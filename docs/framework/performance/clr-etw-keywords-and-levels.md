@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8332eba909c3ebe475e3f364f81a676733e4e3d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d45a8bdebb296a33862f018308a7ef876e0cd64c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572352"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 关键字和级别
 <a name="top"></a> Windows (ETW) 事件的事件跟踪可以按类别和级别进行筛选。 事件 [CLR ETW 关键字](#keywords) 启用按类别筛选事件；它们用于运行时提供程序和断开提供程序的组合。 [事件级别](#levels) 由标志来标识。  
@@ -52,7 +52,7 @@ ms.locfileid: "33397057"
 |`ContentionKeyword`|0x00004000|启用 [争用事件](../../../docs/framework/performance/contention-etw-events.md)的回收。|  
 |`ExceptionKeyword`|0x00008000|启用 [异常事件](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)的回收。|  
 |`ThreadingKeyword`|0x00010000|启用 [线程池事件](../../../docs/framework/performance/thread-pool-etw-events.md)的回收。|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|（[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及更高版本中可用。）取消高开销 `NGenKeyword` 关键字，并防止生成 NGen 模块内方法的事件。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，分析工具应一并使用 `OverrideAndSuppressNGenEventsKeyword` 和 `NGenKeyword` 以取消生成 NGen 模块内方法的事件。 这使分析工具能够使用更高效的 NGen PDB 来获取 NGen 模块中方法的相关信息。 .NET Framework 4 及更早版本中的 CLR 不支持 NGen PDB 的创建。 在这些早期版本中，CLR 将不识别 `OverrideAndSuppressNGenEventsKeyword` 并将处理 `NGenKeyword` 以生成 NGen 模块内方法的事件。|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|（[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及更高版本中可用。）取消高开销 `NGenKeyword` 关键字，并防止生成 NGen 模块内方法的事件。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]开始，分析工具应一并使用 `OverrideAndSuppressNGenEventsKeyword` 和 `NGenKeyword` 以取消生成 NGen 模块内方法的事件。 这使分析工具能够使用更高效的 NGen PDB 来获取 NGen 模块中方法的相关信息。 .NET Framework 4 及更早版本中的 CLR 不支持 NGen PDB 的创建。 在这些早期版本中，CLR 将不识别 `OverrideAndSuppressNGenEventsKeyword` 并将处理 `NGenKeyword` 以生成 NGen 模块内方法的事件。|  
 |`PerfTrackKeyWord`|0x2000000|启用 `ModuleLoad` 和 `ModuleRange` 事件的回收。|  
 |`StackKeyword`|0x40000000|启用 CLR [堆栈跟踪事件](../../../docs/framework/performance/stack-etw-event.md)的回收。|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33397057"
 ### <a name="clr-etw-rundown-keywords"></a>CLR ETW 断开关键字  
  下表列出了 CLR ETW 断开关键字、它们的值以及它们的用途。  
   
-|断开关键字名称|值|目标|  
+|断开关键字名称|“值”|目标|  
 |--------------------------|-----------|-------------|  
 |`LoaderRundownKeyword`|0x00000008|当与 `StartRundownKeyword` 和 `EndRundownKeyword`一起使用时启用加载程序事件的回收。|  
 |`JitRundownKeyword`|0x00000010|当与 `DCStart` 和 `DCEnd` 一起使用时启用 JIT 编译的方法的方法 `StartRundownKeyword` 和 `EndRundownKeyword`事件的回收。|  
@@ -71,7 +71,7 @@ ms.locfileid: "33397057"
 |`EndRundownKeyword`|0x00000100|在结束断开期间启用系统状态的枚举。|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|当与 <xref:System.AppDomain> 或 `StartRundownKeyword` 一起使用时启用 `EndRundownKeyword`级别的资源监视的事件的回收。|  
 |`ThreadingKeyword`|0x00010000|启用线程池事件的回收。|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|（在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及更高版本中可用。）取消高开销 `NGenRundownKeyword` 关键字，并防止生成 NGen 模块内方法的事件。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，分析工具应一并使用 `OverrideAndSuppressNGenEventsRundownKeyword` 和 `NGenRundownKeyword` 以取消生成 NGen 模块内方法的事件。 这使分析工具能够使用更高效的 NGen PDB 来获取 NGen 模块中方法的相关信息。 .NET Framework 4 及更早版本中的 CLR 不支持 NGen PDB 的创建。 在这些早期版本中，CLR 将不识别 `OverrideAndSuppressNGenEventsRundownKeyword` 并将处理 `NGenRundownKeyword` 以生成 NGen 模块内方法的事件。|  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|（在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及更高版本中可用。）取消高开销 `NGenRundownKeyword` 关键字，并防止生成 NGen 模块内方法的事件。 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]开始，分析工具应一并使用 `OverrideAndSuppressNGenEventsRundownKeyword` 和 `NGenRundownKeyword` 以取消生成 NGen 模块内方法的事件。 这使分析工具能够使用更高效的 NGen PDB 来获取 NGen 模块中方法的相关信息。 .NET Framework 4 及更早版本中的 CLR 不支持 NGen PDB 的创建。 在这些早期版本中，CLR 将不识别 `OverrideAndSuppressNGenEventsRundownKeyword` 并将处理 `NGenRundownKeyword` 以生成 NGen 模块内方法的事件。|  
 |`PerfTrackKeyWord`|0x2000000|启用 `ModuleDCStart`、 `ModuleDCEnd`、 `ModuleRangeDCStart`和 `ModuleRangeDCEnd` 事件的回收。|  
   
  [返回页首](#top)  
@@ -122,7 +122,7 @@ ms.locfileid: "33397057"
   
  0x0 - LogAlways  
   
-## <a name="see-also"></a>请参阅  
- [CLR ETW 提供程序](../../../docs/framework/performance/clr-etw-providers.md)  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)  
- [公共语言运行时中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+## <a name="see-also"></a>请参阅
+- [CLR ETW 提供程序](../../../docs/framework/performance/clr-etw-providers.md)
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+- [公共语言运行时中的 ETW 事件](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

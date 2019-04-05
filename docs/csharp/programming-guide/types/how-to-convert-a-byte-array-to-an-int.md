@@ -1,16 +1,17 @@
 ---
-title: 如何：将字节数组转换为 int（C# 编程指南）
+title: 如何：将字节数组转换为 int - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 0da6cbc6967f5e495bacfb9e032a403b4a39791b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3563b0ffd5360c575404ead81e0e847ccab46f0c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741755"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972425"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>如何：将字节数组转换为 int（C# 编程指南）
 此示例演示如何使用 <xref:System.BitConverter> 类将字节数组转换为 [int](../../../csharp/language-reference/keywords/int.md) 然后又转换回字节数组。 例如，在从网络读取字节之后，可能需要将字节转换为内置数据类型。 除了示例中的 [ToInt32(Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) 方法之外，下表还列出了 <xref:System.BitConverter> 类中将字节（来自字节数组）转换为其他内置类型的方法。  
@@ -34,7 +35,7 @@ ms.locfileid: "43741755"
 > [!NOTE]
 >  输出可能会根据计算机体系结构的 endian 设置而不同。  
   
- [!code-csharp[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
+ [!code-csharp[csProgGuideTypes#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#22)]  
   
 ## <a name="example"></a>示例  
  在本示例中，将调用 <xref:System.BitConverter> 类的 <xref:System.BitConverter.GetBytes%28System.Int32%29> 方法，将 `int` 转换为字节数组。  
@@ -42,10 +43,10 @@ ms.locfileid: "43741755"
 > [!NOTE]
 >  输出可能会根据计算机体系结构的 endian 设置而不同。  
   
- [!code-csharp[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
+ [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]  
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.BitConverter>  
-- <xref:System.BitConverter.IsLittleEndian>  
+- <xref:System.BitConverter>
+- <xref:System.BitConverter.IsLittleEndian>
 - [类型](../../../csharp/programming-guide/types/index.md)

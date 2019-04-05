@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b81ee355fe375ca7a597d5f8f2fbf92f71e0bd9b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426970"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481451"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter 方法
-在当前方法中定义的单个参数。 参数类型均从内方法的签名的参数的位置 （序列）。  
+当前方法中定义的单个参数。 从参数的位置 （序列） 的方法签名中获取参数类型。  
   
- 如果参数在给定方法的元数据中定义的你不需要再次使用此方法定义。 在检查符号存储区前，符号读取器必须检查参数的正常元数据。  
+ 如果给定方法的元数据中定义参数，则无需再次使用此方法定义。 符号读取器必须检查符号存储区之前检查参数的普通元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ HRESULT DefineParameter(
     [in] ULONG32      addr3);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `name`  
  [in]参数名称。  
   
@@ -50,25 +50,25 @@ HRESULT DefineParameter(
  [in]参数属性。  
   
  `sequence`  
- [in]参数签名中。  
+ [in]参数签名。  
   
  `addrKind`  
- [in]地址类型中。  
+ [in]地址类型。  
   
  `addr1`  
  [in]参数规格的第一个地址。  
   
  `addr2`  
- [in]参数规范第二个地址。  
+ [in]参数规格的第二个地址。  
   
  `addr3`  
  [in]参数规格的第三个地址。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

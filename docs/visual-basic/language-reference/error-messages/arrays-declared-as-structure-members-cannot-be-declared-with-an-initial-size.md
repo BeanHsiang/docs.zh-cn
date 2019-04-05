@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
-ms.openlocfilehash: 0a7424e5dbfadd78c4071ba5b76086b7f6c9b94a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58889809b3d8d0823784279c421a141dc8056984
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585848"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841961"
 ---
 # <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a>声明为结构成员的数组不能用初始大小声明
-初始大小声明一个结构的数组。 无法初始化任何结构元素，并声明的数组大小是一种形式的初始化。  
+初始大小声明数组在结构中。 无法初始化结构的任何元素，并声明的数组大小是一种形式的初始化。  
   
  **错误 ID:** BC31043  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
-1.  定义数组在结构中为动态 （不是初始大小）。  
+1.  定义数组结构中为动态 （不是初始大小）。  
   
-2.  如果你需要特定大小的数组，你可以重新设置其维数的动态数组[ReDim 语句](../../../visual-basic/language-reference/statements/redim-statement.md)运行你的代码时。 下面的示例阐释了这一点。  
+2.  如果需要特定大小的数组，可以重新使用的动态数组设置其维数[ReDim 语句](../../../visual-basic/language-reference/statements/redim-statement.md)时运行代码。 下面的示例阐释了这一点。  
   
     ```  
     Structure demoStruct  
@@ -36,6 +36,7 @@ ms.locfileid: "33585848"
     End Sub  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [如何：声明结构](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+## <a name="see-also"></a>请参阅
+
+- [数组](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [如何：声明结构](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

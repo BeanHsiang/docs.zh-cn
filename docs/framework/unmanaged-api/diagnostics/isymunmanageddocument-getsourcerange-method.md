@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00baed93bd9ab48c92de83dac76931c3149afc2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 767508e51660a161a7a6ff0b168a46178d66be99
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424622"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474134"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 方法
-返回到给定缓冲区中嵌入源的指定的范围。 缓冲区必须足够大以保存源。  
+返回到给定缓冲区中指定的嵌入的源范围。 缓冲区必须足够大以保存源。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ HRESULT GetSourceRange(
         length_is(*pcSourceBytes)] BYTE source[]);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `startLine`  
  [in]当前文档中的起始行。  
   
@@ -52,13 +52,13 @@ HRESULT GetSourceRange(
  [in]当前文档中的最后一行。  
   
  `endColumn`  
- [in]当前文档中最后一列。  
+ [in]当前文档中的最后一列。  
   
  `cSourceBytes`  
- [in]源，以字节为单位的大小。  
+ [in]为源，以字节为单位的大小。  
   
  `pcSourceBytes`  
- [out]指向接收源大小的变量的指针。  
+ [out]指向一个变量来接收源大小的指针。  
   
  `source`  
  [out]大小和源文档，以字节为单位的指定范围的长度。  
@@ -66,5 +66,5 @@ HRESULT GetSourceRange(
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则为 S_OK。  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

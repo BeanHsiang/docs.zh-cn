@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f833c19da1199528dceee3a4f34dea7180380023
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576429"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 类
-提供用于创建本机可移植可执行 (PE) 文件的功能。 接口将通常用于由编译器生成其已编译的输出可执行文件。  
+提供用于创建本机可移植可执行 (PE) 文件的功能。 接口通常用于由编译器生成可执行其已编译的输出。  
   
 > [!NOTE]
->  `ICeeFileGen` 支持.NET Framework 基础结构，不宜在代码中直接使用。  
+>  `ICeeFileGen` 支持.NET Framework 基础结构，不应在代码中直接使用。  
   
  此接口已弃用，将在未来版本中删除。  
   
@@ -237,11 +237,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** ICeeFileGen.h  
   
  **.NET framework 版本：** 1.0  
   
-## <a name="see-also"></a>请参阅  
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

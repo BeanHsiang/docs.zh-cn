@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9941a9be7d9f68255636b405db29a623be8d37e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7a0d796b9c507665ff3ba67153df4691f078e5c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406433"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543836"
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish 组件类
 提供用于发布应用程序域和进程相关信息的接口。  
@@ -42,17 +42,17 @@ coclass CorpubPublish {
   
 |接口|描述|  
 |---------------|-----------------|  
-|[ICorPublish 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|提供有关进程和应用程序域的信息发布到这些进程的方法。|  
-|[ICorPublishAppDomain 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|表示，并提供关于，应用程序域的过程中的信息。|  
+|[ICorPublish 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|提供用于发布有关进程和应用程序域的信息，这些进程中的方法。|  
+|[ICorPublishAppDomain 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|表示，并提供有关在进程中的应用程序域的信息。|  
 |[ICorPublishAppDomainEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)|提供遍历进程中当前存在的应用程序域的集合的方法。|  
 |[ICorPublishProcess 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)|表示在计算机运行的进程。|  
-|[ICorPublishProcessEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|提供遍历集合的计算机运行的进程的方法。|  
+|[ICorPublishProcessEnum 接口](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|提供遍历计算机运行的进程集合的方法。|  
   
 ## <a name="remarks"></a>备注  
- 典型的发布方案涉及的开发人员想要调试应用程序域内的计算机运行的托管的代码。 宿主环境可能运行的进程中的多个应用程序域。 开发人员想要使用图形用户界面或某种其他方式来列出所有的计算机，运行的进程并选取一个特定的进程。 该列表应包括所有正在运行托管的代码的进程内的应用程序域。 然后，开发人员可以标识特定的应用程序域，并将调试器附加到该域。  
+ 典型的发布方案是，开发人员想要调试在应用程序域的计算机运行的托管的代码。 宿主环境可能运行多个进程内的应用程序域。 开发人员想要使用图形用户界面或某些其他方法来列出所有的计算机，运行的进程并选取特定进程。 该列表应包括的所有应用程序域中运行托管的代码的进程。 然后，开发人员可以标识特定的应用程序域，并将调试器附加到该域。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorPub.idl  
   
@@ -60,5 +60,5 @@ coclass CorpubPublish {
   
  **.NET framework 版本：**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

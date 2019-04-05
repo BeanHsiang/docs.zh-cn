@@ -14,47 +14,47 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-ms.openlocfilehash: 40322dc6c5facd4167a4c9ac5c12fdf2a8831b7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6be6d0904d5b52e5188f0a5a16aaefa08265379c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526447"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674188"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel 控件的最佳做法
-<xref:System.Windows.Forms.TableLayoutPanel>控件提供了强大的布局功能，应在 Windows 窗体上使用之前应该认真考虑。  
+<xref:System.Windows.Forms.TableLayoutPanel>控件提供了强大的布局功能，应在 Windows 窗体上使用之前仔细考虑。  
   
 ## <a name="recommendations"></a>建议  
- 以下建议将帮助你使用<xref:System.Windows.Forms.TableLayoutPanel>其充分利用的控件。  
+ 以下建议将帮助你使用<xref:System.Windows.Forms.TableLayoutPanel>最有效地控制。  
   
 ### <a name="targeted-use"></a>目标的使用  
- 使用<xref:System.Windows.Forms.TableLayoutPanel>尽量少控制。 你不应在要求可调整大小的布局的所有情况下使用它。 以下列表介绍了利用从受益最大的布局<xref:System.Windows.Forms.TableLayoutPanel>控件：  
+ 使用<xref:System.Windows.Forms.TableLayoutPanel>谨慎控制。 不应使用它在所有情况下，需要可调整大小的布局。 以下列表介绍从使用获益最多的布局<xref:System.Windows.Forms.TableLayoutPanel>控件：  
   
--   其中有相互成比例调整大小的多个部分的窗体的布局。  
+-   其中有个彼此的按比例调整大小的多个部分的窗体的布局。  
   
--   将修改或动态生成在运行时，如具有加上或减去的用户可自定义字段的数据输入窗体根据首选项的布局。  
+-   将修改或在运行时，如数据输入窗体具有加上或减去的用户可自定义字段的动态生成的布局根据首选项。  
   
--   应保留在总体的固定大小的布局。 例如，你可能有一个对话框，应保持小于 800 x 600，但你需要支持本地化的字符串。  
+-   应保持为整体的固定大小的布局。 例如，可能有一个对话框，应保持小于 800 x 600，但你需要支持本地化的字符串。  
   
  以下列表介绍执行不会大大受益于使用的布局<xref:System.Windows.Forms.TableLayoutPanel>控件：  
   
--   简单数据输入窗体与单个列的标签和文本输入区域的单个列。  
+-   简单数据输入窗体包含单个列的标签和文本输入区域的单个列。  
   
--   含有单个较大的窗体显示应填满所有可用的空间，在调整大小时的区域。 此示例是窗体中显示单个<xref:System.Windows.Forms.PropertyGrid>控件。 在这种情况下，使用锚定，因为没有任何其他应展开时调整窗体。  
+-   含有单个较大的窗体显示在调整大小时应填充所有可用空间的区域。 此示例是窗体中显示单个<xref:System.Windows.Forms.PropertyGrid>控件。 在这种情况下，使用定位功能，因为没有其他应展开时调整窗体。  
   
- 请仔细选择哪些控件需要在<xref:System.Windows.Forms.TableLayoutPanel>控件。 如果你有为你的文本使用锚定的 30%的增长留出空间，请考虑使用<xref:System.Windows.Forms.Control.Anchor%2A>仅属性。 如果你可以估计需要你的布局的空间，使用的<xref:System.Windows.Forms.Control.Dock%2A>和<xref:System.Windows.Forms.Control.Anchor%2A>比估计剩余空间的详细信息和<xref:System.Windows.Forms.Control.AutoSize%2A>行为。  
+ 请仔细选择哪些控件必须位于<xref:System.Windows.Forms.TableLayoutPanel>控件。 如果为文本使用锚定的 30%的增长留出空间，请考虑使用<xref:System.Windows.Forms.Control.Anchor%2A>只属性。 如果在可以估计您的布局所需的空间，请使用<xref:System.Windows.Forms.Control.Dock%2A>并<xref:System.Windows.Forms.Control.Anchor%2A>是更容易估计的剩余空间的详细信息和<xref:System.Windows.Forms.Control.AutoSize%2A>行为。  
   
- 通常，在设计你使用的布局时<xref:System.Windows.Forms.TableLayoutPanel>控制，使设计保持尽可能简单。  
+ 通常，当设计与布局中<xref:System.Windows.Forms.TableLayoutPanel>控件，使设计尽可能简单。  
   
 ### <a name="use-the-document-outline-window"></a>使用文档大纲窗口  
- 文档大纲窗口提供了你的布局，可用于处理你的控件的 z 顺序和父-子关系的树视图。 从**视图菜单**，选择**其他窗口**，然后选择**文档大纲**。  
+ 文档大纲窗口提供了您的布局，可用于处理您的控件的 z 顺序和父-子关系的树视图。 从**视图菜单**，选择**其他 Windows**，然后选择**文档大纲**。  
   
 ### <a name="avoid-nesting"></a>避免嵌套  
- 避免嵌套其他<xref:System.Windows.Forms.TableLayoutPanel>内控制<xref:System.Windows.Forms.TableLayoutPanel>控件。 调试嵌套的布局可能很困难。  
+ 避免其他嵌套<xref:System.Windows.Forms.TableLayoutPanel>控件的<xref:System.Windows.Forms.TableLayoutPanel>控件。 调试嵌套的布局可能很困难。  
   
 ### <a name="avoid-visual-inheritance"></a>避免 Visual 继承  
- <xref:System.Windows.Forms.TableLayoutPanel>控件不支持在 Windows 窗体设计器 visual 继承。 A<xref:System.Windows.Forms.TableLayoutPanel>为"已锁定"在设计时，将出现在派生类中的控件。  
+ <xref:System.Windows.Forms.TableLayoutPanel>控件在 Windows 窗体设计器中不支持 visual 继承。 一个<xref:System.Windows.Forms.TableLayoutPanel>派生类中的控件将显示为"已锁定"在设计时。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- <xref:System.Windows.Forms.FlowLayoutPanel>
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- <xref:System.Windows.Forms.FlowLayoutPanel>

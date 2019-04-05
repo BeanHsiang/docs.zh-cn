@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: 3e808b836183a23fa6bd80faeb0d3cfc5921f4cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38b1b3ba2bd2116621de820855bb4e4b2cd12915
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358851"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519148"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>从数值序列中返回平均值
 <xref:System.Linq.Enumerable.Average%2A> 运算符用于计算数值序列的平均值。  
@@ -114,5 +114,5 @@ ms.locfileid: "33358851"
   
  `Gravad lax`  
   
-## <a name="see-also"></a>请参阅  
- [聚合查询](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+## <a name="see-also"></a>请参阅
+- [聚合查询](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

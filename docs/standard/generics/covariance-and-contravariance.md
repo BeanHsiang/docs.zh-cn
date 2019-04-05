@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038739"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836417"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的协变和逆变
 <a name="top"></a> 协变和逆变都是术语，前者指能够使用比原始指定的派生类型的派生程度更大（更具体的）的类型，后者指能够使用比原始指定的派生类型的派生程度更小（不太具体的）的类型。 泛型类型参数支持协变和逆变，可在分配和使用泛型类型方面提供更大的灵活性。 在引用类型系统时，协变、逆变和不变性具有如下定义。 这些示例假定一个名为 `Base` 的基类和一个名为 `Derived`的派生类。  
@@ -27,19 +27,19 @@ ms.locfileid: "44038739"
   
      使你能够使用比原始指定的类型派生程度更大的类型。  
   
-     可以向 `IEnumerable<Base>` 类型的变量分配 `IEnumerable<Derived>`（在 Visual Basic 中为 `IEnumerable(Of Derived)`）的实例。  
+     你可以向 `IEnumerable<Derived>` 类型的变量分配`IEnumerable(Of Derived)` （在 Visual Basic 中为 `IEnumerable<Base>`）的实例。  
   
 -   `Contravariance`  
   
      使你能够使用比原始指定的类型更泛型（派生程度更小）的类型。  
   
-     可以向 `Action<Derived>` 类型的变量分配 `Action<Base>`（在 Visual Basic 中为 `Action(Of Base)`）的实例。  
+     你可以向 `Action<Base>` 类型的变量分配`Action(Of Base)` （在 Visual Basic 中为 `Action<Derived>`）的实例。  
   
 -   `Invariance`  
   
      这意味着，你只能使用原始指定的类型；固定泛型类型参数既不是协变类型，也不是逆变类型。  
   
-     无法向 `List<Derived>` 类型的变量分配 `List<Base>`（在 Visual Basic 中为 `List(Of Base)`）的实例，反之亦然。  
+     你无法向 `List<Base>` 类型的变量分配 `List(Of Base)`（在 Visual Basic 中为 `List<Derived>`）的实例，反之亦然。  
   
  利用协变类型参数，你可以执行非常类似于普通的[多态性](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md)的分配，如以下代码中所示。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "44038739"
   
  下面的示例阐释了逆变类型参数。 该示例定义具有`MustInherit` 属性的抽象（在 Visual Basic 中为 `Shape` ） `Area` 类。 该示例还定义一个实现 `ShapeAreaComparer` （在 Visual Basic 中为 `IComparer<Shape>` ）的`IComparer(Of Shape)` 类。 <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> 方法的实现基于 `Area` 属性的值，所以 `ShapeAreaComparer` 可用于按区域对 `Shape` 对象排序。  
   
- `Circle` 类继承 `Shape` 并重写 `Area`。 该示例创建 <xref:System.Collections.Generic.SortedSet%601> 对象的 `Circle` ，使用采用 `IComparer<Circle>` （在 Visual Basic 中为`IComparer(Of Circle)` ）的构造函数。 但是，该对象不传递 `IComparer<Circle>`，而是传递一个用于实现 `ShapeAreaComparer` 的 `IComparer<Shape>` 对象。 当代码需要派生程度较大的类型的比较器 (`Shape`) 时，该示例可以传递派生程度较小的类型的比较器 (`Circle`)，因为 <xref:System.Collections.Generic.IComparer%601> 泛型接口的类型参数是逆变参数。  
+ `Circle` 类继承 `Shape` 并重写 `Area`。 该示例创建 <xref:System.Collections.Generic.SortedSet%601> 对象的 `Circle` ，使用采用 `IComparer<Circle>` （在 Visual Basic 中为`IComparer(Of Circle)` ）的构造函数。 但是，该对象不传递 `IComparer<Circle>`，而是传递一个用于实现 `ShapeAreaComparer` 的 `IComparer<Shape>`对象。 当代码需要派生程度较大的类型的比较器 (`Shape`) 时，该示例可以传递派生程度较小的类型的比较器 (`Circle`)，因为 <xref:System.Collections.Generic.IComparer%601> 泛型接口的类型参数是逆变参数。  
   
  向 `Circle` 中添加新 `SortedSet<Circle>`对象时，每次将新元素与现有元素进行比较时，都会调用 `IComparer<Shape>.Compare` 对象的`IComparer(Of Shape).Compare` 方法（在 Visual Basic 中为 `ShapeAreaComparer` 方法）。 方法 (`Shape`) 的参数类型比被传递的类型 (`Circle`) 的派生程度小，所以调用是类型安全的。 逆变使 `ShapeAreaComparer` 可以对派生自 `Shape`的任意单个类型的集合以及混合类型的集合排序。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "44038739"
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>泛型委托和非泛型委托中的变体  
  在上面的代码中， `MyMethod` 的签名与所构造的泛型委托 `Func<Base, Derived>` （在 Visual Basic 中为`Func(Of Base, Derived)` ）的签名完全匹配。 此示例说明，只要所有委托类型都是从泛型委托类型 <xref:System.Func%602>构造的，就可以将此泛型委托存储在具有派生程度更大的参数类型和派生程度更小的返回类型的变量或方法参数中。  
   
- 这一点非常重要。 协变和逆变在泛型委托的类型参数中的作用与协变和逆变在普通的委托绑定中的作用类似（请参阅[委托中的变体](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)）。 但是，委托绑定中的变化适用于所有委托类型，而不仅仅适用于具有 Variant 类型参数的泛型委托类型。 此外，通过委托绑定中的变化，可以将方法绑定到具有限制较多的参数类型和限制较少的返回类型的任何委托，而对于泛型委托的指派，只有在委托类型是基于同一个泛型类型定义构造的时才可以进行。  
+ 这一点非常重要。 泛型委托的类型参数中的协方差和逆变的效果类似于普通委托绑定中的协方差和逆变的效果（请参阅[委托中的差异 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) 和[委托中的差异 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)）。 但是，委托绑定中的变化适用于所有委托类型，而不仅仅适用于具有 Variant 类型参数的泛型委托类型。 此外，通过委托绑定中的变化，可以将方法绑定到具有限制较多的参数类型和限制较少的返回类型的任何委托，而对于泛型委托的指派，只有在委托类型是基于同一个泛型类型定义构造的时才可以进行。  
   
  下面的示例演示委托绑定中的变化和泛型类型参数中的变化的组合效果。 该示例定义了一个类型层次结构，其中包含三个按派生程度从低到高排列的类型，即`Type1`的派生程度最低，`Type3`的派生程度最高。 普通委托绑定中的变化用于将参数类型为 `Type1` 、返回类型为 `Type3` 的方法绑定到参数类型为 `Type2` 、返回类型为 `Type2`的泛型委托。 然后，使用泛型类型参数的协变和逆变，将得到的泛型委托指派给另一个变量，此变量的泛型委托类型的参数类型为 `Type3` ，返回类型为 `Type1`。 第二个指派要求变量类型和委托类型是基于同一个泛型类型定义（在本例中为 <xref:System.Func%602>）构造的。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "44038739"
   
  Visual Basic 和 C# 不允许违反协变和逆变类型参数的使用规则，也不允许将协变和逆变批注添加到接口和委托类型之外的类型参数中。 [MSIL 汇编程序](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 不执行此类检查，但如果你尝试加载违反规则的类型，则会引发 <xref:System.TypeLoadException> 。  
   
- 有关更多信息和示例代码，请参阅[泛型接口中的变体](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)。  
+ 有关信息和示例代码，请参阅[泛型接口中的差异 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 和[泛型接口中的差异 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
   
  [返回页首](#top)  
   
@@ -190,6 +190,7 @@ ms.locfileid: "44038739"
   
 ## <a name="see-also"></a>请参阅
 
-- [协变和逆变 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
-- [协变和逆变 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
-- [委托中的变体](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+- [协变和逆变 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
+- [协变和逆变 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [委托中的变体 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [委托中的变体 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

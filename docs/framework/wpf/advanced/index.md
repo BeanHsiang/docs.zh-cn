@@ -9,27 +9,27 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 3c933e7062e270a9f4d03772ffbece2500ef9482
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544098"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370704"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>高级 (Windows Presentation Foundation)
 本节介绍 WPF 中的部分高级区域。  
   
 ## <a name="in-this-section"></a>本节内容  
- [WPF 体系结构](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
- [基元素](../../../../docs/framework/wpf/advanced/base-elements.md)  
- [元素树和序列化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
- [拖放](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
- [文档](../../../../docs/framework/wpf/advanced/documents.md)  
- [全球化和本地化](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [性能](../../../../docs/framework/wpf/advanced/performance.md)  
- [线程模型](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [WPF 外接程序概述](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
- [非托管 WPF API 参考](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)  
+ [WPF 体系结构](wpf-architecture.md)  
+ [基元素](base-elements.md)  
+ [元素树和序列化](element-tree-and-serialization.md)  
+ [拖放](drag-and-drop.md)  
+ [文档](documents.md)  
+ [全球化和本地化](globalization-and-localization.md)  
+ [迁移和互操作性](migration-and-interoperability.md)  
+ [性能](performance.md)  
+ [线程模型](threading-model.md)  
+ [WPF 外接程序概述](../app-development/wpf-add-ins-overview.md)  
+ [非托管 WPF API 参考](wpf-unmanaged-api-reference.md)  
   
 ## <a name="related-sections"></a>相关章节

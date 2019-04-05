@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - navigation [WPF]
 ms.assetid: f804648e-558c-4f60-8e48-d11f4a23c436
-ms.openlocfilehash: d6b767e68f8d3217ffacd787137a2d4b91c3761d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d1cfd1388e68ff6a5f8c6a6b209dc38dd2f80d3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550106"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379739"
 ---
 # <a name="navigation-how-to-topics"></a>导航帮助主题
-以下主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]导航。  
+以下主题说明如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]导航。  
   
 ## <a name="in-this-section"></a>本节内容  
- [调用页函数](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
-  [获取页函数的返回值](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
-  [通过导航历史记录前进或后退](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [通过页函数返回](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
+ [调用页函数](how-to-call-a-page-function.md)  
+  [获取页函数的返回值](how-to-get-the-return-value-of-a-page-function.md)  
+  [通过导航历史记录前进或后退](how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [通过页函数返回](how-to-return-from-a-page-function.md)  
   
 ## <a name="related-sections"></a>相关章节  
- [导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [导航概述](navigation-overview.md)  
   
- [结构化导航概述](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+ [结构化导航概述](structured-navigation-overview.md)

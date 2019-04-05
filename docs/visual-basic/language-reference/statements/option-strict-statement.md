@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: ed95d0a0c6fc9ba41bba2c4e16d4ed3b721ae4e3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44077062"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355124"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 隐式数据类型将转换限制为仅进行扩大转换，不允许后期绑定，并禁止隐式键入会导致`Object`类型。  
@@ -113,7 +113,7 @@ Option Strict { On | Off }
   
 2.  上**编译**选项卡上，设置中的值**Option Strict**框。  
   
-###  <a name="conditions"></a> 若要在 IDE 中设置警告配置  
+### <a name="conditions"></a> 若要在 IDE 中设置警告配置  
  当你使用[编译页，项目设计器 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是`Option Strict`语句中，你可以生成错误的条件的其他控制。 **警告配置**一部分**编译页**具有对应于三个条件会导致编译时错误的设置时`Option Strict`上。 这些设置如下：  
   
 -   隐式转换  
@@ -137,30 +137,30 @@ Option Strict { On | Off }
 ## <a name="example"></a>示例  
  下面的示例演示由收缩转换的隐式类型转换导致的编译时错误。 此类别的错误对应于**隐式转换**上的条件**编译页**。  
   
- [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#161](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#161)]  
   
 ## <a name="example"></a>示例  
  下面的示例演示了编译时错误引起的后期绑定。 此类别的错误对应于**Late 绑定; 调用可能在运行时失败**上的条件**编译页**。  
   
- [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#162](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#162)]  
   
 ## <a name="example"></a>示例  
  下面的示例演示使用的隐式类型声明的变量引起的错误`Object`。 此类别的错误对应于**隐式类型; 假定为对象**上的条件**编译页**。  
   
- [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#163](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#163)]  
   
- [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#164](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#164)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [扩大转换和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
-- [隐式转换和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
-- [“项目设计器”->“编译”页 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
-- [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
-- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
-- [如何：访问对象的成员](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
-- [XML 中的嵌入式表达式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
-- [宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
-- [Office 解决方案中的晚期绑定](/visualstudio/vsto/late-binding-in-office-solutions)  
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+- [扩大转换和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [隐式转换和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [“项目设计器”->“编译”页 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [如何：访问对象的成员](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [XML 中的嵌入式表达式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [Office 解决方案中的晚期绑定](/visualstudio/vsto/late-binding-in-office-solutions)
+- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [“选项”对话框 ->“项目”->“Visual Basic 默认值”](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

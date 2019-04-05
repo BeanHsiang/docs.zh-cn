@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51878f0334afe52608b60ca540e49c86fded148e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12a37ee8367006975b0f8ee4fa638ae3d72f9486
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418040"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487741"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a>ICorDebugThread::GetAppDomain 方法
-获取在其中此 ICorDebugThread 当前正在执行的应用程序域的接口指针。  
+获取此 ICorDebugThread 当前执行的应用程序域、 一个接口指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +35,15 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppAppDomain`  
- [out]指向表示当前正在其中执行此线程的应用程序域的 ICorDebugAppDomain 对象的指针。  
+ [out]指向表示此线程当前执行的应用程序域的 ICorDebugAppDomain 对象的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: 如何：向 Windows 窗体 BindingNavigator 控件添加“加载”、“保存”和“取消”按钮
+title: 如何：添加负载，保存和取消按钮，为 Windows 窗体 BindingNavigator 控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 97be77b6591e4b7fa3db8176222dcb1feb3481bc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972684"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722433"
 ---
-# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>如何：向 Windows 窗体 BindingNavigator 控件添加“加载”、“保存”和“取消”按钮
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>如何：添加负载，保存和取消按钮，为 Windows 窗体 BindingNavigator 控件
 <xref:System.Windows.Forms.BindingNavigator>控件是特殊用途<xref:System.Windows.Forms.ToolStrip>旨在用于导航和操作绑定到数据窗体上的控件的控件。  
   
  因为它是<xref:System.Windows.Forms.ToolStrip>控件，<xref:System.Windows.Forms.BindingNavigator>组件可以轻松地修改为包含用户的附加或替代命令。  
@@ -34,7 +34,7 @@ ms.locfileid: "45972684"
   
 5.  选择 <xref:System.Windows.Forms.BindingNavigator> 控件。  
   
-6.  单击智能标记标志符号 (![智能标记标志符号](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，因此**BindingNavigator 任务**对话框，然后选择**编辑项**.  
+6.  单击智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，因此**BindingNavigator 任务**对话框，然后选择**编辑项**.  
   
      **项集合编辑器**出现。  
   
@@ -109,9 +109,9 @@ ms.locfileid: "45972684"
     > [!NOTE]
     >  <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>方法的范围限定为一行数据。 保存您在导航到下一条记录之前查看该单个记录时进行任何更改。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.BindingNavigator>  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.ToolStrip>  
- [BindingNavigator 控件](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [BindingSource 组件概述](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.BindingNavigator>
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.ToolStrip>
+- [BindingNavigator 控件](bindingnavigator-control-windows-forms.md)
+- [BindingSource 组件概述](bindingsource-component-overview.md)

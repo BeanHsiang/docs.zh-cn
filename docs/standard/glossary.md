@@ -1,16 +1,14 @@
 ---
 title: .NET 术语表
 description: 了解 .NET 文档中所用的选定术语的含义。
-author: tdykstra
-ms.author: tdykstra
-ms.date: 07/08/2017
+ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840266"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674505"
 ---
 # <a name="net-glossary"></a>.NET 术语表
 
@@ -20,7 +18,9 @@ ms.locfileid: "48840266"
 
 预编译器。
 
-与 [JIT](#jit) 类似，此编译器还可将 [IL](#il) 转换为机器代码。 与 JIT 编译相比，AOT 编译在应用程序执行前进行并且通常在不同计算机上执行。 由于在运行时 AOT 工具链不编译，因此它们不需要最大程度地减少编译所花费的时间。 这意味着它们可花更多的时间进行优化。 由于 AOT 的上下文是整个应用程序，因此 AOT 编译器还会执行跨模块链接和全程序分析，这意味着之后会进行所有引用并会生成单个可执行文件。
+与 [JIT](#jit) 类似，此编译器还可将 [IL](#il) 转换为机器代码。 与 JIT 编译相比，AOT 编译在应用程序执行前进行并且通常在不同计算机上执行。 AOT 工具不会在运行时进行编译，因此它们不需要最大程度地减少编译所花费的时间。 这意味着它们可花更多的时间进行优化。 由于 AOT 的上下文是整个应用程序，因此 AOT 编译器还会执行跨模块链接和全程序分析，这意味着之后会进行所有引用并会生成单个可执行文件。
+
+请参阅 [CoreRT](#corert) 和 [.NET Native](#net-native)。
 
 ## <a name="aspnet"></a>ASP.NET 
 
@@ -58,7 +58,7 @@ ms.locfileid: "48840266"
 
 .NET Core 基类库 (BCL)
 
-一组构成 System.*（在一定的程度上构成 Microsoft.*）命名空间的库。 BCL 是用于生成 ASP.NET Core 等较高级应用程序框架的较低级通用框架。 .NET Core BCL 的源代码包含在 [CoreFX 存储库](https://github.com/dotnet/corefx)中。 但大部分 .NET Core API 也可在 .NET Framework 中使用，因此可将 CoreFX 视为 .NET Framework BCL 的一个分支。
+一组构成 System.\*（在一定的程度上构成 Microsoft.\*）命名空间的库。 BCL 是用于生成 ASP.NET Core 等较高级应用程序框架的较低级通用框架。 .NET Core BCL 的源代码包含在 [CoreFX 存储库](https://github.com/dotnet/corefx)中。 但大部分 .NET Core API 也可在 .NET Framework 中使用，因此可将 CoreFX 视为 .NET Framework BCL 的一个分支。
 
 ## <a name="corert"></a>CoreRT
 
@@ -117,7 +117,7 @@ C# 等较高级的 .NET 语言编译为称为中间语言 (IL) 的硬件无关�
 
 - 一个或多个运行时。 示例：CLR、CoreCLR、CoreRT。
 - 实现 .NET Standard 的某版本并且可能包含其他 API 的类库。 示例：.NET Framework 基类库、.NET Core 基类库。
-- 可选择包含一个或多个应用程序框架。 示例： ASP.NET、Windows 窗体和 WPF 包含在 .NET Framework 中。
+- 可选择包含一个或多个应用程序框架。 示例：ASP.NET、Windows 窗体和 WPF 包含在 .NET Framework 中。
 - 可包含开发工具。 某些开发工具在多个实现之间共享。
 
 .NET 实现的示例：
@@ -225,7 +225,7 @@ NuGet 包 &mdash; 或只是一个包 &mdash; 是一个 .zip 文件，其中具�
 
 用于托管程序的执行环境。
 
-OS 属于运行时环境，但不属于 .NET 运行时。 下面是 .NET 运行时的一些示例：
+操作系统属于运行时环境，但不属于 .NET 运行时。 下面是 .NET 运行时的一些示例：
 
 - 公共语言运行时 (CLR)
 - Core 公共语言运行时 (CoreCLR)
@@ -272,8 +272,8 @@ OS 属于运行时环境，但不属于 .NET 运行时。 下面是 .NET 运行�
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET 指南](index.md)  
-- [.NET Framework 指南](../framework/index.md)  
-- [.NET Core](../core/index.md)  
-- [ASP.NET 概述](/aspnet/index#pivot=aspnet)  
-- [ 概述](/aspnet/index#pivot=core)  
+- [.NET 指南](index.md)
+- [.NET Framework 指南](../framework/index.md)
+- [.NET Core](../core/index.md)
+- [ASP.NET 概述](/aspnet/index#pivot=aspnet)
+- [ 概述](/aspnet/index#pivot=core)

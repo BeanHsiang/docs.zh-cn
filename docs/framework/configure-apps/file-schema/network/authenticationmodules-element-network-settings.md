@@ -1,5 +1,5 @@
 ---
-title: '&lt;authenticationModules&gt;元素 （网络设置）'
+title: <authenticationModules> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 074f2f0cd2c3ac6c6287db08b22ead07afa58fc5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1e40ee4a0bb0731c78d27b7ba9994884ef9ff447
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190809"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271585"
 ---
-# <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt;元素 （网络设置）
+# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > 元素 （网络设置）
 指定使用网络请求进行身份验证模块。  
   
  \<configuration>  
 \<system.net>  
-\<authenticationModules >  
+\<authenticationModules>  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "50190809"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

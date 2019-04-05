@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 47819740207ae94b814b3009708c2fd247688661
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563998"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity 枚举
 指定可以使用声明性安全执行的安全操作。  
@@ -64,14 +64,14 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|保留。|  
 |`dclRequest`|保留。|  
 |`dclDemand`|要求调用堆栈中的所有高级调用方已被授予当前权限对象所指定的权限。|  
-|`dclAssert`|调用代码可以访问当前权限对象所标识的资源，即使在堆栈中的高级调用方不具备访问该资源的权限|  
-|`dclDeny`|调用方使用，即使它们已被授予权限来访问它拒绝访问当前权限对象所指定的资源的能力。|  
+|`dclAssert`|调用代码可以访问当前权限对象所标识的资源，即使堆栈中的高级调用方不具备访问该资源的权限|  
+|`dclDeny`|即使它们已被授予权限来访问它，将向调用方，拒绝访问当前权限对象指定的资源的能力。|  
 |`dclPermitOnly`|仅可以访问此权限对象所指定的资源，即使代码已被授予访问其他资源的权限。|  
-|`dclLinktimeCheck`|需要已被授予一段给定时间的指定的权限直接调用方。|  
-|`dclInheritanceCheck`|需要已被授予指定的权限继承另一个类或重写方法的派生的类。|  
-|`dclRequestMinimum`|调用方可以请求代码运行所需的最低权限。 此操作仅可以在程序集的作用域内使用。|  
+|`dclLinktimeCheck`|需要已被授予指定的权限在给定时间内直接调用方。|  
+|`dclInheritanceCheck`|需要已被授予指定的权限派生的类继承另一个类或重写方法。|  
+|`dclRequestMinimum`|调用方可以请求的代码运行所需的最小权限。 此操作仅可以在程序集的作用域内使用。|  
 |`dclRequestOptional`|调用方可以请求是可选的 （无需运行） 的其他权限。 此请求隐式拒绝所有未明确请求的其他权限。 此操作仅可以在程序集的作用域内使用。|  
-|`dclRequestRefuse`|将不授予可能被误用的权限的调用方的请求。 此操作仅可以在程序集的作用域内使用。|  
+|`dclRequestRefuse`|将不授予调用方的请求可能被误用的权限。 此操作仅可以在程序集的作用域内使用。|  
 |`dclPrejitGrant`|保留。|  
 |`dclPrejitDenied`|保留。|  
 |`dclNonCasDemand`|保留。|  
@@ -83,11 +83,11 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|保留。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

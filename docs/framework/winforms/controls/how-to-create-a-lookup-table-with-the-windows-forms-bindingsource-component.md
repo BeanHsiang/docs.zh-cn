@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 83a34c9d1a4b3d1c2e9950d3c5427567022326b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535579"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723915"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows 窗体 BindingSource 组件创建查找表
 查找表是一种数据表，其中有一列显示另一个相关表的记录数据。 在以下过程中，<xref:System.Windows.Forms.ComboBox> 控件可用于显示具有从父表到子表的外键关系的字段。  
@@ -35,9 +35,10 @@ ms.locfileid: "33535579"
   
  在这种情况下，表 CustomersTable 存储了想要显示和保存的实际信息。 但为了节省空间，此表省略了可增加清晰度的数据。 另一张表 OrdersTable 只包含有关哪个客户 ID 号等同于哪个订单日期和订单 ID 的表面相关信息。 并没有提及客户的名称。  
   
- 在 [ComboBox 控件](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)控件上设置了 4 种重要属性来创建查找表。  
+ 在 [ComboBox 控件](combobox-control-windows-forms.md)控件上设置了 4 种重要属性来创建查找表。  
   
--   <xref:System.Windows.Forms.ComboBox.DataSource%2A> 属性包含查找表的名称。  
+-   
+  <xref:System.Windows.Forms.ComboBox.DataSource%2A> 属性包含查找表的名称。  
   
 -   <xref:System.Windows.Forms.ListControl.DisplayMember%2A> 属性包含查找表中要作为控件文本（客户名称）显示的数据列。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "33535579"
   
      此控件将显示父表的列。  
   
-2.  拖动其他控件以显示子表的详细信息。 表中数据的格式决定了应当选择哪些控件。 有关详细信息，请参阅[按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)。  
+2.  拖动其他控件以显示子表的详细信息。 表中数据的格式决定了应当选择哪些控件。 有关详细信息，请参阅[按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)。  
   
 3.  将一个 <xref:System.Windows.Forms.BindingNavigator> 控件拖到窗体上；这将允许你导航子表中的数据。  
   
@@ -91,8 +92,8 @@ ms.locfileid: "33535579"
   
 8.  从想要显示的子表的 <xref:System.Windows.Forms.ComboBox>（例如，<xref:System.Windows.Forms.BindingNavigator>）中，将除了 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 外的控件绑定到详细信息字段上。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.BindingSource>  
- [BindingSource 组件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [ComboBox 控件](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- [在 Visual Studio 中将控件绑定到数据](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.BindingSource>
+- [BindingSource 组件](bindingsource-component.md)
+- [ComboBox 控件](combobox-control-windows-forms.md)
+- [在 Visual Studio 中将控件绑定到数据](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

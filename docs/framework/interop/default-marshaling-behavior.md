@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aedc7b1941268184b71713d31913dbfbd8b74643
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504254"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409440"
 ---
 # <a name="default-marshaling-behavior"></a>默认封送处理行为
 互操作封送处理根据规则进行操作，该规则指定与方法参数相关联的数据在托管和非托管内存之间传递时的行为方式。 这些内置规则控制诸如此类的封送处理活动：数据类型转换、被调用方是否可以更改传递给它的数据并将这些更改返回给调用方以及在何种情况下封送拆收器提供性能优化。  
@@ -24,7 +24,7 @@ ms.locfileid: "43504254"
  本部分确定互操作封送处理服务的默认行为特征。 它提供有关封送处理数组、布尔值类型、char 类型、委托、类、对象、字符串和结构的详细信息。  
   
 > [!NOTE]
->  不支持泛型类型的封送处理。 有关详细信息，请参阅[使用泛型类型进行交互操作](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))。  
+>  不支持泛型类型的封送处理。 有关详细信息，请参阅[使用泛型类型进行交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))。  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>使用互操作封送拆收器进行内存管理  
  互操作封送拆收器始终尝试释放由非托管代码分配的内存。 此行为符合 COM 内存管理规则，但不同于用于管理本机 C++ 的规则。  
@@ -33,7 +33,7 @@ ms.locfileid: "43504254"
   
 ### <a name="unmanaged-signature"></a>非托管的签名  
   
-```  
+```cpp  
 BSTR MethodOne (BSTR b) {  
      return b;  
 }  
@@ -41,7 +41,7 @@ BSTR MethodOne (BSTR b) {
   
  但是，如果将方法定义为平台调用原型，将每个 BSTR 类型替换为 <xref:System.String> 类型并调用 `MethodOne`，则公共语言运行时会尝试释放 `b` 两次。 可使用 <xref:System.IntPtr> 类型而不是字符串类型来更改封送处理行为。  
   
- 运行时始终使用 CoTaskMemFree 方法来释放内存。 如果正在使用的内存未通过 **CoTaskMemAlloc** 方法分配，则必须使用 **IntPtr** 并通过适当的方法手动释放内存。 同样，可在永不应释放内存的情况下避免自动释放内存，例如，从 kernel32.dll（它将指针返回内核内存）使用 GetCommandLine 函数时。 有关手动释放内存的详细信息，请参阅[缓冲区示例](https://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100))。  
+ 运行时始终使用 CoTaskMemFree 方法来释放内存。 如果正在使用的内存未通过 **CoTaskMemAlloc** 方法分配，则必须使用 **IntPtr** 并通过适当的方法手动释放内存。 同样，可在永不应释放内存的情况下避免自动释放内存，例如，从 kernel32.dll（它将指针返回内核内存）使用 GetCommandLine 函数时。 有关手动释放内存的详细信息，请参阅[缓冲区示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))。  
   
 ## <a name="default-marshaling-for-classes"></a>类的默认封送处理  
  类仅能由 COM 互操作封送，并总是作为接口封送。 在某些情况下用来将该类封送的接口称为类接口。 有关使用所选接口替代类接口的信息，请参阅[类接口简介](com-callable-wrapper.md#introducing-the-class-interface)。  
@@ -101,7 +101,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
   
 ### <a name="type-library-representation"></a>类型库表示形式  
   
-```  
+```cpp  
 importlib("mscorlib.tlb");  
 interface DelegateTest : IDispatch {  
 [id(…)] HRESULT m1([in] _Delegate* d);  
@@ -117,7 +117,7 @@ interface DelegateTest : IDispatch {
 在此示例中，当两个委托作为 <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType> 封送时，得到的结果是一个 `int` 和一个指向 `int` 的指针。 由于要封送委托类型，此处 `int` 表示指向 void (`void*`) 的指针，这是该委托在内存中的地址。 也就是说，此结果是针对 32 位 Windows 系统的，因为此处 `int` 表示的是函数指针大小。
 
 > [!NOTE]
->  对指向由非托管代码持有的托管委托的函数指针的引用不会阻止公共语言运行时对托管对象执行垃圾回收。  
+>  对指向由非托管代码持有的托管委托的函数指针的引用不会阻止公共语言运行时对托管对象执行垃圾收集。  
   
  例如，下面的代码是错误的，因为对传递给 `SetChangeHandler` 方法的 `cb` 对象的引用不会使 `cb` 在超出 `Test` 方法的生存期时仍保持活动。 一旦对 `cb` 对象进行垃圾收集，传递给 `SetChangeHandler` 的函数指针将不再有效。  
   
@@ -164,13 +164,13 @@ internal class DelegateTest {
 ## <a name="default-marshaling-for-value-types"></a>值类型的默认封送处理  
  大多数值类型（如整数和浮点数）是 [blittable](blittable-and-non-blittable-types.md)类型，不需要封送处理。 其他[非 blittable](blittable-and-non-blittable-types.md) 类型在托管和非托管内存中具有不同的表示形式，且需要封送处理。 其他类型仍需要跨互操作边界的显式格式设置。  
   
- 本主题提供以下有关格式化的值类型的信息：  
+ 本部分提供有关以下格式化值类型的信息：  
   
--   [在平台调用中使用的值类型](#cpcondefaultmarshalingforvaluetypesanchor2)  
+-   [在平台调用中使用的值类型](#value-types-used-in-platform-invoke)  
   
--   [在 COM 互操作中使用的值类型](#cpcondefaultmarshalingforvaluetypesanchor3)  
+-   [在 COM 互操作中使用的值类型](#value-types-used-in-com-interop)  
   
- 除了介绍格式化的类型，本主题识别具有异常封送处理行为的[系统值类型](#cpcondefaultmarshalingforvaluetypesanchor1)。  
+ 除了介绍格式化的类型，本主题识别具有异常封送处理行为的[系统值类型](#system-value-types)。  
   
  格式化的类型是复杂类型，其中包含显式控制其成员在内存中的布局的信息。 使用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性提供成员布局信息。 布局可以是以下 <xref:System.Runtime.InteropServices.LayoutKind> 枚举值之一：  
   
@@ -186,7 +186,6 @@ internal class DelegateTest {
   
      指示根据随每个字段提供的 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 对成员进行布局。  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
 ### <a name="value-types-used-in-platform-invoke"></a>在平台调用中使用的值类型  
  在以下示例中，`Point` 和 `Rect` 类型使用 StructLayoutAttribute 提供成员布局信息。  
   
@@ -221,27 +220,28 @@ public struct Rect {
 }  
 ```  
   
- 当封送到非托管代码时，这些格式化的类型作为 C 样式结构进行封送。 这为调用具有结构自变量的非托管 API 提供一种简单的方法。 例如，`POINT` 和 `RECT` 结构可按下述方式传递到 Microsoft Win32 API PtInRect 函数：  
+ 当封送到非托管代码时，这些格式化的类型作为 C 样式结构进行封送。 这为调用具有结构自变量的非托管 API 提供一种简单的方法。 例如，`POINT` 和 `RECT` 结构可按下述方式传递到 Microsoft Windows API“PtInRect”函数：  
   
-```  
+```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
  可以使用下面的平台调用定义传递结构：  
   
-```vb  
-Class Win32API      
-   Declare Auto Function PtInRect Lib "User32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+        ByRef r As Rect, p As Point) As Boolean
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("User32.dll")]  
-   public static extern Bool PtInRect(ref Rect r, Point p);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("User32.dll")]
+   internal static extern bool PtInRect(ref Rect r, Point p);
+}
+```
   
  必须由引用传递 `Rect` 值类型，因为非托管 API 预期有一个指向 `RECT` 的指针被传递给函数。 由值传递 `Point` 值类型，因为非托管的 API 需要在堆栈上传递 `POINT`。 此细微差别非常重要。 引用作为指针传递到非托管代码。 值传递到堆栈上的非托管代码。  
   
@@ -251,9 +251,9 @@ class Win32API {
  类也可以作为 C 样式结构封送到非托管代码，只要它们具有固定成员布局。 类的成员布局信息也通过 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性提供。 具有固定布局的值类型与具有固定布局的类之间的主要区别在于它们被封送到非托管代码的方式。 由值（在堆栈上）传递值类型，由此，调用方看不到任何由被调用方对该类型的成员所做的更改。 由引用（在堆栈上传递对该类型的引用）传递引用类型；由此，调用方将看到被调用方对该类型的可直接复制到本机结构中的类型成员所做的所有更改。  
   
 > [!NOTE]
->  如果引用类型具有非直接复制到本机结构中的类型成员，则需要进行两次转换：第一次是当参数传递到非托管端时，第二次是从调用返回时。 由于此增加的开销，如果调用方想要查看被调用方所做的更改，必须将输入/输出参数显式应用到某个自变量。  
+>  如果引用类型具有非直接复制到本机结构中的类型成员，则需要进行两次转换：第一次是当参数传递到非托管端时，第二次是从调用返回时。 由于此增加的开销，如果调用方想要查看被调用方所做的更改，必须将输入/输出参数显式应用到某个参数。  
   
- 在以下示例中，`SystemTime` 类具有顺序成员布局，并且可以被传递给 Win32 API GetSystemTime 函数。  
+ 在以下示例中，`SystemTime` 类具有顺序成员布局，并且可以被传递给 Windows API GetSystemTime 函数。  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -284,25 +284,26 @@ End Class
   
  GetSystemTime 函数定义如下：  
   
-```  
+```cpp  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
  GetSystemTime 的等效平台调用定义如下：  
   
-```vb  
-Public Class Win32  
-   Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
-   As SystemTime)  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        ByVal sysTime As SystemTime)
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]  
-   public static extern void GetSystemTime(SystemTime st);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
+   internal static extern void GetSystemTime(SystemTime st);
+}
+```
   
  请注意，`SystemTime` 参数并不类型化为引用参数，因为 `SystemTime` 是一个类，而不是值类型。 与值类型不同，类始终由引用传递。  
   
@@ -329,13 +330,12 @@ public class Point {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
 ### <a name="value-types-used-in-com-interop"></a>在 COM 互操作中使用的值类型  
  格式化的类型也可传递给 COM 互操作方法调用。 实际上，当导出到类型库时，值类型就自动转换为结构。 如下面的示例所示，`Point` 值类型变为类型定义 (typedef)，名称为 `Point`。 在类型库中其他位置对 `Point` 值类型的所有引用都替换为 `Point` typedef。  
   
  **类型库表示形式**  
   
-```  
+```cpp  
 typedef struct tagPoint {  
    int x;  
    int y;  
@@ -353,7 +353,6 @@ interface _Graphics {
 > [!NOTE]
 >  将 <xref:System.Runtime.InteropServices.LayoutKind> 枚举值设置为显式的结构无法用于 COM 互操作，因为导出的类型库不能表达显式布局。  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>系统值类型  
  <xref:System> 命名空间具有多个表示运行时原始类型装箱形式的值类型。 例如，值类型 <xref:System.Int32?displayProperty=nameWithType> 结构表示 ELEMENT_TYPE_I4 的装箱形式。 不像其他格式化类型将这些类型作为结构进行封送处理，而是以它们装箱的原始类型的相同方式将它们封送处理。 因此，System.Int32 作为 ELEMENT_TYPE_I4 封送处理，而不是作为包含长类型的单个成员的结构封送处理。 下表包含系统命名空间中的值类型列表，这些值类型是基元类型的装箱表示形式。  
   
@@ -388,7 +387,7 @@ interface _Graphics {
   
 #### <a name="type-library-representation"></a>类型库表示形式  
   
-```  
+```cpp  
 typedef double DATE;  
 typedef DWORD OLE_COLOR;  
   
@@ -430,7 +429,7 @@ public interface IValueTypes {
   
 #### <a name="type-library-representation"></a>类型库表示形式  
   
-```  
+```cpp  
 […]  
 interface IValueTypes : IDispatch {  
    HRESULT M1([in] DATE d);  
@@ -440,9 +439,9 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)  
- [复制和锁定](copying-and-pinning.md)  
- [数组的默认封送处理](default-marshaling-for-arrays.md)  
- [对象的默认封送处理](default-marshaling-for-objects.md)  
- [字符串的默认封送处理](default-marshaling-for-strings.md)
+## <a name="see-also"></a>请参阅
+- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)
+- [复制和锁定](copying-and-pinning.md)
+- [数组的默认封送处理](default-marshaling-for-arrays.md)
+- [对象的默认封送处理](default-marshaling-for-objects.md)
+- [字符串的默认封送处理](default-marshaling-for-strings.md)

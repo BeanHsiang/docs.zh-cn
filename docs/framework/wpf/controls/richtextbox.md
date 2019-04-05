@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: 201dd8cfc76191fefb45ff01dd42f26fd8454f20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3f2bf274db3a7b14f817dd2dbfffc39d2957ec4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554087"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374539"
 ---
 # <a name="richtextbox"></a>RichTextBox
-<xref:System.Windows.Controls.RichTextBox>元素定义具有对剪切和粘贴、 丰富文档演示文稿和内容选择等功能的内置支持的编辑控件。  
+<xref:System.Windows.Controls.RichTextBox>元素定义具有内置功能，例如剪切和粘贴、 丰富文档演示文稿和内容选择支持的编辑控件。  
   
 ## <a name="in-this-section"></a>本节内容  
- [RichTextBox 概述](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+ [RichTextBox 概述](richtextbox-overview.md)  
+ [帮助主题](richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.TextBox>  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.TextBox>
+- [WPF 中的文档](../advanced/documents-in-wpf.md)
+- [流文档概述](../advanced/flow-document-overview.md)

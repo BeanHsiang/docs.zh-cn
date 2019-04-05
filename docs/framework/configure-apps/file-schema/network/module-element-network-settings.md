@@ -1,5 +1,5 @@
 ---
-title: '&lt;模块&gt;元素 （网络设置）'
+title: <module> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#module
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 2d263fd64475d119d536e7cef69896fcfa5ae42c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4658af3f55bddb5f5a748db5366c53f1d2733983
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183693"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268192"
 ---
-# <a name="ltmodulegt-element-network-settings"></a>&lt;模块&gt;元素 （网络设置）
+# <a name="module-element-network-settings"></a>\<模块 > 元素 （网络设置）
 向应用程序添加新的代理模块。  
   
  \<configuration>  
@@ -72,6 +72,6 @@ ms.locfileid: "50183693"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.IWebProxy?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;sharedListeners&gt;元素'
+title: <sharedListeners> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
@@ -11,21 +11,19 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b312ea8180c464fb9f955e7d7079cac930c8bf05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397106"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348812"
 ---
-# <a name="ltsharedlistenersgt-element"></a>&lt;sharedListeners&gt;元素
+# <a name="sharedlisteners-element"></a>\<sharedListeners > 元素
 包含任何源或跟踪元素可以引用的侦听器。  这些侦听器不会收到默认情况下，任何跟踪并不能在运行时检索这些侦听器。 标识为共享的侦听器可以按名称添加到源或跟踪侦听器。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<sharedListeners >  
+\<system.diagnostics>  
+\<sharedListeners>  
   
 ## <a name="syntax"></a>语法  
   
@@ -87,10 +85,10 @@ ms.locfileid: "47397106"
       </listeners>  
     </trace>  
   </system.diagnostics>  
-</configuration></system.diagnostics>   
+</configuration>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.TraceListener>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.TraceListener>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

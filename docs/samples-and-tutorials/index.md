@@ -1,24 +1,19 @@
 ---
-title: 示例和教程
+title: .NET 示例和教程
 description: 有关可帮助了解 .NET 的 .NET Core、ASP.NET Core 和 C# 语言的示例和教程信息。
-keywords: .NET、.NET core、ASP.NET、C#、示例、教程
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: f69aa704b05bffeaf932a093b991810f8678251c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30957641"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558945"
 ---
-# <a name="samples-and-tutorials"></a>示例和教程
+# <a name="net-samples-and-tutorials"></a>.NET 示例和教程
 
-.NET 文档包含指导用户如何使用 .NET 的一系列示例和教程。 本主题介绍如何查找、查看和下载 .NET Core、ASP.NET Core 和 C# 示例和教程。 可在 [F# 基础站点](http://fsharp.org/learn.html)找到学习 F# 编程语言的资源。 如果你对使用联机代码编辑器探索 C# 感兴趣，可以从[本交互教程](https://www.microsoft.com/net/learn/in-browser-tutorial/1)入手，然后使用 [C# 交互快速入门](../csharp/quick-starts/index.md)继续深入学习。 有关如何查看和下载示例代码的说明，请参阅[查看和下载示例](#viewing-and-downloading-samples)部分。
+.NET 文档包含指导用户如何使用 .NET 的一系列示例和教程。 本主题介绍如何查找、查看和下载 .NET Core、ASP.NET Core 和 C# 示例和教程。 可在 [F# 基础站点](https://fsharp.org/learn.html)找到学习 F# 编程语言的资源。 如果想要使用联机代码编辑器来探索 C#，请先查看[此交互式教程](https://www.microsoft.com/net/learn/in-browser-tutorial/1)然后再继续学习 [C# 交互式教程](../csharp/tutorials/intro-to-csharp/index.md)。 有关如何查看和下载示例代码的说明，请参阅[查看和下载示例](#viewing-and-downloading-samples)部分。
 
 ## <a name="net-core"></a>.NET Core
 
@@ -66,6 +61,10 @@ ms.locfileid: "30957641"
 
 这一系列示例将演示许多语言集成查询 (LINQ) 功能。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/linq/csharp)。
 
+**Microsoft Office PIA 示例**
+
+[ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) 示例演示了 [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies) 在 .NET Core 中的使用情况。
+
 ### <a name="tutorials"></a>教程
 
 **[控制台应用程序](../csharp/tutorials/console-teleprompter.md)**
@@ -80,10 +79,6 @@ ms.locfileid: "30957641"
 
 本教程演示许多 LINQ 功能和支持 LINQ 的语言元素。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq)。
 
-**[Docker 中托管的微服务](../csharp/tutorials/microservices.md)**
-
-本教程演示如何生成 ASP.NET Core 微服务并将其托管在 Docker 中。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice)。
-
 **[借助 Visual Studio for Mac 在 macOS 上开始使用 .NET Core](../core/tutorials/using-on-mac-vs.md)**
 
 本教程演示了如何使用 Visual Studio for Mac 生成简单的 .NET Core 控制台应用。
@@ -91,6 +86,10 @@ ms.locfileid: "30957641"
 **[使用 Visual Studio for Mac 在 macOS 上构建完整的 .NET Core 解决方案](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
 本教程演示了如何构建包含可重用的库和单元测试的的完整 .NET Core 解决方案。
+
+**[创建支持插件的 .NET Core 应用程序](../core/tutorials/creating-app-with-plugin-support.md)**
+
+本教程演示了如何在 .NET Core 上构建支持插件基础结构的简单应用程序。 可在 GitHub 上的 dotnet/samples 存储库中找到[完整示例](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)。
 
 ## <a name="deploying-to-containers"></a>部署到容器
 
@@ -113,6 +112,6 @@ ms.locfileid: "30957641"
 1. 在存储库的文件夹中导航到示例的位置。 当你点击示例链接时，示例位置的相对路径将显示在浏览器的地址栏中。
 1. 要运行示例，你有多个选择：
    * 使用 [dotnet CLI 工具](../core/tools/index.md)：在控制台窗口中，导航到示例的文件夹，然后使用 dotnet CLI 命令。
-   * 使用 [Visual Studio ](https://www.visualstudio.com/) 或 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)：从菜单栏中依次选择“文件”>“打开”>“项目/解决方案”来打开示例，导航到示例项目文件夹，然后选择项目文件（*.csproj* 或 *.fsproj*）。
+   * 退出 [Visual Studio](https://visualstudio.microsoft.com/) 或 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)：从菜单栏中依次选择“文件”>“打开”>“项目/解决方案”来打开示例，导航到示例项目文件夹，然后选择项目文件（.csproj 或 .fsproj）。
    * 使用 [Visual Studio Code](https://code.visualstudio.com/)：从菜单栏中选择“文件”>“打开文件夹”来打开示例，然后选择示例的项目文件夹。
    * 使用支持 .NET Core 项目的其他 IDE。

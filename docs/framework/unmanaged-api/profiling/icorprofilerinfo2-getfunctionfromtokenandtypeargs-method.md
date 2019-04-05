@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 343cedcf26112f0f2bcc7943ea5ee9f302329a15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c069cb375e9cb6011e7e91041d13736f5ef88dfd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457472"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482439"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 方法
-获取`FunctionID`通过使用指定元数据标记，包含类的函数和`ClassID`值的任何类型参数。  
+获取`FunctionID`通过使用指定的元数据令牌，其中包含类的函数和`ClassID`的任何值类型参数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,41 +39,41 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
     [out] FunctionID* pFunctionID);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `moduleID`  
- [in]函数所在模块的 ID。  
+ [in]该函数所在的模块的 ID。  
   
  `funcDef`  
- [in]`mdMethodDef`引用该函数的元数据标记。  
+ [in]`mdMethodDef`引用了函数的元数据标记。  
   
  `classId`  
  [in]函数的包含类的 ID。  
   
  `cTypeArgs`  
- [in]给定的函数的类型参数的数目。 此值必须为零的非泛型函数。  
+ [in]对于给定的函数的类型参数的数目。 此值必须为零的非泛型函数。  
   
  `typeArgs`  
- [in]数组`ClassID`值，其中每个是函数的自变量。 值`typeArgs`时可以为 NULL`cTypeArgs`设置为零。  
+ [in]一个数组`ClassID`值，其中每个是函数的参数。 值`typeArgs`可以为 NULL，如果`cTypeArgs`设置为零。  
   
  `pFunctionID`  
- [out]指向的指针`FunctionID`指定函数。  
+ [out]一个指向`FunctionID`指定函数。  
   
 ## <a name="remarks"></a>备注  
- 调用`GetFunctionFromTokenAndTypeArgs`方法替换`mdMethodRef`元数据，而不是`mdMethodDef`元数据的令牌可以具有不可预知的结果。 调用方应解决`mdMethodRef`到`mdMethodDef`时将其传递。  
+ 调用`GetFunctionFromTokenAndTypeArgs`方法替换`mdMethodRef`元数据，而不是`mdMethodDef`元数据标记可以具有不可预知的结果。 调用方应解决`mdMethodRef`到`mdMethodDef`时将其传递。  
   
- 如果尚未加载该函数，则调用`GetFunctionFromTokenAndTypeArgs`将导致加载发生，这是一种危险操作在多种上下文中的。 例如，在模块或类型的加载过程中调用此方法在运行时尝试循环加载某些内容导致无限循环。  
+ 如果尚未加载该函数，则调用`GetFunctionFromTokenAndTypeArgs`会导致加载发生，这是一种危险操作在多种上下文中的。 例如，在模块或类型的加载过程中调用此方法在运行时尝试循环加载某些内容导致无限循环。  
   
- 一般情况下，使用`GetFunctionFromTokenAndTypeArgs`不建议这样做。 如果探查器感兴趣的特定函数的事件，它们应将存储`ModuleID`和`mdMethodDef`该函数，并使用[icorprofilerinfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)以检查是否给定`FunctionID`是所需的函数。  
+ 一般情况下，使用`GetFunctionFromTokenAndTypeArgs`不建议这样做。 如果探查器是对特定函数的事件感兴趣，它们应存储`ModuleID`并`mdMethodDef`该函数，并使用[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)若要检查是否给定`FunctionID`是所需的函数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

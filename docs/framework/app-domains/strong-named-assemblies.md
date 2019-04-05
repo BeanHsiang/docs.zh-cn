@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 681938b4893e9fe68caa142898db9b867b481bf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657293"
 ---
 # <a name="strong-named-assemblies"></a>具有强名称的程序集
 强命名一个程序集可为程序集创建唯一的标识，并且可以防止程序集冲突。  
@@ -20,7 +20,7 @@ ms.locfileid: "50190900"
 ## <a name="what-makes-a-strong-named-assembly"></a>如何创建强名称程序集？  
  强名称程序集通过使用私钥以及程序集本身生成，此私钥对应于与该程序集一起分发的公钥。 程序集包括程序集清单，此清单包含所有组成该程序集的文件的名称和哈希。 具有相同强名称的程序集应该完全相同。  
   
- 你可以使用 Visual Studio 或命令行工具强命名程序集。 有关详细信息，请参阅[如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)或 [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)。  
+ 你可以使用 Visual Studio 或命令行工具强命名程序集。 有关详细信息，请参阅[如何：使用强名称](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)或 [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)为程序集签名。  
   
  在创建强名称程序集时，它包含程序集的简单文本名称、版本号、可选区域性信息、数字签名，以及对应于用于签名的私钥的公钥。  
   
@@ -42,8 +42,8 @@ ms.locfileid: "50190900"
   
  如果你是开源开发人员且希望利用强命名程序集的标识优势，不妨签入与源代码管理系统内程序集相关联的私钥。  
   
-## <a name="see-also"></a>请参阅  
-- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)  
-- [如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
-- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+## <a name="see-also"></a>请参阅
+- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)
+- [如何：使用强名称为程序集签名](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 64a0b8d0d0d9f0cc2bc2a841b999af58f29b4f75
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196000"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718046"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows 窗体设计器中的设计时错误
 本主题说明 Windows 窗体设计器加载失败时出现在 Microsoft Visual Studio 中的设计时错误列表的含义和用法。 如果出现此错误列表，则不应将其视为设计器中的 Bug，而应作为纠正代码中的错误的辅助手段。  
@@ -52,8 +52,8 @@ ms.locfileid: "47196000"
 ### <a name="ignore-and-continue"></a>忽略并继续  
  可选择忽略错误条件并继续加载设计器。 选择此操作可能会导致意外行为。 例如，控件可能不会显示在设计图面上。  
   
-## <a name="see-also"></a>请参阅  
- [设计时开发故障排除](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
- [控件和组件创作疑难解答](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
- [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Windows 窗体设计器错误信息](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+## <a name="see-also"></a>请参阅
+- [设计时开发故障排除](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
+- [控件和组件创作疑难解答](troubleshooting-control-and-component-authoring.md)
+- [设计时开发 Windows 窗体控件](developing-windows-forms-controls-at-design-time.md)
+- [Windows 窗体设计器错误信息](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))

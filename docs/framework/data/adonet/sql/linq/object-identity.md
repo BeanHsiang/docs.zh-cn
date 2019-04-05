@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: 930295073f9f75cf4101bf6fa3834561a4db8f58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e1db49f534b0f82bf54dc5cedaf46cef683363c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640978"
 ---
 # <a name="object-identity"></a>对象标识
 运行库中的对象具有唯一标识。 引用同一对象的两个变量实际上是引用此对象的同一实例。 因为这一事实，您通过一个变量做出更改后，立即就可以通过另一个变量看到这些更改。  
@@ -21,7 +21,7 @@ ms.locfileid: "33358464"
   
  对于对象，您的期望则大不一样。 您期望在您反复向 <xref:System.Data.Linq.DataContext> 索取相同的信息时，它实际上会为您提供同一对象实例。 您之所以期望这种行为，是因为对象对您的应用程序而言有着特殊的含义，您期望它们的行为像实物一样。 您将它们设计为层次结构或关系图。 您希望像检索实物一样检索它们，而不希望仅仅因为您多次索要同一内容而收到大量的复制实例。  
   
- 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，<xref:System.Data.Linq.DataContext> 管理对象标识。 只要您从数据库中检索新行，该行就会由其主键记录到标识表中，并且会创建一个新的对象。 只要您检索该行，就会将原始对象实例传递回应用程序。 通过这种方式，<xref:System.Data.Linq.DataContext> 将数据库看到的标识（即主键）的概念转换成相应语言看到的标识（即实例）的概念。 应用程序只看到处于第一次检索时的状态的对象。 新数据如果不同，则会被丢弃。 有关详细信息，请参阅[从标识缓存中检索对象](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)。  
+ 在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，<xref:System.Data.Linq.DataContext> 管理对象标识。 只要您从数据库中检索新行，该行就会由其主键记录到标识表中，并且会创建一个新的对象。 只要您检索该行，就会将原始对象实例传递回应用程序。 通过这种方式，<xref:System.Data.Linq.DataContext> 将数据库看到的标识（即主键）的概念转换成相应语言看到的标识（即实例）的概念。 应用程序只看到处于第一次检索时的状态的对象。 新数据如果不同，则会被丢弃。 有关详细信息，请参阅[从实体缓存检索对象](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用此方法来管理本地对象的完整性，以支持开放式更新。 由于在最初创建对象后唯一发生的更改是由应用程序做出的，因此应用程序的意向是很明确的。 如果在中间阶段外部某一方做了更改，则在调用 `SubmitChanges()` 时会识别出这些更改。  
   
@@ -42,5 +42,5 @@ ms.locfileid: "33358464"
  [!code-csharp[DLinqObjectIdentity#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#2)]
  [!code-vb[DLinqObjectIdentity#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#2)]  
   
-## <a name="see-also"></a>请参阅  
- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>请参阅
+- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

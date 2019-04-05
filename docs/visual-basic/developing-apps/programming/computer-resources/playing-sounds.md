@@ -11,12 +11,12 @@ helpviewer_keywords:
 - sounds, background
 - playing sounds
 ms.assetid: f0d9e4ab-57c7-47b6-86d3-99ff07078040
-ms.openlocfilehash: decd845fde5bd4fad702cfe05fd63fcc180b63a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56b156545fac2aba09d32139fdaad26da711e018
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588453"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966211"
 ---
 # <a name="playing-sounds-visual-basic"></a>播放声音 (Visual Basic)
 `My.Computer.Audio` 对象提供用于播放声音的方法。  
@@ -26,20 +26,20 @@ ms.locfileid: "33588453"
   
  下例中使用 `My.Computer.Audio.Play` 方法播放声音。 指定 `AudioPlayMode.WaitToComplete` 时，`My.Computer.Audio.Play` 将等待声音播放完毕，然后再调用代码继续。 使用此示例时，应确保文件名可指代计算机中的 .wav 声音文件  
   
- [!code-vb[VbVbalrMyComputer#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_1.vb)]  
+ [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
   
  下例中使用 `My.Computer.Audio.Play` 方法播放声音。 使用此示例时，应确保应用程序资源包含名为 Waterfall 的 .wav 声音文件。  
   
- [!code-vb[VbVbalrMyComputer#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_2.vb)]  
+ [!code-vb[VbVbalrMyComputer#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#16)]  
   
 ## <a name="playing-looping-sounds"></a>播放循环声音  
  在下例中，指定 `PlayMode.BackgroundLoop` 时，`My.Computer.Audio.Play` 方法将播放指定的背景声音。 使用此示例时，应确保文件名可指代计算机中的 .wav 声音文件。  
   
- [!code-vb[VbVbalrMyComputer#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_3.vb)]  
+ [!code-vb[VbVbalrMyComputer#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#11)]  
   
  在下例中，指定 `PlayMode.BackgroundLoop` 时，`My.Computer.Audio.Play` 方法将播放指定的背景声音。 使用此示例时，应确保应用程序资源包含名为 Waterfall 的 .wav 声音文件。  
   
- [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
+ [!code-vb[VbVbalrMyComputer#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#12)]  
   
  前面的代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，它位于“Windows 窗体应用程序”>“声音”中。 有关详细信息，请参阅[代码片段](/visualstudio/ide/code-snippets)。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "33588453"
   
  下面的示例将停止播放背景声音。  
   
- [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
+ [!code-vb[VbVbalrMyComputer#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#18)]  
   
  前面的代码示例也可作为 IntelliSense 代码片段。 在代码片段选取器中，它位于“Windows 窗体应用程序”>“声音”中。 有关详细信息，请参阅[代码片段](/visualstudio/ide/code-snippets)。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "33588453"
   
  下例使用 `My.Computer.Audio.PlaySystemSound` 方法播放系统声音。  
   
- [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_6.vb)]  
+ [!code-vb[VbVbalrMyComputer#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.Devices.Audio>  
- <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>  
- <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>  
- <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A>  
- <xref:Microsoft.VisualBasic.AudioPlayMode>
+## <a name="see-also"></a>请参阅
+- <xref:Microsoft.VisualBasic.Devices.Audio>
+- <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>
+- <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>
+- <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A>
+- <xref:Microsoft.VisualBasic.AudioPlayMode>

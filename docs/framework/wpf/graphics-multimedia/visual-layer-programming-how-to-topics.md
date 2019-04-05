@@ -8,27 +8,27 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: e4328e1628028be72d10ee2a59c3f53b18bd6580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0328b5da837fa11a6c2b7dba9ae761a1e88729bb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561971"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376928"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>可视化层编程帮助主题
-此部分中的主题演示如何使用可视化层进行命中测试和低级别的组合。  
+在本部分中的主题演示如何使用可视化层进行命中测试和低级别的组合。  
   
 ## <a name="in-this-section"></a>本节内容  
- [获取视觉对象偏移](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [枚举视觉对象的绘图内容](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [对视觉对象中的几何图形进行命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [将几何图形用作参数的命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [使用 Win32 宿主容器进行命中测试](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [使用 CompositionTarget 按每帧间隔呈现](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+ [获取视觉对象偏移](how-to-get-the-offset-of-a-visual.md)  
+ [枚举视觉对象的绘图内容](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [对视觉对象中的几何图形进行命中测试](how-to-hit-test-geometry-in-a-visual.md)  
+ [将几何图形用作参数的命中测试](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [使用 Win32 宿主容器进行命中测试](how-to-hit-test-using-a-win32-host-container.md)  
+ [使用 CompositionTarget 按每帧间隔呈现](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
+- [图形和多媒体](index.md)

@@ -2,12 +2,12 @@
 title: 使用 DependentTransaction 管理并发
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 5bcf321c2c09411ddb720e2cb4be1ddb076bbe6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363199"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664455"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>使用 DependentTransaction 管理并发
 <xref:System.Transactions.Transaction> 对象是使用 <xref:System.Transactions.Transaction.DependentClone%2A> 方法创建的。 该对象的唯一目的是保证当某他一些代码段（如辅助线程）还在事务上工作时，不能提交事务。 当在克隆的事务中执行的工作最终完成并可以提交时，该对象可以使用 <xref:System.Transactions.DependentTransaction.Complete%2A> 方法通知事务的创建者。 因而您就可以保持数据的一致性和正确性。  
@@ -70,7 +70,7 @@ using(TransactionScope scope = new TransactionScope())
   
  `ThreadMethod` 方法将在新线程上执行。 客户端会启动一个新线程，以将该依赖事务作为 `ThreadMethod` 参数传递。  
   
- 由于依赖事务是用 <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> 创建的，因此应保证第二个线程上的所有事务工作都完成并对该依赖事务调用 <xref:System.Transactions.DependentTransaction.Complete%2A> 后才能提交事务。 这意味着，如果客户端的范围结束 (当它尝试释放事务对象的末尾**使用**语句) 之前的新的线程调用<xref:System.Transactions.DependentTransaction.Complete%2A>对依赖的事务，客户端代码阻止，直到<xref:System.Transactions.DependentTransaction.Complete%2A>依赖项上调用。 这样，事务就可完成提交或中止。  
+ 由于依赖事务是用 <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> 创建的，因此应保证第二个线程上的所有事务工作都完成并对该依赖事务调用 <xref:System.Transactions.DependentTransaction.Complete%2A> 后才能提交事务。 这意味着，如果客户端的范围结束 (当它尝试释放事务对象的末尾**使用**语句) 之前的新的线程调用<xref:System.Transactions.DependentTransaction.Complete%2A>该依赖事务，客户端代码阻止，直到<xref:System.Transactions.DependentTransaction.Complete%2A>依赖项调用。 这样，事务就可完成提交或中止。  
   
 ## <a name="concurrency-issues"></a>并发问题  
  使用 <xref:System.Transactions.DependentTransaction> 类时，存在其他一些需要了解的并发问题。  
@@ -81,5 +81,5 @@ using(TransactionScope scope = new TransactionScope())
   
 -   如果辅助线程生成新的辅助线程，请确保利用现有的依赖克隆中再创建一个依赖的克隆，然后将后者传递给该新线程。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Transactions.DependentTransaction>
+## <a name="see-also"></a>请参阅
+- <xref:System.Transactions.DependentTransaction>

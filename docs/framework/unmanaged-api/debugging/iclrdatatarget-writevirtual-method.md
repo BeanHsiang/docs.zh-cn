@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e55bc18c7a41e235d1ba6274067c45c26dc7262a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a1d9fdef9d183a03fd7f335a13683e1d1a3f95c8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405443"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485715"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual 方法
-从指定的缓冲区写入指定的虚拟内存地址的数据。  
+将数据从指定的缓冲区写入到指定的虚拟内存地址。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +39,9 @@ HRESULT WriteVirtual (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `address`  
- [in]将存储的虚拟内存地址 CLRDATA_ADDRESS。  
+ [in]存储的虚拟内存地址 CLRDATA_ADDRESS。  
   
  `buffer`  
  [in]指向存储的数据要写入的缓冲区的指针。  
@@ -53,13 +53,13 @@ HRESULT WriteVirtual (
  [out]指向实际写入的字节数的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl、 ClrData.h  
+ **标头：** ClrData.idl, ClrData.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICLRDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d039e591e1f61a7be18dc224845f82b107d918f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 04ed4dcaab8d39d8a34cadef8285ea8307f198c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659756"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的类型转换
 <a name="top"></a>每个值都有与之关联的类型，此类型定义分配给该值的空间大小、它可以具有的可能值的范围以及它可以提供的成员等属性。 许多值可以表示为多种类型。 例如，值 4 可以表示为整数或浮点值。 类型转换可以创建一个等同于旧类型值的新类型值，但却不必保留原始对象的恒等值（或精确值）。  
@@ -208,6 +208,6 @@ ms.locfileid: "45617923"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Convert?displayProperty=nameWithType>  
-- <xref:System.IConvertible>  
+- <xref:System.Convert?displayProperty=nameWithType>
+- <xref:System.IConvertible>
 - [类型转换表](../../../docs/standard/base-types/conversion-tables.md)

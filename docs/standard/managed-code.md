@@ -1,17 +1,15 @@
 ---
 title: 什么是托管代码？
 description: 了解托管代码为何是其执行由运行时（公共语言运行时 (CLR)）管理的代码。
-author: blackdwarf
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 268ffe9c5cbbc9490ed91f2b4c28f8f876b8ff5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9133859bd9c999e076effcf0d4d631c59db02f33
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574538"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678753"
 ---
 # <a name="what-is-managed-code"></a>什么是“托管代码”？
 
@@ -39,6 +37,6 @@ ms.locfileid: "33574538"
 
 ## <a name="more-resources"></a>更多资源
 
-*   [.NET Framework 概念性概述](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [不安全代码和指针](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
-*   [互操作性（C# 编程指南）](https://msdn.microsoft.com/library/ms173184.aspx)
+* [.NET Framework 概述](../framework/get-started/overview.md)
+* [不安全代码和指针](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [本机互操作性](./native-interop/index.md)

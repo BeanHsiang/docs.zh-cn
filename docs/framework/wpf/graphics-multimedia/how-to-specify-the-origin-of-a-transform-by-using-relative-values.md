@@ -6,40 +6,40 @@ helpviewer_keywords:
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: ff263af8fbedeec483eee213c07dd4ec169805de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdcc17e2d9bf68170c10dd8e35670f3e072a527c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561402"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352563"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>如何：使用相对值指定变换原点
-此示例演示如何使用相对的值来指定的源的<xref:System.Windows.UIElement.RenderTransform%2A>，可应用于<xref:System.Windows.FrameworkElement>。  
+此示例演示如何使用相对值来指定原点<xref:System.Windows.UIElement.RenderTransform%2A>应用于<xref:System.Windows.FrameworkElement>。  
   
- 当旋转、 缩放或扭曲<xref:System.Windows.FrameworkElement>使用<xref:System.Windows.UIElement.RenderTransform%2A>属性，默认设置适用于元素左上角的转换。 如果要从元素中心进行旋转、缩放或扭曲，则可以通过将转换中心设置为元素中心来进行补偿。 但是，该解决方案要求你知道元素的大小。 将转换应用于元素的中心的更简单的方法是将设置其<xref:System.Windows.UIElement.RenderTransformOrigin%2A>属性设置为 （0.5，0.5），而不是转换本身上设置中心值。  
+ 当旋转、 缩放或扭曲<xref:System.Windows.FrameworkElement>通过使用<xref:System.Windows.UIElement.RenderTransform%2A>属性，默认设置适用于元素的左上角的转换。 如果要从元素中心进行旋转、缩放或扭曲，则可以通过将转换中心设置为元素中心来进行补偿。 但是，该解决方案要求你知道元素的大小。 将转换应用于元素的中心的更简单的方法是设置其<xref:System.Windows.UIElement.RenderTransformOrigin%2A>属性设置为 （0.5，0.5），而不是对转换本身设置中心值。  
   
 ## <a name="example"></a>示例  
  下面的示例使用<xref:System.Windows.Media.RotateTransform>旋转<xref:System.Windows.Controls.Button>顺时针旋转 45 度。 由于该示例未指定中心，按钮将围绕点 (0, 0)（即按钮的左上角）旋转。 <xref:System.Windows.Media.RotateTransform>应用于<xref:System.Windows.UIElement.RenderTransform%2A>属性。  
   
  下图显示了以下示例的转换结果。  
   
- ![使用 rendertransform 变换的按钮](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+ ![使用 RenderTransform 转换的按钮](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
 使用 RenderTransform 属性顺时针旋转 45 度  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
- 下面的示例还使用<xref:System.Windows.Media.RotateTransform>旋转<xref:System.Windows.Controls.Button>45 度沿顺时针方向; 但是，此示例设置<xref:System.Windows.UIElement.RenderTransformOrigin%2A>的按钮为 （0.5，0.5）。 因此，将在按钮的中心（而不是其左上角）应用旋转。  
+ 下面的示例也使用<xref:System.Windows.Media.RotateTransform>旋转<xref:System.Windows.Controls.Button>45 度顺时针旋转; 但是，此示例设置<xref:System.Windows.UIElement.RenderTransformOrigin%2A>到按钮的 （0.5，0.5）。 因此，将在按钮的中心（而不是其左上角）应用旋转。  
   
  下图显示了以下示例的转换结果。  
   
- ![围绕中心变换的按钮](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+ ![围绕中心转换后的按钮](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
 将 RenderTransform 属性与值为 (0.5, 0.5) 的 RenderTransformOrigin 结合使用以旋转 45 度  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
- 有关转换的详细信息<xref:System.Windows.FrameworkElement>对象，请参阅[转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)。  
+ 有关转换的详细信息<xref:System.Windows.FrameworkElement>对象，请参阅[转换概述](transforms-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Transform>  
- [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Transform>
+- [转换概述](transforms-overview.md)
+- [帮助主题](transformations-how-to-topics.md)

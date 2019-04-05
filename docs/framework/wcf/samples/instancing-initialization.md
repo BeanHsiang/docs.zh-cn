@@ -2,12 +2,12 @@
 title: 实例化初始化
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 651029783f4632fc0b404bea8df8bd3790622bfd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ec44276d56b0a914c742a5a709f2207f8111e57b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516133"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827908"
 ---
 # <a name="instancing-initialization"></a>实例化初始化
 此示例扩展[池](../../../../docs/framework/wcf/samples/pooling.md)示例通过定义一个接口， `IObjectControl`，这通过激活和停用它来自定义对象的初始化。 客户端调用向池中返回对象以及不向池中返回对象的方法。  
@@ -23,9 +23,9 @@ ms.locfileid: "43516133"
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
  在 WCF 中，EndpointDispatcher 通过来创建服务类的实例的实例提供程序实现<xref:System.ServiceModel.Dispatcher.IInstanceProvider>接口。 此接口只有两个方法：  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>：当消息到达时，Dispatcher 调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法，以创建服务类的实例来处理该消息。 调用此方法的频率由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性决定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性设置为 <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>，则创建服务类的一个新实例来处理到达的每个消息，因此每当有消息到达时，都会调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>。  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>：当消息到达时，调度程序调用<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>方法来创建服务类来处理该消息的实例。 调用此方法的频率由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性决定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性设置为 <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>，则创建服务类的一个新实例来处理到达的每个消息，因此每当有消息到达时，都会调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>。  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>：当服务实例处理完消息后，EndpointDispatcher 将调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A> 方法。 与 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法中一样，调用此方法的频率由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性决定。  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>：当服务实例处理完该消息时，EndpointDispatcher 将调用<xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>方法。 与 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法中一样，调用此方法的频率由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 属性决定。  
   
 ## <a name="the-object-pool"></a>对象池  
  `ObjectPoolInstanceProvider` 类包含对象池的实现。 此类实现 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 接口，以便与服务模型层进行交互。 当 EndpointDispatcher 调用 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法时，自定义实现将在内存中的池内寻找现有对象，而不是创建新的实例。 如果找到一个对象，则返回该对象。 否则，`ObjectPoolInstanceProvider` 则检查 `ActiveObjectsCount` 属性（从池中返回的对象数）是否已达到最大池大小。 如果没有达到最大池大小，则创建一个新实例并将其返回调用方，而 `ActiveObjectsCount` 则相应地增加。 否则，对象创建请求将排队，等待配置的时间段。 下面的示例代码演示了 `GetObjectFromThePool` 的实现。  
@@ -138,11 +138,11 @@ if (activeObjectsCount == 0)
   
 -   服务行为：这些行为允许自定义整个服务运行时。  
   
--   终结点行为：这些行为允许自定义特定的服务终结点，包括 EndpointDispatcher。  
+-   终结点行为：这些行为允许自定义特定服务终结点，包括 EndpointDispatcher。  
   
--   协定行为：这些行为允许在客户端或服务上分别自定义 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 或 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 类。  
+-   协定行为：这些行为允许自定义<xref:System.ServiceModel.Dispatcher.ClientRuntime>或<xref:System.ServiceModel.Dispatcher.DispatchRuntime>分别是在客户端或服务类。  
   
--   操作行为：这些行为允许在客户端或服务上分别自定义 <xref:System.ServiceModel.Dispatcher.ClientOperation> 或 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 类。  
+-   操作行为：这些行为允许自定义<xref:System.ServiceModel.Dispatcher.ClientOperation>或<xref:System.ServiceModel.Dispatcher.DispatchOperation>分别是在客户端或服务类。  
   
  为了实现对象池扩展，可以创建终结点行为或服务行为。 在此示例中，我们使用了服务行为，它使服务的每个终结点都具有对象池能力。 服务行为是通过实现 <xref:System.ServiceModel.Description.IServiceBehavior> 接口创建的。 可以通过多种方式让 ServiceModel 注意到自定义行为：  
   
@@ -158,7 +158,7 @@ if (activeObjectsCount == 0)
   
 -   `Description`：此参数提供整个服务的服务说明。 它可用于检查有关服务的终结点、协定、绑定和其他关联数据的说明数据。  
   
--   `ServiceHostBase`：此参数提供当前正在初始化的 <xref:System.ServiceModel.ServiceHostBase>。  
+-   `ServiceHostBase`：此参数提供<xref:System.ServiceModel.ServiceHostBase>，当前正在初始化。  
   
  在自定义 <xref:System.ServiceModel.Description.IServiceBehavior> 实现中，会实例化 `ObjectPoolInstanceProvider` 的一个新实例，并将其分配给附加到 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 的每个 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 的 <xref:System.ServiceModel.ServiceHostBase> 属性。  
   
@@ -188,7 +188,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
 }   
 ```  
   
- 除了 <xref:System.ServiceModel.Description.IServiceBehavior> 实现外，`ObjectPoolingAttribute` 类有多个可以使用属性参数自定义对象池的成员。 这些成员包括 `MaxSize`、`MinSize`、`Enabled` 和 `CreationTimeout`，用于匹配 .NET 企业服务提供的对象池功能集。  
+ 除了 <xref:System.ServiceModel.Description.IServiceBehavior> 实现外，`ObjectPoolingAttribute` 类有多个可以使用属性自变量自定义对象池的成员。 这些成员包括 `MaxSize`、`MinSize`、`Enabled` 和 `CreationTimeout`，用于匹配 .NET 企业服务提供的对象池功能集。  
   
  对象池行为现在的 WCF 服务通过对使用新创建的自定义的服务实现进行批注添加`ObjectPooling`属性。  
   
@@ -265,4 +265,3 @@ else if (pool.Count < minPoolSize)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   
-## <a name="see-also"></a>请参阅

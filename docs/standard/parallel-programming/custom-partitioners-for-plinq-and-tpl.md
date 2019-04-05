@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45964828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698886"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ 和 TPL 的自定义分区程序
 若要并行执行对数据源的操作，关键步骤之一是，将数据源分区成多个部分，以供多个线程同时访问。 PLINQ 和任务并行库 (TPL) 提供了默认分区程序，在用户编写并行查询或 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环时透明运行。 对于更高级的方案，可以插入自己的分区程序。  
@@ -23,7 +23,7 @@ ms.locfileid: "45964828"
 ## <a name="kinds-of-partitioning"></a>分区的种类  
  对数据源进行分区的方法有很多种。 最高效的方法是，多个线程一起协作，共同处理原始源序列，而不是将数据源实际分割成多个子序列。 对于长度提前已知的数组和其他索引源（如 <xref:System.Collections.IList> 集合），范围分区是最简单的分区种类。 每个线程都会收到唯一起始和结束索引，这样就可以处理范围内的数据源，而又不会覆盖其他任何线程或被其他任何线程覆盖。 范围分区涉及的唯一开销是，创建范围这项初始工作；之后就无需执行其他任何同步工作了。 因此，只要工作负载是均分的，就可以确保实现良好性能。 范围分区的缺点是，即使某线程提前完成，也无法帮助其他线程完成工作。  
   
- 对于长度未知的链接列表或其他集合，可以使用区块分区。 在区块分区中，并行循环或查询中的每个线程或任务都会使用并处理一个区块中的若干源元素，再返回检索其他元素。 分区程序可确保所有元素均已分发，且没有重复项。 区块可为任意大小。 例如，[如何：实现动态分区](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)中展示的分区程序创建的区块就只包含一个元素。 只要区块不是太大，这类分区就一定会执行负载均衡，因为向线程分配的元素不是预先确定的。 不过，每当线程需要获取其他区块时，分区程序就要承担一次同步开销。 在这种情况下产生的同步量与区块大小成反比。  
+ 对于长度未知的链接列表或其他集合，可以使用区块分区。 在区块分区中，并行循环或查询中的每个线程或任务都会使用并处理一个区块中的若干源元素，再返回检索其他元素。 分区程序可确保所有元素均已分发，且没有重复项。 区块可为任意大小。 例如，[如何：实现动态分区](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)中所述的分区程序会创建只包含一个元素的区块。 只要区块不是太大，这类分区就一定会执行负载均衡，因为向线程分配的元素不是预先确定的。 不过，每当线程需要获取其他区块时，分区程序就要承担一次同步开销。 在这种情况下产生的同步量与区块大小成反比。  
   
  通常情况下，范围分区只有在以下情况下才会更快：委托的执行时间为小到中等，数据源有大量元素，且每个分区的工作总量大致相等。 因此，大多数情况下，区块分区通常更快。 如果数据源有少量元素或委托的执行时间较长，那么区块分区和范围分区的性能大致相同。  
   
@@ -122,6 +122,6 @@ ms.locfileid: "45964828"
   
 ## <a name="see-also"></a>请参阅
 
-- [并行编程](../../../docs/standard/parallel-programming/index.md)  
-- [如何：实现动态分区](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
+- [并行编程](../../../docs/standard/parallel-programming/index.md)
+- [如何：实现动态分区](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
 - [如何：实现静态分区程序](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

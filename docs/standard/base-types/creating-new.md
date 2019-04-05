@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 477791a0d62186b6cb88d0fae3aa9b4e38b3ef35
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659483"
 ---
 # <a name="creating-new-strings-in-net"></a>新建 .NET 中的字符串
 借助 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，可以使用简单的分配来创建字符串，也可以重载类构造函数，以支持使用许多不同参数来创建字符串。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 还在 <xref:System.String?displayProperty=nameWithType> 类中提供了多个方法，可通过合并多个字符串、字符串数组或对象来新建字符串对象。  
@@ -82,5 +82,5 @@ ms.locfileid: "43870105"
   
 ## <a name="see-also"></a>请参阅
 
-- [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)  
+- [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)
 - [复合格式设置](../../../docs/standard/base-types/composite-formatting.md)

@@ -7,18 +7,16 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 44f4befc03c886e51a19a44f45f7cbdc20f60fe3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: dc77d3798c9a79b5becf28e55c9f7e3be23eb352
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209908"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677820"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>UI 自动化控件模式帮助主题
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本部分包含有关实现控件模式的详细信息。  
   
@@ -27,4 +25,4 @@ ms.locfileid: "47209908"
  [获取受支持的 UI 自动化控件模式](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
  [使用 UI 自动化获取复选框的切换状态](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
  [使用 UI 自动化调用控件](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [移动 UI 自动化元素](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+ [Move a UI Automation Element](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)

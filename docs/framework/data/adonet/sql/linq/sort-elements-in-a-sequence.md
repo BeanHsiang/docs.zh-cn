@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 00c7a7a62890aced4c480e2653084c0b7cfe7f45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59384900226fbbcfc879650402b1a5df80b69cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596418"
 ---
 # <a name="sort-elements-in-a-sequence"></a>在序列中对元素进行排序
 使用 <xref:System.Linq.Enumerable.OrderBy%2A> 运算符可按一个或多个键对序列进行排序。  
@@ -88,6 +88,6 @@ ms.locfileid: "33361949"
   
  `Carnarvon Tigers`  
   
-## <a name="see-also"></a>请参阅  
- [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a>请参阅
+- [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

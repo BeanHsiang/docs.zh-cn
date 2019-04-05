@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4c1cbf075ef96073061679b6d062075490f5e4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aebcd2d2f2387f478c36e84dad82d90d4d70d68e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554668"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>exceptionSwallowedOnCallFromCom MDA
 如果在通过不具有非托管 HRESULT 返回类型的方法从 COM 中调用公共语言运行时 (CLR) 代码时，引发了一个异常，将激活 `exceptionSwallowedOnCallFromCOM` 托管调试助手 (MDA)。  
@@ -46,7 +46,7 @@ ms.locfileid: "33390603"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)

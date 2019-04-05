@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5869eb16bd768d58a6f27a83f2d8d51914a8aed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ab94bf7c55d4c19a4f3672ed86808575b8a2239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536904"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind 枚举
-包含值，用于描述一个可移植可执行 (PE) 文件，从调用返回[imetadataimport2:: Getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)。  
+包含值，用于描述一个可移植可执行 (PE) 文件，如从调用返回[IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,20 +47,20 @@ typedef enum CorPEKind {
 |------------|-----------------|  
 |`peNot`|指示这不是 PE 文件。|  
 |`peILOnly`|指示此 PE 文件包含仅托管代码。|  
-|`pe32BitRequired`|指示此 PE 文件执行 Win32 调用。|  
-|`pe32Plus`|指示此 PE 文件，在 64 位平台上运行。|  
+|`pe32BitRequired`|指示此 PE 文件进行 Win32 调用。|  
+|`pe32Plus`|指示此 PE 文件在 64 位平台上运行。|  
 |`pe32Unmanaged`|指示此 PE 文件是本机代码。|  
-|pe32BitPreferred|指示此 PE 文件是以非特定于平台的以及更希望要加载在 32 位环境中。|  
+|pe32BitPreferred|指示此 PE 文件与平台无关，并且更适合于创建要在 32 位环境中加载。|  
   
 ## <a name="remarks"></a>备注  
- 按位组合，可以使用这些值。  
+ 按位组合中，可以使用这些值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

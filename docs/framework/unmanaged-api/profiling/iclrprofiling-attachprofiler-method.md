@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52e3498b54f90e7d9d1d1d79ae0817cca511af4e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459500"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468996"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 方法
 将指定的探查器附加到指定的进程中。  
@@ -39,7 +39,7 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwProfileeProcessID`  
  [in] 应附加探查器的进程的进程 ID。 在 64 位计算机上，被分析进程的位数必须匹配调用 `AttachProfiler` 的触发进程的位数。 如果调用 `AttachProfiler` 的用户帐户具有管理特权，则目标进程可能是系统上的任何进程。 否则，相同的用户帐户必须拥有目标进程。  
   
@@ -47,13 +47,15 @@ HRESULT AttachProfiler(
  [in] `AttachProfiler` 完成的持续时间（以毫秒为单位）。 触发器进程应传递一个特定探查器足以完成其初始化的已知超时。  
   
  `pClsidProfiler`  
- [in] 指向要加载的探查器 CLSID 的指针。 `AttachProfiler` 返回后，触发器进程可重用此内存。  
+ [in] 指向要加载的探查器 CLSID 的指针。 
+  `AttachProfiler` 返回后，触发器进程可重用此内存。  
   
  `wszProfilerPath`  
  [in] 要加载的探查器 DLL 文件的完整路径。 此字符串应包含不超过 260 个字符，包括 null 终止符。 如果 `wszProfilerPath` 为 null 或为空字符串，公共语言运行时 (CLR) 将通过在 `pClsidProfiler` 指向的 CLSID 的注册表中查找探查器的 DLL 文件的位置。  
   
  `pvClientData`  
- [in]指向要传递给探查器的数据的指针[icorprofilercallback3:: Initializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法。 `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。  
+ [in]指向要传递给探查器数据[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法。 
+  `AttachProfiler` 返回后，触发器进程可重用此内存。 如果 `pvClientData` 为 null，`cbClientData` 必须为 0（零）。  
   
  `cbClientData`  
  [in] `pvClientData` 指向的数据的大小（以字节为单位）。  
@@ -74,7 +76,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|尚未开始加载探查器，超时就已过期。 可重试附加操作。 当目标进程中的终结器运行时间长于超时值时，就会出现超时。|  
 |E_INVALIDARG|一个或多个参数具有无效值。|  
 |E_FAIL|出现其他未指定错误。|  
-|其他错误代码|如果探查器的[icorprofilercallback3:: Initializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法返回一个 HRESULT，指示失败，`AttachProfiler`返回相同的 HRESULT。 在这种情况下，E_NOTIMPL 将转换为 CORPROF_E_PROFILER_NOT_ATTACHABLE。|  
+|其他错误代码|如果探查器的[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法返回一个 HRESULT，指示失败，`AttachProfiler`返回相同的 HRESULT。 在这种情况下，E_NOTIMPL 将转换为 CORPROF_E_PROFILER_NOT_ATTACHABLE。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -82,16 +84,16 @@ HRESULT AttachProfiler(
  与 COM 约定一致，`AttachProfiler` 的调用方（例如，由探查器开发人员创作的触发器代码）将负责分配和释放 `pvClientData` 参数指向的数据的内存。 当 CLR 执行 `AttachProfiler` 调用时，会创建 `pvClientData` 指向的内存的副本，并将其传输到目标进程中。 当目标进程内部的 CLR 接收到自己的 `pvClientData` 块副本时，会通过 `InitializeForAttach` 方法将块传递给探查器，然后从目标进程释放其 `pvClientData` 块的副本。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerInfo3 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerInfo3 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)

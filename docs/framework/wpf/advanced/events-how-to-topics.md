@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
-ms.openlocfilehash: fea698dd137a0e5639e4777b85284beaf83ace1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543522"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370954"
 ---
 # <a name="events-how-to-topics"></a>事件帮助主题
-本部分中的主题介绍如何使用在 WPF 中的事件。  
+在本部分中的主题介绍如何在 WPF 中使用事件。  
   
 ## <a name="in-this-section"></a>本节内容  
- [使用代码添加事件处理程序](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [处理路由事件](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [创建自定义路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [在事件处理程序中查找源元素](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [为路由事件添加类处理](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+ [使用代码添加事件处理程序](how-to-add-an-event-handler-using-code.md)  
+ [处理路由事件](how-to-handle-a-routed-event.md)  
+ [创建自定义路由事件](how-to-create-a-custom-routed-event.md)  
+ [在事件处理程序中查找源元素](how-to-find-the-source-element-in-an-event-handler.md)  
+ [为路由事件添加类处理](how-to-add-class-handling-for-a-routed-event.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.RoutedEvent>  

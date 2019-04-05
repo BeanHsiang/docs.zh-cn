@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 8b072c739b56d191e79b4cc2eff195adfe9da2eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700944"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 类型不匹配
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以自动完成对象模型和 SQL Server 之间的大量转换。 不过，有一些情况会阻碍进行精确转换。 以下各部分将介绍公共语言运行库 (CLR) 类型与 SQL Server 数据库类型之间的主要不匹配。 你可以找到有关特定类型映射和在函数转换的更多详细信息[SQL CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)和[数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以自动完成对象模型和 SQL Server 之间的大量转换。 不过，有一些情况会阻碍进行精确转换。 以下各部分将介绍公共语言运行库 (CLR) 类型与 SQL Server 数据库类型之间的主要不匹配。 您可以找到有关特定类型映射和函数转换在更多详细信息[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)并[数据类型及函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
   
 ## <a name="data-types"></a>数据类型  
  将查询发送给数据库时和将结果发送回对象模型时，CLR 和 SQL Server 之间将发生转换。 例如，下面的 Transact-SQL 查询需要进行两次值转换：  
@@ -40,16 +40,16 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
 -   SQL Server 中的不匹配：  
   
-    -   **固定长度字符类型**。 TRANSACT-SQL 区分 Unicode 和非 Unicode 类别和每个类别中有三种不同类型： 固定长度`nchar` / `char`，可变长度`nvarchar` / `varchar`，和较大`ntext` / `text`。 固定长度字符类型可以映射到 CLR <xref:System.Char?displayProperty=nameWithType> 类型以检索字符，但在转换和行为方面不能真正对应于同一类型。  
+    -   **固定长度字符类型**。 TRANSACT-SQL 会区分 Unicode 和非 Unicode 类别并且每个类别有三个不同类型： 固定长度`nchar` / `char`，可变长度`nvarchar` / `varchar`，和较大`ntext` / `text`。 固定长度字符类型可以映射到 CLR <xref:System.Char?displayProperty=nameWithType> 类型以检索字符，但在转换和行为方面不能真正对应于同一类型。  
   
-    -   **位**。 尽管 `bit` 域与 `Nullable<Boolean>` 具有相同数目的值，但二者是不同的类型。 `Bit` 不带值`1`和`0`而不是`true` / `false`，和不能用作布尔表达式的等效项。  
+    -   **位**。 尽管 `bit` 域与 `Nullable<Boolean>` 具有相同数目的值，但二者是不同的类型。 `Bit` 接受的值`1`并`0`而不是`true` / `false`，并且不能用作布尔表达式的等效项。  
   
     -   **时间戳**。 与 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 类型不同，SQL Server `TIMESTAMP` 类型表示由数据库生成的 8 字节数字，它对于每次更新都是唯一的，而不是基于 <xref:System.DateTime> 值之间的差异。  
   
-    -   **Money**和**SmallMoney**。 这些类型可以映射到 <xref:System.Decimal>，但本质上是不同的类型，并且基于服务器的函数和转换也将它们视为不同的类型。  
+    -   **Money**并**SmallMoney**。 这些类型可以映射到 <xref:System.Decimal>，但本质上是不同的类型，并且基于服务器的函数和转换也将它们视为不同的类型。  
   
 ### <a name="multiple-mappings"></a>多重映射  
- 有很多可以映射到一种或多种 CLR 数据类型的 SQL Server 数据类型。 也有很多可以映射到一种或多种 SQL Server 类型的 CLR 类型。 虽然 LINQ to SQL 可能支持映射，但这并不意味着 CLR 与 SQL Server 之间映射的两种类型在精度、范围和语义上都完全匹配。 某些映射可能在以上任何或所有方面存在差异。 你可以在各种映射可能找到这些潜在的区别的详细信息[SQL CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。  
+ 有很多可以映射到一种或多种 CLR 数据类型的 SQL Server 数据类型。 也有很多可以映射到一种或多种 SQL Server 类型的 CLR 类型。 虽然 LINQ to SQL 可能支持映射，但这并不意味着 CLR 与 SQL Server 之间映射的两种类型在精度、范围和语义上都完全匹配。 某些映射可能在以上任何或所有方面存在差异。 您可以找到有关这些可能出现的差异的详细信息在各种映射可能性[SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。  
   
 ### <a name="user-defined-types"></a>用户定义类型  
  用户定义的 CLR 类型旨在帮助弥合类型系统之间的差异。 不过，这些类型也引起了与类型版本管理有关的值得注意的问题。 客户端上的版本更改可能无法与数据库服务器上存储的类型的更改相匹配。 任何此类更改都会导致另一个类型不匹配，体现在其类型语义不匹配，并且版本差距可能变得明显。 在后续版本中重构继承层次结构时，会发生更多的复杂问题。  
@@ -107,7 +107,7 @@ or col1 != col2
   
  在上例中，在生成 SQL 方面可能得出等效的行为，但是转换可能不会准确地反映您的意图。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不会施加 C#`null`或 Visual Basic`nothing`在 SQL 上的比较语义。 比较运算符在语法上被转换为其 SQL 等效项。 反映 SQL 语义的语义是由服务器或连接设置定义的。 在默认的 SQL Server 设置下，两个 null 值被视为不相等（尽管您可以更改设置以改变语义）。 无论如何，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在查询转换中不会考虑服务器设置。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不会施加C#`null`或 Visual Basic`nothing`在 SQL 上的比较语义。 比较运算符在语法上被转换为其 SQL 等效项。 反映 SQL 语义的语义是由服务器或连接设置定义的。 在默认的 SQL Server 设置下，两个 null 值被视为不相等（尽管您可以更改设置以改变语义）。 无论如何，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在查询转换中不会考虑服务器设置。  
   
  带有文本 `null` (`nothing`) 的比较被转换为相应的 SQL 版本（`is null` 或 `is not null`）。  
   
@@ -144,7 +144,7 @@ Where Col1 = Col2
 -- Error, collation conflict.  
 ```  
   
- 实际上，排序顺序子句会创建*受限类型*不可替换。  
+ 实际上，排序规则子句会创建*受限类型*不可替换。  
   
  同样，各个类型系统的排序顺序会有明显差异。 这种差异会影响到结果排序。 <xref:System.Guid> 对全部 16 个字节按字典顺序排序 (`IComparable()`)，而 T-SQL 按下面的顺序比较 GUID：node(10-15)、clock-seq(8-9)、time-high(6-7)、time-mid(4-5)、time-low(0-3)。 当 NT 生成的 GUID 具有类似的八位字节顺序时，此排序在 SQL 7.0 中完成。 该方法确保在同一节点群集上生成的 GUID 按时间戳的顺序集合。 该方法还可用于生成索引（插入改为追加而不是随机 IO）。 出于保密考虑，该顺序稍后在 Windows 中加密，但 SQL 必须维护兼容性。 一种解决方法是使用<xref:System.Data.SqlTypes.SqlGuid>而不是<xref:System.Guid>。  
   
@@ -153,9 +153,9 @@ Where Col1 = Col2
   
 -   C# 基于逻辑运算符 `&&` 和 `||` 的操作数的词法顺序指定短路语义。 另一方面，SQL 面向基于集的查询，因此在决定执行顺序方面为优化器提供了更大的自由度。 由此产生的一些连带影响包括：  
   
-    -   在语义上相等的转换将需要"`CASE` ... `WHEN` … `THEN`"构造 SQL，以避免对操作数执行重新排序。  
+    -   在语义上等效的转换将需要"`CASE` ... `WHEN` … `THEN`"构造，以避免对操作数执行重新排序。  
   
-    -   到的松散转换`AND` / `OR`运算符可能导致错误，如果 C# 表达式依赖于计算第二个操作数所基于的第一个操作数的计算的结果。  
+    -   松散转换为`AND` / `OR`运算符可能导致错误，如果C#表达式依赖于计算基于第一个操作数的计算结果的第二个操作数。  
   
 -   `Round()` 函数在 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 和 T-SQL 中具有不同的语义。  
   
@@ -168,7 +168,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  此 `Like` 运算符行为仅适用于 C#；Visual Basic `Like` 关键字保持不变。  
   
--   在 SQL 中，始终检查溢出，但必须在 C# （而不是在 Visual Basic 中) 中显式指定以避免头尾回绕。 假设有整数列 C1、C2 和 C3，并且 C1+C2 存储在 C3 中 (Update T Set C3 = C1 + C2)。  
+-   在 SQL 中始终检查溢出，但尚未显式指定在C#(不在 Visual Basic 中) 以避免头尾回绕。 假设有整数列 C1、C2 和 C3，并且 C1+C2 存储在 C3 中 (Update T Set C3 = C1 + C2)。  
   
     ```  
     create table T3 (  
@@ -186,7 +186,7 @@ Where Col1 = Col2
   
 -   SQL 执行对称算法四舍五入，而 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 使用“四舍六入五取偶”。 有关更多信息，请参见知识库文章 196652。  
   
--   默认情况下，对于通用区域设置，字符串比较在 SQL 中不区分大小写。 在 Visual Basic 和 C# 中，它们区分大小写。 例如， `s == "Food"` (`s = "Food"`在 Visual Basic 中) 和`s == "Food"`可以产生不同的结果，如果`s`是`food`。  
+-   默认情况下，对于通用区域设置，字符串比较在 SQL 中不区分大小写。 在 Visual Basic 和 C# 中，它们区分大小写。 例如， `s == "Food"` (`s = "Food"`在 Visual Basic 中) 和`s == "Food"`会产生不同的结果，如果`s`是`food`。  
   
     ```  
     -- Assume default US-English locale (case insensitive).  
@@ -257,7 +257,7 @@ Where Col1 + Col2 > 4
 ```  
   
 ## <a name="performance-issues"></a>性能问题  
- 在 CLR 与 SQL Server 类型系统之间切换时，对某些 SQL Server-CLR 类型的差异进行解释可能会导致性能降低。 影响性能的方案示例包括：  
+ 记帐的某些 SQL Server-CLR 类型的差异可能会导致性能降低的 CLR 和 SQL Server 之间切换的类型系统时。 影响性能的方案示例包括：  
   
 -   强制对逻辑“与”/逻辑“或”运算符的计算顺序  
   
@@ -293,5 +293,5 @@ Where Col1 + Col2 > 4
   
  除了语义差异，考虑在 SQL Server 与 CLR 类型系统之间切换时对性能的影响非常重要。 对于大型数据集，此类性能问题可能决定应用程序是否可部署。  
   
-## <a name="see-also"></a>请参阅  
- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>请参阅
+- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

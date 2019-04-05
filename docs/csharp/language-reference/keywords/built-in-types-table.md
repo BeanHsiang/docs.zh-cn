@@ -1,17 +1,18 @@
 ---
-title: 内置类型表（C# 参考）
+title: 内置类型表 - C# 参考
+ms.custom: seodec18
 description: 内置 C# 类型的关键字
 ms.date: 08/17/2018
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: fd9ba878d77bdb219542db55bb38023c60c7bec4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fae0cedfe8bf675dceb9cb9d5835d923cae8b4ab
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507307"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235616"
 ---
 # <a name="built-in-types-table-c-reference"></a>内置类型表（C# 参考）
 

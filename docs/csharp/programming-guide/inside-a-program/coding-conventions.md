@@ -1,17 +1,18 @@
 ---
-title: C# 编码约定（C# 编程指南）
+title: C# 编码约定 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 430cf3f1bc5e0b5ebe1a05530059516f36a473a1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4bb5a8134bb9cbcdb70830628895338ec83b28a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614115"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 编码约定（C# 编程指南）
  编码约定可实现以下目的：  
@@ -162,7 +163,7 @@ ms.locfileid: "44209454"
   
 ### <a name="static-members"></a>静态成员  
   
--   通过使用类名称调用[静态](../../../csharp/language-reference/keywords/static.md)成员：ClassName.StaticMember。 这种做法通过明确静态访问使代码更易于阅读。  请勿使用派生类的名称限定基类中定义的静态成员。  编译该代码时，代码可读性具有误导性，如果向派生类添加具有相同名称的静态成员，代码可能会被破坏。  
+-   使用类名调用 [static](../../../csharp/language-reference/keywords/static.md) 成员：ClassName.StaticMember。 这种做法通过明确静态访问使代码更易于阅读。  请勿使用派生类的名称限定基类中定义的静态成员。  编译该代码时，代码可读性具有误导性，如果向派生类添加具有相同名称的静态成员，代码可能会被破坏。  
   
 ### <a name="linq-queries"></a>LINQ 查询  
   
@@ -197,5 +198,5 @@ ms.locfileid: "44209454"
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 编码约定](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
+- [Visual Basic 编码约定](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [安全编码准则](../../../standard/security/secure-coding-guidelines.md)

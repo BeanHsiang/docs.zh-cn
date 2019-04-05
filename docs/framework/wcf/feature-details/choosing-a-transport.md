@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: e42e6f17a395edd8c765950832f2829a1aea1fe5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494439"
 ---
 # <a name="choosing-a-transport"></a>选择传输方式
-本主题讨论 Windows Communication Foundation (WCF) 中包含的三个主要传输之间进行选择的条件： HTTP、 TCP 和命名的管道。 WCF 还包括消息队列 (也称为 MSMQ) 传输，但本文不讨论消息队列。  
+本主题讨论 Windows Communication Foundation (WCF) 中包含的三个主要传输之间进行选择的条件：HTTP、 TCP 和命名的管道。 WCF 还包括消息队列 (也称为 MSMQ) 传输，但本文不讨论消息队列。  
   
  WCF 编程模型分离开来终结点操作 （如表示服务协定中） 连接两个终结点的传输机制。 这样，在您决定如何向网络公开服务时，就具有一定的灵活性。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "50199652"
  当通信需要一台计算机上的不同 WCF 应用程序之间，并且你想要防止任何来自另一台计算机的通信时，然后使用命名的管道传输。 另一个限制就是：从 Windows 远程桌面运行的进程可能只能用于同一 Windows 远程桌面会话，除非它们具有提升的特权。  
   
 > [!WARNING]
->  当在 IIS 中承载的多个站点上一个弱通配符 URL 保留项中使用命名的管道传输，可能会发生以下错误： 尝试侦听站点"2"时激活服务 NetPipeActivator 协议 net.pipe 中出现错误因此该协议是为该站点临时禁用。 请参阅更多详细信息的异常消息。 URL: weakwildcard: Net.pipe:\<计算机名称 > / 状态： ConflictingRegistration 异常： 进程名称： SMSvcHost 进程 ID: 1076 \  
+>  当在 IIS 中承载的多个站点上一个弱通配符 URL 保留项中使用命名的管道传输，可能会发生以下错误：尝试侦听站点"2"时，激活服务 NetPipeActivator 协议 net.pipe 中出现错误，因此该协议为该站点临时禁用。 请参阅更多详细信息的异常消息。 URL:Weakwildcard: Net.pipe:\<计算机名称 > / 状态：ConflictingRegistration 异常：进程名称：SMSvcHost 进程 ID:1076\  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>选择传输方式的决策点  
  下表列出了选择传输方式的常用决策点。 您应该考虑适合您的应用程序的其他所有属性和传输方式。 识别对您的应用程序非常重要的属性，识别对每个属性有益的传输方式，然后选择最适合您的属性集的传输方式。  
@@ -61,16 +61,16 @@ ms.locfileid: "50199652"
 |吞吐量|吞吐量度量指定的时间内可以传送和处理的数据量。 与滞后时间类似，选择的传输方式会影响服务操作的吞吐量。 将传输的吞吐量最大化要求尽量减小传送内容的开销，并尽量缩短等待消息交换完成的时间。 TCP 和命名管道传输使消息正文增加的开销都不大，并支持减少消息答复等待时间的固有双工形状。|TCP、命名管道|  
 |工具|工具表示对用于开发、诊断、承载和其他活动的协议的第三方应用程序支持。 开发工具和软件以便与 HTTP 协议协同工作意味着巨大的投资。|HTTP|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.BasicHttpBinding>  
- <xref:System.ServiceModel.WSHttpBinding>  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- <xref:System.ServiceModel.WSFederationHttpBinding>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.NetNamedPipeBinding>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [创建用户定义的绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.BasicHttpBinding>
+- <xref:System.ServiceModel.WSHttpBinding>
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- <xref:System.ServiceModel.WSFederationHttpBinding>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.NetTcpBinding>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.NetNamedPipeBinding>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- [绑定](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [创建用户定义的绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

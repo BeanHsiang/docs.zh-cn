@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 404a8255adcdc414a40b40395ada1c90c1078325
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: d564f4f4462a691504297d65575956c5f06691ca
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754222"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759218"
 ---
 # <a name="unable-to-emit-assembly-error-message"></a>无法发出程序集：\<错误消息 >
 
@@ -61,7 +61,7 @@ Visual Basic 编译器调用程序集链接器 (*Al.exe*，也称为 Alink) 生�
 
 ## <a name="see-also"></a>请参阅
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。
-- [Sn.exe （强名称工具）][Sn.exe （强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Sn.exe（强名称工具）](../../../framework/tools/sn-exe-strong-name-tool.md)
 - [如何：创建公钥/私钥对](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [与我们交流](/visualstudio/ide/talk-to-us)

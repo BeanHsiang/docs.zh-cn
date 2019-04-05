@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: be2cf6c550ab8778a42f33fa2cb1b109abeea5e9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 7ddad36c05d9972b9fc613403b68b7c793b6701d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707565"
 ---
 # <a name="serialization-and-deserialization"></a>序列化和反序列化
 Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 可在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 对象和 XML 之间进行双向转换。 本主题说明序列化程序的工作原理。  
@@ -203,7 +203,7 @@ Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:Syst
 >  使用分步引导的序列化可能会导致架构无效的 XML。  
   
 ## <a name="deserialization"></a>反序列化  
- 下面的信息适用于从 <xref:System.Runtime.Serialization.XmlObjectSerializer> 继承的任何类，包括 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 类。  
+ 下面的信息适用于从 <xref:System.Runtime.Serialization.XmlObjectSerializer>继承的任何类，包括 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 类。  
   
  对对象进行反序列化的最基本的方式是调用 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法重载之一。 该方法有三个重载，每个重载分别用于读取 <xref:System.Xml.XmlDictionaryReader>、 `XmlReader`或 `Stream`。 请注意， `Stream` 重载将创建不受任何配额保护的文本 <xref:System.Xml.XmlDictionaryReader> ，此重载仅应用于读取受信任的数据。  
   
@@ -223,7 +223,7 @@ Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:Syst
   
  当使用一个简单时`ReadObject`重载，反序列化程序查找的默认名称和命名空间的包装元素上 （请参阅前面的部分中，"指定默认根名称和 Namespace"），则引发异常，如果它找到了未知元素。 在上面的示例中，应有 `<Person>` 包装元素。 可调用 <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> 方法来验证是否已将读取器定位在按预期命名的元素上。  
   
- 有一种方法可以用来禁用此包装元素名称检查；一些 `ReadObject` 方法的重载采用布尔参数 `verifyObjectName`，该参数默认设置为 `true`。 当该参数设置为 `false`时，包装元素的名称和命名空间将被忽略。 这对于读取使用先前描述的分步引导的序列化机制写入的 XML 是有用的。  
+ 有一种方法可以用来禁用此包装元素名称检查；一些 `ReadObject` 方法的重载采用布尔参数 `verifyObjectName`，该参数默认设置为 `true` 。 当该参数设置为 `false`时，包装元素的名称和命名空间将被忽略。 这对于读取使用先前描述的分步引导的序列化机制写入的 XML 是有用的。  
   
 ## <a name="using-the-netdatacontractserializer"></a>使用 NetDataContractSerializer  
  `DataContractSerializer` 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 之间的主要差异在于 `DataContractSerializer` 使用数据协定名称，而 `NetDataContractSerializer` 在序列化的 XML 中输出完整的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程序集和类型名称。 这意味着必须在序列化终结点和反序列化终结点之间共享完全相同的类型。 这也同时意味着不需要对 `NetDataContractSerializer` 使用已知类型机制，因为要反序列化的确切类型始终是已知的。  
@@ -260,9 +260,9 @@ Windows Communication Foundation (WCF) 包括新的序列化引擎， <xref:Syst
   
  还请注意， `NetDataContractSerializer` 对于对象图中的每个节点不会输出完整的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型和程序集名称。 仅在有歧义的地方才会输出上述信息。 也就是说，它是在根对象级别进行输出并且是针对任何多态情况。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.NetDataContractSerializer>  
- <xref:System.Runtime.Serialization.XmlObjectSerializer>  
- [二进制序列化](../../../../docs/standard/serialization/binary-serialization.md)  
- [数据协定序列化程序支持的类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.NetDataContractSerializer>
+- <xref:System.Runtime.Serialization.XmlObjectSerializer>
+- [二进制序列化](../../../../docs/standard/serialization/binary-serialization.md)
+- [数据协定序列化程序支持的类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

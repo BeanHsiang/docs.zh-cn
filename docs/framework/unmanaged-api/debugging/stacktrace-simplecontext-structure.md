@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf2ba752ace49ae288857dc22819a8e7e429a34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698916"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 结构
 提供可用于代替完整的 `CONTEXT` 结构的简单上下文。  
@@ -42,20 +42,20 @@ struct StackTrace_SimpleContext
   
 |成员|描述|  
 |------------|-----------------|  
-|`StackOffset`|堆栈指针或在 x86 上的输入堆栈指针 (ESP) 平台。|  
+|`StackOffset`|堆栈指针或在 x86 上的 enter 堆栈指针 (ESP) 平台。|  
 |`FrameOffset`|帧偏移量或在 x86 上的 EBP 寄存器平台。|  
-|`InstructionOffset`|指令指针或输入指令指针 (EIP) 在 x86 平台。|  
+|`InstructionOffset`|指令指针或在 x86 上的输入指令指针 (EIP) 平台。|  
   
 ## <a name="remarks"></a>备注  
- 因为堆栈跟踪函数通常需要返回地址、 帧偏移量和堆栈地址，你可以选择使用`SimpleContext`而不是较大的结构`CONTEXT`结构。  
+ 由于堆栈跟踪函数通常需要返回地址、 帧偏移量和堆栈地址，因此你可以选择使用`SimpleContext`而不是一个较大的结构`CONTEXT`结构。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** SOS_Stacktrace.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

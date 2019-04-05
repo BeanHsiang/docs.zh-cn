@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 79de8adbc0f994653f308882b335da2ffa5f7455
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 32aa2c1c4cd31e4591c9fa30c05ebe61058f94c5
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035917"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442628"
 ---
 # <a name="develop-windows-service-apps"></a>开发 Windows 服务应用
 
@@ -51,4 +51,4 @@ ms.locfileid: "48035917"
 
 <xref:System.ServiceProcess.ServiceInstaller> - 介绍 <xref:System.ServiceProcess.ServiceInstaller> 类的功能，该类与 <xref:System.ServiceProcess.ServiceProcessInstaller> 类一起用于安装和卸载服务。
 
-[从模板创建项目](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2) - 介绍本章中使用的项目类型以及如何从中进行选择。
+[从模板创建项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) - 介绍本章中使用的项目类型以及如何从中进行选择。

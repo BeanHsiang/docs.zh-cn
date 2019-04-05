@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edb45c9ceefb242e5a72e8602dc93ecd39b2df09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23a4c1aa25f269121dc602bbeb6b864b589318be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745945"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 枚举
-指定为 PInvoke 调用的选项。  
+指定选项的 PInvoke 调用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -72,30 +72,30 @@ typedef enum  CorPinvokeMap {
 |`pmCharSetNotSpec`|保留。|  
 |`pmCharSetAnsi`|以多字节字符串的形式封送字符串。|  
 |`pmCharSetUnicode`|以 Unicode 2 字节字符的形式封送字符串。|  
-|`pmCharSetAuto`|针对目标操作系统适当地自动封送字符串。 默认值是 Windows NT、 Windows 2000、 Windows XP 和 Windows Server 2003 系列中; 上的为 Unicode默认值是 Windows 98 和 Windows me 上的为 ANSI|  
+|`pmCharSetAuto`|针对目标操作系统适当地自动封送字符串。 默认值是 Windows NT、 Windows 2000、 Windows XP 和 Windows Server 2003 系列中; 上的为 Unicode默认值为 ANSI，在 Windows 98 和 Windows me 一起提供。|  
 |`pmBestFitUseAssem`|保留。|  
-|`pmBestFitEnabled`|执行最佳的映射缺少完全匹配 ANSI 字符集中的 Unicode 字符。|  
-|`pmBestFitDisabled`|不执行 Unicode 字符的最佳的的映射。 在这种情况下，所有无法映射的字符将替换为？。|  
+|`pmBestFitEnabled`|执行最佳映射缺乏完全匹配 ANSI 字符集的 Unicode 字符。|  
+|`pmBestFitDisabled`|不执行最佳的映射的 Unicode 字符。 在这种情况下，无法映射的所有字符将都替换为？。|  
 |`pmBestFitMask`|保留。|  
 |`pmThrowOnUnmappableCharUseAssem`|保留。|  
-|`pmThrowOnUnmappableCharEnabled`|当互操作封送处理程序遇到无法映射的字符，则引发异常。|  
-|`pmThrowOnUnmappableCharDisabled`|当互操作封送处理程序遇到无法映射的字符，则不引发异常。|  
+|`pmThrowOnUnmappableCharEnabled`|互操作封送处理程序遇到的无法映射字符时引发异常。|  
+|`pmThrowOnUnmappableCharDisabled`|互操作封送处理程序遇到的无法映射字符时不会引发异常。|  
 |`pmThrowOnUnmappableCharMask`|保留|  
-|`pmSupportsLastError`|允许被调用方调用 Win32`SetLastError`从特性化方法返回之前的函数。|  
+|`pmSupportsLastError`|允许被调用方能够调用 Win32`SetLastError`从特性化方法返回之前的函数。|  
 |`pmCallConvMask`|保留|  
-|`pmCallConvWinapi`|使用默认平台调用约定。 例如，在 Windows 上默认值是`StdCall`和 Windows CE.NET 很`Cdecl`。|  
-|`pmCallConvCdecl`|使用`Cdecl`调用约定。 在这种情况下，调用方将清理堆栈。 这使调用函数使用`varargs`（即，接受可变数目的参数的函数）。|  
-|`pmCallConvStdcall`|使用`StdCall`调用约定。 在这种情况下，被调用方将清理堆栈。 这是使用平台 invoke 调用非托管函数的默认约定。|  
-|`pmCallConvThiscall`|使用`ThisCall`调用约定。 在这种情况下，第一个参数是`this`指针和存储在 ECX 寄存器。 其他参数被推送到堆栈上。 `ThisCall`调用约定用于调用从非托管 DLL 中导出的类上的方法。|  
+|`pmCallConvWinapi`|使用默认平台调用约定。 例如，在 Windows 上默认值是`StdCall`以及它是 Windows CE.NET `Cdecl`。|  
+|`pmCallConvCdecl`|使用`Cdecl`调用约定。 在这种情况下，调用方清理堆栈。 这样，与调用函数`varargs`（即，接受数目可变的参数的函数）。|  
+|`pmCallConvStdcall`|使用`StdCall`调用约定。 在这种情况下，被调用方清理堆栈。 这是使用平台 invoke 调用非托管函数的默认约定。|  
+|`pmCallConvThiscall`|使用`ThisCall`调用约定。 在这种情况下，第一个参数是`this`指针和存储在寄存器 ECX 中。 其他参数被推送到堆栈上。 `ThisCall`调用约定用于从非托管 DLL 导出的类上调用方法。|  
 |`pmCallConvFastcall`|保留。|  
 |`pmMaxValue`|保留。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

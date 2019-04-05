@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF], how-to topics
 ms.assetid: e29d7516-d5e6-4500-bd4f-775e6f830984
-ms.openlocfilehash: ba81f8e2d603ee2e734e5afd14182e95804fe69e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 930d0834570529bd958006818cddb8f5692066d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550080"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359245"
 ---
 # <a name="adorners-how-to-topics"></a>装饰器帮助主题
 下面的示例演示如何完成常见任务使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装饰器框架。  
   
 ## <a name="in-this-section"></a>本节内容  
- [实现装饰器](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
- [将装饰器绑定到元素](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
- [装饰面板的子元素](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
- [从元素中删除装饰器](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
- [从元素中删除所有装饰器](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
+ [实现装饰器](how-to-implement-an-adorner.md)  
+ [将装饰器绑定到元素](how-to-bind-an-adorner-to-an-element.md)  
+ [装饰面板的子元素](how-to-adorn-the-children-of-a-panel.md)  
+ [从元素中删除装饰器](how-to-remove-an-adorner-from-an-element.md)  
+ [从元素中删除所有装饰器](how-to-remove-all-adorners-from-an-element.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

@@ -1,21 +1,21 @@
 ---
-title: 模式匹配 (F#)
-description: '了解如何使用模式在 F # 中的逻辑结构的数据进行比较、 将数据分解为各个构成部分，或从数据中提取信息。'
+title: 模式匹配
+description: 了解如何在中使用模式F#若要比较的逻辑结构的数据，将数据分解为各个构成部分，或从数据中提取信息。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991419"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613578"
 ---
 # <a name="pattern-matching"></a>模式匹配
 
-模式是用于转换输入的数据的规则。 它们用于整个 F # 语言比较数据的逻辑结构或结构、 将数据分解为各个构成部分，或从以各种方式的数据中提取信息。
+模式是用于转换输入的数据的规则。 在整个F#语言要比较数据的逻辑结构或结构，将数据分解为各个构成部分，或从以各种方式的数据中提取信息。
 
 ## <a name="remarks"></a>备注
 
-在许多语言构造，如使用模式`match`表达式。 正在处理中的函数的参数时使用它们`let`绑定、 lambda 表达式和中与相关联的异常处理程序`try...with`表达式。 有关详细信息，请参阅[匹配表达式](match-expressions.md)， [let 绑定](functions/let-bindings.md)， [Lambda 表达式：`fun`关键字](functions/lambda-expressions-the-fun-keyword.md)，和[异常： `try...with`表达式](exception-handling/the-try-with-expression.md)。
+在许多语言构造，如使用模式`match`表达式。 正在处理中的函数的参数时使用它们`let`绑定、 lambda 表达式和中与相关联的异常处理程序`try...with`表达式。 有关详细信息，请参阅[匹配表达式](match-expressions.md)， [let 绑定](functions/let-bindings.md)， [Lambda 表达式：`fun`关键字](functions/lambda-expressions-the-fun-keyword.md)，和[异常：`try...with`表达式](exception-handling/the-try-with-expression.md)。
 
 例如，在`match`表达式中，*模式*是竖线的后面。
 
@@ -103,7 +103,7 @@ match shape with
 
 活动的模式，您可以定义更复杂的自定义模式匹配。 有关活动模式的详细信息，请参阅[活动模式](active-patterns.md)。
 
-在其中标识符是异常的情况下用在模式匹配的异常处理程序上下文中。 有关异常处理中的模式匹配的信息，请参阅[例外：`try...with`表达式](exception-handling/the-try-with-expression.md)。
+在其中标识符是异常的情况下用在模式匹配的异常处理程序上下文中。 有关异常处理中的模式匹配的信息，请参阅[异常：`try...with`表达式](exception-handling/the-try-with-expression.md)。
 
 ## <a name="variable-patterns"></a>变量模式
 

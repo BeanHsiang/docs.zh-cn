@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f356116d-e415-4f7c-a332-6e6a60227192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b4cbdff72167cfc063254cf5370d22fb729b0a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 42356348ba454ffe0c3778e23dc9a0ff272c9f64
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727737"
 ---
 # <a name="how-to-unload-an-application-domain"></a>如何：卸载应用程序域
 完成使用应用程序域时，可使用 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 方法将其卸载。 **Unload** 方法会正常关闭指定的应用程序域。 卸载过程中，任何新线程都无法访问该应用程序域，并且会释放所有特性于应用程序域的数据结构。  
@@ -31,7 +31,7 @@ ms.locfileid: "50088567"
  [!code-csharp[System.AppDomain.Load#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source3.cs#3)]
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>请参阅  
-- [对应用程序域进行编程](application-domains.md#programming-with-application-domains)  
-- [如何：创建应用程序域](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+## <a name="see-also"></a>请参阅
+- [对应用程序域进行编程](application-domains.md#programming-with-application-domains)
+- [如何：创建应用程序域](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)
 - [使用应用程序域](../../../docs/framework/app-domains/use.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf311ad2b79e615f5c3097686035e7bbfbc49c9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ef883f37587948871b222ca03a4032bea2109bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47210209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711416"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>如何：处理并行循环中的异常
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 重载没有任何用于处理可能引发的异常的特殊机制。 在这一方面，它们类似于常规 `for` 和 `foreach` 循环（在 Visual Basic 中为 `For` 和 `For Each`）；未处理的异常会导致循环立即终止。  
@@ -33,5 +33,5 @@ ms.locfileid: "47210209"
   
 ## <a name="see-also"></a>请参阅
 
-- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

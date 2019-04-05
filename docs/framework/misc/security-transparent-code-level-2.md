@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f15c3bc097bc034db41c95cd168104b8435aaf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394135"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567017"
 ---
 # <a name="security-transparent-code-level-2"></a>安全透明的代码，级别 2
 <a name="top"></a>
@@ -66,18 +66,18 @@ ms.locfileid: "33394135"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]  
 ```  
   
- 如果不对程序集进行批注，则默认使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 规则。 但是，建议的最佳做法是使用<xref:System.Security.SecurityRulesAttribute>特性，而不是依赖默认值。  
+ 如果不对程序集进行批注，则默认使用 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 规则。 但是，建议的最佳做法是使用<xref:System.Security.SecurityRulesAttribute>特性而不是依赖默认值。  
   
 ### <a name="assembly-wide-annotation"></a>程序集范围的批注  
  以下规则适用于程序集级别的特性使用：  
   
--   无特性：如果不指定任何特性，则运行时会将所有代码解释为安全关键代码，除非安全关键代码违反继承规则（例如，当重写或实现透明虚拟或接口方法时）。 在这些情况下，方法是可靠关键方法。 指定无特性会导致公用语言运行时为你确定透明度规则。  
+-   没有属性：如果未指定任何属性，在运行时将所有代码解释为安全关键的除非安全关键违反继承规则 (例如，当重写或实现透明虚拟或接口方法)。 在这些情况下，方法是可靠关键方法。 指定无特性会导致公用语言运行时为你确定透明度规则。  
   
--   `SecurityTransparent`：所有代码都是透明的；整个程序集不会执行任何特权代码或不安全的代码。  
+-   `SecurityTransparent`：所有代码都是透明的;整个程序集不会执行任何特权或不安全。  
   
--   `SecurityCritical`：由此类型引入此程序集的所有代码都是关键代码；其他所有代码都是透明代码。 这种情况类似于不指定任何特性，但公共语言运行时不会自动确定透明度规则。 例如，如果重写虚拟方法或抽象方法或者实现接口方法，默认情况下，该方法是透明的。 你必须将方法显式批注为 `SecurityCritical` 或 `SecuritySafeCritical`；否则加载时将引发 <xref:System.TypeLoadException>。 当基类和派生类位于相同的程序集时，此规则也适用。  
+-   `SecurityCritical`：由此类型引入此程序集的所有代码都是关键代码；其他所有代码都是透明的。 这种情况类似于不指定任何特性，但公共语言运行时不会自动确定透明度规则。 例如，如果重写虚拟方法或抽象方法或者实现接口方法，默认情况下，该方法是透明的。 你必须将方法显式批注为 `SecurityCritical` 或 `SecuritySafeCritical`；否则加载时将引发 <xref:System.TypeLoadException>。 当基类和派生类位于相同的程序集时，此规则也适用。  
   
--   `AllowPartiallyTrustedCallers`（仅 2 级）：所有代码默认都是透明的。 但是，各个类型和成员可以有其他特性。  
+-   `AllowPartiallyTrustedCallers` （级别 2 仅）：所有代码默认都是透明的。 但是，各个类型和成员可以有其他特性。  
   
  下表比较了 2 级与 1 级的程序集级别行为。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "33394135"
 ### <a name="type-and-member-annotation"></a>类型和成员批注  
  适用于安全类型的安全特性也适用于该类型引入的成员。 但是，这些规则不适用于基类或接口实现的虚拟或抽象重写。 以下规则适用于类型和成员级别的特性使用：  
   
--   `SecurityCritical`：类型或成员是关键的，并且只能由完全信任代码调用。 安全关键类型中引入的方法是关键的。  
+-   `SecurityCritical`：类型或成员至关重要，可以通过完全信任代码调用。 安全关键类型中引入的方法是关键的。  
   
     > [!IMPORTANT]
     >  基类或接口中引入的以及安全关键类中重写或实现的虚拟和抽象方法默认是透明的。 这些方法必须标识为 `SecuritySafeCritical` 或 `SecurityCritical`。  
@@ -121,9 +121,9 @@ ms.locfileid: "33394135"
   
  `Transparent` < `SafeCritical` < `Critical`  
   
--   类型的规则：从左到右访问权限受到限制。 派生类型至少必须与基类型具有相同的受限访问权限。  
+-   类型的规则：我们从左到右，访问变得更具限制性。 派生类型至少必须与基类型具有相同的受限访问权限。  
   
--   方法的规则：派生方法的可访问性不能从基方法更改。 对于默认行为，不带批注的所有派生方法都是 `Transparent`。 如果重写方法未显示批注为 `SecurityCritical`，则派生关键类型会导致引发异常。  
+-   方法的规则：派生的方法不能从基方法更改可访问性。 对于默认行为，不带批注的所有派生方法都是 `Transparent`。 如果重写方法未显示批注为 `SecurityCritical`，则派生关键类型会导致引发异常。  
   
  下表显示允许的类型继承模式。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "33394135"
  以下属性已添加到 <xref:System.Reflection> 命名空间，以确定类型、方法或字段是否为 `SecurityCritical``SecuritySafeCritical` 或 `SecurityTransparent`：<xref:System.Type.IsSecurityCritical%2A>、<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A> 和 <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A>。 使用这些属性可通过反射而非检查特性是否存在确定透明度。 透明度规则比较复杂，检查特性可能不够充分。  
   
 > [!NOTE]
->  A`SafeCritical`方法返回`true`两个<xref:System.Type.IsSecurityCritical%2A>和<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>，这是因为`SafeCritical`事实上是关键的 （它具有相同的功能与关键代码，但它可以从透明代码调用）。  
+>  一个`SafeCritical`方法将返回`true`同时<xref:System.Type.IsSecurityCritical%2A>并<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>，这是因为`SafeCritical`事实上是关键的 （它具有相同的功能与关键代码，但它可以从透明代码调用）。  
   
  动态方法继承其附加到的模块的透明度；他们不继承类型的透明度（如果它们附加到一个类型）。  
   
@@ -189,8 +189,8 @@ ms.locfileid: "33394135"
   
  `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`  
   
- <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性默认为 `false`，因此该属性必须设置为 `true` 才能跳过验证。 只能出于优化目的跳过验证。 你应确保程序集中的透明代码是通过使用验证`transparent`选项[PEVerify 工具](../../../docs/framework/tools/peverify-exe-peverify-tool.md)。  
+ <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性默认为 `false`，因此该属性必须设置为 `true` 才能跳过验证。 只能出于优化目的跳过验证。 应确保在程序集中的透明代码是通过使用验证`transparent`选项[PEVerify 工具](../../../docs/framework/tools/peverify-exe-peverify-tool.md)。  
   
-## <a name="see-also"></a>请参阅  
- [安全透明的代码，级别 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
- [安全更改](../../../docs/framework/security/security-changes.md)
+## <a name="see-also"></a>请参阅
+- [安全透明代码，级别 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
+- [安全更改](../../../docs/framework/security/security-changes.md)

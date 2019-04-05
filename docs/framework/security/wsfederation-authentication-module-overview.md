@@ -3,12 +3,12 @@ title: WSFederation 身份验证模块概述
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: bff3875b5f2f3ac187796d89fcd6da31ba911362
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cebdb0e69ae151afd9a1cc422cf48a201176313a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703661"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 身份验证模块概述
 Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-FAM) 对 ASP.NET 应用程序中联合身份验证的支持。 本主题有助于理解联合身份验证的工作原理和使用方法。  
@@ -35,7 +35,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
   
  可以配置 WS-FAM 来指定未经身份验证的请求应重定向到的 STS。 使用 WIF，可采用两种方式对用户进行身份验证：  
   
-1.  被动重定向：如果未经身份验证的用户尝试访问受保护的资源，且你希望在无需登录页的情况下将它们重定向到 STS，则这是正确的方法。 STS 验证用户标识，并颁发包含适合该用户的声明的安全令牌。 此选项需要将 WS-FAM 添加到 HTTP 模块管道。 可以使用用于 Visual Studio 2012 的标识和访问工具修改应用程序配置文件，以便使用 WS FAM 以及与 STS 联合。 有关详细信息，请参阅[用于 Visual Studio 2012 的标识和访问工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
+1.  被动重定向：当未经身份验证的用户尝试访问受保护的资源，并且想要将它们重定向到 STS 而无需登录页时，这是正确的方法。 STS 验证用户标识，并颁发包含适合该用户的声明的安全令牌。 此选项需要将 WS-FAM 添加到 HTTP 模块管道。 可以使用用于 Visual Studio 2012 的标识和访问工具修改应用程序配置文件，以便使用 WS FAM 以及与 STS 联合。 有关详细信息，请参阅[用于 Visual Studio 2012 的标识和访问工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
   
 2.  对于信赖方应用程序中的登录页，可以从代码隐藏调用 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
   
@@ -139,7 +139,7 @@ Windows Identity Foundation (WIF) 包括通过 WS-联合身份验证模块 (WS-F
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)

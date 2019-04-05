@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 45a5584a082c4b274614b8fd55be8be4b87945b3
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 246c5f489f4cc0076303de8383506898fe053ae5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347781"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843133"
 ---
 # <a name="duplex"></a>双工
 “双工”示例演示如何定义和实现双工协定。 当客户端与服务建立会话并为服务提供可用来将消息发送回客户端的通道时，就会发生双工通信。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 双工协定以一对接口形式定义：一个从客户端到服务的主接口和一个从服务到客户端的回调接口。 在本示例中，`ICalculatorDuplex` 接口允许客户端执行数学运算，通过会话计算结果。 服务在 `ICalculatorDuplexCallback` 接口上返回结果。 双工协定需要会话，因为必须建立上下文才能将客户端和服务之间发送的一组消息关联在一起。  
@@ -170,7 +170,7 @@ client.Close();
 3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
     > [!IMPORTANT]
-    >  在运行时客户端用跨计算机配置，请务必替换中的"localhost"`address`的属性[终结点](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素和`clientBaseAddress`的属性[ \<绑定 >](../../../../docs/framework/misc/binding.md)的元素[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)元素如下所示的相应计算机的名称：  
+    >  在运行时客户端用跨计算机配置，请务必替换中的"localhost"`address`的属性[\<终结点 > 的\<客户端 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)元素和`clientBaseAddress`特性[\<绑定 >](../../../../docs/framework/misc/binding.md)元素的[ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)元素如下所示的相应计算机的名称：  
   
     ```xml  
     <client>  
@@ -194,4 +194,3 @@ client.Close();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`  
   
-## <a name="see-also"></a>请参阅

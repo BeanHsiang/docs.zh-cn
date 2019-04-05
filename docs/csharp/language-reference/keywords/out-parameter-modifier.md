@@ -1,15 +1,16 @@
 ---
-title: out 参数修饰符（C# 参考）
+title: out 参数修饰符 - C# 参考
+ms.custom: seodec18
 ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: bc31ae202ccbfee467dc0f6fa2cf515c751825ed
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8aebe0492728f3ef87256f5d8c4859220d9106cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660003"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 参数修饰符（C# 参考）
 `out` 关键字通过引用传递参数。 它与 [ref](ref.md) 关键字相似，只不过 `ref` 要求在传递之前初始化变量。 它也类似于 [in](in-parameter-modifier.md) 关键字，只不过 `in` 不允许通过调用方法来修改参数值。 若要使用 `out` 参数，方法定义和调用方法均必须显式使用 `out` 关键字。 例如:  
@@ -53,7 +54,7 @@ class CS0663_Example
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
- [重试模式](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md)会返回一个 `bool`，指示某个操作是成功还是失败，并在 `out` 参数中返回该操作生成的值。 许多分析方法（如 [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)) 方法）都采用此模式。
+ [重试模式](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods)会返回一个 `bool`，指示某个操作是成功还是失败，并在 `out` 参数中返回该操作生成的值。 许多分析方法（如 [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)) 方法）都采用此模式。
    
 ## <a name="calling-a-method-with-an-out-argument"></a>调用具有 `out` 参数的方法
 
@@ -74,7 +75,7 @@ class CS0663_Example
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
 - [方法参数](../../../csharp/language-reference/keywords/method-parameters.md)

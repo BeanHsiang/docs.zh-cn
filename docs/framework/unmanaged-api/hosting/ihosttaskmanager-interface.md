@@ -16,53 +16,53 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9715738931d1b6a91ad9fae7e00ba607905d380f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d7b85a30a5abd9186f039aa21cbe7790325e4f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449059"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54545642"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager 接口
-提供允许公共语言运行时 (CLR) 用于通过主机而不是使用标准操作系统线程处理或纤程函数的任务的方法。  
+提供允许公共语言运行时 (CLR) 用于通过而不是使用标准操作系统线程或纤程函数主机的任务的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[BeginDelayAbort 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|通知宿主托管代码正在进入不能在其中中止当前任务的周期。|  
-|[BeginThreadAffinity 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|通知宿主托管代码正在进入在其中将当前的任务必须不移动到另一个操作系统线程的周期。|  
-|[CallNeedsHostHook 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)|使主机可以指定公共语言运行时是否可以内联到非托管函数的指定调用。|  
-|[CreateTask 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-createtask-method.md)|主机创建一个新的任务的请求。|  
-|[EndDelayAbort 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|通知宿主托管代码正在退出在其中不必须中止当前的任务，周期以下以前调用`BeginDelayAbort`。|  
-|[EndThreadAffinity 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|通知宿主托管代码正在退出不能在其中当前任务移动到另一个操作系统线程，周期以下以前调用`BeginThreadAffinity`。|  
-|[EnterRuntime 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)|通知主机的调用非托管方法，如平台调用方法，是执行将控制返回到 CLR。|  
-|[GetCurrentTask 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)|获取从中进行此调用的操作系统线程当前正在执行的任务的接口指针。|  
-|[GetStackGuarantee 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|获取量的保证将之后堆栈操作完成，可用的堆栈空间但在进程结束之前。|  
+|[BeginDelayAbort 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|通知宿主托管代码进入不能在其中中止当前任务的周期。|  
+|[BeginThreadAffinity 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|通知宿主托管代码进入在其中将当前的任务必须不移动到另一个操作系统线程的周期。|  
+|[CallNeedsHostHook 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)|使宿主能够指定公共语言运行时是否可以内联指定调用非托管函数。|  
+|[CreateTask 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-createtask-method.md)|主机创建新的任务的请求。|  
+|[EndDelayAbort 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|通知宿主托管代码正在退出在其中不必须中止当前任务，周期遵循早期调用`BeginDelayAbort`。|  
+|[EndThreadAffinity 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|通知宿主托管代码正在退出不能在其当前任务移动到另一个操作系统线程，周期遵循早期调用`BeginThreadAffinity`。|  
+|[EnterRuntime 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)|通知主机，对非托管方法的调用以便为平台调用方法，将执行控制返回到 CLR。|  
+|[GetCurrentTask 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)|获取从其进行此调用的操作系统线程当前正在执行的任务的接口指针。|  
+|[GetStackGuarantee 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|获取的堆栈空间后的堆栈操作完成后，可保证，但在关闭进程之前的量。|  
 |[LeaveRuntime 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)|通知宿主托管代码将要对非托管函数进行调用。|  
 |[ReverseEnterRuntime 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)|通知主机正在到公共语言运行时 (CLR) 从非托管代码进行调用。|  
 |[ReverseLeaveRuntime 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)|通知主机控制正在离开 CLR 并输入从托管代码调用非托管的函数。|  
 |[SetCLRTaskManager 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|为宿主提供的接口指针到[ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)由 CLR 实现的实例。|  
-|[SetLocale 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setlocale-method.md)|通知主机 CLR 已更改了当前任务中的区域设置。|  
+|[SetLocale 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setlocale-method.md)|通知宿主 CLR 已更改了当前任务中的区域设置。|  
 |[SetStackGuarantee 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setstackguarantee-method.md)|保留以仅供内部使用。|  
 |[SetUILocale 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)|通知主机用户界面区域设置已在当前任务。|  
-|[Sleep 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)|通知宿主，当前的任务将进入睡眠状态。|  
-|[SwitchToTask 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|通知主机应该换出当前任务。|  
+|[Sleep 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)|通知主机当前任务即将进入睡眠状态。|  
+|[SwitchToTask 方法](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|通知主机应切换当前任务。|  
   
 ## <a name="remarks"></a>备注  
- `IHostTaskManager` 允许 CLR 创建和管理任务，若要提供的主机时要执行操作控制从托管代码转换到非托管代码，反之亦然，并指定特定操作的挂钩主机可以才能在代码执行过程。  
+ `IHostTaskManager` 使 CLR 能够创建和管理任务，以提供挂钩，以便主机控件从托管代码转换到非托管代码，反之亦然时, 执行的操作并指定特定的操作，主机可以并且不能创建在代码执行过程。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [ICLRTaskManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
- [IHostTask 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [ICLRTask 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [ICLRTaskManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

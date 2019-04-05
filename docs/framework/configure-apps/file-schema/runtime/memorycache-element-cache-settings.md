@@ -1,21 +1,19 @@
 ---
-title: '&lt;memoryCache&gt;元素 （缓存设置）'
+title: <memoryCache> 元素（缓存设置）
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2d6b7a1ba9c9b7ba598dbcea076ff6ee553ddc9a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 25e87aa9fa4e56c5042eb25c41f6cfe1b65aea24
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396898"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266372"
 ---
-# <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt;元素 （缓存设置）
+# <a name="memorycache-element-cache-settings"></a>\<memoryCache > 元素 （缓存设置）
 定义一个用于配置基于 <xref:System.Runtime.Caching.MemoryCache> 类的缓存的元素。 <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> 类定义可以用于配置缓存的 [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) 元素。 可以在单个应用程序中使用 <xref:System.Runtime.Caching.MemoryCache> 类的多个实例。 配置文件中的每个 `memoryCache` 元素可以包含一个命名 <xref:System.Runtime.Caching.MemoryCache> 实例的设置。  
   
  \<configuration>  
@@ -92,7 +90,7 @@ ms.locfileid: "47396898"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Caching.MemoryCache>  
- [\<system.runtime.caching > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)  
- [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Caching.MemoryCache>
+- [\<system.runtime.caching > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)
+- [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fd7694901534ad6897bbf78239081af6314e4bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3cc9601105d05740e6db0a41bae521bd9a276d74
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415456"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471311"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>ICorDebugILFrame::EnumerateLocalVariables 方法
-此帧中获取的本地变量的枚举数。  
+获取在此帧中局部变量的枚举数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +35,18 @@ HRESULT EnumerateLocalVariables(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppValueEnum`  
- [out]指向的地址是此帧中局部变量的枚举器的 ICorDebugValueEnum 对象的指针。  
+ [out]指向一个 ICorDebugValueEnum 对象，它在此帧中局部变量的枚举器的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- `EnumerateLocalVariables` 获取可以列出此 ICorDebugILFrame 对象表示的调用帧中可用的本地变量的枚举器。 列表可能不包括所有的局部变量中正在运行的函数，因为其中一些可能未处于活动状态。  
+ `EnumerateLocalVariables` 获取可以列出可用由此 ICorDebugILFrame 对象的调用帧中局部变量的枚举器。 列表可能不包括的所有本地变量在正在运行的函数中，因为其中一些可能未处于活动状态。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

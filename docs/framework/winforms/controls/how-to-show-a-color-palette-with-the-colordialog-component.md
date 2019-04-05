@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 ColorDialog 组件显示调色板
+title: 如何：显示调色板使用 ColorDialog 组件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: ea12fe19b6c8c7464f0820267face8a1d66de784
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35f6f81c2b13234b23b3b2295e45caf5f16abd9e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536922"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708322"
 ---
-# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>如何：使用 ColorDialog 组件显示调色板
-[ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)组件显示的颜色的调色板，并返回包含用户选定的颜色的属性。  
+# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>如何：显示调色板使用 ColorDialog 组件
+[ColorDialog](colordialog-component-windows-forms.md)组件显示调色板的颜色，并返回包含用户选定的颜色的属性。  
   
 ### <a name="to-choose-a-color-using-the-colordialog-component"></a>若要使用 ColorDialog 组件选择颜色  
   
@@ -30,9 +30,9 @@ ms.locfileid: "33536922"
   
 2.  使用<xref:System.Windows.Forms.DialogResult>属性来确定如何关闭对话框。  
   
-3.  使用<xref:System.Windows.Forms.ColorDialog.Color%2A>属性<xref:System.Windows.Forms.ColorDialog>组件设置所选的颜色。  
+3.  使用<xref:System.Windows.Forms.ColorDialog.Color%2A>属性的<xref:System.Windows.Forms.ColorDialog>组件设置所选的颜色。  
   
-     在示例中，<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件处理程序将打开<xref:System.Windows.Forms.ColorDialog>组件。 一种颜色如果已选择，并且用户单击**确定**、<xref:System.Windows.Forms.Button>控件的背景色设置为所选颜色。 该示例假定你的窗体具有<xref:System.Windows.Forms.Button>控件和<xref:System.Windows.Forms.ColorDialog>组件。  
+     在以下示例中，<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Click>事件处理程序打开<xref:System.Windows.Forms.ColorDialog>组件。 当一种颜色是所选与用户单击**确定**，则<xref:System.Windows.Forms.Button>控件的背景色设置为所选颜色。 该示例假定窗体具有<xref:System.Windows.Forms.Button>控件和一个<xref:System.Windows.Forms.ColorDialog>组件。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -65,7 +65,7 @@ ms.locfileid: "33536922"
        }  
     ```  
   
-     (Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数以注册事件处理程序。  
+     (Visual C#， [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 将以下代码放在窗体的构造函数，以注册事件处理程序。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -76,6 +76,6 @@ ms.locfileid: "33536922"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.ColorDialog>  
- [ColorDialog 组件](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.ColorDialog>
+- [ColorDialog 组件](colordialog-component-windows-forms.md)

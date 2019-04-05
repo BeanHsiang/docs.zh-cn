@@ -1,16 +1,17 @@
 ---
-title: 表达式（C# 编程指南）
+title: 表达式 - C# 编程指南
+ms.custom: seodec18
 ms.date: 05/11/2017
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 3cf084102186d9e13727c36ed14e2ea72ca324f9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c8856dfd1c6c8e35399c20b630c0d44493e42b6a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615256"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972191"
 ---
 # <a name="expressions-c-programming-guide"></a>表达式（C# 编程指南）
 表达式是由一个或多个操作数以及零个或多个运算符组成的序列，其计算结果为一个值、对象、方法或命名空间。 表达式可以包含文本值、方法调用、运算符及其操作数，或简单名称。 简单名称可以是变量名、类型成员名、方法参数名、命名空间名或类型名。  
@@ -24,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>表达式值  
- 在大部分使用表达式的上下文中（例如在语句或方法参数中），表达式的计算结果应为某个值。 如果 x 和 y 是整数，表达式 `x + y` 的计算结果为一个数值。 表达式 `new MyClass()` 的计算结果为对 `MyClass` 对象的新实例的引用。 表达式 `myClass.ToString()` 的计算结果为一个字符串，因为字符串是该方法的返回类型。 然而，虽然命名空间名称归类为表达式，但它的计算结果不是一个值，因此绝不会作为任何表达式的最终结果。 命名空间名称不得传递给方法参数，不能用在新表达式中，也不能赋给变量。 命名空间名称只能用作较大表达式的子表达式。 同样如此的还有类型（与 <xref:System.Type?displayProperty=nameWithType> 对象不同）、方法组名称（与特定方法不同）以及事件 [add](../../../csharp/language-reference/keywords/add.md) 和 [remove](../../../csharp/language-reference/keywords/remove.md) 访问器。  
+ 在大部分使用表达式的上下文中（例如在语句或方法参数中），表达式的计算结果应为某个值。 如果 x 和 y 是整数，表达式 `x + y` 的计算结果为一个数值。 表达式 `new MyClass()` 的计算结果为对 `MyClass` 类的新实例的引用。 表达式 `myClass.ToString()` 的计算结果为一个字符串，因为字符串是该方法的返回类型。 然而，虽然命名空间名称归类为表达式，但它的计算结果不是一个值，因此绝不会作为任何表达式的最终结果。 命名空间名称不得传递给方法参数，不能用在新表达式中，也不能赋给变量。 命名空间名称只能用作较大表达式的子表达式。 同样如此的还有类型（与 <xref:System.Type?displayProperty=nameWithType> 对象不同）、方法组名称（与特定方法不同）以及事件 [add](../../../csharp/language-reference/keywords/add.md) 和 [remove](../../../csharp/language-reference/keywords/remove.md) 访问器。  
   
  每个值都有关联的类型。 例如，如果 x 和 y 都是 `int` 类型的变量，则表达式 `x + y` 的值也属于 `int` 类型。 如果将该值赋给不同类型的变量，或者如果 x 和 y 是不同的类型，则应用类型转换规则。 若要详细了解如何进行这种转换，请参阅[强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)。  
   
@@ -39,13 +40,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>文本和简单名称  
  最简单的两种表达式类型是文本和简单名称。 文本是没有名称的常数值。 例如，在以下代码示例中，`5` 和 `"Hello World"` 都是文本值：  
   
- [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  有关文本的详细信息，请参阅[类型](../../../csharp/language-reference/keywords/types.md)。  
   
  在前面的示例中，`i` 和 `s` 都是用于标识局部变量的简单名称。 在表达式中使用这些变量时，变量名称计算为当前在该变量的内存位置所存储的值。 下面的示例对此进行了演示：  
   
- [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]  
 ## <a name="invocation-expressions"></a>调用表达式  
  在下面的代码示例中，对 `DoWork` 的调用是一个调用表达式。  
   
@@ -74,9 +75,9 @@ C# 支持“Expression-Bodied 成员”，这允许为方法、构造函数、�
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [委托](../../../csharp/programming-guide/delegates/index.md)  
-- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-- [类型](../../../csharp/programming-guide/types/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [委托](../../../csharp/programming-guide/delegates/index.md)
+- [运算符](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [类型](../../../csharp/programming-guide/types/index.md)
 - [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)

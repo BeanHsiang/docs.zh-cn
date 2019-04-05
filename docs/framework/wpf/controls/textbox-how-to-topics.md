@@ -7,30 +7,30 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: 2319ea8522a90705cf65006ffb368801921cda57
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d99528dcfbf2229b57e81f9dedc5bc0aa50c5b75
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742805"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375204"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox 帮助主题
 本部分提供示例来演示如何完成常见任务使用<xref:System.Windows.Controls.TextBox>控件。  
   
 ## <a name="in-this-section"></a>本节内容  
- [创建多行 TextBox 控件](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
- [检测 TextBox 中的文本何时更改](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
- [在 TextBox 控件中启用制表符](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
- [从 TextBox 获取一系列文本行](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
- [将 TextBox 控件设为只读](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
- [将光标置于 TextBox 控件中文本的开头或结尾](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [检索选定文本内容](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
- [在 TextBox 控件中设置焦点](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
- [设置 TextBox 控件的文本内容](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
- [在文本编辑控件中启用拼写检查](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [将自定义上下文菜单与 TextBox 结合使用](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
- [将拼写检查功能与上下文菜单结合使用](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
- [向 TextBox 添加水印](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
+ [创建多行 TextBox 控件](how-to-create-a-multiline-textbox-control.md)  
+ [检测 TextBox 中的文本何时更改](how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [在 TextBox 控件中启用制表符](how-to-enable-tab-characters-in-a-textbox-control.md)  
+ [从 TextBox 获取一系列文本行](how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [将 TextBox 控件设为只读](how-to-make-a-textbox-control-read-only.md)  
+ [将光标置于 TextBox 控件中文本的开头或结尾](position-the-cursor-at-the-beginning-or-end-of-text.md)  
+ [检索选定文本内容](how-to-retrieve-a-text-selection.md)  
+ [在 TextBox 控件中设置焦点](how-to-set-focus-in-a-textbox-control.md)  
+ [设置 TextBox 控件的文本内容](how-to-set-the-text-content-of-a-textbox-control.md)  
+ [在文本编辑控件中启用拼写检查](how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [将自定义上下文菜单与 TextBox 结合使用](how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [将拼写检查功能与上下文菜单结合使用](how-to-use-spell-checking-with-a-context-menu.md)  
+ [向 TextBox 添加水印](how-to-add-a-watermark-to-a-textbox.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.TextBox>  
@@ -41,6 +41,6 @@ ms.locfileid: "45742805"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>请参阅  
- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [TextBox 样式和模板](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+## <a name="see-also"></a>请参阅
+- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [TextBox 样式和模板](textbox-styles-and-templates.md)

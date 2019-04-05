@@ -2,12 +2,12 @@
 title: 关于 System.Net.PeerToPeer.Collaboration 命名空间
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-ms.openlocfilehash: 9e95dc571bc520c0abd0cf676ce37f383fed84ba
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5bb96e11cf51e7e5b37d895310fa9a113899f34c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570846"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>关于 System.Net.PeerToPeer.Collaboration 命名空间
 <xref:System.Net.PeerToPeer.Collaboration> 命名空间提供用于通过对等协作基础结构实现对等协作活动的类和 API。  
@@ -39,5 +39,5 @@ ms.locfileid: "50197075"
   
  典型的 P2P 应用程序包括：用于协作进行笔记或白板记录的电话会议、无服务器的聊天应用程序、交互式播发和联机游戏会话。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Net.PeerToPeer.Collaboration>
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.PeerToPeer.Collaboration>

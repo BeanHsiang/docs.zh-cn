@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 28eda94914125f2c5849a471671c8e283475c82c
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321387"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58043272"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 指令
 约束类型参数传递给泛型类型的构造函数的泛型。  
@@ -73,7 +73,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 或不带任何 WPF 3.0 或 3.5 WPF XAML 2006 依赖关系  
  在.NET Framework XAML 服务 XAML 2006 或 XAML 2009，放宽了对泛型的 XAML 用法的 WPF 相关限制。 您可以实例化泛型对象元素，在后备类型系统和对象模型可以支持的 XAML 标记中的任意位置。  
   
- 如果使用 XAML 2009 而不是将 CLR 映射基类型来获取常用语言基元的 XAML 类型转换，则可以使用[常见 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)中的信息项作为`typeString`。 例如，您可以声明以下 （前缀映射不显示，但 x 是 XAML 2009 的 XAML 语言 XAML 命名空间）：  
+ 如果使用 XAML 2009 而不是将 CLR 映射基类型来获取常用语言基元的 XAML 类型转换，则可以使用[常见 XAML 语言基元的内置类型](built-in-types-for-common-xaml-language-primitives.md)中的信息项作为`typeString`。 例如，您可以声明以下 （前缀映射不显示，但 x 是 XAML 2009 的 XAML 语言 XAML 命名空间）：  
   
 ```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
@@ -81,8 +81,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  在 WPF 中并面向[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，可以使用 XAML 2009 功能一起使用`x:TypeArguments`但只针对松散 XAML (未标记编译的 XAML)。 WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。 如果需要为标记编译 XAML，您必须在"XAML 2006 和 WPF 泛型 XAML 用法"部分中所述的限制下进行操作。  
   
-## <a name="see-also"></a>请参阅  
- [x:Class 指令](../../../docs/framework/xaml-services/x-class-directive.md)  
- [x:Type 标记扩展](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [常见 XAML 语言基元的内置类型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
- [XAML 中的泛型](../../../docs/framework/xaml-services/generics-in-xaml.md)
+## <a name="see-also"></a>请参阅
+- [x:Class 指令](x-class-directive.md)
+- [x:Type 标记扩展](x-type-markup-extension.md)
+- [常见 XAML 语言基元的内置类型](built-in-types-for-common-xaml-language-primitives.md)
+- [XAML 中的泛型](generics-in-xaml.md)

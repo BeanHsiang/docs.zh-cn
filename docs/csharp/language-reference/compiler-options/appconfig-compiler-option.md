@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -appconfig compiler option [C#]
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
-ms.openlocfilehash: 33f79967c34736f2175e0bb6e2b5b88d211545c2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 102ed3977d56ace0dab63b1f066cc10a6fc5dfbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514057"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig（C# 编译器选项）
 -appconfig 编译器选项让 C# 应用程序能够在程序集绑定时将程序集的应用程序配置 (app.config) 文件的位置指定为公共语言运行时 (CLR)。  
@@ -26,7 +26,7 @@ ms.locfileid: "45698113"
   
 ## <a name="arguments"></a>自变量  
  `file`  
- 必须的。 包含程序集绑定设置的应用程序配置文件。  
+ 必需。 包含程序集绑定设置的应用程序配置文件。  
   
 ## <a name="remarks"></a>备注  
  -appconfig 的一种用途是处理高级情形；在该情形中，程序集必须同时引用特定引用程序集的 .NET Framework 版本和 .NET Framework for Silverlight 版本。 例如，在 Windows Presentation Foundation (WPF) 中编写的 XAML 设计器可能需要为设计器用户界面引用 WPF 桌面以及随附于 Silverlight 的 WPF 子集。 同一设计器程序集必须访问这两个程序集。 默认情况下，单独引用会导致编译器错误，因为程序集绑定将这两个程序集视为等效。  
@@ -54,7 +54,7 @@ ms.locfileid: "45698113"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [\<supportPortability> 元素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)  
+- [\<supportPortability> 元素](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
 - [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)

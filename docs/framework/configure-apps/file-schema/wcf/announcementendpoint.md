@@ -1,32 +1,32 @@
 ---
-title: '&lt;announcementEndpoint&gt;'
+title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: 15d60cd277b77fd52b2b77bfcdf4d0da1de7167a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8977a36d9eee48505a65fa52272a95665fea7972
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351821"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267087"
 ---
-# <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
-此配置元素定义具有固定公告协定的标准终结点。 当分别打开或关闭服务时，服务可以选择通过发送一条联机和脱机公告消息来公告其可用性。 Windows Communication Foundation (WCF) 服务指定公告终结点中的[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)元素，并使用 AnnouncementClient 执行公告。 客户端希望侦听从其他服务公告实际充当 WCF 服务;因此，你需要将公告终结点配置为在该客户端[\<服务 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)部分。  
+# <a name="announcementendpoint"></a>\<announcementEndpoint>
+此配置元素定义具有固定公告协定的标准终结点。 当分别打开或关闭服务时，服务可以选择通过发送一条联机和脱机公告消息来公告其可用性。 Windows Communication Foundation (WCF) 服务指定公告终结点在[ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)元素，并使用 AnnouncementClient 执行公告。 客户端希望侦听来自其他服务的公告的实际充当 WCF 服务;因此，必须在该客户端配置公告终结点[\<服务 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)部分。  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <announcementEndpoint>
-      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005" 
-                        maxAnnouncementDelay="Timespan" 
+      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
+                        maxAnnouncementDelay="Timespan"
                         name="String" />
     </announcementEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -47,36 +47,36 @@ ms.locfileid: "33351821"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|具有一个或多个固定属性（地址、绑定和协定）的预定义终结点的标准终结点集合。|  
   
 ## <a name="example"></a>示例  
  下面的示例演示通过 http 和对等网络侦听公告消息的客户端。  
   
 ```xml  
-<services>  
-  <service name="ServiceAnnouncementListener">  
-    <endpoint name="httpAnnouncementEndpoint"  
-              kind="announcementEndpoint"  
-              binding="basicHttpBinding"  
-              address="announcements" />  
-    <endpoint name="peerNetAnnouncementEndpoint"  
-              kind="announcementEndpoint"  
-              binding="peerTcpBinding"  
-              address="net.p2p://discoveryMesh/multicast"  
-              bindingConfiguration="discoveryPeerTcpBindingConfig" />  
-  ...  
-  </service>  
-</services>  
-  
-<standardEndpoints>  
-  <announcementEndpoint>  
-    <standardEndpoint name="httpAnnouncementEndpoint"                         
-                      version="WSDiscoveryApril2005" />  
-    <standardEndpoint name="peerNetAnnouncementEndpoint"                         
-                      version="WSDiscoveryApril2005" />  
-   </announcementEndpoint>  
-</standardEndpoints>  
+<services>
+  <service name="ServiceAnnouncementListener">
+    <endpoint name="httpAnnouncementEndpoint"
+              kind="announcementEndpoint"
+              binding="basicHttpBinding"
+              address="announcements" />
+    <endpoint name="peerNetAnnouncementEndpoint"
+              kind="announcementEndpoint"
+              binding="peerTcpBinding"
+              address="net.p2p://discoveryMesh/multicast"
+              bindingConfiguration="discoveryPeerTcpBindingConfig" />
+  ...
+  </service>
+</services>
+
+<standardEndpoints>
+  <announcementEndpoint>
+    <standardEndpoint name="httpAnnouncementEndpoint"
+                      version="WSDiscoveryApril2005" />
+    <standardEndpoint name="peerNetAnnouncementEndpoint"
+                      version="WSDiscoveryApril2005" />
+  </announcementEndpoint>
+</standardEndpoints>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

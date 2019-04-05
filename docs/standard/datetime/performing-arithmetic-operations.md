@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2a50823b812541786cf1bebfd6b1262ce2e9314
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503148"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>使用日期和时间执行算术运算
 
@@ -78,7 +78,7 @@ ms.locfileid: "47070549"
 
 有关详细信息，请参阅[各时区之间转换时间](../../../docs/standard/datetime/converting-between-time-zones.md)。
 
-<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>类不提供任何执行日期和时间运算时自动应用调整规则的方法。 但是可以通过将某一时区内的时间转换为 UTC，执行算术运算，然后再将 UTC 转换回该时区内的时间，来实现此目的。 有关详细信息，请参阅[如何： 在日期和时间算术中使用时区](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)。
+<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>类不提供任何执行日期和时间运算时自动应用调整规则的方法。 但是可以通过将某一时区内的时间转换为 UTC，执行算术运算，然后再将 UTC 转换回该时区内的时间，来实现此目的。 有关详细信息，请参阅[如何：在日期和时间算术中使用时区](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)。
 
 例如，以下代码类似于之前向 2008 年 3 月 9 日凌晨 2:00 增加 两个半小时的代码。 但是，由于其在执行日期和时间算术前将中部标准时间转换为 UTC，然后将 UTC 结果转换回中部标准时间，所以得出的时间反映的是中部标准时区转换为夏令时。
 
@@ -87,5 +87,5 @@ ms.locfileid: "47070549"
 
 ## <a name="see-also"></a>请参阅
 
-* [日期、时间和时区](../../../docs/standard/datetime/index.md)
-* [如何：在日期和时间算术中使用时区](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)
+- [日期、时间和时区](../../../docs/standard/datetime/index.md)
+- [如何：在日期和时间算术中使用时区](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)

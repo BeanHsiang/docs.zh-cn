@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189623"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709424"
 ---
 # <a name="distributed-application-security"></a>分布式应用程序安全
 Windows Communication Foundation (WCF) 安全分为三个主要功能区域： 传输安全、 访问控制和审核。 传输安全提供完整性、保密性和身份验证。 传输安全由传送安全、消息安全或 `TransportWithMessageCredential` 实现。  
@@ -65,8 +65,8 @@ Windows Communication Foundation (WCF) 安全分为三个主要功能区域： �
 |设置|描述|  
 |-------------|-----------------|  
 |无|指定客户端不需要提供任何凭据。 这相当于匿名客户端。|  
-|Basic|指定基本身份验证。  有关其他信息，请参见 RFC2617，"[HTTP 身份验证： 基本和摘要式身份验证](https://go.microsoft.com/fwlink/?LinkId=88313)。"|  
-|摘要|指定摘要式身份验证。  有关其他信息，请参见 RFC2617，"[HTTP 身份验证： 基本和摘要式身份验证](https://go.microsoft.com/fwlink/?LinkId=88313)。"|  
+|Basic|指定基本身份验证。  有关其他信息，请参见 RFC2617，"[HTTP 身份验证：基本和摘要式身份验证](https://go.microsoft.com/fwlink/?LinkId=88313)。"|  
+|摘要|指定摘要式身份验证。  有关其他信息，请参见 RFC2617，"[HTTP 身份验证：基本和摘要式身份验证](https://go.microsoft.com/fwlink/?LinkId=88313)。"|  
 |Ntlm|指定在 Windows 域中使用 SSPI 协商进行 Windows 身份验证。<br /><br /> 要使用 SSPI 协商，就需要使用 Kerberos 协议或 NT LanMan (NTLM)。|  
 |Windows|指定在 Windows 域中使用 SSPI 进行 Windows 身份验证。 SSPI 选择 Kerberos 协议或 NTLM 作为身份验证服务。<br /><br /> SSPI 首先尝试 Kerberos 协议；如果失败，则使用 NTLM。|  
 |证书|使用证书（通常是 X.509）执行客户端身份验证。|  
@@ -94,8 +94,8 @@ Windows Communication Foundation (WCF) 安全分为三个主要功能区域： �
   
  在消息安全模式中，通过执行传输安全，还可以与客户端交换服务凭据，作为初始协商的一部分。 若要启用协商，请将 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 属性设置为 `true`。  
   
-## <a name="see-also"></a>请参阅  
- [终结点创建概述](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>请参阅
+- [终结点创建概述](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

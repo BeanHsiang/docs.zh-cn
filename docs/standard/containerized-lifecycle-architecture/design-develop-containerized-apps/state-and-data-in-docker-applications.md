@@ -1,55 +1,72 @@
 ---
 title: Docker 应用程序中的状态和数据
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 了解可用的选项以在容器化应用程序中保存状态。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.date: 02/15/2019
+ms.openlocfilehash: 30dde3ce44aa61fff3fad1841ae4a8b941573877
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123223"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678072"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 应用程序中的状态和数据
 
-容器的基元是不可变性。 与 VM 相比，容器将不会作为一种常见情况消失。 在从死信进程、 重载的 CPU 或完整或失败的磁盘的各种窗体中，VM 可能会失败。 我们希望在可用的 VM 和 RAID 驱动器来确保驱动器故障维护的数据。
+在大多数情况下，可以将容器视为进程的实例。 进程不维护持久状态。 虽然容器可以写入其本地存储，假定实例将无限期围绕就像假设内存中的单个位置将持久。 应假设容器映像，与进程一样，有多个实例，并且它们最终将会终止;如果使用容器 orchestrator 管理它们，那么应该假定，它们可能会获取从一个节点或 VM 之间移动。
 
-但是，容器被认为是非进程的实例。 进程不维护持久状态。 即使容器可以写入其本地存储，假定将无限期地将围绕该实例将等效于假定单副本内存将持久。 您应假定复制的容器与进程一样，，已终止，或者，当托管容器业务流程协调程序时，可能会将它们移动。
+以下解决方案用于管理 Docker 应用程序中的持久性数据：
 
-Docker 使用一项功能称为*覆盖文件系统*实现写入时复制过程，用于存储任何更新信息到容器，相比原始映像所基于的根文件系统。 如果随后从系统删除该容器，这些更改将丢失。 一个容器，因此，不具有持久性存储区默认情况下。 尽管可以保存容器的状态，但设计系统解决此问题是与容器体系结构原则冲突。
+从 Docker 主机，作为 [Docker 卷](https://docs.docker.com/engine/admin/volumes/)：
 
-若要管理 Docker 应用程序中的持久性数据，还有常见解决方案：
+- **卷**存储在由 Docker 管理的主机文件系统区域中。
 
--   [**数据卷**](https://docs.docker.com/engine/tutorials/dockervolumes/) 这些装载到主机，只需特别说明。
+- **将绑定装载**可以映射到主机文件系统中任何文件夹中，因此不能从 Docker 进程控制访问，并可带来安全风险，因为容器可以访问敏感的操作系统文件夹。
 
--   [**数据卷容器**](https://docs.docker.com/engine/tutorials/dockervolumes/#/creating-and-mounting-a-data-volume-container) 这些跨容器，使用可以循环的外部容器提供共享的存储。
+- **tmpfs 装载**类似仅存在于主机内存中的虚拟文件夹，并且绝不会写入文件系统。
 
--   [**卷插件**](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-shared-storage-volume-as-a-data-volume) 这些卷装载到远程位置，提供持久性。
+从远程存储：
 
--   **远程数据源** 示例包括 SQL 数据库和无 SQL 数据库或缓存服务，如 Redis。
+- [Azure 存储](https://azure.microsoft.com/documentation/services/storage/)提供可异地分发存储，为容器提供良好的持久性解决方案。
 
--   [**Azure 存储**](https://docs.microsoft.com/azure/storage/) 这提供异地可分发平台即服务 (PaaS) 存储，提供最佳的容器为持久性。
+- 远程关系数据库喜欢[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)，等 NoSQL 数据库[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction)，或缓存服务，如[Redis](https://redis.io/)。
 
-数据卷被专门指定跳过的一个或多个容器内的目录[联合的文件系统](https://docs.docker.com/glossary/?term=Union%20file%20system)。 数据卷用于维护数据，独立于容器的生命周期。 Docker 因此永远不会自动删除卷时您删除容器，也不能将它不再引用的容器的"垃圾收集"的卷。 主机操作系统可以浏览和编辑任何卷中的数据公开发布，这是尽量少使用的数据卷的只是另一个原因。
+从 Docker 容器：
 
-一个[数据卷容器](https://docs.docker.com/glossary/?term=volume)是对常规数据卷的改进。 实质上是处于休眠状态容器具有一个或多个数据卷 （如前面所述），在其中创建它。 数据卷容器从中央装入点提供对容器的访问。 访问此方法的优点是它抽象出原始数据，使逻辑装入点的数据容器的位置。 它还允许访问的数据容器卷来创建和销毁时将数据保存在专用容器中持久保留的"应用程序"容器。
+- Docker 提供一个名为“覆盖文件系统”的功能。 此功能实现了写入时复制任务存储到的容器的根文件系统更新信息。 该信息"介绍了在最前面的"容器所基于的原始图像。 如果从系统中删除容器，则这些更改将丢失。 因此，虽然可能保存在其本地存储的容器的状态，但设计基于此功能的系统容器设计，它默认情况下是无状态的前提相冲突。
 
-图 4-5 显示了常规 Docker 卷可以置于存储超出容器本身，但在主机服务器/VM 物理边界内。 *Docker 卷不能使用到另一个将卷从一台主机服务器/VM*。
+- 但是，Docker 卷现在是首选的方法来处理在 Docker 中的本地数据。 如果需要有关在容器中存储的详细信息，则检查[Docker 存储驱动程序](https://docs.docker.com/engine/userguide/storagedriver/)并[有关映像、 容器和存储驱动程序](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/)。
 
-![](./media/image5.png)
+下面提供了有关这些选项的其他详细信息。
 
-图 4-5： 数据卷和用于容器的应用/容器的外部数据源
+**卷**是从主机 OS 映射到容器目录的目录。 当容器中的代码访问该目录时，该访问实际上是对主机操作系统上的一个目录的访问。 此目录不与容器自身的生存期绑定，且该目录由 Docker 管理并独立于主机计算机的核心功能。 因此，数据卷用于将独立于容器的生命周期的数据持久保存。 如果从 Docker 主机中删除容器或图像，不会删除数据卷中保留的数据。
 
-因为无法管理在单独的物理主机运行的容器之间共享的数据，建议不使用卷用于业务数据除非 Docker 主机是固定的主机/VM，因为在业务流程协调程序中使用 Docker 容器时容器应介于 1 到另一台主机，具体取决于要由群集执行的优化移动。
+可以命名卷，也可以让卷保持匿名（默认设置）。 命名卷是**数据卷容器**的演变，它使得在不同容器之间共享数据变得容易。 卷还支持卷驱动程序，可用于将数据存储在远程主机，以及其他选项。
 
-因此，常规数据卷是一个良好的机制用于跟踪文件、 临时文件或任何类似的概念，并不影响业务数据一致性，如果或跨多个主机移动用户的容器。
+**将绑定装载**已经面世了很长时间，并允许将映射到容器中的装入点的任何文件夹。 绑定挂载的限制比卷的限制多，并存在一些重要安全问题，因此，卷是建议选项。
 
-[卷插件](https://docs.docker.com/engine/extend/plugins_volume/)跨群集中的所有主机提供的数据。 尽管并非所有卷插件都是相同的但卷插件通常提供外部化不可变的容器中的持久可靠存储。
+**`tmpfs` 装载**是虚拟文件夹，仅在主机的内存中保留，所以永远不会写入到文件系统。 它们快速且安全，但使用内存且仅适用于非持久性数据。
 
-远程数据源和 SQL 数据库、 DocumentDB、 或的远程如 Redis 缓存等缓存应该是与开发不带容器相同。 这是一种首选方法，且经实践证明的业务应用程序数据存储。
+如图 4-5 所示，常规 Docker 卷可以存储在容器本身之外，但是在主机服务器或 VM 的物理边界内。 但是，Docker 容器不能从一个主机服务器或 VM 访问另一个主机服务器或 VM 的卷。 换而言之，如果使用这些卷，那么不能管理在不同 Docker 主机上运行的容器之间共享的数据，尽管可通过支持远程主机的卷驱动程序来实现这一功能。
 
+![卷可在容器之间共享，但仅限于同一台主机，除非使用支持远程主机的远程驱动程序。 ](./media/image5.png)
+
+**图 4-5**。 基于容器的应用程序的卷和外部数据源
+
+此外，当 Docker 容器由业务流程协调程序管理时，容器可能会在主机之间“移动”，这取决于群集所执行的优化。 因此，不建议将数据卷用于业务数据。 但它们是一个良好的机制，可以使用跟踪文件、 临时文件，或类似，不会影响业务数据一致性。
+
+远程数据源和缓存工具（如 Azure SQL 数据库、Azure Cosmos DB）或远程缓存（如 Redis）可以在容器化应用程序中使用，与开发时没有容器的使用方式相同。 这是存储业务应用程序数据的一种行之有效的方法。
+
+Azure 存储。 业务数据通常需要放在外部资源或数据库，如 Azure 存储中。 Azure 存储提供在云中的以下服务：
+
+- Blob 存储存储非结构化的对象数据。 Blob 可以是任何类型的文本或二进制数据，如文档或媒体文件（图像、音频和视频文件）。 Blob 存储也称为对象存储。
+
+- 文件存储提供共享的存储使用标准 SMB 协议的旧版应用程序。 Azure 虚拟机和云服务可以通过装载的共享在应用程序组件之间共享文件数据。 在本地应用程序可以访问通过文件服务 REST API 的共享中的文件数据。
+
+- 表存储存储结构化数据集。 表存储是 NoSQL 键属性数据存储，它允许快速开发和快速访问大量数据。
+
+关系数据库和 NoSQL 数据库。 外部数据库有很多选择，包括关系数据库（如 SQL Server、PostgreSQL、Oracle）或 NoSQL 数据库（如 Azure Cosmos DB、MongoDB）等。这些数据库不会加以解释本指南的一部分，因为它们完全是不同的主题。
 
 >[!div class="step-by-step"]
-[上一页](monolithic-applications.md)
-[下一页](soa-applications.md)
+>[上一页](monolithic-applications.md)
+>[下一页](soa-applications.md)

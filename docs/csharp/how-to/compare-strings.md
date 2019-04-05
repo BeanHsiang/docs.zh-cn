@@ -1,16 +1,16 @@
 ---
 title: 如何：比较字符串 - C# 指南
 description: 了解在区分或不区分大小写以及使用或不使用区域性特定的排序情况下，如何对字符串值进行比较和排序
-ms.date: 03/20/2018
+ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 36529414d5b51e9e4ade7447ff6e5e908e5153ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188568"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58634227"
 ---
 # <a name="how-to-compare-strings-in-c"></a>如何：比较 C\# 中的字符串
 
@@ -29,23 +29,33 @@ ms.locfileid: "50188568"
 
 ## <a name="default-ordinal-comparisons"></a>默认的序号比较
 
-最常见的操作：<xref:System.String.CompareTo%2A?displayProperty=nameWithType> 和 <xref:System.String.Equals%2A?displayProperty=nameWithType> 或 <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 使用序号比较（一种区分大小写的比较）并使用当前区域性。 结果如下例所示。
+最常见的操作：
+
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- <xref:System.String.Equals%2A?displayProperty=nameWithType>
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+
+使用序号比较（一种区分大小写的比较）并使用当前区域性。 结果如下例所示：
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-序号比较在比较字符串时不会考虑语义规则。 他们将按字符比较字符串。 区分大小写的比较在比较时使用大写。 这种默认的比较方法最重要的一点是：由于使用当前区域性，所以比较结果取决于运行比较的计算机的区域设置以及语言设置。 对于需要在多个计算机或位置保持顺序一致的情况，这种比较并不适用。
+默认序号比较在比较字符串时不会考虑语义规则。 它会比较两个字符串中每个 <xref:System.Char> 对象的二进制值。 因此，默认的序号比较也是区分大小写的。 
+
+请注意，使用 <xref:System.String.Equals%2A?displayProperty=nameWithType> 和 <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 的相等性测试不同于使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 和 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 方法的字符串比较。 虽然相等性测试执行区分大小写的序号比较，但比较方法使用当前区域性执行区分大小写、区分区域性的比较。 由于默认比较方法通常执行不同类型的比较，因此建议始终调用显式指定要执行的比较类型的重载，确保代码意图明确。
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>不区分大小写的序号比较
 
-<xref:System.String.Equals%2A?displayProperty=nameWithType> 方法允许指定 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 的 <xref:System.StringComparison> 值
-用于指定不区分大小写的比较。 还有一个静态 <xref:System.String.Compare%2A> 方法，其中包括用于指定不区分大小写比较的布尔参数。 如以下代码所示：
+<xref:System.String.Equals(System.String,System.StringComparison)?displayProperty=nameWithType> 方法允许指定 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 的 <xref:System.StringComparison> 值
+对于不区分大小写的序号比较。 此外还有静态 <xref:System.String.Compare(System.String,System.String,System.StringComparison)?displayProperty=nameWithType> 方法，该方法执行不区分大小写的序号比较，前提是你指定 <xref:System.StringComparison> 参数的 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 值。 如以下代码所示：
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
+
+执行不区分大小写的序号比较时，这些方法使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的大小写约定。
 
 ## <a name="linguistic-comparisons"></a>语义比较
 
 可以使用当前区域性的语义规则来对字符串进行排序。
-这有时被称为“文字排序顺序”。 在执行语义比较时，一些非字母数字的 Unicode 字符可能分配有特殊的权重。 例如，连字符“-”分配的权重可能很小，所以“co-op”和“coop”在排序顺序中会彼此相邻。 此外，一些 Unicode 字符可能会与一些字母数字字符相同。 下面以德语短句“他们在街上跳舞。”为例， 这两个短句分别使用了“ss”和“ß”。 （在 Windows 系统中）从语义上说，“ss”在“en-US”和“de-DE”区域性中都等同于德语中的“'ß”。
+这有时被称为“文字排序顺序”。 在执行语义比较时，一些非字母数字的 Unicode 字符可能分配有特殊的权重。 例如，连字符“-”分配的权重可能很小，所以“co-op”和“coop”在排序顺序中会彼此相邻。 此外，一些 Unicode 字符可能与一系列 <xref:System.Char> 实例等效。 下面以德语短句“他们在街上跳舞。”为例， 在德语中，一个字符串中有“ss”(U+0073 U+0073)，另一个字符串中有“ß”(U+00DF)。 （在 Windows 系统中）从语义上说，“ss”在“en-US”和“de-DE”区域性中都等同于德语中的“'ß”。
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -64,8 +74,8 @@ ms.locfileid: "50188568"
 
 ## <a name="comparisons-using-specific-cultures"></a>使用特定区域性的比较
 
-此示例存储当前区域性的 <xref:System.Globalization.CultureInfo>。
-在当前线程对象上可以设置并检索原始区域性。 使用 <xref:System.StringComparison.CurrentCulture> 值执行比较以确保执行的是区域性特定的比较。
+此示例为 en-US 和 de-DE 区域性存储 <xref:System.Globalization.CultureInfo> 对象。
+使用 <xref:System.Globalization.CultureInfo> 对象执行比较以确保执行的是特定于区域性的比较。
 
 所用的区域性会对语义比较产生影响。 以下示例展示使用“en-US”区域性和“de-DE”区域性对两个德语句子进行比较的结果：
 
@@ -92,7 +102,7 @@ ms.locfileid: "50188568"
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
-对数组进行排序后，可以使用二分搜索法搜索条目。 二分搜索法从集合的中间开始搜索，判断集合的哪一半包含所找字符串。 后续的每个比较都将集合的剩余部分再次对半分开。  使用 <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType> 对数组进行排序。 本地函数 `ShowWhere` 显示发现字符串所在位置的信息。 如果未找到字符串，返回的值会指示它可能会在的位置（如果找到）。
+对数组进行排序后，可以使用二分搜索法搜索条目。 二分搜索法从集合的中间开始搜索，判断集合的哪一半包含所找字符串。 后续的每个比较都将集合的剩余部分再次对半分开。  使用 <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType> 存储数组。 本地函数 `ShowWhere` 显示发现字符串所在位置的信息。 如果未找到字符串，返回的值会指示它可能会在的位置（如果找到）。
 
 [!code-csharp-interactive[Searching in a sorted array](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#6)]
 
@@ -119,10 +129,12 @@ ms.locfileid: "50188568"
 > [!NOTE]
 > 测试字符串是否相等时，使用的方法应显式指定要执行的比较类型。 你的代码具备更强的可维护性和可读性。 重载采用了 <xref:System.StringComparison> 枚举参数的 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Array?displayProperty=nameWithType> 类的方法。 指定要执行的比较类型。 在测试相等性时，请避免使用 `==` 和 `!=` 运算符。 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 实例方法始终执行区分大小写的序号比较。 它们主要适用于按字母顺序进行的字符串排序。
 
+可以通过调用 <xref:System.String.Intern%2A?displayProperty=nameWithType> 方法暂存字符串或检索对现有暂存字符串的引用。 要确定字符串是否暂存，请调用 <xref:System.String.IsInterned%2A?displayProperty=nameWithType> 方法。
+
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
-- <xref:System.StringComparer?displayProperty=nameWithType>  
-- [字符串](../programming-guide/strings/index.md)  
-- [比较字符串](../../standard/base-types/comparing.md)  
+- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>
+- <xref:System.StringComparer?displayProperty=nameWithType>
+- [字符串](../programming-guide/strings/index.md)
+- [比较字符串](../../standard/base-types/comparing.md)
 - [对应用程序进行全球化和本地化](/visualstudio/ide/globalizing-and-localizing-applications)

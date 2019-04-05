@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2633bfadaabf208a2b86fda83375c3a136b93b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ece12247e48a0a005fd542bf76a32a1c6eeaa7cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448167"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478397"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map 方法
 映射使用元数据签名的程序集之间的关系。  
@@ -36,7 +36,7 @@ HRESULT Map (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `tkImp`  
  [in]表示导入的代码对象的元数据标记。  
   
@@ -44,16 +44,16 @@ HRESULT Map (
  [in]表示发出的代码对象的元数据标记。  
   
 ## <a name="remarks"></a>备注  
- 当令牌重新映射发生在合并过程时，原始令牌的作用范围导入 （源） 元数据范围内，而且新令牌范围发出 （目标） 元数据范围内。  
+ 标记重新映射发生在合并期间时, 原始令牌的作用域导入 （源） 元数据范围内，新的令牌的范围限定在发出 （目标） 的元数据范围内。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMapToken 接口](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMapToken 接口](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

@@ -1,5 +1,6 @@
 ---
-title: lock 语句（C# 参考）
+title: lock 语句 - C# 参考
+ms.custom: seodec18
 description: 使用 C# lock 语句同步对共享资源的线程访问
 ms.date: 10/01/2018
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 802f447e1ae01020fa80fa3048e3783ea24db3d3
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 63fadd3c37c7533211e7bd0ac07952ca99fd6a79
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850096"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244253"
 ---
 # <a name="lock-statement-c-reference"></a>lock 语句（C# 参考）
 
@@ -74,5 +75,4 @@ finally
 - [C# 参考](../index.md)
 - [C# 关键字](index.md)
 - [语句关键字](statement-keywords.md)
-- [互锁操作](../../../standard/threading/interlocked-operations.md)
 - [同步基元概述](../../../standard/threading/overview-of-synchronization-primitives.md)

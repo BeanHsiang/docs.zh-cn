@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48838a90939899fc1e7e91cdb7bbe98019591416
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 45f0e30efac32dec42cf0687fa0da40f4d6dca4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551821"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>集合内的比较和排序
 <xref:System.Collections> 类在管理集合所涉及的几乎所有进程中执行比较，无论是搜索待删除的元素或返回键值对的值。  
@@ -61,8 +61,8 @@ ms.locfileid: "44210294"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Collections.IComparer>  
-- <xref:System.IEquatable%601>  
-- <xref:System.Collections.Generic.IComparer%601>  
-- <xref:System.IComparable>  
+- <xref:System.Collections.IComparer>
+- <xref:System.IEquatable%601>
+- <xref:System.Collections.Generic.IComparer%601>
+- <xref:System.IComparable>
 - <xref:System.IComparable%601>

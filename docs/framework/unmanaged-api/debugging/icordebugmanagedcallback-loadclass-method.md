@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1d920a97338bba3e90ec8f0c440f6dd2a93e722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8904f816f075b2c837f5c591ddb6697ba5a241f6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416200"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478553"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a>ICorDebugManagedCallback::LoadClass 方法
 通知调试器已加载的类。  
@@ -36,27 +36,27 @@ HRESULT LoadClass (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个表示已向其中加载类的应用程序域的 ICorDebugAppDomain 对象的指针。  
+ [in]指向一个 ICorDebugAppDomain 对象，表示应用程序域已在其中加载类的指针。  
   
  `c`  
  [in]指向一个 ICorDebugClass 对象，表示类的指针。  
   
 ## <a name="remarks"></a>备注  
- 仅当包含的类模块启用了类加载，则会发生此回调。 类加载的动态模块始终处于启用状态。  
+ 仅当类加载已启用包含的类的模块，会发生此回调。 类加载始终启用的动态模块。  
   
- `LoadClass`回调提供适当的时候将断点绑定到动态模块中的新生成类。  
+ `LoadClass`回调提供适当的时候若要将断点绑定到动态模块中新生成的类。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [UnloadClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)  
- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>请参阅
+- [UnloadClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)
+- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

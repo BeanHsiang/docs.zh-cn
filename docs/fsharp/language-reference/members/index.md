@@ -1,29 +1,27 @@
 ---
-title: 成员 (F#)
+title: 成员
 description: 了解有关对象成员的信息F#编程语言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6dcdb1d7fa061fb838d4aa8f7a2912fd168c3781
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c32bd76ab60673563f0cc45ce0fb569b2ea262b9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33562201"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613136"
 ---
 # <a name="members"></a>成员
 
 本部分介绍 F# 对象类型的成员。
 
-
 ## <a name="remarks"></a>备注
+
 *成员*是一种属于类型定义的功能，可使用 `member` 关键字进行声明。 记录、类、可区分联合、接口和结构等 F# 对象类型都支持成员。 有关详细信息，请参阅[记录](../records.md)、[类](../classes.md)、[可区分联合](../discriminated-Unions.md)、[接口](../interfaces.md)和[结构](../structures.md)。
 
 成员通常组成类型的公共接口，这就是成员通常是公共成员（除非另外指定）的原因。 也可以声明私有成员或内部成员。 有关详细信息，请参阅[访问控制](../access-Control.md)。 类型的签名还可用于公开或不公开类型的某些成员。 有关详细信息，请参阅[签名](../signatures.md)。
 
 只能与类一起使用的私有字段和 `do` 绑定不是真正的成员，因为它们从不是类型的公共接口的一部分，并且也不是用 `member` 关键字声明的，但本部分对它们也进行了介绍。
 
-
 ## <a name="related-topics"></a>相关主题
-
 
 |主题|描述|
 |-----|-----------|

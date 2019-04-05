@@ -1,5 +1,6 @@
 ---
-title: float 关键字（C# 参考）
+title: float 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - float
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: da697aa6f1f429418a69d9f58a13f46a3da9ac74
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6bf8043b97d23fdb91ca5798ed46cdea783bad7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187174"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514115"
 ---
 # <a name="float-c-reference"></a>float（C# 参考）
 
@@ -65,12 +66,12 @@ float x = 3.5F;
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Single>  
-- [C# 参考](../index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
-- [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)  
-- [C# 关键字](index.md)  
-- [整型表](integral-types-table.md)  
-- [内置类型表](built-in-types-table.md)  
-- [隐式数值转换表](implicit-numeric-conversions-table.md)  
-- [显式数值转换表](explicit-numeric-conversions-table.md)  
+- <xref:System.Single>
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)
+- [C# 关键字](index.md)
+- [整型表](integral-types-table.md)
+- [内置类型表](built-in-types-table.md)
+- [隐式数值转换表](implicit-numeric-conversions-table.md)
+- [显式数值转换表](explicit-numeric-conversions-table.md)

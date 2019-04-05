@@ -6,38 +6,36 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-ms.openlocfilehash: 5b3b49ca61d491a2593db7b43bf3efd0b63af650
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: da5f0b4418d61b973044a89d4902900247efb115
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526242"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707776"
 ---
 # <a name="windows-forms-controls"></a>Windows 窗体控件
 设计和修改 Windows 窗体应用程序的用户界面时，需要添加、对齐和定位控件。 控件是窗体对象内包含的对象。 每种类型的控件都有自己的一组属性、方法和事件，使其适用于特定用途。 可以在设计器中控制控件，并将代码编写为在运行时动态添加控件。  
   
 ## <a name="in-this-section"></a>本节内容  
- [将控件置于 Windows 窗体上](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ [将控件置于 Windows 窗体上](putting-controls-on-windows-forms.md)  
  收录了有关将控件置于窗体上的链接。  
   
- [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)  
  收录了有关在窗体上排列控件的链接。  
   
- [标记各个 Windows 窗体控件并创建它们的快捷键](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
  介绍了如何使用键盘快捷键、控件文本标签和修改键。  
   
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)  
  列出了 Windows 窗体支持的控件以及每个控件可以完成的基本操作。  
   
- [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)  
  介绍了背景信息和示例，有助于用户开发自定义 Windows 窗体控件。  
   
- [设计时开发 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [设计时开发 Windows 窗体控件](developing-windows-forms-controls-at-design-time.md)  
  介绍了通过设计和继承创建自定义控件的技巧。  
   
 ## <a name="related-sections"></a>相关章节  
- [客户端应用程序](../../../../docs/framework/develop-client-apps.md)  
+ [客户端应用程序](../../develop-client-apps.md)  
  概述了如何开发基于 Windows 的应用程序。  
   
- [Windows 窗体演练](https://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
- 列出了关于 Windows 窗体和控件的演练主题。

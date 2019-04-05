@@ -1,5 +1,5 @@
 ---
-title: '&lt;qualifyAssembly&gt;元素'
+title: <qualifyAssembly> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#qualifyAssembly
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59e3f54f4d3ce0c191193ff63a3c2bce5b93a1bd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ec72b1a1e3a2526dfb52f562be9fe92c677747ec
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747163"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674667"
 ---
-# <a name="ltqualifyassemblygt-element"></a>&lt;qualifyAssembly&gt;元素
+# <a name="qualifyassembly-element"></a>\<qualifyAssembly > 元素
 指定使用部分名称时应动态加载的程序集全名。  
   
  \<configuration>  
 \<运行时 >  
-\<assemblyBinding >  
+\<assemblyBinding>  
 \<qualifyAssembly>  
   
 ## <a name="syntax"></a>语法  
@@ -75,7 +75,7 @@ ms.locfileid: "43747163"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [NIB： 部分程序集引用](https://msdn.microsoft.com/library/ec90f07a-398c-4306-9401-0fc5ff9cb59f)
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [部分程序集引用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

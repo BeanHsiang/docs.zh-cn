@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: 3a7accd2e98423bf3ab0133a5eb36610b3ebb414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542605"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360974"
 ---
 # <a name="fonts-wpf"></a>字体 (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包含支持对文本使用丰富演示[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体。 示例包[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体是附带[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包括对文本使用的丰富的演示支持[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体。 一个示例包[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体随[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]。  
   
 ## <a name="in-this-section"></a>本节内容  
- [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [将字体与应用程序一起打包](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
- [示例 OpenType 字体包](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [帮助主题](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
+ [OpenType 字体功能](opentype-font-features.md)  
+ [将字体与应用程序一起打包](packaging-fonts-with-applications.md)  
+ [示例 OpenType 字体包](sample-opentype-font-pack.md)  
+ [帮助主题](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.FontStyle>  
- <xref:System.Windows.SystemFonts>  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.FontStyle>
+- <xref:System.Windows.SystemFonts>
+- [WPF 中的文档](documents-in-wpf.md)
+- [WPF 中的版式](typography-in-wpf.md)

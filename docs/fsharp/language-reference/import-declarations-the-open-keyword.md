@@ -1,18 +1,18 @@
 ---
-title: 导入声明：open 关键字 (F#)
-description: '了解有关 F # 导入声明以及如何指定模块或命名空间可以不使用完全限定的名称引用其中的元素。'
+title: 导入声明：Open 关键字
+description: 了解如何F#导入声明和如何指定模块或命名空间可以不使用完全限定的名称引用其中的元素。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 261ffdfdea2860db72b052b2ffeb5c7e5d652c24
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46586618"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610315"
 ---
 # <a name="import-declarations-the-open-keyword"></a>导入声明：`open`关键字
 
 > [!NOTE]
-本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
+> 本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 *导入声明*指定模块或命名空间可以不使用完全限定的名称引用其中的元素。
 
@@ -36,7 +36,7 @@ open module-or-namespace-name
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-F # 编译器不会发出错误或警告，当二义性出现时在多个打开的模块或命名空间中出现相同的名称。 二义性出现时，F # 提供对更多最近打开的模块或命名空间的首选项。 例如，在下面的代码中，`empty`意味着`Seq.empty`，即使`empty`位于在这种`List`和`Seq`模块。
+F#多个打开的模块或命名空间中出现相同的名称时，会出现多义性时，编译器不会发出错误或警告。 当出现多义性问题时，F#提供了对更多最近打开的模块或命名空间的首选项。 例如，在下面的代码中，`empty`意味着`Seq.empty`，即使`empty`位于在这种`List`和`Seq`模块。
 
 ```fsharp
 open List
@@ -48,11 +48,11 @@ printfn "%A" empty
 
 ## <a name="namespaces-that-are-open-by-default"></a>默认情况下打开的命名空间
 
-F # 代码而无需显式导入声明它们也隐式打开频繁使用一些命名空间。 下表显示了默认情况下打开的命名空间。
+一些命名空间相当频繁，因此可在F#而无需显式导入声明它们也隐式打开的代码。 下表显示了默认情况下打开的命名空间。
 
 |命名空间|描述|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|包含基本 F # 的类型定义内置类型，如`int`和`float`。|
+|`Microsoft.FSharp.Core`|包含基本F#类型的内置类型定义，如`int`并`float`。|
 |`Microsoft.FSharp.Core.Operators`|包含基本算术运算，如`+`和`*`。|
 |`Microsoft.FSharp.Collections`|包含不可变集合类，例如`List`和`Array`。|
 |`Microsoft.FSharp.Control`|包含用于控制构造，如惰性计算和异步工作流类型。|

@@ -2,12 +2,12 @@
 title: TcpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-ms.openlocfilehash: 04326484bbf1f07c66ad8fb401642880f9ba8c6e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0d5dc5c9b9bf2313d18c9fadb1a2adb87c1b11b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610781"
 ---
 # <a name="tcptransportbindingelement"></a>TcpTransportBindingElement
 TcpTransportBindingElement  
@@ -27,7 +27,7 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 ## <a name="methods"></a>方法  
  TcpTransportBindingElement 类不定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  TcpTransportBindingElement 类具有以下属性：  
   
 ### <a name="connectionpoolsettings"></a>ConnectionPoolSettings  
@@ -64,5 +64,5 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

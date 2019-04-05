@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5fca698adc4d08d805fec2ff80af377366674b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 961c1e0468ab99baca387b7d6ada4733629b7ffa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445950"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492226"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName 方法
 枚举表示具有指定名称的指定类型的成员的 MemberDef 标记。  
@@ -40,15 +40,15 @@ HRESULT EnumMembersWithName (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `phEnum`  
- [在中，out]枚举数指向的指针。  
+ [in、 out]一个指向枚举器。  
   
  `cl`  
- [in]表示具有要枚举的成员的类型的 TypeDef 标记。  
+ [in]表示与要枚举的成员类型的 TypeDef 标记。  
   
  `szName`  
- [in]限制的作用域的枚举器成员名称。  
+ [in]成员名称的枚举器的作用域限制。  
   
  `rMembers`  
  [out]用于存储 MemberDef 标记的数组。  
@@ -57,7 +57,7 @@ HRESULT EnumMembersWithName (
  [in] `rMembers` 数组的最大大小。  
   
  `pcTokens`  
- [out]在中返回的 MemberDef 标记的实际数`rMembers`。  
+ [out]MemberDef 标记中返回的实际数目`rMembers`。  
   
 ## <a name="remarks"></a>备注  
  此方法枚举字段和方法，但不是属性或事件。 与不同[imetadataimport:: Enummembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)，`EnumMembersWithName`放弃所有不具有指定的名称的字段和成员的令牌。  
@@ -70,14 +70,14 @@ HRESULT EnumMembersWithName (
 |`S_FALSE`|没有要枚举的 MemberDef 标记。 在这种情况下，`pcTokens`为零。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

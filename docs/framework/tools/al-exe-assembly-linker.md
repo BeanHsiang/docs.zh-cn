@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4fe4c4f89056ae57c3516149a41a5a3bea4fcd2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48848006"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492252"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe（程序集链接器）
 
@@ -23,7 +23,7 @@ ms.locfileid: "48848006"
 > [!NOTE]
 > 从 Visual Studio 2008 开始，C# 和 Visual Basic 编译器都自动将 Win32 清单嵌入到程序集中。 有关详细信息，请参阅 [/win32manifest（C# 编译器选项）](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md)。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
 
 在命令提示符处，键入以下内容：
 
@@ -33,11 +33,11 @@ ms.locfileid: "48848006"
 al sources options
 ```
 
-#### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
 你可以指定以下一个或多个 `sources`。
 
-| 源 | 描述 |
+| 源 | 说明 |
 | ------ | ----------- |
 |`file`[,`target`]|将 `file`（模块）的内容复制到 `target` 指定的文件名。 复制后，Al.exe 将 `target` 编译为程序集。|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|将 `file` 指定的资源嵌入到包含程序集清单的映像中；Al.exe 将 `file` 的内容复制到可移植的可执行 (PE) 映像中。<br /><br /> `name` 参数是资源的内部标识符。 默认情况下，资源在程序集中是公共的（对于其他程序集可见）。 指定 `private` 会使该资源对于其他程序集不可见。<br /><br /> 例如，如果 `file` 是由[资源文件生成器 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 创建的或在开发环境中创建的 .NET Framework 资源文件，则可使用 <xref:System.Resources> 中的成员来访问它。 有关更多信息，请参见<xref:System.Resources.ResourceManager>。 对于所有其他资源，请使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在运行时访问此资源。<br /><br /> 如果只将资源文件传递给 Al.exe，则输出文件为附属资源程序集。|
@@ -45,7 +45,7 @@ al sources options
 
 可以指定以下 `options`；必须指定 **/out**。
 
-| 选项 | 描述 |
+| 选项 | 说明 |
 | ------ | ----------- |
 |**/algid:** `id`|指定一种算法来对多文件程序集中的所有文件（包含程序集清单的文件除外）进行哈希处理。 默认算法是 CALG_SHA1。 有关其他算法，请参见平台 SDK 文档中的 ALG_ID。 对于 .NET Framework 的第一版，只有 CALG_SHA1 和 CALG_MD5 是有效的。<br /><br /> 哈希值存储在程序集清单的文件表中。 在安装和加载时，会对照相应的哈希值检查程序集文件。<br /><br /> 还可以将此选项指定为任何模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>)。|
 |**/base[address]:** `addr`|指定一个地址，运行时在用户计算机上在该地址加载 DLL。 如果指定 DLL 的基址，而不是让操作系统在进程空间内重新定位 DLL，则应用程序的加载速度会更快。|
@@ -54,7 +54,7 @@ al sources options
 |**/config[uration]:** `text`|为程序集中的“配置”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果文本是空字符串，则 Win32“配置”资源将显示为一个空格。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyConfigurationAttribute>)。|
 |**/copy[right]:** `text`|为程序集中的“版权”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/copyright** 在文件资源管理器中将显示为 Win32“版权”资源。<br /><br /> 如果文本是空字符串，则 Win32 Copyright 资源将显示为一个空格。<br /><br /> 如果指定 **/win32res**，则 **/copyright** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyCopyrightAttribute>)。|
 |**/c[ulture]:** `text`|指定要与程序集关联的区域性字符串。 区域性的有效值是名为“Tags for the Identification of Languages”的 Internet Requests for Comments (RFC) 文档 1766 定义的那些值。<br /><br /> 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 没有默认的区域性字符串。 使用反射可以查看此字符串。<br /><br /> 有关有效的 `text` 字符串的信息，请参见 <xref:System.Globalization.CultureInfo>。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyCultureAttribute>)。|
-|**/delay[sign][+|-]**|指定程序集是完全签名的还是部分签名的。 如果需要完全签名的程序集，请使用 **/delaysign-**。 如果仅需要将公钥包含在程序集中，则使用 **/delaysign+**。<br /><br /> 请求完全签名的程序集时，Al.exe 会对包含清单（程序集元数据）的文件进行哈希处理，并使用私钥对哈希进行签名。 产生的数字签名存储在包含清单的文件中。 在对程序集延迟签名时，Al.exe 不会计算和存储签名，而只是在文件中保留空间以便稍后可添加该签名。<br /><br /> 默认值为 **/delaysign-**。<br /><br /> 除非与 **/keyfile** 或 **/keyname** 一同使用，否则 **/delaysign** 选项将不起作用。<br /><br /> 例如，使用 **/delaysign+** 可允许测试人员将程序集放入全局缓存中。 测试完成后，可以通过将私钥包含在程序集中来对程序集进行完全签名。<br /><br /> 注意：使用 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)将延迟签名的程序集放入全局缓存之前，请使用 [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)来注册该程序集以跳过验证。 例如 `Sn.exe –Vr delaySignedAssembly`。 仅将它用于开发。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
+|**/delay[sign][+&#124;-]**|指定程序集是完全签名的还是部分签名的。 如果需要完全签名的程序集，请使用 **/delaysign-**。 如果仅需要将公钥包含在程序集中，则使用 **/delaysign+**。<br /><br /> 请求完全签名的程序集时，Al.exe 会对包含清单（程序集元数据）的文件进行哈希处理，并使用私钥对哈希进行签名。 产生的数字签名存储在包含清单的文件中。 在对程序集延迟签名时，Al.exe 不会计算和存储签名，而只是在文件中保留空间以便稍后可添加该签名。<br /><br /> 默认值为 **/delaysign-**。<br /><br /> 除非与 **/keyfile** 或 **/keyname** 一同使用，否则 **/delaysign** 选项将不起作用。<br /><br /> 例如，使用 **/delaysign+** 可允许测试人员将程序集放入全局缓存中。 测试完成后，可以通过将私钥包含在程序集中来对程序集进行完全签名。<br /><br /> 注意:使用 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)将延迟签名的程序集放入全局缓存之前，请使用 [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)来注册该程序集以跳过验证。 例如 `Sn.exe –Vr delaySignedAssembly`。 仅将它用于开发。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyDelaySignAttribute>)。|
 |**/descr[iption]:** `text`|为程序集中的 <xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A> 字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/description** 在文件资源管理器中将显示为 Win32“注释”资源。<br /><br /> 如果文本是空字符串，则 Win32“注释”资源将显示为一个空格。<br /><br /> 如果指定 **/win32res**，则 **/description** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyDescriptionAttribute.Description%2A>)。|
 |**/e[vidence]:** `file`|使用 Security.Evidence 的资源名将 `file` 嵌入程序集中。<br /><br /> 不能对常规资源使用 Security.Evidence。|
 |**/fileversion:** `version`|为程序集中的“文件版本”字段指定字符串。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/fileversion** 将用作 Win32“文件版本”资源。 如果不指定 **/fileversion**，则 Win32“文件版本”资源将由 Win32“程序集版本”资源填充。<br /><br /> 如果指定 **/win32res**，则 **/fileversion** 不会影响 Win32 资源。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (AssemblyFileVersionAttribute)。|
@@ -69,7 +69,7 @@ al sources options
 |**/platform:** `text`|限制可以运行该代码的平台；必须为 x86、Itanium、x64、anycpu（默认值）之一，或 anycpu32bitpreferred。|
 |**/prod[uct]:** `text`|为程序集中的“产品”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/product** 在文件资源管理器中将显示为 Win32“产品名称”资源。<br /><br /> 如果文本是空字符串，则 Win32“产品名称”资源将会显示为一个空格。<br /><br /> 如果指定 **/win32res**，则 **/product** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyProductAttribute>)。|
 |**/productv[ersion]:** `text`|为程序集中的“产品版本”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/productversion** 将用作 Win32“产品版本”资源。 如果不指定 **/productversion**，则 Win32“产品版本”资源将由 Win32“文件版本”资源填充。<br /><br /> 如果指定 **/win32res**，则 **/productversion** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyInformationalVersionAttribute>)。|
-|**/t[arget]:** `lib[rary]` | `exe` | `win[exe]`|指定输出文件的文件格式：`lib[rary]`（代码库）、`exe`（控制台应用程序）或 `win[exe]`（基于 Windows 的应用程序）。 默认值为 `lib[rary]`。|
+|**/t[arget]:** `lib[rary]` &#124; `exe` &#124; `win[exe]`|指定输出文件的文件格式：`lib[rary]`（代码库）、`exe`（控制台应用程序）或 `win[exe]`（基于 Windows 的应用程序）。 默认值为 `lib[rary]`。|
 |**/template:** `filename`|指定程序集 `filename`，除区域性字段之外的所有程序集元数据都从该程序集继承。<br /><br /> 使用 **/template** 创建的程序集将成为附属程序集。|
 |**/title:** `text`|为程序集中的“标题”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/title** 在文件资源管理器中将显示为 Win32“说明”资源，shell 将其用作应用程序的友好名称。 如果某个文件类型有多个支持应用程序，则该字符串也会出现在此文件类型的快捷菜单的“打开方式”子菜单中。<br /><br /> 如果文本是空字符串，则 Win32“说明”资源将显示为一个空格。<br /><br /> 如果指定 **/win32res**，则 **/title** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyTitleAttribute>)。|
 |**/trade[mark]:** `text`|为程序集中的“商标”字段指定字符串。 如果 `text` 包含空格，则将字符串放置在双引号 (" ") 中。 此字符串是程序集上的自定义特性，可以使用反射进行查看。<br /><br /> 如果不指定 **/win32res**，则 **/trademark** 在文件资源管理器中将显示为 Win32“商标”资源。<br /><br /> 如果文本是空字符串，则 Win32“商标”资源将显示为一个空格。<br /><br /> 如果指定 **/win32res**，则 **/trademark** 将不会影响 Win32 资源信息。<br /><br /> 还可以将此选项指定为任何 MSIL 模块的源代码中的自定义特性 (<xref:System.Reflection.AssemblyTrademarkAttribute>)。|
@@ -89,7 +89,7 @@ al sources options
 
 下表列出了 Al.exe 生成的错误。
 
-| Error | 描述 |
+| Error | 说明 |
 | ----- | ----------- |
 |al1001|内部编译器错误<br /><br /> 尝试确定 Al.exe 是否因为无法分析意外语法而失败。 然后，请与 Microsoft 产品支持服务联系。|
 |al1002|内存不足<br /><br /> Al.exe 内存不足，已停止。 增加可用内存量。|
@@ -100,7 +100,7 @@ al sources options
 |al1007|打开响应文件“file”时出错 —“reason”<br /><br /> Al.exe 因特定原因无法打开指定的响应文件。|
 |al1008|缺少“option”命令行选项的文件规范<br /><br /> Al.exe 预期一个文件被传递到命令行选项。 例如，如果指定 **/out** 选项，则必须指定文件。|
 |al1009|无法打开“file”以进行写入<br /><br /> Al.exe 无法写入文件，例如输出程序集文件。 磁盘可能已满，该文件可能是只读的，或者你可能不具有对该文件的权限。|
-|al1010|命令行语法错误:“option”选项缺少“:text”<br /><br /> Al.exe 预期一个自变量被传递到命令行选项。 例如，如果指定 **/title** 选项，则必须传递字符串。|
+|al1010|命令行语法错误：“选项”选项缺少“:text”<br /><br /> Al.exe 预期一个自变量被传递到命令行选项。 例如，如果指定 **/title** 选项，则必须传递字符串。|
 |al1011|文件“file”是可执行文件，无法作为文本文件打开<br /><br /> 在预期为文本文件之处指定了二进制文件。 例如，如果将二进制文件作为响应文件传递到命令行上，将发生此错误。|
 |al1012|“value”不是选项“option”的有效设置<br /><br /> 意外值被传递到命令行选项。 例如，如果将无效值指定到 **/target** 选项，则将发生此错误。|
 |al1013|无法识别的命令行选项:“option”<br /><br /> 已指定无效的命令行选项。|
@@ -129,7 +129,7 @@ al sources options
 |al1039|全局程序集缓存管理器的初始化失败 — 原因<br /><br /> 重新安装 Visual Studio 或 [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]。|
 |al1040|未能将程序集安装到缓存 — 原因<br /><br /> 仅签名的程序集可安装到缓存中。 有关详细信息，请参阅[全局程序集缓存](../../../docs/framework/app-domains/gac.md)。|
 |al1041|“method”: 不能为入口点，因为签名或可见性不正确，或者它是泛型<br /><br /> 使用 **/main** 选项指定了一种方法，但该方法不是静态的，不会返回 `int` 或 `void`，该方法是泛型类型，或者具有无效自变量。|
-|al1042|“exe”: 不能向 EXE 添加模块<br /><br /> 已将不具有程序集的 .exe 文件指定为 Al.exe 的输入文件。 Al.exe 只能接受不具有程序集的 .dll 文件作为输入文件。|
+|al1042|“exe”：不能向 EXE 添加模块<br /><br /> 已将不具有程序集的 .exe 文件指定为 Al.exe 的输入文件。 Al.exe 只能接受不具有程序集的 .dll 文件作为输入文件。|
 |al1043|清单文件名“name”不能和任何模块相同<br /><br /> 使用 /out 选项指定的名称不能与任何一个指定为 Al.exe 的输入文件的名称相同。|
 |al1044|读取密钥文件“file”时出错 — 原因<br /><br /> 从使用 /keyfile 或 <xref:System.Reflection.AssemblyKeyFileAttribute> 指定的文件打开或读取时出错。|
 |al1045|文件名“file”太长或无效<br /><br /> 将长于 260 个字符的文件名传递给 Al.exe。 选择字符较少或路径较短的文件名或重命名该文件。|

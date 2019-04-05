@@ -2,12 +2,12 @@
 title: PII 安全锁定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 48b62ed5c27463b863ff585520a4b42fc4c83f88
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195133"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699774"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全锁定
 此示例演示如何控制通过 Windows Communication Foundation (WCF) 服务的多个安全相关的功能：  
@@ -47,7 +47,7 @@ ms.locfileid: "50195133"
   
 3.  通过发出下面的命令对 Web.config 文件夹中的 appSettings 配置设置进行加密：`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`。  
   
- 可以通过读取操作方式上 DPAPI ASP.NET 配置中的找到有关加密配置文件节的详细信息 ([Building Secure ASP.NET Applications： 身份验证、 授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)) 和 ASP.NET 配置中的操作方法上 RSA ([如何： 在 ASP.NET 2.0 使用 RSA 加密配置节](https://go.microsoft.com/fwlink/?LinkId=95138))。  
+ 可以通过读取操作方式上 DPAPI ASP.NET 配置中的找到有关加密配置文件节的详细信息 ([Building Secure ASP.NET Applications:身份验证、 授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)) 和 ASP.NET 配置中的操作方法上 RSA ([How To:加密 ASP.NET 2.0 中的配置节，可使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138))。  
   
 ## <a name="locking-configuration-file-elements"></a>锁定配置文件元素  
  在 Web 承载的方案中，可以使服务位于其他服务的子目录中。 在这些情况下，通过检查 Machine.config 中的值并依次与父目录中的任何 Web.config 文件合并，然后沿目录树向下移动，最后合并包含该服务的目录中的 Web.config 文件，来计算子目录中服务的配置值。 多数配置元素的默认行为都允许子目录中的配置文件重写父目录中设置的值。 在特定情况下，可能需要阻止子目录中的配置文件重写父目录配置中设置的值。  
@@ -124,9 +124,9 @@ ms.locfileid: "50195133"
   
  使用 DPAPI 和 RSA 也可以对配置文件元素进行加密。 有关更多信息，请参见以下链接：  
   
--   [构建安全的 ASP.NET 应用程序： 身份验证、 授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
+-   [构建安全的 ASP.NET 应用程序：身份验证、 授权和安全通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [如何： 加密 ASP.NET 2.0 中的配置节，可使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+-   [如何：加密 ASP.NET 2.0 中的配置节，可使用 RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -142,5 +142,5 @@ ms.locfileid: "50195133"
   
 1.  编辑 Machine.config，将 `enableLoggingKnownPii` 属性设置为 `false`。  
   
-## <a name="see-also"></a>请参阅  
- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>请参阅
+- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

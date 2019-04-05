@@ -1,17 +1,17 @@
 ---
-title: 记录 (F#)
-description: '了解如何对 F # 记录表示已命名的值，可选择包含成员的简单聚合。'
+title: 记录
+description: 了解如何F#记录表示已命名的值，可选择包含成员的简单聚合。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48261285"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656136"
 ---
 # <a name="records"></a>记录
 
-记录表示已命名值的简单聚合，可选择包含成员。  从 F # 4.1 开始，它们可以是结构或引用类型。  它们是默认情况下引用类型。
+记录表示已命名值的简单聚合，可选择包含成员。  从F#4.1，它们可以是结构或引用类型。  它们是默认情况下引用类型。
 
 ## <a name="syntax"></a>语法
 
@@ -89,6 +89,29 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 // and leave the rest with default values.
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
+
+## <a name="creating-mutually-recursive-records"></a>创建相互递归记录
+
+一段时间时创建一条记录，你可能想让它取决于你想要定义之后的另一种类型。 除非定义记录类型是互斥的递归，这是一个编译错误。
+
+定义相互递归记录通过`and`关键字。 这样可将 2 个或更多记录类型链接在一起。
+
+例如，下面的代码定义`Person`和`Address`为相互递归类型：
+
+```fsharp
+// Create a Person type and use the Address type that is not defined
+type Person =
+  { Name: string
+    Age: int
+    Address: Address }
+// Define the Address type which is used in the Person record
+and Address =
+  { Line1: string
+    Line2: string
+    PostCode: string }
+```
+
+如果要定义前面的示例，而无需`and`关键字，则它将无法编译。 `and`关键字是所必需的相互递归定义。
 
 ## <a name="pattern-matching-with-records"></a>使用记录的模式匹配
 

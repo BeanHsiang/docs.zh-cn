@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d7ab227a19eeb9bf054700f8d932b75cf3c1ddc9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 361582866dabf51665e1dc94fdc49e8710d8ad3e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43772736"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091820"
 ---
 # <a name="create-the-data-service"></a>创建数据服务
 
@@ -52,7 +52,7 @@ ms.locfileid: "43772736"
 
 5. 连接到数据库的数据模型，通过执行以下步骤之一，然后单击**下一步**:
 
-    -   如果没有已配置的数据库连接，请单击**新的连接**和创建新的连接。 有关详细信息，请参阅[如何： 创建到 SQL Server 数据库的连接](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
+    -   如果没有已配置的数据库连接，请单击**新的连接**和创建新的连接。 有关详细信息，请参阅[如何：创建连接到 SQL Server 数据库](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))。 此 SQL Server 实例必须附加了 Northwind 示例数据库。
 
          \- 或 -
 
@@ -103,4 +103,4 @@ ms.locfileid: "43772736"
 
 ## <a name="see-also"></a>请参阅
 
-- [ADO.NET 实体数据模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [ADO.NET 实体数据模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

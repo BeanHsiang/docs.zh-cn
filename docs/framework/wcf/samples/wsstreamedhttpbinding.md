@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: d2111639266612183630231dbd51be55ef9c1ee4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96dccbc971c9ef5a59557100adb6df24a745ea5d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779326"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828012"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 此示例演示如何创建一个绑定，该绑定用于在使用 HTTP 传输时支持流方案。  
@@ -142,4 +142,3 @@ public class StreamedEchoService : IStreamedEchoService
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```  
   
-## <a name="see-also"></a>请参阅

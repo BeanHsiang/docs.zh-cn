@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90dd72fae71f4283e6eefeb7c878b32e9c155cff
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a3c48182ab5a864228fd1d2ccf32d714ebccf60a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494556"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 和开放源代码
 本主题提供有关 .NET Core 概念的简要概述并展示如何查找更多信息。 若要查找有关 .NET Core 的完整主题列表，请访问 [.NET Core 指南](../../core/index.md)。
@@ -22,7 +22,7 @@ ms.locfileid: "49454390"
   
  下面列出了 .NET Core 的主要特征：  
   
--   **跨平台：**.NET Core 提供了实现所需应用功能的关键功能，并且可以重用代码而不考虑平台目标。 它当前支持三种主要的操作系统 (OS)：Windows、 Linux 和 macOS。 可以编写无需修改即可跨受支持操作系统运行的应用和库。 若要查看受支持操作系统的列表，请访问 [.NET Core 路线图](https://github.com/dotnet/core/blob/master/roadmap.md)。
+-   **跨平台：**.NET Core 提供了实现所需应用功能的关键功能，并且可以重用代码而不考虑平台目标。 它当前支持三种主要的操作系统 (OS)：Windows、Linux 和 macOS。 可以编写无需修改即可跨受支持操作系统运行的应用和库。 若要查看受支持操作系统的列表，请访问 [.NET Core 路线图](https://github.com/dotnet/core/blob/master/roadmap.md)。
   
 -   **开放源代码：**.NET Core 是 [.NET Foundation](https://www.dotnetfoundation.org/) 管理下的很多项目中的一个，并在 [GitHub](https://github.com/) 上提供。  将 .NET Core 作为开放源代码项目促使开发过程更加透明并能提升社区的活跃度及参与度。   
   
@@ -45,7 +45,7 @@ ms.locfileid: "49454390"
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
-## <a name="see-also"></a>请参阅  
-- [.NET Core主页](https://www.microsoft.com/net/core)  
-- [.NET Core 指南](../../core/index.md)  
+## <a name="see-also"></a>请参阅
+- [.NET Core主页](https://www.microsoft.com/net/core)
+- [.NET Core 指南](../../core/index.md)
 - [ASP.NET Core 文档](/aspnet/core/)

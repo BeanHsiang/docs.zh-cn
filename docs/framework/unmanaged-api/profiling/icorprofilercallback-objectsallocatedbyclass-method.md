@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dde5c50666333c02c8c1a9a167e17af3f40341
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e26e7ac9b89e005d9520ad860cf3acee7d3cc6cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454336"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479748"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass 方法
-通知探查器有关的最新的垃圾回收后，创建的每个指定的类的实例数。  
+通知探查器有关的最新的垃圾回收以来已创建的每个指定的类的实例数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +36,7 @@ HRESULT ObjectsAllocatedByClass(
     [in, size_is(cClassCount)] ULONG   cObjects[] );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `cClassCount`  
  [in]大小`classIds`和`cObjects`数组。  
   
@@ -44,23 +44,23 @@ HRESULT ObjectsAllocatedByClass(
  [in]类 Id，其中每个 ID 指定的类具有一个或多个实例的数组。  
   
  `cObjects`  
- [in]一个整数，其中每个整数指定中的对应类的实例数数组`classIds`数组。  
+ [in]一个整数，其中每个整数指定中的相应类的实例数数组`classIds`数组。  
   
 ## <a name="remarks"></a>备注  
- `classIds`和`cObjects`数组是并行数组。 例如，`classIds[i]`和`cObjects[i]`引用同一个类。 如果自上次垃圾回收后不创建了一个类的任何实例，则忽略该类。 `ObjectsAllocatedByClass`回调不会报告大对象堆中分配的对象。  
+ `classIds`和`cObjects`数组是并行数组。 例如，`classIds[i]`和`cObjects[i]`引用同一个类。 如果自上次垃圾回收以来创建的类没有实例，则省略类。 `ObjectsAllocatedByClass`回调不会报告大型对象堆中分配的对象。  
   
- 报告的数目`ObjectsAllocatedByClass`只是估计。 精确计数，使用[icorprofilercallback:: Objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)。  
+ 通过报告的数字`ObjectsAllocatedByClass`只是估计。 对于精确计数，请使用[icorprofilercallback:: Objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)。  
   
- `classIds`数组可能包含一个或多个 null 条目，如果相应`cObjects`数组具有要卸载的类型。  
+ `classIds`数组可能包含一个或多个 null 项，如果相应`cObjects`数组具有正在卸载的类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

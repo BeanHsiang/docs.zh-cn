@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 9c4b4d66ba002e58af87ef39ea82a7a23caa15ca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5254907147444f7c02b2bf0141af02d0efd4159b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185753"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839426"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 指定可以运行生成的可执行文件的子系统的最低版本，以此确定可以运行该可执行文件的 Windows 版本。 大多数情况下，此选项确保该可执行文件可以利用早期 Windows 版本中未提供的特定安全功能。  
@@ -25,7 +25,7 @@ ms.locfileid: "50185753"
 -subsystemversion:major.minor  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `major.minor`  
  所需的子系统最低版本，以主版本和次要版本之间使用点标记的方式表示。 例如，如果将此选项的值设置为 6.01，则可以指定应用程序不能在低于 Windows 7 的操作系统上运行（如本主题后面的表中所述）。 必须将 `major` 和 `minor` 的值指定为整数。  
   
@@ -64,7 +64,8 @@ ms.locfileid: "50185753"
   
 
   
-## <a name="see-also"></a>请参阅  
-[Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+## <a name="see-also"></a>请参阅
 
-[MSBuild 属性](/visualstudio/msbuild/msbuild-properties)
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+
+- [MSBuild 属性](/visualstudio/msbuild/msbuild-properties)

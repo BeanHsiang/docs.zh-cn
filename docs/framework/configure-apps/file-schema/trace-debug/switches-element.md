@@ -1,5 +1,5 @@
 ---
-title: '&lt;开关&gt;元素'
+title: <switches> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches
@@ -9,21 +9,19 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: afd0e955698dfc7ff3d5c843dd8db10f648265b8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033332"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254660"
 ---
-# <a name="ltswitchesgt-element"></a>&lt;开关&gt;元素
+# <a name="switches-element"></a>\<开关 > 元素
 包含跟踪开关和对该跟踪开关设置的级别。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<开关 >  
+\<system.diagnostics>  
+\<switches>  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,8 +66,8 @@ ms.locfileid: "48033332"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.Switch>  
- <xref:System.Diagnostics.TraceSwitch>  
- <xref:System.Diagnostics.BooleanSwitch>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.Switch>
+- <xref:System.Diagnostics.TraceSwitch>
+- <xref:System.Diagnostics.BooleanSwitch>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

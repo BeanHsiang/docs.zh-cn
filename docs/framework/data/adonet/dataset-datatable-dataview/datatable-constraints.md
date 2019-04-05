@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: fa70af311d6b4fa4e17bb3ba6110e4cea420c34c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d0b3bd649da301c563a19450d7d9b42e9d0b29e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611756"
 ---
 # <a name="datatable-constraints"></a>数据表约束
 为了维护数据的完整性，可以使用约束来对 <xref:System.Data.DataTable> 中的数据施加限制。 约束是应用于某列或相关各列的自动规则，它决定了某行的值以某种方式更改时的操作过程。 强制执行约束时`System.Data.DataSet.EnforceConstraints`的属性<xref:System.Data.DataSet>是**true**。 有关显示如何设置 `EnforceConstraints` 属性的代码示例，请参见 <xref:System.Data.DataSet.EnforceConstraints%2A> 参考主题。  
@@ -92,11 +92,11 @@ UniqueConstraint custUnique = new UniqueConstraint(new DataColumn[]
 custDS.Tables["Customers"].Constraints.Add(custUnique);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Data.DataRelation>  
- <xref:System.Data.DataTable>  
- <xref:System.Data.ForeignKeyConstraint>  
- <xref:System.Data.UniqueConstraint>  
- [数据表架构定义](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- <xref:System.Data.DataRelation>
+- <xref:System.Data.DataTable>
+- <xref:System.Data.ForeignKeyConstraint>
+- <xref:System.Data.UniqueConstraint>
+- [数据表架构定义](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
+- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

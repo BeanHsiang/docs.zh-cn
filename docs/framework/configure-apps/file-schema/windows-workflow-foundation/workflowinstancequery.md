@@ -1,26 +1,26 @@
 ---
-title: '&lt;workflowInstanceQuery&gt;'
+title: <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9096e812-626a-409a-9eda-c31a60b84c55
-ms.openlocfilehash: eb8b84f70025df3a8a8ac96f61dec6755eb3a364
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7541ddcf4df8135d82b1f7f5ae2c02f031090e17
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757835"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275057"
 ---
-# <a name="ltworkflowinstancequerygt"></a>&lt;workflowInstanceQuery&gt;
+# <a name="workflowinstancequery"></a>\<workflowInstanceQuery>
 表示一个查询，该查询跟踪工作流实例生命周期的更改，例如已开始或已完成的事件。  
   
  有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<跟踪 >  
+\<tracking>  
 \<trackingProfile>  
-\<工作流 >  
+\<workflow>  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
+\<workflowInstanceQuery>  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,7 +50,7 @@ ms.locfileid: "32757835"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<状态 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|创建跟踪记录时已跟踪工作流实例中已订阅状态的集合。|  
+|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|创建跟踪记录时已跟踪工作流实例中已订阅状态的集合。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -84,8 +84,8 @@ ms.locfileid: "32757835"
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
+- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

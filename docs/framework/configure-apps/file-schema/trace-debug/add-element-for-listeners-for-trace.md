@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;'
+title: <add> 的 <listeners> 的 <trace> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -8,22 +8,20 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: fd8ddf5daec4ab7e4de636a2f14cf413aedaa99a
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 31ab58d6817c6c5064182ab5ef8b9595e92bef7d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261428"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260641"
 ---
-# <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;添加&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;
+# <a name="add-element-for-listeners-for-trace"></a>\<添加 > 元素\<侦听器 > 为\<跟踪 >
 将侦听器添加到**侦听器**集合。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<跟踪 >  
-\<侦听器 >  
+\<system.diagnostics>  
+\<trace>  
+\<listeners>  
 \<add>  
   
 ## <a name="syntax"></a>语法  
@@ -103,11 +101,11 @@ ms.locfileid: "48261428"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.Debug>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- <xref:System.Diagnostics.ConsoleTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.Debug>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- <xref:System.Diagnostics.ConsoleTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

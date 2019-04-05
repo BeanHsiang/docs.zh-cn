@@ -1,25 +1,23 @@
 ---
-title: '&lt;删除&gt;元素&lt;namedCaches&gt;'
+title: <remove> 的 <namedCaches> 元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 22d06ab1df0d5ed74073772302421a680f1665ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838216"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257014"
 ---
-# <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;删除&gt;元素&lt;namedCaches&gt;
+# <a name="remove-element-for-namedcaches"></a>\<删除 > 元素\<namedCaches >
 从内存缓存的 `namedCaches` 集合中删除一个命名的缓存条目。  
   
  \<system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
+\<namedCaches>  
 \<remove>  
   
 ## <a name="syntax"></a>语法  
@@ -52,5 +50,5 @@ ms.locfileid: "48838216"
 ## <a name="remarks"></a>备注  
  `remove`元素中移除`namedCache`内存缓存的命名的缓存集合中的条目。  
   
-## <a name="see-also"></a>请参阅  
- [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+## <a name="see-also"></a>请参阅
+- [\<namedCaches > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

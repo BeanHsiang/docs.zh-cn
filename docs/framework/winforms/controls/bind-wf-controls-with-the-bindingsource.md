@@ -1,19 +1,19 @@
 ---
-title: 如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定
+title: 如何：将 Windows 窗体控件与 BindingSource 组件使用设计器绑定
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 95f375d8845c60441aa5eefdd37e32541ea2d5a7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e12498bc71957d49893e49e54095b6bb184ac2c3
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042304"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441913"
 ---
-# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定
+# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>如何：将 Windows 窗体控件与 BindingSource 组件使用设计器绑定
 在已向窗体添加控件并为你的应用程序确定的用户界面后，可以将控件绑定到数据源，以便在运行时，用户可以更改和保存到应用程序相关的数据。  
   
  在 Windows 窗体中绑定的控件的一系列使用非常轻松地实现<xref:System.Windows.Forms.BindingSource>控件作为窗体上的控件和数据源之间的桥梁。  
@@ -59,8 +59,8 @@ ms.locfileid: "44042304"
   
      **数据源**UI 类型编辑器将关闭并且数据集，<xref:System.Windows.Forms.BindingSource>和特定于数据连接添加到你的窗体的表适配器。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.BindingNavigator>  
- [添加新数据源](/visualstudio/data-tools/add-new-data-sources)  
- [数据源窗口](https://msdn.microsoft.com/library/0d20f699-cc95-45b3-8ecb-c7edf1f67992)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.BindingNavigator>
+- [添加新数据源](/visualstudio/data-tools/add-new-data-sources)
+- [数据源窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))

@@ -1,5 +1,5 @@
 ---
-title: '&lt;网络&gt;元素 （网络设置）'
+title: <network> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 242ee42ded339b349cb9e4eb93750b9f5db29b51
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 67743ccf2fa14117814160aeb7624c2be4eea364
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50135227"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257857"
 ---
-# <a name="ltnetworkgt-element-network-settings"></a>&lt;网络&gt;元素 （网络设置）
+# <a name="network-element-network-settings"></a>\<网络 > 元素 （网络设置）
 配置外部的简单邮件传输协议 (SMTP) 服务器的网络选项。  
   
  \<configuration>  
@@ -109,8 +109,8 @@ ms.locfileid: "50135227"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>  
- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

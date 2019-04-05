@@ -2,12 +2,12 @@
 title: 协定优先工具
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 86ef109425a75e46e056447f4f40df36aa332293
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261610"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819614"
 ---
 # <a name="contract-first-tool"></a>协定优先工具
 服务协定往往需要从现有的服务创建。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以使用协定优先工具从现有服务自动创建数据协定类。 要使用协定优先工具，必须本地下载 XML 架构定义 (XSD) 文件；该工具无法通过 HTTP 导入远程数据协定。
@@ -61,39 +61,39 @@ ms.locfileid: "48261610"
 ## <a name="configuring-contract-first-options"></a>配置协定优先选项
  协定优先选项可以配置 WCF 项目中的属性菜单中。 若要启用协定优先开发，请选择**XSD 作为类型定义语言**项目属性窗口的 WCF 页中的复选框。
 
- ![WCF 项目选项显示协定&#45;第一个](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")
+ ![协定优先开发启用 WCF 选项的屏幕截图。](./media/contract-first-tool/contract-first-options.png)
 
  要配置高级属性，请单击“高级”按钮。
 
- ![高级协定&#45;第一个属性](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")
+ ![高级的协定代码生成设置对话框。](./media/contract-first-tool/advanced-contract-settings.png)
 
  可以从协定中配置下列高级设置用于代码生成。 只能为项目中的所有文件配置设置；目前不能为单独的文件配置设置。
 
--   **序列化程序模式**： 此设置确定哪个序列化程序用于读取服务协定文件。 时**XML 序列化程序**已选中**集合类型**并**重用类型**选项处于禁用状态。 这些选项仅适用于**数据协定序列化程序**。
+-   **序列化程序模式**:此设置确定哪个序列化程序用于读取服务协定文件。 时**XML 序列化程序**已选中**集合类型**并**重用类型**选项处于禁用状态。 这些选项仅适用于**数据协定序列化程序**。
 
--   **重新使用的类型**： 此设置指定哪些库用于类型重用。 此设置才适用**序列化程序模式**设置为**数据协定序列化程序**。
+-   **重新使用的类型**:此设置指定哪些库用于类型重用。 此设置才适用**序列化程序模式**设置为**数据协定序列化程序**。
 
--   **集合类型**： 此设置指定要用作集合数据类型的完全限定或程序集限定类型。 此设置才适用**序列化程序模式**设置为**数据协定序列化程序**。
+-   **集合类型**:此设置指定要用作集合数据类型的完全限定或程序集限定类型。 此设置才适用**序列化程序模式**设置为**数据协定序列化程序**。
 
--   **字典类型**： 此设置指定要用于字典数据类型的完全限定或程序集限定类型。
+-   **字典类型**:此设置指定要用于字典数据类型的完全限定或程序集限定类型。
 
--   **EnableDataBinding**： 此设置指定是否实现<xref:System.ComponentModel.INotifyPropertyChanged>上所有数据类型实现数据绑定接口。
+-   **EnableDataBinding**:此设置指定是否实现<xref:System.ComponentModel.INotifyPropertyChanged>上所有数据类型实现数据绑定接口。
 
 -   **ExcludedTypes**： 此设置指定的完全限定或程序集限定类型引用的程序集从排除列表。 此设置才适用**序列化程序模式**设置为**数据协定序列化程序**。
 
--   **GenerateInternalTypes**： 此设置指定是否生成标记为内部的类。 此设置才适用**序列化程序模式**设置为**数据协定序列化程序**。
+-   **GenerateInternalTypes**:此设置指定是否生成标记为内部的类。 此设置才适用**序列化程序模式**设置为**数据协定序列化程序**。
 
--   **GenerateSerializableTypes**： 此设置指定是否生成与类<xref:System.SerializableAttribute>属性。 此设置才适用**序列化程序模式**设置为**数据协定序列化程序**。
+-   **GenerateSerializableTypes**:此设置指定是否生成与类<xref:System.SerializableAttribute>属性。 此设置才适用**序列化程序模式**设置为**数据协定序列化程序**。
 
--   **ImportXMLTypes**： 此设置指定是否将配置数据协定序列化程序，以应用<xref:System.SerializableAttribute>属性为类，而<xref:System.Runtime.Serialization.DataContractAttribute>属性。  此设置才适用**序列化程序模式**设置为**数据协定序列化程序**。
+-   **ImportXMLTypes**:此设置指定是否将配置数据协定序列化程序，以应用<xref:System.SerializableAttribute>属性为类，而<xref:System.Runtime.Serialization.DataContractAttribute>属性。  此设置才适用**序列化程序模式**设置为**数据协定序列化程序**。
 
--   **SupportFx35TypedDataSets**： 此设置指定是否以提供其他功能的类型化数据集创建.Net Framework 3.5。 当**序列化程序模式**设置为**XML 序列化程序**，则<xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35>扩展将添加到 XML 架构导入程序，此值设置为 True 时。 当**序列化程序模式**设置为**数据协定序列化程序**，类型<xref:System.DateTimeOffset>时此值设置为 False，将排除从引用，以便<xref:System.DateTimeOffset>始终生成对于较早的 framework 版本。
+-   **SupportFx35TypedDataSets**:此设置指定是否向为.NET Framework 3.5 创建的类型化数据集提供其他功能。 当**序列化程序模式**设置为**XML 序列化程序**，则<xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35>扩展将添加到 XML 架构导入程序，此值设置为 True 时。 当**序列化程序模式**设置为**数据协定序列化程序**，类型<xref:System.DateTimeOffset>时此值设置为 False，将排除从引用，以便<xref:System.DateTimeOffset>始终生成对于较早的 framework 版本。
 
--   **InputXsdFiles**： 此设置指定输入文件的列表。 每个文件都必须包含有效的 XML 架构。
+-   **InputXsdFiles**:此设置指定输入文件的列表。 每个文件都必须包含有效的 XML 架构。
 
--   **语言**： 此设置指定生成的协定代码的语言。 该设置必须为 <xref:System.CodeDom.Compiler.CodeDomProvider> 所识别。
+-   **语言**:此设置指定生成的协定代码的语言。 该设置必须为 <xref:System.CodeDom.Compiler.CodeDomProvider> 所识别。
 
--   **NamespaceMappings**： 此设置指定从 XSD 目标命名空间到 CLR 命名空间的映射。 每个映射应使用以下格式：
+-   **NamespaceMappings**:此设置指定从 XSD 目标命名空间到 CLR 命名空间的映射。 每个映射应使用以下格式：
 
     ```xml
     "<Schema Namespace>, <CLR Namespace>"
@@ -105,7 +105,7 @@ ms.locfileid: "48261610"
     "*, <CLR Namespace>"
     ```
 
--   **OutputDirectory**： 此设置指定将生成的代码文件的目录。
+-   **OutputDirectory**:此设置指定将生成的代码文件的目录。
 
  这些设置将用于在生成项目时从服务协定文件中生成服务协定类型。
 
@@ -118,9 +118,9 @@ ms.locfileid: "48261610"
 using MyProjectNamespace.ContractTypes;
 ```
 
- 然后，服务协定中定义的类型将在项目中变得可解析，如下所示。
+ 服务协定中定义的类型然后，将在项目中，可解析，如下所示：
 
- ![使用类型派生自服务协定](../../../docs/framework/wcf/media/contractfirsttypes.png "ContractFirstTypes")
+ ![SearchRequest 类键入前几个字母后显示在 IntelliSense 中。](./media/contract-first-tool/service-contract-types.png)
 
  在 GeneratedXSDTypes.cs 文件中创建由工具生成的类型。 中创建的文件\<项目目录 > /obj/\<生成配置 > /XSDGeneratedCode/ 目录默认情况下。 本主题开头的示例架构转换为如下所示：
 

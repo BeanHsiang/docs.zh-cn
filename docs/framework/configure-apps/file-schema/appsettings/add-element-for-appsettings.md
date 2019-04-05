@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;元素&lt;appSettings&gt;'
+title: <add> 的 <appSettings> 元素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: e74f0956dd5acebccee87fd6ad8c09b299badffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dde773dc722cf75da9d922ccf28af4bf4a09636c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194340"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277467"
 ---
 # <a name="add-element-for-appsettings"></a>\<添加 > 元素\<appSettings >
 
@@ -22,7 +22,7 @@ ms.locfileid: "50194340"
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<添加 >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>语法
 
@@ -37,7 +37,7 @@ ms.locfileid: "50194340"
 |           | 描述 |
 | --------- | ----------- |
 | **key**   | 必需的特性。<br><br>指定要添加的键的名称。 |
-| **value** | 必需的特性。<br><br>指定要添加的键的值。 |
+| **值** | 必需的特性。<br><br>指定要添加的键的值。 |
 
 ## <a name="parent-element"></a>父元素
 

@@ -1,40 +1,42 @@
 ---
-title: '&lt;netHttpBinding&gt; 的 &lt;transport&gt;'
+title: <transport> 的 <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 092072df2b88c59c7744a694175ce5ddf39cf79b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4d84d99660e4804a5eff2e343ba01c2983520b8f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842640"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379726"
 ---
-# <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; 的 &lt;transport&gt;
+# <a name="transport-of-nethttpbinding"></a>\<transport> of \<netHttpBinding>
 为 HTTP 传输定义控制身份验证参数的属性。  
   
 \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<netHttpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
 \<transport>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
-<netHttpBinding>  
-  <binding>  
-    <security mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">  
-      <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"  
-                 proxyCredentialType="None|Basic|Digest|Ntlm|Windows" realm="string">  
-        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"  
-                                  protectionScenario="TransportSelected|TrustedProxy">  
-          <customServiceNames></customServiceNames>  
-        </extendedProtectionPolicy>  
-      </transport>  
-    </security>  
-  </binding>  
-</netHttpBinding>  
+```xml  
+<netHttpBinding>
+  <binding>
+    <security mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">
+      <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"
+                 proxyCredentialType="None|Basic|Digest|Ntlm|Windows"
+                 realm="string">
+        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"
+                                  protectionScenario="TransportSelected|TrustedProxy">
+          <customServiceNames>
+          </customServiceNames>
+        </extendedProtectionPolicy>
+      </transport>
+    </security>
+  </binding>
+</netHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -65,8 +67,8 @@ ms.locfileid: "48842640"
 |值|描述|  
 |-----------|-----------------|  
 |无|的在传输过程中不是安全消息数。|  
-|Basic|指定“RFC 2617 – HTTP 身份验证：基本和摘要式身份验证”所定义的基本身份验证。|  
-|摘要|指定“RFC 2617 – HTTP 身份验证：基本和摘要式身份验证”所定义的摘要式身份验证。|  
+|Basic|指定基本身份验证定义的 RFC 2617 – HTTP 身份验证：基本和摘要式身份验证。|  
+|摘要|指定摘要式身份验证定义的 RFC 2617 – HTTP 身份验证：基本和摘要式身份验证。|  
 |Ntlm|指定 NTLM 身份验证（如果可能且 Windows 身份验证失败）。|  
 |Windows|指定 Windows 集成身份验证。|  
 |证书|使用证书执行客户端身份验证。 此选项只在父 `Mode` 元素的 `security` 属性设置为“Transport”时才起作用，如果该属性设置为“TransportCredentialOnly”，则此选项将不起作用。|  
@@ -83,42 +85,44 @@ ms.locfileid: "48842640"
 ## <a name="example"></a>示例  
  下面的示例演示如何对基本绑定使用 SSL 传输安全。 默认情况下，基本绑定支持 HTTP 通信。  
   
-```xml
-<system.serviceModel>  
-  <services>  
-    <service type="Microsoft.ServiceModel.Samples.CalculatorService"  
-             behaviorConfiguration="CalculatorServiceBehavior">  
-      <endpoint address=""  
-                binding="netHttpBinding"  
-                bindingConfiguration="Binding1"   
-                contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-    </service>  
-  </services>  
-  <bindings>  
-    <netHttpBinding>  
-      <!-- Configure basicHttpBinding with Transport security -- >  
-      <!-- mode and clientCredentialType set to None.-->  
-      <binding name="Binding1">  
-        <security mode="Transport">  
-          <transport clientCredentialType="None"  
-                     proxyCredentialType="None">  
-            <extendedProtectionPolicy policyEnforcement="WhenSupported"  
-                                      protectionScenario="TransportSelected">  
-              <customServiceNames></customServiceNames>  
+```xml  
+<system.serviceModel>
+  <services>
+    <service type="Microsoft.ServiceModel.Samples.CalculatorService"
+             behaviorConfiguration="CalculatorServiceBehavior">
+      <endpoint address=""
+                binding="netHttpBinding"
+                bindingConfiguration="Binding1"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </service>
+  </services>
+  <bindings>
+    <netHttpBinding>
+      <!-- Configure basicHttpBinding with Transport security -->
+      <!-- mode and clientCredentialType set to None. -->
+      <binding name="Binding1">
+        <security mode="Transport">
+          <transport clientCredentialType="None"
+                     proxyCredentialType="None">
+            <extendedProtectionPolicy policyEnforcement="WhenSupported"
+                                      protectionScenario="TransportSelected">
+              <customServiceNames>
+              </customServiceNames>
             </extendedProtectionPolicy>
-          </transport> 
-        </security>  
-      </binding>  
-    </netHttpBinding>  
-  </bindings>  
-</system.serviceModel>  
+          </transport>
+        </security>
+      </binding>
+    </netHttpBinding>
+  </bindings>
+</system.serviceModel>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>
+- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

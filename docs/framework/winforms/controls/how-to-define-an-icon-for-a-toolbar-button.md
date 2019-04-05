@@ -1,5 +1,5 @@
 ---
-title: 如何：定义工具栏按钮的图标
+title: 如何：定义的工具栏按钮的图标
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,30 +13,31 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 9c396f861307d1c8e722beaf38c6cb914d0630c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531906"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712742"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>如何：定义工具栏按钮的图标
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>如何：定义的工具栏按钮的图标
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
+>  
+  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
   
- <xref:System.Windows.Forms.ToolBar> 按钮就能够自身中显示图标以便于识别用户。 这将通过添加到图像实现[ImageList 组件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)组件并将<xref:System.Windows.Forms.ImageList>组件<xref:System.Windows.Forms.ToolBar>控件。  
+ <xref:System.Windows.Forms.ToolBar> 按钮是可以由用户显示其中方便识别的图标。 这通过添加到图像[ImageList 组件](imagelist-component-windows-forms.md)组件并将相关联<xref:System.Windows.Forms.ImageList>组件与<xref:System.Windows.Forms.ToolBar>控件。  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>以编程方式设置工具栏按钮的图标  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>若要以编程方式设置工具栏按钮的图标  
   
-1.  在过程中，实例化<xref:System.Windows.Forms.ImageList>组件和<xref:System.Windows.Forms.ToolBar>控件。  
+1.  在过程中，实例化<xref:System.Windows.Forms.ImageList>组件和一个<xref:System.Windows.Forms.ToolBar>控件。  
   
-2.  在相同的过程中，分配到图像<xref:System.Windows.Forms.ImageList>组件。  
+2.  在相同的过程中，将分配到图像<xref:System.Windows.Forms.ImageList>组件。  
   
-3.  在相同的过程中，将分配<xref:System.Windows.Forms.ImageList>控制转移到<xref:System.Windows.Forms.ToolBar>可控制并指派<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>单个工具栏按钮的属性。  
+3.  在相同的过程中，将分配<xref:System.Windows.Forms.ImageList>控制对<xref:System.Windows.Forms.ToolBar>控件并将分配<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>各个工具栏按钮的属性。  
   
-     在下面的代码示例中，路径为设置的映像的位置为**我的文档**文件夹。 此操作后，因为你可以采用大多数计算机运行 Windows 操作系统，将包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。 下面的示例假定的窗体具有<xref:System.Windows.Forms.PictureBox>已添加的控件。  
+     在下面的代码示例中，将路径设置的映像的位置是**我的文档**文件夹。 此操作后，因为您可以假定大多数运行 Windows 操作系统的计算机都包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。 下面的示例假定窗体具有<xref:System.Windows.Forms.PictureBox>已添加的控件。  
   
-     按照上述步骤中，您应该已经编写类似于下面显示的代码。  
+     按照上述步骤中，您应编写类似于下面显示的代码。  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -115,8 +116,8 @@ ms.locfileid: "33531906"
        }  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.ToolBar>  
- [如何：触发工具栏按钮的菜单事件](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [ToolBar 控件](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
- [ImageList 组件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.ToolBar>
+- [如何：触发工具栏按钮的菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar 控件](toolbar-control-windows-forms.md)
+- [ImageList 组件](imagelist-component-windows-forms.md)

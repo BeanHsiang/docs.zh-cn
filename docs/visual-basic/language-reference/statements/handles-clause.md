@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 15ce6a25aa5f403a2e55beb57b3693095743e52f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50a449ea8a5131c878cf703f44695cd2e2304444
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603712"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842572"
 ---
 # <a name="handles-clause-visual-basic"></a>Handles 子句 (Visual Basic)
 声明某一过程可处理指定的事件。  
@@ -35,29 +35,30 @@ proceduredeclaration Handles eventlist
   
  `Handles` 关键字和 `AddHandler` 语句都允许你指定特定过程处理特定事件，但存在差异。 定义过程时使用 `Handles` 关键字，以指定它处理特定事件。 `AddHandler` 语句在运行时将过程连接到事件。 有关详细信息，请参阅[AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)。  
   
- 对于自定义事件，应用程序会在添加过程作为事件处理程序时，调用事件的 `AddHandler` 取值函数。 有关自定义事件的详细信息，请参阅[Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)。  
+ 对于自定义事件，应用程序会在添加过程作为事件处理程序时，调用事件的 `AddHandler` 访问器。 自定义事件的详细信息，请参阅[Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)。  
   
 ## <a name="example"></a>示例  
- [!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
+ [!code-vb[VbVbalrEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#2)]  
   
  下面的示例演示派生类可以如何使用 `Handles` 语句处理来自基类的事件。  
   
- [!code-vb[VbVbalrEvents#3](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
+ [!code-vb[VbVbalrEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>示例  
- 下面的示例包含两个按钮事件处理程序**WPF 应用程序**项目。  
+ 下面的示例包含两个按钮的事件处理程序**WPF 应用程序**项目。  
   
- [!code-vb[VbVbalrEvents#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
+ [!code-vb[VbVbalrEvents#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#41)]  
   
 ## <a name="example"></a>示例  
  下面的示例与前面的示例等效。 `Handles` 子句中的 `eventlist` 包含两个按钮的事件。  
   
- [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
+ [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   
-## <a name="see-also"></a>请参阅  
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
- [RaiseEvent 语句](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>请参阅
+
+- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)
+- [RaiseEvent 语句](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

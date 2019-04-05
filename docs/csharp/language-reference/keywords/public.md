@@ -1,5 +1,6 @@
 ---
-title: public 关键字（C# 参考）
+title: public 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - public
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 84a3bc49b6eea047d518edc01dab7f2301854b6a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 15b86920736f1220553b462d103841ac98d88b7c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518181"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239298"
 ---
 # <a name="public-c-reference"></a>public（C# 参考）
 
@@ -37,9 +38,9 @@ class SampleClass
 
 “PointTest.y”不可访问，因为它受保护级别限制。
 
-## <a name="c-language-specification"></a>C# 语言规范
+## <a name="c-language-specification"></a>C# 语言规范  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[声明的可访问性](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 该语言规范是 C# 语法和用法的权威资料。
 
 ## <a name="see-also"></a>请参阅
 
@@ -51,5 +52,5 @@ class SampleClass
 - [可访问性级别](accessibility-levels.md)
 - [修饰符](modifiers.md)
 - [private](private.md)
-- [protected](protected.md)
+- [受保护](protected.md)
 - [internal](internal.md)

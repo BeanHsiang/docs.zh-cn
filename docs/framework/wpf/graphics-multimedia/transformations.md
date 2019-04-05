@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 0a1be35a37a9f3d0fa94d13f5bc50df213bd1775
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561909"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352446"
 ---
 # <a name="transformations"></a>转换
-转换用于旋转、 缩放、 转换或扭曲<xref:System.Windows.FrameworkElement>对象。  
+使用转换来旋转、 缩放、 转换或倾斜<xref:System.Windows.FrameworkElement>对象。  
   
 ## <a name="in-this-section"></a>本节内容  
- [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [转换概述](transforms-overview.md)  
+ [帮助主题](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Transform>  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Transform>
+- [图形和多媒体](index.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
+- [布局](../advanced/layout.md)

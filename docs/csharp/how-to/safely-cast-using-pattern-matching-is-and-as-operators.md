@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 88289099864293b3b19da62155d58ba4797948bd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4e0eb53a44a6348d0f5154a0a08222da90985864
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216168"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149310"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-is-and-as-operators"></a>如何：使用模式匹配 is 和 as 运算符安全地进行强制转换
 

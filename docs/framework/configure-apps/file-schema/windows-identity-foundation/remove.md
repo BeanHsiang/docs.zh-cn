@@ -1,16 +1,16 @@
 ---
-title: '&lt;remove&gt;'
+title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: 410fef1a43f9202d56c4957b1162c53ee056ae3f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 17c4d4289cf90b66d52986c054d4807ecff2b3d8
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198717"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758412"
 ---
-# <a name="ltremovegt"></a>&lt;remove&gt;
+# <a name="remove"></a>\<remove>
 从令牌处理程序集合中移除指定的安全令牌处理程序。  
   
  \<system.identityModel>  
@@ -38,7 +38,7 @@ ms.locfileid: "47198717"
   
 |特性|描述|  
 |---------------|-----------------|  
-|类型|要删除的令牌处理程序的 CLR 类型名称。 有关如何指定详细信息`type`属性，请参阅[自定义类型引用](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24)。 必须的。|  
+|类型|要删除的令牌处理程序的 CLR 类型名称。 有关如何指定详细信息`type`属性，请参阅[自定义类型引用](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)。 必需。|  
   
 ### <a name="child-elements"></a>子元素  
  无  

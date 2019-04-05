@@ -2,12 +2,12 @@
 title: 模型声明函数
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: f92bdfedaefca7182b5de72abae9852965d83ff7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 31efbab4b8323ff8cec9498fa20fa40b1efb819e
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511510"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904076"
 ---
 # <a name="model-declared-function"></a>模型声明函数
 一个*模型声明函数*是在概念模型中，声明但未在该概念模型中定义的函数。 该函数可能是在承载或存储环境中定义的。 例如，模型声明函数可能映射至在数据库中定义的函数，从而在概念模型中提供服务器端的功能。  
@@ -24,10 +24,10 @@ ms.locfileid: "43511510"
 -   参数信息，包括参数名和类型。 （可选）  
   
 ## <a name="example"></a>示例  
- [ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)使用称为概念性架构定义语言的特定于域的语言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 来定义概念模型。 在 CSDL 中，是一种模型声明函数的实现[函数导入](https://msdn.microsoft.com/library/125704ae-56c7-4233-80b7-389a10f3a65d)。 下面的 CSDL 定义了一个实体容器，其中包含一个函数导入定义。 请注意，由于未指定返回类型，因而该函数的返回类型为 void。  
+ [ADO.NET 实体框架](./ef/index.md)使用称为概念性架构定义语言的特定于域的语言 (DSL) ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) 来定义概念模型。 在 CSDL 中，模型声明函数的一种实现是函数导入 (使用[FunctionImport 元素](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl))。 下面的 CSDL 定义了一个实体容器，其中包含一个函数导入定义。 请注意，由于未指定返回类型，因而该函数的返回类型为 void。  
   
  [!code-xml[EDM_Example_Model#FunctionImport](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#functionimport)]  
   
-## <a name="see-also"></a>请参阅  
- [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>请参阅
+- [实体数据模型关键概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [实体数据模型](../../../../docs/framework/data/adonet/entity-data-model.md)

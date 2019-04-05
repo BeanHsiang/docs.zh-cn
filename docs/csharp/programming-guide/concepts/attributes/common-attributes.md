@@ -2,12 +2,12 @@
 title: 通用属性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d5d56fff82fb552f42f72c18b8c3b907c5bc113c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504390"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374799"
 ---
 # <a name="common-attributes-c"></a>通用属性 (C#)
 本主题介绍在 C# 程序中最常用的属性。  
@@ -20,7 +20,7 @@ ms.locfileid: "43504390"
   
 -   [调用方信息特性](#CallerInfo)  
   
-##  <a name="Global"></a> 全局特性  
+## <a name="Global"></a> 全局特性  
  大多数特性应用于特定语言元素，如类或方法；但是，一些特性是全局特性 - 它们应用于整个程序集或模块。 例如，<xref:System.Reflection.AssemblyVersionAttribute> 属性可用于将版本信息嵌入程序集，如下所示：  
   
 ```csharp  
@@ -72,7 +72,7 @@ ms.locfileid: "43504390"
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|定义为程序集清单指定程序集配置（如零售或调试）的自定义属性。|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|定义程序集清单的友好默认别名|  
   
-##  <a name="Obsolete"></a> Obsolete 特性  
+## <a name="Obsolete"></a> Obsolete 特性  
  `Obsolete` 特性将程序实体标记为不再推荐使用。 每次使用标记为过时的实体后，将生成警告或错误，具体取决于该特性的配置方式。 例如:  
   
 ```csharp  
@@ -111,7 +111,7 @@ b.NewMethod();
   
  `Obsolete` 特性是一次性特性，可以应用于任何允许特性的实体。 `Obsolete` 是 <xref:System.ObsoleteAttribute> 的别名。  
   
-##  <a name="Conditional"></a> Conditional 特性  
+## <a name="Conditional"></a> Conditional 特性  
  `Conditional` 特性使得方法执行依赖于预处理标识符。 `Conditional` 属性是 <xref:System.Diagnostics.ConditionalAttribute> 的别名，可以应用于方法或特性类。  
   
  在此示例中，`Conditional` 应用于启用或禁用显示特定于程序的诊断信息的方法：  
@@ -216,12 +216,12 @@ class SampleClass
 }  
 ```  
   
-##  <a name="CallerInfo"></a>调用方信息特性  
+## <a name="CallerInfo"></a>调用方信息特性  
  通过使用调用方信息特性，可获取有关方法的调用方的信息。 可以获取源代码的文件路径、源代码中的行号和调用方的成员名称。  
   
  若要获取成员调用方信息，可以使用应用于可选参数的特性。 每个可选参数指定一个默认值。 下表列出在 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空间中定义的调用方信息特性：  
   
-|特性|描述|类型|  
+|特性|说明|类型|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含调用方的源文件的完整路径。 这是编译时的路径。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|源文件中调用方法的行号。|`Integer`|  
@@ -231,9 +231,9 @@ class SampleClass
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
-- [特性](../../../../../docs/standard/attributes/index.md)  
-- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+- [特性](../../../../../docs/standard/attributes/index.md)
+- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
 - [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

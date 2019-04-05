@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0a506f05aac3b8335a0863c3152567fe05463a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70f4d61eac381ede94fd9f7369c84d9d1d210c55
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415875"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476511"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>ICorDebugManagedCallback::UpdateModuleSymbols 方法
 通知调试器已更改了公共语言运行时模块的符号。  
@@ -37,31 +37,31 @@ HRESULT UpdateModuleSymbols (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个表示包含在其中更改符号的模块的应用程序域的 ICorDebugAppDomain 对象的指针。  
+ [in]指向一个 ICorDebugAppDomain 对象，表示包含的模块的符号已发生更改的应用程序域的指针。  
   
  `pModule`  
- [in]指向一个表示已在其中更改符号的模块的 icor 调试模块对象的指针。  
+ [in]指向表示的模块的符号已发生更改的 icor 调试模块对象的指针。  
   
  `pSymbolStream`  
  [in]一个指向 Win32 COM`IStream`对象，其中包含已修改的符号。  
   
 ## <a name="remarks"></a>备注  
- 此方法提供了一个机会更新模块的符号的调试器的视图，通过调用[isymunmanagedreader:: Updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)或[isymunmanagedreader:: Replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)。  
+ 此方法提供了通过调用更新模块的符号的调试器的视图的机会[isymunmanagedreader:: Updatesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)或[isymunmanagedreader:: Replacesymbolstore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-replacesymbolstore-method.md)。  
   
- 此回调可以对同一模块中发生多次。  
+ 此回调可多次出现相同的模块。  
   
- 调试器应尝试将绑定未绑定的源级的断点。  
+ 调试程序应尝试绑定未绑定的源级别断点。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

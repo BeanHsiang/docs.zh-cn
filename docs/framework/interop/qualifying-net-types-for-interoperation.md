@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a40b9524990213eaaf2ed78503b6f831776306ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524307"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>为互操作限定 .NET 类型
 若要向 COM 应用程序公开程序集中的类型，请考虑 COM 互操作在设计时的需求。 如果符合以下准则，托管类型（类、接口、结构和枚举）将与 COM 类型无缝集成：  
@@ -47,9 +47,9 @@ ms.locfileid: "33389039"
   
  导出到 COM 后，托管类型的继承层次结构将被展平。 托管和非托管环境之间的版本控制也会有所不同。 向 COM 公开的类型不具有其他托管类型相同的版本控制特性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [类接口简介](com-callable-wrapper.md#introducing-the-class-interface)  
- [应用互操作属性](../../../docs/framework/interop/applying-interop-attributes.md)  
- [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.InteropServices.ComVisibleAttribute>
+- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [类接口简介](com-callable-wrapper.md#introducing-the-class-interface)
+- [应用互操作属性](../../../docs/framework/interop/applying-interop-attributes.md)
+- [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

@@ -6,18 +6,16 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 270267fa961e2d9420364bc11992be9eff03866b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: df2c1fcd6c84b7670c53a8f06f97c2ea46b8b33d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837356"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679406"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>服务器端 UI 自动化提供程序的实现
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本部分将介绍如何实现自定义控件的服务器端 UI 自动化提供程序。  
   
@@ -171,12 +169,10 @@ ms.locfileid: "48837356"
   
  为此，rebar 的片段根提供程序公开表示带区的子级集。 每个带区包含可能会公开属性和模式的单个提供程序。 在其实现 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>的过程中，带区提供程序将返回控件 HWND的默认窗口提供程序，它通过调用 <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>获取此提供程序，并传入控件的窗口句柄。 最后，rebar 的片段根提供程序将实现 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> 接口，并在其实现 <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> 的过程中返回包含在指定 HWND 中的控件的相应带区提供程序。  
   
-## <a name="see-also"></a>请参阅  
- [UI 自动化提供程序概述](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [公开服务器端 UI 自动化提供程序](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [从 UI 自动化提供程序返回属性](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [从 UI 自动化提供程序引发事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [在 UI 自动化片段提供程序中启用导航](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [简单的提供程序示例](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
- [片段提供程序示例](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+## <a name="see-also"></a>请参阅
+- [UI 自动化提供程序概述](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [公开服务器端 UI 自动化提供程序](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
+- [从 UI 自动化提供程序返回属性](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [从 UI 自动化提供程序引发事件](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [在 UI 自动化片段提供程序中启用导航](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [在 UI 自动化提供程序中支持控件模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)

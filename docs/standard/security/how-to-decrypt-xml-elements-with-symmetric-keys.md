@@ -1,5 +1,5 @@
 ---
-title: 如何：用对称密钥对 XML 元素进行解密
+title: 如何：使用对称密钥解密 XML 元素
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38bb22de14ecef618d45f54cced32af57542d3df
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 19ee0e3244d9a9bf7d7eddc9be4eb7c50b467cf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502619"
 ---
-# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>如何：用对称密钥对 XML 元素进行解密
+# <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>如何：使用对称密钥解密 XML 元素
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类加密 XML 文档内的元素。  XML 加密可用于存储或传输敏感 XML，而无需担心数据被轻易读取。  此代码示例使用高级加密标准 (AES) 算法（也称为 Rijndael）对 XML 元素进行解密。  
   
- 有关如何加密 XML 元素使用此过程的信息，请参阅[如何： 用对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
+ 有关如何加密 XML 元素使用此过程的信息，请参阅[如何：使用对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
   
  当使用对称算法（如 AES）来加密 XML 数据时，必须使用相同的密钥来加密和解密 XML 数据。  此过程中的示例假定加密的 XML 是使用相同的密钥进行加密的，且加密方和解密方对要使用的算法和密钥达成一致。  此示例不对加密的 XML 内的 AES 密钥进行存储或加密。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "43866840"
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>若要使用对称密钥解密 XML 元素  
   
-1.  使用以前生成的密钥使用中所述的技术加密 XML 元素[如何： 用对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
+1.  使用以前生成的密钥使用中所述的技术加密 XML 元素[如何：使用对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
   
 2.  在包含加密的 XML 的 <xref:System.Xml.XmlDocument> 对象中查找 <`EncryptedData`> 元素（由 XML 加密标准定义），然后创建一个新的 <xref:System.Xml.XmlElement> 对象来表示该元素。  
   
@@ -83,5 +83,5 @@ ms.locfileid: "43866840"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Security.Cryptography.Xml>  
+- <xref:System.Security.Cryptography.Xml>
 - [如何：使用对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)

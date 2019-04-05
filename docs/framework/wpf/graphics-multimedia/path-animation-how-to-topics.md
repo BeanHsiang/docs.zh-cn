@@ -7,30 +7,30 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562000"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373473"
 ---
 # <a name="path-animation-how-to-topics"></a>路径动画帮助主题
-此部分中的主题演示如何对沿着路径对对象进行动画处理。  
+在本部分中的主题演示如何沿着路径针对对象进行动画处理。  
   
 ## <a name="in-this-section"></a>本节内容  
- [沿着路径针对对象进行动画处理（双重动画）](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [沿着路径针对对象进行动画处理（点动画）](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [沿着路径针对对象进行动画处理（矩阵动画）](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [沿着路径为对象设置动画效果（累积偏移的矩阵动画）](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [使用几何路径旋转对象（矩阵动画）](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [使用几何路径旋转对象](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+ [沿着路径针对对象进行动画处理（双重动画）](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [沿着路径针对对象进行动画处理（点动画）](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [沿着路径针对对象进行动画处理（矩阵动画）](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [沿着路径为对象设置动画效果（累积偏移的矩阵动画）](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [使用几何路径旋转对象（矩阵动画）](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [使用几何路径旋转对象](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a>请参阅  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>请参阅
+- [图形和多媒体](index.md)
+- [动画概述](animation-overview.md)
+- [关键帧动画概述](key-frame-animations-overview.md)

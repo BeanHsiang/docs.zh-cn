@@ -1,5 +1,5 @@
 ---
-title: '&lt;编译器&gt;元素'
+title: <compilers> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers
@@ -9,20 +9,18 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a73c3e8f554d2c78252ca763a620d05c5b494884
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 15beb15d7927d616cc09c7e318ef26a6627926af
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192923"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260601"
 ---
-# <a name="ltcompilersgt-element"></a>&lt;编译器&gt;元素
+# <a name="compilers-element"></a>\<编译器 > 元素
 编译器配置元素的容器；包含零个或多个 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 元素。  
   
  \<configuration>  
-\<system.codedom >  
+\<system.codedom>  
 \<编译器 > 元素  
   
 ## <a name="syntax"></a>语法  
@@ -79,9 +77,9 @@ ms.locfileid: "50192923"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [编译器和语言提供程序设置架构](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+## <a name="see-also"></a>请参阅
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [编译器和语言提供程序设置架构](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
 - [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

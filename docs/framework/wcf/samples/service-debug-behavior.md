@@ -2,12 +2,12 @@
 title: 服务调试行为
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: b87911426b6d4edf8a6f9b0172f4872fac7b9b6f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4eac577775074abf8c5f35c73dfa3286a75c2744
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858881"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835762"
 ---
 # <a name="service-debug-behavior"></a>服务调试行为
 本示例演示如何配置服务调试行为设置。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它可以实现`ICalculator`服务协定。 本示例在配置文件中显式定义服务调试行为。 也可以在代码中强制完成此操作。  
@@ -59,4 +59,3 @@ ms.locfileid: "43858881"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\ServiceDebug`  
   
-## <a name="see-also"></a>请参阅

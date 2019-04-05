@@ -2,12 +2,12 @@
 title: 从 .NET 远程处理迁移到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 91cbfa33c6645fbc0a8d9b513e3a59799114a710
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 38ec11b529c7b0444d47971938fb711fe40bee3d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200093"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333061"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>从 .NET 远程处理迁移到 WCF
 本文介绍如何迁移借助 .NET 远程处理来使用 Windows Communication Foundation (WCF) 的应用程序。 本文对这些产品之间的相似概念进行比较，并介绍如何在 WCF 中完成若干常见的远程处理方案。  
@@ -89,8 +89,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
     serviceHost.AddServiceEndpoint(typeof(IWCFServer), binding, baseAddress);  
     serviceHost.Open();  
   
-    Console.WriteLine(String.Format("The WCF server is ready at {0}.",  
-                                    baseAddress));  
+    Console.WriteLine($"The WCF server is ready at {baseAddress}.");
     Console.WriteLine("Press <ENTER> to terminate service...");  
     Console.WriteLine();  
     Console.ReadLine();  
@@ -121,8 +120,7 @@ RemotingServer server = (RemotingServer)Activator.GetObject(
                             "tcp://localhost:8080/RemotingServer");  
   
 RemotingCustomer customer = server.GetCustomer(42);  
-Console.WriteLine(String.Format("Customer {0} {1} received.",   
-                                 customer.FirstName, customer.LastName));  
+Console.WriteLine($"Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
  从 Activator.GetObject() 返回的 RemotingServer 实例称为“透明代理”。 它会实现客户端中的 RemotingServer 类型的公共 API，但所有方法都会调用运行在不同进程或计算机中的服务器对象。  
@@ -139,15 +137,14 @@ ChannelFactory<IWCFServer> channelFactory =
 IWCFServer server = channelFactory.CreateChannel();  
   
 Customer customer = server.GetCustomer(42);  
-Console.WriteLine(String.Format("  Customer {0} {1} received.",  
-                    customer.FirstName, customer.LastName));  
+Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
  此示例演示通道级编程，因为它非常类似于远程处理示例。 也可**添加服务引用**生成代码，以简化客户端编程的 Visual Studio 中的方法。 有关详细信息，请参阅下列主题：  
   
 -   [客户端通道级编程](./extending/client-channel-level-programming.md)  
   
--   [如何： 添加、 更新或删除服务引用](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+-   [如何：添加、 更新或删除服务引用](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>序列化用法  
  .NET 远程处理和 WCF 均使用序列化发送客户端和服务器之间的对象，但它们在这些重要的方面有所区别：  
@@ -210,11 +207,7 @@ public class WCFCustomer
   
  [DataContract] 特性标识此类型为可在客户端和服务器之间进行序列化和反序列化。 [DataMember] 特性标识要序列化的单个属性或字段。  
   
- 当 WCF 跨多个层发送某个对象时，它仅序列化值并在另一个层上创建此对象的新实例。 与此对象的值进行的任何交互仅发生在本地 – 它们不能如 .NET 远程处理中的按引用对象一样与其他层进行通信。 有关详细信息，请参阅下列主题：  
-  
--   [序列化和反序列化](./feature-details/serialization-and-deserialization.md)  
-  
--   [Windows Communication Foundation 中的序列化](https://msdn.microsoft.com/magazine/cc163569.aspx)  
+ 当 WCF 跨多个层发送某个对象时，它仅序列化值并在另一个层上创建此对象的新实例。 与此对象的值进行的任何交互仅发生在本地 – 它们不能如 .NET 远程处理中的按引用对象一样与其他层进行通信。 有关详细信息，请参阅[序列化和反序列化](./feature-details/serialization-and-deserialization.md)。  
   
 ### <a name="exception-handling-capabilities"></a>异常处理功能  
   
@@ -269,8 +262,7 @@ try
 }  
 catch (FaultException<CustomerServiceFault> fault)  
 {  
-    Console.WriteLine(String.Format("Fault received: {0}",  
-    fault.Detail.ErrorMessage));  
+    Console.WriteLine($"Fault received: {fault.Detail.ErrorMessage}");
 }  
 ```  
   
@@ -307,13 +299,13 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **创建错误协定 （可选）。** 遇到错误时，请创建将在服务器和客户端之间进行交换的类型。 将这些类型标记为 [DataContract] 和 [DataMember] 以使其可序列化。 对于标记为 [OperationContract] 的所有服务操作，还可将其标记为 [FaultContract]，以指示它们可能会返回哪些错误。  
   
--   **配置和承载服务。** 完成创建服务协定后，下一步则是配置一个绑定以公开终结点中的服务。 有关详细信息，请参阅[终结点： 地址、 绑定和协定](./feature-details/endpoints-addresses-bindings-and-contracts.md)。  
+-   **配置和承载服务。** 完成创建服务协定后，下一步则是配置一个绑定以公开终结点中的服务。 有关详细信息，请参阅[终结点：地址、 绑定和协定](./feature-details/endpoints-addresses-bindings-and-contracts.md)。  
   
  将远程处理应用程序迁移到 WCF 后，删除 .NET 远程处理中的依赖仍然很重要。 这可确保删除应用程序中的任何远程处理漏洞。 这些步骤包括：  
   
--   **停止使用 MarshalByRefObject。** MarshalByRefObject 类型仅因远程处理而存在并且 WCF 并不使用此类型。 应删除或更改子类 MarshalByRefObject 的任何应用程序类型。 MarshalByRefObject 类型仅因远程处理而存在并且 WCF 并不使用此类型。 应删除或更改子类 MarshalByRefObject 的任何应用程序类型。  
+-   **停止使用 MarshalByRefObject。** MarshalByRefObject 类型仅因远程处理而存在并且 WCF 并不使用此类型。 应删除或更改子类 MarshalByRefObject 的任何应用程序类型。  
   
--   **停止使用 [Serializable] 和 ISerializable。** [Serializable] 属性和 ISerializable 接口最初用于在受信任的环境中序列化类型，并为远程处理所用。 WCF 序列化依赖于标记为 [DataContract] 和 [DataMember] 的类型。 若要使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]，则应修改应用程序使用的数据类型。 [Serializable] 属性和 ISerializable 接口最初用于在受信任的环境中序列化类型，并为远程处理所用。 WCF 序列化依赖于标记为 [DataContract] 和 [DataMember] 的类型。 若要使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]，则应修改应用程序使用的数据类型。  
+-   **停止使用 [Serializable] 和 ISerializable。** [Serializable] 属性和 ISerializable 接口最初用于在受信任的环境中序列化类型，并为远程处理所用。 WCF 序列化依赖于标记为 [DataContract] 和 [DataMember] 的类型。 若要使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]，则应修改应用程序使用的数据类型。  
   
 ### <a name="migration-scenarios"></a>迁移方案  
  现在让我们了解如何完成以下 WCF 中的常见远程处理方案：  
@@ -343,7 +335,7 @@ public class RemotingServer : MarshalByRefObject
 }  
 ```  
   
-#### <a name="scenario-1-service-returns-an-object-by-value"></a>方案 1：服务按值返回对象  
+#### <a name="scenario-1-service-returns-an-object-by-value"></a>方案 1:服务按值返回对象  
  此方案演示服务器按值将对象返回至客户端。 WCF 始终按值从服务器中返回对象，因此以下步骤仅描述了如何创建普通 WCF 服务。  
   
 1.  首先定义 WCF 服务的公共接口并标记 [ServiceContract] 属性。 使用 [OperationContract] 标识客户端将调用的服务器端方法。  
@@ -442,7 +434,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-     有关使用详细信息**添加服务引用**，请参阅[如何： 添加、 更新或删除服务引用](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)。  
+     有关使用详细信息**添加服务引用**，请参阅[如何：添加、 更新或删除服务引用](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)。  
   
 7.  现在可以从客户端中调用 WCF 服务。 可通过创建该服务的通道工厂、要求提供通道以及直接调用想要用在该通道中的方法实现此操作。 可进行此操作的原因是通道可实现服务接口，并为我们处理基础的请求/答复逻辑。 此方法调用的返回值是服务器响应的反序列化副本。  
   
@@ -451,13 +443,12 @@ public class RemotingServer : MarshalByRefObject
        new ChannelFactory<ICustomerService>("customerservice");  
    ICustomerService service = factory.CreateChannel();  
    Customer customer = service.GetCustomer(42);  
-   Console.WriteLine(String.Format("  Customer {0} {1} received.",  
-           customer.FirstName, customer.LastName));  
+   Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
    ```  
   
  由 WCF 从服务器返回到客户端的对象始终为按值返回。 对象是由服务器发送的数据反序列化副本。 客户端可以对这些本地副本调用方法，而无需担心通过回调调用服务器。  
   
-#### <a name="scenario-2-server-returns-an-object-by-reference"></a>方案 2：服务器按按引用返回对象  
+#### <a name="scenario-2-server-returns-an-object-by-reference"></a>方案 2:服务器按引用返回的对象  
  此方案演示服务器按引用向客户端提供对象。 在 .NET 远程处理中，这会自动处理任何派生自 MarshalByRefObject 的类型，即序列化的引用。 此方案的一个示例是允许多个客户端拥有独立会话的服务端对象。 正如前面所述，WCF 服务返回的对象始终按值返回，因此并没有直接对等的按引用对象，但是有可能实现类似于使用 <xref:System.ServiceModel.EndpointAddress10> 对象的按引用语义。 这是客户端用于获取服务器上会话按引用对象的可序列化的值对象。 这将使多个客户端拥有独立会话的服务器端对象的方案得以实现。  
   
 1.  首先，需要定义与会话对象本身对应的 WCF 服务协定。  
@@ -640,7 +631,7 @@ public class RemotingServer : MarshalByRefObject
   
  WCF 将始终返回按值的对象，但是通过使用 EndpointAddress10 有可能支持按引用语义的等效项。 这将允许客户端请求会话的 WCF 服务实例，此后客户端可以与此实例进行交互，与其他 WCF 服务并无差异。  
   
-#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>方案 3：客户端向服务器发送按值实例  
+#### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>方案 3:客户端向服务器发送按值实例  
  此方案演示客户端按值向服务器发送一个非基元对象实例。 由于 WCF 仅发送按值对象，因此此方案演示正常使用 WCF 的情况。  
   
 1.  使用与方案 1 中相同的 WCF 服务。  
@@ -657,7 +648,7 @@ public class RemotingServer : MarshalByRefObject
    CustomerId = 43,   
    AccountId = 99};  
    bool success = service.UpdateCustomer(customer);  
-   Console.WriteLine(String.Format("  Server returned {0}.", success));  
+   Console.WriteLine($"  Server returned {success}.");
    ```  
   
      将序列化客户对象，并将其发送到服务器，在其中将其反序列化为该对象的新副本。  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: d15765b7673f321d4362ceea0adb73959a7e7726
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4998097b910a504461a34af3cc159ddb1c74cc62
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582653"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832549"
 ---
 # <a name="myforms-object"></a>My.Forms 对象
 提供用于访问当前项目中声明每个 Windows 窗体的实例的属性。  
@@ -46,7 +46,7 @@ ms.locfileid: "48582653"
 ## <a name="example"></a>示例  
  此示例将更改的默认标题`SidebarMenu`窗体。  
   
- [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
+ [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]  
   
  对于此示例正常工作，你的项目必须具有名为窗体`SidebarMenu`。  
   
@@ -66,11 +66,12 @@ ms.locfileid: "48582653"
 |Windows 服务|否|  
 |网站|否|  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Form.Close%2A>  
- [对象](../../../visual-basic/language-reference/objects/index.md)  
- [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [访问应用程序窗体](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Form.Close%2A>
+- [对象](../../../visual-basic/language-reference/objects/index.md)
+- [Is 运算符](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot 运算符](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [访问应用程序窗体](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 39466eb528003e36bfa05751f83619d86b78a2a7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fbdd04f40c1d4a29ff1807b8a2760802b0338cb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988231"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379687"
 ---
 # <a name="document-serialization-and-storage"></a>文档序列化和存储
 Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示高质量的文档。  增强的功能，支持固定文档和流文档以及高级查看控件，结合功能强大的二维和三维图形功能需要.NET Framework 应用程序到新的质量和用户体验级别。  能够灵活地管理文档的内存中表示形式是.NET Framework 中，一项主要功能并能够高效保存和加载数据存储区中的文档是几乎每个应用程序的需求。  将文档从内部的内存中表示形式转换为外部数据存储的过程称为序列化。  反之，读取数据存储并重新创建原始内存中实例的过程则称为反序列化。  
@@ -41,7 +41,7 @@ Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示�
     -   对自定义运行时设置和选项的用户界面支持。  
   
 ### <a name="xps-print-path"></a>XPS 打印路径  
- Microsoft.NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印路径还提供了一个可扩展机制，用于编写通过打印输出的文档。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可以作为文档文件格式，也可以作为 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机后台打印格式。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档可直接发送到与 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 兼容的打印机，而无需转换为中间格式。  有关打印路径输出选项和功能的其他信息，请参阅[打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)。  
+ Microsoft.NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]打印路径还提供了一个可扩展机制，用于编写通过打印输出的文档。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 可以作为文档文件格式，也可以作为 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 的本机后台打印格式。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文档可直接发送到与 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 兼容的打印机，而无需转换为中间格式。  有关打印路径输出选项和功能的其他信息，请参阅[打印概述](printing-overview.md)。  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>插件序列化程序  
@@ -54,11 +54,11 @@ Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示�
   
  下面的示例演示使用的应用程序<xref:System.Windows.Documents.Serialization.SerializerProvider>"PlugInFileFilter"属性中的方法。  PlugInFileFilter 枚举已安装的插件，并生成一个筛选器字符串，使用可用的文件的选项<xref:Microsoft.Win32.SaveFileDialog>。  
   
- [!code-csharp[DocumentSerialize#DocSerializeFileFilter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
   
  用户已选择输出文件的名称后，下面的示例演示使用<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>方法来存储给定的文档中指定的格式。  
   
- [!code-csharp[DocumentSerialize#DocSerializePlugIn](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
   
 <a name="InstallingPluginSerializers"></a>   
 ### <a name="installing-plug-in-serializers"></a>安装插件序列化程序  
@@ -73,10 +73,10 @@ Microsoft.NET Framework 提供了功能强大的环境，用于创建和显示�
   
 3.  创建插件序列化程序之后，实现安装脚本以分发和安装（以及卸载）插件（请参阅上面的“[安装插件序列化程序](#InstallingPluginSerializers)”）。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Documents.Serialization>  
- <xref:System.Windows.Xps.XpsDocumentWriter>  
- <xref:System.Windows.Xps.Packaging.XpsDocument>  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [XML 纸张规范：概述](https://go.microsoft.com/fwlink?LinkID=106246)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Documents.Serialization>
+- <xref:System.Windows.Xps.XpsDocumentWriter>
+- <xref:System.Windows.Xps.Packaging.XpsDocument>
+- [WPF 中的文档](documents-in-wpf.md)
+- [打印概述](printing-overview.md)
+- [XML 纸张规范：概述](https://go.microsoft.com/fwlink?LinkID=106246)

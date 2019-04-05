@@ -2,12 +2,12 @@
 title: ClientCredentials
 ms.date: 03/30/2017
 ms.assetid: 41dffd6b-8f14-4fed-aefb-2a1bb168efb3
-ms.openlocfilehash: 8b6200f84f352d49cf142d9c8b97d1c2b36149b2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 410a133ae3041db00ecb7a17677afe6538ef1f4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180895"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632733"
 ---
 # <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
@@ -31,7 +31,7 @@ class ClientCredentials : Behavior
 ## <a name="methods"></a>方法  
  ClientCredentials 类未定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  ClientCredentials 类具有以下属性：  
   
 ### <a name="clientcertificate"></a>ClientCertificate  
@@ -96,5 +96,5 @@ class ClientCredentials : Behavior
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.ClientCredentials>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.ClientCredentials>

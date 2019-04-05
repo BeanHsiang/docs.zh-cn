@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: f52192087eb7b73ee930eea073e0c5716ad8c636
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 59b54cfd731c21982cae9a07fd1e37d97f3747db
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507587"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486975"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform（C# 编译器选项）
 指定公共语言运行时 (CLR) 的哪个版本可以运行程序集。  
@@ -24,7 +24,7 @@ ms.locfileid: "43507587"
 -platform:string  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `string`  
  anycpu（默认值）、anycpu32bitpreferred、ARM、x64、x86 或 Itanium。  
   
@@ -36,6 +36,8 @@ ms.locfileid: "43507587"
   
 -   ARM 将程序集编译成可以在具有高级 RISC 计算机 (ARM) 处理器的计算机上运行。  
   
+-   ARM64 编译程序集以在由 64 位 CLR 在具有支持 A64 指令集的高级 RISC 计算机 (ARM) 处理器的计算机上运行。  
+
 -   x64 将程序集编译成可由支持 AMD64 或 EM64T 指令集的计算机上的 64 位 CLR 运行。  
   
 -   x86 将程序集编译成可由 32 位、x86 可兼容 CLR 运行。  
@@ -75,7 +77,7 @@ ms.locfileid: "43507587"
 csc -platform:anycpu filename.cs  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](index.md)  
+- [C# 编译器选项](index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

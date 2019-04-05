@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b8ee0d04644cf504354767c296f504a937055d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27f0d35dbe459ce53e6e10905a0a86a3f2bd3762
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702621"
 ---
 # <a name="trace-switches"></a>跟踪开关
 跟踪开关用于启用、禁用和筛选跟踪输出。 它们是代码中存在并可通过 .config 文件在外部配置的对象。 .NET Framework 中提供三种跟踪开关类型： <xref:System.Diagnostics.BooleanSwitch> 类、 <xref:System.Diagnostics.TraceSwitch> 类和 <xref:System.Diagnostics.SourceSwitch> 类。 <xref:System.Diagnostics.BooleanSwitch> 类充当切换开关，可启用或禁用各种跟踪语句。 使用 <xref:System.Diagnostics.TraceSwitch> 和 <xref:System.Diagnostics.SourceSwitch> 类，可以启用特定跟踪级别的跟踪开关，以确保出现为该级别以及其下所有级别指定的 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.TraceSource> 消息。 如果禁用此开关，则不会出现跟踪消息。 所有这些类均派生自抽象 (MustInherit**T:System.Diagnostics.Switch**) 类 **Switch**，用户开发的任何开关也应如此。  
   
- 跟踪开关可用于筛选信息。 例如，你可能希望查看数据访问模块中的每条跟踪消息，但只查看应用程序其余部分的错误消息。 在这种情况下，则需要分别对数据访问模块和应用程序的其余部分使用一个跟踪开关。 通过使用 .config 文件将开关配置为相应的设置，便可以控制接收的跟踪消息类型。 有关详细信息，请参阅[如何：创建、初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
+ 跟踪开关可用于筛选信息。 例如，你可能希望查看数据访问模块中的每条跟踪消息，但只查看应用程序其余部分的错误消息。 在这种情况下，则需要分别对数据访问模块和应用程序的其余部分使用一个跟踪开关。 通过使用 .config 文件将开关配置为相应的设置，便可以控制接收的跟踪消息类型。 有关详细信息，请参阅[如何：创建、 初始化和配置跟踪开关](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
   
  通常情况下，会在禁用开关的情况下执行已部署的应用程序，以确保在应用程序运行时用户不会看到屏幕上出现的或填满日志文件的不相关跟踪消息。 如果应用程序执行期间出现了问题，可以停止应用程序，启用开关，然后重新启动应用程序。 然后，将显示跟踪消息。  
   
@@ -83,7 +83,7 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ## <a name="developer-defined-switches"></a>开发人员定义的开关  
  除了提供 BooleanSwitch **T:System.Diagnostics.Switch** 和 **TraceSwitch**之外，可以通过从 **Switch** 类继承以及将基类方法重写为自定义的方法定义自己的开关。 有关创建开发人员定义的开关的详细信息，请参阅 .NET Framework 引用中的 <xref:System.Diagnostics.Switch> 类。  
   
-## <a name="see-also"></a>请参阅  
- [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>请参阅
+- [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

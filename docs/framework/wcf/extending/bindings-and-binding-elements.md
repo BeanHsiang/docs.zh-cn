@@ -5,11 +5,11 @@ helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
 ms.openlocfilehash: ca013c939e3db2136ffa1504ae0eedd7b870d773
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372533"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982823"
 ---
 # <a name="bindings-and-binding-elements"></a>绑定和绑定元素
 绑定是特殊的配置元素，名为的集合*绑定元素*、 其计算由服务运行时每当客户端或服务终结点构造。 绑定内绑定元素的类型和顺序确定了终结点的通道堆栈中协议和传输通道的选择和堆叠顺序。  

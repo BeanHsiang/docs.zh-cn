@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9a65f76aed00e2b848f8603f1fee4d6acc91f99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 16984fe108abd1cfc01c471bcfc091a805b28e83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449152"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501498"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize 方法
-获取当前范围内的程序集和其元数据的估计二进制大小。  
+获取当前作用域中的程序集和其元数据的估计二进制大小。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,35 +36,35 @@ HRESULT GetSaveSize (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `fSave`  
- [in]值为[CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)枚举，它指定是否获取的准确或近似大小。 只有三个值都无效： cssAccurate，cssQuick，和 cssDiscardTransientCAs:  
+ [in]值为[CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)枚举，用于指定是否要获取的准确或近似大小。 只有三个值都有效： cssAccurate，cssQuick，和 cssDiscardTransientCAs:  
   
--   cssAccurate 返回准确的存储大小，但需要更长的计算。  
+-   cssAccurate 返回确切的存储大小，但花费的时间来计算。  
   
--   cssQuick 返回的大小，为安全起见，填充，但需要更少时间来计算。  
+-   cssQuick 返回大小，为安全起见，填充，但需要更少的时间来计算。  
   
--   cssDiscardTransientCAs 告知`GetSaveSize`，它可以抛弃可丢弃的自定义属性。  
+-   cssDiscardTransientCAs 告知`GetSaveSize`，它可以丢弃可放弃的自定义属性。  
   
  `pdwSaveSize`  
- [out]指向保存该文件所需的大小的指针。  
+ [out]一个指向保存该文件所需的大小。  
   
 ## <a name="remarks"></a>备注  
- `GetSaveSize` 计算所需的空间，以字节为单位，以保存在当前范围内的程序集和所有元数据。 (调用[imetadataemit:: Savetostream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md)方法将发出此数目的字节。)  
+ `GetSaveSize` 计算所需的空间，以字节为单位，以将该程序集和其元数据保存在当前作用域。 (调用[imetadataemit:: Savetostream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md)方法将发出此数目的字节数。)  
   
- 如果调用方实现[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)接口 (通过[imetadataemit:: Sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)或[imetadataemit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md))，`GetSaveSize`将执行两个周期通过优化并压缩的元数据。 否则，不执行任何优化。  
+ 如果调用方实现[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)接口 (通过[imetadataemit:: Sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)或[imetadataemit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md))，`GetSaveSize`将执行两个阶段通过优化并将其压缩的元数据。 否则，不执行任何优化。  
   
- 如果执行优化，则第一次传递只需进行排序的元数据结构调整导入时搜索的性能。 此步骤通常会导致移动解决问题，并且保留供将来参考工具的令牌将会失效其副作用的记录。 元数据不会通知这些令牌更改之前的调用方后的第二个过程，但是。 第二个阶段中，在各种优化来执行旨在减少将元数据，如优化去除 （早期绑定） 的总体大小`mdTypeRef`和`mdMemberRef`令牌时则引用为的类型或声明中的成员当前的元数据范围。 在此阶段中，会发生令牌映射的另一轮。 在后此阶段中，元数据引擎通知调用方，通过其`IMapToken`接口的任何更改令牌值。  
+ 如果执行优化，则第一步只需进行排序来优化性能的导入时搜索的元数据结构。 此步骤通常会记录移动，并且其副作用，保留供将来参考工具的令牌都无效。 元数据不会通知调用方之前这些令牌更改后的第二个过程，但是。 在第二个阶段中，各种优化的执行，旨在减少的元数据，例如优化去除 （早期绑定） 的总体大小`mdTypeRef`和`mdMemberRef`令牌的类型或成员声明中的引用时当前元数据范围。 在此阶段中，会发生另一轮标记映射。 之后此阶段中，元数据引擎通知调用方，通过其`IMapToken`接口的任何更改令牌值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

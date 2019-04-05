@@ -1,22 +1,22 @@
 ---
-title: 如何： 创建签名的友元程序集 (Visual Basic)
+title: 如何：创建签名的友元程序集 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 6a9dcc65e7e496a436d81ad2d311a4174f111104
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188427"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836735"
 ---
-# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>如何： 创建签名的友元程序集 (Visual Basic)
+# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>如何：创建签名的友元程序集 (Visual Basic)
 本示例演示如何将友元程序集和具有强名称的程序集一起使用。 这两种程序集必须都使用强名称。 尽管本示例中的两种程序集使用相同的密钥，但可以对这两种程序集使用不同的密钥。  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>创建签名的程序集和友元程序集  
   
 1.  打开命令提示。  
   
-2.  使用强名称工具，通过以下命令序列生成 keyfile 并显示其公钥。 有关详细信息，请参阅 [Sn.exe （强名称工具）][Sn.exe （强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md))。  
+2.  使用强名称工具，通过以下命令序列生成 keyfile 并显示其公钥。 有关详细信息，请参阅[Sn.exe （强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
     1.  生成此示例的强名称密钥，并将其存储在 FriendAssemblies.snk 文件中：  
   
@@ -84,12 +84,13 @@ ms.locfileid: "50188427"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 类之间具有相似之处。 主要区别是，<xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全权限来运行一段特定代码，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性控制 `Friend` 类型和成员的可见性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [程序集和全局程序集缓存 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [如何： 创建未签名的友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe （强名称工具）][Sn.exe （强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md))  
- [创建和使用具有强名称的程序集](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [.NET 中的程序集](../../../../standard/assembly/index.md)
+- [友元程序集](../../../../standard/assembly/friend-assemblies.md)
+- [如何：创建未签名的友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [Sn.exe （强名称工具）](../../../../framework/tools/sn-exe-strong-name-tool.md))
+- [创建和使用具有强名称的程序集](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)

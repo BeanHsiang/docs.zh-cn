@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 897f49dc783885728f7d7242482a2b42f3a114bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43883717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498068"
 ---
 # <a name="latency-modes"></a>滞后时间模式
 若要回收对象，垃圾回收器必须停止应用程序中所有正在执行的线程。 在某些情况下（例如当应用程序检索数据或显示内容时），关键时刻可能发生完整的垃圾回收，从而妨碍性能。 可以通过将 <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 属性设置为其中一个 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 值来调节垃圾回收的干扰。  
@@ -22,7 +22,7 @@ ms.locfileid: "43883717"
   
 -   <xref:System.Runtime.GCLatencyMode.LowLatency> 禁止第 2 代集合，仅执行第 0 代和第 1 代集合。 只能在短时间内使用。 在更长时间内，如果系统处于内存压力下，垃圾回收器将触发一次回收，这样会暂时暂停应用程序并中断对时间要求很急的操作。 此设置仅对工作站垃圾回收可用。  
   
--   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> 禁止前景第 2 代回收，仅执行第 0 代、第 1 代和背景第 2 代回收。 它可以长时间使用，并对工作站和服务器垃圾回收都可用。 如果[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)已禁用，则无法使用此设置。  
+-   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> 禁止前台第 2 代回收，仅执行第 0 代、第 1 代和后台第 2 代回收。 它可以长时间使用，并对工作站和服务器垃圾回收都可用。 如果[并发垃圾回收](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)已禁用，则无法使用此设置。  
   
  在低延迟期间，除非发生以下情况，否则禁止第 2 代回收：  
   
@@ -56,6 +56,6 @@ ms.locfileid: "43883717"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.GC?displayProperty=nameWithType>  
-- [已引发回收](../../../docs/standard/garbage-collection/induced.md)  
+- <xref:System.GC?displayProperty=nameWithType>
+- [已引发回收](../../../docs/standard/garbage-collection/induced.md)
 - [垃圾回收](../../../docs/standard/garbage-collection/index.md)

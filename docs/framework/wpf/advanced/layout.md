@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 869780f2b6a625923ce869bcaafbbd2319f6cb23
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703019"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464562"
 ---
 # <a name="layout"></a>布局
 本主题介绍 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 布局系统。 了解布局计算发生的方式和时间对于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中创建用户界面非常重要。  
@@ -41,22 +41,22 @@ ms.locfileid: "46703019"
   
  下图显示了一个简单的布局。  
   
- ![未添加边界框的典型网格。](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
+ ![显示的典型网格未添加边界框的屏幕截图。](./media/layout/grid-no-bounding-box-superimpose.png)  
   
  可以通过使用以下 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 实现此布局。  
   
- [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
+ [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
  将单个<xref:System.Windows.Controls.TextBlock>内承载元素<xref:System.Windows.Controls.Grid>。 而文本填充第一列，为分配的空间的左上角<xref:System.Windows.Controls.TextBlock>实际上远大。 边界框的任何<xref:System.Windows.FrameworkElement>可以通过使用来检索<xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A>方法。 下图显示的边界框<xref:System.Windows.Controls.TextBlock>元素。  
   
- ![TextBlock 的边界框现在可见。](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![屏幕截图显示 TextBlock 的边界框现在可见。](./media/layout/visible-textblock-bounding-box.png)  
   
  黄色矩形，为分配的空间所示<xref:System.Windows.Controls.TextBlock>元素是实际上远大于显示。 其他元素添加到<xref:System.Windows.Controls.Grid>，这种分配可以收缩或扩展，具体取决于类型和添加的元素的大小。  
   
  布局槽<xref:System.Windows.Controls.TextBlock>转换成<xref:System.Windows.Shapes.Path>通过使用<xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A>方法。 此方法可用于显示元素的边界框。  
   
- [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
- [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>布局系统  
@@ -122,7 +122,7 @@ ms.locfileid: "46703019"
   
 -   应注意哪些属性值更改会强制执行布局系统的递归更新。  
   
-     如果依赖属性的值可能导致布局系统被初始化，则会使用公共标志对该依赖属性进行标记。 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 和<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>提供有关哪些属性值更改会强制执行递归的有用提示更新由布局系统。 一般情况下，可能会影响元素的边界框的大小的任何属性应具有<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>标志设置为 true。 有关详细信息，请参阅[依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+     如果依赖属性的值可能导致布局系统被初始化，则会使用公共标志对该依赖属性进行标记。 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> 和<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>提供有关哪些属性值更改会强制执行递归的有用提示更新由布局系统。 一般情况下，可能会影响元素的边界框的大小的任何属性应具有<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>标志设置为 true。 有关详细信息，请参阅[依赖项属性概述](dependency-properties-overview.md)。  
   
 -   如果可能，请使用<xref:System.Windows.UIElement.RenderTransform%2A>而不是<xref:System.Windows.FrameworkElement.LayoutTransform%2A>。  
   
@@ -146,11 +146,11 @@ ms.locfileid: "46703019"
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>下一步  
- 了解元素的测量和排列方式是了解布局的第一步。 有关可用的详细信息<xref:System.Windows.Controls.Panel>元素，请参阅[面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)。 若要更好地了解可能影响布局的各种定位属性，请参阅[对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)。 有关自定义的示例<xref:System.Windows.Controls.Panel>元素，请参阅[自定义径向面板示例](https://go.microsoft.com/fwlink/?LinkID=159982)。 当准备好将其全部放在轻型应用程序，请参阅[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
+ 了解元素的测量和排列方式是了解布局的第一步。 有关可用的详细信息<xref:System.Windows.Controls.Panel>元素，请参阅[面板概述](../controls/panels-overview.md)。 若要更好地了解可能影响布局的各种定位属性，请参阅[对齐、边距和填充概述](alignment-margins-and-padding-overview.md)。 有关自定义的示例<xref:System.Windows.Controls.Panel>元素，请参阅[自定义径向面板示例](https://go.microsoft.com/fwlink/?LinkID=159982)。 当准备好将其全部放在轻型应用程序，请参阅[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.UIElement>  
- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.UIElement>
+- [面板概述](../controls/panels-overview.md)
+- [对齐、边距和填充概述](alignment-margins-and-padding-overview.md)
+- [布局和示例](optimizing-performance-layout-and-design.md)

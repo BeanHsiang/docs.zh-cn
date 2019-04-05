@@ -1,31 +1,32 @@
 ---
-title: 分部类和方法（C# 编程指南）
+title: 分部类和方法 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 21350c28f5fcce812f47742bebe07f5bcdf842f1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e91d77393c4d2980cce73a92589b752124e8077
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521164"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965197"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>分部类和方法（C# 编程指南）
-拆分[类](../../../csharp/language-reference/keywords/class.md)、[结构](../../../csharp/language-reference/keywords/struct.md)、[接口](../../../csharp/language-reference/keywords/interface.md)或超过两种源文件的方法的定义是可能的。 每个源文件包含类型或方法定义的一部分，编译应用程序时将把所有部分组合起来。  
+拆分一个[类](../../../csharp/language-reference/keywords/class.md)、一个[结构](../../../csharp/language-reference/keywords/struct.md)、一个[接口](../../../csharp/language-reference/keywords/interface.md)或一个方法的定义到两个或更多的文件中是可能的。 每个源文件包含类型或方法定义的一部分，编译应用程序时将把所有部分组合起来。  
   
 ## <a name="partial-classes"></a>分部类  
  在以下几种情况下需要拆分类定义：  
   
 -   处理大型项目时，使一个类分布于多个独立文件中可以让多位程序员同时对该类进行处理。  
   
--   使用自动生成的源时，无需重新创建源文件便可将代码添加到类中。 Visual Studio 在创建 Windows 窗体、Web 服务包装器代码等时都使用此方法。 无需修改 Visual Studio 创建的文件，就可创建使用这些类的代码。  
+-   当使用自动生成的源文件时，你可以添加代码而不需要重新创建源文件。 Visual Studio 在创建Windows 窗体、Web 服务包装器代码等时会使用这种方法。 你可以创建使用这些类的代码，这样就不需要修改由Visual Studio生成的文件。  
   
 -   若要拆分类定义，请使用 [partial](../../../csharp/language-reference/keywords/partial-type.md) 关键字修饰符，如下所示：  
   
- [!code-csharp[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]  
   
  `partial` 关键字指示可在命名空间中定义该类、结构或接口的其他部分。 所有部分都必须使用 `partial` 关键字。 在编译时，各个部分都必须可用来形成最终的类型。 各个部分必须具有相同的可访问性，如 `public`、`private` 等。  
   
@@ -38,15 +39,15 @@ ms.locfileid: "43521164"
   
  下面的示例演示嵌套类型可以是分部的，即使它们所嵌套于的类型本身并不是分部的也如此。  
   
- [!code-csharp[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#25)]  
   
  编译时会对分部类型定义的属性进行合并。 以下面的声明为例：  
   
- [!code-csharp[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#23)]  
   
  它们等效于以下声明：  
   
- [!code-csharp[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#24)]  
   
  将从所有分部类型定义中对以下内容进行合并：  
   
@@ -62,24 +63,24 @@ ms.locfileid: "43521164"
   
  以下面的声明为例：  
   
- [!code-csharp[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#21)]  
   
  它们等效于以下声明：  
   
- [!code-csharp[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]  
   
 ### <a name="restrictions"></a>限制  
  处理分部类定义时需遵循下面的几个规则：  
   
 -   要作为同一类型的各个部分的所有分部类型定义都必须使用 `partial` 进行修饰。 例如，下面的类声明会生成错误：  
   
-     [!code-csharp[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
+     [!code-csharp[csProgGuideObjects#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#20)]  
   
 -   `partial` 修饰符只能出现在紧靠关键字 `class`、`struct` 或 `interface` 前面的位置。  
   
 -   分部类型定义中允许使用嵌套的分部类型，如下面的示例中所示：  
   
-     [!code-csharp[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
+     [!code-csharp[csProgGuideObjects#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#19)]  
   
 -   要成为同一类型的各个部分的所有分部类型定义都必须在同一程序集和同一模块（.exe 或 .dll 文件）中进行定义。 分部定义不能跨越多个模块。  
   
@@ -91,7 +92,7 @@ ms.locfileid: "43521164"
   
     -   [专用](../../../csharp/language-reference/keywords/private.md)  
   
-    -   [protected](../../../csharp/language-reference/keywords/protected.md)  
+    -   [受保护](../../../csharp/language-reference/keywords/protected.md)  
   
     -   [internal](../../../csharp/language-reference/keywords/internal.md)  
   
@@ -109,19 +110,19 @@ ms.locfileid: "43521164"
   
 ## <a name="example-1"></a>示例 1  
   
-### <a name="description"></a>描述  
- 下面的示例在一个分部类定义中声明 `CoOrds` 类的字段和构造函数，在另一个分部类定义中声明成员 `PrintCoOrds`。  
+### <a name="description"></a>说明  
+ 下面的示例在一个分部类定义中声明 `Coords` 类的字段和构造函数，在另一个分部类定义中声明成员 `PrintCoords`。  
   
 ### <a name="code"></a>代码  
- [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
+ [!code-csharp[csProgGuideObjects#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#17)]  
   
 ## <a name="example-2"></a>示例 2  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  从下面的示例可以看出，你也可以开发分部结构和接口。  
   
 ### <a name="code"></a>代码  
- [!code-csharp[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
+ [!code-csharp[csProgGuideObjects#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#18)]  
   
 ## <a name="partial-methods"></a>分部方法  
  分部类或结构可以包含分部方法。 类的一个部分包含方法的签名。 可以在同一部分或另一个部分中定义可选实现。 如果未提供该实现，则会在编译时删除方法以及对方法的所有调用。  
@@ -158,12 +159,13 @@ partial void onNameChanged()
 -   你可以为已定义并实现的分部方法生成[委托](../../../csharp/language-reference/keywords/delegate.md)，但不能为已经定义但未实现的分部方法生成委托。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[分部类型](~/_csharplang/spec/classes.md#partial-types)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)  
-- [接口](../../../csharp/programming-guide/interfaces/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [类](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [结构](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [接口](../../../csharp/programming-guide/interfaces/index.md)
 - [分部（类型）](../../../csharp/language-reference/keywords/partial-type.md)

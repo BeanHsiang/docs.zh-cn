@@ -5,12 +5,12 @@ ms.date: 06/05/2018
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 6730238a73b41faa4409fdfc75af1de36f31d13e
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569594"
 ---
 # <a name="system-provided-bindings"></a>系统提供的绑定
 
@@ -71,25 +71,25 @@ WCF 附带有以下绑定：
 |<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1（基本配置文件 1.1）|（无）、传输、消息、混合|（无）|（无）|n/a|文本、(MTOM)|是<br />（缓冲式）|
 |<xref:System.ServiceModel.NetTcpContextBinding>|.NET|（传输）、消息、无、混合|（传输）、可靠会话、安全会话|（无）、是|是|二进制|是<br />（缓冲式）|
 |<xref:System.ServiceModel.WSHttpContextBinding>|WS|传输、（消息）、混合|（无）、可靠会话、安全会话|（无）、是|n/a|文本、(MTOM)|否|
-|<xref:System.ServiceModel.UdpBinding> <br /><br /> 注意：可以通过实现此绑定所实现的标准 SOAP-over-UDP（UDP 上的 SOAP）规范来获得互操作性。|.NET|（无）|（无）|（无）|n/a|（文本）|否|
+|<xref:System.ServiceModel.UdpBinding> <br /><br /> **注意：** 可以通过实现此绑定所实现的标准 SOAP-over-UDP（UDP 上的 SOAP）规范来获得互操作性。|.NET|（无）|（无）|（无）|n/a|（文本）|否|
 
 > [!IMPORTANT]
-> <xref:System.ServiceModel.NetHttpBinding> 是为使用 HTTP 或 WebSocket 服务设计的绑定，默认情况下使用二进制编码。 <xref:System.ServiceModel.NetHttpBinding> 将检测它是否与请求-答复协定或双工协定结合使用，并更改其行为以进行匹配 - 它将针对请求-答复协定使用 HTTP，并针对双工协定使用 WebSocket。 此行为可以使用 <xref:System.ServiceModel.Channels.WebSocketTransportUsage> 绑定设置进行重写：WhenDuplex - 这是默认值，行为方式如上面所述。 从不 - 阻止使用 WebSocket。 尝试使用具有此设置的双工协定将导致异常。 始终 - 甚至对于请求-答复协定，也会强制使用 WebSocket。 NetHttpBinding 支持 HTTP 模式和 WebSocket 模式下的可靠会话。 在 WebSocket 模式下，会话由传输来提供。
+> <xref:System.ServiceModel.NetHttpBinding> 是为使用 HTTP 或 WebSocket 服务设计的绑定，默认情况下使用二进制编码。 <xref:System.ServiceModel.NetHttpBinding> 将检测它是否与请求-答复协定或双工协定结合使用，并更改其行为以进行匹配 - 它将针对请求-答复协定使用 HTTP，并针对双工协定使用 WebSocket。 可以使用重写此行为<xref:System.ServiceModel.Channels.WebSocketTransportUsage>绑定设置：双工时 - 这是默认值，其行为如前所述。 从不 - 阻止使用 WebSocket。 尝试使用具有此设置的双工协定将导致异常。 始终 - 甚至对于请求-答复协定，也会强制使用 WebSocket。 NetHttpBinding 支持 HTTP 模式和 WebSocket 模式下的可靠会话。 在 WebSocket 模式下，会话由传输来提供。
 
  下表对上表列出的功能进行说明。
 
 |功能|描述|
 |-------------|-----------------|
 |互操作性类型|指定绑定用来确保互操作的协议或技术。|
-|安全性|指定如何保护通道：<br />- 无：不保护 SOAP 消息且不对客户端进行身份验证。<br />- 传输：在传输层上满足安全要求。<br />- 消息：在消息层上满足安全要求。<br />- 混合：声明包含在消息中；完整性和保密性要求由传输层满足。|
+|安全性|指定如何保护通道：<br />-None:SOAP 消息的不安全和客户端未经身份验证。<br />-传输：在传输层上满足安全要求。<br />-消息：在消息层上满足安全要求。<br />混合：声明包含在 message;传输层满足完整性和保密性需求。|
 |会话|指定此绑定是否支持会话协定。|
 |事务|指定是否启用事务。|
 |双工|指定是否支持双工协定。 请注意，此功能要求支持绑定中的会话。|
-|编码|指定消息的网络格式。 允许的值包括：<br />- 文本：例如 UTF-8。<br />- 二进制<br />- 消息传输优化机制 (MTOM)：一种在 SOAP 信封上下文中高效编码二进制 XML 元素的方法。|
-|流式处理|指定传入和传出消息是否支持流。 使用绑定上的 `TransferMode` 属性可设置值。 允许的值包括：<br />- <xref:System.ServiceModel.TransferMode.Buffered>：请求消息和响应消息都是缓冲式的。<br />- <xref:System.ServiceModel.TransferMode.Streamed>：请求消息和响应消息都是流式的。<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest>：请求消息是流式的，而响应消息是缓冲式的。<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse>：请求消息是缓冲式的，而响应消息是流式的。|
+|编码|指定消息的网络格式。 允许的值包括：<br />- 文本：例如 UTF-8。<br />- 二进制<br />消息传输优化机制 (MTOM):一种方法的高效编码的 SOAP 信封上下文中的二进制 XML 元素。|
+|流式处理|指定传入和传出消息是否支持流。 使用绑定上的 `TransferMode` 属性可设置值。 允许的值包括：<br />- <xref:System.ServiceModel.TransferMode.Buffered>：对请求和响应消息进行缓冲处理。<br />- <xref:System.ServiceModel.TransferMode.Streamed>：对请求和响应消息进行流式处理。<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest>：对请求消息进行流式处理，对响应消息进行缓冲处理。<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse>：对请求消息进行缓冲处理，对响应消息进行流式处理。|
 
 ## <a name="see-also"></a>请参阅
 
-[终结点创建概述](endpoint-creation-overview.md)  
-[使用绑定配置服务和客户端](using-bindings-to-configure-services-and-clients.md)  
-[基本 WCF 编程](basic-wcf-programming.md)  
+- [终结点创建概述](endpoint-creation-overview.md)
+- [使用绑定配置服务和客户端](using-bindings-to-configure-services-and-clients.md)
+- [基本 WCF 编程](basic-wcf-programming.md)

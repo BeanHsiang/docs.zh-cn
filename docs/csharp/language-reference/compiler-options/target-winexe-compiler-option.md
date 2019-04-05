@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: f77137e3cc2f734435d3b1d391a303fcd3e16332
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 5d5e5c62dc1a5fe6901ee232084a704d7d936b76
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970170"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411958"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe（C# 编译器选项）
 -target:winexe 选项使编译器创建可执行文件 (EXE) 和 Windows 程序。  
@@ -25,7 +25,7 @@ ms.locfileid: "45970170"
 ```  
   
 ## <a name="remarks"></a>备注  
- 将创建扩展名为 .exe 的可执行文件。 Windows 程序从 .NET Framework 库或使用 Win32 API 提供用户界面。  
+ 将创建扩展名为 .exe 的可执行文件。 Windows 程序从 .NET Framework 库或使用 Windows API 提供用户界面。  
   
  使用 [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) 创建控制台应用程序。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "45970170"
 csc -target:winexe in.cs  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

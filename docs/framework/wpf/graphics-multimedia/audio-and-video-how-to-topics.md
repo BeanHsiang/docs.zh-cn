@@ -7,24 +7,23 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
-ms.openlocfilehash: d7c3a6b01591dd1c7fc7554a6e660f1ca7b12de1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 2f46a548f28cffb1824ffbdc51f8d4d79c4c9d02
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582208"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363691"
 ---
 # <a name="audio-and-video-how-to-topics"></a>音频和视频帮助主题
 以下主题演示如何使用<xref:System.Windows.Controls.MediaElement>集成应用程序中的音频和视频内容。  
   
 ## <a name="in-this-section"></a>本节内容  
- [如何： 动态添加元素](https://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
- [控制 MediaElement（播放、暂停、停止、音量和速度）](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [使用情节提要控制 MediaElement](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [使用用户事件触发媒体播放](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [重复媒体播放](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [播放带有动画的媒体](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [对 MediaElement 使用转换](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+ [控制 MediaElement（播放、暂停、停止、音量和速度）](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [使用情节提要控制 MediaElement](how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [使用用户事件触发媒体播放](how-to-trigger-media-playback-with-a-user-event.md)  
+ [重复媒体播放](how-to-repeat-media-playback.md)  
+ [播放带有动画的媒体](how-to-play-media-with-animations.md)  
+ [对 MediaElement 使用转换](how-to-use-transforms-on-a-mediaelement.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.MediaElement>  
@@ -34,4 +33,4 @@ ms.locfileid: "48582208"
  <xref:System.Windows.Media.MediaTimeline>  
   
 ## <a name="related-sections"></a>相关章节  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [图形和多媒体](index.md)

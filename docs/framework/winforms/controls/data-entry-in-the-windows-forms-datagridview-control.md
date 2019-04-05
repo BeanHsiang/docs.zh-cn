@@ -6,52 +6,52 @@ helpviewer_keywords:
 - data entry [Windows Forms], dataGridView control
 - data grids [Windows Forms], data entry
 ms.assetid: 4a6d4676-d4e7-4b0e-9c22-50ce65ffe0d6
-ms.openlocfilehash: f5870b3cedd18d605426c7e27981303adc9beb5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3022ceddd9fab5610a0856b5e3273d8c046a5fa
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526815"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719732"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows 窗体 DataGridView 控件中的数据输入
-`DataGridView`控件提供了一些功能，可让你更改用户添加或修改控件中的数据的方式。 例如，你可以使数据输入更高效通过提供新行的默认值和错误发生时通知用户。  
+`DataGridView`控件提供了多项功能，可用于更改用户添加或修改控件中的数据的方式。 例如，您可以使数据输入效率更高通过新行提供默认值，并且发生错误时通知用户。  
   
 ## <a name="in-this-section"></a>本节内容  
- [如何：指定 Windows 窗体 DataGridView 控件的编辑模式](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
- 描述如何更改用户开始编辑单元格的方式。  
+ [如何：Windows 窗体 DataGridView 控件中指定的编辑模式](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
+ 介绍如何更改用户开始编辑单元格的方式。  
   
- [如何：指定 Windows 窗体 DataGridView 控件中新行的默认值](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
- 描述如何使用预先填充用于新记录以节省数据输入时间的行。  
+ [如何：指定 Windows 窗体 DataGridView 控件中的新行的默认值](specify-default-values-for-new-rows-in-the-datagrid.md)  
+ 介绍如何预填充新记录以节省数据输入时间所对应的行。  
   
- [在 Windows 窗体 DataGridView 控件中对新记录使用行](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)  
- 描述在详细信息，包括它隐藏、 自定义其外观，以及它如何与相关的信息的新记录所在行<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。  
+ [在 Windows 窗体 DataGridView 控件中对新记录使用行](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)  
+ 介绍用于在详细信息，包括它隐藏、 自定义其外观，以及它如何与相关的信息的新记录的行<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。  
   
- [演练：在 Windows 窗体 DataGridView 控件中验证数据](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
- 描述如何验证用户输入，以防止数据输入格式设置错误。  
+ [演练：验证 Windows 窗体 DataGridView 控件中的数据](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+ 介绍如何验证用户输入，以防止数据输入格式设置错误。  
   
- [演练：处理在 Windows 窗体 DataGridView 控件有数据输入时发生的错误](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
- 描述如何处理来自数据源，当用户尝试提交新值的数据输入错误。  
+ [演练：Windows 窗体 DataGridView 控件中的数据输入时发生的错误处理](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+ 介绍如何处理来自数据源，当用户尝试提交新值时的数据输入错误。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Forms.DataGridView>  
  提供关于 <xref:System.Windows.Forms.DataGridView> 控件的参考文档。  
   
  <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>  
- 提供的参考文档<xref:System.Windows.Forms.DataGridView.EditMode%2A>属性。  
+ 为提供参考文档<xref:System.Windows.Forms.DataGridView.EditMode%2A>属性。  
   
  <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
- 提供的参考文档<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。  
+ 为提供参考文档<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。  
   
  <xref:System.Windows.Forms.DataGridView.DataError?displayProperty=nameWithType>  
- 提供的参考文档<xref:System.Windows.Forms.DataGridView.DataError>事件。  
+ 为提供参考文档<xref:System.Windows.Forms.DataGridView.DataError>事件。  
   
  <xref:System.Windows.Forms.DataGridView.CellValidating?displayProperty=nameWithType>  
- 提供的参考文档<xref:System.Windows.Forms.DataGridView.CellValidating>事件。  
+ 为提供参考文档<xref:System.Windows.Forms.DataGridView.CellValidating>事件。  
   
 ## <a name="related-sections"></a>相关章节  
- [在 Windows 窗体 DataGridView 控件中显示数据](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- 提供一些主题，介绍如何向数据控件填充手动或从外部数据源。  
+ [在 Windows 窗体 DataGridView 控件中显示数据](displaying-data-in-the-windows-forms-datagridview-control.md)  
+ 提供一些主题，介绍如何手动或从外部数据源填充的数据控件。  
   
-## <a name="see-also"></a>请参阅  
- [DataGridView 控件](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Windows 窗体 DataGridView 控件中的列类型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>请参阅
+- [DataGridView 控件](datagridview-control-windows-forms.md)
+- [Windows 窗体 DataGridView 控件中的列类型](column-types-in-the-windows-forms-datagridview-control.md)

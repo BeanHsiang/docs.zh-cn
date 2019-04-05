@@ -1,15 +1,16 @@
 ---
-title: 选择语句（C# 参考）
+title: 选择语句 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
-ms.openlocfilehash: b4575884acc63489f3e40bd040257a9c6bca5df9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7e5a8aa83fb099e4945ce2406aaea9d11a84d040
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181397"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241176"
 ---
 # <a name="selection-statements-c-reference"></a>选择语句（C# 参考）
 

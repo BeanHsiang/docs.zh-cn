@@ -1,13 +1,13 @@
 ---
-title: '签名文件 （F #）'
-description: '了解如何使用 F # 签名文件来保存一组 F # 程序元素，如类型、 命名空间和模块的信息的公共签名。'
+title: 签名文件
+description: 了解如何使用F#签名文件以保存有关的一组公共签名信息F#程序元素，如类型、 命名空间和模块。
 ms.date: 06/15/2018
-ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991228"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613409"
 ---
 # <a name="signatures"></a>签名
 
@@ -29,6 +29,7 @@ ms.locfileid: "45991228"
 |---------|-----------|
 |`[<Sealed>]`|适用于没有抽象成员或不应扩展的类型。|
 |`[<Interface>]`|适用于接口类型。|
+
 如果实现文件中的签名和声明的特性不一致，则编译器将产生错误。
 
 使用关键字 `val` 来创建用于值或函数值的签名。 关键字 `type` 引入类型签名。

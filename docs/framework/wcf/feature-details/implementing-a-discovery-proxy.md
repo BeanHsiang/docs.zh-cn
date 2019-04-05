@@ -2,12 +2,12 @@
 title: 实现发现代理
 ms.date: 03/30/2017
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
-ms.openlocfilehash: 0c7086e0eecea6cc2d7494d6afda0abf056ba758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2f687912b966b03c17206f369b46ffd28d019d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634514"
 ---
 # <a name="implementing-a-discovery-proxy"></a>实现发现代理
 本节说明实现发现代理所需执行的步骤。 发现代理是包含服务存储库的独立服务。 客户端可以查询发现代理，以便查找该代理已知的可检测服务。 使用服务填充代理的方式由实施者决定。 例如，发现代理可以连接到现有服务存储库并使该信息可供检测，管理员可以使用管理 API 向代理添加可检测服务，或者发现代理也可以使用公告功能更新其内部缓存。  
@@ -20,15 +20,15 @@ ms.locfileid: "33492214"
  [如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
  说明如何实现发现代理。  
   
- [如何：实现向发现代理注册的可检测服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- 描述如何实现向发现代理注册的可发现的 WCF 服务。  
+ [如何：实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ 介绍如何实现向发现代理注册的可发现的 WCF 服务。  
   
  [如何：实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
- 描述如何实现使用发现代理要搜索的服务的 WCF 客户端应用程序。  
+ 介绍如何实现使用发现代理搜索服务的 WCF 客户端应用程序。  
   
  [如何：测试发现代理](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)  
  说明如何测试前面三个主题中编写的代码。  
   
-## <a name="see-also"></a>请参阅  
- [WCF 发现](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [如何：以编程方式向 WCF 服务和客户端添加可发现性](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)
+## <a name="see-also"></a>请参阅
+- [WCF 发现](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [如何：以编程方式向 WCF 服务和客户端添加可发现性](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)

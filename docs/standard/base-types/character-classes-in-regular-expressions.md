@@ -1,5 +1,6 @@
 ---
-title: 正则表达式中的字符类
+title: .NET 正则表达式中的字符类
+description: 了解如何使用字符类表示 .NET 正则表达式中的一组字符。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1a40c5c178f87bb5037ce356d345a2f3db997a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: seodec18
+ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622944"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正则表达式中的字符类
 <a name="Top"></a>一个字符类定义一组字符，其中的任一字符均可出现在输入字符串中以便成功匹配。 .NET 中的正则表达式语言支持以下字符类：  
@@ -70,7 +72,7 @@ ms.locfileid: "44180145"
   
  下表列出了一些常见的包含正字符类的正则表达式模式。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`[aeiou]`|匹配所有元音。|  
 |`[\p{P}\d]`|匹配所有标点符号和十进制数字字符。|  
@@ -83,7 +85,7 @@ ms.locfileid: "44180145"
   
  按以下方式定义正则表达式 `gr[ae]y\s\S+?[\s|\p{P}]`：  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`gr`|匹配文本字符“gr”。|  
 |`[ae]`|匹配“a”或“e”。|  
@@ -98,7 +100,7 @@ ms.locfileid: "44180145"
   
  正则表达式 `\b[A-Z]\w*\b` 的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`[A-Z]`|匹配从 A 到 Z 的所有大写字符。|  
@@ -132,7 +134,7 @@ ms.locfileid: "44180145"
   
  下表列出了一些常见的包含负字符组的正则表达式模式。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`[^aeiou]`|匹配除元音以外的所有字符。|  
 |`[^\p{P}\d]`|匹配标点符号和十进制数字字符以外的所有字符。|  
@@ -144,7 +146,7 @@ ms.locfileid: "44180145"
   
  正则表达式 `\bth[^o]\w+\b` 的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`th`|匹配文本字符“th”。|  
@@ -158,7 +160,7 @@ ms.locfileid: "44180145"
 ## <a name="any-character-"></a>任意字符：.  
  句点字符 (.) 匹配除 `\n`（换行符 \u000A）之外的任何字符，有以下两个限制：  
   
--   如果通过 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项修改正则表达式模式，或者通过 `.` 选项修改包含 `s` 字符类的模式的部分，则 `.` 可匹配任何字符。 有关更多信息，请参见[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)。  
+-   如果通过 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项修改正则表达式模式，或者通过 `.` 选项修改包含 `s` 字符类的模式的部分，则 `.` 可匹配任何字符。 有关详细信息，请参阅 [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md)。  
   
      下面的示例阐释了默认情况下以及使用 `.` 选项的情况下 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 字符类的不同的行为。 正则表达式 `^.+` 在字符串开头开始并匹配每个字符。 默认情况下，匹配在第一行的结尾结束；正则表达式模式匹配回车符、`\r` 或 \u000D，但不匹配 `\n`。 由于 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 选项将整个输入字符串解释为单行，因此它匹配输入字符串中的每个字符，包括 `\n`。  
   
@@ -174,7 +176,7 @@ ms.locfileid: "44180145"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  由于它匹配任何字符，因此当正则表达式模式尝试多次匹配任何字符时，`.` 语言元素通常会与惰性限定符一起使用。 有关详细信息，请参阅[限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由于它匹配任何字符，因此当正则表达式模式尝试多次匹配任何字符时，`.` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  [返回页首](#Top)  
   
@@ -195,7 +197,7 @@ ms.locfileid: "44180145"
   
  正则表达式 `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` 的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`\p{IsGreek}+`|匹配一个或多个希腊语字符。|  
@@ -232,7 +234,7 @@ ms.locfileid: "44180145"
 ## <a name="word-character-w"></a>单词字符：\w  
  `\w` 与任何单词字符匹配。 单词字符是下表中列出的任何 Unicode 类别的成员。  
   
-|类别|描述|  
+|类别|说明|  
 |--------------|-----------------|  
 |Ll|字母，小写|  
 |Lu|字母，大写|  
@@ -246,11 +248,11 @@ ms.locfileid: "44180145"
  如果指定了符合 ECMAScript 的行为，则 `\w` 等效于 `[a-zA-Z_0-9]`。 有关 ECMAScript 正则表达式的信息，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“ECMAScript 匹配行为”部分。  
   
 > [!NOTE]
->  由于它匹配任何单词字符，因此当正则表达式模式尝试多次匹配任何单词字符且后跟特定单词字符时，`\w` 语言元素通常会与惰性限定符一起使用。 有关详细信息，请参阅[限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由于它匹配任何单词字符，因此当正则表达式模式尝试多次匹配任何单词字符且后跟特定单词字符时，`\w` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  下面的示例使用 `\w` 语言元素来匹配单词中的重复字符。 该示例定义可按如下方式解释的正则表达式模式 `(\w)\1`。  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |(\w)|匹配单词字符。 这是第一个捕获组。|  
 |\1|匹配第一次捕获的值。|  
@@ -270,7 +272,7 @@ ms.locfileid: "44180145"
   
  换言之，它与下表列出的 Unicode 类别中的字符以外的任何字符匹配。  
   
-|类别|描述|  
+|类别|说明|  
 |--------------|-----------------|  
 |Ll|字母，小写|  
 |Lu|字母，大写|  
@@ -284,11 +286,11 @@ ms.locfileid: "44180145"
  如果指定了符合 ECMAScript 的行为，则 `\W` 等效于 `[^a-zA-Z_0-9]`。 有关 ECMAScript 正则表达式的信息，请参阅[正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)中的“ECMAScript 匹配行为”部分。  
   
 > [!NOTE]
->  由于它匹配任何非单词字符，因此当正则表达式模式尝试多次匹配任何非单词字符且后跟特定非单词字符时，`\W` 语言元素通常会与惰性限定符一起使用。 有关详细信息，请参阅[限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
+>  由于它匹配任何非单词字符，因此当正则表达式模式尝试多次匹配任何非单词字符且后跟特定非单词字符时，`\W` 语言元素通常会与惰性限定符一起使用。 有关更多信息，请参见 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。  
   
  下面的示例阐释 `\W` 字符类。  它定义正则表达式模式 `\b(\w+)(\W){1,2}`，该模式匹配后跟一个或两个非单词字符（例如，空白或标点符号）的单词。 正则表达式模式可以解释为下表中所示内容。  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |\b|在单词边界处开始匹配。|  
 |(\w+)|匹配一个或多个单词字符。 这是第一个捕获组。|  
@@ -305,7 +307,7 @@ ms.locfileid: "44180145"
 ## <a name="white-space-character-s"></a>空白字符：\s  
  `\s` 匹配任何空白字符。 它等效于下表中列出的转义序列和 Unicode 类别。  
   
-|类别|描述|  
+|类别|说明|  
 |--------------|-----------------|  
 |`\f`|窗体换页符，\u000C。|  
 |`\n`|换行符，\u000A。|  
@@ -319,12 +321,12 @@ ms.locfileid: "44180145"
   
  下面的示例阐释 `\s` 字符类。 它定义正则表达式模式 `\b\w+(e)?s(\s|$)`，该模式匹配以“s”或“es”结尾且后跟一个空白字符或输入字符串末尾的单词。 正则表达式模式可以解释为下表中所示内容。  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |\b|在单词边界处开始匹配。|  
 |\w+|匹配一个或多个单词字符。|  
 |(e)?|匹配“e”零次或一次。|  
-|s|匹配“s”。|  
+|秒|匹配“s”。|  
 |(\s&#124;$)|匹配空白字符或输入字符串的末尾。|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
@@ -340,7 +342,7 @@ ms.locfileid: "44180145"
   
  下面的示例阐释 `\S` 语言元素。 正则表达式模式 `\b(\S+)\s?` 匹配由空白字符分隔的字符串。 匹配项的 <xref:System.Text.RegularExpressions.GroupCollection> 对象中的第二个元素包含匹配的字符串。 正则表达式可按下表中的方式解释。  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`(\S+)`|匹配一个或多个非空白字符。 这是第一个捕获组。|  
@@ -359,7 +361,7 @@ ms.locfileid: "44180145"
   
  下面的示例阐释 `\d` 语言元素。 它测试输入字符串是否表示美国和加拿大的有效电话号码。 正则表达式模式 `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` 的定义如下表所示。  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头部分开始匹配。|  
 |`\(?`|匹配零个或一个“(”文本字符。|  
@@ -383,7 +385,7 @@ ms.locfileid: "44180145"
   
  下面的示例阐释了 \D 语言元素。 它测试部件号等字符串是否包含适当的十进制和非十进制数字字符的组合。 正则表达式模式 `^\D\d{1,5}\D*$` 的定义如下表所示。  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头部分开始匹配。|  
 |`\D`|匹配非数字字符。|  
@@ -400,7 +402,7 @@ ms.locfileid: "44180145"
 ## <a name="supported-unicode-general-categories"></a>支持的 Unicode 常规类别  
  Unicode 定义下表列出的常规类别。 有关详细信息，请参阅 [Unicode 字符数据库](https://www.unicode.org/reports/tr44/)中的“UCD 文件格式”和“常规类别值”子主题。  
   
-|类别|描述|  
+|类别|说明|  
 |--------------|-----------------|  
 |`Lu`|字母，大写|  
 |`Ll`|字母，小写|  
@@ -581,7 +583,7 @@ ms.locfileid: "44180145"
   
  下面的示例定义正则表达式 `^[0-9-[2468]]+$`，该表达式匹配输入字符串中的零和奇数。  正则表达式模式可以解释为下表中所示内容。  
   
-|元素|描述|  
+|元素|说明|  
 |-------------|-----------------|  
 |^|从输入字符串的开头处开始进行匹配。|  
 |`[0-9-[2468]]+`|匹配任意字符（从 0 到 9，除了 2、4、6 和 8 之外）的一个或多个匹配项。 换句话说，匹配零或奇数的一个或多个匹配项。|  
@@ -592,6 +594,6 @@ ms.locfileid: "44180145"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Char.GetUnicodeCategory%2A>  
-- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- <xref:System.Char.GetUnicodeCategory%2A>
+- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [正则表达式选项](../../../docs/standard/base-types/regular-expression-options.md)

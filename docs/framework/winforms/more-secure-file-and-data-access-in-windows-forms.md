@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: d5a9b08188e346fdea5b155149dee1ef8368c2a0
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696547"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724539"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows 窗体中更加安全的文件和数据访问
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用权限帮助保护资源和数据。 你的应用程序可以读取或写入数据的位置取决于授予该应用程序的权限。 在部分信任环境中运行应用程序时，可能不具有对数据的访问权限，或可能必须更改访问数据的方式。  
@@ -26,7 +26,7 @@ ms.locfileid: "46696547"
  遇到安全限制时，你有两个选择：断言该权限（假设已将该权限授予你的应用程序），或者使用编写为用于部分信任中的功能版本。 以下各节探讨如何使用文件、数据库和在部分信任环境中运行的应用程序中的注册表访问。  
   
 > [!NOTE]
->  默认情况下，生成 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具默认这些部署从在其上运行的计算机请求完全信任。 如果您决定要在部分信任环境中运行的更高的安全性优势，则必须更改此默认值在 Visual Studio 或其中一个[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]工具 （Mage.exe 或 MageUI.exe）。 有关 Windows 窗体安全性以及如何确定您的应用程序的适当的信任级别的详细信息，请参阅[中的安全性 Windows 窗体概述](../../../docs/framework/winforms/security-in-windows-forms-overview.md)。  
+>  默认情况下，生成 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具默认这些部署从在其上运行的计算机请求完全信任。 如果您决定要在部分信任环境中运行的更高的安全性优势，则必须更改此默认值在 Visual Studio 或其中一个[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]工具 （Mage.exe 或 MageUI.exe）。 有关 Windows 窗体安全性以及如何确定您的应用程序的适当的信任级别的详细信息，请参阅[中的安全性 Windows 窗体概述](security-in-windows-forms-overview.md)。  
   
 ## <a name="file-access"></a>文件访问  
  <xref:System.Security.Permissions.FileIOPermission> 类控制 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的文件和文件夹访问。 默认情况下，安全系统不会向本地 Intranet 和 Internet 区域等部分信任环境授予 <xref:System.Security.Permissions.FileIOPermission>。 但是，如果修改应用程序的设计或使用不同的方法访问文件，那么需要文件访问权限的应用程序仍可以在这些环境中正常工作。 默认情况下，将向本地 Intranet 区域授予以下权限：具有相同的站点访问权限和相同的目录访问权限、连回其源站点、从其安装目录进行读取。 默认情况下，仅向 Internet 区域授予连回其源站点的权限。  
@@ -136,7 +136,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 >  在 Visual C# 中，确保将添加代码以启用事件处理程序。 通过使用上一示例中的代码，以下代码显示了如何启用事件处理程序。`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>其他文件  
- 有时你将需要读取或写入到用户未指定的文件，例如当你必须保存应用程序设置时。 在本地 Intranet 和 Internet 区域中，你的应用程序将无权在本地文件中存储数据。 但是，它将能够在独立存储中存储数据。 独立存储是一个抽象的数据隔离舱（而非具体的存储位置），它包含一个或多个独立存储文件（称为存储区），这些文件包含存储数据的实际目录位置。 文件访问权限（如 <xref:System.Security.Permissions.FileIOPermission>）不是必须具有的权限；<xref:System.Security.Permissions.IsolatedStoragePermission> 类控制独立存储权限。 默认情况下，在本地 Intranet 和 Internet 区域中运行的应用程序可以使用独立存储来存储数据；但是，磁盘配额等设置可能有所不同。 有关独立存储的详细信息，请参阅[独立存储](../../../docs/standard/io/isolated-storage.md)。  
+ 有时你将需要读取或写入到用户未指定的文件，例如当你必须保存应用程序设置时。 在本地 Intranet 和 Internet 区域中，你的应用程序将无权在本地文件中存储数据。 但是，它将能够在独立存储中存储数据。 独立存储是一个抽象的数据隔离舱（而非具体的存储位置），它包含一个或多个独立存储文件（称为存储区），这些文件包含存储数据的实际目录位置。 文件访问权限（如 <xref:System.Security.Permissions.FileIOPermission>）不是必须具有的权限；<xref:System.Security.Permissions.IsolatedStoragePermission> 类控制独立存储权限。 默认情况下，在本地 Intranet 和 Internet 区域中运行的应用程序可以使用独立存储来存储数据；但是，磁盘配额等设置可能有所不同。 有关独立存储的详细信息，请参阅[独立存储](../../standard/io/isolated-storage.md)。  
   
  下面的示例使用独立存储将数据写入位于某个存储区中的文件。 该示例需要 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 和 <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> 枚举值。 该示例演示了将 <xref:System.Windows.Forms.Button> 控件的某些属性值读取和写入到独立存储中的文件。 应用程序启动后将调用 `Read` 函数，将在应用程序结束之前调用 `Write` 函数。 该示例需要`Read`并`Write`函数作为的成员存在<xref:System.Windows.Forms.Form>，其中包含<xref:System.Windows.Forms.Button>控件命名为`MainButton`。  
   
@@ -348,20 +348,20 @@ public void Write()
 }  
 ```  
   
-## <a name="database-access"></a>数据库访问  
- 访问数据库所需的权限因数据库提供程序而异；但是，只有使用相应权限运行的应用程序可以通过数据连接访问数据库。 有关访问数据库所需的权限的详细信息，请参阅[代码访问安全性和 ADO.NET](../../../docs/framework/data/adonet/code-access-security.md)。  
+## <a name="database-access"></a>数据库访问权限  
+ 访问数据库所需的权限因数据库提供程序而异；但是，只有使用相应权限运行的应用程序可以通过数据连接访问数据库。 有关访问数据库所需的权限的详细信息，请参阅[代码访问安全性和 ADO.NET](../data/adonet/code-access-security.md)。  
   
- 如果因为要使应用程序以部分信任权限运行而不能直接访问数据库，作为一种替代方法，可将 Web 服务作为备份方法来访问你的数据。 Web 服务是一种软件，可通过网络以编程方式进行访问。 通过 Web 服务，应用程序可以跨代码组区域共享数据。 默认情况下，本地 Intranet 和 Internet 区域中的应用程序被授予了访问其源站点的权限，使其能够调用同一台服务器上托管的 Web 服务。 有关详细信息请参阅[ASP.NET AJAX 中的 Web 服务](https://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b)或[Windows Communication Foundation](https://msdn.microsoft.com/library/ms735119.aspx)。  
+ 如果因为要使应用程序以部分信任权限运行而不能直接访问数据库，作为一种替代方法，可将 Web 服务作为备份方法来访问你的数据。 Web 服务是一种软件，可通过网络以编程方式进行访问。 通过 Web 服务，应用程序可以跨代码组区域共享数据。 默认情况下，本地 Intranet 和 Internet 区域中的应用程序被授予了访问其源站点的权限，使其能够调用同一台服务器上托管的 Web 服务。 有关详细信息请参阅[ASP.NET AJAX 中的 Web 服务](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100))或[Windows Communication Foundation](../wcf/index.md)。  
   
 ## <a name="registry-access"></a>注册表访问  
  <xref:System.Security.Permissions.RegistryPermission> 类控制对操作系统注册表的访问。 默认情况下，只有在本地运行的应用程序可以访问注册表。  <xref:System.Security.Permissions.RegistryPermission> 仅授予应用程序尝试进行注册表访问的权限；它不保证访问一定成功，因为操作系统仍对注册表强制安全。  
   
  由于无法在部分信任环境下访问注册表，所以可能需要寻找其他方法来存储你的数据。 存储应用程序设置时，请使用独立存储而非注册表。 独立存储也可用于存储其他特定于应用程序的文件。 由于默认授予了应用程序访问其源站点的权限，因此还可以存储有关服务器或源站点的全局应用程序信息。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 窗体中更加安全的打印](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- [Windows 窗体中额外的安全注意事项](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
- [Windows 窗体中的安全性概述](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- [Windows 窗体安全](../../../docs/framework/winforms/windows-forms-security.md)  
- [Mage.exe（清单生成和编辑工具）](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe（图形化客户端中的清单生成和编辑工具）](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+## <a name="see-also"></a>请参阅
+- [Windows 窗体中更加安全的打印](more-secure-printing-in-windows-forms.md)
+- [Windows 窗体中额外的安全注意事项](additional-security-considerations-in-windows-forms.md)
+- [Windows 窗体中的安全性概述](security-in-windows-forms-overview.md)
+- [Windows 窗体安全](windows-forms-security.md)
+- [Mage.exe（清单生成和编辑工具）](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe（图形化客户端中的清单生成和编辑工具）](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

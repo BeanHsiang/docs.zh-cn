@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ListBox control [WPF], how-to topics
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
-ms.openlocfilehash: 2d7f37acb2c0e09a0a9104a0bb7bd90b2d324a4d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0895b80f230d2c67ab0723c7935ae20443327a41
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507945"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363397"
 ---
 # <a name="listbox-how-to-topics"></a>ListBox 帮助主题
 在本部分中的主题介绍如何使用<xref:System.Windows.Controls.ListBox>控件来显示可选择的项的列表。  
   
 ## <a name="in-this-section"></a>本节内容  
- [将 ListBox 绑定到数据](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
- [获取 ListBoxItem](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- [如何： 将数据添加到 ItemsControl](https://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
- [提升 ListBox 的滚动性能](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
+ [将 ListBox 绑定到数据](how-to-bind-a-listbox-to-data.md)  
+ [获取 ListBoxItem](how-to-get-a-listboxitem.md)  
+ [如何：将数据添加到 ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))  
+ [提升 ListBox 的滚动性能](how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.ListBox>  

@@ -1,27 +1,27 @@
 ---
-title: '&lt;byteStreamMessageEncoding&gt;'
+title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: 4b031bfb0d0979dc99df13c104a712d6dd771e8a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c8dfd6824877d6f9e5b089a538cce35ffe51320b
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44225183"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674277"
 ---
-# <a name="ltbytestreammessageencodinggt"></a>&lt;byteStreamMessageEncoding&gt;
+# <a name="bytestreammessageencoding"></a>\<byteStreamMessageEncoding>
 指定消息编码作为字节流，也可以选择指定字符编码。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
+\<binding>  
 \<binaryMessageEncoding>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<byteStreamMessageEncoding/>  
+<byteStreamMessageEncoding />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -37,22 +37,22 @@ ms.locfileid: "44225183"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>  
- [消息编码](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)  
- [选择消息编码器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>
+- [消息编码](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [选择消息编码器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

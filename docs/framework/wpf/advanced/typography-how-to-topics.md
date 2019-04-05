@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: af5bd998840e87a4e13f5865c26aea57dcd24426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f4297fdc5c49270ac97513295fc5aa2e0f2213
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546310"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353707"
 ---
 # <a name="typography-how-to-topics"></a>版式帮助主题
-本部分中的主题介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]支持你的应用程序中的文本的丰富呈现。  
+在本部分中的主题介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]丰富应用程序中的文本表示的支持。  
   
 ## <a name="in-this-section"></a>本节内容  
- [创建文本效果](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
- [指定是否为超链接添加下划线](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [向文本应用转换](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
- [向文本应用动画](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
- [创建有阴影的文本](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
- [创建空心文本](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [在控件背景上绘制文本](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
- [在视觉对象中绘制文本](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
- [在 XAML 中使用特殊字符](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
+ [创建文本效果](how-to-create-a-text-decoration.md)  
+ [指定是否为超链接添加下划线](how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [向文本应用转换](how-to-apply-transforms-to-text.md)  
+ [向文本应用动画](how-to-apply-animations-to-text.md)  
+ [创建有阴影的文本](how-to-create-text-with-a-shadow.md)  
+ [创建空心文本](how-to-create-outlined-text.md)  
+ [在控件背景上绘制文本](how-to-draw-text-to-a-control-background.md)  
+ [在视觉对象中绘制文本](how-to-draw-text-to-a-visual.md)  
+ [在 XAML 中使用特殊字符](how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Documents.Typography>  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Documents.Typography>
+- [WPF 中的文档](documents-in-wpf.md)
+- [OpenType 字体功能](opentype-font-features.md)

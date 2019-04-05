@@ -1,5 +1,6 @@
 ---
-title: select 子句（C# 参考）
+title: select 子句 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - select_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 3fa60d4e7546fc88ac2a2ffea45ae69b0da7a6a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7c61fb18c37ed65a62975a75506d4265c52f2a98
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183537"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244136"
 ---
 # <a name="select-clause-c-reference"></a>select 子句（C# 参考）
 

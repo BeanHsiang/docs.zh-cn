@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ca6109a61fb32cd148e69081da0772277743b6e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532184"
 ---
 # <a name="standard-date-and-time-format-strings"></a>标准日期和时间格式字符串
 标准日期和时间格式字符串使用单个格式说明符来定义日期和时间值的文本表示形式。 包含一个以上字符（包括空白）的任何日期和时间格式字符串都会被解释为自定义日期和时间格式字符串；有关更多信息，请参见[自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 可通过两种方式使用标准或自定义格式字符串：  
@@ -39,23 +39,23 @@ ms.locfileid: "48873727"
 
 <a name="table"></a>下表描述了标准日期和时间格式说明符。 除非另行说明，否则，特定的标准日期和时间格式说明符将产生相同的字符串表示形式，这与它是与 <xref:System.DateTime> 值还是 <xref:System.DateTimeOffset> 值一起使用无关。 有关使用标准日期和时间格式字符串的其他信息，请参见[注释](#Notes)部分。  
   
-|格式说明符|描述|示例|  
+|格式说明符|说明|示例|  
 |----------------------|-----------------|--------------|  
 |"d"|短日期模式。<br /><br /> 有关详细信息，请参阅[短日期（“d”）格式说明符](#ShortDate)。|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|  
 |“D”|长日期模式。<br /><br /> 有关详细信息，请参阅[长日期（“D”）格式说明符](#LongDate)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|  
-|“f”|完整日期/时间模式（短时间）。<br /><br /> 有关详细信息，请参阅[完整日期短时间（“f”）格式说明符](#FullDateShortTime)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|  
-|“F”|完整日期/时间模式（长时间）。<br /><br /> 有关详细信息，请参阅[完整日期长时间（“F”）格式说明符](#FullDateLongTime)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (zh-CN)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|  
-|“g”|常规日期/时间模式（短时间）。<br /><br /> 有关详细信息，请参阅[常规日期短时间（“g”）格式说明符](#GeneralDateShortTime)。|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|  
-|“G”|常规日期/时间模式（长时间）。<br /><br /> 有关详细信息，请参阅[常规日期长时间（“G”）格式说明符](#GeneralDateLongTime)。|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|  
-|“M”、“m”|月/日模式。<br /><br /> 有关详细信息，请参阅[月（“M”、“m”）格式说明符](#MonthDay)。|2009-06-15T13:45:30 -> June 15 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (id-ID)|  
-|“O”、“o”|往返日期/时间模式。<br /><br /> 有关详细信息，请参阅[往返（“O”、“o”）格式说明符](#Roundtrip)。|<xref:System.DateTime> 值：<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> 值：<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|  
-|“R”、“r”|RFC1123 模式。<br /><br /> 有关详细信息，请参阅 [RFC1123（“R”、“r”）格式说明符](#RFC1123)。|2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT|  
-|“s”|可排序日期/时间模式。<br /><br /> 有关详细信息，请参阅[可排序（“s”）格式说明符](#Sortable)。|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
-|“t”|短时间模式。<br /><br /> 有关详细信息，请参阅[短时间（“t”）格式说明符](#ShortTime)。|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
-|“T”|长时间模式。<br /><br /> 有关详细信息，请参阅[长时间（“T”）格式说明符](#LongTime)。|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|  
-|“u”|通用可排序日期/时间模式。<br /><br /> 有关详细信息，请参阅[通用可排序（“u”）格式说明符](#UniversalSortable)。|含 <xref:System.DateTime> 值：2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> 带有 <xref:System.DateTimeOffset> 值：2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
-|“U”|通用完整日期/时间模式。<br /><br /> 有关详细信息，请参阅[通用完整（“U”）格式说明符](#UniversalFull)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|  
-|“Y”、“y”|年月模式。<br /><br /> 有关详细信息，请参阅[年月（“Y”）格式说明符](#YearMonth)。|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|  
+|“f”|完整日期/时间模式（短时间）。<br /><br /> 更多信息：[完整日期短时间（“f”）格式说明符](#FullDateShortTime)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|  
+|“F”|完整日期/时间模式（长时间）。<br /><br /> 更多信息：[完整日期长时间（“F”）格式说明符](#FullDateLongTime)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (zh-CN)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|  
+|“g”|常规日期/时间模式（短时间）。<br /><br /> 更多信息：[常规日期短时间（“g”）格式说明符](#GeneralDateShortTime)。|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|  
+|“G”|常规日期/时间模式（长时间）。<br /><br /> 更多信息：[常规日期长时间（“G”）格式说明符](#GeneralDateLongTime)。|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|  
+|“M”、“m”|月/日模式。<br /><br /> 更多信息：[月（“M”、“m”）格式说明符](#MonthDay)。|2009-06-15T13:45:30 -> June 15 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (id-ID)|  
+|“O”、“o”|往返日期/时间模式。<br /><br /> 更多信息：[往返（“O”、“o”）格式说明符](#Roundtrip)。|<xref:System.DateTime> 值：<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> 值：<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|  
+|“R”、“r”|RFC1123 模式。<br /><br /> 更多信息：[RFC1123（“R”、“r”）格式说明符](#RFC1123)。|2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT|  
+|“s”|可排序日期/时间模式。<br /><br /> 更多信息：[可排序（“s”）格式说明符](#Sortable)。|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
+|“t”|短时间模式。<br /><br /> 更多信息：[可排序（“s”）格式说明符](#ShortTime)。|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
+|“T”|长时间模式。<br /><br /> 更多信息：[长时间（“T”）格式说明符](#LongTime)。|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|  
+|“u”|通用可排序日期/时间模式。<br /><br /> 更多信息：[通用可排序（“u”）格式说明符](#UniversalSortable)。|带有 <xref:System.DateTime> 值：2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> 带有 <xref:System.DateTimeOffset> 值：2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
+|“U”|通用完整日期/时间模式。<br /><br /> 更多信息：[通用完整（“U”）格式说明符](#UniversalFull)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|  
+|“Y”、“y”|年月模式。<br /><br /> 更多信息：[年月（“Y”、“y”）格式说明符](#YearMonth)。|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|  
 |任何其他单个字符|未知说明符。|引发运行时 <xref:System.FormatException>。|  
   
 ## <a name="how-standard-format-strings-work"></a>标准格式字符串的工作原理  
@@ -103,7 +103,7 @@ ms.locfileid: "48873727"
   
  下表列出用于控制返回字符串格式的 <xref:System.Globalization.DateTimeFormatInfo> 对象属性。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|定义用于分隔日期中年、月、日部分的字符串。|  
@@ -121,7 +121,7 @@ ms.locfileid: "48873727"
   
  下表列出了用于控制返回字符串格式的 <xref:System.Globalization.DateTimeFormatInfo> 对象的属性。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定义可在结果字符串中出现的本地化日名称。|  
@@ -140,7 +140,7 @@ ms.locfileid: "48873727"
   
  结果字符串受特定 <xref:System.Globalization.DateTimeFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|定义结果字符串中日期部分的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定义结果字符串中时间部分的格式。|  
@@ -163,7 +163,7 @@ ms.locfileid: "48873727"
   
  下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定义可在结果字符串中出现的本地化日名称。|  
@@ -185,7 +185,7 @@ ms.locfileid: "48873727"
   
  结果字符串受特定 <xref:System.Globalization.DateTimeFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定义结果字符串中日期部分的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定义结果字符串中时间部分的格式。|  
@@ -207,7 +207,7 @@ ms.locfileid: "48873727"
   
  结果字符串受特定 <xref:System.Globalization.DateTimeFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|定义结果字符串中日期部分的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|定义结果字符串中时间部分的格式。|  
@@ -229,7 +229,7 @@ ms.locfileid: "48873727"
   
  下表列出用于控制返回字符串格式的 <xref:System.Globalization.DateTimeFormatInfo> 对象属性。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定义可在结果字符串中出现的本地化月份名称。|  
@@ -255,7 +255,7 @@ ms.locfileid: "48873727"
   
 -   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 日期和时间值没有时区信息。  
   
- 由于“O”或“o”标准格式说明符遵循国际标准，因此使用说明符的格式设置或分析操作始终使用固定区域性和公历。  
+ 由于“O”或“o”标准格式说明符遵循国际标准，使用说明符的格式设置或分析操作始终使用固定区域性和公历。  
   
  如果字符串采用了这些格式中的某个格式,则可以通过使用“O”或“o”格式说明符分析传递到 `Parse` 和 `TryParse` 的 `ParseExact`、`TryParseExact`、<xref:System.DateTime> 和 <xref:System.DateTimeOffset> 方法的这些字符串。 对于 <xref:System.DateTime> 对象，你调用的分析重载还应当包含带有 `styles` 值的 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> 参数。 请注意，如果你使用对应于“O”或“o”格式说明符的自定义格式字符串调用分析方法，则你不会获得与“O”或“o”相同的结果。 这是因为使用自定义格式字符串的分析方法不能分析缺少时区组件的日期和时间值的字符串表示形式，或使用“Z”指示 UTC。  
   
@@ -277,7 +277,7 @@ ms.locfileid: "48873727"
   
  结果字符串受由 <xref:System.Globalization.DateTimeFormatInfo> 属性（该属性表示固定区域性）返回的 <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> 对象的下列属性的影响。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|定义结果字符串的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|定义可在结果字符串中出现的缩写的日期名称。|  
@@ -313,7 +313,7 @@ ms.locfileid: "48873727"
   
  结果字符串受特定 <xref:System.Globalization.DateTimeFormatInfo> 对象的格式信息的影响。 下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|定义结果字符串中时间部分的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定义分隔时间中小时、分钟和秒钟几个组成部分的字符串。|  
@@ -333,7 +333,7 @@ ms.locfileid: "48873727"
   
  下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|定义结果字符串中时间部分的格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|定义分隔时间中小时、分钟和秒钟几个组成部分的字符串。|  
@@ -366,7 +366,7 @@ ms.locfileid: "48873727"
   
  下表列出了 <xref:System.Globalization.DateTimeFormatInfo> 对象属性，这些属性可控制返回字符串的格式。 由某些区域性的 <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> 属性返回的自定义格式说明符可能未利用所有属性。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|定义可在结果字符串中出现的本地化日名称。|  
@@ -390,7 +390,7 @@ ms.locfileid: "48873727"
   
  下表列出用于控制返回字符串格式的 <xref:System.Globalization.DateTimeFormatInfo> 对象属性。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|定义结果字符串的总体格式。|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|定义可在结果字符串中出现的本地化月份名称。|  
@@ -415,8 +415,8 @@ ms.locfileid: "48873727"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.DateTime?displayProperty=nameWithType>  
-- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
-- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
-- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>
+- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)
+- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [示例：.NET Framework 4 格式设置实用工具](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

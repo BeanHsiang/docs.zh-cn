@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 979989c3e1f90f3de47473aa1bd8bc5268520e57
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 135decebcd071c611cf6e72835fee33d49088070
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493906"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>在 .NET Framework 中构建控制台应用程序
 .NET Framework 中的应用程序可以使用 <xref:System.Console?displayProperty=nameWithType> 类在控制台中读取和写入字符。 读取自控制台的数据是从标准输入流读取的，而写入到控制台的数据将写入标准输出流，并且写入控制台的错误数据将写入标准错误输出流。 应用程序启动时，这些数据流会自动与控制台关联，并分别表示为 <xref:System.Console.In%2A>、<xref:System.Console.Out%2A> 和 <xref:System.Console.Error%2A> 属性。  
@@ -34,5 +34,5 @@ ms.locfileid: "48840149"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Console?displayProperty=nameWithType>  
+- <xref:System.Console?displayProperty=nameWithType>
 - [格式设置类型](../../docs/standard/base-types/formatting-types.md)

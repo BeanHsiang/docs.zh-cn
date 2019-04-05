@@ -4,12 +4,6 @@ description: 了解如何在 Windows 上安装 .NET Framework。
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: e6432c693562221969085206bc3d3a7ac77c8ba5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386748"
 ---
 # <a name="installation-guide"></a>安装指南
 
@@ -29,7 +23,7 @@ ms.locfileid: "33386748"
 
 ## <a name="see-also"></a>请参阅
 
-[下载 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)  
-[安装和卸载 .NET Framework 受阻疑难解答](troubleshoot-blocked-installations-and-uninstallations.md)  
-[安装面向开发者的 .NET Framework](guide-for-developers.md)  
-[部署面向开发人员的 .NET Framework](../deployment/deployment-guide-for-developers.md)  
+- [下载 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [安装和卸载 .NET Framework 受阻疑难解答](troubleshoot-blocked-installations-and-uninstallations.md)
+- [安装面向开发者的 .NET Framework](guide-for-developers.md)
+- [部署面向开发人员的 .NET Framework](../deployment/deployment-guide-for-developers.md)

@@ -2,12 +2,12 @@
 title: 如何：使用命令行创建和使用程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 0cb964991cdbcdb3fa528ac96a0e883a37439099
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: df22d52ad71b2a98d7e85f4c2002091b97d87b21
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514550"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746884"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>如何：使用命令行创建和使用程序集 (C#)
 程序集或动态链接库 (DLL) 会在运行时链接到程序。 为了演示如何生成和使用 DLL，请考虑以下方案：  
@@ -124,6 +124,6 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
-- [程序集和全局程序集缓存 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+- [.NET 中的程序集](../../../../standard/assembly/index.md)
 - [创建用于容纳 DLL 函数的类](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

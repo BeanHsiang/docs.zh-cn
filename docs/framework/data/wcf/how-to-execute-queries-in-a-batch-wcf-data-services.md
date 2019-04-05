@@ -1,5 +1,5 @@
 ---
-title: 如何：在一个批处理作业中执行查询（WCF 数据服务）
+title: 如何：在批处理 （WCF 数据服务） 中执行查询
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: d710d6539cf465624aa985ce19a67a6d8fb8ee8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a11a96c197cd6905d8e80fac5c869a9c5c374e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611899"
 ---
-# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>如何：在一个批处理作业中执行查询（WCF 数据服务）
-通过使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，你可以在单个批处理中执行针对数据服务的多个查询。 有关详细信息，请参阅[批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。  
+# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>如何：在批处理 （WCF 数据服务） 中执行查询
+通过使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，可以在单个批处理中执行多个查询针对数据服务。 有关详细信息，请参阅[批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。  
   
- 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 在完成时创建此服务和客户端数据类[WCF 数据服务快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
+ 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 完成后，将创建此服务和客户端数据类[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何调用 <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> 方法来执行一个 <xref:System.Data.Services.Client.DataServiceRequest%601> 对象数组，该数组包含从 Northwind 数据服务同时返回 `Customers` 和 `Products` 对象的查询。 此示例将枚举返回的 <xref:System.Data.Services.Client.QueryOperationResponse%601> 中的 <xref:System.Data.Services.Client.DataServiceResponse> 对象的集合，并且还会枚举每个 <xref:System.Data.Services.Client.QueryOperationResponse%601> 中包含的对象的集合。  
@@ -25,5 +25,5 @@ ms.locfileid: "33355404"
  [!code-csharp[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#batchquery)]
  [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#batchquery)]  
   
-## <a name="see-also"></a>请参阅  
- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a>请参阅
+- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

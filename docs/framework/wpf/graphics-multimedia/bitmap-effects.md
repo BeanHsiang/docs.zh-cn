@@ -9,21 +9,21 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: fef5cec4da09f8cd1a29cb9ebaccc83ee7c48311
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb81644bc69edcd1465cf43224eb6af369b5fb3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555810"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373460"
 ---
 # <a name="bitmap-effects"></a>位图效果
-本部分中的主题介绍如何将可视化效果应用于位图图像使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
+在本部分中的主题介绍如何将视觉效果应用到位图图像使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
   
 > [!IMPORTANT]
->  在[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]或更高版本，<xref:System.Windows.Media.Effects.BitmapEffect>类已过时。 如果你尝试使用<xref:System.Windows.Media.Effects.BitmapEffect>类，则您将收到已过时。 未过时的替代项为<xref:System.Windows.Media.Effects.BitmapEffect>类是<xref:System.Windows.Media.Effects.Effect>类。 在大多数情况下，<xref:System.Windows.Media.Effects.Effect>类是快得多。  
+>  在中[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]或更高版本，<xref:System.Windows.Media.Effects.BitmapEffect>类已过时。 如果尝试使用<xref:System.Windows.Media.Effects.BitmapEffect>类，您将收到已过时异常。 非过时替代项为<xref:System.Windows.Media.Effects.BitmapEffect>类是<xref:System.Windows.Media.Effects.Effect>类。 在大多数情况下，<xref:System.Windows.Media.Effects.Effect>类是快得多。  
   
 ## <a name="in-this-section"></a>本节内容  
- [位图效果概述](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+ [位图效果概述](bitmap-effects-overview.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
@@ -31,6 +31,6 @@ ms.locfileid: "33555810"
  <xref:System.Windows.Media.Effects>  
   
 ## <a name="related-sections"></a>相关章节  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [图形和多媒体](index.md)  
   
- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [图像处理概述](imaging-overview.md)

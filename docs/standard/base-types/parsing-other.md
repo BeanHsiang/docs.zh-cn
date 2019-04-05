@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85bb6dcdaa198b6b038cc80e1e38fa7d11123678
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: cf8a7b090b7a54328101478aed7edbbc5efd79ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603620"
 ---
 # <a name="parsing-other-strings-in-net"></a>分析 .NET 中的其他字符串
 除了数字和 <xref:System.DateTime> 字符串之外，还可以将表示类型 <xref:System.Char>、<xref:System.Boolean> 和 <xref:System.Enum> 的字符串分析为数据类型。  
@@ -52,6 +52,6 @@ ms.locfileid: "44086376"
   
 ## <a name="see-also"></a>请参阅
 
-- [分析字符串](../../../docs/standard/base-types/parsing-strings.md)  
-- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
+- [分析字符串](../../../docs/standard/base-types/parsing-strings.md)
+- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)
 - [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)

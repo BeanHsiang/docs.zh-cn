@@ -3,12 +3,12 @@ title: 使用集合 - C# 教程简介
 description: 在本教程中通过探索列表集合了解 C#。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: eaf921be2bd50b6e346f57f42e17f151ff336821
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205277"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261266"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>了解如何使用泛型列表类型管理数据集合
 
@@ -19,9 +19,6 @@ ms.locfileid: "50205277"
 ## <a name="a-basic-list-example"></a>基本列表示例
 
 创建名为 list-tutorial 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console`。
-
-> [!NOTE]
-> 如果你刚完成 [10 分钟 .NET 入门](https://www.microsoft.com/net)，则可以继续使用刚刚创建的 myApp 应用程序。
 
 在常用编辑器中，打开 Program.cs，并将现有代码替换为以下代码：
 

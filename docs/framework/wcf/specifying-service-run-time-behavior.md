@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 0dbf0a61e1d1183b3f4491002b04156ccf6da0ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566727"
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服务运行时行为
 在已经设计（[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)）并实现服务协定（[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)）之后，就可以配置服务运行时的操作行为。 本主题讨论系统提供的服务和操作行为，并说明在何处查找更多信息来创建新行为。 尽管有些行为是作为属性应用的，但很多行为是使用应用程序配置文件或以编程方式应用的。 有关配置服务应用程序的详细信息，请参阅[配置服务](../../../docs/framework/wcf/configuring-services.md)。  
@@ -64,7 +64,7 @@ ms.locfileid: "50183721"
  请注意，当向此构造函数提供了一个对象，相关到 Windows Communication Foundation (WCF) 实例化行为的某些功能工作以不同的方式。 例如，在提供已知对象实例时，调用 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 没有任何效果。 同样，也将忽略所有其他实例释放机制。 <xref:System.ServiceModel.ServiceHost> 类的行为总是像对于所有操作都将 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> 一样。  
   
 ## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>其他服务、终结点、协定和操作行为  
- 服务行为（如 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性）在整个服务中运行。 例如，如果将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType>，则必须自己在服务中的每个操作内处理线程同步问题。 终结点行为在终结点上运行，许多系统提供的终结点行为是针对客户端功能的。 协定行为在协定级别上运行，并且操作行为修改操作传递。  
+ 服务行为（如 <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性）在整个服务中运行。 例如，如果将 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> ，则必须自己在服务中的每个操作内处理线程同步问题。 终结点行为在终结点上运行，许多系统提供的终结点行为是针对客户端功能的。 协定行为在协定级别上运行，并且操作行为修改操作传递。  
   
  许多这些行为在属性上进行实现，并且可以像操作 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 属性一样使用它们（通过将这些行为应用于相应的服务类或操作实现）。 其他行为（如 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 对象）通常使用应用程序配置文件进行应用，但也可以以编程方式使用它们。  
   
@@ -114,12 +114,12 @@ ms.locfileid: "50183721"
 ### <a name="operation-behaviors"></a>操作行为  
  下面的操作行为指定操作的序列化和事务控制。  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>。 表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 的运行时行为。  
+-   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>。 表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>的运行时行为。  
   
 -   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>。 控制 `XmlSerializer` 的运行时行为并将其与某个操作相关联。  
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>。 指定服务操作接受事务标头所处的级别。  
   
-## <a name="see-also"></a>请参阅  
- [配置服务](../../../docs/framework/wcf/configuring-services.md)  
- [如何：控制服务实例化](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+## <a name="see-also"></a>请参阅
+- [配置服务](../../../docs/framework/wcf/configuring-services.md)
+- [如何：控制服务实例化](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

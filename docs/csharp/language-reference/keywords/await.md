@@ -1,5 +1,6 @@
 ---
-title: await（C# 参考）
+title: await - C# 参考
+ms.custom: seodec18
 ms.date: 05/22/2017
 f1_keywords:
 - await_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 7ca7554c81b7e8b54665700869c4f7788ebc3dbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1afd763d41ac3ffd42409ff8d1b8823979ab0c08
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511940"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713041"
 ---
 # <a name="await-c-reference"></a>await（C# 参考）
 `await` 运算符应用于异步方法中的任务，在方法的执行中插入挂起点，直到所等待的任务完成。 任务表示正在进行的工作。  
@@ -20,17 +21,16 @@ ms.locfileid: "43511940"
 `await` 仅可用于由 [async](../../../csharp/language-reference/keywords/async.md) 关键字修改的异步方法中。 使用 `async` 修饰符定义并且通常包含一个或多个 `await` 表达式的这类方法称为异步方法。  
   
 > [!NOTE]
->  `async` 和 `await` 关键字是在 C# 5 中引入的。 有关异步编程的说明，请参阅[使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)。  
+> `async` 和 `await` 关键字是在 C# 5 中引入的。 有关异步编程的说明，请参阅[使用 Async 和 Await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)。  
   
-应用 `await` 运算符的任务通常由实现[基于任务的异步模式](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)的方法调用返回。 包括返回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 和 `System.Threading.Tasks.ValueType<TResult>` 对象的方法。  
+应用 `await` 运算符的任务通常由实现[基于任务的异步模式](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)的方法调用返回。 包括返回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask> 和 <xref:System.Threading.Tasks.ValueTask%601> 对象的方法。  
 
-  
- 如下示例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 方法返回 `Task<byte[]>`。 当任务完成时，任务约定生成实际字节数组。 `await` 运算符挂起执行，直到 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法完成其操作。 同时，控制权会返回给 `GetPageSizeAsync` 的调用方。 任务结束执行时，`await` 表达式的计算结果为字节数组。  
+如下示例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 方法返回 `Task<byte[]>`。 当任务完成时，任务约定生成实际字节数组。 `await` 运算符挂起执行，直到 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法完成其操作。 同时，控制权会返回给 `GetPageSizeAsync` 的调用方。 任务结束执行时，`await` 表达式的计算结果为字节数组。  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  有关完整示例，请参阅[演练：使用 async 和 await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以从 Microsoft 网站的[开发者代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)中下载示例。 该示例处于 AsyncWalkthrough_HttpClient 项目中。  
+> 有关完整示例，请参阅[演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以从 Microsoft 网站的[开发者代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)中下载示例。 该示例处于 AsyncWalkthrough_HttpClient 项目中。  
   
 如前一示例所示，如果 `await` 应用于返回 `Task<TResult>` 的方法调用的结果，则 `await` 表达式的类型为 `TResult`。 如果 `await` 应用于返回 `Task` 的方法调用的结果，则 `await` 表达式的类型为 `void`。 以下示例演示了差异。  
   
@@ -65,9 +65,9 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-由于不支持在应用程序入口点中使用 `async` 和`await`，因此我们无法将 `async` 属性应用到 `Main` 方法，也无法等待 `GetPageLengthsAsync` 方法调用。 我们可通过检索 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 属性的值来确保 `Main` 方法等待异步操作完成。 对于不返回值的任务，可调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法。 
+前面的示例使用 C# 7.1，它支持 [`async` `Main` 方法](../../programming-guide/main-and-command-args/index.md)。 因为早期的 C# 版本不支持返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的应用程序入口点，无法将 `async` 修饰符应用于 `Main` 方法并等待 `GetPageLengthsAsync` 方法调用。 在这种情况下，可通过检索 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 属性的值来确保 `Main` 方法等待异步操作完成。 对于不返回值的任务，可调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法。 有关如何选择语言版本的信息，请参阅[选择 C# 语言版本](../configure-language-version.md)。
 
-## <a name="see-also"></a>请参阅  
-- [使用 async 和 await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)   
-- [演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+## <a name="see-also"></a>请参阅
+- [使用 async 和 await 的异步编程](../../../csharp/programming-guide/concepts/async/index.md)
+- [演练：使用 Async 和 Await 访问 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

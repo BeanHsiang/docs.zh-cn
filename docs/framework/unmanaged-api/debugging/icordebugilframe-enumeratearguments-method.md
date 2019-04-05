@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4a727dcfbc80b131f526a08b00bd0ec91ca209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49d7fb1de0b2ea63c1a766023b23acc42e027af8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415017"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475653"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>ICorDebugILFrame::EnumerateArguments 方法
-此帧中获取自变量的枚举数。  
+在此范围内的自变量中获取一个枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +35,18 @@ HRESULT EnumerateArguments (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppValueEnum`  
- [out]指向的地址是此帧中的自变量的枚举器的 ICorDebugValueEnum 对象的指针。  
+ [out]指向一个 ICorDebugValueEnum 对象，它在此范围内的自变量枚举器的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- `EnumerateArguments` 获取枚举数，可以列出此 ICorDebugILFrame 对象表示的调用帧中可用的自变量。 列表中会包含由自变量[vararg](/cpp/windows/vararg) （即，数目可变的参数） 不是自变量以及`vararg`。  
+ `EnumerateArguments` 获取可以列出由此 ICorDebugILFrame 对象调用框架中提供的参数的枚举器。 该列表将包括参数是[vararg](/cpp/windows/vararg) （即，可变自变量的数量） 以及参数不是`vararg`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 9bbc7f51de9899354184d051d8f1a584651dd030
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850369"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818847"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>数据类型疑难解答 (Visual Basic)
 此页列出了你对内部数据类型执行操作时可能发生的一些常见问题。  
@@ -40,7 +40,7 @@ ms.locfileid: "48850369"
   
  下面的示例演示两个错误用法和正确比较`Double`值。  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]  
   
  上面的示例使用<xref:System.Double.ToString%2A>方法<xref:System.Double>结构，使它可以指定精度优于`CStr`关键字使用。 默认值为 15 个数字，但是"G17"格式将其扩展到 17 位数字。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48850369"
   
  下面的示例演示可能不精确的浮点操作数。  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]  
   
  上面的示例使用<xref:System.Double.ToString%2A>方法<xref:System.Double>结构，使它可以指定精度优于`CStr`关键字使用。 默认值为 15 个数字，但是"G17"格式将其扩展到 17 位数字。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48850369"
   
  下面的示例演示如何操作和不成功分配到文字的`Char`变量。  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]  
   
  始终存在风险中没有使用收缩转换，因为它们可以在运行时失败。 例如，从转换`String`到`Char`可能会失败，如果`String`值包含多个字符。 因此，它更好地编程使用`C`键入字符。  
   
@@ -112,11 +112,12 @@ ms.locfileid: "48850369"
 ### <a name="meaningless-values"></a>无意义的值  
  一般情况下，`String`值不是在其他数据类型，有意义，转换是高度人工和危险。 只要有可能，应限制的使用情况`String`它们设计的字符序列的变量。 绝不应编写依赖于其他类型中的等效值的代码。  
   
-## <a name="see-also"></a>请参阅  
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [有效使用数据类型](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>请参阅
+
+- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [有效使用数据类型](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

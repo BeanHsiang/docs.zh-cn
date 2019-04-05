@@ -8,29 +8,29 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540554"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用标识模型管理声明和授权
-授权是确定哪些实体具有更改、查看或其他访问计算机资源权限的过程。 例如，在一个企业中，可能只有经理们才可以访问其员工的文件。 Windows Communication Foundation (WCF) 执行授权处理支持两种机制。 第一种机制使您能够使用现有的公共语言运行库 (CLR) 构造来控制授权。 第二个是称为的基于声明的模型*标识模型*。 WCF 使用标识模型来创建声明从传入消息;可以扩展标识模型类以支持自定义授权方案的新声明类型。 本主题概述标识模型功能的主要编程概念，并提供此功能使用的最重要的类的列表。  
+授权是确定哪些实体具有更改、查看或其他访问计算机资源权限的过程。 例如，在一个企业中，可能只有经理们才可以访问其员工的文件。 Windows Communication Foundation (WCF) 执行授权处理支持两种机制。 第一种机制使您能够使用现有的公共语言运行库 (CLR) 构造来控制授权。 第二个是名为基于声明的模型*标识模型*。 WCF 使用标识模型创建的声明从传入消息;可以扩展标识模型类以支持自定义授权方案的新声明类型。 本主题概述标识模型功能的主要编程概念，并提供此功能使用的最重要的类的列表。  
   
 ## <a name="identity-model-scenarios"></a>标识模型方案  
  以下方案演示标识模型的使用方式。  
   
-### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>方案 1：支持标识、角色和组声明  
+### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>方案 1:支持标识、 角色和组声明  
  用户向 Web 服务发送消息。 Web 服务的访问控制需求使用标识、角色或组。 消息发送方映射到一个角色或组的集中。 角色或组信息用于执行访问检查。  
   
-### <a name="scenario-2-supporting-rich-claims"></a>方案 2：支持多信息声明  
+### <a name="scenario-2-supporting-rich-claims"></a>方案 2:支持多信息声明  
  用户向 Web 服务发送消息。 Web 服务的访问控制要求需要比标识、角色或组更丰富的模型。 Web 服务确定给定的用户是否有权使用基于多信息声明的模型访问特定的受保护资源。 例如，某个用户也许能读取特定信息（如薪金信息），而其他用户无此权限。  
   
-### <a name="scenario-3-mapping-disparate-claims"></a>方案 3：映射完全不同的声明  
- 某个用户向 Web 服务发送一条消息。 此用户可能以多种不同方式指定其凭据：X.509 证书、用户名令牌或 Kerberos 令牌。 无论用户采用何种凭据类型，Web 服务都需要以相同的方式执行访问控制检查。 如果随着时间的推移可以支持其他凭据类型，则系统应获得相应的能力。  
+### <a name="scenario-3-mapping-disparate-claims"></a>方案 3:映射完全不同的声明  
+ 某个用户向 Web 服务发送一条消息。 用户可以在多种不同方式指定其凭据：X.509 证书、 用户名令牌或 Kerberos 令牌。 无论用户采用何种凭据类型，Web 服务都需要以相同的方式执行访问控制检查。 如果随着时间的推移可以支持其他凭据类型，则系统应获得相应的能力。  
   
-### <a name="scenario-4-determining-access-to-multiple-resources"></a>方案 4：确定访问多个资源的权限  
+### <a name="scenario-4-determining-access-to-multiple-resources"></a>方案 4:确定多个资源的访问权限  
  Web 服务试图访问多个资源。 它通过比较与给定用户关联的声明和访问资源所需的声明，确定该用户有权访问哪些受保护资源。  
   
 ## <a name="identity-model-terms"></a>标识模型术语  
@@ -60,7 +60,7 @@ ms.locfileid: "33497021"
  颁发者  
  一个声明集，它至少包含一个标识声明，并且被认为已颁发另一个声明集。  
   
- 属性  
+ Properties  
  与评估上下文或授权上下文关联的一组信息。  
   
  受保护的资源  
@@ -69,7 +69,7 @@ ms.locfileid: "33497021"
  右  
  对于某个资源拥有的能力。 标识模型 API 定义的权限是 <xref:System.IdentityModel.Claims.Rights> 类的属性。 系统提供的权限的示例有 <xref:System.IdentityModel.Claims.Rights.Identity%2A> 和 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>。  
   
- 值  
+ “值”  
  用以声明权限的信息。  
   
 ## <a name="claims"></a>声明  
@@ -80,10 +80,10 @@ ms.locfileid: "33497021"
  尽管有各种声明类型和权限被定义为标识模型的一部分，但系统仍可以扩展，允许构建于标识模型基础结构之上的各种系统根据需要定义其他声明类型和权限。  
   
 ### <a name="identity-claims"></a>标识声明  
- 一种特定权限是标识权限。 拥有此权限的声明对实体的标识进行声明。 例如，一个声明的类型为"用户主体名称"(UPN) 值为"someone@example.com"和标识的权限指示特定域中的特定标识。  
+ 一种特定权限是标识权限。 拥有此权限的声明对实体的标识进行声明。 例如，"用户主体名称"类型的声明 (UPN) 值为"someone@example.com"，并标识的权限指示特定域中的特定标识。  
   
 #### <a name="system-identity-claim"></a>System 标识声明  
- 标识模型定义一个标识声明：System. System 标识声明指示实体为当前应用程序或系统。  
+ 标识模型定义了一个标识声明：系统。 System 标识声明指示实体为当前应用程序或系统。  
   
 ### <a name="sets-of-claims"></a>声明集  
  代表标识的声明的模型很重要，因为总是由系统中的某个实体颁发声明，即使该实体最终是某种“自我”的概念。 声明以集的形式组合在一起，每个集具有一个颁发者。 颁发者只是一个声明集。 这样一种递归关系最终必须结束，任何声明集都可以是其自己的颁发者。  
@@ -125,7 +125,7 @@ ms.locfileid: "33497021"
  ![管理声明和授权](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF 和标识模型  
- WCF 使用标识模型基础结构作为基础执行授权。 在 WCF 中，<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>类允许你指定*授权*作为服务的一部分的策略。 这种授权策略被称为*外部授权策略*，并且它们可以执行声明处理基于本地策略或者通过与远程服务的交互。 授权管理器中，由表示<xref:System.ServiceModel.ServiceAuthorizationManager>类以及识别各种凭据类型 （令牌） 的授权策略的外部授权策略的计算结果并填充所谓*授权上下文*适合于传入消息的声明。 授权上下文由 <xref:System.IdentityModel.Policy.AuthorizationContext> 类表示。  
+ 执行授权的情况下，WCF 使用作为基础的标识模型基础结构。 在 WCF 中，<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>类，可指定*授权*策略作为服务的一部分。 这种授权策略称为*外部授权策略*，并且它们可以执行声明处理根据本地策略或与远程服务的交互。 授权管理器中，由<xref:System.ServiceModel.ServiceAuthorizationManager>类外部授权策略，以及能够识别各种凭据类型 （令牌） 的计算结果并填充所谓*授权上下文*适用于传入消息的声明。 授权上下文由 <xref:System.IdentityModel.Policy.AuthorizationContext> 类表示。  
   
 ## <a name="identity-model-programming"></a>标识模型编程  
  下表说明了用于对标识模型扩展进行编程的对象模型 这些类全部存在于 <xref:System.IdentityModel.Policy> 或 <xref:System.IdentityModel.Claims> 命名空间中。  
@@ -133,13 +133,13 @@ ms.locfileid: "33497021"
 |类|描述|  
 |-----------|-----------------|  
 |授权组件|实现 <xref:System.IdentityModel.Policy.IAuthorizationComponent> 接口的标识模型类。|  
-|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|一个接口，提供单一只读字符串属性：Id。在实现此接口的系统中，每个实例的此属性值都是唯一的。|  
-|<xref:System.IdentityModel.Policy.AuthorizationContext>|*授权组件*包含一套`ClaimSet`具有零个或多个属性的实例; 对一个或多个授权策略进行评估的结果。|  
+|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|提供单一只读字符串属性的接口：Id。在实现此接口的系统中，每个实例的此属性值都是唯一的。|  
+|<xref:System.IdentityModel.Policy.AuthorizationContext>|*授权组件*包含一组`ClaimSet`具有零个或多个属性的实例; 对一个或多个授权策略进行评估的结果。|  
 |<xref:System.IdentityModel.Claims.Claim>|声明类型、权限和值的组合。 权限和值部分受声明类型约束。|  
 |<xref:System.IdentityModel.Claims.ClaimSet>|一个抽象基类。 `Claim` 实例的集合。|  
 |<xref:System.IdentityModel.Claims.DefaultClaimSet>|一个密封类。 `ClaimSet` 类的一个实现。|  
 |<xref:System.IdentityModel.Policy.EvaluationContext>|一个抽象基类。 在策略评估期间传递给授权策略。|  
-|<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|接口派生自`IAuthorizationComponent`并由授权策略类实现。|  
+|<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|一个接口，派生从`IAuthorizationComponent`并由授权策略类实现。|  
 |<xref:System.IdentityModel.Claims.Rights>|一个静态类，包含预定义的权限值。|  
   
  以下类也用于标识模型编程，但不存在于 <xref:System.IdentityModel.Policy> 或 <xref:System.IdentityModel.Claims> 命名空间中。  
@@ -155,27 +155,27 @@ ms.locfileid: "33497021"
   
 |成员|描述|  
 |------------|-----------------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|派生类实现此方法以在服务中运行操作之前执行基于声明的访问检查。 在做出访问检查决定时，可以检查提供的 <xref:System.ServiceModel.OperationContext> 中（或其他位置）的所有信息。 如果 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 返回 `true`，则允许进行访问和执行操作。 如果 `CheckAccessCore` 返回 `false`，则拒绝访问并且不执行操作。 有关示例，请参阅[如何： 为服务创建自定义授权管理器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)。|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|派生类实现此方法以在服务中运行操作之前执行基于声明的访问检查。 在做出访问检查决定时，可以检查提供的 <xref:System.ServiceModel.OperationContext> 中（或其他位置）的所有信息。 如果 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 返回 `true`，则允许进行访问和执行操作。 如果 `CheckAccessCore` 返回 `false`，则拒绝访问并且不执行操作。 有关示例，请参见 [如何：创建自定义授权管理器服务](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)。|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|返回服务的 <xref:System.ServiceModel.ServiceAuthorizationManager>。 <xref:System.ServiceModel.ServiceAuthorizationManager> 负责做出授权决定。|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|为服务指定的自定义授权策略的集合。 除了评估与传入消息中的凭据关联的策略外，还评估这些策略。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Policy.AuthorizationContext>  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Policy.EvaluationContext>  
- <xref:System.IdentityModel.Policy.IAuthorizationComponent>  
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims>  
- <xref:System.IdentityModel.Policy>  
- <xref:System.IdentityModel.Tokens>  
- <xref:System.IdentityModel.Selectors>  
- [声明和令牌](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [声明和拒绝访问资源](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
- [声明创建和资源值](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [如何：创建自定义声明](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [如何：比较声明](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [如何：创建自定义授权策略](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [如何：为服务创建自定义授权管理器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Policy.AuthorizationContext>
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Policy.EvaluationContext>
+- <xref:System.IdentityModel.Policy.IAuthorizationComponent>
+- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims>
+- <xref:System.IdentityModel.Policy>
+- <xref:System.IdentityModel.Tokens>
+- <xref:System.IdentityModel.Selectors>
+- [声明和令牌](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
+- [声明和拒绝访问资源](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
+- [声明创建和资源值](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
+- [如何：创建自定义声明](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [如何：比较声明](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [如何：创建自定义授权策略](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [如何：创建自定义授权管理器服务](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

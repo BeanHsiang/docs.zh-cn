@@ -1,23 +1,24 @@
 ---
-title: 类型参数的约束（C# 编程指南）
+title: 类型参数约束 - C# 编程指南
+ms.custom: seodec18
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47232711"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202595"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>类型参数的约束（C# 编程指南）
 
-约束告知编译器类型参数必须具备的功能。 在没有任何约束的情况下，类型参数可以是任何类型。 编译器只能假定 <xref:System.Object?displayPropety=nameWithType> 的成员，它是任何 .NET 类型的最终基类。 有关详细信息，请参阅[使用约束的原因](#why-use-constraints)。 如果客户端代码尝试使用约束所不允许的类型来实例化类，则会产生编译时错误。 通过使用 `where` 上下文关键字指定约束。 下表列出了七种类型的约束：
+约束告知编译器类型参数必须具备的功能。 在没有任何约束的情况下，类型参数可以是任何类型。 编译器只能假定 <xref:System.Object?displayProperty=nameWithType> 的成员，它是任何 .NET 类型的最终基类。 有关详细信息，请参阅[使用约束的原因](#why-use-constraints)。 如果客户端代码尝试使用约束所不允许的类型来实例化类，则会产生编译时错误。 通过使用 `where` 上下文关键字指定约束。 下表列出了七种类型的约束：
 
-|约束|描述|
+|约束|说明|
 |----------------|-----------------|
 |`where T : struct`|类型参数必须是值类型。 可以指定除 <xref:System.Nullable%601> 以外的任何值类型。 有关可以为 null 的类型的详细信息，请参阅[可以为 null 的类型](../nullable-types/index.md)。|
 |`where T : class`|类型参数必须是引用类型。 此约束还应用于任何类、接口、委托或数组类型。|
@@ -112,7 +113,7 @@ ms.locfileid: "47232711"
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Collections.Generic>
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [泛型类](../../../csharp/programming-guide/generics/generic-classes.md)  
-- [new 约束](../../../csharp/language-reference/keywords/new-constraint.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [泛型介绍](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [泛型类](../../../csharp/programming-guide/generics/generic-classes.md)
+- [new 约束](../../../csharp/language-reference/keywords/new-constraint.md)

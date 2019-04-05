@@ -1,21 +1,21 @@
 ---
 title: 使用 Visual Studio 部署 .NET Core 应用
-description: 了解如何使用 Visual Studio 部署 .NET Core 应用
+description: 了解如何使用 Visual Studio 部署 .NET Core 应用。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: fd12d2d8c210bb85e3f45b8c8246a3d19f1a7095
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698019"
 ---
-# <a name="deploying-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 应用
+# <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 应用
 
 可将 .NET Core 应用程序部署为依赖框架的部署或独立部署，前者包含应用程序二进制文件，但依赖目标系统上存在的 .NET Core，而后者同时包含应用程序和 .NET Core 二进制文件。 有关 .NET Core 应用程序部署的概述，请参阅 [.NET Core 应用程序部署](index.md)。
 
@@ -176,7 +176,7 @@ ms.locfileid: "48584374"
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 及更早版本](#tab/vs157)
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 及更高版本](#tab/vs157)
 
 调试并测试程序后，为应用的每个目标平台创建要与应用一起部署的文件。 这包括为每个目标平台创建单独的配置文件。
 
@@ -289,7 +289,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 及更早版本](#tab/vs157)
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 及更高版本](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -311,5 +311,5 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 ## <a name="see-also"></a>请参阅
 
-* [.NET Core 应用程序部署](index.md)
-* [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
+- [.NET Core 应用程序部署](index.md)
+- [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)

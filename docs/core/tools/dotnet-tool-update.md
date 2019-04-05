@@ -1,15 +1,13 @@
 ---
-title: dotnet tool update 命令 - .NET Core CLI
+title: dotnet tool update 命令
 description: dotnet tool update 命令在你计算机上更新指定的 .NET Core 全局工具。
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 90b0dc91f74d890420dc7185642aa89100cadba8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: bc7edada013c118564d44cbe4542dacb76925692
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516637"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -27,7 +25,7 @@ dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v
 dotnet tool update <-h|--help>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet tool update` 命令让你可以将计算机上的 .NET Core 全局工具更新为包的最新稳定版。 此命令卸载并重新安装工具，有效地对工具进行更新。 若要使用此命令，需要使用 `--global` 选项指定从用户范围的安装中更新工具或使用 `--tool-path` 选项指定安装工具的路径。
 
@@ -83,4 +81,4 @@ dotnet tool update <-h|--help>
 
 ## <a name="see-also"></a>请参阅
 
-* [.NET Core 全局工具](global-tools.md)
+- [.NET Core 全局工具](global-tools.md)

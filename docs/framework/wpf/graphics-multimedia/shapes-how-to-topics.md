@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: d3b14881cc1366cefb4d11c9d14654c15952624b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f1d22d2f7070bb93d175c28c166c434ff16ae19
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562865"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358062"
 ---
 # <a name="shapes-how-to-topics"></a>形状帮助主题
-此部分中的主题演示如何使用<xref:System.Windows.Shapes.Shape>屏幕绘制基本形状的对象。  
+在本部分中的主题演示如何使用<xref:System.Windows.Shapes.Shape>要在屏幕上绘制基本形状的对象。  
   
 ## <a name="in-this-section"></a>本节内容  
- [使用多边形元素绘制闭合形状](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [绘制椭圆形或圆形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [绘制直线](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [使用 Polyline 元素绘制折线](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [绘制矩形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [修改直线或线段末端的线帽](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+ [使用多边形元素绘制闭合形状](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [绘制椭圆形或圆形](how-to-draw-an-ellipse-or-a-circle.md)  
+ [绘制直线](how-to-draw-a-line.md)  
+ [使用 Polyline 元素绘制折线](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [绘制矩形](how-to-draw-a-rectangle.md)  
+ [修改直线或线段末端的线帽](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Shapes.Shape>  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Shapes.Shape>
+- [图形和多媒体](index.md)

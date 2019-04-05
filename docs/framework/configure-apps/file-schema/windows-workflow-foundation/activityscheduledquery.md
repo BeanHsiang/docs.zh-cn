@@ -1,26 +1,26 @@
 ---
-title: '&lt;activityScheduledQuery&gt;'
+title: <activityScheduledQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
-ms.openlocfilehash: 0822d0ce7dd82ff396596a0ed2431a5f2084ad8f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2199e66342c6fa3afca9d8ccd3b620560b123ede
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755365"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260835"
 ---
-# <a name="ltactivityscheduledquerygt"></a>&lt;activityScheduledQuery&gt;
+# <a name="activityscheduledquery"></a>\<activityScheduledQuery>
 表示一个查询集合，这些查询用于跟踪安排给父活动来执行的活动。 跟踪参与者需要用此查询来订阅活动安排记录。  
   
  有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<跟踪 >  
+\<tracking>  
 \<trackingProfile>  
-\<工作流 >  
-\<activityScheduledQueries >  
-\<activityScheduledQuery >  
+\<workflow>  
+\<activityScheduledQueries>  
+\<activityScheduledQuery>  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,10 +54,10 @@ ms.locfileid: "32755365"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<activityScheduledQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|一个查询，用于跟踪安排给父活动来执行的活动。|  
+|[\<activityScheduledQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|一个查询，用于跟踪安排给父活动来执行的活动。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>       
- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>
+- [工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

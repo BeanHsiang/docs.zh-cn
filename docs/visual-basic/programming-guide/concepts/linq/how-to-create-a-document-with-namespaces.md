@@ -1,15 +1,15 @@
 ---
-title: 如何：使用命名空间创建文档 (LINQ to XML) (Visual Basic)
+title: 如何：创建包含命名空间的文档 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b65d22451d900f7b20226f25b61bb235241dd84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499921"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816857"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>如何：使用命名空间创建文档 (LINQ to XML) (Visual Basic)
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>如何：创建包含命名空间的文档 (LINQ to XML) (Visual Basic)
 本主题演示如何在 Visual Basic 中创建包含命名空间的文档。  
   
  在 Visual Basic 中使用 XML 文本时，用户可以定义一个全局默认 XML 命名空间。 该命名空间对 XML 文本和 XML 属性都是默认的命名空间。 可以在项目级别或文件级别上定义默认的 XML 命名空间。 如果在文件级别上定义，则会重写项目级别上的默认命名空间。  
@@ -114,5 +114,6 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>请参阅
+
+- [使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

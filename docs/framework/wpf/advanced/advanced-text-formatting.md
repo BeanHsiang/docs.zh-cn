@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: e8347f1a82c70f1ce8aa7cc05841bc869abbcc33
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7d2408104ee3cf206734c5a1904129c3b71f7229
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787659"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368228"
 ---
 # <a name="advanced-text-formatting"></a>高级文本格式设置
 Windows Presentation Foundation (WPF) 提供了一套稳健的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]用于在你的应用程序中包括的文本。 布局和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Controls.TextBlock>、 提供了最常见和常规使用用于呈现文本元素。 绘制[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，如<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，在绘图中加入格式化的文本提供一种方法。 在最高级别，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了一个可扩展的文本格式引擎，用于控制文本呈现，如文本存储管理、 文本运行格式管理和嵌入的对象管理的各个方面。  
@@ -28,7 +28,7 @@ Windows Presentation Foundation (WPF) 提供了一套稳健的[!INCLUDE[TLA#tla_
   
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 本主题假定你熟悉的较高级别[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]用于呈现文本。 大多数用户方案都不需要的高级的文本格式[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]本主题中讨论。 有关不同的文本的介绍[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，请参阅[WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
+ 本主题假定你熟悉的较高级别[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]用于呈现文本。 大多数用户方案都不需要的高级的文本格式[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]本主题中讨论。 有关不同的文本的介绍[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，请参阅[WPF 中的文档](documents-in-wpf.md)。  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>高级文本格式设置  
@@ -42,15 +42,15 @@ Windows Presentation Foundation (WPF) 提供了一套稳健的[!INCLUDE[TLA#tla_
   
  与传统文本不同[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，则<xref:System.Windows.Media.TextFormatting.TextFormatter>与通过回调方法的一组文本布局客户端进行交互。 它要求客户端提供这些方法的实现中<xref:System.Windows.Media.TextFormatting.TextSource>类。 下图说明了客户端应用程序之间的文本布局交互和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
   
- ![文本布局客户端和 TextFormatter 示意图](../../../../docs/framework/wpf/advanced/media/textformatter01.png "TextFormatter01")  
+ ![文本布局客户端和 TextFormatter 示意图](./media/textformatter01.png "TextFormatter01")  
 应用程序和 TextFormatter 之间的交互  
   
  文本格式化程序用于从文本存储中检索带格式的文本行即的实现<xref:System.Windows.Media.TextFormatting.TextSource>。 这是通过首先通过使用创建文本格式化程序实例<xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A>方法。 此方法可创建一个文本格式化程序实例，并设置最大行高值和行宽值。 一旦创建文本格式化程序的实例，通过调用来启动行创建过程<xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>方法。 <xref:System.Windows.Media.TextFormatting.TextFormatter> 回拨到要检索的文本和格式设置参数的文本运行的文本源构成一条线。  
   
  下例演示文本存储的格式设置过程。 <xref:System.Windows.Media.TextFormatting.TextFormatter>对象用于从文本存储中检索文本行，然后设置格式绘制到的文本行<xref:System.Windows.Media.DrawingContext>。  
   
- [!code-csharp[TextFormatterExample#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/Window1.xaml.cs#100)]
- [!code-vb[TextFormatterExample#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/Window1.xaml.vb#100)]  
+ [!code-csharp[TextFormatterExample#100](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/Window1.xaml.cs#100)]
+ [!code-vb[TextFormatterExample#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/Window1.xaml.vb#100)]  
   
 <a name="section3"></a>   
 ## <a name="implementing-the-client-text-store"></a>实现客户端文本存储  
@@ -84,8 +84,8 @@ Windows Presentation Foundation (WPF) 提供了一套稳健的[!INCLUDE[TLA#tla_
   
  下面的示例演示<xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>方法。 返回此文本存储<xref:System.Windows.Media.TextFormatting.TextRun>文本格式化程序以进行处理的对象。  
   
- [!code-csharp[TextFormatterExample#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/CustomTextSource.cs#101)]
- [!code-vb[TextFormatterExample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/CustomTextSource.vb#101)]  
+ [!code-csharp[TextFormatterExample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/CustomTextSource.cs#101)]
+ [!code-vb[TextFormatterExample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/CustomTextSource.vb#101)]  
   
 > [!NOTE]
 >  在此示例中，文本存储为所有文本提供了相同的文本属性。 高级文本存储需要实现各自的范围管理，以便单个字符具有不同的属性。  
@@ -94,6 +94,6 @@ Windows Presentation Foundation (WPF) 提供了一套稳健的[!INCLUDE[TLA#tla_
 ## <a name="specifying-formatting-properties"></a>指定格式设置属性  
  <xref:System.Windows.Media.TextFormatting.TextRun> 使用提供的文本存储属性设置格式的对象。 这些属性有两种类型，<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>。 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 处理涉及段落的属性，如<xref:System.Windows.TextAlignment>和<xref:System.Windows.FlowDirection>。 <xref:System.Windows.Media.TextFormatting.TextRunProperties> 可以为每个文本运行中一个段落，如前景画笔、 不同的属性<xref:System.Windows.Media.Typeface>，和字体大小。 若要实现自定义段落和自定义文本运行属性类型，你的应用程序必须创建派生的类<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>分别。  
   
-## <a name="see-also"></a>请参阅  
- [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>请参阅
+- [WPF 中的版式](typography-in-wpf.md)
+- [WPF 中的文档](documents-in-wpf.md)

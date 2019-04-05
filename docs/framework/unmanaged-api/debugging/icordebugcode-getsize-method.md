@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c5d42aa7053c1138808775a16d820d5fef3b095
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3bd21e43973d116e4383d88bd5ce90f0fbfeb1a6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410814"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471469"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize 方法
-获取的大小，以字节为单位表示此"icor 调试代码"的二进制代码。  
+获取用字节表示，此"ICorDebugCode"所表示的二进制代码大小。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +35,18 @@ HRESULT GetSize (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pcBytes`  
- [out]指向以字节为单位的二进制文件的大小的指针代码此`ICorDebugCode`对象所表示。  
+ [out]指向的大小，以字节为单位，该二进制文件的代码，此`ICorDebugCode`对象表示。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

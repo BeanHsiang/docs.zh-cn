@@ -2,12 +2,12 @@
 title: 调试支持
 ms.date: 03/30/2017
 ms.assetid: 262d8e60-8e71-42d7-8340-1b5276a0ad35
-ms.openlocfilehash: 70823d7480d59f96f3f8f4ad2b28102917ec2d80
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e19acb4a3a5cdff29e5eee81e422be1209cf91ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856824"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554864"
 ---
 # <a name="debugging-support"></a>调试支持
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供了有关常规调试支持[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]项目。  另请参阅[调试 LINQ](/visualstudio/debugger/debugging-linq)或[调试 LINQ](/visualstudio/debugger/debugging-linq)。  
@@ -27,5 +27,5 @@ ms.locfileid: "43856824"
  [疑难解答](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  
  提供可能难以确定其出现原因的一些常见情况。  
   
-## <a name="see-also"></a>请参阅  
- [编程指南](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
+## <a name="see-also"></a>请参阅
+- [编程指南](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)

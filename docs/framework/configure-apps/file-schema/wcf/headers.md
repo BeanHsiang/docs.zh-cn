@@ -1,28 +1,28 @@
 ---
-title: '&lt;标头&gt;'
+title: <headers>
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: 7683b07093719cda6b210a4174d47e5785d4644d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3c3c3a3d747a1338e2db3afa92c735af4a588642
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747146"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288023"
 ---
-# <a name="ltheadersgt"></a>&lt;标头&gt;
+# <a name="headers"></a>\<headers>
 除了其基本 URI 外，终结点可以按一个或多个 SOAP 标头寻址。 这一点在其中很有用的一组方案是一组 SOAP 媒介方案，其中终结点要求该终结点的客户端包括以媒介为目标的 SOAP 头。 此配置元素可用于定义此类自定义地址标头。 终结点标头集合中的项是用户定义的 XML 元素。 每个元素必须是格式良好的 XML。  
   
  \<system.ServiceModel>  
-\<客户端 >  
-\<终结点 >  
+\<client>  
+\<endpoint>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<headers>  
-    <Region xmlns="Uri">"String"</Region>  
-        <Member xmlns="Uri">"String"</Member>  
-</headers>  
+<headers>
+  <region xmlns="Uri">"String"</region>
+  <member xmlns="Uri">"String"</member>
+</headers>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -32,24 +32,20 @@ ms.locfileid: "32747146"
  无。  
   
 ### <a name="child-elements"></a>子元素  
-  
-|元素|描述|  
-|-------------|-----------------|  
-|Region||  
-|成员||  
+ 用户定义的 XML 元素。  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<终结点 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|配置不同类型的终结点。|  
+|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|配置不同类型的终结点。|  
   
 ## <a name="remarks"></a>备注  
  可选标头提供用于标识终结点或与终结点交互的更多详细寻址信息。 例如，标头可指示如何处理传入消息，终结点应发送答复消息的位置，或在多个实例可用时应使用哪个服务实例处理来自特定用户的传入消息。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Headers%2A>  
- <xref:System.ServiceModel.Channels.AddressHeaderCollection>  
- [终结点：地址、绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Headers%2A>
+- <xref:System.ServiceModel.Channels.AddressHeaderCollection>
+- [终结点：地址、 绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

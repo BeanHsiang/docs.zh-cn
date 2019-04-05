@@ -1,5 +1,5 @@
 ---
-title: ICorDebugCodeEnum 接口 1
+title: ICorDebugCodeEnum 接口
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCodeEnum
@@ -16,21 +16,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1af5184881c7d357e084e40ac79e2ebd349c4cfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed18f969d4ee857aee72668cf7230aa385586bde
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413180"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965236"
 ---
-# <a name="icordebugcodeenum-interface1"></a>ICorDebugCodeEnum 接口 1
-实现"ICorDebugEnum"方法，并枚举"icor 调试代码"数组。  
+# <a name="icordebugcodeenum-interface"></a>ICorDebugCodeEnum 接口
+
+实现"ICorDebugEnum"方法，并枚举"ICorDebugCode"数组。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|获取指定的数目的`ICorDebugCode`枚举，从当前位置开始中的实例。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|获取指定的数目的`ICorDebugCode`从当前位置开始枚举的实例。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -38,13 +39,13 @@ ms.locfileid: "33413180"
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

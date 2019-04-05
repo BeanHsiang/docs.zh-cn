@@ -1,18 +1,18 @@
 ---
-title: 如何：配置 Windows Communication Foundation 服务以使用端口共享
+title: 如何：配置 Windows Communication Foundation 服务，以使用端口共享
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 19f61e6e38a5eeb477833b0d5ea94c1b1a8447b4
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 942dea9b745d3dd7cda366ad3e855ddaed0473db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582547"
 ---
-# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>如何：配置 Windows Communication Foundation 服务以使用端口共享
+# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>如何：配置 Windows Communication Foundation 服务，以使用端口共享
 若要使用 net.tcp:// 端口共享在 Windows Communication Foundation (WCF) 应用程序中的最简单方法是公开服务使用<xref:System.ServiceModel.NetTcpBinding>。  
   
  此绑定提供了一个 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 属性，该属性控制是否为配置了此绑定的服务启用 net.tcp:// 端口共享。  
@@ -60,6 +60,6 @@ ms.locfileid: "49121913"
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-* [Net.TCP 端口共享](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
-* [如何：启用 Net.TCP 端口共享服务](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+## <a name="see-also"></a>请参阅
+- [Net.TCP 端口共享](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
+- [如何：启用 Net.TCP 端口共享服务](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

@@ -2,12 +2,12 @@
 title: 设计模式：基于列表的发布-订阅
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: caec9a9aa6de267cb5407ad4a7166701740f9a63
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 59b56ce5b3be031a598c690976d5f9c23932fc66
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086565"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815025"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>设计模式：基于列表的发布-订阅
 此示例演示基于列表的发布-订阅模式实现作为 Windows Communication Foundation (WCF) 的程序。  
@@ -124,7 +124,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  从 \datasource\bin 运行 Datasource.exe\\，从特定于语言的文件夹下。 数据源活动将显示在控制台窗口中。 数据源向服务发送信息后，信息应传递到每个客户端。  
   
-4.  如果客户端、 数据源和服务程序能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端、 数据源和服务程序能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-machines"></a>跨计算机运行示例  
   
@@ -161,4 +161,3 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
   
-## <a name="see-also"></a>请参阅

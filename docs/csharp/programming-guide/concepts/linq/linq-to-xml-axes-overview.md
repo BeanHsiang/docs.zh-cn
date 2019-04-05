@@ -2,12 +2,12 @@
 title: LINQ to XML 轴概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: 1eabd6a171637b85a5d22afa209e6c80dbbb9f4c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 73587e0637e562ce4a35f9ec92a407928e0ad885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211705"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503051"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 轴概述 (C#)
 创建 XML 树或将 XML 文档加载到 XML 树之后，可以进行查询，从而查找元素和属性并检索它们的值。 通过*轴方法*（也叫做*轴*）来检索集合。 一些轴就是 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 类中返回 <xref:System.Collections.Generic.IEnumerable%601> 集合的方法。 另一些轴是 <xref:System.Xml.Linq.Extensions> 类中的扩展方法。 实现为扩展方法的轴对集合进行操作，然后返回集合。  
@@ -23,7 +23,7 @@ ms.locfileid: "44211705"
 ## <a name="methods-for-retrieving-a-collection-of-elements"></a>用于检索元素集合的方法  
  下面是 <xref:System.Xml.Linq.XElement> 类（或其基类）的方法汇总，您可以对 <xref:System.Xml.Linq.XElement> 调用这些方法以返回元素集合。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|返回此元素的上级的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回上级的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些上级具有指定的 <xref:System.Xml.Linq.XName>。|  
 |<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|返回此元素的子代的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>。 重载方法返回子代的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，这些子代具有指定的 <xref:System.Xml.Linq.XName>。|  
@@ -36,21 +36,21 @@ ms.locfileid: "44211705"
 ## <a name="method-for-retrieving-a-single-element"></a>用于检索单个元素的方法  
  下面的方法从 <xref:System.Xml.Linq.XElement> 对象中检索单个子级。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|返回具有指定 <xref:System.Xml.Linq.XElement> 的第一个子 <xref:System.Xml.Linq.XName> 对象。|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>用于检索属性集合的方法  
  下面的方法从 <xref:System.Xml.Linq.XElement> 对象中检索属性。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|返回所有属性的 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XAttribute>。|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>用于检索单个属性的方法  
  下面的方法从 <xref:System.Xml.Linq.XElement> 对象中检索单个属性。  
   
-|方法|描述|  
+|方法|说明|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|返回具有指定 <xref:System.Xml.Linq.XAttribute> 的 <xref:System.Xml.Linq.XName>。|  
   

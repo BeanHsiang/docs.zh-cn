@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -res compiler option [Visual Basic]
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
-ms.openlocfilehash: ca9aea526d1039c09883696ed2a35ed930c92872
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 46122eaa7ca54679c9a52b939f9100c9a0747e7b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199014"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550352"
 ---
 # <a name="-resource-visual-basic"></a>-资源 (Visual Basic)
 将托管资源嵌入程序集。  
@@ -31,7 +31,7 @@ ms.locfileid: "50199014"
   
 |术语|定义|  
 |---|---|  
-|`filename`|必须的。 要在输出文件中嵌入的资源文件的名称。 默认情况下，`filename`在程序集是公共的。 将文件名括在引号 ("") 如果包含空格。|  
+|`filename`|必需。 要在输出文件中嵌入的资源文件的名称。 默认情况下，`filename`在程序集是公共的。 将文件名括在引号 ("") 如果包含空格。|  
 |`identifier`|可选。 资源; 的逻辑名称用来加载它的名称。 默认值是文件的名称。 或者，可以指定资源是公共或私有程序集清单中与以下一样： `-res:filename.res, myname.res, public`|  
   
 ## <a name="remarks"></a>备注  
@@ -52,8 +52,8 @@ vbc -res:rf.resource in.vb
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)  
-- [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)  
-- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)
+- [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)
+- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

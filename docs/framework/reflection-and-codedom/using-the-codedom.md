@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50ff6e2baaee683674f82cff178eeef7b7e43de4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486207"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219589"
 ---
 # <a name="using-the-codedom"></a>使用 CodeDom
 CodeDOM 提供表示多种常见源代码元素的类型。 可以设计一个程序，它使用 CodeDOM 元素生成源代码模型来组合对象图。 对于支持的编程语言，可使用 CodeDOM 代码生成器将此对象图呈现为源代码。 还可使用 CodeDOM 将源代码编译为二进制程序集。  
@@ -127,4 +127,4 @@ CodeDOM 提供表示多种常见源代码元素的类型。 可以设计一个�
   
  有关各种 CodeDOM 类型的文档，请参阅 <xref:System.CodeDom> 命名空间的参考文档。  
   
- 有关用于查找表示特定代码元素类型的 CodeDOM 元素的快速图表，请参阅 [CodeDOM 快速参考](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)。
+ 有关用于查找表示特定代码元素类型的 CodeDOM 元素的快速图表，请参阅 [CodeDOM 快速参考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))。

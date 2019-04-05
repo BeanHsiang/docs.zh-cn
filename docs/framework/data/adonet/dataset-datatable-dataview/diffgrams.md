@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: fd452efff2a26b66c06a7762b215df140047286d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513643"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <xref:System.Data.DataSet> 使用 DiffGram 格式来加载和保持其内容，并将其内容序列化，以便通过网络连接来进行传输。 当<xref:System.Data.DataSet>编写为 DiffGram，若要精确地重新创建内容，但不架构的所有必要信息 DiffGram 填充它<xref:System.Data.DataSet>，包括从这两个列的值**原始**并**当前**行版本、 行错误信息以及行顺序。  
@@ -94,7 +94,7 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
 |批注|描述|  
 |----------------|-----------------|  
 |**RowOrder**|保留原始数据的行顺序并标识特定 <xref:System.Data.DataTable> 中行的索引。|  
-|**隐藏**|标识为具有列**ColumnMapping**属性设置为**MappingType.Hidden**。 属性将写格式**msdata： 隐藏** *[ColumnName]*="*值*"。 例如：`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`。<br /><br /> 请注意，只有当隐藏列包含数据时才以 DiffGram 属性的形式来编写隐藏列。 否则将忽略隐藏列。|  
+|**Hidden**|标识为具有列**ColumnMapping**属性设置为**MappingType.Hidden**。 属性将写格式**msdata： 隐藏** *[ColumnName]*="*值*"。 例如：`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`。<br /><br /> 请注意，只有当隐藏列包含数据时才以 DiffGram 属性的形式来编写隐藏列。 否则将忽略隐藏列。|  
   
 ## <a name="sample-diffgram"></a>DiffGram 示例  
  下面是 DiffGram 格式的示例。 该示例显示对表行的更新在提交更改之前的结果。 CustomerID 为“ALFKI”的行已被修改，但尚未更新。 因此，没有**当前**行**diffgr: id**为"Customers1"中**\<** ***DataInstance*** **>** 块中，和一个**原始**行**diffgr: id** "Customers1"的 **\<diffgr： 之前 >** 块。 Customerid 为"ANATR"的行包含**RowError**，因此它将批注`diffgr:hasErrors="true"`，并且没有一个相关的元素 **\<diffgr:errors >** 块。  
@@ -131,9 +131,9 @@ DiffGram 是用于标识数据元素的当前和原始版本的 XML 格式。 <x
 </diffgr:diffgram>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [以 XML 数据的形式编写数据集内容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [以 XML 数据的形式编写数据集内容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

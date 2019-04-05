@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4d3bf7db928f926b802c08ee5e61edf86055b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196743"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412339"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中的过时类型
-<a name="introduction"></a>本文中的表格列出了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中由程序集组织的过时的类型。 使用以下链接可查看每个程序集中过时的类型和建议的备选项的列表。 由于这些类型已过时，因此其所有成员也已过时。 有关 .NET Framework 类库中其他过时成员的列表，请参阅[过时成员](../../../docs/framework/whats-new/obsolete-members.md)。
+<a name="introduction"></a>本文中的表格列出了 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中由程序集组织的过时的类型。 使用以下链接可查看每个程序集中过时的类型和建议的备选项的列表。 由于这些类型已过时，因此其所有成员也已过时。 有关 .NET Framework 类库中其他过时成员的列表，请参阅[过时成员](obsolete-members.md)。
 
 -   [系统程序集中的过时类型](#obsolete_types_in_system_assemblies)
 
@@ -84,7 +84,7 @@ ms.locfileid: "47196743"
 |<xref:System.Collections.IHashCodeProvider?displayProperty=nameWithType>|请改用 <xref:System.Collections.IEqualityComparer?displayProperty=nameWithType>。|
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=nameWithType>|<xref:System.Configuration.Assemblies.AssemblyHash> 类已弃用。|
 |<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=nameWithType>|在 .NET Framework 4.5 中首次被废弃。 请改用 System.Runtime.CompilerServices 命名空间中的 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=nameWithType> 类。|
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|备用 API 可用：改为发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=nameWithType>|有一个可用的备用 API：发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|
 |<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=nameWithType>|请改用 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=nameWithType>。|
@@ -205,7 +205,7 @@ ms.locfileid: "47196743"
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|此接口已弃用。 改为将 <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> 添加到句柄类型 <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType>。|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|改用 <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> 来处理新的设置模型。|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|此特性已弃用。 请改用 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>。 例如，若要为 CodeDom 指定根设计器，请使用 `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`。|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|此特性已弃用。 请改用 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>。|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|此类已弃用。|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|此类已弃用。 改为通过 <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> 类使用性能计数器。|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|此类已弃用。 请改用 <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> 以访问和设置全局默认代理。 使用“null”而非 <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>。|
@@ -630,7 +630,9 @@ ms.locfileid: "47196743"
 
 <a name="VBCompat"></a>
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>程序集：Microsoft.VisualBasic.Compatibility.dll
-  有关从 Visual Basic 6 迁移的信息，请参阅 [Visual Basic 6.0 资源中心](https://msdn.microsoft.com/library/windows/desktop/ms788229)。
+
+有关从 Visual Basic 6 迁移的信息，请参阅 [Visual Basic 6.0 资源中心](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation)。
+  
 |类型|消息|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|此成员已过时。|
@@ -777,4 +779,5 @@ ms.locfileid: "47196743"
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll 是已过时的程序集，仅出于向后兼容目的而存在。|
 
 ## <a name="see-also"></a>请参阅
- [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md) [过时成员](../../../docs/framework/whats-new/obsolete-members.md)
+- [类库中过时的内容](whats-obsolete.md)
+- [过时成员](obsolete-members.md)

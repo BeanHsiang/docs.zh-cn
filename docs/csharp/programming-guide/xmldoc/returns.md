@@ -1,5 +1,6 @@
 ---
-title: '&lt;returns&gt;（C# 编程指南）'
+title: <returns> - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - returns
@@ -8,21 +9,21 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: fc3254062e4412c2a0640e27ce4d188b83507eea
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: e0beb366f7dc568c6efdc50c9abedb419c01e61b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259910"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477631"
 ---
-# <a name="ltreturnsgt-c-programming-guide"></a>&lt;returns&gt;（C# 编程指南）
+# <a name="returns-c-programming-guide"></a>\<returns>（C# 编程指南）
 ## <a name="syntax"></a>语法  
   
 ```xml  
 <returns>description</returns>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `description`  
  返回值的说明。  
   
@@ -32,9 +33,9 @@ ms.locfileid: "44259910"
  使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- [!code-csharp[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#10)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

@@ -2,18 +2,16 @@
 title: 在持续集成 (CI) 中使用 .NET Core SDK 和工具
 description: 了解如何在生成服务器上使用 .NET Core SDK 及其工具。
 author: guardrex
-ms.author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 207a6740f2a483d532c194b2bf8112898e9c3463
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: seodec18
+ms.openlocfilehash: c9fd9e359a22467cc8639109538522e4088df5ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704090"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持续集成 (CI) 中使用 .NET Core SDK 和工具
-
-## <a name="overview"></a>概述
 
 本文档概述了如何在生成服务器上使用 .NET Core SDK 及其工具。 .NET Core 工具集既可以交互方式运行（当开发者在命令提示符处键入命令时），也可以自动运行（当持续集成 (CI) 服务器运行生成脚本时）。 命令、选项、输入和输出都相同，可通过提供的唯一内容来获取用于生成应用的工具和系统。 本文档重点介绍了 CI 工具获取方案，并提供了有关如何设计和构建生成脚本的建议。
 
@@ -25,22 +23,22 @@ ms.locfileid: "48033462"
 
 macOS 用户应使用 PKG 安装程序。 在 Linux 上，可选择使用基于源的包管理器（如用于 Ubuntu 的 apt-get 或用于 CentOS 的 yum），也可以选择使用包本身（即 DEB 或 RPM）。 在 Windows 上，使用 MSI 安装程序。
 
-有关最新的稳定二进制文件，请参阅 [.NET Core 入门](https://aka.ms/dotnetcoregs)。 若要使用最新（但可能不稳定）的预览版工具，请使用 [dotnet/cli GitHub 存储库](https://github.com/dotnet/cli#installers-and-binaries)中提供的链接。 对于 Linux 发行版本，可以使用 `tar.gz` 存档（亦称为 `tarballs`）；使用存档中的安装脚本来安装 .NET Core。
+有关最新的稳定二进制文件，请参阅 [.NET 下载](https://dotnet.microsoft.com/download)。 若要使用最新（但可能不稳定）的预览版工具，请使用 [dotnet/core-sdk GitHub 存储库](https://github.com/dotnet/core-sdk#installers-and-binaries)中提供的链接。 对于 Linux 发行版本，可以使用 `tar.gz` 存档（亦称为 `tarballs`）；使用存档中的安装脚本来安装 .NET Core。
 
 ### <a name="using-the-installer-script"></a>使用安装程序脚本
 
 使用安装程序脚本，可以在生成服务器上执行非管理员安装，并能轻松实现自动化，以便获取工具。 安装程序脚本负责下载并将工具提取到默认或指定位置，以供使用。 还可以指定要安装的工具版本，以及是要安装整个 SDK，还是仅安装共享运行时。
 
-安装程序脚本在开始生成时自动运行，以提取和安装相应版本的 SDK。 相应版本是指生成项目所需的任意 SDK 版本。 使用安装程序脚本，可以在服务器的本地目录中安装 SDK，并能从安装位置运行工具，还可以在生成后进行清理（或让 CI 服务进行清理）。 这样，可以封装和隔离整个生成进程。 有关安装脚本参考，请参阅 [dotnet-install](dotnet-install-script.md) 主题。
+安装程序脚本在开始生成时自动运行，以提取和安装相应版本的 SDK。 相应版本是指生成项目所需的任意 SDK 版本。 使用安装程序脚本，可以在服务器的本地目录中安装 SDK，并能从安装位置运行工具，还可以在生成后进行清理（或让 CI 服务进行清理）。 这样，可以封装和隔离整个生成进程。 有关安装脚本参考，请参阅 [dotnet-install](dotnet-install-script.md) 一文。
 
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> 使用安装程序脚本时，不会自动安装本机依赖项。 如果操作系统没有本机依赖项，必须手动安装。 请参阅 [.NET Core 本机先决条件](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)主题中的先决条件列表。
+> 使用安装程序脚本时，不会自动安装本机依赖项。 如果操作系统没有本机依赖项，必须手动安装。 有关详细信息，请参阅 [Linux 上 .NET Core 的先决条件](../linux-prerequisites.md)。
 
 ## <a name="ci-setup-examples"></a>CI 安装示例
 
-此部分介绍了如何使用 PowerShell 或 bash 脚本进行手动安装，同时还介绍了多个服务型软件 (SaaS) CI 解决方案。 涵盖的 SaaS CI 解决方案包括 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和[生成](https://docs.microsoft.com/azure/devops/build-release/index)。
+此部分介绍了如何使用 PowerShell 或 bash 脚本进行手动安装，同时还介绍了多个服务型软件 (SaaS) CI 解决方案。 涵盖的 SaaS CI 解决方案包括 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index)。
 
 ### <a name="manual-setup"></a>手动安装
 
@@ -126,11 +124,11 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 可以将 [Travis CI](https://travis-ci.org/) 配置为使用 `csharp` 语言和 `dotnet` 键安装 .NET Core SDK。 有关详细信息，请参阅 Travis CI 官方文档[生成 C#、F# 或 Visual Basic 项目](https://docs.travis-ci.com/user/languages/csharp/)。 请注意，访问 Travis CI 信息时，社区维护的 `language: csharp` 语言标识符适用于所有 .NET 语言，包括 F# 和 Mono。
 
-Travis CI 可同时在生成矩阵中运行 macOS（OS X 10.11、OS X 10.12）和 Linux (Ubuntu 14.04) 作业。在生成矩阵中，可以指定运行时、环境和排除项/包含项的组合，从而涵盖应用的生成组合。 有关详细信息，请参阅 Travis CI 文档 [.travis.yml 示例](https://github.com/dotnet/docs/blob/master/.travis.yml)文件和[自定义生成](https://docs.travis-ci.com/user/customizing-the-build)。 基于 MSBuild 的工具在包中添加 LTS (1.0.x) 和最新 (1.1.x) 运行时；因此，通过安装 SDK，可以收到执行生成所需的一切。
+Travis CI 可同时在生成矩阵中运行 macOS 和 Linux 作业。在生成矩阵中，可以指定运行时、环境和排除项/包含项的组合，从而涵盖应用的生成组合。 有关详细信息，请参阅 Travis CI 文档中的[自定义生成](https://docs.travis-ci.com/user/customizing-the-build)一文。 基于 MSBuild 的工具在包中添加 LTS (1.0.x) 和最新 (1.1.x) 运行时；因此，通过安装 SDK，可以收到执行生成所需的一切。
 
 ### <a name="appveyor"></a>AppVeyor
 
-[AppVeyor](https://www.appveyor.com/) 使用 `Visual Studio 2017` 生成辅助角色映像安装 .NET Core 1.0.1 SDK。 可以使用其他包含不同版本 .NET Core SDK 的生成映像；有关详细信息，请参阅 AppVeyor 文档中的 [appveyor.yml 示例](https://github.com/dotnet/docs/blob/master/appveyor.yml)和[生成辅助角色映像](https://www.appveyor.com/docs/build-environment/#build-worker-images)主题。
+[AppVeyor](https://www.appveyor.com/) 使用 `Visual Studio 2017` 生成辅助角色映像安装 .NET Core 1.0.1 SDK。 提供具有不同版本的 .NET Core SDK 的其他生成映像。 有关详细信息，请参阅 AppVeyor 文档中的 [appveyor.yml 示例](https://github.com/dotnet/docs/blob/master/appveyor.yml)和[生成辅助角色映像](https://www.appveyor.com/docs/build-environment/#build-worker-images)一文。
 
 .NET Core SDK 二进制文件通过安装脚本下载并解压缩到子目录，再添加到 `PATH` 环境变量。 添加生成矩阵可以运行包含多个版本 .NET Core SDK 的集成测试：
 
@@ -151,32 +149,32 @@ install:
 1. 使用命令运行[手动安装步骤](#manual-setup)中的脚本。
 1. 创建包含多个 Azure DevOps Services 内置生成任务（这些任务被配置为使用 .NET Core 工具）的生成。
 
-这两种均为有效解决方案。 使用手动安装脚本，可以控制收到的工具版本，因为工具是作为生成的一部分进行下载。 此生成是通过必须创建的脚本进行运行。 本主题仅涉及手动选项。 若要详细了解如何撰写包含 Azure DevOps Services 生成任务的生成，请参阅 Azure DevOps Services [持续集成和部署](https://docs.microsoft.com/azure/devops/build-release/index)主题。
+这两种均为有效解决方案。 使用手动安装脚本，可以控制收到的工具版本，因为工具是作为生成的一部分进行下载。 此生成是通过必须创建的脚本进行运行。 本文仅涉及手动选项。 有关使用 Azure DevOps Services 生成任务撰写生成的详细信息，请参阅 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) 一文。
 
 若要在 Azure DevOps Services 中使用手动安装脚本，请新建生成定义，并指定要对生成步骤运行的脚本。 为此，请使用 Azure DevOps Services 用户界面：
 
 1. 首先，新建生成定义。 到达可以定义要创建的生成类型的屏幕后，选择“空”选项。
 
-   ![选择空的生成定义](./media/using-ci-with-cli/screen1.png)
+   ![选择空的生成定义](./media/using-ci-with-cli/select-empty-build-definition.png)
 
 1. 配置要生成的存储库后，将转到生成定义。 选择“添加生成步骤”：
 
-   ![添加生成步骤](./media/using-ci-with-cli/screen2.png)
+   ![添加生成步骤](./media/using-ci-with-cli/add-build-step.png)
 
-1. 此时，系统会显示“任务目录”。 此目录包含在生成中使用的任务。 由于已有脚本，因此选择“PowerShell:运行 PowerShell 脚本”旁边的“添加”按钮。
+1. 此时，系统会显示“任务目录”。 此目录包含在生成中使用的任务。 由于已有脚本，因此请为“PowerShell：运行 PowerShell 脚本”选择“添加”按钮
 
-   ![添加 PowerShell 脚本步骤](./media/using-ci-with-cli/screen3.png)
+   ![添加 PowerShell 脚本步骤](./media/using-ci-with-cli/add-powershell-script.png)
 
 1. 配置生成步骤。 从要生成的存储库中添加脚本：
 
-   ![指定要运行的 PowerShell 脚本](./media/using-ci-with-cli/screen4.png)
+   ![指定要运行的 PowerShell 脚本](./media/using-ci-with-cli/powershell-script-path.png)
 
 ## <a name="orchestrating-the-build"></a>安排生成
 
-本文档的大部分内容介绍了如何获取 .NET Core 工具和配置各种 CI 服务，并未介绍如何安排或实际生成 .NET Core 代码。 具体如何构建生成进程取决于许多因素，我们无法在本文中笼统概述。 请浏览 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/) 和 [Azure DevOps Services](https://docs.microsoft.com/azure/devops/build-release/index) 文档集中提供的资源和示例，详细了解如何使用每种技术安排生成。
+本文档的大部分内容介绍了如何获取 .NET Core 工具和配置各种 CI 服务，并未介绍如何安排或实际生成 .NET Core 代码。 具体如何构建生成进程取决于许多因素，我们无法在本文中笼统概述。 有关使用每种技术安排生成的详细信息，请浏览 [Travis CI](https://travis-ci.org/)、[AppVeyor](https://www.appveyor.com/)、和 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) 文档集中提供的资源和示例。
 
 使用 .NET Core 工具构建 .NET Core 代码生成进程的两种常规方法是，直接使用 MSBuild 或使用 .NET Core 命令行命令。 应采用哪种方法取决于对方法的熟悉程度和复杂性取舍。 使用 MSBuild，可以将生成进程表达为任务和目标，但需要学习 MSBuild 项目文件语法，这增加了复杂性。 使用 .NET Core 命令行工具可能更为简单，但需要在 `bash` 或 PowerShell 等脚本语言中编写业务流程逻辑。
 
 ## <a name="see-also"></a>请参阅
 
-* [Ubuntu 获取步骤](https://www.microsoft.com/net/core#linuxubuntu)
+- [.NET 下载 - Linux](https://dotnet.microsoft.com/download?initial-os=linux)

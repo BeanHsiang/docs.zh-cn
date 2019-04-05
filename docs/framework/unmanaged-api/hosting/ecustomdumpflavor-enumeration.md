@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6d0ba3f722f63650a3db6a8f633189993db0716
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2be9f112d5997ec8a6b126229eb8608eb8dd8520
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431403"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627637"
 ---
 # <a name="ecustomdumpflavor-enumeration"></a>ECustomDumpFlavor 枚举
-包含值，用于指示哪些项目应包含自定义子集中的堆转储时报告错误。  
+包含指示要包含堆的自定义子集中的项转储报告错误时的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,22 +39,22 @@ typedef enum {
   
 |成员|描述|  
 |------------|-----------------|  
-|`DUMP_FLAVOR_Mini`|指定自定义的堆转储应该以小型转储启动并包含指定的任何额外数据[CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)实例传递给相同的方法。|  
-|`DUMP_FLAVOR_NonHeapCLRState`|指定自定义的堆转储应收集未动态分配的所有运行时状态数据。|  
+|`DUMP_FLAVOR_Mini`|指定应启动作为小型转储并包括指定的任何额外数据自定义堆转储[CustomDumpItem](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)实例传递给相同的方法。|  
+|`DUMP_FLAVOR_NonHeapCLRState`|指定自定义堆转储应收集不动态分配的所有运行时状态数据。|  
   
 ## <a name="remarks"></a>备注  
  类型的参数`ECustomDumpFlavor`传递给[iclrerrorreportingmanager:: Begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ECustomDumpItemKind 枚举](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)  
- [ICLRErrorReportingManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [ECustomDumpItemKind 枚举](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
+- [ICLRErrorReportingManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

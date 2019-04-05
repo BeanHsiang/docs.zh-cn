@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7e0d5e53b255ab59eabace01e69784d88aec8aca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fad67c1a3c53cd83dec6bfa161333b5e20ab4c4
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575526"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058316"
 ---
 # <a name="thread-safe-collections"></a>线程安全集合
-[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 引入了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间，其中包含多个线程安全且可缩放的集合类。 多个线程可以安全高效地从这些集合添加或删除项，而无需在用户代码中进行其他同步。 编写新代码时，只要将集合同时写入多个线程中，就使用并发集合类。 如果仅从共享集合进行读取，则可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的类。 建议不要使用 1.0 集合类，除非需要定位 .NET Framework 1.1 或更低版本运行时。  
+[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 引入了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间，其中包含多个线程安全且可缩放的集合类。 多个线程可以安全高效地从这些集合添加或删除项，而无需在用户代码中进行其他同步。 编写新代码时，只要将多个线程同时写入到集合时，就使用并发集合类。 如果仅从共享集合进行读取，则可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空间中的类。 建议不要使用 1.0 集合类，除非需要定位 .NET Framework 1.1 或更低版本运行时。  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>.NET Framework 1.0 和 2.0 集合中的线程同步  
  .NET Framework 1.0 中引入的集合位于 <xref:System.Collections?displayProperty=nameWithType> 命名空间中。 这些集合（包括常用的 <xref:System.Collections.ArrayList> 和 <xref:System.Collections.Hashtable>）通过 `Synchronized` 属性（此属性围绕集合返回线程安全的包装器）提供一些线程安全性。 该包装器通过对每个添加或删除操作锁定整个集合进行工作。 因此，每个尝试访问集合的线程必须等待，直到轮到它获取锁定。 这不可缩放，并且可能导致大型集合的性能显著下降。 此外，这一设计并不能完全防止争用情况的出现。 有关详细信息，请参阅[泛型集合中的同步](https://blogs.msdn.microsoft.com/bclteam/2005/03/15/synchronization-in-generic-collections-brian-grunkemeyer/)。  
@@ -34,7 +34,7 @@ ms.locfileid: "33575526"
   
  下表列出了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空间中的集合类型。  
   
-|类型|描述|  
+|类型|说明|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|为实现 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 的所有类型提供限制和阻止功能。 有关详细信息，请参阅 [BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|键值对字典的线程安全实现。|  
@@ -45,7 +45,7 @@ ms.locfileid: "33575526"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[BlockingCollection 概述](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|描述 <xref:System.Collections.Concurrent.BlockingCollection%601> 类型提供的功能。|  
 |[如何：在 ConcurrentDictionary 中添加和移除项](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|描述如何从 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 添加和删除元素|  

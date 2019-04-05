@@ -1,27 +1,27 @@
 ---
-title: '&lt;serviceTimeouts&gt;'
+title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: a0f0725bffe0c3c83e412348dea97b16736ef3a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b67ea137e6c116d00a8a098b9c0df99430114dc5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743467"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267279"
 ---
-# <a name="ltservicetimeoutsgt"></a>&lt;serviceTimeouts&gt;
+# <a name="servicetimeouts"></a>\<serviceTimeouts>
 指定服务的超时。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
-\<serviceTimeouts >  
+\<behavior>  
+\<serviceTimeouts>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<serviceTimeouts transactionTimeout="TimeSpan" />  
+<serviceTimeouts transactionTimeout="TimeSpan" />
 ```  
   
 ## <a name="type"></a>类型  
@@ -34,7 +34,7 @@ ms.locfileid: "32743467"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`transactionTimeout`|一个 <xref:System.TimeSpan> 值，指定事务从客户端流动到服务器所必须经历的时间间隔。 默认值为"00: 00:00"。|  
+|`transactionTimeout`|一个 <xref:System.TimeSpan> 值，指定事务从客户端流动到服务器所必须经历的时间间隔。 默认值是"00: 00:00"。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -43,7 +43,7 @@ ms.locfileid: "32743467"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>

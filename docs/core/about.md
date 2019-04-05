@@ -2,14 +2,13 @@
 title: 关于 .NET Core
 description: 了解 .NET Core。
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197647"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675961"
 ---
 # <a name="about-net-core"></a>关于 .NET Core
 
@@ -17,10 +16,10 @@ ms.locfileid: "50197647"
 
 - **跨平台：** 可以在 Windows、macOS 和 Linux [操作系统](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)上运行。
 - **跨体系结构保持一致：** 在多个体系结构（包括 x64、x86 和 ARM）上以相同的行为运行代码。
-- **命令行工具：** 包括用于本地开发和持续集成方案中的易于使用的命令行工具。
+- **命令行工具：** 包括可用于本地开发和持续集成方案中的易于使用的命令行工具。
 - **部署灵活：** 可以包含在应用或已安装的并行用户或计算机范围中。 可搭配 [Docker 容器](docker/index.md)使用。
 - **兼容性：**.NET Core 通过 [.NET Standard](../standard/net-standard.md)与 .NET Framework、Xamarin 和 Mono 兼容。
-- **开放源：**.NET Core 是一个开放源平台，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
+- **开放源代码：**.NET Core 平台是开放源代码，使用 MIT 和 Apache 2 许可证。 .NET Core 是一个 [.NET Foundation](https://dotnetfoundation.org/) 项目。
 - **由 Microsoft 支持：**.NET Core 由 Microsoft 依据 [.NET Core 支持](https://www.microsoft.com/net/core/support/)提供支持。
 
 ## <a name="languages"></a>语言
@@ -35,7 +34,7 @@ ms.locfileid: "50197647"
 - 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
 - 实用程序类型，例如 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 和 <xref:System.IO.FileStream?displayProperty=nameWithType>。
 - 数据类型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 和 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/)。
-- 高性能类型，例如 <xref:System.Numerics.Vector?displayProperty=nameWithType> 和 [Pipelines](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/)。
+- 高性能类型，例如 <xref:System.Numerics.Vector?displayProperty=nameWithType> 和 [Pipelines](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/)。
 
 .NET Core 通过实现 [.NET Standard](../standard/net-standard.md) 规范提供 .NET Framework 和 Mono API 的兼容性。
 
@@ -96,7 +95,7 @@ Windows 和 Unix 实现大小相似。 Windows 具有较大的实现，因为 Co
 
 .NET Core 和 .NET Framework 的主要差异在于：
 
-- **应用模型** -- .NET Core 不支持所有 .NET Framework 应用模型。 具体而言，它不支持 ASP.NET Web 窗体和 MVC。 已宣布 [.NET Core 3 将支持 WPF 和 Windows 窗体](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/)。
+- **应用模型** -- .NET Core 不支持所有 .NET Framework 应用模型。 具体而言，它不支持 ASP.NET Web 窗体和 ASP.NET MVC，但支持 ASP.NET Core MVC。 已宣布 [.NET Core 3 将支持 WPF 和 Windows 窗体](https://devblogs.microsoft.com/dotnet/net-core-3-and-support-for-windows-desktop-applications/)。
 - **API** -- .NET Core 包含 .NET Framework 基类库的一个大型子集，但具有不同的组成要素（程序集名称不同；类型上公开的成员在关键用例中不同）。 这些差异需要在某些情况下更改 .NET Core 的端口源（请参阅 [microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport)）。 .NET Core 实施 [.NET Standard](../standard/net-standard.md) API 规范。
 - **子系统** -- .NET Core 实现 .NET Framework 中子系统的子级，目的是实现更简单的实现和编程模型。 例如，不支持代码访问安全性 (CAS)，但支持反射。
 - **平台** -- .NET Framework 支持 Windows 和 Windows Server，而 NET Core 还支持 macOS 和 Linux。

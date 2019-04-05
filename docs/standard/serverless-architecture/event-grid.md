@@ -4,16 +4,16 @@ description: Azure 事件网格是可靠事件交付和支付每个事件模型�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b2507da61cbea3b4bdc51c6eecfe4d784737e924
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369663"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212178"
 ---
 # <a name="event-grid"></a>事件网格
 
-[Azure 事件网格](/azure-event-grid/overview)为基于事件的应用程序提供无服务器基础结构。 可以从任何源发布到事件网格，并使用从任何平台的消息。 事件网格还提供来自 Azure 资源，以简化您的应用程序与集成的事件的内置支持。 例如，您可以订阅 blob 存储事件，以在文件上传时通知您的应用程序。 你的应用程序然后可以将发布供其他云或本地应用程序的自定义事件网格消息。 事件网格旨在可靠地处理很大的规模。 获取发布和订阅消息，而不必设置必要的基础结构的开销的优势。
+[Azure 事件网格](/azure/event-grid/overview)为基于事件的应用程序提供无服务器基础结构。 可以从任何源发布到事件网格，并使用从任何平台的消息。 事件网格还提供来自 Azure 资源，以简化您的应用程序与集成的事件的内置支持。 例如，您可以订阅 blob 存储事件，以在文件上传时通知您的应用程序。 你的应用程序然后可以将发布供其他云或本地应用程序的自定义事件网格消息。 事件网格旨在可靠地处理很大的规模。 获取发布和订阅消息，而不必设置必要的基础结构的开销的优势。
 
 ![事件网格徽标](./media/event-grid-logo.png)
 
@@ -123,8 +123,8 @@ Azure 提供了多个消息传送服务，包括[事件中心](https://docs.micr
 * [应用服务计划](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Application Insights 分析](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
-* [Azure： 将应用迁移到使用无服务器 Azure Functions 在云中](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Azure 事件网格](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Azure:将应用迁移到使用无服务器 Azure Functions 在云中](https://channel9.msdn.com/events/Connect/2017/E102)
+* [Azure 事件网格](https://docs.microsoft.com/azure/event-grid/overview)
 * [Azure 事件网格事件架构](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Azure 事件中心](https://docs.microsoft.com/azure/event-hubs)
 * [Azure Functions 文档](https://docs.microsoft.com/azure/azure-functions)
@@ -142,5 +142,5 @@ Azure 提供了多个消息传送服务，包括[事件中心](https://docs.micr
 * [使用 Azure Functions 代理](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
-[上一页](logic-apps.md)
-[下一页](durable-azure-functions.md)
+>[上一页](logic-apps.md)
+>[下一页](durable-azure-functions.md)

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-ms.openlocfilehash: 1922282ece4dd90c8f55c8dea20ef2866d8b357c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a469a08ebadd77d5abbfa95b270784c9ef534691
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181389"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734865"
 ---
 # <a name="type-characters-visual-basic"></a>键入字符 (Visual Basic)
 
@@ -142,10 +142,10 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="see-also"></a>请参阅
 
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
+- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)

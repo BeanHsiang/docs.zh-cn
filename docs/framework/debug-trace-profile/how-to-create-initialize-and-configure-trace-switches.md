@@ -1,5 +1,5 @@
 ---
-title: 如何：创建、初始化和配置跟踪开关
+title: 如何：创建、 初始化和配置跟踪开关
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739610"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：创建、初始化和配置跟踪开关
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：创建、 初始化和配置跟踪开关
 跟踪开关用于启用、禁用和筛选跟踪输出。  
   
 <a name="create"></a>   
@@ -75,11 +75,11 @@ ms.locfileid: "33392926"
   
 2.  如果项目不包含配置文件（app.config 或 Web.config），则从“项目”菜单中选择“添加新项”。  
   
-    -   **Visual Basic：** 在“添加新项”对话框中，选择“应用程序配置文件”。  
+    -   **Visual Basic：** 在中**添加新项**对话框框中，选择**应用程序配置文件**。  
   
          创建并打开应用程序配置文件。 这是一个根元素为 `<configuration>.` 的 XML 文档  
   
-    -   **Visual C#：** 在“添加新项”对话框中，选择“XML 文件”。 将此文件命名为 app.config。XML 编辑器中，在 XML 声明后，添加以下 XML：  
+    -   **Visual C#:** 在中**添加新项**对话框框中，选择**XML 文件**。 将此文件命名为 app.config。XML 编辑器中，在 XML 声明后，添加以下 XML：  
   
         ```xml  
         <configuration>  
@@ -125,8 +125,8 @@ ms.locfileid: "33392926"
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [跟踪和调试设置架构](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>请参阅
+- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [跟踪和调试设置架构](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

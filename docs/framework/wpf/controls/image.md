@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: 0e5fc4e97457858cfbf517726a6f2904a282727d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a57b4a656ca5119ac6717579f49950437588328
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554000"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357555"
 ---
 # <a name="image"></a>图像
-<xref:System.Windows.Controls.Image>元素用来显示中的位图图像[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
+<xref:System.Windows.Controls.Image>元素用于显示中的位图图像[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
- [帮助主题](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+ [帮助主题](image-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Image>  
@@ -27,6 +27,6 @@ ms.locfileid: "33554000"
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>请参阅  
- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [图像处理概述](../graphics-multimedia/imaging-overview.md)
+- [帮助主题](../graphics-multimedia/imaging-how-to-topics.md)

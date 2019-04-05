@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8e1886a3e33b533eb525f5b35480a8a7d326da0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1e2b4ec0183f010cfc9ad4fce21cf0f616b0ef3c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454587"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472455"
 ---
 # <a name="icorprofilerinfo2getappdomainstaticaddress-method"></a>ICorProfilerInfo2::GetAppDomainStaticAddress 方法
-获取指定的应用程序域范围内的指定的应用程序域的静态字段的地址。  
+获取在指定的应用程序域的范围内的指定的应用程序域静态字段的地址。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ RESULT GetAppDomainStaticAddress(
     [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `classId`  
  [in]包含请求的应用程序域静态字段的类的类 ID。  
   
@@ -45,29 +45,29 @@ RESULT GetAppDomainStaticAddress(
  [in]请求的应用程序域静态字段的元数据标记。  
   
  `appDomainId`  
- [in]为请求的静态字段的作用域的应用程序域的 ID。  
+ [in]请求的静态字段的作用域的应用程序域 ID。  
   
  `ppAddress`  
- [out]指向指定的应用程序域中的静态字段的地址的指针。  
+ [out]指向在指定的应用程序域中的静态字段的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- `GetAppDomainStaticAddress`方法可能会返回以下项之一：  
+ `GetAppDomainStaticAddress`方法可能会返回以下值之一：  
   
--   如果尚未分配为给定的静态字段指定的上下文中的地址 CORPROF_E_DATAINCOMPLETE HRESULT。  
+-   如果尚未分配给定的静态字段中指定的上下文的地址 CORPROF_E_DATAINCOMPLETE HRESULT。  
   
--   可能会在垃圾回收堆中的对象的地址。 这些地址可能会变得无效垃圾回收后，以便垃圾回收后，探查器不应假定它们有效。  
+-   可能在垃圾回收堆的对象的地址。 使垃圾回收后，探查器不应假定它们是有效，则这些地址可能会回收后无效。  
   
- 完成的类的类构造函数之前，`GetAppDomainStaticAddress`将返回 CORPROF_E_DATAINCOMPLETE 对于所有其静态字段，尽管可能已初始化的静态字段的一些和定位垃圾回收对象。  
+ 类的类构造函数完成之前，`GetAppDomainStaticAddress`将返回 CORPROF_E_DATAINCOMPLETE 对于所有其静态字段，尽管可能已初始化的一些静态字段和根垃圾回收对象。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

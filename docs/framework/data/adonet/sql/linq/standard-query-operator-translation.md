@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004427"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093926"
 ---
 # <a name="standard-query-operator-translation"></a>标准查询运算符转换
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 将标准查询运算符转换为 SQL 命令。 数据库的查询处理器决定了 SQL 转换的执行语义。  
   
- 标准查询运算符定义针对*序列*。 序列是*排序*和依赖于序列的每个元素的引用标识。 有关详细信息，请参阅[标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)。  
+ 标准查询运算符定义针对*序列*。 序列是*排序*和依赖于序列的每个元素的引用标识。 有关详细信息，请参阅[标准查询运算符概述 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)或[标准查询运算符概述 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
  SQL 主要处理*无序值集的*。 排序通常是显式声明的后续处理操作，应用于查询的最终结果而不是中间结果。 标识由值定义。 出于此原因，SQL 查询理解为处理多重集 (*袋*) 而不是*设置*。  
   
@@ -71,10 +71,10 @@ ORDER BY [t0].[CustomerID]
   
 |运算符|阐释|  
 |---------------|---------------|  
-|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 查询是对多重集执行的，而不是对序列执行的。 `ORDER BY` 必须是最后一个应用于结果的子句。 因此，不存在适用于这两个方法的通用转换。|  
+|<xref:System.Linq.Enumerable.TakeWhile%2A>， <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 查询是对多重集执行的，而不是对序列执行的。 `ORDER BY` 必须是最后一个应用于结果的子句。 因此，不存在适用于这两个方法的通用转换。|  
 |<xref:System.Linq.Enumerable.Reverse%2A>|此方法的转换对于有序集而言是可行的，但目前 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 未对它进行转换。|  
-|<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|这些方法的转换对于有序集而言是可行的，但目前 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 未对它们进行转换。|  
-|<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL 查询是对多重集执行的，而不是对可建立索引的序列执行的。|  
+|<xref:System.Linq.Enumerable.Last%2A>， <xref:System.Linq.Enumerable.LastOrDefault%2A>|这些方法的转换对于有序集而言是可行的，但目前 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 未对它们进行转换。|  
+|<xref:System.Linq.Enumerable.ElementAt%2A>， <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL 查询是对多重集执行的，而不是对可建立索引的序列执行的。|  
 |<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>（带默认参数的重载）|一般而言，无法为任意元组指定默认值。 在某些情况下，可以通过外部联接为元组指定 Null 值。|  
   
 ## <a name="expression-translation"></a>表达式转换  
@@ -112,7 +112,7 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持相等性和比较*平面*参数，而不是或者包含序列的自变量。 平自变量是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持相等性和比较*平面*参数，而不是或者包含序列的自变量。 平参数是一种能映射到 SQL 行的类型。 可以静态方式确定不包含序列的一个或多个实体类型的投影被视为平参数。  
   
  以下是平参数的一些示例：  
   
@@ -147,7 +147,7 @@ ORDER BY [t0].[CustomerID]
 ## <a name="inheritance-support"></a>层次结构支持  
   
 ### <a name="inheritance-mapping-restrictions"></a>继承映射限制  
- 有关详细信息，请参阅[如何： 映射继承层次结构](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)。  
+ 有关详细信息，请参阅[如何：映射继承层次结构](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md)。  
   
 ### <a name="inheritance-in-queries"></a>查询中的继承  
  仅支持在投影中使用 C# 强制转换。 在其他地方使用的强制转换不会进行转换且会被忽略。 除 SQL 函数名以外，SQL 确实仅执行公共语言运行库 (CLR) <xref:System.Convert> 的等效项。 也就是说，SQL 可以将一种类型的值更改为另一类型。 CLR 强制转换不存在等效项，这是因为不存在这样的概念：重新解释与另一类型的位相同的位。 正因如此，C# 强制转换只能在本地使用。 它无法以远程方式使用。  
@@ -225,10 +225,10 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## <a name="see-also"></a>请参阅  
- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [返回或跳过序列中的元素](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [连接两个序列](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- [返回两个序列之间的差集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [返回两个序列的交集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [返回两个序列的并集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+## <a name="see-also"></a>请参阅
+- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [返回或跳过序列中的元素](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
+- [连接两个序列](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
+- [返回两个序列之间的差集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
+- [返回两个序列的交集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
+- [返回两个序列的并集](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

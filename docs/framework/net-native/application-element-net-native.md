@@ -1,17 +1,17 @@
 ---
-title: '&lt;应用程序&gt;元素 (.NET Native)'
+title: <Application>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60145611981b53d4778e7c52c6138b6a9b58a592
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 366878fbfbfbe3e3951095c9ad82c1260638a0cb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394629"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270805"
 ---
-# <a name="ltapplicationgt-element-net-native"></a>&lt;应用程序&gt;元素 (.NET Native)
+# <a name="application-element-net-native"></a>\<应用程序 > 元素 (.NET Native)
 作为应用程序范围内的类型和元数据可以反应在运行时间的类型成员的容器而服务，并将运行时反射策略应用到一个应用的所有程序元素。  
   
  \<Directives> 元素  
@@ -85,8 +85,8 @@ ms.locfileid: "33394629"
   
 -   作为为反射、序列化和互操作设置应用程序范围的策略的元素。 `<Application>` 元素的特性定义应用程序范围的策略，它可能会遭到 `<Application>` 或 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 元素定义的子元素的改写。  
   
-## <a name="see-also"></a>请参阅  
- [\<库 > 元素](../../../docs/framework/net-native/library-element-net-native.md)  
- [\<指令 > 元素](../../../docs/framework/net-native/directives-element-net-native.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>请参阅
+- [\<库 > 元素](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<指令 > 元素](../../../docs/framework/net-native/directives-element-net-native.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

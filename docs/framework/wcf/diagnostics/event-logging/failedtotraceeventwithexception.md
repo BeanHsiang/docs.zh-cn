@@ -2,17 +2,17 @@
 title: FailedToTraceEventWithException
 ms.date: 03/30/2017
 ms.assetid: b605b2b8-acd6-4762-8269-b025758a2404
-ms.openlocfilehash: 59e6c6f6bb2fa5a545ada415683390cde7997a88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee3785fce40e18faaeb029de9da88d082e4f51d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525711"
 ---
 # <a name="failedtotraceeventwithexception"></a>FailedToTraceEventWithException
-ID：105  
+ID:105  
   
- 严重性：错误  
+ 严重性：Error  
   
  类别：跟踪  
   
@@ -21,6 +21,6 @@ ID：105
   
  此事件将列出原始事件字符串、异常、进程名及进程 ID。  
   
-## <a name="see-also"></a>请参阅  
- [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>请参阅
+- [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -16,16 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1060ca140db0304c8e5667f7fdf9624b3ac2b64a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44f343fa6d9f620145c707e5987ecaedf17dcba8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478981"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim 函数
 将指定的库中具有指定的名称和参数的函数调用。  
   
- 此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,9 +41,9 @@ HRESULT CallFunctionShim (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `szDllName`  
- [in]包含函数的库的名称。  
+ [in]包含该函数的库的名称。  
   
  `szFunctionName`  
  [in]函数的名称。  
@@ -54,19 +55,19 @@ HRESULT CallFunctionShim (
  [in]要传递给函数的第二个参数。  
   
  `szVersion`  
- [in]包含函数的库的版本。  
+ [in]包含该函数的库的版本。  
   
  `pvReserved`  
- [in]留待将来使用。 传递此参数中的零。  
+ [in]保留供将来使用。 此参数中传递零。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>请参阅
+- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

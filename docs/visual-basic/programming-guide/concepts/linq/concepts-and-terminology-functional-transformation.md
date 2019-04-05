@@ -2,12 +2,12 @@
 title: 概念和术语 （功能转换） (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: 67986e36333ac9a1aba7bec3c1b6c248b4faf55f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644415"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820797"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>概念和术语 （功能转换） (Visual Basic)
 本主题介绍纯函数转换的概念和术语。 与更加传统的命令性编程方式相比，用来转换数据的函数转换方法所生成的代码往往编程速度更快、含义更明确、更易于调试和维护。  
@@ -24,16 +24,16 @@ ms.locfileid: "33644415"
 > [!IMPORTANT]
 >  在本教程的其余部分，术语“纯函数”用于概括表示编程方法，而不是具体的语言功能。  
 >   
->  请注意，必须为在 Visual Basic 中的函数实现纯函数。  
+>  请注意，必须在 Visual Basic 中的函数作为实现纯函数。  
 >   
 >  此外，不要将纯函数与 C++ 中的纯虚方法混淆。 后者表示包含类是抽象的，并且不提供方法体。  
   
 ### <a name="functional-programming"></a>函数编程  
  函数编程是一种编程方法，直接支持纯函数转换。  
   
- 学术团体对诸如 ML、Scheme、Haskell 和 F# 等通用函数编程语言一直抱有浓厚的兴趣。 虽然它一直可以用来在 Visual Basic 中编写纯函数转换，这样做的困难使之不具它对大多数程序员来说不错的选择。 有更高版本的 Visual Basic 中，但是，新语言构造如 lambda 表达式和类型推理降低了函数编程提高工作效率，而且更容易。  
+ 学术团体对诸如 ML、Scheme、Haskell 和 F# 等通用函数编程语言一直抱有浓厚的兴趣。 虽然始终是可以在 Visual Basic 中编写纯函数转换，这样做的困难使之不具它对大多数程序员来说一个不错的选择。 对于更高版本的 Visual Basic，但是，新语言构造像这样的 lambda 表达式和类型推理功能性编程更容易、 提高工作效率。  
   
- 有关函数编程的详细信息，请参阅[函数编程与(Visual Basic) 的命令性编程](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)。  
+ 有关函数编程的详细信息，请参阅[函数编程与命令式编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)。  
   
 #### <a name="domain-specific-fp-languages"></a>特定于域的 FP 语言  
  虽然通用函数编程语言并未得到广泛采用，但特定于域的函数编程语言却得到了较为成功的应用。 例如，级联样式表 (CSS) 用于确定许多网页的外观，可扩展样式表转换语言 (XSLT) 样式表广泛应用于 XML 数据操作中。 有关 XSLT 的详细信息，请参阅 [XSLT 转换](../../../../standard/data/xml/xslt-transformations.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "33644415"
  高阶（第一类）函数  
  可作为编程对象的一种函数。 例如，高阶函数可以传递到其他函数或从其他函数返回。 在 Visual Basic 中，委托和 lambda 表达式是支持高阶函数的语言功能。 若要编写高阶函数，需要声明一个或多个自变量来接受委托，而在调用该函数时通常使用 lambda 表达式。 许多标准查询运算符都属于高阶函数。  
   
- 有关详细信息，请参阅[标准查询运算符概述 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
+ 有关详细信息，请参阅[标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
  lambda 表达式  
  实质上是一个匿名的内联函数，可用在任何需要委托类型的地方。 这是对 lambda 表达式的一个简化的定义，但足以满足本教程的需要。  
@@ -62,15 +62,16 @@ ms.locfileid: "33644415"
  类型推理（隐式确定类型）  
  在没有显式类型声明的情况下编译器确定变量类型的能力。  
   
- 有关详细信息，请参阅[本地类型推理](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
+ 有关详细信息，请参阅[本地类型推断](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
  延迟执行和迟缓计算  
  延迟表达式的计算，直到实际需要它的求解值。 集合中支持延迟执行。  
   
- 有关详细信息，请参阅[基本查询操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)和[延迟执行和 LINQ to XML (Visual Basic 中) 中的迟缓计算](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。  
+ 有关详细信息，请参阅[基本查询操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)并[延迟执行和迟缓计算 LINQ to XML (Visual Basic 中) 中](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)。  
   
  本节各处的代码示例中将使用这些语言功能。  
   
-## <a name="see-also"></a>请参阅  
- [介绍纯函数转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [函数编程与命令性编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>请参阅
+
+- [纯功能转换 (Visual Basic) 简介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [函数编程与命令式编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

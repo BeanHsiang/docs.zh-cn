@@ -1,28 +1,28 @@
 ---
-title: '&lt;超时&gt;'
+title: <timeOuts>
 ms.date: 03/30/2017
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-ms.openlocfilehash: 1f0638f85177d2acb6f61e3246a1a5ee9a4e2f5c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8a8a352380fe6eedb41ead089405e7b79fad29fe
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752996"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272769"
 ---
-# <a name="lttimeoutsgt"></a>&lt;超时&gt;
+# <a name="timeouts"></a>\<timeOuts>
 表示一个配置元素，该元素指定允许服务主机打开或关闭的时间间隔。  
   
  \<system.ServiceModel>  
-\<客户端 >  
-\<终结点 >  
-\<主机 >  
-\<超时 >  
+\<client>  
+\<endpoint>  
+\<host>  
+\<timeOuts>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<timeOuts closeTimeout="TimeSpan"  
-   openTimeout="TimeSpan" >  
+<timeOuts closeTimeout="TimeSpan"
+          openTimeout="TimeSpan" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -42,9 +42,9 @@ ms.locfileid: "32752996"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<主机 >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|一个指定服务主机设置的配置元素。|  
+|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|一个指定服务主机设置的配置元素。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.HostElement>  
- <xref:System.ServiceModel.ServiceHost>  
- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.HostElement>
+- <xref:System.ServiceModel.ServiceHost>
+- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)

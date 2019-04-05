@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 31820775d4f7fb981599e806aa5e27655039e6ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213087"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720769"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>如何：向 Windows 窗体添加控件
-大多数窗体旨在通过将控件添加到窗体的面，用于定义用户界面 (UI) 中。 一个*控制*是用于显示信息或接受用户输入的窗体上的组件。 有关控件的详细信息，请参阅[Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)。  
+大多数窗体旨在通过将控件添加到窗体的面，用于定义用户界面 (UI) 中。 一个*控制*是用于显示信息或接受用户输入的窗体上的组件。 有关控件的详细信息，请参阅[Windows 窗体控件](index.md)。  
   
 > [!NOTE]
 >  显示的对话框和菜单命令可能会与“帮助”中的描述不同，具体取决于你现用的设置或版本。 若要更改设置，请在 **“工具”** 菜单上选择 **“导入和导出设置”** 。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
 ### <a name="to-draw-a-control-on-a-form"></a>若要绘制的控件在窗体上  
   
-1.  打开窗体。 有关详细信息，请参阅[如何： 在设计器中显示 Windows 窗体](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+1.  打开窗体。 有关详细信息，请参阅[如何：在设计器中显示 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
   
 2.  在中**工具箱**，单击你想要添加到窗体的控件。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "44213087"
   
 ### <a name="to-drag-a-control-to-a-form"></a>若要将控件拖动到窗体  
   
-1.  打开窗体。 有关详细信息，请参阅[如何： 在设计器中显示 Windows 窗体](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5)。  
+1.  打开窗体。 有关详细信息，请参阅[如何：在设计器中显示 Windows 窗体](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
   
 2.  在中**工具箱**，单击所需的控件并将其拖动到窗体。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "44213087"
     > [!IMPORTANT]
     >  可能会通过引用恶意公开您的本地计算机通过网络安全风险`UserControl`。 这只能在恶意的用户创建一个具有破坏性的自定义控件，跟您错误地将其添加到你的项目的情况下一个问题。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
- [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [如何：重设 Windows 窗体上控件的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- [如何：设置 Windows 窗体控件显示的文本](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- [Windows 窗体控件](index.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
+- [如何：调整 Windows 窗体上的控件的大小](how-to-resize-controls-on-windows-forms.md)
+- [如何：设置显示的文本的 Windows 窗体控件](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

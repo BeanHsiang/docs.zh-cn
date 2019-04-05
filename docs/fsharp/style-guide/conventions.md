@@ -1,6 +1,6 @@
 ---
-title: 'F # 编码约定'
-description: '编写 F # 代码时，了解一般指导原则和惯例。'
+title: F# 编码约定
+description: 编写 F# 代码时，了解一般指导原则和惯例。
 ms.date: 05/14/2018
 ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,13 +9,13 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "49087383"
 ---
-# <a name="f-coding-conventions"></a>F # 编码约定
+# <a name="f-coding-conventions"></a>F# 编码约定
 
-以下约定表述从体验使用大型 F # 代码库。 [优秀的 F # 代码的五个原则](index.md#five-principles-of-good-f-code)是每个建议的基础。 与相关[F # 组件设计准则](component-design-guidelines.md)，但适用于任何 F # 代码，而不仅仅是组件，例如库。
+以下约定表述从体验使用大型 F# 代码库。 [优秀的 F# 代码的五个原则](index.md#five-principles-of-good-f-code)是每个建议的基础。 与相关[F# 组件设计准则](component-design-guidelines.md)，但适用于任何 F# 代码，而不仅仅是组件，例如库。
 
 ## <a name="organizing-code"></a>组织代码
 
-F # 功能来组织代码的两种主要方式： 模块和命名空间。 这些相似，但存在以下差异：
+F# 功能来组织代码的两种主要方式： 模块和命名空间。 这些相似，但存在以下差异：
 
 * 命名空间被编译为.NET 命名空间。 静态类作为编译模块。
 * 命名空间始终是最高级别。 模块可以是顶级和嵌套在其他模块。
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-使用顶级模块可能不会显示不同时仅从 F # 中，但 C# 的使用者，调用方可能会惊讶于无需限定`MyClass`与`MyCode`模块。
+使用顶级模块可能不会显示不同时仅从 F# 中，但 C# 的使用者，调用方可能会惊讶于无需限定`MyClass`与`MyCode`模块。
 
 ```fsharp
 // Bad!
@@ -48,7 +48,7 @@ type MyClass() =
 
 ### <a name="carefully-apply-autoopen"></a>请仔细应用 `[<AutoOpen>]`
 
-`[<AutoOpen>]`构造可以污染，调用方提供的功能范围和内容来自的答案是"神奇"。 这通常不是一件好事。 此规则的例外是 F # 核心库本身 （尽管这一事实也是有点有争议的）。
+`[<AutoOpen>]`构造可以污染，调用方提供的功能范围和内容来自的答案是"神奇"。 这通常不是一件好事。 此规则的例外是 F# 核心库本身 （尽管这一事实也是有点有争议的）。
 
 但是，如果你有一个公共 API，你想要组织单独从该公共 API 帮助程序功能是提供了便利。
 
@@ -90,13 +90,13 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>排序`open`语句拓扑结构上
 
-在 F # 中，声明的顺序非常重要，包括与`open`语句。 这是与 C# 中，其中的效果`using`和`using static`无关的文件中这些语句的顺序。
+在 F# 中，声明的顺序非常重要，包括与`open`语句。 这是与 C# 中，其中的效果`using`和`using static`无关的文件中这些语句的顺序。
 
-在 F # 中，打开到作用域的元素可以隐藏其他人已存在。 这意味着重新排序`open`语句无法更改代码的含义。 因此，任何任意排序的所有`open`语句 （例如，根据） 通常不建议，避免生成您所料的不同行为。
+在 F# 中，打开到作用域的元素可以隐藏其他人已存在。 这意味着重新排序`open`语句无法更改代码的含义。 因此，任何任意排序的所有`open`语句 （例如，根据） 通常不建议，避免生成您所料的不同行为。
 
 相反，我们建议，您对其进行排序[拓扑结构上](https://en.wikipedia.org/wiki/Topological_sorting); 即，排序你`open`语句中的顺序_层_系统的定义。 也可以考虑不同的拓扑图层内的排序字母数字。
 
-例如，下面是 F # 编译器服务公共 API 文件的拓扑排序：
+例如，下面是 F# 编译器服务公共 API 文件的拓扑排序：
 
 ```fsharp
 namespace Microsoft.FSharp.Compiler.SourceCodeServices
@@ -190,7 +190,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>表示错误情况和你的域中的内部类型中的非法状态
 
-与[可区分联合](../language-reference/discriminated-unions.md)，F # 使你能够在类型系统中表示发生故障的程序状态。 例如：
+与[可区分联合](../language-reference/discriminated-unions.md)，F# 使你能够在类型系统中表示发生故障的程序状态。 例如：
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -219,11 +219,11 @@ let handleWithdrawal amount =
 
 ### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>当错误不能表示的类型时使用异常
 
-并非所有的错误可表示问题域中。 这些类型的故障*异常*在本质上，因此能够引发和 F # 中捕获异常。
+并非所有的错误可表示问题域中。 这些类型的故障*异常*在本质上，因此能够引发和 F# 中捕获异常。
 
-首先，建议先阅读[异常设计准则](../../standard/design-guidelines/exceptions.md)。 它们还适用于 F #。
+首先，建议先阅读[异常设计准则](../../standard/design-guidelines/exceptions.md)。 它们还适用于 F#。
 
-可在 F # 中用于引发异常的目的的主要构造应考虑按以下顺序的首选项：
+可在 F# 中用于引发异常的目的的主要构造应考虑按以下顺序的首选项：
 
 | 函数 | 语法 | 目标 |
 |----------|--------|---------|
@@ -240,7 +240,7 @@ let handleWithdrawal amount =
 
 ### <a name="using-exception-handling-syntax"></a>使用异常处理语法
 
-F # 支持通过异常模式`try...with`语法：
+F# 支持通过异常模式`try...with`语法：
 
 ```fsharp
 try
@@ -317,15 +317,15 @@ let tryReadAllTextIfPresent (path : string) =
 
 而不是作为万法归宗正常运行，此函数现在正确地处理这种情况时文件找不到，并将该含义分配给返回。 此返回值可以将映射到错误这种情况下，不放弃任何上下文信息或强制调用方不得不面临可能无法在该点在代码中相关的用例时。
 
-类型，如`Result<'Success, 'Error>`适用于基本操作，其中它们不嵌套和 F # 可选类型非常适合表示当内容无法返回时，*一些*或*nothing*. 它们也不能取代有关例外情况，但是，和参数不应尝试使用，以替换异常。 相反，它们应当应用明智地到地址的异常和错误管理策略的特定方面中目标的方式。
+类型，如`Result<'Success, 'Error>`适用于基本操作，其中它们不嵌套和 F# 可选类型非常适合表示当内容无法返回时，*一些*或*nothing*. 它们也不能取代有关例外情况，但是，和参数不应尝试使用，以替换异常。 相反，它们应当应用明智地到地址的异常和错误管理策略的特定方面中目标的方式。
 
 ## <a name="partial-application-and-point-free-programming"></a>部分应用程序和无点的编程
 
-F # 无点的方式，支持部分应用程序，因此，不同的方法来计划。 这会很有用的代码重用在模块或实现的操作，但它通常不是要公开的内容。 一般情况下，无点的编程有益本身并不是，并可以添加一个巨大的认知障碍不沉浸在样式中的人员。
+F# 无点的方式，支持部分应用程序，因此，不同的方法来计划。 这会很有用的代码重用在模块或实现的操作，但它通常不是要公开的内容。 一般情况下，无点的编程有益本身并不是，并可以添加一个巨大的认知障碍不沉浸在样式中的人员。
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>不要使用部分应用程序和科中的公共 Api
 
-有一些例外，在公共 Api 中的部分应用程序的用法容易混淆的使用者。 通常情况下， `let`-F # 代码中的绑定的值为**值**，而非**函数值**。 值和函数值，将混合在一起可能会导致保存少量的几行代码来交换一小段认知开销，尤其是与运算符结合使用如`>>`编写函数。
+有一些例外，在公共 Api 中的部分应用程序的用法容易混淆的使用者。 通常情况下， `let`-F# 代码中的绑定的值为**值**，而非**函数值**。 值和函数值，将混合在一起可能会导致保存少量的几行代码来交换一小段认知开销，尤其是与运算符结合使用如`>>`编写函数。
 
 ### <a name="consider-the-tooling-implications-for-point-free-programming"></a>请考虑无点的编程的工具含义
 
@@ -418,7 +418,7 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
 
 ## <a name="access-control"></a>访问控制
 
-F # 的多个选项[访问控制](../language-reference/access-control.md)继承从所用的.NET 运行时中可用。 这些不是只可用于类型-您也可以使用它们对于函数。
+F# 的多个选项[访问控制](../language-reference/access-control.md)继承从所用的.NET 运行时中可用。 这些不是只可用于类型-您也可以使用它们对于函数。
 
 * 更喜欢非`public`类型和成员，直到需要它们是公开使用。 这还可以尽量降低到哪些使用者几。
 * 尽量保证所有帮助器功能`private`。
@@ -426,7 +426,7 @@ F # 的多个选项[访问控制](../language-reference/access-control.md)继承
 
 ## <a name="type-inference-and-generics"></a>类型推断和泛型
 
-类型推断可以将保存您键入了大量的样板。 在 F # 编译器自动泛化可帮助您编写更为通用的代码几乎没有任何额外的工作量。 但是，这些功能不是普遍很好的。
+类型推断可以将保存您键入了大量的样板。 在 F# 编译器自动泛化可帮助您编写更为通用的代码几乎没有任何额外的工作量。 但是，这些功能不是普遍很好的。
 
 * 考虑标签与公共 Api 中的显式类型的参数名称并不依赖此类型推断。
 
@@ -440,17 +440,17 @@ F # 的多个选项[访问控制](../language-reference/access-control.md)继承
 
     这是常规的方法进行某些操作在.NET 中，因此建议使用 pascal 命名法而不是 snake_case 或驼峰式大小写。
 
-最后，自动泛化并不总是不熟悉 F # 或大型基本代码的人员的一大福音。 在使用都是泛型方法的组件则认知开销。 此外，如果自动对不同的输入类型 (let 单独如果他们要这种情况下使用) 不使用通用的函数，就是在该点在时间没有实际的好处。 应始终考虑是否你正在编写的代码将实际上是受益泛型。
+最后，自动泛化并不总是不熟悉 F# 或大型基本代码的人员的一大福音。 在使用都是泛型方法的组件则认知开销。 此外，如果自动对不同的输入类型 (let 单独如果他们要这种情况下使用) 不使用通用的函数，就是在该点在时间没有实际的好处。 应始终考虑是否你正在编写的代码将实际上是受益泛型。
 
 ## <a name="performance"></a>性能
 
-F # 的值为默认情况下，你可以避免某些 bug （特别是那些涉及并发和并行度） 的类不可变。 但是，在某些情况下，为了实现最佳 （或甚至合理） 高效的执行时间或内存分配的工作范围可能最实现使用就地变化的状态。 这可在使用 F # 与选择的基础`mutable`关键字。
+F# 的值为默认情况下，你可以避免某些 bug （特别是那些涉及并发和并行度） 的类不可变。 但是，在某些情况下，为了实现最佳 （或甚至合理） 高效的执行时间或内存分配的工作范围可能最实现使用就地变化的状态。 这可在使用 F# 与选择的基础`mutable`关键字。
 
-但是，使用的`mutable`在 F # 中可能会觉得促使功能纯度。 这是没问题，如果调整到纯度上的预期[引用透明度](https://en.wikipedia.org/wiki/Referential_transparency)。 引用透明度-不纯度-时编写 F # 函数中的最终目标。 这可以通过性能关键代码的变化基于实现编写功能的接口。
+但是，使用的`mutable`在 F# 中可能会觉得促使功能纯度。 这是没问题，如果调整到纯度上的预期[引用透明度](https://en.wikipedia.org/wiki/Referential_transparency)。 引用透明度-不纯度-时编写 F# 函数中的最终目标。 这可以通过性能关键代码的变化基于实现编写功能的接口。
 
 ### <a name="wrap-mutable-code-in-immutable-interfaces"></a>可变代码包装在不可变接口
 
-作为一个目标的引用透明度，与编写代码，不会公开性能关键功能可变 underbelly 至关重要。 例如，下面的代码实现`Array.contains`F # 核心库中的函数：
+作为一个目标的引用透明度，与编写代码，不会公开性能关键功能可变 underbelly 至关重要。 例如，下面的代码实现`Array.contains`F# 核心库中的函数：
 
 ```fsharp
 [<CompiledName("Contains")>]
@@ -546,7 +546,7 @@ let kernels =
 
 ## <a name="object-programming"></a>对象编程
 
-F # 具有对对象和面向对象的 (OO) 概念的完整支持。 尽管许多 OO 概念是功能强大且有用，但并非所有这些都使用的理想之选。 以下列表提供类别在高级别 OO 功能的指导。
+F# 具有对对象和面向对象的 (OO) 概念的完整支持。 尽管许多 OO 概念是功能强大且有用，但并非所有这些都使用的理想之选。 以下列表提供类别在高级别 OO 功能的指导。
 
 **请考虑在许多情况下使用这些功能：**
 
@@ -578,7 +578,7 @@ F # 具有对对象和面向对象的 (OO) 概念的完整支持。 尽管许多
 
 ### <a name="prefer-composition-over-inheritance"></a>组合为首继承
 
-[通过继承复合](https://en.wikipedia.org/wiki/Composition_over_inheritance)是良好的 F # 代码可以遵循一个长期惯例。 基本原则是，不应公开的基类，强制调用方继承该基类可以实现功能。
+[通过继承复合](https://en.wikipedia.org/wiki/Composition_over_inheritance)是良好的 F# 代码可以遵循一个长期惯例。 基本原则是，不应公开的基类，强制调用方继承该基类可以实现功能。
 
 ### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>使用对象表达式实现接口，如果您不需要一个类
 

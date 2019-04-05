@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac40927ac9469e4a2fb74fb550287130b9bb9f83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402465"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481555"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange 方法
-获取此证书链的堆栈段的地址范围。  
+获取此链堆栈段的地址范围。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,21 +36,21 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pStart`  
- [out]指向的指针`CORDB_ADDRESS`是堆栈段的起始地址的值。  
+ [out]一个指向`CORDB_ADDRESS`堆栈段的起始地址的值。  
   
  `pEnd`  
- [out]指向的指针`CORDB_ADDRESS`是堆栈段的结束地址的值。  
+ [out]一个指向`CORDB_ADDRESS`是堆栈段的结束地址的值。  
   
 ## <a name="remarks"></a>备注  
- 数值范围是仅对比较的堆栈帧位置有意义。 不能进行任何假设在堆栈上实际存储的内容。  
+ 数值范围是仅对的堆栈帧位置比较有意义。 不能进行任何假设实际存储在堆栈上的内容。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

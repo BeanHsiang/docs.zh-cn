@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-ms.openlocfilehash: 78d98dcf098966de435254926af21db76b7bccfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7518493cca62018ccda9659e977333184888ea7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585731"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968681"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>如何：在 Visual Basic 中向文本文件追加内容
 通过指定将 `append` 参数设置为 `True`，可使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法向文本文件追加内容。  
@@ -22,7 +22,7 @@ ms.locfileid: "33585731"
   
      此示例将字符串 `"This is a test string."` 写入名为 `Testfile.txt` 的文件中。  
   
-     [!code-vb[VbFileIOWrite#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-append-to-text-files_1.vb)]  
+     [!code-vb[VbFileIOWrite#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#6)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  以下情况可能会导致异常：  
@@ -41,7 +41,7 @@ ms.locfileid: "33585731"
   
 -   该用户缺少查看该路径所必需的权限 (<xref:System.Security.SecurityException>)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- [写入文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>请参阅
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- [写入文件](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

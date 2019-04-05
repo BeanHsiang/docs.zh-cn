@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: ea371dc968c8d8bf1569d17531cf7f6faff1d315
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 6d1134367cbbe494f5ab882d88cc083110ffd5c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004200"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362352"
 ---
 # <a name="-out-c-compiler-options"></a>-out（C# 编译器选项）
 -out 选项指定输出文件的名称。  
@@ -45,7 +45,7 @@ ms.locfileid: "46004200"
   
  在编译时生成的任何模块都将成为与编译时生成的程序集关联的文件。 使用 [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) 查看程序集清单，了解关联文件。  
   
- 为使 exe 成为友元程序集的目标，-out 编译器选项是必需的。 有关详细信息，请参阅[友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)。  
+ 为使 exe 成为友元程序集的目标，-out 编译器选项是必需的。 有关详细信息，请参阅[友元程序集](../../../standard/assembly/friend-assemblies.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项  
   
@@ -64,8 +64,8 @@ ms.locfileid: "46004200"
 csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
-- [友元程序集](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [友元程序集](../../../standard/assembly/friend-assemblies.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

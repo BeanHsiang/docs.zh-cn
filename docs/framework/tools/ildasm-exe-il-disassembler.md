@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b69544b2d8041a3aa4cb566867b6c14b29f0f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409105"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488508"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe（IL 反汇编程序）
 
 IL 反汇编程序是 IL 汇编程序 (Ilasm.exe) 的配套工具。 Ildasm.exe 可利用包含中间语言 (IL) 代码的可移植可执行 (PE) 文件，并创建适合输入到 Ilasm.exe 的文本文件。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
 
 在命令提示符处，键入以下内容：
 
@@ -32,11 +32,11 @@ IL 反汇编程序是 IL 汇编程序 (Ilasm.exe) 的配套工具。 Ildasm.exe 
 ildasm [options] [PEfilename] [options]
 ```
 
-#### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
 下列选项可用于 .exe、.dll、.obj、.lib 和 .winmd 文件。
 
-| 选项 | 描述 |
+| 选项 | 说明 |
 | ------ | ----------- |
 |**/out=** `filename`|创建具有指定 `filename` 的输出文件，而不是在图形用户界面中显示结果。|
 |/rtf|以 RTF 格式生成输出。 与 /text 选项一起使用时无效。|
@@ -46,7 +46,7 @@ ildasm [options] [PEfilename] [options]
 
 下列附加选项可用于 .exe、.dll 和 .winmd 文件。
 
-| 选项 | 描述 |
+| 选项 | 说明 |
 | ------ | ----------- |
 |/bytes|以十六进制格式显示作为指令注释的实际字节。|
 |/caverbal|以文字形式生成自定义特性 Blob。 默认为二进制形式。|
@@ -63,7 +63,7 @@ ildasm [options] [PEfilename] [options]
 
 下列选项仅对用于文件或控制台输出的 .exe、.dll 和 .winmd 文件有效。
 
-| 选项 | 描述 |
+| 选项 | 说明 |
 | ------ | ----------- |
 |**/all**|指定 /header、/bytes、/stats、/classlist 和 /tokens 选项的组合。|
 |/classlist|包含模块中定义的类的列表。|
@@ -78,13 +78,13 @@ ildasm [options] [PEfilename] [options]
 
 下列选项仅对用于文件或控制台输出的 .exe、.dll、.obj、.lib 和 .winmd 文件有效。
 
-| 选项 | 描述 |
+| 选项 | 说明 |
 | ------ | ----------- |
 |/metadata[=`specifier`]|显示元数据，其中 `specifier` 为：<br /><br /> MDHEADER - 显示元数据头信息和大小。<br /><br /> HEX - 以十六进制形式及文字形式显示信息。<br /><br /> CSV - 显示记录计数和堆大小。<br /><br /> UNREX - 显示无法解析的外部对象。<br /><br /> SCHEMA - 显示元数据头和架构信息。<br /><br /> RAW - 显示原始元数据表。<br /><br /> HEAPS - 显示原始堆。<br /><br /> VALIDATE - 验证元数据的一致性。<br /><br /> 可多次指定 /metadata，并为 `specifier` 指定不同的值。|
 
 下列选项仅对用于文件或控制台输出的 .lib 文件有效。
 
-| 选项 | 描述 |
+| 选项 | 说明 |
 | ------ | ----------- |
 |/objectfile=`filename`|显示指定库中单个对象文件的元数据。|
 
@@ -186,7 +186,7 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 ## <a name="see-also"></a>请参阅
 
-[工具](../../../docs/framework/tools/index.md)  
-[Ilasm.exe（IL 汇编程序）](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
-[托管执行过程](../../../docs/standard/managed-execution-process.md)  
-[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [工具](../../../docs/framework/tools/index.md)
+- [Ilasm.exe（IL 汇编程序）](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [托管执行过程](../../../docs/standard/managed-execution-process.md)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

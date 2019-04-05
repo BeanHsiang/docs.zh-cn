@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: a04d531433273328c2d8eb0c5ef614f08c33952a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a059726ea410e88121a0b755295c3c492c11962a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530375"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705514"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>如何：在 ToolStrip 控件中创建切换按钮
-当用户单击切换按钮时，它显示为凹陷并保留凹陷外观，直到用户单击按钮再次。  
+当用户单击切换按钮时，它显示凹下外观，并将保留凹下外观，直到用户单击按钮再次。  
   
 ### <a name="to-create-a-toggling-toolstripbutton"></a>若要创建切换 ToolStripButton  
   
--   使用如下面的代码示例的代码。 此代码假定你的窗体包含<xref:System.Windows.Forms.ToolStrip>控件，并且其<xref:System.Windows.Forms.ToolStrip.Items%2A>集合包含<xref:System.Windows.Forms.ToolStripButton>调用`toolStripButton1`。 它还假定你具有事件处理程序调用`toolStripButton1_CheckedChanged`。  
+-   使用如下面的代码示例的代码。 此代码假定你的窗体包含<xref:System.Windows.Forms.ToolStrip>控件，并且其<xref:System.Windows.Forms.ToolStrip.Items%2A>集合包含<xref:System.Windows.Forms.ToolStripButton>调用`toolStripButton1`。 它还假定您有事件处理程序调用`toolStripButton1_CheckedChanged`。  
   
     ```vb  
     toolStripButton1.CheckOnClick = True  
@@ -35,6 +35,6 @@ ms.locfileid: "33530375"
     EventHandler(toolStripButton1_CheckedChanged);  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.ToolStripButton>  
- [ToolStrip 控件概述](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.ToolStripButton>
+- [ToolStrip 控件概述](toolstrip-control-overview-windows-forms.md)

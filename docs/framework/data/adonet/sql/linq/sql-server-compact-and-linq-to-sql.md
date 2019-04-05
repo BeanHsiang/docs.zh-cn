@@ -2,15 +2,15 @@
 title: SQL Server Compact 与 LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: 1229fcb285038875950776a924870c9be6bef13b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d7c0b34c431947a3e9f3f6b87e5d66e800c58f44
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529983"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092925"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact 与 LINQ to SQL
-SQL Server Compact 是与 Visual Studio 一起安装的默认数据库。 有关详细信息，请参阅[PAVE 通过使用 SQL Server Compact (Visual Studio)](https://msdn.microsoft.com/library/13320dd1-94e5-4077-bf76-8df253695ccc)。  
+SQL Server Compact 是与 Visual Studio 一起安装的默认数据库。 有关详细信息，请参阅[使用 SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))。  
   
  本主题概述了使用情况、 配置、 功能集和作用域中的主要差异[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支持。  
   
@@ -42,5 +42,5 @@ SQL Server Compact 是与 Visual Studio 一起安装的默认数据库。 有关
   
 -   SQL Server Compact 不支持部分信任。  
   
-## <a name="see-also"></a>请参阅  
- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>请参阅
+- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

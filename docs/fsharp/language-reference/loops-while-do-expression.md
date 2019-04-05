@@ -1,13 +1,13 @@
 ---
-title: 循环：while...do 表达式 (F#)
+title: 循环：while...do 表达式
 description: 请参阅如何...执行表达式用于在指定的测试条件为 true 时执行迭代操作 （循环）。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45664704"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613006"
 ---
 # <a name="loops-whiledo-expression"></a>循环：while...do 表达式
 
@@ -35,8 +35,8 @@ while test-expression do
 Found a 10!
 ```
 
->[!NOTE]
-可以使用`while...do`在序列表达式和其他计算表达式，这种情况下的自定义的版本`while...do`使用表达式。 有关详细信息，请参阅[序列](sequences.md)，[异步工作流](asynchronous-workflows.md)，并[计算表达式](computation-expressions.md)。
+> [!NOTE]
+> 可以使用`while...do`在序列表达式和其他计算表达式，这种情况下的自定义的版本`while...do`使用表达式。 有关详细信息，请参阅[序列](sequences.md)，[异步工作流](asynchronous-workflows.md)，并[计算表达式](computation-expressions.md)。
 
 ## <a name="see-also"></a>请参阅
 

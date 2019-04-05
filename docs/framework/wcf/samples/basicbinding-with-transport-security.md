@@ -2,12 +2,12 @@
 title: 使用传输安全的 BasicBinding
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: d3d1aa9b4ee35e4ef96f1494ee79b3e60bba50a4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5f3e2305a4ae8da13a5241bef9c438a060234132
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195705"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826140"
 ---
 # <a name="basicbinding-with-transport-security"></a>使用传输安全的 BasicBinding
 本示例演示对基本绑定使用 SSL 传输安全。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)实现计算器服务。  
@@ -42,8 +42,8 @@ ms.locfileid: "50195705"
    </services>  
   <bindings>  
     <basicHttpBinding>  
-      <!-- Configure basicHttpBinding with Transport security -- >  
-      <!-- mode and clientCredentialType set to None.-->  
+      <!-- Configure basicHttpBinding with Transport security -->  
+      <!-- mode and clientCredentialType set to None. -->  
       <binding name="Binding1">  
         <security mode="Transport">  
           <transport clientCredentialType="None"/>  
@@ -89,4 +89,3 @@ Press <ENTER> to terminate client.
   
 5.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>请参阅

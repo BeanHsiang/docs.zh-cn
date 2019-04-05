@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191059"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826897"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用强名称为程序集签名
 可通过许多方法为程序集签署强名称：  
@@ -43,9 +43,12 @@ ms.locfileid: "50191059"
   
 4.  在“选择强名称密钥文件”框中，选择“\<浏览…>”，然后导航到该密钥文件。 若要创建新的密钥文件，请选择“\<新建…>”，然后在“创建强名称密钥”对话框中输入其名称。  
   
+> [!NOTE]
+>  为了[延迟为程序集签名](../../../docs/framework/app-domains/delay-sign-assembly.md)，请选择公钥文件。  
+  
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>使用程序集链接器创建程序集并为程序集签署强名称  
   
--   在 [Visual Studio 命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)处，键入以下命令：  
+-   在 [Visual Studio 开发人员命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)处，键入以下命令：  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -97,10 +100,10 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
     ```  
   
-## <a name="see-also"></a>请参阅  
-- [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
-- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)  
-- [延迟签发程序集](../../../docs/framework/app-domains/delay-sign-assembly.md)  
-- [管理程序集签名和清单签名](/visualstudio/ide/managing-assembly-and-manifest-signing)  
+## <a name="see-also"></a>请参阅
+- [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [延迟签发程序集](../../../docs/framework/app-domains/delay-sign-assembly.md)
+- [管理程序集签名和清单签名](/visualstudio/ide/managing-assembly-and-manifest-signing)
 - [“项目设计器”->“签名”页](/visualstudio/ide/reference/signing-page-project-designer)

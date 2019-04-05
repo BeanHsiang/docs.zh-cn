@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 0e77b26bdc7eaa038c69a6fb706ee066aa223a2e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2587a3b4e38aed507688cc86f0e179b3acbb1672
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211940"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358318"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF 自定义控件的 UI 自动化
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] 提供了一个通用接口，自动化客户端可使用该接口来检查或操作各种平台和框架的用户界面。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 使质量保证（测试）代码和具有辅助功能的应用程序（如屏幕阅读器）能够检查用户界面元素，以及能够模拟与其他代码中的用户元素进行的用户交互。 有关跨所有平台的 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 的信息，请参阅“辅助功能”。  
@@ -54,8 +54,8 @@ ms.locfileid: "44211940"
 ### <a name="override-getpattern"></a>重写 GetPattern  
  自动化对等简化了服务器端 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 提供程序的一部分实现，但自定义控件自动化对等仍必须处理模式接口。 非 WPF 提供程序，如对等方支持控件模式中的接口的实现，从而<xref:System.Windows.Automation.Provider?displayProperty=nameWithType>命名空间，如<xref:System.Windows.Automation.Provider.IInvokeProvider>。 控件模式接口可以由对等本身或其他对象实现。 对等节点的实现<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>返回支持指定的模式的对象。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 代码调用<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>方法，并指定<xref:System.Windows.Automation.Peers.PatternInterface>枚举值。 重写<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>应返回实现了指定的模式的对象。 如果您的控件不具有一种模式的自定义实现，则可以调用基类型实现<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>要检索其实现或返回 null，如果模式不支持此控件类型。 例如，自定义的 NumericUpDown 控件可以被设置为范围内的值以便其[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]对等实现<xref:System.Windows.Automation.Provider.IRangeValueProvider>接口。 下面的示例演示如何对等节点的<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>重写方法以响应<xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType>值。  
   
- [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
- [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
+ [!code-csharp[CustomControlNumericUpDown#GetPattern](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
+ [!code-vb[CustomControlNumericUpDown#GetPattern](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
   
  一个<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>方法还可以指定子元素作为模式提供程序。 下面的代码演示如何<xref:System.Windows.Controls.ItemsControl>传输滚动模式处理传递给其内部的对等方<xref:System.Windows.Controls.ScrollViewer>控件。  
   
@@ -106,8 +106,8 @@ End Class
 ### <a name="override-core-methods"></a>重写“Core”方法  
  自动化代码通过调用对等类的公共方法来获取控件的相关信息。 在控件实现不同于自动化对等基类提供的实现的情况下，若要提供控件的相关信息，请重写名称以“Core”结尾的每个方法。 至少，您的控件必须实现<xref:System.Windows.Automation.Peers.AutomationPeer.GetClassNameCore%2A>和<xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A>方法，如下面的示例中所示。  
   
- [!code-csharp[CustomControlNumericUpDown#CoreOverrides](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#coreoverrides)]
- [!code-vb[CustomControlNumericUpDown#CoreOverrides](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#coreoverrides)]  
+ [!code-csharp[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#coreoverrides)]
+ [!code-vb[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#coreoverrides)]  
   
  实现<xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A>通过返回描述您的控件<xref:System.Windows.Automation.ControlType>值。 尽管您可以返回<xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType>，如果它准确地描述您的控件应返回更具体的控件类型之一。 返回值<xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType>为要实现的提供程序的额外工作量[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]，和[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]客户端产品不能以应对预期的控件结构、 键盘交互和可能的控件模式。  
   
@@ -151,10 +151,10 @@ End Class
 ### <a name="raise-events"></a>引发事件  
  自动化客户端可订阅自动化事件。 自定义控件必须报告更改，以通过调用控件状态<xref:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent%2A>方法。 同样，属性值发生更改时调用<xref:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent%2A>方法。 以下代码演示了如何在控件代码内获取对等对象，并调用一个方法来引发事件。 作为一种优化，该代码会确定是否有适用于此事件类型的任何侦听器。 仅当有侦听器时才引发事件，可避免不必要的开销，有助于控件保持响应状态。  
   
- [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
- [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
+ [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
+ [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
-## <a name="see-also"></a>请参阅  
- [UI 自动化概述](../../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [带有主题和 UI 自动化支持示例的 NumericUpDown 自定义控件](https://go.microsoft.com/fwlink/?LinkID=160025)  
- [服务器端 UI 自动化提供程序实现](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a>请参阅
+- [UI 自动化概述](../../ui-automation/ui-automation-overview.md)
+- [带有主题和 UI 自动化支持示例的 NumericUpDown 自定义控件](https://go.microsoft.com/fwlink/?LinkID=160025)
+- [服务器端 UI 自动化提供程序实现](../../ui-automation/server-side-ui-automation-provider-implementation.md)

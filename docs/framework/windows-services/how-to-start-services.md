@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: b3f04deb11a23957198864c444b4872aef45b2e4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494351"
 ---
 # <a name="how-to-start-services"></a>如何：启动服务
 安装服务后，必须启动它。 开始调用服务类上的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法。 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法通常定义服务将执行的有用工作。 服务启动后，在手动暂停或停止它前，该服务将保持活动状态。  
@@ -48,7 +48,7 @@ ms.locfileid: "47176742"
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>从“服务器资源管理器”手动启动服务  
   
-1.  在“服务器资源管理器”中，添加所需的服务器（如果尚未列出）。 有关详细信息，请参阅如何：访问和初始化服务器资源管理器-数据库资源管理器。  
+1.  在“服务器资源管理器”中，添加所需的服务器（如果尚未列出）。 有关详细信息，请参阅“如何：访问和初始化服务器资源管理器/数据库资源管理器。  
   
 2.  展开“服务”节点，然后找到要启动的服务。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47176742"
   
 2.  调用 <xref:System.ServiceProcess.ServiceController.Start%2A> 方法以启动该服务。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>请参阅
+- [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

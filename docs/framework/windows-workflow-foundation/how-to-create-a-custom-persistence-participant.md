@@ -2,15 +2,15 @@
 title: 如何：创建自定义持久性参与者
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: 8daf4924db48c79486e85660357e3b28a2583836
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fca8db41a415965f10990069682c561f680bf386
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855837"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725072"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>如何：创建自定义持久性参与者
-下列过程包含持久性参与者的创建步骤。 请参阅[参与持久性](https://go.microsoft.com/fwlink/?LinkID=177735)示例和[存储扩展性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)持久性参与者的示例实现主题。  
+下列过程包含持久性参与者的创建步骤。 请参阅[参与持久性](https://go.microsoft.com/fwlink/?LinkID=177735)示例和[存储扩展性](store-extensibility.md)持久性参与者的示例实现主题。  
   
 1.  创建一个派生自 <xref:System.Activities.Persistence.PersistenceParticipant> 或 <xref:System.Activities.Persistence.PersistenceIOParticipant> 类的类。 以外，PersistenceIOParticipant 类提供与 PersistenceParticipant 类除了能够参与 I/O 操作相同的扩展点。 请完成以下一个或多个步骤。  
   
@@ -28,7 +28,8 @@ ms.locfileid: "43855837"
     protected virtual IDictionary<XName,Object> MapValues (IDictionary<XName,Object> readWriteValues,IDictionary<XName,Object> writeOnlyValues)  
     ```  
   
-     <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> 方法提供 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 不实现的功能，因为它允许由另一个持久性参与者提供另一个值的依赖项，该参与者尚未经过 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 的处理。  
+     
+  <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> 方法提供 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 不实现的功能，因为它允许由另一个持久性参与者提供另一个值的依赖项，该参与者尚未经过 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 的处理。  
   
 4.  实现**PublishValues**方法。 **PublishValues**方法接收一个包含从持久性存储区中加载的所有值的字典。  
   

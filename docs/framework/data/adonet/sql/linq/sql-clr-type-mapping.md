@@ -2,12 +2,12 @@
 title: SQL-CLR 类型映射
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617338"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 类型映射
 在 LINQ to SQL 中，关系数据库的数据模型映射到用您所选择的编程语言表示的对象模型。 当应用程序运行时，LINQ to SQL 会将对象模型中的语言集成查询转换为 SQL，然后将它们发送到数据库进行执行。 当数据库返回结果时，LINQ to SQL 会将它们转换回您可以用您自己的编程语言处理的对象。  
@@ -38,7 +38,7 @@ ms.locfileid: "48837331"
 ## <a name="default-type-mapping"></a>默认类型映射  
  您可以使用对象关系设计器（O/R 设计器）或 SQLMetal 命令行工具自动创建对象模型或外部映射文件。 这些工具的默认类型映射定义选择何种 CLR 类型来映射到 SQL Server 数据库内部的列。 有关使用这些工具的详细信息，请参阅[创建对象模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)。  
   
- 您也可以使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 方法来创建基于对象模型或外部映射文件中的映射信息的 SQL Server 数据库。 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 方法的默认类型映射定义创建何种 SQL Server 列来映射到对象模型中的 CLR 类型。 有关详细信息，请参阅[如何： 动态创建数据库](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)。  
+ 您也可以使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 方法来创建基于对象模型或外部映射文件中的映射信息的 SQL Server 数据库。 <xref:System.Data.Linq.DataContext.CreateDatabase%2A> 方法的默认类型映射定义创建何种 SQL Server 列来映射到对象模型中的 CLR 类型。 有关详细信息，请参阅[如何：动态创建数据库](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)。  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>类型映射运行时行为矩阵  
@@ -256,8 +256,8 @@ ms.locfileid: "48837331"
   
  LINQ to SQL 不支持这些杂项类型的任何其他类型映射。  有关详细信息，请参阅[类型映射运行时行为矩阵](#BehaviorMatrix)。  
   
-## <a name="see-also"></a>请参阅  
- [基于特性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [SQL-CLR 类型不匹配](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+## <a name="see-also"></a>请参阅
+- [基于特性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [数据类型和函数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [SQL-CLR 类型不匹配](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

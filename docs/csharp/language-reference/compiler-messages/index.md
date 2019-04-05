@@ -1,17 +1,11 @@
 ---
-title: C# 编译器错误
+title: 'C# 编译器错误'
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, compiler errors
-- Visual C# compiler, errors
-- errors [C#]
+  - 'C# language, compiler errors'
+  - 'Visual C# compiler, errors'
+  - 'errors [C#]'
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
-ms.openlocfilehash: 2edd47682223dd94fc8dd7448465613236e67e27
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706393"
 ---
 # <a name="c-compiler-errors"></a>C# 编译器错误
 
@@ -31,8 +25,8 @@ ms.locfileid: "46706393"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
-- [很抱歉，我们没有关于此 C# 错误的具体信息](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)  
-- [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)  
-- [/warn（C# 编译器选项）](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [很抱歉，我们没有关于此 C# 错误的具体信息](../../../csharp/misc/sorry-we-don-t-have-specifics-on-this-csharp-error.md)
+- [“项目设计器”->“生成”页 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
+- [/warn（C# 编译器选项）](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)
 - [/nowarn（C# 编译器选项）](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)

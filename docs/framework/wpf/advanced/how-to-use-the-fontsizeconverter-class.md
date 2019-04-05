@@ -5,24 +5,24 @@ helpviewer_keywords:
 - FontSizeConverter objects [WPF]
 - typography [WPF], FontSizeConverter objects
 ms.assetid: 3b0592bd-7223-4860-a108-a5d72f3a9178
-ms.openlocfilehash: 625beb06b526e2753abc6f982cf5834bfae1f202
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21050ae69ad834b56c70f40d85138714af334dab
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545121"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364094"
 ---
 # <a name="how-to-use-the-fontsizeconverter-class"></a>如何：使用 FontSizeConverter 类
 ## <a name="example"></a>示例  
- 此示例演示如何创建的实例<xref:System.Windows.FontSizeConverter>并使用它来将字体大小更改。  
+ 此示例演示如何创建的实例<xref:System.Windows.FontSizeConverter>并使用它来更改字体大小。  
   
- 该示例定义的自定义的方法调用`changeSize`，用于将转换的内容<xref:System.Windows.Controls.ListBoxItem>，如在单独定义[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]文件、 实例<xref:System.Double>，然后再转换<xref:System.String>。 此方法将传递<xref:System.Windows.Controls.ListBoxItem>到<xref:System.Windows.FontSizeConverter>对象，后者将转换<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.ListBoxItem>到实例<xref:System.Double>。 此值然后传递的值作为<xref:System.Windows.Controls.TextBlock.FontSize%2A>属性<xref:System.Windows.Controls.TextBlock>元素。  
+ 该示例定义一个名为的自定义方法`changeSize`的内容的转换<xref:System.Windows.Controls.ListBoxItem>在单独的定义，[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]的实例的文件， <xref:System.Double>，然后再转换<xref:System.String>。 此方法将传递<xref:System.Windows.Controls.ListBoxItem>到<xref:System.Windows.FontSizeConverter>对象，它将转换<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.ListBoxItem>的实例<xref:System.Double>。 然后将此值传递的值为<xref:System.Windows.Controls.TextBlock.FontSize%2A>属性的<xref:System.Windows.Controls.TextBlock>元素。  
   
- 此示例还定义称为的第二个自定义方法`changeFamily`。 此方法将转换<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.ListBoxItem>到<xref:System.String>，然后将传递到该值<xref:System.Windows.Controls.TextBlock.FontFamily%2A>属性<xref:System.Windows.Controls.TextBlock>元素。  
+ 此示例还定义调用的第二个自定义方法`changeFamily`。 此方法将转换<xref:System.Windows.Controls.ContentControl.Content%2A>的<xref:System.Windows.Controls.ListBoxItem>到<xref:System.String>，然后将传递到该值<xref:System.Windows.Controls.TextBlock.FontFamily%2A>属性<xref:System.Windows.Controls.TextBlock>元素。  
   
  此示例不运行。  
   
- [!code-csharp[FontSizeConverter#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSizeConverter/CSharp/Window1.xaml.cs#1)]  
+ [!code-csharp[FontSizeConverter#1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSizeConverter/CSharp/Window1.xaml.cs#1)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.FontSizeConverter>
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.FontSizeConverter>

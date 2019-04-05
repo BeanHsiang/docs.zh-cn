@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2bf8848851dc99c60b8c151ed34cd536fa9a8fed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f946179fc31adebc8e8fc67c394e0b55a876f49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641325"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType 枚举
 提供一些值，用于指示本机代码中链接的类型。  
@@ -47,18 +47,18 @@ typedef enum
 |`nltNone`|指示未指定任何关键字。|  
 |`nltAnsi`|指示指定的 ANSI 关键字。|  
 |`nltUnicode`|指示指定的 Unicode 关键字|  
-|`nltAuto`|指示指定了 auto 关键字。|  
+|`nltAuto`|指示指定 auto 关键字。|  
 |`nltOle`|指示指定的 OLE 关键字。|  
 |`nltMaxValue`|未使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

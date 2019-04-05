@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d5284cf6072aa5c1c11cc83355a3e9fa5c96837
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 040c7dea7f751accb801f8fda190e9387c7aede1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415917"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466162"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>ICorDebugManagedCallback::LogSwitch 方法
-通知调试器公共语言运行时 (CLR) 托管线程，调用方法<xref:System.Diagnostics.Switch>类来创建、 修改或删除调试/跟踪开关。  
+通知调试器公共语言运行时 (CLR) 托管线程已调用的一个方法<xref:System.Diagnostics.Switch>类来创建、 修改或删除调试/跟踪开关。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,33 +39,33 @@ HRESULT LogSwitch (
     [in] WCHAR               *pParentName);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `PAppDomain`  
- [in]指向一个表示包含创建、 修改或删除调试/跟踪开关的托管的线程的应用程序域的 ICorDebugAppDomain 对象的指针。  
+ [in]指向一个 ICorDebugAppDomain 对象，表示包含创建、 修改或删除调试/跟踪开关的托管的线程的应用程序域的指针。  
   
  `pThread`  
  [in]指向表示托管的线程的 ICorDebugThread 对象的指针。  
   
  `lLevel`  
- [in]一个值，指示已写入到事件日志的描述性消息的严重性级别。  
+ [in]一个值，指示已写入事件日志的描述性消息的严重性级别。  
   
  `ulReason`  
- [in]值为[LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)枚举，指示该操作执行对调试/跟踪开关。  
+ [in]值为[LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md)上调试/跟踪开关执行枚举，指示该操作。  
   
  `pLogSwitchName`  
  [in]指向调试/跟踪开关的名称的指针。  
   
  `pParentName`  
- [in]指向的父级的调试/跟踪开关的名称的指针。  
+ [in]指向调试/跟踪开关的父级的名称的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

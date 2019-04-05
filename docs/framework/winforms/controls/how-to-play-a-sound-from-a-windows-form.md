@@ -11,12 +11,12 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 853d0f78b4f6dba2dc84109270f79f4b010c27b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d8c723fc995e8b9987681e3db343c43d3bc2682
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533515"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714705"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>如何：从 Windows 窗体播放声音
 本示例在运行时播放给定路径中的声音。  
@@ -42,7 +42,7 @@ private void playSimpleSound()
   
 -   即，使用有效的文件名替换文件名 `"c:\Windows\Media\chimes.wav"`。  
   
--   (C#)对引用<xref:System.Media?displayProperty=nameWithType>命名空间。  
+-   (C#) 的引用<xref:System.Media?displayProperty=nameWithType>命名空间。  
   
 ## <a name="robust-programming"></a>可靠编程  
  文件操作应包含在相应的结构化异常处理块内。  
@@ -59,12 +59,12 @@ private void playSimpleSound()
   
 -   路径无效（<xref:System.IO.DirectoryNotFoundException> 类）。  
   
--   该路径是仅为冒号":"(<xref:System.NotSupportedException>类)。  
+-   路径是仅为冒号":"(<xref:System.NotSupportedException>类)。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  不要根据文件的名称来判断文件的内容。 例如，文件 `Form1.vb` 可能不是 Visual Basic 源文件。 在应用程序中使用输入的数据之前，需验证所有的输入内容。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Media.SoundPlayer>  
- [如何：在 Windows 窗体内异步加载声音](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- 
+## <a name="see-also"></a>请参阅
+- <xref:System.Media.SoundPlayer>
+- [如何：加载声音以异步方式在 Windows 窗体](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+

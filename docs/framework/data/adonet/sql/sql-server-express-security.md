@@ -2,12 +2,12 @@
 title: SQL Server Express 安全性
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 736c450d944efe7e6a69e16e00e1c96f0a868697
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 73f94d25e90197ade5e27ab6d9ff13602a5c854f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485581"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664245"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 安全性
 Microsoft SQL Server Express Edition (SQL Server Express) 基于 Microsoft SQL Server，支持数据库引擎的大多数功能。 它如此设计旨在默认情况下关闭不重要的功能和网络连接。 这可减少恶意用户可以利用的攻击面。  
@@ -31,13 +31,11 @@ Microsoft SQL Server Express Edition (SQL Server Express) 基于 Microsoft SQL S
   
 |||  
 |-|-|  
-|[SQL Server 联机丛书](https://msdn.microsoft.com/library/bb543165.aspx)|包含 SQL Server Express 的文档。|  
-|[连接到 SQL Server Express](https://msdn.microsoft.com/library/ms165679.aspx) SQL Server 联机丛书中|说明如何在网络上使用 SQL Server Express Edition。|  
-|[Microsoft SQL Server 2005 Express Edition 联机丛书](https://msdn.microsoft.com/library/ms165706.aspx)|SQL Server 2005 Express Edition 的完整文档。|  
-|[非管理员的用户实例](https://msdn.microsoft.com/library/ms143684.aspx)SQL Server 联机丛书中|说明如何创建和部署用户实例。|  
+|[Microsoft SQL Server 2005 Express Edition 联机丛书](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition 的完整文档。|  
+|[非管理员的用户实例](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))SQL Server 联机丛书中|说明如何创建和部署用户实例。|  
 |[SQL Server Express 用户实例](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|说明 ADO.NET 应用程序中的用户实例功能。 提供有关如何启用用户实例、使用 <xref:System.Data.SqlClient.SqlConnection> 连接到用户实例、用户实例生存期和用户实例方案的信息。|  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [SQL Server Express 用户实例](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server Express 用户实例](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

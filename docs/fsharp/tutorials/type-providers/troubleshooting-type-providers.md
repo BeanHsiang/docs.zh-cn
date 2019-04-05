@@ -1,13 +1,13 @@
 ---
 title: 类型提供程序疑难解答
-description: '发现问题的最有可能要在 F # 中使用类型提供程序时遇到的潜在的解决方案。'
+description: 发现潜在的解决方案，最有可能使用时遇到的问题类型中的提供程序的F#。
 ms.date: 05/16/2016
-ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6c675720e0b7c306a2916c94d8096d2f09c0daca
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48873211"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610328"
 ---
 # <a name="troubleshooting-type-providers"></a>类型提供程序疑难解答
 

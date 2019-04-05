@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb1fc266c8451953c8b6a9c686f4a1c1951966e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ffcd389f9b9e2e113fc45d2961a92790f4c57ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405393"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478045"
 ---
 # <a name="embedresource-method"></a>EmbedResource 方法
 声明嵌入的资源。 此方法不会实际嵌入资源。  
@@ -39,29 +39,29 @@ HRESULT EmbedResource(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `AssemblyID`  
  程序集的 ID。  
   
  `FileToken`  
- 包含资源的文件的文件标记或程序集 ID。  
+ 文件文件，其中包含该资源的令牌或程序集的 ID。  
   
  `pszResourceName`  
  资源的名称。  
   
  `dwOffset`  
- 来自 RVA 的资源的偏移量。  
+ RVA 从资源的偏移量。  
   
  `dwFlags`  
- 可访问性标志，如`mrPublic`和`mrPrivate`。 这些标志可能传递给[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
+ 可访问性标志，如`mrPublic`和`mrPrivate`。 这些标志可能会传递到[DefineExportedType 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回，则为 S_OK。  
+ 如果该方法成功，返回，则为 S_OK。  
   
 ## <a name="requirements"></a>要求  
  需要 alink.h。  
   
-## <a name="see-also"></a>请参阅  
- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>请参阅
+- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

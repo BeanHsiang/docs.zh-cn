@@ -2,15 +2,15 @@
 title: 演练：SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733436"
 ---
 # <a name="walkthrough-sql-generation"></a>演练：SQL 生成
-本主题说明了如何中进行 SQL 生成[示例提供程序](https://go.microsoft.com/fwlink/?LinkId=180616)。 下面的 Entity SQL 查询使用随示例提供程序提供的模型：  
+本主题说明了如何中进行 SQL 生成[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)。 下面的 Entity SQL 查询使用随示例提供程序提供的模型：  
   
 ```  
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId  
@@ -136,11 +136,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- 对于 Join3，IsParentAJoin 返回 false，并需要启动一个新的 SqlSelectStatement (SelectStatement1)，将其推送到堆栈上。 按照处理前面的联接的方式继续处理，将一个新范围推送到堆栈上，并处理子级。 左侧子级是一个 Extent (Extent3)，右侧子级是一个还需要启动新的 SqlSelectStatement (SelectStatement2) 的联接 (Join2)。 Join2 上的子级也是 Extent，并聚合成 SelectStatement2。  
+ 对于 Join3，IsParentAJoin 返回 false，并需要启动一个新的 SqlSelectStatement (SelectStatement1)，将其推送到堆栈上。 按照处理前面的联接的方式继续处理，将一个新范围推送到堆栈上，并处理子级。 左侧的子级是一个 Extent (Extent3)，右侧子级是还需要启动一个新的 SqlSelectStatement 的联接 (Join2):SelectStatement2. Join2 上的子级也是 Extent，并聚合成 SelectStatement2。  
   
  下图显示了刚好在访问 Join2 之后但在完成其后续处理 (ProcessJoinInputResult) 之前的那一刻访问者的状态：  
   
- ![关系图](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/7510346f-8b09-4c99-b411-40af239c3c4d.gif "7510346f-8b09-4c99-b411-40af239c3c4d")  
   
  在上图中，SelectStatement2 显示为可自由浮动，原因是它已从堆栈中弹出，但尚未由父级进行后续处理。 需要将它添加到父级的 FROM 部分，但它没有 SELECT 子句，并不是完整的 SQL 语句。 因此，此时将由 AddDefaultColumns 方法将默认列（由 SelectStatement2 输入生成的所有列）添加到选择列表中。 AddDefaultColumns 循环访问 FromExtents 中的每个符号，并为每个符号添加范围内的所有列。 对于简单符号，它将查看符号类型来检索要添加的所有符号属性。 它还使用列名称填充 AllColumnNames 字典。 将已完成的 SelectStatement2 追加到 SelectStatement1 的 FROM 子句。  
   
@@ -192,12 +192,12 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成的第二阶段：生成字符串命令  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成的第二个阶段：生成字符串命令  
  第二阶段生成符号的实际名称，我们只关注表示名为“OrderID”的列的符号，因为在本例中需要解决冲突。 SqlSelectStatement 中突出显示了这些符号。 请注意，图中使用的后缀仅强调这些符号是不同的实例，而不表示任何新的名称，因为在此阶段还未指派它们的最终名称，这些最终名称很可能与原始名称不同。  
   
  查找到的需要重命名的第一个符号是 <symbol_OrderID>。 为它指派的新名称为“OrderID1”，标记 1 表示为“OrderID”使用的最后一个后缀，该符号标记为不需要重命名。 接下来，找到第一个 <symbol_OrderID_2>。 将它重命名为使用下一个可用的后缀“OrderID2”，同样将其标记为不需要重命名，以便在下一次使用它时不需要再进行重命名。 对于 <symbol_OrderID_3> 也执行相同的操作。  
   
  在第二阶段结束时，将生成最后的 SQL 语句。  
   
-## <a name="see-also"></a>请参阅  
- [示例提供程序中的 SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>请参阅
+- [示例提供程序中的 SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

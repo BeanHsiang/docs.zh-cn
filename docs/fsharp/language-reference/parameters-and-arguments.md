@@ -1,13 +1,13 @@
 ---
-title: 参数和自变量 (F#)
-description: '了解有关 F # 语言支持对定义形参并将参数传递给函数、 方法和属性。'
+title: 形参和实参
+description: 了解如何F#对定义形参并将参数传递给函数、 方法和属性的语言支持。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744452"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352278"
 ---
 # <a name="parameters-and-arguments"></a>形参和实参
 
@@ -105,11 +105,11 @@ let angle (Polar(_, theta)) = theta
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-有关详细信息，请参阅[构造函数 （F #）](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)。
+有关详细信息，请参阅[构造函数 (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)。
 
 ## <a name="optional-parameters"></a>可选参数
 
-可以通过使用参数名称前面的问号指定一种方法的可选参数。 可选参数被解释为 F # 选项类型，因此您可以将这些查询，查询选项类型，通过常规方式`match`与表达式`Some`和`None`。 仅在成员上，通过使用创建的函数上不允许使用可选参数`let`绑定。
+可以通过使用参数名称前面的问号指定一种方法的可选参数。 可选参数将被解释为F#选项类型，因此您可以将这些查询，查询选项类型，通过常规方式`match`具有表达式`Some`并`None`。 仅在成员上，通过使用创建的函数上不允许使用可选参数`let`绑定。
 
 您可以现有可选将值传递给方法的参数名称，如`?arg=None`或`?arg=Some(3)`或`?arg=arg`。 构建一种方法将可选参数传递给另一种方法时，这很有用。
 
@@ -135,12 +135,22 @@ Baud Rate: 4800 Duplex: Half Parity: false
 ```fsharp
 open System
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
         printfn "%s" message
 ```
 
-作为参数的给定值`DefaultParameterValue`必须匹配的类型的参数，即不允许以下内容：
+此外可以作为默认参数值指定一个新的对象。 例如，`Foo`成员可以有一个可选`CancellationToken`作为输入改为：
+
+```fsharp
+open System.Threading
+open System.Runtime.InteropServices
+type C =
+    static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
+        printfn "%A" ct
+```
+
+作为参数的给定值`DefaultParameterValue`必须与参数的类型匹配。 例如，以下不是允许：
 
 ```fsharp
 type C =
@@ -151,7 +161,7 @@ type C =
 
 ## <a name="passing-by-reference"></a>按引用传递
 
-按引用传递的 F # 值涉及[byref](byrefs.md)，哪些是托管的指针类型。 对于要使用的类型是，如下所示的指南：
+传递F#按引用值涉及[byref](byrefs.md)，这是托管的指针类型。 对于要使用的类型是，如下所示的指南：
 
 * 使用`inref<'T>`如果只需要读取指针。
 * 使用`outref<'T>`如果只需编写的指针。
@@ -186,11 +196,11 @@ example3 &y // Now 'y' is 3
 
 有时有必要定义采用任意数量的异构类型的参数的函数。 它不会实际创建所有可能的重载的方法来应对可能使用的所有类型。 .NET 实现为此类方法的参数数组功能通过提供支持。 可以有任意数量的参数提供的签名中使用参数数组的方法。 参数被放入数组中。 数组元素的类型确定可以传递给函数的参数类型。 如果定义数组，该参数数组`System.Object`与元素类型，然后客户端代码可以通过任何类型的值。
 
-在 F # 中，只能在方法中定义参数数组。 它们不能独立函数或模块中定义的函数中使用。
+在F#，参数数组只能在方法中定义。 它们不能独立函数或模块中定义的函数中使用。
 
 使用定义的参数数组`ParamArray`属性。 `ParamArray`属性只能应用到的最后一个参数。
 
-以下代码演示了这两个调用 F # 具有采用参数数组的方法中使用参数数组和类型的定义的.NET 方法。
+以下代码演示了这两个调用采用一个参数数组和的中的类型定义的.NET 方法F#具有使用参数数组的方法。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 

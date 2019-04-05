@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: c6a8b3b7355d315b83f859e7016018b56ade5484
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196338"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371666"
 ---
 # <a name="attached-events-overview"></a>附加事件概述
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 定义了一个语言组件和称为附加事件的事件类型。 通过附加事件的概念，你能够向任意元素（而不是实际定义或继承事件的元素）添加特定事件的处理程序。 在这种情况下，对象既不会引发事件，目标处理实例也不会定义或“拥有”事件。  
@@ -26,7 +26,7 @@ ms.locfileid: "47196338"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 本主题假定你已阅读[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)和 [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
+ 本主题假定你已阅读[路由事件概述](routed-events-overview.md)和 [XAML 概述 (WPF)](xaml-overview-wpf.md)。  
   
 <a name="Syntax"></a>   
 ## <a name="attached-event-syntax"></a>附加事件语法  
@@ -36,7 +36,7 @@ ms.locfileid: "47196338"
   
  例如，下面是 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 语法，用于附加自定义 `NeedsCleaning` 附加事件的处理程序：  
   
- [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  请注意 `aqua:` 前缀；该前缀在本例中是必需的，因为附加事件是来自自定义映射 xmlns 的自定义事件。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47196338"
   
  一般情况下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加事件与 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 路由事件并没有太大的区别。 不同之处在于如何确定事件的源，以及如何通过类将事件作为成员进行公开（这还将影响 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 处理程序语法）。  
   
- 但是，正如前文所述，现有的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加事件并不是专门用于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中进行处理。 更多情况下，该事件用于在复合时，使复合元素能够向父元素报告状态，在这种情况下，事件通常用代码引发，同时依赖于相关父类中的类处理。 例如内的项<xref:System.Windows.Controls.Primitives.Selector>应引发附加<xref:System.Windows.Controls.Primitives.Selector.Selected>由处理事件，然后是类<xref:System.Windows.Controls.Primitives.Selector>类，然后可能通过转换<xref:System.Windows.Controls.Primitives.Selector>为一个不同的路由事件的类<xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>. 有关路由事件和类处理的详细信息，请参阅[将路由事件标记为“已处理”和“类处理”](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)。  
+ 但是，正如前文所述，现有的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加事件并不是专门用于在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中进行处理。 更多情况下，该事件用于在复合时，使复合元素能够向父元素报告状态，在这种情况下，事件通常用代码引发，同时依赖于相关父类中的类处理。 例如内的项<xref:System.Windows.Controls.Primitives.Selector>应引发附加<xref:System.Windows.Controls.Primitives.Selector.Selected>由处理事件，然后是类<xref:System.Windows.Controls.Primitives.Selector>类，然后可能通过转换<xref:System.Windows.Controls.Primitives.Selector>为一个不同的路由事件的类<xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>. 有关路由事件和类处理的详细信息，请参阅[将路由事件标记为“已处理”和“类处理”](marking-routed-events-as-handled-and-class-handling.md)。  
   
 <a name="Custom"></a>   
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>将自己的附加事件定义为路由事件  
@@ -80,10 +80,10 @@ ms.locfileid: "47196338"
   
  例如，以下代码通过将附加事件声明为路由事件的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加事件策略，在所有者类 `Aquarium` 中定义 `NeedsCleaning` 附加事件。  
   
- [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
- [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
+ [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
+ [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- 请注意，该方法使用建立的附加的事件标识符字段， <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>，实际上用于注册非附加路由的事件的相同的方法。 附加事件和路由事件都已注册到集中式内部存储。 此事件存储实现能够考虑到[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)中介绍的“事件即界面”概念。  
+ 请注意，该方法使用建立的附加的事件标识符字段， <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>，实际上用于注册非附加路由的事件的相同的方法。 附加事件和路由事件都已注册到集中式内部存储。 此事件存储实现能够考虑到[路由事件概述](routed-events-overview.md)中介绍的“事件即界面”概念。  
   
 <a name="Raising"></a>   
 ## <a name="raising-a-wpf-attached-event"></a>引发 WPF 附加事件  
@@ -91,7 +91,7 @@ ms.locfileid: "47196338"
   
  但是，如果要定义自定义的附加的事件基于[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型的基础上附加事件<xref:System.Windows.RoutedEvent>，可以使用<xref:System.Windows.UIElement.RaiseEvent%2A>若要从任何引发附加事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>。 引发路由的事件 （不管附加） 要求在元素树中作为事件源中; 一个特定元素声明该源将报告为<xref:System.Windows.UIElement.RaiseEvent%2A>调用方。 服务负责确定将哪个元素报告为元素树中的事件源  
   
-## <a name="see-also"></a>请参阅  
- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a>请参阅
+- [路由事件概述](routed-events-overview.md)
+- [XAML 语法详述](xaml-syntax-in-detail.md)
+- [XAML 及 WPF 的自定义类](xaml-and-custom-classes-for-wpf.md)

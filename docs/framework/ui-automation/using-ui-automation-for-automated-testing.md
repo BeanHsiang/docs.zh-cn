@@ -6,18 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 4a43b33c1faf123ce05be70db102bc9b2ac541f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e9bab754302252cdf4e4e9303ecc4a188e651ca9
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200836"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678388"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自动化进行自动化测试
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本概述介绍可如何将 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 用作一个用于在自动测试方案中进行编程访问的框架。  
   
@@ -47,7 +45,7 @@ ms.locfileid: "47200836"
 |--------------------------------|------------------|---------------------------------|----------------------------|  
 |Button|Windows Presentation Foundation|内容|NameProperty|  
 |Button|Win32|标题|NameProperty|  
-|Image|HTML|Alt|NameProperty|  
+|图像|HTML|Alt|NameProperty|  
   
  UI 自动化提供程序负责将其控件的特定于框架的属性映射到等效的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性。  
   
@@ -97,7 +95,7 @@ ms.locfileid: "47200836"
 |添加 UI 自动化引用。|下面列出了 UI 自动化客户端所必需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] dll。<br /><br /> -Uiautomationclient.dll 访问[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]客户端 Api。<br />-Uiautomationclientsideprovider.dll 可以自动执行[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]控件。 请参阅 [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)。<br />-UIAutomationTypes.dll 提供对中定义的特定类型的访问[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。|  
 |添加 <xref:System.Windows.Automation> 命名空间。|此命名空间包含 UI 自动化客户端使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的功能（文本处理除外）所需的一切内容。|  
 |添加 <xref:System.Windows.Automation.Text> 命名空间。|此命名空间包含 UI 自动化客户端使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文本处理的功能所需的一切内容。|  
-|查找相关控件|自动测试脚本可以查找表示自动化树中相关控件的 UI 自动化元素。<br /><br /> 可使用多种方法来通过代码获取 UI 自动化元素。<br /><br /> -查询[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]使用<xref:System.Windows.Automation.Condition>语句。 这通常是使用中性语言 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 的位置。 **注意：** <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>可以使用能够详细列举的 Inspect.exe 之类的工具获取[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]控件的属性。 <br /><br /> -使用<xref:System.Windows.Automation.TreeWalker>类，以遍历整个[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]树或其子集。<br />-跟踪焦点。<br />-使用该控件的 hWnd。<br />-使用屏幕位置，例如鼠标光标的位置。<br /><br /> 请参见 [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)|  
+|查找相关控件|自动测试脚本可以查找表示自动化树中相关控件的 UI 自动化元素。<br /><br /> 可使用多种方法来通过代码获取 UI 自动化元素。<br /><br /> -查询[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]使用<xref:System.Windows.Automation.Condition>语句。 这通常是使用中性语言 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 的位置。 **注意：**<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>可以使用能够详细列举的 Inspect.exe 之类的工具获取[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]控件的属性。 <br /><br /> -使用<xref:System.Windows.Automation.TreeWalker>类，以遍历整个[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]树或其子集。<br />-跟踪焦点。<br />-使用该控件的 hWnd。<br />-使用屏幕位置，例如鼠标光标的位置。<br /><br /> 请参见 [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)|  
 |获取控件模式|控件模式公开在功能上相似的控件的常见行为。<br /><br /> 找到需要测试的控件之后，自动测试脚本从这些 UI 自动化元素获取相关的控件模式。 例如，用于典型按钮功能的 <xref:System.Windows.Automation.InvokePattern> 控件模式或用于窗口功能的 <xref:System.Windows.Automation.WindowPattern> 控件模式。<br /><br /> 请参阅 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。|  
 |自动化 UI|自动测试脚本现在可以使用 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 控件模式公开的信息和功能来控制 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 框架中的任何相关 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。|  
   
@@ -113,5 +111,5 @@ ms.locfileid: "47200836"
 ## <a name="security"></a>安全性  
  有关安全信息，请参阅 [UI Automation Security Overview](../../../docs/framework/ui-automation/ui-automation-security-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- [UI 自动化基础知识](../../../docs/framework/ui-automation/index.md)
+## <a name="see-also"></a>请参阅
+- [UI 自动化基础知识](../../../docs/framework/ui-automation/index.md)

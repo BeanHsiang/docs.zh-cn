@@ -1,18 +1,18 @@
 ---
-title: '&lt;备注&gt;(Visual Basic)'
+title: <remarks> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 97fca8758d9c21ac0b8f15bf9d5831750fbabe77
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c5c088472ae09a416953d9c0829cad1cb48646b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863028"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833485"
 ---
-# <a name="ltremarksgt-visual-basic"></a>&lt;备注&gt;(Visual Basic)
+# <a name="remarks-visual-basic"></a>\<备注 > (Visual Basic)
 指定成员的备注部分。  
   
 ## <a name="syntax"></a>语法  
@@ -21,7 +21,7 @@ ms.locfileid: "43863028"
 <remarks>description</remarks>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `description`  
  对成员的说明。  
   
@@ -35,7 +35,8 @@ ms.locfileid: "43863028"
 ## <a name="example"></a>示例  
  此示例使用`<remarks>`标记解释`UpdateRecord`方法执行。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

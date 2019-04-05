@@ -1,5 +1,5 @@
 ---
-title: '&lt;ipv6&gt;元素 （网络设置）'
+title: <ipv6> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: 5e1afdd372c2198c00bf8c02939d2167261b5d5c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 708604c782690efa631e4eab0aa62c1c0b1f657b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205134"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279690"
 ---
-# <a name="ltipv6gt-element-network-settings"></a>&lt;ipv6&gt;元素 （网络设置）
+# <a name="ipv6-element-network-settings"></a>\<ipv6 > 元素 （网络设置）
 启用 Internet 协议版本 6 (IPv6) 的过时成员的响应<xref:System.Net.Dns>类。  
   
  \<configuration>  
 \<system.net>  
-\<设置 >  
-\<ipv6 >  
+\<settings>  
+\<ipv6>  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "50205134"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
 ## <a name="remarks"></a>备注  
  此设置启用 IPv6 支持的过时成员<xref:System.Net.Dns>类： <xref:System.Net.Dns.BeginGetHostByName%2A>， <xref:System.Net.Dns.BeginResolve%2A>， <xref:System.Net.Dns.EndGetHostByName%2A>， <xref:System.Net.Dns.EndResolve%2A>， <xref:System.Net.Dns.GetHostByAddress%2A>， <xref:System.Net.Dns.GetHostByName%2A>，和<xref:System.Net.Dns.Resolve%2A>。 有关的其他成员<xref:System.Net?displayProperty=nameWithType>命名空间中，如果在操作系统中启用了 IPv6，则可能会返回 IPv6 地址。  
@@ -68,8 +68,8 @@ ms.locfileid: "50205134"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net?displayProperty=nameWithType>  
-- <xref:System.Net.Dns?displayProperty=nameWithType>  
-- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net?displayProperty=nameWithType>
+- <xref:System.Net.Dns?displayProperty=nameWithType>
+- <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

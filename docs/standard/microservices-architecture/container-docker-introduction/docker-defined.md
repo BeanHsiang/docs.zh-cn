@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 63f3714fce317d915b65075922b323f2aa5061f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0493e7c08a742abed26ff00ce84b9d77da73ea63
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185922"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153860"
 ---
 # <a name="what-is-docker"></a>什么是 Docker？
 
@@ -83,5 +83,5 @@ Docker 映像容器可以在 Linux 和 Windows 上本机运行。 但是，Windo
 同样，你可以将容器视为已安装映像硬盘的“计算机”。 与计算机一样，可以打开或关闭容器电源。
 
 >[!div class="step-by-step"]
-[上一页](index.md)
-[下一页](docker-terminology.md)
+>[上一页](index.md)
+>[下一页](docker-terminology.md)

@@ -1,36 +1,36 @@
 ---
-title: '&lt;identity&gt;'
+title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 74c88df867efa82d48693a3df86b4c7813c40eba
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5b5248f4cb8bdcd15b553fa14351013e78d422d9
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200041"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675395"
 ---
-# <a name="ltidentitygt"></a>&lt;identity&gt;
+# <a name="identity"></a>\<identity>
 标识元素允许客户端开发人员在设计时指定服务的期望标识。 在客户端和服务之间的握手过程中，Windows Communication Foundation (WCF) 基础结构将确保预期的服务匹配此元素的值的标识，因此可以进行身份验证。 有关详细信息，请参阅[服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
  \<system.ServiceModel>  
-\<客户端 >  
-\<终结点 >  
+\<client>  
+\<endpoint>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<identity>  
-    <certificate encodedValue="String"/>  
-    <certificateReference findValue="String"   
-       isChainIncluded="Boolean"  
-       storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-       storeLocation="LocalMachine/CurrentUser"  
-       X509FindType= Enumeration./>  
-    <dns value="String"/>  
-    <rsa value="String"/>  
-    <servicePrincipalName value="String"/>  
-    <usePrincipalName value="String"/>  
-</identity>  
+<identity>
+  <certificate encodedValue="String" />
+  <certificateReference findValue="String"
+                        isChainIncluded="Boolean"
+                        storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+                        storeLocation="LocalMachine/CurrentUser"
+                        X509FindType="Enumeration" />
+  <dns value="String" />
+  <rsa value="String" />
+  <servicePrincipalName value="String" />
+  <usePrincipalName value="String" />
+</identity>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -55,15 +55,16 @@ ms.locfileid: "50200041"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|指定 netPeerTcpBinding 的自定义对等解析程序。|  
-|[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|配置不同类型的终结点。|  
+|[\<endpoint>](endpoint-element.md)|配置服务终结点。|  
+|[\<终结点 > 的\<客户端 >](endpoint-of-client.md)|配置通道终结点。|  
 |[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|指定联合服务的安全令牌服务 (STS)。|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|指定联合服务的安全令牌服务 (STS) 的元数据终结点。|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|定义自定义绑定中的已颁发令牌的参数。|  
 |[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|指定本地安全令牌服务 (STS)。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [终结点：地址、绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [终结点：地址、 绑定和协定](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

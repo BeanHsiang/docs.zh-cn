@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c341ba3d0164e65cd752baa20f674fe3afc714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a52075f33d594787c516f84b65b3319991380907
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405429"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500360"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions 方法
 获取此数组的每个维度中的元素数。  
@@ -37,20 +37,20 @@ HRESULT GetDimensions (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `cdim`  
  [in]此 ICorDebugArrayValue 对象的维度数。  
   
- 该值也为的大小`dims`数组因为其大小等于的维度数`ICorDebugArrayValue`对象。  
+ 该值也为的大小`dims`由于其大小为维数的数组`ICorDebugArrayValue`对象。  
   
  `dims`  
- [out]整数的数组，其中每个在此维度中指定的元素数`ICorDebugArrayValue`对象。  
+ [out]一个整数数组，其中每个指定的元素数，在此维度中`ICorDebugArrayValue`对象。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -2,12 +2,12 @@
 title: AttributeUsage (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: ae162c310511db160806501af895276a4a4bba5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1841171f2f3fc26ba9244c72c69960b765d39807
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643345"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827505"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 确定如何使用自定义特性类。 `AttributeUsage` 是一个特性，可应用于自定义特性定义，以控制如何应用新特性。 在显式应用时的默认设置如下：  
@@ -161,12 +161,13 @@ A3
 A2  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Attribute>  
- <xref:System.Reflection>  
- [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)  
- [特性](../../../../standard/attributes/index.md)  
- [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
- [创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Attribute>
+- <xref:System.Reflection>
+- [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)
+- [属性](../../../../standard/attributes/index.md)
+- [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [创建自定义特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

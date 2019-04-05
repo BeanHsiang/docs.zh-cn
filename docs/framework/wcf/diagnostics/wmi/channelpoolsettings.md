@@ -2,12 +2,12 @@
 title: ChannelPoolSettings
 ms.date: 03/30/2017
 ms.assetid: d3f475bd-f780-4bbe-b291-339387322964
-ms.openlocfilehash: d763be92243768bce9fdaefcd3e3575effac464b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4a3e45140765f99f4a30b77fc9d02b167601b50b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591468"
 ---
 # <a name="channelpoolsettings"></a>ChannelPoolSettings
 ChannelPoolSettings  
@@ -56,5 +56,5 @@ class ChannelPoolSettings
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.ChannelPoolSettings>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.ChannelPoolSettings>

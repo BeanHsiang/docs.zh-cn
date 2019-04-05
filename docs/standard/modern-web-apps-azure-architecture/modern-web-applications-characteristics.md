@@ -3,13 +3,13 @@ title: 新式 Web 应用程序的特征
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 新式 Web 应用程序的特征
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 4c73ab59148325f66d3ee17db3fb78d397b73f15
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.date: 01/30/2019
+ms.openlocfilehash: eacc66ff5d2c4bfb8d8645bc6bd319eab52437a3
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404481"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828119"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>新式 Web 应用程序的特征
 
@@ -39,25 +39,25 @@ ASP.NET Core 针对新式 Web 应用程序和基于云的托管方案进行了�
 
 ## <a name="cross-platform"></a>跨平台
 
-ASP.NET Core 具有跨平台性，可在 Linux、MacOS 以及 Windows 上运行。 这为开发和部署通过 ASP.NET Core 构建的应用程序带来了新的选择。 Docker 容器如今通常运行 Linux，可托管 ASP.NET Core 应用程序，从而使应用程序可利用[容器和微服务](../microservices-architecture/index.md)的优势。
+ASP.NET Core 具有跨平台性，可在 Linux、macOS 以及 Windows 上运行。 这为开发和部署通过 ASP.NET Core 构建的应用程序带来了新的选择。 Docker 容器（包括 Linux 和 Windows）可托管 ASP.NET Core 应用程序，从而使应用程序可利用[容器和微服务](../microservices-architecture/index.md)的优势。
 
 ## <a name="modular-and-loosely-coupled"></a>模块化和松散耦合
 
 NuGet 包在 .NET Core 中处于第一等级，而 ASP.NET Core 应用经 NuGet 由众多库构成。 此功能的粒度有助于确保应用仅依赖和部署其实际所需的功能，从而降低占用空间和安全漏洞外围应用。
 
-ASP.NET Core 还完全支持内部和应用程序级别的依赖项注入。 接口可具有多个能按需换出的实现。 依赖项注入可使应用松散耦合到此类接口，从而使其扩展、维护和测试更加容易。
+ASP.NET Core 还完全支持内部和应用程序级别的[依赖项注入](https://deviq.com/dependency-injection/)。 接口可具有多个能按需换出的实现。 依赖项注入可使应用松散耦合到此类接口，而不是特定的实现，从而使其扩展、维护和测试更加容易。
 
 ## <a name="easily-tested-with-automated-tests"></a>通过自动测试轻松实现测试
 
-ASP.NET Core 应用程序支持单元测试，并且通过其松散耦合和依赖项注入支持，可轻松出于测试目的轻松将基础设施顾虑转换为虚假实现。 ASP.NET Core 还附带可用于托管内存中应用的 TestServer。 功能测试然后可向此内存中服务器发出请求，从而能在真实服务器上托管应用和通过网络层作出请求所需时间的短暂时间内，执行完整的应用程序堆栈（包括中间件、路由、模型绑定、筛选器等）和接收响应。 对于在新式 Web 应用程序中愈发重要的 API 而言，这些测试非常易于编写，具有很大作用。
+ASP.NET Core 应用程序支持单元测试，并且通过其松散耦合和依赖项注入支持，使得出于测试目的很容易将基础设施顾虑转换为虚假实现。 ASP.NET Core 还附带可用于托管内存中应用的 TestServer。 功能测试然后可向此内存中服务器发出请求，从而能在真实服务器上托管应用和通过网络层作出请求所需时间的短暂时间内，执行完整的应用程序堆栈（包括中间件、路由、模型绑定、筛选器等）和接收响应。 对于在新式 Web 应用程序中愈发重要的 API 而言，这些测试非常易于编写，具有很大作用。
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>支持传统和 SPA 行为
 
-传统 Web 应用程序涉及极少的客户端行为，而是依赖服务器执行该应用可能需要执行的所有导航、查询和更新。 用户执行的每个新操作会被转换为新的 Web 请求，其结果是最终用户浏览器中的完整页面重载。 经典模型视图控制器 (MVC) 框架通常采用此方式，其中每个新请求对应一个不同的控制器操作，这些操作会反过来作用于模型并返回一个视图。 特定页面上的一些单独操作可使用 AJAX（异步 JavaScript 和 XML）功能改进，但该应用的总体体系结构使用了多个不同的 MVC 视图和 URL 终结点。
+传统 Web 应用程序涉及极少的客户端行为，而是依赖服务器执行该应用可能需要执行的所有导航、查询和更新。 用户执行的每个新操作会被转换为新的 Web 请求，其结果是最终用户浏览器中的完整页面重载。 经典模型视图控制器 (MVC) 框架通常采用此方式，其中每个新请求对应一个不同的控制器操作，这些操作会反过来作用于模型并返回一个视图。 特定页面上的一些单独操作可使用 AJAX（异步 JavaScript 和 XML）功能改进，但该应用的总体体系结构使用了多个不同的 MVC 视图和 URL 终结点。 此外，ASP.NET Core MVC 还支持 Razor Pages，这是一种组织 MVC 样式页的较为简单的方法。
 
 与之相反，单页应用程序 (SPAs) 涉及极少动态生成的服务器端页面负载（如有）。 许多 SPA 在一个静态 HTML 文件中进行初始化，此文件加载该应用启动和运行所需的 JavaScript 库。 这些应用大量使用 Web API 处理数据需求，并提供更为丰富的用户体验。
 
-许多 Web 应用程序同时涉及传统 Web 应用程序行为（尤其是对于内容）和 SPA（对于交互）。 ASP.NET Core 通过使用相同工具集和基础框架库，在同一应用程序中同时支持 MVC（视图和/或 Razor Pages）和 Web API。
+许多 Web 应用程序同时涉及传统 Web 应用程序行为（尤其是对于内容）和 SPA（对于交互）。 ASP.NET Core 通过使用相同工具集和基础框架库，在同一应用程序中同时支持 MVC（基于视图或页面）和 Web API。
 
 ## <a name="simple-development-and-deployment"></a>简单的开发和部署
 
@@ -77,5 +77,5 @@ ASP.NET Core 应用程序支持单元测试，并且通过其松散耦合和依�
 >   <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
-[上一页](index.md)
-[下一页](choose-between-traditional-web-and-single-page-apps.md)
+>[上一页](index.md)
+>[下一页](choose-between-traditional-web-and-single-page-apps.md)

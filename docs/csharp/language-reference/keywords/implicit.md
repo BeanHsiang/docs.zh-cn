@@ -1,5 +1,6 @@
 ---
-title: implicit（C# 参考）
+title: implicit - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - implicit
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: 70379136fd4b14403eac919ac15590250b17b416
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d3e1cb9d6fb37617c6e2aa7070b006c594d39762
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661706"
 ---
 # <a name="implicit-c-reference"></a>implicit（C# 参考）
 
@@ -30,9 +31,9 @@ ms.locfileid: "46702692"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
-- [C# 关键字](index.md)  
-- [explicit](explicit.md)  
-- [运算符（C# 参考）](operator.md)  
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](index.md)
+- [explicit](explicit.md)
+- [运算符（C# 参考）](operator.md)
 - [如何：在结构之间实现用户定义的转换](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

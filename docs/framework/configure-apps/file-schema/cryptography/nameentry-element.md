@@ -1,5 +1,5 @@
 ---
-title: '&lt;nameEntry&gt;元素'
+title: <nameEntry> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -8,23 +8,21 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f5d53debd746ba031e39215354c391d288016b6b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b5f92ca2956f32382b12c9a1dec4e5d41ea4ee2a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201344"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285916"
 ---
-# <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt;元素
+# <a name="nameentry-element"></a>\<nameEntry > 元素
 将类名称映射到友好算法名称，允许一个类具有多个友好名称。  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<cryptoNameMapping >  
-\<nameEntry >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<cryptoNameMapping>  
+\<nameEntry>  
   
 ## <a name="syntax"></a>语法  
   
@@ -77,8 +75,8 @@ ms.locfileid: "50201344"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>请参阅
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

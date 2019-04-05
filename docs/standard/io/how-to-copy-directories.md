@@ -1,6 +1,6 @@
 ---
 title: 如何：复制目录
-ms.date: 03/30/2017
+ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,17 +14,19 @@ helpviewer_keywords:
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f2c2fbd58b10af80a2a233cbd4211befe2dbd33
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 57e2b61fb8fef37234dc10885752f92e5f9b1330
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671065"
 ---
 # <a name="how-to-copy-directories"></a>如何：复制目录
-此示例演示如何使用 I/O 类将目录下的内容同步复制到另一个位置。 在此示例中，用户可以指定是否同时复制子目录。 如果复制子目录，则此示例中的方法将通过对每个后续子目录调用其自身的方法来递归复制它们，直到再也没有子目录可以复制为止。  
-  
- 有关异步复制文件的示例，请参阅 [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。  
+此主题演示如何使用 I/O 类将目录下的内容同步复制到另一个位置。 
+
+有关异步文件复制的示例，请参阅[异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。 
+
+此示例通过将 `DirectoryCopy` 方法的 `copySubDirs` 设置为 `true` 来复制子目录。 `DirectoryCopy` 方法通过对每个子目录调用其自身的方法来递归复制它们，直到再也没有子目录可以复制为止。  
   
 ## <a name="example"></a>示例  
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
@@ -32,9 +34,9 @@ ms.locfileid: "44216049"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.IO.FileInfo>  
-- <xref:System.IO.DirectoryInfo>  
-- <xref:System.IO.FileStream>  
-- [文件和流 I/O](../../../docs/standard/io/index.md)  
-- [通用 I/O 任务](../../../docs/standard/io/common-i-o-tasks.md)  
+- <xref:System.IO.FileInfo>
+- <xref:System.IO.DirectoryInfo>
+- <xref:System.IO.FileStream>
+- [文件和流 I/O](../../../docs/standard/io/index.md)
+- [通用 I/O 任务](../../../docs/standard/io/common-i-o-tasks.md)
 - [异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

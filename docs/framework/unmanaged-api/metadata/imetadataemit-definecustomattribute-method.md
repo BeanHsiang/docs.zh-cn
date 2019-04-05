@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a11e9919dc1338c4b67c3c4b0f082e330c29d9eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: adf3c74526bbf2b8e740f505ab6f4243cd799041
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445077"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474574"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute 方法
-使用指定的元数据签名，要附加到指定的对象，创建的自定义特性的定义并获取指向该自定义特性定义的标记。  
+使用指定的元数据签名，附加到指定的对象，创建自定义属性的定义并获取该自定义特性定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,31 +39,31 @@ HRESULT DefineCustomAttribute (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `tkObj`  
  [in]所有者项标记。  
   
  `tkType`  
- [in]标识自定义特性的标记。  
+ [in]令牌，用于标识自定义属性。  
   
  `pCustomAttribute`  
- [in]指向自定义特性的指针。  
+ [in]一个指向自定义属性。  
   
  `cbCustomAttribute`  
  [in]中的字节计数`pCustomAttribute`。  
   
  `pcv`  
- [out]`mdCustomAttribute`分配的令牌。  
+ [out]`mdCustomAttribute`分配标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

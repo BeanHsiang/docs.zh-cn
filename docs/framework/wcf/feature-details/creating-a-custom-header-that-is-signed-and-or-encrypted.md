@@ -2,12 +2,12 @@
 title: 创建自定义标头进行签名和-或加密
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 4770d650cba5c182aa56d9ac7afa39e585512d4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f8f86bcb5494cd502d14aff1cf3c4cdf4f8dd33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494816"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>创建自定义标头进行签名和-或加密
 在使用 WCF 客户端调用非 WCF 服务时，有时需要使用自定义 SOAP 标头。 WCF 中有一个规范化 bug，该 bug 将阻止已签名和已加密的自定义标头使用非 WCF 服务。 此问题是因默认 XML 命名空间的规范化错误导致的。 此问题仅在使用已签名和/或已加密的自定义标头调用非 WCF 服务时发生。  当服务收到包含已签名和/或已加密的自定义标头的消息时，无法验证该签名。 此解决方法可避免出现规范化 bug，它允许与非 WCF 服务进行互操作，但不阻止与 WCF 服务进行互操作。  
@@ -56,7 +56,7 @@ public  class MyMessageContract
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [默认消息协定](../../../../docs/framework/wcf/samples/default-message-contract.md)  
- [消息协定](../../../../docs/framework/wcf/samples/message-contracts.md)  
- [使用消息协定](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+## <a name="see-also"></a>请参阅
+- [默认消息协定](../../../../docs/framework/wcf/samples/default-message-contract.md)
+- [消息协定](../../../../docs/framework/wcf/samples/message-contracts.md)
+- [使用消息协定](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

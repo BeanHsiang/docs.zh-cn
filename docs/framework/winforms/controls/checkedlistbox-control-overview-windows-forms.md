@@ -8,22 +8,22 @@ helpviewer_keywords:
 - check marks
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
-ms.openlocfilehash: b60274a13999c5a916840e721c02210c4e5d510b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e150d0ff7c5e44c971ea5ddcd1b04176c608d3b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524302"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721926"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox 控件概述（Windows 窗体）
-Windows 窗体<xref:System.Windows.Forms.CheckedListBox>控件扩展<xref:System.Windows.Forms.ListBox>控件。 它执行几乎所有操作都列表框不，还可以在列表中显示项旁边的复选标记。 其他两个控件之间的区别是，选中列表框仅支持<xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; 并且，选中列表框只能有一项或选择无。 请注意，所选的项将会突出显示窗体上，并且不是与选中的项相同。  
+Windows 窗体<xref:System.Windows.Forms.CheckedListBox>控件扩展<xref:System.Windows.Forms.ListBox>控件。 它执行的几乎所有列表框 does 和还可以显示在列表中的项旁边的复选标记。 其他两个控件之间的差异是，检查列表框和仅支持<xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; 和列表框只能有一项或选择无的检查。 请注意，所选的项将会突出显示在窗体上不选中项相同。  
   
- 检查列表框可以在设计时使用已添加项**字符串集合编辑器**或其项可以在运行时，集合中动态添加使用<xref:System.Windows.Forms.CheckedListBox.Items%2A>属性。 有关详细信息，请参阅[如何： 添加和删除项目，从 Windows 窗体 combobox 控件、 ListBox 控件或 CheckedListBox 控件](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)。  
+ 检查列表框可以在设计时使用添加的项**字符串集合编辑器**或其项可以在运行时，集合中动态添加使用<xref:System.Windows.Forms.CheckedListBox.Items%2A>属性。 有关详细信息，请参阅[如何：添加和删除项从 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件](add-and-remove-items-from-a-wf-combobox.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.CheckedListBox>  
- <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>  
- [ListBox 控件概述](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- [用于列出选项的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- [如何：确定 Windows 窗体 CheckedListBox 控件中的选中项](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.CheckedListBox>
+- <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>
+- [ListBox 控件概述](listbox-control-overview-windows-forms.md)
+- [用于列出选项的 Windows 窗体控件](windows-forms-controls-used-to-list-options.md)
+- [如何：确定 Windows 窗体 CheckedListBox 控件中的选中的项](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)

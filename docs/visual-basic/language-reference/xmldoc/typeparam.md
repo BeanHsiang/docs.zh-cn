@@ -1,18 +1,18 @@
 ---
-title: '&lt;typeparam&gt; (Visual Basic)'
+title: <typeparam> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: d362f181921a39d274eaee78e85976522ce4fc15
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 014623be84f9d7eb8a25ac4aadcce450f158c154
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863184"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827232"
 ---
-# <a name="lttypeparamgt-visual-basic"></a>&lt;typeparam&gt; (Visual Basic)
+# <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
 定义的类型参数名称和说明。  
   
 ## <a name="syntax"></a>语法  
@@ -21,7 +21,7 @@ ms.locfileid: "43863184"
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `name`  
  类型参数的名称。 用双引号 (" ") 将名称引起来。  
   
@@ -36,7 +36,8 @@ ms.locfileid: "43863184"
 ## <a name="example"></a>示例  
  此示例使用`<typeparam>`标记来描述`id`参数。  
   
- [!code-vb[VbVbcnXmlDocComments#8](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/typeparam_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

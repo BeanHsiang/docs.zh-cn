@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: b73d7cf694e7bce5d055f8a3c9f78c27bb8cd5b9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3316f3b292f6a9597b62a802b489459ee2f0a952
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743512"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>如何：将安装程序添加到服务应用程序
 Visual Studio 提供可安装与服务应用程序关联资源的安装组件。 安装组件在安装它的系统上注册单个服务，并让服务控制管理器知道存在该服务。 当使用服务应用程序时，你可以在“属性”窗口中选择一个链接，以将相应的安装程序自动添加到项目中。  
@@ -45,13 +45,13 @@ Visual Studio 提供可安装与服务应用程序关联资源的安装组件。
   
 5.  要确定服务的启动方式，请单击 <xref:System.ServiceProcess.ServiceInstaller> 组件并将 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 属性设置为适当的值。  
   
-    |“值”|结果|  
+    |值|结果|  
     |-----------|------------|  
     |<xref:System.ServiceProcess.ServiceStartMode.Manual>|该服务必须在安装后手动启动。 有关详细信息，请参阅[如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)。|  
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|只要重启计算机，服务就将自行启动。|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|服务无法启动。|  
   
-6.  要确定服务将在其中运行的安全性上下文，请单击 <xref:System.ServiceProcess.ServiceProcessInstaller> 组件并设置适当的属性值。 有关详细信息，请参阅[如何：为服务指定安全性上下文](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)。  
+6.  要确定服务将在其中运行的安全性上下文，请单击 <xref:System.ServiceProcess.ServiceProcessInstaller> 组件并设置适当的属性值。 有关详细信息，请参阅[如何：为服务指定安全上下文](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)。  
   
 7.  替代需要为其执行自定义处理进程的任何方法。  
   
@@ -60,8 +60,8 @@ Visual Studio 提供可安装与服务应用程序关联资源的安装组件。
     > [!NOTE]
     >  对于项目中的每项其他服务，必须向项目的 `ProjectInstaller` 类添加一个附加 <xref:System.ServiceProcess.ServiceInstaller> 组件。 在步骤 3 中添加的 <xref:System.ServiceProcess.ServiceProcessInstaller> 组件可与项目中的所有单个服务安装程序一起使用。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)  
- [如何：为服务指定安全上下文](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+## <a name="see-also"></a>请参阅
+- [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)
+- [如何：为服务指定安全上下文](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

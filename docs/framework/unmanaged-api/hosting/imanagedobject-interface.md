@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9d10126ac7edd3073d91a9c68c86a7df8cad402
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4b63d30c9662ce75df491e6e1329d2b955df2ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441112"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645972"
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject 接口
 提供用于控制托管的对象的方法。  
@@ -31,16 +31,16 @@ ms.locfileid: "33441112"
 |方法|描述|  
 |------------|-----------------|  
 |[GetObjectIdentity 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|获取此托管对象的标识。|  
-|[GetSerializedBuffer 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|获取此托管对象的字符串表示。|  
+|[GetSerializedBuffer 方法](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|获取此托管对象的字符串表示形式。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

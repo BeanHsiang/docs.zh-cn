@@ -2,12 +2,12 @@
 title: ADO.NET 中的 SQL Server 数据操作
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 9c913bffea1be8db0fa5ba2e97714acefe681569
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 66e7a33edfc053760109ded4c18c84950869b4af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528181"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702231"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>ADO.NET 中的 SQL Server 数据操作
 本节描述适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 特定的 SQL Server 特性和功能。  
@@ -25,7 +25,7 @@ ms.locfileid: "43528181"
  [表值参数](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  描述如何使用在 SQL Server 2008 中引入的表值参数。  
   
-## <a name="see-also"></a>请参阅  
- [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [在 ADO.NET 中检索和修改数据](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: 7a066f403e526c50054b58a099bb7978ef57e74d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bb44aca802f6a0323e69fb33f64d8238406f8b48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653640"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>缓存策略交互 — 最长使用期限和最长过期时间
 为了帮助确保将最新鲜的内容返回给客户端应用程序，客户端缓存策略和服务器重新验证要求的交互始终会造成最保守的缓存策略。 本主题中的所有示例阐明针对在 1 月 1 日缓存、1 月 4 日过期的资源的缓存策略。  
@@ -35,10 +35,10 @@ ms.locfileid: "50181142"
   
 -   如果缓存策略设置 `maxAge` = 1 天，`maxStale` = 1 天，会在 1 月 2 日重新验证此内容。  
   
-## <a name="see-also"></a>请参阅  
- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)  
- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- [缓存策略交互 — 最长使用时间和最低新鲜度](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)
+## <a name="see-also"></a>请参阅
+- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
+- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+- [缓存策略交互 — 最长使用时间和最低新鲜度](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)

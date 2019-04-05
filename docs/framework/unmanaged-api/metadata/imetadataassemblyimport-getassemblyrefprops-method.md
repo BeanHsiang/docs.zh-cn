@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0810ba945c1ed5874dae79704362a399c7349604
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 471f4837ff8aee725020f52c09a57d8f3652013c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445817"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489860"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps 方法
-获取与指定的元数据签名的程序集引用的属性集。  
+获取具有指定的元数据签名的程序集引用的属性集。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ HRESULT GetAssemblyRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `mdar`  
  [in]`mdAssemblyRef`表示要为其获取属性的程序集引用的元数据标记。  
   
@@ -61,31 +61,31 @@ HRESULT GetAssemblyRefProps (
  [in]大小，以宽字符为单位的`szName`。  
   
  `pchName`  
- [out]指向的宽字符中实际返回数的指针`szName`。  
+ [out]指向的宽字符中实际返回数的`szName`。  
   
  `pMetaData`  
  [out]指向包含程序集元数据的 ASSEMBLYMETADATA 结构的指针。  
   
  `ppbHashValue`  
- [out]指向哈希值的指针。 这是使用 sha-1 算法，哈希`PublicKey`引用，除非 arfFullOriginator 标志的程序集的属性[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)枚举设置。  
+ [out]指向哈希值的指针。 这是使用 sha-1 算法，哈希`PublicKey`除非 arfFullOriginator 标记所引用的程序集的属性[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)枚举设置。  
   
  `pcbHashValue`  
- [out]返回的哈希值中的宽字符数。  
+ [out]中返回的哈希值的宽字符数。  
   
  `pdwAssemblyRefFlags`  
  [out]指向描述应用于程序集的元数据的标志的指针。 标志值是一个或多个组合[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值。  
   
 ## <a name="return-value"></a>返回值  
- 此方法返回成功; 如果，则为 S_OK否则，它将返回一个在 Winerror.h 标头文件中定义的错误代码。  
+ 此方法返回时如果它成功，则为 S_OK否则，它返回一个在 Winerror.h 标头文件中定义的错误代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

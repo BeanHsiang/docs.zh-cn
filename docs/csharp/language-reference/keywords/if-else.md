@@ -1,5 +1,6 @@
 ---
-title: if-else（C# 参考）
+title: if-else - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - if_CSharpKeyword
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: 77ee6e86017eb24d565842b3401533ebda1add35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517833"
 ---
 # <a name="if-else-c-reference"></a>if-else（C# 参考）
 
-`if` 语句基于 `Boolean` 表达式的值来识别运行哪个语句。 在下面的示例中， `Boolean` 变量 `result` 已被设置为 `true` ，然后被签入到了 `if` 语句。 输出为 `The variable is set to true.`。
+`if` 语句基于布尔表达式的值来识别运行哪个语句。 在下面的示例中， `bool` 变量 `condition` 已被设置为 `true` ，然后被签入到了 `if` 语句。 输出为 `The variable is set to true.`。
 
 [!code-csharp[csrefKeywordsSelection#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#1)]
 
@@ -136,9 +137,9 @@ if (!(m >= n || m >= p))
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
-- [C# 关键字](index.md)  
-- [?: 运算符](../operators/conditional-operator.md)  
-- [if-else 语句 (C++)](/cpp/cpp/if-else-statement-cpp)  
-- [switch](switch.md)  
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](index.md)
+- [?:运算符](../operators/conditional-operator.md)
+- [if-else 语句 (C++)](/cpp/cpp/if-else-statement-cpp)
+- [switch](switch.md)

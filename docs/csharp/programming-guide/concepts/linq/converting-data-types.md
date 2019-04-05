@@ -2,12 +2,12 @@
 title: 转换数据类型 (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 54ef612ad4e92058d9af4d96b7b3cde9732b2f9c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: ea1f204ab59ecdd3e3e7e65d12c1be37e9b09f01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736875"
 ---
 # <a name="converting-data-types-c"></a>转换数据类型 (C#)
 转换方法可更改输入对象的类型。  
@@ -25,7 +25,7 @@ ms.locfileid: "47089719"
   
  本表中名称以“As”开头的转换方法可更改源集合的静态类型，但不对其进行枚举。 名称以“To”开头的方法可枚举源集合，并将项放入相应的集合类型。  
   
-|方法名|描述|C# 查询表达式语法|详细信息|  
+|方法名|说明|C# 查询表达式语法|详细信息|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |AsEnumerable|返回类型化为 <xref:System.Collections.Generic.IEnumerable%601> 的输入。|不适用。|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
 |AsQueryable|将（泛型）<xref:System.Collections.IEnumerable> 转换为（泛型）<xref:System.Linq.IQueryable>。|不适用。|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
@@ -76,8 +76,8 @@ static void Cast()
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Linq>  
-- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [from 子句](../../../../csharp/language-reference/keywords/from-clause.md)  
-- [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- <xref:System.Linq>
+- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [from 子句](../../../../csharp/language-reference/keywords/from-clause.md)
+- [LINQ 查询表达式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [如何：使用 LINQ 查询 ArrayList (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 示例的一次性安装过程
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 5db72a6e5970a2c10e0dd1fb62339efd9b69138c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 76cf2c7ec7edbfaaa186b45f4b810c7d4c0b1d47
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840099"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825165"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 示例的一次性安装过程
 托管在 Internet 信息服务 (IIS) 和从公共虚拟目录中运行的大多数 Windows Communication Foundation (WCF) 示例。 此一次性安装过程的磁盘; 上创建一个文件夹它还添加到名为的 IIS 虚拟目录**ServiceModelSamples**。
@@ -25,7 +25,7 @@ ms.locfileid: "48840099"
   
 3.  如果没有安装 Visual Studio 2012，并且你的操作系统不是 Windows Server 2008 SP2 或更高版本，安装[修补程序 251798](https://go.microsoft.com/fwlink/?LinkId=184693)。  
   
-4.  运行以下命令。 为什么必须运行这些命令的详细信息，请参阅[IIS 宿主服务失败](https://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)。  
+4.  运行以下命令。 为什么必须运行这些命令的详细信息，请参阅[IIS 宿主服务失败](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90))。  
   
     > [!WARNING]
     >  如果重新安装 IIS，则需要再次运行以下命令。
@@ -44,7 +44,7 @@ ms.locfileid: "48840099"
   
 7.  如果未安装这些示例，它们从安装的示例下载位置[Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939)或[Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373)。  
   
-8.  后安装这些示例，请转到：\<安装驱动器 >:**\WF_WCF_Samples\WCF\Setup\\**  
+8.  后安装这些示例，请转到：\<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. 运行**Setupvroot.bat**批处理文件。 将执行以下步骤：  
   
@@ -85,5 +85,3 @@ ms.locfileid: "48840099"
     >  确保在运行需要消息队列的任何示例之前启动 MSMQ 服务。
 
 15. 有些示例需要使用证书。 请参阅[Internet 信息服务 (IIS) 服务器证书安装说明](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。
-
-## <a name="see-also"></a>请参阅

@@ -1,5 +1,5 @@
 ---
-title: 演练：设计时在 Windows 窗体上分配 WPF 内容
+title: 演练：在设计时分配在 Windows 窗体上的 WPF 内容
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 554153335c08c9c8911a5d4fda3696db1e0abf2a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 364cfe521a1e141bdfcfb3cfc47170714d010a87
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838099"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707919"
 ---
-# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>演练：设计时在 Windows 窗体上分配 WPF 内容
+# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时分配在 Windows 窗体上的 WPF 内容
 本演练展示了如何选择要在窗体上显示的 Windows Presentation Foundation (WPF) 控件类型。 可选择项目中包含的任何 WPF 控件类型。
 
  在本演练中，你将要执行以下任务：
@@ -32,7 +32,7 @@ ms.locfileid: "48838099"
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   Visual Studio 2012。  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建 Windows 窗体项目。  
@@ -49,9 +49,9 @@ ms.locfileid: "48838099"
   
 #### <a name="to-create-wpf-control-types"></a>创建 WPF 控件类型  
   
-1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参阅[演练： 创建新 WPF 内容在设计时的 Windows 窗体上](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
-2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何： 选择和设计图面上移动元素](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。  
+2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
   
 3.  在中**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>并<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。  
   
@@ -76,13 +76,15 @@ ms.locfileid: "48838099"
   
 2.  在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。  
   
-     `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
+     
+  `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
   
 3.  中的智能标记面板`elementHost1`，打开**选择承载的内容**下拉列表。  
   
 4.  选择**UserControl2**从下拉列表框。  
   
-     `elementHost1` 控件现承载 `UserControl2` 类型的实例。  
+     
+  `elementHost1` 控件现承载 `UserControl2` 类型的实例。  
   
 5.  在中**属性**窗口中，确认<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>属性设置为**UserControl2**。  
   
@@ -94,11 +96,12 @@ ms.locfileid: "48838099"
   
 8.  选择**UserControl1**从下拉列表。  
   
-9. `elementHost2` 控件现承载 `UserControl1` 类型的实例。  
+9. 
+  `elementHost2` 控件现承载 `UserControl1` 类型的实例。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [使用 WPF 控件](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [迁移和互操作性](../../wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控件](using-wpf-controls.md)
+- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

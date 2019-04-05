@@ -2,12 +2,12 @@
 title: 性能 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 155557f6-5d7e-4784-9d00-f42092a28857
-ms.openlocfilehash: 463075dbf1b84de1af45f7644019e49bbeca6487
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: c58bcecbe196f32c0a6ce885929292490b37e052
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925217"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824814"
 ---
 # <a name="performance-linq-to-xml-visual-basic"></a>性能 (LINQ to XML) (Visual Basic)
 本节提供有关 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的性能（尤其是函数构造和查询的性能）信息。  
@@ -25,5 +25,6 @@ ms.locfileid: "42925217"
  [静态编译的查询 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
  提供有关静态编译查询（对比必须由 XPath 表达式计算器完成的分析和处理）的性能信息。  
   
-## <a name="see-also"></a>请参阅  
- [编程指南 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [编程指南 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

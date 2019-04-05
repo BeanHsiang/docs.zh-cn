@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b42a7fc54af56149b602b337e4a6c853c270cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736528"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 枚举
 标识堆栈帧的类型。 此枚举由[icordebuginternalframe:: Getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)方法。  
@@ -51,24 +51,24 @@ typedef enum CorDebugInternalFrameType {
 |------------|-----------------|  
 |`STUBFRAME_NONE`|Null 值。 `ICorDebugInternalFrame::GetFrameType`方法永远不会返回此值。|  
 |`STUBFRAME_M2U`|托管到非托管存根 （stub） 框架。|  
-|`STUBFRAME_U2M`|非托管到托管存根 （stub） 帧。|  
+|`STUBFRAME_U2M`|非托管到托管存根 （stub） 的帧。|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|应用程序域之间的转换。|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|轻量方法调用。|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|轻量的方法调用。|  
 |`STUBFRAME_FUNC_EVAL`|函数计算的开始。|  
 |`STUBFRAME_INTERNALCALL`|内部调入公共语言运行时。|  
-|`STUBFRAME_CLASS_INIT`|类初始化的开始日期。|  
+|`STUBFRAME_CLASS_INIT`|类初始化开始。|  
 |`STUBFRAME_EXCEPTION`|引发异常。|  
-|`STUBFRAME_SECURITY`|用于代码访问安全性的帧。|  
+|`STUBFRAME_SECURITY`|使用代码访问安全性的帧。|  
 |`STUBFRAME_JIT_COMPILATION`|运行时 JIT 编译的方法。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6f528bcef7d06b503b1ee9d7bd4a61d3d3e9672
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ca9792df69f859e20f1d9e40754d1cec138945d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406515"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480021"
 ---
 # <a name="icordebugappdomaingetobject-method"></a>ICorDebugAppDomain::GetObject 方法
-公共语言运行时 (CLR) 应用程序域中获取的接口指针。  
+获取对公共语言运行时 (CLR) 应用程序域的接口指针。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,21 +35,21 @@ HRESULT GetObject (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppObject`  
  [out]指向一个 ICorDebugValue 接口对象，表示 CLR 应用程序域的地址的指针。  
   
 ## <a name="return-value"></a>返回值  
- 如果托管<xref:System.AppDomain?displayProperty=nameWithType>对象尚未为此应用程序域中构造，该方法返回`S_FALSE`并放置`NULL`中`*ppObject`。  
+ 如果托管<xref:System.AppDomain?displayProperty=nameWithType>尚未为此应用程序域已构造对象，该方法返回`S_FALSE`，并将`NULL`中`*ppObject`。  
   
 ## <a name="remarks"></a>备注  
- 每个应用程序域的过程中可能具有托管<xref:System.AppDomain?displayProperty=nameWithType>表示它的运行时中的对象。 此函数获取对应于此管理的 ICorDebugValue 接口对象<xref:System.AppDomain?displayProperty=nameWithType>对象。  
+ 在进程中的每个应用程序域可能具有托管<xref:System.AppDomain?displayProperty=nameWithType>表示它在运行时中的对象。 此函数获取对应于此托管 ICorDebugValue 接口对象<xref:System.AppDomain?displayProperty=nameWithType>对象。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]

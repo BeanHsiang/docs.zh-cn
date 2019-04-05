@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51fd8e9728955e8f426a38b8bf6cdc78dfa9bbde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecc0b46618cd00ba4442e30c23a7b7e950382fee
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412342"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475588"
 ---
 # <a name="icordebughandlevaluegethandletype-method"></a>ICorDebugHandleValue::GetHandleType 方法
-获取一个值，该值指示句柄引用此 ICorDebugHandleValue 对象的类型。  
+获取一个值，该值指示此 ICorDebugHandleValue 对象引用的句柄的类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,15 +35,15 @@ HRESULT GetHandleType (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pType`  
- [out]指向 CorDebugHandleType 枚举，该值指示此句柄类型的值的指针。  
+ [out]CorDebugHandleType 枚举，该值指示此句柄类型的值指向的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

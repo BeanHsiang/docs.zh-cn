@@ -3,13 +3,13 @@ title: 常用客户端 Web 技术
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 常用客户端 Web 技术
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.date: 01/30/2019
+ms.openlocfilehash: 36bb18d21740f406d33306c212195fa5dbb25ee1
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404601"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828327"
 ---
 # <a name="common-client-side-web-technologies"></a>常用客户端 Web 技术
 
@@ -165,5 +165,5 @@ JavaScript 框架仍以极快的速度发展。 使用上面列出的注意事�
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[上一页](common-web-application-architectures.md)
-[下一页](develop-asp-net-core-mvc-apps.md)
+>[上一页](common-web-application-architectures.md)
+>[下一页](develop-asp-net-core-mvc-apps.md)

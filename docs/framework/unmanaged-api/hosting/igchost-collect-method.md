@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bce005a677dcb74c176a6dddfb2726f6b1fd0e8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 973062e93e4964da0a21c14c17e0ce1960029ebd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436902"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489067"
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect 方法
-强制回收进行回收对给定的代，而无论当前的垃圾回收的状态。  
+强制给定生成，而不考虑当前的垃圾回收状态发生的集合。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +35,18 @@ HRESULT Collect (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `Generation`  
- [in]要对其执行垃圾回收生成。 值-1 指示所有代上将都进行垃圾回收。  
+ [in]要对其执行垃圾回收生成。 值为-1 指示所有代将都进行垃圾回收。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** GCHost.idl、 GCHost.h  
+ **标头：** GCHost.idl GCHost.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IGCHost 接口](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>请参阅
+- [IGCHost 接口](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

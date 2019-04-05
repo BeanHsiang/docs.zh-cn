@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;authenticationModules （网络设置） 的'
+title: authenticationModules -> <add> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 0d7be1d525ff0f4d1e23155f350155837394297a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 12dc8be762e1158ddaabbd67e7165d7bdaca6461
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181077"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276323"
 ---
-# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;添加&gt;authenticationModules （网络设置） 的
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<添加 > authenticationModules （网络设置） 的
 将身份验证模块添加到应用程序。  
   
  \<configuration>  
 \<system.net>  
-\<authenticationModules >  
+\<authenticationModules>  
 \<add>  
   
 ## <a name="syntax"></a>语法  
@@ -81,7 +81,7 @@ ms.locfileid: "50181077"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

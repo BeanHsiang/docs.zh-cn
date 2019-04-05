@@ -1,16 +1,16 @@
 ---
-title: '&lt;securityTokenHandlers&gt;'
+title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: e63f02add81495e474b59b6c5cc090bd69add3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206161"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277519"
 ---
-# <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
+# <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 指定与该终结点注册的安全令牌处理程序的集合。  
   
  \<system.identityModel>  
@@ -44,13 +44,13 @@ ms.locfileid: "47206161"
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|将安全令牌处理程序添加到令牌处理程序集合。|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|清除所有安全令牌处理程序从令牌处理程序集合。|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|令牌处理程序集合中删除的安全令牌处理程序。|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供的令牌处理程序集合的配置。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供的令牌处理程序集合的配置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
   
 ## <a name="remarks"></a>备注  
  在服务配置，可以指定一个或多个安全令牌处理程序的命名的集合。 可以通过使用指定的名称集合`name`属性。 该框架将处理的唯一名称是"ActAs"和"OnBehalfOf"。 如果这些集合中存在处理程序，它们由安全令牌服务 (STS) 而不是默认处理程序处理时`ActAs`和`OnBehalfOf`令牌。  

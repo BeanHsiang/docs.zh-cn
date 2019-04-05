@@ -1,5 +1,6 @@
 ---
-title: by 上下文关键字（C# 参考）
+title: by 上下文关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - by
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
-ms.openlocfilehash: b2d9b08378dd0edf37c07663b3fe37a09f8acf47
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d8632c9fd722a7e9864628013e87b24d7e6633c5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524497"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241296"
 ---
 # <a name="by-c-reference"></a>by（C# 参考）
 

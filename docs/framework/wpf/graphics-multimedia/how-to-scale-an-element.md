@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 44c638b58d828e5beb0b9de5c7bb0b67c8e82d87
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6decc10c954b51d64c6045c01f1264df35429862
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609117"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358608"
 ---
 # <a name="how-to-scale-an-element"></a>如何：缩放元素
 此示例演示如何使用<xref:System.Windows.Media.ScaleTransform>缩放元素。  
@@ -22,23 +22,23 @@ ms.locfileid: "45609117"
  下面的示例使用<xref:System.Windows.Media.ScaleTransform>翻倍，大小为 50 的 50 <xref:System.Windows.Shapes.Rectangle>。 <xref:System.Windows.Media.ScaleTransform>两个具有值为 0 （默认值）<xref:System.Windows.Media.ScaleTransform.CenterX%2A>和<xref:System.Windows.Media.ScaleTransform.CenterY%2A>。  
   
 ## <a name="example"></a>示例  
- [!code-xaml[transformsSample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
+ [!code-xaml[transformsSample#21](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
   
  通常情况下，设置<xref:System.Windows.Media.ScaleTransform.CenterX%2A>并<xref:System.Windows.Media.ScaleTransform.CenterY%2A>到中心进行缩放的对象: (<xref:System.Windows.FrameworkElement.Width%2A>/2，  <xref:System.Windows.FrameworkElement.Height%2A> /2)。  
   
  下面的示例演示了另一个<xref:System.Windows.Shapes.Rectangle>的一倍大小; 但是，这<xref:System.Windows.Media.ScaleTransform>两个具有值为 25<xref:System.Windows.Media.ScaleTransform.CenterX%2A>和<xref:System.Windows.Media.ScaleTransform.CenterY%2A>，这对应于矩形的中心。  
   
- [!code-xaml[transformsSample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
+ [!code-xaml[transformsSample#22](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
   
  下图显示了两者之间的差异<xref:System.Windows.Media.ScaleTransform>操作。 虚线显示的是矩形在缩放之前的大小和位置。  
   
- ![以不同中心点的 2 倍缩放](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
+ ![以不同中心点的 2 倍缩放](./media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
 两个具有相同 ScaleX 和 ScaleY 值但中心不同的 ScaleTransform 操作  
   
  有关完整示例，请参阅 [2D 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.ScaleTransform>  
- [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.ScaleTransform>
+- [转换概述](transforms-overview.md)
+- [帮助主题](transformations-how-to-topics.md)

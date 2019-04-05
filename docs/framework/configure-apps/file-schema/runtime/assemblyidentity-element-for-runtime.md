@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyIdentity&gt;元素&lt;运行时&gt;'
+title: <assemblyIdentity> 的 <runtime> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
@@ -9,23 +9,21 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6f05f1f395156e149e73c1081e486b5285c2b599
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025605"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277493"
 ---
-# <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;元素&lt;运行时&gt;
+# <a name="assemblyidentity-element-for-runtime"></a>\<assemblyIdentity > 元素\<运行库 >
 包含有关程序集的标识信息。  
   
  \<configuration>  
 \<运行时 >  
-\<assemblyBinding >  
-\<dependentAssembly >  
-\<assemblyIdentity >  
+\<assemblyBinding>  
+\<dependentAssembly>  
+\<assemblyIdentity>  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,10 +50,10 @@ culture="assembly culture"/>
   
 |“值”|描述|  
 |-----------|-----------------|  
-|`amd64`|仅 64 位 AMD 处理器。|  
-|`ia64`|仅 64 位 Intel 处理器。|  
-|`msil`|特定于处理器和每字位数|  
-|`x86`|32 位 Intel 处理器，位于本机或在 Windows 上的 64 位平台上的 Windows (WOW) 环境中。|  
+|`amd64`|AMD x86-64 体系结构仅。|  
+|`ia64`|Intel Itanium 体系结构仅。|  
+|`msil`|不特定于处理器和每字位数。|  
+|`x86`|32 位 x86 处理器，位于本机或在 Windows 上的 64 位平台上的 Windows (WOW) 环境中。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -121,7 +119,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows 窗体中复制像素以减少闪烁
+title: 如何：复制像素以减少在 Windows 窗体中的闪烁
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270430"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719242"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>如何：在 Windows 窗体中复制像素以减少闪烁
-当你进行动画处理的简单图形时，用户可以有时会出现闪烁或其他不良的视觉效果。 限制此问题的一种方法是使用在图形上的"bitblt"过程。 Bitblt 是"位块传输"颜色数据从像素组成的源矩形向目标矩形的像素为单位。  
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>如何：复制像素以减少在 Windows 窗体中的闪烁
+当对简单的图形进行动画处理时，用户有时可能会遇到闪烁或其他不需要的视觉效果。 若要限制此问题的一种方法是在图形上使用"bitblt"过程。 Bitblt 是"位块传输"的颜色数据从一个源矩形的像素为单位向目标矩形的像素为单位。  
   
- 用 Windows 窗体 bitblt 通过<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法<xref:System.Drawing.Graphics>类。 在该方法的参数中，你可以指定源和目标 （以磅为单位）、 要复制的区域的大小和用于绘制新形状的图形对象。  
+ 使用 Windows 窗体 bitblt 通过<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法的<xref:System.Drawing.Graphics>类。 在该方法的参数，指定源和目标 （以磅为单位）、 要复制的区域的大小和用于绘制新形状的图形对象。  
   
  在下面的示例中，在窗体上绘制一个形状其<xref:System.Windows.Forms.Control.Paint>事件处理程序。 然后，<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法用于复制了该形状。  
   
 > [!NOTE]
->  设置窗体的<xref:System.Windows.Forms.Control.DoubleBuffered%2A>属性`true`将使基于图形的代码中<xref:System.Windows.Forms.Control.Paint>事件是双缓冲。 而使用下面的代码时，这将不具有任何明显的性能提升，它是使用更复杂的图形操作代码时，需要注意。  
+>  将窗体<xref:System.Windows.Forms.Control.DoubleBuffered%2A>属性设置为`true`会使基于图形的代码中<xref:System.Windows.Forms.Control.Paint>事件是双缓冲。 使用下面的代码时，这并不会任何会造成明显的性能提升，而这是一个需要使用更复杂的图形操作代码时，请记住。  
   
 ## <a name="example"></a>示例  
   
@@ -60,11 +60,11 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 在窗体的中运行上面的代码<xref:System.Windows.Forms.Control.Paint>事件处理程序，以便在重绘窗体时，持久保存图形。 在这种情况下，不要调用与图形相关的方法<xref:System.Windows.Forms.Form.Load>事件处理程序，因为所绘制的内容将不会重绘如果窗体调整大小或另一种形式被遮盖。  
+ 上面的代码运行在窗体的<xref:System.Windows.Forms.Control.Paint>事件处理程序，以便当重新绘制窗体时，仍然会保持图形。 在这种情况下，不要调用与图形相关的方法<xref:System.Windows.Forms.Form.Load>事件处理程序，因为如果窗体进行大小调整或另一个窗体被遮盖，不重绘绘制的内容。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Drawing.CopyPixelOperation>  
- <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>  
- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
- [使用笔绘制直线和形状](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Drawing.CopyPixelOperation>
+- <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
+- [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)
+- [使用笔绘制直线和形状](using-a-pen-to-draw-lines-and-shapes.md)

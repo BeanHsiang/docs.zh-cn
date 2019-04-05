@@ -1,30 +1,30 @@
 ---
-title: WCF 的 &lt;faultPropagationQueries&gt;
+title: <faultPropagationQueries> WCF 的
 ms.date: 03/30/2017
 ms.assetid: d85f66a7-e7b0-4dbb-83cc-89fa06fc9161
-ms.openlocfilehash: 1db99a8d80fad5c0eca93777d87047b43371d048
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bc016827c5bb243bc83dbb53c1eda7eec1bfd8c4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202115"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280392"
 ---
-# <a name="ltfaultpropagationqueriesgt-of-wcf"></a>WCF 的 &lt;faultPropagationQueries&gt;
+# <a name="faultpropagationqueries-of-wcf"></a>\<faultPropagationQueries> of WCF
 
 表示一个查询集合，这些查询用于跟踪在某个活动中发生的错误的处理。  每次 FaultHandler 处理错误时，都会发生此事件。 应使用此类查询来跟踪对在活动中出现的错误进行的处理。 跟踪参与者需要用此查询来订阅错误传播记录。  
   
 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
   
 \<system.serviceModel>  
-\<跟踪 >  
+\<tracking>  
 \<配置文件 >  
 \<trackingProfile>  
-\<工作流 >  
-\<faultPropagationQueries >  
+\<workflow>  
+\<faultPropagationQueries>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,9 +36,9 @@ ms.locfileid: "50202115"
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
+</tracking>
+```  
+  
 ## <a name="attributes-and-elements"></a>特性和元素
 
 下列各节描述了特性、子元素和父元素。
@@ -51,13 +51,13 @@ ms.locfileid: "50202115"
 
 |元素|描述|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](faultpropagationquery-of-wcf.md)|一个查询，用于跟踪在活动中发生的错误的处理。  每次 FaultHandler 处理错误时，都会发生此事件。|  
+|[\<faultPropagationQuery>](faultpropagationquery-of-wcf.md)|一个查询，用于跟踪在活动中发生的错误的处理。  每次 FaultHandler 处理错误时，都会发生此事件。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<工作流 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含 `activityDefinitionId` 属性所标识的特定工作流的所有查询。|  
+|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含 `activityDefinitionId` 属性所标识的特定工作流的所有查询。|  
   
 ## <a name="see-also"></a>请参阅
 

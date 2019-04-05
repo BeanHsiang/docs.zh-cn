@@ -1,5 +1,6 @@
 ---
-title: decimal 关键字（C# 参考）
+title: decimal 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - decimal_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: c9d40238ca4c34238d5663185f93afbce73195cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7bc806cd5516666c86780bb53842725f0c0c1617
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600695"
 ---
 # <a name="decimal-c-reference"></a>decimal（C# 参考）
 
@@ -96,12 +97,12 @@ Console.WriteLine((double)dec + dub);
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Decimal>  
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [标准数字格式字符串](../../../standard/base-types/standard-numeric-format-strings.md)
+- <xref:System.Decimal>
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)

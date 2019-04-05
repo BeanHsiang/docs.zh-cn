@@ -1,25 +1,25 @@
 ---
-title: 如何：创建 Flowchart 工作流
+title: 如何：创建一个流程图工作流
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e4a4714c1d93280cb86e2887505fc2b0b79484d7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502146"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718344"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>如何：创建 Flowchart 工作流
-工作流可基于内置活动以及自定义活动来构造。 本主题将指导逐步创建如使用这两个内置的活动的工作流<xref:System.Activities.Statements.Flowchart>活动，并从以前的自定义活动[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主题。 该工作流模拟猜数游戏。  
+# <a name="how-to-create-a-flowchart-workflow"></a>如何：创建一个流程图工作流
+工作流可基于内置活动以及自定义活动来构造。 本主题将指导逐步创建如使用这两个内置的活动的工作流<xref:System.Activities.Statements.Flowchart>活动，并从以前的自定义活动[如何：创建活动](how-to-create-an-activity.md)主题。 该工作流模拟猜数游戏。  
   
 > [!NOTE]
->  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)。  
+>  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成[如何：创建活动](how-to-create-an-activity.md)。  
   
 > [!NOTE]
->  若要下载本教程的完整的版本，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  若要下载完整版教程，请参阅 [Windows Workflow Foundation (WF45) — 入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ### <a name="to-create-the-workflow"></a>创建工作流  
   
@@ -67,7 +67,7 @@ ms.locfileid: "43502146"
 1.  拖动**分配**活动从**基元**部分**工具箱**并将它悬停**启动**节点，即在顶部流程图。 当**分配**活动位于**启动**节点，周围会出现三个三角形**启动**节点。 Drop**分配**下方的三角形上的活动**启动**节点。 这将两个项一起链接并将指定**分配**流程图中的第一个活动的活动。  
   
     > [!NOTE]
-    >  也还可以通过手动将活动链接到开始节点而将活动指示为流程图中的起始活动。 若要执行此操作，将鼠标悬停**启动**节点中，单击鼠标位于上方时出现的矩形之一**启动**节点，，然后将连接至所需的活动并将其放置在其中一个出现的矩形。 此外可以指定和作为通过右键单击，然后选择启动活动的活动**设置为开始节点**。  
+    >  也还可以通过手动将活动链接到开始节点而将活动指示为流程图中的起始活动。 若要执行此操作，将鼠标悬停**启动**节点中，单击鼠标位于上方时出现的矩形之一**启动**节点，，然后将连接至所需的活动并将其放置在其中一个出现的矩形。 您还可以指定一个活动为起始活动通过右键单击并选择**设置为开始节点**。  
   
 2.  类型`Target`成**到**框中，以下表达式**输入 C# 表达式**或**输入 VB 表达式**框。  
   
@@ -142,19 +142,19 @@ ms.locfileid: "43502146"
   
      下面的示例阐释已完成的工作流。  
   
-     ![完成 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
+     ![完成 Windows Workflow Foundation](./media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
   
 ### <a name="to-build-the-workflow"></a>生成工作流  
   
 1.  按 Ctrl+Shift+B 生成解决方案。  
   
-     有关如何运行工作流，说明，请参阅下一主题[如何： 运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。 如果你已完成[如何： 运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)使用不同样式的工作流步骤并希望使用此步骤中的流程图工作流运行它，请直接跳转到[生成并运行应用程序](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一节[如何： 运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。  
+     有关如何运行工作流，说明，请参阅下一主题[如何：运行工作流](how-to-run-a-workflow.md)。 如果你已完成[如何：运行工作流](how-to-run-a-workflow.md)使用不同样式的工作流步骤并希望使用此步骤中的流程图工作流运行它，请直接跳转到[生成并运行应用程序](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一部分[如何：运行工作流](how-to-run-a-workflow.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Activities.Statements.Flowchart>  
- <xref:System.Activities.Statements.FlowDecision>  
- [Windows Workflow Foundation 编程](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [设计工作流](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [如何：创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [如何：运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Activities.Statements.Flowchart>
+- <xref:System.Activities.Statements.FlowDecision>
+- [Windows Workflow Foundation 编程](programming.md)
+- [设计工作流](designing-workflows.md)
+- [入门教程](getting-started-tutorial.md)
+- [如何：创建活动](how-to-create-an-activity.md)
+- [如何：运行工作流](how-to-run-a-workflow.md)

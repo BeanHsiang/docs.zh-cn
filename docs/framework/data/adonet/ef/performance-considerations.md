@@ -2,12 +2,12 @@
 title: 性能注意事项（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: d244c3e9c48aed1844a90f1f42d33a91edc80046
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4b6d3d4dbf801a7b0cc378482ad4d0d29a915be3
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520371"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904797"
 ---
 # <a name="performance-considerations-entity-framework"></a>性能注意事项（实体框架）
 本主题介绍 ADO.NET 实体框架的性能特征，并提供一些注意事项帮助改善实体框架应用程序的性能。  
@@ -18,13 +18,13 @@ ms.locfileid: "43520371"
 |操作|相对成本|频率|注释|  
 |---------------|-------------------|---------------|--------------|  
 |加载元数据|中等|在每个应用程序域中一次。|实体框架使用的模型和映射元数据加载到 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 中。 此元数据全局缓存，并可用于同一个应用程序域中的其他 <xref:System.Data.Objects.ObjectContext> 实例。|  
-|打开数据库连接|中等<sup>1</sup>|根据需要。|数据库的打开连接会占用宝贵的资源，因为[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]打开和关闭数据库连接，仅在需要时。 还可以显式打开连接。 有关详细信息，请参阅[管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。|  
-|生成视图|高|在每个应用程序域中一次。 （可以预生成。）|在实体框架可以针对概念模型执行查询或将更改保存到数据源之前，它必须生成一组本地查询视图才能访问数据库。 由于生成这些视图会产生很高的成本，因此，您可以在设计时预生成视图并将它们添加到项目。 有关详细信息，请参阅[如何： 提高查询性能的 Pre-Generate 视图](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)。|  
-|准备查询|中等<sup>2</sup>|每个唯一查询一次。|包括编写查询命令、基于模型和映射元数据生成命令树和定义所返回数据的形状的成本。 因为实体 SQL查询命令和 LINQ 查询现已缓存，所以，以后执行相同查询所需的时间较少。 您仍可以使用已编译的 LINQ 查询来降低后续执行中的这一开销，编译的查询比自动缓存的 LINQ 查询效率更高。 有关详细信息，请参阅[编译的查询 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。 有关 LINQ 查询执行的常规信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。 **注意：** LINQ to Entities 查询适用的`Enumerable.Contains`不自动缓存到内存中集合的运算符。 此外，不允许在已编译的 LINQ 查询中参数化内存中的集合。|  
+|打开数据库连接|中等<sup>1</sup>|根据需要。|数据库的打开连接会占用宝贵的资源，因为[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]打开和关闭数据库连接，仅在需要时。 还可以显式打开连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。|  
+|生成视图|高|在每个应用程序域中一次。 （可以预生成。）|在实体框架可以针对概念模型执行查询或将更改保存到数据源之前，它必须生成一组本地查询视图才能访问数据库。 由于生成这些视图会产生很高的成本，因此，您可以在设计时预生成视图并将它们添加到项目。 有关详细信息，请参阅[如何：预生成视图以提高查询性能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。|  
+|准备查询|中等<sup>2</sup>|每个唯一查询一次。|包括编写查询命令、基于模型和映射元数据生成命令树和定义所返回数据的形状的成本。 因为实体 SQL查询命令和 LINQ 查询现已缓存，所以，以后执行相同查询所需的时间较少。 您仍可以使用已编译的 LINQ 查询来降低后续执行中的这一开销，编译的查询比自动缓存的 LINQ 查询效率更高。 有关详细信息，请参阅[编译的查询 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。 有关 LINQ 查询执行的常规信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。 **注意：** 不自动缓存将 `Enumerable.Contains` 运算符应用到内存中集合的 LINQ to Entities 查询。 此外，不允许在已编译的 LINQ 查询中参数化内存中的集合。|  
 |执行查询|低<sup>2</sup>|每个查询一次。|使用 ADO.NET 数据提供程序对数据源执行命令的成本。 因为大多数数据源缓存查询计划，所以，以后执行相同查询所需的时间可能较少。|  
 |加载和验证类型|低<sup>3</sup>|每个 <xref:System.Data.Objects.ObjectContext> 实例一次。|将加载类型，并针对概念模型定义的类型对其进行验证。|  
-|跟踪|低<sup>3</sup>|对于查询返回的每个对象执行一次。 <sup>4</sup>|如果查询使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合并选项，则此阶段不影响性能。<br /><br /> 如果查询使用 <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 合并选项，则将在 <xref:System.Data.Objects.ObjectStateManager> 中跟踪查询结果。 将为查询返回的每个跟踪对象生成一个 <xref:System.Data.EntityKey>，并用于在 <xref:System.Data.Objects.ObjectStateEntry> 中创建 <xref:System.Data.Objects.ObjectStateManager>。 如果对于 <xref:System.Data.Objects.ObjectStateEntry> 可以找到现有 <xref:System.Data.EntityKey>，则返回现有对象。 如果使用 <xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 选项，则首先更新对象，然后返回此对象。<br /><br /> 有关详细信息，请参阅[标识解析、 状态管理和更改跟踪](https://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0)。|  
-|使对象具体化|中等<sup>3</sup>|对于查询返回的每个对象执行一次。 <sup>4</sup>|读取返回的 <xref:System.Data.Common.DbDataReader> 对象、创建对象以及设置属性值（这些值基于 <xref:System.Data.Common.DbDataRecord> 类的每个实例中的值）的过程。 如果对象已存在于 <xref:System.Data.Objects.ObjectContext> 中且查询使用 <xref:System.Data.Objects.MergeOption.AppendOnly> 或 <xref:System.Data.Objects.MergeOption.PreserveChanges> 合并选项，则此阶段不影响性能。 有关详细信息，请参阅[标识解析、 状态管理和更改跟踪](https://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0)。|  
+|跟踪|低<sup>3</sup>|对于查询返回的每个对象执行一次。 <sup>4</sup>|如果查询使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合并选项，则此阶段不影响性能。<br /><br /> 如果查询使用 <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 合并选项，则将在 <xref:System.Data.Objects.ObjectStateManager> 中跟踪查询结果。 将为查询返回的每个跟踪对象生成一个 <xref:System.Data.EntityKey>，并用于在 <xref:System.Data.Objects.ObjectStateEntry> 中创建 <xref:System.Data.Objects.ObjectStateManager>。 如果对于 <xref:System.Data.Objects.ObjectStateEntry> 可以找到现有 <xref:System.Data.EntityKey>，则返回现有对象。 如果使用 <xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 选项，则首先更新对象，然后返回此对象。<br /><br /> 有关详细信息，请参阅[标识解析、 状态管理和更改跟踪](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))。|  
+|使对象具体化|中等<sup>3</sup>|对于查询返回的每个对象执行一次。 <sup>4</sup>|读取返回的 <xref:System.Data.Common.DbDataReader> 对象、创建对象以及设置属性值（这些值基于 <xref:System.Data.Common.DbDataRecord> 类的每个实例中的值）的过程。 如果对象已存在于 <xref:System.Data.Objects.ObjectContext> 中且查询使用 <xref:System.Data.Objects.MergeOption.AppendOnly> 或 <xref:System.Data.Objects.MergeOption.PreserveChanges> 合并选项，则此阶段不影响性能。 有关详细信息，请参阅[标识解析、 状态管理和更改跟踪](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))。|  
   
  <sup>1</sup>当数据源提供程序实现连接池时，将打开一个连接的成本分布在池。 SQL Server 的 .NET 提供程序支持连接池。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "43520371"
  因为查询可能消耗大量资源，所以请考虑一下在代码中的哪个点以及在哪台计算机上执行查询。  
   
 #### <a name="deferred-versus-immediate-execution"></a>延迟执行与立即执行  
- 当您创建 <xref:System.Data.Objects.ObjectQuery%601> 或 LINQ 查询时，查询可能并不立即执行。 查询延迟执行，直到您需要结果，例如，在 `foreach` (C#) 或 `For Each` (Visual Basic) 枚举期间或当分配此查询以填充 <xref:System.Collections.Generic.List%601> 集合时。 当您对 <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> 调用 <xref:System.Data.Objects.ObjectQuery%601> 方法时，或当您调用返回单一查询（如 <xref:System.Linq.Enumerable.First%2A> 或 <xref:System.Linq.Enumerable.Any%2A>）的 LINQ 方法时，将立即开始执行查询。 有关详细信息，请参阅[对象查询](https://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276)并[查询执行 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)。  
+ 当您创建 <xref:System.Data.Objects.ObjectQuery%601> 或 LINQ 查询时，查询可能并不立即执行。 查询延迟执行，直到您需要结果，例如，在 `foreach` (C#) 或 `For Each` (Visual Basic) 枚举期间或当分配此查询以填充 <xref:System.Collections.Generic.List%601> 集合时。 当您对 <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> 调用 <xref:System.Data.Objects.ObjectQuery%601> 方法时，或当您调用返回单一查询（如 <xref:System.Linq.Enumerable.First%2A> 或 <xref:System.Linq.Enumerable.Any%2A>）的 LINQ 方法时，将立即开始执行查询。 有关详细信息，请参阅[对象查询](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))并[查询执行 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)。  
   
 #### <a name="client-side-execution-of-linq-queries"></a>客户端执行 LINQ 查询  
  尽管 LINQ 查询执行发生在承载数据源的计算机上，但 LINQ 查询的某些部分可能在客户端计算机上进行计算。 有关详细信息，请参阅存储执行一部分[查询执行 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)。  
@@ -58,7 +58,7 @@ ms.locfileid: "43520371"
 -   看似简单的针对概念模型的查询可能导致对数据源执行更复杂的查询。 因为实体框架将针对概念模型的查询转换为针对数据源的等效查询，所以可能发生上述情况。 当概念模型中的单个实体集映射到数据源中的多个表时，或当实体之间的关系映射到联接表时，针对数据源查询执行的查询命令可能需要一个或多个联接。  
   
     > [!NOTE]
-    >  使用 <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> 或 <xref:System.Data.Objects.ObjectQuery%601> 类的 <xref:System.Data.EntityClient.EntityCommand> 方法可以查看针对给定查询的数据源执行的命令。 有关详细信息，请参阅[如何： 查看存储命令](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79)。  
+    >  使用 <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> 或 <xref:System.Data.Objects.ObjectQuery%601> 类的 <xref:System.Data.EntityClient.EntityCommand> 方法可以查看针对给定查询的数据源执行的命令。 有关详细信息，请参阅[如何：查看存储命令](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100))。  
   
 -   嵌套的 Entity SQL 查询可能在服务器上创建联接，并可能返回大量的行。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "43520371"
   
      此外，此类查询还会导致查询管道生成单个查询并在各嵌套查询间复制对象。 因此，单一列可能会复制多次。 在某些数据库（包括 SQL Server）中，这可能导致 TempDB 表增长过大，而降低服务器性能。 当执行嵌套查询时，应务必小心。  
   
--   如果客户端执行的操作所消耗的资源与结果集的大小成正比，则返回大量数据的任何查询都可能导致性能下降。 在此类情况下，应考虑限制查询返回的数据量。 有关详细信息，请参阅[如何： 通过查询结果进行分页](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)。  
+-   如果客户端执行的操作所消耗的资源与结果集的大小成正比，则返回大量数据的任何查询都可能导致性能下降。 在此类情况下，应考虑限制查询返回的数据量。 有关详细信息，请参阅[如何：页查看查询结果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))。  
   
  实体框架自动生成的任何命令都可能比数据库开发人员显式编写的类似命令更复杂。 如果您需要对针对数据源执行的命令进行显式控制，请考虑对表值函数或存储过程定义映射。  
   
@@ -86,15 +86,15 @@ ms.locfileid: "43520371"
   
 2.  对于对象公开的导航属性调用 `Load` 方法。  
   
-3.  将 <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> 上的 <xref:System.Data.Objects.ObjectContext> 选项设置为 `true`。 请注意，这是自动生成对象层代码时[实体数据模型设计器](https://msdn.microsoft.com/library/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf)。 有关详细信息请参阅[生成的代码概述](https://msdn.microsoft.com/library/6a88ea38-6a90-4107-bc33-531b79ce5b6a)。  
+3.  将 <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> 上的 <xref:System.Data.Objects.ObjectContext> 选项设置为 `true`。 请注意，这是自动生成对象层代码时[实体数据模型设计器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))。 有关详细信息请参阅[生成的代码概述](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))。  
   
- 在考虑要使用哪个选项时，请注意在对数据库的请求数与单个查询中返回的数据量之间进行权衡。 有关详细信息，请参阅[加载相关对象](https://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1)。  
+ 在考虑要使用哪个选项时，请注意在对数据库的请求数与单个查询中返回的数据量之间进行权衡。 有关详细信息，请参阅[加载相关对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))。  
   
 #### <a name="using-query-paths"></a>使用查询路径  
  查询路径定义查询返回的对象的图。 当定义查询路径时，仅需对数据库请求一次，即可返回该路径定义的所有对象。 如果使用查询路径，看似简单的对象查询也可能需要对数据源执行复杂的命令。 这是因为，在单个查询中返回相关对象需要一个或多个联接。 对复杂实体模型（如具有继承关系的实体或包含多对多关系的路径）进行的查询的复杂性将进一步加大。  
   
 > [!NOTE]
->  使用 <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> 方法可以查看将由 <xref:System.Data.Objects.ObjectQuery%601> 生成的命令。 有关详细信息，请参阅[如何： 查看存储命令](https://msdn.microsoft.com/library/f9771c6e-3b62-4b24-a5d4-55d68e14fa79)。  
+>  使用 <xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> 方法可以查看将由 <xref:System.Data.Objects.ObjectQuery%601> 生成的命令。 有关详细信息，请参阅[如何：查看存储命令](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100))。  
   
  如果查询路径包含过多相关对象，或对象包含过多行数据，数据源可能无法完成查询。 如果查询所需的中间临时存储区超过数据源的容量，则会出现这种情况。 出现这种情况时，通过显式加载相关对象可以降低数据源查询的复杂性。  
   
@@ -116,33 +116,33 @@ ms.locfileid: "43520371"
   
 -   具有对 SQL Server 2000 数据库执行的操作的显式事务，或始终将显式事务提升到 DTC 的其他数据源。  
   
--   当连接由[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]管理时，具有对 SQL Server 2005 执行的操作的显式事务。 因为只要在单个事务中关闭并重新打开连接，SQL Server 2005 就会提升到 DTC（这是[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的默认行为），所以会发生上述情况。 当使用 SQL Server 2008 时，不会发生这种 DTC 提升的现象。 为了避免在使用 SQL Server 2005 时出现此提升，必须在事务中显式打开和关闭连接。 有关详细信息，请参阅[管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
+-   当连接由[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]管理时，具有对 SQL Server 2005 执行的操作的显式事务。 因为只要在单个事务中关闭并重新打开连接，SQL Server 2005 就会提升到 DTC（这是[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的默认行为），所以会发生上述情况。 当使用 SQL Server 2008 时，不会发生这种 DTC 提升的现象。 为了避免在使用 SQL Server 2005 时出现此提升，必须在事务中显式打开和关闭连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
- 当在 <xref:System.Transactions> 事务内执行了一个或多个操作时，将使用显式事务。 有关详细信息，请参阅[管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
+ 当在 <xref:System.Transactions> 事务内执行了一个或多个操作时，将使用显式事务。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
 ## <a name="strategies-for-improving-performance"></a>改善性能的策略  
  您可以通过以下策略改进实体框架中查询的总体性能：  
   
 #### <a name="pre-generate-views"></a>预生成视图  
- 当应用程序首次执行查询时，基于实体模型生成视图需要很高的成本。 使用 EdmGen.exe 实用工具可以将视图预生成为 Visual Basic 或 C# 代码文件，此文件可以在设计期间添加到项目中。 还可以使用文本模板转换工具包生成预编译的视图。 预生成的视图在运行时进行验证，以确保这些视图与指定实体模型的当前版本保持一致。 有关详细信息，请参阅[如何： 提高查询性能的 Pre-Generate 视图](https://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)并[隔离使用预编译或预生成视图性能 Entity Framework 4](https://go.microsoft.com/fwlink/?LinkID=201337&clcid=0x409)。  
+ 当应用程序首次执行查询时，基于实体模型生成视图需要很高的成本。 使用 EdmGen.exe 实用工具可以将视图预生成为 Visual Basic 或 C# 代码文件，此文件可以在设计期间添加到项目中。 还可以使用文本模板转换工具包生成预编译的视图。 预生成的视图在运行时进行验证，以确保这些视图与指定实体模型的当前版本保持一致。 有关详细信息，请参阅[如何：预生成视图以提高查询性能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。
   
  在使用非常大的模型时，适用以下注意事项：  
   
  .NET 元数据格式将一个给定的二进制文件中的用户字符串字符数限定为 16,777,215 (0xFFFFFF)。 如果您正在生成非常大的模型的视图和视图文件达到此大小限制，则会获得"没有剩余的逻辑空间来创建更多用户字符串。" 编译错误。 此大小限制适用于所有托管二进制文件。 有关详细信息请参阅[博客](https://go.microsoft.com/fwlink/?LinkId=201476)，演示如何使用大而复杂的模型时避免错误。  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>考虑对查询使用 NoTracking 合并选项  
- 跟踪对象上下文中返回的对象会引发成本。 检测对象更改以及确保对于同一个逻辑实体的多个请求返回相同的对象实例均要求将对象附加到 <xref:System.Data.Objects.ObjectContext> 实例。 如果您不打算更新或删除对象并且不需要标识管理，请考虑在执行查询时使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合并选项。  
+ 跟踪对象上下文中返回的对象会引发成本。 检测对象更改以及确保对于同一个逻辑实体的多个请求返回相同的对象实例均要求将对象附加到 <xref:System.Data.Objects.ObjectContext> 实例。 如果您不打算对对象进行更新或删除并不需要标识管理，请考虑使用<xref:System.Data.Objects.MergeOption.NoTracking>在执行查询时的合并选项。  
   
 #### <a name="return-the-correct-amount-of-data"></a>返回正确的数据量  
- 在某些方案下，使用 <xref:System.Data.Objects.ObjectQuery%601.Include%2A> 方法指定查询路径要快得多，因为它要求与数据库之间的往返次数较少。 然而，在其他方案中，加载相关对象时增加与数据库之间的往返次数可能会更快，因为联接较少的较为简单的查询会使数据冗余程度下降。 因此，我们建议你测试用于检索相关对象的不同方法的性能。 有关详细信息，请参阅[加载相关对象](https://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1)。  
+ 在某些方案下，使用 <xref:System.Data.Objects.ObjectQuery%601.Include%2A> 方法指定查询路径要快得多，因为它要求与数据库之间的往返次数较少。 然而，在其他方案中，加载相关对象时增加与数据库之间的往返次数可能会更快，因为联接较少的较为简单的查询会使数据冗余程度下降。 因此，我们建议你测试用于检索相关对象的不同方法的性能。 有关详细信息，请参阅[加载相关对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))。  
   
- 为了避免在单个查询中返回过多的数据，请考虑将查询结果分页为多个可管理的组。 有关详细信息，请参阅[如何： 通过查询结果进行分页](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)。  
+ 为了避免在单个查询中返回过多的数据，请考虑将查询结果分页为多个可管理的组。 有关详细信息，请参阅[如何：页查看查询结果](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))。  
   
 #### <a name="limit-the-scope-of-the-objectcontext"></a>限制 ObjectContext 的作用域  
- 在大多数情况下，应在 <xref:System.Data.Objects.ObjectContext> 语句（在 Visual Basic 中为 `using`）内创建一个 `Using…End Using` 实例。 这样，通过确保当代码退出语句块时自动释放与对象上下文关联的资源，可以提高性能。 但是，当控制权绑定到由对象上下文管理的对象时，只要需要绑定并手动释放它，就应维护 <xref:System.Data.Objects.ObjectContext> 实例。 有关详细信息，请参阅[管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
+ 在大多数情况下，应在 <xref:System.Data.Objects.ObjectContext> 语句（在 Visual Basic 中为 `using`）内创建一个 `Using…End Using` 实例。 这样，通过确保当代码退出语句块时自动释放与对象上下文关联的资源，可以提高性能。 但是，当控制权绑定到由对象上下文管理的对象时，只要需要绑定并手动释放它，就应维护 <xref:System.Data.Objects.ObjectContext> 实例。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
 #### <a name="consider-opening-the-database-connection-manually"></a>考虑手动打开数据库连接  
- 当你的应用程序执行的一系列对象查询或频繁调用<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>保留创建、 更新和删除数据源的操作[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]必须不断地打开和关闭与数据源的连接。 在这类情况下，请考虑在开始这些操作时手动打开连接，并在操作完成后关闭或释放连接。 有关详细信息，请参阅[管理连接和事务](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。  
+ 当你的应用程序执行的一系列对象查询或频繁调用<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>保留创建、 更新和删除数据源的操作[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]必须不断地打开和关闭与数据源的连接。 在这类情况下，请考虑在开始这些操作时手动打开连接，并在操作完成后关闭或释放连接。 有关详细信息，请参阅[管理连接和事务](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
 ## <a name="performance-data"></a>性能数据  
  实体框架的一些性能数据上发布的下列帖子中[ADO.NET 团队博客](https://go.microsoft.com/fwlink/?LinkId=91905):  
@@ -153,5 +153,5 @@ ms.locfileid: "43520371"
   
 -   [ADO.NET 实体框架性能比较](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
-## <a name="see-also"></a>请参阅  
- [开发和部署注意事项](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a>请参阅
+- [开发和部署注意事项](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

@@ -2,12 +2,12 @@
 title: 在 FileName 中指定的文件不是有效的 XML 文件
 ms.date: 07/20/2015
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
-ms.openlocfilehash: d4babe81f950bcf9b23d053405fb293e81056c36
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ffa39653c20127bb6af5e85654fee940a191fe5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603517"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>在 FileName 中指定的文件不是有效的 XML 文件
 所提供的文件名称不是有效的 XML 文件。 若要指定允许的 XML 文档的结构和内容，可使用文档类型定义 (DTD)、Microsoft XML 数据缩减 (XDR) 架构或 XML 架构定义语言 (XSD) 架构。 XSD 架构是用于指定 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]中的 XML 语法的首选方式。

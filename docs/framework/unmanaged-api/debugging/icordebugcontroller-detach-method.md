@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cad8b305de580ce7cf4876939b95cc05d0fd11f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4f2dae147f8667a73036dbcf873e2082996b2755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666980"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>ICorDebugController::Detach 方法
 从分离调试器进程或应用程序域。  
@@ -34,18 +34,18 @@ HRESULT Detach ();
 ```  
   
 ## <a name="remarks"></a>备注  
- 进程或应用程序域将继续执行正常，但"ICorDebugProcess"或"ICorDebugAppDomain"对象将不再有效，且没有进一步的回调会发生。  
+ 进程或应用程序域将继续执行正常，但"ICorDebugProcess"或"ICorDebugAppDomain"对象不再有效，会进行任何进一步的回调。  
   
- 在.NET Framework 2.0 版中，如果启用了非托管调试后，此方法将由于操作系统限制失败。  
+ 在.NET Framework 2.0 版中，如果启用非托管调试，则此方法将失败由于操作系统限制。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

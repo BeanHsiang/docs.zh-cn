@@ -5,21 +5,21 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-ms.openlocfilehash: ddceec86938ef5f500c38eb90004dc1f9d11b122
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 409dd945ebd26d212f62745ce6751f7507641bb2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537776"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708075"
 ---
 # <a name="creating-a-new-windows-form"></a>创建新的 Windows 窗体
-本主题包含介绍如何创建你的第一个 Windows 窗体应用程序的主题链接。 此外，本部分中的主题还将介绍一些基本的词汇和当开始创建 Windows 窗体应用程序时，应该了解的准则。 若要了解有关 Windows 窗体应用程序的详细信息，可以使用它们、 事件和处理事件和如何处理来自用户的输入上的控件，请参阅相关的主题列表。  
+本主题包含介绍如何创建你的第一个 Windows 窗体应用程序的主题链接。 此外，本部分中的主题还将介绍一些基本的词汇和当开始创建 Windows 窗体应用程序时，应该了解的准则。 若要详细了解 Windows 窗体应用程序，可以使用它们、 事件和处理事件和如何处理来自用户输入的控件，请参阅相关的主题列表。  
   
 ## <a name="in-this-section"></a>本节内容  
- [Windows 窗体坐标](../../../docs/framework/winforms/windows-forms-coordinates.md)。  
+ [Windows 窗体坐标](windows-forms-coordinates.md)。  
  描述客户端和屏幕坐标。  
   
- [如何：通过命令行创建 Windows 窗体应用程序](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md)  
+ [如何：从命令行创建 Windows 窗体应用程序](how-to-create-a-windows-forms-application-from-the-command-line.md)  
  描述如何创建基本的 Windows 窗体，并从命令行对其进行编译。  
   
 ## <a name="reference"></a>参考  
@@ -30,14 +30,14 @@ ms.locfileid: "33537776"
  描述该类，并包含其所有成员的链接。  
   
 ## <a name="related-sections"></a>相关章节  
- [处理用户输入](../../../docs/framework/winforms/controls/handling-user-input.md)  
+ [处理用户输入](./controls/handling-user-input.md)  
  包含讨论用户输入以及如何在 Windows 窗体应用程序中进行处理的主题的链接。  
   
- [在 Windows 窗体中创建事件处理程序](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [在 Windows 窗体中创建事件处理程序](creating-event-handlers-in-windows-forms.md)  
  包含介绍如何在 Windows 窗体应用程序中处理事件的主题的链接。  
   
- [更改 Windows 窗体外观](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [更改 Windows 窗体外观](changing-the-appearance-of-windows-forms.md)  
  包含演示如何更改 Windows 窗体应用程序的外观的主题的链接。  
   
- [按功能列出的 Windows 窗体控件](../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [按功能列出的 Windows 窗体控件](./controls/windows-forms-controls-by-function.md)  
  包含介绍可以在 Windows 窗体应用程序中使用的控件的主题的链接。

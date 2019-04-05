@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 256afe9a4304654ddb263a0671db7525f3bedcba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6826ee1b94f9a1c48c19150271ebc84ac54dda25
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429632"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471779"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 函数
 获取指定从最新的安装公共语言运行时 (CLR) 版本导出的函数的地址。  
   
- 此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetRealProcAddress (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pwszProcName`  
  [in]函数的名称。  
   
@@ -45,7 +45,7 @@ HRESULT GetRealProcAddress (
  [out]接收指向函数的地址的位置。  
   
 ## <a name="return-value"></a>返回值  
- 定义在 WinError.h，除了 CorError.h 中定义的以下值时，此方法将返回标准组件对象模型 (COM) 错误代码。  
+ 此方法返回标准的组件对象模型 (COM) 错误代码，定义在 WinError.h，除了 CorError.h 中定义的以下值。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
@@ -54,13 +54,13 @@ HRESULT GetRealProcAddress (
 |CLR_E_SHIM_RUNTIMEEXPORT|不会在运行时中导出函数。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>请参阅
+- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

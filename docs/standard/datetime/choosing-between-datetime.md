@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54392ce12ca93d3a7979b1d0bbc78132773f88ce
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600110"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之间进行选择
 
@@ -47,7 +47,7 @@ ms.locfileid: "44227709"
 
 ## <a name="the-datetime-structure"></a>DateTime 结构
 
-<xref:System.DateTime> 值定义特定日期和时间。 它包括<xref:System.DateTime.Kind%2A>属性提供了有关时区信息的日期和时间所属有限。 <xref:System.DateTimeKind>返回值<xref:System.DateTime.Kind%2A>属性指示是否<xref:System.DateTime>值表示本地时间 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)，协调世界时 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>)，或未指定的时间 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>)。
+<xref:System.DateTime> 值定义特定日期和时间。 它包括<xref:System.DateTime.Kind%2A>属性提供了有关时区信息的日期和时间所属有限。 由 <xref:System.DateTimeKind> 属性返回的 <xref:System.DateTime.Kind%2A> 值指示 <xref:System.DateTime> 值是表示本地时间 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、协调世界时 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) 还是未指定的时间 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>)。
 
 <xref:System.DateTime> 结构适用于执行以下操作的应用程序：
 
@@ -114,7 +114,7 @@ ms.locfileid: "44227709"
 
 ## <a name="the-timezoneinfo-class"></a>TimeZoneInfo 类
 
-<xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. 借助 <xref:System.TimeZoneInfo> 类，即可处理日期和时间，以使任何日期和时间值均明确标识单个时间点。 <xref:System.TimeZoneInfo> 类也可扩展。 虽然它依赖于为 Windows 系统提供且在注册表中定义的时区信息，但仍然支持创建自定义时区。 它还支持时区信息的序列化和反序列化。
+ <xref:System.TimeZoneInfo> class represents any of the Earth's time zones, and enables the conversion of any date and time in one time zone to its equivalent in another time zone. 借助 <xref:System.TimeZoneInfo> 类，即可处理日期和时间，以使任何日期和时间值均明确标识单个时间点。 <xref:System.TimeZoneInfo> 类也可扩展。 虽然它依赖于为 Windows 系统提供且在注册表中定义的时区信息，但仍然支持创建自定义时区。 它还支持时区信息的序列化和反序列化。
 
 在某些情况下，可能需要进一步的开发工作才可以充分利用 <xref:System.TimeZoneInfo> 类。 如果日期和时间值不会与时区到它们属于、 深入的工作紧密耦合则需要。 除非您的应用程序提供了一些机制来将日期和时间及其关联时区链接，很容易变得与时区解除关联的特定日期和时间值。 链接此信息的一种方法是，定义一个同时包含日期和时间值及其关联时区对象的类或结构。
 
@@ -122,4 +122,4 @@ ms.locfileid: "44227709"
 
 ## <a name="see-also"></a>请参阅
 
-* [日期、时间和时区](../../../docs/standard/datetime/index.md)
+- [日期、时间和时区](../../../docs/standard/datetime/index.md)

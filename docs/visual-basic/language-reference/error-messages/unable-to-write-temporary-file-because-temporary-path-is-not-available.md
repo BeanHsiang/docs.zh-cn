@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30698
 ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
-ms.openlocfilehash: 7e2dfb3151c3ef81beaabe6fae3b026148796eb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cafd2f657f618de66a132c03b5245fad4c2f3264
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603998"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828038"
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>临时路径不可用，因此无法写入临时文件
 Visual Basic 无法确定存储临时文件的路径。  
@@ -25,5 +25,6 @@ Visual Basic 无法确定存储临时文件的路径。
   
 2.  如果问题仍然存在，请重新安装 Visual Studio。  
   
-## <a name="see-also"></a>请参阅  
- [与我们交流](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>请参阅
+
+- [与我们交流](/visualstudio/ide/talk-to-us)

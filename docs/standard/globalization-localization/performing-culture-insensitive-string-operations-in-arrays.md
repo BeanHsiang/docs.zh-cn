@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22815b5ab993b36bc8bcb91f89f346cb6d812e19
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ba02333aaafbadc85e4d3c547659f4ce4d2740c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698240"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670272"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>在数组中执行不区分区域性的字符串操作
 默认情况下，<xref:System.Array.Sort%2A?displayProperty=nameWithType> 和 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 方法重载使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性执行区域性敏感型排序。 由于排序顺序不同，因此这些方法返回的区域性敏感型结果可能会因区域性而异。 若要消除区域性敏感型行为，请使用需要使用 `comparer` 参数的此方法重载之一。 `comparer` 参数指定要在比较数组元素时使用的 <xref:System.Collections.IComparer> 实现。 对于参数，指定使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的自定义固定比较器类。 [在集合中执行非区域性敏感型字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md)主题的“使用 SortedList 类”子主题提供了自定义固定比较器类的示例。  
@@ -23,7 +23,7 @@ ms.locfileid: "45698240"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Array.Sort%2A?displayProperty=nameWithType>  
-- <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>  
-- <xref:System.Collections.IComparer>  
+- <xref:System.Array.Sort%2A?displayProperty=nameWithType>
+- <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType>
+- <xref:System.Collections.IComparer>
 - [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

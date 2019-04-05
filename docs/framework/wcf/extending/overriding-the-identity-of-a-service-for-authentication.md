@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: c6810009e4cda0b493a5f215d966cb37fc6fb090
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554460"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>重写服务标识以便进行身份验证
 通常情况下不需要设置服务上的标识，因为客户端凭据类型的选择即规定了服务元数据中公开的标识的类型。 例如，下面的配置代码使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素并设置`clientCredentialType`属性到 Windows。  
@@ -26,7 +26,7 @@ ms.locfileid: "43511989"
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 身份验证和标识  
  默认情况下，当服务配置为使用 Windows 凭据， [\<标识 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)元素，其中包含[ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)或[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)在 WSDL 中生成元素。 如果服务下运行`LocalSystem`， `LocalService`，或`NetworkService`帐户、 服务主体名称 (SPN) 形式的默认情况下生成`host/` \<*主机名*> 因为这些帐户有权访问计算机的 SPN 数据。 如果服务正在其他帐户下，Windows Communication Foundation (WCF) 中的窗体生成 UPN \<*用户名*>@<*domainName* `>`. 发生这种情况的原因是 Kerberos 身份验证要求向客户端提供 UPN 或 SPN，以便对服务进行身份验证。  
   
- 您还可以使用 Setspn.exe 工具向域中服务的帐户注册其他 SPN。 然后，可以使用该 SPN 作为服务的标识。 若要下载该工具，请参阅[Windows 2000 资源工具包工具： Setspn.exe](https://go.microsoft.com/fwlink/?LinkId=91752)。 有关工具的详细信息，请参阅[Setspn 概述](https://go.microsoft.com/fwlink/?LinkId=61374)。  
+ 您还可以使用 Setspn.exe 工具向域中服务的帐户注册其他 SPN。 然后，可以使用该 SPN 作为服务的标识。 若要下载该工具，请参阅[Windows 2000 资源工具包工具：Setspn.exe](https://go.microsoft.com/fwlink/?LinkId=91752)。 有关工具的详细信息，请参阅[Setspn 概述](https://go.microsoft.com/fwlink/?LinkId=61374)。  
   
 > [!NOTE]
 >  若要使用不带协商的 Windows 凭据类型，服务的用户帐户必须有权访问向 Active Directory 域注册的 SPN。 可以使用下列方式来实现：  
@@ -65,6 +65,6 @@ ms.locfileid: "43511989"
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
-## <a name="see-also"></a>请参阅  
- [如何：创建自定义客户端标识验证工具](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>请参阅
+- [如何：创建自定义客户端标识验证工具](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+- [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

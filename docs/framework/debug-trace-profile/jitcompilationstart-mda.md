@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9643a2d2ea0967b8cf6d8e18ce2e9073ae583f71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd4d1be3ec3c64c7c6669a2c85ba6bf68db6da68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536758"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 激活 `jitCompilationStart` 托管调试助手 (MDA) 以报告实时 (MDA) 编译器何时开始编译函数。  
@@ -39,7 +39,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>配置  
- 以下配置文件显示多种筛选器，可筛选出首次 JIT 编译时，报告哪些方法。 通过将名称属性的值设置为 *，可指定报告所有方法。  
+ 以下配置文件显示多种筛选器，可筛选出首次 JIT 编译时，报告哪些方法。 您可以指定报告所有方法通过将名称属性的值设置\*。  
   
 ```xml  
 <mdaConfig>  
@@ -62,7 +62,7 @@ method name="Test!ns2.C0::m"
 ## <a name="example"></a>示例  
  以下示例代码用于上述配置文件。  
   
-```  
+```csharp
 using System;  
 using System.Reflection;  
 using System.Runtime.CompilerServices;  
@@ -157,7 +157,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)

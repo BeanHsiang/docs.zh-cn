@@ -1,5 +1,6 @@
 ---
-title: 索引器（C# 编程指南）
+title: 索引器 - C# 编程指南
+ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 6a98cd9f2ff6f40a200a9e30fc65de717b6e788e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5ab0a5e524979110c355391cf800cc82e6d6244f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503628"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365017"
 ---
 # <a name="indexers-c-programming-guide"></a>索引器（C# 编程指南）
 
@@ -53,7 +54,7 @@ ms.locfileid: "43503628"
   
 -   索引器可以有多个形参，例如当访问二维数组时。  
   
-##  <a name="BKMK_RelatedSections"></a>相关部分  
+## <a name="BKMK_RelatedSections"></a>相关部分  
   
 -   [使用索引器](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
@@ -64,9 +65,10 @@ ms.locfileid: "43503628"
 -   [限制访问器可访问性](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[索引器](~/_csharplang/spec/classes.md#indexers)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)

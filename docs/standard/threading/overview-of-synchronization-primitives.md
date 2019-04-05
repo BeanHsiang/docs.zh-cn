@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201593"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479773"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步基元概述
 
@@ -79,9 +79,9 @@ ms.locfileid: "50201593"
 
 ### <a name="readerwriterlockslim-class"></a>ReaderWriterLockSlim 类
 
-<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> 类授予对共享资源的独占访问权限以便进行写入，并允许多个线程同时访问资源以便进行读取。 你可能想要使用 <xref:System.Threading.ReaderWriterLockSlim> 同步对支持线程安全读取操作，但需要独占访问权限才能执行写入操作的共享数据结构的访问。 当某个线程请求独占访问时（例如，通过调用 <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> 方法），后续读取器请求将被阻止，直到所有现有读取器均已退出 lock，并且编写器已进入并退出 lock。
+<xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> 类授予对共享资源的独占访问权限以便进行写入，并允许多个线程同时访问资源以便进行读取。 你可能想要使用 <xref:System.Threading.ReaderWriterLockSlim> 同步对支持线程安全读取操作，但需要独占访问权限才能执行写入操作的共享数据结构的访问。 当某个线程请求独占访问时（例如，通过调用 <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType> 方法），后续读取器和编写器请求将被阻止，直到所有现有读取器均已退出 lock，并且编写器已进入并退出 lock。
   
-有关详细信息，请参阅[读取器-编写器锁](reader-writer-locks.md)一文和 <xref:System.Threading.ReaderWriterLockSlim> API 参考。
+有关详细信息，请参阅 <xref:System.Threading.ReaderWriterLockSlim> API 参考。
 
 ### <a name="semaphore-and-semaphoreslim-classes"></a>Semaphore 和 SemaphoreSlim 类
 
@@ -112,7 +112,7 @@ ms.locfileid: "50201593"
 
 在 Windows 上，可以将 <xref:System.Threading.EventWaitHandle> 用于进程间同步。 为此，通过使用指定了名称或 <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType> 方法的 [EventWaitHandle 构造函数](<xref:System.Threading.EventWaitHandle.%23ctor%2A>)之一来创建表示指定了已命名系统信号量的 <xref:System.Threading.EventWaitHandle> 实例。
 
-有关详细信息，请参阅 [EventWaitHandle](eventwaithandle.md)、[AutoResetEvent](autoresetevent.md) 以及 [ManualResetEvent 和 ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md) 文章。 对于 API 参考，请参阅 <xref:System.Threading.EventWaitHandle>、<xref:System.Threading.AutoResetEvent>、<xref:System.Threading.ManualResetEvent> 和 <xref:System.Threading.ManualResetEventSlim>。
+有关详细信息，请参阅文章 [EventWaitHandle](eventwaithandle.md)。 对于 API 参考，请参阅 <xref:System.Threading.EventWaitHandle>、<xref:System.Threading.AutoResetEvent>、<xref:System.Threading.ManualResetEvent> 和 <xref:System.Threading.ManualResetEventSlim>。
 
 ### <a name="countdownevent-class"></a>CountdownEvent 类
 
@@ -134,7 +134,7 @@ ms.locfileid: "50201593"
 
 <xref:System.Threading.Interlocked?displayProperty=nameWithType> 类提供了可对变量执行简单原子操作的静态方法。 这些原子操作包括添加、递增和递减、交换、取决于比较的条件交换以及读取 64 位整数值的操作。
 
-有关详细信息，请参阅[互锁操作](interlocked-operations.md)一文和 <xref:System.Threading.Interlocked> API 参考。
+有关详细信息，请参阅 <xref:System.Threading.Interlocked> API 参考。
 
 ## <a name="spinwait-structure"></a>SpinWait 结构
 

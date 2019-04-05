@@ -11,32 +11,32 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: 73867a5881db7c94d258e8716c4ff4c5b1119e71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650434"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833810"
 ---
 # <a name="composite-data-types-visual-basic"></a>复合数据类型 (Visual Basic)
-除了基本数据类型 Visual Basic 提供，也可以组合不同的类型创建的项目*复合数据类型*如结构、 数组和类。 基本类型和其他复合类型，你可以构建复合数据类型。 例如，可以与数组成员中定义的结构元素的数组或结构。  
+除了基本数据类型 Visual Basic 提供，您可以汇集不同类型创建的项*复合数据类型*如结构、 数组和类。 从基本类型和其他复合类型，您可以构建复合数据类型。 例如，可以使用数组成员定义结构元素的数组或结构。  
   
 ## <a name="data-types"></a>数据类型  
- 复合类型是不同的任一种情况及其组件的数据类型。 例如，数组的`Integer`元素不属于`Integer`数据类型。  
+ 复合类型是不同于其任意组件的数据类型。 例如，数组`Integer`元素的不是`Integer`数据类型。  
   
- 数组数据类型通常表示根据需要使用元素类型、 圆括号和逗号。 例如，一维数组的`String`元素表示为`String()`，和一个二维数组的`Boolean`元素表示为`Boolean(,)`。  
+ 通常情况下根据需要使用元素类型、 括号和逗号表示数组数据类型。 例如的一维数组`String`元素表示为`String()`，和的二维数组`Boolean`元素表示为`Boolean(,)`。  
   
 ## <a name="structure-types"></a>结构类型  
- 不存在包含所有结构的单个数据类型。 相反，每个定义的结构表示唯一的数据类型，即使两个结构定义相同的元素顺序相同。 但是，如果你创建具有相同结构的两个或多个实例，则 Visual Basic 将认为它们是相同的数据类型。  
+ 没有一种数据类型包含所有结构。 相反，每个定义的结构表示唯一的数据类型，即使两个结构的相同顺序定义相同的元素。 但是，如果创建具有相同结构的两个或多个实例时，Visual Basic 将认为它们是相同的数据类型。  
   
 ## <a name="tuples"></a>元组
 
-元组是包含其类型预定义的两个或多个字段的轻量结构。 从 Visual Basic 自 2017 年开始支持元组。 元组通常用于从单个方法调用返回多个值，而无需通过引用传递自变量或打包多重型的类或结构中返回的字段。 请参阅[元组](tuples.md)元组的详细信息的主题。
+元组是包含两个或多个字段的类型预定义的轻型结构。 从 Visual Basic 2017 开始支持元组。 元组通常用于从单个方法调用返回多个值，而无需按引用传递参数或打包更粗线的类或结构中返回的字段。 请参阅[元组](tuples.md)元组的详细信息的主题。
 
 ## <a name="array-types"></a>数组类型  
- 不存在包含所有数组的单个数据类型。 由以下确定数组的特定实例的数据类型：  
+ 没有一种数据类型包含所有数组。 通过以下方法确定数组的特定实例的数据类型：  
   
--   确实为数组  
+-   这一事实的一个数组  
   
 -   数组的秩 （维数）  
   
@@ -52,21 +52,22 @@ Dim arrayD( , ) As Short
 Dim arrayE( , ) As Short = New Short(4, 10) {}  
 ```  
   
- 在前面的示例中，数组变量`arrayA`和`arrayB`被视为相同的数据类型- `Byte()` — 即使它们将初始化为不同长度也是如此。 变量`arrayB`和`arrayC`不属于同一类型，因为它们的元素类型不同。 变量`arrayC`和`arrayD`不属于同一类型，因为它们的秩不同。 变量`arrayD`和`arrayE`具有相同的类型- `Short(,)` -因为它们的秩和元素类型是相同的即使`arrayD`尚未初始化。  
+ 在前面的示例中，数组变量`arrayA`并`arrayB`被视为是相同的数据类型 — `Byte()` — 即使它们初始化为不同的长度。 变量`arrayB`和`arrayC`不属于同一类型，因为它们的元素类型不同。 变量`arrayC`和`arrayD`不属于同一类型，因为它们的秩不同。 变量`arrayD`并`arrayE`具有相同的类型 — `Short(,)` — 因为它们的秩和元素类型是相同的即使`arrayD`尚未初始化。  
   
- 在阵列上的详细信息，请参阅[数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
+ 在数组上的详细信息，请参阅[数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
 ## <a name="class-types"></a>类类型  
- 不存在包含所有类的单个数据类型。 尽管一个类可以从另一个类继承的每个是单独的数据类型。 同一个类的多个实例均为相同的数据类型。 如果将一个类实例变量分配到另一个，不仅它们具有相同的数据类型，它们指向内存中的同一个类实例。  
+ 没有一种数据类型组成的所有类。 尽管一个类可以继承自另一个类，每个是单独的数据类型。 同一个类的多个实例是相同的数据类型。 如果将一个类实例变量分配到另一个，不仅它们具有相同的数据类型，它们指向内存中的同一个类实例。  
   
  类的详细信息，请参阅[对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [如何：在一个变量中保存多个值](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)
+## <a name="see-also"></a>请参阅
+
+- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [如何：在一个变量中保留多个值](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)

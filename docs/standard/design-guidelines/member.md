@@ -1,6 +1,6 @@
 ---
 title: 成员设计准则
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], about member design guidelines
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+author: KrzysztofCwalina
+ms.openlocfilehash: d7023bbe59eb3590af47952a2fe24c5f40b3ca68
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259962"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155257"
 ---
 # <a name="member-design-guidelines"></a>成员设计准则
 方法、属性、事件、构造函数和字段统称为成员。 框架功能最终以成员的方式向框架用户公开。  
@@ -35,7 +34,7 @@ ms.locfileid: "44259962"
  [参数设计](../../../docs/standard/design-guidelines/parameter-design.md)  
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *通过从 Pearson Education，Inc.的权限重新打印[Framework 设计准则：约定、 语法和模式的可重用.NET 库，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，作为 Microsoft Windows 开发系列的一部分发布 2008 年 10 月 22 日由 Addison-wesley 专业人员。*  
   
 ## <a name="see-also"></a>请参阅
 

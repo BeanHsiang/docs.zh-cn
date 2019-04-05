@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b68d4e3d51fdb50290319de804a78c1a78a07a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 857ea06ad8aba2a6de87bdf670ad0462a2f7dde1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487275"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod 方法
-获取一个指向 methoddef 标记包含的方法由指定<xref:System.Type>并具有指定的名称和元数据签名。  
+获取指向 MethodDef 标记所用的方法由指定<xref:System.Type>并具有指定的名称和元数据签名。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,12 +39,12 @@ HRESULT FindMethod (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `td`  
- [in]`mdTypeDef`标记，表示包含要搜索的成员的类型 （类或接口）。 如果此值为`mdTokenNil`，然后对全局函数执行查找。  
+ [in]`mdTypeDef`标记，表示包含要搜索的成员的类型 （类或接口）。 如果此值为`mdTokenNil`，则会对全局函数执行查找。  
   
  `szName`  
- [in]要搜索的方法名称。  
+ [in]要搜索的方法的名称。  
   
  `pvSigBlob`  
  [in]指向方法的二进制元数据签名的指针。  
@@ -55,22 +56,22 @@ HRESULT FindMethod (
  [out]指向匹配的 MethodDef 标记的指针。  
   
 ## <a name="remarks"></a>备注  
- 指定使用其封闭类或接口的方法 (`td`)，其名称 (`szName`)，（可选） 及其签名 (`pvSigBlob`)。 可能有多个具有相同名称的类或接口中的方法。 在这种情况下，将传递方法的签名，以查找唯一匹配项。  
+ 指定使用封闭类或接口的方法 (`td`)，其名称 (`szName`)，并根据需要它的签名 (`pvSigBlob`)。 可能有多个具有相同名称的类或接口中的方法。 在这种情况下，传递方法的签名，以查找唯一匹配项。  
   
- 签名传递给`FindMethod`必须已生成在当前范围内，因为签名绑定到特定的作用域。 签名中可以嵌入标识封闭类或值类型的令牌。 该标记是本地的 TypeDef 表中的索引。 不能生成上下文之外的当前作用域的运行时签名并使用该签名为的输入`FindMethod`。  
+ 签名传递给`FindMethod`必须已生成在当前范围内，因为这些签名将绑定到特定的作用域。 签名可以嵌入令牌，用于标识封闭类或值类型。 令牌的本地 TypeDef 表中的索引。 不能生成上下文的当前作用域外部的运行时签名并使用该签名一样的输入`FindMethod`。  
   
- `FindMethod` 查找直接在类或接口; 中定义的方法未找到继承的方法。  
+ `FindMethod` 查找直接在类或接口; 中定义的方法找不到继承的方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection.MethodInfo>  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Reflection.MethodInfo>
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

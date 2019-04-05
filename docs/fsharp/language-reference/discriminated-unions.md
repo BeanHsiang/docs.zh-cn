@@ -1,13 +1,13 @@
 ---
-title: 可区分联合 (F#)
-description: '了解如何使用 F # 可区分联合。'
+title: 可区分联合
+description: 了解如何使用F#可区分联合。
 ms.date: 05/16/2016
-ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43788118"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821421"
 ---
 # <a name="discriminated-unions"></a>可区分联合
 
@@ -39,7 +39,7 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-前面的代码声明的可区分的联合形状，它可以具有任意三个用例的值： 矩形、 圆形和棱镜。 每种情况下具有一组不同的字段。 矩形用例有两个命名字段，这两个类型`float`，具有名称宽度和长度。 圆形用例都只是一个命名的字段，radius。 棱镜用例有三个字段，哪个 （宽度和高度） 的两个命名字段。 未命名的字段称为匿名字段。
+前面的代码声明的可区分的联合形状，它可以具有任意三个用例的值：矩形、 圆形和棱镜。 每种情况下具有一组不同的字段。 矩形用例有两个命名字段，这两个类型`float`，具有名称宽度和长度。 圆形用例都只是一个命名的字段，radius。 棱镜用例有三个字段，哪个 （宽度和高度） 的两个命名字段。 未命名的字段称为匿名字段。
 
 通过根据以下示例的命名和匿名字段提供值来构造对象。
 
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 此代码显示了您可以使用命名的字段初始化，也可以依赖于声明中字段的排序方式，只需提供的值对于每个字段又。 有关构造函数调用`rect`前面的代码中使用的命名的字段，但对于构造函数调用`circ`使用了排序。 可以混合有序的字段和已命名字段，如下所示的构造`prism`。
 
-`option`类型是一个简单的可区分的联合中的 F # 核心库。 `option`类型声明，如下所示。
+`option`类型是一个简单的可区分的联合中F#核心库。 `option`类型声明，如下所示。
 
 ```fsharp
 // The option type is a discriminated union.
@@ -84,7 +84,7 @@ let getShapeHeight shape =
 
 ### <a name="unwrapping-discriminated-unions"></a>解包的可区分的联合
 
-在 F # 可区分联合通常用在域模型用于包装单个类型。 它很容易提取通过模式匹配也的基础值。 您不需要对单个事例使用匹配表达式：
+在F#的可区分联合通常用于在域模型中包装单一类型。 它很容易提取通过模式匹配也的基础值。 您不需要对单个事例使用匹配表达式：
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -95,15 +95,23 @@ let ([UnionCaseName] [values]) = [UnionValue]
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
 
-let someMethodUsingShaderProgram shaderProgram =
+let someFunctionUsingShaderProgram shaderProgram =
     let (ShaderProgram id) = shaderProgram
     // Use the unwrapped value
-    ..
+    ...
+```
+
+模式匹配还允许直接在函数参数中，因此，可以解除单个事例的包装：
+
+```fsharp
+let someFunctionUsingShaderProgram (ShaderProgram id) =
+    // Use the unwrapped value
+    ...
 ```
 
 ## <a name="struct-discriminated-unions"></a>结构可区分联合
 
-从 F # 4.1 开始，可以为结构还表示可区分联合。  这通过`[<Struct>]`属性。
+从F#4.1，您还可以表示为结构可区分联合。  这通过`[<Struct>]`属性。
 
 ```fsharp
 [<Struct>]
@@ -148,7 +156,7 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 在前面的代码，`resultSumTree`具有值 10。 下图显示的树结构`myTree`。
 
-![Mytree 的树结构](../media/TreeStructureDiagram.png)
+![图，显示 mytree 的树结构。](../media/discriminated-unions/tree-structure-mytree.png)
 
 如果在树中的节点是异类是可行的可区分的联合。 在下面的代码中，类型`Expression`表示一种简单的编程语言支持添加中的表达式的抽象语法树和乘法的数字和变量。 一些联合用例不是递归的表示数字 (`Number`) 或变量 (`Variable`)。 其他情况下是递归的并表示操作 (`Add`和`Multiply`)、 的操作数也是表达式。 `Evaluate`函数使用匹配表达式以递归方式处理语法树。
 

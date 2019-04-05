@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 911d0d1444e2cf3cb8241eeeff63a5a86b4ab806
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 74295b14e9c774aa8a61d9c2726a39a4e3f5f8cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446269"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477707"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps 方法
 获取具有指定的元数据签名的程序集的属性集。  
@@ -43,18 +43,18 @@ HRESULT GetAssemblyProps (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `mda`  
- [in]。 `mdAssembly`表示要为其获取属性的程序集的元数据标记。  
+ [in]. `mdAssembly`表示要为其获取属性的程序集的元数据标记。  
   
  `ppbPublicKey`  
  [out]公钥或元数据标记的指针。  
   
  `pcbPublicKey`  
- [out]返回公钥中的字节数。  
+ [out]中返回的公钥的字节数。  
   
  `pulHashAlgId`  
- [out]指向用于在程序集中的文件执行哈希算法的指针。  
+ [out]一个指向用于在程序集中的文件执行哈希的算法。  
   
  `szName`  
  [out]程序集的简单名称。  
@@ -72,13 +72,13 @@ HRESULT GetAssemblyProps (
  [out]描述应用于程序集的元数据的标志。 此值是一个或多个组合[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataAssemblyImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

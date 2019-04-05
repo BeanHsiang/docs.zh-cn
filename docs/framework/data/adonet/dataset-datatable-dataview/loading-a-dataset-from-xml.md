@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 3a781f17ac3cabebce17955b9a7e2edda4d4fd4b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 8dea23bac122f1f135b4695995d79191d5cd5f04
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582770"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827599"
 ---
 # <a name="loading-a-dataset-from-xml"></a>从 XML 加载数据集
 ADO.NET <xref:System.Data.DataSet> 的内容可以从 XML 流或文档创建。 此外，利用 .NET Framework，您可以相当灵活地控制从 XML 中加载哪些信息以及如何创建 <xref:System.Data.DataSet> 的架构（即关系结构）。  
   
- 若要填充<xref:System.Data.DataSet>XML 中的数据，使用**ReadXml**方法的<xref:System.Data.DataSet>对象。 **ReadXml**方法读取文件、 流，或**XmlReader**，并将作为参数的 XML 以及可选源**XmlReadMode**参数。 (有关详细信息**XmlReader**，请参阅[NIB： 使用 XmlTextReader 读取 XML 数据](https://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540)。)**ReadXml**方法读取 XML 流或文档和加载的内容<xref:System.Data.DataSet>的数据。 它还将创建的关系架构<xref:System.Data.DataSet>具体取决于**XmlReadMode**指定且是否关系架构已经存在。  
+ 若要填充<xref:System.Data.DataSet>XML 中的数据，使用**ReadXml**方法的<xref:System.Data.DataSet>对象。 **ReadXml**方法读取文件、 流，或**XmlReader**，并将作为参数的 XML 以及可选源**XmlReadMode**参数。 有关详细信息**XmlReader**，请参阅[使用 XmlTextReader 读取 XML 数据](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100))。 **ReadXml**方法读取 XML 流或文档和加载的内容<xref:System.Data.DataSet>的数据。 它还将创建的关系架构<xref:System.Data.DataSet>具体取决于**XmlReadMode**指定且是否关系架构已经存在。  
   
  下表描述的选项**XmlReadMode**参数。  
   
@@ -115,12 +115,12 @@ foreach (DataTable dataTable in dataSet.Tables)
 ## <a name="merging-data-from-xml"></a>合并 XML 中的数据  
  如果 <xref:System.Data.DataSet> 已经包含数据，则会向已存在于 <xref:System.Data.DataSet> 中的数据添加 XML 中的新数据。 **ReadXml**不会合并从 XML 向<xref:System.Data.DataSet>任何行具有匹配主键的信息。 若要使用 XML 中的新信息覆盖现有行信息，请使用**ReadXml**若要创建一个新<xref:System.Data.DataSet>，然后<xref:System.Data.DataSet.Merge%2A>新<xref:System.Data.DataSet>到现有<xref:System.Data.DataSet>。 请注意该装载时使用的 DiffGram **ReadXML**与**XmlReadMode**的**DiffGram**将合并具有相同的唯一标识符的行。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>  
- [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
- [从 XML 架构派生数据集关系结构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [从 XML 推断数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [从 XML 加载数据集构架信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>
+- [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
+- [从 XML 架构派生数据集关系结构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [从 XML 推断数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [从 XML 加载数据集构架信息](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
+- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

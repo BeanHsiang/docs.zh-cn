@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3fd130759ab11b54b597d5c099c33dab93070ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0fb4c98ff2c8b071f05b42aefed61485001e97f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429245"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480320"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 函数
-获取一个值，该值指示指定的程序集是否为托管对象。  
+获取一个值，该值指示指定的程序集是否已托管。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,28 +37,28 @@ HRESULT IsFrameworkAssembly (
  );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pwzAssemblyReference`  
  [in]要检查的程序集的名称。  
   
  `pbIsFrameworkAssembly`  
- [out]一个布尔值，该值指示是否已托管程序集。  
+ [out]一个布尔值，该值指示是否为托管程序集。  
   
  `pwzFrameworkAssemblyIdentity`  
- [in]包含程序集的唯一标识一个 uncanonicalized 的字符串。  
+ [in]一个 uncanonicalized 的字符串，包含程序集的唯一标识。  
   
  `pccSize`  
  [输入] `pwzFrameworkAssemblyIdentity` 的大小。  
   
 ## <a name="remarks"></a>备注  
- `pwzAssemblyReference`参数是指向包含程序集的名称的字符字符串的指针。  
+ `pwzAssemblyReference`参数是指向包含程序集名称的字符串。  
   
- 如果此程序集是.NET Framework 的一部分`pbIsFrameworkAssembly`参数将包含布尔值的`true`。  
+ 如果此程序集是.NET Framework 的一部分`pbIsFrameworkAssembly`参数将包含一个布尔值为`true`。  
   
- 如果指定的程序集不属于.NET Framework 中，或如果`pwzAssemblyReference`参数没有命名一个程序集，`pbIsFrameworkAssembly`将包含布尔值的`false`。  
+ 如果命名的程序集不是.NET Framework 的一部分，或如果`pwzAssemblyReference`参数没有命名程序集`pbIsFrameworkAssembly`将包含一个布尔值为`false`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
-## <a name="see-also"></a>请参阅  
- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>请参阅
+- [合成全局静态函数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

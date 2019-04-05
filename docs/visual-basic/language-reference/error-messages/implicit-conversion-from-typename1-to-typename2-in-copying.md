@@ -1,5 +1,5 @@
 ---
-title: 从隐式转换&#39; &lt;typename1&gt; &#39;到&#39; &lt;typename2&gt; &#39;中的值复制&#39;ByRef&#39;参数&#39; &lt;parametername&gt; &#39;回匹配的自变量。
+title: 将“ByRef”参数“<typename1>”的值复制回匹配参数时，发生从“<typename2>”到“<parametername>”的隐式转换。
 ms.date: 07/20/2015
 f1_keywords:
 - vbc41999
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: b1f772598b18f8edfe0198f62d78854d30f993ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589995"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831751"
 ---
-# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>从隐式转换&#39; &lt;typename1&gt; &#39;到&#39; &lt;typename2&gt; &#39;中的值复制&#39;ByRef&#39;参数&#39; &lt;parametername&gt; &#39;回匹配的自变量。
-调用过程时使用[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)比其对应的参数的不同类型自变量。  
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>从隐式转换\<typename1 > 到\<typename2 >' ByRef 参数的值复制\<参数名 > 返回到匹配的参数。
+与调用了过程[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)比其对应的参数的不同类型的参数。  
   
- 如果传递了参数`ByRef`，Visual Basic 有时会将自变量值复制到本地变量中而不是传递一个引用的过程。 在这种情况下，当过程返回时，Visual Basic 必须随后将局部变量值复制回调用代码中的自变量。  
+ 如果传递参数`ByRef`，Visual Basic 有时会将参数值复制到本地变量中而不是传递一个引用，该过程。 在这种情况下，当过程返回时，Visual Basic 必须然后将本地变量值复制回调用代码中的参数。  
   
- 如果将 `ByRef` 实参值复制到过程中，并且实参与形参为同一类型，则不必进行转换。 但如果类型不同，Visual Basic 必须进行双向转换。 因为无法使用`CType`或任何其他转换关键字上过程自变量或参数，这种转换始终是隐式。  
+ 如果将 `ByRef` 实参值复制到过程中，并且实参与形参为同一类型，则不必进行转换。 但如果类型不同，必须将 Visual Basic 转换两个方向。 因为不能使用`CType`或任何其他转换关键字上过程自变量或参数，此类转换始终是隐式。  
   
  默认情况下，此消息是一个警告。 有关隐藏警告或将警告视为错误的信息，请参见 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
@@ -27,12 +27,13 @@ ms.locfileid: "33589995"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果可能，请与过程参数，使用相同类型的调用自变量，因此 Visual Basic 不需要进行任何转换。  
+-   如果可能，请与过程参数，使用相同类型的调用参数，因此 Visual Basic 不需要执行任何转换。  
   
--   如果你需要使用自变量调用过程类型的参数类型不同，但不是需要将值返回到调用自变量、 参数定义为[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)而不是`ByRef`。  
+-   如果需要调用实参类型与形参类型不同的过程，但不需要将值返回到调用实参中，请将形参定义为 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) 而不是 `ByRef`。  
   
-## <a name="see-also"></a>请参阅  
- [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [过程参数和自变量](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)  
- [按值和按引用传递自变量](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
- [隐式转换和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+## <a name="see-also"></a>请参阅
+
+- [过程](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [过程参数和自变量](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
+- [按值和按引用传递自变量](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [隐式转换和显式转换](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

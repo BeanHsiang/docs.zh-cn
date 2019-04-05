@@ -2,12 +2,12 @@
 title: LINQ to XML 与DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: 4feb0df2e4d3ffe5c79ce61d7b94142833a312c7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213866"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831262"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML 与DOM (Visual Basic)
 本节说明 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和当前主导 XML 编程 API（W3C 文档对象模型 (DOM)）之间的主要区别。  
@@ -104,7 +104,7 @@ doc.AppendChild(name)
  DOM 的另一个问题是它不允许您更改节点的名称。 您必须创建新节点并将所有子节点复制到此节点，从而会失去原始节点标识。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许对节点设置 <xref:System.Xml.Linq.XName> 属性，因此可避免此问题。  
   
 ## <a name="static-method-support-for-loading-xml"></a>对加载 XML 的静态方法支持  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许您通过使用静态方法而不是实例方法来加载 XML。 这简化了加载和分析。 有关详细信息，请参阅[如何： 加载 XML 文件 (Visual Basic 中) 从](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 允许您通过使用静态方法而不是实例方法来加载 XML。 这简化了加载和分析。 有关详细信息，请参阅[如何：从文件 (Visual Basic) 加载 XML](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)。  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>移除对 DTD 构造的支持  
  通过移除对实体和实体引用的支持，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 进一步简化了 XML 编程。 实体因管理复杂而很少使用。 移除对它们的支持可提高性能并简化编程接口。 在填充 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 树时，会展开所有 DTD 实体。  
@@ -113,7 +113,7 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 未提供 `XmlDocumentFragment` 类的等效项。 但在很多情况下，`XmlDocumentFragment` 概念都可以通过执行类型化为<xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XNode> 或 <xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement> 的查询来进行处理。  
   
 ## <a name="support-for-xpathnavigator"></a>对 XPathNavigator 的支持  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过 <xref:System.Xml.XPath.XPathNavigator> 命名空间中的扩展方法提供对 <xref:System.Xml.XPath?displayProperty=nameWithType> 的支持。 有关详细信息，请参阅<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过 <xref:System.Xml.XPath.XPathNavigator> 命名空间中的扩展方法提供对 <xref:System.Xml.XPath?displayProperty=nameWithType> 的支持。 有关详细信息，请参阅 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  
   
 ## <a name="support-for-white-space-and-indentation"></a>对空白和缩进的支持  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 处理空白的方式比 DOM 更简单。  
@@ -128,7 +128,8 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 元素支持可扩展的批注集。 这对于跟踪有关元素的杂项信息（如架构信息、关于元素是否绑定到 UI 的信息或应用程序特定的任何其他信息）很有用。 有关详细信息，请参阅 [LINQ to XML 批注](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)。  
   
 ## <a name="support-for-schema-information"></a>对架构信息的支持  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的扩展方法提供对 XSD 验证的支持。 你可以验证 XML 树是否符合 XSD。 你可以用架构验证后信息集 (PSVI) 填充 XML 树。 有关详细信息，请参阅[如何：使用 XSD 进行验证](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)和 <xref:System.Xml.Schema.Extensions>。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 通过 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的扩展方法提供对 XSD 验证的支持。 你可以验证 XML 树是否符合 XSD。 你可以用架构验证后信息集 (PSVI) 填充 XML 树。 有关详细信息，请参阅[如何：使用 XSD 进行验证](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) 和 <xref:System.Xml.Schema.Extensions>。  
   
-## <a name="see-also"></a>请参阅  
- [入门 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [入门 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

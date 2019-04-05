@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49708175f8501c735a77b0f7f965a106b6e086f2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424449"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466148"
 ---
 # <a name="types-of-isolation"></a>隔离的类型
 独立存储始终仅限创建它的用户访问。 为了实现这种隔离，公共语言运行时使用操作系统识别的相同用户标识，即与存储打开时的代码运行进程相关联的标识。 虽然此标识是已验证用户标识，但模拟可能会导致当前用户的标识发生动态变化。  
@@ -46,15 +46,14 @@ ms.locfileid: "47424449"
   
  这两种隔离都可以与漫游用户策略文件结合使用。 有关详细信息，请参阅[独立存储和漫游](#Roaming)部分。  
   
- 下图展示了存储在不同范围的隔离情况。  
+ 下图展示了存储在不同范围的隔离情况：  
   
- ![按用户和程序集隔离](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-独立存储的类型  
+ ![显示按用户和程序集隔离的图表。](./media/types-of-isolation/isolated-storage-types.gif)  
   
  请注意，除漫游存储外，独立存储始终按计算机隐式隔离，因为它使用指定计算机的本地存储设备。  
   
 > [!IMPORTANT]
->  独立存储不适用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。 相反，使用 `Windows.Storage` API 中包含的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 命名空间中的应用程序数据类来存储本地数据和文件。 有关详细信息，请参阅 Windows 开发人员中心中的[应用程序数据](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。  
+>  独立存储不适用于 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 应用。 相反，使用 `Windows.Storage` API 中包含的 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 命名空间中的应用程序数据类来存储本地数据和文件。 有关详细信息，请参阅 Windows 开发人员中心的 [应用程序数据](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) 。  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>按用户和程序集隔离  
@@ -108,5 +107,5 @@ ms.locfileid: "47424449"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [独立存储](../../../docs/standard/io/isolated-storage.md)

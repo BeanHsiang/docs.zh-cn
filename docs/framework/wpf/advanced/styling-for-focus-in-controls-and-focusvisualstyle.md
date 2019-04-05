@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744980"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377040"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>为控件中的焦点设置样式以及 FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供两种用于在控件接收键盘焦点时更改其视觉外观的并行机制。 第一种机制是使用属性资源库属性如<xref:System.Windows.UIElement.IsKeyboardFocused%2A>样式或模板应用于控件中。 第二种机制是提供一个单独的样式的值作为<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>属性;"焦点视觉样式"为绘制控件，而不更改控件或其他 UI 的可视化树的装饰器创建单独的可视化树通过替换的元素。 本主题讨论上述每一种机制的适用情况。  
@@ -25,7 +25,7 @@ ms.locfileid: "43744980"
   
 <a name="Default"></a>   
 ## <a name="default-focus-visual-style-behavior"></a>默认焦点视觉样式行为  
- 焦点视觉样式仅在焦点操作由键盘启动时才起作用。 任何鼠标操作或者通过编程实现的焦点更改都会禁用焦点视觉样式模式。 有关焦点模式间区别的详细信息，请参阅[焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)。  
+ 焦点视觉样式仅在焦点操作由键盘启动时才起作用。 任何鼠标操作或者通过编程实现的焦点更改都会禁用焦点视觉样式模式。 有关焦点模式间区别的详细信息，请参阅[焦点概述](focus-overview.md)。  
   
  控件的主题包括默认焦点视觉样式行为，该焦点视觉样式成为主题中所有控件的焦点视觉样式。 此主题样式由静态键的值标识<xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>。 当在应用程序级声明自己的焦点视觉样式时，将替换主题中的这一默认样式行为。 或者，如果要定义整个主题，那么应同样使用这个键来为整个主题的默认行为定义样式。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "43744980"
 ## <a name="alternatives-to-using-a-focus-visual-style"></a>使用焦点视觉样式的替代方法  
  对于不适合使用焦点视觉样式的情况（因为仅设置单个控件的样式或希望对控件模板有更多的控制），存在许多其他可用的属性和技术，可用来创建响应焦点更改的视觉行为。  
   
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)中对触发器、setter 以及事件 setter 进行了详细介绍。 [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)中对路由事件处理进行了介绍。  
+ [样式设置和模板化](../controls/styling-and-templating.md)中对触发器、setter 以及事件 setter 进行了详细介绍。 [路由事件概述](routed-events-overview.md)中对路由事件处理进行了介绍。  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
  如果您特别感兴趣键盘焦点<xref:System.Windows.UIElement.IsKeyboardFocused%2A>依赖项属性可用于属性<xref:System.Windows.Trigger>。 对于定义专用于单个控件且可能与其他控件的键盘焦点行为在视觉上不匹配的键盘焦点行为，一个更适合的方法是使用样式或模板中的属性触发器。  
@@ -76,8 +76,8 @@ ms.locfileid: "43744980"
 ### <a name="other-focus-properties"></a>其他焦点属性  
  如果您希望所有可能的原因更改焦点的以产生一个视觉行为，应将 setter 或触发<xref:System.Windows.UIElement.IsFocused%2A>依赖项属性，或者在<xref:System.Windows.UIElement.GotFocus>或<xref:System.Windows.UIElement.LostFocus>用于事件<xref:System.Windows.EventSetter>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
+- [样式设置和模板化](../controls/styling-and-templating.md)
+- [焦点概述](focus-overview.md)
+- [输入概述](input-overview.md)

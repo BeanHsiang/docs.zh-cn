@@ -2,12 +2,12 @@
 title: 事务和并发性
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5efa8f25e3cd4dedec9e5a9c99db28320a4d93e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494049"
 ---
 # <a name="transactions-and-concurrency"></a>事务和并发性
 事务由作为包执行的单个命令或一组命令组成。 通过事务可以将多个操合并为单个工作单元。 如果在事务中的某一点发生故障，则所有更新都可以回滚到其事务前状态。  
@@ -34,10 +34,10 @@ ms.locfileid: "43777445"
  [开放式并发](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  描述开放式并发和保守式并发，以及如何测试并发冲突。  
   
-## <a name="see-also"></a>请参阅  
- [事务基础知识](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
- [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [事务基础知识](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
+- [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

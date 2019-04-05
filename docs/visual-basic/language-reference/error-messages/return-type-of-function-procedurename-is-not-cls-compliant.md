@@ -1,5 +1,5 @@
 ---
-title: 函数的返回类型&#39;&lt;过程名称&gt;&#39;不是符合 cls 的
+title: 函数“<procedurename>”的返回类型不符合 CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40027
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: b7704ee63031c38f708a2243e84b880c25fcf819
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5e746981d10ba8e662aebf86f67f08856ba37199
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243776"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260510"
 ---
-# <a name="return-type-of-function-39ltprocedurenamegt39-is-not-cls-compliant"></a>函数的返回类型&#39;&lt;过程名称&gt;&#39;不是符合 cls 的
+# <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>函数的返回类型\<过程名称 > 不符合 cls 的
 一个`Function`过程标记为`<CLSCompliant(True)>`但返回类型被标记为`<CLSCompliant(False)>`、 未标记，或不符合条件，因为它是不符合要求的类型。  
   
  一个过程要符合[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md) (CLS)，必须只使用符合 CLS 的类型。 这适用于参数的类型、返回类型及其所有本地变量的类型。  

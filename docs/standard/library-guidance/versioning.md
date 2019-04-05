@@ -3,13 +3,13 @@ title: 版本控制和 .NET 库
 description: 版本控制 .NET 库的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: f95c8ade1f91af5c13184b839b327c9397c6fe5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/10/2018
+ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187853"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204738"
 ---
 # <a name="versioning"></a>版本管理
 
@@ -77,25 +77,29 @@ Windows .NET Framework CLR 要求完全匹配以便加载具有强名称的程�
 
 ![Windows 资源管理器](./media/versioning/win-properties.png "Windows 资源管理器")
 
-> [!NOTE]
-> 如果此版本未采用 `Major.Minor.Build.Revision` 格式，则会引发没有威胁的生成警告。 可放心忽略此警告。
-
 ✔️请考虑包括持续集成内部版本号作为 AssemblyFileVersion 修订号。
 
 > 例如，生成的项目版本为 1.0.0 且持续集成内部版本号为 99，则 AssemblyFileVersion 为 1.0.0.99。
 
+✔️请对文件版本使用 `Major.Minor.Build.Revision` 格式。
+
+> 虽然 .NET 从不使用此文件版本，但 [Windows 期望文件版本](/windows/desktop/menurc/versioninfo-resource)采用 `Major.Minor.Build.Revision` 格式。 如果版本不遵循此格式，则会引发警告。
+
 ### <a name="assembly-informational-version"></a>程序集信息性版本
 
-程序集信息性版本用于记录附加版本信息，并且对运行时行为没有影响。 设置此版本是可选的。 如果使用的是 SourceLink，则将在具有 NuGet 包版本以及源代码管理版本的内部版本上设置此版本。 例如，`1.0.0-beta1+204ff0a` 包括从中生成程序集的源代码的提交哈希。 有关详细信息，请参阅 [SourceLink](./sourcelink.md)。
+程序集信息性版本用于记录附加版本信息，并且对运行时行为没有影响。 设置此版本是可选的。 如果使用的是源链接，则将在具有 NuGet 包版本以及源代码管理版本的内部版本上设置此版本。 例如，`1.0.0-beta1+204ff0a` 包括从中生成程序集的源代码的提交哈希。 有关详细信息，请参阅[源链接](./sourcelink.md)。
 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
+
+> [!NOTE]
+> 如果此版本不遵循格式 `Major.Minor.Build.Revision`，则较早版本的 Visual Studio 会引发生成警告。 可放心忽略此警告。
 
 ❌请避免自行设置程序集信息性版本。
 
 > 允许 SourceLink 自动生成包含 NuGet 和源代码管理元数据的版本。
 
 >[!div class="step-by-step"]
-[上一页](./publish-nuget-package.md)
-[下一页](./breaking-changes.md)
+>[上一页](publish-nuget-package.md)
+>[下一页](breaking-changes.md)

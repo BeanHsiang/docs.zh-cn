@@ -4,19 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-ms.openlocfilehash: 2d2f1997534a33f246c85501e66b6aa8a684445f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 698d65d951ed7adad5aa32e874befb15a3b24d12
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190692"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261422"
 ---
 # <a name="extending-security"></a>扩展安全性
 若要适应新的声明类型和自定义令牌，可以扩展安全基础结构的 Windows Communication Foundation (WCF)。 本节中的主题将向您介绍如何完成此任务。  
   
 ## <a name="in-this-section"></a>本节内容  
- [安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- 介绍了整个 WCF 安全系统的体系结构。  
   
  [自定义凭据和凭据验证](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  说明在验证自定义凭据时如何使用标识模型。  
@@ -36,7 +34,7 @@ ms.locfileid: "50190692"
  [如何：使用独立的 X.509 证书进行签名和加密](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
  通常使用单个证书对消息进行签名和加密。 本主题说明如何按照要求使用两个证书。  
   
- [如何：更改 X.509 证书私钥的加密提供程序](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
+ [如何：更改 X.509 证书的私钥的加密提供程序](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
  说明如何更改用于提供 X.509 证书的私钥的加密提供程序以及如何将提供程序集成到 Windows Communication Foundation (WCF) 框架。  
   
 ## <a name="reference"></a>参考  
@@ -57,5 +55,5 @@ ms.locfileid: "50190692"
   
  [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>请参阅  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a>请参阅
+- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)

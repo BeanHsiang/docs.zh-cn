@@ -1,35 +1,34 @@
 ---
-title: '&lt;userNameAuthentication&gt;'
+title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: d81bf3441f4999683b9dc9ab956fff517c20e80e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 05aa326c50823810caee5d6552af4d50424251dd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754858"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273999"
 ---
-# <a name="ltusernameauthenticationgt"></a>&lt;userNameAuthentication&gt;
+# <a name="usernameauthentication"></a>\<userNameAuthentication>
 指定基于用户名和密码的服务凭据。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
+\<behavior>  
 \<serviceCredentials>  
-\<userNameAuthentication >  
+\<userNameAuthentication>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<userNameAuthentication  
-   cacheLogonTokenLifetime="TimeSpan"  
-   cacheLogonTokens="Boolean"   
-   customUserNamePasswordValidatorType="String"  
-   includeWindowsGroups="Boolean"   
-   maxCacheLogonTokens="Integer"  
-   membershipProviderName="String"  
-   userNamePasswordValidationMode="Windows/MembershipProvider/Custom" />  
+<userNameAuthentication cacheLogonTokenLifetime="TimeSpan"
+                        cacheLogonTokens="Boolean"
+                        customUserNamePasswordValidatorType="String"
+                        includeWindowsGroups="Boolean"
+                        maxCacheLogonTokens="Integer"
+                        membershipProviderName="String"
+                        userNamePasswordValidationMode="Windows/MembershipProvider/Custom" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -45,7 +44,7 @@ ms.locfileid: "32754858"
 |`includeWindowsGroups`|一个布尔值，指定 Windows 组是否包含在安全上下文中。 默认值为 `true`。<br /><br /> 将此属性设置为 `true` 会影响性能，因为这会导致完全组扩展。 如果不需要建立用户所属组的列表，请将此属性设置为 `false`。|  
 |`maxCacheLogonTokens`|一个整数，指定要缓存的最大登录令牌数。 此值应大于零。 默认值为 128。|  
 |`membershipProviderName`|如果将绑定的 `clientCredentialType` 属性设置为 `username`，则用户名将映射到 Windows 帐户。 可以使用此属性重写此行为，此属性是一个包含 <xref:System.Web.Security.MembershipProvider> 值的名称的字符串，该值提供相关的密码验证机制。|  
-|`userNamePasswordValidationMode`|指定对用户名密码进行验证的方式。 有效值为：<br /><br /> -Windows<br />-MembershipProvider<br />自定义<br /><br /> 默认值为 Windows。 此属性的类型为 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>。|  
+|`userNamePasswordValidationMode`|指定对用户名密码进行验证的方式。 有效值为：<br /><br /> -   Windows<br />-   MembershipProvider<br />自定义<br /><br /> 默认值为 Windows。 此属性的类型为 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -61,8 +60,8 @@ ms.locfileid: "32754858"
   
  如果没有配置服务所用的绑定，以使用 Windows 用户名/密码身份验证，则忽略与登录令牌的缓存相关的设置。 这些设置包括 `cacheLogonTokenLifetime`、`cacheLogonTokens` 和 `maxCacheLogonTokens`。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.UserNameServiceElement>  
- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>  
- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.UserNameServiceElement>
+- <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>
+- <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.UserNameAuthentication%2A>

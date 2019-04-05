@@ -1,21 +1,21 @@
 ---
-title: '&lt;缓存&gt;'
+title: <caches>
 ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
-ms.openlocfilehash: a91a389e53354e4f5b26e1510fc2f025300d65cc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b1d04280ef993297102d446ba5a7db54e8404dd8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192675"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285657"
 ---
-# <a name="ltcachesgt"></a>&lt;缓存&gt;
+# <a name="caches"></a>\<caches>
 注册用于会话令牌和令牌重放检测的缓存。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<缓存 >  
+\<caches>  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,15 +38,15 @@ ms.locfileid: "47192675"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<sessionSecurityTokenCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|使用的服务或安全令牌处理程序集合注册会话令牌的缓存。|  
-|[\<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|使用的服务或安全令牌处理程序集合注册的标记重播缓存。|  
+|[\<sessionSecurityTokenCache>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|使用的服务或安全令牌处理程序集合注册会话令牌的缓存。|  
+|[\<tokenReplayCache>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|使用的服务或安全令牌处理程序集合注册的标记重播缓存。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
   
 ## <a name="remarks"></a>备注  
  一个`<caches>`可以在服务级别下指定元素`<identityConfiguration>`元素下的安全令牌处理程序集合级别上或`<securityTokenHandlerConfiguration>`元素。 标记处理程序集合上的设置将覆盖在服务上指定的。  

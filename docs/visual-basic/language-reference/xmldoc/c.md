@@ -1,18 +1,18 @@
 ---
-title: '&lt;c&gt; (Visual Basic)'
+title: <c> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 06c6899895f278fdf652725a05ecc7229805f4d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9be9f9e96fc1b79ea97d54c54352da63b93ef264
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041117"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838035"
 ---
-# <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
+# <a name="c-visual-basic"></a>\<c > (Visual Basic)
 指示说明中的文本是代码。  
   
 ## <a name="syntax"></a>语法  
@@ -21,7 +21,7 @@ ms.locfileid: "44041117"
 <c>text</c>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
   
 |参数|描述|  
 |---|---|  
@@ -35,7 +35,8 @@ ms.locfileid: "44041117"
 ## <a name="example"></a>示例  
  此示例使用`<c>`指示的摘要部分中的标记`Counter`是代码。  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

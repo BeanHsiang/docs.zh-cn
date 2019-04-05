@@ -1,15 +1,13 @@
 ---
-title: dotnet tool install 命令 - .NET Core CLI
+title: dotnet tool install 命令
 description: dotnet tool install 命令在计算机上安装指定的 .NET Core 全局工具。
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: aad5a3e815936749d90f40975a8b13d34e89386c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1348eb1165c77376a885fdcbf094bd17b2aa3514
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512190"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563699"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -27,7 +25,7 @@ dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [
 dotnet tool install <-h|--help>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet tool install` 为用户提供一种在计算机上安装 .NET Core 全局工具的方法。 若要使用此命令，需要使用 `--global` 选项指定用户范围的安装或者使用 `--tool-path` 选项指定安装路径。
 
@@ -98,4 +96,4 @@ dotnet tool install <-h|--help>
 
 ## <a name="see-also"></a>请参阅
 
-* [.NET Core 全局工具](global-tools.md)
+- [.NET Core 全局工具](global-tools.md)

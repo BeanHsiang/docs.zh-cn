@@ -1,15 +1,15 @@
 ---
-title: 按执行 (Visual Basic) 方式的标准查询运算符的分类
+title: 标准查询运算符按执行 (Visual Basic) 方式的分类
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: c1f97c4c1fcd081ccce985e1adbca9c6634843b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644000"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823210"
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>按执行 (Visual Basic) 方式的标准查询运算符的分类
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>标准查询运算符按执行 (Visual Basic) 方式的分类
 标准查询运算符方法的 LINQ to Objects 实现主要通过两种方法之一执行：立即执行和延迟执行。 使用延迟执行的查询运算符可以进一步分为两种类别：流式处理和非流式处理。 如果你了解不同查询运算符的执行方式，则有助于理解从给定查询中获得的结果。 如果数据源是不断变化的，或者如果你要在另一个查询的基础上构建查询，这种帮助尤其明显。 本主题根据标准查询运算符的执行方式对其进行分类。  
   
 ## <a name="manners-of-execution"></a>执行方式  
@@ -87,8 +87,9 @@ ms.locfileid: "33644000"
 |<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq.Enumerable>  
- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [标准查询运算符 (Visual Basic) 的查询表达式语法](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq.Enumerable>
+- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [标准查询运算符 (Visual Basic 中) 的查询表达式语法](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

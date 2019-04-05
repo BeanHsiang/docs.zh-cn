@@ -19,15 +19,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c75db784a404298b86ed42692573a509ea56cf9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4f1f4734b6cb5b214b219742a6cac1c50220b96e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415524"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492850"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset 方法
-对于指定的 IL 偏移量，获取本机偏移量，以便调试器可以获取返回值从函数应放置断点。  
+对于指定的 IL 偏移量，获取本机偏移量，以便调试器可以从函数获取返回值应放置一个断点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,44 +40,44 @@ HRESULT GetReturnValueLiveOffset(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ILoffset`  
  IL 偏移量。 它必须是函数调用站点，否则函数调用将失败。  
   
  `bufferSize`  
- 可用于存储的字节数`pOffsets`。  
+ 可用来存储的字节数`pOffsets`。  
   
  `pFetched`  
- 指向的实际返回的偏移量数的指针。 通常情况下，其值为 1，但单个 IL 指令可以映射到多个`CALL`程序集指令。  
+ 指向实际返回的偏移量数的指针。 通常情况下，其值为 1，但单个 IL 指令可以映射到多个`CALL`程序集指令。  
   
  `pOffsets`  
- 本机偏移量的数组。 通常情况下，`pOffsets`尽管单个 IL 指令可以映射到多个映射到多个包含同一偏移量，`CALL`程序集指令。  
+ 本机偏移量的数组。 通常情况下，`pOffsets`包含一个偏移量，尽管单个 IL 指令可以映射到多个映射到多个`CALL`程序集指令。  
   
 ## <a name="remarks"></a>备注  
- 此方法使用连同[icordebugilframe3:: Getreturnvalueforiloffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法以获取返回引用类型的方法的返回值。 传递 IL 偏移量到函数调用站点到此方法返回一个或多个本机偏移量。 调试器然后可以在这些函数中的本机偏移量上设置断点。 当调试器遇到的其中一个断点时，你就可以将相同的 IL 偏移量传递给此方法传递[icordebugilframe3:: Getreturnvalueforiloffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法以获取返回值。 调试器然后应清除它所设置的所有断点。  
+ 此方法使用连同[ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法以获取返回引用类型的方法的返回值。 传递 IL 偏移量至函数调用站点，此方法返回一个或多个本机偏移量。 调试程序然后可以在函数中的本机偏移量上设置断点。 当调试器遇到其中一个断点时，您可以将传递给此方法的相同的 IL 偏移量[ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法以获取返回值。 然后调试器应该清除此设置的所有断点。  
   
 > [!WARNING]
->  `ICorDebugCode3::GetReturnValueLiveOffset`和[icordebugilframe3:: Getreturnvalueforiloffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法，你可以获取仅适用于引用类型的返回值信息。 从值类型检索返回值信息 (即，派生自的所有类型<xref:System.ValueType>) 不支持。  
+>  `ICorDebugCode3::GetReturnValueLiveOffset`并[ICorDebugILFrame3::GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法，你可以获得仅为引用类型的返回值信息。 从值类型检索返回值信息 (即，派生的所有类型<xref:System.ValueType>) 不受支持。  
   
- 该函数将返回`HRESULT`下表中所示的值。  
+ 该函数将返回`HRESULT`下表中显示的值。  
   
 |`HRESULT` 值|描述|  
 |---------------------|-----------------|  
 |`S_OK`|成功。|  
-|`CORDBG_E_INVALID_OPCODE`|给定的 IL 偏移量的站点不是调用指令，或该函数将返回`void`。|  
-|`CORDBG_E_UNSUPPORTED`|给定的 IL 偏移量是正确的调用，但返回类型不支持获取返回值。|  
+|`CORDBG_E_INVALID_OPCODE`|给定的 IL 偏移量的站点不是调用命令，或该函数将返回`void`。|  
+|`CORDBG_E_UNSUPPORTED`|给定的 IL 偏移量为适当的调用，但返回类型是用于获取返回值不受支持。|  
   
  `ICorDebugCode3::GetReturnValueLiveOffset`方法是仅适用于基于 x86 和 AMD64 系统。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [GetReturnValueForILOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)  
- [ICorDebugCode3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+## <a name="see-also"></a>请参阅
+- [GetReturnValueForILOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
+- [ICorDebugCode3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbf47dbfddac7d48b78c9d52969de1ef03385c15
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a9d3f8966f6333487631a0e155c7be49075a6992
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734670"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration 函数
 终止通过调用开始枚举[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函数。  
@@ -61,11 +61,11 @@ HRESULT QualifierSet_EndEnumeration (
 
 ## <a name="requirements"></a>要求  
 
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
 **标头：** WMINet_Utils.idl  
   
 **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

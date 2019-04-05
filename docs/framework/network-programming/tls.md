@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194132"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724708"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 中的传输层安全性 (TLS) 最佳做法
 
@@ -56,7 +56,7 @@ WCF 支持 TLS1.0、1.1 和 1.2 作为 .NET Framework 4.7 中的默认设置。 
 
 对于 ASP.NET 应用程序，检查 _web.config_ 的 `<system.web><httpRuntime targetFramework>` 元素，以验证你所使用的是 .NET Framework 的目标版本。
 
-对于 Windows 窗体和其他应用程序，请参阅[如何：面向 .NET Framework 版本](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
+有关 Windows 窗体和其他应用程序，请参阅[如何：面向 .NET Framework 的某个版本](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。
 
 使用以下部分验证你未使用特定 TLS 或 SSL 版本。
 
@@ -150,7 +150,7 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-`Switch.System.Net.DontEnableSchUseStrongCrypto` 的值为 `false` 将导致你的应用使用强加密。 `DontEnableSchUseStrongCrypto` 的值为 `false` 将使用更为安全的网络协议（TLS 1.2、TLS 1.1 和 TLS 1.0），并阻止不安全的协议。 有关详细信息，请参阅 [SCH_USE_STRONG_CRYPTO 标志](#the-schusestrongcrypto-flag)。 值为 `true` 将为你的应用禁用强加密。
+`Switch.System.Net.DontEnableSchUseStrongCrypto` 的值为 `false` 将导致你的应用使用强加密。 `DontEnableSchUseStrongCrypto` 的值为 `false` 将使用更为安全的网络协议（TLS 1.2、TLS 1.1 和 TLS 1.0），并阻止不安全的协议。 有关详细信息，请参阅 [SCH_USE_STRONG_CRYPTO 标志](#the-sch_use_strong_crypto-flag)。 值为 `true` 将为你的应用禁用强加密。
 
 如果你的应用面向 .NET Framework 4.6 或更高版本，则该开关默认为 `false`。 这是我们建议使用的安全默认值。 如果你的应用在 .NET Framework 4.6 上运行，但面向早期版本，则开关默认为 `true`。 在这种情况下，应显式将其设置为 `false`。
 
@@ -174,7 +174,7 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 对于面向 .NET Framework 4.7.1 和更高版本的应用程序，此值默认为 `false`。 对于面向 .NET Framework 4.7 和早期版本的应用程序，此值默认为 `true`。
 
-有关 TLS 协议的详细信息，请参阅[缓解：TLS 协议](../migration-guide/mitigation-tls-protocols.md)。 有关 `AppContext` 开关的详细信息，请参阅 [`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)。
+有关 TLS 协议的详细信息，请参阅[缓解措施：TLS 协议](../migration-guide/mitigation-tls-protocols.md)。 有关 `AppContext` 开关的详细信息，请参阅 [`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)。
 
 ## <a name="configuring-security-via-the-windows-registry"></a>通过 Windows 注册表配置安全性
 
@@ -191,7 +191,7 @@ WCF 框架的这些版本被硬编码为使用值 SSL 3.0 和 TLS 1.0。 这些�
 
 ### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` 注册表项具有类型为 DWORD 的值。 值为 1 将导致你的应用使用强加密。 强加密会使用更为安全的网络协议（TLS 1.2、TLS 1.1 和 TLS 1.0），并阻止不安全的协议。 值为 0 将禁用强加密。 有关详细信息，请参阅 [SCH_USE_STRONG_CRYPTO 标志](#the-schusestrongcrypto-flag)。
+`HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` 注册表项具有类型为 DWORD 的值。 值为 1 将导致你的应用使用强加密。 强加密会使用更为安全的网络协议（TLS 1.2、TLS 1.1 和 TLS 1.0），并阻止不安全的协议。 值为 0 将禁用强加密。 有关详细信息，请参阅 [SCH_USE_STRONG_CRYPTO 标志](#the-sch_use_strong_crypto-flag)。
 
 如果你的应用面向 .NET Framework 4.6 或更高版本，则此注册表项默认值为 1。 这是我们建议使用的安全默认值。 如果你的应用在 .NET Framework 4.6 上运行，但面向早期版本，则注册表项默认为 0。 在这种情况下，应显式将其值设置为 1。
 
@@ -237,7 +237,7 @@ Windows Registry Editor Version 5.00
 
 从 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` 注册表项开始。 在该注册表项下，可以在集 `SSL 2.0`、`SSL 3.0`、`TLS 1.0`、`TLS 1.1` 和 `TLS 1.2` 中创建任何子项。 在每个子项下，可以创建子项 `Client` 和/或 `Server`。 在 `Client` 和 `Server` 下，可以创建 DWORD 值 `DisabledByDefault`（0 或 1）和 `Enabled`（0 或 0xFFFFFFFF）。
 
-## <a name="the-schusestrongcrypto-flag"></a>SCH_USE_STRONG_CRYPTO 标志
+## <a name="the-sch_use_strong_crypto-flag"></a>SCH_USE_STRONG_CRYPTO 标志
 
 启用后（默认情况下，通过 `AppContext` 开关或 Windows 注册表启动），当你的应用请求 TLS 安全协议时，.NET Framework 将使用 `SCH_USE_STRONG_CRYPTO` 标志。 可以通过 `AppContext` 开关或注册表来默认启用 `SCH_USE_STRONG_CRYPTO` 标志。 操作系统将标志传递到 `Schannel`，以指示它禁用已知弱加密算法、密码套件和 TLS/SSL 协议版本（否则，可能会启用该协议以获得更好的互操作性）。 有关详细信息，请参见:
 
@@ -252,13 +252,13 @@ Windows Registry Editor Version 5.00
 
 若要更新 .NET Framework，以允许操作系统选择要使用的 TLS 的最佳版本，必须至少安装：
 
-- [.NET Framework 2017 年 8 月质量汇总预览](https://blogs.msdn.microsoft.com/dotnet/2017/08/16/net-framework-august-2017-preview-of-quality-rollup)。
-- 或 [.NET Framework 2017 年 9 月安全和质量汇总](https://blogs.msdn.microsoft.com/dotnet/2017/09/12/net-framework-september-2017-security-and-quality-rollup)。
+- [.NET Framework 2017 年 8 月质量汇总预览](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/)。
+- 或 [.NET Framework 2017 年 9 月安全和质量汇总](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/)。
 
 另请参阅：
 
 - [.NET Framework 版本和依赖关系](../migration-guide/versions-and-dependencies.md)
-- [如何：确定安装了哪些 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
+- [如何：确定已安装的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 ## <a name="support-for-tls-12"></a>支持 TLS 1.2
 
@@ -270,10 +270,10 @@ Windows Registry Editor Version 5.00
 
 | 操作系统 | TLS 1.2 支持 |
 | --- | --- |
-| Windows 10</br>Windows 2016 Server | 默认情况下支持和启用。 |
-| Windows 8.1</br>Windows Server 2012 R2 | 默认情况下支持和启用。 |
-| Windows 8.0</br>Windows Server 2012 | 默认情况下支持和启用。 |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | 默认情况下支持但不启用。 请参阅[传输层安全性 (TLS) 注册表设置](/windows-server/security/tls/tls-registry-settings)网页，以详细了解如何启用 TLS 1.2。 |
+| Windows 10<br>Windows 2016 Server | 默认情况下支持和启用。 |
+| Windows 8.1<br>Windows Server 2012 R2 | 默认情况下支持和启用。 |
+| Windows 8.0<br>Windows Server 2012 | 默认情况下支持和启用。 |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | 默认情况下支持但不启用。 请参阅[传输层安全性 (TLS) 注册表设置](/windows-server/security/tls/tls-registry-settings)网页，以详细了解如何启用 TLS 1.2。 |
 | Windows Server 2008 | 支持 TLS 1.2 和 TLS 1.1 需要更新。 请参阅[更新以在 Windows Server 2008 SP2 中添加对 TLS 1.1 和 TLS 1.2 的支持](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s)。 |
 | Windows Vista | 不支持。 |
 
@@ -285,10 +285,10 @@ Windows Registry Editor Version 5.00
 
 | 操作系统 | **.NET Framework 3.5 中支持 TLS 1.2 所需的最低更新** |
 | --- | --- |
-| Windows 10</br>Windows 2016 Server | [Windows 10 版本 1511 和 Windows Server 2016 Technical Preview 4 的累积更新：2016 年 5 月 10 日](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
-| Windows 8.1</br>Windows Server 2012 R2 | [在 Windows 8.1 和 Windows Server 2012 R2 上的 .NET Framework 3.5 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 8.0</br>Windows Server 2012 | [在 Windows Server 2012 R2 上的 .NET Framework 3.5 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows 7 SP1</br>Windows Server 2008 R2 SP1 | [在 Windows 7 SP1 和 Server 2008 R2 SP1 上的 .NET Framework 3.5.1 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 10<br>Windows 2016 Server | [Windows 10 版本 1511 和 Windows Server 2016 Technical Preview 4 的累积更新：2016 年 5 月 10 日](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
+| Windows 8.1<br>Windows Server 2012 R2 | [在 Windows 8.1 和 Windows Server 2012 R2 上的 .NET Framework 3.5 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 8.0<br>Windows Server 2012 | [在 Windows Server 2012 R2 上的 .NET Framework 3.5 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | [在 Windows 7 SP1 和 Server 2008 R2 SP1 上的 .NET Framework 3.5.1 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Server 2008 | [在 Windows Vista SP2 和 Server 2008 SP2 上的 .NET Framework 2.0 SP2 中包含对 TLS 系统默认版本的支持](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | 不支持 |
 

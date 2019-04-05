@@ -10,18 +10,16 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 4fe6a0c39388e72807043e9e1ccd2deb59afb656
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4b2988314afbe501623fd050a989876842f68601
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845962"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674531"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自动化和屏幕缩放
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 让用户能够更改 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] 设置，以便屏幕上的大多数 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 元素显示得更大。 虽然 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]中之前就已提供了此项功能，但在早期版本中，必须由应用程序实现缩放。 在 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]中，桌面窗口管理器为所有不会处理其自身缩放的应用程序执行默认缩放。 UI 自动化客户端应用程序必须考虑到此功能。  
   
@@ -38,13 +36,13 @@ ms.locfileid: "48845962"
   
  屏幕缩放为以任何方式与屏幕坐标有关的应用程序带来了新的挑战。 屏幕现在包含两个坐标系：物理和逻辑。 点的物理坐标是距原点左上部的实际偏移量（以像素为单位）。 如果像素本身进行了缩放，则逻辑坐标为缩放后的偏移量。  
   
- 假定你设计了一个对话框，其按钮位于坐标 (100, 48) 处。 当此对话框按默认值 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]显示时，该按钮所处的物理坐标为 (100, 48)。 当为 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]时，它所处的物理坐标为 (125, 60)。 但逻辑坐标与 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 设置相同：(100, 48)。  
+ 假定你设计了一个对话框，其按钮位于坐标 (100, 48) 处。 当此对话框按默认值 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]显示时，该按钮所处的物理坐标为 (100, 48)。 当为 120 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]时，它所处的物理坐标为 (125, 60)。 但逻辑坐标表示在任何相同[!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]设置：(100, 48).  
   
- 逻辑坐标非常重要，因为它们使操作系统和应用程序的行为保持一致，而不考虑 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 设置。 例如，<xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>通常返回逻辑坐标。 如果将光标移至对话框中的某个元素，则将返回相同的坐标，而不考虑 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 设置。 如果你在 (100, 100) 处拖动控件，它将被拖到这些逻辑坐标，并将占用与任何 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 设置相同的相对位置。  
+ 逻辑坐标非常重要，因为它们使操作系统和应用程序的行为保持一致，而不考虑 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 设置。 例如，正常情况下， <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType> 将返回逻辑坐标。 如果将光标移至对话框中的某个元素，则将返回相同的坐标，而不考虑 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 设置。 如果你在 (100, 100) 处拖动控件，它将被拖到这些逻辑坐标，并将占用与任何 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 设置相同的相对位置。  
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
 ## <a name="scaling-in-ui-automation-clients"></a>UI 自动化客户端中的缩放  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] 不使用逻辑坐标。 下面的方法和属性将返回物理坐标或将其用作参数。  
+  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] 不使用逻辑坐标。 下面的方法和属性将返回物理坐标或将其用作参数。  
   
 -   <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   
@@ -65,7 +63,7 @@ ms.locfileid: "48845962"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     此函数使得整个进程成为 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知的进程，这意味着属于该进程的所有窗口都不会被缩放。 在中[Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)，例如，构成突出显示矩形的四个窗口位于从获取的物理坐标上[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，非逻辑坐标。 如果该示例不是 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知的，将在桌面上的逻辑坐标处绘制突出显示，这将导致在非 96 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] 环境中错误放置。  
+     此函数使得整个过程感知 dpi，这意味着属于的进程的所有窗口都不成比例。 在中[Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)，例如，构成突出显示矩形的四个窗口位于从 UI 自动化，非逻辑坐标获取的物理坐标上。 如果该示例不是 dpi 感知的突出显示绘制的逻辑坐标处的桌面上，这将导致在非 96 dpi 环境中错误放置。  
   
 2.  若要获取光标坐标，请调用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函数 `GetPhysicalCursorPos`。 下面的示例演示如何声明和使用此函数。  
   
@@ -73,9 +71,9 @@ ms.locfileid: "48845962"
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
   
 > [!CAUTION]
->  不要使用<xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>。 未定义此属性在扩展环境下客户端窗口以外的行为。  
+>  请勿使用 <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>。 未定义此属性在扩展环境下客户端窗口以外的行为。  
   
  如果你的应用程序与非 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知应用程序进行直接的跨进程通信，你可能需要通过使用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函数 `PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`在逻辑和物理坐标之间转换。  
   
-## <a name="see-also"></a>请参阅  
- [荧光笔示例](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+## <a name="see-also"></a>请参阅
+- [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

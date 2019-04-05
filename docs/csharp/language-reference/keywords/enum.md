@@ -1,5 +1,6 @@
 ---
-title: enum 关键字（C# 参考）
+title: enum 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - enum
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: de11a306937626a7dbbb184e509a9f89e63dbae5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727633"
 ---
 # <a name="enum-c-reference"></a>enum（C# 参考）
 
@@ -97,11 +98,11 @@ int x = (int)Day.Sun;
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../index.md)  
-- [枚举类型](../../programming-guide/enumeration-types.md)  
-- [C# 关键字](index.md)  
-- [整型表](integral-types-table.md)  
-- [内置类型表](built-in-types-table.md)  
-- [隐式数值转换表](implicit-numeric-conversions-table.md)  
-- [显式数值转换表](explicit-numeric-conversions-table.md)  
+- [C# 参考](../index.md)
+- [枚举类型](../../programming-guide/enumeration-types.md)
+- [C# 关键字](index.md)
+- [整型表](integral-types-table.md)
+- [内置类型表](built-in-types-table.md)
+- [隐式数值转换表](implicit-numeric-conversions-table.md)
+- [显式数值转换表](explicit-numeric-conversions-table.md)
 - [枚举命名约定](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

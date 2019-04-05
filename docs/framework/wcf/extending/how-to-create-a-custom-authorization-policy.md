@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 0bacf874e09aca82b2f2685a146612cdef0673db
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705899"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>如何：创建自定义授权策略
-标识模型基础结构在 Windows Communication Foundation (WCF) 支持基于声明的授权模型。 声明从令牌中提取，并可以选择由自定义授权策略进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中，之后进行检查以做出授权决定。 可以使用自定义策略将声明从传入令牌转换成应用程序需要的声明。 这种方式，应用程序层可以受由 WCF 支持的不同令牌类型的不同声明的详细信息。 本主题演示如何实现自定义授权策略和如何将该策略添加到服务所使用的策略集中。  
+标识模型基础结构在 Windows Communication Foundation (WCF) 支持基于声明的授权模型。 声明从令牌中提取，并可以选择由自定义授权策略进行处理，然后放入 <xref:System.IdentityModel.Policy.AuthorizationContext> 中，之后进行检查以做出授权决定。 可以使用自定义策略将声明从传入令牌转换成应用程序需要的声明。 这样一来，应用程序层可以从由 WCF 支持的不同令牌类型的不同声明的详细信息隔离出来。 本主题演示如何实现自定义授权策略和如何将该策略添加到服务所使用的策略集中。  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>实现自定义授权策略  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33804230"
   
 1.  需要向此方法传递两个参数：<xref:System.IdentityModel.Policy.EvaluationContext> 类的一个实例和一个对象引用。  
   
-2.  如果自定义授权策略添加<xref:System.IdentityModel.Claims.ClaimSet>而不考虑当前的内容的实例<xref:System.IdentityModel.Policy.EvaluationContext>，然后添加每个`ClaimSet`通过调用<xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29>方法，并且返回`true`从<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>方法。 返回 `true` 可向授权基础结构指示授权策略已执行其工作，不需要重新调用。  
+2.  如果自定义授权策略添加<xref:System.IdentityModel.Claims.ClaimSet>而不考虑当前内容的实例<xref:System.IdentityModel.Policy.EvaluationContext>，然后添加每个`ClaimSet`通过调用<xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29>方法并返回`true`从<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>方法。 返回 `true` 可向授权基础结构指示授权策略已执行其工作，不需要重新调用。  
   
 3.  如果自定义授权策略仅在 `EvaluationContext` 中已经存在特定的声明时才添加声明集，则通过检查由 `ClaimSet` 属性返回的 <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A> 实例，查找这些声明。 如果声明已存在，则通过调用 <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> 方法添加新声明集，如果不再需要添加其他声明集，则返回 `true`，向授权基础结构指示授权策略已完成其工作。 如果声明不存在，则返回 `false`，指示如果其他授权策略向 `EvaluationContext` 添加更多声明集，则应该重新调用授权策略。  
   
@@ -45,8 +45,8 @@ ms.locfileid: "33804230"
       <behaviors>  
         <serviceAuthorization serviceAuthorizationManagerType=  
                   "Samples.MyServiceAuthorizationManager" >  
-          <authorizationPolicies>         
-            <add policyType="Samples.MyAuthorizationPolicy"  
+          <authorizationPolicies>  
+            <add policyType="Samples.MyAuthorizationPolicy" />  
           </authorizationPolicies>  
         </serviceAuthorization>  
       </behaviors>  
@@ -75,8 +75,8 @@ ms.locfileid: "33804230"
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [如何：比较声明](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [如何：为服务创建自定义授权管理器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- [如何：比较声明](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [如何：创建自定义授权管理器服务](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)

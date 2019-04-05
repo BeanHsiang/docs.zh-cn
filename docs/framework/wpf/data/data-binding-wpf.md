@@ -7,22 +7,22 @@ helpviewer_keywords:
 - data binding [WPF]
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
-ms.openlocfilehash: 441f14b09e3bd3ed745d38645ec23b9d040d419b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555771"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375189"
 ---
 # <a name="data-binding-wpf"></a>数据绑定 (WPF)
-Windows Presentation Foundation (WPF) 数据绑定提供了简单的应用程序为与数据交互和呈现的一致方法。 元素可以从多个公共语言运行时 (CLR) 对象和 XML 的形式中的数据源绑定到数据。  
+Windows Presentation Foundation (WPF) 数据绑定提供了简单而一致的方式，应用程序能够显示和与数据交互。 元素可以从各种数据源的公共语言运行时 (CLR) 对象和 XML 的形式绑定到数据。  
   
 ## <a name="in-this-section"></a>本节内容  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [绑定源概述](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [绑定声明概述](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [数据绑定概述](data-binding-overview.md)  
+ [绑定源概述](binding-sources-overview.md)  
+ [数据模板化概述](data-templating-overview.md)  
+ [绑定声明概述](binding-declarations-overview.md)  
+ [帮助主题](data-binding-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Data>  
@@ -34,8 +34,8 @@ Windows Presentation Foundation (WPF) 数据绑定提供了简单的应用程序
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>相关章节  
- [拖放](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [拖放](../advanced/drag-and-drop.md)  
   
- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [数据绑定](../advanced/optimizing-performance-data-binding.md)  
   
- [演练：在 WPF 应用程序中缓存应用程序数据](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [演练：缓存在 WPF 应用程序的应用程序数据](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

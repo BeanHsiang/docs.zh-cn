@@ -2,12 +2,12 @@
 title: SqlClient 对 LocalDB 的支持
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 102dbdcc79234525a45e9059092ccaad63fa3353
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527609"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient 对 LocalDB 的支持
 从 SQL Server 代号 Denali，SQL Server 的称作 LocalDB 的轻量版本将提供。 本主题讨论如何连接到 LocalDB 数据库。  
@@ -31,7 +31,7 @@ ms.locfileid: "47079375"
   
  连接到 LocalDB 数据库时，不允许`User Instance=True` 。  
   
- 您可以下载从 LocalDB [Microsoft SQL Server 2012 功能包](https://www.microsoft.com/download/en/details.aspx?id=29065)。 如果将使用 sqlcmd.exe 来修改 LocalDB 实例中的数据，则需要 SQL Server 2012，您还可以从 SQL Server 2012 功能包中的 sqlcmd。  
+ 可以从 [Microsoft SQL Server 2012 功能包](https://www.microsoft.com/download/en/details.aspx?id=29065)下载 LocalDB。 如果将使用 sqlcmd.exe 来修改 LocalDB 实例中的数据，则需要 SQL Server 2012，您还可以从 SQL Server 2012 功能包中的 sqlcmd。  
   
 ## <a name="programmatically-create-a-named-instance"></a>以编程方式创建命名实例  
  应用程序可以创建命名实例并指定数据库，如下所示：  
@@ -58,6 +58,6 @@ ms.locfileid: "47079375"
   
 -   使用 `AttachDBFilename` 连接字符串关键字来指定 .MDF 文件。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

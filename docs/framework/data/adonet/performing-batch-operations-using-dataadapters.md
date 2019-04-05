@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ccf730eb85024687285200db8f978291986dcc18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543456"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>使用 DataAdapter 执行批处理操作
 通过 ADO.NET 中的批处理支持，<xref:System.Data.Common.DataAdapter> 可以将 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 中的 INSERT、UPDATE 和 DELETE 操作分组发向服务器，而不是每次发送一项操作。 因为减少了与服务器的往返次数，通常可以大大提高性能。 SQL Server .NET 数据提供程序 (<xref:System.Data.SqlClient>) 和 Oracle .NET 数据提供程序 (<xref:System.Data.OracleClient>) 支持批量更新。  
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>处理与批处理更新相关的事件和错误  
- **DataAdapter**有两个与更新相关的事件： **RowUpdating**并**RowUpdated**。 在 ADO.NET 的以前版本中，如果禁用批处理，则每处理一行就会生成一次这些事件。 **RowUpdating**之前发生更新时，生成并**RowUpdated**数据库更新完成后生成。  
+ **DataAdapter**具有两个与更新相关的事件：**RowUpdating**并**RowUpdated**。 在 ADO.NET 的以前版本中，如果禁用批处理，则每处理一行就会生成一次这些事件。 **RowUpdating**之前发生更新时，生成并**RowUpdated**数据库更新完成后生成。  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>批处理更新的事件行为更改  
  启用批处理时，在单个数据库操作中可更新多行。 因此，每个批处理只发生一次 `RowUpdated` 事件，而对于处理每一行，`RowUpdating` 事件都会发生。 禁用批处理时，这两个事件一对一交错触发，即一行触发一个 `RowUpdating` 事件和一个 `RowUpdated` 事件，下一行触发一个 `RowUpdating` 事件和一个 `RowUpdated` 事件，直到处理完所有行。  
@@ -141,8 +141,8 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
  数据提供程序和后端数据库服务器确定支持哪些 SQL 构造以执行批处理。 如果为执行提交了不支持的语句，则可能引发异常。  
   
-## <a name="see-also"></a>请参阅  
- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

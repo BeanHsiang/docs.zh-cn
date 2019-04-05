@@ -6,25 +6,23 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 04abb999ae232d2dd49b1fad8887a596530ea369
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 32f1940db7e2e77b2d878a71c9e1aa4e394b349f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842666"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677196"
 ---
 # <a name="ui-automation-overview"></a>UI 自动化概述
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 是 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]的全新辅助功能框架，在所有支持 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]的操作系统上可用。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供对桌面上大多数 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 元素的编程访问，使辅助技术产品（如屏幕阅读器）能够使用标准输入以外的其他方式向最终用户提供有关 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的信息并操纵 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 也使自动化的测试脚本能够与 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]进行交互。  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不会启用由不同用户通过启动的进程之间的通信**以运行**命令。  
+>  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不会启用由不同用户通过“Run as”  命令启动的进程之间的通信。  
   
  UI 自动化客户端应用程序可在保证其将在多个框架上运行的情况下进行编写。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心掩盖位于 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]各组成部分之下的框架中的任何差异。 例如在 `Content` 视图中， [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 按钮的 `Caption` 属性、 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 按钮的 `ALT` 属性、HTML 图像的 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>属性全部映射到单个属性， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。  
   
@@ -41,7 +39,7 @@ ms.locfileid: "48842666"
 |提供程序 [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] （UIAutomationProvider.dll 和 UIAutomationTypes.dll）|一组接口定义，它们由 UI 自动化提供程序、提供关于 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素信息并响应编程输入的对象来实现。|  
 |客户端 API（UIAutomationClient.dll 和 UIAutomationTypes.dll）|一组托管代码的类型，它们使 UI 自动化客户端应用程序可以获取有关 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 的信息，并将输入发送到控件。|  
 |UiAutomationCore.dll|用于处理提供程序和客户端之间通信的基础代码（有时称为 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心）。|  
-|UIAutomationClientsideProviders.dll|一组用于标准旧版本控件的 UI 自动化提供程序。 ([!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]控件具有对本机支持[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。)此支持自动提供给客户端应用程序。|  
+|UIAutomationClientsideProviders.dll|一组用于标准旧版本控件的 UI 自动化提供程序。 （[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控件具有对 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的本机支持。）此支持自动提供给客户端应用程序。|  
   
  从软件开发人员的角度来看，有以下两种使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的方式：创建对自定义控件的支持（使用提供程序 API），创建使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心以与 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 元素通信的应用程序（使用客户端 API）。 具体取决于侧重点，你应参考文档中的其他部分。 你可在以下各节中进一步了解概念并获得实际操作知识。  
   
@@ -76,9 +74,9 @@ ms.locfileid: "48842666"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 同样通过事件向客户端应用程序提供信息。 与 [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]不同， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件不基于广播的机制。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 客户端注册特定的事件通知且可以请求将特定 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性和控件模式信息传递给其事件处理程序。 此外， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件包含对引发它的元素的引用。 提供程序可以通过有选择地引发事件来提高性能，具体取决于任一客户端是否正在进行侦听。  
   
-## <a name="see-also"></a>请参阅  
- [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI 自动化属性概述](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [UI 自动化事件概述](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [UI 自动化安全性概述](../../../docs/framework/ui-automation/ui-automation-security-overview.md)
+## <a name="see-also"></a>请参阅
+- [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI 自动化控件模式概述](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [UI 自动化属性概述](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
+- [UI 自动化事件概述](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
+- [UI 自动化安全性概述](../../../docs/framework/ui-automation/ui-automation-security-overview.md)

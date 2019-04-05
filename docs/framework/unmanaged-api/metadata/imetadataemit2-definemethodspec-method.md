@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 85b17199ad40d8b3fbf4e1a0271828e5a5ac7991
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 012cd9fdf23206f57662c854692ba53f403b727f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445255"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471597"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>IMetaDataEmit2::DefineMethodSpec 方法
-创建的泛型实例方法，并获取指向定义的标记。  
+创建一个方法的泛型实例并获取定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,9 +38,9 @@ HRESULT DefineMethodSpec (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `tkParent`  
- [in]要创建泛型实例方法标记。 令牌的类型必须为`mdMethodDef`或`mdMemberRef`。  
+ [in]要创建泛型实例的方法的标记。 该标记必须为类型`mdMethodDef`或`mdMemberRef`。  
   
  `pvSigBlob`  
  [in]指向二进制 COM + 方法的签名的指针。  
@@ -49,17 +49,17 @@ HRESULT DefineMethodSpec (
  [in]大小，以字节为单位的`pvSigBlob`。  
   
  `pmi`  
- [out]指向方法的元数据签名定义的标记。  
+ [out]该方法的元数据签名定义标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

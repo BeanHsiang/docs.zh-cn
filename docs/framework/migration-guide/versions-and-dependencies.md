@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c78a80b6d266f40aa8872f0411d74f10c45e4c68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3cec103d72cf8bf714abfe5cb645802f92b7fc5d
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200935"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759777"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和依赖关系
 每个版本的 .NET framework 都包含公共语言运行时 (CLR)、基类库和其他托管库。 本主题按版本介绍了 .NET Framework 的关键功能，提供了有关基础 CLR 版本和相关开发环境的信息，并标识了 Windows 操作系统所安装的版本。  
@@ -24,13 +24,13 @@ ms.locfileid: "50200935"
   
  每个新版本的 .NET Framework 都会保留早期版本中的功能并会添加新功能。 CLR 由其自己的版本号标识。 虽然 CLR 版本并不总是递增的，但 .NET Framework 版本号在每次发布时都会递增。 例如，.NET Framework 4、4.5 和更高版本包含 CLR 4，而 .NET Framework 2.0、3.0 和 3.5 包含 CLR 2.0。 （没有版本 3 的 CLR。）  
   
- 有关受支持操作系统的完整列表，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关下载，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。 有关确定计算机上已安装哪些 .NET Framework 版本，请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。  
+ 有关受支持操作系统的完整列表，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关下载，请参阅[安装面向开发人员的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。 若要确定计算机上安装的是哪个版本的 .NET Framework，请参阅[如何：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。  
   
  在表中，带有标记 ✓ 的操作系统版本上安装的 .NET Framework 版本必须[在控制面板中启用](../../../docs/framework/install/dotnet-35-windows-10.md)（适用于 Windows）或通过服务器管理器启用（适用于 Windows Server），该标记显示在“包含在/可安装在 Windows 中”和“包含在/可安装在 Windows Server 中”列中。  
   
 |.NET Framework 版本|CLR 版本|包含于<br /> Visual Studio<br/>version|✓ 包括在内<br />+ 可在其上安装<br />Windows|✓ 包括在内<br />+ 可在其上安装<br />Windows Server|确定已安装的 .NET 版本|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
-|4.7.2<br/><br/>[新增功能](../whats-new/index.md#whats-new-in-the-net-framework-472)<br/><br/>[辅助功能的新增功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-472)|4| | ✓ 10 2018 年 10 月更新（版本 1809） <br/><br/> ✓ 10 2018 年 4 月更新（版本 1803） <br/><br/> + 10 Fall Creators Update（版本 1709） <br/> <br/> + 10 创意者更新（版本 1703） <br/> + 10 周年更新（版本 1607） <br/> + 8.1 <br/> +7 | ✓ Windows Server 版本 1803 <br/> + Windows Server 版本 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461814（Windows 10 2018 年 10 月更新） <br/> - 461808（Windows 10 2018 年 4 月更新和 Windows Server 版本 1803） <br/> - 461814（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|
+|4.7.2<br/><br/>[新增功能](../whats-new/index.md#whats-new-in-the-net-framework-472)<br/><br/>[辅助功能的新增功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-472)|4| | ✓ 10 2018 年 10 月更新（版本 1809） <br/><br/> ✓ 10 2018 年 4 月更新（版本 1803） <br/><br/> + 10 Fall Creators Update（版本 1709） <br/> <br/> + 10 创意者更新（版本 1703） <br/> + 10 周年更新（版本 1607） <br/> + 8.1 <br/> +7 | ✓ Windows Server 2019<br/> ✓ Windows Server 版本 1809 <br/> ✓ Windows Server 版本 1803 <br/> + Windows Server 版本 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461814（Windows 10 2018 年 10 月更新） <br/> - 461808（Windows 10 2018 年 4 月更新和 Windows Server 版本 1803） <br/> - 461814（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|
 |4.7.1<br/><br/>[新增功能](../whats-new/index.md#whats-new-in-the-net-framework-471)<br/><br/>[辅助功能的新增功能](../whats-new/whats-new-in-accessibility.md#whats-new-in-accessibility-in-the-net-framework-471)|4| | ✓ 10 Fall Creators Update（版本 1709） <br/> <br/> + 10 创意者更新（版本 1703） <br/> + 10 周年更新（版本 1607） <br/> + 8.1 <br/> +7| + Windows Server 版本 1803 <br/> ✓ Windows Server 版本 1709 <br/> + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 461308（Windows 10 创意者更新和 Windows Server 版本 1709） <br/> - 461310（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）| 
 |4.7<br/><br/>[新增功能](../whats-new/index.md#whats-new-in-the-net-framework-47)|4| | ✓ 10 创意者更新（版本 1703） <br/> <br/> + 10 周年更新（版本 1607） <br/> + 8.1 <br/> +7| + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |使用 `Release` DWORD：<br/><br/> - 460798（Windows 10 创意者更新） <br/> - 460805（所有其他操作系统版本） <br/><br/> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)） |  
 |4.6.2<br/><br/>[新增功能](../whats-new/index.md#whats-new-in-the-net-framework-462)|4||✓ 10 周年更新（版本 1607） <br /><br /> + 10 十一月更新（版本 1511） <br/> + 10 <br/> + 8.1<br />+ 7|✓ 2016<br /><br /> + 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|使用 `Release` DWORD：<br /><br /> - 394802（Windows 10 周年更新和 Windows Server 2016） <br />- 394806（所有其他操作系统版本）<br /><br /> （请参阅[说明](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)）|  
@@ -76,10 +76,10 @@ ms.locfileid: "50200935"
   
 -   有关将应用从 .NET Framework 4 迁移到 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其单点版本的信息，请参阅[迁移指南](../../../docs/framework/migration-guide/index.md)。  
   
--   有关确定计算机上安装了哪些版本或更新的信息，请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)和[如何：确定安装了哪些 .NET Framework 更新](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。  
+-   若要了解如何确定计算机上所安装的版本或更新，请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)和[如何：确定已安装的 .NET Framework 更新](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- [版本兼容性](../../../docs/framework/migration-guide/version-compatibility.md)   - 
-- [Microsoft .NET Framework 支持生命周期策略](https://go.microsoft.com/fwlink/?LinkId=196607)   
+- [版本兼容性](../../../docs/framework/migration-guide/version-compatibility.md)
+- [Microsoft .NET Framework 支持生命周期策略](https://go.microsoft.com/fwlink/?LinkId=196607)
 - [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

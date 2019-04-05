@@ -1,5 +1,5 @@
 ---
-title: 如何：使用设计器为 Windows 窗体控件创建访问键
+title: 如何：为使用设计器的 Windows 窗体控件创建访问密钥
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], access keys
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-ms.openlocfilehash: d077de1636888f0e3b763344206692fee2cb2296
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3d4112d87dbd448c7e34d2b84d11b49f56e1dc44
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502965"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713340"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>如何：使用设计器为 Windows 窗体控件创建访问键
+# <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>如何：为使用设计器的 Windows 窗体控件创建访问密钥
 *访问密钥*是中的菜单、 菜单项或如按钮控件的标签文本带下划线的字符。 它使用户能够通过同时按下 ALT 键和预定义的访问键"单击"按钮。 例如，如果某个按钮可运行打印窗体的过程，因此其`Text`属性设置前以字母"P"使得字母"P"以带有下划线的按钮文本中在运行时为"Print"，添加一个与号 (&)。 用户可以运行通过按 ALT + P 与按钮关联的命令。 不能具有不能接收焦点的控件的访问密钥。  
   
 > [!NOTE]
@@ -32,8 +32,8 @@ ms.locfileid: "43502965"
   
 1.  在中**属性**窗口中，设置`Text`属性将成为访问键的字母前为一个字符串，包含一个 & 号 (&)。 例如，若要设置为访问键的字母"P"，键入**和打印**到网格中。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Button>  
- [如何：响应 Windows 窗体 Button 控件单击](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [如何：设置 Windows 窗体控件显示的文本](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [标记各个 Windows 窗体控件并创建它们的快捷键](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Button>
+- [如何：响应 Windows 窗体按钮单击](how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：设置显示的文本的 Windows 窗体控件](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

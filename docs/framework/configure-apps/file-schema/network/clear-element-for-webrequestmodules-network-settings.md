@@ -1,5 +1,5 @@
 ---
-title: '&lt;清除&gt;webRequestModules （网络设置） 的'
+title: webRequestModules -> <clear> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 39d4a184972036677aaa9fdb33e672521033d35f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0096c7b3426645b90e2e1609fb2427334345fd87
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190523"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284149"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;清除&gt;webRequestModules （网络设置） 的
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<清除 > webRequestModules （网络设置） 的
 从应用程序中删除所有已注册的 Web 请求模块。  
   
  \<configuration>  
 \<system.net>  
 \<webRequestModules>  
-\<清除 >  
+\<clear>  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,6 +69,6 @@ ms.locfileid: "50190523"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.WebRequest>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.WebRequest>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

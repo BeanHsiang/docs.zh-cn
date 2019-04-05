@@ -1,15 +1,15 @@
 ---
-title: '&lt;system.runtime.serialization&gt;'
+title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: 6ffd4057028adcd123086173a05164eb5d2622f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5aa5d75e12852fe6a0e4e9a2eb4ae57d25d1022c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748495"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272672"
 ---
-# <a name="ltsystemruntimeserializationgt"></a>&lt;system.runtime.serialization&gt;
+# <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 表示 <xref:System.Runtime.Serialization> 命名空间节的根元素，并包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的设置选项的元素。  
   
  system.runtime.serialization  
@@ -17,20 +17,20 @@ ms.locfileid: "32748495"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<configuration>  
-  <system.runtime.serialization>  
-    <dataContractSerializer ignoreExtensionDataObject="Boolean"  
-      maxItemsInObjectGraph="Integer">  
-      <declaredTypes>  
-        <add type="String ">  
-          <knownType type="String">  
-             <parameter index="Integer"/>  
-          </knownType>  
-        </add>  
-      </declaredTypes>  
-    <dataContractSerializer>  
-  </system.runtime.serialization>  
-</configuration>  
+<configuration>
+  <system.runtime.serialization>
+    <dataContractSerializer ignoreExtensionDataObject="Boolean"
+                            maxItemsInObjectGraph="Integer">
+      <declaredTypes>
+        <add type="String">
+          <knownType type="String">
+            <parameter index="Integer" />
+          </knownType>
+        </add>
+      </declaredTypes>
+    <dataContractSerializer>
+  </system.runtime.serialization>
+</configuration>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -43,7 +43,7 @@ ms.locfileid: "32748495"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|使得可以在反序列化时添加要使用的已知类型。|  
+|[\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|使得可以在反序列化时添加要使用的已知类型。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -51,7 +51,7 @@ ms.locfileid: "32748495"
 |-------------|-----------------|  
 |[\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|配置的顶级元素。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization>  
- [使用数据协定](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization>
+- [使用数据协定](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [数据协定已知类型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

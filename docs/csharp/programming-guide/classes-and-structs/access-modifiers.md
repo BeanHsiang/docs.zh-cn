@@ -1,16 +1,17 @@
 ---
-title: 访问修饰符（C# 编程指南）
+title: 访问修饰符 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 6be0ae4f6497dfb2db9607f61c4ede5083d57dc7
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: d328f8e73824a4773c6e10f506f3021d3c88d085
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036248"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378047"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>访问修饰符（C# 编程指南）
 所有类型和类型成员都具有可访问性级别，该级别可以控制是否可以从你的程序集或其他程序集中的其他代码中使用它们。 可以使用以下访问修饰符在进行声明时指定类型或成员的可访问性：  
@@ -21,7 +22,7 @@ ms.locfileid: "48036248"
  [private](../../../csharp/language-reference/keywords/private.md)  
  只有同一类或结构中的代码可以访问该类型或成员。  
   
- [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [受保护](../../../csharp/language-reference/keywords/protected.md)  
  只有同一类或者从该类派生的类中的代码可以访问该类型或成员。  
  [internal](../../../csharp/language-reference/keywords/internal.md)  
  同一程序集中的任何代码都可以访问该类型或成员，但其他程序集中的代码不可以。  
@@ -32,7 +33,7 @@ ms.locfileid: "48036248"
   
  下面的示例演示如何在类型和成员上指定访问修饰符：  
   
- [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
+ [!code-csharp[csProgGuideObjects#72](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#72)]  
   
  并非所有的访问修饰符都可以由所有上下文中的所有类型或成员使用，并且在某些情况下，类型成员的可访问性受其包含类型的可访问性限制。 以下各节提供了有关可访问性的更多详细信息。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "48036248"
   
  派生类不能具有高于其基类型的可访问性。 换而言之，不能具有派生自内部类 `A` 的公共类 `B`。 如果允许这样，则它将具有使 `A` 公开的效果，因为可从派生类访问 `A` 的所有受保护的或内部成员。  
   
- 可以通过使用 InternalsVisibleToAttribute 启用特定的其他程序集访问内部类型。 有关详细信息，请参阅[友元程序集](../concepts/assemblies-gac/friend-assemblies.md)。  
+ 可以通过使用 InternalsVisibleToAttribute 启用特定的其他程序集访问内部类型。 有关详细信息，请参阅[友元程序集](../../../standard/assembly/friend-assemblies.md)。  
   
 ## <a name="class-and-struct-member-accessibility"></a>类和结构成员可访问性  
  可以使用六种访问类型中的任意一种声明类成员（包括嵌套的类和结构）。 结构成员无法声明为受保护，因为结构不支持继承。  
@@ -58,7 +59,7 @@ ms.locfileid: "48036248"
   
  若要设置类或结构成员的访问级别，向成员声明添加适当的关键字，如以下示例中所示。  
   
- [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
+ [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
 >  受保护的内部可访问性级别意味着受保护或内部，而非受保护和内部。 换而言之，可以从同一程序集中的任何类（包括派生类）访问受保护的内部成员。 若要将同一程序集中的可访问性限制为仅派生类，请声明类本身为内部，并声明其成员为受保护。 此外，从 C# 7.2 开始，可以使用专用受保护的访问修饰符实现相同的效果，而无需使包含的类属于内部。  
@@ -75,15 +76,15 @@ ms.locfileid: "48036248"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [接口](../../../csharp/programming-guide/interfaces/index.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [internal](../../../csharp/language-reference/keywords/internal.md)  
-- [protected](../../../csharp/language-reference/keywords/protected.md)  
-- [受保护的内部](../../../csharp/language-reference/keywords/protected-internal.md)  
-- [专用受保护](../../../csharp/language-reference/keywords/private-protected.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
-- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [类和结构](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [接口](../../../csharp/programming-guide/interfaces/index.md)
+- [private](../../../csharp/language-reference/keywords/private.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
+- [internal](../../../csharp/language-reference/keywords/internal.md)
+- [受保护](../../../csharp/language-reference/keywords/protected.md)
+- [受保护的内部](../../../csharp/language-reference/keywords/protected-internal.md)
+- [专用受保护](../../../csharp/language-reference/keywords/private-protected.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
+- [struct](../../../csharp/language-reference/keywords/struct.md)
 - [interface](../../../csharp/language-reference/keywords/interface.md)

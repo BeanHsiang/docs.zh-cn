@@ -1,23 +1,23 @@
 ---
-title: '&lt;作用域&gt;'
+title: <scopes>
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 7e2dda0d0def4d1f90bf1b4dbf54f18983355222
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eee6382c578648866045fd9b283454d9e0e76fcb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749616"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275018"
 ---
-# <a name="ltscopesgt"></a>&lt;作用域&gt;
+# <a name="scopes"></a>\<scopes>
 包含一个配置元素集合，这些元素指定可用于在查询时筛选服务终结点的自定义范围 URI。  
   
 \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<endpointBehaviors>  
-\<行为 >  
-\<endpointDiscovery >  
-\<作用域 >  
+\<behavior>  
+\<endpointDiscovery>  
+\<scopes>  
   
 ## <a name="syntax"></a>语法  
   
@@ -32,7 +32,7 @@ ms.locfileid: "32749616"
       </endpointDiscovery>
     </behavior>
   </endpointBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -51,7 +51,7 @@ ms.locfileid: "32749616"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<endpointDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|指定终结点的各种发现设置，例如终结点的可发现性、范围以及对终结点元数据的任何自定义扩展。|  
+|[\<endpointDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|指定终结点的各种发现设置，例如终结点的可发现性、范围以及对终结点元数据的任何自定义扩展。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

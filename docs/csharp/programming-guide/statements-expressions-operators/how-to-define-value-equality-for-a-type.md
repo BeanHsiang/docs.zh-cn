@@ -1,19 +1,20 @@
 ---
-title: 如何：为类型定义值相等性（C# 编程指南）
+title: 如何：为类型定义值相等性 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
 - object equivalence [C#]
-- Equals method [C#] , overriding
+- Equals method [C#], overriding
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 365aa5a71eb3d07a79920f565a66fcac67de0b42
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042616"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545437"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何：为类型定义值相等性（C# 编程指南）
 定义类或结构时，需确定为类型创建值相等性（或等效性）的自定义定义是否有意义。 通常，类型的对象预期要添加到某类集合时，或者这些对象主要用于存储一组字段或属性时，需实现值相等性。 可以基于类型中所有字段和属性的比较结果来定义值相等性，也可以基于子集进行定义。 但在任何一种情况下，类和结构中的实现均应遵循 5 个等效性保证条件：  
@@ -34,9 +35,9 @@ ms.locfileid: "44042616"
   
 1.  替代[虚拟](../../../csharp/language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法。 大多数情况下，`bool Equals( object obj )` 实现应只调入作为 <xref:System.IEquatable%601?displayProperty=nameWithType> 接口的实现的类型特定 `Equals` 方法。 （请参阅步骤 2。）  
   
-2.  通过提供类型特定的 `Equals` 方法实现 <xref:System.IEquatable%601?displayProperty=nameWithType> 接口。 实际的等效性比较将在此接口中执行。 例如，可能决定通过仅比较类型中的一两个字段来定义相等性。 不会从 `Equals` 引发异常。 仅适用于类：此方法应仅检查类中声明的字段。 它应调用 `base.Equals` 来检查基类中的字段。 （如果类型直接从 <xref:System.Object> 中继承，则不要这样做，因为 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 的 <xref:System.Object> 实现会执行引用相等性检查。）  
+2.  通过提供类型特定的 `Equals` 方法实现 <xref:System.IEquatable%601?displayProperty=nameWithType> 接口。 实际的等效性比较将在此接口中执行。 例如，可能决定通过仅比较类型中的一两个字段来定义相等性。 不会从 `Equals` 引发异常。 仅对于类：此方法应仅检查类中声明的字段。 它应调用 `base.Equals` 来检查基类中的字段。 （如果类型直接从 <xref:System.Object> 中继承，则不要这样做，因为 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 的 <xref:System.Object> 实现会执行引用相等性检查。）  
   
-3.  可选，但建议这样做：重载 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 运算符。  
+3.  可选但建议这样做：重载 [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 和 [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) 运算符。  
   
 4.  替代 <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>，以便具有值相等性的两个对象生成相同的哈希代码。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "44042616"
 ## <a name="example"></a>示例  
  下面的示例演示如何在类（引用类型）中实现值相等性。  
   
- [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
   
  在类（引用类型）上，两种 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法的默认实现均执行引用相等性比较，而不是值相等性检查。 实施者替代虚方法时，目的是为其指定值相等性语义。  
   
@@ -56,13 +57,13 @@ ms.locfileid: "44042616"
 ## <a name="example"></a>示例  
  下面的示例演示如何在结构（值类型）中实现值相等性：  
   
- [!code-csharp[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
+ [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
   
  对于结构，<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>（<xref:System.ValueType?displayProperty=nameWithType> 中的替代版本）的默认实现通过使用反射来比较类型中每个字段的值，从而执行值相等性检查。 实施者替代结构中的 `Equals` 虚方法时，目的是提供更高效的方法来执行值相等性检查，并选择根据结构字段或属性的某个子集来进行比较。  
   
- 除非结构显式重载了 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 运算符，否则这些运算符无法对结构进行运算。  
+ 除非结构显式重载了 [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 和 [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) 运算符，否则这些运算符无法对结构进行运算。  
   
 ## <a name="see-also"></a>请参阅
 
-- [相等比较](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+- [相等比较](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
 - [C# 编程指南](../../../csharp/programming-guide/index.md)

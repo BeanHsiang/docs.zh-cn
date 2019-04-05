@@ -1,31 +1,30 @@
 ---
-title: '&lt;ws2007HttpBinding&gt; 的 &lt;transport&gt;'
+title: <transport> 的 <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 5c7e96beee2fc1e4780729e56f10a52b63dde4e8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b8f84d0ed6c6248e72e3353675c9da96a0678ae6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841412"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273301"
 ---
-# <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt; 的 &lt;transport&gt;
+# <a name="transport-of-ws2007httpbinding"></a>\<传输 > 的\<ws2007HttpBinding >
 定义 HTTP 传输的身份验证设置。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<ws2007HttpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
 \<transport>  
   
 ## <a name="syntax"></a>语法  
   
-```  
-transport clientCredentialType =   
-       "Basic/Certificate/Digest/None/Ntlm/Windows"  
-       proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-       realm="string"   
+```xml  
+<transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+           proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+           realm="string" />
 ```  
   
 ## <a name="type"></a>类型  
@@ -73,13 +72,13 @@ transport clientCredentialType =
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|表示的安全功能[ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)元素。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

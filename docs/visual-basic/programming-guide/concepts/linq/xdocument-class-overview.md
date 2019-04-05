@@ -2,12 +2,12 @@
 title: XDocument 类概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
-ms.openlocfilehash: 98ab095d67add2375eaf912ade71114c022b2ebb
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: f9a531b9e90a8d6511dd0a2c6fc3131c9bfe1e89
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220943"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834278"
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>XDocument 类概述 (Visual Basic)
 本主题介绍 <xref:System.Xml.Linq.XDocument> 类。  
@@ -81,5 +81,6 @@ doc.Save("test.xml")
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to XML 编程概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ to XML 编程概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

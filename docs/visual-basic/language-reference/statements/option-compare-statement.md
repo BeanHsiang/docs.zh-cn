@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 32664dc3be98a9d5a2e6a7d61790c18ae5d3795d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b092d54e6cf4d8a96a35e6b1cc818fad8f26e3ae
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519322"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834070"
 ---
 # <a name="option-compare-statement"></a>Option Compare 语句
 声明比较字符串数据时要使用的默认比较方法。  
@@ -80,23 +80,24 @@ Option Compare { Binary | Text }
 ## <a name="example"></a>示例  
  下例使用 `Option Compare` 语句将二进制比较设置为默认字符串比较方法。 若要使用此代码，请取消 `Option Compare Binary` 语句的注释，并将其置于源文件顶部。  
   
- [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#45)]  
   
 ## <a name="example"></a>示例  
  下例使用 `Option Compare` 语句将不区分大小写的文本排序顺序设置为默认字符串比较方法。 若要使用此代码，请取消 `Option Compare Text` 语句的注释，并将其置于源文件顶部。  
   
- [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>  
- <xref:Microsoft.VisualBasic.Strings.Replace%2A>  
- <xref:Microsoft.VisualBasic.Strings.Split%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [比较运算符](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [在 Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Like 运算符](../../../visual-basic/language-reference/operators/like-operator.md)  
- [字符串函数](../../../visual-basic/language-reference/functions/string-functions.md)  
- [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>
+- <xref:Microsoft.VisualBasic.Strings.Replace%2A>
+- <xref:Microsoft.VisualBasic.Strings.Split%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [比较运算符](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [在 Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Like 运算符](../../../visual-basic/language-reference/operators/like-operator.md)
+- [字符串函数](../../../visual-basic/language-reference/functions/string-functions.md)
+- [Option Explicit 语句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)

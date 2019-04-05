@@ -1,5 +1,5 @@
 ---
-title: 如何：往返日期和时间值
+title: 如何：往返行程日期和时间值
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628183"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>如何：往返日期和时间值
+# <a name="how-to-round-trip-date-and-time-values"></a>如何：往返行程日期和时间值
 在许多应用程序中，日期和时间值旨在明确标识单个时间点。 本主题介绍了如何保存和还原 <xref:System.DateTime> 值、<xref:System.DateTimeOffset> 值以及包含时区信息的日期和时间值，以便还原后的值与保存的值标识的时间相同。  
   
 ### <a name="to-round-trip-a-datetime-value"></a>往返 DateTime 值  
@@ -101,6 +101,6 @@ ms.locfileid: "45668413"
   
 ## <a name="see-also"></a>请参阅
 
-- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之间进行选择](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之间进行选择](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

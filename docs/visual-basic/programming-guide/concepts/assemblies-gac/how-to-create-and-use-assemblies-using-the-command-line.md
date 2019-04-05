@@ -1,15 +1,15 @@
 ---
-title: 如何： 创建和使用程序集使用命令行 (Visual Basic)
+title: 如何：创建和使用程序集使用命令行 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: 3b9d3c45168020f22f7e263fdf59454e3789dd9e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eecd644a7b91492f0a78cf969cfa71ae927609ab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194652"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819393"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>如何： 创建和使用程序集使用命令行 (Visual Basic)
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>如何：创建和使用程序集使用命令行 (Visual Basic)
 程序集或动态链接库 (DLL) 会在运行时链接到程序。 为了演示如何生成和使用 DLL，请考虑以下方案：  
   
 -   `MathLibrary.DLL`：包含要在运行时调用的方法的库文件。 在此示例中，DLL 包含两个方法，即 `Add` 和 `Multiply`。  
@@ -117,7 +117,8 @@ vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb
   
  有关从命令行生成的详细信息，请参阅并[从命令行生成](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。  
   
-## <a name="see-also"></a>请参阅  
- [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)  
- [程序集和全局程序集缓存 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [创建用于容纳 DLL 函数的类](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+## <a name="see-also"></a>请参阅
+
+- [编程概念](../../../../visual-basic/programming-guide/concepts/index.md)
+- [.NET 中的程序集](../../../../standard/assembly/index.md)
+- [创建用于容纳 DLL 函数的类](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

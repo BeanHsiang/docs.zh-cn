@@ -2,12 +2,12 @@
 title: 自定义绑定安全性
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 444e9fc1b9a1543ab22c112468929efa2621db03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192884"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814414"
 ---
 # <a name="custom-binding-security"></a>自定义绑定安全性
 本示例演示如何使用自定义绑定配置安全性。 并演示如何使用自定义绑定实现消息级安全性和安全传输。 如果在客户端和服务之间传输消息时需要进行安全的传输，同时消息必须在消息级别上保持安全，这非常有用。 系统提供的绑定不支持此配置。
@@ -57,7 +57,7 @@ ms.locfileid: "50192884"
 </behaviors>
 ```
 
- 此外，此自定义绑定将消息安全性与 Windows 凭据类型（默认凭据类型）一起使用。 这是通过 `security` 绑定元素实现的。 如果 Kerberos 身份验证机制可用，则使用消息级安全性对客户端和服务进行身份验证。 如果在 Active Directory 环境中运行示例，则会发生这种情况。 如果 Kerberos 身份验证机制不可用，则使用 NTLM 身份验证。 NTLM 向服务对客户端进行身份验证，但不向客户端对服务进行身份验证。 `security`绑定元素配置为使用`SecureConversation``authenticationType`，这会导致在客户端和服务的安全会话的创建。 为了使服务的双工协定起作用，需要这么做。
+ 此外，此自定义绑定将消息安全性与 Windows 凭据类型（默认凭据类型）一起使用。 这是通过 `security` 绑定元素实现的。 如果 Kerberos 身份验证机制可用，则使用消息级安全性对客户端和服务进行身份验证。 如果在 Active Directory 环境中运行示例，则会发生这种情况。 如果 Kerberos 身份验证机制不可用，则使用 NTLM 身份验证。 NTLM 向服务对客户端进行身份验证，但不向客户端对服务进行身份验证。 `security` 绑定元素配置为使用 `SecureConversation` `authenticationType`，这将导致在客户端和服务器上创建安全会话。 为了使服务的双工协定起作用，需要这么做。
 
  运行示例时，操作请求和响应将显示在客户端的控制台窗口中。 在客户端窗口中按 Enter 可以关闭客户端。
 
@@ -113,7 +113,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例
 
-1.  使用管理员特权打开 Visual Studio 命令提示窗口，并运行示例安装文件夹中的 Setup.bat。 这将安装运行示例所需的所有证书。
+1.  使用管理员特权打开 Visual Studio 窗口开发人员命令提示并从示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。
 
     > [!NOTE]
     >  Setup.bat 批处理文件旨在为从 Visual Studio 2012 命令提示运行。 在 Visual Studio 2012 命令提示符点设置为包含 Setup.bat 脚本所需的可执行文件的目录路径环境变量。  
@@ -122,7 +122,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -134,7 +134,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3.  将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-    4.  使用管理员特权打开 Visual Studio 命令提示中的以下命令运行： `Setup.bat service`。 这会用与运行批处理文件的计算机的名称匹配的主题名称创建服务证书。  
+    4.  对于使用管理员特权打开 Visual Studio 中开发人员命令提示符处运行以下命令： `Setup.bat service`。 这会用与运行批处理文件的计算机的名称匹配的主题名称创建服务证书。  
   
         > [!NOTE]
         >  Setup.bat 批处理文件设计为通过 Visual Studio 2010 命令提示运行。 这要求路径环境变量指向 SDK 的安装目录。 将在 Visual Studio 2010 命令提示中自动设置此环境变量。
@@ -149,7 +149,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2.  运行 Cleanup.bat 以移除先前示例中使用的所有旧证书。
 
-    3.  通过使用管理特权打开 Visual Studio 命令提示并在服务计算机上运行以下命令，来导出服务的证书（用运行服务的计算机的完全限定名称替换 `%SERVER_NAME%`）：
+    3.  使用管理特权打开 Visual Studio 开发人员命令提示，在服务计算机上运行以下命令来导出服务的证书 (替换`%SERVER_NAME%`提供计算机的完全限定的名称，该服务正在运行）：
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -157,7 +157,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4.  将 %SERVER_NAME%.cer 复制到客户端计算机（用运行服务的计算机的完全限定名称替换 %SERVER_NAME%）。
 
-    5.  通过使用管理特权打开 Visual Studio 命令提示并在服务计算机上运行以下命令，来导入服务的证书（用运行服务的计算机的完全限定名称替换 %SERVER_NAME%）：
+    5.  通过使用管理特权打开 Visual Studio 开发人员命令提示和客户端计算机上运行以下命令导入服务的证书 (替换 %server_name%的完全限定名称的计算机的位置服务正在运行）：
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -185,5 +185,3 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理
 
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。
-
-## <a name="see-also"></a>请参阅

@@ -1,15 +1,15 @@
 ---
-title: 如何： 筛选特性 (XPATH-LINQ to XML) (Visual Basic)
+title: 如何：根据属性 (XPATH-LINQ to XML) 进行筛选 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: ed9869045270cdc51388b192e8d6ab38005eba8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0803fe7a5527a86fcb85abfc160abf34bb32fbb2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641076"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822734"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>如何： 筛选特性 (XPATH-LINQ to XML) (Visual Basic)
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>如何：根据属性 (XPATH-LINQ to XML) 进行筛选 (Visual Basic)
 本主题演示如何获取具有指定名称、并具有一个带指定值的属性的子代元素。  
   
  XPath 表达式为：  
@@ -19,7 +19,7 @@ ms.locfileid: "33641076"
 ## <a name="example"></a>示例  
  本示例查找名称为 `Address`，`Type`、并具有一个带“Shipping”值的属性的子代元素。  
   
- 本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 此示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -75,5 +75,6 @@ Results are identical
 </Address>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

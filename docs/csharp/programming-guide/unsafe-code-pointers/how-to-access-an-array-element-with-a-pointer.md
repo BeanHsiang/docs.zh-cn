@@ -1,15 +1,16 @@
 ---
-title: 如何使用指针访问数组元素（C# 编程指南）
+title: 如何使用指针访问数组元素 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-ms.openlocfilehash: 0e76ebddd8b703e8d0de4aa6825cbd6d0221079b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7b2991776ca032aa53111187a061835725cfe223
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861645"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965600"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>如何使用指针访问数组元素（C# 编程指南）
 
@@ -23,7 +24,7 @@ for (int i = 65; i < 123; i++)
 }
 ```
 
-方括号中的表达式必须可隐式转换为 `int`、`uint`、`long` 或 `ulong`。 p[e] 运算等效于 \* (p+e)。 与 C 和 C++ 一样，指针元素访问不检查越界错误。
+方括号中的表达式必须可隐式转换为 `int`、`uint`、`long` 或 `ulong`。 `p[e]` 操作等效于 `*(p+e)`。 与 C 和 C++ 一样，指针元素访问不检查越界错误。
 
 ## <a name="example"></a>示例
 
@@ -31,14 +32,14 @@ for (int i = 65; i < 123; i++)
 
 请注意，表达式 `charPointer[i]` 等效于表达式 `*(charPointer + i)`，使用这两个表达式中任何一个获得的结果相同。
 
-[!code-csharp[csProgGuidePointers#11](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-access-an-array-element-with-a-pointer_1.cs)]
+ [!code-csharp[csProgGuidePointers#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers2.cs#11)]
 
-[!code-csharp[csProgGuidePointers#12](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-access-an-array-element-with-a-pointer_2.cs)]
+ [!code-csharp[csProgGuidePointers#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#12)]
 
-**大写字母：**
-**ABCDEFGHIJKLMNOPQRSTUVWXYZ**
-**小写字母：**
-**abcdefghijklmnopqrstuvwxyz**
+大写字母：  
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+小写字母：  
+abcdefghijklmnopqrstuvwxyz  
 
 ## <a name="see-also"></a>请参阅
 

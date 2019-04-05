@@ -2,12 +2,12 @@
 title: SQL Server CLR 集成简介
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: df5ead7d640446a3832b485ecf82cd4a2a11b1fb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dcfc43a68fb8bcacd4a14d6b94a932d656635d55
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523000"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092574"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 集成简介
 公共语言运行库 (CLR) 是 Microsoft .NET Framework 的核心，为所有 .NET Framework 代码提供执行环境。 在 CLR 中运行的代码称为托管代码。 CLR 提供执行程序所需的各种函数和服务，包括实时 (JIT) 编译、分配和管理内存、强制类型安全性、异常处理、线程管理和安全性。  
@@ -65,7 +65,6 @@ GO
   
 -   [调试 CLR 数据库对象](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
-## <a name="see-also"></a>请参阅  
- [在托管代码中创建 SQL Server 2005 对象](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [代码访问安全性和 ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

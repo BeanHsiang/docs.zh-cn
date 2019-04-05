@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
-ms.openlocfilehash: c15308d27b504f22b266e28f6db0caf837ae36c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 24f5cba5650777f4844923844708d287798c445c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518385"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409258"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly（C# 编译器选项）
 
@@ -33,7 +33,7 @@ ms.locfileid: "43518385"
 引用程序集进一步从仅包含元数据的程序集中删除元数据（私有成员）：
 
 - 引用程序集只包含在 API 外围应用中所需的引用。 实际程序集可能包含与特定实现相关的其他引用。 例如，`class C { private void M() { dynamic d = 1; ... } }` 的引用程序集不引用 `dynamic` 所需的任何类型。
-- 删除私有函数成员（方法、属性和事件），前提是这不会对编译造成显著影响。 如果没有 `InternalsVisibleTo` 属性，也请删除内部函数成员。
+- 删除私有函数成员（方法、属性和事件），前提是这不会对编译造成显著影响。 如果没有 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性，也请删除内部函数成员。
 - 但保留引用程序集中的所有类型（包括私有或嵌套类型）。 保留所有属性（甚至是内部属性）。
 - 保留所有虚拟方法。 保留显式接口实现。 保留显式实现的属性和事件，因为它们的访问器是虚拟的（因此予以保留）。
 - 保留结构的所有字段。 （这是 post-C#-7.1 优化候选项）
@@ -42,5 +42,5 @@ ms.locfileid: "43518385"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

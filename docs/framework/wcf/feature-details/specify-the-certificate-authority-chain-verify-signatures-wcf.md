@@ -1,18 +1,18 @@
 ---
-title: 如何：指定用于验证签名的证书颁发机构证书链 (WCF)
+title: 如何：指定用于验证签名 (WCF) 的证书颁发机构证书链
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 9e2ba9f3550442602cab217fec329e6c19efd3b3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8d44e9f9278a212813fca5e77ebfca72734c60d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648779"
 ---
-# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>如何：指定用于验证签名的证书颁发机构证书链 (WCF)
+# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>如何：指定用于验证签名 (WCF) 的证书颁发机构证书链
 当 Windows Communication Foundation (WCF) 收到使用 X.509 证书签名的 SOAP 消息时，默认情况下它将验证 X.509 证书已颁发由受信任的证书颁发机构。 通过搜索证书存储区并确定是否已将该证书颁发机构的证书指定为受信任的证书，可以做到这一点。 为了使 WCF 能够做出此判断，必须在正确的证书存储区中安装证书颁发机构证书链。  
   
 ### <a name="to-install-a-certification-authority-certificate-chain"></a>安装证书颁发机构证书链  
@@ -31,7 +31,7 @@ ms.locfileid: "47200095"
   
          在 Microsoft 管理控制台 (MMC) 中，打开证书管理单元。 证书存储区的 WCF 配置为从选择中检索 X.509 证书**受信任的根****证书颁发机构**文件夹。 下**受信任的根证书颁发机构**文件夹中，右键单击**证书**文件夹，指向**所有任务**，然后单击**导入**. 提供在步骤 a 中导出的文件。  
   
-         有关使用 MMC 证书管理单元中使用的详细信息，请参阅[如何： 使用 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+         有关使用 MMC 证书管理单元中使用的详细信息，请参阅[如何：使用 MMC 管理单元查看证书](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
-## <a name="see-also"></a>请参阅  
- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>请参阅
+- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

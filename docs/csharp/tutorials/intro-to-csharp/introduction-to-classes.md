@@ -3,12 +3,12 @@ title: 类和对象 - C# 简介教程
 description: 创建首个 C# 程序，并探索面向对象的概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 8b823e05ea5e51bb3096d6a0611630c996f56b33
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b4c135b7adf96de3a234cde02485a1e84fc9fd3
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205356"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204777"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>使用类和对象探索面向对象的编程
 
@@ -106,7 +106,7 @@ Console.WriteLine($"Account {account.Number} was created for {account.Owner} wit
 private static int accountNumberSeed = 1234567890;
 ```
 
-此为数据成员。 它是 `private`，这意味着只能通过 `BankAccount` 类中的代码访问它。 这是一种分离公共责任（如拥有帐号）与私有实现（如何生成帐号）的方法。它也是 `static`，这意味着它由所有 ``BankAccount`` 对象共享。 非静态变量的值对于 ``BankAccount`` 对象的每个实例是唯一的。 将下面两行代码添加到构造函数，以分配帐号：
+此为数据成员。 它是 `private`，这意味着只能通过 `BankAccount` 类中的代码访问它。 这是一种分离公共责任（如拥有帐号）与私有实现（如何生成帐号）的方法。它也是 `static`，这意味着它由所有 `BankAccount` 对象共享。 非静态变量的值对于 `BankAccount` 对象的每个实例是唯一的。 将下面两行代码添加到构造函数，以分配帐号：
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -156,14 +156,14 @@ using System.Collections.Generic;
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
 Console.WriteLine(account.Balance);
-account.MakeDeposit(100, DateTime.Now, "friend paid me back");
+account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
 Console.WriteLine(account.Balance);
 ```
 
 接下来，尝试创建初始余额为负数的帐户，测试能否捕获到错误条件：
 
 ```csharp
-// Test that the initial balances must be positive:
+// Test that the initial balances must be positive.
 try
 {
     var invalidAccount = new BankAccount("invalid", -55);
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 使用 [`try` 和 `catch` 语句](../../language-reference/keywords/try-catch.md)，标记可能会引发异常的代码块，并捕获预期错误。 可以使用相同的技术，测试代码能否在取款后的余额为负数时引发异常：
 
 ```csharp
-// Test for a negative balance
+// Test for a negative balance:
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");

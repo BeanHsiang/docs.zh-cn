@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd77a8a81718837d55f3018564d0f4ba8fdc95ee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c7b336d1372bdbe0d6dbdcf79d94e14c30ad2ebe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198899"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497335"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense 函数
 为验证码 XrML 许可证添加时间戳。  
@@ -30,7 +30,7 @@ HRESULT CertTimestampAuthenticodeLicense (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pSignedLicenseBlob`  
  [in] 要添加时间戳的已签名验证码 XrML 许可证。 请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。  
   
@@ -46,5 +46,5 @@ HRESULT CertTimestampAuthenticodeLicense (
 ## <a name="return-value"></a>返回值  
  如果此函数成功，则返回 `S_OK`。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
- [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>请参阅
+- [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)

@@ -1,15 +1,15 @@
 ---
-title: 如何： 查询字符串 (LINQ) (Visual Basic 中) 中的字符
+title: 如何：查询字符串 (LINQ) (Visual Basic 中) 中的字符
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 0953ff9152a4af1aa40379e15b2279d23ad0aac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f460f635c581eef5655c5707e3dd356e7986d74
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642111"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819484"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>如何： 查询字符串 (LINQ) (Visual Basic 中) 中的字符
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>如何：查询字符串 (LINQ) (Visual Basic 中) 中的字符
 因为 <xref:System.String> 类可实现泛型 <xref:System.Collections.Generic.IEnumerable%601> 接口，因此任何字符串都可以字符序列的形式进行查询。 但是，这不是 LINQ 的一般用法。 对于复杂的模式匹配操作，请使用 <xref:System.Text.RegularExpressions.Regex> 类。  
   
 ## <a name="example"></a>示例  
@@ -57,6 +57,7 @@ End Class
 ## <a name="compiling-the-code"></a>编译代码  
  创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [如何： 合并 LINQ 查询中的使用正则表达式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [如何：合并 LINQ 查询与正则表达式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)

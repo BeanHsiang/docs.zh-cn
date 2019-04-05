@@ -1,5 +1,5 @@
 ---
-title: '&lt;运行时&gt;元素'
+title: <runtime> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: 05a94116d3b3cc662036b2ed15e255d4f8eda2c4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863619"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285943"
 ---
-# <a name="ltruntimegt-element"></a>&lt;运行时&gt;元素
+# <a name="runtime-element"></a>\<运行时 > 元素
 提供公共语言运行时用于配置应用程序的信息。  
   
  \<configuration>  
@@ -68,7 +66,7 @@ ms.locfileid: "47863619"
 |[<NetFx40_LegacySecurityPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|指定运行时是否使用旧版代码访问安全性 (CAS) 策略。|  
 |[<NetFx40_PInvokeStackResilience>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|指定运行时是否以减慢托管和非托管代码之间的转换速度为代价，在运行时自动修复不正确的平台调用声明。|  
 |[<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|指定运行时是否使用固定的内存量来计算 <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> 方法的哈希代码。|  
-|[\<PreferComInsteadOfRemoting >](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|指定运行时将使用 COM 互操作来代替跨应用程序域边界的远程。|  
+|[\<PreferComInsteadOfRemoting>](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|指定运行时将使用 COM 互操作来代替跨应用程序域边界的远程。|  
 |[\<relativeBindForResources>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|优化附属程序集的探测。|  
 |[\<shadowCopyVerifyByTimeStamp>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|指定卷影复制是否使用 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 中引入的默认启动行为，或恢复到 .NET Framework 的早期版本的启动行为。|  
 |[\<supportPortability>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|通过禁用将程序集视为等效于应用程序可移植性用途的默认行为来指定应用程序可以在两种不同的 .NET Framework 实现中引用同一程序集。|  
@@ -91,6 +89,6 @@ ms.locfileid: "47863619"
   
  中的元素[\<运行时 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)部分由公共语言运行时在应用程序启动时自动读取。 您还可以通过提供到其名称定义一个非默认应用程序域的配置文件<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>属性; 其设置将应用程序域加载时自动读取。 您应该很少，即使有的话会需要直接读取中的设置[\<运行时 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)应用程序的配置文件中的部分。  
   
-## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

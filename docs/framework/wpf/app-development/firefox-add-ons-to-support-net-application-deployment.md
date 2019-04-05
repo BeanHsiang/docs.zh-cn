@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: e8f6947a0fe39998d9dc229ad7b95bfd2d426f6c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 837ed1cd41869031e8c0b549ffcd26e3285570cd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391402"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368059"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>支持 .NET 应用程序部署的 Firefox 加载项
 Windows Presentation Foundation (WPF) 适用于 Firefox 和.NET Framework Assistant firefox 插件启用[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、 松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，和 ClickOnce 应用程序以使用 Mozilla Firefox 浏览器。  
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) 适用于 Firefox 和.NET Framework Assist
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]与已安装 Firefox 插件[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。 Window 7 包括[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，但不包括[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 的插件。 不能安装[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Windows 7 上的 Firefox 的插件。  
   
- [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]不包括[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 的插件。 但是，如果两个[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]并[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]是安装，随一起安装的 WPF 插件 Firefox [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。 因此[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]应用程序仍将运行，因为 WPF 宿主将加载正确版本的 framework。 有关详细信息，请参阅[WPF 主机 (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)。  
+ [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]不包括[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Firefox 的插件。 但是，如果两个[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]并[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]是安装，随一起安装的 WPF 插件 Firefox [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。 因此[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]应用程序仍将运行，因为 WPF 宿主将加载正确版本的 framework。 有关详细信息，请参阅[WPF 主机 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)。  
   
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant for Firefox  
  .NET Framework Assistant firefox 允许独立 ClickOnce 应用程序从 Firefox 浏览器中运行。 .NET Framework Assistant Firefox 函数的相同安装之前和之后的 Firefox 浏览器。 Firefox 浏览器启动时和[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]是安装，Firefox 找到并安装了适用于 Firefox 的.NET Framework Assistant。 用户可以配置的.NET Framework Assistant firefox 来执行以下操作：  
@@ -33,7 +33,7 @@ Windows Presentation Foundation (WPF) 适用于 Firefox 和.NET Framework Assist
   
  .NET Framework Assistant firefox 是附带[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]。 有关删除适用于 Firefox 的.NET Framework Assistant 的信息，请参阅[如何删除适用于 Firefox 的.NET Framework Assistant](https://go.microsoft.com/fwlink/?LinkId=177944)。  
   
-## <a name="see-also"></a>请参阅  
- [部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）  
- [检测是否安装了适用于 Firefox 的 WPF 插件](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)
+## <a name="see-also"></a>请参阅
+- [部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)
+- [WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）
+- [检测是否安装了适用于 Firefox 的 WPF 插件](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

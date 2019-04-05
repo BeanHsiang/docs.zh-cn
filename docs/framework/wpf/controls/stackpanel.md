@@ -8,18 +8,18 @@ helpviewer_keywords:
 - StackPanel control [WPF]
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
-ms.openlocfilehash: b901c256491b24c0583835fab36744733c545920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553736"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361223"
 ---
 # <a name="stackpanel"></a>StackPanel
 <xref:System.Windows.Controls.StackPanel>元素用于水平或垂直堆叠子元素。  
   
 ## <a name="in-this-section"></a>本节内容  
- [帮助主题](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+ [帮助主题](stackpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ ms.locfileid: "33553736"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相关章节  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)  
+ [布局](../advanced/layout.md)  
   
- [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概述](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概述](scrollviewer-overview.md)

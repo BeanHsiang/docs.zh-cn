@@ -2,12 +2,12 @@
 title: ServiceThrottlingBehavior
 ms.date: 03/30/2017
 ms.assetid: 37b9e517-1f1f-4ec4-9fcb-2b8016794f5b
-ms.openlocfilehash: edc154fcce0058455f1376a2a45807c92f7f2457
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 98e8a720e92547ca0a893dd988b91cb7907660b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190941"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689846"
 ---
 # <a name="servicethrottlingbehavior"></a>ServiceThrottlingBehavior
 ServiceThrottlingBehavior  
@@ -26,7 +26,7 @@ class ServiceThrottlingBehavior : Behavior
 ## <a name="methods"></a>方法  
  ServiceThrottlingBehavior 类未定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  ServiceThrottlingBehavior 类有以下属性：  
   
 ### <a name="maxconcurrentcalls"></a>MaxConcurrentCalls  
@@ -56,5 +56,5 @@ class ServiceThrottlingBehavior : Behavior
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>

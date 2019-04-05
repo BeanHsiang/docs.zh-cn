@@ -1,21 +1,21 @@
 ---
-title: 如何： 从文件 (Visual Basic) 加载 XML
+title: 如何：从文件 (Visual Basic) 加载 XML
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-ms.openlocfilehash: fce4ebee075f5e622de17bd5227dd6e4ae9cccd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f1f9abfa33b76e702b51221715da80c3f66421
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641434"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814940"
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>如何： 从文件 (Visual Basic) 加载 XML
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a>如何：从文件 (Visual Basic) 加载 XML
 本主题演示如何通过使用 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 方法从 URI 加载 XML。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何从文件加载 XML 文档。 下面的示例加载 books.xml 并将 XML 树输出到控制台。  
   
- 本示例使用以下 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+ 此示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
   
 ```vb  
 Dim booksFromFile As XElement = XElement.Load("books.xml")  
@@ -48,5 +48,6 @@ Console.WriteLine(booksFromFile)
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [分析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [分析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

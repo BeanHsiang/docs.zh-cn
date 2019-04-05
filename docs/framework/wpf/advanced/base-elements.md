@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: 165dfda74ac570578371915259548784c5a37820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539460"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359609"
 ---
 # <a name="base-elements"></a>基元素
-四个关键类-<xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>-实现可用于 WPF 编程的常见元素功能的大部分。 这四个类在此 SDK 中称为基元素类。  
+四个关键类<xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>-实现的大部分可用在 WPF 编程中的常见元素功能。 这四个类作为基元素类引用到此 SDK 中。  
   
 ## <a name="in-this-section"></a>本节内容  
- [基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
+ [基元素概述](base-elements-overview.md)  
+ [Freezable 对象概述](freezable-objects-overview.md)  
+ [对齐、边距和填充概述](alignment-margins-and-padding-overview.md)  
+ [帮助主题](base-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.UIElement>  
@@ -32,12 +32,12 @@ ms.locfileid: "33539460"
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>相关章节  
- [WPF 体系结构](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF 中的 XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [元素树和序列化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [属性](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [事件](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [输入](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [资源](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [线程模型](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF 体系结构](wpf-architecture.md)  
+  [WPF 中的 XAML](xaml-in-wpf.md)  
+  [元素树和序列化](element-tree-and-serialization.md)  
+  [属性](properties-wpf.md)  
+  [事件](events-wpf.md)  
+  [输入](input-wpf.md)  
+  [资源](resources-wpf.md)  
+  [样式设置和模板化](../controls/styling-and-templating.md)  
+  [线程模型](threading-model.md)

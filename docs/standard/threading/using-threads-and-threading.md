@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690613"
 ---
 # <a name="using-threads-and-threading"></a>使用线程和线程处理
 
@@ -44,7 +44,7 @@ ms.locfileid: "43864224"
 
 下表列出了某些 <xref:System.Threading.Thread> 属性：  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|如果此线程已启动但尚未正常终止或中止，则返回 `true`。|  
 |<xref:System.Threading.Thread.IsBackground%2A>|获取或设置布尔值，该值指示线程是否为后台线程。 后台线程类似前台线程，但后台线程不会阻止进程停止。 属于某个进程的所有前台线程均停止后，公共语言运行时通过对仍处于活动状态的后台进程调用 <xref:System.Threading.Thread.Abort%2A> 方法来结束进程。 有关详细信息，请参阅[前台和后台线程](foreground-and-background-threads.md)。|  
@@ -54,6 +54,6 @@ ms.locfileid: "43864224"
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.Thread?displayProperty=nameWithType>  
-- [线程与线程处理](threads-and-threading.md)  
-- [并行编程](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>
+- [线程与线程处理](threads-and-threading.md)
+- [并行编程](../parallel-programming/index.md)

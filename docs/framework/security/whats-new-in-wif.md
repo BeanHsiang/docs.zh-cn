@@ -3,20 +3,21 @@ title: Windows Identity Foundation 4.5 中的新增功能
 ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
-ms.openlocfilehash: 673294ccdb76e6016169a4e2b4e7713ba63fa1e7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9009f3bd6e782aefdeca0f071dc70d6247c3987b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836811"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360211"
 ---
-# <a name="what39s-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5 中的新增功能
+# <a name="whats-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5 中的新增功能
 Windows Identity Foundation (WIF) 的首个版本是作为单独的下载文件而发布的，因为在 .NET 3.5 SP1 期间推出，所以称为 WIF 3.5。 从 .NET 4.5 开始，WIF 便成为 .NET Framework 的一部分。 通过使 WIF 类直接在框架中可用，可以在 .NET 中更深度地集成基于声明的标识，从而更轻松地使用声明。 针对 WIF 3.5 而编写的应用程序需要进行修改才能利用新模型；有关信息，请参阅[使用 WIF 3.5 至 WIF 4.5 构建的应用程序的迁移指南](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)。  
   
  在下文中，你可以发现一些突出的主要更改。  
   
 ## <a name="wif-is-now-part-of-the-net-framework"></a>WIF 现在是 .NET Framework 的一部分  
- WIF 类现在涵盖多个程序集，主要包括 `mscorlib`、`System.IdentityModel`、`System.IdentityModel.Services` 和 `System.ServiceModel`。 同样，WIF 类涵盖多个命名空间：<xref:System.Security.Claims?displayProperty=nameWithType>、多个 [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 命名空间，以及 <xref:System.ServiceModel.Security?displayProperty=nameWithType>。 <xref:System.Security.Claims?displayProperty=nameWithType> 命名空间包含新的 <xref:System.Security.Claims.ClaimsPrincipal> 和 <xref:System.Security.Claims.ClaimsIdentity> 类（请参阅下文）。 .NET 中的所有主体现在均派生自 <xref:System.Security.Claims.ClaimsPrincipal>。 有关 WIF 命名空间及其包含的类种类的详细信息，请参阅 [WIF API 参考](../../../docs/framework/security/wif-api-reference.md)。 有关 WIF 3.5 和 WIF 4.5 之间命名空间映射方式的信息，请参阅 [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)。  
+ WIF 类现在涵盖多个程序集，主要包括 `mscorlib`、`System.IdentityModel`、`System.IdentityModel.Services` 和 `System.ServiceModel`。 同样，WIF 类涵盖多个命名空间：<xref:System.Security.Claims?displayProperty=nameWithType>、多个 [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) 命名空间，以及 <xref:System.ServiceModel.Security?displayProperty=nameWithType>。 
+  <xref:System.Security.Claims?displayProperty=nameWithType> 命名空间包含新的 <xref:System.Security.Claims.ClaimsPrincipal> 和 <xref:System.Security.Claims.ClaimsIdentity> 类（请参阅下文）。 .NET 中的所有主体现在均派生自 <xref:System.Security.Claims.ClaimsPrincipal>。 有关 WIF 命名空间及其包含的类种类的详细信息，请参阅 [WIF API 参考](../../../docs/framework/security/wif-api-reference.md)。 有关 WIF 3.5 和 WIF 4.5 之间命名空间映射方式的信息，请参阅 [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)。  
   
 ## <a name="new-claims-model-and-principal-object"></a>新声明模型和主体对象  
  声明是 .NET Framework 4.5 的核心所在。 基声明类（<xref:System.Security.Claims.Claim>、<xref:System.Security.Claims.ClaimsIdentity>、<xref:System.Security.Claims.ClaimsPrincipal>、<xref:System.Security.Claims.ClaimTypes> 和 <xref:System.Security.Claims.ClaimValueTypes>）全部直接存在于 `mscorlib` 命名空间的 <xref:System.Security.Claims?displayProperty=nameWithType> 中。 现在已不再需要使用接口来将声明插入到 .NET 标识系统中：<xref:System.Security.Principal.WindowsPrincipal>、<xref:System.Security.Principal.GenericPrincipal> 和 <xref:System.Web.Security.RolePrincipal> 现在继承自 <xref:System.Security.Claims.ClaimsPrincipal>；而 <xref:System.Security.Principal.WindowsIdentity>、<xref:System.Security.Principal.GenericIdentity> 和 <xref:System.Web.Security.FormsIdentity> 现在继承自 <xref:System.Security.Claims.ClaimsIdentity>。 简言之，每个主体类现在都服务于声明。 因此，WIF 3.5 集成类和接口（`WindowsClaimsIdentity`、`WindowsClaimsPrincipal`、`IClaimsPrincipal`、`IClaimsIdentity`）现在已被移除。 此外，<xref:System.Security.Claims.ClaimsIdentity> 类现在已将方法公开，以便更轻松地查询标识的声明集合。  
@@ -27,7 +28,8 @@ Windows Identity Foundation (WIF) 的首个版本是作为单独的下载文件�
   
 -   ASP.NET 和 STS 模板不再作为声明提供，可以直接在 ASP.NET、网站和 WCF 的现有项目模板中使用。  
   
--   `Microsoft.IdentityModel.Web.Controls` 命名空间中的控件（`SignInControl`、`FederatedPassiveSignInControl` 和 `FederatedPassiveSignInStatus`）不会转入到 WIF 4.5 中。  
+-   
+  `Microsoft.IdentityModel.Web.Controls` 命名空间中的控件（`SignInControl`、`FederatedPassiveSignInControl` 和 `FederatedPassiveSignInStatus`）不会转入到 WIF 4.5 中。  
   
 ## <a name="changes-to-the-wif-45-api"></a>WIF 4.5 API 的更改  
   
@@ -56,8 +58,8 @@ Windows Identity Foundation (WIF) 的首个版本是作为单独的下载文件�
   
      使用用于 Visual Studio 2012 标识和访问工具时（请参阅上文 Visual Studio 体验方面的更改），此工具会添加一个 `<serviceCredentials>` 元素，该元素具有 `useIdentityConfiguration` 特性，并且此特性设置为你的配置文件。 它还会添加一个包含 WIF 配置设置的对应 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 元素，并添加一个绑定以及其他必要的设置，以便将身份验证外包给你所选择的 STS。  
   
-## <a name="see-also"></a>请参阅  
- [使用 WIF 3.5 至 WIF 4.5 生成的应用程序的迁移指南](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
- [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [WIF API 参考](../../../docs/framework/security/wif-api-reference.md)  
- [WIF 配置参考](../../../docs/framework/security/wif-configuration-reference.md)
+## <a name="see-also"></a>请参阅
+- [使用 WIF 3.5 至 WIF 4.5 生成的应用程序的迁移指南](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
+- [WIF 3.5 和 WIF 4.5 之间的命名空间映射](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [WIF API 参考](../../../docs/framework/security/wif-api-reference.md)
+- [WIF 配置参考](../../../docs/framework/security/wif-configuration-reference.md)

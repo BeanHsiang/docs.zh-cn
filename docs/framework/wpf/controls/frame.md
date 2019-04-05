@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Frame control [WPF]
 - content [WPF], Frame control
 ms.assetid: 1588f9bf-9001-4437-a8fc-cc57ef50561c
-ms.openlocfilehash: b65fa2b011e1be04b1e6a16b41566c4a07ad33ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f530fa04e25bfa18095fc3b2a182d3d624789f54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552040"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371900"
 ---
 # <a name="frame"></a>Frame
-<xref:System.Windows.Controls.Frame>控件支持在内容中的内容导航。 <xref:System.Windows.Controls.Frame> 可以通过类似的根元素承载<xref:System.Windows.Window>， <xref:System.Windows.Navigation.NavigationWindow>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Controls.UserControl>， <xref:System.Windows.Documents.FlowDocument>，或作为一个安全岛属于根元素的内容树中。  
+<xref:System.Windows.Controls.Frame>控件支持在内容中的内容导航。 <xref:System.Windows.Controls.Frame> 可以通过类似的根元素承载<xref:System.Windows.Window>， <xref:System.Windows.Navigation.NavigationWindow>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Controls.UserControl>， <xref:System.Windows.Documents.FlowDocument>，或为属于根元素的内容树中岛。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Frame>  
   
 ## <a name="related-sections"></a>相关章节  
- [导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+ [导航概述](../app-development/navigation-overview.md)

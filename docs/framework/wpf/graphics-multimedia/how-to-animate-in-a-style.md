@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: a455bbfb9defbcf83f7e490f60031917a3b41779
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5fb18a2d927746c3437ec01d2a19327be373cae3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079389"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373954"
 ---
 # <a name="how-to-animate-in-a-style"></a>如何在样式中进行动画处理
 
@@ -20,8 +20,8 @@ ms.locfileid: "47079389"
 
 ## <a name="example"></a>示例
 
-[!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
+[!code-xaml[timingbehaviors_snip#21](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
 
 请注意，当在样式中进行动画处理，可能对不存在的目标对象。 例如，假设您的方式使用<xref:System.Windows.Media.SolidColorBrush>来设置按钮的 background 属性，但在某一时刻样式重写，并且使用设置按钮的背景<xref:System.Windows.Media.LinearGradientBrush>。  尝试进行动画处理<xref:System.Windows.Media.SolidColorBrush>不会引发异常，则动画将以静默方式失败。
 
-有关情节提要目标语法的详细信息，请参阅[情节提要概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。 有关动画的详细信息，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。 有关样式的详细信息，请参阅[样式和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。
+有关情节提要目标语法的详细信息，请参阅[情节提要概述](storyboards-overview.md)。 有关动画的详细信息，请参阅[动画概述](animation-overview.md)。 有关样式的详细信息，请参阅[样式和模板化](../controls/styling-and-templating.md)。

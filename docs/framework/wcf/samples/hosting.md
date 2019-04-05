@@ -1,13 +1,13 @@
 ---
-title: Hosting1
+title: WCF 托管示例
 ms.date: 03/30/2017
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
-ms.openlocfilehash: 6cbd05bd0d478898807ef0bfadfc64f1feea0574
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a2b6767ac85a45587f68e0175cb80487baa640c3
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873755"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332463"
 ---
 # <a name="hosting"></a>宿主
 本节包含演示承载 Windows Communication Foundation (WCF) 服务的示例。  

@@ -1,6 +1,6 @@
 ---
 title: 使用延续任务来链接任务
-ms.date: 03/30/2017
+ms.date: 02/11/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 308b834a133798104dcc47a16f8adc068ed937ec
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b924f281a2a543ff98e9ae681a6100150898f240
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188340"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219901"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用延续任务来链接任务
-在异步编程中，一个异步操作在完成时调用另一个操作并将数据传递到其中的情况非常常见。 传统上，此过程是通过使用回调方法完成的。 在任务并行库中， *延续任务*提供了同样的功能。 延续任务（也简称为“延续”）是一个异步任务，由另一个任务（称为 *前面的任务*）在完成时调用。  
+在异步编程中，一个异步操作在完成时调用另一个操作并将数据传递到其中的情况较常见。 传统上，延续性是通过使用回调方法完成的。 在任务并行库中， *延续任务*提供了同样的功能。 延续任务（也简称为“延续”）是一个异步任务，由另一个任务（称为 *前面的任务*）在完成时调用。  
   
  尽管延续相对容易使用，但也十分强大和灵活。 例如，你可以：  
   
@@ -39,22 +39,25 @@ ms.locfileid: "44188340"
 -   使用延续来处理前面的任务所引发的异常。  
   
 ## <a name="about-continuations"></a>关于延续  
- 延续创建时的状态为 <xref:System.Threading.Tasks.TaskStatus.WaitingForActivation> 。 在一个或多个前面的任务完成时，它将自动激活。 若在用户代码中对延续调用 <xref:System.Threading.Tasks.Task.Start%2A?displayProperty=nameWithType>，将引发 <xref:System.InvalidOperationException?displayProperty=nameWithType> 异常。  
+ 延续创建时的状态为 <xref:System.Threading.Tasks.TaskStatus.WaitingForActivation> 。 在一个或多个前面的任务完成时，它将自动激活。 若在用户代码中对延续调用 <xref:System.Threading.Tasks.Task.Start%2A?displayProperty=nameWithType> ，将引发 <xref:System.InvalidOperationException?displayProperty=nameWithType> 异常。  
   
  延续本身是 <xref:System.Threading.Tasks.Task> ，并不阻止它在其上启动的线程。 调用 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法进行阻止，直到延续任务完成。  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>为一个前面的任务创建延续  
- 通过调用 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法创建在其前面的任务完成时执行的延续。 下面的示例演示基本模式（为清楚起见，省略了异常处理）。 它会执行一个先行任务 - `taskA`，将返回一个 <xref:System.DayOfWeek> 对象，指示当天为周几。 前面的任务完成时，将向延续任务 `continuation` 传递前面的任务，并显示包含其结果的字符串。  
+ 通过调用 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 方法创建在其前面的任务完成时执行的延续。 下面的示例演示基本模式（为清楚起见，省略了异常处理）。 它会执行一个先行任务 - `taskA`，将返回一个 <xref:System.DayOfWeek> 对象，指示当天为周几。 前面的任务完成时，将向延续任务 `continuation` 传递前面的任务，并显示包含其结果的字符串。 
+
+> [!NOTE]
+> 本文中的 C# 示例利用 `Main` 方法的 `async` 修饰符。 此功能在 C# 7.1 及更高版本中提供。 以前的版本在编译此示例代码时生成 [`CS5001`](../../csharp/misc/cs5001.md)。 需要将语言版本设置为 C#7.1 或更高版本。 可以通过有关[配置语言版本](../../csharp/language-reference/configure-language-version.md)的文章了解如何配置语言版本。
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  
   
 ## <a name="creating-a-continuation-for-multiple-antecedents"></a>为多个前面的任务创建延续  
- 还可以创建一个将在一组任务中的任意或全部任务完成时运行的延续任务。 若要在所有前面的任务都完成后执行延续，则可以调用静态（在 Visual Basic 中为 `Shared`）<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法或实例 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> 方法。 若要在多个前面的任务中的任意任务完成时执行延续，则可以调用静态（在 Visual Basic 中为 `Shared`）<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法或实例 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> 方法。  
+ 还可以创建一个将在一组任务中的任意或全部任务完成时运行的延续任务。 若要在所有前面的任务都完成后执行延续，则可以调用静态（在 Visual Basic 中为`Shared` ） <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法或实例 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> 方法。 若要在多个前面的任务中的任意任务完成时执行延续，则可以调用静态（在 Visual Basic 中为`Shared` ） <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法或实例 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> 方法。  
   
  请注意，调用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 重载不会阻止调用线程。  不过，通常调用除 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> 外的其他所有方法来检索返回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性，这样不会阻止调用线程。  
   
- 下面的示例调用 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 方法来创建反映其十个前面的任务的结果的延续任务。 每个前面的任务计算从 1 到 10 的索引值的平方值。 如果前面的任务成功完成（其 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 属性为 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>），则延续任务的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性为由每个前面的任务返回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 值组成的数组。 该示例计算它们的总和，得出 1 到 10 之间的所有数字的平方和。  
+ 下面的示例调用 <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 方法来创建反映其 10 个前面的任务的结果的延续任务。 每个前面的任务计算从 1 到 10 的索引值的平方值。 如果前面的任务成功完成（其 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 属性为 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>），则延续任务的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性为由每个前面的任务返回的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 值组成的数组。 该示例计算它们的总和，得出 1 到 10 之间的所有数字的平方和。  
   
  [!code-csharp[TPL_Continuations#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/whenall1.cs#5)]
  [!code-vb[TPL_Continuations#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/whenall1.vb#5)]  
@@ -62,7 +65,7 @@ ms.locfileid: "44188340"
 ## <a name="continuation-options"></a>延续选项  
  在创建单任务延续时，你可以使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 重载，该重载采用 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 枚举值来指定启动延续所依据的条件。 例如，可以将延续指定为仅在前面的任务已完成运行时运行，或仅在前面的任务完成时处于错误状态时运行。 如果该条件在前面的任务准备调用延续时未得到满足，则延续将直接转换为 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状态，之后将无法启动。  
   
- 许多多任务延续方法（如 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> 方法的重载）也包括 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 参数。 但是，只有所有 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 枚举成员的一个子集有效。 你可以指定在 <xref:System.Threading.Tasks.TaskCreationOptions?displayProperty=nameWithType> 枚举中具有对应的值的 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 值，如 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>、<xref:System.Threading.Tasks.TaskContinuationOptions.LongRunning?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness?displayProperty=nameWithType>。 如果为多任务延续指定 `NotOn` 或 `OnlyOn` 选项中的任意一个，则在运行时将引发 <xref:System.ArgumentOutOfRangeException> 异常。  
+ 许多多任务延续方法（如 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> 方法的重载）也包括 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 参数。 但是，只有所有 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 枚举成员的一个子集有效。 你可以指定在 <xref:System.Threading.Tasks.TaskContinuationOptions?displayProperty=nameWithType> 枚举中具有对应的值的 <xref:System.Threading.Tasks.TaskCreationOptions?displayProperty=nameWithType> 值，如 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>、 <xref:System.Threading.Tasks.TaskContinuationOptions.LongRunning?displayProperty=nameWithType>和 <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness?displayProperty=nameWithType>。 如果为多任务延续指定 `NotOn` 或 `OnlyOn` 选项中的任意一个，则在运行时将引发 <xref:System.ArgumentOutOfRangeException> 异常。  
   
  有关任务延续选项的详细信息，请参阅 <xref:System.Threading.Tasks.TaskContinuationOptions> 主题。  
   
@@ -74,21 +77,21 @@ ms.locfileid: "44188340"
  [!code-csharp[TPL_Continuations#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result1.cs#2)]
  [!code-vb[TPL_Continuations#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result1.vb#2)]  
   
- 如果希望延续即使在前面的任务未完成运行时也运行，则必须防止出现异常。 一种方法是测试前面的任务的 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 属性，并且仅在状态不是 <xref:System.Threading.Tasks.TaskStatus.Faulted> 或 <xref:System.Threading.Tasks.TaskStatus.Canceled> 时才尝试访问 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性。 也可以检查前面的任务的 <xref:System.Threading.Tasks.Task.Exception%2A> 属性。 有关详细信息，请参阅[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。 下面的示例将之前的示例修改为仅在前面的任务的状态为 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> 时，才访问该任务的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 属性。  
+ 如果希望延续即使在前面的任务未完成运行时也运行，则必须防止出现异常。 一种方法是测试前面的任务的 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 属性，并且仅在状态不是 <xref:System.Threading.Tasks.Task%601.Result%2A> 或 <xref:System.Threading.Tasks.TaskStatus.Faulted> 时才尝试访问 <xref:System.Threading.Tasks.TaskStatus.Canceled>属性。 也可以检查前面的任务的 <xref:System.Threading.Tasks.Task.Exception%2A> 属性。 有关详细信息，请参阅[异常处理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。 下面的示例将之前的示例修改为仅在前面的任务的状态为 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 时，才访问该任务的 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>属性。  
   
  [!code-csharp[TPL_Continuations#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result2.cs#7)]
  [!code-vb[TPL_Continuations#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result2.vb#7)]  
   
 ## <a name="canceling-a-continuation"></a>取消延续  
- 在以下情况下，延续的 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 属性将设置为 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>：  
+ 在以下情况下，延续的 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> 属性将设置为 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> ：  
   
 -   延续引发 <xref:System.OperationCanceledException> 以响应取消请求。 就像任何任务一样，如果异常包含已传递到延续的相同标记，则会将其视为确认协作取消。  
   
--   将 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 属性为 `true` 的 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 传递到延续。 在这种情况下，延续不会启动，并且将转换为 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状态。  
+-   将 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 属性为 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 的 `true`传递到延续。 在这种情况下，延续不会启动，并且将转换为 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状态。  
   
 -   延续由于其 <xref:System.Threading.Tasks.TaskContinuationOptions> 参数设置的条件未得到满足而从不运行。 例如，如果前面的任务进入 <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 状态，则该任务被传递了 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> 选项的延续将不会运行，而是将转换为 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态。  
   
- 如果一项任务及其延续表示同一逻辑操作的两个部分，则可以将相同的取消标记传递到这两个任务，如下面的示例所示。 它包含的前面的任务可生成由可被 33 的整数组成的列表，并将该列表传递给延续。 而延续反过来显示该列表。 前面的任务和延续任务都将定期以随机间隔暂停。 此外，<xref:System.Threading.Timer?displayProperty=nameWithType> 对象用于在五秒的超时间隔后执行 `Elapsed` 方法。 这将调用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，从而将导致当前正在执行的任务调用 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> 方法。 是否在前面的任务或其延续正在执行时调用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法取决于随机生成的暂停的持续时间。 如果已取消前面的任务，则延续将不会启动。 如果未取消前面的任务，则仍然可以使用标记来取消延续。  
+ 如果一项任务及其延续表示同一逻辑操作的两个部分，则可以将相同的取消标记传递到这两个任务，如下面的示例所示。 它包含的前面的任务可生成由可被 33 的整数组成的列表，并将该列表传递给延续。 而延续反过来显示该列表。 前面的任务和延续任务都将定期以随机间隔暂停。 此外， <xref:System.Threading.Timer?displayProperty=nameWithType> 对象用于在五秒的超时间隔后执行 `Elapsed` 方法。 此示例调用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法，从而将导致当前正在执行的任务调用 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> 方法。 是否在前面的任务或其延续正在执行时调用 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 方法取决于随机生成的暂停的持续时间。 如果已取消前面的任务，则延续将不会启动。 如果未取消前面的任务，则仍然可以使用标记来取消延续。  
   
  [!code-csharp[TPL_Continuations#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/cancellation1.cs#3)]
  [!code-vb[TPL_Continuations#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/cancellation1.vb#3)]  
@@ -103,7 +106,7 @@ ms.locfileid: "44188340"
  已释放的延续将不会启动。  
   
 ## <a name="continuations-and-child-tasks"></a>继续和子任务  
- 在前面的任务及其所有附加的子任务完成之前，延续将不会运行。 延续不会等待分离的子任务完成。 以下两个示例阐释了两个子任务，其中一个附加到创建了延续的前面的任务，另一个从创建了延续的前面的任务中分离。 在下面的示例中，延续仅在所有子任务都完成后才会运行，并且多次运行该示例时，每次生成的输出相同。 请注意，该示例通过调用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法来启动前面的任务，因为在默认情况下，<xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法将创建一个默认任务创建选项为 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 的父任务。  
+ 在前面的任务及其所有附加的子任务完成之前，延续将不会运行。 延续不会等待分离的子任务完成。 以下两个示例阐释了两个子任务，其中一个附加到创建了延续的前面的任务，另一个从创建了延续的前面的任务中分离。 在下面的示例中，延续仅在所有子任务都完成后才会运行，并且多次运行该示例时，每次生成的输出相同。 该示例通过调用 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法来启动前面的任务，因为在默认情况下， <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法将创建一个默认任务创建选项为 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType>的父任务。  
   
  [!code-csharp[TPL_Continuations#9](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/attached1.cs#9)]
  [!code-vb[TPL_Continuations#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/attached1.vb#9)]  
@@ -118,7 +121,7 @@ ms.locfileid: "44188340"
 ## <a name="associating-state-with-continuations"></a>将状态与延续关联  
  可以将任意状态与任务延续关联。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法提供重载版本，每个重载版本都带有一个表示延续状态的 <xref:System.Object> 值。 可以之后通过使用 <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> 属性访问此状态对象。 如果未提供值，则此状态对象为 `null` 。  
   
- 将使用 [异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 的现有代码转换为使用 TPL 时，延续状态非常有用。 在 APM 中，通常在 BeginMethod****** 方法中提供对象状态，随后使用 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 属性访问此状态。 通过使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法，你可在将使用 APM 的代码转换为使用 TPL 时保留此状态。  
+ 将使用 [异步编程模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 的现有代码转换为使用 TPL 时，延续状态非常有用。 在 APM 中，通常在 **Begin**_Method_ 方法中提供对象状态，并在之后通过使用 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 属性访问该状态。 通过使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法，你可在将使用 APM 的代码转换为使用 TPL 时保留此状态。  
   
  在 Visual Studio 调试器中处理 <xref:System.Threading.Tasks.Task> 对象时，延续状态也非常有用。 例如，在“并行任务”  窗口中，“任务”  列显示每个任务的状态对象的字符串表示形式。 有关“并行任务”窗口的详细信息，请参阅[使用并行任务窗口](/visualstudio/debugger/using-the-tasks-window)。  
   

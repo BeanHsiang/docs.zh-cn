@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Button control [Windows Forms], about Button control
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
-ms.openlocfilehash: 88255882d3255eff112b9048a906182b64d75084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 505b75d362cea0eddec2b51dc398e2cd8c8d4db8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526017"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713381"
 ---
 # <a name="button-control-overview-windows-forms"></a>Button 控件概述（Windows 窗体）
-Windows 窗体 <xref:System.Windows.Forms.Button> 控件允许用户通过单击来执行某项操作。 单击该按钮时，看上去它像是被按下并释放。 无论何时用户单击按钮，<xref:System.Windows.Forms.Control.Click>调用事件处理程序。 你将代码放置在<xref:System.Windows.Forms.Control.Click>事件处理程序来执行你选择的任何操作。  
+Windows 窗体 <xref:System.Windows.Forms.Button> 控件允许用户通过单击来执行某项操作。 单击该按钮时，看上去它像是被按下并释放。 每当用户单击一个按钮，<xref:System.Windows.Forms.Control.Click>调用事件处理程序。 你将代码放在<xref:System.Windows.Forms.Control.Click>事件处理程序以执行所选择的任何操作。  
   
- 按钮上显示的文本包含在<xref:System.Windows.Forms.Control.Text%2A>属性。 如果你的文本超过按钮的宽度，它将换行到下一行。 但是，它将剪切如果该控件所能容纳的窗体的整体高度。 有关详细信息，请参阅[如何： 设置 Windows 窗体控件显示的文本](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)。 <xref:System.Windows.Forms.Control.Text%2A>属性可以包含的访问密钥，这样用户就可以通过按 ALT 键和访问密钥"单击"的控件。 有关详细信息，请参阅[如何： 为 Windows 窗体控件创建访问键](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)。 由控制文本的外观<xref:System.Windows.Forms.Control.Font%2A>属性和<xref:System.Windows.Forms.ButtonBase.TextAlign%2A>属性。  
+ 在按钮上显示的文本包含在<xref:System.Windows.Forms.Control.Text%2A>属性。 如果您的文本超出了按钮的宽度，它将换行到下一行。 但是，它将剪辑如果控件所能容纳的窗体的整体高度。 有关详细信息，请参阅[如何：设置显示的文本的 Windows 窗体控件](how-to-set-the-text-displayed-by-a-windows-forms-control.md)。 <xref:System.Windows.Forms.Control.Text%2A>属性可以包含访问密钥，这样用户就可以通过按 ALT 键和访问密钥"单击"控件。 有关详细信息，请参阅[如何：Windows 窗体控件的创建访问键](how-to-create-access-keys-for-windows-forms-controls.md)。 由控制文本的外观<xref:System.Windows.Forms.Control.Font%2A>属性和<xref:System.Windows.Forms.ButtonBase.TextAlign%2A>属性。  
   
- <xref:System.Windows.Forms.Button>控件还可以显示使用的图像<xref:System.Windows.Forms.ButtonBase.Image%2A>和<xref:System.Windows.Forms.ButtonBase.ImageList%2A>属性。 有关详细信息，请参阅[如何： 设置 Windows 窗体控件显示的图像](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)。  
+ <xref:System.Windows.Forms.Button>控件还可以显示使用的映像<xref:System.Windows.Forms.ButtonBase.Image%2A>和<xref:System.Windows.Forms.ButtonBase.ImageList%2A>属性。 有关详细信息，请参阅[如何：设置所显示的图像的 Windows 窗体控件](how-to-set-the-image-displayed-by-a-windows-forms-control.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Button>  
- [如何：响应 Windows 窗体 Button 控件单击](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [如何选择 Windows 窗体 Button 控件](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [如何：使用设计器将 Windows 窗体按钮指定为“接受”按钮](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
- [如何：使用设计器将 Windows 窗体按钮指定为“取消”按钮](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
- [Button 控件](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Button>
+- [如何：响应 Windows 窗体按钮单击](how-to-respond-to-windows-forms-button-clicks.md)
+- [如何选择 Windows 窗体 Button 控件](ways-to-select-a-windows-forms-button-control.md)
+- [如何：将 Windows 窗体按钮指定为接受按钮使用设计器](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [如何：将 Windows 窗体按钮指定为使用设计器的取消按钮](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Button 控件](button-control-windows-forms.md)

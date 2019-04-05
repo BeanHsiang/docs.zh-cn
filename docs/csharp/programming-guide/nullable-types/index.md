@@ -1,18 +1,13 @@
 ---
-title: 可以为 null 的类型（C# 编程指南）
-description: 了解 C# 中可以为 null 的类型及其使用方法
+title: '可以为 null 的类型 - C# 编程指南'
+ms.custom: seodec18
+description: '了解 C# 中可以为 null 的类型及其使用方法'
 ms.date: 07/30/2018
 helpviewer_keywords:
-- nullable types [C#]
-- C# language, nullable types
-- types [C#], nullable
+  - 'nullable types [C#]'
+  - 'C# language, nullable types'
+  - 'types [C#], nullable'
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658699"
 ---
 # <a name="nullable-types-c-programming-guide"></a>可以为 null 的类型（C# 编程指南）
 
@@ -52,14 +47,14 @@ ms.locfileid: "45658699"
   
 - 不得嵌套可以为 null 的类型。 不会编译下面的一行代码：`Nullable<Nullable<int>> n;`  
 
-有关详细信息，请参阅[使用可以为 null 的类型](using-nullable-types.md)及[如何：标识可以为 null 的类型](how-to-identify-a-nullable-type.md)主题。
+有关详细信息，请参阅[使用可以为 null 的类型](using-nullable-types.md)，以及[如何：标识可以为 null 的类型](how-to-identify-a-nullable-type.md)主题。
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Nullable%601?displayProperty=nameWithType>  
-- <xref:System.Nullable?displayProperty=nameWithType>  
-- [??运算符](../../language-reference/operators/null-coalescing-operator.md)  
-- [C# 编程指南](../index.md)  
-- [C# 指南](../../index.md)  
-- [C# 参考](../../language-reference/index.md)  
-- [可以为 Null 的值类型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>
+- <xref:System.Nullable?displayProperty=nameWithType>
+- [??运算符](../../language-reference/operators/null-coalescing-operator.md)
+- [C# 编程指南](../index.md)
+- [C# 指南](../../index.md)
+- [C# 参考](../../language-reference/index.md)
+- [可以为 Null 的值类型 (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

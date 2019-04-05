@@ -1,27 +1,27 @@
 ---
-title: '&lt;服务&gt;'
+title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 6e83e988920d24c6fe7615e40334919caf21652e
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 57fbdd2cf7c398e611f835eeb4e924fb4f3e0c9e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34059025"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270298"
 ---
-# <a name="ltservicegt"></a>&lt;服务&gt;
+# <a name="service"></a>\<service>
 `service` 元素包含 Windows Communication Foundation (WCF) 服务的设置。 它还包含公开此服务的终结点。  
   
  \<system.ServiceModel>  
 \<services>  
-\<服务 >  
+\<service>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<service behaviorConfiguration=String"  
-        name="String">  
-</service>  
+<service behaviorConfiguration="String"
+         name="String">
+</service>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -38,8 +38,8 @@ ms.locfileid: "34059025"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<终结点 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|公开此服务的 `endpoint` 元素的集合。|  
-|[\<主机 >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定此服务实例的主机。 此元素的类型为 <xref:System.ServiceModel.Configuration.HostElement>。|  
+|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|公开此服务的 `endpoint` 元素的集合。|  
+|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|指定此服务实例的主机。 此元素的类型为 <xref:System.ServiceModel.Configuration.HostElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -58,17 +58,16 @@ ms.locfileid: "34059025"
  这是服务配置的一个示例。  
   
 ```xml  
-<service behaviorConfiguration="testChannelBehavior"   
-     name="HelloWorld">  
-     <endpoint   
-        address="/HelloWorld2/"  
-        name="test"  
-        bindingNamespace="http://www.cohowinery.com/"  
-        binding="basicHttpBinding"  
-        contract="IHelloWorld" />  
-</service>  
+<service behaviorConfiguration="testChannelBehavior"
+         name="HelloWorld">
+  <endpoint address="/HelloWorld2/"
+            name="test"
+            bindingNamespace="http://www.cohowinery.com/"
+            binding="basicHttpBinding"
+            contract="IHelloWorld" />
+</service>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceElement>  
- [配置服务](../../../../../docs/framework/wcf/configuring-services.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceElement>
+- [配置服务](../../../../../docs/framework/wcf/configuring-services.md)

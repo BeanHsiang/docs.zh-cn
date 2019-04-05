@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b4c832a4bbc915749aadf435b204e084828698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb2c560f8f906f20de752e5dfad995e2082caaea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654667"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 结构
-包含有关程序集中的单个属性的信息，并由三个`DWORD`s。 每个`DWORD`是到生成的字符缓冲区的偏移量`CurrentIntoBuffer`方法[IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)接口  
+包含有关某个特性的程序集的信息，并由三个`DWORD`s。 每个`DWORD`是由字符缓冲区偏移量`CurrentIntoBuffer`方法[IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)接口  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,12 +42,12 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |成员|描述|  
 |------------|-----------------|  
-|`ofsNamespace`|第一个偏移量的字符缓冲区。 该特性的命名空间，而是一系列的 null 字符后面不接此偏移量。 因此，不使用它。|  
-|`ofsName`|第二个偏移量的字符缓冲区。 此位置将标记该特性的名称的开头。|  
-|`ofsValue`|第三个偏移量的字符缓冲区。 此位置将标记该特性的值的开头。|  
+|`ofsNamespace`|字符缓冲区中的第一个偏移量。 未遵循此偏移量则由该特性的命名空间，而是一系列的 null 字符。 因此，不使用它。|  
+|`ofsName`|字符缓冲区中的第二个偏移量。 此位置标记特性的名称的开头。|  
+|`ofsValue`|字符缓冲区中的第三个偏移量。 此位置将标记属性的值的开头。|  
   
 ## <a name="sample"></a>示例  
- 下面的示例演示几个基本步骤，最终导致填充`IDENTITY_ATTRIBUTE_BLOB`结构：  
+ 下面的示例说明了几个基本步骤，最终会生成一个填充`IDENTITY_ATTRIBUTE_BLOB`结构：  
   
 1.  获取[IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)程序集。  
   
@@ -55,7 +55,7 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 3.  创建字符缓冲区，并将其转换为`IDENTITY_ATTRIBUTE_BLOB`结构。  
   
-4.  调用`CurrentIntoBuffer`方法`IEnumIDENTITY_ATTRIBUTE`接口。 此方法将这些属性复制`Namespace`， `Name`，和`Value`字符缓冲区中。 为这些字符串的三个偏移量将变为可用在`IDENTITY_ATTRIBUTE_BLOB`结构。  
+4.  调用`CurrentIntoBuffer`方法的`IEnumIDENTITY_ATTRIBUTE`接口。 此方法将这些属性复制`Namespace`， `Name`，和`Value`字符缓冲区中。 为这些字符串的三个偏移量将变为可用在`IDENTITY_ATTRIBUTE_BLOB`结构。  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -225,7 +225,7 @@ Exit:
  C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>示例输出  
- 区域性 = neutral  
+ 区域性 = 中性  
   
  名称 = 系统  
   
@@ -236,14 +236,14 @@ Exit:
  版本 = 2.0.0.0  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IReferenceIdentity 接口](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
- [IEnumIDENTITY_ATTRIBUTE 接口](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
- [IDENTITY_ATTRIBUTE 结构](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- [合成结构](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+## <a name="see-also"></a>请参阅
+- [IReferenceIdentity 接口](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [IEnumIDENTITY_ATTRIBUTE 接口](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [IDENTITY_ATTRIBUTE 结构](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
+- [合成结构](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28e6e95bbcca35ad39f30adcf100519748c02838
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7c3a3581d2a9a1cb79f4ffe1d0a37269c18789a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652167"
 ---
 # <a name="corprfruntimetype-enumeration"></a>COR_PRF_RUNTIME_TYPE 枚举
-包含指示公共语言运行时 (CLR) 的版本值： 桌面或 CoreCLR，Silverlight 中使用。  
+包含指示公共语言运行时 (CLR) 的版本值： 桌面或 CoreCLR，在 Silverlight 中使用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,19 +40,19 @@ typedef enum
   
 |成员|描述|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|CLR 桌面版本。|  
-|`COR_PRF_CORE_CLR`|Silverlight 中所用的 CLR core 版本。|  
+|`COR_PRF_DESKTOP_CLR`|桌面 CLR 的版本。|  
+|`COR_PRF_CORE_CLR`|在 Silverlight 中所用的 CLR core 版本。|  
   
 ## <a name="remarks"></a>备注  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

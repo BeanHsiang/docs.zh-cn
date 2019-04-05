@@ -1,16 +1,16 @@
 ---
-title: 如何：通过非 MEX 绑定检索元数据
+title: 如何：检索元数据通过非 MEX 绑定
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689545"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>如何：通过非 MEX 绑定检索元数据
-本主题介绍如何通过非 MEX 绑定从 MEX 终结点检索元数据。 在此示例代码基于[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例。  
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>如何：检索元数据通过非 MEX 绑定
+本主题介绍如何通过非 MEX 绑定从 MEX 终结点检索元数据。 在此示例中的代码基于[自定义安全元数据终结点](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示例。  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>通过非 MEX 绑定检索元数据  
   
@@ -121,7 +121,7 @@ ms.locfileid: "33488083"
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  此时，您拥有服务终结点的集合。 有关导入元数据的详细信息，请参阅[如何： 导入到服务终结点的元数据](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
+5.  此时，您拥有服务终结点的集合。 有关导入元数据的详细信息，请参阅[如何：元数据导入服务终结点](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
   
-## <a name="see-also"></a>请参阅  
- [元数据](../../../../docs/framework/wcf/feature-details/metadata.md)
+## <a name="see-also"></a>请参阅
+- [元数据](../../../../docs/framework/wcf/feature-details/metadata.md)

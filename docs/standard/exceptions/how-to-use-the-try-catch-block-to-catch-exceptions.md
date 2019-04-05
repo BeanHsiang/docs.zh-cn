@@ -1,11 +1,10 @@
 ---
 title: 如何：使用 Try-Catch 块捕获异常
-ms.date: 03/30/2017
+ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - exceptions, try/catch blocks
 - try blocks
@@ -14,28 +13,32 @@ helpviewer_keywords:
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 852df5cb3eeea2ee5fa44ddce2f97e9c4f8d8b5a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5183a854ee2b7462ecc27786a5fc0697565194c0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842380"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092743"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>如何使用 try/catch 块捕获异常
 
-将可能引发异常的代码部分置于 `try` 块，将可处理异常的代码置于 `catch` 块。 `catch` 块是一系列以关键字 `catch` 开头的语句，后跟要执行的异常类型和操作。
+将可能引发异常的任何代码语句放置在 `try` 块中，将用于处理异常的语句放置在 `try` 块下的一个或多个 `catch` 块中。 每个 `catch` 块包括异常类型，并且可以包含处理该异常类型所需的其他语句。
 
-下方代码示例使用 `try`/`catch` 块来捕获可能的异常。 `Main` 方法包含带有 <xref:System.IO.StreamReader> 语句的 `try` 块，此块可打开名为 `data.txt` 的数据文件，并写入该文件的字符串。 以下 `try` 块是可捕获由 `try` 块导致的任何异常的 `catch` 块。
+在以下示例中，<xref:System.IO.StreamReader> 将打开一个名为 data.txt 的文件，并从文件中检索行。 因为代码可能会引发任何三个异常，因此将其放置于 `try` 块中。 三个 `catch` 块捕获异常并通过将结果向控制台显示来处理它们。
 
- [!code-cpp[CatchException#3](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception2.cpp#3)]
- [!code-csharp[CatchException#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
- [!code-vb[CatchException#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
+[!code-csharp[CatchException#3](~/samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception2.cs#3)]
+[!code-vb[CatchException#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception2.vb#3)]  
 
-公共语言运行时可捕获未被 catch 块捕获的异常。 会出现调试对话框，或是停止运行程序且会出现含有异常信息的对话框，或者会将错误打印到 STDERR，具体情况取决于运行时的配置方式。
+公共语言运行时 (CLR) 会捕获未由 `catch` 块处理的异常。 如果异常由 CLR 捕获，则可能出现以下结果之一，具体取决于 CLR 配置：
 
-> [!NOTE] 
-> 几乎任何代码行都可能导致异常，尤其是由公共语言运行时本身造成的异常，如 <xref:System.OutOfMemoryException>。 大多数应用程序无需处理这些异常，但在编写供他人使用的库时，应注意到这种可能性。 有关何时在 try 块中设置代码的建议，请参阅[异常的最佳做法](best-practices-for-exceptions.md)。
+- 出现“调试”对话框。
+- 该程序停止执行，出现含有异常信息的对话框。
+- 错误输出到[标准错误输出流](xref:System.Console.Error)。
+
+> [!NOTE]
+> 大多数代码可能会引发异常，并且一些异常（如 <xref:System.OutOfMemoryException>）可能随时由 CLR 本身引发。 虽然应用程序无需处理这些异常，但在编写供他人使用的库时，应注意到这种可能性。 有关何时在 `try` 块中设置代码的建议，请参阅[异常的最佳做法](best-practices-for-exceptions.md)。
 
 ## <a name="see-also"></a>请参阅
 
-- [异常](index.md)
+[异常](index.md)  
+[处理 .NET 中的 I/O 错误](../io/handling-io-errors.md)

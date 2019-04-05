@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34bd959890717a16df80d3870099757dd7400943
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 04ef2ea6bf9d10baabea39133b2e0a9a72a6ce4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674841"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的托管和非托管线程处理
 
@@ -24,7 +24,7 @@ ms.locfileid: "50199729"
   
  当非托管线程进入运行时（如通过 COM 可调用包装）时，系统将检查该线程的线程本地存储区以查找内部托管 <xref:System.Threading.Thread> 对象。 若找到一个对象，运行时就会注意到该线程。 但如果一个也找不到，则运行时将生成新的 <xref:System.Threading.Thread> 对象并将其安装在该线程的线程本地存储区中。  
   
- 在托管线程处理中，<xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> 是稳定的托管线程标识。 在线程的生存期内，它不会与来自其他任何线程的值相冲突，不管你是从哪个应用程序域获取该值。  
+ 在托管线程处理中， <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> 是稳定的托管线程标识。 在线程的生存期内，它不会与来自其他任何线程的值相冲突，不管你是从哪个应用程序域获取该值。  
   
 > [!NOTE]
 >  因为非托管宿主可以控制托管线程和非托管线程之间的关系，所以操作系统 **ThreadId** 与托管线程之间没有固定的关系。 具体而言，一个复杂的主机可以使用 Fiber API 针对同一操作系统线程调度多个托管线程，或在不同的操作系统线程之间移动托管线程。  
@@ -75,8 +75,8 @@ ms.locfileid: "50199729"
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
-- <xref:System.Threading.ThreadState>  
-- <xref:System.EnterpriseServices.ServicedComponent>  
-- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>
+- <xref:System.Threading.ThreadState>
+- <xref:System.EnterpriseServices.ServicedComponent>
+- <xref:System.Threading.Thread>
 - <xref:System.Threading.Monitor>

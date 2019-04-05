@@ -1,19 +1,19 @@
 ---
-title: 如何：使用设计器将 Windows 窗体控件绑定到类型
+title: 如何：将 Windows 窗体控件绑定到使用设计器的类型
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding to a type
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: 33df9e050dd8c2b3ace8ff89cbd5939b538fcd95
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 29a28052b149f565e47a2e0366ed6845b83234ba
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873740"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712092"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>如何：使用设计器将 Windows 窗体控件绑定到类型
+# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>如何：将 Windows 窗体控件绑定到使用设计器的类型
 在生成与数据交互的控件时，有时需要将控件绑定到类型而非对象。 当数据可能不可用，但仍然希望数据绑定控件显示类型的公共接口中的信息时，通常需要在设计时将控件绑定到类型。 以下过程演示如何创建一个新<xref:System.Windows.Forms.BindingSource>，它是绑定到一个类型，以及如何绑定到该类型的属性之一<xref:System.Windows.Forms.TextBox.Text%2A>属性的<xref:System.Windows.Forms.TextBox>。  
   
 ### <a name="to-bind-the-bindingsource-to-a-type"></a>将 BindingSource 绑定到类型  
@@ -51,7 +51,7 @@ ms.locfileid: "48873740"
   
 4.  在中**DataSource UI 类型编辑器**，展开的节点<xref:System.Windows.Forms.BindingSource>之前，添加并选择想要将绑定到的绑定类型的属性<xref:System.Windows.Forms.TextBox.Text%2A>属性<xref:System.Windows.Forms.TextBox>。  
   
-## <a name="see-also"></a>请参阅  
- [BindingSource 组件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [如何：将 Windows 窗体控件绑定到类型](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
- [在 Visual Studio 中将控件绑定到数据](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>请参阅
+- [BindingSource 组件](bindingsource-component.md)
+- [如何：将 Windows 窗体控件绑定到类型](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [在 Visual Studio 中将控件绑定到数据](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

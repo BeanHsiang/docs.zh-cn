@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0b68eaefcd2901f9cf05d491459b18f94a2614a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8acf811b835d5afd8686701fe269b16d4b766458
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415063"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58676064"
 ---
 # <a name="assembly-manifest"></a>程序集清单
 每一程序集，无论是静态的还是动态的，均包含描述该程序集中各元素彼此如何关联的数据集合。 程序集清单就包含这些程序集元数据。 程序集清单包含指定该程序集的版本要求和安全标识所需的所有元数据，以及定义该程序集的范围和解析对资源和类的引用所需的全部元数据。 程序集清单可以存储在具有 Microsoft 中间语言 (MSIL) 代码的 PE 文件（.exe 或 .dll）中，也可存储在只包含程序集清单信息的独立 PE 文件中。  
   
  以下插图显示了清单的不同存储方法。  
   
- ![单文件程序集](../../../docs/framework/app-domains/media/assemblytypes.gif "assemblytypes")  
-程序集的类型  
+ ![显示单文件程序集和多文件程序集配置中的清单的图表。](./media/assembly-manifest/assembly-types-diagram.gif)  
   
  对于有一个关联文件的程序集，该清单将被合并到 PE 文件中以构成单文件程序集。 您可以创建有独立的清单文件，或清单被合并到同一多文件程序集中某一 PE 文件的多文件程序集。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "49415063"
 ## <a name="assembly-manifest-contents"></a>程序集清单内容  
  下表显示了在程序集清单中包含的信息。 前四项（程序集名称、版本号、区域性和强名称信息）构成了程序集的标识。  
   
-|信息|描述|  
+|信息|说明|  
 |-----------------|-----------------|  
 |程序集名称|指定程序集名称的文本字符串。|  
 |版本号|主版本号和次版本号，以及修订号和生成号。 公共语言运行时使用这些编号来强制实施版本策略。|  
@@ -54,8 +53,8 @@ ms.locfileid: "49415063"
   
  通过在代码中使用程序集特性，您可以添加或更改程序集清单中的一些信息。 您可以更改版本信息和信息性特性，包括商标、版权、产品、公司和信息性版本。 有关程序集特性的完整列表，请参阅[设置程序集特性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
-## <a name="see-also"></a>请参阅  
-- [程序集内容](../../../docs/framework/app-domains/assembly-contents.md)  
-- [程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)  
-- [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
+## <a name="see-also"></a>请参阅
+- [程序集内容](../../../docs/framework/app-domains/assembly-contents.md)
+- [程序集版本控制](../../../docs/framework/app-domains/assembly-versioning.md)
+- [创建附属程序集](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)

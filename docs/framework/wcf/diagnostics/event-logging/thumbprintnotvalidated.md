@@ -2,23 +2,23 @@
 title: ThumbPrintNotValidated
 ms.date: 03/30/2017
 ms.assetid: e3e110f5-2853-4150-99c9-18236df320e2
-ms.openlocfilehash: e59247e5193ea706e2e5d390a075224e563d1dc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7737032cfcfe3ef0cad2d51b444c15e865fcd0e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33472065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745397"
 ---
 # <a name="thumbprintnotvalidated"></a>ThumbPrintNotValidated
-ID：153  
+ID:153  
   
- 严重性：错误  
+ 严重性：Error  
   
  类别：TransactionBridge  
   
 ## <a name="description"></a>描述  
  此事件指示无法验证带有指定指纹的标识证书。 该事件将列出进程名称和进程 ID。  
   
-## <a name="see-also"></a>请参阅  
- [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>请参阅
+- [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

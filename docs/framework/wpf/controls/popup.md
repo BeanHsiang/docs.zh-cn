@@ -9,24 +9,24 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: c7161439f5b4a0e0e224235b458945376215d273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b43456de1b161763c6197956003c9e7f07135fc
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551747"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410103"
 ---
 # <a name="popup"></a>弹出项
-<xref:System.Windows.Controls.Primitives.Popup>控件通过当前的应用程序窗口浮动的单独窗口中显示内容。  
+<xref:System.Windows.Controls.Primitives.Popup>控件当前的应用程序窗口上浮动的单独窗口中显示内容。  
   
- 下图显示<xref:System.Windows.Controls.Primitives.Popup>相对于定位的控件<xref:System.Windows.Controls.Button>，它是其父级。  
+ 如下图所示<xref:System.Windows.Controls.Primitives.Popup>相对于定位的控件<xref:System.Windows.Controls.Button>，它是其父级：  
   
- ![Popup 图](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")  
+ ![Popup 图](./media/popup/popup-picture-button.jpg)  
   
 ## <a name="in-this-section"></a>本节内容  
- [Popup 概述](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [Popup 放置行为](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
- [帮助主题](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [Popup 概述](popup-overview.md)  
+ [Popup 放置行为](popup-placement-behavior.md)  
+ [帮助主题](popup-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Primitives.Popup>  

@@ -1,16 +1,16 @@
 ---
-title: '&lt;system.identityModel&gt;'
+title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 1b3121a6e7e036ec268cf83ffbf545c0e669a9b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd17c0318480f5e157c8c9114116735b82bbfcef
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199391"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351289"
 ---
-# <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
+# <a name="systemidentitymodel"></a>\<system.identityModel>
 提供用于启用应用程序中的 Windows Identity Foundation (WIF) 选项的配置。  
   
  \<system.identityModel>  
@@ -32,7 +32,7 @@ ms.locfileid: "50199391"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -75,5 +75,5 @@ ms.locfileid: "50199391"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

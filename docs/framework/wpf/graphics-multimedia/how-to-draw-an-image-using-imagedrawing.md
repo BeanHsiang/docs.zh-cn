@@ -6,30 +6,30 @@ helpviewer_keywords:
 - graphics [WPF], drawing images
 - images [WPF], drawing
 ms.assetid: df28ab41-25fb-4ab3-b51d-7f695b24f55e
-ms.openlocfilehash: 2c7771f841fb3b600d4790eb4d484b0a09c45dd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a9a7ee32104e44997e6eaada09edaac2b1d610e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559874"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355583"
 ---
 # <a name="how-to-draw-an-image-using-imagedrawing"></a>如何：使用 ImageDrawing 绘制图像
-此示例演示如何使用<xref:System.Windows.Media.ImageDrawing>要绘制图像。 <xref:System.Windows.Media.ImageDrawing>允许您显示<xref:System.Windows.Media.ImageSource>与<xref:System.Windows.Media.DrawingBrush>， <xref:System.Windows.Media.DrawingImage>，或<xref:System.Windows.Media.Visual>。 若要绘制图像，则创建<xref:System.Windows.Media.ImageDrawing>并设置其<xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType>和<xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType>属性。 <xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType>属性指定要绘制图像，和<xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType>属性指定的位置和每个图像的大小。  
+此示例演示如何使用<xref:System.Windows.Media.ImageDrawing>要绘制图像。 <xref:System.Windows.Media.ImageDrawing>允许您显示<xref:System.Windows.Media.ImageSource>与<xref:System.Windows.Media.DrawingBrush>， <xref:System.Windows.Media.DrawingImage>，或<xref:System.Windows.Media.Visual>。 若要绘制图像，则创建<xref:System.Windows.Media.ImageDrawing>并设置其<xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType>和<xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType>属性。 <xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType>属性指定要绘制，图像和<xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType>属性指定的位置和每个图像的大小。  
   
 ## <a name="example"></a>示例  
- 下面的示例创建使用四个复合绘图<xref:System.Windows.Media.ImageDrawing>对象。 该示例产生下面的图像：  
+ 下面的示例创建复合绘图使用四个<xref:System.Windows.Media.ImageDrawing>对象。 此示例将生成以下映像：  
   
- ![几个 DrawingImage 对象](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-imagedrawingexample.jpg "graphicsmm_ImageDrawingExample")  
+ ![几个 DrawingImage 对象](./media/graphicsmm-imagedrawingexample.jpg "graphicsmm_ImageDrawingExample")  
 四个 ImageDrawing 对象  
   
- [!code-csharp[DrawingMiscSnippets_snip#ImageDrawingExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawingexample)]
- [!code-xaml[DrawingMiscSnippets_snip#ImageDrawingExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/ImageDrawingExample.xaml#imagedrawingexample)]  
+ [!code-csharp[DrawingMiscSnippets_snip#ImageDrawingExample](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawingexample)]
+ [!code-xaml[DrawingMiscSnippets_snip#ImageDrawingExample](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/ImageDrawingExample.xaml#imagedrawingexample)]  
   
- 有关演示一种简单的方法，可显示图像，而无需使用的示例<xref:System.Windows.Media.ImageDrawing>，请参阅[使用图像元素](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)。  
+ 有关演示简单的方法来显示图像而不使用的示例<xref:System.Windows.Media.ImageDrawing>，请参阅[使用 Image 元素](../controls/how-to-use-the-image-element.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Freezable.Freeze%2A>  
- <xref:System.Windows.Controls.Image>  
- [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [PresentationOptions:Freeze 特性](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Freezable.Freeze%2A>
+- <xref:System.Windows.Controls.Image>
+- [Drawing 对象概述](drawing-objects-overview.md)
+- [Freezable 对象概述](../advanced/freezable-objects-overview.md)
+- [PresentationOptions:Freeze 特性](../advanced/presentationoptions-freeze-attribute.md)

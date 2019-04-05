@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deaeb4e244a4f9c1e8582d9bea26c2ae5cfde818
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4887d44f0ac5603280efa0abdbd7e65c71fc3ca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421345"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485444"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters 方法
-（在计算机上当前正在执行代码） 中获取的每个寄存器的值指定的位掩码。  
+获取每个寄存器的值 （上当前正在执行代码的计算机） 指定的位掩码。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,30 +38,30 @@ HRESULT GetRegisters (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `mask`  
- [in]指定哪一寄存器的值为要检索一个位掩码。 每位对应于寄存器。 如果位设置为 1，则检索寄存器的值;否则，不会检索寄存器的值。  
+ [in]一个位掩码，它指定要从中检索值的哪一寄存器。 每位对应于寄存器。 如果有些设置为 1，则检索寄存器的值;否则，不会检索寄存器的值。  
   
  `regCount`  
- [in]要检索的寄存器值的数目。  
+ [in]要检索的注册值的数目。  
   
  `regBuffer`  
- [out]数组`CORDB_REGISTER`对象，其中每个接收的寄存器的值。  
+ [out]一个数组`CORDB_REGISTER`对象，其中每个接收寄存器的值。  
   
 ## <a name="remarks"></a>备注  
- 数组的大小应等于的中位掩码设置为 1 的位数。 `regCount`参数指定将接收寄存器值的缓冲区中的元素数。 如果`regCount`值是由屏蔽指示的寄存器的数目太小，将从集合中截断的更高版本的编号的寄存器。 如果`regCount`值太大，未使用`regBuffer`元素将保持不变。  
+ 数组的大小应等于的位数设置为一个位掩码中。 `regCount`参数指定将接收寄存器值的缓冲区中的元素数。 如果`regCount`值指示掩码的寄存器数太小，将从集合中截断的更高版本的带编号的寄存器。 如果`regCount`该值太大，而未使用`regBuffer`元素将保持不变。  
   
- 如果位掩码指定不可用，注册`GetRegisters`返回该寄存器的不确定的值。  
+ 如果位掩码指定寄存器不可用，`GetRegisters`返回为该寄存器不确定的值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugRegisterSet 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [ICorDebugRegisterSet2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugRegisterSet 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

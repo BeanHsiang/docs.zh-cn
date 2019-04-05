@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 651da766bc5931f5afa06699d1ec11fa40147e82
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f10d7d03bbf88ed8f7a89a5d3919a39b3c124ae0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678264"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130229"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和注册表
 
@@ -25,7 +25,7 @@ ms.locfileid: "45678264"
 
 **图 2-4**。 Docker 术语和概念的分类
 
-通过将映射存储到注册表中，可存储静态和不可变的应用程序，包括其在框架级别的所有依赖项。 然后可将这些映像部署到多种环境中，并进行版本控制，从而提供一致的部署单元
+将映射存储到注册表中可存储静态和不可变的应用程序，包括其在框架级别的所有依赖项。 然后可将这些映像部署到多种环境中，并进行版本控制，从而提供一致的部署单元
 
 无论是托管在本地还是托管在云中，在下列情况下都建议使用私有映像注册表：
 
@@ -34,5 +34,5 @@ ms.locfileid: "45678264"
 -   希望映像和所选部署环境之间的网络延迟保持在最低水平。 例如，如果生产环境是 Azure 云，为实现最低的网络延迟，需要将映像存储在 [Azure 容器注册表](https://azure.microsoft.com/services/container-registry/)中。 同样，如果生产环境是在本地，则需要在同一本地网络中使用本地的 Docker 信任的注册表。
 
 >[!div class="step-by-step"]
-[上一页](docker-terminology.md)
-[下一页](../net-core-net-framework-containers/index.md)
+>[上一页](docker-terminology.md)
+>[下一页](../net-core-net-framework-containers/index.md)

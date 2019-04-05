@@ -2,12 +2,12 @@
 title: 操作数据表中的数据
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: a09edc6ce3098ab135d8c27ba0f6ad56cceed159
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 54ebde293dd6701b8018e77c6bf8d773a4931e2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509544"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>操作数据表中的数据
 在 <xref:System.Data.DataTable> 中创建 <xref:System.Data.DataSet> 之后，您执行的活动可以与使用数据库中的表时执行的活动相同。 您可以添加、查看、编辑和删除表中的数据；可以监视错误和事件；并且可以查询表中的数据。 在中修改数据时**DataTable**，您还可以验证所做的更改是否正确，并确定是否要以编程方式接受或拒绝所做的更改。  
@@ -37,7 +37,7 @@ ms.locfileid: "43521303"
  [AcceptChanges 和 RejectChanges](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
  说明如何接受或拒绝对行的更改。  
   
-## <a name="see-also"></a>请参阅  
- [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [处理数据表事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [处理数据表事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

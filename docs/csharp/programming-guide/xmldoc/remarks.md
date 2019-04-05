@@ -1,5 +1,6 @@
 ---
-title: '&lt;remarks&gt;（C# 编程指南）'
+title: <remarks> - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - remarks
@@ -8,21 +9,21 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: 10d8dbe7862514ff2417054b6c1c5e9ef15e20ff
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b2e91b868c35773033418c796b7c43b08e87a28b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514196"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480372"
 ---
-# <a name="ltremarksgt-c-programming-guide"></a>&lt;remarks&gt;（C# 编程指南）
+# <a name="remarks-c-programming-guide"></a>\<remarks>（C# 编程指南）
 ## <a name="syntax"></a>语法  
   
 ```xml  
 <remarks>description</remarks>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `Description`  
  对成员的说明。  
   
@@ -32,9 +33,9 @@ ms.locfileid: "43514196"
  使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- [!code-csharp[csProgGuideDocComments#9](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/remarks_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

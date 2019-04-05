@@ -1,5 +1,5 @@
 ---
-title: 如何：创建发行者策略
+title: 如何：创建发布服务器策略
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838463"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758984"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>如何：创建发行者策略
+# <a name="how-to-create-a-publisher-policy"></a>如何：创建发布服务器策略
 程序集的供应商可以声明应用程序应通过包括发布服务器策略文件与升级后的程序集使用的程序集的较新版本。 发布服务器策略文件指定程序集重定向和基本代码设置，并为应用程序配置文件使用相同的格式。 发布服务器策略文件编译到程序集中，放置在全局程序集缓存中。  
   
  创建发布者策略时涉及的是三个步骤：  
@@ -91,7 +89,7 @@ ms.locfileid: "48838463"
   
 1.  在命令提示符下键入以下命令：  
   
-     **gacutil /i***publisherPolicyAssemblyFile*  
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      以下命令将添加`policy.1.0.myAssembly.dll`到全局程序集缓存。  
   
@@ -102,11 +100,10 @@ ms.locfileid: "48838463"
     > [!IMPORTANT]
     >  发行者策略程序集不能添加到全局程序集缓存中，除非原始发布服务器策略文件位于与该程序集相同的目录中。  
   
-## <a name="see-also"></a>请参阅  
- [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [配置应用程序](../../../docs/framework/configure-apps/index.md)  
- [配置.NET Framework 应用](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
- [运行时设置架构](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)  
- [重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>请参阅
+- [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [使用配置文件配置应用程序](../../../docs/framework/configure-apps/index.md)
+- [运行时设置架构](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)
+- [重定向程序集版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

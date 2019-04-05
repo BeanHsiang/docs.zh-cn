@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: acaa8f2ff6611f2f0beb07b74193341edfa2a428
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259842"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375345"
 ---
 # <a name="graphics-rendering-registry-settings"></a>图形呈现注册表设置
 本主题概述了影响 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 图形呈现注册表设置。  
@@ -50,7 +50,7 @@ ms.locfileid: "44259842"
   
  使用“禁用硬件加速选项”，可以出于调试和测试目的而关闭硬件加速。 查看应用程序中的呈现项目时，尝试关闭硬件加速。 如果项目消失，则视频驱动程序可能有问题。  
   
- “禁用硬件加速选项”是一个等于 0 或 1 的 DWORD 值。 如果值为 1，表示禁用硬件加速。 如果值为 0，表示启用硬件加速，前提是系统满足硬件加速要求；有关详细信息，请参阅[图形呈现层](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。  
+ “禁用硬件加速选项”是一个等于 0 或 1 的 DWORD 值。 如果值为 1，表示禁用硬件加速。 如果值为 0，表示启用硬件加速，前提是系统满足硬件加速要求；有关详细信息，请参阅[图形呈现层](../advanced/graphics-rendering-tiers.md)。  
   
 <a name="maxmultisample"></a>   
 ## <a name="maximum-multisample-value"></a>最大多重采样值  
@@ -97,6 +97,6 @@ ms.locfileid: "44259842"
   
  “使用参考光栅器选项”采用 DWORD 值。 值为 0 指示不使用参考光栅器。 任何其他非零值都强制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用参考光栅器。  
   
-## <a name="see-also"></a>请参阅  
- [图形呈现层](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>请参阅
+- [图形呈现层](../advanced/graphics-rendering-tiers.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)

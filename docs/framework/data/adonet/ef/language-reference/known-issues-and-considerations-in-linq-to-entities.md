@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 6b54f75afd52b5179693c5a92ebce2e8aa02f122
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717956"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知问题和注意事项
 本节提供有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询的已知问题的信息。  
@@ -19,13 +19,13 @@ ms.locfileid: "32765459"
   
 -   [排序信息丢失](#OrderingInfoLost)  
   
--   [不支持的无符号的整数](#UnsignedIntsUnsupported)  
+-   [不支持无符号的整数](#UnsignedIntsUnsupported)  
   
 -   [类型转换错误](#TypeConversionErrors)  
   
 -   [不支持引用非标量变量](#RefNonScalarClosures)  
   
--   [嵌套的查询可能会失败，SQL Server 2000](#NestedQueriesSQL2000)  
+-   [嵌套的查询可能会因 SQL Server 2000](#NestedQueriesSQL2000)  
   
 -   [投影到匿名类型](#ProjectToAnonymousType)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "32765459"
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>不支持无符号整数  
- 由于 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 不支持无符号整数，因此不支持在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 查询中指定无符号整数类型。 如果指定无符号的整数<xref:System.ArgumentException>下面的示例中所示将查询表达式转换，期间引发异常。 此示例查询其 ID 为 48000 的订单。  
+ 由于 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 不支持无符号整数，因此不支持在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 查询中指定无符号整数类型。 如果指定无符号的整数，<xref:System.ArgumentException>异常过程中会引发在查询表达式转换，如下面的示例中所示。 此示例查询其 ID 为 48000 的订单。  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -79,5 +79,5 @@ ms.locfileid: "32765459"
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype2)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>请参阅
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

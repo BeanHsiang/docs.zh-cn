@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: d956a72c9413384176c10effefc0307b09744c4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bbae7e54160923e973ff6a8adb655587adf1002
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708826"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003 和 Windows XP 在排队功能方面的差异
 本主题总结了在 Windows Communication Foundation (WCF) 队列功能之间的差异[!INCLUDE[wv](../../../../includes/wv-md.md)]， [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，和[!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
@@ -30,11 +30,11 @@ ms.locfileid: "33492019"
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持否定确认，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 不支持。 来自接收队列管理器的否定确认会致使发送队列管理器将被拒绝的消息放入死信队列。 因此，在 `ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 中不允许 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持用于对消息传递尝试次数进行计数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 WCF 维护中止计数在内存中，因此很可能由多个 Web 场中的 WCF 服务读取同一消息时，此属性可能不包含准确的值。  
+-   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 支持用于对消息传递尝试次数进行计数的消息属性。 此中止计数属性在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中不可用。 WCF 会维护中止计数在内存中，所以，此属性可能包含不精确的值时由多个 Web 场中的 WCF 服务读取同一条消息。  
   
 ## <a name="remote-transactional-read"></a>远程事务性读取  
  [!INCLUDE[wv](../../../../includes/wv-md.md)] 上的 MSMQ 支持远程事务性读取。 这允许从队列中进行读取的应用程序与该队列承载在不同的计算机上。 这样可以确保服务场能够从中心队列进行读取，从而增加系统的总体吞吐量。 另外，还可以确保在读取和处理消息时一旦出现故障，事务能够回滚并且消息保留在队列中以供以后处理。  
   
-## <a name="see-also"></a>请参阅  
- [使用死信队列处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [有害消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+## <a name="see-also"></a>请参阅
+- [使用死信队列处理消息传输故障](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [有害消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

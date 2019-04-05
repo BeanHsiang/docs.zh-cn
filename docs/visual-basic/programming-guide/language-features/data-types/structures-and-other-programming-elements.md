@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: 7b375c5a45998fc0bd06f7c075f23a30dd377295
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652020"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819094"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>结构和其他编程元素 (Visual Basic)
-你可以结合使用数组、 对象和过程，以及与每个其他使用结构。 交互使用相同的语法，如单独使用这些元素。  
+可以结合使用数组、 对象和过程，以及与每个其他使用结构。 交互使用相同的语法，如单独使用这些元素。  
   
 > [!NOTE]
->  无法初始化任何结构声明中的结构元素。 您可以分配到已被声明为结构类型的变量的元素的值。  
+>  无法初始化任何在结构声明中的结构元素。 可以仅对元素的已声明为结构类型的变量赋值。  
   
 ## <a name="structures-and-arrays"></a>结构和数组  
- 结构可以包含数组作为一个或多个它的元素。 下面的示例阐释了这一点。  
+ 一种结构可以包含为一个或多个元素的数组。 下面的示例阐释了这一点。  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- 你可以访问数组结构中的值相同的方式访问对象的属性。 下面的示例阐释了这一点。  
+ 访问对象的属性一样访问数组在结构中的值。 下面的示例阐释了这一点。  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,7 +41,7 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- 你也可以声明结构的数组。 下面的示例阐释了这一点。  
+ 此外可以声明为结构数组。 下面的示例阐释了这一点。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -56,7 +56,7 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>结构和对象  
- 结构只能包含一个作为一个或多个它的元素的对象。 下面的示例阐释了这一点。  
+ 结构包含一个作为一个或多个元素的对象。 下面的示例阐释了这一点。  
   
 ```vb  
 Protected Structure userInput  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- 前面的示例将此结构传递*通过引用*，这样，过程来修改其元素，以便在调用代码中所做的更改生效。 如果你想要保护避免这种修改的结构，则按值传递它。  
+ 前面的示例中将此结构传递*通过引用*，这将允许过程来修改它的元素，以便在调用代码中所做的更改生效。 如果你想要保护的结构避免这种修改，将它传递的值。  
   
- 你还可以返回的结构从`Function`过程。 下面的示例阐释了这一点。  
+ 您还可以返回从结构`Function`过程。 下面的示例阐释了这一点。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -118,18 +118,19 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- 此方法还可用于封装在另一个模块中定义结构中的一个模块中定义的结构。  
+ 此方法还可用于封装在模块中的另一个模块中定义的结构中定义的结构。  
   
- 结构可以包含其他结构到任意深度。  
+ 结构可以包含其他任意深度的结构。  
   
-## <a name="see-also"></a>请参阅  
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [如何：声明结构](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [结构变量](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- [结构和类](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>请参阅
+
+- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [如何：声明结构](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [结构变量](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
+- [结构和类](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)

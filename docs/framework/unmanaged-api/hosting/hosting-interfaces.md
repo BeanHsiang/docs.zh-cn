@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a32f68566fc6fe53020c4e9b13482355b62ed21
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e330e0d06077d1eef63cf44f31bbcbf7c3431b59
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485949"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303304"
 ---
 # <a name="hosting-interfaces"></a>承载接口
 本部分中描述的接口以及非托管主机可用于将公共语言运行时 (CLR) 集成到其应用程序。  
@@ -45,4 +45,4 @@ ms.locfileid: "43485949"
   
  [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)  
   
- [运行时宿主](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)
+ [运行时主机](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))

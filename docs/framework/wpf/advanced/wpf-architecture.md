@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 50a7e1b08c31b5d0fb779dabf617a08bbb4c6cf4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195913"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362002"
 ---
 # <a name="wpf-architecture"></a>WPF 体系结构
 本主题提供 Windows Presentation Foundation (WPF) 类层次结构的指导的教程。 本主题涵盖了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的大部分主要子系统，并说明它们的交互方式。 本主题还详细介绍了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架构师所做的一些选择。  
@@ -33,7 +33,7 @@ ms.locfileid: "50195913"
   
  下图说明了 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要组件。 关系图的红色部分（PresentationFramework、PresentationCore 和 milcore）是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的主要代码部分。 在这些组件中，只有一个是非托管组件 - milcore。 milcore 是以非托管代码编写的，目的是实现与 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 的紧密集成。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有显示均通过 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 引擎完成，因此硬件和软件呈现都很高效。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还要求对内存和执行进行精细控制。 milcore 中的组合引擎受性能影响极大，需要放弃 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 的许多优点来提高性能。  
   
- ![WPF 在 .NET Framework 中的位置。](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
+ ![WPF 在 .NET Framework 中的位置。](./media/wpf-architect1.PNG "wpf_architect1")  
   
  本主题的后面部分将讨论 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的托管和非托管部分之间的通信。 下面介绍托管编程模型的其余部分。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "50195913"
   
  编程时[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，创建<xref:System.Windows.Media.Visual>元素和派生的类型，它们在内部与此消息传递协议通过此组合树进行通信。 每个<xref:System.Windows.Media.Visual>在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可能会创建一个、 none、 或多个组合节点。  
   
- ![Windows Presentation Foundation 可视化树。](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![Windows Presentation Foundation 可视化树。](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
  请注意一个非常重要的体系结构细节 - 会缓存整个可视化树和绘制指令。 在图形方面，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用一个保留的绘制系统。 这可以实现以高刷新率重绘系统，并且组合系统不会阻止对用户代码的回调。 这有助于防止出现应用程序无响应的情况。  
   
@@ -141,14 +141,14 @@ ms.locfileid: "50195913"
   
  当开始开发基于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的应用程序时，你应感到非常熟悉。 设置属性、使用对象和数据绑定的方式与使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 的方式极为相似。 如果对 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 体系结构有更深的了解，将能够创建更丰富的应用程序，这些应用程序在根本上会将数据视为应用程序的核心驱动要素。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.UIElement>  
- <xref:System.Windows.Input.ICommand>  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.Threading.DispatcherObject>  
- <xref:System.Windows.Input.CommandBinding>  
- <xref:System.Windows.Controls.Control>  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.UIElement>
+- <xref:System.Windows.Input.ICommand>
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.Threading.DispatcherObject>
+- <xref:System.Windows.Input.CommandBinding>
+- <xref:System.Windows.Controls.Control>
+- [数据绑定概述](../data/data-binding-overview.md)
+- [布局](layout.md)
+- [动画概述](../graphics-multimedia/animation-overview.md)

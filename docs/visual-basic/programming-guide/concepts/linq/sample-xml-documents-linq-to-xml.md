@@ -2,12 +2,12 @@
 title: 示例 XML 文档 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: 5ddfdd9c8b7114651cea59a0b356ee87f29bd62b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d8567d8129dd7ba32e847b8c1e28ffc992d10b1f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964537"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837684"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>示例 XML 文档 (LINQ to XML)
 整个 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的代码示例和代码段中均使用下面的示例文件。  
@@ -30,8 +30,9 @@ ms.locfileid: "45964537"
 |[示例 XML 文件：命名空间中的客户和订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|处于某一命名空间中的包含客户和订单的 XML 文档。|  
 |[示例 XML 文件：数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|包含适合于求和和分组的数据的 XML 文档。|  
 |[示例 XML 文件：命名空间中的数值数据](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|处于某一命名空间中的包含适合于求和和分组的数据的 XML 文档。|  
-|[示例 XML 文件：书籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|包含书籍目录的 XML 文档。|  
-|[示例 XML 文件：合并的采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|表示包含处于不同命名空间中的采购订单的 XML 文档。|  
+|[示例 XML 文件：图书 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|包含书籍目录的 XML 文档。|  
+|[示例 XML 文件：合并采购订单](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|表示包含处于不同命名空间中的采购订单的 XML 文档。|  
   
-## <a name="see-also"></a>请参阅  
- [编程指南 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [编程指南 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

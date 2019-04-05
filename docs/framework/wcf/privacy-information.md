@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086669"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333399"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隐私信息
 Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communication Foundation (WCF) 3.0 版，它的应用程序时你的应用程序可能会影响最终用户的隐私。 例如，应用程序可能显式收集用户联系信息，或者通过 Internet 向您的网站请求或发送信息。 如果您在应用程序中嵌入了 Microsoft 技术，则该技术可能具有可能会影响隐私的自己的行为。 WCF 不发送任何信息向 Microsoft 从你的应用程序除非你或最终用户选择将其发送给我们。  
@@ -21,7 +21,7 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  标头可能包含消息路由、安全信息、事务和其他信息，具体取决于应用程序所使用的服务。 默认情况下，消息通常要进行加密。 一个例外的情况是使用 `BasicHttpBinding`（它适用于不受保护的旧式 Web 服务）。 作为应用程序设计人员，您负责进行最终设计。 SOAP 正文中的消息包含特定于应用程序的数据;但是，可以使用 WCF 加密或保密性功能来保护此数据，如应用程序定义的个人信息。 以下几节将描述可能对隐私造成影响的功能。  
   
-## <a name="messaging"></a>消息传送  
+## <a name="messaging"></a>消息  
  每个 WCF 消息具有指定的消息目标的地址标头和答复应发送到何处。  
   
  终结点地址的地址部分是一个标识该终结点的统一资源标识符 (URI)。 该地址可以是网络地址，也可以是逻辑地址。 该地址可能包含计算机名称（主机名、完全限定域名）和一个 IP 地址。 终结点地址还可能包含一个用于进行临时寻址的全局唯一标识符 (GUID) 或 GUID 集合，以便辨别每个地址。 每个消息都包含一个消息 ID，该消息 ID 是 GUID。 此功能遵循 WS-Addressing 引用标准。  
@@ -95,7 +95,7 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
 ### <a name="tracing"></a>跟踪  
  WCF 基础结构的诊断功能记录通过传输和服务模型层的活动和与这些消息关联的事件传递的消息。 默认情况下，此功能被禁用。 启用使用应用程序的配置文件，并可以在运行时使用的 WCF WMI 提供程序来修改跟踪行为。 在启用此功能后，跟踪基础结构会向已配置的侦听器发出包含消息、活动和处理事件的诊断跟踪。 输出的格式和位置由管理员的侦听器配置选择确定，但通常是 XML 格式化文件。 管理员负责设置跟踪文件上的访问控制列表 (ACL)。 具体而言，在由 Windows 激活系统 (WAS) 进行承载时，管理员应确保不是从公共虚拟根目录提供这些文件（如果不需要）。  
   
- 有两种类型的跟踪：消息日志记录和服务模型诊断跟踪，下一节将对其进行介绍。 每种类型都通过其自身的跟踪源进行配置，它们分别是 <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 这两种日志记录跟踪源都捕获应用程序本地的数据。  
+ 有两种类型的跟踪：消息日志记录和诊断服务模型跟踪下, 一节中描述。 每种类型都通过其自身的跟踪源进行配置，它们分别是 <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 这两种日志记录跟踪源都捕获应用程序本地的数据。  
   
 ### <a name="message-logging"></a>消息日志记录  
  消息日志记录跟踪源（<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>）使管理员可以记录流经系统的消息。 通过配置，用户可以决定是记录完整的消息还是仅记录消息头、是否在传输和/或服务模型层记录以及是否包括格式不正确的消息。 另外，用户可以配置筛选来限制要记录的消息范围。  
@@ -167,11 +167,11 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  \<AudienceRestrictionCondition>  
   
- \<受众 > [uri]\</Audience > +  
+ \<Audience>[uri]\</Audience>+  
   
  \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!-抽象基类型  
   
@@ -185,7 +185,7 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<断言 > [断言]\</Assertion > *  
+ \<Assertion>[assertion]\</Assertion>*  
   
  [any]*  
   
@@ -195,9 +195,9 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  \<语句 / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
- \<使用者 >  
+ \<Subject>  
   
  `<NameIdentifier`  
   
@@ -213,17 +213,17 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
+ \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
   
  \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<ds: keyinfo >...\</ds:KeyInfo >？  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</ SubjectConfirmation >？  
+ \</SubjectConfirmation>?  
   
  \</Subject>  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -255,9 +255,9 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [Subject]  
   
@@ -273,7 +273,7 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  \</ 属性 > +  
   
- \</ AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
@@ -291,7 +291,7 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<断言 > [断言]\</Assertion > +  
+ \<Assertion>[assertion]\</Assertion>+  
   
  \</ 证据 >？  
   
@@ -401,6 +401,6 @@ Microsoft 承诺保护最终用户的隐私。 生成使用 Windows Communicatio
   
  Web 服务描述语言 (WSDL) 包含端口的定义。 每个端口都具有一个终结点地址和一个表示应用程序所使用的服务的绑定。 可以使用配置禁用公开 WSDL。 计算机上不会保留任何信息。  
   
-## <a name="see-also"></a>请参阅  
- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
- [安全性](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>请参阅
+- [Windows Communication Foundation](index.md)
+- [安全性](../../../docs/framework/wcf/feature-details/security.md)

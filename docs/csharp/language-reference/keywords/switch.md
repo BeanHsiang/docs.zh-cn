@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188607"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463249"
 ---
 # <a name="switch-c-reference"></a>switch（C# 参考）
 
@@ -59,7 +59,7 @@ ms.locfileid: "50188607"
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-switch 语句执行中只有一个开关部分。 C# 不允许从一个开关部分继续执行到下一个开关部分。 因此，以下代码将生成编译器错误 CS0163：“控件不能从一个 case 标签 (<case label>) 贯穿到另一个 case 标签。”
+switch 语句执行中只有一个开关部分。 C# 不允许从一个开关部分继续执行到下一个开关部分。 因此，下面的代码生成编译器错误 CS0163：“控制不能从一个 case 标签（\<case 标签 >）贯穿到另一个 case 标签。”
 
 ```csharp
 switch (caseSwitch)
@@ -88,7 +88,7 @@ switch (caseSwitch)
 
 因为 C# 6 仅支持常量模式并且不允许重复常量值，所以 case 标签定义了互斥值，而且仅有一个模式可与匹配表达式相匹配。 因此，`case` 语句显示的顺序并不重要。
 
-然而，在 C# 7.0 中，因为支持其他模式，所以 case 标签不需要定义互斥值，并且多个模式可以与匹配表达式相匹配。 因为仅执行包含首次匹配模式的开关部分中的语句，所以 `case` 语句显示的顺序很重要。 如果 C# 检测到开关部分的 case 语句或语句等效于或是先前语句的子集，它将生成编译错误 CS8120：“开关 case 已由先前 case 处理。”
+然而，在 C# 7.0 中，因为支持其他模式，所以 case 标签不需要定义互斥值，并且多个模式可以与匹配表达式相匹配。 因为仅执行包含匹配模式的首次开关部分中的语句，所以 `case` 语句显示的顺序很重要。 如果 C# 检测到开关部分的 case 语句或语句等效于或是先前语句的子集，它将生成编译错误 CS8120：“开关 case 已由先前 case 处理。”
 
 以下示例说明了使用各种非互斥模式的 `switch` 语句。 如果移动 `case 0:` 开关部分，使其不再是 `switch` 语句中的第一部分，C# 会生成编译器错误，因为值为零的整数是所有整数的子集（由 `case int val` 语句定义的模式）。
 

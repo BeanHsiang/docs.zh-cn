@@ -3,12 +3,12 @@ title: 解释表达式
 description: 了解如何编写代码来检查表达式树的结构。
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506414"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201971"
 ---
 # <a name="interpreting-expressions"></a>解释表达式
 

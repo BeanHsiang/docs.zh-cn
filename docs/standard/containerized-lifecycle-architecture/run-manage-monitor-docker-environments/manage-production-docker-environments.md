@@ -1,15 +1,15 @@
 ---
 title: 管理 Docker 生产环境
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 初步了解用于管理基于容器的生产环境的关键点。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 3bafdd9f6a6aa4f850fd28b6315e68c643d1f8c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 02/15/2019
+ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202850"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836612"
 ---
 # <a name="manage-production-docker-environments"></a>管理 Docker 生产环境
 
@@ -23,28 +23,25 @@ ms.locfileid: "50202850"
 
 表 6-1 列出了其业务流程协调程序、 计划程序和聚类分析平台相关的常见管理工具。
 
-表 6-1: Docker 管理工具
+**表 6-1**。 Docker 管理工具
 
-
-| 管理工具      | 描述           | 相关业务流程协调程序 |
-|-----------------------|-----------------------|-----------------------|
-| 容器服务\(Azure 门户中的用户界面管理) | [容器服务](https://azure.microsoft.com/services/container-service/)提供了一种易于获取启动路[部署在 Azure 中的容器群集](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment)基于 Mesosphere DC/OS、 Kubernetes 和 Docker Swarm 等常用业务流程协调程序。 <br /><br /> 容器服务优化了这些平台的配置。 只需选择大小、 主机数和 orchestrator 工具选项，容器服务可处理所有其他内容。 | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
-| Docker 通用控制平面\(的本地或云) | [Docker 通用控制平面](https://docs.docker.com/v1.11/ucp/overview/)是从 Docker 的企业级群集管理解决方案。 它可帮助你从单个位置管理整个群集。 <br /><br /> Docker 通用控制平面是名为它提供了 Docker Swarm、 Docker 通用控制平面和 Docker 受信任注册表的 Docker 数据中心的商业产品的一部分。 <br /><br /> Docker 数据中心可以是安装在本地或从 Azure 等公有云预配。 | Docker Swarm\(容器服务支持) |
-| Docker 云\(也称为 Tutum; 云 SaaS) | [Docker 云](https://docs.docker.com/docker-cloud/)是托管的管理服务 (SaaS)，提供生成和测试工具已 docker 化应用程序映像，工具来帮助你设置和管理主机基础结构，业务流程功能和 Docker 注册表和部署功能，可帮助你自动执行将映像部署到你的具体基础结构。 您可以将 SaaS Docker 云帐户连接到您在运行 Docker Swarm 群集的容器服务中的基础结构。 | Docker Swarm\(容器服务支持) |
-| Mesosphere Marathon\(的本地或云) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) Mesosphere 的 DC/OS 和 Apache Mesos 是生产级容器业务流程和计划程序平台。 <br /><br /> 它适用于 Mesos （DC/OS 基于 Apache Mesos） 控制长时间运行服务，并且提供[进程和容器管理的 web UI](https://mesosphere.github.io/marathon/docs/marathon-ui.html)。 它提供了 web UI 管理工具 | Mesosphere DC/OS\(基于 Apache Mesos; 支持的容器服务) |
-| Google Kubernetes | [Kubernetes](https://kubernetes.io/docs/user-guide/ui/#dashboard-access)跨越协调、 计划和群集基础结构。 它是一个开放源代码平台，用于自动部署、 缩放和应用程序的容器操作的执行跨群集的主机，提供以容器为中心的基础结构。 | Google Kubernetes\(容器服务支持) |
+| 管理工具 | 描述 | 相关业务流程协调程序 |
+|------------------|-------------|-----------------------|
+| [用于容器的 azure 监视器](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | 专用的 azure Kubernetes 管理工具 | Azure Kubernetes 服务 (AKS) |
+| [Kubernetes Web UI （仪表板）](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes 的管理工具，可以监视和管理本地 Kubernetes 群集 | Azure Kubernetes 服务 (AKS)<br/>本地 Kubernetes |
+| [适用于 Service Fabric 的 azure 门户](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | 用于管理 Service Fabric 群集，在 Azure 上、 在本地、 本地开发和其他云中的联机和桌面版本 | Azure Service Fabric |
+| [容器监视 （日志分析）](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 常规容器监视解决方案管理 y。 可以管理通过 Kubernetes 群集[容器的 Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)。 | Azure Service Fabric<br/>Azure Kubernetes 服务 (AKS)<br/>Mesosphere DC/OS 和其他人。 |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
-为群集部署和管理的另一个选项是 Azure Service Fabric。 [Service Fabric](https://azure.microsoft.com/services/service-fabric/)包括容器业务流程，以及开发人员的 Microsoft 微服务平台编程模型来构建高度可缩放的微服务应用程序。 Service Fabric 支持在当前 Linux 预览版本中，作为中的 Docker [Linux 上的 Service Fabric 预览版](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-anywhere)，和用于 Windows 容器[中的下一个版本](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)。
+为群集部署和管理的另一个选项是 Azure Service Fabric。 [Service Fabric](https://azure.microsoft.com/services/service-fabric/)包括容器业务流程，以及开发人员的 Microsoft 微服务平台编程模型来构建高度可缩放的微服务应用程序。 Service Fabric 在 Linux 和 Windows 容器支持 Docker，可以在 Windows 和 Linux 服务器中运行。
 
 以下是 Service Fabric 管理工具：
 
--   [Azure 门户中的为 Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)与群集相关的操作 （创建/更新/删除） 群集或配置其基础结构 (Vm、 负载均衡器、 网络等)
+- [Azure 门户中的为 Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)与群集相关的操作 （创建/更新/删除） 群集或配置其基础结构 (Vm、 负载均衡器、 网络等)
 
--   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster)是一个专用的 web UI 工具，提供的见解和 Service Fabric 群集从节点 /vm 的角度，并从应用程序和服务的角度上进行某些操作。
-
+- [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster)是一个专用 web UI 和桌面提供的见解和 Service Fabric 群集，从节点 /vm 的角度，并从应用程序和服务的角度上进行某些操作的多平台工具。
 
 >[!div class="step-by-step"]
-[上一页](run-microservices-based-applications-in-production.md)
-[下一页](monitor-containerized-application-services.md)
+>[上一页](run-microservices-based-applications-in-production.md)
+>[下一页](monitor-containerized-application-services.md)

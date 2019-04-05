@@ -1,5 +1,6 @@
 ---
-title: false（C# 参考）
+title: false - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - false_CSharpKeyword
@@ -7,22 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - false keyword [C#]
 ms.assetid: a11aa532-efe2-442b-9fcc-8fdb33b8c8b4
-ms.openlocfilehash: 15243d4d7ecfe4600fbd6afbd0d1276ce25a58cc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 10c6229ced27cfdef089afaa086236299881da67
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44198226"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241099"
 ---
 # <a name="false-c-reference"></a>false（C# 参考）
-用作重载运算符或文本：  
-  
--   [false 运算符](../../../csharp/language-reference/keywords/false-operator.md)  
-  
--   [false 字面常数](../../../csharp/language-reference/keywords/false-literal.md)  
-  
+
+用作重载运算符或文本：
+
+- [false 运算符](true-false-operators.md)
+- [false 字面常数](false-literal.md)
+
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](index.md)
+- [true](true.md)

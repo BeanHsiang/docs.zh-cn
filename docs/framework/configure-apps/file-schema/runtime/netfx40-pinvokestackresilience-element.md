@@ -1,5 +1,5 @@
 ---
-title: '&lt;NetFx40_PInvokeStackResilience&gt;元素'
+title: < NetFx40_PInvokeStackResilience > 元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <NetFx40_PInvokeStackResilience> element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cfd8c971edd4537de6e073c49f128f86eb8a042
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8bc0d7c9222c31900cad9a8be05c79f7f8a04719
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748992"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289336"
 ---
-# <a name="ltnetfx40pinvokestackresiliencegt-element"></a>&lt;NetFx40_PInvokeStackResilience&gt;元素
+# <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 元素
 指定运行时是否以减慢托管和非托管代码之间的转换速度为代价，在运行时自动修复不正确的平台调用声明。  
   
  \<configuration>  
@@ -34,14 +34,14 @@ ms.locfileid: "32748992"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`enabled`|必需的特性。<br /><br /> 指定是否运行时检测到不正确的平台调用声明，并在 32 位平台上，将自动修复在运行时堆栈。|  
+|`enabled`|必需的特性。<br /><br /> 指定是否在运行时检测到不正确的平台调用声明和 32 位平台上，将自动修复在运行时堆栈。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`0`|运行时使用更快的互操作封送处理体系结构中引入[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、 这不会检测和修复不正确的平台调用声明。 这是默认设置。|  
-|`1`|运行时使用的转换速度，检测和修复不正确的平台调用声明。|  
+|`0`|运行时使用的更快的互操作封送处理体系结构中引入[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]，这不会检测和修复不正确的平台调用声明。 这是默认设置。|  
+|`1`|运行时使用的转换速度的检测和修复不正确的平台调用声明。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -54,19 +54,19 @@ ms.locfileid: "32748992"
 |`runtime`|包含有关运行时初始化选项的信息。|  
   
 ## <a name="remarks"></a>备注  
- 此元素使您能够更快互操作封送处理对针对不正确的平台的运行时恢复调用声明的交易对象。  
+ 此元素可以交换更快地互操作封送处理运行时恢复能力对不正确的平台调用声明。  
   
- 从开始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，简化的互操作封送处理体系结构提供从托管代码转换到非托管代码显著的性能改善。 在.NET framework 的早期版本，封送处理层检测到不正确的平台调用声明在 32 位平台上的，并自动修复堆栈。 新的封送处理体系结构消除了此步骤。 因此，转换速度非常快，但不正确的平台调用声明可能导致程序失败。  
+ 从开始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，简化的互操作封送处理体系结构提供了从托管代码转换到非托管代码一显著的性能改进。 在早期版本的.NET Framework，封送处理层检测到不正确的平台调用在 32 位平台上的声明，并自动修复堆栈。 新的封送处理体系结构消除了此步骤。 因此，转换速度非常快，但不正确的平台调用声明可能会导致程序失败。  
   
- 为了更加轻松地在开发过程中检测不正确的声明，改进 Visual Studio 调试体验。 [PInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)托管调试助手 (MDA) 通知应用程序运行附带调试器时，你不正确的平台调用声明。  
+ 为了更加轻松地在开发过程中检测不正确的声明，改进 Visual Studio 调试体验。 [PInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)托管调试助手 (MDA) 通知你的应用程序运行带有附加调试程序时，您不正确的平台调用声明。  
   
- 其中你的应用程序使用的组件，则不能重新编译，，具有不正确的平台调用声明，您可以使用的地址方案`NetFx40_PInvokeStackResilience`元素。 将此元素添加到你应用程序配置文件与`enabled="1"`opts 进入兼容性模式与早期版本的.NET Framework 中，转换速度为代价的行为。 已编译针对.NET Framework 的早期版本的程序集自动选择到此兼容性模式，并且不需要此元素。  
+ 为应用程序使用组件，则不能重新编译，和，具有不正确的平台调用声明，您可以使用其中的解决情况`NetFx40_PInvokeStackResilience`元素。 将此元素添加到应用程序配置文件与`enabled="1"`opts 到与早期版本的.NET Framework 中，转换速度为代价的行为的兼容性模式。 已针对.NET Framework 的早期版本编译的程序集自动选择加入此兼容性模式，并且不需要此元素。  
   
 ## <a name="configuration-file"></a>配置文件  
  仅在应用程序配置文件中，可以使用此元素。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何选择加入更好针对不正确的弹性平台调用声明为应用程序，但代价是之间的转换速度托管和非托管代码。  
+ 下面的示例演示如何对不正确的增强恢复能力选择使用平台调用声明应用程序之间的转换速度为代价托管和非托管代码。  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,7 @@ ms.locfileid: "32748992"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)

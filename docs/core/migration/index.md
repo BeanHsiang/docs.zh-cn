@@ -1,23 +1,24 @@
 ---
-title: .NET Core 迁移到 csproj 格式
-description: .NET Core project.json 到 csproj 的迁移
-author: blackdwarf
-ms.author: mairaw
+title: 从 project.json 迁移 .NET Core
+description: 了解如何使用 project.json 迁移较旧的 .NET Core 项目
 ms.date: 07/19/2017
-ms.openlocfilehash: da1995ed3b77cb802d1f3d04e6d741809de20927
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.custom: seodec18
+ms.openlocfilehash: f48728e647b57a8c5796bdc2119f72b58a49d80f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584311"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675909"
 ---
-# <a name="migrating-net-core-projects-to-the-csproj-format"></a>将 .NET Core 项目迁移到 .csproj 格式
+# <a name="migrating-net-core-projects-from-projectjson"></a>从 project.json 迁移 .NET Core 项目
 
 本文档介绍 .NET Core 项目的迁移方案，并探讨以下三个迁移方案：
 
 1. [从 project.json 的一个最新有效架构迁移到 csproj](#migration-from-projectjson-to-csproj)
 2. [从 DNX 迁移到 csproj](#migration-from-dnx-to-csproj)
 3. [从 RC3 和以前的 .NET Core csproj 项目迁移到最终格式](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
+
+本文档仅适用于仍使用 project.json 的较旧的 .NET Core 项目。 它不适用于从 .NET Framework 迁移到 .NET Core。
 
 ## <a name="migration-from-projectjson-to-csproj"></a>从 project.json 迁移到 csproj
 
@@ -58,7 +59,7 @@ Visual Studio 将迁移自动选择的项目。 迁移解决方案时，如果�
 
 ### <a name="common-issues"></a>常见问题
 
-- 如果收到错误：“未找到任何匹配命令 dotnet-migrate 的可执行文件”：
+- 如果看到错误消息：“找不到匹配命令 dotnet-migrate 的可执行文件”：
 
 请运行 `dotnet --version` 查看所使用的版本。 [`dotnet migrate`](../tools/dotnet-migrate.md) 需要 .NET Core CLI RC3 或更高版本。
 如果当前目录或父级目录中有 global.json 文件，且 `sdk` 版本设置为较低版本，则会收到此错误。
@@ -87,7 +88,7 @@ Visual Studio 将迁移自动选择的项目。 迁移解决方案时，如果�
 
 完成这些步骤后，项目应与 RTM .NET Core csproj 格式完全兼容。
 
-有关从旧的 csproj 格式迁移到新的 csproj 格式之前和之后情况的示例，请参阅 .NET 博客上的 [Updating Visual Studio 2017 RC – .NET Core Tooling improvements](https://blogs.msdn.microsoft.com/dotnet/2016/12/12/updating-visual-studio-2017-rc-net-core-tooling-improvements/)（更新 Visual Studio 2017 RC - .NET Core 工具改进）文章。
+有关从旧的 csproj 格式迁移到新的 csproj 格式之前和之后情况的示例，请参阅 .NET 博客上的 [Updating Visual Studio 2017 RC – .NET Core Tooling improvements](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/)（更新 Visual Studio 2017 RC - .NET Core 工具改进）文章。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,5 @@
 ---
-title: 如何：用 X.509 证书对 XML 元素进行解密
+title: 如何：使用 X.509 证书解密 XML 元素
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72630fce122c2b0acadb074724ed41394695f2c6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 5e58a463c38dc41e669cf554961124b893fb7406
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682133"
 ---
-# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>如何：用 X.509 证书对 XML 元素进行解密
+# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>如何：使用 X.509 证书解密 XML 元素
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类对 XML 文档内的元素进行加密和解密。  XML 加密是交换或存储加密的 XML 数据的一种标准方式，使用后就无需担心数据被轻易读取。  有关 XML 加密标准的详细信息，请参阅万维网联合会 (W3C) 规范 XML 加密位于 <https://www.w3.org/TR/xmldsig-core/>。  
   
- 此示例使用中所述的方法进行加密的 XML 元素进行解密：[如何： 用 X.509 证书加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)。  它找到一个 <`EncryptedData`> 元素，解密该元素，然后将其替换为原始纯文本 XML 元素。  
+ 此示例使用中所述的方法进行加密的 XML 元素进行解密：[如何：使用 X.509 证书加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)。  它找到一个 <`EncryptedData`> 元素，解密该元素，然后将其替换为原始纯文本 XML 元素。  
   
  此过程中的代码示例将使用当前用户帐户的本地证书存储中的 X.509 证书来解密 XML 元素。  该示例使用 <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法自动检索 X.509 证书，然后对 <`EncryptedData`> 元素的 <`EncryptedKey`> 元素中存储的会话密钥进行解密。  然后，<xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> 方法将自动使用会话密钥对 XML 元素进行解密。  
   
@@ -79,5 +79,5 @@ ms.locfileid: "49122365"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Security.Cryptography.Xml>  
+- <xref:System.Security.Cryptography.Xml>
 - [如何：使用 X.509 证书加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)

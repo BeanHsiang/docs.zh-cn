@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58676b1726496a33496b10bbd3befba82aea4434
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872331"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537967"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>如何：从特定日期中提取星期几
 利用 .NET Framework，可以很容易地确定某个特定日期是星期几，以及显示某个特定日期的本地化星期几名称。 指示与特定日期相对应的星期几的枚举值可以从 <xref:System.DateTime.DayOfWeek%2A> 或 <xref:System.DateTimeOffset.DayOfWeek%2A> 属性中获取。 与此不同的是，检索星期几名称是一项格式化操作，可通过调用格式化方法来执行，例如日期和时间值的 `ToString` 方法或 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法。 本主题演示如何执行这些格式化操作。  
@@ -102,6 +102,6 @@ ms.locfileid: "43872331"
   
 ## <a name="see-also"></a>请参阅
 
-- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

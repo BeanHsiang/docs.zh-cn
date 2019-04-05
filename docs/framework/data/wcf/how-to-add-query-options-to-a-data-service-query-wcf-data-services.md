@@ -1,5 +1,5 @@
 ---
-title: 如何：将查询选项添加到数据服务查询（WCF 数据服务）
+title: 如何：将查询选项添加到数据服务查询 （WCF 数据服务）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: e4258526-557e-4e96-91e1-2175400c7c8f
-ms.openlocfilehash: 330581c699ca4beede3333315844af084f27e672
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f02f28127650f316b954eaca182945e83fd418a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519029"
 ---
-# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>如何：将查询选项添加到数据服务查询（WCF 数据服务）
+# <a name="how-to-add-query-options-to-a-data-service-query-wcf-data-services"></a>如何：将查询选项添加到数据服务查询 （WCF 数据服务）
 通过 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以使用生成的客户端数据服务类，从基于 .NET Framework 的客户端应用程序查询数据服务。 执行此操作的最简单方法是编写一个包含所需查询选项的语言集成查询 (LINQ) 查询表达式。 还可以调用一系列 LINQ 查询方法来编写等效的查询。 最后，可以使用 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法向查询添加查询选项。 在上述每种情况下，客户端生成的 URI 都包含应用了选定查询选项的被请求实体集。 有关详细信息，请参阅[查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  
   
- 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 在完成时创建此服务和客户端数据类[WCF 数据服务快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
+ 本主题中的示例使用罗斯文示例数据服务和自动生成的客户端数据服务类。 完成后，将创建此服务和客户端数据类[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何编写 LINQ 查询表达式，该表达式仅返回运费成本超过 30 美元的订单，并根据发货日期按降序顺序对这些结果进行排序。  
@@ -45,6 +45,6 @@ ms.locfileid: "33363225"
  [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#orderwithfilter)]
  [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#orderwithfilter)]  
   
-## <a name="see-also"></a>请参阅  
- [查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
- [如何：投影查询结果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)
+## <a name="see-also"></a>请参阅
+- [查询数据服务](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [如何：项目查询结果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)

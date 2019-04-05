@@ -2,12 +2,12 @@
 title: 证书选择和验证
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 2767f8fc62d44e480962690a3cbe379fea0f9662
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6d2c5470856f09d3da3bcae890717757c598a4c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666642"
 ---
 # <a name="certificate-selection-and-validation"></a>证书选择和验证
 <xref:System.Net> 类支持多种针对安全套接字层 (SSL) 连接选择和验证 <xref:System.Security.Cryptography.X509Certificates> 的方法。 客户端可以选择一个或多个证书对服务器自身的客户端进行身份验证。 服务器可以要求客户端证书具有一个或多个用于身份验证的特定属性。  
@@ -52,6 +52,6 @@ HttpCfg.exe 工具可用于配置 <xref:System.Net.HttpListener> 类的服务器
   
  除了这些工具， <xref:System.Security.Cryptography.X509Certificates.X509Certificate> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 类还提供从文件系统加载证书的方法。  
   
-## <a name="see-also"></a>请参阅  
- [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)  
- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)
+## <a name="see-also"></a>请参阅
+- [网络编程中的安全性](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)

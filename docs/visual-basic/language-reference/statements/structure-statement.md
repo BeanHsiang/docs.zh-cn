@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 9377d889f56049720ab10439582300913f5cbb37
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: ab446319a9e0ef295387d0d6768e813a158939c9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347989"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828341"
 ---
 # <a name="structure-statement"></a>Structure 语句
 声明结构的名称，并引入的变量、 属性、 事件和结构包含的过程的定义。  
@@ -38,17 +38,17 @@ End Structure
 |术语|定义|  
 |---|---|  
 |`attributelist`|可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|可选。 可以是以下各项之一：<br /><br /> -   [公共](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [专用](../../../visual-basic/language-reference/modifiers/private.md)<br />- [受保护的友元](../../language-reference/modifiers/protected-friend.md)<br/>- [专用受保护](../../language-reference/modifiers/private-protected.md) <br /><br /> 请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`accessmodifier`|可选。 可以是以下各项之一：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [专用](../../../visual-basic/language-reference/modifiers/private.md)<br />- [受保护的友元](../../language-reference/modifiers/protected-friend.md)<br/>- [专用受保护](../../language-reference/modifiers/private-protected.md) <br /><br /> 请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
 |`Shadows`|可选。 请参阅[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
 |`Partial`|可选。 指示结构的分部定义。 请参阅[分部](../../../visual-basic/language-reference/modifiers/partial.md)。|  
-|`name`|必须的。 此结构的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`name`|必需。 此结构的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`Of`|可选。 指定这是一个泛型结构。|  
 |`typelist`|如果在使用需要[的](../../../visual-basic/language-reference/statements/of-clause.md)关键字。 此结构的类型参数的列表。 请参阅[类型列表](../../../visual-basic/language-reference/statements/type-list.md)。|  
 |`Implements`|可选。 指示此结构实现一个或多个接口的成员。 请参阅[实现语句](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
 |`interfacenames`|如果在使用需要`Implements`语句。 此结构实现接口的名称。|  
-|`datamemberdeclarations`|必须的。 零个或多`Const`， `Dim`， `Enum`，或`Event`语句声明*数据成员*的结构。|  
+|`datamemberdeclarations`|必需。 零个或多`Const`， `Dim`， `Enum`，或`Event`语句声明*数据成员*的结构。|  
 |`methodmemberdeclarations`|可选。 零个或多个声明`Function`， `Operator`， `Property`，或`Sub`过程，它充当*方法成员*的结构。|  
-|`End Structure`|必须的。 终止`Structure`定义。|  
+|`End Structure`|必需。 终止`Structure`定义。|  
   
 ## <a name="remarks"></a>备注  
  `Structure`语句定义可以自定义的复合值类型。 一个*结构*是用户定义类型 (UDT) 的以前版本的 Visual Basic 的泛化。 有关详细信息，请参阅[结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)。  
@@ -102,16 +102,17 @@ End Structure
 ## <a name="example"></a>示例  
  下面的示例使用`Structure`语句来为某位员工定义一组相关数据。 它演示如何使用`Public`， `Friend`，和`Private`成员以反映数据项目的敏感度。 它还将显示过程、 属性和事件成员。  
   
- [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]  
   
-## <a name="see-also"></a>请参阅  
- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)  
- [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Enum 语句](../../../visual-basic/language-reference/statements/enum-statement.md)  
- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
- [结构和类](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+## <a name="see-also"></a>请参阅
+
+- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Interface 语句](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Module 语句](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Dim 语句](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Const 语句](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Enum 语句](../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)
+- [结构和类](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

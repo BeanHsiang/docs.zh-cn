@@ -2,12 +2,12 @@
 title: 如何：将服务标记用于 WSDL 协定
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: fc8e5d80ec0b1df699ebe9112f364dd69ca3faf6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726567"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>如何：将服务标记用于 WSDL 协定
 在某些情况下，您可能希望具有完全自包含的 COM 互操作客户端。 您要调用的服务可能不会公开 MEX 终结点，而 WCF 客户端 DLL 可能不会为 COM 互操作注册。 在这些情况下，您可以创建用于描述该服务的 WSDL 文件，并将该文件传递到 WCF 服务标记中。 本主题描述如何使用 WCF WSDL 标记调用 WCF 入门示例。  
@@ -56,6 +56,6 @@ ms.locfileid: "48266517"
   
 7.  运行 Visual Basic 应用程序。 将显示一个消息框，其中列出调用 Subtract(145, 76.54) 的结果。  
   
-## <a name="see-also"></a>请参阅  
- [入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [与 COM 应用程序集成的概述](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>请参阅
+- [入门](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [与 COM 应用程序集成的概述](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

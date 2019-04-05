@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 7075f8258e617d2d13d4585fdd5fb7aefaa50664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6e946c63227a06b2032ce27e61899c1b8f05ec9f
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528383"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042969"
 ---
 # <a name="xuid-directive"></a>x:Uid 指令
 提供的标记元素的唯一标识符。 在许多情况下，此唯一标识符将使用 XAML 本地化流程和工具。  
@@ -39,9 +39,9 @@ ms.locfileid: "43528383"
  框架可以指定特定的属性在其对象模型中为别名`x:Uid`通过将特性应用<xref:System.Windows.Markup.UidPropertyAttribute>到定义的类型。 如果框架指定特定属性，它不是同时指定`x:Uid`和别名成员在同一个对象。 如果这两个`x:Uid`并指定别名成员，.NET Framework XAML 服务 API 通常会引发<xref:System.Xaml.XamlDuplicateMemberException>这种情况下。  
   
 ## <a name="wpf-usage-notes"></a>WPF 用法说明  
- 有关角色的详细信息`x:Uid`WPF 在本地化过程中以及 XAML 的 BAML 形式中，请参阅[WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ 有关角色的详细信息`x:Uid`WPF 在本地化过程中以及 XAML 的 BAML 形式中，请参阅[WPF 的全球化](../wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
- <xref:Microsoft.Build.Tasks.Windows.UidManager>  
- [WPF 全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
+- <xref:Microsoft.Build.Tasks.Windows.UidManager>
+- [WPF 全球化](../wpf/advanced/globalization-for-wpf.md)

@@ -7,52 +7,52 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: ae69481a884610d6253ee9a45bc3139cabac7e0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557683"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360571"
 ---
 # <a name="data-binding-how-to-topics"></a>数据绑定帮助主题
-本部分中的主题介绍如何使用数据绑定来从各种数据源在公共语言运行时 (CLR) 对象和 XML 的形式将元素绑定到数据。  
+在本部分中的主题介绍如何使用数据绑定来从各种数据源的公共语言运行时 (CLR) 对象和 XML 的形式将元素绑定到数据。  
   
 ## <a name="in-this-section"></a>本节内容  
- [创建简单绑定](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
- [指定绑定源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [让数据可供 XAML 中的绑定使用](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
- [控制文本框文本更新源的时间](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
- [指定绑定方向](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md)  
- [绑定到集合并根据选择的内容显示信息](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [绑定到枚举](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)  
- [绑定两个控件的属性](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)  
- [实现绑定验证](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [在自定义对象上实现验证逻辑](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)  
- [从已绑定的目标属性获取绑定对象](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
- [实现 CompositeCollection](../../../../docs/framework/wpf/data/how-to-implement-a-compositecollection.md)  
- [转换已绑定的数据](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
- [在代码中创建绑定](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
- [获取数据集合的默认视图](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)  
- [在数据集合视图中浏览对象](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
- [在视图中筛选数据](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [在视图中对数据进行排序](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [在 XAML 中使用视图对数据进行排序和分组](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [将主-详细模式与分层数据结合使用](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [将主-详细模式与分层 XML 数据结合使用](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [根据已绑定项的列表生成值](../../../../docs/framework/wpf/data/how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
- [实现属性更改通知](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)  
- [创建和绑定到 ObservableCollection](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
- [实现 PriorityBinding](../../../../docs/framework/wpf/data/how-to-implement-prioritybinding.md)  
- [使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
- [绑定到 XDocument、XElement 或 LINQ to XML 查询结果](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
- [在数据绑定中使用 XML 命名空间](../../../../docs/framework/wpf/data/how-to-use-xml-namespaces-in-data-binding.md)  
- [绑定到 ADO.NET 数据源](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)  
- [绑定到方法](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
- [设置绑定更新通知](../../../../docs/framework/wpf/data/how-to-set-up-notification-of-binding-updates.md)  
- [清除绑定](../../../../docs/framework/wpf/data/how-to-clear-bindings.md)  
- [查找由 DataTemplate 生成的元素](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
- [绑定到 Web 服务](../../../../docs/framework/wpf/data/how-to-bind-to-a-web-service.md)  
- [绑定到 LINQ 查询结果](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
+ [创建简单绑定](how-to-create-a-simple-binding.md)  
+ [指定绑定源](how-to-specify-the-binding-source.md)  
+ [让数据可供 XAML 中的绑定使用](how-to-make-data-available-for-binding-in-xaml.md)  
+ [控制文本框文本更新源的时间](how-to-control-when-the-textbox-text-updates-the-source.md)  
+ [指定绑定方向](how-to-specify-the-direction-of-the-binding.md)  
+ [绑定到集合并根据选择的内容显示信息](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [绑定到枚举](how-to-bind-to-an-enumeration.md)  
+ [绑定两个控件的属性](how-to-bind-the-properties-of-two-controls.md)  
+ [实现绑定验证](how-to-implement-binding-validation.md)  
+ [在自定义对象上实现验证逻辑](how-to-implement-validation-logic-on-custom-objects.md)  
+ [从已绑定的目标属性获取绑定对象](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+ [实现 CompositeCollection](how-to-implement-a-compositecollection.md)  
+ [转换已绑定的数据](how-to-convert-bound-data.md)  
+ [在代码中创建绑定](how-to-create-a-binding-in-code.md)  
+ [获取数据集合的默认视图](how-to-get-the-default-view-of-a-data-collection.md)  
+ [在数据集合视图中浏览对象](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
+ [在视图中筛选数据](how-to-filter-data-in-a-view.md)  
+ [在视图中对数据进行排序](how-to-sort-data-in-a-view.md)  
+ [在 XAML 中使用视图对数据进行排序和分组](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [将主-详细模式与分层数据结合使用](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [将主-详细模式与分层 XML 数据结合使用](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [根据已绑定项的列表生成值](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
+ [实现属性更改通知](how-to-implement-property-change-notification.md)  
+ [创建和绑定到 ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md)  
+ [实现 PriorityBinding](how-to-implement-prioritybinding.md)  
+ [使用 XMLDataProvider 和 XPath 查询绑定到 XML 数据](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [绑定到 XDocument、XElement 或 LINQ to XML 查询结果](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [在数据绑定中使用 XML 命名空间](how-to-use-xml-namespaces-in-data-binding.md)  
+ [绑定到 ADO.NET 数据源](how-to-bind-to-an-ado-net-data-source.md)  
+ [绑定到方法](how-to-bind-to-a-method.md)  
+ [设置绑定更新通知](how-to-set-up-notification-of-binding-updates.md)  
+ [清除绑定](how-to-clear-bindings.md)  
+ [查找由 DataTemplate 生成的元素](how-to-find-datatemplate-generated-elements.md)  
+ [绑定到 Web 服务](how-to-bind-to-a-web-service.md)  
+ [绑定到 LINQ 查询结果](how-to-bind-to-the-results-of-a-linq-query.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Data>  
@@ -64,6 +64,6 @@ ms.locfileid: "33557683"
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>相关章节  
- [数据绑定](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
+ [数据绑定](data-binding-wpf.md)  
   
- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+ [数据绑定](../advanced/optimizing-performance-data-binding.md)

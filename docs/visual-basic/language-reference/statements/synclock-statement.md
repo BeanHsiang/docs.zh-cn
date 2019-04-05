@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: 5a931199ff8d09412d536a173f3cd12e451def64
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845975"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979809"
 ---
 # <a name="synclock-statement"></a>SyncLock 语句
 执行块之前获取语句块的排他的锁。  
@@ -29,7 +29,7 @@ End SyncLock
   
 ## <a name="parts"></a>部件  
  `lockobject`  
- 必须的。 计算结果为一个对象引用的表达式。  
+ 必需。 计算结果为一个对象引用的表达式。  
   
  `block`  
  可选。 要获取的锁时执行的语句块。  
@@ -81,13 +81,13 @@ End SyncLock
  如果`simpleMessageList`类共享其所有实例，这些变量之间的消息的一个列表`messagesList`并`messagesLast`将被声明为`Shared`。 在此情况下，变量`messagesLock`也应是`Shared`，以便将每个实例使用的单个锁对象。  
   
 ### <a name="code"></a>代码  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>描述  
  下面的示例使用线程和`SyncLock`。 只要`SyncLock`语句，语句块就是关键部分和`balance`永远不会是负数。 您可以注释掉`SyncLock`并`End SyncLock`语句，以查看影响省去`SyncLock`关键字。  
   
 ### <a name="code"></a>代码  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  
   
 ### <a name="comments"></a>注释  
   

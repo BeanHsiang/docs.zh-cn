@@ -8,18 +8,16 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 2e0c2764f96a2592ad0a4dfe5caa46536373eb80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0bfd07788bd8d2ebf028865478b0db6fb86c2f46
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193273"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677287"
 ---
 # <a name="ui-automation-properties-for-clients"></a>客户端的 UI 自动化属性
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本概述为你介绍 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性，因为会向 UI 自动化客户端应用程序公开它们。  
   
@@ -35,7 +33,7 @@ ms.locfileid: "47193273"
 ## <a name="property-ids"></a>属性 ID  
  属性 [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] 是封装在 <xref:System.Windows.Automation.AutomationProperty> 对象中的唯一常量值。 UI 自动化客户端应用程序从 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 类或从相应的控件模式类（如 <xref:System.Windows.Automation.AutomationElement> ）获取这些 <xref:System.Windows.Automation.ScrollPattern>。 UI 自动化提供程序从 <xref:System.Windows.Automation.AutomationElementIdentifiers> 或从其中一个控件模式标识符类（如 <xref:System.Windows.Automation.ScrollPatternIdentifiers>）获取它们。  
   
- 数值<xref:System.Windows.Automation.AutomationIdentifier.Id%2A>的<xref:System.Windows.Automation.AutomationProperty>提供程序用于标识属性在所查询的<xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType>方法。 通常情况下，客户端应用程序不需要检查 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>。 <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> 仅用于调试和诊断目的。  
+ <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> 的数值 <xref:System.Windows.Automation.AutomationProperty> 被提供程序用于标识正在 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> 方法中进行查询的属性。 通常情况下，客户端应用程序不需要检查 <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>。  <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> 仅用于调试和诊断目的。  
   
 <a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>属性条件  
@@ -79,7 +77,7 @@ ms.locfileid: "47193273"
 ## <a name="default-property-values"></a>默认属性值  
  如果 UI 自动化提供程序不实现属性，则 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 系统能够提供一个默认值。 例如，如果控件的提供程序不支持由 <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>标识的属性，则 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 返回一个空字符串。 同样，如果提供程序不支持由 <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>标识的属性，则 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 返回 `false`。  
   
- 可以通过更改此行为<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>和<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType>方法重载。 当指定 `true` 作为第二个参数时， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不返回默认值，而是返回特殊值 <xref:System.Windows.Automation.AutomationElement.NotSupported>。  
+ 你可以通过使用 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> 方法重载更改此行为。 当指定 `true` 作为第二个参数时， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不返回默认值，而是返回特殊值 <xref:System.Windows.Automation.AutomationElement.NotSupported>。  
   
  下面的示例代码尝试从某个元素检索属性，如果该属性不受支持，将会改为使用应用程序定义的值。  
   
@@ -105,7 +103,7 @@ ms.locfileid: "47193273"
 |<xref:System.Windows.Automation.AutomationElement.FocusedElement%2A>|（静态属性）具有输入焦点的 <xref:System.Windows.Automation.AutomationElement> 。|  
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|（静态属性）根 <xref:System.Windows.Automation.AutomationElement>。|  
   
-## <a name="see-also"></a>请参阅  
- [在 UI 自动化客户端中缓存](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [订阅 UI 自动化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+## <a name="see-also"></a>请参阅
+- [在 UI 自动化客户端中缓存](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [服务器端 UI 自动化提供程序实现](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [订阅 UI 自动化事件](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

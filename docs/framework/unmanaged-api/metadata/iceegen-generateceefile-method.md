@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d82952e34195ee813d4cd0217c904a5253859f99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cb6a9721549087900083b0d5455054abf07362df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445103"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476255"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile 方法
-生成包含当前加载到此代码的基本代码文件[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口。  
+生成包含当前加载到此代码的代码库文件[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口。  
   
  此方法已过时，不应使用。  
   
@@ -35,17 +35,17 @@ ms.locfileid: "33445103"
 HRESULT GenerateCeeFile ();  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `GenerateCeeFile` 不带任何参数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

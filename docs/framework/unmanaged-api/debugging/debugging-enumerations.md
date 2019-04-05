@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b81e7c2ffabdee78af34d00c48fb29c7525dea08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410463"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415944"
 ---
 # <a name="debugging-enumerations"></a>调试枚举
 本节介绍了调试 API 使用的非托管枚举。  
   
 ## <a name="in-this-section"></a>本节内容  
  [CLR_DEBUGGING_PROCESS_FLAGS 枚举](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
- 提供使用的值[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。  
+ 提供了使用的值[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。  
   
  [CLRDataEnumMemoryFlags 枚举](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
- 指示的内存区域对的调用[iclrdataenummemoryregions:: Enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)应包括方法。  
+ 指示调用的内存区域[iclrdataenummemoryregions:: Enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)方法应包括。  
   
  [COR_PUB_ENUMPROCESS 枚举](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)  
  标识要枚举的进程的类型。  
@@ -41,16 +41,16 @@ ms.locfileid: "33410463"
  描述为何导出的函数会调用托管代码。  
   
  CorDebugCreateProcessFlags  
- 提供了其他可以在调用中使用的调试选项[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)方法。  
+ 提供了更多调试选项，可在调用[icordebug:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)方法。  
   
  [CorDebugDebugEventKind 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- 指示由解码获取其信息的事件类型[解码事件](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法。  
+ 指示获取其信息进行解码的事件的类型[解码事件](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法。  
   
  [CorDebugDecodeEventFlagsWindows 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  提供关于 Windows 平台上的调试事件的其他信息。  
   
  CorDebugExceptionCallbackType  
- 指示的回调中所做的类型[icordebugmanagedcallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。  
+ 指示从进行回调的类型[ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。  
   
  [CorDebugExceptionFlags 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)  
  提供有关异常的附加信息。  
@@ -95,7 +95,7 @@ ms.locfileid: "33410463"
  提供用于确定调试器是否从本机映像缓存中加载本机 (NGen) 映像的值。  
   
  [CorDebugPlatform 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
- 提供通过使用的目标平台值[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。  
+ 提供了使用的目标平台值[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。  
   
  [CorDebugRecordFormat 枚举](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
  描述包含本机异常调试事件相关信息的字节数组的数据格式。  
@@ -137,8 +137,10 @@ ms.locfileid: "33410463"
  指示变量的本机位置类型。  
   
  [WriteableMetadataUpdateMode 枚举](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
- 提供用于指定元数据的内存中更新对调试器是否可见的值。  
-  
+ 提供用于指定元数据的内存中更新对调试器是否可见的值。 
+
+ [ClrDataSourceType 枚举](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)提供 CLRDATA_IL_ADDRESS_MAP 结构使用的值。
+
 ## <a name="related-sections"></a>相关章节  
  [调试组件类](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   

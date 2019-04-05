@@ -1,15 +1,14 @@
 ---
-title: dotnet vstest 命令 - .NET Core CLI
+title: dotnet vstest 命令
 description: dotnet vstest 命令可生成项目及其所有依赖项。
 author: guardrex
-ms.author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: 84b9d9eebfbf20fefe8153dd3ae9bec0f34986c8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d41e901f70b4a3d0647c693fdd8076f771466073
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696333"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747724"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -42,9 +41,9 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 ```
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明​​
 
-`dotnet-vstest` 命令运行 `VSTest.Console` 命令行应用程序以运行自动化单元测试和编码的 UI 应用程序测试。
+`dotnet-vstest` 命令运行 `VSTest.Console` 命令行应用程序以运行自动化单元测试。
 
 ## <a name="arguments"></a>自变量
 
@@ -74,11 +73,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-用于测试执行的目标 .NET Framework 版本。 有效值的示例为 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支持的值为 `Framework35`、`Framework40`、`Framework45`、`FrameworkCore10` 和 `FrameworkUap10`。
+用于测试执行的目标 .NET Framework 版本。 有效值的示例为 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支持的值为 `Framework40`、`Framework45`、`FrameworkCore10` 和 `FrameworkUap10`。
 
 `--Parallel|/Parallel`
 
-并行执行测试。 默认情况下，计算机上的所有可用内核都可供使用。 使用设置文件设置显式内核数量。
+并行执行测试。 默认情况下，计算机上的所有可用内核都可供使用。 通过在 runsettings 文件的 RunConfiguration 节点下设置 MaxCpuCount 属性来指定显式内核数。
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -163,11 +162,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-用于测试执行的目标 .NET Framework 版本。 有效值的示例为 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支持的值为 `Framework35`、`Framework40`、`Framework45` 和 `FrameworkCore10`。
+用于测试执行的目标 .NET Framework 版本。 有效值的示例为 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支持的值为 `Framework40`、`Framework45` 和 `FrameworkCore10`。
 
 `--Parallel|/Parallel`
 
-并行执行测试。 默认情况下，计算机上的所有可用内核都可供使用。 使用设置文件设置显式内核数量。
+并行执行测试。 默认情况下，计算机上的所有可用内核都可供使用。 通过在 runsettings 文件的 RunConfiguration 节点下设置 MaxCpuCount 属性来指定显式内核数。
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -239,11 +238,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-用于测试执行的目标 .NET Framework 版本。 有效值的示例为 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支持的值为 `Framework35`、`Framework40`、`Framework45` 和 `FrameworkCore10`。
+用于测试执行的目标 .NET Framework 版本。 有效值的示例为 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支持的值为 `Framework40`、`Framework45` 和 `FrameworkCore10`。
 
 `--Parallel|/Parallel`
 
-并行执行测试。 默认情况下，计算机上的所有可用内核都可供使用。 使用设置文件设置显式内核数量。
+并行执行测试。 默认情况下，计算机上的所有可用内核都可供使用。 通过在 runsettings 文件的 RunConfiguration 节点下设置 MaxCpuCount 属性来指定显式内核数。
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 

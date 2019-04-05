@@ -1,39 +1,39 @@
 ---
-title: 类型（C# 参考）
+title: 类型 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-ms.openlocfilehash: c5c29f5d9a1a4e25e2d5f8816a0df31fa9a91fb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 41406e74a207f289968017f1f9869b23b165c34b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506316"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236656"
 ---
 # <a name="types-c-reference"></a>类型（C# 参考）
-C# 类型化系统包含以下类别：  
-  
--   [值类型](../../../csharp/language-reference/keywords/value-types.md)  
-  
--   [引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
-  
--   [指针类型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-  
- 值类型的变量可存储数据，引用类型的变量可存储对实际数据的引用。 引用类型也被称作对象。 仅在[不安全](../../../csharp/language-reference/keywords/unsafe.md)模式下才可使用指针类型。  
-  
- 可将值类型转换为引用类型，并通过[装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)再次转换回值类型。 除已装箱值类型外，不可将引用类型转换为值类型。  
-  
- 本部分还介绍了 [void](../../../csharp/language-reference/keywords/void.md)。  
-  
- 值类型可为空，即是说它们可以存储其他非值状态。 有关详细信息，请参阅[可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)。  
-  
+
+C# 类型化系统包含以下类别：
+
+- [值类型](value-types.md)
+
+- [引用类型](reference-types.md)
+
+- [指针类型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+
+ 值类型的变量可存储数据，引用类型的变量可存储对实际数据的引用。 引用类型的实例也被称作对象。 仅在[不安全](unsafe.md)模式下才可使用指针类型。
+
+ 可将值类型转换为引用类型，并通过[装箱和取消装箱](../../../csharp/programming-guide/types/boxing-and-unboxing.md)再次转换回值类型。 除已装箱值类型外，不可将引用类型转换为值类型。
+
+ 本部分还介绍了 [void](void.md)。
+
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [类型参考表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [强制转换和类型转换](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
-- [类型](../../../csharp/programming-guide/types/index.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](index.md)
+- [类型参考表](reference-tables-for-types.md)
+- [强制转换和类型转换](../../programming-guide/types/casting-and-type-conversions.md)
+- [类型](../../programming-guide/types/index.md)

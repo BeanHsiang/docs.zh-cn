@@ -2,12 +2,12 @@
 title: 信息泄露
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 057984dada86019cd8e0a619523d717d0045062f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 267e0dc656e05ed6f95eef1c75e40c07108a164e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508005"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588234"
 ---
 # <a name="information-disclosure"></a>信息泄露
 信息泄露会使攻击者获得有价值的系统相关信息。 因此，应始终考虑到您正在泄露何种信息以及恶意用户是否可能使用这些信息。 下面列出了可能的信息泄露攻击并针对每种攻击提供了缓解措施。  
@@ -56,10 +56,10 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  如果指定了域，但使用终结点标识功能指定了无效的服务主体名称，则会使用 NTLM。 有关如何指定终结点标识的详细信息，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
-## <a name="see-also"></a>请参阅  
- [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>请参阅
+- [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

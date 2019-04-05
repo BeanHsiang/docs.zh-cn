@@ -1,16 +1,17 @@
 ---
-title: 如何：使用自动实现的属性实现轻量类（C# 编程指南）
+title: 如何：使用自动实现的属性实现轻量类 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: fb5d11ed43246f2c4dd67ef35b71e899ab978fc4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a987d0501e36232993a2f1a2b4ebda29d007afd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618641"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何：使用自动实现的属性实现轻量类（C# 编程指南）
 本示例演示如何创建一个仅用于封装一组自动实现的属性的不可变轻型类。 当你必须使用引用类型语义时，请使用此种构造而不是结构。  
@@ -115,6 +116,6 @@ ms.locfileid: "48837901"
   
 ## <a name="see-also"></a>请参阅
 
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [struct](../../../csharp/language-reference/keywords/struct.md)  
+- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [struct](../../../csharp/language-reference/keywords/struct.md)
 - [对象和集合初始值设定项](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)

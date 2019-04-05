@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 591b3e43712832156283baf16e3d65b09172fe14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4956a763c9a5b2fc1ad74463fdfdeef2b5dc379e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620040"
 ---
 # <a name="ehostapplicationpolicy-enumeration"></a>EHostApplicationPolicy 枚举
-指示如何修改[IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)界面对象。 已弃用此枚举。  
+指示如何修改[IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)接口对象。 此枚举已弃用。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,13 +35,13 @@ typedef enum _HostApplicationPolicy {
 ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -1,20 +1,20 @@
 ---
 title: Docker 应用程序生命周期的介绍
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 开始此处的容器化应用程序开发过程。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 45a6e2fdf4c1308dc0de9d4eb828e6b3edcd4490
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 11/23/2018
+ms.openlocfilehash: 5d569cf5edc9f1e39b9c53908b7fbe075d3f2bf5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106653"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584351"
 ---
-# <a name="introduction-to-the-docker-application-life-cycle"></a>Docker 应用程序生命周期的介绍
- 
-容器化应用程序的生命周期从开发人员开始。 开发者选择实施容器和 Docker，因为这可以消除部署和 IT 操作的摩擦，从而最终帮助每个用户提高敏捷性、端到端工作效率和速度。
+# <a name="introduction-tothe-docker-application-life-cycle"></a>Docker 应用程序生命周期简介
+
+*容器化应用程序生命周期是开发人员开始旅程。开发人员选择实现容器和 Docker，因为它消除了部署和 IT 操作的摩擦从而最终帮助每个人都可以进行端到端和更快更灵活多变、 提高工作效率。*
 
 >[!div class="step-by-step"]
-[上一页](../docker-containers-images-and-registries.md)
-[下一页](containers-foundation-for-devops-collaboration.md)
+>[上一页](../docker-containers-images-and-registries.md)
+>[下一页](containers-foundation-for-devops-collaboration.md)

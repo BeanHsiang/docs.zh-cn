@@ -2,12 +2,12 @@
 title: 示例 XML 文件：测试配置 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 45bfb509-c1d4-4b4f-9690-1cb0c9816516
-ms.openlocfilehash: 2d1a5b18f9e660959a8c9656cc82ac0686c7d7ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a001d7433bcf19e5bcecf7ba49cb233559906d87
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496135"
 ---
 # <a name="sample-xml-file-test-configuration-linq-to-xml"></a>示例 XML 文件：测试配置 (LINQ to XML)
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 这是一个测试配置文件。  

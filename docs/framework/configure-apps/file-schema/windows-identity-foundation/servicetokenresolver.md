@@ -1,23 +1,23 @@
 ---
-title: '&lt;serviceTokenResolver&gt;'
+title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: d4b64e2c88e153834b7cf5a83bd6258b6dfd471f
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 1143717882652fc8a03947327b5f1ea89dde7373
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347495"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267425"
 ---
-# <a name="ltservicetokenresolvergt"></a>&lt;serviceTokenResolver&gt;
+# <a name="servicetokenresolver"></a>\<serviceTokenResolver>
 注册的服务令牌解析程序使用的令牌处理程序集合中的处理程序。 服务标记解析器用于解析传入的令牌和消息中的加密令牌。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<serviceTokenResolver >  
+\<securityTokenHandlerConfiguration>  
+\<serviceTokenResolver>  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ ms.locfileid: "49347495"
   
 |特性|描述|  
 |---------------|-----------------|  
-|类型|指定的服务令牌解析程序的类型。 任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类型或派生类型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类。 详细了解如何指定`type`属性，请参阅 [自定义类型引用]。 必须的。|  
+|类型|指定的服务令牌解析程序的类型。 任一<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类型或派生类型<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类。 详细了解如何指定`type`属性，请参阅 [自定义类型引用]。 必需。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -50,7 +50,7 @@ ms.locfileid: "49347495"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
   
 ## <a name="remarks"></a>备注  
  服务标记解析器可用于解析传入的令牌和消息中的加密令牌。 它用于检索应该用于解密传入令牌的密钥。 必须指定`type`属性。 指定的类型可以是<xref:System.IdentityModel.Selectors.SecurityTokenResolver>派生的自定义类型或<xref:System.IdentityModel.Selectors.SecurityTokenResolver>类。  

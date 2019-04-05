@@ -2,12 +2,12 @@
 title: 令牌身份验证器
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 198994acb322ece374ba0e04bc4d15cb2754f995
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1e0ab9a7c1cd1b5d92556973928a014957f51918
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582640"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824200"
 ---
 # <a name="token-authenticator"></a>令牌身份验证器
 此示例演示如何实现一个自定义令牌身份验证器。 令牌身份验证器在 Windows Communication Foundation (WCF) 用于验证消息，使用的令牌验证它自身一致，并进行身份验证标识与令牌相关联。
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  启动 \client\bin 中的 client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2.  将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新服务的 App.config 文件才能反映这个新证书名称。 如果您将 `%SERVER_NAME%` 变量设置为将在其上运行服务的计算机的完全限定主机名，则可以使用 Setup.bat 来创建一个这样的证书。 请注意，setup.bat 文件必须在使用管理员特权打开的 Visual Studio 命令提示中运行。  
+3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新服务的 App.config 文件才能反映这个新证书名称。 如果您将 `%SERVER_NAME%` 变量设置为将在其上运行服务的计算机的完全限定主机名，则可以使用 Setup.bat 来创建一个这样的证书。 请注意，setup.bat 文件必须在运行从开发人员命令提示符处使用管理员特权打开 Visual studio。  
   
 4.  将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 除非服务器证书是由客户端的受信任颁发者颁发的，否则没有必要这样做。  
   
@@ -361,10 +361,9 @@ static void DisplayIdentityInformation()
   
 9. 在客户端计算机上，在命令提示符下启动 Client.exe。  
   
-10. 如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
-## <a name="see-also"></a>请参阅

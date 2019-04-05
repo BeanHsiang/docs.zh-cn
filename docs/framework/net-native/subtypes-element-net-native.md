@@ -1,17 +1,17 @@
 ---
-title: '&lt;子类型&gt;元素 (.NET Native)'
+title: <Subtypes>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f850ec24530dd9a7d80f826461cacd9c249dd0de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 712282153b79edc480ec387aa746e375ddd30d27
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397983"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273121"
 ---
-# <a name="ltsubtypesgt-element-net-native"></a>&lt;子类型&gt;元素 (.NET Native)
+# <a name="subtypes-element-net-native"></a>\<子类型 > 元素 (.NET Native)
 将运行时策略应用到从包含类型继承的所有类。  
   
 ## <a name="syntax"></a>语法  
@@ -89,8 +89,8 @@ ms.locfileid: "33397983"
   
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
-## <a name="see-also"></a>请参阅  
- [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>请参阅
+- [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

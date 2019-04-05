@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 8380778398495fe9948e6a0eb19b535656a575f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654417"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972374"
 ---
 # <a name="interfaces-visual-basic"></a>接口 (Visual Basic)
 接口定义了类可以实现的属性、方法和事件。 接口允许将功能定义为一些紧密相关的属性、方法和事件的小组；这样就减少了兼容性问题，因为可以在不损害现有代码的情况下开发接口的增强型实现。 在任何时候都可以通过开发附加接口和实现来添加新的功能。  
@@ -37,7 +37,7 @@ ms.locfileid: "33654417"
   
  例如，下面的代码定义了一个函数、一个属性和一个事件的接口。  
   
- [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>实现接口  
  Visual Basic 保留字`Implements`两种方式使用。 `Implements` 语句表示类或结构实现接口。 `Implements` 关键字表示类成员或结构成员实现特定的接口成员。  
@@ -46,11 +46,11 @@ ms.locfileid: "33654417"
  如果一个类或结构实现一个或多个接口，则它必须紧随在 `Class` 或 `Structure` 语句之后包括 `Implements` 语句。 `Implements` 语句需要一个由类实现的接口的逗号分隔列表。 类或结构必须使用 `Implements` 关键字来实现所有的接口成员。  
   
 ### <a name="implements-keyword"></a>Implements 关键字  
- `Implements` 关键字需要一个要实现的接口成员的逗号分隔列表。 通常只指定单个接口成员，但也可以指定多个成员。 接口成员的规范由接口名称（必须在类中的 implements 语句中指定）、句点和要实现的成员函数、属性或事件的名称组成。 实现接口成员的成员的名称可以使用任何合法标识符，并不限于`InterfaceName_MethodName`早期版本的 Visual Basic 中使用的约定。  
+ `Implements` 关键字需要一个要实现的接口成员的逗号分隔列表。 通常只指定单个接口成员，但也可以指定多个成员。 接口成员的规范由接口名称（必须在类中的 implements 语句中指定）、句点和要实现的成员函数、属性或事件的名称组成。 实现接口成员的成员的名称可以使用任何合法标识符，并不局限于`InterfaceName_MethodName`早期版本的 Visual Basic 中使用的约定。  
   
  例如，以下代码显示了如何声明一个名为 `Sub1` 的用于实现接口方法的子例程：  
   
- [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/VisualBasic/index_2.vb)]  
+ [!code-vb[VbVbalrOOP#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#69)]  
   
  实现成员的参数类型和返回类型必须与接口属性或接口中的成员声明匹配。 实现接口元素的最常用方法是采用一个与接口同名的成员，如上述示例所示。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "33654417"
   
  使用 `Implements`，你还可以编写单个方法来实现接口中定义的多个方法，如下面的示例所示：  
   
- [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/VisualBasic/index_3.vb)]  
+ [!code-vb[VbVbalrOOP#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#70)]  
   
  可以使用私有成员来实现接口成员。 在私有成员实现一个接口成员时，即使在类的对象变量上不能直接使用该成员，仍然可以通过接口将其变为可用成员。  
   
@@ -67,15 +67,15 @@ ms.locfileid: "33654417"
   
  下面的示例定义了两个接口。 第二个接口 `Interface2` 继承 `Interface1` 并定义附加属性和方法。  
   
- [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/VisualBasic/index_4.vb)]  
+ [!code-vb[VbVbalrOOP#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#39)]  
   
  下一个示例则实现在上一示例中定义的接口 `Interface1`：  
   
- [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/VisualBasic/index_5.vb)]  
+ [!code-vb[VbVbalrOOP#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#40)]  
   
  最后一个示例实现 `Interface2`，包括继承自 `Interface1` 的方法：  
   
- [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/VisualBasic/index_6.vb)]  
+ [!code-vb[VbVbalrOOP#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#41)]  
   
  可以使用 readwrite 属性实现 readonly 属性（也就是说，无需在实现类中将其声明为 readonly）。  实现接口承诺至少实现接口声明的成员，但你还可以提供更多功能，如允许对属性进行编写。  
   

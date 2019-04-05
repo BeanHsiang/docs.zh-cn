@@ -1,32 +1,31 @@
 ---
-title: '&lt;tcpTransport&gt; 的 &lt;connectionPoolSettings&gt;'
+title: <connectionPoolSettings> 的 <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 1fbc4e179fa5f59a903dad51728638a1e182b23e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4828357f392089be14ee04bc672acce0c0973300
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753074"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269258"
 ---
-# <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a>&lt;tcpTransport&gt; 的 &lt;connectionPoolSettings&gt;
+# <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings> of \<tcpTransport>
 指定 TCP 传输的其他连接池设置。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
+\<binding>  
 \<tcpTransport>  
-\<connectionPoolSettings >  
+\<connectionPoolSettings>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<connectionPoolSettings  
-    groupName="String"  
-    idleTimeout"TimeSpan"  
-        leaseTimeout="TimeSpan"  
-    maxOutboundConnectionsPerEndpopint="Integer" />  
+<connectionPoolSettings groupName="String"
+                        idleTimeout="TimeSpan"
+                        leaseTimeout="TimeSpan"
+                        maxOutboundConnectionsPerEndpopint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -48,17 +47,17 @@ ms.locfileid: "32753074"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|定义传输，该传输使通道使用命名管道传输消息。|  
+|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|定义传输，该传输使通道使用命名管道传输消息。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

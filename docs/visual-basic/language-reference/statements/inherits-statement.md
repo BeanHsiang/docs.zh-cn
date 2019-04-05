@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 4a98ada39a04730b46f40fe139e72d1855d9b067
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739498"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817092"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 导致当前类或接口继承另一个类或接口集的属性、 变量、 属性、 过程和事件。  
@@ -28,7 +28,7 @@ Inherits basetypenames
   
 |术语|定义|  
 |---|---|  
-|`basetypenames`|必须的。 此类派生的类的名称。<br /><br /> 或<br /><br /> 此接口派生的接口的名称。 使用逗号分隔多个名称。|  
+|`basetypenames`|必需。 此类派生的类的名称。<br /><br /> 或<br /><br /> 此接口派生的接口的名称。 使用逗号分隔多个名称。|  
   
 ## <a name="remarks"></a>备注  
  如果使用，`Inherits`语句必须是类或接口定义中的第一个非空、 非注释行。 它应紧接`Class`或`Interface`语句。  
@@ -54,18 +54,19 @@ Inherits basetypenames
 ## <a name="example"></a>示例  
  下面的示例使用`Inherits`语句，以显示一个类的名为`thisClass`可继承的名为的基类的所有成员`anotherClass`。  
   
- [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>示例  
  下面的示例显示了多个接口继承。  
   
- [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
  名为的接口`thisInterface`现在包括中的所有定义<xref:System.IComparable>， <xref:System.IDisposable>，和<xref:System.IFormattable>接口继承的成员分别提供有关特定于类型的比较的两个对象，释放分配的资源表示为对象的值和`String`。 实现的类`thisInterface`必须实现每个基接口的每个成员。  
   
-## <a name="see-also"></a>请参阅  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
- [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [继承的基础知识](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>请参阅
+
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
+- [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [继承的基础知识](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [接口](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

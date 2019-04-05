@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: daf2c3dcaf16e949f8770121d8324cbfe6c7d05b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 69914bce7ed322d90cfbd03dd611e2b745dfe066
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404074"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470021"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute 方法
-用于设置程序集级自定义属性的调用。  
+调用以设置程序集级别自定义属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,12 +41,12 @@ HRESULT EmitAssemblyCustomAttribute(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `AssemblyID`  
  程序集的 ID。  
   
  `FileToken`  
- 定义特性的文件。 如果可以为 NULL`AssemblyID`并不表示未绑定的程序集。  
+ 定义该属性的文件。 可以为 NULL，如果`AssemblyID`并不表示未绑定的 netmodule。  
   
  `tkType`  
  自定义特性的类型。  
@@ -58,18 +58,18 @@ HRESULT EmitAssemblyCustomAttribute(
  自定义值数据的长度。  
   
  `bSecurity`  
- 如果程序集签名与自定义特性，则为 TRUE。  
+ 如果自定义特性与程序集签名，则为 TRUE。  
   
  `bAllowMulti`  
- 如果要发出多个属性，则为 TRUE。  
+ 如果要在发出多个属性，则为 TRUE。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回，则为 S_OK。  
+ 如果该方法成功，返回，则为 S_OK。  
   
 ## <a name="requirements"></a>要求  
  需要 alink.h  
   
-## <a name="see-also"></a>请参阅  
- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>请参阅
+- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -2,12 +2,12 @@
 title: 演练：操作数据 (C#)
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: b9b19d4f9a1fb56ddabbf3584c1fb7bb29cd6d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637302"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>演练：操作数据 (C#)
 本演练提供了用于在数据库中添加、修改和删除数据的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将使用 Northwind 示例数据库的一个副本来添加一位客户，更改该客户的姓名，然后删除一个订单。  
@@ -53,15 +53,15 @@ ms.locfileid: "33357655"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1.  在 Visual Studio**文件**菜单上，指向**新建**，然后单击**项目**。  
+1.  在 Visual Studio**文件**菜单，依次指向**新建**，然后单击**项目**。  
   
-2.  在**项目类型**窗格中的**新项目**对话框中，单击**Visual C#**。  
+2.  在中**项目类型**窗格中的**新项目**对话框中，单击**Visual C#** 。  
   
 3.  在“模板”窗格中，单击“控制台应用程序”。  
   
-4.  在**名称**框中，键入**LinqDataManipulationApp**。  
+4.  在中**名称**框中，键入**LinqDataManipulationApp**。  
   
-5.  在**位置**框中，确认你要存储项目文件。  
+5.  在中**位置**框中，确认你想要用于存储项目文件。  
   
 6.  单击 **“确定”**。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "33357655"
   
 #### <a name="to-add-systemdatalinq"></a>添加 System.Data.Linq  
   
-1.  在**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
+1.  在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
   
-2.  在**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，，然后单击**确定**。  
+2.  在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
   
      此程序集即被添加到项目中。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "33357655"
   
 1.  上**项目**菜单上，单击**添加现有项**。  
   
-2.  在**添加现有项**对话框中，导航到 c:\linqtest6\northwind.cs，，然后单击**添加**。  
+2.  在中**添加现有项**对话框中，导航到 c:\linqtest6\northwind.cs，然后依次**添加**。  
   
      northwind.cs 文件即被添加到项目中。  
   
@@ -102,9 +102,9 @@ ms.locfileid: "33357655"
   
 2.  按 F5 在此点测试应用程序。  
   
-     A**控制台**窗口随即打开。  
+     一个**控制台**窗口随即打开。  
   
-     你可以通过按 Enter，在关闭应用程序**控制台**窗口中，或通过单击**停止调试**在 Visual Studio**调试**菜单。  
+     可以通过按 Enter 在关闭应用程序**控制台**窗口中，或单击**停止调试**在 Visual Studio**调试**菜单。  
   
 ## <a name="creating-a-new-entity"></a>创建新实体  
  创建新实体很简单。 可以使用 `Customer` 关键字创建对象（如 `new`）。  
@@ -119,7 +119,7 @@ ms.locfileid: "33357655"
   
 2.  按 F5 调试解决方案。  
   
-3.  在中按 Enter**控制台**窗口以停止调试并继续演练。  
+3.  在中按 Enter**控制台**窗口以停止调试并继续本演练。  
   
 ## <a name="updating-an-entity"></a>更新实体  
  在以下步骤中，您将检索一个 `Customer` 对象并修改其属性之一。  
@@ -156,10 +156,10 @@ ms.locfileid: "33357655"
   
 3.  按 F5 调试解决方案。  
   
-4.  在中按 Enter**控制台**关闭应用程序窗口。  
+4.  在中按 Enter**控制台**窗口关闭应用程序。  
   
 > [!NOTE]
 >  通过提交更改添加了新的客户后，您无法再次按原样执行此解决方案。 若要再次执行此解决方案，请更改要添加的客户姓名和客户 ID。  
   
-## <a name="see-also"></a>请参阅  
- [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>请参阅
+- [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

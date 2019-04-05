@@ -2,12 +2,12 @@
 title: HttpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
-ms.openlocfilehash: 34ad4b8534d082d7f5248d42d70ca5bd0647a5dc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 2376a0ec25539b97a37b1827e3e4c148eb8d5838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610768"
 ---
 # <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 HttpTransportBindingElement  
@@ -35,7 +35,7 @@ class HttpTransportBindingElement : TransportBindingElement
 ## <a name="methods"></a>方法  
  HttpTransportBindingElement 类未定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  HttpTransportBindingElement 类具有以下属性：  
   
 ### <a name="allowcookies"></a>AllowCookies  
@@ -128,5 +128,5 @@ class HttpTransportBindingElement : TransportBindingElement
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>

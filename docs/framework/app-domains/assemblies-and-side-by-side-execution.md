@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e192266aa7b98637cb05f400901f51afd3046a72
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 2b635dcbbb3a78948a2d1d1e9d4feca6f4d2ee76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "49415193"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657995"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>程序集和并行执行
 并行执行是在同一台计算机上存储和执行应用程序或组件的多个版本的能力。 这意味着在同一台计算机上可以同时有运行时的多个版本，并且可以有使用其中某个运行时版本的应用程序和组件的多个版本。 并行执行使您能够更多地控制应用程序绑定到的组件版本和应用程序使用的运行时版本。  
@@ -21,6 +21,6 @@ ms.locfileid: "49415193"
   
  尽管运行时使您能够创建并行应用程序，但并行执行并不是自动进行的。 有关创建并行执行的应用程序的详细信息，请参阅[并行执行的组件的创建指南](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)。  
   
-## <a name="see-also"></a>请参阅  
-- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>请参阅
+- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Assemblies in the Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)（公共语言运行时中的程序集）

@@ -1,22 +1,22 @@
 ---
-title: '&lt;securityTokenHandlerConfiguration&gt;'
+title: <securityTokenHandlerConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
-ms.openlocfilehash: d66771ec7ed52ace52df6bb3bfafdcf9cce989b5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29e18cdda9e18addef4f0f32fd30e9abf6af78fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838465"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360402"
 ---
-# <a name="ltsecuritytokenhandlerconfigurationgt"></a>&lt;securityTokenHandlerConfiguration&gt;
+# <a name="securitytokenhandlerconfiguration"></a>\<securityTokenHandlerConfiguration>
 提供的令牌处理程序集合的配置。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
+\<securityTokenHandlerConfiguration>  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,13 +46,13 @@ ms.locfileid: "48838465"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<audienceUris >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|指定 Uri 是可接受此信赖方标识符的集。 可选。|  
-|[\<缓存 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|注册用于会话令牌和令牌重放检测的缓存。 可以指定在服务级别或对安全令牌处理程序集合。 可选。|  
-|[\<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制令牌处理程序用来验证证书的设置。 可以指定在服务级别或对安全令牌处理程序集合。 如果特定的处理程序配置了其自己的验证程序，则将重写这些设置。 可选。|  
-|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|配置颁发者名称注册的标记处理程序集合中的处理程序使用。 可选。|  
-|[\<issuerTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|注册令牌处理程序集合中的处理程序使用的颁发者令牌解析程序。 颁发者令牌解析程序用于解决签名令牌对传入令牌和消息。 可选。|  
-|[\<serviceTokenResolver >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|注册的服务令牌解析程序使用的令牌处理程序集合中的处理程序。 服务标记解析器用于解析传入的令牌和消息中的加密令牌。 可选。|  
-|[\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|启用令牌重放检测并指定令牌的到期时间。 可以指定在服务级别或对安全令牌处理程序集合。 可选。|  
+|[\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)|指定 Uri 是可接受此信赖方标识符的集。 可选。|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|注册用于会话令牌和令牌重放检测的缓存。 可以指定在服务级别或对安全令牌处理程序集合。 可选。|  
+|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制令牌处理程序用来验证证书的设置。 可以指定在服务级别或对安全令牌处理程序集合。 如果特定的处理程序配置了其自己的验证程序，则将重写这些设置。 可选。|  
+|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|配置颁发者名称注册的标记处理程序集合中的处理程序使用。 可选。|  
+|[\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)|注册令牌处理程序集合中的处理程序使用的颁发者令牌解析程序。 颁发者令牌解析程序用于解决签名令牌对传入令牌和消息。 可选。|  
+|[\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)|注册的服务令牌解析程序使用的令牌处理程序集合中的处理程序。 服务标记解析器用于解析传入的令牌和消息中的加密令牌。 可选。|  
+|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|启用令牌重放检测并指定令牌的到期时间。 可以指定在服务级别或对安全令牌处理程序集合。 可选。|  
   
 ### <a name="parent-elements"></a>父元素  
   

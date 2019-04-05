@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic]
 - ByRef keyword [Visual Basic], contexts
 ms.assetid: 4692e032-46f3-4e41-b0fa-3004364d9138
-ms.openlocfilehash: 42d9d0c76ff8a025f7230ec0c92d19904fabb80a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e553f350ea95f04996496b65f98f277795838e25
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596225"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822765"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
-指定的参数传递的方式调用的过程可以更改基础中调用代码的自变量的变量的值。  
+指定的参数传递的方式被调用的过程可以更改基础调用代码中的参数的变量的值。  
   
 ## <a name="remarks"></a>备注  
  `ByRef` 修饰符可用于下面的上下文中：  
@@ -27,6 +27,7 @@ ms.locfileid: "33596225"
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>请参阅  
- [关键字](../../../visual-basic/language-reference/keywords/index.md)  
- [按值和按引用传递自变量](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a>请参阅
+
+- [关键字](../../../visual-basic/language-reference/keywords/index.md)
+- [按值和按引用传递自变量](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

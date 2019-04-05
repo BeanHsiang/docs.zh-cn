@@ -2,19 +2,19 @@
 title: 对数据进行排序 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f52000d37df45c97754463de1e81cd523806e9c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad39aca6a53221f077a6b8313262d508744ff5ea
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646859"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819081"
 ---
 # <a name="sorting-data-visual-basic"></a>对数据进行排序 (Visual Basic)
 排序操作基于一个或多个属性对序列的元素进行排序。 第一个排序条件对元素执行主要排序。 通过指定第二个排序条件，您可以对每个主要排序组内的元素进行排序。  
   
  下图演示对一个字符序列执行按字母排序操作的结果。  
   
- ![LINQ 排序操作](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![展示按字母顺序排序操作的图。](./media/sorting-data/alphabetical-sort-operation.png)  
   
  下节列出了对数据进行排序的标准查询运算符方法。  
   
@@ -142,9 +142,10 @@ MsgBox(sb.ToString())
 ' brown  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq>  
- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [如何：对查询结果进行排序](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)  
- [如何： 排序或筛选器文本数据按任意词或字段 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq>
+- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [如何：对查询结果进行排序](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
+- [如何：排序或筛选器文本数据，按任意词或字段 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

@@ -1,19 +1,19 @@
 ---
-title: 演练：创建可访问的基于 Windows 的应用程序
+title: 演练：创建基于 Windows 的可访问应用程序
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6c798d0f6a454c7ee819d5556970bca12f1812e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529618"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823462"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>演练：创建可访问的基于 Windows 的应用程序
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>演练：创建基于 Windows 的可访问应用程序
 创建具有辅助功能的应用程序具有重要的商业意义。 很多政府都有针对软件购买的辅助功能法规。 Certified for Windows 徽标包括辅助功能需求。 据估计，仅美国就有 3 千万居民（其中很多为潜在客户）受到软件辅助功能的影响。  
   
  此演练将针对 Certified for Windows 徽标的 5 项辅助功能需求。 根据这些要求，具有辅助功能的应用程序将：  
@@ -30,7 +30,7 @@ ms.locfileid: "33529618"
   
  有关详细信息，请参阅[用于设计支持辅助功能的应用程序的资源](/visualstudio/ide/reference/resources-for-designing-accessible-applications)。  
   
- 有关支持不同键盘布局的信息，请参阅[开发全球通用应用程序的最佳做法](../../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)。  
+ 有关支持不同键盘布局的信息，请参阅[开发全球通用应用程序的最佳做法](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)。  
   
 ## <a name="creating-the-project"></a>创建项目  
  此演练为一个可接受比萨订单的应用程序创建用户界面。 它包含以下内容：一个用于输入客户名称的 <xref:System.Windows.Forms.TextBox>一个用于选择比萨大小的 <xref:System.Windows.Forms.RadioButton> 组，一个用于选择浇头的 <xref:System.Windows.Forms.CheckedListBox>分别标记为“订购”和“取消”的两个 Button 控件，以及一个具有“退出”命令的“菜单”。  
@@ -41,12 +41,12 @@ ms.locfileid: "33529618"
   
 #### <a name="to-begin-making-the-application"></a>开始生成应用程序  
   
--   在 Visual Basic 或 Visual C# 中创建新的 Windows 应用程序。 将项目命名为 **PizzaOrder**。 （有关详细信息，请参阅[创建新解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。）  
+-   在 Visual Basic 或视觉对象中创建新的 Windows 应用程序C#。 将项目命名为 **PizzaOrder**。 （有关详细信息，请参阅[创建新解决方案和项目](/visualstudio/ide/creating-solutions-and-projects)。）  
   
 ## <a name="adding-the-controls-to-the-form"></a>将控件添加到窗体  
  将控件添加到窗体时，请牢记以下指南以生成具有辅助功能的应用程序：  
   
--   设置 <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 和 <xref:System.Windows.Forms.Control.AccessibleName%2A> 属性。 在此示例中，<xref:System.Windows.Forms.Control.AccessibleRole%2A> 的默认设置已经足够。 有关辅助功能属性的详细信息，请参阅[为 Windows 窗体上的控件提供辅助功能信息](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)。  
+-   设置 <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 和 <xref:System.Windows.Forms.Control.AccessibleName%2A> 属性。 在此示例中，<xref:System.Windows.Forms.Control.AccessibleRole%2A> 的默认设置已经足够。 有关辅助功能属性的详细信息，请参阅[为 Windows 窗体上的控件提供辅助功能信息](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)。  
   
 -   将字体大小设置为 10 号或更大。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "33529618"
   
 -   确保任何描述 TextBox 控件的 Label 控件均按 Tab 顺序紧排在相应的 TextBox 控件之前。  
   
--   使用“&”字符将访问键添加到用户可能想要导航到的任何控件的 <xref:System.Windows.Forms.Control.Text%2A> 属性。  
+-   添加访问键，使用"&"字符到<xref:System.Windows.Forms.Control.Text%2A>用户可能想要导航到任何控件的属性。  
   
--   使用“&”字符将访问键添加到标签的 <xref:System.Windows.Forms.Control.Text%2A> 属性，此标签位于用户可能想要导航到的控件之前。 将标签的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 属性设置为 `true`，以便在用户按下访问键时将焦点设置到按 Tab 键顺序的下一控件。  
+-   添加访问键，使用"&"字符到<xref:System.Windows.Forms.Control.Text%2A>的标签位于用户可能想要导航到的控件之前的属性。 将标签的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 属性设置为 `true`，以便在用户按下访问键时将焦点设置到按 Tab 键顺序的下一控件。  
   
 -   将访问键添加到所有菜单项。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "33529618"
     |PictureBox|名称|徽标|  
     ||AccessibleDescription|一片比萨饼|  
     ||AccessibleName|公司徽标|  
-    ||Image|任何图标或位图|  
+    ||图像|任何图标或位图|  
     |Label|名称|companyLabel|  
     ||Text|美味比萨|  
     ||TabIndex|1|  
@@ -135,10 +135,12 @@ ms.locfileid: "33529618"
     |MenuItem|名称|fileCommands|  
     ||Text|文件(&F)|  
     |MenuItem|名称|exitApp|  
-    ||Text|退出(&X)|  
-  
-     ![比萨饼订购窗体](../../../../docs/framework/winforms/advanced/media/vbpizzaorderform.gif "vbPizzaOrderForm")  
-窗体外观将类似于：  
+    ||Text|退出(&X)|
+    
+      你的窗体将类似于下图：
+    
+      ![使用名称文本框中，以及大小和浇头选择比萨订购窗体。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+
   
 ## <a name="supporting-high-contrast-mode"></a>支持高对比度模式  
  高对比度模式是一种 Windows 系统设置，它通过使用有益于视力受损用户的对比颜色和字体大小提高可读性。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>提供属性以确定是否设置高对比度模式。  
@@ -287,7 +289,7 @@ ms.locfileid: "33529618"
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>以声音以外的其他方式提供信息  
   
-1.  使用 Windows API 函数 FlashWindow 使标题栏闪烁。 有关如何调用 Windows API 函数的示例，请参阅[演练：调用 Windows API](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
+1.  使用 Windows API 函数 FlashWindow 使标题栏闪烁。 有关如何调用 Windows API 函数的示例，请参阅[演练：调用 Windows Api](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
   
     > [!NOTE]
     >  用户可能已启用 Windows SoundSentry 服务，它也会在系统声音通过计算机内置扬声器播放时使窗口闪烁。  
@@ -296,7 +298,7 @@ ms.locfileid: "33529618"
   
 3.  显示一个获取键盘焦点消息框。 在用户可能键入时避免使用此方法。  
   
-4.  在任务栏的状态通知区域中显示一个状态指示器。 有关详细信息，请参阅[使用 Windows 窗体 NotifyIcon 组件向任务栏添加应用程序图标](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
+4.  在任务栏的状态通知区域中显示一个状态指示器。 有关详细信息，请参阅[使用 Windows 窗体 NotifyIcon 组件向任务栏添加应用程序图标](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
   
 ## <a name="testing-the-application"></a>测试应用程序  
  在部署应用程序之前，应测试已实现的辅助功能。  

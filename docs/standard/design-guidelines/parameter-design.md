@@ -1,6 +1,6 @@
 ---
 title: 参数设计
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
@@ -9,83 +9,82 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea5311de8cef266af23b259d943568bfa95eaf72
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 5a0f6e0fab5d0f2fe8574e348fc6b8ae726eeb99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617208"
 ---
 # <a name="parameter-design"></a>参数设计
-本部分提供全面的指南参数的设计方案，包括用于检查参数的指导原则的部分。 此外，应参考中所述的准则[命名参数](../../../docs/standard/design-guidelines/naming-parameters.md)。  
+本部分提供了有关参数设计的广泛准则，包括用于检查参数的准则。 此外，还应参考[命名参数](../../../docs/standard/design-guidelines/naming-parameters.md)中介绍的准则。  
   
- **✓ DO** 使用至少派生的参数提供的类型的成员所需的功能。  
+ **✓ 务必**使用可提供成员所需功能的最少的派生参数类型。  
   
- 例如，假设你想要设计枚举集合，并输出到控制台的每个项的方法。 此类方法应采取<xref:System.Collections.IEnumerable>作为参数，不<xref:System.Collections.ArrayList>或<xref:System.Collections.IList>，例如。  
+ 例如，假设想要设计一个枚举集合并将每个项输出到控制台的的方法。 此类方法应使用 <xref:System.Collections.IEnumerable> 作为参数，而不应使用 <xref:System.Collections.ArrayList> 或 <xref:System.Collections.IList>。  
   
- **X DO NOT** 使用保留的参数。  
+ **X 切忌**使用保留参数。  
   
- 如果某些未来版本中需要更多输入到成员，则可以添加新的重载。  
+ 如果在将来的某个版本中需要对成员有更多输入，则可以添加新的重载。  
   
- **X DO NOT** 具有公共公开指针、 数组的指针或作为参数的多维数组的方法。  
+ **X 切忌**使用将指针、指针数组或多维数组作为参数的公开方法。  
   
- 指针和多维数组是相对较难正确使用。 在几乎所有情况下，可以重新设计的 Api 来避免这些类型作为参数。  
+ 指针和多维数组相对难以正确使用。 几乎在所有情况下，都可以重新设计 API 以避免将这些类型作为参数。  
   
- **✓ DO** 放置所有`out`后所有按值的参数和`ref`参数 （不包括参数数组），即使它会导致重载之间进行排序的参数中的不一致 (请参阅[成员重载](../../../docs/standard/design-guidelines/member-overloading.md))。  
+ **✓ 务必**把所有 `out` 参数放置在所有传值和 `ref` 参数（不包括参数数组）之后，即使它会导致重载之间参数排序的不一致（请参阅[成员重载](../../../docs/standard/design-guidelines/member-overloading.md)）。  
   
- `out`参数可将其视为额外返回的值，并将它们组合在一起使方法签名易于理解。  
+ 可以将 `out` 参数看作是额外的返回值，并且可以将它们分组在一起，使方法签名更易于理解。  
   
- **✓ DO** 时重写成员命名参数或实现接口成员中保持一致。  
+ **✓ 务必**在重写成员或实现接口成员时，在命名参数上保持一致。  
   
- 这更好地进行通信的方法之间的关系。  
+ 这更好地传达了方法之间的关系。  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>枚举和布尔参数之间进行选择  
- **✓ DO** 如果成员本来两个或多个布尔参数，请使用枚举。  
+### <a name="choosing-between-enum-and-boolean-parameters"></a>在枚举和布尔形参之间进行选择  
+ **✓ 务必**使用枚举，如果成员有两个或多个布尔参数的话。  
   
- **X DO NOT** 如果你不完全确定永远不会将两个以上值需要使用布尔值。  
+ **X 切忌**使用布尔值，除非绝对确定永远不需要两个以上的值。  
   
- 枚举为您提供一些空间以便将来添加值，但您应注意将值添加到枚举器中所述的所有隐患[枚举设计](../../../docs/standard/design-guidelines/enum.md)。  
+ 枚举为你将来添加值提供了一些空间，但应该注意在枚举中添加值的所有影响，这些内容在[枚举设计](../../../docs/standard/design-guidelines/enum.md)中进行了描述。  
   
- **✓ CONSIDER** 布尔值用于构造函数参数是真正的两个状态的值，只需用来初始化布尔属性。  
+ **✓ 考虑**使用布尔值作为构造函数参数，这些参数是真正的双状态值，仅用于初始化布尔属性。  
   
-### <a name="validating-arguments"></a>验证自变量  
- **✓ DO** 验证自变量传递到公共、 受保护，或显式实现的成员。 引发<xref:System.ArgumentException?displayProperty=nameWithType>，或一个子类，如果验证失败。  
+### <a name="validating-arguments"></a>验证实参  
+ **✓ 务必**验证传递到公共、受保护或显式实现的成员的实参。 如果验证失败，将引发 <xref:System.ArgumentException?displayProperty=nameWithType> 或其一个子类。  
   
- 请注意，实际的验证不一定发生这种情况中的公共或受保护成员本身。 它可能在某些私有或内部的例程中较低级别。 要点是，向最终用户公开的整个图面区域会检查自变量。  
+ 请注意，实际验证不一定必须在公共成员或受保护成员本身中进行。 它可能发生在某些私有或内部例程的较低级别。 重点是暴露给最终用户的整个上层区域会检查参数。  
   
- **✓ DO** 引发<xref:System.ArgumentNullException>如果传递 null 自变量，并将该成员不支持 null 参数。  
+ **✓ 务必**引发 <xref:System.ArgumentNullException>，如果传递 null 实参且该成员不支持 null 实参。  
   
- **✓ DO** 验证 enum 参数。  
+ **✓ 务必**验证 enum 形参。  
   
- 不要假定枚举自变量将在枚举定义的范围内。 CLR 允许任何整数值转换为枚举值，即使在枚举中未定义值。  
+ 不要假设枚举实参将在枚举定义的范围内。 CLR 允许将任何整数值转换为枚举值，即使该值未在枚举中定义。  
   
- **X DO NOT** 使用<xref:System.Enum.IsDefined%2A?displayProperty=nameWithType>枚举范围检查。  
+ **X 切忌**将 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 用于枚举范围检查。  
   
- **✓ DO** 请注意，在经过验证后，可能已更改可变自变量。  
+ **✓ 务必**注意，可变实参在验证后可能已更改。  
   
- 如果该成员是敏感的安全，建议您的生成副本和验证并处理自变量。  
+ 如果该成员对安全性敏感，则建议生成一个副本，然后验证并处理该实参。  
   
 ### <a name="parameter-passing"></a>参数传递  
- 从框架设计器的角度来看，有三个主要组的参数： 按值参数，`ref`参数，和`out`参数。  
+ 从框架设计者的角度来看，有三组主要形参：传值形参、`ref` 形参和 `out` 形参。  
   
- 当自变量传递通过按值参数时，成员都会中传递的实际自变量的副本。 如果参数为值类型，自变量的副本放在堆栈上。 如果参数为引用类型，引用的副本放在堆栈上。 最常用的 CLR 语言，如 C#、 VB.NET 和 c + +，默认为按值传递参数。  
+ 当实参通过传值形参传递时，该成员将接收传入的实际实参的副本。 如果实参是值类型，则将实参的副本放在栈上。 如果实参是引用类型，则将引用的副本放在栈上。 最常用的 CLR 语言，如 C#，VB.NET 和 C++，默认按值传递形参。  
   
- 当自变量传递通过`ref`参数，该成员接收到传入的实际参数的引用。 如果参数为值类型，对自变量的引用放在堆栈上。 如果参数为引用类型，对引用的引用放在堆栈上。 `Ref` 可以使用参数，以便成员可以修改由调用方传递的参数。  
+ 当实参通过 `ref` 形参传递时，成员接收对传入的实际实参的引用。 如果实参是值类型，则将实参的引用放在栈上。 如果实参是引用类型，则将引用的引用放在栈上。 `Ref` 形参可用于允许成员修改调用方传递的实参。  
   
- `Out` 参数是类似于`ref`参数，但存在一些小差异。 参数最初被认为是未分配，分配一些值之前无法在成员正文中读取。 此外，该参数具有值分配给某些成员返回之前。  
+ `Out`形参类似于`ref`形参，但存在一些细微差异。 该形参最初被视为未分配，并且在为其分配某个值之前无法在成员体内中读取。 此外，必须在成员返回之前为形参指定一些值。  
   
- **X AVOID** 使用`out`或`ref`参数。  
+ **X 避免**使用 `out` 或 `ref` 形参。  
   
- 使用`out`或`ref`参数需要体验提供了指导，了解值类型和引用类型的不同之处，以及能处理具有多个返回值的方法。 此外，之间的差异`out`和`ref`参数没有得到广泛了解。 为一般用户设计的框架架构师不应指望用户掌握了`out`或`ref`参数。  
+ 使用 `out` 或 `ref` 形参需要一些经验，包括使用指针，理解值类型和引用类型的不同，以及处理具有多个返回值的方法。 另外，`out` 和 `ref` 形参之间的区别并不广为人知。 为一般用户设计的框架架构师不应期望用户熟练掌握使用 `out` 或 `ref` 形参。  
   
- **X DO NOT** 通过引用传递引用类型。  
+ **X 切忌**通过引用传递引用类型。  
   
- 有一些有限的例外规则，例如可用于交换的引用的方法。  
+ 该规则有一些有限的例外情况，例如可用于交换引用的方法。  
   
-### <a name="members-with-variable-number-of-parameters"></a>具有可变数量的参数的成员  
- 通过提供的数组参数表示可以采用可变数量的参数的成员。 例如，<xref:System.String>提供了以下方法：  
+### <a name="members-with-variable-number-of-parameters"></a>具有可变形参数量的成员  
+ 可以通过提供数组形参来表示使用可变数量实参的成员。 例如，<xref:System.String> 提供了以下方法：  
   
 ```  
 public class String {  
@@ -97,7 +96,7 @@ public class String {
   
  `String.Format("File {0} not found in {1}",new object[]{filename,directory});`  
   
- 将 C# params 关键字添加到的数组参数更改为所谓的 params 数组参数的参数，并提供了创建临时数组的快捷方式。  
+ 将 C# params 关键字添加到数组形参会将形参更改为所谓的 params 数组形参，并提供了创建临时数组的快捷方式。  
   
 ```  
 public class String {  
@@ -105,58 +104,58 @@ public class String {
 }  
 ```  
   
- 执行此操作允许用户通过将数组元素传递自变量列表中直接调用的方法。  
+ 执行此操作允许用户通过直接在实参列表中传递数组元素来调用方法。  
   
  `String.Format("File {0} not found in {1}",filename,directory);`  
   
- 请注意 params 关键字，可以添加仅对在参数列表中的最后一个参数。  
+ 请注意，params 关键字只能添加到形参列表中的最后一个形参。  
   
- **✓ CONSIDER** 将 params 关键字添加到数组参数中，如果希望最终用户能够将较少的元素的数组传递。 如果希望，大量元素将传递在常见方案，用户可能不会传递这些元素内联不管怎样，并因此 params 关键字不必要。  
+ **✓ 考虑**如果希望最终用户传递具有少量元素的数组，则将 params 关键字添加到数组形参中。 如果期望在常见场景中传递大量元素，则用户可能无论如何也不会以内联方式传递这些元素，因此 params 关键字不是必需的。  
   
- **X AVOID** 使用 params 数组，如果调用方将几乎始终输入已具有数组中。  
+ **X 避免**使用 params 数组，如果调用方几乎总是将输入放在数组中。  
   
- 例如，几乎不会将单个字节表示通过调用通过字节数组参数的成员。 出于此原因，.NET Framework 中的字节数组参数不使用 params 关键字。  
+ 例如，具有字节数组形参的成员几乎不会通过传递单个字节来调用。 因此，.NET Framework 中的字节数组形参不使用 params 关键字。  
   
- **X DO NOT** 使用 params 数组，如果采用 params 数组参数的成员来修改数组。  
+ **X 切忌**使用 params 数组，如果采用 params 数组形参的成员修改了数组。  
   
- 原因在于，许多编译器将对成员实参转换到调用站点上的临时数组，该数组可能为临时对象，并因此对数组进行任何修改都将丢失。  
+ 由于许多编译器将成员的实参转换为调用站点的临时数组，因此该数组可能是临时对象，所以对数组的任何修改都将丢失。  
   
- **✓ CONSIDER** 使用在简单的重载中，params 关键字，即使更复杂的重载不能使用它。  
+ **✓ 考虑**在简单的重载中使用 params 关键字，即使更复杂的重载不能使用它。  
   
- 问问自己，是否用户将具有参数数组中某一重载，即使它不是在所有重载值。  
+ 问问自己用户是否会重视在一个重载中使用 params 数组，即使它不在所有重载中。  
   
- **✓ DO** 尝试顺序参数，以使其可以使用 params 关键字。  
+ **✓ 务必**尝试对形参进行排序，以使其可以使用 params 关键字。  
   
- **✓ CONSIDER** 使用少量的极性能敏感的 Api 中的自变量调用提供特殊的重载和代码路径。  
+ **✓ 考虑**在性能极其敏感的 API 中为具有少量实参的调用提供特殊的重载和代码路径。  
   
- 这样可以避免使用少量的参数调用 API 时创建的数组对象。 通过采用数组参数的单数形式，并添加数字后缀构成的参数的名称。  
+ 这样在使用少量实参调用 API 时可以避免创建数组对象。 通过采用数组形参的单数形式，并添加数字后缀来形成形参的名称。  
   
- 只有如果您将特殊处理的完整的代码路径，而不仅仅是创建一个数组，并调用更多常规方法的保护时，才应该这样做。  
+ 应该只在对整个代码路径执行特例时才这样做，而不仅仅是创建一个数组并调用更通用的方法。  
   
- **✓ DO** 请注意该 null 可以作为参数数组自变量传递。  
+ **✓ 务必**注意，null 可以作为 params 数组实参传递。  
   
- 您应验证数组不处理前为 null。  
+ 应该在处理之前验证数组是否为 null。  
   
- **X DO NOT** 使用`varargs`方法，也称为旁边的省略号。  
+ **X 切忌**使用 `varargs` 方法，也称为省略号。  
   
- 某些 CLR 语言，例如，c + +，支持替代约定，以便传递变量参数列表调用`varargs`方法。 约定不应在框架中，因为它不符合 CLS。  
+ 某些 CLR 语言，如 C++ ，支持传递变量形参列表的替代约定，称为 `varargs` 方法。 该约定不应在框架中使用，因为它不符合CLS。  
   
 ### <a name="pointer-parameters"></a>指针参数  
- 一般情况下，指针不应出现在一个设计良好的托管的代码框架的公共图面区域。 大多数情况下，应封装的指针。 但是，在某些情况下指针所需的互操作性方面的考虑，并且在这种情况下使用指针适合。  
+ 通常，指针不应出现在设计良好的托管代码框架的公共上层区域中。 大多数情况下，指针应该被封装。 但是，在某些情况下，出于互操作性原因需要指针，在这种情况下适合使用指针。  
   
- **✓ DO** 为采用指针自变量，任何成员提供一种替代方法，因为不符合 cls 的指针。  
+ **✓ 务必**为所有采用指针实参的成员提供替代方法，因为指针不符合 CLS。  
   
- **X AVOID** 执行检查的指针自变量的高开销的参数。  
+ **X 避免**对指针实参进行高开销的实参检查。  
   
- **✓ DO** 设计具有使用指针的成员时遵循指针相关的常见约定。  
+ **✓ 务必**在设计带指针的成员时，遵循常见的指针相关约定。  
   
- 例如，没有必要将传递的起始索引，因为简单指针算法可用于实现相同的结果。  
+ 例如，不需要传递起始索引，因为可以使用简单的指针算法来完成相同的结果。  
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [成员设计准则](../../../docs/standard/design-guidelines/member.md)  
+- [成员设计准则](../../../docs/standard/design-guidelines/member.md)
 - [框架设计指南](../../../docs/standard/design-guidelines/index.md)

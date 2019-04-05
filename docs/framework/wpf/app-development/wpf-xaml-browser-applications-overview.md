@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8121b6e8c5a136f5f89b59636a7cb7f15794164a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745471"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410156"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 浏览器应用程序概述
 <a name="introduction"></a>
@@ -35,12 +35,12 @@ ms.locfileid: "43745471"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>创建新的 XAML 浏览器应用程序 (XBAP)  
- 创建新的 XBAP 项目的最简单方法是使用 Microsoft Visual Studio。 创建新项目时，从模板列表中选择“WPF 浏览器应用程序”。 有关详细信息，请参阅[如何：创建新的 WPF 浏览器应用程序项目](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)。  
+ 创建新的 XBAP 项目的最简单方法是使用 Microsoft Visual Studio。 创建新项目时，从模板列表中选择“WPF 浏览器应用程序”。 有关详细信息，请参阅[如何：创建新的 WPF 浏览器应用程序项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。  
   
- 运行 XBAP 项目时，它将在浏览器窗口而不是在单独的窗口中打开。 当调试从 Visual Studio XBAP 时，应用程序通过 Internet 区域权限运行，并因此将引发安全异常，如果超出这些权限。 有关详细信息，请参阅[安全性](../../../../docs/framework/wpf/security-wpf.md)和 [WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
+ 运行 XBAP 项目时，它将在浏览器窗口而不是在单独的窗口中打开。 当调试从 Visual Studio XBAP 时，应用程序通过 Internet 区域权限运行，并因此将引发安全异常，如果超出这些权限。 有关详细信息，请参阅[安全性](../security-wpf.md)和 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
   
 > [!NOTE]
->  如果你不开发与 Visual Studio 或想要了解有关项目文件的详细信息，请参阅[生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)。  
+>  如果你不开发与 Visual Studio 或想要了解有关项目文件的详细信息，请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md)。  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>部署 XBAP  
@@ -52,7 +52,7 @@ ms.locfileid: "43745471"
 |应用程序清单 (.manifest)|此文件包含与应用程序关联的元数据且具有 .manifest 扩展名。|  
 |部署清单 (.xbap)|此文件包含 ClickOnce 使用来部署应用程序和具有.xbap 扩展名的信息。|  
   
- 将 XBAP 部署到 Web 服务器，例如 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或更高版本。 无需在 Web 服务器上安装.NET Framework，但需要注册[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]类型和文件扩展名。 有关详细信息，请参阅[配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
+ 将 XBAP 部署到 Web 服务器，例如 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或更高版本。 无需在 Web 服务器上安装.NET Framework，但需要注册[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]类型和文件扩展名。 有关详细信息，请参阅[配置 IIS 5.0 和 IIS 6.0 以部署 WPF 应用程序](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
   
  若要将 XBAP 准备好进行部署，请将 .exe 和关联的清单复制到 Web 服务器。 创建包含超链接的 HTML 页以打开部署清单，即扩展名为 .xbap 的文件。 当用户单击指向.xbap 文件的链接时，ClickOnce 会自动处理下载和启动应用程序的机制。 下面的代码示例显示包含指向 XBAP 的超链接的 HTML 页面。  
   
@@ -88,14 +88,14 @@ ms.locfileid: "43745471"
  Mage.exe -cc
  ```
   
- 此命令可保证启动最新版本的 XBAP。 当你在 Visual Studio 中的应用程序调试时，应启动最新版本的 XBAP。 一般情况下，应在每次生成时更新部署版本号。 有关 Mage 的详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](../../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
+ 此命令可保证启动最新版本的 XBAP。 当你在 Visual Studio 中的应用程序调试时，应启动最新版本的 XBAP。 一般情况下，应在每次生成时更新部署版本号。 有关 Mage 的详细信息，请参阅 [Mage.exe（清单生成和编辑工具）](../../tools/mage-exe-manifest-generation-and-editing-tool.md)。  
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>与宿主网页通信  
  当在 HTML 框架中承载应用程序时，可以与包含 XBAP 的网页进行通信。 为此，可检索<xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A>属性的<xref:System.Windows.Interop.BrowserInteropHelper>。 此属性返回一个表示 HTML 窗口的脚本对象。 然后可以通过使用常规的点语法访问 [window object](https://go.microsoft.com/fwlink/?LinkId=160274)（window 对象）上的属性、方法和事件。 还可以访问脚本方法和全局变量。 以下示例演示如何检索脚本对象和关闭浏览器。  
   
- [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
- [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
+ [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
+ [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
   
 ### <a name="debugging-xbaps-that-use-hostscript"></a>调试使用 HostScript 的 XBAP  
  如果 XBAP 使用<xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A>对象与 HTML 窗口中，通信有两个设置，你必须指定用于运行和调试 Visual Studio 中的应用程序。 应用程序必须有权访问其源站点，并且必须使用包含 XBAP 的 HTML 页启动应用程序。 以下步骤介绍如何检查这两个设置：  
@@ -127,11 +127,11 @@ ms.locfileid: "43745471"
   
 <a name="xbap_security_considerations"></a>   
 ## <a name="xbap-security-considerations"></a>XBAP 安全注意事项  
- 通常在被限制到 Internet 区域权限集的部分信任的安全沙盒中执行 XBAP。 因此，您的实现必须支持 Internet 区域中支持的 WPF 元素的子集，或必须将提升您的应用程序的权限。 有关详细信息，请参阅[安全性](../../../../docs/framework/wpf/security-wpf.md)。  
+ 通常在被限制到 Internet 区域权限集的部分信任的安全沙盒中执行 XBAP。 因此，您的实现必须支持 Internet 区域中支持的 WPF 元素的子集，或必须将提升您的应用程序的权限。 有关详细信息，请参阅[安全性](../security-wpf.md)。  
   
  当你使用<xref:System.Windows.Controls.WebBrowser>中应用程序中，WPF 控件在内部实例化本机 WebBrowser ActiveX 控件。 如果应用程序是 Internet Explorer 中运行的部分信任的 XBAP，则 ActiveX 控件会在 Internet Explorer 进程的专用线程中运行。 因此，存在以下限制：  
   
--   <xref:System.Windows.Controls.WebBrowser>控件应提供行为类似于主机浏览器中，包括安全限制。 可以通过 Internet Explorer 安全设置控制这些安全限制中的某些限制。 有关详细信息，请参阅[安全性](../../../../docs/framework/wpf/security-wpf.md)。  
+-   <xref:System.Windows.Controls.WebBrowser>控件应提供行为类似于主机浏览器中，包括安全限制。 可以通过 Internet Explorer 安全设置控制这些安全限制中的某些限制。 有关详细信息，请参阅[安全性](../security-wpf.md)。  
   
 -   在 HTML 页中跨域加载 XBAP 时，将引发异常。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "43745471"
   
 -   在项目文件中，将 `<TargetZone>` 元素值更改为 `Custom`。  
   
--   在应用程序清单 (app.manifest) 中，将 `Unrestricted="true"` 特性添加到 `PermissionSet` 元素。  
+-   应用程序清单 (app.manifest) 中`Unrestricted="true"`属性添加到<xref:System.Security.PermissionSet>元素。  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   
@@ -186,6 +186,6 @@ ms.locfileid: "43745471"
   
  此外，改进了的 ClickOnce 下载序列并发最多 10%改进开始时间。 ClickOnce 下载并验证之后清单、 启动应用程序下载和进度栏将开始更新。  
   
-## <a name="see-also"></a>请参阅  
- [将 Visual Studio 配置为通过调试 XAML 浏览器应用程序来调用 Web 服务](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+## <a name="see-also"></a>请参阅
+- [将 Visual Studio 配置为通过调试 XAML 浏览器应用程序来调用 Web 服务](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)

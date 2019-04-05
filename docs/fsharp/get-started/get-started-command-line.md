@@ -1,13 +1,13 @@
 ---
-title: '使用命令行工具实现 F # 入门'
-description: '了解如何在 F # 在任何操作系统 （Windows、 macOs 或 Linux） 上使用.NET Core CLI 构建简单的多项目解决方案。'
+title: 开始使用F#使用命令行工具
+description: 了解如何构建简单的多项目解决方案F#在任何操作系统 （Windows、 macOs 或 Linux） 上使用.NET Core CLI。
 ms.date: 03/26/2018
-ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45673904"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152094"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>要开始使用 F # 使用.NET Core CLI
 
@@ -17,7 +17,7 @@ ms.locfileid: "45673904"
 
 若要开始，你必须安装最新[.NET Core SDK](https://www.microsoft.com/net/download/)。
 
-本文假定，您知道如何使用命令行，并且包含首选的文本编辑器。 如果还没有使用它， [Visual Studio Code](get-started-vscode.md)是作为文本编辑器中进行 F # 很好的选择。
+本文假定，您知道如何使用命令行，并且包含首选的文本编辑器。 如果还没有使用它， [Visual Studio Code](get-started-vscode.md)是实用的选项，文本编辑器，以作为F#。
 
 ## <a name="build-a-simple-multi-project-solution"></a>构建简单的多项目解决方案
 
@@ -131,7 +131,7 @@ dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 dotnet sln add src/App/App.fsproj
 ```
 
-还原 NuGet 依赖项， `dotnet restore` ([请参阅备注](#dotnet-restore-note)) 并运行`dotnet build`以生成项目。
+还原 NuGet 依赖项，`dotnet restore`并运行`dotnet build`以生成项目。
 
 将目录更改为`src/App`控制台项目并运行项目传递`Hello World`作为自变量：
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>后续步骤
 
-接下来，请查看[F # 教程](../tour.md)若要了解有关不同的 F # 功能的详细信息。
+接下来，请查看[概览F#](../tour.md)若要详细了解不同F#功能。

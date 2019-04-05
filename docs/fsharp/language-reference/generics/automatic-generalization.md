@@ -1,21 +1,21 @@
 ---
-title: 自动泛化 (F#)
-description: '了解如何 F # 自动泛化的参数和类型的函数，以便它们适用于多个类型在可能的情况。'
+title: 自动泛化
+description: 了解如何F#自动泛化的参数和类型的函数，以便它们适用于多个类型在可能的情况。
 ms.date: 05/16/2016
-ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43855772"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611706"
 ---
 # <a name="automatic-generalization"></a>自动泛化
 
-F # 使用类型推理来评估函数和表达式的类型。 本主题介绍如何 F # 自动泛化的参数和类型的函数，使它们工作的多个类型时做到这一点。
+F#使用类型推理评估的函数和表达式的类型。 本主题介绍如何F#自动泛化的参数和类型的函数，使它们工作的多个类型时做到这一点。
 
 ## <a name="automatic-generalization"></a>自动泛化
 
-F # 编译器，它执行上一个函数，类型推理时确定是否为给定的参数可以为泛型。 编译器检查每个参数，并确定该函数是否具有该参数的特定类型的依赖关系。 如果未显示，类型推断为泛型。
+F#编译器，它执行上一个函数，类型推理时确定是否为给定的参数可以为泛型。 编译器检查每个参数，并确定该函数是否具有该参数的特定类型的依赖关系。 如果未显示，类型推断为泛型。
 
 下面的代码示例演示编译器将推断是通用的函数。
 
@@ -58,7 +58,7 @@ let biggestIntFloat = max 2.0 3
 
 - 下面的代码示例说明了每种方案。
 
-案例 1： 太复杂的表达式。 在此示例中，列表`counter`用于`int option ref`，但它不定义为一个简单的不可变值。
+案例 1:表达式太复杂。 在此示例中，列表`counter`用于`int option ref`，但它不定义为一个简单的不可变值。
 
 ```fsharp
 let counter = ref None
@@ -66,7 +66,7 @@ let counter = ref None
 let counter : int option ref = ref None
 ```
 
-案例 2： 使用不可泛化构造定义的泛型函数。 在此示例中，构造是不可泛化，因为它涉及到部分应用函数自变量。
+案例 2:使用不可泛化构造定义的泛型函数。 在此示例中，构造是不可泛化，因为它涉及到部分应用函数自变量。
 
 ```fsharp
 let maxhash = max << hash
@@ -74,7 +74,7 @@ let maxhash = max << hash
 let maxhash obj = (max << hash) obj
 ```
 
-案例 3： 添加一个额外的、 未使用的参数。 此表达式不是简单的泛化，因为编译器会发出值限制错误。
+案例 3:添加一个额外的、 未使用的参数。 此表达式不是简单的泛化，因为编译器会发出值限制错误。
 
 ```fsharp
 let emptyList10 = Array.create 10 []
@@ -82,7 +82,7 @@ let emptyList10 = Array.create 10 []
 let emptyList10 () = Array.create 10 []
 ```
 
-情形 4： 添加的类型参数。
+情形 4:添加类型参数。
 
 ```fsharp
 let arrayOf10Lists = Array.create 10 []

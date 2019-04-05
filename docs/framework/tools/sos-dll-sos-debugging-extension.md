@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c6f2d001c6513211cf15993285e3564f7613402
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8ffb0686de5039573355e48446a4085fc44d2c75
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "47863658"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356892"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll（SOS 调试扩展）
 
@@ -27,7 +27,7 @@ SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) �
 
 ## <a name="commands"></a>命令
 
-|命令|描述|
+|命令|说明|
 |-------------|-----------------|
 |**AnalyzeOOM** (**ao**)|显示对垃圾回收堆进行分配请求时发生的最后一次内存不足 (OOM) 的信息。 （在服务器垃圾回收中，它将在每个垃圾回收堆上显示 OOM（如果有））。|
 |**BPMD** [**-nofuturemodule**] [\<*module name*> \<*method name*>] [**-md** <`MethodDesc`>] **-list** **-clear** \<*pending breakpoint number*> **-clearall**|在指定模块中的指定方法处创建断点。<br /><br /> 如果尚未加载指定的模块和方法，则此命令将在创建断点之前等待已加载并进行实时 (JIT) 编译的模块的通知。<br /><br /> 可以通过使用 **-list**、**-clear** 和 **-clearall** 选项来管理挂起断点的列表：<br /><br /> 该 **-list** 选项生成所有挂起断点的列表。 如果挂起断点有一个非零模块 ID，则该断点特定于该特定已加载模块中的函数。 如果挂起断点有一个零模块 ID，则该断点适用于尚未加载的模块。<br /><br /> 使用 **-clear** 或 **-clearall** 选项可从该列表中移除挂起断点。|
@@ -62,7 +62,7 @@ SOS 调试扩展 (SOS.dll) 通过提供有关内部公共语言运行时 (CLR) �
 |**GCHandles** [**-perdomain**]|显示有关进程中的垃圾回收器句柄的统计信息。<br /><br /> **-perdomain** 选项将按应用程序域排列统计信息。<br /><br /> 使用 **GCHandles** 命令可查找由垃圾回收器句柄泄漏导致的内存泄漏。 例如，当代码由于强垃圾回收器句柄仍指向一个大型数组而保留该数组时，若不释放句柄就将其放弃，则会发生内存泄漏。|
 |**GCHandleLeaks**|在内存中搜索进程中的对强垃圾回收器句柄和固定垃圾回收器句柄的任何引用并显示结果。 如果找到某个句柄，**GCHandleLeaks** 命令将显示相应的引用地址。 如果在内存中找不到句柄，此命令将显示一个通知。|
 |**GCInfo** \<*MethodDesc address*>\<*Code address*>|显示指示寄存器或堆栈位置何时包含托管对象的数据。 如果发生垃圾回收，回收器必须知道对象引用的位置，以便可以使用新的对象指针值更新相应的对象引用。|
-|**GCRoot** [**-nostacks**] \<*Object address*>|显示有关对指定地址处的对象的引用（或根）的信息。<br /><br /> **GCRoot** 命令将检查整个托管堆和句柄表以查找其他对象内的句柄和堆栈上的句柄。 然后，在每个堆栈中搜索对象的指针，同时还搜索终结器队列。<br /><br /> 此命令无法确定堆栈根是有效的还是已丢弃。 使用 **CLRStack** 和 **U** 命令可对本地或自变量值所属的帧进行反汇编，以便确定堆栈根是否仍在使用中。<br /><br /> **-nostacks** 选项将搜索限制为垃圾回收器句柄和 Freachable 对象。|
+|**GCRoot** [**-nostacks**] \<*Object address*>|显示有关对指定地址处的对象的引用（或根）的信息。<br /><br /> **GCRoot** 命令将检查整个托管堆和句柄表以查找其他对象内的句柄和堆栈上的句柄。 然后，在每个堆栈中搜索对象的指针，同时还搜索终结器队列。<br /><br /> 此命令无法确定堆栈根是有效的还是已丢弃。 使用 **CLRStack** 和 **U** 命令可对本地或自变量值所属的帧进行反汇编，以便确定堆栈根是否仍在使用中。<br /><br /> -nostacks 选项将搜索限制为垃圾回收器句柄和 reachable 对象。|
 |**GCWhere**  *\<object address>*|显示垃圾回收堆中自变量传入的位置和大小。 如果自变量位于托管堆中，但不是有效的对象地址，则大小显示为 0（零）。|
 |**help** [\<*command*>] [`faq`]|在未指定参数时显示所有可用命令，或者显示有关指定命令的详细帮助信息。<br /><br /> `faq` 参数显示常见问题的答案。|
 |**HeapStat** [**-inclUnrooted** &#124; **-iu**]|显示每个堆的生成大小及每个堆上各生成的可用空间总量。 如果指定 -**inclUnrooted** 选项，则报告将包括有关不再为根的垃圾回收堆中的托管对象的信息。|
@@ -126,79 +126,79 @@ WinDbg.exe 和 Visual Studio 使用与当前使用的 Mscorwks.dll 版本对应�
 !dumparray -start 2 -length 5 -detail 00ad28d0
 ```
 
- 下面的命令显示在地址 `1ca248` 处的程序集的内容。
+下面的命令显示在地址 `1ca248` 处的程序集的内容。
 
 ```
 !dumpassembly 1ca248
 ```
 
- 下面的命令显示有关垃圾回收器堆的信息。
+下面的命令显示有关垃圾回收器堆的信息。
 
 ```
 !dumpheap
 ```
 
- 下面的命令将内存中压力日志的内容写入到当前目录中名为 StressLog.txt 的（默认）文件中。
+下面的命令将内存中压力日志的内容写入到当前目录中名为 StressLog.txt 的（默认）文件中。
 
 ```
 !DumpLog
 ```
 
- 下面的命令显示在地址 `MethodDesc` 处的 `902f40` 结构。
+下面的命令显示在地址 `MethodDesc` 处的 `902f40` 结构。
 
 ```
 !dumpmd 902f40
 ```
 
- 下面的命令显示有关地址 `1caa50` 处的模块的信息。
+下面的命令显示有关地址 `1caa50` 处的模块的信息。
 
 ```
 !dumpmodule 1caa50
 ```
 
- 下面的命令显示有关地址 `a79d40` 处的对象的信息。
+下面的命令显示有关地址 `a79d40` 处的对象的信息。
 
 ```
 !DumpObj a79d40
 ```
 
- 下面的命令使用地址 `00a79d9c` 处的方法表显示地址 `0090320c` 处的值类的字段。
+下面的命令使用地址 `00a79d9c` 处的方法表显示地址 `0090320c` 处的值类的字段。
 
 ```
 !DumpVC 0090320c 00a79d9c
 ```
 
- 下面的命令显示垃圾回收器所使用的进程内存。
+下面的命令显示垃圾回收器所使用的进程内存。
 
 ```
 !eeheap -gc
 ```
 
- 下面的命令显示所有已做好终结计划的对象。
+下面的命令显示所有已做好终结计划的对象。
 
 ```
 !finalizequeue
 ```
 
- 下面的命令确定地址 `00a79d98` 处的对象的应用程序域。
+下面的命令确定地址 `00a79d98` 处的对象的应用程序域。
 
 ```
 !findappdomain 00a79d98
 ```
 
- 下面的命令显示当前进程中的所有垃圾回收器句柄。
+下面的命令显示当前进程中的所有垃圾回收器句柄。
 
 ```
 !gcinfo 5b68dbb8
 ```
 
- 下面的命令显示模块 `MethodTable` 的类 `EEClass` 中的 `Main` 方法的 `MainClass` 和 `unittest.exe` 结构。
+下面的命令显示模块 `MethodTable` 的类 `EEClass` 中的 `Main` 方法的 `MainClass` 和 `unittest.exe` 结构。
 
 ```
 !name2ee unittest.exe MainClass.Main
 ```
 
- 下面的命令显示有关模块 `02000003` 中的地址 `unittest.exe` 处的元数据标记的信息。
+下面的命令显示有关模块 `02000003` 中的地址 `unittest.exe` 处的元数据标记的信息。
 
 ```
 !token2ee unittest.exe 02000003

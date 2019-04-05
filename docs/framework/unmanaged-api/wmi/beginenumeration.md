@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08406f7d93671b406b3c7cd8719a7a0e5e423184
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 11002ac57a37b3c9ab0badfab49bb9049b0dfa79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523497"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369287"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函数
 将枚举数重置到枚举的起点。  
@@ -40,12 +40,13 @@ HRESULT BeginEnumeration (
 
 ## <a name="parameters"></a>参数
 
-`vFunc`  
+`vFunc`\
 [in]此参数是未使用。
 
-`ptr` [in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
+`ptr`\
+[in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
 
-`lEnumFlags`  
+`lEnumFlags`\
 [in]值中所述的标志的按位组合[备注](#remarks)部分，用于控制在枚举中包含的属性。
 
 ## <a name="return-value"></a>返回值
@@ -67,21 +68,21 @@ HRESULT BeginEnumeration (
 
 **组 1**
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | 包含构成仅密钥的属性。 |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | 包括仅限对象引用的属性。 |
 
 **组 2**
 
-返回的常量  |“值”  |描述  |
+返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | 限制为仅系统属性的枚举。 |
 |`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | 包括本地和传播属性但不枚举中的系统属性。 |
 
 对于类：
 
-返回的常量  |“值”  |描述  |
+返回的常量  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | 限制到类定义中被重写的属性的枚举。 |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | 限制到当前的类定义中被重写的属性和新的类中定义的属性的枚举。 |
@@ -98,11 +99,12 @@ HRESULT BeginEnumeration (
 
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

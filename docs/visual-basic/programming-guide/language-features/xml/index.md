@@ -3,14 +3,8 @@ title: Visual Basic 中的 XML
 description: 了解如何使用 XML 和 LINQ 到 Visual Basic 代码中的 XML 功能。
 ms.date: 10/20/2017
 helpviewer_keywords:
-- LINQ to XML [Visual Basic]
+  - 'LINQ to XML [Visual Basic]'
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: 4ccdf0f4b05e23c1107d7df2a813e8b6de423589
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084372"
 ---
 # <a name="xml-in-visual-basic"></a>Visual Basic 中的 XML
 
@@ -29,7 +23,7 @@ Visual Basic 提供了集成的语言支持，使其能够与之交互[!INCLUDE[
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.Linq>  
-- [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)  
-- [XML 轴属性](../../../../visual-basic/language-reference/xml-axis/index.md)  
+- <xref:System.Xml.Linq>
+- [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)
+- [XML 轴属性](../../../../visual-basic/language-reference/xml-axis/index.md)
 - [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

@@ -1,17 +1,17 @@
 ---
-title: '结果 （F #）'
-description: '了解如何使用 F # Result 类型可帮助你编写容错的代码。'
+title: 结果
+description: 了解如何使用F#结果类型可帮助你编写容错的代码。
 ms.date: 04/24/2017
-ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44213035"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612707"
 ---
 # <a name="results"></a>结果
 
-从 F # 4.1 开始，没有`Result<'T,'TFailure>`可用于编写容错错误代码的可组合的类型。
+从F#4.1，没有`Result<'T,'TFailure>`可用于编写容错错误代码的可组合的类型。
 
 ## <a name="syntax"></a>语法
 
@@ -27,9 +27,9 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>备注
 
-请注意，结果类型是[结构的可区分联合](discriminated-unions.md#struct-discriminated-unions)，这是在 F # 4.1 中引入的另一个功能。  结构相等性语义在此处适用。
+请注意，结果类型是[结构的可区分联合](discriminated-unions.md#struct-discriminated-unions)，这另一项功能在中引入F#4.1。  结构相等性语义在此处适用。
 
-`Result`类型通常用在一元错误的处理，这通常称为[铁路面向编程](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)F # 社区中。  下面的简单示例演示了这种方法。
+`Result`类型通常用在一元错误的处理，这通常称为[铁路面向编程](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html)中F#社区。  下面的简单示例演示了这种方法。
 
 ```fsharp
 // Define a simple type which has fields that can be validated

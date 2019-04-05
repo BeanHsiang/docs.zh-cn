@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 790fe629ae709a9fcb57d5b551e9fa7aecfb04f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f6f0e51319da8c2edcb914170aa14837229163c1
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177055"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093666"
 ---
 # <a name="wcf-data-services-resources"></a>WCF 数据服务资源
 可以在以下位置找到有关 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的介绍性主题。 其中的许多主题还包含指向包含更多详细信息的相关主题的链接。  
@@ -23,7 +23,7 @@ ms.locfileid: "44177055"
  [应用程序方案](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  提供基于任务的方法来创建[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和应用程序的访问[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。  
   
- [Visual Studio 和.NET Framework 术语表](https://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [.NET 术语表](../../../standard/glossary.md)  
  包括中使用的术语[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]和[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]文档。  
   
 ## <a name="external-resources"></a>外部资源  
@@ -47,17 +47,17 @@ ms.locfileid: "44177055"
  [数据访问和存储开发人员中心](https://go.microsoft.com/fwlink/?LinkId=91903)  
  用于查找有关使用数据的信息和资源的中心位置。  
   
- [如何实现数据平台？视频： WCF 数据服务系列](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [如何实现数据平台？视频：WCF 数据服务系列](https://go.microsoft.com/fwlink/?LinkId=124600)  
  包含一组演示如何生成和访问数据服务的视频截屏。  
   
- [概述： WCF 数据服务](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [概述：WCF 数据服务](https://go.microsoft.com/fwlink/?LinkID=131074)  
  提供有关 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]优势的更多高级信息的白皮书。  
   
  [使用 Microsoft WCF 数据服务](https://go.microsoft.com/fwlink/?LinkID=131075)  
  提供创建数据服务和在客户端应用程序中访问数据服务的其他信息和示例的白皮书。  
   
- [实体关系模型： 针对数据的统一视图](https://go.microsoft.com/fwlink/?LinkId=91909)Peter Pin-shan Chen，由麻省理工学院的技术  
+ [The Entity-Relationship Model:针对数据的统一视图](https://go.microsoft.com/fwlink/?LinkId=91909)Peter Pin-shan Chen，由麻省理工学院的技术  
  介绍 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 实现的实体关系模型的基础。 该文撰写于 1976 年，是计算机领域中最常引用的论文之一。  
   
-## <a name="see-also"></a>请参阅  
- [入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+## <a name="see-also"></a>请参阅
+- [入门](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

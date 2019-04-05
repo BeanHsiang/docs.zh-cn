@@ -2,19 +2,19 @@
 title: 使用 XML 命名空间 (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
-ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: faffead73211fcfd8c00ba4c3dd2d4f3aa001b43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590543"
 ---
 # <a name="working-with-xml-namespaces-c"></a>使用 XML 命名空间 (C#)
 本节中的主题描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如何支持命名空间。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[命名空间概述 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|本主题介绍命名空间、<xref:System.Xml.Linq.XName> 类和 <xref:System.Xml.Linq.XNamespace> 类。|  
 |[如何：创建包含命名空间的文档 (C#) (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md)|演示如何创建包含命名空间的文档。|  

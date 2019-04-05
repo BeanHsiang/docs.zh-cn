@@ -1,13 +1,13 @@
 ---
-title: 可变类型 (F#)
-description: '了解如何使用 F # 可变类型批注，这表示参数、 变量或值具有与指定的类型兼容的类型。'
+title: 可变类型
+description: 了解如何使用F#可变类型批注，该值指示参数、 变量或值具有与指定的类型兼容的类型。
 ms.date: 05/16/2016
-ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 32857cc317bc6b4b7baf53b623b551e8e0733e41
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47210040"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613669"
 ---
 # <a name="flexible-types"></a>可变类型
 
@@ -65,7 +65,7 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-在 F # 中，如下所示的面向对象的其他语言中，有一些的上下文中的派生的类型或实现接口的类型自动转换为基类型或接口类型。 在直接自变量，但不是在该类型位于从属的位置，例如函数类型的返回类型的更复杂类型的一部分或作为类型参数时，会发生这些自动转换。 因此，灵活类型表示法时，主要是要将应用到的类型是更复杂类型的一部分。
+在F#，如下所示的面向对象的其他语言中，有的上下文中的派生类型或实现接口的类型自动转换为基类型或接口类型。 在直接自变量，但不是在该类型位于从属的位置，例如函数类型的返回类型的更复杂类型的一部分或作为类型参数时，会发生这些自动转换。 因此，灵活类型表示法时，主要是要将应用到的类型是更复杂类型的一部分。
 
 ## <a name="see-also"></a>请参阅
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /preferreduilang compiler option [C#]
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
-ms.openlocfilehash: a1fbbb8415e5e3405f039489aa071b0624065a9d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d079441e91ff90bcc974564bbd7069e0548a7d77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575281"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang（C# 编译器选项）
 通过使用 `-preferreduilang` 编译器选项，可指定 C# 编译器显示输出的语言，如错误消息。  

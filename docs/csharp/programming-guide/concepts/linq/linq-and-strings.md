@@ -2,12 +2,12 @@
 title: LINQ 和字符串 (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: da7a35f0fd66d1f7b8a72550c175b5428242fbc1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886495"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744613"
 ---
 # <a name="linq-and-strings-c"></a>LINQ 和字符串 (C#)
 
@@ -52,7 +52,7 @@ LINQ 可用于查询和转换字符串和字符串集合。 这在处理文本�
 
   演示如何对 .csv 文件的某行中的字段进行重新排序。
 
-- [如何：合并和比较字符串集合 (LINQ) (C#)](how-to-combine-and-compare-string-collections-linq.md)
+- [如何：组合和比较字符串集合 (LINQ) (C#)](how-to-combine-and-compare-string-collections-linq.md)
 
   演示如何通过各种方式合并字符串列表。
 

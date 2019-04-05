@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e64bb2e1c8a7b11fe70024eb4a4fa1717c06e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 34b02dfa3fb0f1e5f4cfadc297194dc4f3160c8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628469"
 ---
 # <a name="corheapobject-structure"></a>COR_HEAPOBJECT 结构
 提供有关托管堆上的对象的信息。  
@@ -42,28 +42,28 @@ typedef struct _COR_HEAPOBJECT {
 |------------|-----------------|  
 |`address`|在内存中对象的地址。|  
 |`size`|对象，以字节为单位的总大小。|  
-|`type`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)表示的对象类型的令牌。|  
+|`type`|一个[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)表示的对象类型的令牌。|  
   
 ## <a name="remarks"></a>备注  
- `COR_HEAPOBJECT` 可以通过枚举来检索实例[ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)填充通过调用的接口对象[icordebugprocess5:: Enumerateheap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)方法。  
+ `COR_HEAPOBJECT` 实例可以检索通过枚举[ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)接口对象通过调用来填充[ICorDebugProcess5::EnumerateHeap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)方法。  
   
- A`COR_HEAPOBJECT`实例提供有关在托管堆上的实时对象或有关的对象的任何对象不根路径，但尚未被垃圾回收器回收的信息。  
+ 一个`COR_HEAPOBJECT`实例提供了有关托管堆上一个活动对象或不根路径的任何对象，但尚未被垃圾回收器回收的对象有关的信息。  
   
- 为了提高性能，`COR_HEAPOBJECT.address`字段是`CORDB_ADDRESS`值，而不是 ICorDebugValue 接口在很多调试 API 中使用的值。 若要获取给定的对象地址的 ICorDebugValue 对象，你可以传递`CORDB_ADDRESS`值赋给[icordebugprocess5:: Getobject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)方法。  
+ 为了提高性能，`COR_HEAPOBJECT.address`字段是`CORDB_ADDRESS`值而不是 ICorDebugValue 接口在很多调试 API 中使用的值。 若要获取给定的对象地址的 ICorDebugValue 对象，可以将传递`CORDB_ADDRESS`值设为[ICorDebugProcess5::GetObject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)方法。  
   
- 为了提高性能，`COR_HEAPOBJECT.type`字段是`COR_TYPEID`值，而不是 ICorDebugType 接口在很多调试 API 中使用的值。 若要获取给定的类型 ID ICorDebugType 对象，你可以传递`COR_TYPEID`值赋给[icordebugprocess5:: Gettypefortypeid](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)方法。  
+ 为了提高性能，`COR_HEAPOBJECT.type`字段是`COR_TYPEID`值而不是 ICorDebugType 接口在很多调试 API 中使用的值。 若要获取给定的类型 ID ICorDebugType 对象，可以将传递`COR_TYPEID`值设为[ICorDebugProcess5::GetTypeForTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)方法。  
   
- `COR_HEAPOBJECT`结构包含引用计数 COM 接口。 如果你检索`COR_HEAPOBJECT`从通过调用枚举器实例[icordebugheapenum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)方法，你随后必须释放该引用。  
+ `COR_HEAPOBJECT`结构包含引用计数 COM 接口。 如果检索`COR_HEAPOBJECT`通过调用枚举器中的实例[icordebugheapenum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)方法，随后必须释放该引用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -2,12 +2,12 @@
 title: LocalServiceSecuritySettings
 ms.date: 03/30/2017
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
-ms.openlocfilehash: c1f3abe2d016ccab9b136752c4b2e6697ca59e66
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5c68706c5dcec3a5b0ec62bb9cfbea4e1496b4f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574594"
 ---
 # <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings
 LocalServiceSecuritySettings  
@@ -37,7 +37,7 @@ class LocalServiceSecuritySettings
 ## <a name="methods"></a>方法  
  LocalServiceSecuritySettings 类未定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  LocalServiceSecuritySettings 类具有以下属性：  
   
 ### <a name="detectreplays"></a>DetectReplays  
@@ -144,5 +144,5 @@ class LocalServiceSecuritySettings
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

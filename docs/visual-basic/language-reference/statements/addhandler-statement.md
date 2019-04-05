@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: f731ff150bd901e325726fca5aa682ff1770f979
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e8d8f512f163d82f074a5ad53fbb38a10904dfa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502945"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827076"
 ---
 # <a name="addhandler-statement"></a>AddHandler 语句
 在运行时将事件与事件处理程序。  
@@ -42,10 +42,11 @@ AddHandler event, AddressOf eventhandler
 >  用于自定义事件`AddHandler`语句调用事件的`AddHandler`访问器。 自定义事件的详细信息，请参阅[Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)。  
   
 ## <a name="example"></a>示例  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a>请参阅  
- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)  
- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>请参阅
+
+- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)
+- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

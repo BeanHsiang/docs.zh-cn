@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 7ee6eeab32dc4221354714781598f2445c94e662
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548881"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365121"
 ---
 # <a name="application-development"></a>应用程序开发
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 是一个演示框架，可用于开发以下类型的应用程序：  
@@ -52,13 +52,13 @@ ms.locfileid: "33548881"
   
  以上功能由通过*应用程序定义*添加到应用程序的 <xref:System.Windows.Application> 类来实现。  
   
- 有关详细信息，请参阅[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)。  
+ 有关详细信息，请参阅[应用程序管理概述](application-management-overview.md)。  
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF 应用程序资源、内容和数据文件  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 扩展支持三种类型的非可执行文件数据文件中嵌入的资源 Microsoft.NET Framework 的核心支持： 资源、 内容和数据。 有关详细信息，请参阅 [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 扩展支持三种类型的非可执行文件的数据文件中嵌入的资源在 Microsoft.NET Framework 的核心支持： 资源、 内容和数据。 有关详细信息，请参阅 [WPF 应用程序资源、内容和数据文件](wpf-application-resource-content-and-data-files.md)。  
   
- 在对于 WPF 非可执行数据文件的众多支持中，其中的一项重要支持就是能够通过唯一的 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 来识别和加载这些文件。 有关详细信息，请参阅 [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)。  
+ 在对于 WPF 非可执行数据文件的众多支持中，其中的一项重要支持就是能够通过唯一的 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 来识别和加载这些文件。 有关详细信息，请参阅 [WPF 中的 Pack URI](pack-uris-in-wpf.md)。  
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>窗口和对话框  
@@ -72,15 +72,15 @@ ms.locfileid: "33548881"
   
 -   对窗口的生存期进行跟踪并与之进行交互。  
   
- 有关详细信息，请参阅 [WPF 窗口概述](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)。  
+ 有关详细信息，请参阅 [WPF 窗口概述](wpf-windows-overview.md)。  
   
  <xref:System.Windows.Window> 支持用于创建被称为对话框的特殊窗口类型的功能。 可以创建两种类型的对话框，即模式和无模式对话框。  
   
- 为方便起见和可重用性和跨应用程序、 一致的用户体验的优点[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]会公开三个常见的 Windows 对话框： <xref:Microsoft.Win32.OpenFileDialog>， <xref:Microsoft.Win32.SaveFileDialog>，和<xref:System.Windows.Controls.PrintDialog>。  
+ 为方便起见，以及可重用性和跨应用程序一致的用户体验的优势[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供了三种常见的 Windows 对话框： <xref:Microsoft.Win32.OpenFileDialog>， <xref:Microsoft.Win32.SaveFileDialog>，和<xref:System.Windows.Controls.PrintDialog>。  
   
  消息框是一种特殊类型的对话框，用于向用户显示重要的文本信息并询问简单的“是/否/确定/取消”问题。 使用 <xref:System.Windows.MessageBox> 类创建并显示消息框。  
   
- 有关详细信息，请参阅[对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)。  
+ 有关详细信息，请参阅[对话框概述](dialog-boxes-overview.md)。  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>导航  
@@ -104,29 +104,29 @@ ms.locfileid: "33548881"
   
 -   记住通过日志实现的后向和前向导航，还可以检查和操控这些导航。  
   
- 有关信息，请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
+ 有关信息，请参阅[导航概述](navigation-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还支持一种被称为结构化导航的特殊导航类型。 结构化导航可用于调用一个或多个页面，这些页面能以结构化的可预测方式返回与调用函数一致的数据。 此功能将取决于 <xref:System.Windows.Navigation.PageFunction%601> 类；有关该类的进一步描述，请参阅[结构化导航概述](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)。 <xref:System.Windows.Navigation.PageFunction%601> 还可用于简化[导航拓扑概述](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)中所述的复杂导航拓扑的创建。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 还支持一种被称为结构化导航的特殊导航类型。 结构化导航可用于调用一个或多个页面，这些页面能以结构化的可预测方式返回与调用函数一致的数据。 此功能将取决于 <xref:System.Windows.Navigation.PageFunction%601> 类；有关该类的进一步描述，请参阅[结构化导航概述](structured-navigation-overview.md)。 <xref:System.Windows.Navigation.PageFunction%601> 还可用于简化[导航拓扑概述](navigation-topologies-overview.md)中所述的复杂导航拓扑的创建。  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>宿主  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以在 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Firefox 中承载。 每个承载模型都有各自的一些注意事项和约束，这些内容在[承载](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)中均有涵盖。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以在 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Firefox 中承载。 每个承载模型都有各自的一些注意事项和约束，这些内容在[承载](hosting-wpf-applications.md)中均有涵盖。  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>生成和部署  
- 尽管简单的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序可以在命令提示符下使用命令行编译器来生成，但 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 仍与 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 实现了集成以提供简化了开发和生成过程的额外支持。 有关详细信息，请参阅[生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)。  
+ 尽管简单的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序可以在命令提示符下使用命令行编译器来生成，但 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 仍与 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 实现了集成以提供简化了开发和生成过程的额外支持。 有关详细信息，请参阅[生成 WPF 应用程序](building-a-wpf-application-wpf.md)。  
   
- 根据所生成的应用程序类型，会有一个或多个部署选项可供选择。 有关详细信息，请参阅[部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)。  
+ 根据所生成的应用程序类型，会有一个或多个部署选项可供选择。 有关详细信息，请参阅[部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)。  
   
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
 |标题|描述|  
 |-----------|-----------------|  
-|[应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)|简要介绍 <xref:System.Windows.Application> 类，包括管理应用程序生存期、窗口、应用程序资源和导航。|  
-|[WPF 中的窗口](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)|详细介绍如何在应用程序中管理窗口，包括如何使用 <xref:System.Windows.Window> 类和对话框。|  
-|[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)|概述如何管理应用程序的各个页面间的导航。|  
-|[承载](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)|概述 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。|  
-|[生成和部署](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)|描述如何生成和部署 WPF 应用程序。|  
-|[Visual Studio 中的 WPF 简介](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|介绍 WPF 的主要功能。|  
-|[演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|一项演练，用于演示如何使用页面导航、布局、控件、图像、样式和绑定来创建 WPF 应用程序。|
+|[应用程序管理概述](application-management-overview.md)|简要介绍 <xref:System.Windows.Application> 类，包括管理应用程序生存期、窗口、应用程序资源和导航。|  
+|[WPF 中的窗口](windows-in-wpf-applications.md)|详细介绍如何在应用程序中管理窗口，包括如何使用 <xref:System.Windows.Window> 类和对话框。|  
+|[导航概述](navigation-overview.md)|概述如何管理应用程序的各个页面间的导航。|  
+|[承载](hosting-wpf-applications.md)|概述 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。|  
+|[生成和部署](building-and-deploying-wpf-applications.md)|描述如何生成和部署 WPF 应用程序。|  
+|[Visual Studio 中的 WPF 简介](../getting-started/introduction-to-wpf-in-vs.md)|介绍 WPF 的主要功能。|  
+|[演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|一项演练，用于演示如何使用页面导航、布局、控件、图像、样式和绑定来创建 WPF 应用程序。|

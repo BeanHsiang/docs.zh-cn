@@ -2,12 +2,12 @@
 title: Internet 信息服务承载最佳实践
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 5efa4c56cafe32dcc6864ba0bd68d14ea10b15e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187565"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333412"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Internet 信息服务承载最佳实践
 本主题概述了用于承载 Windows Communication Foundation (WCF) 服务的一些最佳做法。  
@@ -16,13 +16,13 @@ ms.locfileid: "50187565"
  实现 WCF 服务作为 DLL 部署到 Web 应用程序的 \bin 目录允许你重复使用服务模型外的 Web 应用程序，例如，可能没有 Internet 信息服务 (IIS) 部署的测试环境中。  
   
 ## <a name="service-hosts-in-iis-hosted-applications"></a>承载于 IIS 中的应用程序中的服务主机  
- 不要使用强制性自承载 API 创建用于侦听 IIS 承载环境本身不支持的网络传输的新服务主机（例如，承载 TCP 服务的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)]，因为 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 本身不支持 TCP 通信）。 建议不要使用此方法。 强制创建的服务主机在 IIS 承载环境内是未知的。 很重要的一点是，在 IIS 确定承载应用程序池是否空闲时，它未说明强制创建的服务所进行的处理。 结果是具有这样强制创建的服务主机的应用程序具有主动处置 IIS 宿主进程的 IIS 承载环境。  
+ 不要使用强制性自承载 API 创建用于侦听 IIS 承载环境本身不支持的网络传输的新服务主机（例如，承载 TCP 服务的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)]，因为 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 本身不支持 TCP 通信）。 建议不要使用此方法。 强制创建的服务主机在 IIS 承载环境内是未知的。 很重要的一点是，在 IIS 确定承载应用程序池是否空闲时，它未说明强制创建的服务所进行的处理。 结果是具有这样强制创建的服务主机的应用程序具有主动处置 IIS 托管进程的 IIS 承载环境。  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>URI 和承载于 IIS 中的终结点  
  承载于 IIS 中的服务的终结点应该使用相对统一资源标识符 (URI) 而不是绝对地址进行配置。 这保证终结点地址在属于承载应用程序的 URI 地址集范围内，并确保像预期的那样发生基于消息的激活。  
   
 ## <a name="state-management-and-process-recycling"></a>状态管理和进程回收  
- 为不在内存中维护本地状态的服务优化了 IIS 承载环境。 IIS 回收宿主进程以响应各种外部和内部事件，导致仅存储在内存中的任何可变状态丢失。 寄宿在 IIS 中的服务应该在进程外存储其状态（例如，在数据库中），或者在出现应用程序回收事件时可以轻松重新创建的内存中缓存中存储其状态。  
+ 为不在内存中维护本地状态的服务优化了 IIS 承载环境。 IIS 回收托管进程以响应各种外部和内部事件，导致仅存储在内存中的任何可变状态丢失。 寄宿在 IIS 中的服务应该在进程外存储其状态（例如，在数据库中），或者在出现应用程序回收事件时可以轻松重新创建的内存中缓存中存储其状态。  
   
 > [!NOTE]
 >  使 WCF 用于消息层可靠性和安全性的协议使用的易失性内存中状态。 WCF 可靠会话和安全会话可能由于应用程序回收而意外终止。 这些协议的使用 IIS 承载的应用程序应该依赖于以外的关联应用程序层状态 （例如，应用程序层结构或自定义关联标头） 或禁用的 WCF 提供的会话密钥IIS 进程回收的托管应用程序。  
@@ -81,6 +81,7 @@ ms.locfileid: "50187565"
   </system.webServer>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [服务承载示例](https://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)  
- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>请参阅
+
+- [服务承载示例](../samples/hosting.md)
+- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

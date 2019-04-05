@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: edec95ea729fdf26e384b6658c241ca307e60851
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389494"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408972"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>与非托管代码进行交互操作
 
 .NET Framework 提升与 COM 组件、COM+ 服务、外部类型库和许多操作系统服务的交互。 托管和非托管对象模型之间的数据类型、方法签名和错误处理机制有所不同。 要简化 .NET Framework 组件和非托管代码之间的互操作并简化迁移路径，公共语言运行时需对客户端和服务器隐藏这些对象模型中的差异。
 
-在运行时控制下执行的代码称为托管代码。 反之，在运行时以外运行的代码称为非托管代码。 COM 组件、ActiveX 接口和 Win32 API 函数都是非托管代码的示例。
+在运行时控制下执行的代码称为托管代码。 反之，在运行时以外运行的代码称为非托管代码。 COM 组件、ActiveX 接口和 Windows API 函数都是非托管代码的示例。
 
 ## <a name="in-this-section"></a>本节内容
 

@@ -2,12 +2,12 @@
 title: Operation 类
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: 16de8b25594896349ea546d3def52dd256fe5c70
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9453d67854bb8439891661b07e3ab3aa373e23eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668296"
 ---
 # <a name="operation-class"></a>Operation 类
 操作  
@@ -35,7 +35,7 @@ class Operation
 ## <a name="methods"></a>方法  
  Operation 类不定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  Operation 类具有下列属性：  
   
 ### <a name="action"></a>操作  
@@ -52,8 +52,8 @@ class Operation
   
  指示操作以异步方式使用实现`Begin`[左/右尖括号] 和`End`[左/右尖括号] 方法对服务协定中的。  
   
-### <a name="behaviors"></a>行为  
- 数据类型：Behavior array  
+### <a name="behaviors"></a>Behaviors  
+ 数据类型：行为数组  
   
  访问类型：只读  
   
@@ -128,5 +128,5 @@ class Operation
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.OperationDescription>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.OperationDescription>

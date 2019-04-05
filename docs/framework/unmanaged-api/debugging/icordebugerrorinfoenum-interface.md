@@ -1,5 +1,5 @@
 ---
-title: ICorDebugErrorInfoEnum 接口 1
+title: ICorDebugErrorInfoEnum 接口
 ms.date: 03/30/2017
 api_name:
 - ICorDebugErrorInfoEnum
@@ -16,15 +16,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7872a13dea7746b40d5525e4d758c1d8cd7117a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9fed280e4192e900b02e7abe2b0550817645c1ba
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411065"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964916"
 ---
-# <a name="icordebugerrorinfoenum-interface1"></a>ICorDebugErrorInfoEnum 接口 1
+# <a name="icordebugerrorinfoenum-interface"></a>ICorDebugErrorInfoEnum 接口
+
 `ICorDebugErrorInfoEnum` 已过时。 不要使用此接口。  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

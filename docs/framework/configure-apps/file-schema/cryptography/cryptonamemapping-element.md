@@ -1,5 +1,5 @@
 ---
-title: '&lt;cryptoNameMapping&gt;元素'
+title: <cryptoNameMapping> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoNameMapping
@@ -8,22 +8,20 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3909b9cd012ef47f5a191dbc1e7978a5852e62fe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ff3300f57fd4681875e2791610cc5a0d0dcba31b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184161"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281471"
 ---
-# <a name="ltcryptonamemappinggt-element"></a>&lt;cryptoNameMapping&gt;元素
+# <a name="cryptonamemapping-element"></a>\<cryptoNameMapping > 元素
 包含类到友好名称的映射。  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<cryptoNameMapping >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<cryptoNameMapping>  
   
 ## <a name="syntax"></a>语法  
   
@@ -76,8 +74,8 @@ ms.locfileid: "50184161"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>请参阅
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

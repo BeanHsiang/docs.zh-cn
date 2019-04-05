@@ -1,5 +1,6 @@
 ---
-title: char 关键字（C# 参考）
+title: char 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - char
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 95ecfaaf1397f7a4598faba6528b38170062145a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b0aaf6c0b2f614fa5ff8611407cea567da1faafb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43742021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616310"
 ---
 # <a name="char-c-reference"></a>char（C# 参考）
 
@@ -36,19 +37,19 @@ ms.locfileid: "43742021"
 
 <xref:System.Char?displayProperty=nameWithType> 类型提供多种适用于 `char` 值的静态方法。
 
-## <a name="c-language-specification"></a>C# 语言规范
+## <a name="c-language-specification"></a>C# 语言规范  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[整型类型](~/_csharplang/spec/types.md#integral-types)。 该语言规范是 C# 语法和用法的权威资料。
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Char>  
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)  
+- <xref:System.Char>
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [整型表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+- [可以为 null 的类型](../../../csharp/programming-guide/nullable-types/index.md)
 - [字符串](../../../csharp/programming-guide/strings/index.md)

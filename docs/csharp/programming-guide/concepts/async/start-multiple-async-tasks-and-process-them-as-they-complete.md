@@ -2,12 +2,12 @@
 title: 在异步任务完成时对其进行处理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 9380be1dc24d7c147c22dbb1a362777f56a32358
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202037"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152353"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>启动多个异步任务并在其完成时进行处理 (C#)
 
@@ -75,7 +75,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
         ```csharp
         int length = await firstFinishedTask;
-        resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);
+        resultsTextBox.Text += $"\r\nLength of the download:  {length}";
         ```
 
 多次运行此程序以验证并不总是以相同顺序显示已下载的长度。
@@ -181,7 +181,7 @@ namespace ProcessTasksAsTheyFinish
 
                     // Await the completed task.
                     int length = await firstFinishedTask;
-                    resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);
+                    resultsTextBox.Text += $"\r\nLength of the download:  {length}";
             }
         }
 
@@ -230,4 +230,4 @@ namespace ProcessTasksAsTheyFinish
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）
+- [异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

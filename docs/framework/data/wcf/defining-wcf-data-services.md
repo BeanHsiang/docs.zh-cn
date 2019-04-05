@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
-ms.openlocfilehash: c0c9010a71877d2c9757a2c9cf2d5c1fec8aedf7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ac75f5fd91f68d9403dc7b42325bf8970f0c6794
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515532"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512289"
 ---
 # <a name="defining-wcf-data-services"></a>定义 WCF 数据服务
 

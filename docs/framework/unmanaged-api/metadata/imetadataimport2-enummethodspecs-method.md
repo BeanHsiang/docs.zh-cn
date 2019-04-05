@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c2122c06c6e4f1137173f02e37fb0982864e7ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24ad5ff05e4f7fe7fcfc06ff5fe096d47e8b3cbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468203"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs 方法
-获取的枚举数数组 MethodSpec 与关联的标记指定的 MethodDef 或 MemberRef 令牌。  
+获取可枚举数组 MethodSpec 与关联的标记指定的 MethodDef 或 MemberRef 令牌。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,18 +39,18 @@ HRESULT EnumMethodSpecs (
 );   
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `phEnum`  
- [在中，out]枚举数指向的指针`rMethodSpecs`。  
+ [in、 out]指向的枚举器的`rMethodSpecs`。  
   
  `tk`  
- [in]新对象或 MemberRef 令牌表示其 MethodSpec 令牌是要枚举的方法。 如果值`tk`为 0 （零），将枚举的作用域中的所有 MethodSpec 令牌。  
+ [in]新对象或 MemberRef 令牌，表示其 MethodSpec 令牌是要枚举的方法。 如果的值`tk`为 0 （零），则将枚举所有 MethodSpec 令牌的作用域中。  
   
  `rMethodSpecs`  
  [out]要枚举的 MethodSpec 标记的数组。  
   
  `cMax`  
- [in]请求的令牌中放置的最大数`rMethodSpecs`。  
+ [in]要放置在中的令牌的请求最大数目`rMethodSpecs`。  
   
  `pcMethodSpecs`  
  [out]返回的标记数置于`rMethodSpecs`。  
@@ -62,14 +63,14 @@ HRESULT EnumMethodSpecs (
 |`S_FALSE`|`phEnum` 不包含任何成员元素。 在这种情况下，`pcMethodSpecs`设置为 0 （零）。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**用作 MsCorEE.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

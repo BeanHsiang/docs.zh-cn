@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: d43d22c1e8c0b05e06582d63d3998c64940a3f7a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37926e48ef6dc12a6b96bbdb8b268993c82e4b48
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185400"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821265"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 本示例演示在同一台计算机上提供跨进程通信的 `netNamedPipeBinding` 绑定。 命名管道不能跨计算机工作。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)计算器服务。  
@@ -19,7 +19,7 @@ ms.locfileid: "50185400"
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
   
- 绑定是在客户端和服务的配置文件中指定的。 中指定的绑定类型`binding`的属性[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如下面的示例配置所示：  
+ 绑定是在客户端和服务的配置文件中指定的。 中指定的绑定类型`binding`的属性[\<终结点 >](../../configure-apps/file-schema/wcf/endpoint-element.md)或[\<终结点 > 的\<客户端 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)元素，如中所示下面的示例配置：  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -94,4 +94,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  
   
-## <a name="see-also"></a>请参阅

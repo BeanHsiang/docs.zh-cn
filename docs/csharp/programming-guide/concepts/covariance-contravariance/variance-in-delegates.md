@@ -2,12 +2,12 @@
 title: 委托中的变体 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 75b1f94a3fc7a59393d6a114a2b5346dd0534297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657202"
 ---
 # <a name="variance-in-delegates-c"></a>委托中的变体 (C#)
 .NET Framework 3.5 引入了变体支持，用于在 C# 中匹配所有委托的方法签名和委托类型。 这表明不仅可以将具有匹配签名的方法分配给委托，还可以将返回多个派生类型（协变）的方法分配给委托，或者将所接受参数的派生类型（逆变）数目比委托类型指定的数目少的方法分配给委托。 这包括泛型委托和非泛型委托。  
@@ -198,6 +198,6 @@ public static void Test()
   
 ## <a name="see-also"></a>请参阅
 
-- [泛型](~/docs/standard/generics/index.md)  
-- [对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
+- [泛型](~/docs/standard/generics/index.md)
+- [对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
 - [如何：合并委托（多播委托）](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

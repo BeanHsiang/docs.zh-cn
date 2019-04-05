@@ -2,12 +2,12 @@
 title: 运行 Windows Communication Foundation 示例
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 3e49a88fa5369cc2ad2251e48f3eca74fa7c4445
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: aec7d7f9ce0a6db5d20bce47ab313f4248e86c88
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836891"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304669"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>运行 Windows Communication Foundation 示例
 可以在单一计算机或跨计算机配置中运行的 Windows Communication Foundation (WCF) 示例。 示例在提供时就可用于在单机上运行。 在跨计算机配置中，必须修改示例的配置文件设置。 下面的过程说明如何用同一计算机配置和跨计算机配置来运行示例。 请注意，Internet 信息服务 (IIS) 中承载的服务和自承载示例在步骤上有所不同。 大多数示例承载于 IIS 中，请参见示例自述文件信息以确定示例的承载方式。  
@@ -19,13 +19,13 @@ ms.locfileid: "48836891"
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>在同一计算机上运行示例  
   
-1.  如果服务由 IIS 承载，请确保您可以访问使用浏览器通过输入以下地址的服务： `http://localhost/servicemodelsamples/service.svc`。 在响应中应显示确认页。 如果未显示确认页，请参阅[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+1.  如果服务由 IIS 承载，请确保您可以访问使用浏览器通过输入以下地址的服务： `http://localhost/servicemodelsamples/service.svc`。 在响应中应显示确认页。 如果未显示确认页，请参阅[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 2.  如果服务是自承载的，请从 \service\bin（在语言特定文件夹内）中运行 Service.exe。 服务活动显示在服务控制台窗口上。  
   
 3.  从 \client\bin 运行 Client.exe\\，从特定于语言的文件夹下。 客户端活动将显示在客户端控制台窗口上。  
   
-4.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-machines"></a>跨计算机运行示例  
   
@@ -79,7 +79,6 @@ ms.locfileid: "48836891"
   
 -   出于安全目的，如果服务承载于 IIS 中，请在示例结束后删除虚拟目录定义和在安装步骤中授予的权限。  
   
-## <a name="see-also"></a>请参阅  
- [生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [在工作组中和跨计算机运行示例](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
- [疑难解答提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+## <a name="see-also"></a>请参阅
+- [生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)
+- [WCF 示例的疑难解答提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6a217e2212bb900d7ba83ccdd9cb00d30454baf
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a7187076eb338d5a57388d19f62e79af041ee774
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749643"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501040"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函数
 加载类型库并使用所提供[ITypeLibResolver 接口](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)若要解决任何内部引用的类型库。  
@@ -36,18 +36,18 @@ HRESULT LoadTypeLibWithResolver(
     [out] ITypeLib          **pptlib);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `szFile`  
  [in]类型库文件路径。  
   
  `regkind`  
  [in]一个[REGKIND 枚举](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind)标志，用于控制如何注册类型库。 其可能的值为：  
   
--   `REGKIND_DEFAULT`： 使用默认注册行为。  
+-   `REGKIND_DEFAULT`：使用默认注册行为。  
   
--   `REGKIND_REGISTER`： 注册此类型库。  
+-   `REGKIND_REGISTER`：注册此类型库。  
   
--   `REGKIND_NONE`： 没有注册此类型库。  
+-   `REGKIND_NONE`：未注册此类型库。  
   
  `pTlbResolver`  
  [in]实现的指针[ITypeLibResolver 接口](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)。  
@@ -85,14 +85,14 @@ HRESULT LoadTypeLibWithResolver(
  如果您调用`LoadTypeLibWithResolver`直接，您必须提供你自己[ITypeLibResolver 接口](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** TlbRef.h  
   
  **库：** TlbRef.lib  
   
- **.NET framework 版本：** 3.5、 3.0、 2.0  
+ **.NET framework 版本：** 3.5, 3.0, 2.0  
   
-## <a name="see-also"></a>请参阅  
- [Tlbexp Helper 函数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx 函数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>请参阅
+- [Tlbexp Helper 函数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [LoadTypeLibEx 函数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

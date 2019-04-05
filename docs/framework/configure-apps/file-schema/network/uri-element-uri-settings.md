@@ -1,21 +1,21 @@
 ---
-title: '&lt;Uri&gt;元素 （Uri 设置）'
+title: <Uri> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: 2ca5592bd0a66ded25c7da8f0b42367af990aa7a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f432be7594b1659dfcae0c6eee706358230f2cbb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192182"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269245"
 ---
-# <a name="lturigt-element-uri-settings"></a>&lt;Uri&gt;元素 （Uri 设置）
+# <a name="uri-element-uri-settings"></a>\<Uri > 元素 （Uri 设置）
 包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。  
   
 ## <a name="schema-hierarchy"></a>架构层次结构  
  [\<configuration> 元素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<uri >](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<uri>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ ms.locfileid: "50192182"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[配置](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含所有命名空间的设置。|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|包含所有命名空间的设置。|  
   
 ## <a name="remarks"></a>备注  
  `uri`元素包含的成员设置<xref:System.Uri>类中的类使用<xref:System.Net>命名空间。 设置配置为 IRI 和 IDN 的支持。  
@@ -67,5 +67,5 @@ ms.locfileid: "50192182"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

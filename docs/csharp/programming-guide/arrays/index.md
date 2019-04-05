@@ -1,16 +1,17 @@
 ---
-title: 数组（C# 编程指南）
+title: 数组 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: e0ed2d678363a29bb870a496846fc6f054769a4b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 1b1a3d2e61507a497349deeb857e4333356f66a5
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47111108"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857796"
 ---
 # <a name="arrays-c-programming-guide"></a>数组（C# 编程指南）
 
@@ -18,9 +19,9 @@ ms.locfileid: "47111108"
   
  `type[] arrayName;`  
   
- 以下示例创建一维、多维和交错数组：  
+ 下面的示例创建一维数组、多维数组和交错数组：  
   
- [!code-csharp[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideArrays#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#1)]  
   
 ## <a name="array-overview"></a>数组概述
 
@@ -54,6 +55,5 @@ ms.locfileid: "47111108"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [集合](../../../csharp/programming-guide/concepts/collections.md)  
-- [数组集合类型](https://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [集合](../../../csharp/programming-guide/concepts/collections.md)

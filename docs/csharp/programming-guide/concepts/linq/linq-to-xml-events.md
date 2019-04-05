@@ -2,12 +2,12 @@
 title: LINQ to XML 事件 (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-ms.openlocfilehash: 6308d81eac830e11b6d58f8e460dfa377663cd21
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: f7ce6ed99f7279d1dc774314cdc2dde345b6a84d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736859"
 ---
 # <a name="linq-to-xml-events-c"></a>LINQ to XML 事件 (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 事件使你可以在 XML 树发生改变时得到通知。  
@@ -19,21 +19,21 @@ ms.locfileid: "49453302"
 ## <a name="types-and-events"></a>类型和事件  
  在处理事件时使用下面的类型：  
   
-|类型|描述|  
+|类型|说明|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|当 <xref:System.Xml.Linq.XObject> 发生事件时指定事件类型。|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|提供有关 <xref:System.Xml.Linq.XObject.Changing> 和 <xref:System.Xml.Linq.XObject.Changed> 事件的数据。|  
   
  修改 XML 树时将引发以下事件：  
   
-|事件|描述|  
+|事件|说明|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|在此 <xref:System.Xml.Linq.XObject> 或它的任何子代即将发生更改之前发生。|  
 |<xref:System.Xml.Linq.XObject.Changed>|在 <xref:System.Xml.Linq.XObject> 或它的任何子代已经更改时发生。|  
   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  当您希望在 XML 树中保留一些聚合信息时事件非常有用。 例如，您可能想保留一份发票合计，计算发票上各个项目的总和。 本示例使用事件来维护复杂元素 `Items` 之下所有子元素的总和。  
   
 ### <a name="code"></a>代码  

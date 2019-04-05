@@ -17,41 +17,45 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d73fe16720248d541bac64a432bb6f35d6873b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9a676989bdc6866f85fabe3e15b1e6b7b8b5a9a9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454976"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351250"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc 方法
-尝试为新的 Microsoft 中间语言 (MSIL) 函数主体分配指定的数量的内存。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-PVOID Alloc (  
-    [in] ULONG   cb  
-);  
-```  
-  
-#### <a name="parameters"></a>参数  
- `cb`  
- [in]要为方法体分配的字节数。  
-  
-## <a name="remarks"></a>备注  
- 分配的内存将大于与此分配器相关联的模块的基址的地址处开始。 换而言之，每个分配器创建对特定模块，并且将尝试从其基址分配正偏移量的内存。 如果`Alloc`无法分配的请求大于该模块的基址的地址处的字节数它将返回 E_OUTOFMEMORY，而不考虑实际可用的内存空间量。  
-  
- `Alloc`方法应与结合使用[icorprofilerinfo:: Setilfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)方法。  
-  
-## <a name="requirements"></a>要求  
- **平台：** WindSee[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **头文件：** CorProf.idl、CorProf.h  
-  
- **库：** CorGuids.lib  
-  
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>请参阅  
- [IMethodMalloc 接口](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)
+
+尝试为新的 Microsoft 中间语言 (MSIL) 函数主体分配指定的内存量。
+
+## <a name="syntax"></a>语法
+
+```cpp
+PVOID Alloc (
+    [in] ULONG   cb
+);
+```
+
+## <a name="parameters"></a>参数
+
+`cb`\
+[in]要为方法主体分配的字节数。
+
+## <a name="remarks"></a>备注
+
+ 已分配的内存将大于与此分配器相关联的模块的基址的地址处开始。 换而言之，每个分配器创建特定的模块，并将尝试从其基址分配内存的正偏移位置。 如果`Alloc`无法分配请求的数目的字节大于该模块的基址的地址处返回 E_OUTOFMEMORY，而不考虑实际的可用内存空间量。
+
+ `Alloc`方法应结合使用[icorprofilerinfo:: Setilfunctionbody](icorprofilerinfo-setilfunctionbody-method.md)方法。
+
+## <a name="requirements"></a>要求
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+ **标头：** CorProf.idl, CorProf.h
+
+ **库：** CorGuids.lib
+
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
+## <a name="see-also"></a>请参阅
+
+- [IMethodMalloc 接口](imethodmalloc-interface.md)

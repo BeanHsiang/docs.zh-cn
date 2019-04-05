@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f92667191cad163998d233e1110365de65c0340c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 69976110a227f95cf157b19b270f25cc3808246e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437685"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484103"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx 方法
-为第 0 代中设置的段大小和最大大小。  
+设置第 0 代段大小和最大大小。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +36,7 @@ HRESULT SetGCStartupLimitsEx (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `SegmentSize`  
  [in]由垃圾回收系统段的大小。  
   
@@ -44,16 +44,16 @@ HRESULT SetGCStartupLimitsEx (
  [in]第 0 代最大大小。  
   
 ## <a name="remarks"></a>备注  
- 值的`SetGCStartupLimitsEx`仅之前启动主机时，可以指定集。 以后无法更改这些值。  
+ 值的`SetGCStartupLimitsEx`只能在启动主机之前，可以指定集。 以后无法更改这些值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** GCHost.idl、 GCHost.h  
+ **标头：** GCHost.idl GCHost.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IGCHost2 接口](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IGCHost2 接口](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)

@@ -2,12 +2,12 @@
 title: 成员资格和角色提供程序
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: bff100189c904706f3c7c886945383252ce7bfcb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: eb2c8a5bbe10d91a29ed040e89163279434c8f8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864023"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839751"
 ---
 # <a name="membership-and-role-provider"></a>成员资格和角色提供程序
 此“成员资格和角色提供程序”示例演示服务如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格和角色提供程序来对客户端进行身份验证和授权。  
@@ -114,7 +114,7 @@ ms.locfileid: "43864023"
 </system.serviceModel>  
 ```  
   
- 运行此示例时，客户端使用三个不同的用户帐户来调用各个服务操作：Alice、Bob 和 Charlie。 操作请求和响应显示在客户端控制台窗口中。 以用户“Alice”身份执行的所有四个调用都应成功。 用户“Bob”在尝试调用 Divide 方法时会收到拒绝访问错误。 用户“Charlie”在尝试调用 Multiply 方法时会收到拒绝访问错误。 在客户端窗口中按 Enter 可以关闭客户端。  
+ 运行示例时，客户端调用各个服务操作在三个不同的用户帐户：Alice、 Bob 和 Charlie。 操作请求和响应显示在客户端控制台窗口中。 以用户“Alice”身份执行的所有四个调用都应成功。 用户“Bob”在尝试调用 Divide 方法时会收到拒绝访问错误。 用户“Charlie”在尝试调用 Multiply 方法时会收到拒绝访问错误。 在客户端窗口中按 Enter 可以关闭客户端。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>设置、生成和运行示例  
   
@@ -134,11 +134,11 @@ ms.locfileid: "43864023"
   
 1.  请确保路径包含 Makecert.exe 所在的文件夹。  
   
-2.  在使用管理员特权运行的 Visual Studio 命令提示中，运行示例安装文件夹中的 Setup.bat。 这将安装运行此示例所需的服务证书。  
+2.  使用管理员特权运行 Visual Studio，请从示例安装文件夹在开发人员命令提示符上运行 Setup.bat。 这将安装运行此示例所需的服务证书。  
   
 3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -150,7 +150,7 @@ ms.locfileid: "43864023"
   
 4.  将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-5.  在服务器上，使用管理特权打开 Visual Studio 命令提示并运行 `setup.bat service`。 运行`setup.bat`与`service`参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
+5.  在服务器上，使用管理权限打开 Visual Studio 开发人员命令提示符并运行`setup.bat service`。 运行`setup.bat`与`service`参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
   
 6.  编辑 Web.config 以反映新的证书名称 (在`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md))，这是与计算机的名称的完全限定域名相同。  
   
@@ -158,16 +158,16 @@ ms.locfileid: "43864023"
   
 8.  在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。  
   
-9. 在客户端上，使用管理特权打开 Visual Studio 命令提示并运行 ImportServiceCert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+9. 在客户端上使用管理权限打开 Visual Studio 开发人员命令提示符并运行 ImportServiceCert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
-10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务能够进行通信，请参见[故障排除提示](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 在客户端计算机上，在命令提示符下启动 Client.exe。 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
 > [!NOTE]
->  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+>  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="the-setup-batch-file"></a>Setup 批处理文件  
  通过运行此示例随附的 Setup.bat 批处理文件，可以用相关的证书将服务器配置为运行需要基于服务器证书的安全性的自承载应用程序。 必须修改此批处理文件，以便跨计算机或在非承载情况下工作。  
@@ -198,4 +198,3 @@ ms.locfileid: "43864023"
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
-## <a name="see-also"></a>请参阅

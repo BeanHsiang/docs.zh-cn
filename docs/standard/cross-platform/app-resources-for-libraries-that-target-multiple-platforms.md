@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b57233457c697dbe35ab0f68d6ce3557cee9b5c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580084"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641143"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>面向多个平台的库的应用程序资源
 可以使用.NET Framework[可移植类库](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)项目类型以确保可以从多个平台访问类库中的资源。 该项目类型可以在 Visual Studio 2012 中，面向.NET Framework 类库的可移植子集。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]确保可从桌面应用、Silverlight 应用、Windows Phone 应用和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用访问你的库。
@@ -52,7 +52,7 @@ ms.locfileid: "48580084"
  如果你的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]项目包含本地化资源，则根据需要对桌面应用中的库使用集散模型来部署这些资源。 若要在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]应用中使用主资源文件和所有本地化的资源文件，可添加对主程序集的引用。 在编译时，Visual Studio 会将你的主资源文件以及所有本地化资源文件中的资源提取到单独的 .resw 文件中。 然后，它将 .resw 文件编译为 [!INCLUDE[wrt](../../../includes/wrt-md.md)]在运行时访问的单个 PRI 文件。
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>示例：非本地化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
+## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>示例:未本地化 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  以下是一个简单的非本地化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]示例，它使用资源来存储列的名称并确定要为表格数据保留的字符数。 此示例使用名为 LibResources.resx 的文件存储下表中列出的字符串资源。
 
 |资源名称|资源值|
@@ -81,7 +81,7 @@ ms.locfileid: "48580084"
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>示例：本地化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>示例:本地化 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  下面的本地化的[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]示例包括法语（法国）和英语（美国）区域性的资源。 英语 （美国） 区域性是应用程序的默认区域性;在表中显示其资源[上一节](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)。 法语（法国）区域性的资源文件命名为 LibResources.fr-FR.resx，该文件包含下表中列出的字符串资源。 `UILibrary` 类的源代码与上一部分中所示的相同。
 
 |资源名称|资源值|
@@ -106,6 +106,6 @@ ms.locfileid: "48580084"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Resources.ResourceManager>  
-- [桌面应用中的资源](../../../docs/framework/resources/index.md)  
+- <xref:System.Resources.ResourceManager>
+- [桌面应用中的资源](../../../docs/framework/resources/index.md)
 - [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

@@ -1,15 +1,15 @@
 ---
 title: 微服务中的复原和高可用性
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务中的复原和高可用性
+description: 微服务必须能够承受暂时的网络和依赖项故障，必须可复原以实现高可用性。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 19657c35e6640558526bf390b81eb08220821a4c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: ebf3a81718cd3423d3c80edb9c2f5b10f4ef47da
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106312"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465810"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>微服务中的复原和高可用性
 
@@ -19,7 +19,7 @@ ms.locfileid: "37106312"
 
 在其他情况下，复原问题会更加复杂，例如在应用程序升级时发生此故障。 与部署系统一起工作的微服务需要确定它应该继续更新到新版本还是应该回滚到之前的版本，才能保持一致的状态。 需要考虑的问题如：是否有足够的计算机可继续更新以及如何恢复微服务的以前版本。 这要求微服务发出运行状况信息，使整个应用程序和业务流程协调程序可以做出以上决定。
 
-此外，复原还与基于云的系统的必要行为方式有关。 如前所述，基于云的系统必须包含故障，必须尝试从故障中自动恢复。 例如，如果发生网络或容器故障，客户端应用或客户端服务必须有重试发送信息或重试请求的策略，因为在多数情况下，云中的故障仅是部分故障。 本指南中的[实现具有恢复能力的应用程序](#implementing_resilient_apps)一节介绍了部分故障的处理方式。 该部分通过使用库（如[Polly](https://github.com/App-vNext/Polly)，其中提供了多种策略处理此类问题）介绍了诸如指数退避重试或 .NET Core 中的断路器模式的技术。
+此外，复原还与基于云的系统的必要行为方式有关。 如前所述，基于云的系统必须包含故障，必须尝试从故障中自动恢复。 例如，如果发生网络或容器故障，客户端应用或客户端服务必须有重试发送信息或重试请求的策略，因为在多数情况下，云中的故障仅是部分故障。 本指南中的[实现具有恢复能力的应用程序](../implement-resilient-applications/index.md)一节介绍了部分故障的处理方式。 该部分通过使用库（如[Polly](https://github.com/App-vNext/Polly)，其中提供了多种策略处理此类问题）介绍了诸如指数退避重试或 .NET Core 中的断路器模式的技术。
 
 ## <a name="health-management-and-diagnostics-in-microservices"></a>微服务中的运行状况管理和诊断
 
@@ -29,7 +29,12 @@ ms.locfileid: "37106312"
 
 运行状况不同于诊断。 运行状况是微服务报告其当前状态以采取适当的措施。 一个很好的例子就是使用升级和部署机制来保证可用性。 即使可能由于进程崩溃或计算机重启导致当前服务不正常，仍可对服务器进行操作。 最不需要做的就是执行升级，那样会让情况变得更糟。 最佳方法是先调查或给微服务恢复的时间。 微服务的运行状况事件能帮助做出明智的决定，实际上是帮助创建自愈服务。
 
-本指南“在 ASP.NET Core 服务中实现运行状况检查”一节介绍了如何在微服务中使用新 ASP.NET 运行状况检查库，使微服务可向监视器服务报告它们的状态，以执行适当的操作。
+本指南的[在 ASP.NET Core 服务中实现运行状况检查](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services)一节介绍了如何在微服务中使用新 ASP.NET 运行状况检查库，使微服务可向监视器服务报告它们的状态，以执行适当的操作。
+
+还可以使用出色的开源库 Beat Pulse，该库可通过 [GitHub](https://github.com/Xabaril/BeatPulse) 作为 [NuGet 包](https://www.nuget.org/packages/BeatPulse/) 获取。 此库还执行经过改进的运行状况检查，它可以处理两种类型的检查：
+
+- **运行情况**：检查微服务是否处于活动状态，即微服务是否接受请求并作出响应。 
+- **就绪情况**：检查微服务的依赖项（数据库、查询服务等）是否已就绪，以便微服务可以执行预期操作。 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>使用诊断和日志事件流
 
@@ -43,7 +48,7 @@ ms.locfileid: "37106312"
 
 创建基于微服务的应用程序时，需要处理其复杂性。 当然，单个微服务的处理很简单，但处理微服务的数十个或数百个类型以及数千个实例则十分复杂。 这不仅是构建微服务体系结构，如果想要一个稳定紧密的系统，还需要具有高可用性、可寻址能力、复原能力、运行状况和诊断功能。
 
-![](./media/image22.png)
+![业务流程协调程序提供用于运行微服务的支持平台。](./media/image22.png)
 
 **图 4-22**。 微服务平台是应用程序运行状况管理的基础
 
@@ -53,30 +58,27 @@ ms.locfileid: "37106312"
 
 ## <a name="additional-resources"></a>其他资源
 
--   **The Twelve-Factor App.XI.Logs: Treat logs as event streams**（日志：将日志视为事件流）
-    [https://12factor.net/logs](https://12factor.net/logs)
+- **The Twelve-Factor App.XI.日志：将日志视为事件流** \
+  [https://12factor.net/logs](https://12factor.net/logs)
 
--   **Microsoft 诊断 EventFlow 库。** GitHub 存储库。
+- Microsoft Diagnostic EventFlow 库 GitHub 存储库。 \
+  [https://github.com/Azure/diagnostics-eventflow](https://github.com/Azure/diagnostics-eventflow)
 
-    [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+- 什么是 Azure 诊断 \
+  [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **什么是 Azure 诊断**
-    [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
+- 将 Windows 计算机连接到 Azure 中的 Log Analytics 服务 \
+  [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **将 Windows 计算机连接到 Azure 中的 Log Analytics 服务**
-    [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **记录你的想法：使用语义日志记录应用程序块** \
+  <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
--   **Logging What You Mean: Using the Semantic Logging Application Block**（记录你的想法：使用语义日志记录应用程序块）
-    [https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+- Splunk 官方网站。 \
+  [https://www.splunk.com/](https://www.splunk.com/)
 
--   **Splunk。** 官方网站。
-    [*https://www.splunk.com/*](https://www.splunk.com/)
-
--   **EventSource 类**。 Windows 事件跟踪 (ETW) 的 API [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
-
-
-
+- Windows 事件跟踪 (ETW) 的 EventSource 类 API \
+  [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
-[上一页](microservice-based-composite-ui-shape-layout.md)
-[下一页](scalable-available-multi-container-microservice-applications.md)
+>[上一页](microservice-based-composite-ui-shape-layout.md)
+>[下一页](scalable-available-multi-container-microservice-applications.md)

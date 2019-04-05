@@ -1,15 +1,13 @@
 ---
-title: dotnet build 命令 - .NET Core CLI
+title: dotnet build 命令
 description: dotnet build 命令可生成项目及其所有依赖项。
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: c9d1478e3d3e298b01e707242cc7ad5cd924a9b3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 1e5e05d51f98394b2b77e3a8fc645cf9712b0a0f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200544"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169686"
 ---
 # <a name="dotnet-build"></a>dotnet 生成
 
@@ -37,7 +35,7 @@ dotnet build [-h|--help]
 ```
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet build` 命令将项目及其依赖项生成为一组二进制文件。 二进制文件包括中间语言 (IL) 文件（带 *.dll* 扩展名）和用于调试的符号文件（带 *.pdb* 扩展名）中的项目的代码。 生成依赖项 JSON 文件 (*\*.deps.json*)，该文件列出了应用程序的依赖项。 生成 *\*.runtimeconfig.json* 文件，该文件指定应用程序的共享运行时及其版本。
 
@@ -46,10 +44,6 @@ dotnet build [-h|--help]
 构建需要 *project.assets.json* 文件，该文件列出了你的应用程序的依赖项。 此文件在 [`dotnet restore`](dotnet-restore.md) 执行时创建。 如果资产文件未就位，那么工具将无法解析引用程序集，进而导致错误生成。 使用 .NET Core 1.x SDK，需要在运行 `dotnet build` 之前显式运行 `dotnet restore`。 自 .NET Core 2.0 SDK 起，`dotnet restore` 在 `dotnet build` 运行时隐式运行。 若要在运行 build 命令时禁用隐式还原，可以传递 `--no-restore` 选项。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
-
-`dotnet build` 使用 MSBuild 生成项目，因此它支持并行生成和增量生成。 有关详细信息，请参阅[增量生成](/visualstudio/msbuild/incremental-builds)。
-
-除其自己的选项外，`dotnet build` 命令也接受 MSBuild 选项，如用来设置属性的 `-p` 或用来定义记录器的 `-l`。 有关这些选项的详细信息，请参阅 [MSBuild 命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)。
 
 项目是否可执行由项目文件中的 `<OutputType>` 属性决定。 以下示例显示生成可执行代码的项目：
 
@@ -61,6 +55,14 @@ dotnet build [-h|--help]
 
 若要生成库，则省略 `<OutputType>` 属性。 生成输出中的主要区别在于，针对某个库的 IL DLL 不包含入口点，并且不能执行。
 
+### <a name="msbuild"></a>MSBuild
+
+`dotnet build` 使用 MSBuild 生成项目，因此它支持并行生成和增量生成。 有关详细信息，请参阅[增量生成](/visualstudio/msbuild/incremental-builds)。
+
+除其自己的选项外，`dotnet build` 命令也接受 MSBuild 选项，如用来设置属性的 `-p` 或用来定义记录器的 `-l`。 有关这些选项的详细信息，请参阅 [MSBuild 命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)。 或者也可以使用 [dotnet msbuild](dotnet-msbuild.md) 命令。
+
+运行 `dotnet build` 相当于 `dotnet msbuild -restore -target:Build`。
+
 ## <a name="arguments"></a>自变量
 
 `PROJECT | SOLUTION`
@@ -71,104 +73,118 @@ dotnet build [-h|--help]
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-定义生成配置。 默认值为 `Debug`。
+  定义生成配置。 默认值为 `Debug`。
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-编译特定[框架](../../standard/frameworks.md)。 必须在[项目文件](csproj.md)中定义该框架。
+  编译特定[框架](../../standard/frameworks.md)。 必须在[项目文件](csproj.md)中定义该框架。
 
-`--force`
+* **`--force`**
 
-强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。
+  强制解析所有依赖项，即使上次还原已成功，也不例外。 指定此标记等同于删除 project.assets.json 文件。
 
-`-h|--help`
+* **`-h|--help`**
 
-打印出有关命令的简短帮助。
+  打印出有关命令的简短帮助。
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-忽略项目到项目 (P2P) 引用，并仅生成指定的根项目。
+  忽略项目到项目 (P2P) 引用，并仅生成指定的根项目。
 
-`--no-incremental`
+* **`--no-incremental`**
 
-将生成标记为对增量生成不安全。 此标记关闭增量编译，并强制完全重新生成项目依赖项关系图。
+  将生成标记为对增量生成不安全。 此标记关闭增量编译，并强制完全重新生成项目依赖项关系图。
 
-`--no-restore`
+* **`--no-restore`**
 
-在生成期间不执行隐式还原。
+  在生成期间不执行隐式还原。
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-放置生成二进制文件的目录。 指定此选项时还需要定义 `--framework`。
+  放置生成二进制文件的目录。 指定此选项时还需要定义 `--framework`。 如果未指定，则默认路径为 `./bin/<configuration>/<framework>/`。
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-指定目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
+  指定目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-在项目文件的版本字段中定义星号 (`*`) 版本后缀。 格式遵循 NuGet 的版本准则。
+  在项目文件的版本字段中定义星号 (`*`) 版本后缀。 格式遵循 NuGet 的版本准则。
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-定义生成配置。 默认值为 `Debug`。
+  定义生成配置。 默认值为 `Debug`。
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-编译特定[框架](../../standard/frameworks.md)。 必须在[项目文件](csproj.md)中定义该框架。
+  编译特定[框架](../../standard/frameworks.md)。 必须在[项目文件](csproj.md)中定义该框架。
 
-`-h|--help`
+* **`-h|--help`**
 
-打印出有关命令的简短帮助。
+  打印出有关命令的简短帮助。
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-忽略项目到项目 (P2P) 引用，并仅生成指定的根项目。
+  忽略项目到项目 (P2P) 引用，并仅生成指定的根项目。
 
-`--no-incremental`
+* **`--no-incremental`**
 
-将生成标记为对增量生成不安全。 此标记关闭增量编译，并强制完全重新生成项目依赖项关系图。
+  将生成标记为对增量生成不安全。 此标记关闭增量编译，并强制完全重新生成项目依赖项关系图。
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-放置生成二进制文件的目录。 指定此选项时还需要定义 `--framework`。
+  放置生成二进制文件的目录。 指定此选项时还需要定义 `--framework`。
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-指定目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
+  指定目标运行时。 有关运行时标识符 (RID) 的列表，请参阅 [RID 目录](../rid-catalog.md)。
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  设置命令的详细级别。 允许使用的值为 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-在项目文件的版本字段中定义星号 (`*`) 版本后缀。 格式遵循 NuGet 的版本准则。
+  在项目文件的版本字段中定义星号 (`*`) 版本后缀。 格式遵循 NuGet 的版本准则。
 
 ---
 
 ## <a name="examples"></a>示例
 
-生成项目及其依赖项：
+* 生成项目及其依赖项：
 
-`dotnet build`
+  ```console
+  dotnet build
+  ```
 
-使用“发布”配置生成项目及其依赖项：
+* 使用“发布”配置生成项目及其依赖项：
 
-`dotnet build --configuration Release`
+  ```console
+  dotnet build --configuration Release
+  ```
 
-针对特定运行时（本例中为 Ubuntu 16.04）生成项目及其依赖项：
+* 针对特定运行时（本例中为 Ubuntu 16.04）生成项目及其依赖项：
 
-`dotnet build --runtime ubuntu.16.04-x64`
+  ```console
+  dotnet build --runtime ubuntu.16.04-x64
+  ```
 
-生成项目，并在还原操作过程中使用指定的 NuGet 包源（.NET Core SDK 2.0 及更高版本）：
+* 生成项目，并在还原操作过程中使用指定的 NuGet 包源（.NET Core 2.0 SDK 及更高版本）：
 
-`dotnet build --source c:\packages\mypackages`
+  ```console
+  dotnet build --source c:\packages\mypackages
+  ```
+
+* 生成项目，并将 1.2.3.4 版本设置为生成参数：
+
+  ```console
+  dotnet build -p:Version=1.2.3.4
+  ```

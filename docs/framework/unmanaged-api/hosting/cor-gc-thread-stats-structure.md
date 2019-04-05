@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a386fe82bbd004954924a573c090af7f58824a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3f453867f6b46265fdbf567b4374ddc64b4efe84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431823"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563885"
 ---
 # <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS 结构
 包含有关垃圾回收的每个线程统计信息。  
@@ -39,21 +39,21 @@ typedef struct _COR_GC_THREAD_STATS {
   
 |成员|描述|  
 |------------|-----------------|  
-|`PerThreadAllocation`|与当前关联的线程上分配的内存的字节数`COR_GC_THREAD_STATS`实例。 此数字将清零每次生成零垃圾回收发生时。|  
-|`Flags`|提升的字节数为较高代的最新的垃圾回收。|  
+|`PerThreadAllocation`|与当前相关联的线程上分配的内存字节数`COR_GC_THREAD_STATS`实例。 此数字将清零每次生成零垃圾回收发生时。|  
+|`Flags`|提升的字节数为更高版本生成的最新的垃圾回收。|  
   
 ## <a name="remarks"></a>备注  
- [Iclrtask:: Getmemstats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)采用类型的输出参数`COR_GC_THREAD_STATS`。  
+ [Iclrtask:: Getmemstats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)需要使用输出参数的类型`COR_GC_THREAD_STATS`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** GCHost.idl  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [承载结构](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- [IHostTask 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+## <a name="see-also"></a>请参阅
+- [承载结构](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [IHostTask 接口](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

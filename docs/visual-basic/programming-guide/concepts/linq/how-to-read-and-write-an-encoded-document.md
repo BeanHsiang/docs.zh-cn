@@ -1,15 +1,15 @@
 ---
-title: 如何： 读取和写入编码的文档 (Visual Basic)
+title: 如何：读取和写入编码的文档 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-ms.openlocfilehash: 6e768f26313da93076807f5fabe18a26333ebab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d558b8dea5f376b6ad77e2f4ac93a3f4663cbff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641323"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825191"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>如何： 读取和写入编码的文档 (Visual Basic)
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>如何：读取和写入编码的文档 (Visual Basic)
 若要创建编码的 XML 文档，请向 XML 树中添加一个 <xref:System.Xml.Linq.XDeclaration>，将编码设置为需要的代码页名称。  
   
  由 <xref:System.Text.Encoding.WebName%2A> 返回的任何值都是有效值。  
@@ -76,6 +76,7 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
+- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

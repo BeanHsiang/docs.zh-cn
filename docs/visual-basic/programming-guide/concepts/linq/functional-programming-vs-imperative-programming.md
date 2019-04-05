@@ -1,15 +1,15 @@
 ---
-title: 函数编程与命令性编程 (Visual Basic)
+title: 函数编程与命令式编程 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 63d3801a393b242bce8b497e2c983534a6996c6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644265"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827324"
 ---
-# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>函数编程与命令性编程 (Visual Basic)
+# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>函数编程与命令式编程 (Visual Basic)
 本主题对函数编程和更传统的命令性（过程性）编程进行比较。  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>函数编程与命令式编程  
@@ -30,7 +30,7 @@ ms.locfileid: "33644265"
 ## <a name="functional-programming-using-xslt"></a>使用 XSLT 的函数编程  
  很多 XSLT 开发人员熟悉纯函数方法。 开发 XSLT 样式表的最有效方式是将每个模板视为一个独立的、可组合的转换。 执行顺序完全不重要。 XSLT 不允许副作用（但用于执行过程代码的转义机制除外，它可能引入可导致功能不纯的副作用）。 不过，虽然 XSLT 是一个有效的工具，但其某些特性并不是最佳的。 例如，在 XML 中表示编程构造会使代码相对繁琐，因此难于维护。 而且，流控制对递归的依赖性很强，因此会使代码的可读性较差。 有关 XSLT 的详细信息，请参阅 [XSLT 转换](../../../../standard/data/xml/xslt-transformations.md)。  
   
- 但 XSLT 在使用纯函数方法将 XML 从一种形状转换为另一种形状方面确有其自身的价值。 使用 LINQ to XML 的纯函数编程在许多方面与 XSLT 类似。 但是，linq to XML 和 Visual Basic 中引入的编程构造允许你编写更具可读性且比 XSLT 更容易维护的纯函数转换。  
+ 但 XSLT 在使用纯函数方法将 XML 从一种形状转换为另一种形状方面确有其自身的价值。 使用 LINQ to XML 的纯函数编程在许多方面与 XSLT 类似。 但是，linq to XML 和 Visual Basic 中引入的编程构造允许你编写更具可读性且比 XSLT 更易维护的纯函数转换。  
   
 ## <a name="advantages-of-pure-functions"></a>纯函数的优点  
  以纯函数形式实现函数转换的主要原因是纯函数是可以组合的：即独立并且无状态。 这些特性可带来很多好处，包括以下各项：  
@@ -48,9 +48,10 @@ ms.locfileid: "33644265"
   
  相比之下，函数编程将计算机的操作问题处理为数据集合的纯函数转换计算。 函数编程可以避免使用状态和可变数据，并改为强调函数的应用。  
   
- 幸运的是，Visual Basic 不要求完全转变为函数编程，因为它支持命令性和功能的编程方法。 开发人员可以选择哪种方法最适合特定方案。 实际上，程序通常组合使用这两种方法。  
+ 幸运的是，Visual Basic 并不要求完全转变为函数编程，因为它支持命令性和功能性编程方法。 开发人员可以选择哪种方法最适合特定方案。 实际上，程序通常组合使用这两种方法。  
   
-## <a name="see-also"></a>请参阅  
- [介绍纯函数转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [XSLT 转换](../../../../standard/data/xml/xslt-transformations.md)  
- [重构到纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>请参阅
+
+- [纯功能转换 (Visual Basic) 简介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [XSLT 转换](../../../../standard/data/xml/xslt-transformations.md)
+- [重构为纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

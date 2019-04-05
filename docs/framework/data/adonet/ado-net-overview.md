@@ -2,12 +2,12 @@
 title: ADO.NET 概述
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714381"
 ---
 # <a name="adonet-overview"></a>ADO.NET 概述
 ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB 和 ODBC 公开的数据源的一致访问。 共享数据的使用方应用程序可以使用 ADO.NET 连接到这些数据源，并可以检索、处理和更新其中包含的数据。  
@@ -20,7 +20,7 @@ ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB
   
  ADO.NET 在 .NET Framework 中提供最直接的数据访问方法。 有关更高级别的抽象，让应用程序能够对概念模型而不是基础存储模型的说明，请参阅[ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)。  
   
- **隐私声明**: System.Data.dll、 System.Data.Design.dll、 System.Data.OracleClient.dll、 System.Data.SqlXml.dll、 System.Data.Linq.dll、 System.Data.SqlServerCe.dll 和 System.Data.DataSetExtensions.dll 程序集不这样做区分用户的隐私数据和非隐私数据。  这些程序集不收集、存储或传输任何用户隐私数据。 不过，第三方应用程序可能会使用这些程序集收集、存储或传输用户的隐私数据。  
+ **隐私声明**:System.Data.dll、System.Data.Design.dll、System.Data.OracleClient.dll、System.Data.SqlXml.dll、System.Data.Linq.dll、System.Data.SqlServerCe.dll 和 System.Data.DataSetExtensions.dll 程序集不区分用户的隐私数据和非隐私数据。  这些程序集不收集、存储或传输任何用户隐私数据。 不过，第三方应用程序可能会使用这些程序集收集、存储或传输用户的隐私数据。  
   
 ## <a name="in-this-section"></a>本节内容  
  [ADO.NET 体系结构](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -57,7 +57,7 @@ ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB
  [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  说明如何连接到数据源、检索数据和修改数据。 这包括 `DataReaders` 和 `DataAdapters`。  
   
-## <a name="see-also"></a>请参阅  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

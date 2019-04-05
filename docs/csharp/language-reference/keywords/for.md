@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ba156eed25f28a0568e11c986de1e84db3cd9cf0
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511723"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504478"
 ---
 # <a name="for-c-reference"></a>for（C# 参考）
 
@@ -47,9 +47,9 @@ for (initializer; condition; iterator)
 
   - 方法的调用
 
-  - 为 [increment](../operators/increment-operator.md) 表达式添加前缀或后缀，如 `++i` 或 `i++`
+  - 为 [increment](../operators/arithmetic-operators.md#increment-operator-) 表达式添加前缀或后缀，如 `++i` 或 `i++`
 
-  - 为 [decrement](../operators/decrement-operator.md) 表达式添加前缀或后缀，如 `--i` 或 `i--`
+  - 为 [decrement](../operators/arithmetic-operators.md#decrement-operator---) 表达式添加前缀或后缀，如 `--i` 或 `i--`
 
   - 通过使用 [new](new-operator.md) 关键字创建对象
 
@@ -79,9 +79,9 @@ i < 5
 
 - 方法的调用
 
-- 为 [increment](../operators/increment-operator.md) 表达式添加前缀或后缀，如 `++i` 或 `i++`
+- 为 [increment](../operators/arithmetic-operators.md#increment-operator-) 表达式添加前缀或后缀，如 `++i` 或 `i++`
 
-- 为 [decrement](../operators/decrement-operator.md) 表达式添加前缀或后缀，如 `--i` 或 `i--`
+- 为 [decrement](../operators/arithmetic-operators.md#decrement-operator---) 表达式添加前缀或后缀，如 `--i` 或 `i--`
 
 - 通过使用 [new](new-operator.md) 关键字创建对象
 
@@ -105,14 +105,12 @@ i++
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的 [for 语句](~/_csharplang/spec/statements.md#the-for-statement)部分。
 
 ## <a name="see-also"></a>请参阅
 
-- [for 语句（C# 语言规范）](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
 - [C# 参考](../index.md)
 - [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)
-- [foreach, in](foreach-in.md)
-- [for 语句 (C++)](/cpp/cpp/for-statement-cpp)
 - [迭代语句](iteration-statements.md)
+- [foreach, in](foreach-in.md)

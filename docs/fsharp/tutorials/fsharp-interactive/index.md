@@ -2,20 +2,20 @@
 title: F# Interactive (fsi.exe) 参考
 description: 了解如何F#Interactive (fsi.exe) 用于运行F#代码以交互方式在控制台上或执行F#脚本。
 ms.date: 05/16/2016
-ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: dde65a4fa4bd41895716344fc67823366c73c5d4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50195250"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979874"
 ---
-# <a name="interactive-programming-with-f"></a>使用 F# 进行交互式编程 #
+# <a name="interactive-programming-with-f"></a>使用 F 进行交互式编程\#
 
 > [!NOTE]
-本文目前仅介绍适用于 Windows 的体验。  它将被重写。
+> 本文目前仅介绍适用于 Windows 的体验。  它将被重写。
 
 > [!NOTE]
-API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
+> API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 F# Interactive (fsi.exe) 用于在控制台以交互方式运行 F# 代码，或执行 F# 脚本。 换句话说，F# Interactive 对 F# 语言执行 REPL（读取、计算、打印循环）。
 
@@ -44,7 +44,7 @@ F# Interactive 试图编译代码，如果成功，它将执行代码并打印�
 你可以通过调整设置控制 F# Interactive 命令行自变量（选项）。 在“工具”菜单上，选择“选项...”，然后展开“F# 工具”。 可以更改的两种设置是 F# Interactive 选项和“64 位F# Interactive”，只有在 64 位计算机上运行 F# Interactive 时，更改才有意义。 此设置确定是否需要运行 fsi.exe 或 fsianycpu.exe 的专用 64 位版本，它使用计算机体系结构确定是作为 32 位还是 64 位进程来运行。
 
 
-## <a name="scripting-with-f"></a>使用 F# 编写脚本 #
+## <a name="scripting-with-f"></a>使用 F 编写脚本\#
 脚本使用 **.fsx** 或 **.fsscript** 文件扩展名。 可以不编译源代码再运行编译的程序集，而仅运行 **fsi.exe** 并指定 F# 源代码脚本的文件名，F# Interactive 会实时读取并执行代码。
 
 

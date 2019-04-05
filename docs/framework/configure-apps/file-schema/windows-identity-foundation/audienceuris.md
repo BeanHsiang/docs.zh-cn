@@ -1,23 +1,23 @@
 ---
-title: '&lt;audienceUris&gt;'
+title: <audienceUris>
 ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
-ms.openlocfilehash: af138a4da49a48ed43e1bc8f2c2c81c56892feed
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034475"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267269"
 ---
-# <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
+# <a name="audienceuris"></a>\<audienceUris>
 指定 Uri 都是可接受的信赖方 (RP) 标识符的集。 除非某个允许的受众 Uri 作用域内，将不会接受令牌。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<audienceUris >  
+\<securityTokenHandlerConfiguration>  
+\<audienceUris>  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48034475"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
   
 ## <a name="remarks"></a>备注  
  默认情况下，该集合为空;使用`<add>`， `<clear>`，和`<remove>`要修改集合的元素。 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 并<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>对象所需配置任何的受众 URI 集合中的值允许的受众 URI 限制中的使用<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>对象。  

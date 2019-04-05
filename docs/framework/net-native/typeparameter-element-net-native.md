@@ -1,17 +1,17 @@
 ---
-title: '&lt;类型参数&gt;元素 (.NET Native)'
+title: <TypeParameter>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cc2faf9768b60d49f573720df8763813000a6b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b478f963156a2c8f189bbbdbc027927df8974dc2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393863"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263558"
 ---
-# <a name="lttypeparametergt-element-net-native"></a>&lt;类型参数&gt;元素 (.NET Native)
+# <a name="typeparameter-element-net-native"></a>\<类型参数 > 元素 (.NET Native)
 将策略应用到以传递到方法为代表的类型参数类型。  
   
 ## <a name="syntax"></a>语法  
@@ -94,8 +94,8 @@ Object obj = JsonConvert.DeserializeObject(data, t);
   
  反射指令使 `StockQuote` 类型的元数据在运行时间可由 NewtonSoft JSON 序列化程序使用。  
   
-## <a name="see-also"></a>请参阅  
- [\<Method> 元素](../../../docs/framework/net-native/method-element-net-native.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>请参阅
+- [\<Method> 元素](../../../docs/framework/net-native/method-element-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)

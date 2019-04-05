@@ -2,15 +2,15 @@
 title: 跟踪参与者
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086361"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462989"
 ---
 # <a name="tracking-participants"></a>跟踪参与者
-跟踪参与者是扩展点，允许工作流开发人员访问 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 对象并对其进行处理。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包括一个标准跟踪参与者，可将跟踪记录作为 Windows 事件跟踪 (ETW) 事件写入。 如果这不能满足您的要求，您还可以编写自定义跟踪参与者。  
+跟踪参与者是扩展点，允许工作流开发人员访问 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 对象并对其进行处理。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包括一个标准跟踪参与者，可将跟踪记录作为 Windows 事件跟踪 (ETW) 事件写入。 如果这不能满足您的需求，您还可以编写自定义跟踪参与者。  
   
 ## <a name="tracking-participants"></a>跟踪参与者  
  跟踪基础结构允许对传出跟踪记录应用筛选器，以便参与者可订阅该记录的子集。 应用筛选器的机制是通过跟踪配置文件来实现的。  
@@ -60,10 +60,10 @@ ms.locfileid: "47086361"
   
  下图显示了通过 ETW 跟踪参与者的跟踪数据流。 跟踪数据到达 ETW 会话后，可以采用多种方法进行访问。 访问这些事件最有用的方法之一是通过事件查看器，这是一个常用的 Windows 工具，用于查看来自应用程序和服务的日志和跟踪。  
   
- ![跟踪和 ETW 跟踪提供程序的流程](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![跟踪通过 ETW 跟踪提供程序的数据的流。](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>跟踪参与者事件数据  
- 跟踪参与者将跟踪的事件数据序列化为 ETW 会话，格式为每个跟踪记录一个事件。  标识事件所使用的 ID 在从 100 到 199 的范围内。 有关跟踪事件的定义记录发出的跟踪参与者，请参阅[跟踪事件参考](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md)主题。  
+ 跟踪参与者将跟踪的事件数据序列化为 ETW 会话，格式为每个跟踪记录一个事件。  标识事件所使用的 ID 在从 100 到 199 的范围内。 有关跟踪事件的定义记录发出的跟踪参与者，请参阅[跟踪事件参考](tracking-events-reference.md)主题。  
   
  ETW 事件的大小受到 ETW 缓冲区大小或 ETW 事件最大负载的限制，以二者中较小的值为限。 如果事件的大小超出其中任何一个 ETW 限制，则事件将被截断，其内容将以任意方式移除。 不可有选择性地移除变量、参数、批注和自定义数据。 发生截断时，所有这些内容都将被截断，无论导致事件大小超出 ETW 限制的是哪个值。  移除的数据用 `<item>..<item>` 代替。  
   
@@ -140,6 +140,6 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
             Console.ReadLine();  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [使用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>请参阅
+- [Windows Server App Fabric 监视](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [使用 App Fabric 监视应用程序](https://go.microsoft.com/fwlink/?LinkId=201275)

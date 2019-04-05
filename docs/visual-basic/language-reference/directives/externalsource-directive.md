@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: dcde8507eb033d0a47d5c5d3fa36176cd63b0856
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 39e6963c97340daab3f0ab7ad6860695f1f6c135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861777"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823423"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource 指令
 指示特定行的源代码和源的外部文本之间的映射。  
@@ -50,5 +50,6 @@ ms.locfileid: "43861777"
   
  外部源指令不会影响编译，而且不能嵌套。 它们是由应用程序仅供内部使用。  
   
-## <a name="see-also"></a>请参阅  
- [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+## <a name="see-also"></a>请参阅
+
+- [条件编译](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

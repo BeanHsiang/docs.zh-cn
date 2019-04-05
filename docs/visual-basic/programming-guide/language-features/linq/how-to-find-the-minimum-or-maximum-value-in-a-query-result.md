@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ 查找查询结果中的最小值或最大值 (Visual Basic)
+title: 如何：使用 LINQ (Visual Basic 中) 中的查询结果中查找最小值或最大值
 ms.date: 07/20/2015
 helpviewer_keywords:
 - max operator [LINQ in Visual Basic]
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: 252601b12e21e122c316952f8e10ce04cbe3f78e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 311ba2d9c4be75e77cf134bf44dc96eab957736d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924477"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838165"
 ---
-# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>如何：使用 LINQ 查找查询结果中的最小值或最大值 (Visual Basic)
+# <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>如何：使用 LINQ (Visual Basic 中) 中的查询结果中查找最小值或最大值
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。  
   
  下面的示例演示如何创建新的应用程序对 SQL Server 数据库执行查询。 该示例使用来确定结果的最小和最大值`Aggregate`和`Group By`子句。 有关详细信息，请参阅[Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)并[组 By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
@@ -72,12 +72,13 @@ ms.locfileid: "42924477"
   
      将以下代码添加到`Load`事件。 此代码将查询作为数据上下文的属性公开，并确定结果的最小和最大值的表。 此示例使用他`Aggregate`到单个结果的查询子句和`Group By`子句以显示为平均值分组结果。  
   
-     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-find-the-minimum-or-maximum-value-in-a-query-result_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form7.vb#14)]  
   
 4.  按 F5 以运行您的项目并查看结果。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查询](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>请参阅
+
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查询](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

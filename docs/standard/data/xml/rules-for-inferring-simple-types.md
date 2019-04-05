@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123574"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550495"
 ---
 # <a name="rules-for-inferring-simple-types"></a>推断简单类型的规则
 描述 <xref:System.Xml.Schema.XmlSchemaInference> 类如何推断属性和元素的数据类型。  
@@ -24,7 +24,7 @@ ms.locfileid: "49123574"
   
  下表列出生成的架构中可能包含的推断类型。  
   
-|简单类型|描述|  
+|简单类型|说明|  
 |-----------------|-----------------|  
 |boolean|true、false、0、1.|  
 |byte|范围在 –128 到 127 之间的整数。|  
@@ -69,7 +69,7 @@ ms.locfileid: "49123574"
 
 在架构引用过程中忽略下列架构定义属性。  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
 |`xsi:type`|如果遇到指定了 `xsi:type` 类型的元素，将忽略 `xsi:type`。|  
 |`xsi:nil`|如果遇到具有 `xsi:nil` 属性的元素，推断架构中的元素声明的值将为 `nillable="true"`。 `xsi:nil` 属性设置为 `true` 的元素不能包含子元素。|  
@@ -78,6 +78,6 @@ ms.locfileid: "49123574"
   
 ## <a name="see-also"></a>请参阅
 
-- [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [从 XML 文档推断架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [XML 架构对象模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [从 XML 文档推断架构](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [推断架构节点类型和结构的规则](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

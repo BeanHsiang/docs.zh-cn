@@ -2,15 +2,15 @@
 title: 外部映射
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 640dff5555ab346782825c44ded758a681226648
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cc72c360a2dfbb7446a5157cde898be93d29171
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614567"
 ---
 # <a name="external-mapping"></a>外部映射
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持*外部映射*，依据你使用单独的 XML 文件指定数据库的数据模型和对象模型之间的映射的进程。 使用外部映射文件具有以下优点：  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支持*外部映射*，依据你使用单独的 XML 文件指定的数据库的数据模型与您的对象模型之间的映射的进程。 使用外部映射文件具有以下优点：  
   
 -   可以将映射代码放在应用程序代码外部。 此方法可以降低应用程序代码的混乱程度。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "33365210"
   
 -   映射文件必须为 XML 文件。  
   
--   XML 映射文件必须能够通过 XML 架构定义文件的验证。 有关详细信息，请参阅[如何： 验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
+-   XML 映射文件必须能够通过 XML 架构定义文件的验证。 有关详细信息，请参阅[如何：验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
   
 -   外部映射会重写基于属性的映射。 换句话说，在使用外部映射源创建 <xref:System.Data.Linq.DataContext> 时，<xref:System.Data.Linq.DataContext> 会忽略已在类上创建的所有映射属性。 无论类是否包含在外部映射文件中，都会发生这种情况。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33365210"
  请将此架构定义文件与用于验证 DBML 文件的架构定义文件区分开来。 有关详细信息，请参阅[LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md))。  
   
 > [!NOTE]
->  Visual Studio 用户还会发现此 XSD 文件在 XML 架构对话框中为"LinqToSqlMapping.xsd"。 若要正确使用此文件，用于验证外部映射文件，请参阅[如何： 验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
+>  Visual Studio 用户还会发现此 XSD 文件在 XML 架构对话框中为"LinqToSqlMapping.xsd"。 若要正确使用此文件，来验证外部映射文件，请参阅[如何：验证 DBML 和外部映射文件](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -141,7 +141,7 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [如何：将对象模型作为外部文件生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+## <a name="see-also"></a>请参阅
+- [LINQ to SQL 中的代码生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [如何：对象模型作为外部文件生成](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

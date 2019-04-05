@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4e9d03dcf4603f9470f8f2509050eb6f875746a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 084f0bbab130cd4e7334184fe9baa322c0487942
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442635"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616766"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder 枚举
 包含一些标志值，用于指示无序发出元数据时应生成错误消息的条件。  
@@ -49,19 +49,19 @@ typedef enum CorErrorIfEmitOutOfOrder {
 |------------|-----------------|  
 |`MDErrorOutOfOrderDefault`|指示默认行为，不会生成错误消息。|  
 |`MDErrorOutOfOrderNone`|指示编译器不应生成错误消息。|  
-|`MDErrorOutOfOrderAll`|指示当字段、 属性、 事件、 方法时，编译器应生成一条错误消息或无序发出参数。|  
-|`MDMethodOutOfOrder`|指示当无序发出方法时，编译器应生成一条错误消息。|  
-|`MDFieldOutOfOrder`|指示当无序发出字段时，编译器应生成一条错误消息。|  
-|`MDParamOutOfOrder`|指示当无序发出参数时，编译器应生成一条错误消息。|  
-|`MDPropertyOutOfOrder`|指示当无序发出属性时，编译器应生成一条错误消息。|  
-|`MDEventOutOfOrder`|指示当无序发出事件时，编译器应生成一条错误消息。|  
+|`MDErrorOutOfOrderAll`|指示编译器应该生成一条错误消息时字段、 属性、 事件、 方法或参数，将发出顺序。|  
+|`MDMethodOutOfOrder`|指示一种方法发出顺序时，编译器应该生成一条错误消息。|  
+|`MDFieldOutOfOrder`|指示无序发出一个字段时，编译器应该生成一条错误消息。|  
+|`MDParamOutOfOrder`|指示参数发出顺序时，编译器应该生成一条错误消息。|  
+|`MDPropertyOutOfOrder`|指示无序发出属性时，编译器应该生成一条错误消息。|  
+|`MDEventOutOfOrder`|指示事件发出顺序时，编译器应该生成一条错误消息。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

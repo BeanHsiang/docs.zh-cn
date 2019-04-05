@@ -3,11 +3,11 @@ title: 消息安全中的活动跟踪
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181324"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982836"
 ---
 # <a name="activity-tracing-in-message-security"></a>消息安全中的活动跟踪
 本主题描述用于安全处理的活动跟踪，这些活动跟踪发生在以下三个阶段。  

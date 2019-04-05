@@ -1,39 +1,39 @@
 ---
-title: '&lt;webHttpBinding&gt; 的 &lt;security&gt;'
+title: <security> 的 <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: fbf9ac87da0d23930d589a40a9335acc34c4e94d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f714ffb89d5ff990239bd1a02ffaeead4ad7d91
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194373"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360767"
 ---
-# <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt; 的 &lt;security&gt;
+# <a name="security-of-webhttpbinding"></a>\<安全 > 的\<webHttpBinding >
 指定与配置的终结点的安全要求[ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<webHttpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.ServiceModel>  
-    <bindings>  
-        <webHttpBinding>  
-            <binding name = "string">  
-              <security mode="None/Transport/TransportCredentialOnly">  
-                                    <transport clientCredentialType =   
-                                     "Basic/Certificate/Digest/None/Ntlm/Windows"  
-                                     proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
-                                     realm="string" />  
-              </security>  
-        </webHttpBinding>  
-    </bindings>  
-</system.ServiceModel>  
+<system.ServiceModel>
+  <bindings>
+    <webHttpBinding>
+      <binding name = "String">
+        <security mode="None/Transport/TransportCredentialOnly">
+          <transport clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"
+                     proxyCredentialType="Basic/Digest/None/Ntlm/Windows"
+                     realm="String" />
+        </security>
+      </binding>
+    </webHttpBinding>
+  </bindings>
+</system.ServiceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -65,16 +65,16 @@ ms.locfileid: "50194373"
 |-------------|-----------------|  
 |[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|用于配置终结点，Windows Communication Foundation (WCF) Web 服务响应 HTTP 请求，而不是 SOAP 消息的一个绑定元素。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
- <xref:System.ServiceModel.WebHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.WebHttpSecurity>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [选择凭据类型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)  
- [WCF Web HTTP 编程模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
+- <xref:System.ServiceModel.WebHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WebHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.WebHttpSecurity>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [选择凭据类型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [WCF Web HTTP 编程模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

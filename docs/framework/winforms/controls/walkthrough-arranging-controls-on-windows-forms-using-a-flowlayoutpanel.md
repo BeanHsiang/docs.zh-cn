@@ -1,5 +1,5 @@
 ---
-title: 演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件
+title: 演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], walkthroughs
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 5c1f4ec53831662bd25f1f15dc1973440067b32c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fdb92a1ec9aa349c8768b5dc4ddf3d403297cf7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595261"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703534"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件
 某些应用程序需要这样一个窗体，该窗体的布局可在窗体重新调整大小或在内容更改大小时对自身进行排列。 当你需要动态布局并且不希望在代码中显式处理 <xref:System.Windows.Forms.Control.Layout> 事件时，请考虑使用布局面板。  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 控件和 <xref:System.Windows.Forms.TableLayoutPanel> 控件提供可用于排列窗体上的控件的直观方式。 两种控件均提供一种自动的可配置能力来控制包含在控件内的子控件的相对位置，并且两种控件均在运行时提供动态布局功能，以便它们可以在父窗体的尺寸更改时重新调整子控件的大小和对其进行重新定位。 布局面板可以嵌套在布局面板内，从而实现复杂的用户界面。  
   
- <xref:System.Windows.Forms.TableLayoutPanel>排列其内容在网格中，提供的功能类似的 html\<表 > 元素。 其单元格排列为行和列，并且这些行和列可具有不同的大小。 有关详细信息，请参阅 [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
+ <xref:System.Windows.Forms.TableLayoutPanel>排列其内容在网格中，提供的功能类似的 html\<表 > 元素。 其单元格排列为行和列，并且这些行和列可具有不同的大小。 有关详细信息，请参见[演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 以特定的流向排列其内容：水平或垂直。 可从一行到下一行，或从一列到下列进行内容换行。 还可以剪切内容，而不是进行换行。 本演练涉及以下任务：  
   
@@ -124,7 +124,7 @@ ms.locfileid: "45595261"
   
 1.  将 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的 <xref:System.Windows.Forms.Control.Dock%2A> 属性值更改为 <xref:System.Windows.Forms.DockStyle.Fill>。 如果你的窗体足够大，则 <xref:System.Windows.Forms.Button> 控件将被移动到 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的第一列中。  
   
-2.  通过在 <xref:System.Windows.Forms.FlowLayoutPanel> “属性” <xref:System.Windows.Forms.Control.Padding%2A> 窗口中展开 <xref:System.Windows.Forms.Control.Padding%2A> 条目并将 **属性设置为** 20 <xref:System.Windows.Forms.Padding.All%2A> ，可更改 **控件的**属性的值。 有关详细信息，请参阅[演练： 对进行布局出 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)。 请注意，会将子控件向 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的中心移动。 增加 <xref:System.Windows.Forms.Control.Padding%2A> 属性的值会使子控件远离 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的边框。  
+2.  通过在 <xref:System.Windows.Forms.FlowLayoutPanel> “属性” <xref:System.Windows.Forms.Control.Padding%2A> 窗口中展开 <xref:System.Windows.Forms.Control.Padding%2A> 条目并将 **属性设置为** 20 <xref:System.Windows.Forms.Padding.All%2A> ，可更改 **控件的**属性的值。 有关详细信息，请参见[演练：对 Windows 窗体控件使用 Padding、 Margins 和 AutoSize 属性](windows-forms-controls-padding-autosize.md)。 请注意，会将子控件向 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的中心移动。 增加 <xref:System.Windows.Forms.Control.Padding%2A> 属性的值会使子控件远离 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的边框。  
   
 3.  选择 <xref:System.Windows.Forms.Button> 中全部的 <xref:System.Windows.Forms.FlowLayoutPanel> 控件，并将 <xref:System.Windows.Forms.Control.Margin%2A> 属性的值设置为 **20**。 请注意， <xref:System.Windows.Forms.Button> 控制之间的间距会增加，因此它们会分得更开。 你可能需要重新调整 <xref:System.Windows.Forms.FlowLayoutPanel> 控件的大小，以使其变的更大，从而可看到全部子控件。  
   
@@ -187,13 +187,13 @@ ms.locfileid: "45595261"
   
 -   将其中一个控件的 <xref:System.Windows.Forms.Control.Visible%2A> 属性设置为 `false` ，并注意 <xref:System.Windows.Forms.FlowLayoutPanel> 作为响应是如何进行重排的。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.FlowLayoutPanel>  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [演练：使用对齐线在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Microsoft Windows 用户体验，用户界面开发人员和设计人员的官方指南。Redmond, WA: Microsoft Press, 1999.(USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
- [AutoSize 属性概述](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
- [如何：在 Windows 窗体上停靠控件](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- [如何：在 Windows 窗体上锚定控件](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
- [演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.FlowLayoutPanel>
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：使用对齐线的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Microsoft Windows 用户体验，用户界面开发人员和设计人员的官方指南。Redmond，WA:Microsoft Press，1999年。(USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [AutoSize 属性概述](autosize-property-overview.md)
+- [如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)
+- [如何：在 Windows 窗体上定位控件](how-to-anchor-controls-on-windows-forms.md)
+- [演练：布局 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](windows-forms-controls-padding-autosize.md)

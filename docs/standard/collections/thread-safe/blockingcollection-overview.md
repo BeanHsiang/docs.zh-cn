@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 257435516b38d0e4389b7feceba68371bcc8f90e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673993"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概述
 <xref:System.Collections.Concurrent.BlockingCollection%601> 是一个线程安全集合类，可提供以下功能：  
@@ -48,7 +48,7 @@ ms.locfileid: "47397551"
  [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)]
  [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
   
- 有关完整示例，请参阅[如何：在 BlockingCollection 中逐个添加和取出项](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)。  
+ 有关完整的示例，请参阅 [如何：在 BlockingCollection 中逐个添加和取出项](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)。  
   
 ## <a name="timed-blocking-operations"></a>计时阻塞操作  
  在针对有限集合的计时阻塞 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 操作中，此方法将尝试添加或取出某个项。 如果项可用，项会被置于通过引用传入的变量中，然后方法返回 true。 如果在指定的超时期限过后未检索到任何项，方法返回 false。 相应线程可以任意执行一些其他有用的工作，然后再重新尝试访问该集合。 有关计时阻塞访问的示例，请参阅[如何：在 BlockingCollection 中逐个添加和取出项](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)中的第二个示例。  
@@ -59,7 +59,7 @@ ms.locfileid: "47397551"
  [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)]
  [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
   
- 有关如何添加取消支持的示例，请参阅[如何：在 BlockingCollection 中逐个添加和获取项](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)中的第二个示例。  
+ 有关如何添加取消支持的示例，请参阅[如何：在 BlockingCollection 中逐个添加和取出项](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)中的第二个示例。  
   
 ## <a name="specifying-the-collection-type"></a>指定集合类型  
  创建 <xref:System.Collections.Concurrent.BlockingCollection%601> 时，不仅可以指定上限容量，而且可以指定要使用的集合类型。 例如，可为先进先出 (FIFO) 行为指定 <xref:System.Collections.Concurrent.ConcurrentQueue%601>，也可为后进先出 (LIFO) 行为指定 <xref:System.Collections.Concurrent.ConcurrentStack%601>。 可使用实现 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 接口的任何集合类。 <xref:System.Collections.Concurrent.BlockingCollection%601> 的默认集合类型为 <xref:System.Collections.Concurrent.ConcurrentQueue%601>。 下面的代码示例演示如何创建字符串的 <xref:System.Collections.Concurrent.BlockingCollection%601>，其容量为 1000 并使用 <xref:System.Collections.Concurrent.ConcurrentBag%601>：  
@@ -72,7 +72,7 @@ Dim bc = New BlockingCollection(Of String)(New ConcurrentBag(Of String()), 1000)
 BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag<string>(), 1000 );  
 ```  
   
- 有关详细信息，请参阅[如何：向集合添加控制和锁定功能](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)。  
+ 有关详细信息，请参阅[如何：向集合添加限制和阻塞功能](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)。  
   
 ## <a name="ienumerable-support"></a>IEnumerable 支持  
  <xref:System.Collections.Concurrent.BlockingCollection%601> 提供 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> 方法，该方法允许使用者使用 `foreach`（在 Visual Basic 中为 `For Each`）删除项直到完成集合，也就是说，集合为空且不再添加项。 有关详细信息，请参阅[如何：使用 ForEach 移除 BlockingCollection 中的项](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)。  
@@ -82,6 +82,6 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
-- [集合和数据结构](../../../../docs/standard/collections/index.md)  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [集合和数据结构](../../../../docs/standard/collections/index.md)
 - [线程安全集合](../../../../docs/standard/collections/thread-safe/index.md)

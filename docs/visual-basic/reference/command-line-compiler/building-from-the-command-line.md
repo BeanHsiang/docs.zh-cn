@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: 89bcd6e0e7c1cc867bf853dc9bbe96628942ace2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 798baa90308c83e42b335635fb23a9983f5180fb
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211744"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739470"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>从命令行生成 (Visual Basic)
 Visual Basic 项目由一个或多个单独的源代码文件组成。 在名为编译过程中，这些文件被集中到一个包，可以为应用程序运行的单个可执行文件。  
@@ -28,9 +28,9 @@ Visual Basic 项目由一个或多个单独的源代码文件组成。 在名为
   若要编译源文件从 Visual Studio IDE 中的，选择**构建**命令**生成**菜单。  
   
 > [!TIP]
->  通过使用 Visual Studio IDE 生成项目文件时，可以显示有关关联的信息**vbc**命令和输出窗口中的其开关。 若要显示此信息，请打开[选项对话框、 项目和解决方案、 生成和运行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然后设置**MSBuild 项目生成输出详细级别**到**正常**或更高级别的详细级别。 有关详细信息，请参阅[如何：查看、保存和配置生成日志文件](https://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7)。  
+>  通过使用 Visual Studio IDE 生成项目文件时，可以显示有关关联的信息**vbc**命令和输出窗口中的其开关。 若要显示此信息，请打开[选项对话框、 项目和解决方案、 生成和运行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然后设置**MSBuild 项目生成输出详细级别**到**正常**或更高级别的详细级别。 有关详细信息，请参阅[如何：查看、 保存和配置生成日志文件](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)。  
   
- 可以通过使用 MSBuild 编译在命令提示符下的项目 (.vbproj) 文件。 有关详细信息，请参阅[命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)并[演练： 使用 MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild)。  
+ 可以通过使用 MSBuild 编译在命令提示符下的项目 (.vbproj) 文件。 有关详细信息，请参阅[命令行参考](/visualstudio/msbuild/msbuild-command-line-reference)和[演练：使用 MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild)。  
   
 ## <a name="in-this-section"></a>本节内容  
  [如何：调用命令行编译器](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e0d6f68ffa5280d4616d4fa4ac60b4cb86f6a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b8af1de3daf08a8389a5b0e6ebb278646345f9b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437760"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482608"
 ---
 # <a name="igchostgetstats-method"></a>IGCHost::GetStats 方法
 获取垃圾回收系统的当前状态的统计信息。  
@@ -35,21 +35,21 @@ HRESULT GetStats (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pStats`  
- [在中，out]指向的指针[COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)包含垃圾回收系统的当前状态的统计信息的结构。  
+ [in、 out]一个指向[COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)结构，其中包含垃圾回收系统的当前状态的统计信息。  
   
 ## <a name="remarks"></a>备注  
- 统计信息可以通过智能分配系统，用于帮助垃圾回收系统进行操作。 例如，分配系统可能会确定之后查看统计信息，它需要添加更多内存或强制进行回收。  
+ 统计信息可以由智能分配系统，用于帮助垃圾回收系统进行操作。 例如，分配系统可能会确定，请查看统计信息，它需要添加更多内存或强制回收后。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** GCHost.idl、 GCHost.h  
+ **标头：** GCHost.idl GCHost.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IGCHost 接口](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>请参阅
+- [IGCHost 接口](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

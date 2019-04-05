@@ -2,15 +2,15 @@
 title: 管理数据服务上下文（WCF 数据服务）
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-ms.openlocfilehash: 9b2b0bb709081ca7b0b2a1367f10e1f7a08c98c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d339826cabc83d2e0cecb5451ba5b950e7f02321
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365223"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631760"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>管理数据服务上下文（WCF 数据服务）
-<xref:System.Data.Services.Client.DataServiceContext> 类封装针对指定数据服务支持的操作。 尽管 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服务是无状态的，但上下文不是。 因此，你可以使用<xref:System.Data.Services.Client.DataServiceContext>类保持与数据服务中，以便支持各种交互之间客户端的状态功能诸如更改管理。 该类还对更改的标识和跟踪进行管理。  
+<xref:System.Data.Services.Client.DataServiceContext> 类封装针对指定数据服务支持的操作。 尽管 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服务是无状态的，但上下文不是。 因此，可以使用<xref:System.Data.Services.Client.DataServiceContext>诸如更改管理的类，以保持与数据服务以便支持各种交互之间客户端的状态功能。 该类还对更改的标识和跟踪进行管理。  
   
 ## <a name="merge-options-and-identity-resolution"></a>合并选项和标识解析  
  当执行 <xref:System.Data.Services.Client.DataServiceQuery%601> 时，响应源中的实体将具体化为对象。 有关详细信息，请参阅[对象具体化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)。 将响应消息中的项具体化为对象所采用的方式将基于标识解析，并且依赖于执行查询时所依据的合并选项。 在单一 <xref:System.Data.Services.Client.DataServiceContext> 范围内执行多个查询或加载请求时，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端将只跟踪具有特定键值的单个对象实例。 用于执行标识解析的此键唯一地标识一个实体。  
@@ -18,7 +18,7 @@ ms.locfileid: "33365223"
  默认情况下，客户端只针对 <xref:System.Data.Services.Client.DataServiceContext> 尚未跟踪的实体，将响应源中的项具体化为对象。 这意味着不会覆盖缓存中已存在的对象更改。 此行为通过为查询和加载操作指定 <xref:System.Data.Services.Client.MergeOption> 值进行控制。 通过设置 <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> 的 <xref:System.Data.Services.Client.DataServiceContext> 属性可指定此选项。 默认的合并选项值为 <xref:System.Data.Services.Client.MergeOption.AppendOnly>。 这样将只为尚未进行跟踪的实体具体化对象，这意味着不会覆盖现有对象。 防止数据服务中的更新覆盖客户端上的对象更改的另一种方式是指定 <xref:System.Data.Services.Client.MergeOption.PreserveChanges>。 当指定 <xref:System.Data.Services.Client.MergeOption.OverwriteChanges> 时，客户端上对象的值将替换为响应源中对应项的最新值，即使已对这些对象进行了更改也是如此。 当使用 <xref:System.Data.Services.Client.MergeOption.NoTracking> 合并选项时，<xref:System.Data.Services.Client.DataServiceContext> 无法将对客户端对象所做的更改发送到数据服务。 使用此选项时，将始终用数据服务中的值覆盖更改。  
   
 ## <a name="managing-concurrency"></a>管理并发  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持使数据服务能够检测更新冲突的乐观并发。 可以按这种方式配置数据服务提供程序，使得数据服务能够使用并发标记检查实体是否更改。 此标记包含实体类型的一个或多个属性，数据服务通过验证这些属性来确定某个资源是否已更改。 并发标记，包括在对请求和从数据服务的响应的 eTag 标头中，管理为你通过[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端。 有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支持数据服务能够以检测更新冲突的乐观并发。 可以按这种方式配置数据服务提供程序，使得数据服务能够使用并发标记检查实体是否更改。 此标记包含实体类型的一个或多个属性，数据服务通过验证这些属性来确定某个资源是否已更改。 并发标记包含在发出的请求以及来自数据服务的响应的 eTag 标头中，管理为你[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端。 有关详细信息，请参阅[更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
   
  <xref:System.Data.Services.Client.DataServiceContext> 通过使用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或通过 <xref:System.Data.Services.Client.DataServiceCollection%601> 跟踪已手动报告的对对象所做的更改。 当调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法时，客户端将更改发送回数据服务。 如果客户端中的数据更改与数据服务中的更改冲突，则 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 会失败。 当发生这种情况时，您必须再次查询实体资源以接收更新数据。 若要覆盖数据服务中的更改，请使用 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 合并选项执行查询。 再次调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 时，只要尚未对数据服务中的资源进行其他更改，客户端上保留的更改将永久保存到数据服务。  
   
@@ -34,10 +34,10 @@ ms.locfileid: "33365223"
 >  当客户端不知道实体的所有属性时，PUT 请求的行为会与 MERGE 请求不同。 当将某个实体类型投影到客户端上的新类型时，可能会发生这种情况。 当新属性已经添加到服务数据模型中的实体中，同时 <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> 的 <xref:System.Data.Services.Client.DataServiceContext> 属性设置为 `true` 以忽略这类客户端映射错误时，也会发生这种情况。 在这种情况下，PUT 请求会将客户端未知的任何属性重置为默认值。  
   
 ### <a name="post-tunneling"></a>POST 隧道  
- 默认情况下，客户端库通过使用 POST、GET、PUT/MERGE/PATCH 和 DELETE 等 HTTP 方法相应地向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服务发送创建、读取、更新和删除请求。 这保持了具象状态传输 (REST) 的基本原则。 不过，不是每个 Web 服务器实现都支持完整的 HTTP 方法集。 在某些情况下，支持的方法可能仅限 GET 和 POST。 在中介（如防火墙）用某些方法阻止请求时，可能会发生这种情况。 因为 GET 和 POST 方法是支持最多的方法，所以 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 指定了一种方法，通过使用 POST 请求执行任何不受支持的 HTTP方法。 名为*方法隧道*或*POST 隧道*，这允许客户端使用自定义中指定的实际方法发送 POST 请求`X-HTTP-Method`标头。 要为请求启用 POST 隧道，请将 <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> 实例上的 <xref:System.Data.Services.Client.DataServiceContext> 属性设置为 `true`。  
+ 默认情况下，客户端库通过使用 POST、GET、PUT/MERGE/PATCH 和 DELETE 等 HTTP 方法相应地向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服务发送创建、读取、更新和删除请求。 这保持了具象状态传输 (REST) 的基本原则。 不过，不是每个 Web 服务器实现都支持完整的 HTTP 方法集。 在某些情况下，支持的方法可能仅限 GET 和 POST。 在中介（如防火墙）用某些方法阻止请求时，可能会发生这种情况。 因为 GET 和 POST 方法是支持最多的方法，所以 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 指定了一种方法，通过使用 POST 请求执行任何不受支持的 HTTP方法。 名为*方法隧道*或*POST 隧道*，这使客户端发送 POST 请求与自定义中指定的实际方法`X-HTTP-Method`标头。 要为请求启用 POST 隧道，请将 <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> 实例上的 <xref:System.Data.Services.Client.DataServiceContext> 属性设置为 `true`。  
   
-## <a name="see-also"></a>请参阅  
- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
- [异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
- [批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
+## <a name="see-also"></a>请参阅
+- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [更新数据服务](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)
+- [异步操作](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
+- [批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: ASP.NET 兼容性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1128183e990567d15b133bf8aa4ff5d32f10c663
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800168"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541087"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 兼容性
 此示例演示如何启用 ASP.NET 兼容性模式在 Windows Communication Foundation (WCF)。 在 ASP.NET 兼容性模式完全参与 ASP.NET 应用程序管道，并可以使运行的服务使用的 ASP.NET 功能，如文件 /URL 授权、 会话状态和<xref:System.Web.HttpContext>类。 <xref:System.Web.HttpContext>类可以访问 cookie、 会话和其他 ASP.NET 功能。 此模式要求绑定使用 HTTP 传输，且服务本身必须承载于 IIS 中。  
@@ -64,7 +64,7 @@ public interface ICalculatorSession
 > [!NOTE]
 > ASP.NET 会话状态和 WCF 会话是截然不同的事物。 请参阅[会话](../../../../docs/framework/wcf/samples/session.md)有关 WCF 会话的详细信息。
   
- 该服务直接依赖对 ASP.NET 会话状态，并需要 ASP.NET 兼容性模式才能正常工作。 这些要求是通过应用 `AspNetCompatibilityRequirements` 属性以声明性方式表示的。  
+ 该服务直接依赖对 ASP.NET 会话状态，并需要 ASP.NET 兼容性模式才能正常工作。 这些需求是通过应用 `AspNetCompatibilityRequirements` 属性以声明性方式表示的。  
   
 ```csharp  
 [AspNetCompatibilityRequirements(RequirementsMode =  
@@ -127,5 +127,5 @@ Press <ENTER> to terminate client.
   
 4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>请参阅  
- [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>请参阅
+- [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

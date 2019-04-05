@@ -1,16 +1,17 @@
 ---
-title: 如何：实现接口事件（C# 编程指南）
+title: 如何：实现接口事件 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 3620a3e11553bdd6878126388b612113b5722e89
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dfd0602ef92f9b0f84a8e1434ef834a328d60f03
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863656"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200268"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>如何：实现接口事件（C# 编程指南）
 [接口](../../../csharp/language-reference/keywords/interface.md)可以声明[事件](../../../csharp/language-reference/keywords/event.md)。 下面的示例演示如何在类中实现接口事件。 这些规则基本上都与实现任何接口方法或属性时的相同。  
@@ -55,12 +56,12 @@ namespace ImplementInterfaceEvents
   
 通过提供自己的访问器，可以指定两个事件是由类中的同一个事件表示，还是由不同事件表示。 例如，如果根据接口规范应在不同时间引发事件，可以在类中将每个事件与单独实现关联。 在下面的示例中，订阅服务器确定它们通过将形状引用转换为 `IShape` 或 `IDrawingObject` 接收哪个 `OnDraw` 事件。  
   
- [!code-csharp[WrapTwoInterfaceEvents](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs#everything)]
+ [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [事件](../../../csharp/programming-guide/events/index.md)  
-- [委托](../../../csharp/programming-guide/delegates/index.md)  
-- [显式接口实现](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
-- [如何：在派生类中引发基类事件](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [事件](../../../csharp/programming-guide/events/index.md)
+- [委托](../../../csharp/programming-guide/delegates/index.md)
+- [显式接口实现](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)
+- [如何：在派生类中抛出基类事件](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

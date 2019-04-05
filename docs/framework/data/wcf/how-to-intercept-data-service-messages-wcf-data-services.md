@@ -1,5 +1,5 @@
 ---
-title: 如何：截获数据服务消息（WCF 数据服务）
+title: 如何：截获数据服务消息 （WCF 数据服务）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 9d79a9ca27470512105b3a04d681906aa365d7e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5fdbaa25f55caf3de2f0591b7258d4a7dcb1b7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586392"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>如何：截获数据服务消息（WCF 数据服务）
-使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以截获请求消息，以便可以向操作添加自定义逻辑。 若要截获消息，请在数据服务中使用专门特性化的方法。 有关详细信息，请参阅[拦截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)。  
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>如何：截获数据服务消息 （WCF 数据服务）
+使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以截获请求消息，以便可以向操作添加自定义逻辑。 若要截获消息，请在数据服务中使用专门特性化的方法。 有关详细信息，请参阅[侦听器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)。  
   
- 本主题中的示例使用 Northwind 示例数据服务。 在完成时创建此服务[WCF 数据服务快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
+ 本主题中的示例使用 Northwind 示例数据服务。 此服务创建完成后[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>为 Orders 实体集定义查询侦听器  
   
@@ -55,6 +55,6 @@ ms.locfileid: "33355755"
  [!code-csharp[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptor)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptor)]  
   
-## <a name="see-also"></a>请参阅  
- [如何：定义服务操作](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+## <a name="see-also"></a>请参阅
+- [如何：定义服务操作](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

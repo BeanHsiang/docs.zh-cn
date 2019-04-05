@@ -1,21 +1,21 @@
 ---
-title: 组织项目以支持 .NET Framework 和 .NET Core
+title: 组织适用于 .NET Framework 和 .NET Core 的项目
 description: 帮助希望针对 .NET Framework 和 .NET Core 并行编译解决方案的项目所有者。
 author: conniey
-ms.author: mairaw
-ms.date: 04/06/2017
-ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 12/07/2018
+ms.custom: seodec18
+ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512261"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186060"
 ---
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>组织项目以支持 .NET Framework 和 .NET Core
+# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>组织项目以支持 .NET Framework 和 .NET Core
 
-本文旨在帮助希望针对 .NET Framework 和 .NET Core 并行编译解决方案的项目所有者。 它提供了多个可组织项目的选项以帮助开发人员实现此目标。 下列列表提供了一些在决定如何使用 .NET Core 设置项目时需考虑的典型方案。 此列表可能无法涵盖所有要求；这些方案的优先级具体取决于项目需求。
+了解如何创建一个并行编译 .NET Framework 和 .NET Core 的解决方案。 查看几个选项来组织项目以帮助你实现此目标。 以下是决定如何使用 .NET Core 设置项目布局时要考虑的一些典型方案。 此列表可能无法涵盖所有要求；这些方案的优先级具体取决于项目需求。
 
-* [**将现有项目和 .NET Core 项目合并为单个项目**][option-csproj]
+* [将现有项目和 .NET Core 项目合并为单个项目](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
   *此方案的好处：*
   * 通过编译单个项目（而非多个项目）简化生成过程，每个项目针对不同的 .NET Framework 版本或平台。
@@ -26,7 +26,7 @@ ms.locfileid: "43512261"
   *不支持的方案：*
   * 要求开发者使用 Visual Studio 2017 来打开现有项目。 若要支持 Visual Studio 的早期版本，建议[将项目文件保存在不同的文件夹中](#support-vs)。
 
-* <a name="support-vs"></a>[**将现有项目和新的 .NET Core 项目分离**][option-csproj-folder]
+* <a name="support-vs"></a>[将现有项目和新的 .NET Core 项目分离](#keep-existing-projects-and-create-a-net-core-project)
 
   *此方案的好处：*
   * 继续支持现有项目的开发，而无需为没有安装 Visual Studio 2017 的开发人员/参与者进行升级。
@@ -36,9 +36,9 @@ ms.locfileid: "43512261"
 
 请考虑以下存储库：
 
-![现有项目][example-initial-project]
+![现有项目](./media/project-structure/existing-project-structure.png)
 
-[**源代码**][example-initial-project-code]
+[源代码](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
 根据现有项目的约束和复杂性，有几种不同的方法可为此存储库添加对 .NET Core 的支持，下面描述了这些方法。
 
@@ -46,21 +46,21 @@ ms.locfileid: "43512261"
 
 重新组织存储库，以便删除任何现有的 \*.csproj 文件，并创建以多个框架为目标的单一 \*.csproj 文件。 这是一项不错的选择，因为单个项目可以编译不同的框架。 它还可以处理每个目标框架的不同编译选项和依赖项。
 
-![创建以多个框架为目标的 csproj][example-csproj]
+![创建以多个框架为目标的 csproj](./media/project-structure/multi-targeted-project.png)
 
-[**源代码**][example-csproj-code]
+[源代码](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
 需注意的更改：
 
-* 用新的 [.NET Core *\*.csproj*][example-csproj-netcore] 替换 packages.config 和 \*.csproj。 NuGet 包是使用 `<PackageReference> ItemGroup` 指定的。
+* 用新的 [.NET Core \*.csproj](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj) 替换 packages.config 和 \*.csproj。 NuGet 包是使用 `<PackageReference> ItemGroup` 指定的。
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>保留现有项目并创建 .NET Core 项目
 
 如果存在以较旧框架为目标的现有项目，可能需要保留这些项目并将 .NET Core 项目用作将来框架的目标。
 
-![不同文件夹中包含现有项目的 .NET Core 项目][example-csproj-different-folder]
+![位于不同文件夹中的现有项目与 .NET Core 项目](./media/project-structure/separate-projects-same-source.png)
 
-[**源代码**][example-csproj-different-code]
+[源代码](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 
 需注意的更改：
 
@@ -69,18 +69,4 @@ ms.locfileid: "43512261"
 
 ## <a name="see-also"></a>请参阅
 
-* 有关迁移到 .NET Core 的详细指南，请参阅 [.NET Core 移植文档][porting-doc]。
-
-[porting-doc]: index.md
-[example-initial-project]: media/project-structure/project.png "现有项目"
-[example-initial-project-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/
-
-[example-csproj]: media/project-structure/project.csproj.png "创建以多个框架为目标的 csproj"
-[example-csproj-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/
-[example-csproj-netcore]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
-
-[example-csproj-different-folder]: media/project-structure/project.csproj.different.png "不同文件夹中包含现有 PCL 的 .NET Core 项目"
-[example-csproj-different-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/
-
-[option-csproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project
-[option-csproj-folder]: #keep-existing-projects-and-create-a-net-core-project
+有关迁移到 .NET Core 的详细指南，请参阅 [.NET Core 移植文档](index.md)。

@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 69228bbb5f659a8e500e85dea1ef87cb43b0356e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590162"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817590"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>将不会从此事件处理程序中移除 Lambda 表达式
-Lambda 表达式不会从此事件处理程序。 将 lambda 表达式分配给变量并将该变量添加和删除事件。  
+从此事件处理程序不会移除 lambda 表达式。 将 lambda 表达式分配给一个变量并将该变量来添加和删除该事件。  
   
- 当与事件处理程序使用 lambda 表达式时，你可能无法看到你预期的行为。 即使它们是相同，编译器将生成每个 lambda 表达式定义中，一个新方法。 因此，下面的代码显示`False`。  
+ 当事件处理程序中使用 lambda 表达式时，可能无法看到所需的行为。 编译器将生成新的方法对于每个 lambda 表达式定义，即使它们是完全相同。 因此，下面的代码显示`False`。  
   
 ```vb  
 Module Module1  
@@ -33,7 +33,7 @@ Module Module1
 End Module  
 ```  
   
- 当与事件处理程序使用 lambda 表达式时，这可能导致意外的结果。 在下面的示例中，lambda 表达式添加`AddHandler`并不能消除`RemoveHandler`语句。  
+ 当事件处理程序中使用 lambda 表达式时，这可能会导致意外的结果。 在以下示例中，lambda 表达式添加`AddHandler`情况下不删除`RemoveHandler`语句。  
   
 ```vb  
 Module Module1  
@@ -54,13 +54,13 @@ Module Module1
 End Module  
 ```  
   
- 默认情况下，此消息是一个警告。 有关如何隐藏警告或将警告视为错误的详细信息，请参阅[在 Visual Basic 中的配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+ 默认情况下，此消息是一个警告。 有关如何隐藏警告或将警告视为错误的详细信息，请参阅 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
  **错误 ID:** BC42326  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   若要避免此警告，并删除该 lambda 表达式，分配给一个变量的 lambda 表达式，并在将该变量`AddHandler`和`RemoveHandler`语句，如下面的示例中所示。  
+-   若要避免出现警告，并删除 lambda 表达式，lambda 表达式分配给一个变量，并在这种使用该变量`AddHandler`和`RemoveHandler`语句，如下面的示例中所示。  
   
 ```vb  
 Module Module1  
@@ -84,7 +84,8 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>请参阅
+
+- [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [宽松委托转换](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

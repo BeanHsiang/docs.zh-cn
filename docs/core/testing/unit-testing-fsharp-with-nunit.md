@@ -1,23 +1,25 @@
 ---
-title: 使用 dotnet test 和 NUnit 在 .NET Core 中进行 F# 库的单元测试
+title: 使用 dotnet test 和 NUnit 对 .NET Core 中的 F# 进行单元测试
 description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案，在此交互式体验中学习 .NET Core 中的 F# 单元测试概念。
 author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.custom: seodec18
+ms.openlocfilehash: 384d0ac9f36f9ef9daba851f52d577d97248cd67
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308373"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746041"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 在 .NET Core 中进行 F# 库的单元测试
 
 本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>系统必备 
-- [.NET Core SDK 2.1（版本2.1.400）](https://www.microsoft.com/net/download)或更高版本。 
+## <a name="prerequisites"></a>系统必备
+
+- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更高版本。
 - 按需选择的文本编辑器或代码编辑器。
 
 ## <a name="creating-the-source-project"></a>创建源项目
@@ -43,7 +45,7 @@ dotnet new sln
 dotnet new classlib -lang F#
 ```
 
-为了使用由测试驱动的开发 (TDD)，需对数学服务创建故障实现：
+创建数学服务的失败实现：
 
 ```fsharp
 module MyMath =
@@ -114,7 +116,7 @@ dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-TDD 方法要求编写一个失败的测试，使其通过测试，然后重复该过程。 打开 UnitTest1.fs 并添加以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 打开 UnitTest1.fs 并添加以下代码：
 
 ```fsharp
 namespace MathService.Tests

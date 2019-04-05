@@ -1,19 +1,19 @@
 ---
-title: 结束&lt;关键字&gt;语句 (Visual Basic)
+title: End <keyword> 语句 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.EndDefinition
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-ms.openlocfilehash: 8137434bfd8c26144d78b1761b784cdba4894eaf
-ms.sourcegitcommit: 7fe772c6c05a982153655d618c826e9839d39cac
+ms.openlocfilehash: 96dc8ce6b0d3b7545f5caeef43358936e426f566
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33605259"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273525"
 ---
-# <a name="end-ltkeywordgt-statement-visual-basic"></a>结束&lt;关键字&gt;语句 (Visual Basic)
+# <a name="end-keyword-statement-visual-basic"></a>结束\<关键字 > 语句 (Visual Basic)
 
 在后面带有其他关键字，终止由该关键字引入的语句块的定义。
 
@@ -48,7 +48,7 @@ End With
 
 |部件|描述|
 |---|---|
-|`End`|必须的。 终止编程元素的定义。|
+|`End`|必需。 终止编程元素的定义。|
 |`AddHandler`|必选`AddHandler`访问器是匹配的开始`AddHandler`语句在自定义[Event 语句](event-statement.md)。|
 |`Class`|类定义开始是匹配的必选[Class 语句](class-statement.md)。|
 |`Enum`|枚举定义开始是匹配的必选[Enum 语句](enum-statement.md)。|
@@ -85,7 +85,7 @@ End With
 
 |部件|描述|
 |---|---|
-|`#End`|必须的。 终止预处理块的定义。|
+|`#End`|必需。 终止预处理块的定义。|
 |`ExternalSource`|必选开始是匹配的一个外部源块[#ExternalSource 指令](../directives/externalsource-directive.md)。|
 |`If`|终止条件编译块开始是匹配的所需`#If`指令。 请参阅[#If......#Else 指令](../directives/if-then-else-directives.md)。|
 |`Region`|必选开始是匹配的源区域块[#Region 指令](../directives/region-directive.md)。|
@@ -101,4 +101,4 @@ End With
   
 ## <a name="see-also"></a>请参阅
 
-[End 语句](end-statement.md)
+- [End 语句](end-statement.md)

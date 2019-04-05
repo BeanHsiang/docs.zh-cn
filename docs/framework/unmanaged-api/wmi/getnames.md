@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583556"
 ---
 # <a name="getnames-function"></a>GetNames 函数
 检索对象属性的子集或所有名称。 
@@ -90,7 +90,7 @@ HRESULT GetNames (
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  返回不具有指定的名称的限定符的唯一属性`strQualifierName`参数。 如果使用此标志，则必须指定`strQualifierName`。 |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | 返回具有指定的名称的限定符的属性`wszQualifierName`参数和也有值与指定的相同`pQualifierVal`结构。 如果使用此标志，则必须指定这两`wszQualifierName`和一个`pQualifierValue`。 |
 
-| 组 2 标志 |“值”  |描述  |
+| 组 2 标志 |值  |描述  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | 返回定义的键的属性的名称。 |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | 返回唯一属性名称的对象引用。 |
@@ -105,11 +105,11 @@ HRESULT GetNames (
 该函数始终会分配一个新`SAFEARRAY`如果它返回`WBEM_S_NO_ERROR`，和`pstrNames`始终设置为指向它。 如果没有属性与指定筛选器匹配，则返回的数组可以有 0 个元素。 如果该函数将返回一个值，而不`WBM_S_NO_ERROR`，新`SAFEARRAY`结构，则不返回。
  
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

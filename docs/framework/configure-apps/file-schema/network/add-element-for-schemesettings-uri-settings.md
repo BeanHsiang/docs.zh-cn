@@ -1,20 +1,20 @@
 ---
-title: '&lt;添加&gt;schemeSettings （Uri 设置） 的'
+title: schemeSettings 的 <add> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 07bcaf470c68a4d400057b0fe19e96524b2859cb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 672d279f35db64bec7f5b26bd1930d7048c406f1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205173"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279574"
 ---
-# <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;添加&gt;schemeSettings （Uri 设置） 的
+# <a name="add-element-for-schemesettings-uri-settings"></a>\<添加 > schemeSettings （Uri 设置） 的
 添加方案设置的方案名称。  
   
  \<configuration>  
-\<uri >  
-\<schemeSettings >  
+\<uri>  
+\<schemeSettings>  
 \<add>  
   
 ## <a name="syntax"></a>语法  
@@ -81,11 +81,11 @@ ms.locfileid: "50205173"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

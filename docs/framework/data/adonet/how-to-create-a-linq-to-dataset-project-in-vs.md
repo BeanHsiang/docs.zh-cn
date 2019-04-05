@@ -3,13 +3,13 @@ title: 创建 LINQ to DataSet 项目在 Visual Studio 中
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
 ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185555"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154029"
 ---
-# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>如何： 创建 LINQ to DataSet 项目在 Visual Studio 中
+# <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>如何：创建 LINQ to DataSet 项目在 Visual Studio 中
 
 不同类型的 LINQ 项目需要某些程序集引用和导入命名空间 (Visual Basic) 或[使用](../../../csharp/language-reference/keywords/using-directive.md)指令 (C#)。 LINQ 的最低要求是对的引用*System.Core.dll*和一个`using`指令<xref:System.Linq>。
 

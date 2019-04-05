@@ -1,5 +1,5 @@
 ---
-title: 如何：在 TableLayoutPanel 控件中对齐和拉伸控件
+title: 如何：对齐和拉伸控件在 TableLayoutPanel 控件中
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], stretching
 - controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-ms.openlocfilehash: 06e152058337955164bd526e20e023d759340f01
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 511ed20e63778b70355d1deb12e4256b4d2e9101
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504148"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702914"
 ---
-# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>如何：在 TableLayoutPanel 控件中对齐和拉伸控件
+# <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>如何：对齐和拉伸控件在 TableLayoutPanel 控件中
 您可以对齐和拉伸控件中的<xref:System.Windows.Forms.TableLayoutPanel>与<xref:System.Windows.Forms.Control.Anchor%2A>和<xref:System.Windows.Forms.Control.Dock%2A>属性。  
   
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "43504148"
   
 ### <a name="to-align-and-stretch-a-control"></a>若要对齐和拉伸控件  
   
-1.  拖动<xref:System.Windows.Forms.TableLayoutPanel>控件从**工具箱**拖动到窗体。  
+1.  从 <xref:System.Windows.Forms.TableLayoutPanel> “工具箱” **将** 控件拖到你的窗体上。  
   
 2.  拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到的左上角单元格<xref:System.Windows.Forms.TableLayoutPanel>控件。 <xref:System.Windows.Forms.Button>控件居中单元格中。  
   
@@ -39,5 +39,5 @@ ms.locfileid: "43504148"
   
 8.  设置的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Anchor%2A>属性设置为<xref:System.Windows.Forms.AnchorStyles.None>。 <xref:System.Windows.Forms.Button>控件移动到单元格的中心。  
   
-## <a name="see-also"></a>请参阅  
- [TableLayoutPanel 控件](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- [TableLayoutPanel 控件](tablelayoutpanel-control-windows-forms.md)

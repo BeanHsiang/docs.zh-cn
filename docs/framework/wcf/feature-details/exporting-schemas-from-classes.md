@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 9fa123e5532e4c721af5f3ece4feeea92356d1fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 320d0ab4f90c446632225f3d3aabbfc2767f19a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526959"
 ---
 # <a name="exporting-schemas-from-classes"></a>从类导出架构
 若要从数据协定模型中使用的类生成 XML 架构定义语言 (XSD) 架构，请使用 <xref:System.Runtime.Serialization.XsdDataContractExporter> 类。 本主题描述创建架构的过程。  
@@ -43,7 +43,7 @@ ms.locfileid: "33494528"
 ## <a name="export-options"></a>导出选项  
  您可以将 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 的 <xref:System.Runtime.Serialization.XsdDataContractExporter> 属性设置为 <xref:System.Runtime.Serialization.ExportOptions> 类的实例以控制导出过程的各个方面。 您可以具体设置以下选项：  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 这一 `Type` 集合表示要导出的类型的已知类型。 (有关详细信息，请参阅[数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)每次调用 `Export` 时，除了导出已传递给 `Export` 方法的类型外，还导出这些已知类型。  
+-   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 这一 `Type` 集合表示要导出的类型的已知类型。 (有关详细信息，请参阅[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)每次调用 `Export` 时，除了导出已传递给 `Export` 方法的类型外，还导出这些已知类型。  
   
 -   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 通过此属性可以提供 <xref:System.Runtime.Serialization.IDataContractSurrogate> ，该属性将自定义导出过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
   
@@ -58,9 +58,9 @@ ms.locfileid: "33494528"
   
  导出选项会影响所有这些方法。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- [架构导入和导出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- [导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- <xref:System.Runtime.Serialization.XsdDataContractExporter>
+- [架构导入和导出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)

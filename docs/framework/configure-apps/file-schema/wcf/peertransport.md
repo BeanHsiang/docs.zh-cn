@@ -1,34 +1,33 @@
 ---
-title: '&lt;t&gt;'
+title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: df192c6a602aa073f48fab4229b4be3fbeb2349d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8962a0c018442ed590b62e53ea8323d80e334df7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748615"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290090"
 ---
-# <a name="ltpeertransportgt"></a>&lt;t&gt;
+# <a name="peertransport"></a>\<peerTransport>
 定义自定义绑定的对等传输。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
-\<t >  
+\<binding>  
+\<peerTransport>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<peerTransport   
-    listenIpAddress="String"  
-    maxBufferPoolSize="Integer"  
-    maxReceivedMessageSize="Integer"  
-    port="Integer"  
-        <security>  
-    </security>  
-/>  
+<peerTransport listenIpAddress="String"
+               maxBufferPoolSize="Integer"
+               maxReceivedMessageSize="Integer"
+               port="Integer">
+  <security>
+  </security>
+</peerTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -53,19 +52,19 @@ ms.locfileid: "32748615"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  此传输不可用于包含请求/答复操作的协定。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.PeerTransportElement>  
- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.PeerTransportElement>
+- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

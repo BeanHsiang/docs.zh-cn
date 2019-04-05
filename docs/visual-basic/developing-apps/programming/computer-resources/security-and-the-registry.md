@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: ddfe8f88763ee2db78d25d72e6c9cb3456ccd13f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62e9e68eafe55c4d4c3fb2bba05d54f55df74114
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671624"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>安全性与注册表 (Visual Basic)
 本页讨论将数据存储在注册表中的安全意义。  
@@ -24,7 +24,7 @@ ms.locfileid: "33583924"
   
  通过 <xref:System.Security.Permissions.RegistryPermissionAccess> 枚举定义注册表权限访问值。 下表详细说明了其成员。  
   
-|“值”|对注册表变量的访问|  
+|值|对注册表变量的访问|  
 |-----------|----------------------------------|  
 |`AllAccess`|创建、读取和写入|  
 |`Create`|创建|  
@@ -38,6 +38,6 @@ ms.locfileid: "33583924"
 > [!IMPORTANT]
 >  从 Web 应用程序读取注册表时，当前用户的标识依赖于在 Web 应用程序中实现的身份验证和模拟。  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- [读取和写入注册表](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a>请参阅
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- [读取和写入注册表](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

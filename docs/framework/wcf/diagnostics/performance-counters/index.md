@@ -2,14 +2,8 @@
 title: WCF 性能计数器
 ms.date: 03/30/2017
 helpviewer_keywords:
-- performance counters [WCF]
+  - 'performance counters [WCF]'
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: d0ad7ee0bc3ea1d15197e6b8d9888d60b21a2f15
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846209"
 ---
 # <a name="wcf-performance-counters"></a>WCF 性能计数器
 Windows Communication Foundation (WCF) 包括大量的性能计数器，可帮助您衡量应用程序的性能。  
@@ -27,11 +21,11 @@ Windows Communication Foundation (WCF) 包括大量的性能计数器，可帮�
   
  可以将 `performanceCounters` 属性设置为启用特定类型的性能计数器。 有效值为  
   
--   All：启用所有类别计数器（ServiceModelService、ServiceModelEndpoint 和 ServiceModelOperation）。  
+-   所有：启用所有类别计数器 （ServiceModelService、 ServiceModelEndpoint 和 ServiceModelOperation）。  
   
--   ServiceOnly：仅启用 ServiceModelService 类别计数器。 这是默认值。  
+-   ServiceOnly:启用仅 ServiceModelService 类别计数器。 这是默认值。  
   
--   Off：禁用 ServiceModel* 性能计数器。  
+-   关闭：禁用 ServiceModel * 性能计数器。  
   
  如果你想要启用的所有 WCF 应用程序的性能计数器，您可以在 Machine.config 文件中放置配置设置。  请参阅**增加性能计数器内存大小**节在计算机上配置足够的内存性能计数器的详细信息。  
   
@@ -59,7 +53,7 @@ config.Save();
 ## <a name="increasing-memory-size-for-performance-counters"></a>增加性能计数器的内存大小  
  WCF 性能计数器类别使用单独的共享的内存。  
   
- 默认情况下，单独的共享内存被设置为全局性能计数器内存大小的四分之一。 默认的全局性能计数器内存大小为 524,288 字节。 因此，三种 WCF 性能计数器类别具有约 128KB 的每个默认大小。 根据计算机上的 WCF 应用程序的运行时特性，性能计数器内存可能会耗尽。 在此情况下，WCF 将错误写入到应用程序事件日志。 该错误的内容声明未加载性能计数器，并声明一个包含异常“System.InvalidOperationException：可用于自定义计数器文件视图的内存不足。”的项。 如果在错误级别启用了跟踪，此故障也将被跟踪。 如果性能计数器内存已用尽，则继续使用已启用的性能计数器运行 WCF 应用程序可能导致性能下降。 如果您是计算机管理员，则应对计算机进行配置，以便分配足够的内存来支持随时可能存在的最大数量的性能计数器。  
+ 默认情况下，单独的共享内存被设置为全局性能计数器内存大小的四分之一。 默认的全局性能计数器内存大小为 524,288 字节。 因此，三种 WCF 性能计数器类别具有约 128KB 的每个默认大小。 根据计算机上的 WCF 应用程序的运行时特性，性能计数器内存可能会耗尽。 在此情况下，WCF 将错误写入到应用程序事件日志。 该错误的内容声明未加载性能计数器，并该条目包含异常"System.InvalidOperationException:自定义计数器文件视图是内存不足。" 如果在错误级别启用了跟踪，此故障也将被跟踪。 如果性能计数器内存已用尽，则继续使用已启用的性能计数器运行 WCF 应用程序可能导致性能下降。 如果您是计算机管理员，则应对计算机进行配置，以便分配足够的内存来支持随时可能存在的最大数量的性能计数器。  
   
  你可以在注册表中的 WCF 类别的性能计数器内存量。 为此，需要向以下三个位置添加名为 `FileMappingSize` 的新 DWORD 值，并将它设为所需的值（以字节为单位）。 重新启动您的计算机以使这些更改生效。  
   
@@ -72,7 +66,7 @@ config.Save();
  当释放的大量对象（例如 ServiceHost）等待进行垃圾回收时，`PrivateBytes` 性能计数器将登记一个非常大的数字。 若要解决此问题，可以添加特定于自己的应用程序的计数器，或使用 `performanceCounters` 属性仅启用服务级别计数器。  
   
 ## <a name="types-of-performance-counters"></a>性能计数器的类型  
- 性能计数器可分为三个不同级别：服务、终结点和操作。  
+ 性能计数器可分为三个不同级别：服务、 终结点和操作。  
   
  可以使用 WMI 检索性能计数器实例的名称。 例如，应用于对象的  
   
@@ -138,5 +132,5 @@ ServiceName@ServiceBaseAddress
   
  有关如何以编程方式访问计数器的详细信息，请参阅[性能计数器编程体系结构](https://go.microsoft.com/fwlink/?LinkId=95179)。  
   
-## <a name="see-also"></a>请参阅  
- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>请参阅
+- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)

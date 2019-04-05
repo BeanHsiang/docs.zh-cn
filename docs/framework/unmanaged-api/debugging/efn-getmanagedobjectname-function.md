@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f13fad537a6847ba6e19c939e72df86036e28ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a9bef248d00cb62de7c93ba837ebc9f135490cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402199"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479904"
 ---
 # <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName 函数
 获取使用提供的托管的对象指针的类型的名称。  
@@ -37,7 +37,7 @@ HRESULT _EFN_GetManagedObjectName(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `Client`  
  [in]指向调试客户端的指针。  
   
@@ -48,17 +48,17 @@ HRESULT _EFN_GetManagedObjectName(
  [out]类型的名称。  
   
  `cbName`  
- [out]字符串缓冲区中可用的字符数。  
+ [out]字符串缓冲区中有可用的字符数。  
   
 ## <a name="remarks"></a>备注  
- 如果没有任何托管的代码的线程上当前上下文中，该函数将返回的错误代码为 0x1000 0xa0 设施值与 HRESULT SOS_E_NOMANAGEDCODE。  
+ 如果没有任何托管的代码的线程上当前上下文中，该函数返回 HRESULT SOS_E_NOMANAGEDCODE 0xa0 设施值和错误代码为 0x1000。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** SOS_Stacktrace.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试全局静态函数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>请参阅
+- [调试全局静态函数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

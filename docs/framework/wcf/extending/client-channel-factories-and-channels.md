@@ -2,12 +2,12 @@
 title: 客户端：通道工厂和通道
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: 3f045f56f7b73c5416e7a21a3afde29d22212d68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71ed9f9cbef35d14597ce6452d65bfca994dc23e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720309"
 ---
 # <a name="client-channel-factories-and-channels"></a>客户端：通道工厂和通道
 本主题介绍通道工厂和通道的创建。  
@@ -30,7 +30,7 @@ ms.locfileid: "50182432"
   
 -   <xref:System.ServiceModel.Channels.ChannelListenerBase> 类实现 <xref:System.ServiceModel.Channels.IChannelListener>。 它负责执行基本状态管理。 
   
- 下面的讨论基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
+ 下面的讨论基于[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
   
 ### <a name="creating-a-channel-factory"></a>创建通道工厂  
  `UdpChannelFactory` 派生自 <xref:System.ServiceModel.Channels.ChannelFactoryBase>。 该示例重写 <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> 以提供对消息编码器的消息版本的访问。 该示例还重写 <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A> 以在状态机转变时拆开 <xref:System.ServiceModel.Channels.BufferManager> 的实例。  
@@ -73,5 +73,5 @@ this.socket.SendTo(
 );  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)
+## <a name="see-also"></a>请参阅
+- [开发通道](../../../../docs/framework/wcf/extending/developing-channels.md)

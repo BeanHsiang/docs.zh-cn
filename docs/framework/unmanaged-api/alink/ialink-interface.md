@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c970e14bfb3f8f8afcc97568e221d2e1cc15198
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408588"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978236"
 ---
 # <a name="ialink-interface"></a>IALink 接口
-可帮助在构建.NET Framework 程序集。 此外，该接口包含帮助为多模块程序集编写程序集清单、 签名程序集具有强名称，以及创建模块的方法。  
+可帮助在构建.NET Framework 程序集。 此外，此接口包含帮助为多模块程序集编写程序集清单、 签名程序集具有强名称，并创建网络模块的方法。  
   
 ## <a name="in-this-section"></a>本节内容  
- [AddFile 方法 1](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+ [AddFile 方法](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
   
- [AddImport 方法 1](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [AddImport 方法](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
   
  [CloseAssembly 方法](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33408588"
   
  [GetResolutionScope 方法](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
   
- [GetScope 方法 1](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [GetScope 方法](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
   
  [GetWin32ResBlob 方法](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33408588"
   
  [SetNonAssemblyFlags 方法](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>请参阅  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Al.exe（程序集链接器）](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>请参阅
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Al.exe（程序集链接器）](../../../../docs/framework/tools/al-exe-assembly-linker.md)

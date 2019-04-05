@@ -2,17 +2,17 @@
 title: 使用复杂类型的 AJAX 服务示例
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: ef44dc0eddb165c93b912da4fed994074668a250
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 17c760c8276799fed7e7a8366c17ef9f5cf7081c
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837555"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333477"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>使用复杂类型的 AJAX 服务示例
 此示例演示如何使用 Windows Communication Foundation (WCF) 来创建用于创建复杂类型的实例，并将其发送服务和客户端作为 JavaScript 对象表示法 (JSON) 之间的 ASP.NET 异步 JavaScript 和 XML (AJAX) 服务。 可以从 Web 浏览器客户端使用 JavaScript 代码来访问 AJAX 服务。 此示例是基于[基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)示例。  
   
- WCF 中的 AJAX 支持适用于与通过 ASP.NET AJAX 一起使用<xref:System.Web.UI.ScriptManager>控件。 使用 ASP.NET AJAX 使用 WCF 的示例，请参阅[AJAX 示例](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
+ WCF 中的 AJAX 支持适用于与通过 ASP.NET AJAX 一起使用<xref:System.Web.UI.ScriptManager>控件。 使用 ASP.NET AJAX 使用 WCF 的示例，请参阅[AJAX 示例](ajax.md)。  
   
 > [!NOTE]
 >  本主题的最后介绍了此示例的设置过程和生成说明。  
@@ -66,5 +66,5 @@ function onSuccess(mathResult){
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`  
   
-## <a name="see-also"></a>请参阅  
- [基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)
+## <a name="see-also"></a>请参阅
+- [基本 AJAX 服务](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

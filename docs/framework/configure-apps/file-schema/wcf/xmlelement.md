@@ -1,31 +1,31 @@
 ---
-title: '&lt;XmlElement&gt;'
+title: <xmlElement>
 ms.date: 03/30/2017
 ms.assetid: 395205c2-d8c0-4a5e-90f3-7ce3c085fccd
-ms.openlocfilehash: 70ff9b93bcd59331c5fa5e66bb51dc4cd1e043ff
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 648147a7e3977648ac3c26c9dfc469629f3b70c3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767643"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278286"
 ---
-# <a name="ltxmlelementgt"></a>&lt;XmlElement&gt;
+# <a name="xmlelement"></a>\<xmlElement>
 指定一个 XML 元素，请求令牌时，该元素在消息正文中发送到安全令牌服务。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<wsFederatedBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
 \<message>  
-\<tokenRequestParameters >  
+\<tokenRequestParameters>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<tokenRequestParameters>  
-      <xmlElement xmlElement="String" />  
-</tokenRequestParameters>  
+<tokenRequestParameters>
+  <xmlElement xmlElement="String" />
+</tokenRequestParameters>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -46,11 +46,11 @@ ms.locfileid: "32767643"
 |-------------|-----------------|  
 |[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|令牌请求参数的集合。 每个参数都是一个 XML 元素。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters%2A>  
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.TokenRequestParameters%2A>  
- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [使用自定义绑定的安全功能](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters%2A>
+- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.TokenRequestParameters%2A>
+- [服务标识和身份验证](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [使用自定义绑定的安全功能](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [联合令牌与颁发的令牌](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)

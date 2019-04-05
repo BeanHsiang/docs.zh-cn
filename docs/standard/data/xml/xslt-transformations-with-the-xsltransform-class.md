@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67062ab87182bcb42793cb166323020178ac1688
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: db10dda3cbb328cd143afa48e300588ccc7667a6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746414"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463067"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform 类的 XSLT 转换
 
@@ -24,8 +24,7 @@ XSLT 的目标是将源 XML 文档的内容转换为格式或结构不同的另�
 
 ## <a name="overview"></a>概述
 
-![XSLT 转换体系结构](media/xslttransformationswithxsltransformclass.gif "xsltTransformationsWithXslTransformClass")  
-转换结构
+![显示 XSLT 转换体系结构的图表。](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 
 XSLT 建议使用 XML 路径语言 (XPath) 选择 XML 文档的各部分，其中 XPath 是用于浏览文档树节点的查询语言。 如图所示，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 实现的 XPath 用来选择存储在几个类中的 XML 部分，如 <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlDataDocument> 和 <xref:System.Xml.XPath.XPathDocument> 类。 <xref:System.Xml.XPath.XPathDocument> 是一个优化的 XSLT 数据存储区，当与 <xref:System.Xml.Xsl.XslTransform> 一起使用时，可以提供性能良好的 XSLT 转换。
 
@@ -98,11 +97,11 @@ public class Sample
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.Xsl.XslTransform>  
-- [XslTransform 类实现 XSLT 处理器](xsltransform-class-implements-the-xslt-processor.md)  
-- [XslTransform 类中任意行为的实现](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)  
-- [转换中的 XPathNavigator](xpathnavigator-in-transformations.md)  
-- [转换中的 XPathNodeIterator](xpathnodeiterator-in-transformations.md)  
-- [XslTransform 的 XPathDocument 输入](xpathdocument-input-to-xsltransform.md)  
-- [XslTransform 的 XmlDataDocument 输入](xmldatadocument-input-to-xsltransform.md)  
-- [XslTransform 的 XmlDocument 输入](xmldocument-input-to-xsltransform.md)  
+- <xref:System.Xml.Xsl.XslTransform>
+- [XslTransform 类实现 XSLT 处理器](xsltransform-class-implements-the-xslt-processor.md)
+- [XslTransform 类中任意行为的实现](implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)
+- [转换中的 XPathNavigator](xpathnavigator-in-transformations.md)
+- [转换中的 XPathNodeIterator](xpathnodeiterator-in-transformations.md)
+- [XslTransform 的 XPathDocument 输入](xpathdocument-input-to-xsltransform.md)
+- [XslTransform 的 XmlDataDocument 输入](xmldatadocument-input-to-xsltransform.md)
+- [XslTransform 的 XmlDocument 输入](xmldocument-input-to-xsltransform.md)

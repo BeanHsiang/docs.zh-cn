@@ -1,33 +1,33 @@
 ---
-title: '&lt;netPeerBinding&gt; 的 &lt;security&gt;'
+title: <security> 的 <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: d32b6426009c403d74ca3a05d3c3ba7be9163cae
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 06c4b537c336804c28492124e6a4fa8cc4ff3091
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197322"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266294"
 ---
-# <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a>&lt;netPeerBinding&gt; 的 &lt;security&gt;
+# <a name="security-of-netpeerbinding"></a>\<security> of \<netPeerBinding>
 定义的安全设置[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)，包括身份验证的类型使用，安全使用消息传输。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<netPeerBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<netPeerBinding>  
-    <binding>  
-        <security mode="Message/None/Transport//TransportWithMessageCredential">  
-            <transport credentialType="Certificate/Password" />  
-        </security>  
-    </binding>  
-</netPeerBinding>  
+<netPeerBinding>
+  <binding>
+    <security mode="Message/None/Transport//TransportWithMessageCredential">
+      <transport credentialType="Certificate/Password" />
+    </security>
+  </binding>
+</netPeerBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -58,19 +58,19 @@ ms.locfileid: "50197322"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义的所有绑定功能[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义的所有绑定功能[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
   
 ## <a name="remarks"></a>备注  
  安全性可以是特定于消息的，也可以是特定于传输的。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.PeerSecurityElement>  
- <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>  
- <xref:System.ServiceModel.PeerSecuritySettings>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [选择凭据类型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.PeerSecurityElement>
+- <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>
+- <xref:System.ServiceModel.PeerSecuritySettings>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [选择凭据类型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

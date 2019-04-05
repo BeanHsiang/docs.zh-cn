@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c815b256ebdab82a57f921a5df016a1552f6d052
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 116792c6a669f31b0c69dcc0b25134af7e72f9f2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424347"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501027"
 ---
 # <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a>ISymUnmanagedDocument::GetCheckSumAlgorithmId 方法
-获取校验和算法标识符，或如果没有校验和，则返回全为零的 GUID。  
+获取校验和算法标识符，或如果没有校验和，则返回全部为零的 GUID。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,12 +34,12 @@ HRESULT GetCheckSumAlgorithmId(
     [out, retval] GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pRetVal`  
- [out]指向接收校验和算法标识符的变量的指针。  
+ [out]指向一个变量来接收校验和算法标识符的指针。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则为 S_OK。  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

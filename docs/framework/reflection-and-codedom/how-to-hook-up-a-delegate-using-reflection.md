@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16c80dacbe71bb9052df1caa65fbd31e433957e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe90542d1ba106dd52e8995afab298b4b9f69899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644386"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>如何：使用反射将委托挂钩
 使用反射加载和运行程序集时，不能使用 C# `+=` 运算符或 Visual Basic [AddHandler 语句](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)等语言功能将事件挂钩。 以下过程介绍如何通过反射获取所需的全部类型来将现有方法挂钩到事件，以及如何使用反射发出以创建动态方法并将其挂钩到事件。  
@@ -113,10 +113,10 @@ ms.locfileid: "33397931"
   
 -   使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Emit.DynamicMethod>  
- <xref:System.Activator.CreateInstance%2A>  
- <xref:System.Delegate.CreateDelegate%2A>  
- [如何：定义和执行动态方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)  
- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Emit.DynamicMethod>
+- <xref:System.Activator.CreateInstance%2A>
+- <xref:System.Delegate.CreateDelegate%2A>
+- [如何：定义和执行动态方法](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)
+- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)

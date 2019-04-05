@@ -1,5 +1,5 @@
 ---
-title: '&lt;源&gt;元素'
+title: <sources> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
@@ -9,21 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a9c5c5529e349eca2ba089ed6fb71da4bd48430a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: d7d92f91838a8d1914ffe574f018cc701477d767
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033241"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262499"
 ---
-# <a name="ltsourcesgt-element"></a>&lt;源&gt;元素
+# <a name="sources-element"></a>\<源 > 元素
 指定启动跟踪消息的跟踪源。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<源 >  
+\<system.diagnostics>  
+\<sources>  
   
 ## <a name="syntax"></a>语法  
   
@@ -81,12 +79,12 @@ ms.locfileid: "48033241"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.ConsoleTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- <xref:System.Diagnostics.XmlWriterTraceListener>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.ConsoleTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- <xref:System.Diagnostics.XmlWriterTraceListener>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

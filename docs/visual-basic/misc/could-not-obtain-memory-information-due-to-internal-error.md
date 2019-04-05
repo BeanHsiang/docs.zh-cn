@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrDiagnosticInfo_Memory
 ms.assetid: 1ba8f774-5858-438e-914e-99fddc9e5e7e
-ms.openlocfilehash: 6d6f9b65837a989b3dbdd47eea4f3c08a1f0b7b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8d1f3799de11596b9eed9df39e143587e283b55
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33635829"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039016"
 ---
 # <a name="could-not-obtain-memory-information-due-to-internal-error"></a>由于内部错误，无法获取内存信息
 对 `My.Computer.Info` 对象的内存信息属性之一的调用失败。  
@@ -18,6 +18,7 @@ ms.locfileid: "33635829"
   
 -   在对 `Try...Catch` 对象的内存信息属性的调用周围添加一个 `My.Computer.Info` 块。  
   
-## <a name="see-also"></a>请参阅  
- [My.Computer.Info](xref:Microsoft.VisualBasic.Devices.ComputerInfo)  
- [Try...Catch...Finally 语句](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>请参阅
+
+- [My.Computer.Info](xref:Microsoft.VisualBasic.Devices.ComputerInfo)
+- [Try...Catch...Finally 语句](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

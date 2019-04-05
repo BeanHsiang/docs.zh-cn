@@ -8,12 +8,12 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 2a934316517047da6b6aec8e88026024b9a25f65
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 642ca16142bdfe78a40ddf4e6a3a79ce6a8a4985
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514796"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58031600"
 ---
 # <a name="xamlname-grammar"></a>XamlName 语法
 XamlName 语法是为了方便起见，此处重现的 XAML 语言规范 [MS-XAML] 中定义的特定语法。  
@@ -55,7 +55,7 @@ Nl
 Number, Letter  
 ```  
   
- XAML 定义的第二个语法，DottedXamlName，是用于属性和事件限定的引用，并还为附加成员。 有关详细信息，请参阅<xref:System.Windows.DependencyProperty>并[XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
+ XAML 定义的第二个语法，DottedXamlName，是用于属性和事件限定的引用，并还为附加成员。 有关详细信息，请参阅<xref:System.Windows.DependencyProperty>并[XAML 概述 (WPF)](../wpf/advanced/xaml-overview-wpf.md)。  
   
  字符串值的类型 DottedXamlName 必须符合以下语法：  
   

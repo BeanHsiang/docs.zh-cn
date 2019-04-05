@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 94a64efcd7b4f354eaa22d1b646f36212f9c8fbb
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 8813bf68ee2b354ed7fc5e981904b8e4b807c1be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50042293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576520"
 ---
 # <a name="interpreting-network-tracing"></a>解释网络跟踪
 启用网络跟踪之后，可以通过跟踪捕获应用程序对各种 <xref:System.Net> 类成员的调用。 这些调用的输出可能类似于以下示例。  
@@ -44,7 +44,7 @@ ms.locfileid: "50042293"
   
  `Connection: Close`  
   
-## <a name="see-also"></a>请参阅  
- [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [.NET Framework 中的网络跟踪](../../../docs/framework/network-programming/network-tracing.md)
+## <a name="see-also"></a>请参阅
+- [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [.NET Framework 中的网络跟踪](../../../docs/framework/network-programming/network-tracing.md)

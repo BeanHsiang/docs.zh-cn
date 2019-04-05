@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0eb24c7c4f2c60a9c16d903ab1e845b058e280f7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: e5fa4376cdb0496cfd25f4764257c4f3afbc7268
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697044"
 ---
 # <a name="time-zone-overview"></a>时区概述
 
@@ -59,7 +59,7 @@ ms.locfileid: "46539299"
 
 集的依赖性<xref:System.TimeZoneInfo>类对注册表意味着，时区感知应用程序不能为某些特定时区在注册表中定义。 因此，尝试实例化某个特定时区（除了本地时区或表示 UTC 的时区）时，应使用异常处理。 它还应提供一些方法，以便让应用程序继续，则所需<xref:System.TimeZoneInfo>无法从注册表实例化对象。
 
-处理所需的时间区域，缺少<xref:System.TimeZoneInfo>类包括<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法，可用于创建在注册表中找不到的自定义时区。 有关创建自定义时区的详细信息，请参阅[如何： 创建不含调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)并[如何： 创建含调整规则的时区](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。 此外，还可以使用<xref:System.TimeZoneInfo.ToSerializedString%2A>方法将新创建的时区转换为一个字符串，并将其保存在数据存储中 （如数据库、 文本文件、 注册表中或应用程序资源）。 然后，可以使用<xref:System.TimeZoneInfo.FromSerializedString%2A>方法将此字符串转换回<xref:System.TimeZoneInfo>对象。 有关详细信息，请参阅[如何： 将时区保存到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)并[如何： 从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
+处理所需的时间区域，缺少<xref:System.TimeZoneInfo>类包括<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法，可用于创建在注册表中找不到的自定义时区。 有关创建自定义时区的详细信息，请参阅[如何：创建不含调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)和[如何：创建含调整规则的时区](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。 此外，还可以使用<xref:System.TimeZoneInfo.ToSerializedString%2A>方法将新创建的时区转换为一个字符串，并将其保存在数据存储中 （如数据库、 文本文件、 注册表中或应用程序资源）。 然后，可以使用<xref:System.TimeZoneInfo.FromSerializedString%2A>方法将此字符串转换回<xref:System.TimeZoneInfo>对象。 有关详细信息，请参阅[如何：将时区保存到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)和[如何：从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
 
 由于每个时区均由与 UTC 之间的基本时差表示，同时也可由与反映任何现有调整规则的 UTC 之间的时差表示，因此，可轻易将一个时区内的时间转换为另一时区的时间。 为此，<xref:System.TimeZoneInfo>对象包含多个转换方法，包括：
 
@@ -75,4 +75,4 @@ ms.locfileid: "46539299"
 
 ## <a name="see-also"></a>请参阅
 
-* [日期、时间和时区](../../../docs/standard/datetime/index.md)
+- [日期、时间和时区](../../../docs/standard/datetime/index.md)

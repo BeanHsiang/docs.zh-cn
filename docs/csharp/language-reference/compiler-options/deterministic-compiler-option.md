@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f9aca20a3ff65d061c04a21e31db3fb5eab62ba
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 819e0c44d933b491091c05d1c28b30827ead85ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499839"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -54,7 +54,7 @@ ms.locfileid: "48584060"
 
 当源公开可用时，可使用确定性编译来确定是否从可信源编译二进制内容。 它还可有效用于连续生成系统，确定是否需要执行依赖于二进制内容更改的生成步骤。 
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

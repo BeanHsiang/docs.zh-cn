@@ -2,12 +2,12 @@
 title: 数据库访问活动
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: efcdd25ee3e6b86d87d551623b166eab4fa76845
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850388"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066085"
 ---
 # <a name="database-access-activities"></a>数据库访问活动
 数据库访问活动可用于在一个工作流内访问数据库。 这些活动可以访问数据库以检索或修改信息并使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)来访问数据库。  
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
 
  要执行的查询在其 `Sql` 属性中配置，并通过 `Parameters` 集合传递参数。
 
- 之后`DbQueryScalar`是执行，在返回标量`Result``out`自变量 (类型的`TResult`，该基类中定义<xref:System.Activities.AsyncCodeActivity%601>)。
+ 之后`DbQueryScalar`是执行，在返回标量`Result out`自变量 (类型的`TResult`，该基类中定义<xref:System.Activities.AsyncCodeActivity%601>)。
 
 ```
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -200,7 +200,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 
  要执行的查询在其 `Sql` 属性中配置，并通过 `Parameters` 集合传递参数。
 
- 之后`DbQueryDataSet`执行`DataSet`中返回`Result``out`自变量 (类型的`TResult`，该基类中定义<xref:System.Activities.AsyncCodeActivity%601>)。
+ 之后`DbQueryDataSet`执行`DataSet`中返回`Result out`自变量 (类型的`TResult`，该基类中定义<xref:System.Activities.AsyncCodeActivity%601>)。
 
 ```
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`：设置包含连接信息的配置部分的名称。
+-   `ConfigName`：设置包含连接信息的配置节的名称。
 
     ```xml
     <connectionStrings>

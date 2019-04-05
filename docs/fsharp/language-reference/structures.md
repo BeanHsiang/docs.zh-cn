@@ -1,13 +1,13 @@
 ---
-title: 结构 (F#)
-description: '了解有关 F # 结构，紧凑对象类型通常比用于具有少量数据且行为简单类型的类更有效。'
+title: 结构
+description: 了解如何F#结构，紧凑对象类型通常比用于具有少量数据且行为简单类型的类更有效。
 ms.date: 05/16/2016
-ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48845290"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612148"
 ---
 # <a name="structures"></a>结构
 
@@ -40,7 +40,7 @@ type [accessibility-modifier] type-name =
 
 由于结构不允许 `let` 绑定，你必须通过使用 `val` 关键字在结构中声明字段。 `val` 关键字定义字段及其类型，但不允许初始化。 相反，`val` 声明会初始化零或 null。 因此，具有隐式构造函数（即，在声明中的结构名称后直接给定参数）的结构要求使用 `val` 特性批注 `DefaultValue` 声明。 具有定义构造函数的结构仍支持零初始化。 因此，`DefaultValue` 特性是此类零值对字段有效的声明。 由于此类型上不允许 `let` 和 `do` 绑定，结构的隐式构造函数不执行任何操作，但所传入的隐式构造函数参数值作为私有字段提供。
 
-显式构造函数可能涉及字段值的初始化。 当你的结构具有显式构造函数时，它仍支持零初始化；但是，由于它与显式构造函数冲突，请勿在 `DefaultValue` 声明上使用 `val` 特性。 有关详细信息`val`声明，请参见[显式字段：`val`关键字](members/explicit-fields-the-val-keyword.md)。
+显式构造函数可能涉及字段值的初始化。 当你的结构具有显式构造函数时，它仍支持零初始化；但是，由于它与显式构造函数冲突，请勿在 `DefaultValue` 声明上使用 `val` 特性。 有关详细信息`val`声明，请参阅[显式字段：`val`关键字](members/explicit-fields-the-val-keyword.md)。
 
 结构上允许特性和可访问性修饰符，并遵循与其他类型相同的规则。 有关详细信息，请参阅[特性](attributes.md)并[访问控制](access-control.md)。
 
@@ -64,7 +64,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` 并不意味着`Struct`。 必须同时出现在类型上。
 
-一个"`byref`-例如"F # 中的结构是绑定堆栈的值类型。 它永远不会分配托管堆上。 一个`byref`-像结构可用于高效的编程中，因为它强制实施强检查有关生存期和非捕获组。 中的规则：
+一个"`byref`-如"结构中的F#是绑定堆栈的值类型。 它永远不会分配托管堆上。 一个`byref`-像结构可用于高效的编程中，因为它强制实施强检查有关生存期和非捕获组。 中的规则：
 
 * 它们可用作函数参数、 方法参数、 局部变量、 方法返回。
 * 它们不能是静态或实例的类或常规结构的成员。
@@ -86,7 +86,7 @@ type S(count1: int, count2: int) =
 
 `IsReadOnly` 并不意味着`Struct`。 你必须添加具有`IsReadOnly`结构。
 
-此属性的使用发出元数据让 F # 和 C# 知道会将其视为`inref<'T>`和`in ref`分别。
+此属性的使用发出元数据让F#和C#知道会将其视为`inref<'T>`并`in ref`分别。
 
 定义 readonly 结构内的可变值将产生错误。
 

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6da4c282c7f969a406a657d1e30dd6120a32b4e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2e9d640fb1c9dae5bb195baa504e560ba8e45821
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420903"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497088"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory 方法
-将数据写入的此进程中的内存区域。  
+将数据写入到的此过程中的内存区域。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,12 +37,12 @@ HRESULT WriteMemory(
     [out] SIZE_T *written);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `address`  
- [in]A`CORDB_ADDRESS`写入到的数据的内存区域的基址的值。 数据传输发生之前，系统将验证开始的基址的指定大小的内存区域可以进行写入访问。 如果它是不可访问，该方法将失败。  
+ [in]一个`CORDB_ADDRESS`写入数据的内存区域的基址的值。 在传输数据之前，系统将验证开始的位置的基址的指定大小的内存区域可以进行写入访问。 如果不能访问，该方法将失败。  
   
  `size`  
- [in]要写入到内存区域的字节数。  
+ [in]要写入到的内存区域的字节数。  
   
  `buffer`  
  [in]包含要写入的数据的缓冲区。  
@@ -51,15 +51,15 @@ HRESULT WriteMemory(
  [out]指向一个变量来接收此过程中的内存区域写入的字节数的指针。 如果`written`为 NULL，则忽略此参数。  
   
 ## <a name="remarks"></a>备注  
- 在任意断点后，会自动写入数据。 在.NET Framework 2.0 版中，本机调试器不应使用此方法来插入指令流的断点。 使用[icordebugprocess2:: Setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)相反。  
+ 任何断点后自动写入数据。 在.NET Framework 2.0 版中，本机调试器应使用此方法用于将断点注入到指令流。 使用[ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)相反。  
   
- `WriteMemory`方法应仅在托管代码之外使用。 如果使用不正确，此方法会损坏运行时。  
+ `WriteMemory`应仅之外托管代码使用方法。 如果使用不当，则此方法会损坏运行时。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

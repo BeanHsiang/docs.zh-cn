@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a35f35d7aea34c0ef08c30415fde75fe71e645
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad9e552d31944523222798fe7dba2201461b1243
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426045"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487242"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints 方法
 获取在此方法内的所有序列点。  
@@ -41,18 +41,18 @@ HRESULT GetSequencePoints(
     [in, size_is(cPoints)] ULONG32  endColumns[]);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `cPoints`  
- [in]A`ULONG32`接收的大小`offsets`， `documents`， `lines`， `columns`， `endLines`，和`endColumns`数组。  
+ [in]一个`ULONG32`，它接收的大小`offsets`， `documents`， `lines`， `columns`， `endLines`，和`endColumns`数组。  
   
  `pcPoints`  
- [out]指向的指针`ULONG32`接收包含序列点所需的缓冲区的长度。  
+ [out]一个指向`ULONG32`接收包含序列点所需的缓冲区的长度。  
   
  `offsets`  
- [in]要在其中存储 Microsoft 中间语言 (MSIL) 偏移量从开始处的序列点的方法数组。  
+ [in]一个数组，要在其中存储 Microsoft 中间语言 (MSIL) 偏移量从序列点方法的开头。  
   
  `documents`  
- [in]在其中存储序列点所在的文档的数组。  
+ [in]要在其中存储序列点所在的文档数组。  
   
  `lines`  
  [in]在其中存储序列点所在的文档中的行的数组。  
@@ -67,10 +67,10 @@ HRESULT GetSequencePoints(
  [in]序列点结束的文档中的列的数组。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

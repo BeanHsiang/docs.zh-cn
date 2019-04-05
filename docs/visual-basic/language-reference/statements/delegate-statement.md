@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 880b4cf75d518506d2bcf788ad8460274dcccefc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199768"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821304"
 ---
 # <a name="delegate-statement"></a>Delegate 语句
 用于声明委托。 委托是一个引用类型，是指`Shared`方法的类型或实例方法的对象。 任何具有匹配的参数和返回类型的过程可以用于创建此委托类的实例。 然后可以通过委托实例更高版本调用该过程。  
@@ -33,7 +33,7 @@ ms.locfileid: "50199768"
 |`Shadows`|可选。 指示此委托重新声明并隐藏具有相同名称的编程元素或在基类中的重载元素集。 可以与任何其他类型一起隐藏任何类型的已声明元素。<br /><br /> 隐藏的元素不可在隐藏它的派生类中使用（除了从隐藏元素不可访问的位置）。 例如，如果`Private`元素将隐藏基类元素，不具有访问权限的代码`Private`元素将改为访问的基类元素。|  
 |`Sub`|（可选），但`Sub`或`Function`必须出现。 将委托作为此过程声明`Sub`不返回值的过程。|  
 |`Function`|（可选），但`Sub`或`Function`必须出现。 将委托作为此过程声明`Function`返回一个值的过程。|  
-|`name`|必须的。 委托类型; 的名称遵循标准变量命名约定。|  
+|`name`|必需。 委托类型; 的名称遵循标准变量命名约定。|  
 |`typeparamlist`|可选。 此委托的类型参数列表。 由逗号分隔多个类型参数。 （可选） 每个类型参数可以声明变体使用`In`和`Out`泛型修饰符。 必须将[类型列表](../../../visual-basic/language-reference/statements/type-list.md)在括号中，并引入其与`Of`关键字。|  
 |`parameterlist`|可选。 被调用时传递给过程的参数的列表。 必须将[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)在括号中。|  
 |`type`|如果指定，则必需`Function`过程。 返回值的数据类型。|  
@@ -62,14 +62,15 @@ ms.locfileid: "50199768"
 ## <a name="example"></a>示例  
  下面的示例使用`Delegate`语句声明委托对两个数字进行运算并返回一个数字。 `DelegateTest`方法采用这种类型的委托的实例并使用它来对的编号对。  
   
- [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
-## <a name="see-also"></a>请参阅  
- [AddressOf 运算符](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
- [委托](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [如何：使用泛型类](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>请参阅
+
+- [AddressOf 运算符](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Of](../../../visual-basic/language-reference/statements/of-clause.md)
+- [委托](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [如何：使用泛型类](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

@@ -1,15 +1,16 @@
 ---
-title: 如何：使用 My 命名空间（C# 编程指南）
+title: 如何：使用 My 命名空间 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: a8ec3a96534693142d37d26ac0c08eec9298b178
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b56a421dd7b34bf006e1e6609bbb8ecc5f56e0bf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526201"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971255"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>如何：使用 My 命名空间（C# 编程指南）
 <xref:Microsoft.VisualBasic.MyServices> 命名空间（在 Visual Basic 中为 `My`）使访问多个 .NET Framework 类变得轻松直观，让你能够编写与计算机、应用程序、设置、资源等交互的代码。 虽然最初设计用于 Visual Basic，但 `MyServices` 命名空间仍可用于 C# 应用程序。  
@@ -27,19 +28,19 @@ ms.locfileid: "43526201"
   
      同时建议将以下行包括在程序开头的 `using` 部分。  
   
-     [!code-csharp[csProgGuideNamespaces#18](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_1.cs)]  
+     [!code-csharp[csProgGuideNamespaces#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#18)]  
   
 ## <a name="example"></a>示例  
  此示例调用 `MyServices` 命名空间中包含的各种静态方法。 若要编译此代码，必须向项目添加对 Microsoft.VisualBasic.DLL 的引用。  
   
- [!code-csharp[csProgGuideNamespaces#19](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_2.cs)]  
+ [!code-csharp[csProgGuideNamespaces#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#19)]  
   
  并不是 `MyServices` 命名空间中的所有类均可从 C# 应用程序中调用：例如，<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> 类不兼容。 在此特定情况下，可以改为使用属于 <xref:Microsoft.VisualBasic.FileIO.FileSystem> 的静态方法，这些方法也包含在 VisualBasic.dll 中。 例如，下面介绍了如何使用此类方法来复制目录：  
   
- [!code-csharp[csProgGuideNamespaces#20](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_3.cs)]  
+ [!code-csharp[csProgGuideNamespaces#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#20)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [命名空间](../../../csharp/programming-guide/namespaces/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [命名空间](../../../csharp/programming-guide/namespaces/index.md)
 - [使用命名空间](../../../csharp/programming-guide/namespaces/using-namespaces.md)

@@ -1,6 +1,6 @@
 ---
-title: 异常的最佳做法
-ms.date: 03/30/2017
+title: 异常的最佳做法 - .NET
+ms.date: 12/05/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,26 +9,22 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6aa1049c531550687a2c6289ccd87e763ca2f58
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6c979483497ff640be7d1126d63ce95130f6c02b
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199625"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633746"
 ---
 # <a name="best-practices-for-exceptions"></a>异常的最佳做法
 
 设计良好的应用处理异常和错误以防止应用崩溃。 本部分介绍了处理和创建异常的最佳做法。
 
-## <a name="use-trycatchfinally-blocks"></a>使用 try/catch/finally 块
+## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>使用 try/catch/finally 块从错误中恢复或释放资源
 
-在可能产生异常的代码周围使用 `try`/`catch`/`finally` 块。 
+对可能生成异常的代码使用 `try`/`catch` 块，代码就可以从该异常中恢复。 在 `catch` 块中，始终按从派生程度最高到派生程度最低的顺序对异常排序。 所有异常都派生自 <xref:System.Exception>。 位于处理基本异常类的 catch 子句之后的 catch 子句不处理派生程度较高的异常。 当代码无法从异常中恢复时，请勿捕获该异常。 如有可能，请启用调用堆栈中更上层的方法来进行恢复。
 
-在 `catch` 块中，始终按从最特定到最不特定的顺序对异常排序。
-
-无论是否可进行恢复，使用 `finally` 块清理资源。
+使用 `using` 语句或 `finally` 块清除分配的资源。 当引发了异常时，优先使用 `using` 语句自动清除资源。 使用 `finally` 块清除未实现 <xref:System.IDisposable> 的资源。 即使引发了异常，通常也会执行 `finally` 子句中的代码。
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>在不引发异常的前提下，处理常见情况
 
@@ -36,13 +32,13 @@ ms.locfileid: "50199625"
 
 [!code-cpp[Conceptual.Exception.Handling#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
 [!code-csharp[Conceptual.Exception.Handling#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
-[!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]  
+[!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
 
 如果关闭前未检查连接状态，则可能捕获 `InvalidOperationException` 异常。
 
 [!code-cpp[Conceptual.Exception.Handling#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
 [!code-csharp[Conceptual.Exception.Handling#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
-[!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]  
+[!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
 
 选择的方法取决于希望时间发生的频率。
 
@@ -56,13 +52,13 @@ ms.locfileid: "50199625"
 
 [!code-cpp[Conceptual.Exception.Handling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
-[!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
+[!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
-避免异常的另一方法是，对极为常见的错误案例返回 NULL，而不是引发异常。 极其常见的错误案例可被视为常规控制流。 通过在这些情况下返回 null，可最大程度地减小对应用的性能产生的影响。
+避免异常的另一方法是，对极为常见的错误案例返回 `null`，而不是引发异常。 极其常见的错误案例可被视为常规控制流。 通过在这些情况下返回 `null`，可最大程度地减小对应用性能的影响。
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>引发异常而不是返回错误代码
 
-异常可确保故障不被忽略，因为调用代码不会检查返回代码。 
+异常可确保故障不被忽略，因为调用代码不会检查返回代码。
 
 ## <a name="use-the-predefined-net-exception-types"></a>使用预定义的 .NET 异常类型
 
@@ -78,23 +74,23 @@ ms.locfileid: "50199625"
 
 [!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
-[!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]  
+[!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
 
 ## <a name="include-three-constructors-in-custom-exception-classes"></a>在自定义异常类中包括三种构造函数
 
 创建自己的异常类别时至少使用三种公共构造函数：默认构造函数、采用字符串消息的构造函数和采用字符串消息和内部异常的构造函数。
 
 * <xref:System.Exception.%23ctor>（使用默认值）。
-  
-* <xref:System.Exception.%23ctor%28System.String%29>，它接受字符串消息。  
-  
-* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>，它接受字符串消息和内部异常。  
-  
-有关示例，请参阅[如何：创建用户定义的异常](how-to-create-user-defined-exceptions.md)。
+
+* <xref:System.Exception.%23ctor%28System.String%29>，它接受字符串消息。
+
+* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>，它接受字符串消息和内部异常。
+
+有关示例，请参见 [如何：创建用户定义的异常](how-to-create-user-defined-exceptions.md)。
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>确保代码远程执行时异常数据可用
 
-创建用户定义的异常时，请确保异常的元数据对远程执行的代码可用。 
+创建用户定义的异常时，请确保异常的元数据对远程执行的代码可用。
 
 例如，在支持应用域的 .NET 实现中，异常可能会跨应用域抛出。 假设应用域 A 创建应用域 B，后者执行引发异常的代码。 应用域 A 若想正确捕获和处理异常，它必须能够找到包含应用域 B 所引发的异常的程序集。如果应用域 B 在其应用程序基下（但未在应用域 A 的应用程序基下）引发了一个包含在程序集内的异常，那么应用域 A 将无法找到异常，且公共语言运行时将引发 <xref:System.IO.FileNotFoundException> 异常。 为避免此情况，可以两种方式部署包含异常信息的程序集：
 
@@ -110,7 +106,7 @@ ms.locfileid: "50199625"
 
 ## <a name="include-a-localized-string-message-in-every-exception"></a>在每个异常中都包含一个本地化字符串消息
 
-用户看到的错误消息派生自引发的异常的 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，而不是派生自异常类的名称。 通常将值赋给 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，方法是将消息字符串传递到[异常构造函数](xref:System.Exception.%23ctor%2A)的 `message` 参数。 
+用户看到的错误消息派生自引发的异常的 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，而不是派生自异常类的名称。 通常将值赋给 <xref:System.Exception.Message?displayProperty=nameWithType> 属性，方法是将消息字符串传递到[异常构造函数](xref:System.Exception.%23ctor%2A)的 `message` 参数。
 
 对于本地化应用程序，应为应用程序可能引发的每个异常提供本地化消息字符串。 资源文件用于提供本地化错误消息。 若要了解如何本地化应用程序和检索本地化字符串，请参阅[桌面应用中的资源](../../framework/resources/index.md)和 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>。
 
@@ -128,11 +124,11 @@ ms.locfileid: "50199625"
 
 [!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
-[!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
-  
+[!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
+
 在某些情况下，更适合使用异常的构造函数生成异常。 例如，<xref:System.ArgumentException> 等全局异常类。
 
-## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>引发异常时清理中间结果
+## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>因发生异常而未完成方法时还原状态
 
 当异常从方法引发时，调用方应能够假定没有副作用。 例如，如果你的代码可以通过从一个帐户取钱并存入另一个帐户来转移资金，而在存款时引发了异常，你不希望取款仍然有效。
 
@@ -140,10 +136,12 @@ ms.locfileid: "50199625"
 public void TransferFunds(Account from, Account to, decimal amount)
 {
     from.Withdrawal(amount);
-    // If the deposit fails, the withdrawal shouldn't remain in effect. 
+    // If the deposit fails, the withdrawal shouldn't remain in effect.
     to.Deposit(amount);
 }
 ```
+
+上面的方法不会直接引发任何异常，但必须以防御方式进行编写，以便在存款操作失败时撤销取款。
 
 解决这一情况的一种方法是，捕获由存款交易引发的异常，然后回滚取款。
 
@@ -172,8 +170,8 @@ catch (Exception ex)
     throw new TransferFundsException("Withdrawal failed", innerException: ex)
     {
         From = from,
-    To = to,
-    Amount = amount
+        To = to,
+        Amount = amount
     };
 }
 ```

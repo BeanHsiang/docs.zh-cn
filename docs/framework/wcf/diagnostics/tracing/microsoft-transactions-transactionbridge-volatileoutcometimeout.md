@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 ms.date: 03/30/2017
 ms.assetid: 2dbe34c5-57c7-4b64-9257-63021911d03c
-ms.openlocfilehash: b64f61d25c3be87019151cbf560becd3384ec182
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fac3682a955ed0caf21fdb1dea48672bf3bdea77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33475626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704571"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileoutcometimeout"></a>Microsoft.Transactions.TransactionBridge.VolatileOutcomeTimeout
 WS-AT 协议服务在等待可变参与方对结果消息的响应时超时。 如果参与方返回，则事务结果可能不确定。  
@@ -18,7 +18,7 @@ WS-AT 协议服务在等待可变参与方对结果消息的响应时超时。 �
 ## <a name="troubleshooting"></a>疑难解答  
  确保所有可变参与方都能在给定时间内响应。 默认时间为 180 秒。  如果此时间不够，请增加 WS-AT 的 `VolatileOutcomeDelay` 计时器策略。  
   
-## <a name="see-also"></a>请参阅  
- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>请参阅
+- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)

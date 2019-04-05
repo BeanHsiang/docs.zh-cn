@@ -1,5 +1,6 @@
 ---
-title: dynamic（C# 参考）
+title: dynamic - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - dynamic_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-ms.openlocfilehash: 840ecd6ab929b00e1be96c23eb06ccf362380f8e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d2aef5b2ed291aab917573408abf26b9fbedfbd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44195343"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540320"
 ---
 # <a name="dynamic-c-reference"></a>dynamic（C# 参考）
 
@@ -65,12 +66,12 @@ obj = obj + 3;
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>  
-- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
-- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [object](../../../csharp/language-reference/keywords/object.md)  
-- [is](../../../csharp/language-reference/keywords/is.md)  
-- [as](../../../csharp/language-reference/keywords/as.md)  
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
-- [如何：使用模式匹配以及 is 和 as 运算符安全地进行强制转换](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)  
+- <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>
+- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
+- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [object](../../../csharp/language-reference/keywords/object.md)
+- [is](../../../csharp/language-reference/keywords/is.md)
+- [as](../../../csharp/language-reference/keywords/as.md)
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)
+- [如何：使用模式匹配以及 as 和 is 运算符安全地进行强制转换](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [演练：创建和使用动态对象](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

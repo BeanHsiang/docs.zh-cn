@@ -1,5 +1,5 @@
 ---
-title: 可以&#39;t 打开&#39; &lt;filename&gt; &#39;以进行写入
+title: 无法打开“<filename>”进行写入
 ms.date: 07/20/2015
 f1_keywords:
 - vbc2012
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC2012
 ms.assetid: 73270fe4-a638-42c7-be21-5e156e2b18f6
-ms.openlocfilehash: c79dd277476ed4748a1d6aa1c8c5d2ea619b5a7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 289b024569900b94c9f41fe0f98a817ce907de0f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586531"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843612"
 ---
-# <a name="can39t-open-39ltfilenamegt39-for-writing"></a>可以&#39;t 打开&#39; &lt;filename&gt; &#39;以进行写入
-指定的文件无法打开以进行写入，可能因为已打开。  
+# <a name="cant-open-filename-for-writing"></a>无法打开\<文件名 > 进行写入
+指定的文件不能打开进行写入，可能因为已经打开。  
   
  **错误 ID:** BC2012  
   
@@ -25,7 +25,8 @@ ms.locfileid: "33586531"
   
 2.  检查文件的权限。  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>  
- [写入文件](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
+- [写入文件](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

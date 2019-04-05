@@ -1,18 +1,18 @@
 ---
-title: '&lt;返回&gt;(Visual Basic)'
+title: <returns> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: 47debcef2c6ce56fda4c4a0818c8e813b41ebad1
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5a0ff0da7cf26a1cea75a5b2e4678593d9b72f54
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925013"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827155"
 ---
-# <a name="ltreturnsgt-visual-basic"></a>&lt;返回&gt;(Visual Basic)
+# <a name="returns-visual-basic"></a>\<返回 > (Visual Basic)
 指定属性或函数的返回值。  
   
 ## <a name="syntax"></a>语法  
@@ -21,7 +21,7 @@ ms.locfileid: "42925013"
 <returns>description</returns>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `description`  
  返回值的说明。  
   
@@ -33,7 +33,8 @@ ms.locfileid: "42925013"
 ## <a name="example"></a>示例  
  此示例使用`<returns>`标记解释`DoesRecordExist`函数返回。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/returns_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

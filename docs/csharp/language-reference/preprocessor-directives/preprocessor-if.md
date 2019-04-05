@@ -1,17 +1,18 @@
 ---
-title: '#如果是预处理器指令（C# 参考）'
+title: '#if 预处理器指令 - C# 参考'
+ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510227"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545814"
 ---
 # <a name="if-c-reference"></a>#if（C# 参考）
 
@@ -23,7 +24,7 @@ ms.locfileid: "43510227"
 #endif
 ```
 
-仅可以使用运算符 [==](../operators/equality-comparison-operator.md)（相等）和 [!=](../operators/not-equal-operator.md)（不相等）测试 [true](../keywords/true.md) 或 [false](../keywords/false.md)。 True 表示定义该符号。 语句 `#if DEBUG` 具有与 `#if (DEBUG == true)` 相同的含义。 可以使用运算符 [&&](../operators/conditional-and-operator.md) (and)、[&#124;&#124;](../operators/conditional-or-operator.md) (or) 和 [!](../operators/logical-negation-operator.md) (not) 评估是否已经定义了多个符号。 还可以用括号对符号和运算符进行分组。
+仅可以使用运算符 [==](../operators/equality-operators.md#equality-operator-)（相等）和 [!=](../operators/equality-operators.md#inequality-operator-)（不相等）测试 [true](../keywords/true.md) 或 [false](../keywords/false.md)。 True 表示定义该符号。 语句 `#if DEBUG` 具有与 `#if (DEBUG == true)` 相同的含义。 可以使用运算符 [&&](../operators/conditional-and-operator.md) (and)、[&#124;&#124;](../operators/conditional-or-operator.md) (or) 和 [!](../operators/logical-negation-operator.md) (not) 评估是否已经定义了多个符号。 还可以用括号对符号和运算符进行分组。
 
 ## <a name="remarks"></a>备注
 
@@ -88,7 +89,7 @@ public class MyClass
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 预处理器指令](index.md)  
-- [如何：使用跟踪和调试进行有条件地编译](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 预处理器指令](index.md)
+- [如何：使用跟踪和调试执行有条件编译](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

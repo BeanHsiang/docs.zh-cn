@@ -3,14 +3,14 @@ title: 模式匹配 - C# 指南
 description: 了解 C# 中的模式匹配表达式
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522021"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969969"
 ---
-# <a name="pattern-matching"></a>模式匹配 #
+# <a name="pattern-matching"></a>模式匹配
 
 模式可测试值是否具有特定形状，并且可以在值具有匹配形状时从值提取信息。 模式匹配为当前已使用的算法提供了更简洁的语法。 你已使用现有语法创建了模式匹配算法。 编写了测试值的 `if` 或 `switch` 语句。 随后，在这些语句匹配时，可从该值提取并使用信息。 新的语法元素是你已熟悉的语句的扩展：`is` 和 `switch`。 这些新扩展将测试值与提取该信息合并在一起。
 
@@ -111,7 +111,7 @@ ms.locfileid: "43522021"
 
 引入 `var` 作为一种匹配表达式也为模式匹配引入了新规则。
 
-第一个规则是 `var` 声明遵循常规类型推理规则：将类型推理为 switch 表达式的静态类型。 根据此规则，类型始终匹配。
+第一条规则是 `var` 声明遵循正常的类型推理规则：推理出类型是 switch 表达式的静态类型。 根据此规则，类型始终匹配。
 
 第二个规则是 `var` 声明不含 NULL 检查，与其他类型模式表达式不一样。 也就是说，变量可为 NULL，只有在这种情况下，才必须执行 NULL 检查。
 

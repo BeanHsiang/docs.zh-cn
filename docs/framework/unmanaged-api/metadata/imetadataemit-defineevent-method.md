@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce94765467899ac7c906b0dfcdf0ceb78c659b5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 26fd4c89838912e4e07c1d9a8b84aa22f54adeff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448199"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501625"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent 方法
-使用指定的元数据签名中，创建事件的定义并获取该事件定义的标记。  
+使用指定的元数据签名中，创建一个事件的定义并获取该事件定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,9 +43,9 @@ HRESULT DefineEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `td`  
- [in]为目标类或接口标记。 这可以是`mdTypeDef`或`mdTypeDefNil`令牌。  
+ [in]目标类或接口的标记。 这可以是`mdTypeDef`或`mdTypeDefNil`令牌。  
   
  `szEvent`  
  [in]事件的名称。  
@@ -54,32 +54,32 @@ HRESULT DefineEvent (
  [in]事件的标志。  
   
  `tkEventType`  
- [in]Event 类令牌。 这是`mdTypeDef`、 `mdTypeRef`，或`mdTokenNil`令牌。  
+ [in]事件类标记。 这是`mdTypeDef`、 一个`mdTypeRef`，或`mdTokenNil`令牌。  
   
  `mdAddOn`  
- [in]用于订阅的事件或为 null 的方法。  
+ [in]用来订阅事件或为 null 的方法。  
   
  `mdRemoveOn`  
- [in]用于取消订阅事件，或者为 null 的方法。  
+ [in]用于取消订阅事件，则为 null 的方法。  
   
  `mdFire`  
- [in]（由派生类） 中用于引发事件的方法。  
+ [in]（由派生类） 用于引发事件的方法。  
   
  `rmdOtherMethods[]`  
- [in]有关其他方法与事件关联的令牌的数组。 数组终止于`mdMethodDefNil`令牌。  
+ [in]有关其他方法与事件关联的标记的数组。 数组结尾`mdMethodDefNil`令牌。  
   
  `pmdEvent`  
- [out]分配给事件元数据标记。  
+ [out]分配到的事件的元数据标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

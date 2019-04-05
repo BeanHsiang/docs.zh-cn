@@ -2,20 +2,15 @@
 title: 应用设置架构
 ms.date: 05/01/2017
 helpviewer_keywords:
-- schema app settings
-- app settings, schema [Windows Forms]
-- Windows Forms, app settings schema
-- configuration schema [.NET Framework], app settings
+  - schema app settings
+  - 'app settings, schema [Windows Forms]'
+  - 'Windows Forms, app settings schema'
+  - 'configuration schema [.NET Framework], app settings'
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 9bf2568c8c18f8f6d18c445e802cc72df18fb8c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191137"
 ---
+
 # <a name="app-settings-schema"></a>应用设置架构
 
 包含自定义应用程序设置，如文件路径、XML Web service URL 或应用程序的任何其他自定义配置信息。
@@ -72,5 +67,5 @@ ms.locfileid: "50191137"
 
 ## <a name="see-also"></a>请参阅
 
-- [应用程序设置概述](~/docs/framework/winforms/advanced/application-settings-overview.md)   
+- [应用程序设置概述](~/docs/framework/winforms/advanced/application-settings-overview.md)
 - [应用程序设置体系结构](~/docs/framework/winforms/advanced/application-settings-architecture.md)

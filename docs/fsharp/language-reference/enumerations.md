@@ -1,13 +1,13 @@
 ---
-title: 枚举 (F#)
-description: '了解如何使用 F # 枚举来代替文本以使代码更具可读性且更易于维护。'
+title: 枚举
+description: 了解如何使用F#枚举来代替文本以使代码更具可读性且更易于维护。
 ms.date: 05/16/2016
-ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8839b73de074f62606b70ffe969a53b3db753bf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46003160"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611723"
 ---
 # <a name="enumerations"></a>枚举
 
@@ -40,7 +40,7 @@ type enum-name =
 
 枚举的类型可以具有以下基础类型之一： `sbyte`， `byte`， `int16`， `uint16`， `int32`， `uint32`， `int64`， `uint16`， `uint64`，和`char`。 枚举类型在.NET Framework 中表示为从继承的类型`System.Enum`，其又继承自`System.ValueType`。 因此，它们是位于堆栈或内联的包含对象中的值类型，任何值的基础类型是枚举的有效值。 这很重要时模式匹配枚举值，因为您必须提供一种模式可捕获未命名的值。
 
-`enum` F # 库中的函数可用于生成一个枚举值，甚至之外的预定义的值命名值。 您使用`enum`函数，如下所示。
+`enum`函数，在F#库可用于生成一个枚举值，甚至之外的预定义的值命名值。 您使用`enum`函数，如下所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 

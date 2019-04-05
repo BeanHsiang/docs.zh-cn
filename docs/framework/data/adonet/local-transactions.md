@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 17bf06864016ece571b21bee2c180b5781a62959
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9cad6c798856fb77023bb52c528b9294f5f6d0bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656175"
 ---
 # <a name="local-transactions"></a>本地事务
 如果要将多项任务绑定在一起，使其作为单个工作单元来执行，可以使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的事务。 例如，假设应用程序执行两个任务。 首先使用订单信息更新表。 然后更新包含库存信息的表，将已订购的商品记入借方。 如果任何一项任务失败，则这两个更新将回滚。  
@@ -21,7 +21,7 @@ ms.locfileid: "43528254"
  每个 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据提供程序使用自己的 `Transaction` 对象来执行本地事务。 如果要求事务在 SQL Server 数据库中执行，则选择 <xref:System.Data.SqlClient> 事务。 对于 Oracle 事务，使用 <xref:System.Data.OracleClient> 提供程序。 此外，还有<xref:System.Data.Common.DbTransaction>可用于写入需要事务的独立于提供程序的代码的类。  
   
 > [!NOTE]
-> 在服务器上执行时，事务最有效。 如果使用的 SQL Server 数据库广泛使用显式事务，应考虑使用 Transact-SQL BEGIN TRANSACTION 语句以存储过程的形式编写这些事务。
+> 在服务器上执行它们时，事务是最有效。 如果使用的 SQL Server 数据库广泛使用显式事务，应考虑使用 Transact-SQL BEGIN TRANSACTION 语句以存储过程的形式编写这些事务。
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>使用单个连接执行事务  
  在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中，使用 `Connection` 对象控制事务。 可以使用 `BeginTransaction` 方法启动本地事务。 开始事务后，可以使用 `Transaction` 对象的 `Command` 属性在该事务中登记一个命令。 然后，可以根据事务组件的成功或失败，提交或回滚在数据源上进行的修改。  
@@ -47,8 +47,8 @@ ms.locfileid: "43528254"
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [分布式事务](../../../../docs/framework/data/adonet/distributed-transactions.md)  
- [System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [分布式事务](../../../../docs/framework/data/adonet/distributed-transactions.md)
+- [System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

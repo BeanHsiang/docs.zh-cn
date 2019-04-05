@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5d37326d0278225146d217624508e7c7738375b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: abfbea052072f0b90c9d018b520b67878d235701
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506805"
 ---
 # <a name="mitigation-tls-protocols"></a>缓解：TLS 协议
-从 .NET Framework 4.6 开始，<xref:System.Net.ServicePointManager?displayProperty=nameWithType> 和 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 类可以使用以下三种协议之一：Tls1.0、Tls1.1 或 Tls 1.2。 不支持 SSL3.0 协议和 RC4 密码。  
+从 .NET Framework 4.6 开始，允许 <xref:System.Net.ServicePointManager?displayProperty=nameWithType> 和 <xref:System.Net.Security.SslStream?displayProperty=nameWithType> 类使用以下三种协议之一：Tls1.0、Tls1.1 或 Tls1.2。 不支持 SSL3.0 协议和 RC4 密码。  
   
 ## <a name="impact"></a>影响  
  此更改会影响：  
@@ -42,5 +42,5 @@ ms.locfileid: "33388256"
   
  但请注意，不建议选择退出默认行为，因为这会导致应用程序不太安全。  
   
-## <a name="see-also"></a>请参阅  
- [重定目标更改](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>请参阅
+- [重定目标更改](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

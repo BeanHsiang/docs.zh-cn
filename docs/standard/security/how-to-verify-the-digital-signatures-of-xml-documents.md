@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ef87e2c1625ebdf88dc1d21444fbbf185d486c3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b8896f5c8501b757313cc8a549b187ecedcebe97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670139"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>如何：验证 XML 文档的数字签名
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类来验证签有数字签名的 XML 数据。 使用 XML 数字签名 (XMLDSIG)，你可以验证签名后的数据没有被更改。 有关 XMLDSIG 标准的详细信息，请参阅万维网联合会 (W3C) 规范 <https://www.w3.org/TR/xmldsig-core/>。
   
  此过程中的代码示例演示了如何验证包含在 <`Signature`> 元素中的 XML 数字签名。  该示例检索密钥容器中 RSA 公钥，然后使用该密钥来验证签名。  
   
- 了解如何创建可以使用此方法验证数字签名，请参阅[如何： 使用数字签名为 XML 文档](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)。  
+ 了解如何创建可以使用此方法验证数字签名，请参阅[如何：使用数字签名为 XML 文档](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)。  
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>验证 XML 文档的数字签名  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48840357"
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
   
 ## <a name="example"></a>示例  
- 此示例假定名为 `"test.xml"` 的文件与已编译程序存在于同一目录中。  `"test.xml"`必须使用中所述的技术对文件进行签名[如何： 使用数字签名为 XML 文档](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)。  
+ 此示例假定名为 `"test.xml"` 的文件与已编译程序存在于同一目录中。  `"test.xml"`必须使用中描述的方法签名文件[如何：使用数字签名为 XML 文档](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)。  
   
  [!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
@@ -86,5 +86,5 @@ ms.locfileid: "48840357"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Security.Cryptography.Xml>  
-- [如何：使用数字签名为 XML 文档签名](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+- <xref:System.Security.Cryptography.Xml>
+- [如何：使用数字签名为 XML 文档](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

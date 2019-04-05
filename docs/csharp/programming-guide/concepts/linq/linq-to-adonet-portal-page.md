@@ -2,12 +2,12 @@
 title: LINQ to ADO.NET（门户网站页）
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: d65f041751a9418d0eebd3f92fd33a414cbed699
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 51bca1cae25cf20244b183946964a3de14a2d796
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036154"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57806171"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET（门户网站页）
 通过 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)]，你可以使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 编程模型针对 [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 中的任何可枚举对象进行查询。  
@@ -36,5 +36,5 @@ ms.locfileid: "48036154"
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)  
+- [LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)
 - [语言集成查询 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

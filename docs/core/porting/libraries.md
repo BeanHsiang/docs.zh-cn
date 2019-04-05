@@ -1,19 +1,19 @@
 ---
-title: 移植到 .NET Core - 库
+title: 将库移植到 .NET Core
 description: 了解如何将 .NET Framework 中的库项目移植到 .NET Core。
 author: cartermp
-ms.author: mairaw
-ms.date: 07/14/2017
-ms.openlocfilehash: eb6b8506d8df218a053242cd0b8d3097fa6d9fd3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/07/2018
+ms.custom: seodec18
+ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199846"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745555"
 ---
-# <a name="porting-to-net-core---libraries"></a>移植到 .NET Core - 库
+# <a name="port-net-framework-libraries-to-net-core"></a>将 .NET Framework 库移植到 .NET Core
 
-本文介绍了将库代码移植到 .NET Core 以使其跨平台运行的信息。
+了解如何将 .NET Framework 库代码移植到 .NET Core，以跨平台运行并扩展使用该代码的应用的范围。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -26,7 +26,7 @@ ms.locfileid: "50199846"
 
 还应熟悉下列主题的内容：
 
-[.NET Standard](~/docs/standard/net-standard.md)   
+[.NET Standard](../../standard/net-standard.md)\
 此主题介绍了适用于所有 .NET 实现代码的 .NET API 正式规范。
 
 [包、元包和框架](~/docs/core/packages.md)   
@@ -41,66 +41,17 @@ ms.locfileid: "50199846"
 [移植到 .NET Core - 分析第三方依赖项](~/docs/core/porting/third-party-deps.md)   
 本主题介绍了第三方依赖项的可移植性及 NuGet 包依赖项无法在 .NET Core 上运行时要执行的操作。
 
-## <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework 技术在 .NET Core 上不可用
+## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>将 .NET Framework 代码重定向到 .NET Framework 4.7.2
 
-一些适用于 .NET Framework 库的技术不可用于 .NET Core，例如 AppDomains、远程处理、代码访问安全性 (CAS) 和安全透明度。 如果库依赖于这些技术中的一个或多个，请考虑使用下面所述的替代方法。 有关 API 兼容性的详细信息，CoreFX 团队在 GitHub 上列出了[行为更改/兼容性破坏和弃用的/旧 API 列表](https://github.com/dotnet/corefx/wiki/ApiCompat)。
-
-当前未实现某个 API 或技术并不因此意味着有意不对其提供支持。 在 GitHub 的 [dotnet/corefx 存储库问题](https://github.com/dotnet/corefx/issues)中提交问题，以请求特定 API 和技术。 [问题中的移植请求](https://github.com/dotnet/corefx/labels/port-to-core)已标有 `port-to-core` 标签。
-
-### <a name="appdomains"></a>AppDomain
-
-AppDomain 可将应用相互隔离。 AppDomain 需要运行时支持并且通常价格昂贵。 .NET Core 中未实现它们。 我们不计划在将来添加此功能。 对于代码隔离，建议将流程分隔开来或将容器用作一种替代方法。 对于动态加载的程序集，我们建议使用新的 <xref:System.Runtime.Loader.AssemblyLoadContext> 类。
-
-我们已在 .NET Core 中公开了一些 <xref:System.AppDomain> API 图面，以便可以更轻松地从 .NET Framework 进行代码迁移。 一些 API 可正常工作（例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>），一些成员不会执行任何操作（例如 <xref:System.AppDomain.SetCachePath%2A>），也有一些会引发 <xref:System.PlatformNotSupportedException>（例如 <xref:System.AppDomain.CreateDomain%2A>）。 对照 [dotnet/corefx GitHub 存储库](https://github.com/dotnet/corefx)中的 [`System.AppDomain` 引用源](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs)检查所使用的类型，确保选择与已实现的版本相匹配的分支。
-
-### <a name="remoting"></a>远程处理
-
-.NET 远程处理被认为是存在问题的体系结构。 它用于进行跨 AppDomain 的通信，该通信现已不再受支持。 同样，远程处理也需要运行时支持，进行维护的成本较高。 出于这些原因，.NET Core 不支持 .NET 远程处理，并且我们不计划在将来添加对它的支持。
-
-对于跨进程通信，可将进程间通信 (IPC) 机制视为远程处理的备用方案，如 <xref:System.IO.Pipes> 或 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 类。
-
-对于跨计算机的通信，可将基于网络的解决方案用作备用方案。 最好使用低开销纯文本协议，例如 HTTP。 此处，ASP.NET Core 使用的 Web 服务器 [Kestrel Web 服务器](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)是一个选择。 也可考虑将 <xref:System.Net.Sockets> 用于基于网络的跨计算机的方案。 请参阅 [.NET 开放源代码开发人员项目：消息传送](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)了解更多选项。
-
-### <a name="code-access-security-cas"></a>代码访问安全性 (CAS)
-
-沙盒依赖运行时或框架限制托管应用程序或库使用或运行的资源，其[在 .NET Framework 上不受支持](~/docs/framework/misc/code-access-security.md)，因此在 .NET Core 上也不受支持。 我们认为 .NET Framework 中有许多发生特权提升以继续将 CAS 视为安全边界的情况和运行时。 此外，CAS 使实现更加复杂，通常会对无意使用它的应用程序造成正确性-性能影响。
-
-可使用操作系统提供的安全边界，例如虚拟化、容器或用于运行进程的用户帐户具有最少的一组特权。
-
-### <a name="security-transparency"></a>安全透明度
-
-与 CAS 相似，借助安全透明度可以以声明性方式将沙盒代码与安全关键代码隔离，但是[不再支持将它作为安全边界](~/docs/framework/misc/security-transparent-code.md)。 Silverlight 大规模使用了此功能。 
-
-可使用操作系统提供的安全边界，例如虚拟化、容器或用于运行进程的用户帐户具有最少的一组特权。
-
-## <a name="converting-a-pcl-project"></a>转换 PCL 项目
-
-可以通过在 Visual Studio 2017 中加载库并执行以下操作来将 PCL 项目的目标转换为面向 .NET Standard：
-
-1. 右键单击该项目文件，然后选择“属性”。
-1. 在“库”下选择“目标 .NET 平台标准”。
-
-如果包支持 NuGet 3.0，则此项目将重定向到 .NET Standard。
-
-如果包不支持 NuGet 3.0，则将从 Visual Studio 收到一个对话框，告诉用户要卸载当前的包。 如果收到此通知，则执行以下步骤：
-
-1. 右键单击项目，选择“管理 NuGet 包”。
-1. 记录项目的包。
-1. 将包逐一卸载。
-1. 可能需要重启 Visual Studio 才能完成卸载过程。 如果需要重启，“NuGet 包管理器”窗口中将显示“重启”按钮。
-1. 重载后，项目将面向 .NET Standard。 添加需要卸载的包。
-
-## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a>将 .NET Framework 代码重定向到 .NET Framework 4.6.2
-
-如果代码不面向 .NET Framework 4.6.2，建议重定向到 .NET Framework 4.6.2。 在 .NET Standard 不支持现有 API 情况下，这可确保最新备用 API 的可用性。
+如果代码不面向 .NET Framework 4.7.2，建议重定向到 .NET Framework 4.7.2。 在 .NET Standard 不支持现有 API 情况下，这可确保最新备用 API 的可用性。
 
 对于 Visual Studio 中每个想要移植的项目，请执行以下操作：
 
 1. 右键单击该项目，然后选择“属性”。
-1. 在“目标框架”下拉列表中，选择“.NET Framework 4.6.2”。
+1. 在“目标框架”下拉列表中，选择“.NET Framework 4.7.2”。
 1. 重新编译项目。
 
-因为项目现在面向 .NET Framework 4.6.2，因此可使用该版本的 .NET Framework 作为移植代码的基准。
+因为项目现在面向 .NET Framework 4.7.2，因此可使用该版本的 .NET Framework 作为移植代码的基准。
 
 ## <a name="determining-the-portability-of-your-code"></a>确定代码的可移植性
 
@@ -151,7 +102,7 @@ AppDomain 可将应用相互隔离。 AppDomain 需要运行时支持并且通�
  
 分析阶段可能需要一些时间，具体取决于代码库的大小。 在此阶段花费时间（尤其是在具有复杂的代码库时），全面了解所需的更改范围并制定计划，从长远看通常可节省时间。
 
-计划可能包括对代码库做重大更改，同时面向 .NET Framework 4.6.2，使它成为前一种方法更有条理的版本。 着手执行计划的方式具体取决于代码库。
+计划可能包括对代码库做重大更改，同时面向 .NET Framework 4.7.2，使它成为前一种方法更有条理的版本。 着手执行计划的方式具体取决于代码库。
 
 ### <a name="mixing-approaches"></a>混合方法
 
@@ -180,3 +131,6 @@ AppDomain 可将应用相互隔离。 AppDomain 需要运行时支持并且通�
 1. 选择下一层代码进行移植，并重复前面的步骤。
 
 如果从库的基项开始并从基项向外移动并根据需要测试每一层，移植将是一个系统化的过程，在这种情况下，问题可以一次隔离到一层代码中。
+
+>[!div class="step-by-step"]
+>[下一页](project-structure.md)

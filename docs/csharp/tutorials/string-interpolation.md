@@ -3,14 +3,14 @@ title: C# 中的字符串内插
 description: 了解如何在 C# 中使用字符串插值将有格式的表达式结果包括在结果字符串中。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 1a5d451f6fef926f0f142c7f09f564ce95618b39
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5a637937de2f3cff7f5425f47c223a56efa8d0c2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188633"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976052"
 ---
-# <a name="string-interpolation-in-c"></a>C# 中的字符串内插 #
+# <a name="string-interpolation-in-c"></a>C\# 中的字符串内插
 
 本教程演示如何使用[字符串插值](../language-reference/tokens/interpolated.md)设置表达式结果的格式并将其包含仅结果字符串中。 以下示例假设阅读者熟悉基础 C# 概念和 .NET 类型格式设置。 如果不熟悉字符串插值或 .NET 类型格式设置，请先参阅[交互式字符串内插教程](../tutorials/intro-to-csharp/interpolated-strings.yml)。 有关 .NET 中设置类型格式的详细信息，请参阅[设置 .NET 中类型的格式](../../standard/base-types/formatting-types.md)主题。
 
@@ -31,6 +31,8 @@ ms.locfileid: "50188633"
 ```
 
 在编译时间，内插字符串通常会转换为一个 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法调用。 这样即可使用[字符串复合格式设置](../../standard/base-types/composite-formatting.md)功能的所有功能，又可将其与内插字符串结合使用。
+
+如果所分析的行为等效于串联，那么编译器可以用 <xref:System.String.Format%2A?displayProperty=nameWithType> 替换 <xref:System.String.Concat%2A?displayProperty=nameWithType>。
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>如何为内插表达式指定格式字符串
 
@@ -108,7 +110,7 @@ ms.locfileid: "50188633"
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- <xref:System.FormattableString?displayProperty=nameWithType>  
-- <xref:System.IFormattable?displayProperty=nameWithType>  
-- [字符串](../programming-guide/strings/index.md)  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [字符串](../programming-guide/strings/index.md)

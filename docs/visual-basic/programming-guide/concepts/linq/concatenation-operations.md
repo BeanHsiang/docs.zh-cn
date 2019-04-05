@@ -2,12 +2,12 @@
 title: 串联运算 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 44a43b6f3ead494b4ae538e95bc1dacb8662312c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90e848b21c79278f81507831025045224c4cf634
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643325"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834109"
 ---
 # <a name="concatenation-operations-visual-basic"></a>串联运算 (Visual Basic)
 串联是指将一个序列附加到另一个序列的操作。  
@@ -24,7 +24,8 @@ ms.locfileid: "33643325"
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Concat|连接两个序列以组成一个序列。|不适用。|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq>  
- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [如何： 组合和比较字符串集合 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq>
+- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [如何：合并和比较字符串集合 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

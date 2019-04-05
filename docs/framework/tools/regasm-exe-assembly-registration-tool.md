@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30b13c75907ad0bc4d6dbce6a3ecd07f1fbede11
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264429"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492434"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe（程序集注册工具）
 
@@ -30,13 +30,13 @@ ms.locfileid: "48264429"
 regasm assemblyFile [options]
 ```
 
-#### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
-|参数|描述|
+|参数|说明|
 |---------------|-----------------|
 |assemblyFile|要向 COM 注册的程序集。|
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
 |/codebase|在注册表中创建一个 Codebase 项。 Codebase 项指定未安装到全局程序集缓存中的程序集的文件路径。 如果随后将安装要注册到全局程序集缓存中的程序集，则不应指定此选项。 用 /codebase 选项指定的 assemblyFile 参数必须是[具有强名称的程序集](../../../docs/framework/app-domains/strong-named-assemblies.md)。|
 |/registered|指定此工具将仅引用已经注册的类型库。|

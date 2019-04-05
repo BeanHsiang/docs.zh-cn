@@ -2,12 +2,12 @@
 title: 实体框架概述
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 35eb3b1503c8754752662aef0c5101251d60d49c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216937"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145788"
 ---
 # <a name="entity-framework-overview"></a>实体框架概述
 
@@ -26,11 +26,11 @@ ms.locfileid: "47216937"
 
  使用实体数据模型工具时，概念模型、存储模型以及这两者之间的映射以基于 XML 的架构表示，并在具有对应扩展名的文件中定义：
 
--   概念架构定义语言 (CSDL) 定义概念模型。 CSDL 是[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的实现[实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。 文件扩展名为 .csdl。
+- 概念架构定义语言 (CSDL) 定义概念模型。 CSDL 是[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]的实现[实体数据模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。 文件扩展名为 .csdl。
 
--   存储架构定义语言 (SSDL) 定义存储模型，也称为“逻辑模型”。 文件扩展名为 .ssdl。
+- 存储架构定义语言 (SSDL) 定义存储模型，也称为“逻辑模型”。 文件扩展名为 .ssdl。
 
--   映射规范语言 (MSL) 定义存储模型与概念模型之间的映射。 文件扩展名为 .msl。
+- 映射规范语言 (MSL) 定义存储模型与概念模型之间的映射。 文件扩展名为 .msl。
 
 可以根据需要对存储模型和映射进行更改，而无需对概念模型、数据类或应用程序代码进行更改。 存储模型是特定于提供程序的，因此可以在各种数据源之间使用一致的概念模型。
 
@@ -45,9 +45,9 @@ ms.locfileid: "47216937"
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]不仅仅是另一种对象关系映射解决方案，从本质上讲，它的作用是使应用程序能够访问和更改概念模型中以实体和关系形式表示的数据。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]使用模型和映射文件中的信息将对概念模型中表示的实体类型的对象查询转换为特定于数据源的查询。 查询结果具体化为对象的[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]管理。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供以下方式来查询概念模型并返回对象：
 
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]。 提供语言集成查询 (LINQ) 支持，用于查询在概念模型中定义的实体类型。 有关详细信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
+- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]。 提供语言集成查询 (LINQ) 支持，用于查询在概念模型中定义的实体类型。 有关详细信息，请参阅[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。
 
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 与存储无关的 SQL 方言直接使用概念模型中的实体并支持[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 可用于对象查询和使用 EntityClient 提供程序执行的查询。 有关详细信息，请参阅[实体 SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 与存储无关的 SQL 方言直接使用概念模型中的实体并支持[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 可用于对象查询和使用 EntityClient 提供程序执行的查询。 有关详细信息，请参阅[实体 SQL 概述](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 中包含 EntityClient 数据提供程序。 此提供程序管理连接，将实体查询转换为特定于数据源的查询，并返回[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]用于将实体数据具体化为对象的数据读取器。 不需要对象具体化时，也可以 EntityClient 提供程序用作标准[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]数据提供程序使应用程序执行[!INCLUDE[esql](../../../../../includes/esql-md.md)]查询并使用返回的只读数据读取器。 有关详细信息，请参阅[针对实体框架的 EntityClient Provider](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。
 
@@ -71,7 +71,7 @@ ms.locfileid: "47216937"
 
 若要详细了解[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，请参阅：
 
-[入门教程](../../../../../docs/framework/data/adonet/ef/getting-started.md)-介绍如何启动和运行使用快速[快速入门教程](https://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675)，其中说明了如何创建一个简单[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序。
+[入门教程](../../../../../docs/framework/data/adonet/ef/getting-started.md)-介绍如何启动和运行使用快速[快速入门教程](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))，其中说明了如何创建一个简单[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]应用程序。
 
 [实体框架术语](../../../../../docs/framework/data/adonet/ef/terminology.md)-定义的许多术语所引入的实体数据模型和[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]中使用和[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文档。
 

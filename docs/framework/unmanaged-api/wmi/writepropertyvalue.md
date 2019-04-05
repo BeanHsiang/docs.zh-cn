@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a4eb444967390492be33b25866de8a93a1698c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e5a2588023309867694f344041f62be53cab9c37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518288"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590115"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 函数
 将指定数量的字节写入由属性句柄标识的属性。
@@ -76,11 +76,11 @@ HRESULT WritePropertyValue (
 对于非字符串属性值，`lNumBytes`必须是指定的属性类型的正确的数据大小。 有关字符串属性值，`lNumBytes`必须是长度以字节为单位，指定的字符串和字符串本身必须将甚至长度以字节为单位的并且后跟一个 null 终止字符。
 
 ## <a name="requirements"></a>要求  
-**平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

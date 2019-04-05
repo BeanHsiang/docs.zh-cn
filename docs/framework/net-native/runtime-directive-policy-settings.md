@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fc5eddbf21e6e530279e2c85420e539e5d51a7f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642563"
 ---
 # <a name="runtime-directive-policy-settings"></a>运行时指令策略设置
 > [!NOTE]
@@ -127,6 +127,6 @@ ms.locfileid: "46000981"
 |`Required PublicAndInternal`|为公共类型或成员以及内部类型或成员启用策略，并确保公共类型和成员以及内部类型或成员的元数据始终可用。 该设置不同于 `PublicAndInternal`，后者确保公共类型和成员以及内部类型和成员的元数据仅在工具链确定这一步骤有必要时才可用。|✓||  
 |`Required All`|要求工具链在不管所有类型是否受到占用情况下都保留它们，并为它们启用策略。|✓||  
   
-## <a name="see-also"></a>请参阅  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>请参阅
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faefff879142d66c4c596f1b30a25e349a4014b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1f776f20f163df91d65509e5dbab31fe9c29a965
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421796"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492096"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception 方法
-通知调试器搜索异常处理程序已开始。  
+通知调试器的异常处理程序的搜索已启动。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,48 +40,48 @@ HRESULT Exception (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pAppDomain`  
- [in]指向一个表示包含引发异常的线程的应用程序域的 ICorDebugAppDomain 对象的指针。  
+ [in]指向一个 ICorDebugAppDomain 对象，表示包含引发异常的线程的应用程序域的指针。  
   
  `pThread`  
  [in]指向一个 ICorDebugThread 对象，表示引发异常的线程的指针。  
   
  `pFrame`  
- [in]指向根据所表示的帧，ICorDebugFrame 对象的指针`dwEventType`参数。 有关详细信息，请参阅备注部分中的表。  
+ [in]指向 ICorDebugFrame 对象表示框架，由`dwEventType`参数。 有关详细信息，请参阅备注部分中的表。  
   
  `nOffset`  
- [in]一个整数，指定偏移量，所确定的那样`dwEventType`参数。 有关详细信息，请参阅备注部分中的表。  
+ [in]一个整数，由指定偏移量，`dwEventType`参数。 有关详细信息，请参阅备注部分中的表。  
   
  `dwEventType`  
- [in]CorDebugExceptionCallbackType 枚举，指定此异常回调的类型的值。  
+ [in]CorDebugExceptionCallbackType 枚举，指定此异常回调类型的值。  
   
  `dwFlags`  
- [in]值为[CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)枚举，它指定有关异常的其他信息  
+ [in]值为[CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)枚举，用于指定有关异常的其他信息  
   
 ## <a name="remarks"></a>备注  
- `Exception`异常处理过程的搜索阶段在不同时刻调用回调。 即，它可以调用多个一次而展开异常。  
+ `Exception`异常处理过程在搜索阶段在不同的时间点调用回调。 即，它可以调用多个一次而展开异常。  
   
  正在处理的异常可以从所引用的 ICorDebugThread 对象检索`pThread`参数。  
   
- 由特定帧和偏移量`dwEventType`参数，如下所示：  
+ 特定帧和偏移量由`dwEventType`参数，如下所示：  
   
 |`dwEventType` 的值|`pFrame` 的值|`nOffset` 的值|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|引发异常的帧。|指令指针的帧中。|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|引发的异常点最接近的用户代码帧。|指令指针的帧中。|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|包含 catch 处理程序的帧。|Catch 处理程序的开头的 Microsoft 中间语言 (MSIL) 偏移量。|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|引发了异常帧。|在帧中的指令指针。|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|引发的异常点最接近的用户代码帧。|在帧中的指令指针。|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|包含 catch 处理程序的帧。|开始 catch 处理程序的 Microsoft 中间语言 (MSIL) 偏移量。|  
 |DEBUG_EXCEPTION_UNHANDLED|NULL|未定义。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugManagedCallback2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugManagedCallback2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -1,21 +1,22 @@
 ---
-title: 泛型（C# 编程指南）
+title: 泛型 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 9aa57fd31b8d969bbbbf4329a028007f42d3e097
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 186c5bc91204770e636eed5c008db23b798b6880
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50042306"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202153"
 ---
 # <a name="generics-c-programming-guide"></a>泛型（C# 编程指南）
 C# 语言和公共语言运行时 (CLR) 的 2.0 版本中添加了泛型。 泛型将类型参数的概念引入 .NET Framework，这样就可以设计具有以下特征的类和方法：在客户端代码声明并初始化这些类和方法之前，这些类和方法会延迟指定一个或多个类型。 例如，通过使用泛型类型参数 T，可以编写其他客户端代码能够使用的单个类，而不会产生运行时转换或装箱操作的成本或风险，如下所示：  
   
- [!code-csharp[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#1)]  
   
 ## <a name="generics-overview"></a>泛型概述  
   
@@ -61,9 +62,9 @@ C# 语言和公共语言运行时 (CLR) 的 2.0 版本中添加了泛型。 泛�
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Collections.Generic>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [类型](../../../csharp/programming-guide/types/index.md)  
-- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
-- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
-- [.NET 中的泛型](../../../standard/generics/index.md)  
+- <xref:System.Collections.Generic>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [类型](../../../csharp/programming-guide/types/index.md)
+- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)
+- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+- [.NET 中的泛型](../../../standard/generics/index.md)

@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b0871636f816d62c1f65c74d22014d74fb1fb97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 440f2f7c542c697b3d817c988211303c60073979
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492352"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>ICLRRuntimeInfo::SetDefaultStartupFlags 方法
-设置启动标志和将用于启动运行时主机配置文件。 此方法取代了利用`startupFlags`中的参数[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)和[CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)函数。  
+设置启动标志和将用于启动运行时主机配置文件。 此方法会使用取代`startupFlags`中的参数[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)并[CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,9 +35,9 @@ HRESULT SetDefaultStartupFlags(
            [in]  LPCWSTR pwzHostConfigFile);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwStartupFlags`  
- [in]要设置的主机启动标志。 使用相同的标志作为[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)和[CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)函数。  
+ [in]要设置的主机启动标志。 使用具有相同标记作为[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)并[CorBindToRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)函数。  
   
  `pwzHostConfigFile`  
  [in]要设置的主机配置文件的目录路径。  
@@ -49,18 +50,18 @@ HRESULT SetDefaultStartupFlags(
 |S_OK|该方法已成功完成。|  
   
 ## <a name="remarks"></a>备注  
- 多线程的宿主应将同步调用此方法。 否则，调用线程 A 可能`SetStartupFlags`方法线程 B 完成调用后`SetStartupFlags`和线程 B 开始运行时之前。  
+ 多线程的主机应该同步对此方法的调用。 否则，调用线程 A 可能`SetStartupFlags`方法后完成的线程 B 调用`SetStartupFlags`和线程 B 开始运行时之前。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
- **库：**作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRRuntimeInfo 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>请参阅
+- [ICLRRuntimeInfo 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

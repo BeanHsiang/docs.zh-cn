@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f8132296035e9ddcdcad76d93ed05358beb0b81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 738789ee6b21b190302d5e5a204538bd14851b24
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448228"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484662"
 ---
 # <a name="imetadataassemblyemitsetassemblyprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyProps 方法
 修改指定的 `Assembly` 元数据结构。  
@@ -41,39 +41,39 @@ HRESULT SetAssemblyProps (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pma`  
  [in]指定的元数据标记`Assembly`要修改的元数据结构。  
   
  `pbPublicKey`  
- [in]指向程序集的发布者的公钥的指针。  
+ [in]指向程序集的发布服务器的公钥的指针。  
   
  `cbPublicKey`  
  [in]以字节为单位的大小`pbPublicKey`。  
   
  `ulHashAlgId`  
- [in]用于哈希的程序集文件的哈希算法标识符。  
+ [in]使用程序集文件进行哈希的哈希算法标识符。  
   
  `szName`  
- [in]程序集的用户可读文本名称。  
+ [in]用户可读文本的程序集的名称。  
   
  `pMetaData`  
  [in]指向包含程序集的版本、 平台和区域设置信息 ASSEMBLYMETADATA 的指针。  
   
  `dwAssemblyFlags`  
- [in]按位组合[AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)指定的程序集的各种特性的值。  
+ [in]按位组合[AssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)指定程序集的各种属性的值。  
   
 ## <a name="remarks"></a>备注  
  若要创建`Assembly`元数据结构，使用[imetadataassemblyemit:: Defineassembly](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassembly-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -2,14 +2,14 @@
 title: 示例 XML 文件：Namespace1 中的测试配置
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: 01470a66ac42eb9fd68fdcde0d0a4bf9150e3d5f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 975e0bdfe22758b968dde4e97cf5b302579a7ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589238"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>示例 XML 文件：测试命名空间中的配置
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>示例 XML 文件：命名空间中的测试配置
 下面的 XML 文件用在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文档的很多示例中。 这是一个测试配置文件。 该 XML 在某个命名空间中。  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  

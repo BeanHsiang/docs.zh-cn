@@ -1,23 +1,22 @@
 ---
 title: 使用 Docker 和 Microsoft Azure 设计和开发容器化应用
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 让我们开始了解 Docker 应用程序生命周期中的开发/设计工作负载。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: b8f2924b658b7e2eeb295adc3c89a1ed576bba60
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 02/15/2019
+ms.openlocfilehash: 2ecec1412ea1c3b6ff32e6250c7cb97c531a84fd
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104685"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664999"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>使用 Docker 和 Microsoft Azure 设计和开发容器化应用
 
-构想：设计和开发适用于 Docker 的可缩放解决方案。
+*设想：设计和开发中考虑到使用 Docker 的可缩放解决方案。*
 
-有许多适应性极佳的容器用例，不仅适用于面向微服务的体系结构，还适用于要运行常规服务或 Web 应用程序，而希望减少开发和生产环境部署之间的摩擦的情况。
-
+*有许多适应性极用例中的容器，而不仅仅是针对面向微服务的体系结构，但同时时仅需提供常规服务或 web 应用程序运行和你想要减少开发和生产环境之间的摩擦部署。*
 
 >[!div class="step-by-step"]
-[Prev](../Microsoft-platform-tools-containerized-apps/index.md)
-[下一步](design-docker-applications.md)
+>[上一页](../Microsoft-platform-tools-containerized-apps/index.md)
+>[下一页](design-docker-applications.md)

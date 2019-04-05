@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1ba65194c49f76bb5c29ed28b1b038c02cf1a59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 43fe2c3bd7d4e1c90fc52997a123d5dbbb297a02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591336"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
 如果程序集加载到 `LoadFrom` 上下文，将激活 `loadFromContext` 托管调试助手 (MDA)。 这种情况可能由于调用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 或其他类似方法而发生。  
@@ -55,7 +55,7 @@ ms.locfileid: "33393076"
 ## <a name="example"></a>示例  
  以下代码示例展示了一种可激活该 MDA 的情况：  
   
-```  
+```csharp
 using System.Reflection;  
 namespace ConsoleApplication1  
 {  
@@ -72,5 +72,5 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>请参阅
+- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

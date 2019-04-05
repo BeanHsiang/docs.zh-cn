@@ -1,5 +1,5 @@
 ---
-title: 如何：用非对称密钥对 XML 元素进行解密
+title: 如何：使用非对称密钥解密 XML 元素
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96bee90c7cb3847f9c7059e1a0b1d737209b924f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 647ac3898924810eb16cbeb8c67f00e6465c8d80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547757"
 ---
-# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>如何：用非对称密钥对 XML 元素进行解密
+# <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>如何：使用非对称密钥解密 XML 元素
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类对 XML 文档内的元素进行加密和解密。  XML 加密是交换或存储加密的 XML 数据的一种标准方式，使用后就无需担心数据被轻易读取。  有关 XML 加密标准的详细信息，请参阅 World Wide Web 联合会 (W3C) 建议[XML 签名语法和处理](https://www.w3.org/TR/xmldsig-core/)。  
   
- 此过程中的示例使用中所述的方法进行加密的 XML 元素进行解密[如何： 用非对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)。  它找到一个 <`EncryptedData`> 元素，解密该元素，然后将其替换为原始纯文本 XML 元素。  
+ 此过程中的示例使用中所述的方法进行加密的 XML 元素进行解密[如何：使用非对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)。  它找到一个 <`EncryptedData`> 元素，解密该元素，然后将其替换为原始纯文本 XML 元素。  
   
  此示例使用两个密钥对 XML 元素进行解密。  它从密钥容器中检索以前生成的 RSA 私钥，然后使用 RSA 密钥解密存储在 <`EncryptedData`> 元素的 <`EncryptedKey`> 元素中的会话密钥。  然后此示例使用会话密钥对 XML 元素进行解密。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "44185990"
      [!code-vb[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#8)]  
   
 ## <a name="example"></a>示例  
- 此示例假定名为 `test.xml` 的文件与已编译程序存在于同一目录中。  它还假定`test.xml`包含使用中所述的技术加密的 XML 元素[如何： 用非对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)。  
+ 此示例假定名为 `test.xml` 的文件与已编译程序存在于同一目录中。  它还假定`test.xml`包含使用中所述的技术加密的 XML 元素[如何：使用非对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)。  
   
  [!code-csharp[HowToDecryptXMLElementAsymmetric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#1)]
  [!code-vb[HowToDecryptXMLElementAsymmetric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#1)]  
@@ -83,5 +83,5 @@ ms.locfileid: "44185990"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Security.Cryptography.Xml>  
+- <xref:System.Security.Cryptography.Xml>
 - [如何：使用非对称密钥加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)

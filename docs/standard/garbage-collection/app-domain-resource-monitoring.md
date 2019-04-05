@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f5ab93ca5cf616bd4a29ab5d297af1f4550623b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48266638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606525"
 ---
 # <a name="application-domain-resource-monitoring"></a>应用程序域资源监控
 借助应用域资源监视 (ARM)，主机可以通过应用域监视 CPU 和内存使用情况。 对于在长时间运行的进程中使用多个应用域的 ASP.NET 等主机，这就很有用。 主机可以卸载对整个进程的性能有不利影响的应用的应用域，但仅当能够发现有问题的应用时，才可以这样做。 ARM 提供的信息就有助于作出此类决定。  
@@ -48,7 +48,7 @@ ms.locfileid: "48266638"
   
     -   ETW 事件：`ThreadCreated`、`ThreadAppDomainEnter` 和 `ThreadTerminated` 事件。 若要了解提供程序和关键字，请参阅 [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md) 中的“应用域资源监视事件”。  
   
--   **应用域在生存期内执行的总托管分配（以字节为单位）**：总分配并不一定反映应用域的内存使用情况，这是因为分配的对象的生存期可能很短。 不过，如果应用分配并释放大量对象，分配成本可能会非常高。  
+-   **应用程序域在其生命周期内进行的托管分配总量（以字节为单位）**：总分配并不总是反映应用程序域的内存使用情况，因为所分配的对象可能是短期的。 不过，如果应用分配并释放大量对象，分配成本可能会非常高。  
   
     -   托管 API：<xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> 属性。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48266638"
   
     -   ETW 事件：`AppDomainMemSurvived` 事件、`Survived` 字段。  
   
--   **进程引用且在最新执行的完全阻止式回收后保留的总托管内存（以字节为单位）**：为各个应用域保留的内存可以与此数字进行比较。  
+-   **进程引用且在最新执行的完全阻止式回收后保留的托管内存总量（以字节为单位）**：可将为单个应用程序域保留的内存与此数字进行比较。  
   
     -   托管 API：<xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType> 属性。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48266638"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [ICLRAppDomainResourceMonitor 接口](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [ICLRAppDomainResourceMonitor 接口](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

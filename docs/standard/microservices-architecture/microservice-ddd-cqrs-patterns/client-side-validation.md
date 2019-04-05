@@ -1,19 +1,19 @@
 ---
 title: 客户端验证（表示层中的验证）
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 客户端验证（表示层中的验证）
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 探索客户端验证的关键概念。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 10/08/2018
+ms.openlocfilehash: 4c039356e94f843c75430ff61d5fe68906c5c0ed
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582419"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633824"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>客户端验证（表示层中的验证）
 
-即使真实源是域模型，最终也必须在域模型级别进行验证，验证仍然可以在域模型级别（服务器端）和客户端处理。
+即使真实源是域模型，最终也必须在域模型级别进行验证，验证仍然可以在域模型级别（服务器端）和 UI（客户端）处理。
 
 客户端验证极大地方便了用户。 它节省了时间，让用户不必浪费时间等待服务器往返，服务器有可能返回验证错误。 从商业角度而言，即使每次只有几分之一秒，但如果每天发生几百次，也会耗费大量的时间和成本，带来很多不必要的烦恼。 简单直接的验证能够提高用户的工作效率和投入产出比。
 
@@ -29,27 +29,27 @@ ms.locfileid: "48582419"
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin 移动应用中进行的验证
 
--   **Validate Text Input and Show Errors**（验证文本输入并显示错误）
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+- **Validate Text Input and Show Errors**（验证文本输入并显示错误） \
+  [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Validation Callback**
-    （验证回调）[https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+- **Validation Callback** \（验证回调）
+  [https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>ASP.NET Core 应用中进行的验证
 
--   **Rick Anderson。添加验证**
-    [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+- **Rick Anderson。Adding validation**（添加验证） \
+  [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web 应用中进行的验证（Angular 2、TypeScript、JavaScript）
 
--   **Ado Kukic.Angular 2 Form Validation**（Angular 2 窗体验证）
-    [https://scotch.io/tutorials/angular-2-form-validation](https://scotch.io/tutorials/angular-2-form-validation)
+- **Ado Kukic.Angular 2 Form Validation**（Angular 2 窗体验证） \
+  [https://scotch.io/tutorials/angular-2-form-validation](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Form Validation**
-    （窗体验证）[https://angular.io/docs/ts/latest/cookbook/form-validation.html](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+- **Form Validation** \（窗体验证）
+  [https://angular.io/docs/ts/latest/cookbook/form-validation.html](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **验证。** Breeze 文档。
-    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
+- **验证。** Breeze 文档。 \
+  [https://breeze.github.io/doc-js/validation.html](https://breeze.github.io/doc-js/validation.html)
 
 总之，与验证有关的最重要的概念有以下几条：
 
@@ -59,10 +59,8 @@ ms.locfileid: "48582419"
 
 - 如果需要创建多个相关对象（如聚合），且其只有在完成创建所有对象之后才会有效，请考虑使用工厂模式。
 
-- 验证框架最适合用于特定层，如表示层或应用程序/服务层，但通常不用于域模型层，因为这需要在基础结构框架有一个强大的依赖项。
-
 - 在大多数情况下，客户端采用冗余验证是不错的选择，因为应用程序可以是积极主动的。
 
 >[!div class="step-by-step"]
-[上一页](domain-model-layer-validations.md)
-[下一页](domain-events-design-implementation.md)
+>[上一页](domain-model-layer-validations.md)
+>[下一页](domain-events-design-implementation.md)

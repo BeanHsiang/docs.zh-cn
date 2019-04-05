@@ -1,18 +1,18 @@
 ---
-title: 如何：以内联方式调用用户定义的函数
+title: 如何：内联调用用户定义的函数
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 39eeab06952e1d8a1128580a2be79ed4711d58d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76a41ded52ac29b4a8b597188171333a888be5cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692764"
 ---
-# <a name="how-to-call-user-defined-functions-inline"></a>如何：以内联方式调用用户定义的函数
+# <a name="how-to-call-user-defined-functions-inline"></a>如何：内联调用用户定义的函数
 尽管您可以内联调用用户定义的函数，但延迟执行的查询中包含的函数直到此查询执行时才会执行。 有关详细信息，请参阅 [LINQ 查询简介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
   
  当您在查询外部调用同一函数时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会用方法调用表达式创建一个简单查询。 下面是相应的 SQL 语法（`@p0` 参数绑定到传入的常量）：  
@@ -38,5 +38,5 @@ SELECT [t0].[ContactName],
 FROM [Customers] AS [t0]  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [用户定义的函数](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)
+## <a name="see-also"></a>请参阅
+- [用户定义的函数](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;oidMap&gt;元素'
+title: <oidMap> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap
@@ -8,22 +8,20 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d726965a921a11be1ff9c11d4fb348068b2ec0a3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196611"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262512"
 ---
-# <a name="ltoidmapgt-element"></a>&lt;oidMap&gt;元素
+# <a name="oidmap-element"></a>\<oidMap > 元素
 包含类的 ASN.1 对象标识符 (OID) 映射。  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<oidMap >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<oidMap>  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +40,7 @@ ms.locfileid: "47196611"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|将 ASN.1 OID 映射到友好名称。|  
+|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|将 ASN.1 OID 映射到友好名称。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -75,9 +73,9 @@ ms.locfileid: "47196611"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [加密服务](../../../../../docs/standard/security/cryptographic-services.md)  
- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [将对象标识符映射到加密算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+## <a name="see-also"></a>请参阅
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [将对象标识符映射到加密算法](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

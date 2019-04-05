@@ -1,36 +1,34 @@
 ---
-title: '&lt;clientCertificate&gt; 的 &lt;authentication&gt; 元素'
+title: <authentication> <clientCertificate>元素
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: ccc184f63428fd4a12b9047c0bcf4416e87f24d2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6b07eae96367222907dd23968d445efd75906ea7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750474"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263001"
 ---
-# <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a>&lt;clientCertificate&gt; 的 &lt;authentication&gt; 元素
+# <a name="authentication-of-clientcertificate-element"></a>\<身份验证 > 的\<clientCertificate > 元素
 指定服务所使用的客户端证书的身份验证行为。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
+\<behavior>  
 \<serviceCredentials>  
-\<t i a l >  
+\<clientCertificate>  
 \<身份验证 >  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<authentication  
-customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
-certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
-includeWindowsGroups="Boolean"  
-mapClientCertificateToWindowsAccount="Boolean"  
-revocationMode="NoCheck/Online/Offline"  
-trustedStoreLocation="CurrentUser/LocalMachine"   
-/>  
+<authentication customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"
+                certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"
+                includeWindowsGroups="Boolean"
+                mapClientCertificateToWindowsAccount="Boolean"
+                revocationMode="NoCheck/Online/Offline"
+                trustedStoreLocation="CurrentUser/LocalMachine" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -45,7 +43,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |includeWindowsGroups|可选的布尔值。 指定 Windows 组是否包含在安全上下文中。 将此属性设置为 `true` 会影响性能，因为这会导致完全组扩展。 如果不需要建立用户所属组的列表，请将此属性设置为 `false`。|  
 |mapClientCertificateToWindowsAcccount|布尔值。 指定是否可以使用证书将客户端映射到 Windows 标识。 为此，必须启用 Active Directory。|  
 |revocationMode|可选的枚举。 用于检查吊销证书列表 (RCL) 的一种模式。 默认值为 `Online`。 使用 HTTP 传输安全性时，将忽略此值。|  
-|trustedStoreLocation|可选的枚举。 两个系统存储位置之一：`LocalMachine` 或 `CurrentUser`。 在向客户端协商服务证书时使用此值。 验证针对**受信任人**将存储在指定的存储位置。 默认值为 `CurrentUser`。|  
+|trustedStoreLocation|可选的枚举。 两个系统存储位置之一：`LocalMachine` 或 `CurrentUser`。 在向客户端协商服务证书时使用此值。 对执行验证**受信任的人员**将存储在指定的存储位置。 默认值为 `CurrentUser`。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 属性  
   
@@ -57,13 +55,13 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|下列值之一：None、PeerTrust、ChainTrust、PeerOrChainTrust 和 Custom。<br /><br /> 有关详细信息，请参阅[使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
+|枚举|以下值之一：None、 PeerTrust、 ChainTrust、 PeerOrChainTrust、 自定义。<br /><br /> 有关详细信息，请参阅[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|下列值之一：NoCheck、Online 和 Offline。 有关详细信息，请参阅[使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
+|枚举|以下值之一：NoCheck、 Online 和 Offline。 有关详细信息，请参阅[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
@@ -78,41 +76,40 @@ trustedStoreLocation="CurrentUser/LocalMachine"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<t i a l >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|定义用于针对服务进行客户端身份验证的 X.509 证书。|  
+|[\<clientCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)|定义用于针对服务进行客户端身份验证的 X.509 证书。|  
   
 ## <a name="remarks"></a>备注  
- `<authentication>` 元素与 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 类相对应。 利用它您可以自定义对客户端进行身份验证的方式。 可以将 `certificateValidationMode` 属性设置为 `None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust` 或 `Custom`。 默认情况下，级别设置为`ChainTrust`，它指定每个证书必须位于层次结构的证书以*根颁发机构*在链顶部。 这是最安全的模式。 您还可以将此值设置为 `PeerOrChainTrust`，该值指定受信任的链中的证书以及自行颁发的证书（对等信任）都被接受。 因为不需要从受信任的证书颁发机构那里购买自行颁发的证书，所以可以在开发和调试客户端和服务时使用此值。 在部署客户端时，请改用 `ChainTrust` 值。  
+ `<authentication>` 元素与 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 类相对应。 利用它您可以自定义对客户端进行身份验证的方式。 可以将 `certificateValidationMode` 属性设置为 `None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust` 或 `Custom`。 默认情况下的级别设置为`ChainTrust`，它指定每个证书都必须存在的证书以层次结构中*根颁发机构*链的顶部。 这是最安全的模式。 您还可以将此值设置为 `PeerOrChainTrust`，该值指定受信任的链中的证书以及自行颁发的证书（对等信任）都被接受。 因为不需要从受信任的证书颁发机构那里购买自行颁发的证书，所以可以在开发和调试客户端和服务时使用此值。 在部署客户端时，请改用 `ChainTrust` 值。  
   
- 还可以将该值设置为 `Custom`。 当该值设置为 `Custom` 值时，您还必须将 `customCertificateValidatorType` 属性设置为用于验证证书的程序集和类型。 若要创建您自己的自定义验证程序，必须从 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 抽象类进行继承。 有关详细信息，请参阅[如何： 创建服务，它采用一个自定义证书验证程序](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
+ 还可以将该值设置为 `Custom`。 当该值设置为 `Custom` 值时，您还必须将 `customCertificateValidatorType` 属性设置为用于验证证书的程序集和类型。 若要创建您自己的自定义验证程序，必须从 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 抽象类进行继承。 有关详细信息，请参阅[如何：创建使用自定义证书验证程序的服务](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
   
 ## <a name="example"></a>示例  
  下面的代码指定 `<authentication>` 元素中的 X.509 证书和自定义验证类型。  
   
 ```xml  
-<serviceBehaviors>  
- <behavior name="myServiceBehavior">  
-  <clientCertificate>  
-   <certificate   
-         findValue="www.cohowinery.com"   
-         storeLocation="CurrentUser"   
-         storeName="TrustedPeople"  
-         x509FindType="FindByIssuerName" />  
-   <authentication customCertificateValidatorType="MyTypes.Coho"  
-    certificateValidationMode="Custom"   
-    revocationMode="Offline"  
-    includeWindowsGroups="false"   
-    mapClientCertificateToWindowsAccount="true" />  
-  </clientCertificate>  
- </behavior>  
-</serviceBehaviors>  
+<serviceBehaviors>
+  <behavior name="myServiceBehavior">
+    <clientCertificate>
+      <certificate findValue="www.cohowinery.com"
+                   storeLocation="CurrentUser"
+                   storeName="TrustedPeople"
+                   x509FindType="FindByIssuerName" />
+      <authentication customCertificateValidatorType="MyTypes.Coho"
+                      certificateValidationMode="Custom"
+                      revocationMode="Offline"
+                      includeWindowsGroups="false"
+                      mapClientCertificateToWindowsAccount="true" />
+    </clientCertificate>
+  </behavior>
+</serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>  
- <xref:System.ServiceModel.Security.X509CertificateValidationMode>  
- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>  
- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>  
- <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>  
- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [如何：创建使用自定义证书验证程序的服务](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>
+- <xref:System.ServiceModel.Security.X509CertificateValidationMode>
+- <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>
+- <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>
+- <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>
+- [安全行为](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [如何：创建使用自定义证书验证程序的服务](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

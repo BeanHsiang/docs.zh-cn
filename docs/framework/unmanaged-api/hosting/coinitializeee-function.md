@@ -5,6 +5,7 @@ api_name:
 - CoInitializeEE
 api_location:
 - mscoree.dll
+- mscorsvr.dll
 api_type:
 - DLLExport
 f1_keywords:
@@ -16,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bbd25909e70826f8cd29076c1eb62a4da6779cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 061a54dd3b3700840f90843a135cf81d8ed81a2e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435396"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481152"
 ---
 # <a name="coinitializeee-function"></a>CoInitializeEE 函数
-确保公共语言运行时执行引擎已加载到进程。 此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 使用[iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)方法相反。  
+确保公共语言运行时执行引擎已加载到进程。 此函数已弃用在[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 使用[iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)方法相反。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,12 +35,12 @@ HRESULT CoInitializeEE (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `fFlags`  
  [in]之一[COINITIEE](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md)枚举常量。  
   
 ## <a name="return-value"></a>返回值  
- Winerror.h 和下表中的值中定义，此方法将返回标准的 COM 错误代码。  
+ Winerror.h 和下表中的值中定义，此方法将返回标准 COM 错误代码。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
@@ -48,16 +49,16 @@ HRESULT CoInitializeEE (
 |E_FAIL|无法加载执行引擎。|  
   
 ## <a name="remarks"></a>备注  
- 如果它尚未以前加载，则此方法将加载的执行引擎。  
+ 如果它先前加载，则此方法加载的执行引擎。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [元数据全局静态函数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>请参阅
+- [元数据全局静态函数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

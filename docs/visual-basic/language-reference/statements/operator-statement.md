@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 69dea99cf71bd1e091116e54e244abfca291ffdb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399867"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818587"
 ---
 # <a name="operator-statement"></a>Operator Statement
 声明运算符符号、 操作数和运算符过程定义的类或结构的代码。  
@@ -44,13 +44,13 @@ End Operator
  可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。  
   
  `Public`  
- 必须的。 指示此运算符过程具有[公共](../../../visual-basic/language-reference/modifiers/public.md)访问。  
+ 必需。 指示此运算符过程具有[公共](../../../visual-basic/language-reference/modifiers/public.md)访问。  
   
  `Overloads`  
  可选。 请参阅[重载](../../../visual-basic/language-reference/modifiers/overloads.md)。  
   
  `Shared`  
- 必须的。 指示此运算符过程[共享](../../../visual-basic/language-reference/modifiers/shared.md)过程。  
+ 必需。 指示此运算符过程[共享](../../../visual-basic/language-reference/modifiers/shared.md)过程。  
   
  `Shadows`  
  可选。 请参阅[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。  
@@ -62,10 +62,10 @@ End Operator
  除非您指定所需的转换运算符`Widening`。 指示定义此运算符过程[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)转换。 有关此帮助页，请参阅"扩大转换和收缩转换"。  
   
  `operatorsymbol`  
- 必须的。 符号或运算符，以定义此运算符过程的标识符。  
+ 必需。 符号或运算符，以定义此运算符过程的标识符。  
   
  `operand1`  
- 必须的。 名称和单个操作数的一元运算符 （包括转换运算符） 或二元运算符的左的操作数的类型。  
+ 必需。 名称和单个操作数的一元运算符 （包括转换运算符） 或二元运算符的左的操作数的类型。  
   
  `operand2`  
  所需的二进制运算符。 名称和类型的二元运算符的右操作数。  
@@ -77,7 +77,7 @@ End Operator
 |部件|描述|  
 |----------|-----------------|  
 |`ByVal`|必须为可选，但传递机制[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)。|  
-|`operandname`|必须的。 表示此操作数的变量的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`operandname`|必需。 表示此操作数的变量的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`operandtype`|可选除非`Option Strict`是`On`。 此操作数的数据类型。|  
   
  `type`  
@@ -87,10 +87,10 @@ End Operator
  可选。 运算符过程运行的语句块。  
   
  `returnvalue`  
- 必须的。 运算符过程返回到调用代码的值。  
+ 必需。 运算符过程返回到调用代码的值。  
   
  `End` `Operator`  
- 必须的。 终止此运算符过程的定义。  
+ 必需。 终止此运算符过程的定义。  
   
 ## <a name="remarks"></a>备注  
  可以使用`Operator`只能在类或结构中。 这意味着*声明上下文*运算符不能为源文件、 命名空间、 模块、 接口、 过程或块。 有关详细信息，请参阅[声明上下文和默认访问级别](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
@@ -168,16 +168,17 @@ End Operator
 ## <a name="example"></a>示例  
  下面的代码示例使用`Operator`语句来定义包含有关的运算符过程的结构轮廓`And`， `Or`， `IsFalse`，和`IsTrue`运算符。 `And` 并`Or`每个都采用两种类型的操作数`abc`返回类型和`abc`。 `IsFalse` 并`IsTrue`每个都采用单个类型的操作数`abc`，并返回`Boolean`。 这些定义允许调用代码以使用`And`， `AndAlso`， `Or`，和`OrElse`类型的操作数与`abc`。  
   
- [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]  
   
-## <a name="see-also"></a>请参阅  
- [IsFalse 运算符](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [IsTrue 运算符](../../../visual-basic/language-reference/operators/istrue-operator.md)  
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [扩大转换和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [如何：定义运算符](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [如何：定义转换运算符](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
- [如何：调用运算符过程](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)  
- [如何：使用定义运算符的类](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
+## <a name="see-also"></a>请参阅
+
+- [IsFalse 运算符](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [IsTrue 运算符](../../../visual-basic/language-reference/operators/istrue-operator.md)
+- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [扩大转换和收缩转换](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [如何：定义运算符](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [如何：定义转换运算符](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [如何：调用运算符过程](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)
+- [如何：使用定义运算符的类](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)

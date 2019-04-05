@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87c97a678fce4c25a113670a4668515a898e5251
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4fe47a155b29fe452a59adfaffe59162f60f58aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438413"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469569"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a>IHostMemoryManager::NeedsVirtualAddressSpace 方法
-通知宿主，公共语言运行时 (CLR) 将尝试使用指定的内存。  
+通知宿主，公共语言运行时 (CLR) 将要尝试使用指定的内存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,26 +36,26 @@ HRESULT NeedsVirtualAddressSpace (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `startAddress`  
- [in]内存起始地址。  
+ [in]起始内存地址。  
   
  `size`  
- [in]以字节为单位，内存的大小。  
+ [in]以字节为单位的内存的大小。  
   
 ## <a name="remarks"></a>备注  
- `NeedsVirtualAddressSpace`方法是一个回调方法，必须在承载应用程序的编写器实现。 它是由 CLR 调用。  
+ `NeedsVirtualAddressSpace`方法是回调方法，必须由主机应用程序的编写器实现。 它是由 CLR 进行调用。  
   
- 如果主机不希望 CLR 使用指定的内存，它可能返回 E_OUTOFMEMORY HRESULT。  
+ 如果主机不希望在 CLR 使用指定的内存，它可能返回 E_OUTOFMEMORY HRESULT。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a>请参阅
+- [IHostMemoryManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

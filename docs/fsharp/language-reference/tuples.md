@@ -1,13 +1,13 @@
 ---
-title: 元组 (F#)
-description: '了解有关 F # 元组，可能是不同类型的未命名但有序值的分组信息。'
+title: 元组
+description: 了解如何F#元组，可能是不同类型的未命名但有序值的分组。
 ms.date: 05/16/2016
-ms.openlocfilehash: e7628e4c4b538c2fe52fca25d2597b10fec28d1c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a1fc31d4dc97c0921545e53b91dcde0547002006
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43749218"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611043"
 ---
 # <a name="tuples"></a>元组
 
@@ -22,7 +22,7 @@ struct(element, ... ,element )
 
 ## <a name="remarks"></a>备注
 
-每个*元素*在上述语法中可以是任何有效的 F # 表达式。
+每个*元素*在上述语法中可以是任何有效F#表达式。
 
 ## <a name="examples"></a>示例
 
@@ -88,7 +88,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>与 C# 元组互操作
 
-C# 7.0 引入了语言的元组。  在 C# 中的元组是结构，并且等效于 F # 中的结构元组。  如果你需要与 C# 进行互操作，则必须使用结构元组。
+C# 7.0 引入了语言的元组。  中的元组C#是结构，并等效于结构中的元组F#。  如果你需要与 C# 进行互操作，则必须使用结构元组。
 
 这很容易地执行操作。  例如，假设您需要将元组传递给 C# 类，然后使用其结果，这也是一个元组：
 
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-在 F # 代码中，然后可以将作为参数传递的结构元组并使用的结构元组形式的结果。
+在你F#代码，然后可以将作为参数传递的结构元组，并使用的结构元组形式的结果。
 
 ```fsharp
 open TupleInterop
@@ -126,7 +126,7 @@ let struct (newX, newY) = Example.AddOneToXAndY(struct (1, 2))
 
 本部分介绍元组的形式，它们在编译时。  此处的信息不需读取除非面向.NET Framework 3.5 或更低。
 
-元组被编译到的一种多个泛型类型，所有命名对象`System.Tuple`，该重载上的实参数量或类型参数的数目。 查看从另一种语言，如 C# 或 Visual Basic 时，或使用一种工具，并不知道 F # 构造时，元组类型将显示在此窗体。 `Tuple`类型在.NET Framework 4 中引入。 如果面向.NET Framework 的早期版本，则编译器将使用的版本[System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3)从 F # 核心库 2.0 版。 此库中的类型仅用于面向 2.0、 3.0 和 3.5 版本的.NET Framework 的应用程序。 类型转发用于确保.NET Framework 2.0 和.NET Framework 4 F # 组件之间的二进制文件兼容性。
+元组被编译到的一种多个泛型类型，所有命名对象`System.Tuple`，该重载上的实参数量或类型参数的数目。 在此窗体中显示的元组类型，查看这些状态时从另一种语言，如C#或 Visual Basic 中，或者当使用的一种工具，并不知道F#构造。 `Tuple`类型在.NET Framework 4 中引入。 如果面向.NET Framework 的早期版本，则编译器将使用的版本[System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3)从 2.0 版本的F#核心库。 此库中的类型仅用于面向 2.0、 3.0 和 3.5 版本的.NET Framework 的应用程序。 使用类型转发，以确保.NET Framework 2.0 和.NET Framework 4 之间的二进制文件兼容性F#组件。
 
 ### <a name="compiled-form-of-struct-tuples"></a>已编译的形式的结构元组
 

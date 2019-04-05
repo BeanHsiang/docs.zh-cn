@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 4c13b482ddbb3c1c109ca8dfe36ed76a2025d61a
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 9e84ac90054e4ac3d32bb436fc0756248e84fcd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39333034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705318"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>在 .NET Framework 文件 I/O 和文件系统中使用的类 (Visual Basic)
 下列各表列出了常用于 .NET Framework 文件 I/O 的类，将这些类分为文件 I/O 类、用于创建流的类和用于读取和写入流的类。  
@@ -19,7 +19,7 @@ ms.locfileid: "39333034"
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>用于文件、驱动器和目录的基本 I/O 类  
  下表列出并说明了用于文件 I/O 的主类。  
   
-|类|描述|  
+|类|说明|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|提供用于创建、移动和枚举目录和子目录的静态方法。|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|提供用于创建、移动和枚举目录和子目录的实例方法。|  
@@ -36,7 +36,7 @@ ms.locfileid: "39333034"
 ## <a name="classes-used-to-create-streams"></a>用于创建流的类  
  下表列出并说明了用于创建流的主类。  
   
-|类|描述|  
+|类|说明|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|将缓冲层添加到另一个流上的读取和写入操作。|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|支持通过文件的 <xref:System.IO.FileStream.Seek%2A> 方法对其进行随机访问。 默认情况下 <xref:System.IO.FileStream> 同步打开文件，但也支持异步操作。|  
@@ -56,8 +56,8 @@ ms.locfileid: "39333034"
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|从 `String` 读取字符。 输出可以是任意编码中的流或 `String`。|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|将字符写入 `String`。 输出可以是任意编码中的流或 `String`。|  
   
-## <a name="see-also"></a>请参阅  
- [撰写流](../../../../standard/io/composing-streams.md)  
- [文件和流 I/O](../../../../standard/io/index.md)  
- [异步文件 I/O](../../../../standard/io/asynchronous-file-i-o.md)  
- [.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>请参阅
+- [撰写流](../../../../standard/io/composing-streams.md)
+- [文件和流 I/O](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [.NET Framework 文件 I/O 和文件系统基础知识 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

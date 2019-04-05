@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2484fa61c03b95e7cbdb452b92a68a2049701374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2289a9a75311c9642a764844ee466adcc5838655
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744344"
 ---
 # <a name="ireferenceappid-interface"></a>IReferenceAppId 接口
-表示当前范围中的应用程序的唯一标识符的引用。  
+表示为当前作用域中的应用程序的唯一标识符的引用。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|`IReferenceAppId::get_CodeBase`|获取一个指向的字符串表示形式的代码标识符的应用程序引用此`IReferenceAppId`。|  
+|`IReferenceAppId::get_CodeBase`|获取此引用的应用程序的指针的代码标识符的字符串表示形式`IReferenceAppId`。|  
 |`IReferenceAppId::put_CodeBase`|设置此引用的应用程序的代码标识符`IReferenceAppId`。|  
-|`IReferenceAppId::EnumAppPath`|获取到的接口指针`IEnumReferenceIdentity`实例包含`IReferenceIdentity`表示此成员的实例`IReferenceAppId`。|  
-|`IReferenceAppId::get_SubscriptionId`|获取一个指针指向的字符串表示形式的令牌标识符对此订阅`IReferenceAppId`。|  
-|`IReferenceAppId::put_SubscriptionId`|设置与此订阅的令牌标识符`IReferenceAppId`到指定的字符串值。|  
+|`IReferenceAppId::EnumAppPath`|获取到的接口指针`IEnumReferenceIdentity`实例，包含`IReferenceIdentity`表示此成员的实例`IReferenceAppId`。|  
+|`IReferenceAppId::get_SubscriptionId`|获取一个指针指向的标记标识符的字符串表示形式与此订阅`IReferenceAppId`。|  
+|`IReferenceAppId::put_SubscriptionId`|设置与此订阅的标记标识符`IReferenceAppId`到指定的字符串值。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IEnumReferenceIdentity 接口](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)  
- [IReferenceIdentity 接口](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+## <a name="see-also"></a>请参阅
+- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IEnumReferenceIdentity 接口](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)
+- [IReferenceIdentity 接口](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)

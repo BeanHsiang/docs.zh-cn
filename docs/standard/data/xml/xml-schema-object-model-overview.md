@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7f3075d46ef0e8b98af471ae3943f7500128e5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: cdd43f7079563be6b1377f743a84625429ba4f16
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080041"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411689"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML 架构对象模型概述
 Microsoft .NET Framework 中的架构对象模型 (SOM) 是一个丰富 API，可以通过编程创建、编辑和验证架构。 SOM 对 XML 架构文档的作用类似与文档对象模型 (DOM) 对 XML 文档的作用。 XML 架构文档是有效的 XML 文件，在加载到 SOM 之后，传达其他符合该架构的 XML 文档的结构和有效性的含义。  
@@ -34,16 +34,16 @@ Microsoft .NET Framework 中的架构对象模型 (SOM) 是一个丰富 API，�
 ## <a name="the-schema-object-model"></a>架构对象模型  
  SOM 由 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中与 XML 架构中的元素对应的丰富类集组成。 例如，`<xsd:schema>...</xsd:schema>` 元素映射到 <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> 类，所有可以包含在 `<xsd:schema/>` 元素中的信息都可以使用 <xref:System.Xml.Schema.XmlSchema> 类表示。 同样，`<xsd:element>...</xsd:element>` 和 `<xsd:attribute>...</xsd:attribute>` 元素分别映射到 <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> 和 <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> 类。 此映射继续为 XML 架构的所有元素在 <xref:System.Xml.Schema> 命名空间中创建 XML 架构对象模型，如下图中所示。  
   
- ![System.Xml.Schema 对象模型](../../../../docs/standard/data/xml/media/xmlschemaobjmodeloverview.gif "XMLSchemaObjModelOverview")  
+ ![System.Xml.Schema 对象模型](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
   
  有关 <xref:System.Xml.Schema> 命名空间中的每个类的更多信息，请参见 .NET Framework 类库中的 <xref:System.Xml.Schema> 命名空间参考文档。  
   
 ## <a name="see-also"></a>请参阅
 
-- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
-- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [后架构编译信息集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

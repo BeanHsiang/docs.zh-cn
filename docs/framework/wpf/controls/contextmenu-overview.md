@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: 54fd823594fba4500f35ed1d69720a3309e54a36
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4d3677021e38c10d38c0e5ed5e5de1824397db50
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666767"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357360"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu 概述
 <xref:System.Windows.Controls.ContextMenu>类表示使用特定于上下文的公开功能的元素<xref:System.Windows.Controls.Menu>。 通常情况下，用户公开<xref:System.Windows.Controls.ContextMenu>在[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]通过右键单击鼠标按钮。 本主题介绍<xref:System.Windows.Controls.ContextMenu>元素，并提供有关如何使用中的示例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和代码。  
@@ -28,10 +28,10 @@ ms.locfileid: "45666767"
 ## <a name="creating-contextmenus"></a>创建 ContextMenus  
  以下示例演示如何创建<xref:System.Windows.Controls.ContextMenu>具有子菜单。 <xref:System.Windows.Controls.ContextMenu>控件附加到按钮控件。  
   
- [!code-xaml[ContextMenu#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#1)]  
+ [!code-xaml[ContextMenu#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#1)]  
   
- [!code-csharp[ContextMenu#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml.cs#2)]
- [!code-vb[ContextMenu#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ContextMenu/VisualBasic/Pane1.xaml.vb#2)]  
+ [!code-csharp[ContextMenu#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml.cs#2)]
+ [!code-vb[ContextMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContextMenu/VisualBasic/Pane1.xaml.vb#2)]  
   
 <a name="applying_styles_to_contextmenu"></a>   
 ## <a name="applying-styles-to-a-contextmenu"></a>将样式应用于 ContextMenu  
@@ -62,11 +62,11 @@ ms.locfileid: "45666767"
 </Style>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.ContextMenu>  
- <xref:System.Windows.Style>  
- <xref:System.Windows.Controls.Menu>  
- <xref:System.Windows.Controls.MenuItem>  
- [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)  
- [ContextMenu 样式和模板](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Style>
+- <xref:System.Windows.Controls.Menu>
+- <xref:System.Windows.Controls.MenuItem>
+- [ContextMenu](contextmenu.md)
+- [ContextMenu 样式和模板](contextmenu-styles-and-templates.md)
+- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)

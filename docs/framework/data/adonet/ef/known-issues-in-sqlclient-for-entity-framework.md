@@ -2,12 +2,12 @@
 title: SqlClient 中的已知问题（实体框架）
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: c1353444415ddd2305a73d14bacf1bb33a931929
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 112c11edd3955f2bdc6d2b0510e385d4560b80ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47072389"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497243"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>SqlClient 中的已知问题（实体框架）
 本节介绍与 SQL Server .NET Framework 数据提供程序 (SqlClient) 有关的已知问题。  
@@ -36,7 +36,7 @@ ms.locfileid: "47072389"
 -   在 REF 构造上具有 DEREF 构造的查询。  
   
 ## <a name="skip-operator"></a>SKIP 运算符  
- 如果使用的是 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]，则对非键列同时使用 SKIP 和 ORDER BY 可能会返回不正确的结果。 如果非键列中有重复数据，那么跳过的行数可能多于指定的行数。 这是由于 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] 对 SKIP 的解释方式造成的。 例如，在下面的查询中，如果 `E.NonKeyColumn` 有重复值，则跳过的行可能超过 5 行：  
+ 如果使用的是 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]，则对非键列同时使用 SKIP 和 ORDER BY 可能会返回不正确的结果。 如果非键列中有重复数据，那么跳过的行数可能多于指定的行数。 这是由于 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]对 SKIP 的解释方式造成的。 例如，在下面的查询中，如果 `E.NonKeyColumn` 有重复值，则跳过的行可能超过 5 行：  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
@@ -59,6 +59,6 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ## <a name="server-generated-guid-identity-values"></a>服务器生成的 GUID 标识值  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]支持服务器生成的 GUID 类型标识值，但提供程序必须支持在插入行后返回服务器生成的标识值。 从 SQL Server 2005 开始，你可以通过 SQL Server 数据库中返回服务器生成的 GUID 类型[OUTPUT 子句](https://go.microsoft.com/fwlink/?LinkId=169400)。  
   
-## <a name="see-also"></a>请参阅  
- [用于实体框架的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- [LINQ to Entities 中的已知问题和注意事项](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+## <a name="see-also"></a>请参阅
+- [用于实体框架的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+- [LINQ to Entities 中的已知问题和注意事项](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

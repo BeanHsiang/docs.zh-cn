@@ -1,5 +1,5 @@
 ---
-title: '&lt;cryptographySettings&gt;元素'
+title: <cryptographySettings> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings
@@ -8,21 +8,19 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4bad1d15bc8e2fd40d42581220888f035e515162
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 11f07bbf5de04edc98a5a5bc0ba07f1629763a9f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181376"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258703"
 ---
-# <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt;元素
+# <a name="cryptographysettings-element"></a>\<cryptographySettings > 元素
 包含加密设置。  
   
  \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
+\<mscorlib>  
+\<cryptographySettings>  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,8 +39,8 @@ ms.locfileid: "50181376"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|包含类到友好名称的映射。|  
-|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|包含类的 ASN.1 对象标识符 (OID) 映射。|  
+|[\<cryptoNameMapping>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|包含类到友好名称的映射。|  
+|[\<oidMap>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|包含类的 ASN.1 对象标识符 (OID) 映射。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -78,7 +76,7 @@ ms.locfileid: "50181376"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+## <a name="see-also"></a>请参阅
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

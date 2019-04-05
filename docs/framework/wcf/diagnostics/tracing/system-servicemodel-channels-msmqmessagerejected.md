@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 9b7c10a7-2af6-44a2-8b1a-90bba0c7cf26
-ms.openlocfilehash: 0addf987eac62c750a3c418e1b1c431d3f9bc1b0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 87d6e6fc3205fff9bd977ebe77004dfa489098cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681217"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagerejected"></a>System.ServiceModel.Channels.MsmqMessageRejected
 MSMQ 已拒绝该消息。  
@@ -21,9 +21,9 @@ MSMQ 已拒绝该消息。
   
  请参阅[MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)有关被拒绝的消息在 MSMQ 中的含义的详细信息。  
   
-## <a name="see-also"></a>请参阅  
- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [病毒消息处理](https://go.microsoft.com/fwlink/?LinkID=99546)  
- [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)
+## <a name="see-also"></a>请参阅
+- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [病毒消息处理](https://go.microsoft.com/fwlink/?LinkID=99546)
+- [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)

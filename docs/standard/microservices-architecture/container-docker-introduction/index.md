@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: bc99bbfc3adee4cdc7008a91f42659ebcaa7a1b1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45658426"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147933"
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 简介
 
@@ -29,7 +29,6 @@ ms.locfileid: "45658426"
 
 总而言之，容器在整个应用程序生命周期工作流中提供以下优点：隔离性、可移植性、灵活性、可伸缩性和可控性。 最重要的优点是可在开发和运营之间提供隔离。
 
-
 >[!div class="step-by-step"]
-[上一页](../index.md)
-[下一页](docker-defined.md)
+>[上一页](../index.md)
+>[下一页](docker-defined.md)

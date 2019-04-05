@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: caf0a071d65746f1027052e648ade538d62dc4bb
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5fc0105cffb5606f9382aca7b55d6544d04f9fe7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245682"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838152"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>演练：使用 Visual Basic 创建 COM 对象
 创建新的应用程序或组件时，最好创建.NET Framework 程序集。 但是，Visual Basic 还可以轻松公开.NET Framework 组件由 com 使用。 这使您可以提供新的组件需要 COM 组件的早期应用程序套件。 本演练演示如何使用 Visual Basic 来公开[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]对象作为 COM 对象，使用或不使用 COM 类模板。  
@@ -48,7 +48,7 @@ ms.locfileid: "39245682"
   
 2.  在中**新的项目**对话框中的下**项目类型**字段中，检查是否已选中 Windows。 选择**类库**从**模板**列表，，然后单击**确定**。 显示新的项目。  
   
-3.  在中**解决方案资源管理器**，右键单击你的项目，然后单击**属性**。 **项目设计器**显示。  
+3.  在“解决方案资源管理器”中，右键单击项目，然后单击“属性”。 **项目设计器**显示。  
   
 4.  单击“编译”选项卡。  
   
@@ -62,38 +62,39 @@ ms.locfileid: "39245682"
   
 3.  添加到以下常量`ComClass1`。 它们将存储不需要具有 COM 对象的全局唯一标识符 (GUID) 常量。  
   
-     [!code-vb[VbVbalrInterop#2](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_1.vb)]  
+     [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
 4.  在“工具”菜单上，单击“创建 Guid”。 在“创建 GUID”对话框中，单击“注册表格式”，然后单击“复制”。 单击“退出” 。  
   
 5.  空字符串替换为`ClassId`guid，删除前导空格和尾随大括号。 例如，如果由 Guidgen 提供的 GUID 是`"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"`，则你的代码应如下所示出现。  
   
-     [!code-vb[VbVbalrInterop#3](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_2.vb)]  
+     [!code-vb[VbVbalrInterop#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#3)]  
   
 6.  重复前面的步骤对于`InterfaceId`和`EventsId`常量，如以下示例所示。  
   
-     [!code-vb[VbVbalrInterop#4](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_3.vb)]  
+     [!code-vb[VbVbalrInterop#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#4)]  
   
     > [!NOTE]
     >  请确保 Guid 的新的和唯一的;否则，COM 组件可能与其他 COM 组件发生冲突。  
   
 7.  添加`ComClass`属性为`ComClass1`，指定为类 ID、 接口 ID 和事件 ID 的 Guid，如以下示例所示：  
   
-     [!code-vb[VbVbalrInterop#5](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_4.vb)]  
+     [!code-vb[VbVbalrInterop#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#5)]  
   
 8.  COM 类必须具有无参数`Public Sub New()`构造函数或类无法正确注册。 将无参数构造函数添加到类：  
   
-     [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
+     [!code-vb[VbVbalrInterop#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#6)]  
   
 9. 将属性、 方法和事件添加到类，它与结束`End Class`语句。 选择**生成解决方案**从**生成**菜单。 Visual Basic 生成的程序集和与操作系统中注册的 COM 对象。  
   
     > [!NOTE]
     >  使用 Visual Basic 生成的 COM 对象不能使用其他 Visual Basic 应用程序，因为它们不是真正的 COM 对象。 尝试将引用添加到此类 COM 对象将引发错误。 有关详细信息，请参阅[.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.ComClassAttribute>  
- [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)  
- [演练：使用 COM 对象实现继承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [#Region 指令](../../../visual-basic/language-reference/directives/region-directive.md)  
- [.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
- [互操作性疑难解答](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.ComClassAttribute>
+- [COM 互操作](../../../visual-basic/programming-guide/com-interop/index.md)
+- [演练：使用 COM 对象实现继承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [#Region 指令](../../../visual-basic/language-reference/directives/region-directive.md)
+- [.NET Framework 应用程序中的 COM 互操作性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
+- [互操作性疑难解答](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

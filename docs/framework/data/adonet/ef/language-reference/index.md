@@ -2,12 +2,12 @@
 title: Entity SQL 语言参考
 ms.date: 03/30/2017
 ms.assetid: bb07282c-161d-47e8-856d-b2374ba18181
-ms.openlocfilehash: 8ef0f7e00735292252cdabf2adb8b7638faa5d8f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4fcff2e9c50e44730cadb52853eea706a5825f0b
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862743"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828067"
 ---
 # <a name="entity-sql-language-reference"></a>Entity SQL 语言参考
 本节提供有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 以及[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]使用的建模和映射语言的详细文档。  
@@ -22,9 +22,9 @@ ms.locfileid: "43862743"
  [规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
   
 ## <a name="related-sections"></a>相关章节  
- [ADO.NET 实体数据模型工具](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
+ [ADO.NET 实体数据模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))  
   
-## <a name="see-also"></a>请参阅  
- [ADO.NET 实体框架](../../../../../../docs/framework/data/adonet/ef/index.md)  
- [入门](../../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [示例](https://msdn.microsoft.com/library/77500b07-de49-4fb7-93ee-ce76f72d4646)
+## <a name="see-also"></a>请参阅
+- [ADO.NET 实体框架](../../../../../../docs/framework/data/adonet/ef/index.md)
+- [入门](../../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738547(v=vs.100))

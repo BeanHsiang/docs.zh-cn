@@ -6,25 +6,25 @@ helpviewer_keywords:
 - data binding [WPF], creating simple bindings
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-ms.openlocfilehash: 8910dd3ec6c9f72f9d8fb64cd33912f0d4318e5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 157060e784e4169ac8e31c6028ed65f0a9568e0f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555007"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373577"
 ---
 # <a name="how-to-create-a-simple-binding"></a>如何：创建简单绑定
 此示例演示如何创建一个简单<xref:System.Windows.Data.Binding>。  
   
 ## <a name="example"></a>示例  
- 在此示例中，你有`Person`具有名为的字符串属性对象`PersonName`。 `Person`对象在调用的命名空间中定义`SDKSample`。  
+ 此示例中有一个 `Person` 对象，该对象具有名为 `PersonName` 的字符串属性。 该 `Person` 对象在名为 `SDKSample` 的命名空间中定义。  
   
- 突出显示的行将包含`<src>`元素在下面的示例实例化`Person`对象`PersonName`属性值`Joe`。 将执行此操作`Resources`部分并分配`x:Key`。  
+ 在下面的示例中，突出显示的包含 `<src>` 元素的行将实例化 `Person` 对象，该对象的 `PersonName` 属性值为 `Joe`。 该操作在 `Resources` 部分完成，并指定了 `x:Key`。  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- 突出显示的行将包含`<TextBlock>`元素然后将绑定<xref:System.Windows.Controls.TextBlock>控制转移到`PersonName`属性。 因此，<xref:System.Windows.Controls.TextBlock>出现包含值"Joe"。  
+ 然后，突出显示的包含 `<TextBlock>` 元素的行会将 <xref:System.Windows.Controls.TextBlock> 控件绑定到 `PersonName` 属性。 这样，<xref:System.Windows.Controls.TextBlock> 显示的值将为 “Joe”。  
   
-## <a name="see-also"></a>请参阅  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [数据绑定概述](data-binding-overview.md)
+- [帮助主题](data-binding-how-to-topics.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 22af8cd6a8bdce590736ee14705f73bef1dc4d16
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847396"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261097"
 ---
 # <a name="endpoint-addresses"></a>终结点地址
 每个终结点都具有与其关联的地址，该地址用于查找和标识终结点。 此地址主要包括指定终结点位置的统一资源标识符 (URI)。 通过 Windows Communication Foundation (WCF) 编程模型中表示终结点地址<xref:System.ServiceModel.EndpointAddress>类，该类包含一个可选<xref:System.ServiceModel.EndpointAddress.Identity%2A>进行身份验证的其他终结点的终结点的属性，交换消息，以及一组可选<xref:System.ServiceModel.EndpointAddress.Headers%2A>属性，用于定义访问的服务所需的任何其他 SOAP 头。 可选头提供其他的更详细寻址信息以标识服务终结点或与之交互。 终结点的地址在网络上表示为 WS-Addressing 终结点引用 (EPR)。  
@@ -48,7 +48,7 @@ ms.locfileid: "48847396"
   
 -   绑定协议：HTTP  
   
--   绑定信息：IP 地址、端口、主机头  
+-   绑定信息：IP 地址、 端口、 主机标头  
   
  IIS 可以为每个站点指定多个绑定，这会导致每个方案有多个基址。 早于[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]，WCF 的架构不支持多个地址，并且如果它们已指定，则引发<xref:System.ArgumentException>在激活过程。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48847396"
  IIS 提供的基址可能具有绑定到 `baseAddressPrefixFilters` 列表中不存在的其他方案的地址。 不会筛选出这些地址。  
   
 ## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>.NET Framework 4 以及更高版本中的多个 IIS 绑定支持  
- 从 .NET 4 开始，通过将 <xref:System.ServiceModel.ServiceHostingEnvironment> 的 <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> 设置为 True，您无需选取单个基址便可实现对 IIS 中多个绑定的支持。 此支持限于 HTTP 协议方案。  
+ 从 .NET 4 开始，通过将 <xref:System.ServiceModel.ServiceHostingEnvironment> 的 <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> 设置为 True，你无需选取单个基址便可实现对 IIS 中多个绑定的支持。 此支持限于 HTTP 协议方案。  
   
  以下是示例的配置代码上使用 multipleSiteBindingsEnabled [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "48847396"
   
 -   在代码中，通过使用 <xref:System.ServiceModel.Channels.AddressHeader> 类创建自定义地址头，然后在构造 <xref:System.ServiceModel.EndpointAddress> 时使用它。  
   
--   在配置中，自定义[\<标头 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)指定为的子级[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素。  
+-   在配置中，自定义[\<标头 >](../../configure-apps/file-schema/wcf/headers.md)指定为的子级[\<终结点 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)元素。  
   
  配置通常比代码更可取，因为它允许你在部署后更改头。  
   
@@ -130,13 +130,13 @@ ms.locfileid: "48847396"
   
 -   在代码中，通过将 <xref:System.ServiceModel.Description.ClientViaBehavior> 类添加到终结点的行为集合指定自定义侦听地址。  
   
--   在配置中，指定使用自定义侦听地址`ListenUri`服务的特性[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素。  
+-   在配置中，指定使用自定义侦听地址`ListenUri`服务的特性[\<终结点 >](../../configure-apps/file-schema/wcf/endpoint-element.md)元素。  
   
 ### <a name="custom-soap-address-filter"></a>自定义 SOAP 地址筛选器  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> 与任何 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 属性联合使用，以定义终结点的 SOAP 地址筛选器 (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>)。 默认情况下，此筛选器验证传入消息是否具有与终结点的 URI 匹配的 `To` 消息头，以及所有必需的终结点头是否存在于消息中。  
   
  在某些方案中，终结点接收抵达基础传输的所有消息，而不仅仅是具有相应 `To` 头的消息。 若要启用这一点，用户可以使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 类。  
   
-## <a name="see-also"></a>请参阅  
- [指定终结点地址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>请参阅
+- [指定终结点地址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

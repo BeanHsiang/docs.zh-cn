@@ -1,15 +1,16 @@
 ---
-title: 异步编程
+title: 异步编程 - C#
 description: 了解 .NET Core 提供的 C# 语言级别异步编程模式。
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: e562ef9fffa5bf77fd5dee1cb19cee0a2492b986
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.custom: seodec18
+ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349090"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185735"
 ---
 # <a name="asynchronous-programming"></a>异步编程
 
@@ -19,7 +20,7 @@ C# 拥有语言级别的异步编程模型，它使你能轻松编写异步代�
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>异步模型的基本概述
 
-异步编程的核心是 `Task` 和 `Task<T>` 对象，这两个对象对异步操作建模。  它们受关键字 `async` 和 `await` 的支持。  在大多数情况下模型十分简单： 
+异步编程的核心是 `Task` 和 `Task<T>` 对象，这两个对象对异步操作建模。  它们受关键字 `async` 和 `await` 的支持。  在大多数情况下模型十分简单：
 
 对于 I/O 绑定代码，当你 `await` 一个操作，它将返回 `async` 方法中的一个 `Task` 或 `Task<T>`。
 
@@ -86,11 +87,11 @@ calculateButton.Clicked += async (o, e) =>
 
 ## <a name="key-pieces-to-understand"></a>需了解的要点
 
-*   异步代码可用于 I/O 绑定和 CPU 绑定代码，但在每个方案中有所不同。
-*   异步代码使用 `Task<T>` 和 `Task`，它们是对后台所完成的工作进行建模的构造。
+* 异步代码可用于 I/O 绑定和 CPU 绑定代码，但在每个方案中有所不同。
+* 异步代码使用 `Task<T>` 和 `Task`，它们是对后台所完成的工作进行建模的构造。
 * `async` 关键字将方法转换为异步方法，这使你能在其正文中使用 `await` 关键字。
-*   应用 `await` 关键字后，它将挂起调用方法，并将控制权返还给调用方，直到等待的任务完成。
-*   仅允许在异步方法中使用 `await`。
+* 应用 `await` 关键字后，它将挂起调用方法，并将控制权返还给调用方，直到等待的任务完成。
+* 仅允许在异步方法中使用 `await`。
 
 ## <a name="recognize-cpu-bound-and-io-bound-work"></a>识别 CPU 绑定和 I/O 绑定工作
 
@@ -105,10 +106,10 @@ calculateButton.Clicked += async (o, e) =>
 2. 你的代码是否要执行开销巨大的计算？
 
     如果答案为“是”，则你的工作是 **CPU 绑定**。
-    
+
 如果你的工作为 **I/O 绑定**，请使用 `async` 和 `await`（而不使用 `Task.Run`）。  不应使用任务并行库。  相关原因在[深入了解异步的文章](../standard/async-in-depth.md)中说明。
 
-如果你的工作为 **CPU 绑定**，并且你重视响应能力，请使用 `async` 和 `await`，并在另一个线程上使用 `Task.Run` 生成工作。  如果该工作同时适用于并发和并行，则应考虑使用任务并行库。
+如果你的工作为 **CPU 绑定**，并且你重视响应能力，请使用 `async` 和 `await`，并在另一个线程上使用 `Task.Run` 生成工作。  如果该工作同时适用于并发和并行，则应考虑使用[任务并行库](../standard/parallel-programming/task-parallel-library-tpl.md)。
 
 此外，应始终对代码的执行进行测量。  例如，你可能会遇到这样的情况：多线程处理时，上下文切换的开销高于 CPU 绑定工作的开销。  每种选择都有折衷，应根据自身情况选择正确的折衷方案。
 
@@ -184,12 +185,12 @@ public async Task<User> GetUserAsync(int userId)
 public static async Task<IEnumerable<User>> GetUsersAsync(IEnumerable<int> userIds)
 {
     var getUserTasks = new List<Task<User>>();
-    
+
     foreach (int userId in userIds)
     {
         getUserTasks.Add(GetUserAsync(userId));
     }
-    
+
     return await Task.WhenAll(getUserTasks);
 }
 ```
@@ -211,33 +212,34 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
     return await Task.WhenAll(getUserTasks);
 }
 ```
+
 尽管它的代码较少，但在混合 LINQ 和异步代码时需要谨慎操作。  因为 LINQ 使用延迟的执行，因此异步调用将不会像在 `foreach()` 循环中那样立刻发生，除非强制所生成的序列通过对 `.ToList()` 或 `.ToArray()` 的调用循环访问。
 
 ## <a name="important-info-and-advice"></a>重要信息和建议
 
 尽管异步编程相对简单，但应记住一些可避免意外行为的要点。
 
-*  `async`**方法需在其主体中具有**`await` **关键字，否则它们将永不暂停！**
+* `async`**方法需在其主体中具有**`await` **关键字，否则它们将永不暂停！**
 
 这一点需牢记在心。  如果 `await` 未用在 `async` 方法的主体中，C# 编译器将生成一个警告，但此代码将会以类似普通方法的方式进行编译和运行。  请注意这会导致效率低下，因为由 C# 编译器为异步方法生成的状态机将不会完成任何任务。
 
-*   应将“Async”作为后缀添加到所编写的每个异步方法名称中。
+* 应将“Async”作为后缀添加到所编写的每个异步方法名称中。
 
 这是 .NET 中的惯例，以便更轻松区分同步和异步方法。 请注意，未由代码显式调用的某些方法（如事件处理程序或 Web 控制器方法）并不一定适用。 由于它们未由代码显式调用，因此对其显式命名并不重要。
 
-*   `async void` **应仅用于事件处理程序。**
+* `async void` **应仅用于事件处理程序。**
 
 `async void` 是允许异步事件处理程序工作的唯一方法，因为事件不具有返回类型（因此无法利用 `Task` 和 `Task<T>`）。 其他任何对 `async void` 的使用都不遵循 TAP 模型，且可能存在一定使用难度，例如：
 
-  *   `async void` 方法中引发的异常无法在该方法外部被捕获。
-  *   十分难以测试 `async void` 方法。
-  *   如果调用方不希望 `async void` 方法是异步方法，则这些方法可能会产生不好的副作用。
+* `async void` 方法中引发的异常无法在该方法外部被捕获。
+* 十分难以测试 `async void` 方法。
+* 如果调用方不希望 `async void` 方法是异步方法，则这些方法可能会产生不好的副作用。
 
-*   **在 LINQ 表达式中使用异步 lambda 时请谨慎**
+* **在 LINQ 表达式中使用异步 lambda 时请谨慎**
 
 LINQ 中的 Lambda 表达式使用延迟执行，这意味着代码可能在你并不希望结束的时候停止执行。 如果编写不正确，将阻塞任务引入其中时可能很容易导致死锁。 此外，此类异步代码嵌套可能会对推断代码的执行带来更多困难。 Async 和 LINQ 的功能都十分强大，但在结合使用两者时应尽可能小心。
 
-*   **采用非阻止方式编写等待任务的代码**
+* **采用非阻止方式编写等待任务的代码**
 
 将阻止当前线程作为等待任务完成的方法可能导致死锁和已阻止的上下文线程，且可能需要更复杂的错误处理。 下表提供了关于如何以非阻止方式处理等待任务的指南：
 
@@ -248,21 +250,21 @@ LINQ 中的 Lambda 表达式使用延迟执行，这意味着代码可能在你�
 | `await Task.WhenAll` | `Task.WaitAll` | 等待所有任务完成 |
 | `await Task.Delay` | `Thread.Sleep` | 等待一段时间 |
 
-*   **编写状态欠缺的代码**
+* **编写状态欠缺的代码**
 
 请勿依赖全局对象的状态或某些方法的执行。 请仅依赖方法的返回值。 为什么？
 
-  *   这样更容易推断代码。
-  *   这样更容易测试代码。
-  *   混合异步和同步代码更简单。
-  *   通常可完全避免争用条件。
-  *   通过依赖返回值，协调异步代码可变得简单。
-  *   （好处）它非常适用于依赖关系注入。
+* 这样更容易推断代码。
+* 这样更容易测试代码。
+* 混合异步和同步代码更简单。
+* 通常可完全避免争用条件。
+* 通过依赖返回值，协调异步代码可变得简单。
+* （好处）它非常适用于依赖关系注入。
 
 建议的目标是实现代码中完整或接近完整的[引用透明度](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29)。 这么做能获得高度可预测、可测试和可维护的基本代码。
 
 ## <a name="other-resources"></a>其他资源
 
 * [深入了解异步](../standard/async-in-depth.md)提供了关于任务如何工作的详细信息。
-* [使用 Async 和 Await 的异步编程 (C#)](../csharp/programming-guide/concepts/async/index.md)
+* [使用 Async 和 Await 的异步编程 (C#)](./programming-guide/concepts/async/index.md)
 * 由 Lucian Wischik 所著的 [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async)（关于异步的六个要点）是有关异步编程的绝佳资源

@@ -1,6 +1,6 @@
 ---
 title: 基于任务的异步模式 (TAP)
-ms.date: 03/30/2017
+ms.date: 02/26/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,22 +14,23 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe69943a6f87bbbb7f29d1e4d6d30c26709725d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9dd8e49ad3270fe62b65469470485fcb169a4e7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579010"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788539"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>基于任务的异步模式 (TAP)
 基于任务的异步模式 (TAP) 是基于 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 命名空间中的 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 类型，这些类型用于表示任意异步操作。 TAP 是用于新开发的建议的异步设计模式。  
   
-## <a name="naming-parameters-and-return-types"></a>命名、参数和返回类型  
- TAP 使用单个方法表示异步操作的开始和完成。 这与异步编程模型（APM 或 `IAsyncResult`）模式相反（该模式要求 `Begin` 和 `End` 方法），并与基于事件的异步模式 (EAP) 相反（该模式要求具有 `Async` 后缀的方法，还要求一个或多个事件、事件处理程序委托类型和 `EventArg` 派生类型）。 TAP 中的异步方法在操作名称后面添加 `Async` 后缀；例如，`Get` 操作的 `GetAsync`。 如果你正在将 TAP 方法添加到已包含具有 `Async` 后缀的方法名称的类中，请改用后缀 `TaskAsync`。 例如，如果类具有 `GetAsync` 方法，请使用名称 `GetTaskAsync`。  
+## <a name="naming-parameters-and-return-types"></a>命名、参数和返回类型
+
+TAP 使用单个方法表示异步操作的开始和完成。 这与异步编程模型（APM 或 `IAsyncResult`）模式和基于事件的异步模式 (EAP) 形成对比。 APM 需要 `Begin` 和 `End` 方法。 EAP 需要后缀为 `Async` 的方法，以及一个或多个事件、事件处理程序委托类型和 `EventArg` 派生类型。 TAP 中的异步方法在返回可等待类型（如 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask> 和 <xref:System.Threading.Tasks.ValueTask%601>）的方法的操作名称后面添加 `Async` 后缀。 例如，返回 `Task<String>` 的异步 `Get` 操作可命名为 `GetAsync`。 若要将 TAP 方法添加到已包含带 `Async` 后缀的 EAP 方法名称的类中，请改用后缀 `TaskAsync`。 例如，如果类具有 `GetAsync` 方法，请使用名称 `GetTaskAsync`。 如果方法启动异步操作，但不返回可等待类型，它的名称应以 `Begin`、`Start` 或表明此方法不返回或抛出操作结果的其他某谓词开头。  
   
  TAP 方法返回 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>，具体取决于相应同步方法返回的是 void 还是类型 `TResult`。  
   
- TAP 方法的参数应与其同步副本的参数匹配，并应以相同顺序提供。  但是，`out` 和 `ref` 参数不受此规则的限制，并应完全避免。 应该将通过 `out` 或 `ref` 参数返回的所有数据改为作为由 `TResult` 返回的 <xref:System.Threading.Tasks.Task%601> 的一部分返回，且应使用元组或自定义数据结构来容纳多个值。 
+ TAP 方法的参数应与其同步对应方法的参数匹配，并应以相同顺序提供。  但是，`out` 和 `ref` 参数不受此规则的限制，并应完全避免。 应该将通过 `out` 或 `ref` 参数返回的所有数据改为作为由 `TResult` 返回的 <xref:System.Threading.Tasks.Task%601> 的一部分返回，且应使用元组或自定义数据结构来容纳多个值。 即使 TAP 方法的同步对应方法没有提供 <xref:System.Threading.CancellationToken> 参数，也应该考虑添加此参数。
  
  专用于创建、控制或组合任务的方法无需遵循此命名模式，因为方法名称或方法所属类型的名称已明确指明方法的异步用途；此类方法通常称为“组合器”。 组合器的示例包括 <xref:System.Threading.Tasks.Task.WhenAll%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A>，[使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)一文的[使用基于任务的内置组合器](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)部分对此进行了介绍。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "33579010"
  在某些情况下，完成操作所需的工作量要比异步启动操作所需的工作量少。 读取流时，按照在内存中已缓冲好的数据来满足该读取，这就是此类情形的一个示例。 在这样的情况下，操作可能会同步完成，同时返回已完成的任务。  
   
 ## <a name="exceptions"></a>异常  
- 异步方法应引发仅将引发异步方法调用的异常，以响应用法错误。 用法错误决不应该出现在成品代码中。 例如，如果将 null 引用（在 Visual Basic 中为 `Nothing`）作为某个方法的参数传递导致了错误状态（通常由 <xref:System.ArgumentNullException> 异常表示），则可以修改调用代码以确保绝对不传递 null 引用。 对于所有其他错误，在运行异步方法时发生的异常应分配给返回的任务，即使该异步方法碰巧在任务返回前同步完成。 通常，任务最多包含一个异常。 但是，如果任务表示多个操作（例如，<xref:System.Threading.Tasks.Task.WhenAll%2A>），则多个异常可能与单个任务关联。  
+ 异步方法应引发仅将引发异步方法调用的异常，以响应用法错误。 用法错误决不应该出现在成品代码中。 例如，如果将 null 引用（在 Visual Basic 中为 `Nothing`）作为某个方法的自变量传递导致了错误状态（通常由 <xref:System.ArgumentNullException> 异常表示），则可以修改调用代码以确保绝对不传递 null 引用。 对于所有其他错误，在运行异步方法时发生的异常应分配给返回的任务，即使该异步方法碰巧在任务返回前同步完成。 通常，任务最多包含一个异常。 但是，如果任务表示多个操作（例如，<xref:System.Threading.Tasks.Task.WhenAll%2A>），则多个异常可能与单个任务关联。  
   
 ## <a name="target-environment"></a>目标环境  
  在实现 TAP 方法时，你可以确定异步执行发生的位置。 你可选择在线程池上执行工作负荷，可选择使用异步 I/O 实现它（不必绑定到大部分操作执行的线程）或可选择在特定线程（如 UI 线程）上运行它或使用任何数目的潜在上下文。 TAP 方法甚至可能没有要执行的代码，可能只返回 <xref:System.Threading.Tasks.Task> 表示系统其他位置发生的情况（例如，表示到达已排入队列数据结构的数据的任务）。
@@ -53,7 +54,8 @@ ms.locfileid: "33579010"
  TAP 方法的调用方可能会同步等待生成的任务，以阻止等待 TAP 方法完成，也可能会在异步操作完成时运行其他（延续）代码。 延续代码的创建者可以控制该代码的执行位置。 你可以通过 <xref:System.Threading.Tasks.Task> 类上的方法（例如，<xref:System.Threading.Tasks.Task.ContinueWith%2A>）显式创建延续代码，也可以使用基于延续（例如，C# 中的 `await`、Visual Basic 中的 `Await` 和 F# 中的 `AwaitValue`）构建的语言支持隐式创建延续代码。  
   
 ## <a name="task-status"></a>任务状态  
- <xref:System.Threading.Tasks.Task> 类提供了异步操作的生命周期，且该周期由 <xref:System.Threading.Tasks.TaskStatus> 枚举表示。 为了支持派生自 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 的类型的个别案例，并支持调度时分离构造，<xref:System.Threading.Tasks.Task> 类公开了 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 公共 <xref:System.Threading.Tasks.Task> 构造函数创建的任务称为“冷任务”，因为它们在非计划 <xref:System.Threading.Tasks.TaskStatus.Created> 状态下开始生命周期，并仅在对这些实例调用 <xref:System.Threading.Tasks.Task.Start%2A> 时才被排入计划。 
+ 
+  <xref:System.Threading.Tasks.Task> 类提供了异步操作的生命周期，且该周期由 <xref:System.Threading.Tasks.TaskStatus> 枚举表示。 为了支持派生自 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 的类型的个别案例，并支持调度时分离构造，<xref:System.Threading.Tasks.Task> 类公开了 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 公共 <xref:System.Threading.Tasks.Task> 构造函数创建的任务称为“冷任务”，因为它们在非计划 <xref:System.Threading.Tasks.TaskStatus.Created> 状态下开始生命周期，并仅在对这些实例调用 <xref:System.Threading.Tasks.Task.Start%2A> 时才被排入计划。 
  
  所有其他任务在热状态下开始其生命周期，这意味着它们表示的异步操作已启动，并且其任务状态是 <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外的枚举值。 必须激活从 TAP 方法返回的所有任务。 **如果 TAP 方法在内部使用任务的构造函数来实例化要返回的任务，TAP 方法必须在返回前先对 <xref:System.Threading.Tasks.Task> 对象调用 <xref:System.Threading.Tasks.Task.Start%2A>。** TAP 方法的使用者可以安全地假设返回的任务处于活动状态且不应尝试对从 TAP 方法返回的任何 <xref:System.Threading.Tasks.Task.Start%2A> 调用 <xref:System.Threading.Tasks.Task>。 对活动的任务调用 <xref:System.Threading.Tasks.Task.Start%2A> 将引发 <xref:System.InvalidOperationException> 异常。  
   
@@ -63,7 +65,8 @@ ms.locfileid: "33579010"
  [!code-csharp[Conceptual.TAP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#1)]
  [!code-vb[Conceptual.TAP#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#1)]  
   
- 该异步操作监视取消请求的此标记。 如果它收到取消请求，则可以选择接受该请求并取消操作。 如果取消请求导致过早地结束工作，则 TAP 方法返回一个在 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态下结束的任务；没有可用结果且不引发异常。  <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态被视为任务的最终（完成）状态，以及 <xref:System.Threading.Tasks.TaskStatus.Faulted> 和 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 状态。 因此，如果一个任务处于 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态，则其 <xref:System.Threading.Tasks.Task.IsCompleted%2A> 属性将返回 `true`。 在 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态下完成任务时，将计划或执行向任务注册的任何延续，除非延续选项（如 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled>）特定于取消延续。 任何通过使用语言功能异步等待已取消的任务的代码都将继续运行，但不接收 <xref:System.OperationCanceledException> 或其中派生的异常。 通过诸如 <xref:System.Threading.Tasks.Task.Wait%2A> 的方法同步阻止的代码等待任务，并且 <xref:System.Threading.Tasks.Task.WaitAll%2A> 将继续运行但出现异常。  
+ 该异步操作监视取消请求的此标记。 如果它收到取消请求，则可以选择接受该请求并取消操作。 如果取消请求导致过早地结束工作，则 TAP 方法返回一个在 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态下结束的任务；没有可用结果且不引发异常。  
+  <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态被视为任务的最终（完成）状态，以及 <xref:System.Threading.Tasks.TaskStatus.Faulted> 和 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 状态。 因此，如果一个任务处于 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态，则其 <xref:System.Threading.Tasks.Task.IsCompleted%2A> 属性将返回 `true`。 在 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态下完成任务时，将计划或执行向任务注册的任何延续，除非延续选项（如 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled>）特定于取消延续。 任何通过使用语言功能异步等待已取消的任务的代码都将继续运行，但不接收 <xref:System.OperationCanceledException> 或其中派生的异常。 通过诸如 <xref:System.Threading.Tasks.Task.Wait%2A> 的方法同步阻止的代码等待任务，并且 <xref:System.Threading.Tasks.Task.WaitAll%2A> 将继续运行但出现异常。  
   
  如果取消标记请求在接受调用标记的 TAP 方法之前取消，TAP 方法应返回 <xref:System.Threading.Tasks.TaskStatus.Canceled> 任务。  但是，如果在运行异步操作时请求取消，则异步操作不需要接受该取消请求。  仅当该操作如取消请求的结果那样结束时，返回的任务才应以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态结束。 如果已请求取消，但仍然生成了结果或异常，则任务应在 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 或 <xref:System.Threading.Tasks.TaskStatus.Faulted> 状态下结束。 
  
@@ -91,10 +94,12 @@ ms.locfileid: "33579010"
   
  在后一种情况下，特殊数据类型应加上后缀 `ProgressInfo`。  
   
- 如果 TAP 实现提供接受 `progress` 参数的重载，则必须允许该参数成为 `null`，在这种情况下，不会报告任何进度。 TAP 实现应该同步将进度报告到 <xref:System.Progress%601> 对象，使异步方法能够快速提供进度，并允许进度的使用者确定处理信息的最佳方式和位置。 例如，进度实例可以选择将回调封送，并引发有关捕获到的同步上下文的事件。  
+ 如果 TAP 实现提供接受 `progress` 参数的重载，则必须允许该自变量成为 `null`，在这种情况下，不会报告任何进度。 TAP 实现应该同步将进度报告到 <xref:System.Progress%601> 对象，使异步方法能够快速提供进度，并允许进度的使用者确定处理信息的最佳方式和位置。 例如，进度实例可以选择将回调封送，并引发有关捕获到的同步上下文的事件。  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T> 实现  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供单个 <xref:System.IProgress%601> 实现：<xref:System.Progress%601>。 <xref:System.Progress%601> 类的声明方式如下：  
+ 
+  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供单个 <xref:System.IProgress%601> 实现：<xref:System.Progress%601>。 
+  <xref:System.Progress%601> 类的声明方式如下：  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  
@@ -115,7 +120,8 @@ Public Class Progress(Of T) : Inherits IProgress(Of T)
 End Class  
 ```  
   
- <xref:System.Progress%601> 的实例公开 <xref:System.Progress%601.ProgressChanged> 事件，此事件在异步操作每次报告进度更新时引发。 实例化 <xref:System.Progress%601.ProgressChanged> 实例后，会在捕获到的 <xref:System.Threading.SynchronizationContext> 对象上引发 <xref:System.Progress%601> 事件。 如果没有可用的同步上下文，则使用针对线程池的默认上下文。 可以向此事件注册处理程序。 为了方便起见，也可将单个处理程序提供给 <xref:System.Progress%601> 构造函数，并且行为与 <xref:System.Progress%601.ProgressChanged> 事件的事件处理程序一样。 异步引发进度更新以避免延迟异步操作，同时执行事件处理程序。 另一个 <xref:System.IProgress%601> 实现可以选择应用不同的语义。  
+ 
+  <xref:System.Progress%601> 的实例公开 <xref:System.Progress%601.ProgressChanged> 事件，此事件在异步操作每次报告进度更新时引发。 实例化 <xref:System.Progress%601.ProgressChanged> 实例后，会在捕获到的 <xref:System.Threading.SynchronizationContext> 对象上引发 <xref:System.Progress%601> 事件。 如果没有可用的同步上下文，则使用针对线程池的默认上下文。 可以向此事件注册处理程序。 为了方便起见，也可将单个处理程序提供给 <xref:System.Progress%601> 构造函数，并且行为与 <xref:System.Progress%601.ProgressChanged> 事件的事件处理程序一样。 异步引发进度更新以避免延迟异步操作，同时执行事件处理程序。 另一个 <xref:System.IProgress%601> 实现可以选择应用不同的语义。  
   
 ## <a name="choosing-the-overloads-to-provide"></a>选择要提供的重载  
  如果 TAP 实现使用可选的 <xref:System.Threading.Tasks.TaskFactory.CancellationToken%2A> 和可选的 <xref:System.IProgress%601> 参数，则可能需要多达四次的重载：  
@@ -168,7 +174,7 @@ Public MethodNameAsync(…) As Task
 Public MethodNameAsync(…, progress As IProgress(Of T)) As Task  
 ```  
   
- 如果 TAP 实现同时支持取消和进度，则会公开所有四个重载。 但是，它只提供以下两个:  
+ 如果 TAP 实现同时支持取消和进度，则可以公开所有四个重载。 但它也可以只提供以下两个：  
   
 ```csharp  
 public Task MethodNameAsync(…);  
@@ -182,7 +188,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
                        progress As IProgress(Of T)) As Task  
 ```  
   
- 若要弥补缺少的两个中间组合，开发人员可以传递 <xref:System.Threading.CancellationToken.None%2A> 参数的 <xref:System.Threading.CancellationToken> 或默认的 `cancellationToken` 和 `null` 参数的 `progress`。  
+ 若要弥补缺少的两个中间组合，开发人员可以为 `cancellationToken` 参数传递 <xref:System.Threading.CancellationToken.None%2A> 或默认的 <xref:System.Threading.CancellationToken>，为 `null` 参数传递 `progress`。  
   
  如果需要 TAP 方法的每种用法支持取消或进度，则可以忽略不接受相关参数的重载。  
   
@@ -190,7 +196,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[异步编程模式](../../../docs/standard/asynchronous-programming-patterns/index.md)|介绍执行异步操作的三种模式：基于任务的异步模式 (TAP)、异步编程模型 (APM) 和基于事件的异步模式 (EAP)。|  
 |[实现基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|描述如何使用以下三种方式实现基于任务的异步模式 (TAP)：手动使用 Visual Studio 中的 C# 和 Visual Basic 编译器，或通过编译器和手动方法的组合。|  

@@ -4,11 +4,11 @@ description: 管理 .NET 库中 NuGet 依赖项的最佳做法建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: c5df30c606e77c9ef44387233b0072ab890f612f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "49400513"
 ---
 # <a name="dependencies"></a>依赖项
@@ -92,10 +92,12 @@ NuGet 在解析依赖关系时使用的规则是 [complex](/nuget/consume-packag
 
 > 共享源类型将编译到引用程序集中，并且无法跨程序集边界进行交换。 例如，一个项目中的共享源 `IRepository` 类型与另一个项目中的同一共享源 `IRepository` 是彼此独立的类型。 共享源包中的类型应具有 `internal` 可见性。
 
-❌请避免将共享源包发布到 nuget.org。
+**❌请避免**将共享源包发布到 NuGet.org。
 
 > 共享源包包含源代码，只能由具有相同语言类型的项目使用。 例如，F# 应用程序无法使用 C# 共享源包。
+>
+> 发布共享源包到[本地数据源或 MyGet](./publish-nuget-package.md)，以在项目内部使用它们。
 
 >[!div class="step-by-step"]
-[上一页](./nuget.md)
-[下一页](./sourcelink.md)
+>[上一页](nuget.md)
+>[下一页](sourcelink.md)

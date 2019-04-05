@@ -1,26 +1,36 @@
 ---
-title: 如何：启用和禁用自动绑定重定向
-ms.date: 09/12/2018
+title: 启用或禁用自动生成绑定重定向
+ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 9b9c9cbdb89ccf67942dcccee37ea410c6fa39a5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036189"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083650"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>如何：启用和禁用自动绑定重定向
 
-当你编译面向 Visual Studio 中的应用[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]和更高版本，绑定重定向可能会自动添加到应用程序配置文件以重写程序集统一。 如果你的应用或其组件引用同一程序集的多个版本，就会添加绑定重定向，即使你在应用的配置文件中手动指定绑定重定向。 自动绑定重定向功能会影响传统桌面应用和 web 应用面向[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]或更高版本中，虽然行为会略有不同的 web 应用。 如果你有面向较早版本 .NET Framework 的现有应用，则可以启用自动绑定重定向，如果要保留手动编写的绑定重定向，你可以将此功能禁用。
+当你编译面向 Visual Studio 中的应用[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]和更高版本，绑定重定向可能会自动添加到应用程序配置文件以重写程序集统一。 如果你的应用或其组件引用同一程序集的多个版本，就会添加绑定重定向，即使你在应用的配置文件中手动指定绑定重定向。 自动绑定重定向功能会影响桌面应用和 web 应用面向[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]或更高版本中，虽然行为会略有不同的 web 应用。 如果您有现有的应用面向以前版本的.NET Framework 中，或者如果你想要手动编写的绑定重定向，则可以禁用此功能，可以启用自动绑定重定向。
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>禁用自动绑定重定向在桌面应用程序
 
-默认情况下，将为面向 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 及更高版本的传统桌面应用启用自动绑定重定向。 编译应用并重写可能发生的程序集统一时，绑定重定向将添加到输出配置 (app.config) 文件中。 不修改源 app.config 文件。 你可以通过修改应用的项目文件来禁用此功能。
+默认情况下，对于面向 Windows 桌面应用启用自动绑定重定向[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]及更高版本。 绑定重定向添加到输出配置 (**app.config**) 文件编译该应用程序时，重写，否则可能会发生的程序集统一。 在源**app.config**文件不被修改。 通过修改应用程序的项目文件或取消选中 Visual Studio 中的项目的属性中的复选框，可以禁用此功能。
+
+### <a name="disable-through-project-properties"></a>禁用项目属性
+
+如果你有 Visual Studio 2017 版本 15.7 或更高版本，可以轻松地禁用自动生成项目的属性页中的绑定重定向。
+
+1. 右键单击“解决方案资源管理器”中的项目，再选择“属性”。
+
+2. 上**应用程序**页上，取消选中**自动生成绑定重定向**选项。
+
+3. 按**Ctrl**+**S**以保存更改。
+
+### <a name="disable-manually-in-the-project-file"></a>在项目文件中手动禁用
 
 1. 打开该项目文件进行编辑使用以下方法之一：
 
@@ -75,9 +85,9 @@ ms.locfileid: "48036189"
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>启用 web 应用中的自动绑定重定向
 
-Web 应用的自动绑定重定向实现方式有所不同。 由于必须修改 Web 应用的源配置 (web.config) 文件，因此绑定重定向不会自动添加到配置文件。 但是，Visual Studio 会通知你绑定冲突，你可以添加绑定重定向来解决此冲突。 由于系统始终会提示添加绑定重定向，因此不需要显式禁用此功能的 web 应用。
+Web 应用的自动绑定重定向实现方式有所不同。 因为源配置 (**web.config**) 必须修改 web 应用的文件，绑定重定向不会自动添加到配置文件。 但是，Visual Studio 会通知你绑定冲突，你可以添加绑定重定向来解决此冲突。 由于系统始终会提示添加绑定重定向，因此不需要显式禁用此功能的 web 应用。
 
-若要将绑定重定向添加到 web.config 文件：
+若要添加到绑定重定向**web.config**文件：
 
 1. 在 Visual Studio 中，编译应用，然后检查生成警告。
 
@@ -85,7 +95,7 @@ Web 应用的自动绑定重定向实现方式有所不同。 由于必须修改
 
 2. 如果存在程序集绑定冲突，则将显示警告。 双击该警告，或选择警告，然后按**Enter**。
 
-   此时将显示一个对话框，使你可以将必要的绑定重定向添加到源 web.config 文件。
+   一个对话框，可以自动添加必要的绑定重定向到源**web.config**文件将出现。
 
    ![绑定重定向权限对话框](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 

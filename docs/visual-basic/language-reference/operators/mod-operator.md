@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: a04a294d5505180a41edeba4643d25667a301c1d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201606"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840167"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 运算符 (Visual Basic)
 使两个数字相除，仅返回余数。  
@@ -30,10 +30,10 @@ number1 Mod number2
   
 ## <a name="parts"></a>部件  
  `number1`  
- 必须的。 任何数值表达式。  
+ 必需。 任何数值表达式。  
   
  `number2`  
- 必须的。 任何数值表达式。  
+ 必需。 任何数值表达式。  
   
 ## <a name="supported-types"></a>支持的类型  
  所有数值类型。 这包括未签名和浮点类型和`Decimal`。  
@@ -93,19 +93,20 @@ End Module
 ## <a name="example"></a>示例  
  下面的示例使用`Mod`运算符将两个数相除，并只返回余数。 如果一个数是浮点数，结果是表示余数的浮点数。  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>示例  
  下面的示例演示可能不精确的浮点操作数。 在第一个语句中，操作数均为`Double`，0.2，存储的值是为 0.20000000000000001 的无限重复二进制小数。 在第二个语句中，文本类型字符`D`强制的两个操作数`Decimal`，，0.2 具有精确的表示形式。  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.Conversion.Int%2A>  
- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>  
- [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [数据类型疑难解答](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [在 Visual Basic 中的算术运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [\ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.Conversion.Int%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
+- [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [数据类型疑难解答](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [在 Visual Basic 中的算术运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [\ 运算符 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

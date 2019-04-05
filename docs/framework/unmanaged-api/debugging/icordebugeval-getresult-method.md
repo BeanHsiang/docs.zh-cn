@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e160eddf667b542929c8dd3790de666a8e8bb77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b8e7fcb4f44d6bdf6f18c93b1046b549331621a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413054"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470791"
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult 方法
 获取此评估的结果。  
@@ -35,20 +35,20 @@ HRESULT GetResult (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppResult`  
- [out]一个表示此计算的结果，如果计算正常完成的 ICorDebugValue 对象的地址指针。  
+ [out]ICorDebugValue 对象，表示此评估的结果，如果计算正常完成的地址指针。  
   
 ## <a name="remarks"></a>备注  
- `GetResult`方法无效，只有在完成评估后。  
+ `GetResult`仅在完成评估后，方法均有效。  
   
- 如果计算通常情况下，完成`ppResult`指定结果。 如果它终止的异常，则结果将是引发的异常。 如果计算一个新对象，则结果是对新对象的引用。  
+ 如果计算通常情况下，完成`ppResult`指定的结果。 如果出现异常终止，则结果是引发的异常。 如果评估的一个新的对象，结果是对新对象的引用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

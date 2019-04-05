@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee9f771a3df1de67bef70cdb6f8c166040150e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448102"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468736"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 方法
-创建指定类型的属性定义具有指定`get`和`set`方法访问器中，并获取指向该属性定义的标记。  
+创建指定类型的属性定义具有指定`get`和`set`方法访问器，并获取指向该属性定义的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,15 +46,15 @@ HRESULT DefineProperty (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `td`  
- [in]为类或接口在其定义的属性标记。  
+ [in]为类或接口的属性定义的标记。  
   
  `szProperty`  
  [in]属性的名称。  
   
  `dwPropFlags`  
- [in]属性的标志。  
+ [in]属性标志。  
   
  `pvSig`  
  [in]属性签名中。  
@@ -63,7 +63,7 @@ HRESULT DefineProperty (
  [in]中的字节计数`pvSig`。  
   
  `dwCPlusTypeFlag`  
- [in]属性的默认值的类型。  
+ [in]该属性的默认值的类型。  
   
  `pValue`  
  [in]属性的默认值。  
@@ -81,17 +81,17 @@ HRESULT DefineProperty (
  [in]与属性关联的其他方法的数组。 终止与数组`mdTokenNil`。  
   
  `pmdProp`  
- [out]`mdProperty`分配的令牌。  
+ [out]`mdProperty`分配标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -3,12 +3,12 @@ title: C# 结构 - C# 语言介绍
 description: 了解 C# 值类型（称为“结构”）的基础知识
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: d22cb23fe095874f24d7c002dfdb3eefdde66722
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323092"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065955"
 ---
 # <a name="structs"></a>结构
 
@@ -30,10 +30,10 @@ ms.locfileid: "49323092"
 
 [!code-csharp[PointUse](../../../samples/snippets/csharp/tour/structs/Program.cs#L19-L22)]
 
-如果 `Point` 是类，则输出 20，因为 a 和 b 引用同一对象。 如果 Point 是结构，则输出 10，因为将 `a` 赋值给 `b` 创建了值副本，而此副本不受后面对 `a.x` 的赋值的影响。
+如果 `Point` 是类，则输出 20，因为 `a` 和 `b` 引用同一对象。 如果 `Point` 是结构，则输出 10，因为将 `a` 赋值给 `b` 创建了值副本，而此副本不受后面对 `a.x` 的赋值的影响。
 
 以上示例突出显示了结构的两个限制。 首先，复制整个结构通常比复制对象引用效率更低，因此通过结构进行的赋值和值参数传递可能比通过引用类型成本更高。 其次，除 `in`、`ref` 和 `out` 参数以外，无法创建对结构的引用，这就表示在很多应用场景中都不能使用结构。
 
 >[!div class="step-by-step"]
-[上一页](classes-and-objects.md)
-[下一页](arrays.md)
+>[上一页](classes-and-objects.md)
+>[下一页](arrays.md)

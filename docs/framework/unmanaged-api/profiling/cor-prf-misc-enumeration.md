@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8f4cffd718fffa9145e1082092ecec45b80a2ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11b36fa4636dd55e539c198a260dcf93da02a237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728955"
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC 枚举
 包含指定特殊标识符的常数值。  
@@ -41,17 +41,17 @@ typedef enum {
 |成员|描述|  
 |------------|-----------------|  
 |`PROFILER_PARENT_UNKNOWN`|使用的默认标识符[icorprofilerinfo:: Getmoduleinfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)尚未附加到程序集的模块。|  
-|`PROFILER_GLOBAL_CLASS`|不属于一个类的全局常量默认类标识符。|  
-|`PROFILER_GLOBAL_MODULE`|不属于模块的全局对象默认模块标识符。|  
+|`PROFILER_GLOBAL_CLASS`|默认类不属于类的全局常量的标识符。|  
+|`PROFILER_GLOBAL_MODULE`|不属于一个模块的全局对象的默认模块标识符。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a8f3b530c6205572ccf6944af1620cb54486b306
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625615"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354474"
 ---
 # <a name="developing-applications-with-visual-basic"></a>使用 Visual Basic 开发应用程序
 本节介绍有关 Visual Basic 语言的概念文档。  
@@ -27,9 +27,6 @@ ms.locfileid: "45625615"
   
  [在 Visual Basic 中创建和使用组件](../../visual-basic/developing-apps/creating-and-using-components.md)  
  定义术语“组件”，并讨论如何以及何时创建组件。  
-  
- [打印和报告](../../visual-basic/developing-apps/printing/index.md)  
- 提供概述以及有关打印和报告的相关文档的链接。  
   
  [Windows 窗体应用程序基础知识](../../visual-basic/developing-apps/windows-forms/index.md)  
  提供有关使用 Visual Studio 创建 Windows 窗体应用程序的信息。  

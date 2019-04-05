@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b682904a8e7f2eafa8833d784febe7b3b2a1e5f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611080"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函数
 开始为对象提供的方法的枚举。  
@@ -49,7 +49,7 @@ HRESULT BeginMethodEnumeration (
 `lEnumFlags`  
 [in]零 (0) 的所有方法，或指定范围的枚举的标志。 在中定义的以下标志*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-返回的常量  |“值”  |描述  |
+返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | 限制对自身的类中定义的方法的枚举。 |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | 限制对从基类继承的属性的枚举。 |
@@ -70,11 +70,11 @@ HRESULT BeginMethodEnumeration (
 如果当前对象是类定义，则仅支持此方法调用。 方法操作不能从[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)指向实例的指针。 保证在其中枚举了方法的顺序是固定的给定实例的[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

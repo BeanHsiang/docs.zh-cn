@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d9e619e4176633074242521133d42f191f140ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b401a70e34a1686f3a69c657f6417cf8e1d0d938
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499896"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual 方法
-获取指定的地址处开始的连续内存块，并在提供的缓冲区中将其返回。  
+获取从指定地址处开始的连续内存块，并返回它所提供的缓冲区中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,32 +38,32 @@ HRESULT ReadVirtual(
     [out] ULONG32 *  pBytesRead);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `address`  
  [in]起始地址的请求的内存。  
   
  `pbuffer`  
- [out]将存储内存缓冲区。  
+ [out]将在其中存储内存缓冲区。  
   
  `bytesRequested`  
- [in]要获得的目标地址的字节数。  
+ [in]要从目标地址中获取的字节数。  
   
  `pBytesRead`  
- [out]从目标地址实际读取的字节数。 这可能是数不能超过`bytesRequested`。  
+ [out]从目标地址实际读取的字节数。 这可以是少于`bytesRequested`。  
   
 ## <a name="remarks"></a>备注  
- 如果可以读取 （在指定的开始地址中） 的第一个字节，则调用应返回成功 （用于支持高效读取使用自我描述长度，如以 null 结尾的字符串的数据结构）。  
+ 如果可以读取 （在指定的开始地址） 的第一个字节，则调用应返回成功 （若要支持高效读取的数据结构使用自我描述长度，类似于以 null 结尾的字符串）。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

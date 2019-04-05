@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ce45e4df7f74cd68bde0fb2adba10197a11edb1b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394309"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843404"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>如何：声明常量 (Visual Basic)
 您使用`Const`语句声明一个常量，并将其值设置。 通过声明一个常量，您将有意义的名称分配给一个值。 一旦声明一个常量，不能修改或分配一个新值。  
@@ -43,7 +43,7 @@ ms.locfileid: "43394309"
   
 -   编写包含访问说明符声明`Const`关键字和一个表达式，如以下示例所示：  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
+     [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
      当[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)是`Off`并[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)是`On`，您必须通过指定数据类型显式声明常量 (`Boolean`， `Byte`， `Char`， `DateTime`， `Decimal`， `Double`， `Integer`， `Long`， `Short`， `Single`，或`String`)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "43394309"
   
 -   编写的声明，包括`As`关键字和显式数据类型，如以下示例所示：  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
+     [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
      虽然你的代码是声明单个常量每行更具可读性，可以在单个行上声明多个常量。 如果在单个行上声明多个常量，它们必须都具有相同的访问级别 (`Public`， `Private`， `Friend`， `Protected`，或`Protected Friend`)。  
   
@@ -65,14 +65,26 @@ ms.locfileid: "43394309"
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)  
- [常量和文本数据类型](constant-and-literal-data-types.md)  
- [常量概述](constants-overview.md)[如何： 声明常量](how-to-declare-a-constant.md)[用户定义的常量](user-defined-constants.md)[常量和 Literal 数据类型](constant-and-literal-data-types.md)[如何： 组相关的常量值组合在一起](how-to-group-related-constant-values-together.md)[枚举概述](enumerations-overview.md)[如何： 声明枚举](how-to-declare-enumerations.md)[如何： 为枚举成员，请参阅](how-to-refer-to-an-enumeration-member.md)[枚举和名称限定](enumerations-and-name-qualification.md)[如何： 循环访问枚举](how-to-iterate-through-an-enumeration.md)[如何： 确定与枚举值关联的字符串](how-to-determine-the-string-associated-with-an-enumeration-value.md)[何时使用枚举](when-to-use-an-enumeration.md)
+## <a name="see-also"></a>请参阅
 
- [枚举概述](enumerations-overview.md)  
- [常量概述](constants-overview.md)  
- [如何： 声明枚举](how-to-declare-enumerations.md)  
- [枚举和名称限定](enumerations-and-name-qualification.md)  
- [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Const 语句](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [常量和文本数据类型](constant-and-literal-data-types.md)
+- [常量概述](constants-overview.md)
+- [如何：声明常量](how-to-declare-a-constant.md)
+- [用户定义的常量](user-defined-constants.md)
+- [常量和文本数据类型](constant-and-literal-data-types.md)
+- [如何：相关的常量值组合在一起](how-to-group-related-constant-values-together.md)
+- [枚举概述](enumerations-overview.md)
+- [如何：声明枚举](how-to-declare-enumerations.md)
+- [如何：为枚举成员，请参阅](how-to-refer-to-an-enumeration-member.md)
+- [枚举和名称限定](enumerations-and-name-qualification.md)
+- [如何：循环访问枚举](how-to-iterate-through-an-enumeration.md)
+- [如何：确定与枚举值关联的字符串](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [何时使用枚举](when-to-use-an-enumeration.md)
+
+- [枚举概述](enumerations-overview.md)
+- [常量概述](constants-overview.md)
+- [如何：声明枚举](how-to-declare-enumerations.md)
+- [枚举和名称限定](enumerations-and-name-qualification.md)
+- [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [常量和枚举](../../../../visual-basic/language-reference/constants-and-enumerations.md)

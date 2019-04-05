@@ -2,12 +2,12 @@
 title: 错误处理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452844"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261145"
 ---
 # <a name="error-handling"></a>错误处理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation 中的错误处理  
@@ -22,7 +22,7 @@ ms.locfileid: "49452844"
   
  应用程序块旨在纳入常用的最佳做法并且为应用程序中的异常处理提供一般的方法。 另一方面，自定义的错误处理程序以及自己开发的错误协定也可能非常有用。 例如，自定义错误处理程序提供了自动提升到 Faultexception 的所有异常以及将日志记录功能添加到你的应用程序的绝佳机会。  
   
- 有关详细信息，请参阅[Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx)。  
+ 有关详细信息，请参阅[Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10))。  
   
 ### <a name="dealing-with-expected-exceptions"></a>处理预期异常  
  正确的操作是捕获预期的异常中的每个操作或相关扩展点，确定是否可以恢复，并且在 FaultException 中返回正确的自定义错误\<T >  
@@ -67,5 +67,5 @@ ms.locfileid: "49452844"
   
  可通过安装错误处理程序，像许多其他类型的调度失败一样检查类型转换调度失败。 调用 IErrorHandler 扩展点处理服务级别异常。 从中，可以选择要发送回调用方的响应，以及执行任何自定义任务和报告。  
   
-## <a name="see-also"></a>请参阅  
- [基本 WCF 编程](../basic-wcf-programming.md)
+## <a name="see-also"></a>请参阅
+- [基本 WCF 编程](../basic-wcf-programming.md)

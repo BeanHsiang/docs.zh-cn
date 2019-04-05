@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13dfdfd89bf91510146ce388620d3e51c2aa1f02
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 35dcabcf65af1634533edfba1e300a8746bc97ec
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347494"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221363"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET Native 本机反射 API 参考
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] 包含三种新的异常类型： [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、 [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)和 [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)。 请注意有关所有三种异常类型的以下内容：  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] 包括三个新的异常类型：[System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)， [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)，和[System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). 请注意有关所有三种异常类型的以下内容：  
   
  这些类型仅供内部使用。  
  这三种异常类型仅适用于 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链的使用。 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链检测到缺少数据而无法使程序执行继续进行时，引发异常。  
@@ -25,7 +25,7 @@ ms.locfileid: "49347494"
 -   方法的 [MissingMetadataException 故障排除程序](https://dotnet.github.io/native/troubleshooter/method.html) 。  
   
 > [!NOTE]
->  此引用记录了三种对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]唯一的异常类型。 要查看 .NET Framework 核心反射 API 的引用文档，请参阅 [System.Reflection 命名控件](https://msdn.microsoft.com/library/gg145033.aspx)。 要查看 .NET Framework 核心互操作 API 的应用文档，请参阅 <xref:System.Runtime.InteropServices>。  
+>  此引用记录了三种对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]唯一的异常类型。 .NET Framework 核心反射 API 的参考文档，请参阅<xref:System.Reflection>，<xref:System.Reflection.Context>和<xref:System.Reflection.Emit>命名空间。 要查看 .NET Framework 核心互操作 API 的应用文档，请参阅 <xref:System.Runtime.InteropServices>。  
   
 ## <a name="systemreflection-namespace"></a>System.Reflection 命名空间  
  <xref:System.Reflection> 命名空间包含用于 .NET Framework 中的反射的核心类型。 对于 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，它也包括两个新的异常类型：  
@@ -46,8 +46,8 @@ ms.locfileid: "49347494"
   
  要查看有关此命名空间中其他类型的文档，请参阅 .NET Framework 文档集中的 <xref:System.Runtime.CompilerServices> 引用页面。  
   
-## <a name="see-also"></a>请参阅  
- [MissingInteropDataException 类](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  
- [MissingMetadataException 类](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
- [MissingRuntimeArtifactException 类](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)  
- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
+## <a name="see-also"></a>请参阅
+- [MissingInteropDataException 类](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
+- [MissingMetadataException 类](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
+- [MissingRuntimeArtifactException 类](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
+- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)

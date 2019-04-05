@@ -1,17 +1,17 @@
 ---
-title: 借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core
+title: 通过 Visual Studio for Mac 开始在 macOS 上使用 .NET Core
 description: 本主题将指导你使用 Visual Studio for Mac 和 .NET Core 来构建简单的控制台应用程序。
 author: guardrex
-ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f751e7532e9627de3d3733476f7214654089e468
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.custom: seodec18
+ms.openlocfilehash: ed6c25f424e1b87c1a18a3654f756500af9f78de
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170726"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788617"
 ---
-# <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>借助 Visual Studio for Mac 在 macOS 上开始使用.NET Core
+# <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>通过 Visual Studio for Mac 开始在 macOS 上使用 .NET Core
 
 Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面的集成开发环境 (IDE)。 本主题将指导你使用 Visual Studio for Mac 和 .NET Core 来构建简单的控制台应用程序。
 
@@ -24,7 +24,7 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 请参阅 [Mac 上 .NET Core 的先决条件](../../core/macos-prerequisites.md)主题。
 
-## <a name="getting-started"></a>入门
+## <a name="get-started"></a>入门
 
 如果已安装先决条件和 Visual Studio for Mac，请跳过此部分，并继续[创建项目](#creating-a-project)。 请按照以下步骤安装先决条件和 Visual Studio for Mac：
 
@@ -34,25 +34,25 @@ Visual Studio for Mac 提供用于开发 .NET Core 应用程序的功能全面�
 
 1. 选择欢迎屏幕上的“新建项目”。
 
-   ![Visual Studio for Mac 欢迎屏幕上的新建项目按钮](./media/using-on-mac-vs/vsmac1.png)
+   ![Visual Studio for Mac 欢迎屏幕上的新建项目按钮](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
 1. 在“新建项目”对话框中，选择“.NET Core”节点下的“应用”。 单击“下一步”，然后选择“控制台应用程序”模板。
 
-   ![新项目模板列表](./media/using-on-mac-vs/vsmac2.png)
+   ![新项目模板列表](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
 
 1. 为“项目名称”键入“HelloWorld”。 选择“创建”。
 
-   ![配置新的控制台应用程序对话框](./media/using-on-mac-vs/vsmac3.png)
+   ![配置新的控制台应用程序对话框](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 
 1. 等待还原项目的依赖项。 该项目包含一个 C# 文件 *Program.cs*，其中包含具有 `Main` 方法的 `Program` 类。 运行应用时，`Console.WriteLine` 语句将“Hello World!” 输出至控制台。
 
-   ![打开 Program.cs 文件的主窗口](./media/using-on-mac-vs/vsmac4.png)
+   ![打开 Program.cs 文件的主窗口](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 
 ## <a name="run-the-application"></a>运行此应用程序
 
 使用 <kbd>F5</kbd> 在调试模式下运行此应用，或使用 <kbd>Ctrl</kbd>+<kbd>F5</kbd> 在发布模式下运行此应用。
 
-![应用程序输出窗格显示 Hello World!](./media/using-on-mac-vs/vsmac5.png)
+![应用程序输出窗格显示 Hello World!](./media/using-on-mac-vs/visual-studio-mac-output.png)
 
 ## <a name="next-step"></a>下一步
 

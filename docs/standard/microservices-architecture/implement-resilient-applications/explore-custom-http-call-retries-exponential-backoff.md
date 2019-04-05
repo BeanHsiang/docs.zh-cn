@@ -3,21 +3,21 @@ title: 了解如何使用指数退避算法实现自定义 HTTP 调用重试
 description: 了解如何使用指数退避算法从头实现 HTTP 调用重试，以处理可能的 HTTP 故障情况。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: c323b8c4e783ed18c601562cfb25e1ca4986d499
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.date: 10/16/2018
+ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37878612"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362244"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>了解如何使用指数退避算法实现自定义 HTTP 调用重试
 
 若要创建复原微服务，需要处理可能的 HTTP 故障情况。 处理此类故障的一种方法是，使用指数退避算法创建自己的重试实现（但不建议这样做）。
 
-**重要说明：** 本部分说明如何创建自定义代码以实现 HTTP 调用重试。 但是不建议自己完成此过程，而是使用更加强大、可靠且更加简单的机制，如具有 Polly 的 `HttpClientFactory`（自 .NET Core 2.1 起可用）。 后续部分将介绍建议采用的方法。 
+**重要说明：** 本部分说明如何创建自定义代码以实现 HTTP 调用重试。 但是不建议自己完成此过程，而是使用更加强大、可靠且更加简单易用的机制，如具有 Polly 的 `HttpClientFactory`（自 .NET Core 2.1 起可用）。 后续部分将介绍建议采用的方法。
 
-作为初始探索，可以使用针对指数退避算法（如 [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) 中所述）的实用工具类和如下所示的代码（[GitHub 存储库](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b)上也提供这种代码）来实现自己的代码。
+作为初始探索，可以使用针对指数退避算法（如 [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) 中所述）的实用工具类和如下所示的代码来实现自己的代码。
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -113,10 +113,8 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-请记住，此代码仅适合用作概念证明。 以下部分介绍如何通过使用 HttpClientFactory 来应用更高级但却更简单的方法。
-自 .NET Core 2.1 起可使用 HttpClientFactory，并提供 Polly 等经验证的复原库。 
-
+请记住，此代码仅适合用作概念证明。 以下部分介绍如何通过使用 HttpClientFactory 来应用更高级但却更简单的方法。 自 .NET Core 2.1 起可使用 HttpClientFactory，并提供 Polly 等经验证的复原库。
 
 >[!div class="step-by-step"]
-[上一页](implement-resilient-entity-framework-core-sql-connections.md)
-[下一页](use-httpclientfactory-to-implement-resilient-http-requests.md)
+>[上一页](implement-resilient-entity-framework-core-sql-connections.md)
+>[下一页](use-httpclientfactory-to-implement-resilient-http-requests.md)

@@ -1,5 +1,5 @@
 ---
-title: 名称&#39;&lt;名称&gt;&#39;未声明
+title: 名称“<name>”未声明
 ms.date: 10/10/2018
 f1_keywords:
 - bc30451
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: 0b76b3001b01829ce0bd91cb692a6b518d97577e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3aadc49f91021409123550ba2712f1acf5b99d83
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189597"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260121"
 ---
-# <a name="name-39ltnamegt39-is-not-declared"></a>名称&#39;&lt;名称&gt;&#39;未声明
+# <a name="name-name-is-not-declared"></a>名称\<名称 > 未声明
 语句引用的编程元素，但编译器找不到具有相同名称的元素。  
   
  **错误 ID:** BC30451  
@@ -41,9 +41,9 @@ ms.locfileid: "50189597"
 
    [!code-vb[BC30451](~/samples/snippets/visualbasic/language-reference/error-messages/bc30451/vbruntime.vbproj?highlight=6)]
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-[声明和常量摘要](../../../visual-basic/language-reference/keywords/declarations-and-constants-summary.md)  
- [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
- [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [声明和常量摘要](../../../visual-basic/language-reference/keywords/declarations-and-constants-summary.md)
+- [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

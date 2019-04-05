@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453471"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675908"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 部署指南（针对开发人员）
 本主题为想要随自己的应用一起安装任何 .NET Framework 版本（从 .NET Framework 4.5 到 [!INCLUDE[net_current](../../../includes/net-current-version.md)] ）的开发人员提供了相关信息。
@@ -55,7 +55,7 @@ ms.locfileid: "49453471"
 
 - 从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]开始，你的用户可以在安装过程中查看运行中 .NET Framework 应用的列表并轻松关闭这些应用。 这可能有助于避免系统因安装 .NET Framework 而重新启动。 参见 [减少系统重新启动](../../../docs/framework/deployment/reducing-system-restarts.md)。
 
-- 卸载 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其单点版本之一也会删除预先存在的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 文件。 若要返回到 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，你必须重新安装它以及它的任何更新。 （请参阅 [安装 .NET Framework 4](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx)。）
+- 卸载 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其单点版本之一也会删除预先存在的 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 文件。 若要返回到 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，你必须重新安装它以及它的任何更新。 （请参阅 [安装 .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))。）
 
 - .NET Framework 4.5 可再发行组件于 2012 年 10 月 9 日进行了更新，纠正了一个与数字证书中的错误时间戳相关的问题，此问题会导致 Microsoft 生成并签名的文件中的数字签名提前过期。 如果之前安装了日期为 2012 年 8 月 16 日的 .NET framework 4.5 可再发行组件包，则建议使用 [Microsoft 下载中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)中的最新的可再发行组件来更新副本。 有关此问题的更多信息，请参阅 [Microsoft 安全公告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)。
 
@@ -76,7 +76,7 @@ ms.locfileid: "49453471"
 ||Web 安装程序|脱机安装程序|
 |-|-------------------|-----------------------|
 |下载文件|.NET Framework 4.7.2： <br/>[NDP472-KB4054531-Web.exe](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1： <br/>[NDP471-KB4033344-Web.exe](https://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7： <br />[NDP47-KB3186500-Web.exe](https://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]： <br />[NDP462-KB3151802-Web.exe](https://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]：<br />[NDP461-KB3102438-Web.exe](https://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]：<br />[NDP46-KB3045560-Web.exe](https://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901954-Web.exe](https://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2859818-Web.exe](https://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_setup.exe](https://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.2： <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1： <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7： <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]： <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]： <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]： <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_x86_x64.exe](https://go.microsoft.com/fwlink/?LinkId=225702)|
-|是否需要 Internet 连接？|是|否|
+|是否需要 Internet 连接？|是|No|
 |下载文件大小|较小（仅包含面向目标平台的安装程序）*|较大*|
 |语言包|包括**|除非使用面向所有操作系统的程序包，否则必须 [单独安装](#chain_langpack)|
 |部署方法|支持所有方法：<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手动安装](#installing_manually)<br />- [自定义安装（链接）](#chaining)|支持所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手动安装](#installing_manually)<br />- [自定义安装（链接）](#chaining)|
@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - [检测](#detecting-the-language-packs) 用户计算机中是否已安装语言包。
 
-- 如果要控制部署，则静默启动并跟踪 .NET Framework 安装过程（请参阅 [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- 如果要控制部署，则静默启动并跟踪 .NET Framework 安装过程（请参阅[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)。
 
 - 如果要部署脱机安装程序，则 [单独链接语言包](#chain_langpack)。
 
@@ -245,11 +245,10 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 > [!IMPORTANT]
 > 当尝试检测是否存在特定版本时，应检查是否存在  **大于或等于** 版本关键字值的值。
 
-|版本|Release DWORD 的值|
+|Version|Release DWORD 的值|
 |-------------|--------------------------------|
-|安装在 Windows 10 2018 年 10 月更新上的 .NET Framework 4.7.2|461814|
 |安装在 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 上的 .NET Framework 4.7.2|461808|
-|安装在除 Windows 10 2018 年 10 月更新、Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 之外的所有操作系统版本上的 .NET Framework 4.7.2|461814|
+|.NET Framework 4.7.2，安装在除 Windows 10 2018 年 4 月更新和 Windows Server 版本 1803 之外的所有 OS 版本上。 这包括 Windows 10 2018 年 10 月更新。 |461814|
 |安装在 Windows 10 秋季创意者更新和 Windows Server 版本 1709 上的 .NET Framework 4.7.1|461308|
 |安装在除 Windows 10 秋季创意者更新和 Windows Server 版本 1709 之外的所有 OS 版本上的 .NET Framework 4.7.1|461310|
 |在 Windows 10 创意者更新上安装的 .NET Framework 4.7|460798|
@@ -308,7 +307,7 @@ Type: DWORD
  若要随 .NET framework 脱机安装程序一起安装语言包，你必须将其链接到应用的安装程序。 例如，若要部署带有日语语言包的 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 脱机安装程序，请使用下列命令：
 
 ```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductName>
+NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
 ```
 
  如果使用 Web 安装程序，则不必链接语言包；安装程序将安装与用户的 MUI 设置匹配的语言包。 如果要安装其他语言，则可以使用 `/LCID` 选项指定语言包。
@@ -320,7 +319,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 #### <a name="return-codes"></a>返回代码
  下表列出了 .NET Framework 可再发行安装程序的常见返回代码。 所有版本的安装程序的返回代码都是相同的。 有关详细信息的链接，请参见下一节。
 
-|返回代码|描述|
+|返回代码|说明|
 |-----------------|-----------------|
 |0|已成功完成安装。|
 |1602|用户已取消安装。|
@@ -356,11 +355,11 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ### <a name="command-line-options"></a>命名行选项
  下表列出了将 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可再发行组件链接到应用安装程序时可以包括的选项。
 
-|选项|描述|
+|选项|说明|
 |------------|-----------------|
 |**/CEIPConsent**|覆盖默认行为并向 Microsoft 发送匿名反馈以改善将来的部署体验。 仅当安装程序询问你是否同意安装并且用户授权向 Microsoft 发送匿名反馈时，才可以使用此选项。|
 |**/chainingpackage** `packageName`|指定执行链接的可执行文件的名称。 向 Microsoft 发送此信息作为匿名反馈以帮助改进将来的部署体验。<br /><br /> 如果包名称包含空格，则可以用双引号作为分隔符；例如： **/chainingpackage "Lucerne Publishing"**。 有关链接包的示例，请参阅 MSDN 库中的 [从安装包获取进度信息](https://go.microsoft.com/fwlink/?LinkId=181926) 。|
-|**/LCID**  `LCID`<br /><br /> 其中 `LCID` 指定一个区域设置标识符（请参见 [支持的语言](#supported-languages)）|安装由 `LCID` 指定的语言包，并强制使用此语言显示 UI（除非设置为安静模式）。<br /><br /> 对于 Web 安装程序，此选项将从 Web 链接并安装语言包。 **注意：** 只能与 Web 安装程序一起使用此选项。|
+|**/LCID**  `LCID`<br /><br /> 其中 `LCID` 指定一个区域设置标识符（请参见 [支持的语言](#supported-languages)）|安装由 `LCID` 指定的语言包，并强制使用此语言显示 UI（除非设置为安静模式）。<br /><br /> 对于 Web 安装程序，此选项将从 Web 链接并安装语言包。 **注意：** 只能随 Web 安装程序一起使用此选项。|
 |**/log** `file` &#124; `folder`|指定日志文件的位置。 默认为过程的临时文件夹，默认文件名基于安装包。 如果文件扩展名为 .txt，则生成文本日志。 如果指定其他扩展名或不指定扩展名，则创建 HTML 日志。|
 |**/msioptions**|指定要为 .msi 和 .msp 项传递的选项；例如： `/msioptions "PROPERTY1='Value'"`。|
 |**/norestart**|防止安装程序自动重新启动。 如果使用此选项，则链接应用必须捕获返回代码并处理重新启动操作（请参阅 MSDN 库中的 [从安装包获取进度信息](https://go.microsoft.com/fwlink/?LinkId=179606) ）。|
@@ -404,9 +403,9 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |3082|西班牙语 - 西班牙（现代排序）|es|
 
 ## <a name="see-also"></a>请参阅
-- [面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)  
-- [系统要求](../../../docs/framework/get-started/system-requirements.md)  
-- [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)  
-- [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
-- [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)  
+- [面向管理员的部署指南](../../../docs/framework/deployment/guide-for-administrators.md)
+- [系统要求](../../../docs/framework/get-started/system-requirements.md)
+- [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)
+- [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [在 .NET Framework 4.5 安装期间减少系统重新启动次数](../../../docs/framework/deployment/reducing-system-restarts.md)
 - [如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

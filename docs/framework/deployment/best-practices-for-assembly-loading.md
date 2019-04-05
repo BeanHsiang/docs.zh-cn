@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201577"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397041"
 ---
 # <a name="best-practices-for-assembly-loading"></a>适用于程序集加载的最佳做法
 本文讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 以及其他错误。 本文讨论以下建议：  
@@ -44,7 +44,7 @@ ms.locfileid: "50201577"
   
 -   加载位置上下文包含从加载程序未搜索的位置加载的程序集。 例如，外接程序可能安装在一个不在应用程序路径下的目录中。 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>、<xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> 和 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 都是通过路径加载的方法的示例。  
   
--   仅反射上下文包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法加载的程序集。 由于无法执行此上下文中的代码，因此在这里不对其进行讨论。 有关详细信息，请参阅[如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
+-   仅反射上下文包含使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 和 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 方法加载的程序集。 由于无法执行此上下文中的代码，因此在这里不对其进行讨论。 有关更多信息，请参见[如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)。  
   
 -   如果使用反射发出生成了一个瞬态动态程序集，则该程序集不在任何上下文中。 此外，使用 <xref:System.Reflection.Assembly.LoadFile%2A> 方法加载的大多数程序集都是在没有上下文的情况下加载的，并且从字节数组加载的程序集也是在没有上下文的情况下加载的，除非这些程序集的标识（在应用策略后）证实它们位于全局程序集缓存中。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "50201577"
  如果无法将所有程序集放入探测路径中，请考虑替代方式，例如使用 .NET Framework 外接程序模型，将程序集放置到全局程序集缓存中或创建应用程序域。  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>考虑使用 .NET Framework 外接程序模型  
- 如果使用加载位置上下文来实现外接程序（它们通常未安装在应用程序基中），请使用 .NET Framework 外接程序模型。 此模型提供应用程序域或进程级别的隔离，无需自行管理应用程序域。 有关外接程序模型的信息，请参阅[外接程序和扩展性](../../../docs/framework/add-ins/index.md)。  
+ 如果使用加载位置上下文来实现外接程序（它们通常未安装在应用程序基中），请使用 .NET Framework 外接程序模型。 此模型提供应用程序域或进程级别的隔离，无需自行管理应用程序域。 有关外接程序模型的信息，请参阅[外接程序和扩展性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>考虑使用全局程序集缓存  
  将程序集置于全局程序集缓存中，不但可以获得位于应用程序基外部的共享程序集路径的好处，而且不会丧失默认加载上下文的优点，也不会承袭其他上下文的缺点。  
@@ -170,4 +170,3 @@ ms.locfileid: "50201577"
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
-- [外接程序和扩展性](../../../docs/framework/add-ins/index.md)

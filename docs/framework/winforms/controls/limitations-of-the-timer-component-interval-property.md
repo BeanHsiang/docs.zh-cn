@@ -1,5 +1,5 @@
 ---
-title: Windows 窗体 Timer 组件的限制&#39;s 间隔属性
+title: Windows 窗体 Timer 组件的 Interval 属性的限制
 ms.date: 03/30/2017
 helpviewer_keywords:
 - timers [Windows Forms], event intervals
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: 9710568c3c21878aa6aad626e3152168a2f0c2fe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f564a4ce7fa2d9b8ea5446f2cf6bd016db054dd9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836389"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724383"
 ---
-# <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Windows 窗体 Timer 组件的限制&#39;s 间隔属性
+# <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Windows 窗体 Timer 组件的 Interval 属性的限制
 Windows 窗体<xref:System.Windows.Forms.Timer>组件具有<xref:System.Windows.Forms.Timer.Interval%2A>属性，它指定一个计时器事件和下一步之间传递的毫秒数。 除非禁用该组件，计时器会继续接收<xref:System.Windows.Forms.Timer.Tick>事件的时间大致相同时间间隔。  
   
- 此组件专为 Windows 窗体环境设计。 如果需要适合服务器环境的计时器，请参阅[基于服务器的计时器介绍](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
+ 此组件专为 Windows 窗体环境设计。 如果需要适合服务器环境的计时器，请参阅[基于服务器的计时器介绍](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))。  
   
 ## <a name="the-interval-property"></a>间隔属性  
  <xref:System.Windows.Forms.Timer.Interval%2A>属性有一些限制需要考虑进行编程时<xref:System.Windows.Forms.Timer>组件：  
@@ -28,7 +28,7 @@ Windows 窗体<xref:System.Windows.Forms.Timer>组件具有<xref:System.Windows.
   
 -   精度为<xref:System.Windows.Forms.Timer.Interval%2A>属性是以毫秒为单位。 某些计算机提供的高分辨率计数器，分辨率高于毫秒。 此类计数器的可用性取决于您的计算机的处理器硬件。
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Timer>  
- [Timer 组件](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- [Timer 组件概述](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Timer>
+- [Timer 组件](timer-component-windows-forms.md)
+- [Timer 组件概述](timer-component-overview-windows-forms.md)

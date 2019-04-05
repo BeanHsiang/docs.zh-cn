@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8b6237e41826d2bc95672ee2f6b19598eea19ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2ad212117cc51c17b2a0f68a98bee24e1dd3fa05
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252904"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221748"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>如何：实现制造者-使用者数据流模式
 本文档描述如何使用 TPL 数据流库实现制造者-使用者模式。 在此模式下，制造者向消息块发送消息，使用者从该块读取消息。  
@@ -33,7 +33,7 @@ ms.locfileid: "44252904"
  [!code-vb[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#1)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 复制示例代码，并将它粘贴到 Visual Studio 项目中，或粘贴到 `DataflowProducerConsumer.cs`（对于 Visual Basic，则为 `DataflowProducerConsumer.vb`）文件中，再在 Visual Studio 命令提示符窗口中运行以下命令。  
+ 复制示例代码，并将它粘贴到 Visual Studio 项目中，或粘贴到 `DataflowProducerConsumer.cs`（对于 Visual Basic，则为 `DataflowProducerConsumer.vb`）文件中，再在 Visual Studio 开发人员命令提示窗口中运行以下命令。  
   
  Visual C#  
   

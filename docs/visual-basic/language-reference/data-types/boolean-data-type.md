@@ -12,12 +12,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: bbd914d8b4239bbae1de7031e68b2900cf5ad6a3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7b64302d801a08f976de0ec969983c821f7a8471
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862378"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841209"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean 数据类型 (Visual Basic)
 可以仅由值保存`True`或`False`。 关键字`True`并`False`对应的两种状态`Boolean`变量。  
@@ -53,11 +53,12 @@ If scriptEngine = "VB" Then
 End If  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Boolean?displayProperty=nameWithType>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [数据类型疑难解答](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [CType 函数](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Boolean?displayProperty=nameWithType>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [数据类型疑难解答](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [CType 函数](../../../visual-basic/language-reference/functions/ctype-function.md)

@@ -2,12 +2,12 @@
 title: 在可移植子集项目中添加服务引用
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: dd07ab5623a66f7ad4b666955027adcaea232db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121130"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681009"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>在可移植子集项目中添加服务引用
 可移植子集项目启用.NET 程序集程序员可以维护单个源树和生成系统，同时仍可支持多个.NET 实现 （桌面、 Silverlight、 Windows Phone 和 XBOX）。 可移植子集项目只引用.NET 可移植库，后者是可以使用任何.NET 实现的.NET framework 程序集。  
@@ -43,6 +43,6 @@ ms.locfileid: "49121130"
   
 14. 可移植子集项目中不支持 <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A>。  
   
-## <a name="see-also"></a>请参阅  
- [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [可移植类库](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+## <a name="see-also"></a>请参阅
+- [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [可移植类库](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

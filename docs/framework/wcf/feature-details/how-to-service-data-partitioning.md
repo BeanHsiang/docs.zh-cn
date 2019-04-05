@@ -1,16 +1,16 @@
 ---
-title: 如何：划分服务数据
+title: 如何：服务数据分区
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 47e84555e38d2a71b7741c18de5f67349a622798
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3755a9ecb61148bcc426e9d510dc2eab1c34eeb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590625"
 ---
-# <a name="how-to-service-data-partitioning"></a>如何：划分服务数据
-本主题概述了在同一目标服务的多个实例之间划分消息时所需采取的基本步骤。 如果需要缩放服务以提供更好的服务质量，或者需要以特定方式处理来自不同客户的请求，此时通常采用服务数据划分。 例如，从高价值即"黄金"客户的消息可能需要在更高的优先级比从标准客户的消息处理。  
+# <a name="how-to-service-data-partitioning"></a>如何：服务数据分区
+本主题概述了在同一目标服务的多个实例之间划分消息时所需采取的基本步骤。 如果需要缩放服务以提供更好的服务质量，或者需要以特定方式处理来自不同客户的请求，此时通常采用服务数据划分。 例如，来自高值或"黄金"客户的消息可能需要在更高的优先级比来自普通客户的消息处理。  
   
  在本示例中，将消息路由到 regularCalc 服务的两个实例之一。 服务的两个实例相同；但是，calculator1 终结点表示的服务负责处理从高价值客户收到的消息，而 calculator 2 终结点负责处理来自其他客户的消息。  
   
@@ -173,5 +173,5 @@ ms.locfileid: "33491796"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>请参阅
+- [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)

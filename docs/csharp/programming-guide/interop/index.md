@@ -1,5 +1,6 @@
 ---
-title: 互操作性（C# 编程指南）
+title: 互操作性 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -7,15 +8,15 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: f1befaf6fe5b553f8049385b95a9f541cf0d57a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50f2a72bf4981a49d5597a9bc8922db81197d810
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506119"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411338"
 ---
 # <a name="interoperability-c-programming-guide"></a>互操作性（C# 编程指南）
-借助互操作性，可以保留和利用对非托管代码的现有投资工作。 在公共语言运行时 (CLR) 控制下运行的代码称为*托管代码*，不在 CLR 控制下运行的代码称为*非托管代码*。 例如，COM、COM+、C++ 组件、ActiveX 组件和 Microsoft Win32 API 都是非托管代码。  
+借助互操作性，可以保留和利用对非托管代码的现有投资工作。 在公共语言运行时 (CLR) 控制下运行的代码称为*托管代码*，不在 CLR 控制下运行的代码称为*非托管代码*。 例如，COM、COM+、C++ 组件、ActiveX 组件和 Microsoft Windows API 都是非托管代码。  
   
  使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，可以通过平台调用服务、<xref:System.Runtime.InteropServices> 命名空间、C++ 互操作性和 COM 互操作性（COM 互操作），实现与非托管代码的互操作性。  
   
@@ -26,7 +27,7 @@ ms.locfileid: "43506119"
  [如何：通过使用 Visual C# 功能访问 Office 互操作对象](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)  
  介绍了 Visual C# 为了推动 Office 编程而引入的功能 。  
   
- [如何：在 COM 互操作编程中使用索引属性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [如何：在 COM 互操作编程中使用已编制索引的属性](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
  介绍了如何使用已编入索引的属性来访问包含参数的 COM 属性。  
   
  [如何：使用平台调用播放波形文件](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)  
@@ -39,11 +40,12 @@ ms.locfileid: "43506119"
  展示了如何将 C# 类公开为 COM 对象。  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[基本概念](~/_csharplang/spec/unsafe-code.md)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)  
+- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [与非托管代码交互操作](../../../../docs/framework/interop/index.md)
 - [演练：Office 编程](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

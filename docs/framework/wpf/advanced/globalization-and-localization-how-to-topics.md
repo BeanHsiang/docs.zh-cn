@@ -7,22 +7,22 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: 14ec1bb9ca6e6d6702818cf316e100e5bbe97e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544467"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369144"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>全球化和本地化帮助主题
-本部分中的主题介绍如何开发全球通用应用程序。  
+在本部分中的主题介绍如何开发全球通用应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
- [对应用程序进行本地化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
- [使用自动布局创建按钮](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [使用网格进行自动布局](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [使用 ResourceDictionary 管理可本地化的字符串资源](../../../../docs/framework/wpf/advanced/how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [在可本地化的应用程序中使用资源](../../../../docs/framework/wpf/advanced/how-to-use-resources-in-localizable-applications.md)  
+ [对应用程序进行本地化](how-to-localize-an-application.md)  
+ [使用自动布局创建按钮](how-to-use-automatic-layout-to-create-a-button.md)  
+ [使用网格进行自动布局](how-to-use-a-grid-for-automatic-layout.md)  
+ [使用 ResourceDictionary 管理可本地化的字符串资源](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [在可本地化的应用程序中使用资源](how-to-use-resources-in-localizable-applications.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Globalization>  
@@ -31,6 +31,6 @@ ms.locfileid: "33544467"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML 中 xml:lang 的处理](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML 中 xml:lang 的处理](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>相关章节

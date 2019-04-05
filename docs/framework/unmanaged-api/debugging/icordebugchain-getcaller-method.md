@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a0b5d702e9718ce6ac537beae67fc190b152b9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd65de77209f5a981c0a4c291f8573a61cf6335b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405138"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489548"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller 方法
-获取调用链的链。  
+获取调用此链的链。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,20 +35,20 @@ HRESULT GetCaller (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppChain`  
- [out]指向一个表示调用链的 ICorDebugChain 对象的地址的指针。  
+ [out]指向一个 ICorDebugChain 对象，表示调用链的地址的指针。  
   
- 如果此证书链自然而然地调用 （如如果此证书链或调试器初始化调用堆栈，则会出现此情况），`ppChain`将为 null。  
+ 如果此链自然而然地调用 （就会是这种情况，如果此证书链或调试程序初始化的调用堆栈），`ppChain`将为 null。  
   
 ## <a name="remarks"></a>备注  
- 如果调用已跨线程封送处理，则在另一个线程，可能会调用链。  
+ 调用链可能在另一个线程，如果在调用已在线程之间封送。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

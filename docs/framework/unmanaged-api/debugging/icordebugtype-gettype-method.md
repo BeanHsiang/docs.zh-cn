@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d881a1fe3965b6e1d89e6172c887061434cd52ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f6b36c524921a4fecf8bc5ddcbace62af6450b6d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418713"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492417"
 ---
 # <a name="icordebugtypegettype-method"></a>ICorDebugType::GetType 方法
-获取一个 CorElementType 值，描述公共语言运行时 (CLR) 的本机类型<xref:System.Type>表示通过此 ICorDebugType。  
+获取用于描述公共语言运行时 (CLR) 的本机类型的 CorElementType 值<xref:System.Type>此 ICorDebugType 由表示。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +35,18 @@ HRESULT GetType (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ty`  
  [out]指向的值的指针`CorElementType`枚举，指示 CLR<xref:System.Type>此`ICorDebugType`表示。  
   
 ## <a name="remarks"></a>备注  
- 如果值`ty`ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE， [icordebugtype:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)方法可调用以获取泛型类型实例化的类型; 否则，不调用`ICorDebugType::GetClass`。  
+ 如果的值`ty`ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE，是[icordebugtype:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)方法可调用来获取泛型类型的未实例化的类型; 否则，不要调用`ICorDebugType::GetClass`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

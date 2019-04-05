@@ -2,18 +2,18 @@
 layout: ApiBrowserPage
 hide_bc: true
 title: .NET API 浏览器
-quickFilterColumn1: netframework-4.7.2,netcore-2.1,netstandard-2.0
+quickFilterColumn1: netframework-4.7.2,netcore-2.2,netstandard-2.0
 quickFilterColumn2: xamarinios-10.8,xamarinandroid-7.1,xamarinmac-3.0
-quickFilterColumn3: azure-dotnet,aspnetcore-2.1
+quickFilterColumn3: azure-dotnet,aspnetcore-2.2,ml-dotnet
 ms.topic: landing-page
 ms.custom: updateeachrelease
-ms.date: 06/01/2018
-ms.openlocfilehash: 8f6cda89a618939c23e6672f67e59f8f86a2dc99
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 12/03/2018
+ms.openlocfilehash: ce4453f79190319f25860ed3440fd45612c777e6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582247"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146883"
 ---
 # <a name="net-api-browser"></a>.NET API 浏览器
 

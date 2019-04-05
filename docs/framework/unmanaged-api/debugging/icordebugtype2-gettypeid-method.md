@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bc1407f8444b78154981619742bd0da188c4335
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 54b3f8e931507e53809a2419ab7f06e63eb70c10
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422066"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497634"
 ---
 # <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2::GetTypeID 方法
 获取[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)此类型。  
@@ -35,32 +35,32 @@ HRESULT GetTypeID(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `id`  
- [out]指向的指针[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)为此 ICorDebugType。  
+ [out]一个指向[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)此 icordebugtype。  
   
 ## <a name="return-value"></a>返回值  
  如果成功，则返回值是 `S_OK`；如果失败，则返回失败 `HRESULT` 代码。 `HRESULT`代码如下：  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
-|`S_OK`|方法成功。 该方法已检索有效[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)。|  
+|`S_OK`|方法成功。 该方法是否已检索的有效[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)。|  
 |`CORDBG_E_CLASS_NOT_LOADED`|尚未加载该类型。|  
 |`CORDBG_E_UNSUPPORTED`|不支持的类型。|  
   
 ## <a name="remarks"></a>备注  
- 此方法从 ICorDebugType，表示可能或可能不具有已加载到运行时，为的类型提供映射[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)，后者相当于一个不透明处理标识入运行时加载的类型。  
+ 此方法提供 ICorDebugType，表示可能或可能不具有已加载到运行时，为的类型从映射[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)，该类用作一个不透明处理标识在运行时加载的类型。  
   
- 当 ICorDebugType 表示的类型，但尚未被加载，则此方法返回`CORDBG_E_CLASS_NOT_LOADED`。  如果不支持的类型，它将返回`CORDBG_E_UNSUPPORTED`。  
+ 当 ICorDebugType 表示的类型尚未被加载，此方法返回`CORDBG_E_CLASS_NOT_LOADED`。  如果不支持的类型，它将返回`CORDBG_E_UNSUPPORTED`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugType2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugType2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)

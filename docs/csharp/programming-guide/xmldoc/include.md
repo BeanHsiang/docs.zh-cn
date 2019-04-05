@@ -1,5 +1,6 @@
 ---
-title: '&lt;include&gt;（C# 编程指南）'
+title: <include> - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,21 +9,21 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 854c8b61fa8164bccfc9451f2f163dab4a56388f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e77db451103919df5809b2558fcb53a3d7fba71c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48035172"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479956"
 ---
-# <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt;（C# 编程指南）
+# <a name="include-c-programming-guide"></a>\<include>（C# 编程指南）
 ## <a name="syntax"></a>语法  
   
 ```xml  
 <include file='filename' path='tagpath[@name="id"]' />  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `filename`  
  包含文档的 XML 文件的名称。 可使用相对于源代码文件的路径限定文件名。 使用单引号 (' ') 将 `filename` 括起来。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "48035172"
 ## <a name="example"></a>示例  
  这是多文件示例。 第一个文件使用 \<include>，列在下面：  
   
- [!code-csharp[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]  
   
  第二个文件是 xml_include_tag.doc，包含下列文档注释：  
   
@@ -66,7 +67,7 @@ The summary for this other type.
 ```  
   
 ## <a name="program-output"></a>程序输出  
- 使用以下命令行编译 Test 和 Test2 类时，将生成下列输出：`/doc:DocFileName.xml.`。在 Visual Studio 的项目设计器的“生成”窗格中，指定 XML 文档注释选项。 当 C# 编译器发现 \<include> 标记时，它将在 xml_include_tag.doc（而不是当前源文件）中搜索文档注释。 然后编译器生成 DocFileName.xml，这是由文档工具（如 [Sandcastle](https://github.com/EWSoftware/SHFB)）所使用的文件，用于生成最终文档。  
+ 使用以下命令行编译 Test 和 Test2 类时，便会生成下面的输出：`/doc:DocFileName.xml.`。在 Visual Studio 的项目设计器的“生成”窗格中，指定 XML 文档注释选项。 当 C# 编译器发现 \<include> 标记时，它将在 xml_include_tag.doc（而不是当前源文件）中搜索文档注释。 然后编译器生成 DocFileName.xml，这是由文档工具（如 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB)）所使用的文件，用于生成最终文档。  
   
 ```xml  
 <?xml version="1.0"?>   
@@ -91,5 +92,5 @@ The summary for this other type.
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

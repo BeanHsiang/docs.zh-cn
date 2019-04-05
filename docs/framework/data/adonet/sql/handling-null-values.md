@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: 039a6f5aab2f1b857f98803f8b3d6425cc549877
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554681"
 ---
 # <a name="handling-null-values"></a>处理 Null 值
 在列中的值未知或缺失时，在关系数据库中使用空值。 空既不是空字符串（对于 character 或 datetime 数据类型），也不是零值（对于 numeric 数据类型）。 ANSI SQL-92 规范规定，空必须对于所有数据类型均相同，以便以一致的方式处理所有空。 <xref:System.Data.SqlTypes> 命名空间通过实现 <xref:System.Data.SqlTypes.INullable> 接口，提供空语义。 <xref:System.Data.SqlTypes> 中的每种数据类型都有其自己的 `IsNull` 属性和可分配给该数据类型的实例的 `Null` 值。  
@@ -32,7 +32,7 @@ ms.locfileid: "43486036"
 ## <a name="nulls-and-sqlboolean"></a>空和 SqlBoolean  
  任意 <xref:System.Data.SqlTypes> 之间的比较都将返回 <xref:System.Data.SqlTypes.SqlBoolean>。 每个 `IsNull` 的 `SqlType` 函数都可返回一个 <xref:System.Data.SqlTypes.SqlBoolean> 并可用于检查 null 值。 下面的真值表显示在存在空值时 AND、OR 和 NOT 这三个运算符的计算方式。 （T=true，F=false，U=unknown 或空。）  
   
- ![真值表](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
+ ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>理解 ANSI_NULLS 选项  
  <xref:System.Data.SqlTypes> 提供与在 SQL Server 中设置 ANSI_NULLS 选项时相同的语义。 所有算术运算符 (+、-，*、 /、 %)，按位运算符 (~，&、 &#124;)，和大多数函数都返回 null，如果任何操作数或参数为 null，但该属性除外`IsNull`。  
@@ -141,6 +141,6 @@ String.Equals instance method:
   Two empty strings=True   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

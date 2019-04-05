@@ -3,14 +3,14 @@ title: C# 版本控制 - C# 指南
 description: 了解 C# 和 .NET 中的版本控制工作原理
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9ba18f82ad83749d5333628bf4431a0282b0964f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183225"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965665"
 ---
-# <a name="versioning-in-c"></a>C# 中的版本控制 #
+# <a name="versioning-in-c"></a>C\# 中的版本控制
 
 本教程将介绍版本控制在 .NET 中的含义。 还将介绍对库进行版本控制以及升级到新版本的库时需要考虑的因素。
 
@@ -38,7 +38,7 @@ SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 
 以下是维护与较旧版本库的后向兼容时的注意事项：
 
-* 虚拟方法：如果在新版本中使虚拟方法成为非虚拟方法，则必须更新重写该方法的项目。 这是一项重大更改，强烈建议不要执行此操作。
+* 虚拟方法：如果在新版本中使虚拟方法成为非虚拟方法，则必须更新替代该方法的项目。 这是一项重大更改，强烈建议不要执行此操作。
 * 方法签名：虽然更新方法行为也需要更改其签名，但应创建重载，使调用该方法的代码仍可正常运行。
 始终可以使用旧方法签名来调用新方法签名，以使实现保持一致。
 * [已过时属性](programming-guide/concepts/attributes/common-attributes.md#Obsolete)：可在代码中使用此属性指定已弃用且很可能在将来版本中删除的类或类成员。
@@ -62,7 +62,7 @@ SemVer 的最基本方法是 3 组件格式 `MAJOR.MINOR.PATCH`，其中：
 
 ### <a name="assembly-binding-redirection"></a>程序集绑定重定向
 
-可使用 `app.config` 文件更新应用使用的库版本。 通过添加[*绑定重定向*](../framework/configure-apps/redirect-assembly-versions.md)，可在无需重新编译应用的情况下使用新的库版本。 下面的示例演示更新应用的 `app.config` 文件的方法，以便使用 `ReferencedLibrary` 的 `1.0.1` 修补程序版本，而不是最初编译时使用的 `1.0.0` 版本。
+可使用 `app.config` 文件更新应用使用的库版本。 通过添加所谓的[*绑定重定向*](../framework/configure-apps/redirect-assembly-versions.md)，可在无需重新编译应用的情况下使用新的库版本。 下面的示例演示更新应用的 `app.config` 文件的方法，以便使用 `ReferencedLibrary` 的 `1.0.1` 修补程序版本，而不是最初编译时使用的 `1.0.0` 版本。
 
 ```xml
 <dependentAssembly>

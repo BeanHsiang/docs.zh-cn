@@ -1,18 +1,18 @@
 ---
-title: 符号和运算符参考 (F#)
-description: '了解符号和 F # 编程语言中使用的运算符。'
-ms.date: 04/04/2018
-ms.openlocfilehash: 0e36f6cfc75b7d2e79bcf7acb89d260fd4e9b1ad
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: 符号和运算符参考
+description: 了解符号和运算符中使用F#编程语言。
+ms.date: 02/11/2019
+ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216815"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092938"
 ---
 # <a name="symbol-and-operator-reference"></a>符号和运算符参考
 
 > [!NOTE]
-本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
+> 本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 本主题包括 F# 语言中使用的符号和运算符表。
 
@@ -61,7 +61,7 @@ ms.locfileid: "47216815"
 |`::`|[列表](../lists.md)<br /><br />[match 表达式](../match-expressions.md)|<ul><li>创建列表。 将左侧的元素追加到右侧的列表。<br /></li><li>在模式匹配中用于分隔列表的各个部分。<br /></li></ul>|
 |`:=`|[引用单元格](../reference-cells.md)|<ul><li>对引用单元格赋值。<br /></li></ul>|
 |`:>`|[强制转换和转换](../casting-and-conversions.md)|<ul><li>将类型转换为层次结构中级别更高的类型。<br /></li></ul>|
-|`:?`|[match 表达式](../match-expressions.md)|<ul><li>如果值与指定类型匹配，则返回 `true`；否则，返回 `false`（类型测试运算符）。<br /></li></ul>|
+|`:?`|[match 表达式](../match-expressions.md)|<ul><li>返回`true`如果的值与匹配指定的类型 （包括它是否子类型）; 否则，返回`false`（类型测试运算符）。<br /></li></ul>|
 |`:?>`|[强制转换和转换](../casting-and-conversions.md)|<ul><li>将类型转换为层次结构中级别更低的类型。<br /></li></ul>|
 |`;`|[详细语法](../verbose-syntax.md)<br /><br />[列表](../lists.md)<br /><br />[记录](../records.md)|<ul><li>分隔表达式（主要用于详细语法）。<br /></li><li>分隔列表中的元素。<br /></li><li>分隔记录的字段。<br /></li></ul>|
 |`<`|[算术运算符](arithmetic-operators.md)|<ul><li>计算“小于”运算。<br /></li></ul>|
@@ -96,7 +96,7 @@ ms.locfileid: "47216815"
 |`@`|[列表](../lists.md)<br /><br />[字符串](../strings.md)|<ul><li>连接两个列表。<br /></li><li>当放置在字符串文本之前时，指示将逐字解释字符串，而不会解释转义符。<br /></li></ul>|
 |`[...]`|[列表](../lists.md)|<ul><li>分隔列表中的元素。<br /></li></ul>|
 |<code>[&#124;...&#124;]</code>|[数组](../arrays.md)|<ul><li>分隔数组中的元素。<br /></li></ul>|
-|`[<...>]`|[特性](../attributes.md)|<ul><li>分隔特性。<br /></li></ul>|
+|`[<...>]`|[属性](../attributes.md)|<ul><li>分隔特性。<br /></li></ul>|
 |`\`|[字符串](../strings.md)|<ul><li>对下一个字符转义，在字符和字符串文本中使用。<br /></li></ul>|
 |`^`|[静态解析的类型参数](../generics/statically-resolved-type-parameters.md)<br /><br />[字符串](../strings.md)|<ul><li>指定在编译时（而非运行时）必须解析的类型参数。<br /></li><li>连接字符串。<br /></li></ul>|
 |`^^^`|[位运算符](bitwise-operators.md)|<ul><li>计算“位异或”运算。<br /></li></ul>|
@@ -133,7 +133,7 @@ ms.locfileid: "47216815"
 |`or`， <code>&#124;&#124;</code>|左侧|
 |`&`， `&&`|左侧|
 |`:>`， `:?>`|右|
-|`!=`*op*， `<` *op*， `>` *op*， `=`， <code>&#124;</code> *op*， `&`*操作*, `&`<br /><br />（包括 `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`）|左侧|
+|`<`*op*， `>` *op*， `=`， <code>&#124;</code> *op*， `&` *op*， `&`<br /><br />（包括 `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`）|左侧|
 |`^`*op*<br /><br />（包括 `^^^`）|右|
 |`::`|右|
 |`:?`|未关联|
@@ -146,6 +146,7 @@ ms.locfileid: "47216815"
 |`.`|左|
 |`f(x)`|左侧|
 |`f<`*types*`>`|左侧|
+
 F# 支持自定义运算符重载。 这意味着你可以自定义自己的运算符。 在上表中，*op* 可以是任何有效的运算符字符序列（可能为空），它既可以内嵌，也可以由用户定义。 因此，你可以使用此表来确定用于自定义运算符以实现所需优先级级别的字符顺序。 当编译器确定优先级时，会忽略前面的 `.` 字符。
 
 ## <a name="see-also"></a>请参阅

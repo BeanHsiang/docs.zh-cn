@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: ddbb0481ed51d9daad1eedff72fbdb9f6b4a9a35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11a305581ba498715f7f24ecb75f737acdf12bfb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586125"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843547"
 ---
 # <a name="identifier-expected"></a>应输入标识符
-不是可识别的已声明的元素名称的编程元素出现在上下文需要的元素名称的位置。 一个可能原因是以外的某处指定了一个属性语句开头。  
+不是可识别的已声明的元素名称的编程元素出现在上下文要求元素名称的位置。 一个可能的原因是以外的某处指定了一个属性的语句开始处。  
   
  **错误 ID:** BC30203  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   验证在语句中的任何属性的所有位于语句开头。  
+-   验证该语句中的任何属性的所有位于开头。  
   
--   验证在语句中的所有元素名称都拼写正确。  
+-   验证语句中的所有元素名称都拼写正确。  
   
-## <a name="see-also"></a>请参阅  
- [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)
- 
+## <a name="see-also"></a>请参阅
+
+- [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [属性概述](../../../visual-basic/programming-guide/concepts/attributes/index.md)

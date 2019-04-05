@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 078fac7f21ac31b21e5ac442ef81a1c0f496db93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e90f2b7b81bbf6401313209170ea65186c38d4e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711036"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices 接口
-提供用于编录服务的方法。  
+提供目录服务的方法。  
   
  此接口支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
   
@@ -35,5 +35,5 @@ ms.locfileid: "33430397"
 |[Autodone 方法](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-autodone-method.md)|保留以仅供内部使用。|  
 |[NotAutodone 方法](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|保留以仅供内部使用。|  
   
-## <a name="see-also"></a>请参阅  
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

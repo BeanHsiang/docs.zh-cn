@@ -1,28 +1,28 @@
 ---
-title: '&lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt;'
+title: <secureConversationAuthentication> 的 <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: 8433ac8f698f3e5569802a8d76f7dedaf22f53c3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 13e9312e4c4eade003fec77909a743009aa9bca7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180372"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278520"
 ---
-# <a name="ltsecureconversationauthenticationgt-of-ltservicecredentialgt"></a>&lt;serviceCredential&gt; 的 &lt;secureConversationAuthentication&gt;
+# <a name="secureconversationauthentication-of-servicecredential"></a>\<secureConversationAuthentication> of \<serviceCredential>
 指定安全对话服务的设置。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
+\<behavior>  
 \<serviceCredentials>  
-\<secureConversationAuthentication >  
+\<secureConversationAuthentication>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<secureConversationAuthentication securityStateEncoderType="String" />  
+<secureConversationAuthentication securityStateEncoderType="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -46,8 +46,8 @@ ms.locfileid: "50180372"
 ## <a name="remarks"></a>备注  
  使用此配置元素可指定用于安全上下文令牌 (SCT) Cookie 序列化的已知声明类型的列表和用于编码和保护 Cookie 信息的编码器。 有关 SCT 的更多信息，请参见 <xref:System.ServiceModel.Security.SecureConversationServiceCredential>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.SecureConversationAuthentication%2A>  
- <xref:System.ServiceModel.Description.ServiceCredentials.SecureConversationAuthentication%2A>  
- <xref:System.ServiceModel.Security.SecureConversationServiceCredential>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.SecureConversationAuthentication%2A>
+- <xref:System.ServiceModel.Description.ServiceCredentials.SecureConversationAuthentication%2A>
+- <xref:System.ServiceModel.Security.SecureConversationServiceCredential>

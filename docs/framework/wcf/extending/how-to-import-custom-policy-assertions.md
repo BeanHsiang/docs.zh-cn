@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: b6155296e264bb3ae90aac2ee6b83797e632962e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674776"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>如何：导入自定义策略断言
 策略断言说明服务终结点的功能和需求。  客户端应用程序可以在服务元数据中使用策略断言来配置客户端绑定或自定义服务终结点的服务协定。  
@@ -25,7 +25,7 @@ ms.locfileid: "33491148"
   
 3.  使用配置文件。 请参见下面的过程。  
   
-4.  使用配置文件进行[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 请参见下面的过程。  
+4.  通过在配置文件[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 请参见下面的过程。  
   
 5.  以编程方式插入策略导入程序。 请参见下面的过程。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "33491148"
   
 3.  对支持策略断言指定的功能或需求的绑定或协定执行自定义。 断言通常指示绑定需要特定配置或特定绑定元素。 可以通过访问 <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType> 属性来进行这些修改。 其他断言需要您修改协定。  可以使用 <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> 属性来访问并修改该协定。  请注意，对于同一个绑定和协定，可能会多次调用策略导入程序，但导入的是不同的替代策略（如果一个替代策略导入失败）。 您的代码应该能够处理这一行为。  
   
-4.  从断言集合中删除自定义策略断言。 如果你不删除该断言 Windows Communication Foundation (WCF) 会认为策略导入不成功，将不导入相关的绑定。 如果您使用 <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> 方法定位自定义策略断言并在一个步骤中将该断言从集合中删除，则不必执行此步骤。  
+4.  从断言集合中删除自定义策略断言。 如果不删除 Windows Communication Foundation (WCF) 假定策略导入不成功，并且不导入相关的绑定断言。 如果您使用 <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> 方法定位自定义策略断言并在一个步骤中将该断言从集合中删除，则不必执行此步骤。  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>使用配置文件将自定义策略导入程序插入到元数据系统  
   
-1.  添加到导入程序类型`<extensions>`内的元素[ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)客户端配置文件中的元素。  
+1.  添加到导入程序类型`<extensions>`元素内的[ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)客户端配置文件中的元素。  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,16 +55,16 @@ ms.locfileid: "33491148"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>使用 Svcutil.exe 将自定义策略导入程序插入到元数据系统  
   
-1.  添加到导入程序类型`<extensions>`内的元素[ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Svcutil.exe.config 配置文件中的元素。 也可以通过使用 `/svcutilConfig` 选项指示 Svcutil.exe 加载在其他配置文件中注册的策略导入程序类型。  
+1.  添加到导入程序类型`<extensions>`元素内的[ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Svcutil.exe.config 配置文件中的元素。 也可以通过使用 `/svcutilConfig` 选项指示 Svcutil.exe 加载在其他配置文件中注册的策略导入程序类型。  
   
-2.  使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)导入元数据和导入程序自动调用。  
+2.  使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)导入的元数据和导入程序会自动调用。  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>以编程方式将自定义策略导入程序插入到元数据系统  
   
 1.  导入元数据之前，将导入程序添加到 <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> 属性（例如，如果您使用的是 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>）。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- [扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
+- [扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

@@ -2,12 +2,12 @@
 title: 构造类型 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: 91ed123132965353ff354282f6850e9ef9cba3d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 917c59a6602ce0313b91ba78fd59d11596f86e9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718580"
 ---
 # <a name="constructing-types-entity-sql"></a>构造类型 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了三种构造函数： 行构造函数、 命名的类型构造函数和集合构造函数。  
@@ -17,7 +17,7 @@ ms.locfileid: "32765251"
   
  `ROW(1 AS a, "abc" AS b, a + 34 AS c)`  
   
- 如果没有为行构造函数中的表达式提供别名，则实体框架会尝试生成一个别名。 有关详细信息，请参阅中的"别名规则"一节[标识符](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)。  
+ 如果没有为行构造函数中的表达式提供别名，则实体框架会尝试生成一个别名。 有关详细信息，请参阅中的"别名规则"部分[标识符](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)。  
   
  以下规则适用于在行构造函数中指定表达式别名：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "32765251"
   
  有关详细信息，请参阅[命名类型构造函数](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)。  
   
-## <a name="see-also"></a>请参阅  
- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [类型系统](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+## <a name="see-also"></a>请参阅
+- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [类型系统](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b26ebfa327d849f75b1ac5295b66600aeb377e1e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 78dff5dca159b3e714a027bd2d2ebe86d2b414dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625999"
 ---
 # <a name="including-or-importing-xml-schemas"></a>包含或导入 XML 架构
 XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 元素。 这些架构元素引用其他 XML 架构，可以用于补充包括或导入这些架构的架构的结构。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 类映射到架构对象模型 (SOM) API 中的这些元素。  
@@ -52,8 +52,7 @@ XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 
         <xs:element name="FirstName" type="xs:string" />  
         <xs:element name="LastName" type="tns:LastNameType" />  
       </xs:sequence>  
-      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" /  
->  
+      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" />  
     </xs:complexType>  
   </xs:element>  
   <xs:simpleType name="LastNameType">  
@@ -102,9 +101,9 @@ XML 架构可以包含 `<xs:import />`、`<xs:include />` 和 `<xs:redefine />` 
   
 ## <a name="see-also"></a>请参阅
 
-- [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: b20167ad776f3524e4516b71e43ab8cdb5c2aea4
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d5322dfca1aa006ba2fc85b5dedebd09941f9c0e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499218"
 ---
 # <a name="basic-programming-lifecycle"></a>基本编程生命周期
-Windows Communication Foundation (WCF) 使应用程序通报它们是在同一计算机上分布在 Internet 上还是在不同的应用程序平台上。 本主题概述了生成 WCF 应用程序所需的任务。 有关工作示例应用程序，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。  
+Windows Communication Foundation (WCF) 使应用程序通报它们是在同一计算机上，在 Internet 上或在不同的应用程序平台上。 本主题概述了生成 WCF 应用程序所需的任务。 有关工作示例应用程序，请参阅[入门教程](../../../docs/framework/wcf/getting-started-tutorial.md)。  
   
 ## <a name="the-basic-tasks"></a>基本任务  
  要执行的基本任务依次为：  
   
-1.  定义服务协定。 服务协定指定服务的签名、服务交换的数据和其他协定要求的数据。 有关详细信息，请参阅[设计服务协定](../../../docs/framework/wcf/designing-service-contracts.md)。  
+1.  定义服务协定。 服务协定指定服务的签名、服务交换的数据和其他协定要求的数据。 有关详细信息，请参阅[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)。  
   
 2.  实现协定。 若要实现服务协定，请创建实现协定的类并指定运行时应具有的自定义行为。 有关详细信息，请参阅[实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) 使应用程序通报它们是在同一�
   
  尽管本节中的主题遵循此顺序，但是一些方案并不会从头开始。 例如，如果想要为预先存在的服务生成客户端，则从步骤 5 开始。 或者，如果您是在生成其他人要使用的服务，则可以跳过步骤 5。  
   
- 一旦你熟悉开发服务协定，您还可以阅读[扩展性介绍](../../../docs/framework/wcf/introduction-to-extensibility.md)。 如果存在与您的服务的问题，请检查[WCF 疑难解答快速入门](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)以查看是否其他具有相同或类似问题。  
+ 熟悉开发服务协定后，您还可以阅读[扩展性介绍](../../../docs/framework/wcf/introduction-to-extensibility.md)。 如果您创建服务出现问题，请[WCF 疑难解答快速入门](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)若要查看其他人是否有相同或类似问题。  
   
-## <a name="see-also"></a>请参阅  
- [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>请参阅
+- [实现服务协定](../../../docs/framework/wcf/implementing-service-contracts.md)

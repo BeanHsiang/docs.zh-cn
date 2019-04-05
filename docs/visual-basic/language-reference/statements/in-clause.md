@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: 47eb90c9c89c7114c40b8a2caeb0e99f3ceccccb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6826489970137605bf2b07f88b5a64f2ec6bfc2e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597391"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819411"
 ---
 # <a name="in-clause-visual-basic"></a>In 子句 (Visual Basic)
-指定循环变量是中遍历的组`For Each`循环中，或指定查询中的集合`From`， `Join`，或`Group Join`子句。  
+指定循环变量要遍历中的组`For Each`循环，或指定查询中的集合`From`， `Join`，或`Group Join`子句。  
   
 ## <a name="remarks"></a>备注  
  `In`关键字可以在以下上下文中使用：  
@@ -27,5 +27,6 @@ ms.locfileid: "33597391"
   
  [Group Join 子句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>请参阅  
- [关键字](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>请参阅
+
+- [关键字](../../../visual-basic/language-reference/keywords/index.md)

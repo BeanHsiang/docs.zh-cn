@@ -1,13 +1,13 @@
 ---
-title: 类型扩展 (F#)
-description: '了解如何 F # 类型扩展允许将新成员添加到以前定义的对象类型。'
-ms.date: 07/20/2018
-ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: 类型扩展
+description: 了解如何F#类型扩展允许将新成员添加到以前定义的对象类型。
+ms.date: 02/08/2019
+ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43874974"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092470"
 ---
 # <a name="type-extensions"></a>类型扩展
 
@@ -101,6 +101,8 @@ type IEnumerable<'T> with
 
 可选扩展成员将会编译成静态成员，为其对象实例隐式传递的第一个参数。 但是，它们的作用像是实例成员或根据它们的声明的静态成员。
 
+可选扩展成员也看不到C#或 VB 的使用者。 因此，可以仅使用其他F#代码。
+
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>泛型的内部函数和可选类型扩展限制
 
 它是可以受限类型变量的泛型类型上声明的类型扩展。 要求是类型的扩展声明的约束与声明的约束相匹配。
@@ -121,13 +123,13 @@ type IEnumerable<'T> with
 
 * 原样`Sum`成员都有不同的约束`'T`(`static member get_Zero`和`static member (+)`) 比类型扩展的定义。
 * 修改类型扩展具有同一约束作为`Sum`将不再匹配上定义的约束`IEnumerable<'T>`。
-* 进行更改的成员`member inline Sum`将产生类型约束不匹配错误
+* 更改`member this.Sum`到`member inline this.Sum`将产生错误类型约束不匹配。
 
 所需的内容是"空间中浮动"，可以提供好像它们扩展类型的静态方法。 这是其中的扩展方法变得非常必要。
 
 ## <a name="extension-methods"></a>扩展方法
 
-最后，扩展方法 （有时称为"C# 样式扩展成员"） 可以声明在 F # 中为静态成员方法的类上。
+最后，扩展方法 (有时称为"C#样式扩展成员") 可以声明中F#作为类的静态成员方法。
 
 扩展方法可用于当你希望将约束类型变量的泛型类型上定义扩展。 例如：
 
@@ -163,7 +165,7 @@ type IEnumerableExtensions() =
 * 不能在定义类型扩展[类型缩写，用](type-abbreviations.md)。
 * 类型扩展不是有效的`byref<'T>`（尽管它们可以声明）。
 * 类型扩展不是有效的属性 （但它们可以声明）。
-* 可以定义重载具有相同名称的其他方法的扩展，但 F # 编译器提供了首选项设置为非扩展方法，如果调用不明确。
+* 可以定义重载具有相同名称的其他方法的扩展，但F#编译器提供了首选项设置为非扩展方法，如果调用不明确。
 
 最后，如果多个内部类型扩展存在一种类型，所有成员必须都是唯一的。 对于可选类型扩展为同一类型的不同类型扩展中的成员可以具有相同的名称。 仅当客户端代码打开两个不同的作用域定义相同成员名称，则会出现多义性错误。
 

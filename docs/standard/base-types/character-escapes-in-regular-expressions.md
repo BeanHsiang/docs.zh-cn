@@ -1,5 +1,6 @@
 ---
-title: 正则表达式中的字符转义
+title: .NET 正则表达式中的字符转义
+description: 了解 .NET 正则表达式中的特殊字符和转义字符。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837162"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152354"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正则表达式中的字符转义
 正则表达式中的反斜杠 (\\) 指示以下值之一：  
@@ -36,7 +38,7 @@ ms.locfileid: "48837162"
 ## <a name="character-escapes-in-net"></a>.NET 中的字符转义  
  下表列出了 .NET 中正则表达式支持的字符转义。  
   
-|字符或序列|描述|  
+|字符或序列|说明|  
 |---------------------------|-----------------|  
 |除以下字符外的所有字符：<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |“字符或序列”列中未包含的字符在正则表达式中没有特殊含义；此类字符与自身匹配。<br /><br /> “字符或序列”列中包括的字符均为特殊的正则表达式语言元素。 若要在正则表达式中匹配这些字符，必须将其转义或纳入[正字符组](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，正则表达式 `\$\d+` 或 `[$]\d+` 匹配“$1200”。|  
 |`\a`|匹配响铃（警报）字符，`\u0007`。|  
@@ -61,7 +63,7 @@ ms.locfileid: "48837162"
   
  正则表达式 `\G(.+)[\t|\u007c](.+)\r?\n` 可以解释为下表中所示内容。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\G`|从上次匹配结束处开始匹配。|  
 |`(.+)`|一次或多次匹配任何字符。 这是第一个捕获组。|  

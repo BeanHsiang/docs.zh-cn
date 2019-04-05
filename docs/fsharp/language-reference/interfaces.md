@@ -1,13 +1,13 @@
 ---
-title: 接口 (F#)
-description: '了解 F # 接口如何指定其他类实现的相关成员的集。'
+title: 接口
+description: 了解如何F#接口指定的其他类实现的相关成员集。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 85b5506d96c26be5e52670c0c62d27cae047d1a6
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47231435"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610549"
 ---
 # <a name="interfaces"></a>接口
 
@@ -47,7 +47,7 @@ let class-name (argument-list) =
 
 接口的默认可访问性是`public`。
 
-（可选） 可以对每个方法参数使用普通的 F # 语法进行命名：
+您可以根据需要为每个方法参数提供一个名称使用常规F#语法：
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 

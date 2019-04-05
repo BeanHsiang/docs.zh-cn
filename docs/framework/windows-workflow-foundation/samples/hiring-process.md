@@ -2,12 +2,12 @@
 title: 招聘流程
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520633"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223216"
 ---
 # <a name="hiring-process"></a>招聘流程
 本示例演示如何使用消息传递活动和作为工作流服务承载的两个工作流来实现业务流程。 这些工作流是 Contoso, Inc 虚构公司的 IT 基础结构的一部分。  
@@ -114,7 +114,7 @@ ms.locfileid: "43520633"
 |工作流服务|包含流程定义的流程图承载于某服务（在此示例中，此服务承载于控制台应用程序中）。|HiringRequestService|  
 |消息传递活动|此流程图以两种方式使用消息传递活动：<br /><br /> -若要从用户 （以每个审批步骤中收到的决策和相关的信息） 中获取信息。<br />-若要与其他现有服务 （的 InboxService 和 OrgDataService 使用通过服务引用） 进行交互。|HiringRequestService|  
 |基于内容的相关性|批准消息根据招聘请求的 ID 属性相关：<br /><br /> -当在启动进程，使用请求的 ID 初始化相关性句柄。<br />-传入的批准消息根据其 ID （每个批准消息的第一个参数是请求的 ID） 将相关联。|HiringRequestService / ResumeRequestService|  
-|自定义活动（声明性和基于代码）|此示例中有几个自定义活动：<br /><br /> -   `SaveActionTracking`： 此活动发出一个自定义<xref:System.Activities.Tracking.TrackingRecord>(使用<xref:System.Activities.NativeActivityContext.Track%2A>)。 此活动已使用命令性代码扩展 <xref:System.Activities.NativeActivity> 进行创作。<br />-   `GetEmployeesByPositionTypes`： 此活动接收职位类型 Id 的列表，并返回一个具有该位置在 Contoso 中的人员列表。 此活动已通过声明性方式进行创作（使用活动设计器）。<br />-   `SaveHiringRequestInfo`： 此活动保存的信息`HiringRequest`(使用`HiringRequestRepository.Save`)。 此活动已使用命令性代码扩展 <xref:System.Activities.CodeActivity> 进行创作。|HiringRequestService|  
+|自定义活动（声明性和基于代码）|此示例中有几个自定义活动：<br /><br /> -   `SaveActionTracking`:此活动发出一个自定义<xref:System.Activities.Tracking.TrackingRecord>(使用<xref:System.Activities.NativeActivityContext.Track%2A>)。 此活动已使用命令性代码扩展 <xref:System.Activities.NativeActivity> 进行创作。<br />-   `GetEmployeesByPositionTypes`:此活动接收职位类型 Id 的列表，并返回一个具有该位置在 Contoso 中的人员列表。 此活动已通过声明性方式进行创作（使用活动设计器）。<br />-   `SaveHiringRequestInfo`:此活动保存的信息`HiringRequest`(使用`HiringRequestRepository.Save`)。 此活动已使用命令性代码扩展 <xref:System.Activities.CodeActivity> 进行创作。|HiringRequestService|  
 |系统提供的 SQL Server 持久性|将承载流程图过程定义的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 实例配置为使用系统提供的 SQL Server 持久性。|HiringRequestService / ResumeRequestService|  
 |自定义跟踪|此示例包含保存 `HiringRequestProcess` 的历史记录（记录完成的操作、执行者以及执行时间）的自定义跟踪参与者。 源代码位于 HiringRequestService 的跟踪文件夹中。|HiringRequestService|  
 |ETW 跟踪|在 HiringRequestService 服务的 App.config 文件中配置系统提供的 ETW 跟踪。|HiringRequestService|  
@@ -131,13 +131,13 @@ ms.locfileid: "43520633"
 ## <a name="data-storage"></a>数据存储  
  数据存储在名为 `ContosoHR` 的 SQL Server 数据库中（创建此数据库的脚本位于 `DbSetup` 文件夹中）。 工作流实例存储在名为 `InstanceStore` 的 SQL Server 数据库中（创建实例存储的脚本是 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 分布的一部分）。  
   
- 通过 Visual Studio 命令提示符处运行 Setup.cmd 脚本创建两个数据库。  
+ 通过用于 Visual Studio 运行 Setup.cmd 脚本从开发人员命令提示符处创建这两个数据库。  
   
 ## <a name="running-the-sample"></a>运行示例  
   
 #### <a name="to-create-the-databases"></a>创建数据库  
   
-1.  打开 Visual Studio 命令提示。  
+1.  打开 Visual Studio 开发人员命令提示。  
   
 2.  导航到示例文件夹。  
   

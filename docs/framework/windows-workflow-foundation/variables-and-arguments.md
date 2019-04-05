@@ -1,16 +1,16 @@
 ---
-title: 变量和参数
+title: 变量和自变量
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 7d4bcbb28ffac0ea0f2f6d4aa238523855570f7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520102"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717812"
 ---
 # <a name="variables-and-arguments"></a>变量和自变量
-在 Windows Workflow Foundation (WF) 中，变量表示数据的存储参数表示流入和流的数据流入和流出活动。 活动拥有一组自变量，这些自变量构成活动的签名。 此外，活动可以维护一个变量列表，在工作流设计期间，开发人员可在该列表中添加或移除变量。 使用可返回值的表达式可以绑定参数。  
+在 Windows Workflow Foundation (WF) 中，变量表示的数据存储区和自变量表示数据的流执行和跳出执行活动。 活动拥有一组自变量，这些自变量构成活动的签名。 此外，活动可以维护一个变量列表，在工作流设计期间，开发人员可在该列表中添加或移除变量。 使用可返回值的表达式可以绑定参数。  
   
 ## <a name="variables"></a>变量  
  变量是数据的存储位置。 变量被声明为工作流定义的一部分。 变量在运行时获取值，并将这些值存储为工作流实例状态的一部分。 变量定义指定了变量的类型，如果需要，还可指定变量的名称。 以下代码演示如何声明变量，使用 <xref:System.Activities.Statements.Assign%601> 活动为变量赋值，然后使用 <xref:System.Activities.Statements.WriteLine> 活动将其值显示在控制台上。  
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2.  调用 <xref:System.Activities.InOutArgument%601.Set%2A> 时，运行时将立即设置值。  
   
-3.  可根据需要指定参数的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是指定参数计算顺序的从零开始的值。 默认情况下，参数的计算顺序未指定且等于 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 将 <xref:System.Activities.Argument.EvaluationOrder%2A> 设置为一个大于或等于零的值，以便为此参数指定一个计算顺序。 Windows Workflow Foundation 计算自变量以指定的计算顺序按升序。 注意：未指定计算顺序的自变量将先于指定计算顺序的自变量计算。  
+3.  可根据需要指定参数的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是指定参数计算顺序的从零开始的值。 默认情况下，参数的计算顺序未指定且等于 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 将 <xref:System.Activities.Argument.EvaluationOrder%2A> 设置为一个大于或等于零的值，以便为此自变量指定一个计算顺序。 Windows Workflow Foundation 的计算结果的参数和指定的计算顺序按升序排列。 注意：未指定计算顺序的参数将先于指定计算顺序的参数计算。  
   
  活动作者可使用强类型机制来公开该活动的参数。 实现方法是声明 <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601> 和 <xref:System.Activities.InOutArgument%601> 类型的属性。 这允许活动作者建立有关流入流出活动的数据的特定协定。  
   
@@ -123,7 +123,7 @@ WorkflowInvoker.Invoke(wf);
 ```  
   
 ### <a name="using-variables-and-arguments-in-code-based-activities"></a>在基于代码的活动中使用变量和参数  
- 先前的示例演示如何在工作流和声明性活动中使用参数和变量。 参数和变量也用在基于代码的活动中。 从概念上来说，二者的使用非常相似。 变量表示活动中的数据存储区，而参数表示流入或流出活动的数据，二者由工作流作者绑定到工作流中表示数据流至或流出位置的其他变量或参数。 若要获取或设置活动中的变量或参数的值，必须使用表示该活动当前执行环境的活动上下文。 活动上下文由工作流运行时传入活动的 <xref:System.Activities.CodeActivity%601.Execute%2A> 方法中。 在本示例中，为自定义 `Add` 活动定义了两个 <xref:System.Activities.ArgumentDirection.In> 参数。 为了访问这些参数的值，使用了 <xref:System.Activities.Argument.Get%2A> 方法，并使用了由工作流运行时传入的上下文。  
+ 先前的示例演示如何在工作流和声明性活动中使用参数和变量。 参数和变量也用在基于代码的活动中。 从概念上来说，二者的使用非常相似。 变量表示活动中的数据存储区，而参数表示流入或流出活动的数据，二者由工作流作者绑定到工作流中表示数据流至或流出位置的其他变量或参数。 若要获取或设置活动中的变量或参数的值，必须使用表示该活动当前执行环境的活动上下文。 活动上下文由工作流运行时传入活动的 <xref:System.Activities.CodeActivity%601.Execute%2A> 方法中。 在本示例中，为自定义 `Add` 活动定义了两个 <xref:System.Activities.ArgumentDirection.In> 参数。 为了访问这些自变量的值，使用了 <xref:System.Activities.Argument.Get%2A> 方法，并使用了由工作流运行时传入的上下文。  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- 有关使用自变量、 变量和代码中的表达式的详细信息，请参阅[创作工作流、 活动和表达式使用命令性代码](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)和[所需的参数和重载组](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ 有关使用参数、 变量和代码中的表达式的详细信息，请参阅[编写工作流、 活动和表达式使用命令性代码](authoring-workflows-activities-and-expressions-using-imperative-code.md)和[所需自变量和重载组](required-arguments-and-overload-groups.md).

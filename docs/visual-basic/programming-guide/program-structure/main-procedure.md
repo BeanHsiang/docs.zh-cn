@@ -8,32 +8,32 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: 109bf94eb91292cfca700a9e456c8ab53e83d68f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652147"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833660"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic 中的 Main 过程
-每个 Visual Basic 应用程序必须包含被调用的过程`Main`。 此过程可用作起始点并对你的应用程序总体控制。 .NET Framework 调用你`Main`过程时它已加载你的应用程序，并已准备好将控件传递给它。 除非你要创建 Windows 窗体应用程序，你必须编写`Main`运行的应用程序在其自己的过程。  
+每个 Visual Basic 应用程序必须包含被调用的过程`Main`。 此过程可用作起始点并为应用程序的总体控制。 .NET Framework 调用你`Main`时它已加载你的应用程序并已准备好将控制传递给它的过程。 除非要创建 Windows 窗体应用程序，必须编写`Main`运行其自己的应用程序的过程。  
   
- `Main` 包含首先运行的代码。 在`Main`，可以确定在程序启动时首先加载的窗体，找出系统上是否已在运行你的应用程序的副本，为你的应用程序，建立一组变量或打开对于应用程序要求的数据库。  
+ `Main` 包含先运行的代码。 在`Main`，可以确定在程序启动时首先加载哪个窗体，找出在系统上是否已在运行应用程序的副本，为应用程序建立了一组变量或打开应用程序所需的数据库。  
   
-## <a name="requirements-for-the-main-procedure"></a>主要过程要求  
- 在运行其自身 （通常使用扩展名为.exe) 文件必须包含`Main`过程。 （例如具有扩展名为.dll) 的库不运行其自身，并且不需要`Main`过程。 你可以创建不同类型的项目的要求如下所示：  
+## <a name="requirements-for-the-main-procedure"></a>主要过程的要求  
+ 在运行其自身 （通常使用扩展名为.exe) 文件必须包含`Main`过程。 （例如使用扩展名为.dll) 的库不会运行其自己并不需要`Main`过程。 您可以创建不同类型的项目的要求如下所示：  
   
--   控制台应用程序可以独立运行，并且你必须提供至少一个`Main`过程。 .  
+-   控制台应用程序可以独立运行，并且必须提供至少一个`Main`过程。 .  
   
--   在上运行其自己的 Windows 窗体应用程序。 但是，Visual Basic 编译器自动生成`Main`过程中此类应用程序，并且你不需要编写一个此类型。  
+-   Windows 窗体应用程序上运行其自己。 但是，Visual Basic 编译器会自动生成`Main`过程在此类应用程序，并且您无需编写一个。  
   
--   类库不需要`Main`过程。 其中包括 Windows 控件库和 Web 控件库。 作为类库部署 web 应用程序。  
+-   不需要类库`Main`过程。 其中包括 Windows 控件库和 Web 控件库。 Web 应用程序部署为类库。  
   
 ## <a name="declaring-the-main-procedure"></a>声明的主要过程  
- 有四种方式来声明`Main`过程。 它可以采用自变量，或不是，和它可以或不返回值。  
+ 有四种方法来声明`Main`过程。 它可以采用自变量和其可以或不返回值。  
   
 > [!NOTE]
->  如果你声明`Main`在类中，你必须使用`Shared`关键字。 在模块中，`Main`不需要为`Shared`。  
+>  如果声明`Main`在类中，必须使用`Shared`关键字。 在模块中，`Main`不需要为`Shared`。  
   
 -   最简单方法是声明`Sub`不采用自变量或返回值的过程。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33652147"
     End Module  
     ```  
   
--   `Main` 此外可以返回`Integer`值，该值为你的程序，操作系统使用与退出代码。 其他程序可以通过检查 Windows ERRORLEVEL 值来测试此代码。 若要返回退出代码，您必须声明`Main`作为`Function`过程而不是`Sub`过程。  
+-   `Main` 此外可以返回`Integer`值，操作系统的退出代码为使用您的计划。 其他程序可以测试此代码通过检查 Windows ERRORLEVEL 值。 若要返回的退出代码，必须声明`Main`作为`Function`而不是过程`Sub`过程。  
   
     ```  
     Module mainModule  
@@ -64,7 +64,7 @@ ms.locfileid: "33652147"
     End Module  
     ```  
   
--   `Main` 也可以采用`String`作为自变量的数组。 数组中的每个字符串包含用于调用程序的命令行自变量之一。 你可以采取不同的操作，具体取决于它们的值。  
+-   `Main` 也可以采用`String`数组作为参数。 每个字符串数组中的包含一个用于调用程序的命令行参数。 您可以采取不同操作，具体取决于它们的值。  
   
     ```  
     Module mainModule  
@@ -88,7 +88,7 @@ ms.locfileid: "33652147"
     End Module  
     ```  
   
--   你可以声明`Main`来检查命令行自变量而不是返回退出代码，，如下所示。  
+-   您可以声明`Main`来检查命令行参数而不是会返回退出代码，按如下所示。  
   
     ```  
     Module mainModule  
@@ -108,14 +108,15 @@ ms.locfileid: "33652147"
     End Module  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
- <xref:System.Array.Length%2A>  
- <xref:Microsoft.VisualBasic.Information.UBound%2A>  
- [Visual Basic 程序的结构](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- [/main](../../../visual-basic/reference/command-line-compiler/main.md)  
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [String 数据类型](../../../visual-basic/language-reference/data-types/string-data-type.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
+- <xref:System.Array.Length%2A>
+- <xref:Microsoft.VisualBasic.Information.UBound%2A>
+- [Visual Basic 程序的结构](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [/main](../../../visual-basic/reference/command-line-compiler/main.md)
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [String 数据类型](../../../visual-basic/language-reference/data-types/string-data-type.md)

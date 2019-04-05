@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fcf279a-f241-48f0-8034-2e3d331f1fcb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 484ba261f8e5c88f17b3eba3a354967e2350a621
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f14259afe4ee296d930b042d9e9ef069a81e65f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591755"
 ---
 # <a name="how-to-enumerate-stores-for-isolated-storage"></a>如何：枚举独立存储的存储区
 您可以使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 静态方法枚举当前用户的所有独立存储区。 该方法采用 <xref:System.IO.IsolatedStorage.IsolatedStorageScope> 值并且返回 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 枚举器。 若要枚举存储区，您必须具有指定<xref:System.Security.Permissions.IsolatedStorageFilePermission> 值的 <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> 权限。 如果调用采用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> 值的 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> 方法，它将返回一组为当前用户定义的 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 对象。  
@@ -33,5 +33,5 @@ ms.locfileid: "43875884"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [独立存储](../../../docs/standard/io/isolated-storage.md)

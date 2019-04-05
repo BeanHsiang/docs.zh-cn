@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 5856e710ad5a70fd740a5bb99ff241b8d9f2037a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518943"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366538"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 元素的布局注意事项
 本主题介绍如何<xref:System.Windows.Forms.Integration.WindowsFormsHost>与元素交互[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局系统。  
@@ -30,9 +30,9 @@ ms.locfileid: "43518943"
   
 |布局功能|描述|  
 |--------------------|-----------------|  
-|自动调整大小|某些[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件调整自身大小以正确显示其内容。 有关详细信息，请参阅[AutoSize 属性概述](../../../../docs/framework/winforms/controls/autosize-property-overview.md)。|  
+|自动调整大小|某些[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件调整自身大小以正确显示其内容。 有关详细信息，请参阅[AutoSize 属性概述](../../winforms/controls/autosize-property-overview.md)。|  
 |锚定和停靠|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控件支持调整位置和大小基于父容器。 有关详细信息，请参阅 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>。|  
-|自动缩放|容器控件来调整自身及其子级的输出设备或大小，以像素为单位的默认容器字体的分辨率。 有关详细信息，请参阅[在 Windows 窗体中的自动缩放](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)。|  
+|自动缩放|容器控件来调整自身及其子级的输出设备或大小，以像素为单位的默认容器字体的分辨率。 有关详细信息，请参阅[在 Windows 窗体中的自动缩放](../../winforms/automatic-scaling-in-windows-forms.md)。|  
 |布局容器|<xref:System.Windows.Forms.FlowLayoutPanel>和<xref:System.Windows.Forms.TableLayoutPanel>控件排列其子控件和调整自身大小根据其内容。|  
   
 ## <a name="layout-limitations"></a>布局的限制  
@@ -73,7 +73,7 @@ ms.locfileid: "43518943"
 |溢出|当<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素将从转换`double`值到`int`值，可能会溢出。 值大于<xref:System.Int32.MaxValue>设置为<xref:System.Int32.MaxValue>。|  
   
 ### <a name="layout-related-properties"></a>与布局相关的属性  
- 控制中的布局行为的属性[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]相应地通过映射元素<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。 有关详细信息，请参阅 [Windows 窗体和 WPF 属性映射](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)。  
+ 控制中的布局行为的属性[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]相应地通过映射元素<xref:System.Windows.Forms.Integration.WindowsFormsHost>元素。 有关详细信息，请参阅 [Windows 窗体和 WPF 属性映射](windows-forms-and-wpf-property-mapping.md)。  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>托管控件中的布局更改  
  中托管的布局更改[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件将传播到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]以触发布局更新。 <xref:System.Windows.UIElement.InvalidateMeasure%2A>方法<xref:System.Windows.Forms.Integration.WindowsFormsHost>可确保在承载控件的布局更改会造成[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局引擎来运行。  
@@ -98,10 +98,10 @@ ms.locfileid: "43518943"
   
 -   如果<xref:System.Windows.Forms.Control.Size%2A>属性返回与指定的约束，较小的大小<xref:System.Windows.Forms.Integration.WindowsFormsHost>接受此大小值并返回到值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]布局系统。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [演练：在 WPF 中排列 Windows 窗体控件](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)  
- [在 WPF 示例中排列 Windows 窗体控件](https://go.microsoft.com/fwlink/?LinkID=159971)  
- [Windows 窗体和 WPF 属性映射](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [演练：在 WPF 中排列 Windows 窗体控件](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [在 WPF 示例中排列 Windows 窗体控件](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Windows 窗体和 WPF 属性映射](windows-forms-and-wpf-property-mapping.md)
+- [迁移和互操作性](migration-and-interoperability.md)

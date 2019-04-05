@@ -2,24 +2,16 @@
 title: 网络设置架构
 ms.date: 03/30/2017
 helpviewer_keywords:
-- elements [.NET Framework], network configuration elements
-- sending data, network configuration elements
-- receiving data, network configuration elements
-- configuration settings [.NET Framework], networks
-- Internet, network configuration elements
-- network configuration elements
-- network settings
-- connections [.NET Framework], network configuration elements
-- network resources, network configuration elements
+  - 'elements [.NET Framework], network configuration elements'
+  - 'sending data, network configuration elements'
+  - 'receiving data, network configuration elements'
+  - 'configuration settings [.NET Framework], networks'
+  - 'Internet, network configuration elements'
+  - network configuration elements
+  - network settings
+  - 'connections [.NET Framework], network configuration elements'
+  - 'network resources, network configuration elements'
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 5783e63d81c8951afb6b1646b595fc619d51549c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: MT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837477"
 ---
 # <a name="network-settings-schema"></a>网络设置架构
 网络设置指定 .NET Framework 与 Internet 的连接方式。 下表描述 [\<system.Net> 元素（网络设置）](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)下每个子配置元素的功能。  
@@ -41,6 +33,6 @@ ms.locfileid: "48837477"
 |[\<iriParsing> 元素（Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|指定是否对 <xref:System.Uri> 应用国际资源标识符 (IRI) 分析以及是否应该应用 IRI 分析规则。|  
 |[\<schemeSettings> 元素（Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何分析特定方案的 <xref:System.Uri>。|  
   
-## <a name="see-also"></a>请参阅  
- [配置 Internet 应用程序](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>请参阅
+- [配置 Internet 应用程序](../../../../../docs/framework/network-programming/configuring-internet-applications.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

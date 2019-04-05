@@ -1,5 +1,6 @@
 ---
-title: 属性（C# 编程指南）
+title: 属性 - C# 编程指南
+ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - cs.properties
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 74020696a9d2370de2976671a9f1ed944aba8fb9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676817"
 ---
 # <a name="properties-c-programming-guide"></a>属性（C# 编程指南）
 
@@ -33,7 +34,7 @@ ms.locfileid: "43857675"
 
 有一个实现属性的基本模式，该模式使用私有支持字段来设置和检索属性值。 `get` 访问器返回私有字段的值，`set` 访问器在向私有字段赋值之前可能会执行一些数据验证。 这两个访问器还可以在存储或返回数据之前对其执行某些转换或计算。
 
-下面的示例阐释了此模式。 在此示例中，`TimePeriod` 类表示时间间隔。 在内部，该类将时间间隔以秒为单位存储在名为 `seconds` 的私有字段中。 名为 `Hours` 的读-写属性允许客户以小时为单位指定时间间隔。 `get` 和 `set` 访问器都会执行小时与秒之间的必要转换。 此外，`set` 访问器还会验证数据，如果小时数无效，则引发 <xref:System.ArgumentOutOfRangeException>。 
+下面的示例阐释了此模式。 在此示例中，`TimePeriod` 类表示时间间隔。 在内部，该类将时间间隔以秒为单位存储在名为 `_seconds` 的私有字段中。 名为 `Hours` 的读-写属性允许客户以小时为单位指定时间间隔。 `get` 和 `set` 访问器都会执行小时与秒之间的必要转换。 此外，`set` 访问器还会验证数据，如果小时数无效，则引发 <xref:System.ArgumentOutOfRangeException>。 
    
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
@@ -70,12 +71,13 @@ ms.locfileid: "43857675"
 -   [自动实现的属性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[属性](~/_csharplang/spec/classes.md#properties)。 该语言规范是 C# 语法和用法的权威资料。
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [使用属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [索引器](../../../csharp/programming-guide/indexers/index.md)  
-- [get 关键字](../../../csharp/language-reference/keywords/get.md)    
-- [set 关键字](../../../csharp/language-reference/keywords/set.md)    
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [使用属性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [索引器](../../../csharp/programming-guide/indexers/index.md)
+- [get 关键字](../../../csharp/language-reference/keywords/get.md)
+- [set 关键字](../../../csharp/language-reference/keywords/set.md)

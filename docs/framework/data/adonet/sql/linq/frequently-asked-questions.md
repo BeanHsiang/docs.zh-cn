@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 5f556c46823bd867709e8c53b59f7ac53201d242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679756"
 ---
 # <a name="frequently-asked-questions"></a>常见问题
 以下各节解答了您在实现 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 时可能遇到的一些常见问题。  
   
- 其他问题，请参阅[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
+ 在解决其他问题[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
   
 ## <a name="cannot-connect"></a>无法连接  
  问： 我无法连接到数据库。  
@@ -27,7 +27,7 @@ ms.locfileid: "33365483"
   
  答： 请确保您调用了 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 来将结果保存到数据库。  
   
-## <a name="database-connection-open-how-long"></a>数据库连接：可以打开多长时间？  
+## <a name="database-connection-open-how-long"></a>数据库连接：打开多长时间？  
  问： 我的数据库连接可以保持打开状态多长时间？  
   
  答： 一个连接通常会一直保持打开状态，直至您使用完查询结果为止。 如果您需要花时间处理所有结果并且愿意对结果进行缓存，请将 <xref:System.Linq.Enumerable.ToList%2A> 应用于查询。 在每个对象仅处理一次的常见方案中，流模型比 `DataReader` 和 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 都更为适合。  
@@ -100,19 +100,19 @@ ms.locfileid: "33365483"
  有关详细信息，请参阅[自定义操作通过使用存储过程](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)。  
   
 ## <a name="serialization-errors"></a>序列化错误  
- 问： 当我试图进行序列化时，收到以下错误:"...类型 'system.data.linq.changetracker + standardchangetracker' 未标记为可序列化。"  
+ 问： 当我尝试进行序列化时，为什么会出现以下错误："...类型 'system.data.linq.changetracker + standardchangetracker' 未标记为可序列化。"  
   
  答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的代码生成支持 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化， 而不支持 <xref:System.Xml.Serialization.XmlSerializer> 或 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>。 有关详细信息，请参阅[序列化](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md)。  
   
 ## <a name="multiple-dbml-files"></a>多个 DBML 文件  
  问： 如果我有多个 DBML 文件共享一些公用的表，我会收到一个编译器错误消息。  
   
- 答： 设置**上下文 Namespace**和**实体 Namespace**属性从[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]转换为每个 DBML 文件的非重复值。 此方法可以避免名称/命名空间冲突。  
+ 答： 设置**上下文 Namespace**并**实体 Namespace**中的属性[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]为每个 DBML 文件不同的值。 此方法可以避免名称/命名空间冲突。  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>避免在插入或更新时显式设置数据库生成的值  
  问： 我的一个数据库表具有一个默认为 SQL `DateCreated` 的 `Getdate()` 列。 在我试图使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 插入新记录时，该值会设置为 `NULL`。 我希望其设置为数据库默认值。  
   
- 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会自动为标识（自动增加）和 rowguidcol（数据库生成的 GUID）以及时间戳列处理这种情况。 在其他情况下，您应手动设置<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true`和<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>属性。  
+ 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会自动为标识（自动增加）和 rowguidcol（数据库生成的 GUID）以及时间戳列处理这种情况。 在其他情况下，您应手动设置<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true`并<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>属性。  
   
 ## <a name="multiple-dataloadoptions"></a>多个 DataLoadOptions  
  问： 是否可以指定其他加载选项而不覆盖原先的选项？  
@@ -163,14 +163,14 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3.  检查默认的 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) 以确定该值对于您的应用程序是否正确。  
   
     > [!CAUTION]
-    >  如果你使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]在 Visual Studio 中，所做的更改可能会被覆盖。  
+    >  如果使用的[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]在 Visual Studio 中，可能会覆盖所做的更改。  
   
 ## <a name="aptca"></a>APTCA  
  问： System.Data.Linq 是否标记为供部分受信任的代码使用？  
   
  答： 是，System.Data.Linq.dll 程序集属于那些使用 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 属性标记的 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 程序集。 如果没有此标记，则 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 中的程序集将仅供完全受信任的代码使用。  
   
- 中的主体方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对于允许部分受信任调用方是能够进行[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]要访问 Web 应用程序、 程序集其中*信任*配置为 Medium。  
+ 中的主要方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，允许部分受信任调用方是能够[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]程序集访问从 Web 应用程序，其中*信任*配置为 Medium。  
   
 ## <a name="mapping-data-from-multiple-tables"></a>映射来自多个表的数据  
  问： 我的实体中的数据来自多个表。 如果映射这些数据？  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>第二个 DataContext 未更新  
  问： 我使用 <xref:System.Data.Linq.DataContext> 的一个实例存储数据库中的值。 但是，相同数据库上的另一个 <xref:System.Data.Linq.DataContext> 未反映更新的值。 第二个 <xref:System.Data.Linq.DataContext> 实例似乎返回缓存的值。  
   
- 答： 此行为是有意安排的。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会继续返回您在第一个实例中看到的相同实例/值。 在进行更新时使用开放式并发。 原始数据用于检查当前数据库状态，以确定该数据实际上仍未更改。 如果该数据已更改，则会发生冲突，您的应用程序必须解决该冲突。 您的应用程序可以选择将原始状态重置为当前数据库状态并尝试再次更新。 有关详细信息，请参阅[如何： 管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
+ 答： 此行为是有意安排的。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会继续返回您在第一个实例中看到的相同实例/值。 在进行更新时使用开放式并发。 原始数据用于检查当前数据库状态，以确定该数据实际上仍未更改。 如果该数据已更改，则会发生冲突，您的应用程序必须解决该冲突。 您的应用程序可以选择将原始状态重置为当前数据库状态并尝试再次更新。 有关详细信息，请参阅[如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
   
  您也可以将 <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> 设置为 false，这样可以关闭缓存和更改跟踪。 然后便可以在每次查询时检索最新值。  
   
@@ -199,7 +199,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  答： 只读模式关闭了上下文跟踪更改的功能。  
   
-## <a name="see-also"></a>请参阅  
- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [疑难解答](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  
- [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+## <a name="see-also"></a>请参阅
+- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [疑难解答](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
+- [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

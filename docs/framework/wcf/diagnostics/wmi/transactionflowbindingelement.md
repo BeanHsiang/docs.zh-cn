@@ -2,12 +2,12 @@
 title: TransactionFlowBindingElement
 ms.date: 03/30/2017
 ms.assetid: 0a9656fe-2400-45ca-ad79-92715c8cf190
-ms.openlocfilehash: 027ace6ea9fc2a0e5ce63efa84e1a49c0ed2cd0a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0311837ebb8112d9492fb548492bcd3e10230e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188022"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514564"
 ---
 # <a name="transactionflowbindingelement"></a>TransactionFlowBindingElement
 TransactionFlowBindingElement  
@@ -26,7 +26,7 @@ class TransactionFlowBindingElement : BindingElement
 ## <a name="methods"></a>方法  
  TransactionFlowBindingElement 类未定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  TransactionFlowBindingElement 类具有以下属性：  
   
 ### <a name="issuedtokens"></a>IssuedTokens  
@@ -56,5 +56,5 @@ class TransactionFlowBindingElement : BindingElement
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>

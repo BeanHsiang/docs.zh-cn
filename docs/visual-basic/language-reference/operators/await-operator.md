@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: 2094ba308ba384feb8542e896cb1eafcf645947c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d9d50433e3bc24df7cda137a145ab3f0f0302a1f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524461"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841974"
 ---
 # <a name="await-operator-visual-basic"></a>Await 运算符 (Visual Basic)
-在异步方法或 lambda 表达式中对操作数应用 `Await` 运算符可暂停执行方法，直到所等待的任务完成。 任务表示正在进行的工作。  
+在异步方法或 Lambda 表达式中对操作数应用 `Await` 运算符可暂停执行方法，直到所等待的任务完成。 任务表示正在进行的工作。  
   
  方法，用`Await`使用必须具有[异步](../../../visual-basic/language-reference/modifiers/async.md)修饰符。 使用 `Async` 修饰符定义并且通常包含一个或多个 `Await` 表达式的这类方法称为异步方法。  
   
@@ -43,7 +43,7 @@ End Function
 ```  
   
 > [!IMPORTANT]
->  有关完整示例，请参阅[演练：使用 async 和 await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以从 Microsoft 网站的[开发者代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)中下载示例。 该示例处于 AsyncWalkthrough_HttpClient 项目中。  
+>  有关完整示例，请参阅[演练：使用 Async 和 Await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以从 Microsoft 网站的[开发者代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)中下载示例。 该示例处于 AsyncWalkthrough_HttpClient 项目中。  
   
  如果 `Await` 应用于返回 `Task(Of TResult)` 的方法调用结果，则 `Await` 表达式的类型为 TResult。 如果 `Await` 应用于返回 `Task` 的方法调用结果，则 `Await` 表达式不返回值。 以下示例演示了差异。  
   
@@ -59,7 +59,7 @@ Await AsyncMethodThatReturnsTask()
   
  `Await` 表达式只出现在由 `Async` 修饰符标记的一个立即封闭方法体或 lambda 表达式中。 术语*Await*用作关键字仅在该上下文中。 在其他位置，它会解释为标识符。 在异步方法或 lambda 表达式中，`Await`表达式中不能发生在查询表达式中，`catch`或`finally`块[尝试...Catch...最后](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)中的循环控制变量表达式语句`For`或`For Each`循环中，或正文中[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)语句。  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>Exceptions  
  大多数异步方法返回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>。 返回任务的属性携带有关其状态和历史记录的信息，如任务是否完成、异步方法是否导致异常或已取消以及最终结果是什么。 `Await` 运算符可访问这些属性。  
   
  如果等待的任务返回异步方法导致异常，则 `Await` 运算符会重新引发异常。  
@@ -103,7 +103,8 @@ Public Async Function WaitSynchronously() As Task(Of String)
 End Function  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用 Async 和 Await 的异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)  
- [演练：使用 Async 和 Await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Async](../../../visual-basic/language-reference/modifiers/async.md)
+## <a name="see-also"></a>请参阅
+
+- [使用 Async 和 Await 的异步编程](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [演练：使用 Async 和 Await 访问 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async](../../../visual-basic/language-reference/modifiers/async.md)

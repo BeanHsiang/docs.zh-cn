@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 44f0763aa09b2a9d036d13c9995d7ea978908d4c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529156"
 ---
 # <a name="transport-security-overview"></a>传输安全概述
 Windows Communication Foundation (WCF) 中的传输安全机制取决于绑定和正在使用的传输。 例如，当使用 <xref:System.ServiceModel.WSHttpBinding> 类时，传输为 HTTP，保证传输安全的主要机制为 HTTP 上的安全套接字层 (SSL) （通常称为 HTTPS）。 本主题讨论 WCF 系统提供绑定中使用的主要传输安全机制。  
@@ -47,19 +47,19 @@ Windows Communication Foundation (WCF) 中的传输安全机制取决于绑定�
  以下几节讨论其他客户端凭据类型。  
   
 #### <a name="basic"></a>Basic  
- 这对应于 IIS 中的基本身份验证方法。 使用此模式时，必须为 IIS 服务器配置 Windows 用户帐户和适当的 NTFS 文件系统权限。 有关详细信息[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[启用基本身份验证和配置领域名](https://go.microsoft.com/fwlink/?LinkId=88592)。 有关详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[IIS 7.0 Beta： 配置基本身份验证](https://go.microsoft.com/fwlink/?LinkId=88593)。  
+ 这对应于 IIS 中的基本身份验证方法。 使用此模式时，必须为 IIS 服务器配置 Windows 用户帐户和适当的 NTFS 文件系统权限。 有关详细信息[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[启用基本身份验证和配置领域名](https://go.microsoft.com/fwlink/?LinkId=88592)。 有关详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[IIS 7.0 Beta:配置基本身份验证](https://go.microsoft.com/fwlink/?LinkId=88593)。  
   
 #### <a name="certificate"></a>证书  
- IIS 有一个要求客户端使用证书进行登录的选项。 此功能还可以使 IIS 将客户端证书映射到 Windows 帐户。 有关详细信息[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[IIS 6.0 中启用客户端证书](https://go.microsoft.com/fwlink/?LinkId=88594)。 有关详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[IIS 7.0 Beta： 在 IIS 7.0 中配置服务器证书](https://go.microsoft.com/fwlink/?LinkId=88595)。  
+ IIS 有一个要求客户端使用证书进行登录的选项。 此功能还可以使 IIS 将客户端证书映射到 Windows 帐户。 有关详细信息[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[IIS 6.0 中启用客户端证书](https://go.microsoft.com/fwlink/?LinkId=88594)。 有关详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[IIS 7.0 Beta:在 IIS 7.0 中配置服务器证书](https://go.microsoft.com/fwlink/?LinkId=88595)。  
   
 #### <a name="digest"></a>摘要  
- 摘要式身份验证类似于基本身份验证，但其具有以哈希形式而不是明文形式发送凭据的优点。 有关详细信息[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[摘要式身份验证在 IIS 6.0 中](https://go.microsoft.com/fwlink/?LinkID=88443)。 有关详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[IIS 7.0 Beta： 配置摘要式身份验证](https://go.microsoft.com/fwlink/?LinkId=88596)。  
+ 摘要式身份验证类似于基本身份验证，但其具有以哈希形式而不是明文形式发送凭据的优点。 有关详细信息[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[摘要式身份验证在 IIS 6.0 中](https://go.microsoft.com/fwlink/?LinkID=88443)。 有关详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[IIS 7.0 Beta:配置摘要式身份验证](https://go.microsoft.com/fwlink/?LinkId=88596)。  
   
 #### <a name="windows"></a>Windows  
- 这对应于 IIS 中的集成 Windows 身份验证。 设置为此值时，还需要服务器位于使用 Kerberos 协议作为其域控制器的 Windows 域中。 如果服务器不在支持 Kerberos 的域中，或者如果 Kerberos 系统失败，您可以使用下一节中说明的 NT LAN Manager (NTLM) 值。 有关详细信息[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[IIS 6.0 中的集成 Windows 身份验证](https://go.microsoft.com/fwlink/?LinkId=88597)。 有关详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[IIS 7.0 Beta： 在 IIS 7.0 中配置服务器证书](https://go.microsoft.com/fwlink/?LinkId=88595)。  
+ 这对应于 IIS 中的集成 Windows 身份验证。 设置为此值时，还需要服务器位于使用 Kerberos 协议作为其域控制器的 Windows 域中。 如果服务器不在支持 Kerberos 的域中，或者如果 Kerberos 系统失败，您可以使用下一节中说明的 NT LAN Manager (NTLM) 值。 有关详细信息[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[IIS 6.0 中的集成 Windows 身份验证](https://go.microsoft.com/fwlink/?LinkId=88597)。 有关详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]，请参阅[IIS 7.0 Beta:在 IIS 7.0 中配置服务器证书](https://go.microsoft.com/fwlink/?LinkId=88595)。  
   
 #### <a name="ntlm"></a>NTLM  
- 这使服务器可以在 Kerberos 协议失败时使用 NTLM 进行身份验证。 有关中配置 IIS 的详细信息[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[强制 NTLM 身份验证](https://go.microsoft.com/fwlink/?LinkId=88598)。 对于 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 身份验证包括 NTLM 身份验证。 有关详细信息，请参阅[IIS 7.0 Beta： 在 IIS 7.0 中配置服务器证书](https://go.microsoft.com/fwlink/?LinkID=88595)。  
+ 这使服务器可以在 Kerberos 协议失败时使用 NTLM 进行身份验证。 有关中配置 IIS 的详细信息[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，请参阅[强制 NTLM 身份验证](https://go.microsoft.com/fwlink/?LinkId=88598)。 对于 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 身份验证包括 NTLM 身份验证。 有关详细信息，请参阅[IIS 7.0 Beta:在 IIS 7.0 中配置服务器证书](https://go.microsoft.com/fwlink/?LinkID=88595)。  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
  <xref:System.ServiceModel.WSHttpBinding> 类专用于与实现 WS* 规范的服务进行互操作。 此绑定的传输安全为 HTTP 上的安全套接字层 (SSL)，即 HTTPS。 若要创建使用 SSL 的 WCF 应用程序，请使用 IIS 承载该应用程序。 或者，如果您要创建自承载的应用程序，请使用 HttpCfg.exe 工具将 X.509 证书绑定到计算机上的特定端口。 作为 WCF 应用程序作为终结点地址的一部分指定端口号。 使用传输模式时，终结点地址必须包括 HTTPS 协议，否则运行时将引发异常。 有关详细信息，请参阅[HTTP 传输安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
@@ -120,5 +120,5 @@ Windows Communication Foundation (WCF) 中的传输安全机制取决于绑定�
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding 和 NetMsmqBinding  
  有关传输的完整讨论安全与消息队列 （以前称为 MSMQ），请参阅[使用传输安全保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
   
-## <a name="see-also"></a>请参阅  
- [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>请参阅
+- [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

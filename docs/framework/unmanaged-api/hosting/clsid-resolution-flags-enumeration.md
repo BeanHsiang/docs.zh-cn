@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bec138460d508371565c26017fab3a8c22266db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bee25122920a6fcec3bbd4e9e53bbdad008d5304
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514097"
 ---
 # <a name="clsidresolutionflags-enumeration"></a>CLSID_RESOLUTION_FLAGS 枚举
-包含值，用于指示公共语言运行时 (CLR) 应如何解析`CLSID`。  
+包含指示公共语言运行时 (CLR) 应如何解析值`CLSID`。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,14 +40,14 @@ typedef enum {
 |成员|描述|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|指示默认行为。|  
-|`CLSID_RESOLUTION_REGISTERED`|指示运行时的注册表中搜索和应用程序策略。|  
+|`CLSID_RESOLUTION_REGISTERED`|指示运行时注册表中搜索和应用程序策略。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

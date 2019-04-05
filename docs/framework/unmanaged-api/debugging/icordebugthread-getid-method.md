@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52962ea7d2cf3dd1822b1a36cc6cfcb56bc427f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8eef616d51febd1b919e0a1936406551f441b98c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417188"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468970"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID 方法
 获取此 ICorDebugThread 的活动部分的当前操作系统标识符。  
@@ -35,18 +35,18 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pdwThreadId`  
  [out]线程的标识符。  
   
 ## <a name="remarks"></a>备注  
- 操作系统标识符可能发生更改的过程中，执行过程，并且可以的线程的不同部分的值。  
+ 操作系统识别符的过程中，执行过程中可能会更改，并且可以在线程的不同部分的不同值。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

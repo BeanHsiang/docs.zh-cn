@@ -1,15 +1,16 @@
 ---
-title: 使用索引器（C# 编程指南）
+title: 使用索引器 - C# 编程指南
+ms.custom: seodec18
 ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 0bb7b848f5484b78e8dae0c40320e7945b78eea0
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 6b129177e6eb916982a27ba76aca517b0642344c
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873449"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203293"
 ---
 # <a name="using-indexers-c-programming-guide"></a>使用索引器（C# 编程指南）
 
@@ -52,17 +53,17 @@ public int this[int index]   // Indexer declaration
   
  请注意，当评估索引器访问时（例如在 `Console.Write` 语句中），将调用 [get](../../../csharp/language-reference/keywords/get.md) 访问器。 因此，如果不存在 `get` 访问器，则会发生编译时错误。  
   
-[!code-csharp[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#1)]  
   
 ## <a name="indexing-using-other-values"></a>使用其他值进行索引
 
-C# 不将索引类型限制为整数。 例如，对索引器使用字符串可能有用。 通过搜索集合内的字符串并返回相应的值，可以实现此类索引器。 由于访问器可被重载，字符串和整数版本可以共存。  
+C# 不将索引参数类型限制为整数。 例如，对索引器使用字符串可能有用。 通过搜索集合内的字符串并返回相应的值，可以实现此类索引器。 由于访问器可被重载，字符串和整数版本可以共存。  
   
 ## <a name="example-2"></a>示例 2  
   
 下面的示例声明了存储星期几的类。 `get` 访问器采用字符串（星期几）并返回对应的整数。 例如，“Sunday”返回 0，“Monday”返回 1，依此类推。  
   
-[!code-csharp[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#2)]  
   
 ## <a name="robust-programming"></a>可靠编程
 
@@ -74,6 +75,6 @@ C# 不将索引类型限制为整数。 例如，对索引器使用字符串可�
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [索引器](../../../csharp/programming-guide/indexers/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [索引器](../../../csharp/programming-guide/indexers/index.md)
 - [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)

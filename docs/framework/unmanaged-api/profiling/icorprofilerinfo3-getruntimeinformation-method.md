@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67e1d20f7faf38fa37083f1a5b1cc0c1060b7a32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: da116de6bde01ea7fd17f7ab27605501ae723f30
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461563"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473002"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation 方法
 提供有关所分析公共语言运行时 (CLR) 的版本信息。  
@@ -43,12 +43,12 @@ HRESULT GetRuntimeInformation(
                    WCHAR  szVersionString[]);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pClrInstanceId`  
- [out]在进程中运行 CLR 实例代表 ID。 这是与相同`ClrInstanceID`事件跟踪 Windows (ETW) 启动事件的报告。  
+ [out]在进程中正在运行的 CLR 实例代表 ID。 这是与相同`ClrInstanceID`Windows (ETW) 启动事件的事件跟踪报告。  
   
  `pRuntimeType`  
- [out]运行时类型中。 此参数返回`COR_PRF_DESKTOP_CLR`桌面版本的 CLR，或`COR_PRF_CORE_CLR`Silverlight 中所用的 CLR 的核心版本。  
+ [out]运行时类型中。 此参数返回`COR_PRF_DESKTOP_CLR`桌面版本的 CLR，或`COR_PRF_CORE_CLR`CLR 在 Silverlight 中使用的 core 版本。  
   
  `pMajorVersion`  
  [out]CLR 主版本号。  
@@ -63,7 +63,7 @@ HRESULT GetRuntimeInformation(
  [out]与软件更新关联的 CLR 的版本号。  
   
  `cchVersionString`  
- [in]长度，以字符为单位的缓冲区，`szVersionString`指向。  
+ [in]长度，以字符为单位的缓冲区的`szVersionString`指向。  
   
  `pcchVersionString`  
  [out]长度，以字符为单位的`szVersionString`。  
@@ -72,18 +72,18 @@ HRESULT GetRuntimeInformation(
  [out]CLR 版本字符串。  
   
 ## <a name="remarks"></a>备注  
- 你可能会传递了 null 对于任何参数。 但是，`pcchVersionString`不能为 null 除非`szVersionString`也为 null。  
+ 可以传入任何参数为 null。 但是，`pcchVersionString`不能为 null 除非`szVersionString`也为 null。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerInfo3 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerInfo3 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Profiling 接口](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [分析](../../../../docs/framework/unmanaged-api/profiling/index.md)

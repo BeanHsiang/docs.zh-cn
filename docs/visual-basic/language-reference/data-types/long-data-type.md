@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 040306b49bbf6b0f30556309457510ca873d8a74
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641975"
 ---
 # <a name="long-data-type-visual-basic"></a>Long 数据类型 (Visual Basic)
 
@@ -60,7 +60,7 @@ Dim number As Long = &H_0FAC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-此外可以包含数值`L`[键入字符](../../programming-guide\language-features\data-types/type-characters.md)来表示`Long`数据类型，如以下示例所示。
+此外可以包含数值`L`[键入字符](../../programming-guide/language-features/data-types/type-characters.md)来表示`Long`数据类型，如以下示例所示。
 
 ```vb
 Dim number = &H_0FAC_0326_1489_D68CL
@@ -78,10 +78,10 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="see-also"></a>请参阅
 
-<xref:System.Int64>
-[数据类型](../../../visual-basic/language-reference/data-types/index.md)   
-[整数数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
-[Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)   
-[类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
-[转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
-[有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int64>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

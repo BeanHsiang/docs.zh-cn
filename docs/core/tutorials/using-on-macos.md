@@ -1,32 +1,32 @@
 ---
-title: 在 macOS 上入门 .NET Core
+title: 开始在 macOS 上使用 .NET Core
 description: 本文档提供使用 Visual Studio Code 创建 .NET Core 解决方案的步骤和工作流概述。
 author: bleroy
-ms.author: mairaw
 ms.date: 03/23/2017
-ms.openlocfilehash: 5a4b2734137f59b29535f302dd17fb94329d676f
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.custom: seodec18
+ms.openlocfilehash: e5ac6fa04a2a5001146936de56acafeec7dd895d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245580"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409492"
 ---
-# <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上入门 .NET Core
+# <a name="get-started-with-net-core-on-macos"></a>开始在 macOS 上使用 .NET Core
 
 本文档提供为 macOS 创建 .NET Core 解决方案的步骤和工作流概述。 了解到如何通过 [NuGet](https://www.nuget.org/) 创建项目、单元测试、使用调试工具和合并第三方库。
 
 > [!NOTE]
-> 本文在 macOS 上使用 [Visual Studio Code](http://code.visualstudio.com)。
+> 本文在 macOS 上使用 [Visual Studio Code](https://code.visualstudio.com)。
 
 ## <a name="prerequisites"></a>系统必备
 
 获取 [.NET Core SDK](https://www.microsoft.com/net/core)。 .NET Core SDK 包括最新版本的 .NET Core 框架和运行时。
 
-安装 [Visual Studio Code](http://code.visualstudio.com)。 在本文中，还将安装可提升 .NET Core 开发体验的 Visual Studio Code 扩展。
+安装 [Visual Studio Code](https://code.visualstudio.com)。 在本文中，还将安装可提升 .NET Core 开发体验的 Visual Studio Code 扩展。
 
 打开 Visual Studio Code，并按 <kbd>F1</kbd> 打开 Visual Studio Code 面板，从而安装 Visual Studio Code C# 扩展。 键入 ext install ，查看扩展列表。 选择 C# 扩展。 重启 Visual Studio Code 以激活扩展。 有关详细信息，请参阅 [Visual Basic Code C# 扩展文档](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
-## <a name="getting-started"></a>入门
+## <a name="get-started"></a>入门
 
 在本教程中，将创建三个项目：库项目、对该库项目的测试和使用该库的控制台应用程序。 若要[查看或下载本主题的源代码](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)，请访问 GitHub 上的 dotnet/samples 存储库。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
@@ -215,7 +215,7 @@ dotnet run -p app/app.csproj
 
 若要打开“调试器”选项卡，请在 Visual Studio Code 工具栏中选择“调试”图标，再从菜单栏中依次选择“视图”>“调试”，或使用键盘快捷方式 <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
 
-![Visual Studio Code 调试程序](./media/using-on-macos/vscodedebugger.png)
+![Visual Studio Code 调试程序](./media/using-on-macos/visual-studio-code-debugger.png)
 
 按“开始”按钮，在调试器下启动应用程序。 应用开始执行，运行到断点处停止。 单步执行 `Get` 方法，确保已传入正确的参数。 确认答案是 42。
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 853f3fe060b70c8a43957d3c843fb95539981679
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 796342d17b0d0f1a642aff381274746d1fda3559
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296151"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816442"
 ---
 # <a name="resume-statement"></a>Resume 语句
 错误处理例程完成后恢复执行。  
@@ -35,7 +35,7 @@ Resume [ Next | line ]
   
 ## <a name="parts"></a>部件  
  `Resume`  
- 必须的。 如果错误发生在同一过程中作为错误处理程序，将导致错误的语句处继续执行。 如果被调用过程中发生错误的在上一次调用不包含错误处理例程的过程的语句处继续执行。  
+ 必需。 如果错误发生在同一过程中作为错误处理程序，将导致错误的语句处继续执行。 如果被调用过程中发生错误的在上一次调用不包含错误处理例程的过程的语句处继续执行。  
   
  `Next`  
  可选。 如果错误发生的错误处理程序与相同的步骤中，将紧跟导致错误的语句的语句处继续执行。 如果被调用过程中发生错误的与上一次调用不包含错误处理例程的过程在语句后立即语句处继续执行 (或`On Error Resume Next`语句)。  
@@ -55,14 +55,15 @@ Resume [ Next | line ]
 ## <a name="example"></a>示例  
  此示例使用`Resume`语句来结束的错误处理过程中，然后继续执行导致错误的语句。 错误号 55 生成举例说明使用`Resume`语句。  
   
- [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#16)]  
   
 ## <a name="requirements"></a>要求  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空间：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)  
+ **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
   
-## <a name="see-also"></a>请参阅  
- [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Error 语句](../../../visual-basic/language-reference/statements/error-statement.md)  
- [On Error 语句](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a>请参阅
+
+- [Try...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Error 语句](../../../visual-basic/language-reference/statements/error-statement.md)
+- [On Error 语句](../../../visual-basic/language-reference/statements/on-error-statement.md)

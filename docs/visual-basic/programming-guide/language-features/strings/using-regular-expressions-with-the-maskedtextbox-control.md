@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 25bdfaef300b001d1c052aeea4e1ad3547a6d3d7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e0165fb8d573878ae19378b2656d89627680b804
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803803"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826727"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>在 MaskedTextBox 控件中使用正则表达式 (Visual Basic)
 此示例演示如何将简单的正则表达式以使用<xref:System.Windows.Forms.MaskedTextBox>控件。  
@@ -23,12 +23,12 @@ ms.locfileid: "43803803"
 |屏蔽元素|描述|正则表达式元素|  
 |---------------------|-----------------|--------------------------------|  
 |0|介于 0 到 9 之间的任何单个数字。 必填条目。|\d|  
-|9|数字或空格。 可选项。|[\d]？|  
-|#|数字或空格。 可选项。 如果此位置留空掩码中，它将呈现为一个空格。 加号 （+） 和减号 （-） 允许符号。|[\d+-]？|  
-|L|ASCII 字母。 必填条目。|[-zA-Z]|  
-|?|ASCII 字母。 可选项。|[-zA-Z]？|  
+|9|数字或空格。 可选项。|[ \d]?|  
+|#|数字或空格。 可选项。 如果此位置留空掩码中，它将呈现为一个空格。 加号 （+） 和减号 （-） 允许符号。|[ \d+-]?|  
+|L|ASCII 字母。 必填条目。|[a-zA-Z]|  
+|?|ASCII 字母。 可选项。|[a-zA-Z]?|  
 |&|字符。 必填条目。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|字符。 可选项。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]？|  
+|C|字符。 可选项。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
 |包含当前请求的 URL 的|字母数字。 可选项。|\W|  
 |.|相应于区域性的小数点占位符。|不可用。|  
 |,|数千个适合区域性的占位符。|不可用。|  
@@ -55,8 +55,9 @@ ms.locfileid: "43803803"
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|美国电话号码，可选的区域代码。 如果用户不希望输入的可选字符，她可以输入空格，或者将鼠标指针放直接由第一个 0 表示掩码中的位置。|  
 |`$\d{6}.00`|`$999,999.00`|0 到 999999 的范围中的货币值。 货币、 千分位的十进制字符将替换和在运行时与它们特定于区域性的等效项。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>  
- <xref:System.Windows.Forms.MaskedTextBox>  
- [在 Visual Basic 中验证字符串](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)  
- [MaskedTextBox 控件](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
+- <xref:System.Windows.Forms.MaskedTextBox>
+- [在 Visual Basic 中验证字符串](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)
+- [MaskedTextBox 控件](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

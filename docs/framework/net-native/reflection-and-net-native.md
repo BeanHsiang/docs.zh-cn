@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 351748d0b27fa6ffc2368aacddc6c7aca290cddb
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 5ba1c7056cfea3386e4456c09cc0c2ef98811053
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507221"
 ---
 # <a name="reflection-and-net-native"></a>反射和 .NET Native
 在 .NET Framework 中，托管开发通过反射 API 支持元编程。 反射允许你检查应用中的对象，调用通过检查发现的对象上的方法，在运行时间生成性类型，并支持所有其他动态代码方案。 它还支持序列化和反序列化，这允许一个对象的字段值被持久化并在后来得到还原。 这些方案都要求 .NET Framework 及时生成 (JIT) 编译器以可用的元数据为基础生成本机代码。  
@@ -33,6 +33,6 @@ ms.locfileid: "49323105"
   
 -   [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
-## <a name="see-also"></a>请参阅  
- [使用 .NET Native 编译应用程序](../../../docs/framework/net-native/index.md)  
- [.NET Native 和编译](../../../docs/framework/net-native/net-native-and-compilation.md)
+## <a name="see-also"></a>请参阅
+- [使用 .NET Native 编译应用程序](../../../docs/framework/net-native/index.md)
+- [.NET Native 和编译](../../../docs/framework/net-native/net-native-and-compilation.md)

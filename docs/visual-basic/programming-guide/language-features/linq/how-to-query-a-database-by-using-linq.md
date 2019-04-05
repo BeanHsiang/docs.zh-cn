@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ 查询数据库 (Visual Basic)
+title: 如何：通过使用 LINQ (Visual Basic 中) 来查询数据库
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query samples [LINQ]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
-ms.openlocfilehash: 75f3d71e76c81a016a4e2c6fac754b91db31873e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: c6db53241eb9a297d1418162f47be1be9107eda9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924872"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814427"
 ---
-# <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>如何：使用 LINQ 查询数据库 (Visual Basic)
+# <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>如何：通过使用 LINQ (Visual Basic 中) 来查询数据库
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。  
   
  下面的示例演示如何创建新的应用程序对 SQL Server 数据库执行查询。  
@@ -67,17 +67,18 @@ ms.locfileid: "42924872"
   
      将以下代码添加到`Load`事件以查询作为数据上下文的属性公开的表。  
   
-     [!code-vb[VbLINQToSQLHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form2.vb#3)]  
   
 4.  按 F5 以运行您的项目并查看结果。  
   
 5.  以下是可以尝试一些其他查询：  
   
-     [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_2.vb)]  
-    [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_3.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form2.vb#4)]  
+    [!code-vb[VbLINQToSQLHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form2.vb#5)]  
   
-## <a name="see-also"></a>请参阅  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查询](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>请参阅
+
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查询](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

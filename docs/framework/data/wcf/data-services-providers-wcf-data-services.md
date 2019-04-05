@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-ms.openlocfilehash: 7be6578f0b237f986bcb68a3ace10ba04cf06474
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3344088aeb948edac3d3f439d729dc9d45b8b79b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537915"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>数据服务提供程序（WCF 数据服务）
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支持用于将数据作为公开多个提供程序模型[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 本主题提供的信息有助于为数据源选择最佳的 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供程序。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 数据公开为支持多个提供程序模型[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源。 本主题提供的信息有助于为数据源选择最佳的 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供程序。  
   
 ## <a name="data-source-providers"></a>数据源提供程序  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用于定义数据服务的数据模型中支持以下提供程序。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 定义数据服务的数据模型支持以下提供程序。  
   
 |提供程序|描述|  
 |--------------|-----------------|  
@@ -24,13 +24,13 @@ ms.locfileid: "33358874"
 |自定义数据服务提供程序|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]包括一组提供程序，用于基于后期绑定数据类型动态定义数据模型。 当要公开的数据未知时、当正在设计应用程序时或当实体框架或反射提供程序不足时，应实现这些接口。 有关详细信息，请参阅[自定义数据服务提供商](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)。|  
   
 ## <a name="other-data-service-providers"></a>其他数据服务提供程序  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 具有以下的其他数据服务提供程序可增强通过使用其他提供程序之一定义的数据源的性能。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 具有以下的其他数据服务提供程序的增强了使用其他提供程序之一定义的数据源的性能。  
   
 |提供程序|描述|  
 |--------------|-----------------|  
-|流提供程序|此提供程序用于使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 公开二进制大型对象数据类型。 流提供程序通过实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 接口而创建。 此提供程序可与任一数据源提供程序一起实现。 有关详细信息，请参阅[流提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。|  
+|流提供程序|此提供程序用于使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 公开二进制大型对象数据类型。 流提供程序通过实现 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 接口而创建。 此提供程序可与任一数据源提供程序一起实现。 有关详细信息，请参阅[流式处理提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。|  
   
-## <a name="see-also"></a>请参阅  
- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [配置数据服务](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)  
- [承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a>请参阅
+- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [配置数据服务](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
+- [承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

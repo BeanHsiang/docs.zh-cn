@@ -2,12 +2,12 @@
 title: 如何：执行文本到 XML 的流式转换 (C#)
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 98fa8bd9ae393e9c87b67ae3f2874a2c279415af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 906150483f7f76b4429ea390d083e9f18696ac9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555877"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>如何：执行文本到 XML 的流式转换 (C#)
 处理文本文件的一种方法是编写使用 `yield return` 构造一次流式处理一行文本文件的扩展方法。 然后可以编写以迟缓延迟方式处理文本文件的 LINQ 查询。 如果之后使用 <xref:System.Xml.Linq.XStreamingElement> 对输出进行流式处理，则可以创建占用最少量内存的从文本文件到 XML 的转换，而不管源文本文件大小如何。  
@@ -88,5 +88,5 @@ class Program
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.Linq.XStreamingElement>  
+- <xref:System.Xml.Linq.XStreamingElement>
 - [高级查询技术 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

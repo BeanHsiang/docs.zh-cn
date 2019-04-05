@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controls [WPF], Border
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
-ms.openlocfilehash: 0ee7ae6598feacee282cc283b82e20390418b4c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551046"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368072"
 ---
 # <a name="border"></a>Border
 下面的示例演示如何动态更改的属性<xref:System.Windows.Controls.Border>元素。  
   
 ## <a name="in-this-section"></a>本节内容  
- [对 BorderThickness 值进行动画处理](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+ [对 BorderThickness 值进行动画处理](how-to-animate-a-borderthickness-value.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Decorator>  
@@ -27,6 +27,6 @@ ms.locfileid: "33551046"
  <xref:System.Windows.Controls.Border>  
   
 ## <a name="related-sections"></a>相关章节  
- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [面板概述](panels-overview.md)  
   
- [对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [对齐、边距和填充概述](../advanced/alignment-margins-and-padding-overview.md)

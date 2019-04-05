@@ -1,36 +1,36 @@
 ---
-title: '&lt;soapProcessing&gt;'
+title: <soapProcessing>
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 296993f1a91a6da93f01610357f35dac4cfab9e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0bedcec1a87f8384a89f5e5931c18ccebe87f07e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210132"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279664"
 ---
-# <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
+# <a name="soapprocessing"></a>\<soapProcessing>
 
 定义用于封送不同绑定类型和消息版本之间消息的客户端终结点行为。
 
-**\<系统。ServiceModel >**   
-&nbsp;&nbsp;**\<行为 >**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors >**   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<行为 >**   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<soapProcessing >**
-
-## <a name="syntax"></a>语法
-
-```xml
+**\<system.ServiceModel>**   
+&nbsp;&nbsp;**\<behaviors>**   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<endpointBehaviors>**   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<behavior>**   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<soapProcessing>**
+  
+## <a name="syntax"></a>语法  
+  
+```xml  
 <soapProcessing processMessages="true|false" />
-```
-
-## <a name="attributes-and-elements"></a>特性和元素
-
-下列各节描述了特性、子元素和父元素。
-
-### <a name="attributes"></a>特性
-
+```  
+  
+## <a name="attributes-and-elements"></a>特性和元素  
+  
+下列各节描述了特性、子元素和父元素。  
+  
+### <a name="attributes"></a>特性  
+  
 |                   | 描述 |
 | ----------------- | ----------- |
 | `processMessages` | 一个布尔值，指定是否应封送 SOAP 消息版本之间的消息。 |
@@ -43,7 +43,7 @@ ms.locfileid: "47210132"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<行为 >**](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) | 指定终结点行为。 |
+| [**\<behavior>**](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) | 指定终结点行为。 |
 
 ## <a name="remarks"></a>备注
 

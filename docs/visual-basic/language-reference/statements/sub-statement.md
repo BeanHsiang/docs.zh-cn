@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 7baa4e25bc876ebfbe03c316b2020e01aedbc88d
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ab94865f4881b40b38f67eb40d2f9fa2e1982af8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924490"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817222"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 语句 (Visual Basic)
 声明名称、 参数和定义的代码`Sub`过程。  
@@ -72,11 +72,11 @@ End Sub
   
     -   [Private](../modifiers/private.md)  
   
-    - [受保护的友元](../../language-reference/modifiers/protected-friend.md)
+    - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
 
-    - [专用受保护](../../language-reference/modifiers/private-protected.md)
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+     请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 -   `proceduremodifiers`  
   
@@ -110,7 +110,7 @@ End Sub
   
 -   `name`  
   
-     必须的。 该过程的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要创建一个类的构造函数过程，请设置的名称`Sub`过程`New`关键字。 有关详细信息，请参阅[对象生存期： 对象的方式创建和销毁](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
+     必需。 该过程的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要创建一个类的构造函数过程，请设置的名称`Sub`过程`New`关键字。 有关详细信息，请参阅[对象生存期：如何创建和销毁对象](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
   
 -   `typeparamlist`  
   
@@ -136,8 +136,8 @@ End Sub
   
     |部件|描述|  
     |---|---|  
-    |`interface`|必须的。 此过程实现的接口的名称的包含类或结构。|  
-    |`definedname`|必须的。 在 `interface` 中用于定义过程的名称。|  
+    |`interface`|必需。 此过程实现的接口的名称的包含类或结构。|  
+    |`definedname`|必需。 在 `interface` 中用于定义过程的名称。|  
   
 -   `Handles`  
   
@@ -155,8 +155,8 @@ End Sub
   
     |部件|描述|  
     |---|---|  
-    |`eventvariable`|必须的。 声明的类或结构，它会引发事件的数据类型的对象变量。|  
-    |`event`|必须的。 此过程处理的事件的名称。|  
+    |`eventvariable`|必需。 声明的类或结构，它会引发事件的数据类型的对象变量。|  
+    |`event`|必需。 此过程处理的事件的名称。|  
   
 -   `statements`  
   
@@ -217,23 +217,24 @@ End Sub
 ## <a name="example"></a>示例  
  下面的示例使用`Sub`语句来定义名称、 参数和窗体的主体的代码`Sub`过程。  
   
- [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]  
   
 ## <a name="example"></a>示例  
  在以下示例中，`DelayAsync`是`Async``Function`具有返回类型的<xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有返回整数的 `Return` 语句。 因此，函数声明`DelayAsync`必须具有返回类型为`Task(Of Integer)`。 因为返回类型是`Task(Of Integer)`的评估`Await`中的表达式`DoSomethingAsync`如下语句所示得出整数： `Dim result As Integer = Await delayTask`。  
   
  `startButton_Click`过程是一种`Async Sub`过程。 因为`DoSomethingAsync`是`Async`函数，为调用任务`DoSomethingAsync`必须等待，如以下语句所示： `Await DoSomethingAsync()`。 `startButton_Click` `Sub`过程必须使用定义`Async`修饰符，因此`Await`表达式。  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- [Implements 语句](implements-statement.md)  
- [Function 语句](function-statement.md)  
- [参数列表](parameter-list.md)  
- [Dim 语句](dim-statement.md)  
- [Call 语句](call-statement.md)  
- [Of](of-clause.md)  
- [参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [如何：使用泛型类](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [过程疑难解答](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [分部方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>请参阅
+
+- [Implements 语句](implements-statement.md)
+- [Function 语句](function-statement.md)
+- [参数列表](parameter-list.md)
+- [Dim 语句](dim-statement.md)
+- [Call 语句](call-statement.md)
+- [Of](of-clause.md)
+- [参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [如何：使用泛型类](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [过程疑难解答](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [分部方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

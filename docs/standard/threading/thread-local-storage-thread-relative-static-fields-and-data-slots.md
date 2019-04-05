@@ -1,5 +1,5 @@
 ---
-title: 线程本地存储区：线程相关的静态字段和数据槽
+title: 线程本地存储：线程相关的静态字段和数据槽
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bea5dfd7c53b5b5f53ddab5d4d07ec6a603b14e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718255"
 ---
-# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>线程本地存储区：线程相关的静态字段和数据槽
+# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>线程本地存储：线程相关的静态字段和数据槽
 托管线程本地存储 (TLS) 可用于存储对线程和应用域唯一的数据。 .NET Framework 提供了下面两种托管 TLS 使用方式：线程相对静态字段和数据槽。  
   
 -   如果可以在编译时预测确切需求，请使用线程相对静态字段（Visual Basic 中的线程相对 `Shared` 字段）。 线程相对静态字段的性能最佳。 它们还支持编译时类型检查。  
@@ -59,8 +59,8 @@ ms.locfileid: "44042226"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.ContextStaticAttribute>  
-- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
-- <xref:System.ThreadStaticAttribute>  
-- <xref:System.Runtime.Remoting.Messaging.CallContext>  
+- <xref:System.ContextStaticAttribute>
+- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>
+- <xref:System.ThreadStaticAttribute>
+- <xref:System.Runtime.Remoting.Messaging.CallContext>
 - [线程处理](../../../docs/standard/threading/index.md)

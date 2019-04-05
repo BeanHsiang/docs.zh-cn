@@ -1,15 +1,16 @@
 ---
-title: in 参数修饰符（C# 参考）
-ms.date: 03/06/2018
+title: in 参数修饰符 - C# 参考
+ms.custom: seodec18
+ms.date: 02/12/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 199d2d54a1937b9982131b8cc7f1c777f656d7a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5a765a330e4d9efe22943538503c0822e1c9dfdb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199404"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219550"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 参数修饰符（C# 参考）
 
@@ -19,11 +20,14 @@ ms.locfileid: "50199404"
 
 前面的示例说明调用站点处通常不需要 `in` 修饰符。 仅在方法声明中需要它。
 
+
 > [!NOTE] 
 > `in` 关键字还作为 `foreach` 语句的一部分，或作为 LINQ 查询中 `join` 子句的一部分，与泛型类型参数一起使用来指定该类型参数为逆变。 有关在这些上下文使用 `in` 关键字的详细信息，请参阅 [in](in.md)，其中提供了所有这些用法的链接。
   
  作为 `in` 参数传递的变量在方法调用中传递之前必须进行初始化。 但是，所调用的方法可能不会分配值或修改参数。  
-  
+
+`in` 参数修饰符可在 C# 7.2 及更高版本中使用。 以前的版本生成编译器错误 `CS8107`（“‘readonly 引用’功能在 C# 7.0 中不可用。 请使用语言版本 7.2 或更高版本。”）若要配置编译器语言版本，请参阅[选择 C# 语言版本](../configure-language-version.md)。
+
  尽管 `in`、`ref` 和 `out` 关键字会导致不同的运行时行为，它们并不被视为编译时方法签名的一部分。 因此，如果唯一的不同是一个方法采用 `ref` 或 `in` 参数，而另一个方法采用 `out` 参数，则无法重载这两个方法。 例如，以下代码将不会编译：  
   
 ```csharp
@@ -54,7 +58,7 @@ class InOverloads
 
 首先，在调用站点指定 `in` 会强制编译器选择使用匹配的 `in` 参数定义的方法。 否则，如果两种方法唯一的区别在于是否存在 `in`，则按值重载的匹配度会更高。
 
-第二点，指定 `in` 会声明你想按引用传递参数。 结合 `in` 使用的参数必须代表一个可以直接引用的位置。 `out` 和 `ref` 参数的相同常规规则适用：不能使用常数、普通属性或其他生成值的表达式。 否则，在调用站点省略 `in` 就会通知编译器你将允许它创建临时变量，并按只读引用传递至方法。 编译器创建临时变量以克服一些 `in` 参数的限制：
+第二点，指定 `in` 会声明你想按引用传递参数。 结合 `in` 使用的参数必须代表一个可以直接引用的位置。 `out` 和 `ref` 参数的相同常规规则适用：不得使用常量、普通属性或其他生成值的表达式。 否则，在调用站点省略 `in` 就会通知编译器你将允许它创建临时变量，并按只读引用传递至方法。 编译器创建临时变量以克服一些 `in` 参数的限制：
 
 - 临时变量允许将编译时常数作为 `in` 参数。
 - 临时变量允许使用属性或 `in` 参数的其他表达式。
@@ -120,8 +124,8 @@ Method(in i); // passed by readonly reference, explicitly using `in`
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
-- [C# 关键字](index.md)  
-- [方法参数](method-parameters.md)  
-- [编写安全高效的代码](../../write-safe-efficient-code.md)  
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](index.md)
+- [方法参数](method-parameters.md)
+- [编写安全高效的代码](../../write-safe-efficient-code.md)

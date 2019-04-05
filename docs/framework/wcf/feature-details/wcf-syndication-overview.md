@@ -2,12 +2,12 @@
 title: WCF 联合概述
 ms.date: 03/30/2017
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
-ms.openlocfilehash: cba14edc5743966c53f23b3dbf965c5472ed2702
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 82e8e1192b791dde1ca0ea7e030c7cfc82476b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718242"
 ---
 # <a name="wcf-syndication-overview"></a>WCF 联合概述
 Windows Communication Foundation (WCF) 提供支持，用于公开从 WCF 服务的联合源。 联合是一种应用程序集成机制，在这种机制中，服务器以一种可互操作的格式（称为源）公开某些应用程序数据。 源是应用程序数据的集合，其中包括一些源级别的元数据（标题、作者、URL 和其他元数据）以及一系列源项。 在源内，源项通常是按时间的倒序顺序排序的。 源项由一组标准的项级别元数据（标题、URL、创建日期、类别和其他项级别的元数据）以及任意数量的应用程序特定数据组成。 联合源的两个最常见类型是真正简单的整合 (RSS) 2.0 和 Atom 1.0，这两种支持的 WCF。  
@@ -21,5 +21,5 @@ Windows Communication Foundation (WCF) 提供支持，用于公开从 WCF 服务
 ## <a name="syndication-formats"></a>联合格式  
  WCF 联合平台支持 RSS 2.0 和 Atom 1.0。  
   
-## <a name="see-also"></a>请参阅  
- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>请参阅
+- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

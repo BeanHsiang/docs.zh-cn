@@ -1,14 +1,14 @@
 ---
 title: 执行分组联接（C# 中的 LINQ）
 description: 了解如何使用 C# 中的 LINQ 执行分组联接。
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: f65faabcb039e186a2e0d18dda4373263ffd0b8b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911920"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857549"
 ---
 # <a name="perform-grouped-joins"></a>执行分组联接
 
@@ -35,8 +35,8 @@ ms.locfileid: "42911920"
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Linq.Enumerable.Join%2A>  
-- <xref:System.Linq.Enumerable.GroupJoin%2A>  
-- [执行内部联接](perform-inner-joins.md)  
-- [执行左外部联接](perform-left-outer-joins.md)  
-- [匿名类型](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>
+- <xref:System.Linq.Enumerable.GroupJoin%2A>
+- [执行内部联接](perform-inner-joins.md)
+- [执行左外部联接](perform-left-outer-joins.md)
+- [匿名类型](../programming-guide/classes-and-structs/anonymous-types.md)

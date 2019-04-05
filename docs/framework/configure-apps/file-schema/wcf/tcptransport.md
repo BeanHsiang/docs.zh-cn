@@ -1,47 +1,45 @@
 ---
-title: '&lt;tcpTransport&gt;'
+title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738159"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845955"
 ---
-# <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
+# <a name="tcptransport"></a>\<tcpTransport>
 定义通道用于传输自定义绑定消息的 TCP 传输。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
+\<binding>  
 \<tcpTransport>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<tcpTransport   
-      channelInitializationTimeout="TimeSpan"   
-      connectionBufferSize="Integer"   
-      hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"  
-      listenBacklog="Integer"  
-      manualAddressing="Boolean"   
-      maxBufferPoolSize="Integer"  
-      maxBufferSize="Integer"  
-      maxOutputDelay="TimeSpan"  
-      maxPendingAccepts="Integer"   
-      maxPendingConnections="Integer"  
-      maxReceivedMessageSize="Integer"   
-      portSharingEnabled="Boolean"  
-      teredoEnabled="Boolean"  
-      transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse" >  
-      <connectionPoolSettings  
-            groupName="String"  
-            idleTimeout"TimeSpan"  
-            leaseTimeout="TimeSpan"  
-            maxOutboundConnectionsPerEndpopint="Integer" />  
-</tcpTransport>  
+<tcpTransport channelInitializationTimeout="TimeSpan"
+              connectionBufferSize="Integer"
+              hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"
+              listenBacklog="Integer"
+              manualAddressing="Boolean"
+              maxBufferPoolSize="Integer"
+              maxBufferSize="Integer"
+              maxOutputDelay="TimeSpan"
+              maxPendingAccepts="Integer"
+              maxPendingConnections="Integer"
+              maxReceivedMessageSize="Integer"
+              portSharingEnabled="Boolean"
+              teredoEnabled="Boolean"
+              transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse" >
+  <connectionPoolSettings groupName="String"
+                          idleTimeout="TimeSpan"
+                          leaseTimeout="TimeSpan"
+                          maxOutboundConnectionsPerEndpopint="Integer" />
+</tcpTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -51,10 +49,10 @@ ms.locfileid: "43738159"
   
 |特性|描述|  
 |---------------|-----------------|  
-|channelInitializationTimeout|获取或设置对要接受的通道进行初始化的时间限制。  通道在断开连接前可处于初始化状态的最长时间（秒）。 此配额包括 TCP 连接可用于使用 .Net Message Framing 协议对自身进行身份验证的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 默认值为 30 秒。|  
+|channelInitializationTimeout|获取或设置对要接受的通道进行初始化的时间限制。  通道在断开连接前可处于初始化状态的最长时间（秒）。 此配额包括 TCP 连接可能需要进行身份验证使用.NET Message Framing 协议本身的时间。 客户端需要发送一些初始数据，然后服务器才有足够的信息来执行身份验证。 默认值为 30 秒。|  
 |connectionBufferSize|获取或设置用于从客户端或服务传输网络上的序列化消息块的缓冲区大小。|  
 |hostNameComparisonMode|获取或设置一个值，该值指示在对 URI 进行匹配时，是否使用主机名来访问服务。|  
-|listenBacklog|可为 Web 服务挂起的最大排队连接请求数。 `connectionLeaseTimeout` 属性限制客户端在引发连接异常之前将等待连接的持续时间。 这是一个套接字级别属性，控制可能为 Web 服务挂起的最大排队连接请求数。 ListenBacklog 太低时，WCF 将停止接受请求并因此删除新连接，直到服务器确认一些现有队列连接。默认值为 16 * 处理器数。|  
+|listenBacklog|可为 Web 服务挂起的最大排队连接请求数。 `connectionLeaseTimeout` 属性限制客户端在引发连接异常之前将等待连接的持续时间。 这是一个套接字级别属性，控制可能为 Web 服务挂起的最大排队连接请求数。 ListenBacklog 太低时，WCF 将停止接受请求并因此删除新连接，直到服务器确认一些现有队列连接。 默认值为 16 * 处理器数。|  
 |manualAddressing|获取或设置一个值，该值指示是否要求对消息进行手动寻址。|  
 |maxBufferPoolSize|获取或设置传输使用的任何缓冲池的最大大小。|  
 |maxBufferSize|获取或设置要使用的缓冲区的最大大小。 对于经过流处理的消息，该值最少应为以缓冲模式读取的消息头的最大可能大小。|  
@@ -74,21 +72,21 @@ ms.locfileid: "43738159"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  此传输使用“net.tcp://hostname:port/path”形式的 URI。 其他 URI 组件是可选的。  
   
  `tcpTransport` 元素是创建实现 TCP 传输协议的自定义绑定的起始点。 针对 WCF 到 WCF 的通信对此传输进行了优化。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.TcpTransportElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.TcpTransportElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

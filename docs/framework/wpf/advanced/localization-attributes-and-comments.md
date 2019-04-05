@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 7cfcc9fa4dc3bc1450febb39500b7d96f92beac6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 214d2cf369a62f5565ef4b89fd658f6bec4b2fdc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547262"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377095"
 ---
 # <a name="localization-attributes-and-comments"></a>本地化特性和注释
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释是由开发人员提供的 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 源代码中的属性，用于提供本地化规则和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 本地化注释包含两组信息：可本地化特性和任意形式的本地化注释。 可本地化特性由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 本地化 API 用于指示哪些资源要进行本地化。 任意形式的注释是应用程序作者希望包含的任何信息。  
@@ -84,7 +84,7 @@ ms.locfileid: "33547262"
   
  这些特性可以按照由空格分开的任何顺序进行指定。 如果指定了重复特性，则最后一个特性将替代前面的特性。 例如，Localization.Attributes = "Unmodifiable Modifiable" 会将 Modifiability 设置为 Modifiable，因为最后一个值是 Modifiable。  
   
- Modifiability 和 Readability 的名称已经揭示了自身的含义。 “Category”特性提供的预定义类别可帮助本地化人员翻译文本。 类别（如 Text、Label 和 Title）为本地化人员提供了有关如何翻译文本的信息。 另外，还有一些特殊类别：None、Inherit、Ignore 和 NeverLocalize。  
+ Modifiability 和 Readability 的名称已经揭示了自身的含义。 “Category”特性提供的预定义类别可帮助本地化人员翻译文本。 类别（如 Text、Label 和 Title）为本地化人员提供了有关如何翻译文本的信息。 也有一些特殊类别：无、 继承、 忽略，和 NeverLocalize。  
   
  下表显示了这些特殊类别的含义。  
   
@@ -99,8 +99,8 @@ ms.locfileid: "33547262"
 ## <a name="localization-comments"></a>本地化注释  
  Localization.Comments 包含与目标值有关的任意形式的字符串。 应用程序开发人员可以添加一些信息，以便为本地化人员提供有关如何翻译应用程序文本的提示。 注释格式可以是由“()”括起来的任何字符串。 可以使用“\\”对字符进行转义。  
   
-## <a name="see-also"></a>请参阅  
- [WPF 全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [使用自动布局创建按钮](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [使用网格进行自动布局](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [对应用程序进行本地化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+## <a name="see-also"></a>请参阅
+- [WPF 全球化](globalization-for-wpf.md)
+- [使用自动布局创建按钮](how-to-use-automatic-layout-to-create-a-button.md)
+- [使用网格进行自动布局](how-to-use-a-grid-for-automatic-layout.md)
+- [对应用程序进行本地化](how-to-localize-an-application.md)

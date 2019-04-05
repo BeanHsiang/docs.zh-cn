@@ -1,20 +1,20 @@
 ---
-title: 使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库
-description: 了解如何使用 Visual Studio 2017 生成 Visual Basic 类库
+title: 在 Visual Studio 2017 中生成 Visual Basic .NET Standard 类库
+description: 了解如何使用 Visual Studio 2017 生成以 Visual Basic 编写的 .NET Standard 类库
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52bbae330afe4a9ea376c6388a06941f74f6606a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 1fddbfd84164a95505cff1783e241ea9001231f5
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035969"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362036"
 ---
-# <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库
+# <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core SDK 生成 .NET Standard 库
 
 类库定义的是可以由应用程序调用的类型和方法。 借助定目标到 .NET Standard 2.0 的类库，任何支持相应版本 .NET Standard 的 .NET 实现都可以调用库。 完成类库时，可以决定是要将其作为第三方组件进行分布，还是要将其作为与一个或多个应用程序捆绑在一起的组件进行添加。
 
@@ -31,7 +31,7 @@ ms.locfileid: "48035969"
 
 1. 在“新建项目”对话框中，展开“其他项目类型”节点，然后选择“Visual Studio 解决方案”。 将解决方案命名为“ClassLibraryProjects”，然后选择“确定”按钮。
 
-   ![“新建项目”对话框](./media/library-with-visual-studio/newproject.png)
+   ![Visual Studio“新建测试项目”对话框](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>创建类库项目
 
@@ -41,15 +41,15 @@ ms.locfileid: "48035969"
 
 1. 在“添加新项目”对话框中，展开“Visual Basic”节点，并依次选择“.NET Standard”节点和“类库(.NET Standard)”项目模板。 在“名称”文本框中，输入项目名称“StringLibrary”。 选择“确定”，创建类库项目。
 
-   ![“添加新项目”对话框](./media/vb-library-with-visual-studio/libproject.png)
+   ![Visual Studio“添加新的库项目”对话框](./media/vb-library-with-visual-studio/create-new-library-project.png)
 
    然后，代码窗口在 Visual Studio 开发环境中打开。 
  
-   ![显示默认类库模板代码的 Visual Studio 应用程序窗口](./media/vb-library-with-visual-studio/stringlibrary.png)
+   ![显示默认类库模板代码的 Visual Studio 应用程序窗口](./media/vb-library-with-visual-studio/visual-studio-library.png)
 
 1. 请检查以确保库定目标到 .NET Standard 的正确版本。 右键单击“解决方案资源管理器”窗口中的库项目，再选择“属性”。 “目标框架”文本框显示定目标到 .NET Standard 2.0。
 
-   ![类库的项目属性](./media/library-with-visual-studio/properties.png)
+   ![类库的项目属性](./media/library-with-visual-studio/library-project-properties.png)
 
 1. 另外，在“属性”对话框中，清除“根命名空间”文本框中的文本。 对于每个项目，Visual Basic 会自动创建与项目名称对应的命名空间，在源代码文件中定义的任何命名空间都是相应命名空间的父级。 我们要使用 [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) 关键字来定义顶级命名空间。
   
@@ -61,7 +61,7 @@ ms.locfileid: "48035969"
 
 1. 在菜单栏中，选择“生成” > “生成解决方案”。 此项目的编译应该没有错误。
 
-   ![显示生成成功的输出窗格](./media/library-with-visual-studio/buildsucceeds.png)
+   ![显示生成成功的输出窗格](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 
 

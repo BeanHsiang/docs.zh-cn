@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 938044a4e932139eb8a4d0a5d2f998cbc6f193cb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 35ab5b64b3c7e364e0dd11c002b87a0a413f4335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532430"
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next 函数
 检索枚举中的下一个限定符，该枚举以调用 [QualifierSet_BeginEnumeration ](qualifierset-beginenumeration.md) 函数开始。   
@@ -50,7 +50,7 @@ HRESULT QualifierSet_Next (
 [in]一个指向[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)实例。
 
 `lFlags`   
-[in]保留。 此参数必须为 0。
+[in] 保留。 此参数必须为 0。
 
 `pstrName`   
 [out]限定符的名称。 如果`null`，此参数是被忽略; 否则为`pstrName`应不指向有效`BSTR`或发生内存泄漏。 如果不为 null，该函数始终会分配一个新`BSTR`其返回`WBEM_S_NO_ERROR`。
@@ -82,11 +82,11 @@ HRESULT QualifierSet_Next (
 在枚举期间返回的限定符的顺序是未定义。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

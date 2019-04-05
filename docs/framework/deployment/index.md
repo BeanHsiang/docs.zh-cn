@@ -2,21 +2,15 @@
 title: 部署 .NET Framework 和应用程序
 ms.date: 03/30/2017
 helpviewer_keywords:
-- deploying applications [.NET Framework], packaging
-- deploying applications [.NET Framework]
-- deploying applications [.NET Framework], features
-- deploying applications [.NET Framework], distribution
-- .NET Framework, deploying
-- .NET Framework application deployment
+  - 'deploying applications [.NET Framework], packaging'
+  - 'deploying applications [.NET Framework]'
+  - 'deploying applications [.NET Framework], features'
+  - 'deploying applications [.NET Framework], distribution'
+  - '.NET Framework, deploying'
+  - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a650fa0340ce63a573074746eef60994e2254c86
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453224"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和应用程序
 本文有助于你开始部署应用程序的 .NET Framework。 大部分信息都是供开发人员、OEM 和企业管理人员使用的。 想在其自己的计算机上安装 .NET Framework 的用户应阅读[安装 .NET Framework](~/docs/framework/install/index.md)。  
@@ -153,7 +147,7 @@ ms.locfileid: "49453224"
   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明|  
 |-----------|-----------------|  
 |[运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|描述公共语言运行时如何确定将用于满足绑定请求的程序集类型。|  
 |[适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|讨论避免类型标识问题的方法，从而避免发生 <xref:System.InvalidCastException><xref:System.MissingMethodException> 和其他错误。|  
@@ -166,5 +160,5 @@ ms.locfileid: "49453224"
 |[部署互操作应用程序](../../../docs/framework/interop/deploying-an-interop-application.md)|说明如何传送和安装互操作应用程序，通常包括 .NET Framework 客户端程序集、表示区分 COM 类型库的一个或多个互操作程序集以及一个或多个已注册的 COM 组件。|  
 |[如何：获取 .NET Framework 4.5 安装程序的进度](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|描述如何在没有提示的情况下启动和跟踪 .NET Framework 安装进度，同时显示你自己的安装进度视图。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 - [开发指南](../../../docs/framework/development-guide.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdb1570b682088e92ff7c7a78d84259d02d8512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9c930b6fe81fdb7013e95a20d33ff0ba0148f88f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658807"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 枚举
-指定将重复项检查其元数据标记。  
+指定将检查有重复项的元数据令牌。  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,9 +70,9 @@ typedef enum CorCheckDuplicatesFor {
   
 |成员|描述|  
 |------------|-----------------|  
-|`MDDupAll`|请检查重复项的所有元数据标记。|  
+|`MDDupAll`|检查有重复项的所有元数据标记。|  
 |`MDDupENC`|未使用。|  
-|`MDNoDupChecks`|请检查重复项的元数据标记。|  
+|`MDNoDupChecks`|不会检查有重复项的元数据标记。|  
 |`MDDupTypeDef`|检查重复项的`mdTypeDef`令牌。|  
 |`MDDupInterfaceImpl`|检查重复项的`mdInterfaceImpl`令牌。|  
 |`MDDupMethodDef`|检查重复项的`mdMethodDef`令牌。|  
@@ -96,14 +96,14 @@ typedef enum CorCheckDuplicatesFor {
 |`MDDupMethodSpec`|检查重复项的`mdMethodSpec`令牌。|  
 |`MDDupGenericParamConstraint`|检查重复项的`mdGenericParamConstraint`令牌。|  
 |`MDDupAssembly`|检查重复项的`mdAssembly`令牌。|  
-|`MDDupDefault`|检查重复项的`mdMemberRef`， `mdTypeRef`， `mdSignature`， `mdTypeSpec`，和`mdMethodSpec`令牌。|  
+|`MDDupDefault`|检查重复的项`mdMemberRef`， `mdTypeRef`， `mdSignature`， `mdTypeSpec`，和`mdMethodSpec`令牌。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3e2c39416a3d09eb1b1197dbec81f40ce318a43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69dea1adb2d751b44f6c8bc529353ff78cad60ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673037"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 当 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 派生的类的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法返回 `false` 时，激活 `releaseHandleFailed` 托管调试助手 (MDA) 通知开发人员。  
@@ -76,7 +76,7 @@ and closing it directly or building another SafeHandle around it."
 ## <a name="example"></a>示例  
  以下是可激活 `releaseHandleFailed` MDA 的代码示例。  
   
-```  
+```csharp
 bool ReleaseHandle()  
 {  
     // Calling the Win32 CloseHandle function to release the   
@@ -90,7 +90,7 @@ bool ReleaseHandle()
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [互操作封送处理](../../../docs/framework/interop/interop-marshaling.md)

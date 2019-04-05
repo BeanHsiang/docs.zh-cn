@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 7e43d423109ea39a725a4bfa8b9d2b22a25cfb5c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: dbb45b890ddfab3f771d4b4a8932f970036b346d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087331"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828288"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>通过 XML Web 服务使用数据集
-<xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。 **数据集**是"可序列化"，它可以被指定为输入还是输出而无需任何其他编码的 XML Web services 所需流式传输的内容**数据集**从 XML Web 服务到客户端并返回。 **数据集**隐式转换为使用 DiffGram 格式的 XML 流、 通过网络发送和从 XML 流作为然后重新构造**数据集**在接收端。 它为您使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。 有关 DiffGram 格式的详细信息，请参阅[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
+<xref:System.Data.DataSet> 是用断开式设计来构建的，其部分目的是为了便于通过 Internet 来传输数据。 **数据集**是"可序列化"，它可以被指定为输入还是输出而无需任何其他编码的 XML Web services 所需流式传输的内容**数据集**从 XML Web 服务到客户端并返回。 **数据集**隐式转换为使用 DiffGram 格式的 XML 流、 通过网络发送和从 XML 流作为然后重新构造**数据集**在接收端。 它为你使用 XML Web services 传输和返回关系数据提供了非常简单而灵活的方法。 有关 DiffGram 格式的详细信息，请参阅[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
   
  下面的示例演示如何创建 XML Web 服务和使用客户端**数据集**传输关系数据 （包括修改后的数据） 并解决任何更新回原始数据源。  
   
 > [!NOTE]
->  我们建议您在创建 XML Web services 时，应始终考虑到安全问题。 有关保护的 XML Web 服务的信息，请参阅[保护 ASP.NET XML Web Services 创建使用](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)。  
+>  我们建议你在创建 XML Web services 时，应始终考虑到安全问题。 有关保护的 XML Web 服务的信息，请参阅[保护 ASP.NET XML Web Services 创建使用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))。  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>创建返回和使用 DataSet 的 XML Web services  
   
@@ -26,7 +26,7 @@ ms.locfileid: "49087331"
   
      在示例中，XML Web 服务创建返回数据，在此情况下从客户列表**Northwind**数据库，并接收**数据集**与更新数据，该 XML Web 服务解析回原始数据源。  
   
-     XML Web 服务公开两个方法： **GetCustomers**，以返回客户列表，并**UpdateCustomers**，以将更新解析回数据源。 XML Web services 存储在 Web 服务器上名为 DataSetSample.asmx 的文件中。 下面的代码概括了 DataSetSample.asmx 的内容。  
+     XML Web 服务将公开两个方法：**GetCustomers**，以返回客户列表，并**UpdateCustomers**，以将更新解析回数据源。 XML Web services 存储在 Web 服务器上名为 DataSetSample.asmx 的文件中。 下面的代码概括了 DataSetSample.asmx 的内容。  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -259,12 +259,12 @@ ms.locfileid: "49087331"
     csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [从 DataAdapter 填充数据集](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
- [使用 DataAdapter 更新数据源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [DataAdapter 参数](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [Web 服务描述语言工具 (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [数据表](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [从 DataAdapter 填充数据集](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
+- [使用 DataAdapter 更新数据源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [DataAdapter 参数](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [Web 服务描述语言工具 (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

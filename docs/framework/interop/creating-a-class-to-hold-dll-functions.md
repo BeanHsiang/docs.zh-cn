@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09088d1ac0a8312ee5832a5f3bc0547e6654de93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5718c70597acc6919c697a9033e8593865e60a2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745033"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>创建用于容纳 DLL 函数的类
 将常用的 DLL 函数包装在托管类中，这是封装平台功能的一种有效方式。 虽然不必在每种情形下都这样做，但由于定义 DLL 函数相当麻烦且容易出错，所以提供类包装器非常简便。 如果使用 Visual Basic 或 C# 进行编程，必须在一个类或 Visual Basic 模块中声明 DLL 函数。  
@@ -36,8 +36,8 @@ ms.locfileid: "33387057"
   
  可对该类及其方法随意命名。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
   
-## <a name="see-also"></a>请参阅  
- [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [标识 DLL 中的函数](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>请参阅
+- [使用非托管 DLL 函数](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+- [标识 DLL 中的函数](../../../docs/framework/interop/identifying-functions-in-dlls.md)
+- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [调用 DLL 函数](../../../docs/framework/interop/calling-a-dll-function.md)

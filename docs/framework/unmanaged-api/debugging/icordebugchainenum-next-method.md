@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4f27b958aa4b25c2662d8a5e9da6bcdc73d5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 26df40297d080d1ccc9464f7b09e7731f135e270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404451"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489821"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next 方法
-获取指定的数量的 ICorDebugChain 实例的枚举，从当前位置开始。  
+从当前位置开始枚举中获取指定的数量的 ICorDebugChain 实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `celt`  
  [in]数`ICorDebugChain`要检索的实例。  
   
  `chains`  
- [out]一个指针，其中每个指向数组`ICorDebugChain`表示链的对象。  
+ [out]一个指针，其中每个指向数组`ICorDebugChain`对象，表示链。  
   
  `pceltFetched`  
- [out]指向数`ICorDebugChain`实际返回的实例。 此值可能为 null 如果`celt`是之一。  
+ [out]指向数`ICorDebugChain`实际返回的实例。 此值可能为 null 如果`celt`是其中一个。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: '&lt;performanceCounter&gt;元素 （网络设置）'
+title: <performanceCounter> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 445b57747bbcb04df0d6bc6b3e90743b8c9600f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4603a942788d31a049196fb699d07a13551fa443
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187071"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279755"
 ---
-# <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt;元素 （网络设置）
+# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 元素 （网络设置）
 启用或禁用网络性能计数器。  
   
  \<configuration>  
 \<system.net>  
-\<设置 >  
+\<settings>  
 \<performanceCounters>  
   
 ## <a name="syntax"></a>语法  
@@ -47,7 +47,7 @@ ms.locfileid: "50187071"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[设置](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|配置 <xref:System.Net> 命名空间的基本网络选项。|  
   
 ## <a name="remarks"></a>备注  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
@@ -73,8 +73,8 @@ ms.locfileid: "50187071"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
-- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [网络性能计数器](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

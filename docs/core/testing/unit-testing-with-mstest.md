@@ -4,12 +4,13 @@ description: 通过使用 dotnet test 和 MSTest 分步生成示例解决方案�
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 1c2b0bdd4bf76a17217db0c98b8f951f7d58f2ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 4f6e1bb9a03a8f98052ec7bc911f22c288df6fe0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183771"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746845"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>使用 MSTest 和 .NET Core 进行 C# 单元测试
 
@@ -25,7 +26,7 @@ ms.locfileid: "50183771"
     /PrimeService
 ```
 
-将 *PrimeService* 作为当前目录，然后运行 [`dotnet new classlib`](../tools/dotnet-new.md) 以创建源项目。 将 *Class1.cs* 重命名为 *PrimeService.cs*。 为了使用由测试驱动的开发 (TDD)，需对 `PrimeService` 类创建故障实现：
+将 *PrimeService* 作为当前目录，然后运行 [`dotnet new classlib`](../tools/dotnet-new.md) 以创建源项目。 将 *Class1.cs* 重命名为 *PrimeService.cs*。 创建 `PrimeService` 类的失败实现：
 
 ```csharp
 using System;
@@ -92,7 +93,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-TDD 方法要求编写一个失败的测试，使其通过测试，然后重复该过程。 从 *PrimeService.Tests* 目录删除 *UnitTest1.cs*，并创建一个名为 *PrimeService_IsPrimeShould.cs* 且包含以下内容的新 C# 文件：
+编写一个失败测试，使其通过，然后重复此过程。 从 *PrimeService.Tests* 目录删除 *UnitTest1.cs*，并创建一个名为 *PrimeService_IsPrimeShould.cs* 且包含以下内容的新 C# 文件：
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -142,7 +143,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以添加具有 `[TestMethod]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 MSTest 属性，使用这些属性可编写类似测试的套件。  `[DataTestMethod]` 属性表示执行相同代码，但具有不同输入参数的测试套件。 可以使用 `[DataRow]` 属性来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0、-1。 可以添加具有 `[TestMethod]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 MSTest 属性，使用这些属性可编写类似测试的套件。  `[DataTestMethod]` 属性表示执行相同代码，但具有不同输入参数的测试套件。 可以使用 `[DataRow]` 属性来指定这些输入的值。
 
 可以不使用这两个属性创建新测试，而用来创建单个数据驱动的测试。 数据驱动的测试方法用于测试多个小于 2（即最小质数）的值：
 

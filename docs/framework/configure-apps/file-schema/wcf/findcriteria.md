@@ -1,32 +1,35 @@
 ---
-title: '&lt;findCriteria&gt;'
+title: <findCriteria>
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: fc9cd3b87d0f47ae0f16b5c5bfcaa4a1167bae9f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e82312cb17fbd3f76f781ea37f761e946319a0a0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748641"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351848"
 ---
-# <a name="ltfindcriteriagt"></a>&lt;findCriteria&gt;
-一个配置元素，提供客户端应用程序用于搜索发现服务的一组条件。 条件可以划分为搜索条件 （指定要查找的服务） 和查找终止条件 （搜索应持续的时长）。  
+# <a name="findcriteria"></a>\<findCriteria>
+一个配置元素，提供客户端应用程序用于搜索发现服务的一组条件。 条件可以划分为搜索条件 （指定要查找的服务） 和查找终止条件 （搜索应持续多久）。  
   
  \<system.ServiceModel>  
-\<standardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <dynamicEndpoint>
       <standardEndpoint>
         <discoveryClientSettings discoveryEndpoint="String">
-          <findCriteria duration="TimeSpan" maxResults="Integer" scopeMatchBy="Uri">
+          <findCriteria duration="TimeSpan"
+                        maxResults="Integer"
+                        scopeMatchBy="Uri">
             <contractTypeNames>
-              <add name="String" namespace="String" />
-            <contractTypeNames>
+              <add name="String"
+                   namespace="String" />
+            </contractTypeNames>
             <extensions />
             <scopes>
               <add scope="URI" />
@@ -35,8 +38,8 @@ ms.locfileid: "32748641"
         </discoveryClientSettings>
       </standardEndpoint>
     </dynamicEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -54,16 +57,16 @@ ms.locfileid: "32748641"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|一个配置元素集合，这些元素包含工作流服务协定类型的名称。|  
+|[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|包含工作流服务协定类型的名称的配置元素的集合。|  
 |\<扩展 > 的\<findCriteria >|一个 XML 元素对象集合，这些对象提供扩展。|  
-|[\<作用域 >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|一个对象集合，这些对象包含在查找操作过程中用于查找一个或多个特定服务的绝对 URI。<br /><br /> 如果找到特定服务，则表示已在服务 URI 和范围 URI 之间进行了成功的匹配，此匹配操作有时是借助处理匹配复杂性的范围规则完成的。|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|一个对象集合，这些对象包含在查找操作过程中用于查找一个或多个特定服务的绝对 URI。<br /><br /> 如果找到特定服务，则表示已在服务 URI 和范围 URI 之间进行了成功的匹配，此匹配操作有时是借助处理匹配复杂性的范围规则完成的。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|包含应用程序以客户端形式参与服务发现过程所需的设置。|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|包含应用程序以客户端形式参与服务发现过程所需的设置。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Discovery.FindCriteria>  
- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Discovery.FindCriteria>
+- <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>

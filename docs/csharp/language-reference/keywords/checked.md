@@ -1,5 +1,6 @@
 ---
-title: checked 关键字（C# 参考）
+title: checked 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - checked_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 892b24b0283314f5aded0405df55a93069cf91e2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5ce9291fd047dfa9c69048887ccbd878819f2de8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533123"
 ---
 # <a name="checked-c-reference"></a>checked（C# 参考）
 
@@ -42,8 +43,8 @@ ms.locfileid: "43505250"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [Checked and Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [Checked and Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)
 - [unchecked](../../../csharp/language-reference/keywords/unchecked.md)

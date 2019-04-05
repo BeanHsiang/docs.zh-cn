@@ -1,5 +1,6 @@
 ---
-title: const 关键字（C# 参考）
+title: const 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - const_CSharpKeyword
@@ -7,21 +8,21 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: f586b6d097a8592fd74e92df7886b519d623e478
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7cf4fc52691565a850b4f34574828ad4e043998e
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513379"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307884"
 ---
 # <a name="const-c-reference"></a>const（C# 参考）
 
 使用 `const` 关键字来声明某个常量字段或常量局部变量。 常量字段和常量局部变量不是变量并且不能修改。 常量可以为数字、布尔值、字符串或 null 引用。 不要创建常量来表示你需要随时更改的信息。 例如，不要使用常量字段来存储服务的价格、产品版本号或公司的品牌名称。 这些值会随着时间发生变化；因为编译器会传播常量，所以必须重新编译通过库编译的其他代码以查看更改。 另请参阅 [readonly](../../../csharp/language-reference/keywords/readonly.md) 关键字。 例如:
 
 ```csharp
-const int x = 0;
-public const double gravitationalConstant = 6.673e-11;
-private const string productName = "Visual C#";
+const int X = 0;
+public const double GravitationalConstant = 6.673e-11;
+private const string ProductName = "Visual C#";
 ```
 
 ## <a name="remarks"></a>备注
@@ -33,7 +34,7 @@ private const string productName = "Visual C#";
 常数声明可以声明多个常数，例如：
 
 ```csharp
-public const double x = 1.0, y = 2.0, z = 3.0;
+public const double X = 1.0, Y = 2.0, Z = 3.0;
 ```
 
 不允许在常数声明中使用 `static` 修饰符。
@@ -41,8 +42,8 @@ public const double x = 1.0, y = 2.0, z = 3.0;
 常数可以参与常数表达式，如下所示：
 
 ```csharp
-public const int c1 = 5;
-public const int c2 = c1 + 100;
+public const int C1 = 5;
+public const int C2 = C1 + 100;
 ```
 
 > [!NOTE]
@@ -64,8 +65,8 @@ public const int c2 = c1 + 100;
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)
 - [readonly](../../../csharp/language-reference/keywords/readonly.md)

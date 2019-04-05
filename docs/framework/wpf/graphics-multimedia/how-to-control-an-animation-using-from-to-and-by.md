@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-ms.openlocfilehash: e422c008ae3051ecd69b3278eb05fc0e2d1b1a0b
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 35973a2a3dea233468f91c6bd24851be088b84e0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858800"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373837"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>如何：使用 From、To 和 By 控制动画
-"From/To/By"或"基本动画创建两个目标值之间的转换 (请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)有关不同类型的动画的简介)。 若要设置基本动画的目标值，使用其<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性。  下表总结了如何<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性可能会一起使用或单独来确定动画的目标值。  
+"From/To/By"或"基本动画创建两个目标值之间的转换 (请参阅[动画概述](animation-overview.md)有关不同类型的动画的简介)。 若要设置基本动画的目标值，使用其<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性。  下表总结了如何<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>属性可能会一起使用或单独来确定动画的目标值。  
   
 |指定的属性|产生的行为|  
 |--------------------------|------------------------|  
@@ -28,16 +28,16 @@ ms.locfileid: "43858800"
 > [!NOTE]
 >  未设置这两<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>属性和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>在同一个动画的属性。  
   
- 若要在两个以上的目标值之间使用内插方法或进行动画处理，请使用关键帧动画。 请参阅[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)有关详细信息。  
+ 若要在两个以上的目标值之间使用内插方法或进行动画处理，请使用关键帧动画。 请参阅[关键帧动画概述](key-frame-animations-overview.md)有关详细信息。  
   
- 有关将多个动画应用于单个属性的信息，请参阅[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)。  
+ 有关将多个动画应用于单个属性的信息，请参阅[关键帧动画概述](key-frame-animations-overview.md)。  
   
  下面的示例显示了不同设置的效果<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>动画的属性。  
   
 ## <a name="example"></a>示例  
- [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
+ [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
-## <a name="see-also"></a>请参阅  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [From、To 和 By 动画目标值示例](https://go.microsoft.com/fwlink/?LinkID=159988)
+## <a name="see-also"></a>请参阅
+- [动画概述](animation-overview.md)
+- [关键帧动画概述](key-frame-animations-overview.md)
+- [From、To 和 By 动画目标值示例](https://go.microsoft.com/fwlink/?LinkID=159988)

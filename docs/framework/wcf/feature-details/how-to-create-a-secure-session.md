@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-ms.openlocfilehash: c0e5281d227d343d8734809b27b57d8a2bead627
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d484bb6d11e7e81ebd14586450f16d8a18bcaa54
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185793"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463626"
 ---
 # <a name="how-to-create-a-secure-session"></a>如何：创建安全会话
 除[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)绑定，Windows Communication Foundation (WCF) 中的系统提供绑定将自动使用启用了消息安全性的安全会话。  
   
- 默认情况下，安全会话不会在已回收的 Web 服务器中存在。 建立安全会话时，客户端和服务将缓存与安全会话关联的密钥。 交换消息时，只交换已缓存密钥的标识符。 如果回收了 Web 服务器，则也会回收缓存，因此 Web 服务器将无法检索该标识符的已缓存密钥。 如果发生这种情况，将会引发异常并返回至客户端。 使用有状态安全上下文令牌 (SCT) 的安全会话可以在回收 Web 服务器后存在。 有关在安全会话中使用有状态 SCT 的详细信息，请参阅[如何： 为安全会话创建的安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+ 默认情况下，安全会话不会在已回收的 Web 服务器中存在。 建立安全会话时，客户端和服务将缓存与安全会话关联的密钥。 交换消息时，只交换已缓存密钥的标识符。 如果回收了 Web 服务器，则也会回收缓存，因此 Web 服务器将无法检索该标识符的已缓存密钥。 如果发生这种情况，将会引发异常并返回至客户端。 使用有状态安全上下文令牌 (SCT) 的安全会话可以在回收 Web 服务器后存在。 有关在安全会话中使用有状态 SCT 的详细信息，请参阅[如何：创建安全上下文令牌的安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>通过使用系统提供的一个绑定指定服务使用安全会话  
   
@@ -54,13 +54,13 @@ ms.locfileid: "50185793"
      [!code-vb[c_CreateSecureSession#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#1)]  
   
     > [!NOTE]
-    >  可用于关闭安全会话[ <wsHttpBinding> ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)通过设置`establishSecurityContext`归于`false`。 对于其他系统提供的绑定，只能通过创建自定义绑定来关闭安全会话。  
+    >  可用于关闭安全会话[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)通过设置`establishSecurityContext`归于`false`。 对于其他系统提供的绑定，只能通过创建自定义绑定来关闭安全会话。  
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>通过使用自定义绑定来指定服务使用安全会话  
   
 -   创建一个自定义绑定，该绑定指定由安全会话保护 SOAP 消息。  
   
-     有关创建自定义绑定的详细信息，请参阅[如何： 自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
+     有关创建自定义绑定的详细信息，请参阅[如何：自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
   
      下面的代码示例使用配置来指定使用安全会话的消息的自定义绑定。  
   
@@ -83,5 +83,5 @@ ms.locfileid: "50185793"
      [!code-csharp[c_CreateSecureSession#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createsecuresession/cs/secureservice.cs#2)]
      [!code-vb[c_CreateSecureSession#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createsecuresession/vb/secureservice.vb#2)]  
   
-## <a name="see-also"></a>请参阅  
- [WCF 绑定概述](../../../../docs/framework/wcf/bindings-overview.md)
+## <a name="see-also"></a>请参阅
+- [WCF 绑定概述](../../../../docs/framework/wcf/bindings-overview.md)

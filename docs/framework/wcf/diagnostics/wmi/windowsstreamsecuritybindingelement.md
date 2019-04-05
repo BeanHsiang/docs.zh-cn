@@ -2,12 +2,12 @@
 title: WindowsStreamSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4b0508c5-669c-4fe3-9225-8a10f8ee3be4
-ms.openlocfilehash: 4ed4e2ccaf60540ad97119474f8818002b50453e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: abe5bc7e72daea7c10824e3e07167e96bd12a334
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505349"
 ---
 # <a name="windowsstreamsecuritybindingelement"></a>WindowsStreamSecurityBindingElement
 WindowsStreamSecurityBindingElement  
@@ -24,7 +24,7 @@ class WindowsStreamSecurityBindingElement : BindingElement
 ## <a name="methods"></a>方法  
  WindowsStreamSecurityBindingElement 类不定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  WindowsStreamSecurityBindingElement 类具有以下属性：  
   
 ### <a name="protectionlevel"></a>ProtectionLevel  
@@ -40,5 +40,5 @@ class WindowsStreamSecurityBindingElement : BindingElement
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

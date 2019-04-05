@@ -6,22 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], ListBox control
 - binding data [WPF], to ListBox control
 ms.assetid: de93a907-709a-44a7-84bf-578b846a3d8b
-ms.openlocfilehash: 186d25750c5ce196a5e46c02f0f56e2440ea3a25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2cbcb0fb859605c33e2d92559b4a47aa1725472c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372876"
 ---
 # <a name="how-to-bind-a-listbox-to-data"></a>如何：将 ListBox 绑定到数据
-应用程序开发人员可以创建<xref:System.Windows.Controls.ListBox>而无需指定每个内容控件<xref:System.Windows.Controls.ListBoxItem>单独。 你可以使用数据绑定来将数据绑定到的各个项。  
+应用程序开发人员可以创建<xref:System.Windows.Controls.ListBox>而无需指定的每个内容控件<xref:System.Windows.Controls.ListBoxItem>单独。 数据绑定可用于将数据绑定到的各个项。  
   
- 下面的示例演示如何创建<xref:System.Windows.Controls.ListBox>来填充<xref:System.Windows.Controls.ListBoxItem>元素通过数据绑定到数据源调用*颜色*。 在这种情况下不需要使用<xref:System.Windows.Controls.ListBoxItem>标记来指定每个项的内容。  
+ 下面的示例演示如何创建<xref:System.Windows.Controls.ListBox>填充<xref:System.Windows.Controls.ListBoxItem>通过数据绑定到的数据源的元素*颜色*。 在这种情况下不需要使用<xref:System.Windows.Controls.ListBoxItem>标记，以指定每个项的内容。  
   
 ## <a name="example"></a>示例  
- [!code-xaml[ListBoxEvent#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#7)]  
-[!code-xaml[ListBoxEvent#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
+ [!code-xaml[ListBoxEvent#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#7)]  
+[!code-xaml[ListBoxEvent#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.ListBox>  
- <xref:System.Windows.Controls.ListBoxItem>  
- [控件](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.Controls.ListBoxItem>
+- [控件](../advanced/optimizing-performance-controls.md)

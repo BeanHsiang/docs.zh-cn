@@ -1,16 +1,16 @@
 ---
-title: 如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
+title: 如何：创建返回任意数据使用 WCF Web HTTP 编程模型的服务
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576390"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>如何：使用 WCF Web HTTP 编程模型创建返回任意数据的服务
-有时，开发人员必须完全控制从服务操作返回数据的方式。 服务操作必须在由 WCF 不支持的格式返回数据时，这种情况。 本主题讨论如何使用 WCF WEB HTTP 编程模型来创建此类服务。 此服务具有一个返回流的操作。  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>如何：创建返回任意数据使用 WCF Web HTTP 编程模型的服务
+有时，开发人员必须完全控制从服务操作返回数据的方式。 当服务操作必须由 WCF 不支持的格式返回数据时，这是这种情况。 本主题讨论如何使用 WCF WEB HTTP 编程模型来创建此类服务。 此服务具有一个返回流的操作。  
   
 ### <a name="to-implement-the-service-contract"></a>实现服务协定  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33498103"
         }  
     ```  
   
-     因为该方法返回<xref:System.IO.Stream>、 WCF 假定该操作具有完全控制从服务操作返回的字节数和它应用到返回的数据的任何格式设置。  
+     因为该方法将返回<xref:System.IO.Stream>、 WCF 假定该操作具有完全控制从服务操作返回的字节数和其应用任何格式设置为返回的数据。  
   
 2.  实现服务协定。 该协定只有一个操作：`GetImage`。 此方法生成一个位图，再以 .jpg 格式将其保存到 <xref:System.IO.MemoryStream>。 随后，操作将该流返回给调用方。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33498103"
   
      请注意代码的倒数第二行：`WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     这将内容类型标头设置为`"image/jpeg"`。 虽然此示例演示如何返回 .jpg 文件，但可以对其进行修改，以任意格式返回所需的任意类型的数据。 该操作必须检索或生成数据，然后将它写入流。  
+     这会设置内容类型标头`"image/jpeg"`。 虽然此示例演示如何返回 .jpg 文件，但可以对其进行修改，以任意格式返回所需的任意类型的数据。 该操作必须检索或生成数据，然后将它写入流。  
   
 ### <a name="to-host-the-service"></a>承载服务  
   
@@ -175,5 +175,5 @@ namespace RawImageService
   
 -   编译示例代码时，请引用 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>请参阅  
- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>请参阅
+- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

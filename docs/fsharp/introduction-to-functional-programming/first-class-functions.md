@@ -2,12 +2,12 @@
 title: 第一类函数
 description: 了解有关的第一类函数，以及如何对函数式编程中的重要信息F#。
 ms.date: 10/29/2018
-ms.openlocfilehash: 1459049c9c1c77f4eefd2a83945335b33ca22ab9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744628"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148623"
 ---
 # <a name="first-class-functions"></a>第一类函数
 
@@ -27,7 +27,7 @@ ms.locfileid: "50744628"
 
 ## <a name="give-the-value-a-name"></a>为指定名称的值
 
-如果函数是第一类值，您必须能够将其命名，就像可以命名整数、 字符串和其他内置类型。 这称为函数编程语言标识符绑定到的值中。 使用 F # [ `let`绑定](../language-reference/functions/let-bindings.md)要绑定到值的名称： `let <identifier> = <value>`。 下面的代码演示两个示例。
+如果函数是第一类值，您必须能够将其命名，就像可以命名整数、 字符串和其他内置类型。 这称为函数编程语言标识符绑定到的值中。 F#使用[`let`绑定](../language-reference/functions/let-bindings.md)要绑定到值的名称： `let <identifier> = <value>`。 下面的代码演示两个示例。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet20.fs)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "50744628"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
 
-F # 提供了以下更简洁的语法来实现相同的结果，少键入一些字符。
+F#提供了以下更简洁的语法来实现相同的结果，少键入一些字符。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet22.fs)]
 
@@ -57,7 +57,7 @@ F # 提供了以下更简洁的语法来实现相同的结果，少键入一些�
 
 ## <a name="pass-the-value-as-an-argument"></a>值作为参数传递
 
-如果值有一种语言中的第一类的状态，则可以它作为参数传递给函数。 例如，它是常见整数和字符串作为参数传递。 下面的代码演示整数和 F # 中作为参数传递的字符串。
+如果值有一种语言中的第一类的状态，则可以它作为参数传递给函数。 例如，它是常见整数和字符串作为参数传递。 下面的代码演示整数和字符串中作为参数传递F#。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet26.fs)]
 
@@ -69,7 +69,7 @@ F # 提供了以下更简洁的语法来实现相同的结果，少键入一些�
 
 能够将函数作为参数发送到另一个函数是函数编程语言，例如映射或筛选器操作中的常见抽象的基础。 映射操作，例如，是捕获共享单步执行列表、 对每个元素进行一些操作，然后返回结果的列表的函数的计算，高阶函数。 您可能想要递增的整数，列表中每个元素或正方形每个元素，或更改为大写的字符串列表中每个元素。 计算的易出错部分是递归过程的列表的步骤和生成的要返回的结果列表。 映射函数中捕获该部分。 你已将某个特定应用程序是你想要单独应用于每个列表元素的函数 （添加、 求平方、 更改大小写）。 函数作为参数发送到映射函数，就像`squareIt`发送到`applyIt`在前面的示例。
 
-F # 提供的映射方法对于大多数集合类型，包括[列出了](../language-reference/lists.md)，[数组](../language-reference/arrays.md)，并[序列](../language-reference/sequences.md)。 下面的示例使用列表。 语法是`List.map <the function> <the list>`。
+F#提供用于大多数集合类型，包括映射方法[列出了](../language-reference/lists.md)，[数组](../language-reference/arrays.md)，并[序列](../language-reference/sequences.md)。 下面的示例使用列表。 语法是`List.map <the function> <the list>`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet28.fs)]
 
@@ -99,19 +99,19 @@ F # 提供的映射方法对于大多数集合类型，包括[列出了](../lang
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet33.fs)]
 
-下面的示例使用在 F # 中函数的第一类状态来声明函数， `compose`，返回两个函数参数的组合。
+下面的示例使用中的函数的第一类状态F#来声明一个函数， `compose`，返回两个函数参数的组合。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet34.fs)]
 
->[!NOTE]
-更短的版本，请参阅以下部分中，"扩充函数。"
+> [!NOTE]
+> 更短的版本，请参阅以下部分中，"扩充函数。"
 
 下面的代码将作为参数发送两个函数`compose`，这两个的这需要相同类型的单个参数。 返回值是一个新函数，则两个函数参数的组合。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet35.fs)]
 
->[!NOTE]
-F # 提供了两个运算符`<<`和`>>`，组合函数。 例如，`let squareAndDouble2 = doubleIt << squareIt`等效于`let squareAndDouble = compose doubleIt squareIt`在前面的示例。
+> [!NOTE]
+> F#提供了两个运算符`<<`和`>>`，组合函数。 例如，`let squareAndDouble2 = doubleIt << squareIt`等效于`let squareAndDouble = compose doubleIt squareIt`在前面的示例。
 
 返回一个函数作为函数调用的值的以下示例创建一个简单的猜测游戏。 若要创建一个游戏，调用`makeGame`的值，希望有人猜测中发送`target`。 函数的返回值`makeGame`是接受一个参数 （猜测值），并报告猜测是正确的函数。
 
@@ -123,7 +123,7 @@ F # 提供了两个运算符`<<`和`>>`，组合函数。 例如，`let squareAn
 
 ## <a name="curried-functions"></a>扩充的函数
 
-可以通过利用隐式更简洁地编写的示例在上一节中的许多*科*F # 函数声明中。 科是一个转换具有多个参数为一系列的嵌入功能，其中每个具有单个参数的函数的过程。 在 F # 中，都会被扩充具有多个参数的函数。 例如，`compose`从上一节可以编写以下简洁样式，带有三个参数中所示。
+可以通过利用隐式更简洁地编写的示例在上一节中的许多*科*中F#函数声明。 科是一个转换具有多个参数为一系列的嵌入功能，其中每个具有单个参数的函数的过程。 在F#，本质上是扩充具有多个参数的函数。 例如，`compose`从上一节可以编写以下简洁样式，带有三个参数中所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet38.fs)]
 
@@ -139,8 +139,8 @@ F # 提供了两个运算符`<<`和`>>`，组合函数。 例如，`let squareAn
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet41.fs)]
 
->[!NOTE]
-你可以限制科参数括在元组中。 详细信息，请参阅"参数模式"中[形参和实参](../language-reference/parameters-and-arguments.md)。
+> [!NOTE]
+> 你可以限制科参数括在元组中。 详细信息，请参阅"参数模式"中[形参和实参](../language-reference/parameters-and-arguments.md)。
 
 下面的示例使用隐式扩充编写的简短版本`makeGame`。 如何的详细信息`makeGame`构造并返回`game`函数不太明确按以下格式，但你可以通过使用原始的结果是相同的测试用例验证。
 
@@ -162,7 +162,7 @@ F # 提供了两个运算符`<<`和`>>`，组合函数。 例如，`let squareAn
 
 ## <a name="functions-are-first-class-values-in-f"></a>函数是 F 中的第一类值\#
 
-前面几节中的示例演示 F # 中的函数满足 F # 中的一类值的条件：
+前面几节中的示例演示中，函数F#满足的条件中的一类值F#:
 
 - 可以绑定到函数定义的标识符。
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
@@ -176,7 +176,7 @@ F # 提供了两个运算符`<<`和`>>`，组合函数。 例如，`let squareAn
 - 可以将函数作为函数调用的值返回。
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
 
-有关 F # 的详细信息，请参阅[F # 语言参考](../language-reference/index.md)。
+有关详细信息F#，请参阅[F#语言参考](../language-reference/index.md)。
 
 ## <a name="example"></a>示例
 

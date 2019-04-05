@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d915c7d5521e630602f4dac6c905920fd2fab9d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1136b01aba5f2143c6d26388568df0b60a5db123
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411442"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492174"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>ICorDebugDataTarget2::EnumerateThreadIDs 方法
 返回一组活动线程 ID。  
@@ -24,12 +24,12 @@ HRESULT EnumerateThreadIDs(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  cThreadID  
  [输入] 线程 ID 可返回的上限数。  
   
  pcThreadID  
- [输出] `ULONG32` 指针显示写入 `pThreadIds` 阵列的线程 ID 的实际数目。  
+ [输出] `ULONG32` 指针显示写入 `pThreadIds` 数组的线程 ID 的实际数目。  
   
  pThreadID  
  一组线程标识符。  
@@ -44,8 +44,8 @@ HRESULT EnumerateThreadIDs(
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugDataTarget2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugDataTarget2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: 隐私和数据安全性
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: 078b5e09e800511c3edfa78596b5bdb67ebcc6d7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ed408cedbd686efd29472f6f7d19ec03390164f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662135"
 ---
 # <a name="privacy-and-data-security"></a>隐私和数据安全性
 保护和管理 ADO.NET 应用程序中的敏感信息依赖于用于创建这些信息的基础产品和技术。 ADO.NET 不直接提供用于保护或加密数据的服务。  
@@ -27,7 +27,7 @@ ms.locfileid: "50194925"
   
  <xref:System.Security.SecureString> 类提供了在内存中使用数据保护 API (DPAPI) 加密文本的方法。 这样，就可以在不再需要字符串时将其从内存中删除。 没有任何 `ToString` 方法可快速读取 <xref:System.Security.SecureString> 的内容。 您可以不使用值或通过向其传递一个指向 `SecureString` 对象的数组的指针来初始化 <xref:System.Char> 的新实例。 这样，您就可以使用类的各种方法来处理字符串。 有关详细信息，下载[SecureString 示例应用程序](https://go.microsoft.com/fwlink/?LinkId=120418)，其中演示了如何使用`SecureString`类。  
   
-## <a name="see-also"></a>请参阅  
- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

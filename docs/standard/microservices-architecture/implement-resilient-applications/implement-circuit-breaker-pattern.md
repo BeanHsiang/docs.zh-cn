@@ -1,15 +1,15 @@
 ---
 title: 实现断路器模式
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 实现断路器模式，作为对 Http 重试的补充系统
+description: 了解如何实现断路器模式作为 Http 重试的互补系统。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 07/03/2018
-ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.date: 10/16/2018
+ms.openlocfilehash: 25a8b52749c3a8448a80155b233edb938e9bdd64
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453146"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464185"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>实现断路器模式
 
@@ -38,14 +38,15 @@ ms.locfileid: "49453146"
 ```csharp
 //ConfigureServices()  - Startup.cs
 services.AddHttpClient<IBasketService, BasketService>()
-        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to 5 minutes
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Sample. Default lifetime is 2 minutes
+        .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
         .AddPolicyHandler(GetRetryPolicy())
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-`AddPolicyHandler()` 方法将策略添加至将要使用的 HttpClient 对象。 在这种情况下，它会为断路器添加 Polly 策略。
+`AddPolicyHandler()` 方法将策略添加至将要使用的 `HttpClient` 对象。 在这种情况下，它会为断路器添加 Polly 策略。
 
-为了获取更为模块化的方法，会在一个名为 GetCircuitBreakerPolicy() 的单独方法中定义断路器策略，如下列代码所示。
+为了获取更为模块化的方法，会在一个名为 `GetCircuitBreakerPolicy()` 的单独方法中定义断路器策略，如下列代码所示：
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
@@ -56,7 +57,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-上述代码示例配置了断路器策略，因此，如果在重试 Http 请求时出现五个连续故障，则会中断或断开线路。 此时，电路将断开 30 秒：在此期间，断路器会立即中止呼叫，而不是拨打电话。  该策略自动将[相关异常和 HTTP 状态代码](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解释为故障。  
+上述代码示例配置了断路器策略，因此，如果在重试 Http 请求时出现五个连续故障，则会中断或断开线路。 此时，电路将断开 30 秒：在此期间，断路器会立即中止呼叫，而不是拨打电话。  该策略自动将[相关异常和 HTTP 状态代码](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)解释为故障。  
 
 如果一个特定资源出现问题，且该资源部署在不同于执行 HTTP 调用的客户端应用程序或服务的环境中，则还应使用断路器将请求重定向到回退基础结构。 这样一来，如果数据中心发生故障，但该故障只影响后端微服务，而不影响客户端应用程序，则客户端应用程序可以重定向到回退服务。 Polly 正在规划新策略，用于自动实现此[故障转移策略](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy)方案。 
 
@@ -64,15 +65,15 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 从使用情况角度来看，在使用 HttpClient 时，无需添加新内容，因为该代码与结合使用 HttpClientFactory 和 HttpClient 时所使用的代码相同，如之前部分所述。 
 
-## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>在 eShopOnContainers 中测试 Http 重试和断路器
+## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>在 eShopOnContainers 中测试 Http 重试和断路器
 
-每当在 Docker 主机中启动 eShopOnContainers 解决方案时，它需要启动多个容器。 启动和初始化某些容器时会比较慢，如 SQL Server 容器。 尤其是首次在 Docker 中部署 eShopOnContainers 应用程序时，因为它需要设置映像和数据库。 某些容器的启动速度比其他容器慢，这可能导致其余服务一开始会引发 HTTP 异常，即使在 docker-compose 级别设置容器之间的依赖关系也会如此，如前面部分中所述。 容器之间的那些 docker-compose 依赖关系只存在于进程级别。 可能容器的入口点进程已启动，但 SQL Server 可能还不能响应查询。 这是一连串错误导致的结果，应用程序在尝试使用该特定容器时可能引发异常。 
+每当在 Docker 主机中启动 eShopOnContainers 解决方案时，它需要启动多个容器。 启动和初始化某些容器时会比较慢，如 SQL Server 容器。 尤其是首次在 Docker 中部署 eShopOnContainers 应用程序时，因为它需要设置映像和数据库。 某些容器的启动速度比其他容器慢，这可能导致其余服务一开始会引发 HTTP 异常，即使在 docker-compose 级别设置容器之间的依赖关系也会如此，如前面部分中所述。 容器之间的那些 docker-compose 依赖关系只存在于进程级别。 可能容器的入口点进程已启动，但 SQL Server 可能还不能响应查询。 这是一连串错误导致的结果，应用程序在尝试使用该特定容器时可能引发异常。
 
 在应用程序部署到云时，也可能在启动时看到这种类型的错误。 在这种情况下，业务流程协调程序可能会将容器从一个节点或 VM 移动到另一个（即启动新实例），以平衡群集节点中的容器数。
 
 在启用所有容器时，“eShopOnContainers”解决这些问题的方法是使用前文所述的重试模式。 
 
-### <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>在 eShopOnContainers 中测试断路器
+### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>在 eShopOnContainers 中测试断路器
 
 有几种方法可以中断/打开线路，并使用 eShopOnContainers 对其进行测试。
 
@@ -80,27 +81,24 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 另一种方法是使用 Basket 微服务中实现的自定义中间件。 启用此中间件后，它会捕获所有 HTTP 请求并返回状态代码 500。 可以通过向失败 URI 发出 GET 请求来启用此中间件，如下所示：
 
-- `GET http://localhost:5103/failing`
+- `GET http://localhost:5103/failing`\
+  此请求返回中间件的当前状态。 如果启用了中间件，则请求返回状态代码 500。 如果禁用了中间件，则无响应。
 
-此请求返回中间件的当前状态。 如果启用了中间件，则请求返回状态代码 500。 如果禁用了中间件，则无响应。 
+- `GET http://localhost:5103/failing?enable`\
+  此请求启用中间件。
 
-- `GET http://localhost:5103/failing?enable`
-
-此请求启用中间件。 
-
-- `GET http://localhost:5103/failing?disable`
-
-此请求禁用中间件。 
+- `GET http://localhost:5103/failing?disable`\
+  此请求禁用中间件。
 
 例如，应用程序运行后，可立即通过在任何浏览器中使用以下 URI 发出请求，来启用中间件。 请注意，订单微服务使用端口 5103。
 
 `http://localhost:5103/failing?enable` 
 
-然后可以使用 URI `http://localhost:5103/failing` 检查状态，如图 10-4 中所示。
+然后可以使用 URI `http://localhost:5103/failing` 检查状态，如图 8-5 中所示。
 
-![](./media/image4.png)
+![检查失败中间件模拟状态的结果的浏览器视图](./media/image4.png)
 
-**图 10-4**。 正在检查“失败”的 ASP.NET 中间件的状态 – 在此例中为禁用状态。 
+**图 8-5**。 正在检查“失败”的 ASP.NET 中间件的状态 – 在此例中为禁用状态。
 
 在这种情况下，每当调用市场篮微服务时，微服务就会使用状态代码 500 进行响应。
 
@@ -115,7 +113,7 @@ public class CartController : Controller
     public async Task<IActionResult> Index()
     {
         try
-        {          
+        {
             var user = _appUserParser.Parse(HttpContext.User);
             //Http requests using the Typed Client (Service Agent)
             var vm = await _basketSvc.GetBasket(user);
@@ -123,11 +121,11 @@ public class CartController : Controller
         }
         catch (BrokenCircuitException)
         {
-            // Catches error when Basket.api is in circuit-opened mode                 
+            // Catches error when Basket.api is in circuit-opened mode
             HandleBrokenCircuitException();
         }
         return View();
-    }       
+    }
 
     private void HandleBrokenCircuitException()
     {
@@ -136,24 +134,21 @@ public class CartController : Controller
 }
 ```
 
-下面是摘要。 重试策略尝试数次发出 HTTP 请求，并获取 HTTP 错误。 当重试次数达到断路器策略设置的最大次数时（此例中为 5），应用程序会引发 BrokenCircuitException。 结果是一条友好消息，如图 10-5 中所示。
+下面是摘要。 重试策略尝试数次发出 HTTP 请求，并获取 HTTP 错误。 当重试次数达到断路器策略设置的最大次数时（此例中为 5），应用程序会引发 BrokenCircuitException。 结果是一条友好消息，如图 8-6 中所示。
 
-![](./media/image5.png)
+![MVC Web 应用的浏览器视图，显示由断路器策略触发的“basket 服务不起作用”消息](./media/image5.png)
 
-**图 10-5**。 断路器向 UI 返回一个错误
+**图 8-6**。 断路器向 UI 返回一个错误
 
 可以实现其他逻辑来指定何时打开/中断线路。 或如果有一个回退数据中心或冗余的后端系统，可尝试对另一个后端微服务发出 HTTP 请求。 
 
 最后，针对 `CircuitBreakerPolicy` 的另一种可能操作是使用 `Isolate`（强制打开线路并保持为打开状态）和 `Reset`（再次关闭路线）。 可使用这些操作构建一个实用程序 HTTP 终结点，用于在策略上直接调用隔离和重置。  还可以在生产中以合适的安全程度使用这种 HTTP 终结点，用于临时隔离下游系统，比如在想要升级系统的时候。 或可手动打开线路，以保护疑似发生故障的下游系统。
 
-
 ## <a name="additional-resources"></a>其他资源
 
-
--   **断路器模式**
-    [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
-
+- **断路器模式**\
+  [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
-[上一页](implement-http-call-retries-exponential-backoff-polly.md)
-[下一页](monitor-app-health.md)
+>[上一页](implement-http-call-retries-exponential-backoff-polly.md)
+>[下一页](monitor-app-health.md)

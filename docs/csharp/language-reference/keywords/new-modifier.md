@@ -1,15 +1,16 @@
 ---
-title: new 修饰符（C# 参考）
+title: new 修饰符 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 496339a7c3b95f16fd13479b096d90058b0799d4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d5fd244ea22fd48bf5b81d2cdf55127f745c145b
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702668"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835013"
 ---
 # <a name="new-modifier-c-reference"></a>new 修饰符（C# 参考）
 
@@ -23,11 +24,11 @@ ms.locfileid: "46702668"
 
 通过继承隐藏名称采用下列形式之一：
 
-通常，在类或结构中引入的常数、字段、属性或类型会隐藏与其共享名称的所有基类成员。  有三种特殊情况。  例如，如果将名称为 `N` 的新字段声明为不可调用的类型，并且基类型将 `N` 声明为一种方法，则新字段在调用语法中不会隐藏基声明。  请参阅 [C# 5.0 语言规范](https://www.microsoft.com/download/details.aspx?id=7029)了解详细信息（参阅“表达式”一节中的“成员查找”部分）。
+- 通常，在类或结构中引入的常数、字段、属性或类型会隐藏与其共享名称的所有基类成员。  有三种特殊情况。  例如，如果将名称为 `N` 的新字段声明为不可调用的类型，并且基类型将 `N` 声明为一种方法，则新字段在调用语法中不会隐藏基声明。  请参阅 [C# 5.0 语言规范](https://www.microsoft.com/download/details.aspx?id=7029)了解详细信息（参阅“表达式”一节中的“成员查找”部分）。
 
-类或结构中引入的方法会隐藏基类中共享该名称的属性、字段和类型。 它还会隐藏具有相同签名的所有基类方法。
+- 类或结构中引入的方法会隐藏基类中共享该名称的属性、字段和类型。 它还会隐藏具有相同签名的所有基类方法。
 
-类或结构中引入的索引器会隐藏具有相同签名的所有基类索引器。
+- 类或结构中引入的索引器会隐藏具有相同签名的所有基类索引器。
 
 对同一成员同时使用 `new` 和 [override](override.md) 是错误的做法，因为这两个修饰符的含义互斥。 `new` 修饰符会用同样的名称创建一个新成员并使原始成员变为隐藏。 `override` 修饰符会扩展继承成员的实现。
 

@@ -3,20 +3,20 @@ title: Azure 的开发过程
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | Azure 的开发过程
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 487a303e5cf572cf4173423588ee7fb5a93cb394
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 01/30/2019
+ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185612"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202101"
 ---
 # <a name="development-process-for-azure"></a>Azure 的开发过程
 
 > “凭借云，个体和小型企业可轻松无忧地立即建立企业级服务。”  
 > - Roy Stephan
 
- ## <a name="vision"></a>愿景
+## <a name="vision"></a>愿景
 
 > 使用 Visual Studio、dotnet CLI、Visual Studio Code 或所选用的编辑器，按照自己喜欢的方式开发出设计优良的 ASP .NET Core 应用程序。
 
@@ -110,5 +110,5 @@ ms.locfileid: "50185612"
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
-[上一页](test-asp-net-core-mvc-apps.md)
-[下一页](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[上一页](test-asp-net-core-mvc-apps.md)
+>[下一页](azure-hosting-recommendations-for-asp-net-web-apps.md)

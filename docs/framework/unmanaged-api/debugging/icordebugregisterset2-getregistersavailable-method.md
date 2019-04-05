@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3a9cdb49c1a44dbc68cd4b7ccf4d4781ce5c539
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ffa862ebe631471030e1e87a28645e278062d18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421887"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469113"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable 方法
 获取提供的可用寄存器位图的字节数组。  
@@ -36,33 +36,33 @@ HRESULT GetRegistersAvailable (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `numChunks`  
  [in] `availableRegChunks` 数组的大小。  
   
  `availableRegChunks`  
- [out]字节数组，其中每位对应于寄存器。 如果可用的寄存器，注册的对应位将设置。  
+ [out]一个字节数组，其中每位对应于寄存器。 如果可用的寄存器，寄存器的对应位设置。  
   
 ## <a name="remarks"></a>备注  
- CorDebugRegister 枚举的值指定不同微处理器的寄存器。 每个值的上限五位均为的索引为`availableRegChunks`的字节数组。 每个值的较低的三个位标识中的索引的字节的位位置。 给定`CorDebugRegister`值，该值指定特定的注册，掩码中的寄存器的位置确定，如下所示：  
+ CorDebugRegister 枚举的值指定不同的微处理器的寄存器。 每个值的上限五位均为中的索引`availableRegChunks`的字节数组。 每个值的三个低位标识内的索引的字节的位位置。 给定`CorDebugRegister`值，该值指定特定寄存器中，掩码中的寄存器的位置确定，如下所示：  
   
-1.  提取所需访问中的正确字节的索引`availableRegChunks`数组：  
+1.  提取访问中的正确字节所需的索引`availableRegChunks`数组：  
   
      `CorDebugRegister` 值 >> 3  
   
-2.  提取其中位零是最低有效位的位位置中的索引的字节：  
+2.  提取其中位零是最低有效位的位位置内的索引的字节：  
   
-     `CorDebugRegister` 值 （&) 7  
+     `CorDebugRegister` 值和 7  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugRegisterSet2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)  
- [ICorDebugRegisterSet 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugRegisterSet2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)

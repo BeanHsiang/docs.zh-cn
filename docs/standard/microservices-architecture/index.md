@@ -3,19 +3,19 @@ title: .NET 微服务。 适用于容器化 .NET 应用程序的体系结构
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务可是模块化且可独立部署的服务。 （适用于 Linux 和 Windows）的 Docker 容器可将服务及其依赖项绑定到单个单元，使该单元在一个独立的环境中运行，因而可简化部署和测试。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 08/31/2018
-ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 01/07/2019
+ms.openlocfilehash: 9a544172e180bbd3ae5eb2281e73e36407ffc003
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193911"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463639"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服务：适用于容器化 .NET 应用程序的体系结构
 
 ![封面](./media/cover-small.png)
 
-**版本 v2.1.02** - 已更新到 ASP.NET Core 2.1
+**版本 v2.2.00** - 已更新到 ASP.NET Core 2.2
 
 本指南介绍如何使用容器开发基于微服务的应用程序并对其进行管理。 本指南探讨使用 .NET Core 和 Docker 容器的体系结构设计和实现方法。 
 
@@ -47,9 +47,9 @@ Docker 正在逐渐成为容器行业的事实标准，受到 Windows 和 Linux 
 
 学习本指南后，接下来将了解 Microsoft Azure 上的生产就绪微服务。
 
-## <a name="version"></a>版本
+## <a name="version"></a>Version
 
-本指南已进行了修订，涵盖 **.NET Core 2.1** 版本以及与 .NET Core 2.1 同期的同一“批”技术 （即 Azure 和其他第三方技术）的许多其他更新。 这就是书本版本也更新到 **2.1** 的原因。 
+本指南已进行了修订，涵盖 .NET Core 2.2 版本以及与 .NET Core 2.2 同期的同一“批”技术 （即 Azure 和其他第三方技术）的许多其他更新。 这就是书本版本也更新到 2.2 的原因。 
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵盖的内容
 
@@ -58,7 +58,7 @@ Docker 正在逐渐成为容器行业的事实标准，受到 Windows 和 Linux 
 ### <a name="additional-resources"></a>其他资源
 
 -   《使用 Microsoft 平台和工具的容器化 Docker 应用程序生命周期》（可下载电子书）  
-    [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+    [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
 
 ## <a name="who-should-use-this-guide"></a>本指南的目标读者
 
@@ -88,9 +88,9 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 
 合著者：
 
-> **Cesar de la Torre**，Microsoft Corp. .NET 产品团队的高级项目经理。
+> **Cesar de la Torre**，Microsoft Corp .NET 产品团队的高级项目经理。
 >
-> **Bill Wagner**，Microsoft Corp. C+E 高级内容开发者。
+> **Bill Wagner**，Microsoft Corp C+E 高级内容开发人员。
 >
 > **Mike Rousos**，Microsoft DevDiv CAT 团队的主要软件工程师
 
@@ -116,13 +116,15 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 >
 > **Diego Vega**，Microsoft 实体框架团队的项目经理主管
 >
-> **Barry Dorrans**，安全高级项目经理
+> **Barry Dorrans**，高级安全项目经理
 >
 > **Rowan Miller**，Microsoft 高级项目经理
 >
 > **Ankit Asthana**，Microsoft .NET 团队的主要项目经理
 >
 > **Scott Hunter**，Microsoft .NET 团队的合作伙伴总监项目经理
+>
+> Microsoft .NET 团队高级项目经理 Nish Anil
 >
 > **Dylan Reisenberger**，Polly 的架构师兼开发主管
 >
@@ -140,14 +142,13 @@ eShopOnContainers 应用程序是用于 .NET Core 和旨在使用 Docker 容器�
 >
 > **Javier Valero**，Grupo Solutio 的首席运营官
 >
-> **Pierre Millet**，Microsoft 的高级顾问
+> **Pierre Millet**，Microsoft 高级顾问
 >
 > **Michael Friis**，Docker Inc 的产品经理
 >
 > **Charles Lowell**，Microsoft VS CAT 团队的软件工程师
 >
 > **Miguel Veloso**，Turing Challenge 的高级顾问
-
 
 ## <a name="copyright"></a>Copyright
 
@@ -179,6 +180,5 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 所有其他标记和徽标均为其各自所有者的财产。
 
-
 >[!div class="step-by-step"]
-[下一篇](container-docker-introduction/index.md)
+>[下一篇](container-docker-introduction/index.md)

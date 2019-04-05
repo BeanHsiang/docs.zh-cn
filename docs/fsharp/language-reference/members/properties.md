@@ -1,13 +1,13 @@
 ---
-title: 属性 (F#)
-description: '了解 F # 属性，分别表示与对象相关联的值的成员。'
+title: 属性
+description: 了解如何F#是表示与对象相关联的值的成员的属性。
 ms.date: 05/16/2016
-ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bf605ee1135bd3b3561bde9a8ae66353497931b0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50197920"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675687"
 ---
 # <a name="properties"></a>属性
 
@@ -103,7 +103,7 @@ class1.ExplicitProperty = 1131210765
 上述代码的输出显示，AutoProperty 的值是不变时重复调用而 ExplicitProperty 更改每次调用它。 本示例演示自动实现属性的表达式不计算每个时间，是因为是显式的属性的 getter 方法。
 
 >[!WARNING]
-有一些库，如实体框架 (`System.Data.Entity`)，可以在不很好地配合初始化自动实现的属性的基类构造函数中执行自定义操作。 在这些情况下，请尝试使用显式属性。
+>有一些库，如实体框架 (`System.Data.Entity`)，可以在不很好地配合初始化自动实现的属性的基类构造函数中执行自定义操作。 在这些情况下，请尝试使用显式属性。
 
 属性可以是类、 结构、 可区分的联合、 记录、 接口和类型扩展的成员，也可以在对象表达式中定义。
 

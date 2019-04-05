@@ -2,12 +2,12 @@
 title: 创建自定义特性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 5a846771eb26e3760e3f47458b862356f4da1ae6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0277a88b7e5beda511f6490261a7009adcfed4ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674630"
 ---
 # <a name="creating-custom-attributes-c"></a>创建自定义特性 (C#)
 可通过定义特性类创建自己的自定义特性，特性类是直接或间接派生自 <xref:System.Attribute> 的类，可快速轻松地识别元数据中的特性定义。 假设希望使用编写类型的程序员的姓名来标记该类型。 可能需要定义一个自定义 `Author` 特性类：  
@@ -63,15 +63,12 @@ class SampleClass
 }  
 ```  
   
-> [!NOTE]
->  如果特性类包含属性，则该属性必须为读写属性。  
-  
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Reflection>  
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
-- [编写自定义特性](../../../../standard/attributes/writing-custom-attributes.md)  
-- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
-- [特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
-- [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- <xref:System.Reflection>
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)
+- [编写自定义特性](../../../../standard/attributes/writing-custom-attributes.md)
+- [反射 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
+- [特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
+- [使用反射访问特性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
 - [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)

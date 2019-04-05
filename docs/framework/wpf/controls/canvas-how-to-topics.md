@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550948"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359388"
 ---
 # <a name="canvas-how-to-topics"></a>画布帮助主题
-本部分中的主题介绍如何使用<xref:System.Windows.Controls.Canvas>要子元素进行绝对定位元素。  
+在本部分中的主题介绍如何使用<xref:System.Windows.Controls.Canvas>元素以绝对方式定位子元素。  
   
 ## <a name="in-this-section"></a>本节内容  
- [用边框围住画布内容](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [获取或设置画布位置属性](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [创建和使用画布](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [使用画布的附加属性确定子元素的位置](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [使用 Thumb 重设画布大小](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+ [用边框围住画布内容](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [获取或设置画布位置属性](how-to-get-or-set-canvas-positioning-properties.md)  
+ [创建和使用画布](how-to-create-and-use-a-canvas.md)  
+ [使用画布的附加属性确定子元素的位置](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [使用 Thumb 重设画布大小](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +40,8 @@ ms.locfileid: "33550948"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相关章节  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)  
+ [布局](../advanced/layout.md)  
   
- [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概述](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概述](scrollviewer-overview.md)

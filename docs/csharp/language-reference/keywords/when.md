@@ -1,5 +1,6 @@
 ---
-title: when（C# 参考）
+title: when 上下文关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 03/07/2017
 f1_keywords:
 - when_CSharpKeyword
@@ -7,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: a71cbdce256b1c1bd5d101d66f216fb229d70adf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a8f64da0ab603830972035f1c2cd3a0b1eaadaff
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48844899"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221851"
 ---
- # <a name="when-c-reference"></a>when（C# 参考）
+# <a name="when-c-reference"></a>when（C# 参考）
 
 在以下两个上下文中，可以使用上下文关键字 `when` 指定筛选条件：
 
@@ -23,17 +24,18 @@ ms.locfileid: "48844899"
 
 ## <a name="when-in-a-catch-statement"></a>`catch` 语句中的 `when`
 
-从 C# 6 开始，`When` 可用于 `catch` 语句中，以指定为执行特定异常处理程序而必须为 true 的条件。 语法为：
+从 C# 6 开始，`when` 可用于 `catch` 语句中，以指定为执行特定异常处理程序而必须为 true 的条件。 语法为：
 
 ```csharp
-catch ExceptionType [e] when (expr)
+catch (ExceptionType [e]) when (expr)
 ```
-其中，*expr* 是一个表达式，其计算结果为布尔值。 如果该表达式返回 `true`，则执行异常处理程序；如果返回 `false`，则不执行。 
+
+其中，*expr* 是一个表达式，其计算结果为布尔值。 如果该表达式返回 `true`，则执行异常处理程序；如果返回 `false`，则不执行。
 
 以下示例使用 `when` 关键字有条件地执行 <xref:System.Net.Http.HttpRequestException> 的处理程序，具体取决于异常消息的文本内容。
 
- [!code-csharp[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]  
-  
+[!code-csharp[when-with-catch](~/samples/snippets/csharp/language-reference/keywords/when/catch.cs)]
+
 ## <a name="when-in-a-switch-statement"></a>`switch` 语句中的 `when`
 
 从 C# 7.0 开始，`case` 标签无需是互斥的，且 `case` 标签在 `switch` 语句中的显示顺序可以决定要执行的 switch 块。 `when` 关键字可指定一个筛选条件，该条件使得仅当筛选条件也为 true 时，与其相关联的 case 标签才为 true。 语法为：
@@ -41,14 +43,15 @@ catch ExceptionType [e] when (expr)
 ```csharp
 case (expr) when (when-condition):
 ```
-其中，*expr* 是与匹配表达式进行比较的常量模式或类型模式，而 *when-condition* 是任意布尔表达式。 
 
-以下示例使用 `when` 关键字针对具有零范围的 `Shape` 对象进行测试，同时针对各种范围大于零的 `Shape` 对象进行测试。 
+其中，*expr* 是与匹配表达式进行比较的常量模式或类型模式，而 *when-condition* 是任意布尔表达式。
 
- [!code-csharp[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
+以下示例使用 `when` 关键字针对具有零范围的 `Shape` 对象进行测试，同时针对各种范围大于零的 `Shape` 对象进行测试。
+
+[!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
 ## <a name="see-also"></a>请参阅
 
-- [switch 语句](switch.md)  
-- [try/catch 语句](try-catch.md)  
-- [try/catch/finally 语句](try-catch-finally.md) 
+- [switch 语句](switch.md)
+- [try/catch 语句](try-catch.md)
+- [try/catch/finally 语句](try-catch-finally.md)

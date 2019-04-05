@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170219"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127077"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 应用程序域信息  
@@ -35,7 +35,7 @@ class AppDomainInfo
 ## <a name="methods"></a>方法  
  AppDomainInfo 类未定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  AppDomainInfo 类具有以下属性：  
   
 ### <a name="appdomainid"></a>AppDomainId  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617910"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>为多线程处理同步数据
 多个线程可以调用单个对象的属性和方法时，对这些调用进行同步处理是非常重要的。 否则，一个线程可能会中断另一个线程正在执行的任务，可能使该对象处于无效状态。 其成员不受这类中断影响的类叫做线程安全类。  
@@ -33,9 +33,9 @@ ms.locfileid: "48842653"
   
 |类别|全局字段|静态字段|静态方法|实例字段|实例方法|特定代码块|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
-|无同步|否|否|否|否|否|否|  
-|同步上下文|否|否|否|是|是|否|  
-|同步代码区域|否|否|仅当标记时|否|仅当标记时|仅当标记时|  
+|无同步|No|No|No|No|No|No|  
+|同步上下文|No|No|No|是|是|No|  
+|同步代码区域|No|No|仅当标记时|No|仅当标记时|仅当标记时|  
 |手动同步|手动|手动|手动|手动|手动|手动|  
   
 ## <a name="no-synchronization"></a>无同步  
@@ -69,8 +69,8 @@ ms.locfileid: "48842653"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
-- [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)  
-- [同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
-- [SyncLock 语句](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
+- [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)
+- [同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [SyncLock 语句](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
 - [lock 语句](~/docs/csharp/language-reference/keywords/lock-statement.md)

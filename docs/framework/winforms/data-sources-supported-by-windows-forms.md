@@ -15,18 +15,18 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: aee15d8d40ddd3f928c8bc5396d8bcbff17ba533
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858907"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711295"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows 窗体支持的数据源
 传统上，数据绑定已用于应用程序中充分利用数据库中存储数据。 使用 Windows 窗体数据绑定，您可以从数据库以及其他结构，如数组和集合中的数据访问数据，只要满足某些最低要求。  
   
 ## <a name="structures-to-bind-to"></a>将绑定到结构  
- 在 Windows 窗体中可以绑定到各种结构，从简单到复杂的列表，如 ADO.NET 数据表 （复杂绑定） 的对象 （简单绑定）。 对于简单绑定，Windows 窗体上的简单对象支持绑定到的公共属性。 Windows 窗体基于列表的绑定通常需要对象支持<xref:System.Collections.IList>接口或<xref:System.ComponentModel.IListSource>接口。 此外，如果要通过绑定与<xref:System.Windows.Forms.BindingSource>组件，可以绑定到支持的对象，<xref:System.Collections.IEnumerable>接口。 有关与数据绑定相关的接口的详细信息，请参阅[与数据绑定相关的接口](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)。  
+ 在 Windows 窗体中可以绑定到各种结构，从简单到复杂的列表，如 ADO.NET 数据表 （复杂绑定） 的对象 （简单绑定）。 对于简单绑定，Windows 窗体上的简单对象支持绑定到的公共属性。 Windows 窗体基于列表的绑定通常需要对象支持<xref:System.Collections.IList>接口或<xref:System.ComponentModel.IListSource>接口。 此外，如果要通过绑定与<xref:System.Windows.Forms.BindingSource>组件，可以绑定到支持的对象，<xref:System.Collections.IEnumerable>接口。 有关与数据绑定相关的接口的详细信息，请参阅[与数据绑定相关的接口](interfaces-related-to-data-binding.md)。  
   
  以下列表显示了可以在 Windows 窗体中绑定到结构。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "43858907"
  Windows 窗体对象使用的实例上支持数据绑定控件属性绑定到公共属性<xref:System.Windows.Forms.Binding>类型。 Windows 窗体还支持基于列表的绑定控件，例如<xref:System.Windows.Forms.ListControl>的对象实例时<xref:System.Windows.Forms.BindingSource>使用。  
   
  数组或集合  
- 若要充当数据源，列表必须实现<xref:System.Collections.IList>接口; 一个示例是数组的一个实例<xref:System.Array>类。 数组的详细信息，请参阅[如何： 创建数组的对象 (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)。  
+ 若要充当数据源，列表必须实现<xref:System.Collections.IList>接口; 一个示例是数组的一个实例<xref:System.Array>类。 数组的详细信息，请参阅[如何：创建对象 (Visual Basic 中) 的数组](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/487y7874(v=vs.100))。  
   
  一般情况下，应使用<xref:System.ComponentModel.BindingList%601>时创建的对象的数据绑定的列表。 <xref:System.ComponentModel.BindingList%601> 泛型版本<xref:System.ComponentModel.IBindingList>接口。 <xref:System.ComponentModel.IBindingList>接口扩展<xref:System.Collections.IList>接口通过添加属性、 方法和双向数据绑定的事件。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "43858907"
   
 -   <xref:System.Data.DataViewManager>。 一个<xref:System.Data.DataViewManager>是自定义的视图的整个<xref:System.Data.DataSet>，类似于<xref:System.Data.DataView>，但其中包括各种关系。 与<xref:System.Data.DataViewManager.DataViewSettings%2A>集合，您可以设置默认筛选器和排序选项的任何视图的<xref:System.Data.DataViewManager>具有给定的表。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 窗体数据绑定中的更改通知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [数据绑定和 Windows 窗体](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Windows 窗体数据绑定](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>请参阅
+- [Windows 窗体数据绑定中的更改通知](change-notification-in-windows-forms-data-binding.md)
+- [数据绑定和 Windows 窗体](data-binding-and-windows-forms.md)
+- [Windows 窗体数据绑定](windows-forms-data-binding.md)

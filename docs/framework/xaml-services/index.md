@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 373478e8c21fca66cbfbf7a58fc7d53f65ce5d0b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 37fdd96c0666bc6ecda0f46daa5ca6271a8666ab
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617378"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048153"
 ---
 # <a name="xaml-services"></a>XAML 服务
 本主题介绍的技术一名为.NET Framework XAML 服务的功能。 服务和 Api 所述的大多数都位于 System.Xaml，它是一个程序集随程序集[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]的.NET 核心程序集。 服务包括阅读器和编写器，架构类和架构支持，工厂类、 XAML 语言内部函数支持和其他 XAML 语言功能的特性化。  
@@ -33,14 +33,14 @@ ms.locfileid: "45617378"
   
 -   使用`Lookup`或`Invoker`技术来影响 XAML 类型系统和如何评估类型后备。  
   
- 如果您正在寻找有关 XAML 用作语言的介绍性材料，则可以尝试[XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。 该主题将讨论 XAML 的新的读者到[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]并指向通过使用 XAML 标记和 XAML 语言功能。 另一个有用的文档是中的介绍性材料[XAML 语言规范](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 如果您正在寻找有关 XAML 用作语言的介绍性材料，则可以尝试[XAML 概述 (WPF)](../wpf/advanced/xaml-overview-wpf.md)。 该主题将讨论 XAML 的新的读者到[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]并指向通过使用 XAML 标记和 XAML 语言功能。 另一个有用的文档是中的介绍性材料[XAML 语言规范](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML 服务和 System.Xaml 中.NET 体系结构  
  在以前版本的 Microsoft.NET Framework，支持有关 XAML 语言功能所实现的 Microsoft.NET Framework 构建的框架 ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]，Windows Workflow Foundation 和 Windows Communication Foundation (WCF))，并因此不同的行为和使用 API，具体取决于哪个特定的框架已使用。 这包括 XAML 分析器及其对象图创建机制、 XAML 语言内部函数、 序列化支持等。  
   
  在[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，.NET Framework XAML 服务和 System.Xaml 程序集中定义了大部分所需的支持 XAML 语言功能。 这包括基类，这些类的 XAML 读取器和 XAML 编写器。 添加到未出现在任何特定于框架的 XAML 实现的.NET Framework XAML 服务的最重要功能是 XAML 类型系统表示形式。 类型系统表示形式提供一种面向对象的方法，而不依赖于框架的特定功能为中心的 XAML 功能显示 XAML。  
   
- XAML 类型系统不受限制的标记窗体或运行时细节的 XAML 的原点;也不受任何特定后备类型的系统限制。 XAML 类型系统包括类型、 成员、 XAML 架构上下文、 XML 级别概念和其他 XAML 语言概念或 XAML 内部函数的对象表示形式。 使用或扩展的 XAML 类型系统使用可以派生自的类，如 XAML 读取器和 XAML 编写器，并扩展到启用的一种框架、 一种技术或使用的应用程序的特定功能的 XAML 表示形式中的功能或发出 XAML。 XAML 架构上下文概念使从 XAML 对象编写器实现，一种技术的后备类型系统的通信通过上下文和 XAML 节点中的程序集信息的组合的实际对象关系图写入操作源。 有关 XAML 架构概念的详细信息。 请参阅[默认 XAML 架构上下文和 WPF XAML 架构上下文](../../../docs/framework/xaml-services/default-xaml-schema-context-and-wpf-xaml-schema-context.md)。  
+ XAML 类型系统不受限制的标记窗体或运行时细节的 XAML 的原点;也不受任何特定后备类型的系统限制。 XAML 类型系统包括类型、 成员、 XAML 架构上下文、 XML 级别概念和其他 XAML 语言概念或 XAML 内部函数的对象表示形式。 使用或扩展的 XAML 类型系统使用可以派生自的类，如 XAML 读取器和 XAML 编写器，并扩展到启用的一种框架、 一种技术或使用的应用程序的特定功能的 XAML 表示形式中的功能或发出 XAML。 XAML 架构上下文概念使从 XAML 对象编写器实现，一种技术的后备类型系统的通信通过上下文和 XAML 节点中的程序集信息的组合的实际对象关系图写入操作源。 有关 XAML 架构概念的详细信息。 请参阅[默认 XAML 架构上下文和 WPF XAML 架构上下文](default-xaml-schema-context-and-wpf-xaml-schema-context.md)。  
   
 ## <a name="xaml-node-streams-xaml-readers-and-xaml-writers"></a>XAML 节点流中，XAML 读取器和 XAML 编写器  
  若要了解.NET Framework XAML 服务 XAML 语言和特定的技术，使用 XAML 作为一种语言之间的关系中所扮演的角色，将有助于您了解 XAML 节点流和这一概念如何形状 API 的概念和术语。 XAML 节点流是 XAML 语言表示形式与 XAML 表示或定义的对象图之间概念中间。  
@@ -79,7 +79,7 @@ ms.locfileid: "45617378"
   
 -   调用<xref:System.Xaml.XamlXmlWriter.Flush%2A>获取最终的输出。  
   
- 有关 XAML 节点流概念的详细信息，请参阅[理解 XAML 节点 Stream 结构和概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)。  
+ 有关 XAML 节点流概念的详细信息，请参阅[理解 XAML 节点 Stream 结构和概念](understanding-xaml-node-stream-structures-and-concepts.md)。  
   
 ### <a name="the-xamlservices-class"></a>XamlServices 类  
  它并不总是需要处理 XAML 节点流。 如果所需的基本加载路径或保存路径 basic，则可以使用中的 Api<xref:System.Xaml.XamlServices>类。  
@@ -90,7 +90,7 @@ ms.locfileid: "45617378"
   
 -   <xref:System.Xaml.XamlServices.Transform%2A> 将 XAML 转换通过链接一个加载路径或保存路径作为单个操作。 可以为使用不同的架构上下文或不同的后备类型系统<xref:System.Xaml.XamlReader>和<xref:System.Xaml.XamlWriter>，这会影响如何转换生成的 XAML。  
   
- 有关如何使用详细信息<xref:System.Xaml.XamlServices>，请参阅[XAMLServices 类和基本的 XAML 读取或写入](../../../docs/framework/xaml-services/xamlservices-class-and-basic-xaml-reading-or-writing.md)。  
+ 有关如何使用详细信息<xref:System.Xaml.XamlServices>，请参阅[XAMLServices 类和基本的 XAML 读取或写入](xamlservices-class-and-basic-xaml-reading-or-writing.md)。  
   
 ## <a name="xaml-type-system"></a>XAML 类型系统  
  XAML 类型系统提供了使用 XAML 节点流的给定的单个节点所需的 Api。  
@@ -104,4 +104,4 @@ ms.locfileid: "45617378"
  由.NET Framework XAML 服务实现的 XAML 类型系统的默认行为基于公共语言运行时 (CLR) 和静态分析的程序集中的 CLR 类型使用反射。 因此，对于特定的 CLR 类型，XAML 类型系统的默认实现可以公开该类型及其成员的 XAML 架构并将其报告的 XAML 类型系统方面。 在默认 XAML 类型系统中，类型可分配性的概念映射到 CLR 继承和实例、 值类型和等等的概念也将映射到支持的行为和 CLR 的功能。  
   
 ## <a name="reference-for-xaml-language-features"></a>XAML 语言功能的参考  
- 若要支持 XAML，.NET Framework XAML 服务提供特定实现 XAML 语言概念为 XAML 语言 XAML 命名空间定义的一样。 这些被记录为特定的参考页。 从这些语言功能时，会由 XAML 读取器或 XAML 编写器，它由.NET Framework XAML 服务定义的行为的角度来看记录语言功能。 有关更多信息，请参见 [XAML Namespace (x:) Language Features](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。
+ 若要支持 XAML，.NET Framework XAML 服务提供特定实现 XAML 语言概念为 XAML 语言 XAML 命名空间定义的一样。 这些被记录为特定的参考页。 从这些语言功能时，会由 XAML 读取器或 XAML 编写器，它由.NET Framework XAML 服务定义的行为的角度来看记录语言功能。 有关详细信息，请参阅[XAML Namespace （x:）语言功能](xaml-namespace-x-language-features.md)。

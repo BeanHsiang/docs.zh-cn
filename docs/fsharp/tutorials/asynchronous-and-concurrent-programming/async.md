@@ -1,15 +1,15 @@
 ---
-title: 异步编程中F#
+title: 异步编程
 description: 了解如何F#通过是易于使用和自然语言的语言级别编程模型实现异步编程。
 ms.date: 06/20/2016
-ms.openlocfilehash: de07f1252df56e3dfec5ea7a34a283b1c9508523
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50195055"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980082"
 ---
-# <a name="async-programming-in-f"></a>异步编程中F# #
+# <a name="async-programming-in-f"></a>F 中的异步编程\#
 
 > [!NOTE]
 > 在本文中发现了一些错误。  它是被重写。  请参阅[问题 #666](https://github.com/dotnet/docs/issues/666)若要了解有关所做的更改。
@@ -53,7 +53,7 @@ printfn "%s" html
 
 此外，正常`let`， `use`，和`do`关键字可以用异步版本，就像在普通函数中。
 
-## <a name="how-to-start-async-code-in-f"></a>如何在启动异步代码F# #
+## <a name="how-to-start-async-code-in-f"></a>如何在 F 中启动异步代码\#
 
 前面曾提到，异步代码将是一种规范，需要对其显式启动另一个上下文中完成工作。 下面是两种主要方法来实现此目的：
 
@@ -152,7 +152,7 @@ for html in htmlList do
 
  F#编译器是非常严格，因此几乎不可能执行一些麻烦的问题等操作以同步方式运行"async"代码。 如果您遇到一条警告，则代码不会执行认为它将如何登录。 如果编译器可以为取悦，按预期方式将很可能执行代码。
 
-## <a name="for-the-cvb-programmer-looking-into-f"></a>有关C#/VB 程序员深入研究F# #
+## <a name="for-the-cvb-programmer-looking-into-f"></a>有关C#/VB 程序员研究 F\#
 
 本部分假定您熟悉使用中的异步模型C#/VB. 如果你不可以，[中的异步编程C#](../../../csharp/async.md)是一个起始点。
 
@@ -191,24 +191,23 @@ for html in htmlList do
 示例:
 
 ```fsharp
-open System
-open System.Net
 open System.Threading
 
-let uploadDataAsync url data = 
+// Create a workflow which will loop forever.
+let workflow =
     async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        webClient.UploadStringAsync(uri, data)
+        while true do
+            printfn "Working..."
+            do! Async.Sleep 1000
     }
+    
+let tokenSource = new CancellationTokenSource()
 
-let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
+// Start the workflow in the background
+Async.Start (workflow, tokenSource.Token)
 
-let token = new CancellationTokenSource()
-Async.Start (workflow, token.Token)
-
-// Immediately cancel uploadDataAsync after it's been started.
-token.Cancel()
+// Executing the next line will stop the workflow
+tokenSource.Cancel()
 ```
 
 就是这么简单！
@@ -216,5 +215,5 @@ token.Cancel()
 ## <a name="further-resources"></a>其他资源：
 
 *   [MSDN 上的异步工作流](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [异步序列F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [F#HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)
+*   [异步序列 F#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+*   [F# HTTP 数据实用程序](https://fsharp.github.io/FSharp.Data/library/Http.html)

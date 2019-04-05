@@ -1,5 +1,5 @@
 ---
-title: 如何： 枚举计算机上存在的时区
+title: 如何：枚举计算机上存在的时区
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c012b10f43a45699605e2d87a5b4a814c7dae28
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54518405"
 ---
-# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>如何： 枚举计算机上存在的时区
+# <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>如何：枚举计算机上存在的时区
 
 若要成功使用指定的时区，需要该时区的相关信息可供系统使用。 在 Windows XP 和 Windows Vista 操作系统在注册表中存储此信息。 但是，尽管世界上存在的时区总数非常大，但注册表包含的信息只是其中的一个子集。 此外，注册表本身是一个动态结构，其内容可能发生有意或无意的更改。 因此，应用程序无法保证系统上始终存在已定义且可用的特定时区。 对于使用时区信息应用程序的许多应用程序来说，第一步是确定所需时区在本地系统上是否可用，或者向用户提供可供选择的时区列表。 这要求应用程序枚举本地系统上定义的时区。
 
 > [!NOTE]
-> 如果应用程序依赖于本地系统可能没有定义某个特定时区的存在，应用程序可以确保其存在的序列化和反序列化时间区域相关信息。 时区然后可以添加到列表控件，以便应用程序用户可以选择它。 有关详细信息，请参阅[如何： 保存时区添加到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)并[如何： 从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
+> 如果应用程序依赖于本地系统可能没有定义某个特定时区的存在，应用程序可以确保其存在的序列化和反序列化时间区域相关信息。 时区然后可以添加到列表控件，以便应用程序用户可以选择它。 有关详细信息，请参阅[如何：将时区保存到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)和[如何：从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)。
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>枚举本地系统上存在的时区
 
@@ -73,6 +73,6 @@ ms.locfileid: "45698297"
 
 ## <a name="see-also"></a>请参阅
 
-* [日期、时间和时区](../../../docs/standard/datetime/index.md)
-* [如何：将时区保存到嵌入的资源中](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
-* [如何：从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [日期、时间和时区](../../../docs/standard/datetime/index.md)
+- [如何：将时区保存到嵌入的资源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [如何：从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

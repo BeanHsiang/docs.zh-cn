@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 13dec9f298655a4bfe6672e2dbba7c7262379cc4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 82a2badc1bb22a55f753c9075562db3a5ee0d234
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202876"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522955"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong 数据类型 (Visual Basic)
 
@@ -56,7 +56,7 @@ Dim number As ULong = &H_F9AC_0326_1489_D68C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-此外可以包含数值`UL`或`ul`[键入字符](../../programming-guide\language-features\data-types/type-characters.md)来表示`ULong`数据类型，如以下示例所示。
+此外可以包含数值`UL`或`ul`[键入字符](../../programming-guide/language-features/data-types/type-characters.md)来表示`ULong`数据类型，如以下示例所示。
 
 ```vb
 Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
@@ -66,7 +66,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
   
 -   **负号。** 因为`ULong`是无符号的类型，它不能表示为负数。 如果使用一元负 (`-`) 运算符的表达式的计算结果为类型`ULong`，Visual Basic 将转换为表达式`Decimal`第一个。  
   
--   **CLS 遵从性。** `ULong`数据类型不属于[公共语言规范](http://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。  
+-   **CLS 遵从性。** `ULong`数据类型不属于[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。  
   
 -   **互操作注意事项。** 如果你与不是为.NET Framework 中，如自动化或 COM 对象，编写组件交互请记住，类型，如`ulong`可以在其他环境中具有不同的数据宽度 （32 位）。 如果您将 32 位自变量传递给此类组件，将其作为声明`UInteger`而不是`ULong`中托管的 Visual Basic 代码。  
   
@@ -80,9 +80,9 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
   
 ## <a name="see-also"></a>请参阅
 
- <xref:System.UInt64>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [如何：调用采用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.UInt64>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [如何：调用需要使用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -1,18 +1,18 @@
 ---
-title: 数组 (F#)
-description: '了解如何创建和使用 F # 编程语言中的数组。'
+title: 数组
+description: 了解如何创建和使用中的数组F#编程语言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9670f2a61ed5c254493806501120552be9caecdf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48032720"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614553"
 ---
 # <a name="arrays"></a>数组
 
 > [!NOTE]
-API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
+> API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 数组是连续数据元素的所有相同类型的固定大小、 从零开始的可变集合。
 
@@ -57,7 +57,7 @@ API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 ## <a name="array-types-and-modules"></a>数组类型和模块
 
-所有 F # 数组的类型是.NET Framework 类型<xref:System.Array?displayProperty=nameWithType>。 因此，F # 数组支持中提供的所有功能<xref:System.Array?displayProperty=nameWithType>。
+所有的类型F#数组是.NET Framework 类型<xref:System.Array?displayProperty=nameWithType>。 因此，F#数组支持中提供的所有功能<xref:System.Array?displayProperty=nameWithType>。
 
 库模块[ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)支持对一维数组的操作。 模块`Array2D`， `Array3D`，和`Array4D`包含分别支持针对数组的两个、 三种类型和四个维度的操作的函数。 创建数组的秩大于四使用<xref:System.Array?displayProperty=nameWithType>。
 
@@ -218,7 +218,7 @@ matrix.[*, 1..3]
 matrix.[1..3, 1..3]
 ```
 
-自 F # 3.1，您可以将多维数组分解为相同或更低维度的子数组。 例如，可以通过指定的单个行或列从矩阵获得一个向量。
+在F#3.1 中，可以将多维数组分解为相同或更低维度的子数组。 例如，可以通过指定的单个行或列从矩阵获得一个向量。
 
 ```fsharp
 // Get row 3 from a matrix as a vector:
@@ -228,7 +228,7 @@ matrix.[3, *]
 matrix.[*, 3]
 ```
 
-您可以使用此切片语法以实施元素访问运算符和重载的类型`GetSlice`方法。 例如，以下代码创建包装 F # 2D 数组、 实现项属性为数组编制索引，提供支持和实现的三个版本的矩阵类型`GetSlice`。 如果矩阵类型，可作为模板使用此代码，可以使用本部分介绍的所有切片操作。
+您可以使用此切片语法以实施元素访问运算符和重载的类型`GetSlice`方法。 例如，以下代码创建包装的矩阵类型F#2D 数组实现项属性为数组编制索引，提供支持，并实现了三个版本的`GetSlice`。 如果矩阵类型，可作为模板使用此代码，可以使用本部分介绍的所有切片操作。
 
 ```fsharp
 type Matrix<'T>(N: int, M: int) =
@@ -418,4 +418,4 @@ Found an element 4096 with square root 64 and cube root 16.
 ## <a name="see-also"></a>请参阅
 
 - [F# 语言参考](index.md)
-- [F # 中;类型](fsharp-types.md)
+- [F# 类型](fsharp-types.md)

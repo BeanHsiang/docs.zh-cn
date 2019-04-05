@@ -7,19 +7,19 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: e310d9800f4ee2274221e8461838ed8ee3d66ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553363"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372069"
 ---
 # <a name="styles-and-templates"></a>样式和模板
-Windows Presentation Foundation (WPF) 样式和模板化指套件的允许的应用程序、 文档或用户界面 (UI) 设计器来创建视觉效果更佳的应用程序的功能 （样式、 模板、 触发器和情节提要） 和标准化尤其是查找其产品。  
+Windows Presentation Foundation (WPF) 样式和模板化指一套允许应用程序、 文档或用户界面 (UI) 设计器来创建极具视觉表现力的应用程序的功能 （样式、 模板、 触发器和情节提要），并尤其是查找其产品上实现标准化。  
   
 ## <a name="in-this-section"></a>本节内容  
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [如何：查找由 ControlTemplate 生成的元素](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+ [样式设置和模板化](styling-and-templating.md)  
+  [如何：查找由 ControlTemplate 生成的元素](how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Style>  
@@ -27,6 +27,6 @@ Windows Presentation Foundation (WPF) 样式和模板化指套件的允许的应
   <xref:System.Windows.DataTemplate>  
   
 ## <a name="related-sections"></a>相关章节  
- [高级](../../../../docs/framework/wpf/advanced/index.md)  
-  [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [高级](../advanced/index.md)  
+  [控件自定义](control-customization.md)  
+  [图形和多媒体](../graphics-multimedia/index.md)

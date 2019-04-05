@@ -2,12 +2,12 @@
 title: 选择 Visual Basic 语言版本
 description: 配置编译器能够执行语法验证使用的特定编译器版本。
 ms.date: 05/24/2018
-ms.openlocfilehash: 7628b5a7c27f5b26171d42e44a58598ef3d5d49f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194717"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415099"
 ---
 # <a name="select-the-visual-basic-language-version"></a>选择 Visual Basic 语言版本
 
@@ -33,7 +33,7 @@ Visual Basic 编译器将默认为已发布的语言的最新主版本。 你可
 
 值`latest`使用 Visual Basic 语言的最新次版本。 有效值为：
 
-|“值”|含义|
+|值|含义|
 |------------|-------------|
 |default|编译器接受它可支持的最新主版本中的所有有效语言语法。|
 |9|编译器接受仅包含在 Visual Basic 9.0 或更低的语法。|
@@ -60,7 +60,7 @@ Visual Basic 编译器将默认为已发布的语言的最新主版本。 你可
 </Project>
 ```
 
-现在，生成包含该文件的目录的每个子目录中将使用 Visual Basic 版本 15.5 语法。 有关详细信息，请参阅关于[自定义生成](/visualstudio/msbuild/customize-your-build.md)的文章。
+现在，生成包含该文件的目录的每个子目录中将使用 Visual Basic 版本 15.5 语法。 有关详细信息，请参阅关于[自定义生成](/visualstudio/msbuild/customize-your-build)的文章。
 
 ## <a name="set-the-langversion-compiler-option"></a>选择 langversion 编译器选项
 

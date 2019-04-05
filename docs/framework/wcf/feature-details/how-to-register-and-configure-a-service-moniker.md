@@ -1,18 +1,18 @@
 ---
-title: 如何：注册和配置服务标记
+title: 如何：注册并配置服务名字对象
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: cd3b6bbb47dfd72bf70091c9ca4d6fc5e228d950
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f8f19e70b3345b61f1f5caba2fc6f764b58cc9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221540"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593792"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>如何：注册和配置服务标记
+# <a name="how-to-register-and-configure-a-service-moniker"></a>如何：注册并配置服务名字对象
 必须在使用之前在 COM 应用程序中的 Windows Communication Foundation (WCF) 服务名字对象具有类型化协定中, 所需的特性化的类型向 COM 注册，并使用所需的绑定配置的 COM 应用程序和标记配置。  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>向 COM 注册所需的属性化类型  
@@ -84,10 +84,10 @@ ms.locfileid: "44221540"
      在本示例中，绑定配置 `Binding1` 的定义存储在该客户端应用程序的适当命名的配置文件中，如 vb6appname.exe.config。  
   
     > [!NOTE]
-    >  您可以在 C#、C++ 或其他任何 .NET 语言的应用程序中使用类似的代码。  
+    >  你可以在 C#、C++ 或其他任何 .NET 语言的应用程序中使用类似的代码。  
   
     > [!NOTE]
-    >  ：如果标记格式不正确，或者服务不可用，则对 `GetObject` 的调用会返回一个“语法无效”错误。 如果您收到此错误，请确保所使用的标记正确无误且服务可用。  
+    >  :如果标记格式不正确或者服务不可用，在调用`GetObject`返回的"语法无效"错误。 如果您收到此错误，请确保所使用的标记正确无误且服务可用。  
   
      尽管此主题重点介绍通过 VB 6.0 代码使用服务标记，您还是可以通过其他语言使用服务标记。 当通过 C++ 代码使用标记时，应使用“no_namespace named_guids raw_interfaces_only”导入 Svcutil.exe 生成的程序集，如下面的代码中所示。  
   
@@ -97,5 +97,5 @@ ms.locfileid: "44221540"
   
      这会修改导入的接口定义，以便所有方法均会返回一个 `HResult`。 其他任何返回值都将转换为 out 参数。 方法的总体执行情况保持不变。 这将允许您确定在代理上调用方法时出现异常的原因。 仅可通过 C++ 代码来使用此功能。  
   
-## <a name="see-also"></a>请参阅  
- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>请参阅
+- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

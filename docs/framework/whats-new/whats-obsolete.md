@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58ef462fdccc31a7694721b3ab9c3bec52d66abe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183472"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58018742"
 ---
-# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework 类库中过时的内容
+# <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework 类库中过时的内容
 .NET Framework 随时间推移而变化。 每个新版本都添加了提供新功能的新类型和类型成员。 现有类型和成员也会随着时间推移而变化。 例如，某些类型变得不太重要，因为它们支持的技术由新技术所替代，而某些方法由更方便或功能更全面的方法所取代。  
   
  .NET Framework 和公共语言运行时会努力支持向后兼容（允许使用一个版本的 .NET Framework 开发的应用程序在下一版本的 .NET Framework 上运行）。 这便难以仅仅删除类型或类型成员。 相反，.NET Framework 通过将类型或类型成员标记为已过时或已弃用，来指示应不再使用它。 弃用某个类型或成员涉及对它进行标记，以便开发人员知道它将消失，从而有时间来响应其删除。 但是，使用该类型或成员的现有代码会继续在新版本的 .NET Framework 中运行。  
@@ -68,9 +68,9 @@ ms.locfileid: "50183472"
 |1.0|v1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>.NET Framework 4.5 和更高版本的过时列表  
- [过时类型](../../../docs/framework/whats-new/obsolete-types.md)  
+ [过时类型](obsolete-types.md)  
   
- [过时成员](../../../docs/framework/whats-new/obsolete-members.md)  
+ [过时成员](obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>以前版本的过时列表  
  [.NET Framework 4 中的过时类型](https://go.microsoft.com/fwlink/?LinkId=224224)  
@@ -81,5 +81,5 @@ ms.locfileid: "50183472"
   
  [.NET Framework 2.0 过时列表](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
-## <a name="see-also"></a>请参阅  
- [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+## <a name="see-also"></a>请参阅
+- [\<supportedRuntime> 元素](../configure-apps/file-schema/startup/supportedruntime-element.md)

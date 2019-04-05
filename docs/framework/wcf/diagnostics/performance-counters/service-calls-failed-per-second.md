@@ -2,15 +2,15 @@
 title: 服务：Calls Failed Per Second（每秒失败的调用次数）
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: 9cd649788e1304c68caa1bbf4b5fd27e6fc9d508
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a043cf30fa67707aca3edf50cf23372ade5e5a42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559887"
 ---
 # <a name="service-calls-failed-per-second"></a>服务：Calls Failed Per Second（每秒失败的调用次数）
-计数器名称：Calls Failed Per Second（每秒失败的调用次数）。  
+计数器名称：每秒失败的调用。  
   
 ## <a name="description"></a>描述  
  一秒钟内由此服务收到且具有未处理异常的调用次数。  
@@ -25,5 +25,5 @@ ms.locfileid: "43861811"
   
  此服务中每出现一个未处理异常，此计数器就会递增。  
   
-## <a name="see-also"></a>请参阅  
- [在协定和服务中指定并处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>请参阅
+- [在协定和服务中指定并处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

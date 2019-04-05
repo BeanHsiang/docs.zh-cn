@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: 6da8ec2b78066cd251e4ad492afd2d9d37f7b965
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d0b953e4f570f349edeb80fc2316530494905ec0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863234"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583306"
 ---
 # <a name="how-to-deserialize-an-object"></a>如何：反序列化对象
 当您反序列化对象时，传输格式确定您将创建流还是文件对象。 确定了传输格式之后，就可以根据需要调用 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 或 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 方法。  
@@ -53,5 +53,5 @@ ms.locfileid: "43863234"
   
 ## <a name="see-also"></a>请参阅
 
-- [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [如何：将对象序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)

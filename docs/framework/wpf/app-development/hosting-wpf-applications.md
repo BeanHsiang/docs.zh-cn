@@ -8,24 +8,24 @@ helpviewer_keywords:
 - application hosting [WPF]
 - hosting applications [WPF]
 ms.assetid: 1f73067d-c60a-4e9a-b513-c817ee7da3a1
-ms.openlocfilehash: b0a334796cdb698f25f03f629785dae2ee732426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7259c6275b4a87eb7c4ef083dda55b24c1564e9b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546886"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352265"
 ---
 # <a name="hosting-wpf-applications"></a>承载 WPF 应用程序
-WPF XAML 浏览器应用程序 (Xbap) 是胖客户端应用程序可以部署到 Web 服务器并在浏览器中启动。 WPF 主机 (PresentationHost.exe) 注册为 shell 和 MIME XBAP 和 XAML 文件的处理程序。 因此，Internet Explorer 知道 XBAP 启动时启动 WPF 主机。 Firefox 用户可以安装到主机 Xbap 以及启用 Firefox 的 Firefox 外接程序。 XBAP 可以通过使用 wpf 的本机浏览器托管 Api 提供托管在其他浏览器或独立的应用程序。  
+WPF XAML 浏览器应用程序 (Xbap) 是可以部署到 Web 服务器并启动浏览器中的丰富客户端应用程序。 WPF 主机 (PresentationHost.exe) 注册为 shell 和 XBAP 和 XAML 文件的 MIME 处理程序。 因此，Internet Explorer 知道要启动 XBAP 时启动 WPF 宿主。 Firefox 用户可以安装到主机 Xbap 也启用 Firefox 的 Firefox 加载项。 通过使用 wpf 的本机浏览器提供托管的 Api，可以在其他浏览器或独立应用程序中承载 XBAP。  
   
 ## <a name="in-this-section"></a>本节内容  
- [WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）  
-   [WPF 主机 (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)  
-  [支持 .NET 应用程序部署的 Firefox 加载项](../../../../docs/framework/wpf/app-development/firefox-add-ons-to-support-net-application-deployment.md)  
-  [托管支持 API 的本机 WPF 浏览器](../../../../docs/framework/wpf/app-development/native-wpf-browser-hosting-support-apis.md)  
+ [WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）  
+   [WPF 主机 (PresentationHost.exe)](wpf-host-presentationhost-exe.md)  
+  [支持 .NET 应用程序部署的 Firefox 加载项](firefox-add-ons-to-support-net-application-deployment.md)  
+  [托管支持 API 的本机 WPF 浏览器](native-wpf-browser-hosting-support-apis.md)  
   
 ## <a name="related-sections"></a>相关章节  
- [应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [WPF 中的窗口](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [生成和部署](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [应用程序管理概述](application-management-overview.md)  
+  [WPF 中的窗口](windows-in-wpf-applications.md)  
+  [导航概述](navigation-overview.md)  
+  [生成和部署](building-and-deploying-wpf-applications.md)

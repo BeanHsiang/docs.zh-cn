@@ -4,12 +4,12 @@ description: 无服务器提供许多好处，具有各自的困难。 关键结
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 055facf7ef46c18f8cda518da9a9f3e114dec1a2
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6f4951dc85f739b92e56e84d0bd0262166181bd4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369625"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128838"
 ---
 # <a name="conclusion"></a>结束语
 
@@ -30,4 +30,4 @@ ms.locfileid: "49369625"
 **作为一种工具，不是工具箱中无服务器。** 无服务器是为应用程序体系结构不独占的解决方案。 它是一种工具，可以利用传统的层，整体应用程序后端和容器可能包含混合应用程序的一部分。 无服务器可用于增强现有解决方案并不是应用程序开发、 孤注一掷的方法。
 
 >[!div class="step-by-step"]
-[上一篇](serverless-business-scenarios.md)
+>[上一篇](serverless-business-scenarios.md)

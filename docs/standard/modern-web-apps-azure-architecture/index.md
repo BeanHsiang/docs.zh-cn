@@ -3,17 +3,17 @@ title: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
 description: 本指南提供了使用 ASP.NET Core 和 Azure 生成单片式 Web 应用的端到端指导。
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: e2d2545108b55043c322baffbd609b2422d2743b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.date: 01/30/2019
+ms.openlocfilehash: 27212045d9870c9f2fc15509d76f3e9b07d8657f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936979"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675830"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序
 
-![封面图像](./media/cover.png)
+![“架构新式 Web 应用程序”指南的封面图像。](./media/index/web-application-guide-cover-image.png)
 
 发布者
 
@@ -25,7 +25,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-版权所有 © 2018 Microsoft Corporation
+版权所有 © 2019 Microsoft Corporation
 
 保留所有权利。 未经发布者书面许可，不得以任何形式或任何方式复制或传播本书中的任何内容。
 
@@ -43,7 +43,7 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 作者:
 
-> Steve Smith (@ardalis)，[Ardalis.com 软件体系结构顾问](https://ardalis.com)
+> **Steve "ardalis" Smith** - 软件设计师及培训师 - [Ardalis.com](https://ardalis.com)
 
 编辑：
 
@@ -63,11 +63,11 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 - 在同一服务器上通过应用程序对 .NET 版本进行并行版本控制。
 
-传统 .NET 应用程序虽然支持以上要求，但是 ASP.NET Core 和 .NET Core 已经过优化，可为以上方案提供完善的支持。
+传统 .NET 应用程序虽然支持许多以上要求，但是 ASP.NET Core 和 .NET Core 已经过优化，可为以上方案提供完善的支持。
 
 越来越多的组织选择使用 Microsoft Azure 等服务，在云中托管 web 应用程序。 如果以下方面对你的应用程序或组织至关重要，应该考虑在云中托管应用程序：
 
-- 减少对数据中心的成本投入（硬件、软件、空间、实用工具等）
+- 减少对数据中心的成本投入（硬件、软件、空间、实用工具、服务器管理等）
 
 - 灵活的定价（基于使用情况付费，无需为空闲容量付费）。
 
@@ -79,9 +79,9 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 
 使用 Azure 中托管的 ASP.NET Core 生成 Web 应用，与传统替代方法相比，这能提供许多竞争优势。 ASP.NET Core 针对新式 web 应用程序开发做法和云托管方案进行了优化。 本指南介绍如何构建 ASP.NET Core 应用程序以充分利用这些功能。
 
-## <a name="purpose"></a>目的
+## <a name="purpose"></a>目标
 
-本指南提供了使用 ASP.NET Core 和 Azure 构建单片 web 应用程序的端到端指导。
+本指南提供了使用 ASP.NET Core 和 Azure 构建单片 Web 应用程序的端到端指导。 在此上下文中，“单片”是指这一事实，即这些应用程序会作为单个单元部署，而不是作为交互服务和应用程序的集合。
 
 本指南是[“_.NET 微服务 - 容器化 .NET 应用程序体系结构_”](../microservices-architecture/index.md)的补充，该文章更侧重于介绍 Docker、微服务和部署容器以托管企业应用程序。
 
@@ -107,7 +107,7 @@ Docker 的鲸鱼徽标是 Docker Inc. 的注册商标经许可方可使用。
 ## <a name="references"></a>参考资料
 
 - **为服务器应用选择 .NET Core 或 .NET Framework**  
-  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+  [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
-[下一篇](modern-web-applications-characteristics.md)
+>[下一篇](modern-web-applications-characteristics.md)

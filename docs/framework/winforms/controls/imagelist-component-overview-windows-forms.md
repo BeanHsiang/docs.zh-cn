@@ -8,12 +8,12 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: 1ce9ced0c7e6bc13d5cdf331135590ba48c624fb
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9869e647613ccf009954a5d65445947fbced40e7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844912"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709838"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList 组件概述（Windows 窗体）
 
@@ -30,4 +30,4 @@ Windows 窗体 <xref:System.Windows.Forms.ImageList> 组件用于存储图像，
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Windows.Forms.ImageList>
-- [如何：使用 Windows 窗体 ImageList 组件添加或删除图像](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [如何：添加或删除映像使用 Windows 窗体 ImageList 组件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

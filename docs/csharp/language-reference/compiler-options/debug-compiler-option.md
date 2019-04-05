@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: c0e8909a1e642333e93cfea5dbfde2f6c33c5443
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: aa9e98e4ec805006c88188d1d19eb3e9781ad732
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502958"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug（C# 编译器选项）
 -debug 选项将使编译器生成调试信息，并将此信息放置在输出文件或文件中。  
@@ -63,7 +63,7 @@ ms.locfileid: "43470952"
 csc -debug -pdb:app.pdb test.cs  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -3,13 +3,13 @@ title: 在 ASP.NET Core 应用中使用数据
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用 | 在 ASP.NET Core 应用中使用数据
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.date: 01/30/2019
+ms.openlocfilehash: 23c0995c512a07c41b3e2dbe8bc7528723379efa
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49122846"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463730"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>在 ASP.NET Core 应用中使用数据
 
@@ -51,7 +51,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext 必须包含可接受 DbContextOptions 的构造函数，可将此参数传递给基础 DbContext 构造函数。 注意：如果应用程序中只有一个 DbContext，可传递 DbContextOptions 的实例，但如果有多个 DbContext，则必须使用泛型 DbContextOptions<T>，在 DbContext 类型中作为泛型参数传递。
+DbContext 必须包含可接受 DbContextOptions 的构造函数，可将此参数传递给基础 DbContext 构造函数。 注意：如果应用程序中只有一个 DbContext，可传递 DbContextOptions 的实例，但如果有多个 DbContext，则必须使用泛型 DbContextOptions\<T>，在 DbContext 类型中作为泛型参数传递。
 
 ### <a name="configuring-ef-core"></a>配置 EF Core
 
@@ -89,7 +89,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-请务必在上述示例中添加对 ToListAsync 的调用，以立即执行查询。 否则，语句会将 IQueryable<SelectListItem> 分配给 brandItems，brandItems 在被枚举前不会执行。 从方法中返回 IQueryable 结果有优点，也有缺点。 如果将操作添加到 EF Core 无法转换的查询中，它仍允许对 EF Core 将构造的查询进行进一步修改，但会导致出现仅在运行时发生的错误。 将任何筛选器传递给执行数据访问的方法，并返回内存中集合（例如，List<T>）作为结果，这通常会更安全。
+请务必在上述示例中添加对 ToListAsync 的调用，以立即执行查询。 否则，语句会将 IQueryable\<SelectListItem> 分配给 brandItems，brandItems 在被枚举前不会执行。 从方法中返回 IQueryable 结果有优点，也有缺点。 如果将操作添加到 EF Core 无法转换的查询中，它仍允许对 EF Core 将构造的查询进行进一步修改，但会导致出现仅在运行时发生的错误。 将任何筛选器传递给执行数据访问的方法，并返回内存中集合（例如，List\<T>）作为结果，这通常会更安全。
 
 EF Core 可跟踪它从持久性提取的实体上的更改。 要将更改保存到被跟踪实体，只需对 DbContext 调用 SaveChanges 方法，确保它是用于提取实体的同一 DbContext 实例。 直接对相应的 DbSet 属性添加和删除实体，再次通过调用 SaveChanges 执行数据库命令。 下面的示例演示如何从持久性中添加、更新和删除实体。
 
@@ -123,13 +123,82 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-可添加多种关系，也可使用 ThenInclude 添加子关系。 EF Core 将执行单一查询，检索生成的实体集。
+可添加多种关系，也可使用 ThenInclude 添加子关系。 EF Core 将执行单一查询，检索生成的实体集。 或者，可以通过将“.”分隔的字符串传递给 `.Include()` 扩展方法来包含导航属性的导航属性，如下所示：
+
+```csharp
+    .Include(“Items.Products”)
+```
+
+除了封装筛选逻辑，规范还可指定要返回的数据的形状，包括要填充的属性。 eShopOnWeb 示例包含几个规范，用于演示如何在规范内封装预先加载信息。 在此处可以查看如何将规范用作查询的一部分：
+
+```csharp
+// Includes all expression-based includes
+query = specification.Includes.Aggregate(query,
+            (current, include) => current.Include(include));
+
+// Include any string-based include statements
+query = specification.IncludeStrings.Aggregate(query,
+            (current, include) => current.Include(include));
+```
 
 加载相关数据的另一个选项是使用显式加载。 通过显式加载，可以将其他数据加载到已检索的实体中。 由于这涉及单独的数据库请求，因此不建议用于 Web 应用程序，Web 应用程序应尽量减少每个请求的数据往返次数。
 
 延迟加载是可在应用程序引用相关数据时自动对其进行加载的一项功能。 EF Core 2.1 版本中添加了延迟加载支持。 延迟加载默认为不启用，且需要安装 `Microsoft.EntityFrameworkCore.Proxies`。 与显式加载相同，通常应对 Web 应用禁用延迟加载，因为使用延迟加载将导致在每个 Web 请求内进行额外的数据库查询。 遗憾的是，当延迟较小并且用于测试的数据集通常也较小时，在开发时常常会难以发现延迟加载所产生的开销。 但是，在生产中（涉及更多用户、更多数据和更多延迟），额外的数据库请求常常会导致大量使用延迟加载的 Web 应用性能不佳。
 
 [避免延迟加载 Web 应用中的实体](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
+
+### <a name="encapsulating-data"></a>封装数据
+
+EF Core 支持多种功能，使模型能够正确封装其状态。 域模型中的一个常见问题是，它们将集合导航属性公开为可公开访问的列表类型。 这使得任何协作方都能操作这些集合类型的内容，这可能会绕过与集合相关的重要业务规则，从而可能使对象处于无效状态。 若要解决该问题，可向相关集合公开只读访问权限，并显式提供一些方法来定义客户端操作这些集合的方式，如本例中所示：
+
+```csharp
+public class Basket : BaseEntity
+{
+    public string BuyerId { get; set; }
+    private readonly List<BasketItem> _items = new List<BasketItem>();
+    public IReadOnlyCollection<BasketItem> Items => _items.AsReadOnly();
+
+    public void AddItem(int catalogItemId, decimal unitPrice, int quantity = 1)
+    {
+        if (!Items.Any(i => i.CatalogItemId == catalogItemId))
+        {
+            _items.Add(new BasketItem()
+            {
+                CatalogItemId = catalogItemId,
+                Quantity = quantity,
+                UnitPrice = unitPrice
+            });
+            return;
+        }
+        var existingItem = Items.FirstOrDefault(i => i.CatalogItemId == catalogItemId);
+        existingItem.Quantity += quantity;
+    }
+}
+```
+
+请注意，此实体类型不公开公共 `List` 或 `ICollection` 属性，而是公开包装有基础列表类型的 `IReadOnlyCollection` 类型。 使用此模式时，可以指示 Entity Framework Core 使用支持字段，如下所示：
+
+```csharp
+private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
+{
+    var navigation = builder.Metadata.FindNavigation(nameof(Basket.Items));
+
+    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+}
+```
+
+另一种可以改进域模型的方法是通过对缺少标识的类型使用值对象，并仅通过其属性进行区分。 使用这些类型作为实体的属性有助于将逻辑特定于它所属的值对象，并且可以避免使用相同概念的多个实体之间的逻辑重复。 在 Entity Framework Core 中，可以通过将类型配置为从属实体来将值对象保存在与其所属实体相同的表中，如下所示：
+
+```csharp
+private void ConfigureOrder(EntityTypeBuilder<Order> builder)
+{
+    builder.OwnsOne(o => o.ShipToAddress);
+}
+```
+
+在此示例中，`ShipToAddress` 属性的类型为 `Address`。 `Address` 是一个具有多个属性的值对象，例如 `Street` 和 `City`。 EF Core 将 `Order` 对象映射到其表中，每个 `Address` 属性有一列，每个列名前面都加有该属性的名称。 在此示例中，`Order` 表将包含 `ShipToAddress_Street` 和 `ShipToAddress_City` 等列。
+
+[EF Core 2.2 引入了对从属实体集合的支持](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
 
 ### <a name="resilient-connections"></a>弹性连接
 
@@ -165,7 +234,7 @@ public class Startup
 
 在 EF Core 连接中启用重试时，使用 EF Core 执行的每项操作都会成为其自己的可重试操作。 如果发生暂时性故障，每个查询和 SaveChanges 的每次调用都会作为一个单元进行重试。
 
-但是，如果代码使用 BeginTransaction 启动事务，这表示在定义一组自己的操作，这些操作需要被视为一个单元 - 如果发生故障，事务内的所有内容都会回退。 如果在使用 EF 执行策略（重试策略）时尝试执行该事务，并且事务中包含一些来自多个 DbContext 的 SaveChanges，则会看到与下列情况类似的异常。
+但是，如果代码使用 BeginTransaction 启动事务，这表示在定义一组自己的操作，这些操作需要被视为一个单元；如果发生故障，事务内的所有内容都会回退。 如果在使用 EF 执行策略（重试策略）时尝试执行该事务，并且事务中包含一些来自多个 DbContext 的 SaveChanges，则会看到与下列情况类似的异常。
 
 System.InvalidOperationException：已配置的执行策略“SqlServerRetryingExecutionStrategy”不支持用户启动的事务。 使用由“DbContext.Database.CreateExecutionStrategy()”返回的执行策略执行事务（作为一个可回溯单元）中的所有操作。
 
@@ -200,7 +269,7 @@ await strategy.ExecuteAsync(async () =>
 >
 > - **EF Core 文档**  
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core：相关数据**  
+> - **EF Core：关联数据**  
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **避免延迟加载 ASPNET 应用程序中的实体**  
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
@@ -440,5 +509,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 缓存可以显著提高从数据库重复请求相同值的网页的性能。 请确保在应用缓存前测量数据访问和页面性能，并且仅在发现需要改进性能时才应用缓存。 缓存使用 Web 服务器内存资源并增加应用程序的复杂性，因此，不要过早使用此技术进行优化。
 
 >[!div class="step-by-step"]
-[上一页](develop-asp-net-core-mvc-apps.md)
-[下一页](test-asp-net-core-mvc-apps.md)
+>[上一页](develop-asp-net-core-mvc-apps.md)
+>[下一页](test-asp-net-core-mvc-apps.md)

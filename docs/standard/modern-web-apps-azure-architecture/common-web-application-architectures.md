@@ -3,13 +3,13 @@ title: 常用 Web 应用程序体系结构
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 了解常用 Web 应用程序体系结构
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: ff483c9b555fdf394d11626536c28e7e07516d05
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.date: 01/30/2019
+ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404627"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826728"
 ---
 # <a name="common-web-application-architectures"></a>常用 Web 应用程序体系结构
 
@@ -87,7 +87,7 @@ ms.locfileid: "37404627"
 
 在内部，此项目的组织根据职责分为多个项目，提高了应用程序的可维护性。
 
-可纵向或横向扩展此单位，以利用基于云的按需可伸缩性。 纵向扩展指的是向承载应用的服务器添加额外的 CPU、内存、磁盘空间或其他资源。 横向扩展指的是添加此类服务器的其他实例，无论它们属于物理服务器还是虚拟机。 在多个实例中承载应用时，可以使用负载均衡器来将请求分配给各个应用实例。
+可纵向或横向扩展此单位，以利用基于云的按需可伸缩性。 纵向扩展指的是向承载应用的服务器添加额外的 CPU、内存、磁盘空间或其他资源。 横向扩展指的是添加此类服务器的其他实例，无论它们属于物理服务器、虚拟机还是容器。 在多个实例中承载应用时，可以使用负载均衡器来将请求分配给各个应用实例。
 
 在 Azure 中缩放 Web 应用程序最简单的方法是在应用程序的应用服务计划中手动配置缩放。 图 5-6 展示用于配置为应用提供服务的实例数量的相应 Azure 仪表板屏幕。
 
@@ -97,7 +97,7 @@ ms.locfileid: "37404627"
 
 ## <a name="clean-architecture"></a>干净体系结构
 
-遵循依赖倒置原则以及域驱动设计原则 (DDD) 的应用程序倾向于达到类似的体系结构。 多年来，这种体系结构有多种名称。 最初的名称之一是六边形体系结构，然后是端口 - 适配器。 最近，它被称为[洋葱体系结构](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/)或[干净体系结构](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)。 此电子书中将后一种名称“干净体系结构”用作此体系结构的名称。
+遵循依赖倒置原则以及域驱动设计原则 (DDD) 的应用程序倾向于达到类似的体系结构。 多年来，这种体系结构有多种名称。 最初的名称之一是六边形体系结构，然后是端口 - 适配器。 最近，它被称为[洋葱体系结构](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/)或[干净体系结构](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)。 此电子书中将后一种名称“干净体系结构”用作此体系结构的名称。
 
 > [!NOTE]
 > 术语“干净体系结构”可应用于使用 DDD 原则生成以及未使用 DDD 原则生成的应用程序。 对于前者，这种组合可称为“干净 DDD 体系结构”。
@@ -212,9 +212,9 @@ ASP.NET Core MVC 应用程序中的用户界面层是应用程序的入口点。
 
 正如容器从设计上来说，它的本质就是不可变的，因此你无需担心 VM 损坏，而更新脚本可能忘记考虑磁盘上剩下的某些特定配置或文件。
 
-_对于简单 Web 应用的整体部署，可以使用 Docker 容器。这样可以改进持续集成和持续部署管道，并有助于成功实现部署到生产环境。不再出现“为什么可以在我的计算机上正常运行，却不能在生产环境中正常运行？”的问题_
+对于简单 Web 应用程序的单片式部署，可以使用 Docker 容器。 这样可以改进持续集成和持续部署管道，并有助于成功实现部署到生产环境。 不再出现“为什么可以在我的计算机上正常运行，却不能在生产环境中正常运行？”的问题
 
-基于微服务的体系结构具有许多优势，但以增加复杂性为代价。 在某些情况下，如果付出的代价比得到的优势更为重大，在单个或少量容器中运行的单片式部署应用程序是更好的选择。
+基于微服务的体系结构具有许多优势，但以增加复杂性为代价。 在某些情况下，付出的代价会比得到的优势更为重大，因此在单个或少量容器中运行的单片式部署应用程序是更好的选择。
 
 单片式应用程序可能不易分解到独立性良好的微服务。 微服务应彼此独立地运行，以提供恢复能力更强的应用程序。 如果无法实现应用程序的独立功能切片，将其分离只会增加复杂性。
 
@@ -224,7 +224,7 @@ _对于简单 Web 应用的整体部署，可以使用 Docker 容器。这样可
 
 将应用程序分离到多个离散进程还会带来开销。 将功能分离到不同的进程则更复杂。 通信协议会变得更加复杂。 在服务之间必须使用异步通信，而不得使用方法调用。 移动到微服务体系结构时，需要添加许多在 eShopOnContainers 应用程序的微服务版本中实现的构建基块：事件总线处理、消息恢复和重试、最终一致性等。
 
-较为简单的 [eShopOnWeb 参考应用程序](https://github.com/dotnet-architecture/eShopOnWeb)支持单容器整体化容器应用。 该应用程序包括两个 Web 应用程序：一个使用传统 MVC，另一个使用 Razor Pages。 可使用 `docker-compose build` 和 `docker-compose up` 命令从解决方案根目录启动这两个应用程序。 此命令使用在每个 Web 项目的根目录中找到的 `Dockerfile` 为每个 Web 实例配置单独容器，并在单独的端口上运行每个容器。 可从 GitHub 下载此应用程序的源代码，并在本地运行。 即使是这一单片式应用程序，在容器环境中部署也是有益的。
+较为简单的 [eShopOnWeb 参考应用程序](https://github.com/dotnet-architecture/eShopOnWeb)支持单容器整体化容器应用。 该应用程序包括一个 Web 应用程序，其中包括传统的 MVC 视图、Web API 和 Razor Pages。 可使用 `docker-compose build` 和 `docker-compose up` 命令从解决方案根目录启动该应用程序。 此命令使用 web 项目根目录中的 `Dockerfile` 为 Web 实例配置容器，并在指定端口上运行容器。 可从 GitHub 下载此应用程序的源代码，并在本地运行。 即使是这一单片式应用程序，在容器环境中部署也是有益的。
 
 其一，容器化部署意味着应用程序的每个实例都在同一环境中运行。 这包括用于前期测试和开发的开发人员环境。 开发团队可在与生产环境完全相同的容器化环境中运行应用程序。
 
@@ -236,24 +236,14 @@ _对于简单 Web 应用的整体部署，可以使用 Docker 容器。这样可
 
 `eShopOnWeb` 项目在 .NET Core 上运行。 因此，该项目可以在基于 Linux 或 Windows 的容器中运行。 请注意，在 Docker 部署中，请对 SQL Server 使用相同的主机类型。 基于 Linux 的容器占用较小，是首选方案。
 
-可使用 Visual Studio 2017 向现有应用程序添加 Docker 支持：右键单击“解决方案资源管理器”中的一个项目，然后选择“添加” > “Docker 支持”。 此操作可添加所需文件并修改项目以使用这些文件。 当前的 `eShopOnWeb` 示例中已具有这些文件。
+可使用 Visual Studio 2017 或更高版本向现有应用程序添加 Docker 支持：右键单击“解决方案资源管理器”中的一个项目，然后选择“添加” > “Docker 支持”。 此操作可添加所需文件并修改项目以使用这些文件。 当前的 `eShopOnWeb` 示例中已具有这些文件。
 
-解决方案级别 `docker-compose.yml` 文件包含有关要生成的映像和要启动的容器的信息。 利用此文件可使用 `docker-compose` 命令来同时启动两个版本的 Web 应用程序。 还可使用该文件配置依赖项，例如单独的数据库容器。
+解决方案级别 `docker-compose.yml` 文件包含有关要生成的映像和要启动的容器的信息。 该文件可让你使用 `docker-compose` 命令来同时启动多个应用程序。 在本示例中，它只启动 Web 项目。 还可使用该文件配置依赖项，例如单独的数据库容器。
 
 ```yml
 version: '3'
 
 services:
-  eshopwebrazor:
-    image: eshopwebrazor
-    build:
-      context: .
-      dockerfile: src/WebRazorPages/Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "5107:5107"
-
   eshopwebmvc:
     image: eshopwebmvc
     build:
@@ -270,28 +260,27 @@ networks:
       name: nat
 ```
 
-`docker-compose.yml` 文件引用 `Web` 和 `WebRazorPages` 项目中的 `Dockerfile`。 `Dockerfile` 用于指定将要使用的基容器以及在该容器上配置应用程序的方式。 `WebRazorPages`' `Dockerfile`：
+`docker-compose.yml` 文件引用 `Web` 项目中的 `Dockerfile`。 `Dockerfile` 用于指定将要使用的基容器以及在该容器上配置应用程序的方式。 `Web`' `Dockerfile`：
 
 ```
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /app
-EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.1.300-preview1 AS build
-RUN npm install -g bower@1.8.4
-WORKDIR /src
+COPY *.sln .
 COPY . .
-WORKDIR /src/src/WebRazorPages
-RUN dotnet restore -nowarn:msb3202,nu1503
-RUN dotnet build --no-restore -c Release -o /app
+WORKDIR /app/src/Web
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish --no-restore -c Release -o /app
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
+COPY --from=build /app/src/Web/out ./
+
+# Optional: Set this here if not setting it from docker-compose.yml
+# ENV ASPNETCORE_ENVIRONMENT Development
+
+ENTRYPOINT ["dotnet", "Web.dll"]
 ```
 
 ### <a name="troubleshooting-docker-problems"></a>Docker 问题疑难解答
@@ -300,14 +289,13 @@ ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
 
 请注意，正在运行的 Docker 容器可能已绑定到其他可能在开发环境中尝试使用的端口。 如果尝试使用与运行 Docker 容器相同的端口来运行或调试应用程序，将收到指示服务器无法绑定到该端口的错误。 再次强调，停止容器应可解决该问题。
 
-如果要使用 Visual Studio 向应用程序添加 Docker 支持，请确保执行此操作时 Docker 处于运行状态。 如果启动向导时 Docker 未处于运行状态，则向导无法正常运行。 此外，向导会检查当前的容器选择，添加正确的 Docker 支持。 若要为 Windows 容器添加支持，需在配置了 Windows 容器的 Docker 运行时运行向导。 若要为 Linux 容器添加支持，则运行向导，同时运行配置有 Linux 容器的 Docker。
+如果要使用 Visual Studio 向应用程序添加 Docker 支持，请确保执行此操作时 Docker Desktop 处于运行状态。 如果启动向导时 Docker Desktop 未处于运行状态，则向导无法正常运行。 此外，向导会检查当前的容器选择，添加正确的 Docker 支持。 若要为 Windows 容器添加支持，需在配置了 Windows 容器的 Docker Desktop 运行时运行向导。 若要为 Linux 容器添加支持，则运行向导，同时运行配置有 Linux 容器的 Docker。
 
-> ### <a name="references--common-web-architectures"></a>参考 - 常见 Web 体系结构
->
+### <a name="references--common-web-architectures"></a>参考 - 常见 Web 体系结构
 > - **干净体系结构**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **洋葱体系结构**  
->   <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+>   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **存储库模式**  
 >   <https://deviq.com/repository-pattern/>
 > - **干净体系结构解决方案示例**  
@@ -316,5 +304,5 @@ ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
 >   <https://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
-[上一页](architectural-principles.md)
-[下一页](common-client-side-web-technologies.md)
+>[上一页](architectural-principles.md)
+>[下一页](common-client-side-web-technologies.md)

@@ -1,5 +1,6 @@
 ---
-title: 隐式数值转换表（C# 参考）
+title: 隐式数值转换表 - C# 参考
+ms.custom: seodec18
 ms.date: 09/05/2018
 helpviewer_keywords:
 - conversions [C#], implicit numeric
@@ -7,29 +8,29 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: c3c0153a0ae3e07839822c8bb978b1a09277bd53
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 703f60f48e1e569e0ffcab66ff7ccc91d4a49514
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188698"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093549"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>隐式数值转换表（C# 参考）
 
 下表显示 .NET 数值类型之间的预定义隐式转换。
   
-|From|到|  
+|从|到|  
 |----------|--------|  
 |[sbyte](sbyte.md)|`short`、`int`、`long`、`float`、`double` 或 `decimal`|  
 |[byte](byte.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`|  
+|[char](char.md)|`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`|  
 |[short](short.md)|`int`、`long`、`float`、`double` 或 `decimal`|  
 |[ushort](ushort.md)|`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`。|  
 |[int](int.md)|`long`、`float`、`double` 或 `decimal`|  
 |[uint](uint.md)|`long`、`ulong`、`float`、`double` 或 `decimal`|  
 |[long](long.md)|`float`、`double` 或 `decimal`|  
-|[char](char.md)|`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double` 或 `decimal`|  
-|[float](float.md)|`double`|  
 |[ulong](ulong.md)|`float`、`double` 或 `decimal`|  
+|[float](float.md)|`double`|  
   
 ## <a name="remarks"></a>备注  
 
@@ -37,11 +38,13 @@ ms.locfileid: "50188698"
 
 - 在从 `int`、`uint`、`long` 或 `ulong` 转换为 `float`，以及从 `long` 或 `ulong` 转换为 `double` 时，可能会丢失精度，但不会丢失量值。  
   
-- 不存在针对 `char` 类型的隐式转换。  
+- 不存在针对 `char`、`byte` 和 `sbyte` 类型的隐式转换。  
+
+- 不存在从 `double` 和 `decimal` 类型的隐式转换。
   
-- 在 `float` 和 `double` 类型以及 `decimal` 类型之间不存在隐式转换。  
+- `decimal` 类型和 `float` 或 `double` 类型之间不存在隐式转换。  
   
-- 类型 `int` 的常量表达式的值（例如，由整数型字面量表示的值）可以转换为 `sbyte`、`byte`、`short``ushort`、`uint` 或 `ulong`，前提是它在目标类型的范围内：
+- 类型 `int` 的常量表达式的值（例如，由整数型字面量表示的值）可以转换为 `sbyte`、`byte`、`short`、`ushort`、`uint` 或 `ulong`，前提是它在目标类型的范围内：
 
   ```csharp
   byte a = 13;    // Compiles

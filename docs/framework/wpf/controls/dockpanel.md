@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], DockPanel
 - DockPanel control [WPF]
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
-ms.openlocfilehash: dd50045b7f0da350a75157d8e17e6c41cade78c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92dc0d9982e8ef92f4aa99e2bdd694a8585237cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550808"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361871"
 ---
 # <a name="dockpanel"></a>DockPanel
-<xref:System.Windows.Controls.DockPanel>元素用来定位边缘的布局容器的子内容。  
+<xref:System.Windows.Controls.DockPanel>元素用来定位子内容的布局容器的边缘。  
   
 ## <a name="in-this-section"></a>本节内容  
- [帮助主题](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
+ [帮助主题](dockpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Panel>  
@@ -36,8 +36,8 @@ ms.locfileid: "33550808"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相关章节  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)  
+ [布局](../advanced/layout.md)  
   
- [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概述](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概述](scrollviewer-overview.md)

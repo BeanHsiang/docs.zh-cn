@@ -1,15 +1,15 @@
 ---
 title: 基于消息的异步通信
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 基于消息的异步通信
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 基于消息的异步通信是微服务体系结构中的一个重要概念，因为它是保持微服务彼此独立的同时使其最终同步的最佳方式。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 865966a70f18c9023e4c733d82ea90aba9478753
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.date: 09/20/2018
+ms.openlocfilehash: 4285c37c90b01424de70a2ac4dd75d5d9c63dac0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50135370"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465550"
 ---
 # <a name="asynchronous-message-based-communication"></a>基于消息的异步通信
 
@@ -19,13 +19,13 @@ ms.locfileid: "50135370"
 
 消息由标头（标识或安全信息等元数据）和主体组成。 消息通常通过异步协议（如 AMQP）发送。
 
-在微服务社区中，此类通信的首选基础结构是轻型消息代理，它与 SOA 中使用的大型代理和业务流程协调程序不同。 在轻型消息代理中，基础结构通常“很笨”，只能充当消息代理，并且包含简单的实现，例如 RabbitMQ 或云（如 Azure 服务总线）中的可缩放服务总线。 在此方案中，大多数“聪明”的想法仍然停留在生成和使用消息的终结点（也就是微服务）中。
+在微服务社区中，此类通信的首选基础结构是轻型消息代理，它与 SOA 中使用的大型代理和业务流程协调程序不同。 在轻型消息代理中，基础结构通常“很笨”，只能充当消息代理，并且包含简单的实现，例如 RabbitMQ 或云中的可缩放服务总线（如 Azure 服务总线）。 在此方案中，大多数“聪明”的想法仍然停留在生成和使用消息的终结点（也就是微服务）中。
 
 另一个应尽量遵循的规则是，仅在内部服务之间使用异步消息传递，以及仅从客户端应用到前端服务（API 网关以及第一级微服务）使用同步通信（例如 HTTP）。
 
-有两种异步消息通信：基于消息的单接收者通信和基于消息的多接收者通信。 在以下部分中，我们提供了有关这两种通信的详细信息。
+有两种异步消息通信：基于消息的单接收者通信和基于消息的多接收者通信。 以下部分提供了有关这两种通信的详细信息。
 
-## <a name="single-receiver-message-based-communication"></a>基于消息的单接收者通信 
+## <a name="single-receiver-message-based-communication"></a>基于消息的单接收者通信
 
 具有单个接收者的基于消息的异步通信意味着存在点到点通信，即，仅向正在从该通道读取数据的一个使用者传递消息，并且该消息仅处理一次。 不过也有一些特殊情况。 例如，在试图从故障中自动恢复的云系统中，可以多次发送相同的消息。 由于网络或其他故障，客户端必须能够重试发送消息，并且服务器必须实现幂等操作，以便对特定消息仅处理一次。
 
@@ -33,13 +33,13 @@ ms.locfileid: "50135370"
 
 一旦开始发送基于消息的通信（通过命令或事件），就应该避免将基于消息的通信与同步 HTTP 通信混合在一起。
 
-![](./media/image18.PNG)
+![接收异步消息的单个微服务](./media/image18.png)
 
 **图 4-18**. 接收异步消息的单个微服务
 
 请注意，当命令来自客户端应用程序时，它们可以作为 HTTP 同步命令实现。 如果需要更高的可伸缩性或者已经处于基于消息的业务流程中，应使用基于消息的命令。
 
-## <a name="multiple-receivers-message-based-communication"></a>基于消息的多接收者通信 
+## <a name="multiple-receivers-message-based-communication"></a>基于消息的多接收者通信
 
 作为一种更灵活的方法，你可能还需要使用发布/订阅机制，以便其他订阅者微服务或外部应用程序能够收到发送者发送的通信。 因此，它可以帮助你遵循发送服务中的[开/闭原理](https://en.wikipedia.org/wiki/Open/closed_principle)。 这样一来，以后无需修改发送者服务也可添加额外的订阅者。
 
@@ -49,13 +49,13 @@ ms.locfileid: "50135370"
 
 使用事件驱动的异步通信时，微服务会在其域中发生变化时发布集成事件，而另一个微服务需要知道该变化，例如产品目录微服务中的价格变化。 其他微服务会订阅这些事件，以便以异步方式接收它们。 发生这种情况时，接收者可能会更新自己的域实体，这可能会导致发布更多的集成事件。 通常通过使用事件总线实现来执行此发布/订阅系统。 事件总线可以设计成包含 API 的抽象或接口，订阅或取消订阅事件以及发布事件时需使用该 API。 事件总线还可以包含一个或多个基于任意内部进程和消息传递代理的实现，例如支持异步通信和发布/订阅模型的消息传递队列或服务总线。
 
-如果系统使用受集成事件驱动的最终一致性，建议让最终用户完全清楚这种方法。 系统不应使用模拟集成事件的方法，例如 SignalR 或客户端轮询系统。 最终用户和业务所有者必须显式接受系统中的最终一致性，并意识到在许多情况下，只要显式使用该方法，业务就不会有任何问题。
+如果系统使用受集成事件驱动的最终一致性，建议让最终用户完全清楚这种方法。 系统不应使用模拟集成事件的方法，例如 SignalR 或客户端轮询系统。 最终用户和业务所有者必须显式接受系统中的最终一致性，并意识到在许多情况下，只要显式使用该方法，业务就不会有任何问题。 这一点很重要，因为用户可能希望立即看到一些结果，但在使用最终一致性时可能无法实现。
 
-如前面的[分布式数据管理挑战和解决方案](#challenges-and-solutions-for-distributed-data-management)部分所述，可以使用集成事件来实现跨多个微服务的业务任务。 这样就可以在这些服务之间实现最终一致性。 最终一致事务由一组分布式操作组成。 在执行每个操作时，相关微服务会更新域实体，并发布另一个集成事件，以便在相同的端到端业务任务中引发下一个操作。
+如前面的[分布式数据管理挑战和解决方案](distributed-data-management.md)部分所述，可以使用集成事件来实现跨多个微服务的业务任务。 这样就可以在这些服务之间实现最终一致性。 最终一致事务由一组分布式操作组成。 在执行每个操作时，相关微服务会更新域实体，并发布另一个集成事件，以便在相同的端到端业务任务中引发下一个操作。
 
-很重要的一点是，你可能想要与订阅同一事件的多个微服务进行通信。 为此，可以使用基于事件驱动通信的发布/订阅消息传递，如图 4-19 所示。 这种发布/订阅机制并不是微服务体系结构所独有的。 它类似于 DDD 中[绑定上下文](https://martinfowler.com/bliki/BoundedContext.html)的通信方式，或者类似于在[命令和查询责任分离 (CQRS)](https://martinfowler.com/bliki/CQRS.html) 体系结构模式中将更新从写入数据库传播到读取数据库的方式。 其目标是在分布式系统中的多个数据源之间实现最终一致性。
+很重要的一点是，你可能想要与订阅同一事件的多个微服务进行通信。 为此，可以使用基于事件驱动通信的发布/订阅消息传递，如图 4-19 所示。 这种发布/订阅机制并不是微服务体系结构所独有的。 它类似于 DDD 中[界定上下文](https://martinfowler.com/bliki/BoundedContext.html)的通信方式，或者类似于在[命令和查询责任分离 (CQRS)](https://martinfowler.com/bliki/CQRS.html) 体系结构模式中将更新从写入数据库传播到读取数据库的方式。 其目标是在分布式系统中的多个数据源之间实现最终一致性。
 
-![](./media/image19.png)
+![在事件驱动的异步通信中，一个微服务将事件发布到事件总线，许多微服务可以订阅它，以获取通知并对其进行操作。](./media/image19.png)
 
 **图 4-19**. 事件驱动的异步消息通信
 
@@ -73,40 +73,39 @@ ms.locfileid: "50135370"
 
 在多个微服务中实现事件驱动体系结构时面临的挑战是，如何在原始微服务中以原子方式更新状态，同时将其相关集成事件弹性地发布到事件总线中（在某种程度上基于事务）。 下面介绍了实现此操作的几种方法，但也可能有其他方法。
 
--   使用事务（基于 DTC）队列，如 MSMQ。 （不过，这是一种传统方法。）
+- 使用事务（基于 DTC）队列，如 MSMQ。 （不过，这是一种传统方法。）
 
--   使用[事务日志挖掘](https://www.scoop.it/t/sql-server-transaction-log-mining)。
+- 使用[事务日志挖掘](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
--   使用完整[事件溯源](https://msdn.microsoft.com/library/dn589792.aspx)模式。
+- 使用完整[事件溯源](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)模式。
 
--   使用[发件箱模式](http://gistlabs.com/2014/05/the-outbox/)：将用作消息队列的事务数据库表作为事件创建器组件的基础，该组件将创建并发布事件。
+- 使用[发件箱模式](http://gistlabs.com/2014/05/the-outbox/)：将用作消息队列的事务数据库表作为事件创建器组件的基础，该组件将创建并发布事件。
 
-使用异步通信时需要考虑的其他主题包括消息幂等性和重复消息删除。 这些主题将在本指南后面的[在微服务（集成事件）之间实现基于事件的通信](#implementing_event_based_comms_microserv)部分中进行介绍。
+使用异步通信时需要考虑的其他主题包括消息幂等性和重复消息删除。 这些主题将在本指南后面的[在微服务（集成事件）之间实现基于事件的通信](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md)部分中进行介绍。
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Event Driven Messaging**（事件驱动的消息传递）
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+- **Event Driven Messaging** \（事件驱动的消息传递）
+  [http://soapatterns.org/design_patterns/event_driven_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Publish/Subscribe Channel**（发布/订阅通道）
-    [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+- **Publish/Subscribe Channel** \（发布/订阅通道）
+  [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Udi Dahan.Clarified CQRS**（明确的 CQRS）
-    [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **Udi Dahan.Clarified CQRS** \（明确的 CQRS）
+  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **命令和查询责任分离 (CQRS)**
-    [https://docs.microsoft.com/azure/architecture/patterns/cqrs](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+- **命令和查询责任分离 (CQRS)** \
+  [https://docs.microsoft.com/azure/architecture/patterns/cqrs](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **绑定上下文之间的通信**
-    [https://msdn.microsoft.com/library/jj591572.aspx](https://msdn.microsoft.com/library/jj591572.aspx)
+- **界定上下文之间的通信** \
+  [https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10))
 
--   **Eventual Consistency**（最终一致性）
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+- **Eventual Consistency** \（最终一致性）
+  [https://en.wikipedia.org/wiki/Eventual_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Jimmy Bogard。Refactoring Towards Resilience: Evaluating Coupling**（重构复原能力：评估耦合度）
-    [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+- **Jimmy Bogard。重构复原能力：评估耦合度** \
+  [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
-
->[!div class="step-by-step"]
-[上一页](communication-in-microservice-architecture.md)
-[下一页](maintain-microservice-apis.md)
+> [!div class="step-by-step"]
+> [上一页](communication-in-microservice-architecture.md)
+> [下一页](maintain-microservice-apis.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f489ab29726292f6c55151169ad9efc6f0fbfbcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b1ee5044c2223d3ff90cf10b53cad4e1b353d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407789"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726502"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState 枚举
 指示线程的用户状态。  
@@ -47,28 +47,28 @@ typedef enum CorDebugUserState {
 |值|描述|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|已请求的线程终止。|  
-|`USER_SUSPEND_REQUESTED`|已请求线程的挂起。|  
-|`USER_BACKGROUND`|在后台运行该线程。|  
-|`USER_UNSTARTED`|线程开始执行。|  
+|`USER_SUSPEND_REQUESTED`|已请求挂起线程。|  
+|`USER_BACKGROUND`|线程已在后台运行。|  
+|`USER_UNSTARTED`|该线程尚未开始执行。|  
 |`USER_STOPPED`|线程已终止。|  
 |`USER_WAIT_SLEEP_JOIN`|线程正在等待另一个线程来完成任务。|  
 |`USER_SUSPENDED`|线程已挂起。|  
-|`USER_UNSAFE_POINT`|该线程是一个不安全的点处。 也就是说，线程是执行在某个点中可能阻止垃圾回收。<br /><br /> 调试事件可能调度从不安全的点，但是挂起线程，将一个不安全的点处将很有可能导致死锁在恢复线程之前。 由实时 (JIT) 和垃圾回收实现确定的安全和不安全的点。|  
+|`USER_UNSAFE_POINT`|该线程是在不安全的点。 也就是说，线程处于中执行的点，它可能会阻止垃圾回收。<br /><br /> 调试事件的调度可能不安全的点，但挂起线程，在不安全的点将很有可能导致死锁在恢复该线程之前。 由实时 (JIT) 和垃圾回收实现确定的安全和不安全点。|  
 |`USER_THREADPOOL`|该线程是从线程池。|  
   
 ## <a name="remarks"></a>备注  
- 用户状态是线程的时调试器检查该线程具有的状态。 一个线程可能具有用户状态的组合。  
+ 用户状态是线程的调试器检查时该线程具有的状态。 一个线程可能具有的用户状态的组合。  
   
  使用[icordebugthread:: Getuserstate](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)方法来检索线程的用户状态。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

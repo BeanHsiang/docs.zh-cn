@@ -2,12 +2,12 @@
 title: WCF 分析跟踪
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6d4db9a8ec11e215ef18dcab6b7940526bc24927
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748137"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析跟踪
 此示例演示如何将您自己的跟踪事件添加到 Windows Communication Foundation (WCF) 将写入到 ETW 中的分析跟踪流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 跟踪分析是为了便于查看服务，而不会导致较高性能损失。 此示例演示如何使用<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api 来与 WCF 服务集成的写入事件。  
@@ -24,11 +24,11 @@ ms.locfileid: "50181652"
   
 -   如果该应用程序不在根处。  
   
-     \<站点名称 >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
+     \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
 -   如果该应用程序在根处。  
   
-     \<站点名称 >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
+     \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
  对于自承载服务，WCF 的分析跟踪不会填充"HostReference"字段。 此示例中的 `WCFUserEventProvider` 类在由自承载服务使用时，其行为是一致的。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "50181652"
 4.  单击**清除**清除这些事件。  
   
 ## <a name="known-issue"></a>已知问题  
- 没有中的已知的问题**事件查看器**，它可能无法解码 ETW 事件。 可能会看到错误消息，指出:"事件 ID 的说明\<id > 从源不能找到 Microsoft Windows 应用程序服务器-应用程序。 本地计算机上未安装引发此事件的组件，或者安装已损坏。 你可以安装或修复本地计算机上的组件。" 如果遇到此错误，请选择**刷新**从**操作**菜单。 然后，该事件应能正确解码。  
+ 没有中的已知的问题**事件查看器**，它可能无法解码 ETW 事件。 可能会看到错误消息，指出："事件 ID 的说明\<id > 找不到 Microsoft Windows 应用程序服务器-应用程序的源中。 本地计算机上未安装引发此事件的组件，或者安装已损坏。 你可以安装或修复本地计算机上的组件。" 如果遇到此错误，请选择**刷新**从**操作**菜单。 然后，该事件应能正确解码。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -117,5 +117,5 @@ ms.locfileid: "50181652"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>请参阅  
- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>请参阅
+- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

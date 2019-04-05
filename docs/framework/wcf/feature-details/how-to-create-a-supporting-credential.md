@@ -2,12 +2,12 @@
 title: 如何：创建支持凭据
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: ef4d9a406e6fc929e4ad59911d587e462c9b2b65
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539800"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>如何：创建支持凭据
 自定义安全方案可能要求提供多个凭据。 例如，某个服务可能要求客户端不仅提供用户名和密码，还要提供能够证明客户端用户已满 18 岁的凭据。 第二个凭据，则*支持凭据*。 本主题说明如何在 Windows Communication Foundation (WCF) 客户端中实现此类凭据。  
@@ -35,7 +35,7 @@ ms.locfileid: "43499986"
 |签名和加密|签名的加密支持令牌是在 `wsse:SecurityHeader` 中出现时还进行加密的签名支持令牌。|  
   
 ## <a name="programming-supporting-credentials"></a>对支持凭据进行编程  
- 若要创建的服务，使用支持令牌，必须创建[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 (有关详细信息，请参阅[如何： 创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
+ 若要创建的服务，使用支持令牌，必须创建[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 (有关详细信息，请参阅[如何：创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
   
  创建自定义绑定的第一步是创建一个安全绑定元素，该元素可以是以下三种类型之一：  
   
@@ -80,5 +80,5 @@ ms.locfileid: "43499986"
 ### <a name="code"></a>代码  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>请参阅  
- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+## <a name="see-also"></a>请参阅
+- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

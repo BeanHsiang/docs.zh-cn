@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f39b079de1c97d0954ba013ba1c87a8bd606920
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a3678c687817c4c93508d95c3d4b7453eadee32e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643762"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>如何：显示日期和时间值中的毫秒
 默认日期和时间格式设置方法（如 <xref:System.DateTime.ToString?displayProperty=nameWithType>）包含时间值的小时、分钟和秒部分，但不包含毫秒部分。 本主题说明如何在格式化日期和时间字符串中包含日期和时间的毫秒部分。  
@@ -56,5 +56,5 @@ ms.locfileid: "47113577"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Globalization.DateTimeFormatInfo>  
+- <xref:System.Globalization.DateTimeFormatInfo>
 - [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

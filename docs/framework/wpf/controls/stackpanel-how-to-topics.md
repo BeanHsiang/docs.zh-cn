@@ -7,20 +7,20 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555115"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351263"
 ---
 # <a name="stackpanel-how-to-topics"></a>StackPanel 帮助主题
-本部分中的主题介绍如何使用<xref:System.Windows.Controls.StackPanel>以水平或垂直堆叠内容的元素。  
+在本部分中的主题介绍如何使用<xref:System.Windows.Controls.StackPanel>元素水平或垂直堆叠内容。  
   
 ## <a name="in-this-section"></a>本节内容  
- [在 StackPanel 和 DockPanel 之间进行选择](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [创建 StackPanel](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [在 StackPanel 中水平或垂直对齐内容](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+ [在 StackPanel 和 DockPanel 之间进行选择](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [创建 StackPanel](how-to-create-a-stackpanel.md)  
+ [在 StackPanel 中水平或垂直对齐内容](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ ms.locfileid: "33555115"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相关章节  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)  
+ [布局](../advanced/layout.md)  
   
- [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概述](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概述](scrollviewer-overview.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f840e042321b636443b6763e168abd144b05edae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181259"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717449"
 ---
 # <a name="deriving-from-webrequest"></a>从 WebRequest 派生
 <xref:System.Net.WebRequest> 类是一个抽象基类，可为创建适合 .NET Framework 可插入协议模型的协议特定的请求处理程序提供基本方法和属性。 使用 WebRequest 类的应用程序可使用任何支持的协议请求数据，而无需指定所使用的协议。  
   
- 必须满足两个条件才能将协议特定的类用作可插入协议：该类必须实现 <xref:System.Net.IWebRequestCreate> 接口，并且必须使用 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> 方法注册。 该类必须覆盖 WebRequest 的所有抽象方法和属性，才能提供可插入接口。  
+ 为将特定于协议的类用作可插入协议，必须满足两个条件：类必须实现 <xref:System.Net.IWebRequestCreate> 接口，且必须使用 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> 方法注册。 该类必须覆盖 WebRequest 的所有抽象方法和属性，才能提供可插入接口。  
   
  WebRequest 实例是一次性的，如果想再发出请求，请创建一个新的 WebRequest。 WebRequest 支持 <xref:System.Runtime.Serialization.ISerializable> 接口，使开发人员能够序列化模板 WebRequest，然后针对其他请求重新构建模板。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "50181259"
   
  GetResponse 方法负责创建适当的 WebResponse 后代来包含传入的响应。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Net.WebRequest>  
- <xref:System.Net.HttpWebRequest>  
- <xref:System.Net.FileWebRequest>  
- [对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [从 WebResponse 派生](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.HttpWebRequest>
+- <xref:System.Net.FileWebRequest>
+- [对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [从 WebResponse 派生](../../../docs/framework/network-programming/deriving-from-webresponse.md)

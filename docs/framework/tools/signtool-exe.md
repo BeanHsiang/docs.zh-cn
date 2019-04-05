@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6fddc6142341630e96088323d0c23a2eba1e879
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196455"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479150"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe（签名工具）
 签名工具是一个命令行工具，用于对文件进行数字签名，以及验证文件和时间戳文件中的签名。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -27,9 +27,9 @@ ms.locfileid: "47196455"
 signtool [command] [options] [file_name | ...]  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
 |`command`|指定要对文件执行的操作的四个命令（`catdb`、`sign`、`Timestamp` 或 `Verify`）之一。 有关每个命令的说明，请参见下一个表。|  
 |`options`|用于修改命令的选项。 除全局 `/q` 和 `/v` 选项之外，每个命令均支持一组唯一选项。|  
@@ -37,7 +37,7 @@ signtool [command] [options] [file_name | ...]
   
  签名工具支持下列命令。 每个命令均与不同的选项集结合使用，这些选项集已在其各自的节中列出。  
   
-|命令|描述|  
+|命令|说明|  
 |-------------|-----------------|  
 |`catdb`|在目录数据库中添加或移除目录文件。 目录数据库用于自动查找目录文件，并由 GUID 标识。 有关 `catdb` 命令支持的选项列表，请参阅 [catdb 命令选项](../../../docs/framework/tools/signtool-exe.md#catdb)。|  
 |`sign`|对文件进行数字签名。 数字签名可以阻止文件被篡改，并且使用户能够基于签名证书验证签名者。 有关 `sign` 命令支持的选项列表，请参阅 [sign 命令选项](../../../docs/framework/tools/signtool-exe.md#sign)。|  
@@ -46,7 +46,7 @@ signtool [command] [options] [file_name | ...]
   
  下列选项适用于所有签名工具命令。  
   
-|全局选项|描述|  
+|全局选项|说明|  
 |-------------------|-----------------|  
 |**/q**|如果命令运行成功，则不显示输出；如果命令运行失败，则显示最小输出。|  
 |**/v**|无论命令是否运行成功，都显示详细输出，并显示警告消息。|  
@@ -56,7 +56,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="catdb-command-options"></a>catdb 命令选项  
  下表列出了可与 `catdb` 命令一起使用的选项。  
   
-|Catdb 选项|描述|  
+|Catdb 选项|说明|  
 |------------------|-----------------|  
 |`/d`|指定更新默认目录数据库。 如果 `/d` 和 `/g` 选项都未使用，则签名工具会更新系统组件和驱动程序数据库。|  
 |`/g` GUID|指定由全局唯一标识符 GUID 标识的目录数据库已更新。|  
@@ -67,7 +67,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="sign-command-options"></a>sign 命令选项  
  下表列出了可与 `sign` 命令一起使用的选项。  
   
-|Sign 命令选项|描述|  
+|Sign 命令选项|说明|  
 |-------------------------|-----------------|  
 |`/a`|自动选择最佳签名证书。 签名工具将查找满足所有指定条件的所有有效证书，并选择有效时间最长的证书。 如果未提供该选项，签名工具仅查找一个有效的签名证书。|  
 |`/ac` file|将 file 中的其他证书添加到签名块。|  
@@ -103,7 +103,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="timestamp-command-options"></a>TimeStamp 命令选项  
  下表列出了可与 `TimeStamp` 命令一起使用的选项。  
   
-|TimeStamp 选项|描述|  
+|TimeStamp 选项|说明|  
 |----------------------|-----------------|  
 |`/p7`|对 PKCS #7 文件执行时间戳操作。|  
 |`/t` URL|指定时间戳服务器的 URL。 要执行时间戳操作的文件必须在以前已进行签名。 需要 `/t` 或 `/tr` 选项。|  
@@ -116,7 +116,7 @@ signtool [command] [options] [file_name | ...]
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>Verify 命令选项  
   
-|Verify 选项|描述|  
+|Verify 选项|说明|  
 |-------------------|-----------------|  
 |`/a`|指定可以使用所有方法来验证文件。 首先，搜索目录数据库以确定是否在目录中对文件进行签名。 如果未在任何目录中对文件进行签名，签名工具将尝试验证文件的嵌入签名。 验证可以或不能在目录中进行签名的文件时，建议使用该选项。 这些文件的示例包括 Windows 文件或驱动程序。|  
 |`/ad`|使用默认的目录数据库查找目录。|  
@@ -126,10 +126,10 @@ signtool [command] [options] [file_name | ...]
 |`/c` CatFile|通过名称指定目录文件。|  
 |`/d`|指定签名工具应打印描述和描述 URL。|  
 |`/ds` Index|验证指定位置的签名。|  
-|`/hash` (`SHA1`|`SHA256`)|指定在目录中搜索文件时要使用的可选哈希算法。|  
+|`/hash` (`SHA1`&#124;`SHA256`)|指定在目录中搜索文件时要使用的可选哈希算法。|  
 |`/kp`|指定应使用内核模式驱动程序签名策略执行验证。|  
 |`/ms`|使用多个验证语义。 这是 [!INCLUDE[win8](../../../includes/win8-md.md)] 和更高版本上的 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 调用的默认行为。|  
-|`/o` Version|按操作系统版本验证文件。 Version 具有以下形式：PlatformID:VerMajor.VerMinor.BuildNumber。 PlatformID 表示 <xref:System.PlatformID> 枚举成员的基础值。 重要提示：建议使用 `/o` 开关。 如果未指定 `/o`，SignTool.exe 可能会返回意外的结果。 例如，如果你未将 `/o` 开关包含在内，则能在旧版操作系统上正确验证的系统目录可能在新版操作系统上无法正确验证。|  
+|`/o` Version|按操作系统版本验证文件。 版本具有以下格式：PlatformID：VerMajor.VerMinor.BuildNumber。 PlatformID 表示 <xref:System.PlatformID> 枚举成员的基础值。 **重要提示：** 建议使用 `/o` 开关。 如果未指定 `/o`，SignTool.exe 可能会返回意外的结果。 例如，如果你未将 `/o` 开关包含在内，则能在旧版操作系统上正确验证的系统目录可能在新版操作系统上无法正确验证。|  
 |`/p7`|验证 PKCS #7 文件。 无现有策略用于 PKCS #7 验证。 该签名处于选中状态，并为签名证书生成了链。|  
 |`/pa`|指定应使用默认认证码验证策略。 如果未指定 `/pa` 选项，签名工具将使用 Windows 驱动程序验证策略。 此选项不能与 `catdb` 选项一起使用。|  
 |`/pg` PolicyGUID|通过 GUID 指定验证策略。 PolicyGUID 相当于验证策略的 ActionID。 此选项不能与 `catdb` 选项一起使用。|  
@@ -142,7 +142,7 @@ signtool [command] [options] [file_name | ...]
 ## <a name="return-value"></a>返回值  
  当其终止时，签名工具将返回下列退出代码之一。  
   
-|退出代码|描述|  
+|退出代码|说明|  
 |---------------|-----------------|  
 |0|执行成功。|  
 |1|执行失败。|  
@@ -209,6 +209,6 @@ signtool verify /a SystemFile.dll
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [工具](../../../docs/framework/tools/index.md)  
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>请参阅
+- [工具](../../../docs/framework/tools/index.md)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

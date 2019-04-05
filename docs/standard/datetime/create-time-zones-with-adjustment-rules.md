@@ -1,5 +1,5 @@
 ---
-title: 如何： 创建含调整规则的时区
+title: 如何：创建含调整规则的时区
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a5c04f7807638a4a8b114828083835f348ac08
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004109"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721170"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>如何： 创建含调整规则的时区
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>如何：创建含调整规则的时区
 
 应用程序所需的精确的时区信息可能不存在的特定系统上有几个原因：
 
@@ -34,7 +34,7 @@ ms.locfileid: "46004109"
 > [!IMPORTANT]
 > 通过调用创建的自定义时区<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法不会添加到注册表。 相反，它们可以访问只能通过返回的对象引用<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法调用。
 
-本主题演示如何创建含调整规则的时区。 若要创建不支持夏令时调整规则的时区，请参阅[如何： 创建调整规则无需时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)。
+本主题演示如何创建含调整规则的时区。 若要创建不支持夏令时调整规则的时区，请参阅[如何：创建不含调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)。
 
 ### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>若要创建带浮动调整规则的时区
 
@@ -95,6 +95,6 @@ ms.locfileid: "46004109"
 
 ## <a name="see-also"></a>请参阅
 
-* [日期、时间和时区](../../../docs/standard/datetime/index.md)
-* [时区概述](../../../docs/standard/datetime/time-zone-overview.md)
-* [如何：创建不含调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+- [日期、时间和时区](../../../docs/standard/datetime/index.md)
+- [时区概述](../../../docs/standard/datetime/time-zone-overview.md)
+- [如何：创建不含调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)

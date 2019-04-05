@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - On keyword [Visual Basic]
 ms.assetid: 8619c328-1637-4f41-b466-cbe693f4fe73
-ms.openlocfilehash: f7412d11acfa16b5e03f7ee9e917159e47409297
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e466775c2634c89e1357b90e028d3d83e248322
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640578"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58046772"
 ---
 # <a name="on-visual-basic"></a>On (Visual Basic)
 引入了对运行时错误的响应，或打开编译器选项。  
@@ -34,5 +34,6 @@ ms.locfileid: "33640578"
   
  [Option Strict 语句](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>请参阅  
- [关键字](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>请参阅
+
+- [关键字](../../visual-basic/language-reference/keywords/index.md)

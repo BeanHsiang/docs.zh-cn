@@ -1,0 +1,73 @@
+### YamlMime:Tutorial
+title: 探索 C# 6 - C# 交互窗口 C# 教程
+metadata:
+  title: 探索 C# 6 - 使用浏览器以交互方式尝试 C# 6 中的新功能
+  description: 在本教程中，你将使用浏览器以交互方式探索 C# 6。 你将探索可以与 C# 6 配合使用的新的习惯用语，这些习惯用语支持较简洁的可读代码。
+  audience: Developer
+  level: intermediate
+  ms.date: 12/11/2018
+  displayType: two-column
+  interactive: csharp
+  ms.openlocfilehash: c44d16e543f85852cee39106688fd3870dff7c4d
+  ms.sourcegitcommit: c3cf1ace8a1d403aeae76d8976d01995893d2536
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 02/07/2019
+  ms.locfileid: "55807042"
+items:
+- durationInMinutes: 1
+  content: >
+    通过本教程，使用浏览器编写 C#，并查看代码编译和运行结果，以交互方式探索 C# 6。 本教程包含一系列课程，这些课程修改了早期的 C# 做法，以使用更新、更简洁的 C# 6 功能。 本文的其余部分是对每个功能的概述，并提供用于探索每个功能的链接。
+- title: 只读自动属性支持只读类型
+  durationInMinutes: 2
+  content: "通过自动属性语法的两个改进，可以更轻松地在更多位置使用自动属性：只读自动属性和自动属性初始值设定项。 请参考此小程序：\n\n[!code-csharp[Starter](../../../../samples/csharp/tutorials/exploration/csharp6-starter/Program.cs)]  \n\n    \n 进入焦点模式，将前面的代码复制到 C# 交互窗口。 然后，单击“运行”查看代码效果。 `AllCaps` 具有不良副作用，即它会修改属性值并返回大写字符串。 `Person` 类的创建者希望 `FirstName` 和 `LastName` 的字符串为只读字符串。 使用 C#6，可以清楚地表达该意图。 从这两个属性中删除 `private set` 以创建只读自动属性。 单击“运行”，可以看到编译器发现 `FirstName` 和 `LastName` 属性在两个位置发生了更改，而这两个属性在这两个位置本不应更改。 可以将 `AllCaps` 方法更改为以下代码，以修复编译器错误：\n\n```csharp\npublic string AllCaps()\n{\n  return ToString().ToUpper();\n}\n```\n\n使用这种新语法，编译器可以确保属性是不可变的。\n"
+- title: 初始化自动属性的支持字段
+  durationInMinutes: 1
+  content: "C# 6 中的新语法支持使用自动属性的初始值设定项。 随着类增加新的功能，这一点变得越来越重要。 添加一个中间名称属性和一个新的构造函数，该构造函数会将三个字符串添加到 `Person` 类中：\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#MiddleName)]  \n\n`MiddleName` 属性上的赋值为初始值设定项。 它初始化用于中间名称的由编译器生成的支持字段。\n"
+- title: Expression-Bodied 成员
+  durationInMinutes: 2
+  content: >
+    Expression-bodied 成员为轻量级方法提供轻量级语法。 `Person` 类有两个很好的候选项。 请查看 `ToString` 的声明：
+
+
+    ```csharp
+
+    public override string ToString()
+
+    {
+        return FirstName + " " + LastName;
+    }
+
+    ```
+
+
+    将 `ToString` 声明替换为以下代码：
+
+
+    ```csharp
+
+    public override string ToString() => FirstName + " " + LastName;
+
+    ```
+
+
+    使用 `AllCaps` 方法，执行相同操作。 这是一个小的改进，但是如果使用得当，它会创建更具可读性的代码，特别是对于数据传输对象 (DTO) 和其他具有最小行为的类型。
+- title: 导入单个类
+  durationInMinutes: 2
+  content: "如果在整个代码中反复使用类的静态方法，则每次包含类名都会模糊代码的含义。 `Person` 类目前导入 `System` 命名空间，尽管只会使用 <xref:System.Console?displayProperty=nameWithType>。 修改 `using` 语句，如下所示：\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#UsingStatic)]  \n\n在广泛使用具有许多静态方法的单个类（比如 [`string`](xref:System.String) 类或 <xref:System.Math?displayProperty=nameWithType> 类）的大型程序中，`static using` 语句变得更加有用。\n"
+- title: 更好的字符串格式
+  durationInMinutes: 2
+  content: "C# 6 包含新语法，用于从字符串和嵌入的表达式编写字符串，可以通过计算这些字符串来生成其他字符串值。 可以更改 `ToString` 和 `AllCaps` 方法，以使用以下语法：\n\n[!code-csharp[StringInterpolation](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#StringInterpolation)]  \n\n可以直接编写 C# 表达式，而不是 `{` 和 `}` 之间的位置参数。 可以在 `Main` 方法中执行相同操作。 将现有代码替换为以下代码：\n\n[!code-csharp[InterpolationMain](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#InterpolationMain)]  \n\n不仅限于这些表达式中的单个变量。 让我们从一个新的示例开始，修改该示例，以演示可以与字符串内插配合使用的其他表达式。 将以下代码粘贴到 `Main` 方法中的交互式窗口：\n\n[!code-csharp[Phrases](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#Phrases)]  \n\n可以删除局部变量 `average`，并在内插字符串表达式中执行该计算。 将最后两行替换为以下部分：\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average()}\");\n```\n\n运行前面的示例，你可能会发现 `Average` 的输出的小数位数比你需要的多。 字符串内插语法支持可使用前面的格式设置方法的所有格式字符串。 在大括号内指定格式字符串。 在要设置格式的表达式后面添加 `:`：\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average():F2}\");\n```\n"
+- title: 快速且简单的 null 检查
+  durationInMinutes: 2
+  content: "借助 `?.`（null 条件）运算符，可轻松编写包含 `null` 值的逻辑，无需额外的 `if` 检查。 若要探索此功能，请先将以下代码复制到交互式窗口，然后进行尝试：\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n      string s = null;\n      Console.WriteLine(s.Length);\n    }\n}\n```\n\n运行该示例时，它会引发 <xref:System.NullReferenceException>。 将 `.` 成员访问运算符更改为 null 条件运算符：\n\n```csharp\nConsole.WriteLine(s?.Length);\n``` \n\n做此更改后，不会有任何输出。 这是因为 `s.Length` 的结果为 `int` 时，`s?.Length` 的结果为 `int?`。 在此示例中，`s?.Length` 为 `null`。 如果 `?.` 的左操作数为 `null`，则它返回 `null`。 如果右操作数的类型为值类型，则 `?.` 运算符为该类型返回可以为 null 的类型。 除了 `?.` 之外，还可以使用 `?[]` 进行数组或索引访问。 在交互式窗口中，试运行以下代码：\n\n ```csharp\n char? c = s?[0];\n Console.WriteLine(c.HasValue);\n ```\n\n 多个条件运算符可以组合成一个表达式。 `null` 左操作数生成 `null` 结果，这样就可以很容易地避免嵌套 if 子句以访问成员的成员。 例如，在交互式窗口中，试运行以下代码：\n\n ```csharp\n string s = null;\n bool? hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext();\n Console.WriteLine(hasMore.HasValue);\n ```\n\n 通过使用 null 合并运算符提供默认值，可以简化前面的示例：\n\n ```csharp\n bool hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext() ?? false;\n Console.WriteLine(hasMore);\n ```\n\n null 条件运算符可以帮助你编写使核心逻辑清晰，同时无缝测试 `null` 值的代码。\n"
+- title: 异常筛选器
+  durationInMinutes: 2
+  content: "使用异常筛选器可以捕获基于某些条件的异常。 典型用法是创建筛选器方法，该方法记录异常，但从不处理这些异常。 异常筛选器为布尔表达式，应执行 `catch` 子句时该表达式为 `true`，不应由 `catch` 子句捕获异常时，该表达式为 `false`。 在交互式窗口中，试运行以下代码：它将异常类型和消息记录到控制台。 返回 `false`，表示无法处理异常。 在交互式窗口中，尝试运行该程序。\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        try \n        {\n            string s = null;\n            Console.WriteLine(s.Length);\n\n        } catch (Exception e) when (LogException(e))\n        {\n        }\n        Console.WriteLine(\"Exception must have been handled\");\n    }\n\n    private static bool LogException(Exception e)\n    {\n        Console.WriteLine($\"\\tIn the log routine. Caught {e.GetType()}\");\n        Console.WriteLine($\"\\tMessage: {e.Message}\");\n        return false;\n    }\n}\n```\n\n应会显示来自 `LogException` 方法的消息，然后显示默认异常消息。 尝试将 `return false` 语句更改为 `return true`，然后再运行一次。 现在，捕获到异常，并且程序运行直到完成。\n\n除日志记录场景外，异常筛选器在异常的属性确定采取何种操作时可能最有用。 例如，可以查看 <xref:System.AggregateException> 中包含的异常，并根据特定的异常采取适当的操作。\n"
+- title: 使用 nameof
+  durationInMinutes: 2
+  content: "`nameof` 运算符返回任何变量、类型或类型成员的名称。 在交互式窗口中，尝试运行以下代码，了解工作原理：\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Console.WriteLine(nameof(System.String));\n        int j = 5;\n        Console.WriteLine(nameof(j));\n        List<string> names = new List<string>();\n        Console.WriteLine(nameof(names));\n    }\n}\n```\n\n输出与变量或类型的名称相匹配。 即使提供了完全限定的类型名称（如 `System.String`），`nameof` 运算符也会返回不限定的名称。 如果需要将参数或属性名称转换为字符串，此功能非常有用。 示例包括捕获用于引发 <xref:System.ArgumentNullException> 或 <xref:System.ArgumentException> 的参数的名称，或者捕获实现 <xref:System.ComponentModel.INotifyPropertyChanged> 时更改的属性的名称。 \n"
+- title: 新的对象初始化语法
+  durationInMinutes: 2
+  content: "通过新的对象初始化，可以创建更容易初始化字典和其他类型的方法。 开始使用字典。 在交互式窗口中运行以下代码：\n\n```csharp\nvar messages = new Dictionary<int, string>\n{\n    [404] = \"Page not Found\",\n    [302] = \"Page moved, but left a forwarding address.\",\n    [500] = \"The web server can't come out to play today.\"\n};\n\nConsole.WriteLine(messages[302]);\n```\n\n可以将此语法扩展到实现 <xref:System.Collections.IEnumerable> 并具有公共可访问 `Add` 方法的任何类。  在交互式窗口中，尝试以下示例。 它创建 `Path` 类，该类实现 `IEnumerable<Point3D>` 并具有用于添加点（包含三个参数）的方法。 它还结合本教程中已演示过的其他技术，如 expression-bodied 成员和字符串内插。 \n\n在 `Main` 方法中，通过提供点的坐标来初始化路径。 这些的点通过 `Add` 方法添加到集合中。\n\n`Add` 方法也可以是扩展方法。 可以按以下方式更新前面的示例。 由于沙盒限制，此示例无法在交互式体验中进行编译。 但你可以在自己的计算机上进行尝试。\n\n```csharp\npublic class Path : IEnumerable<Point3D>\n{\n    private List<Point3D> points = new List<Point3D>();\n    public IEnumerator<Point3D> GetEnumerator() => points.GetEnumerator();\n    IEnumerator IEnumerable.GetEnumerator() => points.GetEnumerator();\n\n    public void Add(Point3D pt) => points.Add(pt);\n}\n\npublic static class Extensions\n{\n    public static void Add(this Path path, double x, double y, double z) => path.Add(new Point3D(x, y, z));\n}\n```\n"
+- content: 你已完成对 C# 6 中新功能的探索。 请立即在应用程序中亲自尝试新功能。

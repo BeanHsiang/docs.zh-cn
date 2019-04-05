@@ -2,12 +2,12 @@
 title: 自定义安全元数据终结点
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: d9c1e8755e32f3d1a38287e2e88d1026c27af1e8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9376f98f5018a929f27fe546271c71c730185a5f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191228"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832159"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自定义安全元数据终结点
 此示例演示如何实现具有安全元数据终结点使用的非元数据交换绑定，其中一个服务以及如何配置[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或客户端以获取从类元数据终结点元数据。 有两个系统提供的绑定可供公开元数据终结点：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 用于以非安全的方式，通过 HTTP 公开元数据终结点。 mexHttpsBinding 用于以安全的方式，通过 HTTP 公开元数据终结点。 本示例演示如何使用 <xref:System.ServiceModel.WSHttpBinding> 公开安全元数据终结点。 要更改绑定的安全设置但不想使用 HTTPS 时需要这样做。 如果使用 mexHttpsBinding，则元数据终结点是安全的，但无法修改绑定设置。  
@@ -52,9 +52,9 @@ ms.locfileid: "50191228"
   
  在很多其他示例中，元数据终结点使用默认 `mexHttpBinding`，这样会不安全。 下面是使用具有 `WSHttpBinding` 安全性的 `Message` 来保护的元数据。 为了使元数据客户端能够检索此元数据，必须用匹配的绑定来配置这些客户端。 本示例演示两个此类客户端。  
   
- 第一个客户端使用 Svcutil.exe 获取元数据并在设计时生成客户端代码和配置。 由于服务针对元数据使用非默认绑定，因此必须专门配置 Svcutil.exe 工具，以便此工具能够使用该绑定从服务中获取元数据。  
+ 第一个客户端使用 Svcutil.exe 提取元数据并在设计时生成客户端代码和配置。 由于服务针对元数据使用非默认绑定，因此必须专门配置 Svcutil.exe 工具，以便此工具能够使用该绑定从服务中获取元数据。  
   
- 第二个客户端使用 `MetadataResolver` 动态获取已知协定的元数据，然后在动态生成的客户端上调用操作。  
+ 第二个客户端使用 `MetadataResolver` 动态提取已知协定的元数据，然后在动态生成的客户端上调用操作。  
   
 ## <a name="svcutil-client"></a>Svcutil 客户端  
  当使用默认绑定承载您的 `IMetadataExchange` 终结点时，可以使用该终结点的地址运行 Svcutil.exe：  
@@ -110,7 +110,7 @@ mexClient.SoapCredentials.ServiceCertificate.SetDefaultCertificate(    StoreLoca
     X509FindType.FindBySubjectName, "localhost");  
 ```  
   
- 配置完 `mexClient`，我们可以枚举感兴趣的协定并使用 `MetadataResolver` 获取使用这些协定的终结点的列表：  
+ 配置完 `mexClient`，我们可以枚举感兴趣的协定并使用 `MetadataResolver` 提取使用这些协定的终结点的列表：  
   
 ```  
 // The contract we want to fetch metadata for  
@@ -128,7 +128,7 @@ ServiceEndpointCollection endpoints =    MetadataResolver.Resolve(contracts, mex
 ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Binding, endpoint.Address);  
 ```  
   
- 本示例的关键之处在于演示：如果您要使用 `MetadataResolver`，则必须指定用于元数据交换通信的自定义绑定或行为，您可以使用 `MetadataExchangeClient` 指定这些自定义设置。  
+ 本示例的关键之处在于演示：如果你要使用 `MetadataResolver`，则必须指定用于元数据交换通信的自定义绑定或行为，你可以使用 `MetadataExchangeClient` 指定这些自定义设置。  
   
 #### <a name="to-set-up-and-build-the-sample"></a>设置和生成示例  
   
@@ -142,7 +142,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 2.  运行 \MetadataResolverClient\bin 或 \SvcutilClient\bin 中的客户端应用程序。 客户端活动将显示在客户端控制台应用程序上。  
   
-3.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+3.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 4.  在运行完该示例后运行 Cleanup.bat 移除证书。 其他安全示例使用相同的证书。  
   
@@ -168,7 +168,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 10. 在客户端计算机上，运行 VS 中的 MetadataResolverClient 或 SvcutilClient。  
   
-    1.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+    1.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
@@ -186,4 +186,3 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  
   
-## <a name="see-also"></a>请参阅

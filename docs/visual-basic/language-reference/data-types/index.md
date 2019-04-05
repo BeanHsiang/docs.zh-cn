@@ -37,19 +37,19 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925898"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821967"
 ---
 # <a name="data-type-summary-visual-basic"></a>数据类型摘要 (Visual Basic)
 下表显示了 Visual Basic 数据类型、 其支持的公共语言运行时类型、 他们的名义存储分配和其值的范围。  
   
 |Visual Basic 类型|公共语言运行时类型结构|名义存储分配|取值范围|  
 |-----------------------|--------------------------------------------|--------------------------------|-----------------|  
-|[布尔值](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|取决于实现平台|`True` 或 `False`|  
+|[Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|<xref:System.Boolean>|取决于实现平台|`True` 或 `False`|  
 |[Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte>|1 个字节|0 到 255 （无符号）|  
 |[Char](../../../visual-basic/language-reference/data-types/char-data-type.md) （单个字符）|<xref:System.Char>|2 个字节|0 到 65535 （无符号）|  
 |[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|<xref:System.DateTime>|8 个字节|0:00:00 （午夜） 上 0001 到 9999 年 12 月 31 日晚上 11:59:59 年 1 月 1 日|  
@@ -57,7 +57,7 @@ ms.locfileid: "42925898"
 |[双精度](../../../visual-basic/language-reference/data-types/double-data-type.md)（双精度浮点）|<xref:System.Double>|8 个字节|-1.79769313486231570 e + 308 到-4.94065645841246544 e-324 <sup>†</sup>对于负值;<br /><br /> 4.94065645841246544 e-324 到 1.79769313486231570 e + 308 <sup>†</sup>对于正值|  
 |[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 个字节|-2147483648 到 2147483647 （有符号）|  
 |[长](../../../visual-basic/language-reference/data-types/long-data-type.md)（长整型）|<xref:System.Int64>|8 个字节|-9223372036854775808 到 9,223,372,036,854,775,807 (9.2...E + 18 <sup>†</sup>) （有符号）|  
-|[对象](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> （类）|在 32 位平台上的 4 个字节<br /><br /> 在 64 位平台上的 8 个字节|任何类型可以存储在类型的变量 `Object`|  
+|[Object](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> （类）|在 32 位平台上的 4 个字节<br /><br /> 在 64 位平台上的 8 个字节|任何类型可以存储在类型的变量 `Object`|  
 |[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 个字节|-128 到 127 （有符号）|  
 |[短](../../../visual-basic/language-reference/data-types/short-data-type.md)（短整数）|<xref:System.Int16>|2 个字节|-32,768 到 32,767 （有符号）|  
 |[单个](../../../visual-basic/language-reference/data-types/single-data-type.md)（单精度浮点）|<xref:System.Single>|4 个字节|-3.4028235E + 38 到-1.401298E-45 <sup>†</sup>对于负值;<br /><br /> 1.401298E-45 到 3.4028235E + 38 <sup>†</sup>对于正值|  
@@ -91,10 +91,11 @@ ms.locfileid: "42925898"
 ### <a name="object-overhead"></a>对象的开销  
  `Object`指任何基本或复合数据类型使用 4 个字节，以及数据类型中包含的数据。  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [类型字符](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [类型字符](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

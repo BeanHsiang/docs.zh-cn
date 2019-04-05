@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46ee8c62861a62ac044f295f7da082756d87347b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: de4bf2cf647682062fbacb4484ffae905d1b7995
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447628"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835364"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers 方法
 枚举表示指定类型的成员的 MemberDef 标记。  
@@ -39,9 +39,9 @@ HRESULT EnumMembers (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `phEnum`  
- [在中，out]枚举数指向的指针。  
+ [in、 out]一个指向枚举器。  
   
  `cl`  
  [in]表示要枚举其成员的类型的 TypeDef 标记。  
@@ -53,7 +53,7 @@ HRESULT EnumMembers (
  [in] `rMembers` 数组的最大大小。  
   
  `pcTokens`  
- [out]在中返回的 MemberDef 标记的实际数`rMembers`。  
+ [out]MemberDef 标记中返回的实际数目`rMembers`。  
   
 ## <a name="return-value"></a>返回值  
   
@@ -63,17 +63,19 @@ HRESULT EnumMembers (
 |`S_FALSE`|没有要枚举的 MemberDef 标记。 在这种情况下，`pcTokens`为零。|  
   
 ## <a name="remarks"></a>备注  
- 枚举的成员的类集合时`EnumMembers`返回仅直接在类上定义的成员。 即使此类提供这些继承成员的实现，它不返回此类继承，任何成员。 若要枚举继承的成员，调用方必须显式引导继承链。 请注意，继承链的规则可能会有所不同，具体取决于语言或发出的原始元数据的编译器。  
+ 枚举的成员的类集合时`EnumMembers`仅返回成员 (字段和方法，但**不**属性或事件) 在类中直接定义。 它不返回任何成员的类继承，即使类提供实现这些继承的成员。 若要枚举继承的成员，调用方必须显式遍历继承链。 请注意，继承链的规则可能会有所不同，具体取决于语言或编译器发出的原始元数据。
+ 
+ 属性和事件不会枚举`EnumMembers`。 若要枚举的请使用[EnumProperties](imetadataimport-enumproperties-method.md)或[EnumEvents](imetadataimport-enumevents-method.md)。
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

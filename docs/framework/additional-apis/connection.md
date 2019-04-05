@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 7423136ab8e04c076e3e5e33efdf010f36d02242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed1fce1d16f9ddbe3a3ede91fecb1a3ca6b3d407
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349628"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146532"
 ---
 # <a name="connection-class"></a>连接类
 
-`Connection`类分析服务器响应，队列请求，管道请求。
+`Connection`类分析服务器响应，队列请求，请求管道。
 
 ## <a name="syntax"></a>语法
   
@@ -30,14 +30,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> `Connection`类是内部的不应该在代码中直接使用。
+> `Connection`类内部使用并且不应在代码中直接使用。
 > 
-> Microsoft 不支持在生产应用程序在任何情况下使用此类。
+> 在生产应用程序在任何情况下，Microsoft 不支持此类使用。
 
 ## <a name="requirements"></a>要求
 
-**Namespace:** <xref:System.Net>
+**Namespace**：<xref:System.Net>
 
-**程序集：** 系统 （在 System.dll)
+**程序集：**（在 System.dll) 的系统
 
 **.NET framework 版本：** 自 2.0 之后可用。

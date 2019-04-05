@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d26d4dc046841a891c8a36530bd579d100b8f5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96deee943f6a4c636a52b41c8f4c2fda86c6bd18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416119"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493714"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf 方法
-检查是否`this`内部框架为更接近于叶比指定的 ICorDebugFrame 对象。  
+检查是否`this`内部框架是比指定 ICorDebugFrame 对象更接近于叶。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,35 +34,35 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
                        [out] BOOL * pIsCloser);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pFrameToCompare`  
  [in]指向比较`ICorDebugFrame`对象。  
   
  `pIsCloser`  
- [out]`true`如果`this`内部框架为更接近于叶比指定的帧`pFrameToCompare`; 否则为`false`。  
+ [out]`true`如果`this`内部框架是比指定的帧更接近于叶`pFrameToCompare`; 否则为`false`。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|比较已成功执行。|  
+|S_OK|已成功执行比较。|  
 |E_FAIL|无法执行比较。|  
-|E_INVALIDARG|`pFrameToCompare` 或 `pIsCloser` 为 null。|  
+|E_INVALIDARG|`pFrameToCompare` 或`pIsCloser`为 null。|  
   
 ## <a name="remarks"></a>备注  
- `IsCloserToLeaf` 可以用于实现进行交替使用堆栈上的其他框架的内部帧的策略。  
+ `IsCloserToLeaf` 可以用于实现适用于内部帧与堆栈上的其他框架在交错执行的策略。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugInternalFrame2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugInternalFrame2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -1,15 +1,15 @@
 ---
-title: 传输：UDP
+title: 传输:UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: e3e01634c496a3673b49ae7329e4221e0d568803
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485935"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332814"
 ---
-# <a name="transport-udp"></a>传输：UDP
+# <a name="transport-udp"></a>传输:UDP
 UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Communication Foundation (WCF) 传输。 此示例介绍了使用通道框架并遵循 WCF 最佳做法在 WCF 中，创建自定义传输的推荐的过程。 创建自定义传输的步骤如下：  
   
 1.  决定哪些通道[消息交换模式](#MessageExchangePatterns)（IOutputChannel、 IInputChannel、 IDuplexChannel、 IRequestChannel 或 IReplyChannel） 您的 ChannelFactory 和 ChannelListener 将要支持。 然后确定是否要支持这些接口的会话变体。  
@@ -52,17 +52,17 @@ UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Co
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject 和 WCF 对象生存期  
  WCF 具有一个常见的状态机，用于管理的对象，如生命周期<xref:System.ServiceModel.Channels.IChannel>， <xref:System.ServiceModel.Channels.IChannelFactory>，和<xref:System.ServiceModel.Channels.IChannelListener>用于进行通信。 这些通信对象可以处于五种状态。 这些状态通过 <xref:System.ServiceModel.CommunicationState> 枚举来表示，如下所示：  
   
--   已创建：这是 <xref:System.ServiceModel.ICommunicationObject> 在首次实例化后的状态。 在此状态中不会发生输入/输出 (I/O)。  
+-   创建：这是状态<xref:System.ServiceModel.ICommunicationObject>它首次实例化。 在此状态中不会发生输入/输出 (I/O)。  
   
--   正在打开：当调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 时，对象即转换到此状态。 此时，属性被设置为不可变属性，并且可以开始输入/输出。 此转换只有从“已创建”状态转换才有效。  
+-   正在打开：对象转换到此状态时<xref:System.ServiceModel.ICommunicationObject.Open%2A>调用。 此时，属性被设置为不可变属性，并且可以开始输入/输出。 此转换只有从“已创建”状态转换才有效。  
   
--   已打开：当打开进程完成后，对象即转换到此状态。 此转换只有从“正在打开”状态转换才有效。 此时，对象完全可用于传送。  
+-   打开：对象即转换到时打开进程完成后，此状态。 此转换只有从“正在打开”状态转换才有效。 此时，对象完全可用于传送。  
   
--   正在关闭：当调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A> 以完成正常关闭时，对象即转换到此状态。 此转换只有从“已打开”状态转换才有效。  
+-   关闭：对象转换到此状态时<xref:System.ServiceModel.ICommunicationObject.Close%2A>调用以完成正常关闭。 此转换只有从“已打开”状态转换才有效。  
   
--   已关闭：在“已关闭”状态下，对象无法再使用。 一般情况下，仍然可以访问大多数配置以进行检查，但不能进行通信。 此状态相当于被释放。  
+-   关闭：在已关闭状态对象将不再可用。 一般情况下，仍然可以访问大多数配置以进行检查，但不能进行通信。 此状态相当于被释放。  
   
--   出错：在“出错”状态下，可以访问对象以进行检查，但对象无法再使用。 当发生不可恢复的错误时，对象即转换到此状态。 从这种状态的唯一有效的转换是到`Closed`状态。  
+-   出现故障：在出错状态，对象是可访问权限检查，但无法再使用。 当发生不可恢复的错误时，对象即转换到此状态。 从这种状态的唯一有效的转换是到`Closed`状态。  
   
  每次状态转换都会触发事件。 可以随时调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 方法，它将导致对象立即从当前状态转换到“已关闭”状态。 调用 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 将终止任何未完成的工作。  
   
@@ -84,7 +84,7 @@ UDP 传输示例演示如何实现 UDP 单播和多播作为自定义 Windows Co
  `UdpChannelFactory` 派生自 <xref:System.ServiceModel.Channels.ChannelFactoryBase>。 该示例重写 <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A> 以提供对消息编码器的消息版本的访问。 此示例还重写了 <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A>，因此我们可以在状态机转换时拆开 <xref:System.ServiceModel.Channels.BufferManager> 的实例。  
   
 #### <a name="the-udp-output-channel"></a>UDP 输出通道  
- `UdpOutputChannel` 实现 <xref:System.ServiceModel.Channels.IOutputChannel>。 构造函数对参数进行验证，并基于传入的 <xref:System.Net.EndPoint> 来构造目标 <xref:System.ServiceModel.EndpointAddress> 对象。  
+ `UdpOutputChannel` 实现 <xref:System.ServiceModel.Channels.IOutputChannel>。 构造函数对自变量进行验证，并基于传入的 <xref:System.Net.EndPoint> 来构造目标 <xref:System.ServiceModel.EndpointAddress> 对象。  
   
 ```csharp
 this.socket = new Socket(this.remoteEndPoint.AddressFamily, SocketType.Dgram, ProtocolType.Udp);  
@@ -255,7 +255,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>添加标准绑定  
  绑定元素可以按照以下两种方式使用：  
   
--   通过自定义绑定：自定义绑定允许用户根据任意一组绑定元素创建自己的绑定。  
+-   通过自定义绑定：自定义绑定允许用户创建自己的绑定元素的任意一组所基于的绑定。  
   
 -   通过使用系统提供的、包含我们的绑定元素的绑定。 WCF 提供了几个系统定义的绑定，如`BasicHttpBinding`， `NetTcpBinding`，和`WsHttpBinding`。 这些绑定中的每个绑定与一个准确定义的配置文件相关联。  
   
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP 测试服务和客户端  
- 用于使用此示例传输的测试代码位于 UdpTestService 和 UdpTestClient 目录中。 服务代码包含两个测试 - 一个测试从代码中设置绑定和终结点，另一个测试通过配置完成这些操作。 这两个测试都使用两个终结点。 一个终结点使用`SampleUdpProfileBinding`与[ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)设置为`true`。 另一个终结点使用具有 `UdpTransportBindingElement` 的自定义绑定。 这相当于使用`SampleUdpProfileBinding`与[ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b)设置为`false`。 这两个测试都创建一个服务，为每个绑定添加一个终结点，打开该服务，然后等待用户按 Enter 后再关闭该服务。  
+ 用于使用此示例传输的测试代码位于 UdpTestService 和 UdpTestClient 目录中。 服务代码包含两个测试 - 一个测试从代码中设置绑定和终结点，另一个测试通过配置完成这些操作。 这两个测试都使用两个终结点。 一个终结点使用`SampleUdpProfileBinding`与[ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))设置为`true`。 另一个终结点使用具有 `UdpTransportBindingElement` 的自定义绑定。 这相当于使用`SampleUdpProfileBinding`与[ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))设置为`false`。 这两个测试都创建一个服务，为每个绑定添加一个终结点，打开该服务，然后等待用户按 Enter 后再关闭该服务。  
   
  当您启动服务测试应用程序时，应看到如下输出。  
   
@@ -404,7 +404,7 @@ Service is started from code...
 Press <ENTER> to terminate the service and start service from config...  
 ```  
   
- 然后您可以根据发布的终结点运行测试客户端应用程序。 客户端测试应用程序为每个终结点创建一个客户端，并向每个终结点发送五条消息。 下面是客户端输出。  
+ 然后你可以根据发布的终结点运行测试客户端应用程序。 客户端测试应用程序为每个终结点创建一个客户端，并向每个终结点发送五条消息。 下面是客户端输出。  
   
 ```console
 Testing Udp From Imported Files Generated By SvcUtil.  

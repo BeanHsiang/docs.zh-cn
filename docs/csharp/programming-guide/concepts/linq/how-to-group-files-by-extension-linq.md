@@ -2,12 +2,12 @@
 title: 如何：按扩展名对文件进行分组 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: 320d89c78a317f49d98d4dc139aaa3df05fcd6f3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bad4df9009a40cede04438063b2d30916d0e68b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575143"
 ---
 # <a name="how-to-group-files-by-extension-linq-c"></a>如何：按扩展名对文件进行分组 (LINQ) (C#)
 本示例演示如何使用 LINQ 来执行高级分组和对文件或文件夹列表执行排序操作。 它还演示如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法在控制台窗口中对输出进行分页。  
@@ -109,5 +109,5 @@ class GroupByExtension
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

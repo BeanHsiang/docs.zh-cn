@@ -2,12 +2,12 @@
 title: Net.TCP 端口共享示例
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: db4cd5be73e3c170f2feaa1e76f275eb7d9cd226
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2ff63de62ad11ab89721cbf87f1edaca8c54a027
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089732"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830170"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP 端口共享示例
 TCP/IP 协议使用一个称为端口的 16 位数字来区分与在同一台计算机上运行的多个网络应用程序的连接。 如果某个应用程序正在侦听一个端口，则此端口的所有 TCP 通信将转至该应用程序。 其他应用程序无法同时侦听此端口。  
@@ -25,7 +25,7 @@ TCP/IP 协议使用一个称为端口的 16 位数字来区分与在同一台计
   
  NetTcp 端口共享是一项 Windows Communication Foundation (WCF) 功能，同样允许多个网络应用程序共享一个端口。 NetTcp Port Sharing Service 接受使用 net.tcp 协议的连接，并基于消息的目标地址来转发消息。  
   
- 默认情况下不会启用 NetTcp Port Sharing Service。 运行该示例之前，必须手动启用此服务。 有关详细信息，请参阅[如何： 启用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。 如果禁用了此服务，则在启动服务器应用程序时将引发异常。  
+ 默认情况下不会启用 NetTcp Port Sharing Service。 运行该示例之前，必须手动启用此服务。 有关详细信息，请参阅[如何：启用 Net.TCP 端口共享服务](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。 如果禁用了此服务，则在启动服务器应用程序时将引发异常。  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
@@ -44,8 +44,7 @@ binding.PortSharingEnabled = true;
 // Start a service on a fixed TCP port  
 ServiceHost host = new ServiceHost(typeof(CalculatorService));  
 ushort salt = (ushort)new Random().Next();  
-string address =  
-   String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
+string address = $"net.tcp://localhost:9000/calculator/{salt}";
 host.AddServiceEndpoint(typeof(ICalculator), binding, address);  
 host.Open();  
 ```
@@ -66,7 +65,7 @@ class client
    {  
       Console.Write("Enter the service number to test: ");  
       ushort salt = ushort.Parse(Console.ReadLine());  
-      string address = String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
+      string address = $"net.tcp://localhost:9000/calculator/{salt}";
       ChannelFactory<ICalculator> factory = new ChannelFactory<ICalculator>(new NetTcpBinding());  
       ICalculator proxy = factory.CreateChannel(new EndpointAddress(address));  
   
@@ -140,4 +139,3 @@ Press <ENTER> to terminate client.
   
 5.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 前面的“运行示例”部分中包含有关运行该示例的特定详细信息。  
   
-## <a name="see-also"></a>请参阅

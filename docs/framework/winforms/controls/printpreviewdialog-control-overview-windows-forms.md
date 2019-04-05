@@ -8,51 +8,51 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0946220017fb78775f045bb225d84ea95aecd06b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538332"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711273"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog 控件概述 （Windows 窗体）
-Windows 窗体<xref:System.Windows.Forms.PrintPreviewDialog>控件是一个预配置的对话框，用于显示如何[PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)打印时将显示。 中基于 Windows 的应用程序而不是配置自己对话框的简单解决方案，使用它。 该控件包含用于打印、放大、显示一页或多页以及关闭对话框的按钮。  
+Windows 窗体<xref:System.Windows.Forms.PrintPreviewDialog>控件是一个预配置的对话框，用于显示如何[PrintDocument](printdocument-component-windows-forms.md)打印时的显示。 为简单的解决方案，而不是配置你自己的对话框在基于 Windows 的应用程序中使用它。 该控件包含用于打印、放大、显示一页或多页以及关闭对话框的按钮。  
   
 ## <a name="key-properties-and-methods"></a>键属性和方法  
- 控件的键属性是<xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>，这会设置要预览的文档。 文档必须是<xref:System.Drawing.Printing.PrintDocument>对象。 若要显示对话框中，您必须调用其<xref:System.Windows.Forms.Form.ShowDialog%2A>方法。 抗锯齿可以使文本显示生成更平滑的但它还可显示更慢;若要使用它，将设置<xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A>属性`true`。  
+ 控件的关键属性是<xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>，用于设置要预览的文档。 文档必须是<xref:System.Drawing.Printing.PrintDocument>对象。 为了显示对话框中，您必须调用其<xref:System.Windows.Forms.Form.ShowDialog%2A>方法。 抗锯齿功能可以使文本显示更加顺利，但它还可以显示更慢;若要使用它，将设置<xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A>属性设置为`true`。  
   
- 某些属性均可通过<xref:System.Windows.Forms.PrintPreviewControl>，<xref:System.Windows.Forms.PrintPreviewDialog>包含。 (无需添加此<xref:System.Windows.Forms.PrintPreviewControl>到窗体; 它会自动包含在<xref:System.Windows.Forms.PrintPreviewDialog>向窗体添加对话框时。)可通过属性的示例<xref:System.Windows.Forms.PrintPreviewControl>是<xref:System.Windows.Forms.PrintPreviewControl.Columns%2A>和<xref:System.Windows.Forms.PrintPreviewControl.Rows%2A>属性，这些扩展名决定了水平和垂直显示在控件上的页面数。 你可以访问<xref:System.Windows.Forms.PrintPreviewControl.Columns%2A>属性作为`PrintPreviewDialog1.PrintPreviewControl.Columns`在 Visual Basic 中，`printPreviewDialog1.PrintPreviewControl.Columns`在 Visual C# 中，或`printPreviewDialog1->PrintPreviewControl->Columns`中[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]。  
+ 某些属性是可通过<xref:System.Windows.Forms.PrintPreviewControl>的<xref:System.Windows.Forms.PrintPreviewDialog>包含。 (无需添加这<xref:System.Windows.Forms.PrintPreviewControl>向窗体; 它会自动包含在<xref:System.Windows.Forms.PrintPreviewDialog>向窗体添加对话框时。)可通过属性的示例<xref:System.Windows.Forms.PrintPreviewControl>都<xref:System.Windows.Forms.PrintPreviewControl.Columns%2A>和<xref:System.Windows.Forms.PrintPreviewControl.Rows%2A>属性，确定在控件上显示水平和垂直方向的页面数。 您可以访问<xref:System.Windows.Forms.PrintPreviewControl.Columns%2A>属性设置为`PrintPreviewDialog1.PrintPreviewControl.Columns`在 Visual Basic`printPreviewDialog1.PrintPreviewControl.Columns`视觉对象中C#，或`printPreviewDialog1->PrintPreviewControl->Columns`中[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]。  
   
 ## <a name="printpreviewdialog-performance"></a>PrintPreviewDialog 性能
 
-在以下情况下<xref:System.Windows.Forms.PrintPreviewDialog>控件非常缓慢初始化：
+在以下情况下<xref:System.Windows.Forms.PrintPreviewDialog>控件初始化非常缓慢：
 
 - 使用网络打印机。
-- 修改此打印机，例如双工设置的用户首选项。
+- 修改此打印机，如双面打印设置的用户首选项。
   
-对于.NET Framework 4.5.2 上运行的应用，你可以添加到以下项\<appSettings > 你的配置文件以改进性能部分<xref:System.Windows.Forms.PrintPreviewDialog>控制初始化：
+对于.NET Framework 4.5.2 上运行的应用程序，可以添加的以下关键\<appSettings > 配置文件来提高的性能的部分<xref:System.Windows.Forms.PrintPreviewDialog>控制初始化：
 
 ```xml
 <appSettings>
    <add key="EnablePrintPreviewOptimization" value="true" />
 </appSettings>
 ```
-如果`EnablePrintPreviewOptimization`键设置为任何其他值，或如果该键不存在，则不会应用优化。
+如果`EnablePrintPreviewOptimization`键设置为任何其他值，或如果密钥不存在，则不会应用优化。
 
-对于在.NET Framework 4.6 或更高版本上运行的应用程序，你可以添加以下切换到[ \<AppContextSwitchOverrides >](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)中的元素[\<运行时 >](../../configure-apps/file-schema/runtime/index.md)你的应用配置文件的部分内容：
+对于.NET Framework 4.6 或更高版本上运行的应用程序，您可以添加到以下开关[ \<AppContextSwitchOverrides >](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)中的元素[\<运行时 >](../../configure-apps/file-schema/runtime/index.md)应用程序配置文件的部分：
 
 ```xml
 <runtime >
-   <!-- AppContextSwitchOverrides values are in the form of 'key1=true|false;key2=true|false -->
+   <!-- AppContextSwitchOverrides values are in the form of 'key1=true|false;key2=true|false -->
    <AppContextSwitchOverrides value = "Switch.System.Drawing.Printing.OptimizePrintPreview=true" />
 </runtime >
 ``` 
 如果交换机不存在，或者设置为任何其他值，则不会应用优化。 
 
-如果你使用<xref:System.Drawing.Printing.PrintDocument.QueryPageSettings>要修改的打印机设置的性能事件<xref:System.Windows.Forms.PrintPreviewDialog>控件不会提高，即使设置优化配置开关。  
+如果您使用<xref:System.Drawing.Printing.PrintDocument.QueryPageSettings>要修改的打印机设置的性能事件<xref:System.Windows.Forms.PrintPreviewDialog>控件不会提高，即使设置优化配置开关。  
 
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.PrintPreviewDialog>  
- [PrintPreviewControl 控件概述](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)  
- [PrintPreviewDialog 控件](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- [对话框控件和组件](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.PrintPreviewDialog>
+- [PrintPreviewControl 控件概述](printpreviewcontrol-control-overview-windows-forms.md)
+- [PrintPreviewDialog 控件](printpreviewdialog-control-windows-forms.md)
+- [对话框控件和组件](dialog-box-controls-and-components-windows-forms.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 028f8b978a7809fa9ae4710ab85d7dc84e7b04fc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c231c946897772a6f02cce6eb2d3c4936b72a35e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45744003"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716034"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>启动时创建线程并传递数据
 
@@ -61,9 +61,9 @@ ms.locfileid: "45744003"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadStart>  
-- <xref:System.Threading.ParameterizedThreadStart>  
-- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>  
-- [线程处理](index.md)  
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadStart>
+- <xref:System.Threading.ParameterizedThreadStart>
+- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>
+- [线程处理](index.md)
 - [使用线程和线程处理](using-threads-and-threading.md)

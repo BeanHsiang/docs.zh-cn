@@ -2,12 +2,12 @@
 title: 后取消剩余异步任务之一完成 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 2f784449f6a70bccb386cc268e7c33cefe8f9a14
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0edcc969caaeae46240f048e76fbe153041873e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645803"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>后取消剩余异步任务之一完成 (Visual Basic)
 通过结合使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 方法和 <xref:System.Threading.CancellationToken>，可在一个任务完成时取消所有剩余任务。 `WhenAny` 方法采用任务集合中的一个参数。 该方法启动所有任务，并返回单个任务。 当集合中任意任务完成时，完成单个任务。  
@@ -18,13 +18,13 @@ ms.locfileid: "50191202"
 >  若要运行该示例，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
   
 ## <a name="downloading-the-example"></a>下载示例  
- 若要下载完整的 Windows Presentation Foundation (WPF) 项目，请参阅 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序），然后遵循以下步骤。  
+ 您可以下载完整的 Windows Presentation Foundation (WPF) 项目，从[异步示例：微调优化应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)然后按照这些步骤进行操作。  
   
 1.  解压缩下载的文件，然后启动 Visual Studio。  
   
 2.  在菜单栏上，依次选择 **“文件”**、 **“打开”** 和 **“项目/解决方案”**。  
   
-3.  在中**打开项目**对话框中，打开包含您解压缩的示例代码的文件夹，然后打开 AsyncFineTuningVB 的解决方案 (.sln) 文件。  
+3.  在“打开项目”对话框中，打开保存已解压的示例代码的文件夹，然后打开 AsyncFineTuningVB 的解决方案 (.sln) 文件。  
   
 4.  在“解决方案资源管理器”中，打开“CancelAfterOneTask”项目的快捷菜单，然后选择“设为启动项目”。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "50191202"
   
 6.  运行程序若干次，以验证首先完成的下载是不同的。  
   
- 如果不想下载项目，可以查看本主题末尾处的 MainWindow.xaml.vb 文件。  
+ 如果不想下载项目，可在本主题末尾处查看 MainWindow.xaml.vb 文件。  
   
 ## <a name="building-the-example"></a>生成示例  
  本主题中的示例将添加到项目中开发[取消一个异步任务或任务列表](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)取消的任务的列表。 该示例使用相同的 UI，但未显示使用“取消”按钮。  
@@ -107,7 +107,7 @@ resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:
   
  请注意，必须为 <xref:System.Net.Http> 添加引用。  
   
- 可以从 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）下载这些项目。  
+ 您可以下载从项目[异步示例：你的应用程序进行微调](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -234,7 +234,7 @@ End Class
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
-- [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
-- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)（异步示例：微调应用程序）
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>
+- [微调异步应用程序 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [异步示例：微调应用程序](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

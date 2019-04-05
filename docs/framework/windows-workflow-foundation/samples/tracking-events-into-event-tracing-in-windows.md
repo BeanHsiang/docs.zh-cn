@@ -2,12 +2,12 @@
 title: 在 Windows 事件跟踪中跟踪事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 70c75be09528b31572bdf0dc322af5bcd7e3ca5d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592843"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件跟踪中跟踪事件
 此示例演示如何启用 Windows Workflow Foundation (WF) 工作流服务跟踪和发出跟踪事件中事件跟踪 Windows (ETW)。 为了将工作流跟踪记录发到 ETW 中，该示例使用 ETW 跟踪参与者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。
@@ -149,5 +149,5 @@ ms.locfileid: "48837279"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
-## <a name="see-also"></a>请参阅  
- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>请参阅
+- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

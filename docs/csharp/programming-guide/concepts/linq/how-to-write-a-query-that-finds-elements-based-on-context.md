@@ -2,12 +2,12 @@
 title: 如何：编写基于上下文查找元素的查询 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 93bfd77ce6bb7be1d305f20f56da67e8fb9c22f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45987950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667945"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>如何：编写基于上下文查找元素的查询 (C#)
 有时，您可能必须编写基于元素上下文选择元素的查询。 您可能需要基于前面或后面的同级元素进行筛选。 您可能需要基于子元素或上级元素进行筛选。  
@@ -100,8 +100,8 @@ id = 6
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.Linq.XElement.Parse%2A>  
-- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
-- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
-- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
+- <xref:System.Xml.Linq.XElement.Parse%2A>
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
+- <xref:System.Linq.Enumerable.FirstOrDefault%2A>
 - [基本查询 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

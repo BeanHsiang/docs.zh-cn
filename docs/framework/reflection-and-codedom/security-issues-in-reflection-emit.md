@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57db77b64ddcbe282fed035b52bb122901383ca4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40db78b8b09b90ab5e11dcc61dc042af1981e827
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701399"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反射发出中的安全问题
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供了三种发出 Microsoft 中间语言 (MSIL) 的方式，每种方式都有其自身的安全问题：  
@@ -68,7 +68,7 @@ ms.locfileid: "33398867"
 > [!NOTE]
 >  从概念上来说，在方法的构造过程中执行请求。 即，可在发出各 MSIL 指令时执行请求。 在当前实现中，当调用 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> 方法，或调用实时 (JIT) 编译器（如果在没有调用 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 的情况下调用此方法）时将执行所有请求。  
   
- 如果应用程序域允许此操作，则匿名托管的动态方法可跳过 JIT 可见性检查，但受到以下限制：匿名托管的动态方法访问的非公共类型和成员必须位于其授予集等于发出调用堆栈的授予集（或等于发出调用堆栈的授予集的子集）的程序集中。 如果应用程序域授予带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>，则启用此跳过 JIT 可见性检查的受限能力。  
+ 如果应用程序域允许此操作，匿名托管动态方法可以跳过 JIT 可见性检查，但受到以下限制：匿名托管动态方法访问的非公共类型和成员必须位于其授予集等于发出调用堆栈的授予集或其子集中。 如果应用程序域授予带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>，则启用此跳过 JIT 可见性检查的受限能力。  
   
 -   如果你的方法仅使用公共类型和成员，则在构造过程中不需要任何权限。  
   
@@ -153,6 +153,6 @@ ms.locfileid: "33398867"
 ### <a name="obtaining-information-on-types-and-members"></a>获取有关类型和成员的信息  
  从 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，获取有关非公共类型和成员信息不再需要任何权限。 使用反射可获取发出动态方法所需的信息。 例如，使用 <xref:System.Reflection.MethodInfo> 对象发出方法调用。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的早期版本需要带有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。 有关详细信息，请参阅[反射的安全注意事项](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)。  
   
-## <a name="see-also"></a>请参阅  
- [反射的安全注意事项](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)  
- [发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
+## <a name="see-also"></a>请参阅
+- [反射的安全注意事项](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+- [发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

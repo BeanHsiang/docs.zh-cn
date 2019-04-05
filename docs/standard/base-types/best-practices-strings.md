@@ -1,5 +1,6 @@
 ---
 title: 有关使用 .NET 中字符串的最佳做法
+description: 了解如何在 .NET 应用程序中有效地使用字符串。
 ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080333"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150966"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>有关使用 .NET 中字符串的最佳做法
 <a name="top"></a> .NET 为开发本地化和全球化应用提供广泛支持，并方便用户在执行排序和显示字符串等常见操作时，轻松应用当前区域性或特定区域性的约定。 但排序或比较字符串并不总是区分区域性的操作。 例如，对于应用程序内部使用的字符串，通常应该跨所有区域性以相同的方式对其进行处理。 如果将 XML 标记、HTML 标记、用户名、文件路径和系统对象名称等与区域性无关的字符串数据解释为区分区域性，则应用程序代码会遭遇细微的错误、不佳的性能，在某些情况下，还会遭遇安全性问题。  
@@ -85,7 +87,7 @@ ms.locfileid: "47080333"
 ## <a name="specifying-string-comparisons-explicitly"></a>显式指定字符串比较  
  重载 .NET 中大部分字符串操作方法。 通常，一个或多个重载会接受默认设置，然而其他重载则不接受默认设置，而是定义比较或操作字符串的精确方式。 大多数不依赖于默认设置的方法都包括 <xref:System.StringComparison>类型的参数，该参数是按区域性和大小写为字符串比较显式指定规则的枚举。 下表描述 <xref:System.StringComparison> 枚举成员。  
   
-|StringComparison 成员|描述|  
+|StringComparison 成员|说明|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|使用当前区域性执行区分大小写的比较。|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|使用当前区域性执行不区分大小写的比较。|  
@@ -146,13 +148,13 @@ ms.locfileid: "47080333"
   
 -   <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 重载。  
   
--   默认 <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> 方法和需要使用 `null`<xref:System.Globalization.CultureInfo> 参数的 <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法。  
+-   默认 <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> 方法和具有 <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> null `null`<xref:System.Globalization.CultureInfo> 重载。  
   
--   默认 <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> 方法和需要使用 `null`<xref:System.Globalization.CultureInfo> 参数的 <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法。  
+-   默认 <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> 方法和具有 <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> null `null`<xref:System.Globalization.CultureInfo> 重载。  
   
--   接受 <xref:System.String> 作为搜索参数且不包含 <xref:System.StringComparison> 参数的 <xref:System.String.IndexOf%2A?displayProperty=nameWithType> 重载。  
+-   接受<xref:System.String.IndexOf%2A?displayProperty=nameWithType> 作为搜索参数且不包含 <xref:System.String> 参数的 <xref:System.StringComparison> 重载。  
   
--   接受 <xref:System.String> 作为搜索参数且不包含 <xref:System.StringComparison> 参数的 <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> 重载。  
+-   接受<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> 作为搜索参数且不包含 <xref:System.String> 参数的 <xref:System.StringComparison> 重载。  
   
  总之，我们建议调用具有 <xref:System.StringComparison> 参数的重载，以便明确方法调用的意图。  
   
@@ -242,7 +244,7 @@ ms.locfileid: "47080333"
 |----------|--------------|-----------------------------------------------------|  
 |区分大小写的内部标识符。<br /><br /> 区分大小写的标准标识符（例如 XML 和 HTTP）。<br /><br /> 区分大小写的安全相关设置。|字节完全匹配的非语言标识符。|<xref:System.StringComparison.Ordinal>|  
 |不区分大小写的内部标识符。<br /><br /> 不区分大小写的标准标识符（例如 XML 和 HTTP）。<br /><br /> 文件路径。<br /><br /> 注册表项和值。<br /><br /> 环境变量。<br /><br /> 资源标识符（例如，句柄名称）。<br /><br /> 不区分大小写的安全相关设置。|无关大小写的非语言标识符；尤其是存储在大多数 Windows 系统服务中的数据。|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|某些保留的、与语言相关的数据。<br /><br /> 需要固定排序顺序的语言数据的显示。|仍与语言相关的区域性不明确数据。|<xref:System.StringComparison.InvariantCulture><br /><br /> 或<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|某些保留的、与语言相关的数据。<br /><br /> 需要固定排序顺序的语言数据的显示。|仍与语言相关的区域性不明确数据。|<xref:System.StringComparison.InvariantCulture><br /><br /> - 或 -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
 |向用户显示的数据。<br /><br /> 大多数用户输入。|需要本地语言自定义的数据。|<xref:System.StringComparison.CurrentCulture><br /><br /> 或<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [返回页首](#top)  
@@ -252,14 +254,14 @@ ms.locfileid: "47080333"
  以下各节介绍最常用于执行字符串比较的方法。  
   
 ### <a name="stringcompare"></a>String.Compare  
- 默认解释：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 默认解释： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  作为字符串解释最核心的操作，应根据当前区域性检查这些方法调用的所有实例来确定是否应该从区域性（符号）解释或分离字符串。 通常情况下，采用后者，并且应改用 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 比较。  
   
  <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> 类也包括利用 <xref:System.Globalization.CompareOptions> 标记枚举的方式提供大量匹配选项（序号、忽略空白、忽略假名类型等）的 <xref:System.Globalization.CompareInfo.Compare%2A> 方法。  
   
 ### <a name="stringcompareto"></a>String.CompareTo  
- 默认解释：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 默认解释： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  此方法当前不提供指定 <xref:System.StringComparison> 类型的重载。 通常可以将此方法转换为建议的 <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 形式。  
   
@@ -269,12 +271,12 @@ ms.locfileid: "47080333"
  [!code-vb[Conceptual.Strings.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/api1.vb#6)]  
   
 ### <a name="stringequals"></a>String.Equals  
- 默认解释：<xref:System.StringComparison.Ordinal?displayProperty=nameWithType>。  
+ 默认解释： <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>。  
   
  <xref:System.String> 类可通过调用静态或实例 <xref:System.String.Equals%2A> 方法重载或使用静态相等运算符，测试是否相等。 默认情况下，重载和运算符使用序号比较。 但是，我们仍然建议调用显式指定 <xref:System.StringComparison> 类型的重载，即使想要执行序号比较；这将更轻松地搜索特定字符串解释的代码。  
   
 ### <a name="stringtoupper-and-stringtolower"></a>String.ToUpper 和 String.ToLower  
- 默认解释：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 默认解释： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  应谨慎使用这些方法，因为将字符串强制为大写或小写经常用作在不考虑大小写的情况下比较字符串的较小规范化。 如果是这样，请考虑使用不区分大小写的比较。  
   
@@ -283,7 +285,7 @@ ms.locfileid: "47080333"
  通过向方法传递表示区域性的 <xref:System.Globalization.CultureInfo> 对象，重载也已可用于转换该特性区域性中的大写和小写字母。  
   
 ### <a name="chartoupper-and-chartolower"></a>Char.ToUpper 和 Char.ToLower  
- 默认解释：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 默认解释： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  这些方法的工作原理类似于上一节中所述的 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法。  
   
@@ -293,7 +295,7 @@ ms.locfileid: "47080333"
  默认情况下，这两种方法执行区分区域性的比较。  
   
 ### <a name="stringindexof-and-stringlastindexof"></a>String.IndexOf 和 String.LastIndexOf  
- 默认解释：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 默认解释： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  这些方法的默认重载如何执行比较方面缺乏一致性。 包含 <xref:System.Char> 参数的所有 <xref:System.String.IndexOf%2A?displayProperty=nameWithType> 和 <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> 方法都执行序号比较，但是包含 <xref:System.String> 参数的默认 <xref:System.String.IndexOf%2A?displayProperty=nameWithType> 和 <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> 方法都执行区分区域性的比较。  
   
@@ -318,7 +320,7 @@ ms.locfileid: "47080333"
 -   不区分大小写的序号比较。 此 <xref:System.StringComparer> 对象由 <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> 属性返回。  
   
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort 和 Array.BinarySearch  
- 默认解释：<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
+ 默认解释： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。  
   
  当在集合中存储任何数据，或将持久数据从文件或数据库中读取到集合中时，切换当前区域性可能会使集合中的固定条件无效。 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 方法假定已对数组中要搜索的元素排序。 若要对数组中的任何字符串元素进行排序，<xref:System.Array.Sort%2A?displayProperty=nameWithType> 方法会调用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法以对各个元素进行排序。 如果对数组进行排序和搜索其内容的时间范围内区域性发生变化，那么使用区分区域性的比较器会很危险。 例如在下面的代码中，是在由 `Thread.CurrentThread.CurrentCulture` 属性。 如果在调用 `StoreNames` 和 `DoesNameExist`之间更改了区域性（尤其是数组内容保存在两个方法调用之间的某个位置），那么二进制搜索可能会失败。  
   
@@ -362,7 +364,7 @@ ms.locfileid: "47080333"
  [!code-csharp[Conceptual.Strings.BestPractices#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
  [!code-vb[Conceptual.Strings.BestPractices#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]  
   
- 然而，如果您在 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 调用中用 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 替换 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 属性，则持久化的日期时间数据会成功恢复，如下方输出所示。  
+ 然而，如果您在 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 调用中用 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 替换 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>属性，则持久化的日期时间数据会成功恢复，如下方输出所示。  
   
 ```  
 06.05.1758 21:26  

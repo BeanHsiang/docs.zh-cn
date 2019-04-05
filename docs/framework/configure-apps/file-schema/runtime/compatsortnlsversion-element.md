@@ -1,5 +1,5 @@
 ---
-title: '&lt;CompatSortNLSVersion&gt;元素'
+title: <CompatSortNLSVersion> 元素
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e78106c4df2e1c414d00f18871566dd5906c54f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f670bd2030e914cc4431c3325215428570ad46cf
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745703"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256600"
 ---
-# <a name="ltcompatsortnlsversiongt-element"></a>&lt;CompatSortNLSVersion&gt;元素
+# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 元素
 指定在执行字符串比较时，运行时应使用旧排序顺序。  
   
  \<configuration>  
@@ -57,7 +57,7 @@ ms.locfileid: "32745703"
 |`runtime`|包含有关运行时初始化选项的信息。|  
   
 ## <a name="remarks"></a>备注  
- 由于由执行字符串比较、 排序和大小写操作<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>类[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]如符合 Unicode 5.1 标准，字符串比较方法的结果<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>可能不同于.NET framework 的早期版本。 如果你的应用程序依赖于旧行为，则可以通过在你的应用程序配置文件中包括 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 元素来还原 `<CompatSortNLSVersion>` 及早期版本中使用的字串比较和排序规则。  
+ 因为由执行字符串比较、 排序和大小写的操作<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>类中[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]如符合 Unicode 5.1 标准，字符串比较方法的结果<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>和<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>可能不同于.NET framework 的早期版本。 如果你的应用程序依赖于旧行为，则可以通过在你的应用程序配置文件中包括 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 元素来还原 `<CompatSortNLSVersion>` 及早期版本中使用的字串比较和排序规则。  
   
 > [!IMPORTANT]
 >  还原旧的字符串比较和排序规则还要求 sort00001000.dll 动态链接库在本地系统上可用。  
@@ -93,6 +93,6 @@ sta equals a in the sort order.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

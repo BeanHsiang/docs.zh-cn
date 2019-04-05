@@ -1,30 +1,29 @@
 ---
-title: '&lt;netTcpBinding&gt; 的 &lt;message&gt; 元素'
+title: <message> 元素 <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 21c14c64648540eb7b6ecf00b0a37e6fc2800031
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 09ff567e73791151350288f6e5ddb5f9aff36e80
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839027"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276921"
 ---
-# <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;message&gt; 元素
+# <a name="message-element-of-nettcpbinding"></a>\<消息 > 元素的\<netTcpBinding >
 定义与配置的终结点的消息级安全性要求的类型[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<netTcpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
 \<message>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<message   
-      algorithmSuite=System.Servicemodel.Security.SecurityAlgorithmsuite  
-    clientCredentialType="None/Windows/UserName/Certificate/IssuedToken"/>  
+<message algorithmSuite="System.Servicemodel.Security.SecurityAlgorithmsuite"
+         clientCredentialType="None/Windows/UserName/Certificate/IssuedToken" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -80,13 +79,13 @@ ms.locfileid: "48839027"
 ## <a name="remarks"></a>备注  
  消息使用消息级安全性实现 SOAP 消息的完整性和保密性，还用于通信对等方的相互身份验证。 如果在绑定上选择此安全模式，则使用消息安全性绑定元素配置信道堆栈，并且 SOAP 消息可按照 WS-Security* 标准进行保护。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.MessageSecurityOverTcp>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.NetTcpSecurity.Message%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.MessageSecurityOverTcp>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.NetTcpSecurity.Message%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: c235381af36fd6c99d10f27a8a543f836d7af108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410506"
 ---
 # <a name="expander"></a>Expander
-<xref:System.Windows.Controls.Expander>允许用户查看标头并展开该标头，以查看更多详细信息，或折叠到标头部分。  
+<xref:System.Windows.Controls.Expander>允许用户查看标头和展开该标头以查看更多详细信息，或若要折叠到一个标头部分。  
   
- 下图提供其展开位置在此控件的一个示例。  
+ 下图提供了此控件在其扩展的位置的一个示例。  
   
- ![Expander 示例](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")  
-Expander 控件  
+ ![Expander 示例](./media/expander/expander-control-example.jpg)
   
 ## <a name="in-this-section"></a>本节内容  
- [扩展器概述](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+ [扩展器概述](expander-overview.md)  
+ [帮助主题](expander-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Expander>  

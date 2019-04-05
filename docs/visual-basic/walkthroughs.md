@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086758"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739457"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 语言演练
 演练提供有关常见方案的分步说明，这使它们成为了解产品或特定功能部分的良好开端。  
@@ -47,9 +47,6 @@ ms.locfileid: "44086758"
  [使用 COM 对象实现继承](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  演示如何使用 Visual Basic 6.0 创建包含类的 COM 对象，然后将其用作 Visual Basic 中的基类。  
   
- [多线程处理](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
- 演示如何创建在文本文件中搜索单词出现次数的多线程应用程序。  
-  
  [确定 My.Application.Log 写入信息的位置](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  介绍默认 `My.Application.Log` 设置以及如何确定应用程序的设置。  
   
@@ -80,5 +77,5 @@ ms.locfileid: "44086758"
  [在 Visual Basic 中保持对象](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  演示如何创建简单的对象并将其数据保存到文件中。  
   
- [带有“使用时生成”功能的测试先行支持](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [演练：带有“使用时生成”功能的测试先行支持](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  演示执行测试先行开发的方式，即首先编写单元测试，然后编写使测试成功的源代码。

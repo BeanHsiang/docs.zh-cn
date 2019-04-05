@@ -2,12 +2,12 @@
 title: 查询示例
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211861"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093757"
 ---
 # <a name="query-examples"></a>查询示例
 本部分提供了典型的 Visual Basic 和 C# 示例[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查询。 在示例部分中，使用 Visual Studio 的开发人员可以提供的示例解决方案中找到更多示例。 有关详细信息，请参阅[示例](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)。  
@@ -65,8 +65,11 @@ ms.locfileid: "44211861"
  提供了示例的组合`select`与其他功能 (例如，*匿名类型*) 构建查询投影。  
   
 ## <a name="related-sections"></a>相关章节  
- [标准查询运算符概述](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- 解释标准查询运算符的概念。  
+ [标准查询运算符概述 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ 介绍了使用标准查询运算符的概念， C#。  
+  
+ [标准查询运算符概述 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ 介绍了使用 Visual Basic 的标准查询运算符的概念。  
   
  [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  解释 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何使用适用于查询的概念。  

@@ -2,12 +2,12 @@
 title: SymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: b2e182b6-c041-4d80-a926-6058068d9f79
-ms.openlocfilehash: 618899c80d1b22aaabc3c13fe1079137eaf10a93
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7b979a6872da15c4130e580a3f7327802f42db18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701386"
 ---
 # <a name="symmetricsecuritybindingelement"></a>SymmetricSecurityBindingElement
 SymmetricSecurityBindingElement  
@@ -25,7 +25,7 @@ class SymmetricSecurityBindingElement : SecurityBindingElement
 ## <a name="methods"></a>方法  
  SymmetricSecurityBindingElement 类不定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  SymmetricSecurityBindingElement 类具有下列属性：  
   
 ### <a name="messageprotectionorder"></a>MessageProtectionOrder  
@@ -48,5 +48,5 @@ class SymmetricSecurityBindingElement : SecurityBindingElement
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>

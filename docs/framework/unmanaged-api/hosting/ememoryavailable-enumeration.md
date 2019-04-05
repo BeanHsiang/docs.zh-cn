@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 139cf540617e278eeaae8a2a5acf10dd797d5d10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 55463985a7ac93bf0ec3cda92f91f8a326f92406
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429881"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410558"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable 枚举
-包含表示在计算机上的可用物理内存量的值。 这些值以逻辑方式映射的事件的内存从返回的上限和下限`CreateMemoryResourceNotification`Win32 API 中的函数。  
+包含指示计算机上的可用物理内存量的值。 这些值以逻辑方式映射到事件的内存从返回的上限和下限`CreateMemoryResourceNotification`Windows API 中的函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,21 +40,21 @@ typedef enum {
   
 |成员|描述|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|很多物理内存才可用。|  
+|`eMemoryAvailableHigh`|提供足够的物理内存。|  
 |`eMemoryAvailableLow`|很少的物理内存不可用。|  
-|`eMemoryAvailableNeutral`|可用的物理内存为中性。|  
+|`eMemoryAvailableNeutral`|可用物理内存为中性。|  
   
 ## <a name="remarks"></a>备注  
- 此值由传递到公共语言运行时 (CLR) 由主机调用[iclrmemorynotificationcallback:: Onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)方法。  
+ 此值传递由公共语言运行时 (CLR) 由宿主通过调用[iclrmemorynotificationcallback:: Onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

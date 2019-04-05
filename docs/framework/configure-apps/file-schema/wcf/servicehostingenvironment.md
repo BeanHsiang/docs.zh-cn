@@ -1,36 +1,38 @@
 ---
-title: '&lt;serviceHostingEnvironment&gt;'
+title: <serviceHostingEnvironment>
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 1d9edec2c5bbddefe575952d591416353d603d33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09a796a78cf37b464f5f7c359822d9d0c5001787
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354315"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362404"
 ---
-# <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
+# <a name="servicehostingenvironment"></a>\<serviceHostingEnvironment>
 此元素定义服务主机环境要为特定传输实例化的类型。 如果此元素为空，则使用默认类型。 此元素只能在应用程序或计算机级别的配置文件中使用。  
   
  \<system.ServiceModel>  
-\<ServiceHostingEnvironment >  
+\<ServiceHostingEnvironment>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean" 
-                           minFreeMemoryPercentageToActivateService="Integer" 
+<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean"
+                           minFreeMemoryPercentageToActivateService="Integer"
                            multipleSiteBindingsEnabled="Boolean">
   <baseAddressPrefixFilters>
     <add prefix="string" />
   </baseAddressPrefixFilters>
   <serviceActivations>
-    <add factory="String" service="String" />
+    <add factory="String"
+         service="String" />
   </serviceActivations>
   <transportConfigurationTypes>
-    <add name="String" transportConfigurationType="String" />
+    <add name="String"
+         transportConfigurationType="String" />
   </transportConfigurationTypes>
-</serviceHostingEnvironment>  
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -40,17 +42,17 @@ ms.locfileid: "33354315"
   
 |特性|描述|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|一个布尔值，指示是否已为当前应用程序启用了 ASP.NET 兼容模式。 默认值为 `false`。<br /><br /> 当此属性设置为`true`、 对 Windows Communication Foundation (WCF) 服务的请求将流经 ASP.NET HTTP 管道中，和禁止通过非 HTTP 协议的通信。 有关详细信息，请参阅[WCF 服务和 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。|  
-|minFreeMemoryPercentageToActivateService|一个整数，指定的最小应可用于的系统，然后才能激活 WCF 服务的可用内存量。 **注意：** 指定此属性以及 WCF 服务的 web.config 文件中的部分信任会导致<xref:System.Security.SecurityException>服务运行时发生。|  
-|multipleSiteBindingsEnabled|一个布尔值，指定是否对每个站点启用多个 IIS 绑定。<br /><br /> IIS 由网站组成，这些网站是包含虚拟目录的虚拟应用程序的容器。 可通过一个或多个 IIS 绑定访问站点上的应用程序。 一个 IIS 绑定提供两条信息：绑定协议和绑定信息。 绑定协议定义进行通信所依据的方案，而绑定信息是用于访问站点的信息。 绑定协议的一个示例可以是 HTTP，而绑定信息可包含 IP 地址、端口、主机标头等。<br /><br /> IIS 支持一个站点指定多个 IIS 绑定，这会导致一个方案有多个基址。 但是，在一个站点下承载的 Windows Communication Foundation (WCF) 服务允许绑定到每个方案只能有一个 baseAddress。<br /><br /> 若要启用每个站点的 Windows Communication Foundation (WCF) 服务的多个 IIS 绑定，请将此属性设置为`true`。 请注意，仅对 HTTP 协议支持多个站点绑定。 配置文件中的终结点地址需要是一个完整的 URI。|  
+|aspNetCompatibilityEnabled|一个布尔值，指示是否已为当前应用程序启用了 ASP.NET 兼容模式。 默认值为 `false`。<br /><br /> 如果此属性设置为`true`、 对 Windows Communication Foundation (WCF) 服务的请求将流经 ASP.NET HTTP 管道，并禁止通过非 HTTP 协议的通信。 有关详细信息，请参阅[WCF 服务和 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。|  
+|minFreeMemoryPercentageToActivateService|一个整数，指定的最小应为可供系统，可以激活 WCF 服务之前的可用内存量。 注意：指定此属性以及部分信任环境中的 WCF 服务的 web.config 文件会导致<xref:System.Security.SecurityException>服务运行时。|  
+|multipleSiteBindingsEnabled|一个布尔值，指定是否对每个站点启用多个 IIS 绑定。<br /><br /> IIS 由网站组成，这些网站是包含虚拟目录的虚拟应用程序的容器。 可通过一个或多个 IIS 绑定访问站点上的应用程序。 一个 IIS 绑定提供两条信息：绑定协议和绑定信息。 绑定协议定义进行通信所依据的方案，而绑定信息是用于访问站点的信息。 绑定协议的一个示例可以是 HTTP，而绑定信息可包含 IP 地址、端口、主机标头等。<br /><br /> IIS 支持一个站点指定多个 IIS 绑定，这会导致一个方案有多个基址。 但是，一个站点承载的 Windows Communication Foundation (WCF) 服务允许绑定到每个方案只能有一个 baseAddress。<br /><br /> 若要启用每个站点为 Windows Communication Foundation (WCF) 服务的多个 IIS 绑定，请将此属性设置为`true`。 请注意，仅对 HTTP 协议支持多个站点绑定。 配置文件中的终结点地址需要是一个完整的 URI。|  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<Baseaddressprefixfilter >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|一个配置元素的集合，这些元素指定服务主机所使用的基址的前缀筛选器。|  
-|[\<serviceActivations >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|一个描述激活设置的配置节。|  
-|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|一个配置元素的集合，这些元素标识特定传输的类型。|  
+|[\<baseAddressPrefixFilters>](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|一个配置元素的集合，这些元素指定服务主机所使用的基址的前缀筛选器。|  
+|[\<serviceActivations>](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|一个描述激活设置的配置节。|  
+|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|一个配置元素的集合，这些元素标识特定传输的类型。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -87,11 +89,11 @@ ms.locfileid: "33354315"
 ## <a name="code"></a>代码  
   
 ```xml  
-<serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>  
+<serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)  
- [WCF 服务和 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- [承载](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [WCF 服务和 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

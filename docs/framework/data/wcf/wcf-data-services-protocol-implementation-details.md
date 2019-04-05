@@ -2,12 +2,12 @@
 title: WCF 数据服务协议实现详细信息
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: 1d68e278fbac0137d1a5b2dca2daedba2294a7ee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fdaaa95bdcffa3ae053cc856753faa1a224eebc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195675"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728747"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>WCF 数据服务协议实现详细信息
 ## <a name="odata-protocol-implementation-details"></a>OData 协议实现详细信息  
@@ -22,6 +22,6 @@ ms.locfileid: "47195675"
 ### <a name="default-sorting-behavior"></a>默认排序行为  
  当发送到数据服务的查询请求包括 `$top` 或 `$skip` 系统查询选项但不包括 `$orderby` 系统查询选项时，返回的源按键属性升序排序。 这是因为需要顺序以确保结果正确分页。 为此，数据服务向查询中添加排序表达式。 在数据服务中启用服务器驱动的分页时，也会发生此行为。 有关详细信息，请参阅[数据服务配置](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。若要控制返回的源的排序，则应包含`$orderby`查询 URI 中。  
   
-## <a name="see-also"></a>请参阅  
- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a>请参阅
+- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

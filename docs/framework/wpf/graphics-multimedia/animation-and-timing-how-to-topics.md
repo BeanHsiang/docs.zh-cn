@@ -7,41 +7,41 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4936ba7bcd78c4867dae99df8bad11776cf655db
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994268"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358491"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>动画和计时帮助主题
 以下主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]动画和计时系统应用程序中的。  
   
 ## <a name="in-this-section"></a>本节内容  
- [加速或减速播放动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
- [在重复循环过程中累积动画值](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [向动画起始值添加动画输出值](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [使用情节提要对属性进行动画处理](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
- [在不使用情节提要的情况下为属性设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
- [在 ControlTemplate 中设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
- [在样式中设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
- [为元素或画笔的不透明度设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [在不更改时间线速度的情况下更改时钟速度](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
- [在情节提要启动后使用其交互式方法对其进行控制](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
- [使用 From、To 和 By 控制动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
- [定义名称范围](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
- [在时钟状态发生变化时接收通知](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [重复动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
- [搜寻情节提要](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
- [同步搜寻演示图板](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
- [设置动画时长](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
- [在使用情节提要为属性设置动画效果后设置属性](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [使用子时间线简化动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
- [指定演示图板动画之间的 HandoffBehavior](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [为已经到达有效期末尾的时间线指定 FillBehavior](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
- [指定时间线是否自动反转](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [在属性值更改时触发动画](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [在情节提要启动之后使用事件触发器来控制情节提要](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+ [加速或减速播放动画](how-to-accelerate-or-decelerate-an-animation.md)  
+ [在重复循环过程中累积动画值](how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [向动画起始值添加动画输出值](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [使用情节提要对属性进行动画处理](how-to-animate-a-property-by-using-a-storyboard.md)  
+ [在不使用情节提要的情况下为属性设置动画效果](how-to-animate-a-property-without-using-a-storyboard.md)  
+ [在 ControlTemplate 中设置动画效果](how-to-animate-in-a-controltemplate.md)  
+ [在样式中设置动画效果](how-to-animate-in-a-style.md)  
+ [为元素或画笔的不透明度设置动画效果](how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [在不更改时间线速度的情况下更改时钟速度](change-the-speed-of-a-clock.md)  
+ [在情节提要启动后使用其交互式方法对其进行控制](how-to-control-a-storyboard-after-it-starts.md)  
+ [使用 From、To 和 By 控制动画](how-to-control-an-animation-using-from-to-and-by.md)  
+ [定义名称范围](how-to-define-a-name-scope.md)  
+ [在时钟状态发生变化时接收通知](how-to-receive-notification-when-clock-state-changes.md)  
+ [重复动画](how-to-repeat-an-animation.md)  
+ [搜寻情节提要](how-to-seek-a-storyboard.md)  
+ [同步搜寻演示图板](how-to-seek-a-storyboard-synchronously.md)  
+ [设置动画时长](how-to-set-a-duration-for-an-animation.md)  
+ [在使用情节提要为属性设置动画效果后设置属性](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [使用子时间线简化动画](how-to-simplify-animations-by-using-child-timelines.md)  
+ [指定演示图板动画之间的 HandoffBehavior](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [为已经到达有效期末尾的时间线指定 FillBehavior](specify-the-fillbehavior-for-a-timeline.md)  
+ [指定时间线是否自动反转](how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [在属性值更改时触发动画](how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [在情节提要启动之后使用事件触发器来控制情节提要](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Media.Animation.Timeline>  
@@ -55,4 +55,4 @@ ms.locfileid: "45994268"
  <xref:System.Windows.Media.Animation>  
   
 ## <a name="related-sections"></a>相关章节  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [图形和多媒体](index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /sdkpath compiler option [Visual Basic]
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
-ms.openlocfilehash: bf665082f079901ec45122ce7797090b7519fafe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2024ccadb06fdea0c24d9d304c2fe040f8cce1d5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200844"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814317"
 ---
 # <a name="-sdkpath"></a>-sdkpath
 指定 mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。  
@@ -44,8 +44,9 @@ ms.locfileid: "50200844"
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)  
- [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)
+- [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)

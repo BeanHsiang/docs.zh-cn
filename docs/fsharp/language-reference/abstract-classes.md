@@ -1,13 +1,13 @@
 ---
-title: 抽象类 (F#)
-description: '了解有关 F # 抽象类，这将部分或全部成员未实现和表示的一组不同的对象类型的常见功能。'
+title: 抽象类
+description: 了解如何F#抽象类，这将部分或全部成员未实现和表示的一组不同的对象类型的常见功能。
 ms.date: 05/16/2016
-ms.openlocfilehash: 7e1bb9daca7e8a3b442cd7fb02ef99bb6a2085cb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fecd3b2d550c6b8f59fa614f5d00c5f730a4896a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43745445"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613474"
 ---
 # <a name="abstract-classes"></a>抽象类
 
@@ -30,7 +30,7 @@ abstract member member-name : type-signature
 
 在面向对象的编程中，抽象类用作基类的层次结构中，并表示一组不同的对象类型的常见功能。 正如所示名称"抽象"，抽象类通常并不对应直接到问题域中的具体实体上。 但是，它们代表多个不同的具体实体具有共同点。
 
-抽象类必须具有`AbstractClass`属性。 它们可以实现和尚未实现的成员。 使用术语*抽象*时应用于类是与其他.NET 语言; 中的相同但是，使用术语*抽象*时应用于方法 （和属性） 是稍有不同在 F # 从其在其他.NET 语言中使用。 在 F # 中的方法标记为当`abstract`关键字，这指示成员具有一个项，称为*虚拟调度槽*，该类型的虚函数的内部表中。 换而言之，方法是虚拟的尽管`virtual`F # 语言中未使用关键字。 关键字`abstract`虚拟方法，而不考虑是否实现该方法上使用。 虚拟调度槽的声明是独立于为该调度槽方法的定义。 因此，虚拟方法声明和定义中另一种.NET 语言的 F # 等效项是抽象方法声明和使用的单独定义的组合`default`关键字或`override`关键字。 有关详细信息和示例，请参阅[方法](members/methods.md)。
+抽象类必须具有`AbstractClass`属性。 它们可以实现和尚未实现的成员。 使用术语*抽象*时应用于类是与其他.NET 语言; 中的相同但是，使用术语*抽象*时应用于方法 （和属性） 是稍有不同在F#从在其他.NET 语言中使用。 在F#，当方法标有`abstract`关键字，这指示成员具有一个项，称为*虚拟调度槽*，该类型的虚函数的内部表中。 换而言之，方法是虚拟的尽管`virtual`中未使用关键字F#语言。 关键字`abstract`虚拟方法，而不考虑是否实现该方法上使用。 虚拟调度槽的声明是独立于为该调度槽方法的定义。 因此，F#虚方法声明和定义另一种.NET 语言中的等效项是抽象方法声明和使用的单独定义的组合`default`关键字或`override`关键字。 有关详细信息和示例，请参阅[方法](members/methods.md)。
 
 一个类都被视为仅当存在的抽象方法声明但未定义的抽象。 因此，具有抽象方法的类不一定是抽象类。 除非类有未定义的抽象方法，否则不要使用**AbstractClass**属性。
 

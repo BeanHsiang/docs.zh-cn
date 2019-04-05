@@ -5,19 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10449867a37863798a0da2df9111bcd7addfc6ef
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4835536dd3ae815fbe7e50582b94caefb1fc9082
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683815"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>转换中的结果树片断
 
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> 类在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已过期。 可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 类执行可扩展样式表语言转换 (XSLT) 转换。 请参阅[使用 XslCompiledTransform 类](using-the-xslcompiledtransform-class.md)和[从 XslTransform 类迁移](migrating-from-the-xsltransform-class.md)，以获取详细信息。
 
- 结果树片段只是一个特殊类型的节点集。 您可以对它们执行可对节点集执行的任何函数。 您也可以用 `node-set()` 函数将结果树片段转换成一个节点集，然后就可以在任何可使用节点集的位置使用了。
+ 结果树片段只是一个特殊类型的节点集。 您可以对它们执行可对节点集执行的任何函数。 你也可以用 `node-set()` 函数将结果树片段转换成一个节点集，然后就可以在任何可使用节点集的位置使用了。
 
  结果树片段是通过在样式表中以一种特定方式使用 `<xsl:variable>` 或 `<xsl:param>` 元素而创建的。 `variable` 和 `parameter` 元素的语法如下所示：
 
@@ -194,7 +194,7 @@ ms.locfileid: "45625940"
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.XPath.XPathNodeIterator>  
-- <xref:System.Xml.XPath.XPathNodeIterator>  
-- [XslTransform 类的 XSLT 转换](xslt-transformations-with-the-xsltransform-class.md)  
-- [XslTransform 类实现 XSLT 处理器](xsltransform-class-implements-the-xslt-processor.md)  
+- <xref:System.Xml.XPath.XPathNodeIterator>
+- <xref:System.Xml.XPath.XPathNodeIterator>
+- [XslTransform 类的 XSLT 转换](xslt-transformations-with-the-xsltransform-class.md)
+- [XslTransform 类实现 XSLT 处理器](xsltransform-class-implements-the-xslt-processor.md)

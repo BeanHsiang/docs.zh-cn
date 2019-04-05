@@ -2,12 +2,12 @@
 title: 创建和运行工作流实例
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: d0c59946b6419e7088e3426d7ddd08537cfab5a4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562237"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722004"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>创建和运行工作流实例
 此示例演示如何运行工作流实例。 它演示如何以同步方式和异步方式执行这一操作。  
@@ -29,5 +29,5 @@ ms.locfileid: "46562237"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`  
   
-## <a name="see-also"></a>请参阅  
- [使用 WorkflowInvoker 和 WorkflowApplication](../../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)
+## <a name="see-also"></a>请参阅
+- [使用 WorkflowInvoker 和 WorkflowApplication](../using-workflowinvoker-and-workflowapplication.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 012f0220afa0e444d68af5998fb2492a03a371d8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8989d7695f44b0cd2e8b0ce3ec8bd74a6e802102
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534561"
 ---
 # <a name="how-to-configure-an-application-domain"></a>如何：配置应用程序域
 可以使用 <xref:System.AppDomainSetup> 类为新应用程序域提供含配置信息的公共语言运行时。 创建自己的应用程序域时，最重要的属性是 <xref:System.AppDomainSetup.ApplicationBase%2A>。 其他 AppDomainSetup 属性主要由运行时宿主用于配置特殊的应用程序域。  
@@ -33,6 +33,6 @@ ms.locfileid: "50183160"
  [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)]
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>请参阅  
-- [对应用程序域进行编程](application-domains.md#programming-with-application-domains)  
+## <a name="see-also"></a>请参阅
+- [对应用程序域进行编程](application-domains.md#programming-with-application-domains)
 - [使用应用程序域](../../../docs/framework/app-domains/use.md)

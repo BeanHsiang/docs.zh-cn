@@ -1,5 +1,5 @@
 ---
-title: 演练：使用对齐线在 Windows 窗体上排列控件
+title: 演练：使用对齐线的 Windows 窗体上排列控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 170b79f03515ab371f7013c267b28ba85dafd0f5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112908"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703590"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线在 Windows 窗体上排列控件
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>演练：使用对齐线的 Windows 窗体上排列控件
 在窗体上精确地放置控件对于许多应用程序而言是高优先级。 Windows 窗体设计器提供许多布局工具来实现此目的。 一个最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
   
  对齐线显示精确位置与其他控件的控件对齐。 它们还显示控件，指定的 Windows 用户界面指南之间的边距的建议的距离。 有关详细信息，请参阅[用户界面设计和开发](https://go.microsoft.com/FWLink/?LinkId=83878)。  
@@ -64,7 +64,7 @@ ms.locfileid: "47112908"
   
 #### <a name="to-arrange-controls-using-snaplines"></a>使用对齐线排列控件  
   
-1.  拖动<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体。  
+1.  从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。  
   
 2.  移动<xref:System.Windows.Forms.Button>的窗体右下角的控件。 请注意对齐线显示为<xref:System.Windows.Forms.Button>控件接近下边框和右边框的窗体。 这些对齐线显示在窗体控件的边框之间的建议的距离。  
   
@@ -92,11 +92,11 @@ ms.locfileid: "47112908"
 > [!NOTE]
 >  如果窗体的<xref:System.Windows.Forms.Control.Padding%2A>属性设置为 0,0,0,0、 Windows 窗体设计器将为窗体指定隐藏<xref:System.Windows.Forms.Control.Padding%2A>9,9,9,9 的值。 若要重写此行为，分配 0,0,0,0 以外的值。  
   
-1.  更改的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Margin%2A>展开属性<xref:System.Windows.Forms.Control.Margin%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设为 0。 有关详细信息，请参阅[演练： 对进行布局出 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)。  
+1.  更改的值<xref:System.Windows.Forms.Button>控件的<xref:System.Windows.Forms.Control.Margin%2A>展开属性<xref:System.Windows.Forms.Control.Margin%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设为 0。 有关详细信息，请参阅[演练：对 Windows 窗体控件使用 Padding、 Margins 和 AutoSize 属性](windows-forms-controls-padding-autosize.md)。  
   
 2.  移动<xref:System.Windows.Forms.Button>接近直到对齐线显示在窗体的右边框的控件。 窗体的值现在提供此距离<xref:System.Windows.Forms.Control.Padding%2A>属性。  
   
-3.  拖动<xref:System.Windows.Forms.GroupBox>控件从**工具箱**拖动到窗体。  
+3.  从 <xref:System.Windows.Forms.GroupBox> “工具箱” **将** 控件拖到你的窗体上。  
   
 4.  更改的值<xref:System.Windows.Forms.GroupBox>控件的<xref:System.Windows.Forms.Control.Padding%2A>展开属性<xref:System.Windows.Forms.Control.Padding%2A>中的条目**属性**窗口和设置<xref:System.Windows.Forms.Padding.All%2A>属性设置为 10。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47112908"
   
 1.  选择两个窗体上的控件。 移动所选内容并记下你的选择和其他控件之间显示的对齐线。  
   
-2.  拖动<xref:System.Windows.Forms.GroupBox>控件从**工具箱**拖动到窗体。  
+2.  从 <xref:System.Windows.Forms.GroupBox> “工具箱” **将** 控件拖到你的窗体上。  
   
 3.  拖动<xref:System.Windows.Forms.Button>控件从**工具箱**到<xref:System.Windows.Forms.GroupBox>控件。  
   
@@ -152,9 +152,9 @@ ms.locfileid: "47112908"
   
 #### <a name="to-resize-a-control-using-snaplines"></a>调整控件使用对齐线的大小  
   
-1.  拖动<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体。  
+1.  从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。  
   
-2.  重设大小<xref:System.Windows.Forms.Button>抓住角大小调整控点和拖动某个控件。 有关详细信息，请参阅[如何： 调整 Windows 窗体上的控件](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)。  
+2.  重设大小<xref:System.Windows.Forms.Button>抓住角大小调整控点和拖动某个控件。 有关详细信息，请参阅[如何：调整 Windows 窗体上的控件的大小](how-to-resize-controls-on-windows-forms.md)。  
   
 3.  拖动调整大小控点，直到一位<xref:System.Windows.Forms.Button>与其他控件对齐控件的边框。 请注意，显示对齐线。 另请注意，调整大小控点会对齐到对齐线指示的位置。  
   
@@ -165,9 +165,9 @@ ms.locfileid: "47112908"
   
 #### <a name="to-align-a-label-to-a-controls-text"></a>若要对齐到控件的文本标签  
   
-1.  拖动<xref:System.Windows.Forms.TextBox>控件从**工具箱**拖动到窗体。 当 drop<xref:System.Windows.Forms.TextBox>拖到窗体控件，单击智能标记标志符号，选择**将文本设置为 textBox1**选项。 有关详细信息，请参阅[演练： 执行常见任务使用智能标记 Windows 窗体控件上](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)。  
+1.  从 <xref:System.Windows.Forms.TextBox> “工具箱” **将** 控件拖到你的窗体上。 当 drop<xref:System.Windows.Forms.TextBox>拖到窗体控件，单击智能标记标志符号，选择**将文本设置为 textBox1**选项。 有关详细信息，请参阅[演练：在 Windows 上使用智能标记执行常见任务窗体控件](performing-common-tasks-using-smart-tags-on-wf-controls.md)。  
   
-2.  拖动<xref:System.Windows.Forms.Label>控件从**工具箱**拖动到窗体。  
+2.  从 <xref:System.Windows.Forms.Label> “工具箱” **将** 控件拖到你的窗体上。  
   
 3.  将 <xref:System.Windows.Forms.Label> 控件的 <xref:System.Windows.Forms.Control.AutoSize%2A> 属性值更改为 `true`。 请注意该控件的边框调整为适合的显示文本。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "47112908"
   
 #### <a name="to-use-snaplines-with-keyboard-navigation"></a>若要使用的键盘导航使用对齐线  
   
-1.  拖动<xref:System.Windows.Forms.Button>控件从**工具箱**拖动到窗体。 将其放置在窗体的左上角。  
+1.  从 <xref:System.Windows.Forms.Button> “工具箱” **将** 控件拖到你的窗体上。 将其放置在窗体的左上角。  
   
 2.  按 CTRL + 向下箭头。 请注意，控件将向下移动窗体的第一个可用的水平对齐位置。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "47112908"
   
 #### <a name="to-selectively-disable-snaplines"></a>若要有选择性地禁用对齐线  
   
-1.  拖动<xref:System.Windows.Forms.TableLayoutPanel>控件从**工具箱**拖动到窗体。  
+1.  从 <xref:System.Windows.Forms.TableLayoutPanel> “工具箱” **将** 控件拖到你的窗体上。  
   
 2.  在“工具箱” <xref:System.Windows.Forms.Button>**中，双击**控件图标。 请注意，新按钮控件会出现在<xref:System.Windows.Forms.TableLayoutPanel>控件的第一个单元格。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "47112908"
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>若要禁用设计环境中的对齐线  
   
-1.  从**工具**菜单中，打开**选项**对话框。 打开 Windows 窗体设计器对话框。 有关详细信息，请参阅[选项对话框常规 Windows 窗体设计器](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)。  
+1.  从**工具**菜单中，打开**选项**对话框。 打开 Windows 窗体设计器对话框。 有关详细信息，请参阅[选项对话框常规 Windows 窗体设计器](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))。  
   
 2.  选择**常规**节点。 在中**布局模式下**部分中，更改从所选**对齐线**到**网格线对齐**。  
   
@@ -237,11 +237,11 @@ ms.locfileid: "47112908"
   
 -   创建的列<xref:System.Windows.Forms.TextBox>控件与相应的列的<xref:System.Windows.Forms.Label>控件。 设置的值<xref:System.Windows.Forms.Label>控件的<xref:System.Windows.Forms.Control.AutoSize%2A>属性设置为`true`。 使用对齐线将移动<xref:System.Windows.Forms.Label>控制使其显示的文本与中的文本对齐<xref:System.Windows.Forms.TextBox>控件。  
   
- 有关 Windows 用户界面设计的信息，请参阅此书*Microsoft Windows 用户体验、 用户界面开发人员和设计人员的官方指南*Redmond，WA: Microsoft Press，1999年。 (USBN: 0-7356-0566年-1)。  
+ 有关 Windows 用户界面设计的信息，请参阅此书*Microsoft Windows 用户体验、 用户界面开发人员和设计人员的官方指南*Redmond，WA:Microsoft Press，1999年。 (USBN:0-7356-0566-1).  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Design.Behavior.SnapLine>  
- [演练：使用 FlowLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
- [演练：使用 TableLayoutPanel 在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [演练：使用 Padding、Margins 和 AutoSize 属性对 Windows 窗体控件进行布局](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)  
- [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Design.Behavior.SnapLine>
+- [演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [演练：使用 TableLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [演练：布局 Windows 窗体控件与 Padding、 Margins 和 AutoSize 属性](windows-forms-controls-padding-autosize.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)

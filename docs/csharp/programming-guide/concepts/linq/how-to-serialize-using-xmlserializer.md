@@ -1,15 +1,15 @@
 ---
-title: 如何：使用 XmlSerializer 进行序列化 (C#)
+title: 如何：使用 XmlSerializer (C#) 执行序列化
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: 32a23792947639c2c0eb1dc14b640c3786bdfd4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9d722735f9a83f0d65fbc10b6c868525e8393a7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567754"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a>如何：使用 XmlSerializer 进行序列化 (C#)
+# <a name="how-to-serialize-using-xmlserializer-c"></a>如何：使用 XmlSerializer (C#) 执行序列化
 本主题显示一个使用 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化和反序列化的示例。  
   
 ## <a name="example"></a>示例  

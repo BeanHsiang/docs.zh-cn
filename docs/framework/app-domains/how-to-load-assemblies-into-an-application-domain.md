@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e91441f593b7533026d5980f8cf39fb5a3d5b71
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: df3fa60c4fcacc84be36e49e40933d195a9e43e5
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193066"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674927"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>如何：将程序集加载到应用程序域中
 可通过多种方法将程序集加载到应用程序域中。 推荐方法是使用 <xref:System.Reflection.Assembly?displayProperty=nameWithType> 类的 `static`（在 Visual Basic 中为 `Shared`）<xref:System.Reflection.Assembly.Load%2A> 方法。 加载程序集的其他方法包括：  
@@ -37,7 +37,7 @@ ms.locfileid: "50193066"
 > [!NOTE]
 >  从 .NET Framework 2.0 版开始，对于使用版本号高于当前已加载运行时的 .NET Framework 版本所编译的程序集，运行时将不再加载此类程序集。 这同样适用于主版本号和次版本号的组合。  
   
- 可指定在应用程序域间共享已加载程序集的实时 (JIT) 编译代码的方式。 有关详细信息，请参阅[应用程序域和程序集](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)。  
+ 可指定在应用程序域间共享已加载程序集的实时 (JIT) 编译代码的方式。 有关详细信息，请参阅[应用程序域和程序集](application-domains.md#application-domains-and-assemblies)。  
   
 ## <a name="example"></a>示例  
  以下代码将名为“example.exe”或“example.dll”的程序集加载到当前应用程序域中，从该程序集获取名为 `Example` 的类型，为该类型获取名为 `MethodA` 的参数方法，然后执行该方法。 有关从已加载程序集中获取信息的完整讨论，请参阅[动态加载和使用类型](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)。  
@@ -46,10 +46,10 @@ ms.locfileid: "50193066"
  [!code-csharp[System.AppDomain.Load#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source2.cs#2)]
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
-- [对应用程序域进行编程](application-domains.md#programming-with-application-domains)  
-- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)  
-- [使用应用程序域](../../../docs/framework/app-domains/use.md)  
-- [如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
-- [应用程序域和程序集](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)
+## <a name="see-also"></a>请参阅
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
+- [对应用程序域进行编程](application-domains.md#programming-with-application-domains)
+- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [使用应用程序域](../../../docs/framework/app-domains/use.md)
+- [如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [应用程序域和程序集](application-domains.md#application-domains-and-assemblies)

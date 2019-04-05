@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Request object
 ms.assetid: 93d5f0e2-6b60-4a2c-8652-d90216f6ad10
-ms.openlocfilehash: f2c43afb723944293907d0efbb4cf3cc66a40e1e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 08212dc5fe563ce84be02ab706b56195a0636894
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485607"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836618"
 ---
 # <a name="myrequest-object"></a>My.Request 对象
 获取所请求的页面的 <xref:System.Web.HttpRequest> 对象。  
@@ -25,8 +25,9 @@ ms.locfileid: "43485607"
 ## <a name="example"></a>示例  
  下面的示例获取的标头集合`My.Request`对象，并使用`My.Response`要写入到 ASP.NET 页面对象。  
   
- [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-request-object_1.aspx)]  
+ [!code-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Web.HttpRequest>  
- [My.Response 对象](../../../visual-basic/language-reference/objects/my-response-object.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Web.HttpRequest>
+- [My.Response 对象](../../../visual-basic/language-reference/objects/my-response-object.md)

@@ -2,12 +2,12 @@
 title: 联合示例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 49a13b292a627c054510a10445e1e64ab869162c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e9f0c47a1bafe715a40d150a77543ca71a249920
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087818"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816598"
 ---
 # <a name="federation-sample"></a>联合示例
 本示例演示联合安全。  
@@ -117,4 +117,3 @@ ms.locfileid: "44087818"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   
-## <a name="see-also"></a>请参阅

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d3c3c0c5634653d14577de9a1334048d75216b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6b67f5ec233679461f61715d7562b47c2a195fb8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405621"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471619"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>ICorDebugClass::GetStaticFieldValue 方法
 获取指定的静态字段的值。  
@@ -37,26 +37,26 @@ HRESULT GetStaticFieldValue (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `fieldDef`  
- [in]字段`Def`引用字段要检索的令牌。  
+ [in]字段`Def`引用要检索的字段的令牌。  
   
  `pFrame`  
- [in]指向一个 ICorDebugFrame 对象，表示要用于消除线程、 上下文或应用程序域的静态对象之间的歧义的帧的指针。  
+ [in]指向一个 ICorDebugFrame 对象，表示要用来区分线程、 上下文或应用程序域静态对象的帧的指针。  
   
- 如果静态字段为相对于某个线程、 非上下文或应用程序域，则帧将确定适当的值。  
+ 如果静态字段是相对于一个线程、 上下文或应用程序域，则框架将确定适当的值。  
   
  `ppValue`  
- [out]指向一个 ICorDebugValue 对象，表示的静态字段的值的地址的指针。  
+ [out]指向一个 ICorDebugValue 对象，表示静态字段的值的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- 对于参数化类型的静态字段的值是相对于特定的实例化。 因此，如果类构造函数采用的类型参数的<xref:System.Type>，调用[icordebugtype:: Getstaticfieldvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)而不是`ICorDebugClass::GetStaticFieldValue`。  
+ 对于参数化类型的静态字段的值是相对于特定的实例化。 因此，如果类构造函数参数的类型，则<xref:System.Type>，调用[icordebugtype:: Getstaticfieldvalue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)而不是`ICorDebugClass::GetStaticFieldValue`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -2,12 +2,12 @@
 title: 如何：执行表达式树 (C#)
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 2aad970946e417d623907c9f832e2c6e29eef912
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bed37d8d96837062831f4a3017df8a3633446bf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45641594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583267"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>如何：执行表达式树 (C#)
 本主题演示如何执行表达式树。 执行表达式树可能返回一个值，或者它可能只是执行操作，例如调用方法。  
@@ -50,5 +50,5 @@ Console.WriteLine(result);
   
 ## <a name="see-also"></a>请参阅
 
-- [表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [如何：修改表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

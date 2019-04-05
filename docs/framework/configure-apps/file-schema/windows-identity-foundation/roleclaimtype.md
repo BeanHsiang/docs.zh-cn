@@ -1,24 +1,24 @@
 ---
-title: '&lt;RoleClaimType&gt;'
+title: <roleClaimType>
 ms.date: 03/30/2017
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
 author: BrucePerlerMS
-ms.openlocfilehash: 565bf30d334c62c8132c60f411e89f7b260c54f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 812d44ef947d27b0f73d9dc2172494e89ee56d72
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841507"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270861"
 ---
-# <a name="ltroleclaimtypegt"></a>&lt;RoleClaimType&gt;
+# <a name="roleclaimtype"></a>\<roleClaimType>
 指定的集合中定义的角色类型声明的声明类型<xref:System.Security.Claims.ClaimsIdentity>返回的对象<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>令牌处理程序的方法。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
 \<add>  
-\<samlSecurityTokenRequirement >  
-\<roleClaimType >  
+\<samlSecurityTokenRequirement>  
+\<roleClaimType>  
   
 ## <a name="syntax"></a>语法  
   
@@ -68,5 +68,5 @@ ms.locfileid: "48841507"
 </add>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>

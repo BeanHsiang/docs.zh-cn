@@ -1,17 +1,17 @@
 ---
-title: '&lt;参数&gt;元素 (.NET Native)'
+title: <Parameter>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5c72919327c1186f5758f03680ff68037da3632
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c18919a6c48c251138a3d5e88079d3383979ef1a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395240"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266398"
 ---
-# <a name="ltparametergt-element-net-native"></a>&lt;参数&gt;元素 (.NET Native)
+# <a name="parameter-element-net-native"></a>\<参数 > 元素 (.NET Native)
 将反射策略应用到传递到方法的自变量类型。  
   
 ## <a name="syntax"></a>语法  
@@ -73,8 +73,8 @@ ms.locfileid: "33395240"
 ## <a name="remarks"></a>备注  
  `<Parameter>` 元素是 [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 元素的子元素，用于将策略应用于特定方法参数。 特定的方法参数由名称而不是由类型指定。 表示策略类型，比如 `Activate` 或 `Dynamic`，的至少一个特性必须存在。  
   
-## <a name="see-also"></a>请参阅  
- [\<Method> 元素](../../../docs/framework/net-native/method-element-net-native.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>请参阅
+- [\<Method> 元素](../../../docs/framework/net-native/method-element-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)

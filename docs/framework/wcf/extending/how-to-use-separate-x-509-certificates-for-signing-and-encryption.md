@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500481"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>如何：使用独立的 X.509 证书进行签名和加密
-本主题演示如何配置 Windows Communication Foundation (WCF) 以使用不同的证书的客户端和服务上进行消息签名和加密。  
+本主题演示如何配置 Windows Communication Foundation (WCF) 以进行消息签名和加密客户端和服务上的使用不同的证书。  
   
- 若要启用单独的证书以用于签名和加密，自定义客户端或服务凭据 （或两者） 必须创建因为 WCF 不提供 API 来设置多个客户端或服务证书。 此外，还必须提供安全令牌管理器，以利用多个证书的信息并为指定的密钥用法和消息方向创建相应的安全令牌提供程序。  
+ 若要启用独立的证书用于签名和加密，自定义客户端或服务凭据 （或两者） 必须创建因为 WCF 不提供一个 API 来设置多个客户端或服务证书。 此外，还必须提供安全令牌管理器，以利用多个证书的信息并为指定的密钥用法和消息方向创建相应的安全令牌提供程序。  
   
  下图演示所用的主类、它们从其继承的类（由向上箭头指示）以及某些方法和属性的返回类型。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33806177"
   
  ![显示如何使用客户端凭据的图表](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")  
   
- 有关自定义凭据的详细信息，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+ 有关自定义凭据的详细信息，请参阅[演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
  此外，必须创建自定义标识验证程序，并将它链接到自定义绑定中的安全绑定元素。 还必须使用自定义凭据而不是默认凭据。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33806177"
   
  ![显示自定义绑定元素的图表](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")  
   
- 有关创建自定义标识验证程序的详细信息，请参阅如何：[如何： 创建自定义客户端标识验证程序](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)。  
+ 有关创建自定义标识验证程序的详细信息，请参阅如何：[如何：创建自定义客户端标识验证工具](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)。  
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>使用独立的证书进行签名和加密  
   
@@ -89,10 +89,10 @@ ms.locfileid: "33806177"
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceCredentials>  
- <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>  
- <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>  
- <xref:System.ServiceModel.Security.IdentityVerifier>  
- [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceCredentials>
+- <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
+- <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
+- <xref:System.ServiceModel.Security.IdentityVerifier>
+- [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

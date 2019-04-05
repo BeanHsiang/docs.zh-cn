@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: 88200b41346a18732647602fb16774610014330c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1a81f6eac5648406f50d9600b030828551b21c56
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185126"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261334"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>如何：创建自定义安全令牌提供程序
 本主题介绍如何使用自定义安全令牌提供程序来创建新令牌类型，以及如何将该提供程序与自定义安全令牌管理器集成。  
@@ -22,9 +22,7 @@ ms.locfileid: "50185126"
   
  安全令牌提供程序会基于客户端或服务凭据中的信息创建一个安全令牌表示形式。 若要在 Windows Communication Foundation (WCF) 安全中使用自定义安全令牌提供程序，必须创建自定义凭据和安全令牌管理器实现。  
   
- 有关自定义凭据和安全令牌管理器的详细信息请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
-  
- 有关凭据的详细信息，安全令牌的管理器、 提供程序和身份验证器类，请参阅[安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 有关自定义凭据和安全令牌管理器的详细信息请参阅[演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>创建自定义安全令牌提供程序  
   
@@ -41,9 +39,9 @@ ms.locfileid: "50185126"
   
 2.  重写 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法（如果尚未重写它）。  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>方法负责返回的实例<xref:System.IdentityModel.Selectors.SecurityTokenProvider>类适用于<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>由 WCF 安全框架传递给该方法的参数。 修改此方法，以便在用相应的安全令牌参数调用它时，可以返回所实现的自定义安全令牌提供程序（在上一个过程中创建的）。 有关安全令牌管理器的详细信息，请参阅[演练： 创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>方法负责返回的实例<xref:System.IdentityModel.Selectors.SecurityTokenProvider>类适用于<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>由 WCF 安全框架传递给该方法的参数。 修改此方法，以便在用相应的安全令牌参数调用它时，可以返回所实现的自定义安全令牌提供程序（在上一个过程中创建的）。 有关安全令牌管理器的详细信息，请参阅[演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
-3.  向该方法中添加自定义逻辑，使其可以基于 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 参数返回自定义安全令牌提供程序。 下面的示例在满足令牌要求时返回自定义安全令牌提供程序。 这些要求包括一个 X.509 安全令牌以及消息方向（使用令牌进行消息输出）。 对于其他所有情况，该代码通过调用基类，针对其他安全令牌需求来维护系统提供的行为。  
+3.  向该方法中添加自定义逻辑，使其可以基于 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 参数返回自定义安全令牌提供程序。 下面的示例在满足令牌要求时返回自定义安全令牌提供程序。 这些要求包括一个 X.509 安全令牌以及消息方向（使用令牌进行消息输出）。 对于其他所有情况，该代码通过调用基类，针对其他安全令牌要求来维护系统提供的行为。  
   
  [!code-csharp[c_CustomTokenProvider#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#2)]
  [!code-vb[c_CustomTokenProvider#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#2)]  
@@ -54,11 +52,10 @@ ms.locfileid: "50185126"
  [!code-csharp[c_CustomTokenProvider#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#0)]
  [!code-vb[c_CustomTokenProvider#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#0)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Selectors.SecurityTokenProvider>  
- <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
- <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
- <xref:System.IdentityModel.Tokens.X509SecurityToken>  
- [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [如何：创建自定义安全令牌验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [安全体系结构](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Selectors.SecurityTokenProvider>
+- <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>
+- <xref:System.IdentityModel.Selectors.SecurityTokenManager>
+- <xref:System.IdentityModel.Tokens.X509SecurityToken>
+- [演练：创建自定义客户端和服务凭据](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [如何：创建自定义安全令牌身份验证器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)

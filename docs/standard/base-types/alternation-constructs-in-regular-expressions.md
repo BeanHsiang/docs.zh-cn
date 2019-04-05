@@ -1,5 +1,6 @@
 ---
-title: 正则表达式中的备用构造
+title: .NET 正则表达式中的备用构造
+description: 了解如何使用备用构造在正则表达式中进行条件匹配。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839746"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142919"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正则表达式中的备用构造
 <a name="top"></a> 替换构造可修改正则表达式以启用 either/or 或条件匹配。 .NET 支持三种备用构造：  
@@ -43,7 +45,7 @@ ms.locfileid: "48839746"
   
  使用 `|` 字符的正则表达式 `\bgr(a|e)y\b`的解释如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`gr`|匹配字符“gr”。|  
@@ -57,7 +59,7 @@ ms.locfileid: "48839746"
   
  正则表达式 `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` 可以解释为下表中所示内容。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|匹配以下其中一个内容：连字符连接的两个十进制数字和七个十进制数字；或三个十进制数字后接连字符，后接两个十进制数字，后接另一个连字符，然后再接四个十进制数字。|  
@@ -87,7 +89,7 @@ ms.locfileid: "48839746"
   
  正则表达式模式 `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` 的含义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`(?(\d{2}-)`|确定接下来的三个字符是否由两个数字后接一个连字符组成。|  
@@ -118,7 +120,7 @@ ms.locfileid: "48839746"
   
  正则表达式模式 `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` 的含义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始。|  
 |`(?<n2>\d{2}-)?`|匹配两个数字后接一个连字符的零或一个匹配项。 命名此捕获组 `n2`。|  

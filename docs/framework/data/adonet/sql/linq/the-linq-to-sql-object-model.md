@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: c716847c60611a6e8a2911d4b9ae2f1683d2cdd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a424f289bb4ffba102d1023909b139ac2a70c33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503737"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 对象模型
-在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，用开发人员的编程语言表示的对象模型映射到关系数据库的数据模型。 然后就会按照对象模型来执行对数据的操作。  
+在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，开发人员的编程语言表示的对象模型映射到关系数据库的数据模型。 然后就会按照对象模型来执行对数据的操作。  
   
  在这种情况下，您无需向数据库发出数据库命令（例如，`INSERT`）， 而是在对象模型中更改值和执行方法。 当您需要查询数据库或向其发送更改时，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会将您的请求转换成正确的 SQL 命令，然后将这些命令发送到数据库。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33365379"
 >  以下说明假定您已具备关系数据模型和规则方面的基础知识。  
   
 ## <a name="linq-to-sql-entity-classes-and-database-tables"></a>LINQ to SQL 实体类与数据库表  
- 在[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，由表示数据库表*实体类*。 实体类与你可能创建的任何其他类相似，只不过对实体类进行批注的方法是使用将该类与数据库表关联的特殊信息。 您需通过向类声明中添加自定义属性 (<xref:System.Data.Linq.Mapping.TableAttribute>) 来进行这种批注，如下面的示例所示：  
+ 在中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，由表示数据库表*实体类*。 实体类与你可能创建的任何其他类相似，只不过对实体类进行批注的方法是使用将该类与数据库表关联的特殊信息。 您需通过向类声明中添加自定义属性 (<xref:System.Data.Linq.Mapping.TableAttribute>) 来进行这种批注，如下面的示例所示：  
   
 ### <a name="example"></a>示例  
  [!code-csharp[DLinqObjectModel#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/Program.cs#1)]
@@ -72,14 +72,14 @@ ms.locfileid: "33365379"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通过使用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 和 <xref:System.Data.Linq.Mapping.ParameterAttribute> 属性将存储过程和函数映射到方法。 表示存储过程的方法与表示用户定义的函数的方法通过 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 属性加以区分。 如果此属性设置为 `false`（默认值），则此方法表示存储过程。 如果它设置为 `true`，则此方法表示数据库函数。  
   
 > [!NOTE]
->  如果你使用的 Visual Studio，则可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]创建映射到存储的过程和用户定义函数的方法。  
+>  如果使用的 Visual Studio，则可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]创建映射到存储的过程和用户定义函数的方法。  
   
 ### <a name="example"></a>示例  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
  [!code-vb[DLinqObjectModel#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectModel/vb/northwind.vb#4)]  
   
- 有关详细信息，请参阅函数特性、 存储过程属性和参数属性部分[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)和[存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)。  
+ 有关详细信息，请参阅的函数属性，存储过程属性和参数属性部分[基于属性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)并[存储过程](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)。  
   
-## <a name="see-also"></a>请参阅  
- [基于特性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>请参阅
+- [基于特性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

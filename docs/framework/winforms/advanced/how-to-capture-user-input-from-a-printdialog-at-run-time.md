@@ -1,5 +1,5 @@
 ---
-title: 如何：在运行时从 PrintDialog 中捕获用户输入
+title: 如何：在运行时捕获用户输入从 PrintDialog
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - print options
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-ms.openlocfilehash: 554c3c43f8ac4d41ddfc8651472d0b7fbed960bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69a3632ddb4d68f5a916f5ffca020630abe1bd68
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522871"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707322"
 ---
-# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>如何：在运行时从 PrintDialog 中捕获用户输入
-尽管你可以设置与在设计时打印相关的选项，有时想要在运行时，由于用户所做选择最有可能更改这些选项。 你可以捕获有关打印文档使用的用户输入<xref:System.Windows.Forms.PrintDialog>和<xref:System.Drawing.Printing.PrintDocument>组件。  
+# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>如何：在运行时捕获用户输入从 PrintDialog
+虽然您可以设置与在设计时打印相关的选项，有时想要在运行时，最有可能由于所做的用户选择更改这些选项。 您可以捕获用于打印文档中使用的用户输入<xref:System.Windows.Forms.PrintDialog>和<xref:System.Drawing.Printing.PrintDocument>组件。  
   
 ### <a name="to-change-print-options-programmatically"></a>若要以编程方式更改打印选项  
   
-1.  添加<xref:System.Windows.Forms.PrintDialog>和<xref:System.Drawing.Printing.PrintDocument>组件向窗体。  
+1.  添加<xref:System.Windows.Forms.PrintDialog>和一个<xref:System.Drawing.Printing.PrintDocument>向窗体组件。  
   
-2.  设置<xref:System.Windows.Forms.PrintDialog.Document%2A>属性<xref:System.Windows.Forms.PrintDialog>到<xref:System.Drawing.Printing.PrintDocument>添加到窗体。  
+2.  设置<xref:System.Windows.Forms.PrintDialog.Document%2A>的属性<xref:System.Windows.Forms.PrintDialog>到<xref:System.Drawing.Printing.PrintDocument>添加到窗体。  
   
     ```vb  
     PrintDialog1.Document = PrintDocument1  
@@ -53,8 +53,8 @@ ms.locfileid: "33522871"
     printDialog1->ShowDialog();  
     ```  
   
-4.  从对话框的用户的打印选项将复制到<xref:System.Drawing.Printing.PrinterSettings>属性<xref:System.Drawing.Printing.PrintDocument>组件。  
+4.  在对话框中的用户的打印选项将被复制到<xref:System.Drawing.Printing.PrinterSettings>属性的<xref:System.Drawing.Printing.PrintDocument>组件。  
   
-## <a name="see-also"></a>请参阅  
- [如何：打印 Windows 窗体中的多页文本文件](../../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)  
- [Windows 窗体打印支持](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>请参阅
+- [如何：打印 Windows 窗体中的多页文本文件](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Windows 窗体打印支持](windows-forms-print-support.md)

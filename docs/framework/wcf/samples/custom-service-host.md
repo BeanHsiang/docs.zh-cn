@@ -2,12 +2,12 @@
 title: 自定义服务主机
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 51256b115749aef4ed3691e49ccf36ee65f5cbf1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 09a69e489c4b4eb5d3af6e2e74316e678be3d049
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555994"
 ---
 # <a name="custom-service-host"></a>自定义服务主机
 本示例演示如何使用 <xref:System.ServiceModel.ServiceHost> 类的自定义派生来改变服务的运行时行为。 此方法为通过通用方式配置大量服务提供了一个可重用的替代方法。 此示例还演示如何使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 类在 Internet 信息服务 (IIS) 或 Windows 进程激活服务 (WAS) 承载环境中使用自定义 ServiceHost。  
@@ -174,5 +174,5 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 5.  若要删除 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 应用程序，请运行 Cleanup.bat。  
   
-## <a name="see-also"></a>请参阅  
- [如何：在 IIS 中承载 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+## <a name="see-also"></a>请参阅
+- [如何：承载在 IIS 中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

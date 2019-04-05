@@ -1,5 +1,6 @@
 ---
-title: return 语句（C# 参考）
+title: return 语句 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - return_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - return statement [C#]
 - return keyword [C#]
 ms.assetid: 6da6e152-5b58-4448-8f3f-470dd0617ecd
-ms.openlocfilehash: 0d20da39d3f56220c4499f699e542bd24ded93ca
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 058dc1d51099196559bee4ec2b96dc883e813f93
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741995"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236552"
 ---
 # <a name="return-c-reference"></a>return（C# 参考）
 

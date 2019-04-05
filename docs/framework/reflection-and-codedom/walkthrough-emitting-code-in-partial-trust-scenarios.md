@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8461e0a074e7bdf9e1e2631c3f65e16de7256fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399751"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712569"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>演练：在部分信任应用场景中发出代码
 反射发出以完全信任或部分信任形式使用相同的 API 集，但某些功能在部分受信任代码中需要特殊权限。 此外，反射发出具有一个功能，即匿名托管动态方法，旨在由安全透明的程序集采用部分信任的形式使用。  
@@ -184,7 +184,7 @@ ms.locfileid: "33399751"
 <a name="Example"></a>   
 ## <a name="example"></a>示例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  下列代码示例演示如何使用 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> 标记允许匿名托管动态方法跳过 JIT 可见性检查，但仅当目标成员与发出代码的程序集具有相同或较低信任级别时才适用。  
   
  此示例定义了可跨应用程序域边界封送的 `Worker` 类。 该类具有两个发出和执行动态方法的 `AccessPrivateMethod` 方法重载。 第一个重载发出调用 `Worker` 类的私有 `PrivateMethod` 方法的动态方法，而且它发出具有或不具有 JIT 可见性检查的动态方法。 第二个重载发出访问 <xref:System.String> 类的 `internal` 属性（Visual Basic 中的 `Friend` 属性）的动态方法。  
@@ -211,6 +211,6 @@ ms.locfileid: "33399751"
   
 -   如果在 Visual Studio 中生成此代码示例，则必须更改类名，以便在将命名空间传递给 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法时包括该命名空间。 默认情况下，命名空间是项目的名称。 例如，如果项目是“PartialTrust”，那么类名必须为“PartialTrust.Worker”。  
   
-## <a name="see-also"></a>请参阅  
- [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+## <a name="see-also"></a>请参阅
+- [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [如何：运行沙盒中部分受信任的代码](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

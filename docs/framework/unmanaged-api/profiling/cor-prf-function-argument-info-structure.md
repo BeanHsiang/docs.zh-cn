@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fbc41ca1366b412c37d6af09e90e3f1b042ba21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0bb92f9ba8ff0aed1c6eb1fa44fb4d7c9abc186a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714225"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 结构
 按从左向右的顺序表示函数的自变量。  
@@ -40,25 +40,25 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |成员|描述|  
 |------------|-----------------|  
-|`numRanges`|自变量块的数量。 也就是说，此值是数[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)结构中`ranges`数组。|  
-|`totalArgumentSize`|所有自变量的总大小。 换而言之，此值是自变量长度的总和。|  
-|`ranges`|数组`COR_PRF_FUNCTION_ARGUMENT_RANGE`结构，其中每个表示的函数自变量的一个块。|  
+|`numRanges`|自变量的块的数目。 也就是说，此值是数[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)结构中`ranges`数组。|  
+|`totalArgumentSize`|所有自变量的总大小。 换而言之，此值是参数长度的总和。|  
+|`ranges`|一个数组`COR_PRF_FUNCTION_ARGUMENT_RANGE`结构，其中每个表示一个函数自变量的块。|  
   
 ## <a name="remarks"></a>备注  
- 一个函数可能具有多个自变量。 不可能在内存中连续存储这些自变量。 你可能必须在一个位置的三个自变量的块、 在另一个位置中的两个自变量的块和最后一个块中的其他位置的一个自变量。 这些参数均为相同的函数;它们只存储在不同的位置。  
+ 一个函数可能会有多的参数。 不可能在内存中连续存储这些参数。 你可能在一个位置的三个参数的块、 在另一个位置中的两个参数的块和一个自变量的不同位置中的最后一个块。 这些参数均为相同的功能;它们只存储在不同的位置。  
   
- `COR_PRF_FUNCTION_ARGUMENT_INFO`结构表示单个函数的所有参数。 它使用数组引用的函数自变量的所有块。 因此，对于单个函数具有单个`COR_PRF_FUNCTION_ARGUMENT_INFO`结构，即在引用多个`COR_PRF_FUNCTION_ARGUMENT_RANGE`结构，其中每个指向一个或多个函数自变量。  
+ `COR_PRF_FUNCTION_ARGUMENT_INFO`结构表示的单个函数的所有自变量。 它使用数组引用的函数自变量的所有块。 因此，对于单个函数，具有单个`COR_PRF_FUNCTION_ARGUMENT_INFO`结构，它引用多个`COR_PRF_FUNCTION_ARGUMENT_RANGE`结构，其中每个点对一个或多个函数参数。  
   
- 存储在寄存器中的自变量会溢出至内存来生成结构。  
+ 存储在寄存器中的参数将溢出到内存中才能生成结构。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>请参阅
+- [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

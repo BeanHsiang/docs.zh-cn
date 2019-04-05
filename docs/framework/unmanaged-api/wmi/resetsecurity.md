@@ -1,6 +1,6 @@
 ---
 title: ResetSecurity 函数 （非托管 API 参考）
-description: ResetSecurity 函数将模拟令牌分配给当前线程。
+description: ResetSecurity 函数将分配给当前线程的模拟令牌。
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31e42b9e39ddb43025e18888572c394d742e38cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f117b9807d57847d53cf00fbb4983e187798f09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730849"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity 函数
 将提供的模拟令牌分配给当前线程。   
@@ -39,20 +39,20 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>参数
 
 `token`  
-[in]要将与当前线程相关联的模拟令牌。 其值可为 `null`。 
+[in]要与当前线程关联的模拟令牌。 其值可为 `null`。 
 
 ## <a name="return-value"></a>返回值
 
-如果函数成功，则返回值是`S_OK`(0)。
+如果函数成功，返回值是`S_OK`(0)。
 
-如果函数失败，返回值将为非零错误代码。 若要获得扩展的错误信息，调用[GetErrorInfo](geterrorinfo.md)函数。
+如果函数失败，返回值是一个非零错误代码。 若要获得扩展错误信息，请调用[GetErrorInfo](geterrorinfo.md)函数。
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

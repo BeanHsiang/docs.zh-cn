@@ -16,12 +16,12 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 11b0082630fb41823173a87160344d2dfff5482e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 552fb69910d7186321d834e4bc36abc867a31658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602905"
 ---
 # <a name="using-tcp-services"></a>使用 TCP 服务
 <xref:System.Net.Sockets.TcpClient> 类使用 TCP 从 Internet 资源请求数据。 TcpClient 的方法和属性会摘录为了通过 TCP 请求和接收数据而创建的 <xref:System.Net.Sockets.Socket> 的详细信息。 与远程设备的连接表示为流，因此可以使用 .NET Framework 流处理技术读取和写入数据。  
@@ -194,5 +194,5 @@ public class TcpTimeServer {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

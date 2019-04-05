@@ -2,19 +2,19 @@
 title: 创建 XML 树 (C#)
 ms.date: 07/20/2015
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
-ms.openlocfilehash: 1245c0f087bb63f12d9f17389bf752330ccc7670
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 64aed2a02f2f31036458ae878a3cbd21d9526d9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521533"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515844"
 ---
 # <a name="creating-xml-trees-c"></a>创建 XML 树 (C#)
 最常见的 XML 任务之一是构造 XML 树。 本节介绍多种创建 XML 树的方法。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[函数构造 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)|提供对 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中的功能构造的概述。 功能构造使您能在单条语句中创建全部或部分 XML 树。 本主题演示如何在构造 XML 树时嵌入查询。|  
 |[在 C# 中创建 XML 树 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)|演示如何在 C# 中创建树。|  

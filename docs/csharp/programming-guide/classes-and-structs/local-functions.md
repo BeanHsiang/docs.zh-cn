@@ -1,16 +1,17 @@
 ---
-title: 本地函数（C# 编程指南）
+title: 本地函数 - C# 编程指南
+ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42b980bcbb47ed98b9cb8d7234044ae2c92c3124
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e91069c25ebe6c2a22927391734e5030a908e4ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663922"
 ---
 # <a name="local-functions-c-programming-guide"></a>本地函数（C# 编程指南）
 

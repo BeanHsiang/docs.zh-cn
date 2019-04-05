@@ -2,12 +2,12 @@
 title: 联合体系结构
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: f0a6b288860c343157f31f74d5a461fad1784e0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b07fc03fd11c794d804b6bcd1813010965365e43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623438"
 ---
 # <a name="architecture-of-syndication"></a>联合体系结构
 联合 API 是专为提供不限制格式编程模型而设计的，该编程模型允许将各种格式的联合内容写入网络中。 抽象数据模型由以下类组成：  
@@ -24,13 +24,13 @@ ms.locfileid: "33492801"
   
  这些类严格地映射到 Atom 1.0 规范中定义的构造，但有一些名称会不相同。  
   
- 在 Windows Communication Foundation (WCF) 中，联合源建模为另一种服务操作，其中一个其中的返回类型是派生类之一<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>。 源的检索建模为请求-响应消息交换。 客户端向服务发送请求，而服务进行响应。 请求消息是通过基础结构协议（例如，原始 HTTP）设置的，而响应消息包含由通常可以理解的联合格式（RSS 2.0 或 Atom 1.0）组成的负载。 实现这些消息交换的服务称为联合服务。  
+ 在 Windows Communication Foundation (WCF) 中，将联合源建模为另一种类型的服务操作，其中的返回类型是一个派生类的一个<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>。 源的检索建模为请求-响应消息交换。 客户端向服务发送请求，而服务进行响应。 请求消息是通过基础结构协议（例如，原始 HTTP）设置的，而响应消息包含由通常可以理解的联合格式（RSS 2.0 或 Atom 1.0）组成的负载。 实现这些消息交换的服务称为联合服务。  
   
  联合服务的协定包含一组操作，这些操作返回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 类的实例。 下面的示例演示联合服务的接口声明。  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- 联合支持基于 WCF REST 编程模型定义<xref:System.ServiceModel.WebHttpBinding>绑定，与结合使用<xref:System.ServiceModel.Description.WebHttpBehavior>用于使源可用作服务。 有关 WCF REST 编程模型的详细信息，请参阅[WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。  
+ 联合支持基于 WCF REST 编程模型，用于定义<xref:System.ServiceModel.WebHttpBinding>绑定，与结合使用<xref:System.ServiceModel.Description.WebHttpBehavior>以使源可用作服务。 有关 WCF REST 编程模型的详细信息，请参阅[WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。  
   
 > [!NOTE]
 >  Atom 1.0 规范允许在其任何日期构造中指定秒的小数部分。 在序列化和反序列化 WCF 实现会忽略秒的小数部分。  
@@ -75,9 +75,9 @@ ms.locfileid: "33492801"
   
 ## <a name="extensibility"></a>扩展性  
   
--   联合协议的一个主要功能是扩展性。 Atom 1.0 和 RSS 2.0 都允许您向联合源中添加规范中没有定义的属性和元素。 WCF 联合编程模型提供了两种使用自定义属性和扩展的方法： 派生新类和松散类型访问。 有关详细信息，请参阅[联合扩展性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)。  
+-   联合协议的一个主要功能是扩展性。 Atom 1.0 和 RSS 2.0 都允许您向联合源中添加规范中没有定义的属性和元素。 WCF 联合编程模型提供使用自定义属性和扩展的两种方法： 派生新类和松散类型访问。 有关详细信息，请参阅[联合扩展性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)。  
   
-## <a name="see-also"></a>请参阅  
- [WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [WCF 联合对象模型如何映射到 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>请参阅
+- [WCF 联合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [WCF 联合对象模型如何映射到 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
+- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

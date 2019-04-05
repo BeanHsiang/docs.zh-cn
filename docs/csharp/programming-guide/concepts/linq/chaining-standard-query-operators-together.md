@@ -2,12 +2,12 @@
 title: 将标准查询运算符链接在一起 (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 07cc6769646f8f3f924b488e30ce2415c587ebe0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 71b364d76860b5daa21ea176947d9cfe9d49b308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582878"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>将标准查询运算符链接在一起 (C#)
 这是[教程：将查询链接在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) 教程中的最后一个主题。  

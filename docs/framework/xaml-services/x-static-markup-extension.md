@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 8a14b00fe762d325028072cd0ea3eecf9b9206e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0956bb6daa60f947c1cd410ce4728da7d1bb707d
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181272"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037691"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 标记扩展
 引用中定义的任何静态的值的代码实体[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 合规的方式。 引用的静态属性可以用于提供在 XAML 中属性的值。  
@@ -31,8 +31,8 @@ ms.locfileid: "50181272"
 | | |  
 |-|-|  
 |`prefix`|可选。 指的是一个映射的非默认的 XAML 命名空间前缀。 `prefix` 所示显式使用因为很少引用来自默认 XAML 命名空间的静态属性。 请参阅“备注”。|  
-|`typeName`|必须的。 定义的所需的静态成员的类型的名称。|  
-|`staticMemberName`|必须的。 所需的静态值成员 （一个常量、 静态属性、 字段或枚举值） 的名称。|  
+|`typeName`|必需。 定义的所需的静态成员的类型的名称。|  
+|`staticMemberName`|必需。 所需的静态值成员 （一个常量、 静态属性、 字段或枚举值） 的名称。|  
   
 ## <a name="remarks"></a>备注  
 
@@ -69,7 +69,7 @@ ms.locfileid: "50181272"
 
 在.NET Framework XAML 服务实现中，对此标记扩展的处理由定义<xref:System.Windows.Markup.StaticExtension>类。  
 
-`x:Static` 是标记扩展。 在 XAML 使用的所有标记扩展`{`和`}`约定所依据的 XAML 处理器识别标记扩展，必须提供一个值，其特性语法中的字符。 有关标记扩展的详细信息，请参阅 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
+`x:Static` 是标记扩展。 在 XAML 使用的所有标记扩展`{`和`}`约定所依据的 XAML 处理器识别标记扩展，必须提供一个值，其特性语法中的字符。 有关标记扩展的详细信息，请参阅 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 ## <a name="wpf-usage-notes"></a>WPF 用法说明  
  用于 WPF 编程的默认 XAML 命名空间不包含许多有用的静态属性和有用的静态属性大多具有支持类型转换器，可协助而无需使用如`{x:Static}`。 对于静态属性，必须映射 XAML 命名空间的前缀，如果以下项之一为 true:  
@@ -78,10 +78,10 @@ ms.locfileid: "50181272"
   
 -   从自定义程序集引用类型。  
   
--   正在引用存在于 WPF 程序集中的类型，但该类型是未映射到 WPF 默认 XAML 命名空间的一部分的 CLR 命名空间中。 WPF 默认 XAML 命名空间到 CLR 命名空间的映射由中各种 WPF 程序集的定义 (有关这一概念的详细信息，请参阅[XAML 命名空间和 WPF XAML 的 Namespace 映射](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 如果该 CLR 命名空间主要是组成通常不适用于 XAML，如类定义非映射 CLR 命名空间可存在<xref:System.Windows.Threading>。  
+-   正在引用存在于 WPF 程序集中的类型，但该类型是未映射到 WPF 默认 XAML 命名空间的一部分的 CLR 命名空间中。 WPF 默认 XAML 命名空间到 CLR 命名空间的映射由中各种 WPF 程序集的定义 (有关这一概念的详细信息，请参阅[XAML 命名空间和 WPF XAML 的 Namespace 映射](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 如果该 CLR 命名空间主要是组成通常不适用于 XAML，如类定义非映射 CLR 命名空间可存在<xref:System.Windows.Threading>。  
   
- 有关如何为 WPF 使用前缀和 XAML 命名空间的详细信息，请参阅[XAML 命名空间和 WPF XAML Namespace 映射](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ 有关如何为 WPF 使用前缀和 XAML 命名空间的详细信息，请参阅[XAML 命名空间和 WPF XAML Namespace 映射](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
-## <a name="see-also"></a>请参阅  
- [x:Type 标记扩展](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [从 WPF 迁移到 System.Xaml 的类型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>请参阅
+- [x:Type 标记扩展](x-type-markup-extension.md)
+- [从 WPF 迁移到 System.Xaml 的类型](types-migrated-from-wpf-to-system-xaml.md)

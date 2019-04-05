@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f2177702c6c5999033d0852a932e52c0725fb8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9d031754c22a62cb8d37cd5f591619d985773727
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422654"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498856"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles 方法
-在进程中获取对象句柄的枚举数。  
+获取可枚举对象句柄的进程中。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,33 +34,33 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
     [out] ICorDebugGCReferenceEnum **ppEnum);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `types`  
- [in]按位组合[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)指定的句柄以包含在集合中的类型的值。  
+ [in]按位组合[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)值，该值指定要包含在集合中的句柄的类型。  
   
  `ppENum`  
- [out]指向的地址的指针[ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)即的枚举数对象要进行垃圾回收。  
+ [out]指向的地址的指针[ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) ，它是一个枚举器的对象进行垃圾回收。  
   
 ## <a name="remarks"></a>备注  
- `EnumerateHandles` 是一个 helper 函数，支持的句柄表的检查。 它是类似于[icordebugprocess5:: Enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)方法，只不过而不是填充[ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)集合的所有对象要进行垃圾回收，它包括具有来自句柄表的句柄的对象。  
+ `EnumerateHandles` 是一个帮助程序函数支持的句柄表的检查。 它是类似于[ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)方法，不同之处在于而不是填充[ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)集合的所有对象进行垃圾回收它包括具有来自句柄表的句柄的对象。  
   
- `types`参数指定要包含在集合中的句柄类型。 `types` 可以是任何的以下三个成员[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)枚举：  
+ `types`参数指定要包含在集合中的句柄类型。 `types` 可以是任何以下三个成员[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)枚举：  
   
--   `CorHandleStrongOnly` （仅引用强句柄）。  
+-   `CorHandleStrongOnly` （仅限强引用到句柄）。  
   
--   `CorHandleWeakOnly` （仅弱引用到句柄）。  
+-   `CorHandleWeakOnly` （仅限弱引用到句柄）。  
   
 -   `CorHandleAll` （所有句柄）。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

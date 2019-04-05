@@ -2,12 +2,12 @@
 title: 处理异步应用中的重新进入 (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: c641c217b01e820e9a68065b0a56277a656ccc25
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4f5435dd482a20e1aa5a6e0b93d6222025b05518
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50034452"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359258"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>处理异步应用中的重新进入 (C#)
 在应用中包含异步代码时，应考虑并且可以阻止重新进入（指在异步操作完成之前重新进入它）。 如果不识别并处理重新进入的可能性，则它可能会导致意外结果。  
@@ -29,7 +29,7 @@ ms.locfileid: "50034452"
 > [!NOTE]
 >  若要运行该示例，计算机上必须安装 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
   
-##  <a name="BKMK_RecognizingReentrancy"></a>识别重新进入  
+## <a name="BKMK_RecognizingReentrancy"></a>识别重新进入  
  在本主题中的示例中，用户选择“开始”按钮以启动一个异步应用，该应用下载一系列网站并计算下载的总字节数。 该示例的同步版本以相同方式进行响应（无论用户选择该按钮多少次），因为在第一次选择之后，UI 线程会忽略这些事件，直到应用完成运行。 但是，在异步应用中，UI 线程会继续响应，你可能会在它完成之前重新进入异步操作。  
   
  下面的示例显示用户仅选择“开始”按钮一次时的预期输出。 下载网站的列表会出现，其中包含每个站点的大小（以字节为单位）。 总字节数会在结尾处显示。  
@@ -86,7 +86,7 @@ TOTAL bytes returned:  890591
   
  可以滚动到本主题末尾来评审生成此输出的代码。 可以通过将解决方案下载到本地计算机，然后运行 WebsiteDownload 项目，或是通过使用本主题末尾的代码创建自己的项目，来体验该代码。 有关详细信息和说明，请参阅[检查并运行示例应用](#BKMD_SettingUpTheExample)。  
   
-##  <a name="BKMK_HandlingReentrancy"></a>处理重新进入  
+## <a name="BKMK_HandlingReentrancy"></a>处理重新进入  
  可以采用各种方式处理重新进入，具体取决于希望应用执行的操作。 本主题展示了以下示例：  
   
 -   [禁用“开始”按钮](#BKMK_DisableTheStartButton)  
@@ -101,7 +101,7 @@ TOTAL bytes returned:  890591
   
      允许所有请求的操作异步运行，但是会协调输出的显示，以便每个操作的结果按顺序一起显示。  
   
-###  <a name="BKMK_DisableTheStartButton"></a>禁用“开始”按钮  
+### <a name="BKMK_DisableTheStartButton"></a>禁用“开始”按钮  
  可以通过在 `StartButton_Click` 事件处理程序顶部禁用“开始”按钮，在操作运行期间阻止该按钮。 随后可以在操作完成时从 `finally` 块中重新启用中该按钮，以便用户可以再次运行应用。  
   
  若要设置此方案，请对[检查并运行示例应用](#BKMD_SettingUpTheExample)中提供的基本代码进行以下更改。 还可以从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载已完成的应用。 项目名是 DisableStartButton。  
@@ -133,7 +133,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  由于进行了这些更改，所以该按钮在 `AccessTheWebAsync` 下载网站期间不会进行响应，因此无法重新进入该进程。  
   
-###  <a name="BKMK_CancelAndRestart"></a>取消和重启操作  
+### <a name="BKMK_CancelAndRestart"></a>取消和重启操作  
  可以使“开始”按钮保持活动状态而不是禁用该按钮，但是如果用户再次选择该按钮，则取消已在运行的操作，让最近开始的操作继续运行。  
   
  有关取消的详细信息，请参阅[微调异步应用程序 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)。  
@@ -259,7 +259,7 @@ async Task AccessTheWebAsync(CancellationToken ct)
   
     // Display the total count for all of the websites.  
     ResultsTextBox.Text +=  
-        string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);  
+        $"\r\n\r\nTOTAL bytes returned:  {total}\r\n";
 }     
 ```  
   
@@ -293,7 +293,7 @@ TOTAL bytes returned:  890591
   
  若要消除部分列表，请对 `StartButton_Click` 中的第一行代码取消注释以在用户每次重新启动操作时清除文本框。  
   
-###  <a name="BKMK_RunMultipleOperations"></a>运行多个操作并将输出排入队列  
+### <a name="BKMK_RunMultipleOperations"></a>运行多个操作并将输出排入队列  
  此第三个示例最复杂，因为应用会在用户每次选择“开始”按钮时启动另一个异步操作，并且所有操作都会运行到完成。 所有请求的操作以异步方式从列表中下载网站，但是操作的输出会按顺序呈现。 也就是说，实际下载活动是交错进行的（如[识别重新进入](#BKMK_RecognizingReentrancy)中的输出所示），但是每个组的结果列表会分开呈现。  
   
  操作会共享一个全局 <xref:System.Threading.Tasks.Task> (`pendingWork`)，它用作显示进程的守卫。  
@@ -402,7 +402,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
     // ***Verify that each group's results are displayed together, and that  
     // the groups display in order, by marking each group with a letter.  
     group = (char)(group + 1);  
-    ResultsTextBox.Text += string.Format("\r\n\r\n#Starting group {0}.", group);  
+    ResultsTextBox.Text += $"\r\n\r\n#Starting group {group}.";
   
     try  
     {  
@@ -411,7 +411,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
         // The following line verifies a successful return from the download and  
         // display procedures.   
-        ResultsTextBox.Text += string.Format("\r\n\r\n#Group {0} is complete.\r\n", finishedGroup);  
+        ResultsTextBox.Text += $"\r\n\r\n#Group {finishedGroup} is complete.\r\n";
     }  
     catch (Exception)  
     {  
@@ -442,7 +442,7 @@ private async Task<char> AccessTheWebAsync(char grp)
     // Assign the Task that FinishOneGroupAsync returns to the gatekeeper task, pendingWork.  
     pendingWork = FinishOneGroupAsync(urlList, getContentTasks, grp);  
   
-    ResultsTextBox.Text += string.Format("\r\n#Task assigned for group {0}. Download tasks are active.\r\n", grp);  
+    ResultsTextBox.Text += $"\r\n#Task assigned for group {grp}. Download tasks are active.\r\n";
   
     // ***This task is complete when a group has finished downloading and displaying.  
     await pendingWork;  
@@ -477,7 +477,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
     // Display the total count for all of the websites.  
     ResultsTextBox.Text +=  
-        string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);  
+        $"\r\n\r\nTOTAL bytes returned:  {total}\r\n";
 }  
 ```  
   
@@ -534,13 +534,13 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
      组进入 `StartButton_Click` 之后，操作在操作进入 `FinishOneGroupAsync` 之前不会完成 await 表达式。 因此，没有其他操作可以在代码段期间获得控制权。  
   
-##  <a name="BKMD_SettingUpTheExample"></a>检查并运行示例应用  
+## <a name="BKMD_SettingUpTheExample"></a>检查并运行示例应用  
  若要更好地了解示例应用，可以下载它，自己生成或查看本主题末尾的代码，而无需实现应用。  
   
 > [!NOTE]
 >  若要将示例作为 Windows Presentation Foundation (WPF) 桌面应用运行，计算机上必须安装有 Visual Studio 2012 或更高版本和 .NET Framework 4.5 或更高版本。  
   
-###  <a name="BKMK_DownloadingTheApp"></a>下载应用  
+### <a name="BKMK_DownloadingTheApp"></a>下载应用  
   
 1.  从[异步示例：.NET 桌面应用中的重新进入](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下载压缩文件。  
   
@@ -554,7 +554,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 6.  选择 CTRL+F5 键以生成并运行项目。  
   
-###  <a name="BKMK_BuildingTheApp"></a>生成应用  
+### <a name="BKMK_BuildingTheApp"></a>生成应用  
  以下部分提供用于将示例生成为 WPF 应用的代码。  
   
 ##### <a name="to-build-a-wpf-app"></a>生成 WPF 应用程序  
@@ -672,7 +672,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
                 // Display the total count for all of the websites.  
                 ResultsTextBox.Text +=  
-                    string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);  
+                    $"\r\n\r\nTOTAL bytes returned:  {total}\r\n";
             }  
   
             private List<string> SetUpURLList()  
@@ -700,7 +700,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
                 // Strip off the "https://".  
                 var displayURL = url.Replace("https://", "");  
                 // Display position in the URL list, the URL, and the number of bytes.  
-                ResultsTextBox.Text += string.Format("\n{0}. {1,-58} {2,8}", pos, displayURL, content.Length);  
+                ResultsTextBox.Text += $"\n{pos}. {displayURL,-58} {content.Length,8}";
             }  
         }  
     }  
@@ -712,5 +712,5 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 ## <a name="see-also"></a>请参阅
 
-- [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)

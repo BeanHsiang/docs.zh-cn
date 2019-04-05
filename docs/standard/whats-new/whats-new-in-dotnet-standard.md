@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19353bd068e3b04bc3d852c1e22db9c97ebef628
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 45e67fe1436863da4050342bb224d67894111cc4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583160"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712482"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard 中的新增功能
 
@@ -51,7 +51,7 @@ ms.locfileid: "48583160"
 - 增强了 <xref:System.String> 类中的字符串比较、枚举和规范化支持。
 - <xref:System.TimeZoneInfo.AdjustmentRule> 和 <xref:System.TimeZoneInfo.TransitionTime> 类支持夏令时调整和时间转换。
 - 显著改进了 <xref:System.Type> 类中的功能。
-- 通过添加包含 <xref:System.Runtime.Serialization.SerializationInfo> 和 <xref:System.Runtime.Serialization.StreamingContext> 参数的异常构造函数，改进了对异常对象反串行化的支持。
+- 通过添加包含 <xref:System.Runtime.Serialization.SerializationInfo> 和 <xref:System.Runtime.Serialization.StreamingContext> 参数的异常构造函数，改进了对异常对象反序列化的支持。
 
 ### <a name="support-for-net-framework-libraries"></a>支持 .NET Framework 库
 
@@ -93,5 +93,5 @@ dotnet new classlib -lang vb
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Standard](../net-standard.md)  
-- [.NET Standard 简介](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
+- [.NET Standard](../net-standard.md)
+- [.NET Standard 简介](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)

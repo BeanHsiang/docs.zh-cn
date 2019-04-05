@@ -3,12 +3,12 @@ title: C# 数组 - C# 语言介绍
 description: 数组是 C# 语言中最基本的集合类型
 ms.date: 08/10/2016
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: c0fe65348ab2d41852ed9150571dcb0e5b8553f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8685e6ad08eb74534cdad499099b3d12da0a497a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351000"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153301"
 ---
 # <a name="arrays"></a>数组
 
@@ -44,5 +44,5 @@ ms.locfileid: "33351000"
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
-[上一页](structs.md)
-[下一页](interfaces.md)
+>[上一页](structs.md)
+>[下一页](interfaces.md)

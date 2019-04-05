@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc957b345c1e66059551508f73e37e0f6d69f6cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 267102198731054bd2ce050299627eecbd37a4a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692203"
 ---
 # <a name="viewing-type-information"></a>查看类型信息
 <xref:System.Type?displayProperty=nameWithType> 类是反射的中心。 当反射提出请求时，公共语言运行时为已加载的类型创建 Type。 可使用 Type 对象的方法、字段、属性和嵌套类来查找该类型的任何信息。  
@@ -26,7 +26,7 @@ ms.locfileid: "33399738"
  使用 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> 从尚未加载的程序集中获取 Type 对象，传入所需类型的名称。 使用 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 从已加载的程序集中获取 Type 对象。 使用 <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> 获取模块 Type 对象。  
   
 > [!NOTE]
->  若要检查和操纵泛型类型及方法，请参阅[反射类型和泛型类型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)和[如何：使用反射检查和实例化泛型类型](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)中提供的其他信息。  
+>  要检查和操纵泛型类型及方法，请参阅[反射类型和泛型类型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)和[如何：使用反射检查和实例化泛型类型](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)中提供的其他信息。  
   
  下列示例演示获取程序集的 <xref:System.Reflection.Assembly> 对象和模块所必需的语法。  
   
@@ -74,19 +74,19 @@ ms.locfileid: "33399738"
  [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)]
  [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection.BindingFlags>  
- <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetFields%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.MemberInfo>  
- <xref:System.Reflection.ConstructorInfo>  
- <xref:System.Reflection.MethodInfo>  
- <xref:System.Reflection.FieldInfo>  
- <xref:System.Reflection.EventInfo>  
- <xref:System.Reflection.ParameterInfo>  
- [反射类型和泛型类型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Reflection.BindingFlags>
+- <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetFields%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.MemberInfo>
+- <xref:System.Reflection.ConstructorInfo>
+- <xref:System.Reflection.MethodInfo>
+- <xref:System.Reflection.FieldInfo>
+- <xref:System.Reflection.EventInfo>
+- <xref:System.Reflection.ParameterInfo>
+- [反射类型和泛型类型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)

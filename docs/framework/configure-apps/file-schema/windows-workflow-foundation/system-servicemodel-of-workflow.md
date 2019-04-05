@@ -1,16 +1,16 @@
 ---
-title: 工作流的 &lt;system.serviceModel&gt;
+title: 工作流的 <system.serviceModel>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 62047d68d559a34ead290cf18f77d032841210b2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 005a274df9e9ab99227a3748b7a25c9d465d020f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755632"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271119"
 ---
-# <a name="ltsystemservicemodelgt-of-workflow"></a>工作流的 &lt;system.serviceModel&gt;
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > 的工作流
 此配置节包含所有工作流配置元素。  
   
 ## <a name="syntax"></a>语法  
@@ -101,8 +101,8 @@ ms.locfileid: "32755632"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|本部分定义**serviceBehaviors**集合。  集合中的每个元素定义服务所使用的行为元素。 每个行为元素由其唯一标识**名称**属性。|  
-|[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|表示一个配置节，用于定义工作流服务的跟踪设置。<br /><br /> 在工作流跟踪和其配置的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[工作流配置跟踪](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
+|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|本部分将定义**serviceBehaviors**集合。  集合中的每个元素定义服务所使用的行为元素。 每个行为元素由其唯一**名称**属性。|  
+|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|表示一个配置节，用于定义工作流服务的跟踪设置。<br /><br /> 工作流跟踪和其配置的详细信息，请参阅[工作流跟踪](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)并[工作流配置跟踪](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。|  
   
 ### <a name="parent-elements"></a>父元素  
   

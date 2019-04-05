@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5caf432b5de7cb0c8ff0e6f53b3e79a64ecf802e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a54b20ecf34ecf1824420fcbb3d45fba64017b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443308"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657189"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck 枚举
 指定用于控制将哪些引用项转换为相应定义以优化代码的标志。  
@@ -42,18 +42,18 @@ typedef enum CorRefToDefCheck {
   
 |成员|描述|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|指定类型引用和成员引用应转换为定义。 这是默认值 (`MDTypeRefToDef` &#124; `MDMemberRefToDef`)。|  
-|`MDRefToDefAll`|指定应将所有引用的项转换为定义。|  
-|`MDRefToDefNone`|指定应将没有引用的项转换为定义。|  
+|`MDRefToDefDefault`|指定类型的引用和成员引用应转换为定义。 这是默认值 (`MDTypeRefToDef` &#124; `MDMemberRefToDef`)。|  
+|`MDRefToDefAll`|指定应将所有被引用的项转换为定义。|  
+|`MDRefToDefNone`|指定应将任何被引用的项转换为定义。|  
 |`MDTypeRefToDef`|指定类型引用仅应将转换为类型定义。|  
-|`MDMemberRefToDef`|指定应将仅成员引用转换的定义。 也就是说，成员引用应转换为方法的定义或字段定义。|  
+|`MDMemberRefToDef`|指定成员引用仅应转换为定义。 也就是说，成员引用应转换为方法定义或字段定义。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

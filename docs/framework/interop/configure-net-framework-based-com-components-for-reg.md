@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519403"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093536"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活
 基于 .NET Framework 的组件的免注册激活略复杂于 COM 组件的免注册激活。 安装需要两个清单：  
@@ -105,15 +105,15 @@ ms.locfileid: "43519403"
   
 4.  标识程序集中的每个类。 使用 `<clrClass>` 元素来唯一地标识托管程序集中的每个类。 该元素是 `<assembly>` 元素的子元素，具有下表中描述的属性。  
   
-    |特性|描述|必需|  
+    |特性|说明​​|必需|  
     |---------------|-----------------|--------------|  
     |`clsid`|用于指定要激活的类的标识符。|是|  
-    |`description`|用于通知用户组件相关信息的字符串。 空字符串为默认值。|否|  
+    |`description`|用于通知用户组件相关信息的字符串。 空字符串为默认值。|No|  
     |`name`|用于表示托管类的字符串。|是|  
-    |`progid`|用于后期绑定激活的标识符。|否|  
-    |`threadingModel`|COM 线程模型。 “Both”为默认值。|否|  
-    |`runtimeVersion`|指定要使用的公共语言运行时 (CLR) 版本。 如未指定此属性，并且尚未加载 CLR，将使用最近安装的早于 CLR 版本 4 的 CLR 版本加载组件。 如果指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本将自动向前滚到最近安装的早于 CLR 版本 4 的 CLR 版本（通常为 v2.0.50727）。 如果已加载其他 CLR 版本，并且可在进程内并行加载指定版本，那么将加载指定版本；否则使用已加载的 CLR。 这可能会导致加载失败。|否|  
-    |`tlbid`|包含有关该类的类型信息的类型库的标识符。|否|  
+    |`progid`|用于后期绑定激活的标识符。|No|  
+    |`threadingModel`|COM 线程模型。 “Both”为默认值。|No|  
+    |`runtimeVersion`|指定要使用的公共语言运行时 (CLR) 版本。 如未指定此属性，并且尚未加载 CLR，将使用最近安装的早于 CLR 版本 4 的 CLR 版本加载组件。 如果指定 v1.0.3705、v1.1.4322 或 v2.0.50727，版本将自动向前滚到最近安装的早于 CLR 版本 4 的 CLR 版本（通常为 v2.0.50727）。 如果已加载其他 CLR 版本，并且可在进程内并行加载指定版本，那么将加载指定版本；否则使用已加载的 CLR。 这可能会导致加载失败。|No|  
+    |`tlbid`|包含有关该类的类型信息的类型库的标识符。|No|  
   
      所有属性标记都区分大小写。 通过使用 OLE/COM ObjectViewer (Oleview.exe) 查看程序集的已导出类型库，可以获取 CLSID、ProgID、线程模型和运行时版本。  
   
@@ -172,8 +172,8 @@ ms.locfileid: "43519403"
   
      同样，`myresource.res` 是包含嵌入资源的资源文件的名称。  
   
-## <a name="see-also"></a>请参阅  
- [免注册 COM 互操作](registration-free-com-interop.md)  
- [免注册 COM 互操作的要求](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))  
- [将 COM 组件配置为免注册激活](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))  
- [基于 .NET 组件的免注册激活：演练](https://msdn.microsoft.com/library/ms973915.aspx)
+## <a name="see-also"></a>请参阅
+- [免注册 COM 互操作](registration-free-com-interop.md)
+- [免注册 COM 互操作的需求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [将 COM 组件配置为免注册激活](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [基于 .NET 组件的免注册激活：演练](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

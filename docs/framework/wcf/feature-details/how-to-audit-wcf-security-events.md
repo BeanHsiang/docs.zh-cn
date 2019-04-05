@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 90169aac0c0c2cac8860b2809467ffa3a27d0e91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566822"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>如何：审核 Windows Communication Foundation 安全事件
 Windows Communication Foundation (WCF)，可安全事件记录到 Windows 事件日志中，可以使用 Windows 事件查看器查看。 本主题说明如何设置应用程序以使其记录安全事件。 有关 WCF 审核的详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
@@ -81,14 +81,14 @@ Windows Communication Foundation (WCF)，可安全事件记录到 Windows 事件
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  将 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 属性设置为 `true`，就会隐匿任何生成安全审核失败（如果设置为 `false`，则会引发异常）。 但是，如果启用以下 Windows**本地安全设置**属性，无法生成审核事件将导致 Windows 立即关闭：  
   
- **审核： 关闭系统，如果无法记录安全审核则立即**  
+ **审核：如果无法记录安全审核则立即，关闭系统**  
   
  若要设置该属性，打开**本地安全设置**对话框。 下**安全设置**，单击**本地策略**。 然后单击**安全选项**。  
   
  如果<xref:System.ServiceModel.AuditLogLocation>属性设置为<xref:System.ServiceModel.AuditLogLocation.Security>并**审核对象访问**未在中设置**本地安全策略**，审核事件不会写入安全日志。 请注意，虽然不返回任何失败记录，但审核项不会写入安全日志。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)

@@ -12,30 +12,30 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 435789e0d1bc601a9eb51488254407fefd334e05
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121462"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375098"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>通过创建 ControlTemplate 自定义现有控件的外观
-<a name="introduction"></a> 一个<xref:System.Windows.Controls.ControlTemplate>指定可视结构和控件的可视行为。 您可以通过提供一个新的 it 自定义控件的外观<xref:System.Windows.Controls.ControlTemplate>。 当你创建<xref:System.Windows.Controls.ControlTemplate>，而无需更改其功能替换现有控件的外观。 例如，您可以将按钮在应用程序中圆形而不是默认的方形，但按钮仍将引发<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
+<a name="introduction"></a><xref:System.Windows.Controls.ControlTemplate> 指定视觉结构和控件的视觉行为。 可以通过向控件提供一个新的<xref:System.Windows.Controls.ControlTemplate> 对控件外观进行自定义。 创建 <xref:System.Windows.Controls.ControlTemplate> 时，仅替换现有控件的外观，而不会更改其功能。 例如，可在应用程序中将按钮设置为圆形而不是默认的方形，但按钮仍将引发 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件。  
   
  本主题介绍的各个组成部分<xref:System.Windows.Controls.ControlTemplate>，演示如何创建一个简单<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.Button>，并说明如何了解控件的控件协定，使你可以自定义其外观。 因为您创建<xref:System.Windows.Controls.ControlTemplate>在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，可以无需编写任何代码更改控件的外观。 还可以使用设计器（如 Microsoft Expression Blend）创建自定义控件模板。 本主题演示了在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]的自定义的外观<xref:System.Windows.Controls.Button>并列出了本主题末尾的完整示例。 有关使用 Expression Blend 的详细信息，请参阅[设置支持模板的控件的样式](https://go.microsoft.com/fwlink/?LinkId=161153)。  
   
  如下图所示<xref:System.Windows.Controls.Button>，它使用<xref:System.Windows.Controls.ControlTemplate>本主题中创建的。  
   
- ![一个具有自定义控件模板的按钮。](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![一个具有自定义控件模板的按钮。](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 使用自定义控件模板的按钮  
   
- ![一个具有红色边框的按钮。](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![一个具有红色边框的按钮。](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 使用自定义控件模板并将鼠标指针悬停在上方的按钮  
   
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 本主题假设用户了解如何创建和使用[控件](../../../../docs/framework/wpf/controls/index.md)中讨论的控件和样式。 本主题中讨论的概念适用于从继承元素<xref:System.Windows.Controls.Control>类，除<xref:System.Windows.Controls.UserControl>。 无法应用<xref:System.Windows.Controls.ControlTemplate>到<xref:System.Windows.Controls.UserControl>。  
+ 本主题假设用户了解如何创建和使用[控件](index.md)中讨论的控件和样式。 本主题中讨论的概念适用于从继承元素<xref:System.Windows.Controls.Control>类，除<xref:System.Windows.Controls.UserControl>。 无法应用<xref:System.Windows.Controls.ControlTemplate>到<xref:System.Windows.Controls.UserControl>。  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
 ## <a name="when-you-should-create-a-controltemplate"></a>何时应创建 ControlTemplate  
@@ -47,12 +47,12 @@ ms.locfileid: "49121462"
   
  如下图所示<xref:System.Windows.Controls.CheckBox>使用的默认值<xref:System.Windows.Controls.ControlTemplate>。  
   
- ![一个具有默认控件模板的复选框。](../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
+ ![一个具有默认控件模板的复选框。](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 一个具有默认控件模板的复选框  
   
  如下图所示<xref:System.Windows.Controls.CheckBox>使用自定义<xref:System.Windows.Controls.ControlTemplate>的内容放置<xref:System.Windows.Controls.CheckBox>显示 X 选择指示器上方时<xref:System.Windows.Controls.CheckBox>处于选中状态。  
   
- ![一个具有自定义控件模板的复选框。](../../../../docs/framework/wpf/controls/media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
+ ![一个具有自定义控件模板的复选框。](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
 一个具有自定义控件模板的复选框  
   
  <xref:System.Windows.Controls.ControlTemplate>有关<xref:System.Windows.Controls.CheckBox>在此示例是相对复杂，因此本主题使用简单的示例演示创建<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.Button>。  
@@ -71,14 +71,14 @@ ms.locfileid: "49121462"
   
 -   一个<xref:System.Windows.Controls.ContentPresenter>显示按钮的内容。 <xref:System.Windows.Controls.ContentPresenter>使任何类型的对象显示。  
   
- [!code-xaml[VSMButtonTemplate#BasicTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
+ [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
 ### <a name="preserving-the-functionality-of-a-controls-properties-by-using-templatebinding"></a>使用 TemplateBinding 保留控件属性的功能  
- 当您创建一个新<xref:System.Windows.Controls.ControlTemplate>，您仍可能想要使用的公共属性来更改控件的外观。 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)标记扩展将绑定中的元素的属性<xref:System.Windows.Controls.ControlTemplate>到由控件定义的公共属性。 使用 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) 时，可让控件属性用作模板参数。 换言之，设置控件属性后，该值将传递到包含 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) 的元素。  
+ 当您创建一个新<xref:System.Windows.Controls.ControlTemplate>，您仍可能想要使用的公共属性来更改控件的外观。 [TemplateBinding](../advanced/templatebinding-markup-extension.md)标记扩展将绑定中的元素的属性<xref:System.Windows.Controls.ControlTemplate>到由控件定义的公共属性。 使用 [TemplateBinding](../advanced/templatebinding-markup-extension.md) 时，可让控件属性用作模板参数。 换言之，设置控件属性后，该值将传递到包含 [TemplateBinding](../advanced/templatebinding-markup-extension.md) 的元素。  
   
- 下面的示例重复使用前面示例的一部分[TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)绑定中的元素的属性的标记扩展<xref:System.Windows.Controls.ControlTemplate>到按钮定义的公共属性。  
+ 下面的示例重复使用前面示例的一部分[TemplateBinding](../advanced/templatebinding-markup-extension.md)绑定中的元素的属性的标记扩展<xref:System.Windows.Controls.ControlTemplate>到按钮定义的公共属性。  
   
- [!code-xaml[VSMButtonTemplate#TemplateBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
+ [!code-xaml[VSMButtonTemplate#TemplateBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
   
  在此示例中，<xref:System.Windows.Controls.Grid>具有其<xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType>属性模板绑定到<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>。 因为<xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType>是模板绑定，可以创建使用相同的多个按钮<xref:System.Windows.Controls.ControlTemplate>并设置<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>为每个按钮上不同的值。 如果<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>未通过模板绑定到中的元素的属性<xref:System.Windows.Controls.ControlTemplate>，并设置<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>某个按钮没有任何影响上按钮的外观。  
   
@@ -112,11 +112,11 @@ ms.locfileid: "49121462"
   
  下面的示例创建两个按钮，它们使用<xref:System.Windows.Controls.ControlTemplate>中前面的示例中定义。 该示例设置<xref:System.Windows.Controls.Control.Background%2A>， <xref:System.Windows.Controls.Control.Foreground%2A>，和<xref:System.Windows.Controls.Control.FontSize%2A>上每个按钮的属性。 设置<xref:System.Windows.Controls.Control.Background%2A>属性才有效，因为它是中通过模板绑定<xref:System.Windows.Controls.ControlTemplate>。 即使<xref:System.Windows.Controls.Control.Foreground%2A>和<xref:System.Windows.Controls.Control.FontSize%2A>属性不是模板绑定，将它们设置起作用，因为它们的值继承。  
   
- [!code-xaml[VSMButtonTemplate#ButtonDeclaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
+ [!code-xaml[VSMButtonTemplate#ButtonDeclaration](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
   
  前面的示例生成类似于下图的输出。  
   
- ![两个按钮、 一个蓝色和一个紫色。](../../../../docs/framework/wpf/controls/media/ndp-buttontwo.png "NDP_ButtonTwo")  
+ ![两个按钮、 一个蓝色和一个紫色。](./media/ndp-buttontwo.png "NDP_ButtonTwo")  
 背景色不同的两个按钮  
   
 <a name="changing_the_appearance_of_a_control_depending_on_its_state"></a>   
@@ -127,7 +127,7 @@ ms.locfileid: "49121462"
   
  下面的示例演示<xref:System.Windows.VisualState>更改的外观<xref:System.Windows.Controls.Button>当鼠标指针位于其上方。 <xref:System.Windows.Media.Animation.Storyboard>通过更改的颜色更改按钮的边框颜色`BorderBrush`。 如果您参考<xref:System.Windows.Controls.ControlTemplate>示例在本主题开始时，将会记得`BorderBrush`的名称<xref:System.Windows.Media.SolidColorBrush>分配给<xref:System.Windows.Controls.Border.Background%2A>的<xref:System.Windows.Controls.Border>。  
   
- [!code-xaml[VSMButtonTemplate#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
+ [!code-xaml[VSMButtonTemplate#4](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
   
  该控件负责将各种状态定义为控件协定的一部分，这将在本主题后面的[通过了解控件协定自定义其他控件](#customizing_other_controls_by_understanding_the_control_contract)中进行详细讨论。 下表列出了为指定的状态<xref:System.Windows.Controls.Button>。  
   
@@ -147,20 +147,20 @@ ms.locfileid: "49121462"
 > [!NOTE]
 >  请务必设置<xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType>附加属性的根<xref:System.Windows.FrameworkElement>的<xref:System.Windows.Controls.ControlTemplate>。  
   
- [!code-xaml[VSMButtonTemplate#VisualStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
+ [!code-xaml[VSMButtonTemplate#VisualStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
   
  前面的示例生成类似于下图的输出。  
   
- ![一个具有自定义控件模板的按钮。](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![一个具有自定义控件模板的按钮。](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 使用正常状态下的自定义控件模板的按钮  
   
- ![一个具有红色边框的按钮。](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![一个具有红色边框的按钮。](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 使用鼠标悬停状态下的自定义控件模板的按钮  
   
- ![此边框是透明的按下的按钮。](../../../../docs/framework/wpf/controls/media/ndp-buttonpressed.png "NDP_ButtonPressed")  
+ ![此边框是透明的按下的按钮。](./media/ndp-buttonpressed.png "NDP_ButtonPressed")  
 使用按下状态下的自定义控件模板的按钮  
   
- 若要查找附带在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的控件的可视状态，请参阅 [Control 样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)。  
+ 若要查找附带在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的控件的可视状态，请参阅 [Control 样式和模板](control-styles-and-templates.md)。  
   
 <a name="specifying_the_behavior_of_a_control_when_it_transitions_between_states"></a>   
 ## <a name="specifying-the-behavior-of-a-control-when-it-transitions-between-states"></a>指定控件在状态之间转换时的行为  
@@ -177,12 +177,12 @@ ms.locfileid: "49121462"
 ### <a name="specifying-the-duration-of-a-transition"></a>指定转换的持续时间  
  您可以指定多长时间转换所需的设置<xref:System.Windows.VisualTransition.GeneratedDuration%2A>属性。 前面的示例包含<xref:System.Windows.VisualState>，它指定按钮的边框在时按下按钮时，但动画时间太长而引起注意，如果快速按下并释放按钮将变为透明。 可以使用<xref:System.Windows.VisualTransition>若要指定的时间花费在控件转换为按下状态。 以下示例指定控件需要百分之一秒进入按下状态。  
   
- [!code-xaml[VSMButtonTemplate#PressedTransition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
+ [!code-xaml[VSMButtonTemplate#PressedTransition](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
   
 ### <a name="specifying-changes-to-the-controls-appearance-during-a-transition"></a>指定转换时控件外观发生的更改  
  <xref:System.Windows.VisualTransition>包含<xref:System.Windows.Media.Animation.Storyboard>控件状态之间转换时的开始。 例如，可以指定控件从 `MouseOver` 状态转换到 `Normal` 状态时发生的某个动画。 下面的示例创建<xref:System.Windows.VisualTransition>，它指定，当用户移动鼠标指针从按钮，按钮边框更改为蓝色，则为黄色，则为黑色 1.5 秒。  
   
- [!code-xaml[VSMButtonTemplate#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
+ [!code-xaml[VSMButtonTemplate#8](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
   
 ### <a name="specifying-when-a-visualtransition-is-applied"></a>指定何时应用 VisualTransition  
  一个<xref:System.Windows.VisualTransition>可限制要应用于仅某些状态，或可以应用任何时候，只要状态之间的控制转换。 在前面的示例中，<xref:System.Windows.VisualTransition>时在控件转换从应用`MouseOver`状态变为`Normal`状态; 在该示例之前，<xref:System.Windows.VisualTransition>时在控件转换为应用`Pressed`状态。 限制何时<xref:System.Windows.VisualTransition>应用设置<xref:System.Windows.VisualTransition.To%2A>和<xref:System.Windows.VisualTransition.From%2A>属性。 下表描述了从最严限制到最宽松限制的限制级别。  
@@ -196,7 +196,7 @@ ms.locfileid: "49121462"
   
  可以有多个<xref:System.Windows.VisualTransition>中的对象<xref:System.Windows.VisualStateGroup>的引用相同的状态，但它们将使用上一个表指定的顺序。 在以下示例中，有两个<xref:System.Windows.VisualTransition>对象。 该控件时从过渡`Pressed`状态变为`MouseOver`状态，<xref:System.Windows.VisualTransition>同时具有<xref:System.Windows.VisualTransition.From%2A>和<xref:System.Windows.VisualTransition.To%2A>使用集。 当控件从非 `Pressed` 的状态转换为 `MouseOver` 状态时，将使用另一种状态。  
   
- [!code-xaml[VSMButtonTemplate#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
+ [!code-xaml[VSMButtonTemplate#7](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
   
  <xref:System.Windows.VisualStateGroup>已<xref:System.Windows.VisualStateGroup.Transitions%2A>属性，其中包含<xref:System.Windows.VisualTransition>适用于对象<xref:System.Windows.VisualState>中的对象<xref:System.Windows.VisualStateGroup>。 作为<xref:System.Windows.Controls.ControlTemplate>名作者，你可以自由地包括任何<xref:System.Windows.VisualTransition>想。 但是，如果<xref:System.Windows.VisualTransition.To%2A>并<xref:System.Windows.VisualTransition.From%2A>属性设置为不在的州名<xref:System.Windows.VisualStateGroup>，则<xref:System.Windows.VisualTransition>将被忽略。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "49121462"
   
 -   从 `MouseOver` 状态转换为 `Normal` 状态。  
   
- [!code-xaml[VSMButtonTemplate#VisualTransitions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
+ [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
 <a name="customizing_other_controls_by_understanding_the_control_contract"></a>   
 ## <a name="customizing-other-controls-by-understanding-the-control-contract"></a>通过了解控件协定自定义其他控件  
@@ -229,25 +229,25 @@ ms.locfileid: "49121462"
   
  下面的示例演示<xref:System.Windows.TemplatePartAttribute>指定的对象<xref:System.Windows.Controls.ComboBox>类。 逻辑<xref:System.Windows.Controls.ComboBox>期望找到<xref:System.Windows.Controls.TextBox>名为`PART_EditableTextBox`和一个<xref:System.Windows.Controls.Primitives.Popup>名为`PART_Popup`中其<xref:System.Windows.Controls.ControlTemplate>。  
   
- [!code-csharp[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
- [!code-vb[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
+ [!code-csharp[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
+ [!code-vb[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
   
  下面的示例演示一个简单<xref:System.Windows.Controls.ControlTemplate>有关<xref:System.Windows.Controls.ComboBox>包含由指定的元素<xref:System.Windows.TemplatePartAttribute>对象上<xref:System.Windows.Controls.ComboBox>类。  
   
- [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
+ [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
   
 ### <a name="states-in-the-control-contract"></a>控件协定中的状态  
  控件状态也属于控件协定。 创建的示例<xref:System.Windows.Controls.ControlTemplate>有关<xref:System.Windows.Controls.Button>演示如何指定的外观<xref:System.Windows.Controls.Button>具体取决于其状态。 您创建<xref:System.Windows.VisualState>为每个指定的状态并使所有<xref:System.Windows.VisualState>对象的共享<xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A>中<xref:System.Windows.VisualStateGroup>，如中所述[更改其状态根据控件的外观](#changing_the_appearance_of_a_control_depending_on_its_state)前面的这本主题。 第三方控件应使用指定状态<xref:System.Windows.TemplateVisualStateAttribute>，这样设计器工具，例如 Expression Blend，以公开控件的状态以创作控件模板。  
   
- 若要查找 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中随附的控件的控件协定，请参阅 [Control 样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)。  
+ 若要查找 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中随附的控件的控件协定，请参阅 [Control 样式和模板](control-styles-and-templates.md)。  
   
 ### <a name="properties-in-the-control-contract"></a>控件协定中的属性  
- 以可视方式影响控件的公共属性也包含在控件协定中。 可以设置这些属性来更改控件的外观，而无需创建一个新<xref:System.Windows.Controls.ControlTemplate>。 此外可以使用[TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)绑定中的元素的属性的标记扩展<xref:System.Windows.Controls.ControlTemplate>到由定义的公共属性<xref:System.Windows.Controls.Button>。  
+ 以可视方式影响控件的公共属性也包含在控件协定中。 可以设置这些属性来更改控件的外观，而无需创建一个新<xref:System.Windows.Controls.ControlTemplate>。 此外可以使用[TemplateBinding](../advanced/templatebinding-markup-extension.md)绑定中的元素的属性的标记扩展<xref:System.Windows.Controls.ControlTemplate>到由定义的公共属性<xref:System.Windows.Controls.Button>。  
   
  以下示例展示了按钮的控件协定。  
   
- [!code-csharp[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
- [!code-vb[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
+ [!code-csharp[VSMButtonTemplate#ButtonContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
+ [!code-vb[VSMButtonTemplate#ButtonContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
   
  创建时<xref:System.Windows.Controls.ControlTemplate>，它通常是最简单的方法开始与某个现有<xref:System.Windows.Controls.ControlTemplate>并对其进行更改。 可以执行下列任一操作，更改现有<xref:System.Windows.Controls.ControlTemplate>:  
   
@@ -259,7 +259,7 @@ ms.locfileid: "49121462"
 ## <a name="complete-example"></a>完整的示例  
  下面的示例演示的完整<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate>本主题中讨论。  
   
- [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
+ [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
-## <a name="see-also"></a>请参阅  
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>请参阅
+- [样式设置和模板化](styling-and-templating.md)

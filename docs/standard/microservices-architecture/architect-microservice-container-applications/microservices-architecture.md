@@ -1,27 +1,27 @@
 ---
 title: 微服务体系结构
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务体系结构
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务体系结构的 30,000 英尺视图。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: e41544a7c5f352321c3fa3e61a71568a6cf0f219
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: 6a3262c65fb221f3b9e058a581b5dc6bfed92076
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106679"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465186"
 ---
 # <a name="microservices-architecture"></a>微服务体系结构
 
-顾名思义，微服务体系结构是一种将服务器应用程序生成为一组小型服务的方法。 每个服务都在自己的进程中运行，并使用 HTTP/HTTPS、WebSocket 或 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) 等协议与其他进程进行通信。 每个微服务在特定的上下文边界内实现特定的端到端域或业务功能，每个微服务都必须自主开发，并且可以独立部署。 最后，每个微服务都应拥有其基于不同数据存储技术（SQL、NoSQL）和不同编程语言的相关域数据模型和域逻辑（主权和分散式数据管理）。
+顾名思义，微服务体系结构是一种将服务器应用程序生成为一组小型服务的方法。 这意味着微服务体系结构主要面向后端，虽然该方法也会用于前端。 每个服务都在自己的进程中运行，并使用 HTTP/HTTPS、WebSocket 或 [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) 等协议与其他进程进行通信。 每个微服务在特定的上下文边界内实现特定的端到端域或业务功能，每个微服务都必须自主开发，并且可以独立部署。 最后，每个微服务都应拥有其自己的相关域数据模型和域逻辑（主权和分散式数据管理），并且可以基于不同的数据存储技术（SQL、NoSQL）和不同的编程语言。
 
-微服务应该有多大？ 在开发微服务时，大小不应该是重点。 相反，重点应该是创建松散耦合的服务以便自主地为每个服务进行开发、部署和缩放。 当然，在标识和设计微服务时，只要与其他微服务不存在太多直接依赖关系，应尝试使它们尽可能小。 比微服务的大小更重要的是，它必须具有内部内聚，并且独立于其他服务。
+微服务应该有多大？ 在开发微服务时，大小不应成为重点。 相反，重点应该是创建松散耦合的服务以便自主地为每个服务进行开发、部署和缩放。 当然，在标识和设计微服务时，只要与其他微服务不存在过多的直接依赖项，就应尝试让它们尽可能地小。 比微服务的大小更重要的是，它必须具有内部内聚，并且独立于其他服务。
 
 为何选择微服务体系结构？ 简而言之，它提供了长期的灵活性。 通过允许基于许多独立的可部署服务（每个服务都具有粒度和自主生命周期）创建应用程序，微服务在复杂、大型和高度可缩放的系统中支持更好的可维护性。
 
-微服务的另外一大优势是，可以独立横向扩展。 可以横向扩展特定的微服务，而无需将单个整体应用程序作为一个单位扩展。 这样做便可单独扩展需要更多处理能力或网络带宽以支撑需求的功能区域，而不用横向扩展应用程序中不需要扩展的其他区域。 这意味着节省成本，因为所需硬件更少。
+微服务的另外一大优势是，可以独立横向扩展。 可以横向扩展特定的微服务，而无需将单个整体应用程序作为一个单位扩展。 这样便可单独缩放需要更多处理能力或网络带宽以支撑需求的功能区域，而不用横向扩展应用程序中不需要缩放的其他区域。 这意味着节省成本，因为所需硬件更少。
 
-![](./media/image6.png)
+![在传统的整体方法中，应用程序会通过在多个服务器/VM 中克隆整个应用程序进行缩放。 在微服务方法中，功能会分离到较小的服务中，因此每个服务都可以独立缩放。](./media/image6.png)
 
 **图 4-6**。 整体部署与微服务方法
 
@@ -31,37 +31,35 @@ ms.locfileid: "37106679"
 
 以下是使用基于微服务的系统成功投入生产的重要方面：
 
--   对服务和基础结构的监视和运行状况检查。
+- 对服务和基础结构的监视和运行状况检查。
 
--   服务（即云和业务流程协调程序）的可缩放基础结构。
+- 服务（即云和业务流程协调程序）的可缩放基础结构。
 
--   多个级别的安全设计和实现：身份验证、授权、机密管理、安全通信等。
+- 多个级别的安全设计和实现：身份验证、授权、机密管理、安全通信等。
 
--   快速应用程序交付，通常不同的团队重点负责不同的微服务。
+- 快速应用程序交付，通常不同的团队重点负责不同的微服务。
 
--   DevOps 和 CI/CD 实践和基础结构。
+- DevOps 和 CI/CD 实践和基础结构。
 
 其中，本指南只涵盖或介绍了前三项内容。 最后两项与应用程序生命周期相关，在附加的[《使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期》](https://aka.ms/dockerlifecycleebook)电子书中进行了介绍。
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Mark Russinovich。Microservices: An application revolution powered by the cloud**（微服务：云推动的应用程序革命）
-    [https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
+- **Mark Russinovich。微服务：云推动的应用程序革命 \**
+  [https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
--   **Martin Fowler。Microservices**（微服务）
-    [https://www.martinfowler.com/articles/microservices.html](https://www.martinfowler.com/articles/microservices.html)
+- **Martin Fowler。Microservices** \（微服务）
+  [https://www.martinfowler.com/articles/microservices.html](https://www.martinfowler.com/articles/microservices.html)
 
--   **Martin Fowler。Microservice Prerequisites**（微服务先决条件）
-    [https://martinfowler.com/bliki/MicroservicePrerequisites.html](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
+- **Martin Fowler。Microservice Prerequisites** \（微服务先决条件）
+  [https://martinfowler.com/bliki/MicroservicePrerequisites.html](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
--   **Jimmy Nilsson。Chunk Cloud Computing**（区块云计算）
-    [https://www.infoq.com/articles/CCC-Jimmy-Nilsson](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
+- **Jimmy Nilsson。Chunk Cloud Computing** \（区块云计算）
+  [https://www.infoq.com/articles/CCC-Jimmy-Nilsson](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
 
--   **Cesar de la Torre。Containerized Docker Application Lifecycle with Microsoft Platform and Tools**（使用 Microsoft 平台和工具容器化 Docker 应用程序生命周期）（可下载电子书）[https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
-
-
-
+- **Cesar de la Torre。Containerized Docker Application Lifecycle with Microsoft Platform and Tools**（使用 Microsoft 平台和工具的容器化 Docker 应用程序生命周期）（可下载的电子书）\
+  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
 
 >[!div class="step-by-step"]
-[上一页](service-oriented-architecture.md)
-[下一页](data-sovereignty-per-microservice.md)
+>[上一页](service-oriented-architecture.md)
+>[下一页](data-sovereignty-per-microservice.md)

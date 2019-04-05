@@ -1,16 +1,17 @@
 ---
-title: 接口（C# 编程指南）
+title: 接口 - C# 编程指南
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 330e4e8b36f03b028786920422cd325b31d814e0
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181509"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262413"
 ---
 # <a name="interfaces-c-programming-guide"></a>接口（C# 编程指南）
 
@@ -20,13 +21,13 @@ ms.locfileid: "50181509"
   
 可使用 [interface](../../language-reference/keywords/interface.md) 关键字定义接口。 如以下示例所示。  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 结构名称必须是有效的 C# [标识符名称](../inside-a-program/identifier-names.md)。 按照约定，接口名称以大写字母 `I` 开头。
 
 实现 <xref:System.IEquatable%601> 接口的任何类或结构都必须包含与该接口指定的签名匹配的 <xref:System.IEquatable%601.Equals%2A> 方法的定义。 因此，可以依靠实现 `IEquatable<T>` 的类来包含 `Equals` 方法，类的实例可以通过该方法确定它是否等于相同类的另一个实例。  
   
-`IEquatable<T>` 的定义不为 `Equals` 提供实现。 该接口仅定义签名。 这样，C# 中的接口便类似于其中所有方法都是抽象方法的抽象类。 但是，类或结构可以实现多个接口，但是类只能继承单个类（抽象或不抽象）。 因此，使用接口可以在类中包括来自多个源的行为。  
+`IEquatable<T>` 的定义不为 `Equals` 提供实现。 该接口仅定义签名。 这样，C# 中的接口便类似于其中所有方法都是抽象方法的抽象类。 但是，类或结构可以实现多个接口，但是类只能继承单个类（抽象或不抽象）。
   
 有关抽象类的详细信息，请参阅[抽象类、密封类及类成员](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)。  
   
@@ -38,7 +39,7 @@ ms.locfileid: "50181509"
   
 下面的示例演示 <xref:System.IEquatable%601> 接口的实现。 实现类 `Car` 必须提供 <xref:System.IEquatable%601.Equals%2A> 方法的实现。  
   
-[!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#48)]  
   
 类的属性和索引器可以为接口中定义的属性或索引器定义额外的访问器。 例如，接口可能会声明包含 [get](../../language-reference/keywords/get.md) 取值函数的属性。 实现此接口的类可以声明包含 `get` 和 [set](../../language-reference/keywords/set.md) 取值函数的同一属性。 但是，如果属性或索引器使用显式实现，则访问器必须匹配。 有关显式实现的详细信息，请参阅[显式接口实现](explicit-interface-implementation.md)和[接口属性](../classes-and-structs/interface-properties.md)。  
 
@@ -50,7 +51,7 @@ ms.locfileid: "50181509"
 
 接口具有以下属性：  
 
-- 接口类似于抽象基类。 实现接口的任何类或结构都必须实现其所有成员。
+- 接口类似于只有抽象成员的抽象基类。 实现接口的任何类或结构都必须实现其所有成员。
 - 接口无法直接进行实例化。 其成员由实现接口的任何类或结构来实现。
 - 接口可以包含事件、索引器、方法和属性。
 - 接口不包含方法的实现。
@@ -67,7 +68,7 @@ ms.locfileid: "50181509"
  [如何：显式实现两个接口的成员](how-to-explicitly-implement-members-of-two-interfaces.md)  
  提供有关如何使用继承显式实现接口的成员的示例。  
   
-##  <a name="BKMK_RelatedSections"></a>相关部分
+## <a name="BKMK_RelatedSections"></a>相关部分
 
 - [接口属性](../classes-and-structs/interface-properties.md)  
 - [接口中的索引器](../indexers/indexers-in-interfaces.md)  
@@ -83,7 +84,7 @@ ms.locfileid: "50181509"
   
 ## <a name="featured-book-chapter"></a>重要章节
 
-[学习 C# 3.0：掌握 C# 3.0 的基础知识](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)中的[接口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)
+[学习 C# 3.0：掌握 C# 3.0 基础知识](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)中的[接口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)
 
 ## <a name="see-also"></a>请参阅
 

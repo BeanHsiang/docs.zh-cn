@@ -1,25 +1,26 @@
 ---
 title: SOA 应用程序
-description: 使用 Microsoft 平台和工具的容器化 Docker 应用程序的生命周期
+description: 请记住容器也可以是 SOA 应用程序的有用的部署选项。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 276071a5d55015f2feecc27020ad614684907b4c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 02/15/2019
+ms.openlocfilehash: ee71873ac15246f979fd2b08d92280ba797ff6ee
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105206"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675792"
 ---
-# <a name="soa-applications"></a>SOA 应用程序
+# <a name="service-oriented-applications"></a>面向服务的应用程序
 
-SOA 是的使用过度的术语，意味着要对不同的人是许多不同的事物。 但该你结构的您的应用程序将它分解可以分为不同类型的多个服务 （通常作为 HTTP 服务） 中的体系结构最少和作为公分、 SOA，或面向服务、 平均值如子系统或者，在其他情况下，为层。
+面向服务的体系结构 (SOA) 是一个使用过度的术语，意味着不同的人很多不同的理解。 但相同的理解，SOA 意味着通过分解为可进行分类等子系统的不同类型中，或在其他情况下，作为层的多个服务 （通常为 HTTP 服务） 构建的应用程序体系结构。
 
-现在，你可以为 Docker 容器，这可解决与部署相关的问题，因为所有依赖项是包含在容器映像部署这些服务。 但是，当你需要进行横向扩展 SOAs，则可能遇到挑战，如果你要部署基于单个实例。 这是群集软件或 orchestrator 的 Docker 将帮助你。 当我们检查微服务方法，我们将在此查看更详细地下一节介绍。
+现在，可以将这些服务部署为 Docker 容器，解决与部署相关的问题，因为容器映像中包含了所有依赖项。 但是，当您需要向外扩展 Soa，如果要部署基于单个实例可能遇到难题。 可以使用 Docker 群集软件或业务流程协调程序处理这一挑战。 我们将探讨微服务方法时，我们来看看下一节中更详细地业务流程协调程序。
 
-在一天结束时，容器聚类分析解决方案可为这两种传统 SOA 的体系结构或在其中每个微服务拥有其数据模型的更高级的微服务体系结构。 和，得益于多个数据库，你还可以向外扩展而不是使用由 SOA 服务共享的单一数据库的数据层。 但是，有关将数据拆分讨论是纯粹有关体系结构和设计。
+对于传统的面向服务的体系结构和更高级的微服务体系结构，Docker 容器都是有用的（但不是必需的）。
 
+在一天结束时，容器聚类分析解决方案是适用于这两种传统 SOA 的体系结构以及在其中每个微服务拥有它的数据模型的更高级的微服务体系结构。 和得益于多个数据库，您还可以向外扩展而不是使用共享的 SOA 服务的整体式数据库的数据层。 但是，有关将数据拆分的讨论是纯粹有关体系结构和设计。
 
 >[!div class="step-by-step"]
-[上一页](state-and-data-in-docker-applications.md)
-[下一页](orchestrate-high-scalability-availability.md)
+>[上一页](state-and-data-in-docker-applications.md)
+>[下一页](orchestrate-high-scalability-availability.md)

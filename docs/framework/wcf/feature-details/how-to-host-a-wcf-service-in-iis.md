@@ -1,18 +1,18 @@
 ---
-title: 如何：在 IIS 中承载 WCF 服务
+title: 如何：承载在 IIS 中的 WCF 服务
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 207010f594959708322aed2e630935252c873cf8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44c1b489897a25d293644c5a3ef7d446dd8d4a3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651118"
 ---
-# <a name="how-to-host-a-wcf-service-in-iis"></a>如何：在 IIS 中承载 WCF 服务
+# <a name="how-to-host-a-wcf-service-in-iis"></a>如何：承载在 IIS 中的 WCF 服务
 本主题概述了创建 Internet 信息服务 (IIS) 中的托管的 Windows Communication Foundation (WCF) 服务所需的基本步骤。 本主题假设您熟悉 IIS 且了解如何使用 IIS 管理工具创建和管理 IIS 应用程序。 有关 IIS 的详细信息请参阅[Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449)。 WCF 服务，运行在 IIS 环境中的充分利用 IIS 功能，如进程回收、 空闲关闭、 进程运行状况监视和基于消息的激活。 此宿主选项要求正确配置 IIS，但不需要编写任何承载代码作为应用程序的一部分。 只可以将 IIS 宿主与 HTTP 传输协议一起使用。  
   
  详细了解如何为 WCF 和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]进行交互，请参阅[WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 有关配置安全性的详细信息，请参阅[安全](../../../../docs/framework/wcf/feature-details/security.md)。  
@@ -75,9 +75,9 @@ ms.locfileid: "43510750"
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)] 
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>请参阅  
- [在 Internet Information Services 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [托管服务](../../../../docs/framework/wcf/hosting-services.md)  
- [WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [安全性](../../../../docs/framework/wcf/feature-details/security.md)  
- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>请参阅
+- [在 Internet Information Services 中承载](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
+- [托管服务](../../../../docs/framework/wcf/hosting-services.md)
+- [WCF 服务和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+- [安全性](../../../../docs/framework/wcf/feature-details/security.md)
+- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

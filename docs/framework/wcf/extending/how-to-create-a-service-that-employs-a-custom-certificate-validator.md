@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: cc768f5e5086e6eba1ccac9d969eac14e14ceb2f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569318"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>如何：创建使用自定义证书验证程序的服务
 本主题介绍如何实现自定义证书验证程序，以及如何配置客户端或服务凭据以使用自定义证书验证程序替换默认证书验证逻辑。  
   
- 如果使用 X.509 证书进行身份验证的客户端或服务，默认情况下的 Windows Communication Foundation (WCF) 就会使用 Windows 证书存储区和加密 API 以验证证书，并以确保它是受信任。 有时，内置证书验证功能并不足够且必须更改。 WCF 提供了一种通过允许用户添加自定义证书验证程序来更改验证逻辑简便方法。 如果指定了自定义证书验证程序，则 WCF 不使用内置证书验证逻辑，但改为依赖于自定义验证程序。  
+ 如果使用 X.509 证书进行身份验证客户端或服务，默认情况下的 Windows Communication Foundation (WCF) 使用 Windows 证书存储区和加密 API 以验证证书并确保它是受信任。 有时，内置证书验证功能并不足够且必须更改。 WCF 提供了通过允许用户添加自定义证书验证程序来更改验证逻辑的简单方法。 如果指定的自定义证书验证程序，则 WCF 将不使用内置证书验证逻辑，而改为依赖于自定义验证程序。  
   
 ## <a name="procedures"></a>过程  
   
@@ -35,9 +35,9 @@ ms.locfileid: "33808138"
   
 #### <a name="to-specify-a-custom-certificate-validator-in-service-configuration"></a>指定服务配置中的自定义证书验证程序  
   
-1.  添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)元素和[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)到[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素。  
+1.  添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)元素和一个[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)到[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素。  
   
-2.  添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)并设置`name`属性设为适当的值。  
+2.  添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)并设置`name`属性为适当的值。  
   
 3.  添加[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)到`<behavior>`元素。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "33808138"
   
 #### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a>使用客户端上的配置指定自定义证书验证程序  
   
-1.  添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)元素和[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)到[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素。  
+1.  添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)元素和一个[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)到[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素。  
   
 2.  添加[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)元素。  
   
 3.  添加一个 `<behavior>` 元素，并将 `name` 属性设置为适当的值。  
   
-4.  添加[ \<c a t e >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)元素。  
+4.  添加[ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)元素。  
   
 5.  添加[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "33808138"
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a>使用客户端上的代码指定自定义证书验证程序  
   
-1.  使用 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 属性指定自定义证书验证程序。 您可以使用 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 属性访问客户端凭据。 (生成的客户端类[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)始终派生自<xref:System.ServiceModel.ClientBase%601>类。)  
+1.  使用 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 属性指定自定义证书验证程序。 您可以使用 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 属性访问客户端凭据。 (生成的客户端类[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)始终派生<xref:System.ServiceModel.ClientBase%601>类。)  
   
 2.  将 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 属性设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>。  
   
@@ -129,5 +129,5 @@ ms.locfileid: "33808138"
  [!code-csharp[c_CustomCertificateValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#3)]
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Selectors.X509CertificateValidator>
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Selectors.X509CertificateValidator>

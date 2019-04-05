@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c3aedea4cc8ce2d8fb8c0c0bf3fead727dcf64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ed868febb5eb82cf73cfc5b0633d86bf4e1315c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425855"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561616"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 枚举
-指定要执行搜索的符号读取器时使用的策略。 这些常量由[isymunmanagedbinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)和[isymunmanagedbinder3:: Getreaderfromcallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)方法。  
+指定要执行的符号读取器的搜索时使用的策略。 通过使用这些常量[ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)并[ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)方法。  
   
 > [!IMPORTANT]
->  它是从受信任的源中打开程序数据库 (PDB) 文件会带来安全风险。  
+>  它是从受信任的源打开程序数据库 (PDB) 文件会带来安全风险。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,11 +47,11 @@ typedef enum CorSymSearchPolicyAttributes
 |------------|-----------------|  
 |`AllowRegistryAccess`|查询符号搜索路径的注册表。|  
 |`AllowSymbolServerAccess`|访问符号服务器。|  
-|`AllowOriginalPathAccess`|搜索的调试目录中指定的路径。|  
-|`AllowReferencePathAccess`|搜索的.exe 文件所在的位置中的 PDB。|  
+|`AllowOriginalPathAccess`|搜索中的调试目录指定的路径。|  
+|`AllowReferencePathAccess`|搜索 PDB 中的.exe 文件所在的位置。|  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [诊断符号存储区枚举](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [诊断符号存储区枚举](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

@@ -1,18 +1,17 @@
 ---
-title: Microsoft WCF Web Service Reference Provider 工具
+title: 添加 WCF Web 服务引用
 description: Microsoft WCF Web Service Reference Provider 工具概述，该工具添加了 .NET Core 和 ASP.NET Core 项目的功能，类似于 .NET Framework 项目的添加服务引用。
 author: mlacouture
-ms.author: johalex
 ms.date: 04/19/2018
-ms.custom: mvc
-ms.openlocfilehash: 416ca4dbedcf6e610aa5307c87934c0cb18be749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215373"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245569"
 ---
-# <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Microsoft WCF Web Service Reference Provider 工具
+# <a name="use-the-wcf-web-service-reference-provider-tool"></a>使用 WCF Web Service Reference Provider 工具
 
 多年来，许多 Visual Studio 开发者在其. NET Framework 项目需要访问 Web 服务时，都享受到了[添加服务引用](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)工具所带来的工作效率。  WCF Web 服务引用工具是 Visual Studio 连接服务的扩展，提供了类似于 .NET Core 和 ASP.NET Core 项目的“添加服务引用”功能的体验。 此工具可从网络位置的当前解决方案的 web 服务中或从 WSDL 文件中检索元数据，并生成包含可用于访问 web 服务的 Windows Communication Foundation (WCF) 客户端代理代码的可兼容 .NET Core 的源文件。
 
@@ -37,11 +36,11 @@ ms.locfileid: "33215373"
 
 随即显示“连接的服务”页，如下图所示：
 
-![“连接的服务”选项卡](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
+![.NET Core 的“Visual Studio 连接的服务”选项卡](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
 
 2. 在“连接的服务”页上，单击“Microsoft WCF Web Service Reference Provider”。 此操作将显示“配置 WCF Web 服务引用”向导：
 
-![“服务终结点”选项卡](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
+![.NET Core 的“Visual Studio 服务终结点”选项卡](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
 
 3. 选择服务。
 
@@ -58,7 +57,7 @@ ms.locfileid: "33215373"
 
 4. “数据类型选项”窗体可用于优化生成的服务引用配置设置：
 
-![“数据类型选项”选项卡](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
+![.NET Core 的“Visual Studio 数据类型选项”选项卡](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
 
 > [!NOTE]
 > 如果在项目的引用程序集中定义了服务引用代码生成所需的数据类型，则“重新使用引用程序集中的类型”复选框选项将非常有用。  重新使用这些现有数据类型，从而避免编译时类型冲突或运行时问题，这是非常重要的。
@@ -74,7 +73,7 @@ ms.locfileid: "33215373"
 * 在名为“reference.cs”的文件中生成服务引用代码，并将其添加到“连接的服务”节点下的项目。 
 * 使用在目标平台上编译和运行所需的 NuGet 包引用更新项目文件 (.csproj)。
 
-![进度窗口](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
+![Visual Studio 进度窗口](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
 进度完成后，可创建生成的 WCF 客户端类型的实例并调用服务操作。
 

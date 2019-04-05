@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 93512ab00fe05a4166125c5e319ce91a5cc04573
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9a06c4604ee71e3e98de22c6729cc4a874e741
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551994"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375566"
 ---
 # <a name="controls-by-category"></a>按类别分类的控件
-Windows Presentation Foundation (WPF) 控件可以进行逻辑分组为几个类别。 可以使用这些类别来为方案选择适当的控件，从而有助于查看具有相同用法模式或功能的控件。  
+Windows Presentation Foundation (WPF) 控件可以进行逻辑分组为多个类别。 可以使用这些类别来为方案选择适当的控件，从而有助于查看具有相同用法模式或功能的控件。  
   
 ## <a name="layout"></a>布局  
  布局控件用于管理子元素的大小、尺寸、位置和排列。  
@@ -56,7 +56,7 @@ Windows Presentation Foundation (WPF) 控件可以进行逻辑分组为几个类
 -   <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>按钮  
- 按钮是最基本的用户界面控件之一。 应用程序通常执行中的某个任务<xref:System.Windows.Controls.Primitives.ButtonBase.Click>当用户单击在其上的事件。  
+ 按钮是最基本的用户界面控件之一。 应用程序通常执行中的某些任务<xref:System.Windows.Controls.Primitives.ButtonBase.Click>当用户单击其上的事件。  
   
 -   <xref:System.Windows.Controls.Button>  
   
@@ -177,5 +177,5 @@ Windows Presentation Foundation (WPF) 控件可以进行逻辑分组为几个类
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>请参阅  
- [控件库](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a>请参阅
+- [控件库](control-library.md)

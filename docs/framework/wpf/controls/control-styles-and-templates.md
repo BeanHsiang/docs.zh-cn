@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079722"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488833"
 ---
 # <a name="control-styles-and-templates"></a>Control 样式和模板
 Windows Presentation Foundation (WPF) 中的控件具有<xref:System.Windows.Controls.ControlTemplate>，其中包含该控件的可视化树。 可以通过修改更改结构和控件的外观<xref:System.Windows.Controls.ControlTemplate>该控件。 无法替换可视化树的控件，则只有部分若要更改必须设置一个控件的可视化树<xref:System.Windows.Controls.Control.Template%2A>为新的完整控件属性<xref:System.Windows.Controls.ControlTemplate>。  
@@ -34,38 +34,38 @@ Windows Presentation Foundation (WPF) 中的控件具有<xref:System.Windows.Con
 |Aero.NormalColor.xaml|Windows Vista 操作系统上的默认主题。|  
   
 ## <a name="in-this-section"></a>本节内容  
- [Button 样式和模板](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
- [Calendar 样式和模板](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
- [CheckBox 样式和模板](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
- [ComboBox 样式和模板](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
- [ContextMenu 样式和模板](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [DataGrid 样式和模板](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
- [DatePicker 样式和模板](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
- [DocumentViewer 样式和模板](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
- [Expander 样式和模板](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
- [Frame 样式和模板](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
- [GroupBox 样式和模板](../../../../docs/framework/wpf/controls/groupbox-styles-and-templates.md)  
- [Label 样式和模板](../../../../docs/framework/wpf/controls/label-styles-and-templates.md)  
- [ListBox 样式和模板](../../../../docs/framework/wpf/controls/listbox-styles-and-templates.md)  
- [ListView 样式和模板](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
- [Menu 样式和模板](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
- [NavigationWindow 样式和模板](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox 样式和模板](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
- [ProgressBar 样式和模板](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
- [RadioButton 样式和模板](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton 样式和模板](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
- [ScrollBar 样式和模板](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [ScrollViewer 样式和模板](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
- [Slider 样式和模板](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
- [StatusBar 样式和模板](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
- [TabControl 样式和模板](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
- [TextBox 样式和模板](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Thumb 样式和模板](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton 样式和模板](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
- [ToolBar 样式和模板](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
- [ToolTip 样式和模板](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
- [TreeView 样式和模板](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
- [Window 样式和模板](../../../../docs/framework/wpf/controls/window-styles-and-templates.md)  
+ [Button 样式和模板](button-styles-and-templates.md)  
+ [Calendar 样式和模板](calendar-styles-and-templates.md)  
+ [CheckBox 样式和模板](checkbox-styles-and-templates.md)  
+ [ComboBox 样式和模板](combobox-styles-and-templates.md)  
+ [ContextMenu 样式和模板](contextmenu-styles-and-templates.md)  
+ [DataGrid 样式和模板](datagrid-styles-and-templates.md)  
+ [DatePicker 样式和模板](datepicker-styles-and-templates.md)  
+ [DocumentViewer 样式和模板](documentviewer-styles-and-templates.md)  
+ [Expander 样式和模板](expander-styles-and-templates.md)  
+ [Frame 样式和模板](frame-styles-and-templates.md)  
+ [GroupBox 样式和模板](groupbox-styles-and-templates.md)  
+ [Label 样式和模板](label-styles-and-templates.md)  
+ [ListBox 样式和模板](listbox-styles-and-templates.md)  
+ [ListView 样式和模板](listview-styles-and-templates.md)  
+ [Menu 样式和模板](menu-styles-and-templates.md)  
+ [NavigationWindow 样式和模板](navigationwindow-styles-and-templates.md)  
+ [PasswordBox 样式和模板](passwordbox-styles-and-templates.md)  
+ [ProgressBar 样式和模板](progressbar-styles-and-templates.md)  
+ [RadioButton 样式和模板](radiobutton-styles-and-templates.md)  
+ [RepeatButton 样式和模板](repeatbutton-styles-and-templates.md)  
+ [ScrollBar 样式和模板](scrollbar-styles-and-templates.md)  
+ [ScrollViewer 样式和模板](scrollviewer-styles-and-templates.md)  
+ [Slider 样式和模板](slider-styles-and-templates.md)  
+ [StatusBar 样式和模板](statusbar-styles-and-templates.md)  
+ [TabControl 样式和模板](tabcontrol-styles-and-templates.md)  
+ [TextBox 样式和模板](textbox-styles-and-templates.md)  
+ [Thumb 样式和模板](thumb-styles-and-templates.md)  
+ [ToggleButton 样式和模板](togglebutton-styles-and-templates.md)  
+ [ToolBar 样式和模板](toolbar-styles-and-templates.md)  
+ [ToolTip 样式和模板](tooltip-styles-and-templates.md)  
+ [TreeView 样式和模板](treeview-styles-and-templates.md)  
+ [Window 样式和模板](window-styles-and-templates.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls>  
@@ -73,6 +73,6 @@ Windows Presentation Foundation (WPF) 中的控件具有<xref:System.Windows.Con
  <xref:System.Windows.Controls.ControlTemplate>  
   
 ## <a name="related-sections"></a>相关章节  
- [控件创作概述](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [控件创作概述](control-authoring-overview.md)  
   
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [样式设置和模板化](styling-and-templating.md)

@@ -2,12 +2,12 @@
 title: 消息日志记录的安全问题
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 5ed2529d82c3994a245d2132909cd1e88b6ed62d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731993"
 ---
 # <a name="security-concerns-for-message-logging"></a>消息日志记录的安全问题
 本主题描述如何防止在消息日志以及由消息日志记录生成的事件中公开敏感数据。  
@@ -99,16 +99,16 @@ ms.locfileid: "50188802"
 ## <a name="events-triggered-by-message-logging"></a>消息日志记录触发的事件  
  下面列出了消息日志记录发出的所有事件。  
   
--   启用消息日志记录：当在配置中或通过 WMI 启用消息日志记录时发出此事件。 此事件的内容是“消息日志记录已打开。 将记录敏感信息，即使已在网络上对其进行加密: 例如，消息正文。”  
+-   消息日志记录：在配置中，或通过 WMI 启用消息日志记录时，将发出此事件。 此事件的内容是“消息日志记录已打开。 将记录敏感信息，即使已在网络上对其进行加密: 例如，消息正文。”  
   
--   禁用消息日志记录：当通过 WMI 禁用消息日志记录时发出此事件。 此事件的内容是“消息日志记录已关闭”。  
+-   日志记录的消息：通过 WMI 禁用消息日志记录时，将发出此事件。 此事件的内容是“消息日志记录已关闭”。  
   
--   启用记录已知 PII：当启用记录已知 PII 时发出此事件。 发生这种情况时`enableLoggingKnownPii`中的属性`machineSettings`Machine.config 文件的元素设置为`true`，和`logKnownPii`属性的`source`App.config 或 Web.config 文件中的元素设置为`true`.  
+-   登录到已知的 PII:启用记录已知 PII 时发出此事件。 发生这种情况时`enableLoggingKnownPii`中的属性`machineSettings`Machine.config 文件的元素设置为`true`，和`logKnownPii`属性的`source`App.config 或 Web.config 文件中的元素设置为`true`.  
   
--   不允许记录已知 PII：当不允许记录已知 PII 时发出此事件。 发生这种情况时`logKnownPii`的属性`source`App.config 或 Web.config 文件中的元素设置为`true`，但`enableLoggingKnownPii`属性中`machineSettings`Machine.config 文件的元素设置为`false`. 不引发异常。  
+-   日志不允许的已知的 PII:不允许记录已知 PII 时发出此事件。 发生这种情况时`logKnownPii`的属性`source`App.config 或 Web.config 文件中的元素设置为`true`，但`enableLoggingKnownPii`属性中`machineSettings`Machine.config 文件的元素设置为`false`. 不引发异常。  
   
  可以在 Windows 附带的事件查看器工具中查看这些事件。 有关这方面的详细信息，请参阅[事件日志记录](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [消息日志记录](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [有关跟踪的安全注意事项和有用提示](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+## <a name="see-also"></a>请参阅
+- [消息日志记录](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [有关跟踪的安全注意事项和有用提示](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

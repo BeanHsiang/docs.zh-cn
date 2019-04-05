@@ -1,20 +1,20 @@
 ---
-title: 查询表达式 (F#)
-description: '了解有关 F # 编程语言中的 LINQ 查询表达式支持。'
+title: 查询表达式
+description: 了解有关进行中的 LINQ 查询表达式支持F#编程语言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48033488"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654817"
 ---
 # <a name="query-expressions"></a>查询表达式
 
 > [!NOTE]
-本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
+> 本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
-查询表达式可以查询数据源并将数据放入所需的形式。 查询表达式提供对 F # 中的 LINQ 支持。
+查询表达式可以查询数据源并将数据放入所需的形式。 查询表达式提供对中的 LINQ 支持F#。
 
 ## <a name="syntax"></a>语法
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>备注
 
-查询表达式是一种类似于序列表达式的计算表达式。 就像通过提供在序列表达式中的代码指定一个序列，将通过提供查询表达式中的代码中指定一的组数据。 在序列表达式中，`yield`关键字标识为生成序列的一部分返回的数据。 在查询表达式中`select`关键字执行相同的功能。 除了`select`关键字，F # 还支持许多非常类似的组成部分的 SQL SELECT 语句的查询运算符。 下面是一个简单查询表达式，以及连接到 Northwind OData 源的代码示例。
+查询表达式是一种类似于序列表达式的计算表达式。 就像通过提供在序列表达式中的代码指定一个序列，将通过提供查询表达式中的代码中指定一的组数据。 在序列表达式中，`yield`关键字标识为生成序列的一部分返回的数据。 在查询表达式中`select`关键字执行相同的功能。 除了`select`关键字，F#还支持许多非常类似的组成部分的 SQL SELECT 语句的查询运算符。 下面是一个简单查询表达式，以及连接到 Northwind OData 源的代码示例。
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -56,11 +56,11 @@ query1
 
 在查询表达式中允许仅可以转换为 SQL 的表达式。 例如，不允许使用函数调用的表达式中使用时`where`查询运算符。
 
-表 1 显示了可用的查询运算符。 此外，请参阅表 2，将 SQL 查询和本主题后面的等效 F # 查询表达式进行比较。 一些查询运算符不支持某些类型提供程序。 具体而言，它支持由于限制在 OData 中的查询运算符有限制 OData 类型提供程序。 有关详细信息，请参阅[ODataService 类型提供程序 （F #）](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
+表 1 显示了可用的查询运算符。 此外，请参阅 Table2，比较 SQL 查询和等效的F#查询在本主题后面的表达式。 一些查询运算符不支持某些类型提供程序。 具体而言，它支持由于限制在 OData 中的查询运算符有限制 OData 类型提供程序。 有关详细信息，请参阅[ODataService 类型提供程序 (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)。
 
 此表假定以下窗体中的数据库：
 
-![示例数据库关系图](../media/StudentCourseDB.png)
+![图，显示一个示例数据库。](./media/query-expressions/student-course-database.png)
 
 下面的表中的代码还假定以下数据库连接代码。 项目应添加对 System.Data、 System.Data.Linq 和 FSharp.Data.TypeProviders 程序集的引用。 本主题末尾包含创建此数据库的代码。
 
@@ -499,7 +499,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </table>
 
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL 和 F# 查询表达式的比较
-下表显示 F # 中的一些常见的 Transact SQL 查询和它们的等效项。 此表中的代码还假定所在的数据库上的表和相同的初始代码设置类型提供程序。
+下表显示了一些常见的 Transact SQL 查询和中的等效项F#。 此表中的代码还假定所在的数据库上的表和相同的初始代码设置类型提供程序。
 
 
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>表 2。 Transact-SQL 和 F# 查询表达式
@@ -508,10 +508,10 @@ let data = [ 1; 5; 7; 11; 18; 21]
 <table style="width:100%">
   <tr>
     <th>Transact-SQL （不区分大小写）</th>
-    <th>F # 查询表达式 （区分大小写）</th>
+    <th>F#查询表达式 （区分大小写）</th>
   </tr>
 <tr><td>
-从表中选择所有字段。</br>
+从表中选择所有字段。<br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>
@@ -1010,7 +1010,7 @@ query {
     for student in db.Student do
     select
         (if student.Age.HasValue && student.Age.Value = -1 then
-             (student.StudentID, System.Nullable<int>(100), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(100), student.Age)
          else (student.StudentID, student.Age, student.Age))
 }
 </code></pre>
@@ -1034,9 +1034,9 @@ query {
     for student in db.Student do
     select
         (if student.Age.HasValue && student.Age.Value = -1 then
-             (student.StudentID, System.Nullable<int>(100), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(100), student.Age)
          elif student.Age.HasValue && student.Age.Value = 0 then
-             (student.StudentID, System.Nullable<int>(1000), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(1000), student.Age)
          else (student.StudentID, student.Age, student.Age))
 }
 </code></pre>
@@ -1864,7 +1864,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-和在 F # Interactive 中运行此代码时，以下是完整的输出。
+下面是完整输出，该代码中运行时和F#交互。
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'

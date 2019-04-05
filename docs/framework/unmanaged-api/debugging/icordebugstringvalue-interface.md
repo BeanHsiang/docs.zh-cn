@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStringValue 接口 1
+title: ICorDebugStringValue 接口
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStringValue
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2814f6164f383c36bb5b8e20ce8996b30eef0f1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cff85a77b113440c2274910cae8ef93419d1bc1b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421695"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965353"
 ---
-# <a name="icordebugstringvalue-interface1"></a>ICorDebugStringValue 接口 1
-应用于字符串值的 ICorDebugHeapValue 的子类。  
+# <a name="icordebugstringvalue-interface"></a>ICorDebugStringValue 接口
+应用于字符串值的 ICorDebugHeapValue 子类。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetLength 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|获取引用的字符串中的字符数`ICorDebugStringValue`。|  
+|[GetLength 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|获取此引用的字符串中的字符数`ICorDebugStringValue`。|  
 |[GetString 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|获取此引用的字符串`ICorDebugStringValue`。|  
   
 ## <a name="remarks"></a>备注  
@@ -39,13 +39,13 @@ ms.locfileid: "33421695"
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

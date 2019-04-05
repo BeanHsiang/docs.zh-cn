@@ -19,12 +19,12 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3a9d891fe898cf691a5f0d36e6360c2a73fb199d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629223"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>编码和 Windows 窗体全球化
 Windows 窗体应用程序完全支持 Unicode，这意味着每个字符都用唯一编号表示，无论何种平台、程序或语音都是如此。 有关 Unicode 的详细信息，请参阅[Unicode 联盟网站](https://www.unicode.org)。  
@@ -38,4 +38,4 @@ Windows 窗体应用程序完全支持 Unicode，这意味着每个字符都用�
   
 ## <a name="see-also"></a>请参阅
 
-[全球化 Windows 窗体应用程序](globalizing-windows-forms.md)
+- [全球化 Windows 窗体应用程序](globalizing-windows-forms.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4924f373270a30b593e27c334d383963fc4a7cf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81f27489d554b59101f1eb181ea64f6b68da979c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491901"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface 方法
-将 CLR 加载到当前进程，并返回运行时接口指针，如[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)， [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)，和[IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)。  
+将 CLR 加载到当前进程，并返回运行时接口指针，如[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)， [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)，并[IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)。  
   
- 此方法取代所有`CorBindTo`* 中函数[弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)部分。  
+ 此方法取代了所有`CorBindTo`* 中的函数[弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)部分。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,9 +38,9 @@ HRESULT GetInterface(
 [out, iid_is(riid), retval] LPVOID *ppUnk);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `rclsid`  
- [in]用于组件类的 CLSID 接口。  
+ [in]用于 coclass 的 CLSID 接口。  
   
  `riid`  
  [in]所请求的 IID`rclsid`接口。  
@@ -55,13 +55,13 @@ HRESULT GetInterface(
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
 |E_POINTER|`ppUnk` 为 null。|  
-|E_OUTOFMEMORY|没有足够的内存可用于处理该请求。|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|不同的运行时已绑定到的旧的 CLR 版本 2 激活策略。|  
+|E_OUTOFMEMORY|没有足够的内存是可用来处理该请求。|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|不同的运行时已绑定到旧的 CLR 版本 2 激活策略。|  
   
 ## <a name="remarks"></a>备注  
  此方法会导致 CLR 加载，但未初始化。  
   
- 下表显示为受支持的组合`rclsid`和`riid`。  
+ 下表显示了受支持的组合`rclsid`和`riid`。  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
@@ -75,15 +75,15 @@ HRESULT GetInterface(
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRRuntimeInfo 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>请参阅
+- [ICLRRuntimeInfo 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

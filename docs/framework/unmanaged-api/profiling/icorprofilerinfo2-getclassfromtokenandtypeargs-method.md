@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04be252092732296354cfec102cf8fe648ed2dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ece4041f7fe4f9080db32a7edc2271b7f3beb95
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456633"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498934"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs 方法
-获取`ClassID`通过使用指定元数据标记的类型和`ClassID`值的任何类型参数。  
+获取`ClassID`通过使用指定的元数据标记的类型和`ClassID`的任何值类型参数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,38 +38,38 @@ HRESULT GetClassFromTokenAndTypeArgs(
     [out] ClassID* pClassID);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `moduleID`  
  [in]该类型所在的模块的 ID。  
   
  `typeDef`  
- [in]`mdTypeDef`引用该类型的元数据标记。  
+ [in]`mdTypeDef`元数据标记所引用的类型。  
   
  `cTypeArgs`  
- [in]对于给定的类型的类型参数的数目。 此值必须为非泛型类型的零。  
+ [in]为给定类型的类型参数的数目。 此值必须为零的非泛型类型。  
   
  `typeArgs`  
- [in]数组`ClassID`值，其中每个是类型的自变量。 值`typeArgs`时可以为 NULL`cTypeArgs`设置为零。  
+ [in]一个数组`ClassID`值，其中每个类型的自变量。 值`typeArgs`可以为 NULL，如果`cTypeArgs`设置为零。  
   
  `pClassID`  
  [out]一个指向`ClassID`的指定类型。  
   
 ## <a name="remarks"></a>备注  
- 调用`GetClassFromTokenAndTypeArgs`方法替换`mdTypeRef`而不是`mdTypeDef`元数据的令牌可以具有不可预知的结果; 调用方应解决`mdTypeRef`到`mdTypeDef`时将其传递。  
+ 调用`GetClassFromTokenAndTypeArgs`方法替换`mdTypeRef`而不是`mdTypeDef`元数据标记可以具有不可预知的结果; 调用方应解决`mdTypeRef`到`mdTypeDef`时将其传递。  
   
  如果尚未加载该类型，则调用`GetClassFromTokenAndTypeArgs`将触发加载，这是一种危险操作在多种上下文中的。 例如，在模块或其他类型的加载过程中调用此方法在运行时尝试循环加载某些内容导致无限循环。  
   
- 一般情况下，使用`GetClassFromTokenAndTypeArgs`不建议这样做。 如果探查器感兴趣的特定类型的事件，它们应将存储`ModuleID`和`mdTypeDef`该类型，并使用[icorprofilerinfo2:: Getclassidinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)以检查是否给定`ClassID`是所需的类型。  
+ 一般情况下，使用`GetClassFromTokenAndTypeArgs`不建议这样做。 如果探查器感兴趣的特定类型的事件，它们应存储`ModuleID`并`mdTypeDef`的该类型，以及使用[ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)若要检查是否给定`ClassID`是所需的类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

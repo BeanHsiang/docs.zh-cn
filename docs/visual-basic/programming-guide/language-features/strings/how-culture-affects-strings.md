@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 41fd612695fbeacbc7b53cb9e5dbf67939e73482
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332585"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834616"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>区域性对字符串的影响 (Visual Basic)
 此帮助页讨论了 Visual Basic 如何使用区域性信息来执行的字符串转换和比较。  
@@ -36,7 +36,7 @@ ms.locfileid: "39332585"
  有关详细信息，请参阅 <xref:Microsoft.VisualBasic.Conversion.Str%2A> 和 <xref:Microsoft.VisualBasic.Conversion.Val%2A>。  
   
 ## <a name="using-a-specific-culture"></a>使用非特定区域性  
- 假设您正在开发的应用程序将日期 （格式为字符串） 发送到 Web 服务。 在这种情况下，你的应用程序必须使用特定区域性的字符串转换。 为了说明原因，请考虑使用的日期的结果<xref:System.DateTime.ToString>方法： 如果你的应用程序使用该方法来设置日期 2005 年 7 月 4 日，它将返回"2005 年 7 月 4 日上午 12:00:00"运行时与美国英语 (EN-US) 区域性，但它会返回"04.07.2005 00:00:00"德语 (DE-DE) 区域性与运行时。  
+ 假设您正在开发的应用程序将日期 （格式为字符串） 发送到 Web 服务。 在这种情况下，你的应用程序必须使用特定区域性的字符串转换。 为了说明原因，请考虑使用的日期的结果<xref:System.DateTime.ToString>方法：如果应用程序使用该方法来设置日期 2005 年 7 月 4 日，它将返回"2005 年 7 月 4 日上午 12:00:00"运行时与美国英语 (EN-US) 区域性，但它会返回"04.07.2005 00:00:00"德语 (DE-DE) 区域性与运行时。  
   
  如果您需要执行特定区域性格式的字符串转换，则应使用`CultureInfo`类的内置于[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 您可以创建一个新`CultureInfo`针对特定区域性的区域性的将名称传递给对象<xref:System.Globalization.CultureInfo.%23ctor%2A>构造函数。 中列出了支持的区域性名称<xref:System.Globalization.CultureInfo>类帮助页。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "39332585"
   
  若要将日期转换为区域性的字符串，将传递<xref:System.Globalization.CultureInfo>对象与日期对象<xref:System.DateTime.ToString%28System.IFormatProvider%29>方法。 例如，下面的代码显示"07/04/2005年 00:00:00"，无论应用程序的区域性设置。  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Date 文本始终解释取决于英语区域性设置。  
@@ -60,11 +60,11 @@ ms.locfileid: "39332585"
   
  `StrComp`函数返回一个整数，指示基于排序顺序比较的两个字符串之间的关系。 结果是正数值指示第一个字符串大于第二个字符串。 产生负数结果指示第一个字符串是较小，零指示字符串相等。  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
  此外可以使用[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]合作伙伴`StrComp`函数，<xref:System.String.Compare%2A?displayProperty=nameWithType>方法。 这是基础字符串类的静态，重载方法。 下面的示例演示如何使用此方法：  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
  更好地控制如何执行比较，可以使用的其他重载<xref:System.String.Compare%2A>方法。 与<xref:System.String.Compare%2A?displayProperty=nameWithType>方法中，可以使用`comparisonType`参数，以指定要使用的比较类型。  
   
@@ -78,7 +78,8 @@ ms.locfileid: "39332585"
 ### <a name="security-considerations"></a>安全注意事项  
  如果你的应用程序做出安全决策基于比较或大小写更改操作的结果，则该操作应使用<xref:System.String.Compare%2A?displayProperty=nameWithType>方法，并传入`Ordinal`或`OrdinalIgnoreCase`为`comparisonType`参数。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Globalization.CultureInfo>  
- [Visual Basic 中的字符串简介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Globalization.CultureInfo>
+- [Visual Basic 中的字符串简介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

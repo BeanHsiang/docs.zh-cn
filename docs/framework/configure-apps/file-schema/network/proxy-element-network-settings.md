@@ -1,5 +1,5 @@
 ---
-title: '&lt;代理&gt;元素 （网络设置）'
+title: <proxy> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 3a6d5b080c74fbd3f6ebca9882c1667951cfcb91
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a6c6d85d8ec1b79f6b3ddf53af0a4b289289dd6a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183668"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256858"
 ---
-# <a name="ltproxygt-element-network-settings"></a>&lt;代理&gt;元素 （网络设置）
+# <a name="proxy-element-network-settings"></a>\<代理 > 元素 （网络设置）
 定义代理服务器。  
   
  \<configuration>  
 \<system.net>  
 \<defaultProxy >  
-\<代理 >  
+\<proxy>  
   
 ## <a name="syntax"></a>语法  
   
@@ -90,6 +90,6 @@ ms.locfileid: "50183668"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

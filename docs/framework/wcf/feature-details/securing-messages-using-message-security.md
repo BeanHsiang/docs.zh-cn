@@ -2,12 +2,12 @@
 title: 使用消息安全保护消息
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: ff1d488e58be64f31836587c8893ba608ccd821b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4432540bfb6238be5b3e102283d6b67bebad07bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610940"
 ---
 # <a name="securing-messages-using-message-security"></a>使用消息安全保护消息
 本部分讨论 WCF 消息安全时使用<xref:System.ServiceModel.NetMsmqBinding>。  
@@ -63,8 +63,8 @@ ms.locfileid: "50202024"
 ## <a name="using-transport-and-message-security"></a>使用传输安全和消息安全  
  在既使用传输安全又使用消息安全时，用于在传输级别和 SOAP 消息级别保护消息的证书必须相同。  
   
-## <a name="see-also"></a>请参阅  
- [使用传输安全性保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- [使用传输安全性保护消息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

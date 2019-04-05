@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 389cf2e77728002ce1078f63df3d741d1847c105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744968"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 枚举
 指示内存地址的类型。  
@@ -48,19 +48,19 @@ typedef enum CorSymAddrKind
   
 |成员|描述|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|指示的 Microsoft 中间语言 (MSIL) 本地变量或参数索引。|  
+|`ADDR_IL_OFFSET`|指示非 Microsoft 中间语言 (MSIL) 本地变量或参数索引。|  
 |`ADDR_NATIVE_RVA`|指示模块中的相对虚拟地址。|  
 |`ADDR_NATIVE_REGISTER`|指示 CPU 寄存器。|  
-|`ADDR_NATIVE_REGREL`|表示第一个地址是寄存器，第二个地址是的偏移量。|  
-|`ADDR_NATIVE_OFFSET`|指示基址中的偏移量。|  
-|`ADDR_NATIVE_REGREG`|指示第一个地址是一个寄存器中，低部分和第二个地址是高的部分。|  
-|`ADDR_NATIVE_REGSTK`|指示第一个地址是寄存器的低部分、 第二个是高的部分中，第三个是的偏移量。|  
-|`ADDR_NATIVE_STKREG`|指示第一个地址是寄存器，第二个是的偏移量，并且第三个是寄存器的高部分。|  
-|`ADDR_BITFIELD`|表示的第一个地址是字段的开始，第二个地址是字段长度。|  
-|`ADDR_NATIVE_ISECTOFFSET`|指示第一个地址是部分和第二个地址是的偏移量。|  
+|`ADDR_NATIVE_REGREL`|指示第一个地址是寄存器和第二个地址是偏移量。|  
+|`ADDR_NATIVE_OFFSET`|指示一个偏移的基址。|  
+|`ADDR_NATIVE_REGREG`|指示第一个地址是寄存器中，低部分和第二个地址是高部分。|  
+|`ADDR_NATIVE_REGSTK`|指示第一个地址是寄存器的低部分、 第二个是高的部分中，第三个是偏移量。|  
+|`ADDR_NATIVE_STKREG`|指示第一个地址是寄存器，第二个是偏移量，并且第三个已注册的高部分。|  
+|`ADDR_BITFIELD`|指示第一个地址是一个字段的开头和第二个地址是字段长度。|  
+|`ADDR_NATIVE_ISECTOFFSET`|指示第一个地址是部分和第二个地址是偏移量。|  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [诊断符号存储区枚举](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [诊断符号存储区枚举](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

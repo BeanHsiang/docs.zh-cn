@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a75efaf6703858fdb48a3f09635da1be4463d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 663ceda1c0621e1152e795db79c3953be0090d5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681785"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 当程序集加载失败时，将激活 `bindingFailure` 托管调试助手 (MDA)。  
@@ -77,7 +77,7 @@ ms.locfileid: "33364693"
 ## <a name="example"></a>示例  
  以下代码示例展示了一种可激活该 MDA 的情况：  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Text;  
@@ -98,5 +98,5 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>请参阅
+- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

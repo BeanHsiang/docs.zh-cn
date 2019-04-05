@@ -2,12 +2,12 @@
 title: System.Uri 中的国际资源标识符支持
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 742ea03a62426506f068a9b9e669278d0d4663ec
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 56d31b13b94b68719c355335a0598ab8b11d1ecc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50047145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651066"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri 中的国际资源标识符支持
 <xref:System.Uri?displayProperty=nameWithType> 类在国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持下已得到扩展。 NET Framework 3.5、3.0 SP1 和 2.0 SP1 提供了这些增强功能。  
@@ -43,8 +43,8 @@ ms.locfileid: "50047145"
   
  构造第一个 <xref:System.Uri?displayProperty=nameWithType> 类后，将立即读取 <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> 和 <xref:System.Configuration.IdnElement?displayProperty=nameWithType> 配置类的配置设置。 忽略时间后更改为默认设置。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
- <xref:System.Uri?displayProperty=nameWithType>  
- <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>请参阅
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
+- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
+- <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType>

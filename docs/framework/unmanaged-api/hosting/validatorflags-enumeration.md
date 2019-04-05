@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ce52108c1024ad3e07051b226aa65612580e2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e982fa7f6354f341ff4718440f345e282a1d20d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492217"
 ---
 # <a name="validatorflags-enumeration"></a>ValidatorFlags 枚举
-包含值，用于指示应在调用中执行的验证的类型[iclrvalidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)方法。  
+包含指示应在调用中执行的验证类型的值[iclrvalidator:: Validate](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-validate-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,21 +42,21 @@ enum ValidatorFlags {
   
 |成员|描述|  
 |------------|-----------------|  
-|`VALIDATOR_CHECK_ILONLY`|指定应验证的仅 Microsoft 中间语言 (MSIL) 中的可执行文件。|  
+|`VALIDATOR_CHECK_ILONLY`|指定应验证仅 Microsoft 中间语言 (MSIL) 中的可执行文件。|  
 |`VALIDATOR_CHECK_PEFORMAT_ONLY`|指定应验证仅可执行文件的格式。|  
 |`VALIDATOR_EXTRA_VERBOSE`|指定应执行和报告所有类型的验证。|  
 |`VALIDATOR_NOCHECK_PEFORMAT`|指定不应验证可执行文件的格式。|  
-|`VALIDATOR_SHOW_SOURCE_LINES`|指定验证错误消息应包括引发验证错误的源代码行。 .NET Framework 2.0 版中，此字段值无效。|  
+|`VALIDATOR_SHOW_SOURCE_LINES`|指定验证错误消息应包含引发验证错误的源代码行。 此字段值不是在.NET Framework 2.0 版中有效。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** IValidator.idl、 IValidator.h  
+ **标头：** IValidator.idl, IValidator.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRErrorReportingManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)  
- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [ICLRErrorReportingManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)
+- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

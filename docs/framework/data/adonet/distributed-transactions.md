@@ -2,12 +2,12 @@
 title: 分布式事务
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660328"
 ---
 # <a name="distributed-transactions"></a>分布式事务
 事务是一组相关的任务，作为独立于其他任务的独立单元成功（提交）或失败（中止）。 一个*分布式事务，事务*是影响多个资源的事务。 要提交分布式事务，所有参与者都必须保证对数据的任何更改是永久的。 即使发生系统崩溃或其他不可预见的事件，更改也必须是永久的。 即使只有一个参与者无法保证这一点，整个事务也将失败，在事务范围内对数据的任何更改均将回滚。  
@@ -47,7 +47,7 @@ ms.locfileid: "43486322"
 ## <a name="configuring-distributed-transactions"></a>配置分布式事务  
  为了使用分布式事务，您可能需要在网络上启用 MS DTC。 如果已启用 Windows 防火墙，则必须允许 MS DTC 服务使用网络或打开 MS DTC 端口。  
   
-## <a name="see-also"></a>请参阅  
- [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [System.Transactions 与 SQL Server 的集成](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

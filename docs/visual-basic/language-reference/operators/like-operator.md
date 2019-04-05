@@ -22,16 +22,19 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: c5b26bd1d3ebae5136718833c124e3c6e575e9b7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 38e56b8c0ec6bab89052ee42a2cd9c24053c658e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198161"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835695"
 ---
 # <a name="like-operator-visual-basic"></a>Like 运算符 (Visual Basic)
 将字符串与模式进行比较。  
-  
+
+> [!IMPORTANT]
+> `Like` .NET Core 和.NET Standard 项目中当前不支持运算符。
+
 ## <a name="syntax"></a>语法  
   
 ```  
@@ -40,13 +43,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>部件  
  `result`  
- 必须的。 任何`Boolean`变量。 结果是`Boolean`值，该值指示是否`string`满足`pattern`。  
+ 必需。 任何`Boolean`变量。 结果是`Boolean`值，该值指示是否`string`满足`pattern`。  
   
  `string`  
- 必须的。 任何 `String` 表达式。  
+ 必需。 任何 `String` 表达式。  
   
  `pattern`  
- 必须的。 任何`String`符合"备注。"中所述的模式匹配约定的表达式  
+ 必需。 任何`String`符合"备注。"中所述的模式匹配约定的表达式  
   
 ## <a name="remarks"></a>备注  
  如果中的值`string`满足中包含的模式`pattern`，`result`是`True`。 如果字符串不符合该模式中，`result`是`False`。 如果这两个`string`并`pattern`都是空字符串，其结果是`True`。  
@@ -73,7 +76,7 @@ result = string Like pattern
 ## <a name="special-characters"></a>特殊字符  
  若要匹配的特殊字符的左的括号 (`[`)，问号 (`?`)，数字符号 (`#`)，和星号 (`*`)，将它们括在方括号中。 右方括号 (`]`) 不能用于组中与自身匹配，但它可以在组外使用，作为单个字符。  
   
- 字符序列`[]`被视为一个零长度字符串 (`""`)。 但是，它不能是用方括号括起来的字符列表的一部分。 如果你想要检查是否中的位置`string`包含一个的一组字符或根本没有字符，可以使用`Like`两次。 有关示例，请参阅[如何： 将字符串与模式相匹配](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)。  
+ 字符序列`[]`被视为一个零长度字符串 (`""`)。 但是，它不能是用方括号括起来的字符列表的一部分。 如果你想要检查是否中的位置`string`包含一个的一组字符或根本没有字符，可以使用`Like`两次。 有关示例，请参见 [如何：字符串与模式相匹配](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)。  
   
 ## <a name="character-ranges"></a>字符范围  
  使用连字符 (`–`) 来分隔的范围的下限和上限`charlist`可以指定一系列字符。 例如，`[A–Z]`导致匹配项，如果相应的字符位置中`string`包含的范围内的任何字符`A`–`Z`，和`[!H–L]`结果匹配，如果相应的字符位置包含范围之外的任何字符`H`–`L`。  
@@ -95,19 +98,20 @@ result = string Like pattern
  当系统区域设置中指定一种语言，使用二合字母字符时，出现在单个二合字母字符`pattern`或`string`匹配其他字符串中等效的两个字符序列。 同样中的有向图时会字符`pattern`括在方括号中 （本身，在列表中，或某个范围内） 匹配中等效的双字符序列`string`。  
   
 ## <a name="overloading"></a>重载  
- `Like`运算符可以被*重载*，这意味着，某个类或结构可以重新定义其行为时，操作数的类或结构的类型。 如果你的代码对此类的类或结构使用此运算符，请确保了解其被重新定义的行为。 有关详细信息，请参阅[运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+ `Like`运算符可以被*重载*，这意味着，某个类或结构可以重新定义其行为时，操作数的类或结构的类型。 如果你的代码对此类的类或结构使用此运算符，请确保了解其被重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
  此示例使用`Like`运算符来比较各种模式的字符串。 结果进入`Boolean`变量，用于指示每个字符串是否满足模式的要求。  
   
- [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [比较运算符](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [如何：将字符串与模式相匹配](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [比较运算符](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [如何：字符串与模式相匹配](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

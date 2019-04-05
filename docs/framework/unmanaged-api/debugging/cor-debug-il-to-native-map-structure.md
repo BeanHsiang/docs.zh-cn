@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ea9a75ae9316c18439f6c2b728b47deacef9228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 56d4255b06f1317c87685737e4ee4021c37a77f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555006"
 ---
 # <a name="cordebugiltonativemap-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP 结构
 包含用于将 Microsoft 中间语言 (MSIL) 代码映射到本机代码的偏移量。  
@@ -42,19 +42,19 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 |------------|-----------------|  
 |`ilOffset`|MSIL 代码的偏移量。|  
 |`nativeStartOffset`|本机代码开头的偏移量。|  
-|`nativeEndOffset`|本机代码的结尾部分的偏移量。|  
+|`nativeEndOffset`|本机代码的结束偏移量。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** CorProf.idl、 CorDebug.idl  
+ **标头：** CorProf.idl CorDebug.idl  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)  
- [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)  
- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
+- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

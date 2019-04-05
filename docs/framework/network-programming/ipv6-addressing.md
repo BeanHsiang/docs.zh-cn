@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633847"
 ---
 # <a name="ipv6-addressing"></a>IPv6 寻址
 在 Internet 协议版本 6（IPv6）中，地址长度为 128 位。 地址空间如此之大的一个原因是将可用地址细分为可以反映 Internet 拓扑的路由域的层次结构。 另一个原因是映射将设备连接到网络的网络适配器（或接口）的地址。 IPv6 有可以解析最低级别的地址（即网络接口级别的地址）的固有功能以及自动配置功能。  
@@ -60,11 +60,11 @@ ms.locfileid: "50183407"
   
 -   单播地址。 单个接口的标识符。 发送到此地址的数据包将会发送到已标识接口。 可通过高序位八进制数的值，区分单播地址和多播地址。 多播地址的高序位八进制数具有 FF 的十六进制值。 此八进制数的任何其他值标识单播地址。 以下是不同类型的单播地址：  
   
-    -   链接本地地址。 这些地址在单个链接上使用，并且具有以下格式：FE80::InterfaceID。 链接本地地址用于链接的节点之间以实现自动地址配置、邻居发现，或者用于不存在路由器的情况。 链接本地地址主要用于启动时，以及系统尚未获取较大范围地址时。  
+    -   链接本地地址。 这些地址用于单个链接，并且具有以下格式：FE80::InterfaceID。 链接本地地址用于链接的节点之间以实现自动地址配置、邻居发现，或者用于不存在路由器的情况。 链接本地地址主要用于启动时，以及系统尚未获取较大范围地址时。  
   
     -   站点本地地址。 这些地址用于单个站点，具有以下格式：FEC0::SubnetID:InterfaceID。 站点本地地址用于在站点内寻址，无需全局前缀。  
   
-    -   全局 IPv6 单播地址。 这些地址可以在 Internet 中使用，具有以下格式：010(FP, 3 bits) TLA ID (13 bits) Reserved (8 bits) NLA ID (24 bits) SLA ID (16 bits) InterfaceID (64 bits)。  
+    -   全局 IPv6 单播地址。 这些地址可以在 Internet 上使用，并具有以下格式：010 (FP，3 位) TLA ID (13 位)预留(8 位) NLA ID (24 位) SLA ID (16 位) InterfaceID (64 位)  
   
 -   多播地址。 一组接口（通常属于不同节点）的标识符。 发送到此地址的数据包将发送到由该地址标识的所有接口。 多播地址类型取代了 IPv4 广播地址。  
   
@@ -72,6 +72,6 @@ ms.locfileid: "50183407"
   
  通常，节点始终具有链接本地地址。 它可能具有站点本地地址和一个或多个全局地址。  
   
-## <a name="see-also"></a>请参阅  
- [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [套接字](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>请参阅
+- [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [套接字](../../../docs/framework/network-programming/sockets.md)

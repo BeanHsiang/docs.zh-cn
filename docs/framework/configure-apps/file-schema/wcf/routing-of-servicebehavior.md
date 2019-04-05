@@ -1,21 +1,21 @@
 ---
-title: '&lt;serviceBehavior&gt; 的 &lt;routing&gt;'
+title: <routing> 的 <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 5fb7febe365f73acf09ba74b07215fe9cc659efb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3f23cbb45aa72b1aae18c845e68b426a4214d499
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750747"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354215"
 ---
-# <a name="ltroutinggt-of-ltservicebehaviorgt"></a>&lt;serviceBehavior&gt; 的 &lt;routing&gt;
+# <a name="routing-of-servicebehavior"></a>\<路由 > 的\<serviceBehavior >
 提供对路由服务的运行时访问以允许对路由配置进行动态修改。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
+\<behavior>  
 \<路由 >  
   
 ## <a name="syntax"></a>语法  
@@ -24,12 +24,12 @@ ms.locfileid: "32750747"
 <behaviors>
   <serviceBehaviors>
     <behavior name="String">
-      <routing filterTable="String" 
-               routeOnHeadersOnly="Boolean" 
+      <routing filterTable="String"
+               routeOnHeadersOnly="Boolean"
                SoapProcessingEnabled="Boolean" />
     </behavior>
   </serviceBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -39,7 +39,7 @@ ms.locfileid: "32750747"
   
 |特性|描述|  
 |---------------|-----------------|  
-|filterTable|一个字符串，指定路由服务要计算的筛选器所在的路由表的名称。 此值必须匹配`name`属性[ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md)中的元素[ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md)部分。|  
+|filterTable|一个字符串，指定路由服务要计算的筛选器所在的路由表的名称。 此值必须匹配`name`的属性[ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md)中的元素[ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md)部分。|  
 |routeOnHeaderOnly|一个布尔值，指定筛选器将同时检查消息正文和标头，还是仅检查标头。 默认值为 `true`。|  
 |soapProcessingEnabled|一个布尔值，指定是否应进行 SOAP 处理。|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "32750747"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
  将此配置元素添加到服务的行为配置中后，此配置元素将对该服务启用路由。 您可以在此元素中指定服务要使用的实际路由表。  

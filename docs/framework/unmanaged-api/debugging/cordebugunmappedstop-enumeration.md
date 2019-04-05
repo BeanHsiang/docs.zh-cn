@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d812a452910913f169d4377bafa82e823c533d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a6f22c045be9af71644415ae3b6b5e64d3e399dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495430"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop 枚举
 指定未映射代码的类型，这些代码可以中断分档器代码执行。  
@@ -44,25 +44,25 @@ typedef enum CorDebugUnmappedStop {
   
 |成员|描述|  
 |------------|-----------------|  
-|`STOP_NONE`|不要停止在任何类型的未映射代码。|  
+|`STOP_NONE`|不停止任何类型的非托管代码中。|  
 |`STOP_PROLOG`|停止在 prolog 代码中。|  
 |`STOP_EPILOG`|停止在 epilog 代码。|  
-|`STOP_NO_MAPPING_INFO`|在没有映射信息的代码中停止时。|  
-|`STOP_OTHER_UNMAPPED`|停止在不适合 prolog、 epilog、 无映射信息或非托管的类别的未映射代码。|  
-|`STOP_UNMANAGED`|非托管代码中停止。 此值才有效仅使用互操作调试。|  
-|`STOP_ALL`|在所有类型的非托管代码中停止时。|  
+|`STOP_NO_MAPPING_INFO`|在没有映射的信息的代码中停止。|  
+|`STOP_OTHER_UNMAPPED`|停止不适合 prolog、 epilog、 无映射信息或非托管的类别的未映射代码中。|  
+|`STOP_UNMANAGED`|在非托管代码中停止。 此值是有效仅使用互操作调试。|  
+|`STOP_ALL`|停止所有类型的非托管代码中。|  
   
 ## <a name="remarks"></a>备注  
- 使用[icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)方法以设置指定将在其中停止分档器未映射的代码的标志。  
+ 使用[icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)方法设置标志，用于指定将在其中停止分档器未映射的代码。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

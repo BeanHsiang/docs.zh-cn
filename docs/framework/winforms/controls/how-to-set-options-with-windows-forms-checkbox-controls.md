@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: dc9e7b1aea74874c66bf9eb96a5b919ed9b4b73b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3eb68d76d936f13e78d13629455c6ac7fb537b40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534081"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714783"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>如何：使用 Windows 窗体 CheckBox 控件设置选项
-Windows 窗体<xref:System.Windows.Forms.CheckBox>控制用于授予用户 True/False 或是/否选项。 选择此项时，该控件将显示一个复选标记。  
+Windows 窗体<xref:System.Windows.Forms.CheckBox>控制用于授予用户 True/False 或 Yes/No 选项。 选择此项时，该控件将显示一个复选标记。  
   
-### <a name="to-set-options-with-checkbox-controls"></a>若要设置选项的复选框控件  
+### <a name="to-set-options-with-checkbox-controls"></a>若要使用 CheckBox 控件设置选项  
   
-1.  检查的值<xref:System.Windows.Forms.CheckBox.Checked%2A>属性以确定其状态，并使用该值来设置选项。  
+1.  检查的值<xref:System.Windows.Forms.CheckBox.Checked%2A>属性来确定其状态，然后使用该值来设置一个选项。  
   
-     将以下代码示例，当在<xref:System.Windows.Forms.CheckBox>控件的<xref:System.Windows.Forms.CheckBox.CheckedChanged>引发事件时，窗体的<xref:System.Windows.Forms.Control.AllowDrop%2A>属性设置为`false`如果选中复选框。 这是适用于想要限制用户交互的情况。  
+     代码在以下示例中，当<xref:System.Windows.Forms.CheckBox>控件的<xref:System.Windows.Forms.CheckBox.CheckedChanged>引发事件时，窗体的<xref:System.Windows.Forms.Control.AllowDrop%2A>属性设置为`false`如果选中了复选框。 这是适用于想要限制用户交互的情况。  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -65,8 +65,8 @@ Windows 窗体<xref:System.Windows.Forms.CheckBox>控制用于授予用户 True/
        }  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.CheckBox>  
- [CheckBox 控件概述](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
- [如何：响应 Windows 窗体 CheckBox 控件单击](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
- [CheckBox 控件](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.CheckBox>
+- [CheckBox 控件概述](checkbox-control-overview-windows-forms.md)
+- [如何：响应 Windows 窗体 CheckBox 控件单击](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [CheckBox 控件](checkbox-control-windows-forms.md)

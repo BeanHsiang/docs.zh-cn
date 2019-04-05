@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3926a0d49b2db02cf52a3cc943b05edc4cc36a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 939e815f4d3adc5f6e1c8b8fc85c9f4b89372501
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406264"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571478"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 枚举
 枚举的程序集选项。  
@@ -58,25 +58,25 @@ typedef enum _AssemblyOptions {
   
 |字段|描述|  
 |-----------|-----------------|  
-|optAssemTitle|字符串 – 表示程序集的标题。|  
-|optAssemDescription|字符串--包含程序集描述。|  
+|optAssemTitle|字符串--表示程序集标题。|  
+|optAssemDescription|字符串--包含程序集说明。|  
 |optAssemConfig|字符串--包含程序集配置。|  
-|optAssemOS|字符串的编码为:"dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion"。|  
+|optAssemOS|字符串-编码为:"dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion"。|  
 |optAssemProcessor|ULONG|  
 |optAssemLocale|字符串--包含程序集的区域设置。|  
-|optAssemVersion|字符串的编码为:"Major.Minor.Build.Revision"。|  
+|optAssemVersion|字符串-编码为："Major.Minor.Build.Revision"。|  
 |optAssemCompany|字符串--包含公司。|  
 |optAssemProduct|字符串--包含产品名称。|  
 |optAssemProductVersion|字符串 (也称为 InformationalVersion)。|  
 |optAssemCopyright|字符串--包含的版权信息。|  
 |optAssemTrademark|字符串--包含商标信息。|  
 |optAssemKeyFile|字符串 （文件名）。|  
-|optAssemKeyName|字符串 （密钥名称）。|  
+|optAssemKeyName|字符串 （项名）。|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
 |optAssemHalfSign|Bool （也称为 DelaySign）。|  
-|optAssemFileVersion|字符串的编码为"Major.Minor.Build.Revision"-ProductVersion 相同。|  
-|optAssemSatelliteVer|编码的字符串的"Major.Minor.Build.Revision"形式。|  
+|optAssemFileVersion|字符串-编码为"Major.Minor.Build.Revision"-ProductVersion 相同。|  
+|optAssemSatelliteVer|字符串-编码为"Major.Minor.Build.Revision"。|  
 |optLastAssemOption|元素数的计数器。|  
   
 ## <a name="requirements"></a>要求  
@@ -84,5 +84,5 @@ typedef enum _AssemblyOptions {
   
  **库**: alink.dll  
   
-## <a name="see-also"></a>请参阅  
- [Al.exe（程序集链接器）](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>请参阅
+- [Al.exe（程序集链接器）](../../../../docs/framework/tools/al-exe-assembly-linker.md)

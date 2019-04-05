@@ -1,17 +1,17 @@
 ---
-title: 类中的 let 绑定 (F#)
-description: '了解如何通过在类定义中使用 let 绑定定义私有字段和 F # 类的私有函数。'
+title: 类中的 let 绑定
+description: 了解如何定义私有字段和私有函数为F#类使用 let 中的类定义的绑定。
 ms.date: 05/16/2016
-ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48033215"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611121"
 ---
 # <a name="let-bindings-in-classes"></a>类中的 let 绑定
 
-可以通过使用定义私有字段和 F # 类的私有函数`let`类定义中的绑定。
+你可以定义私有字段和私有函数为F#使用的类`let`类定义中的绑定。
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +45,7 @@ ms.locfileid: "48033215"
 
 ## <a name="alternative-ways-to-create-fields"></a>创建字段的替代方法
 
-此外可以使用`val`关键字创建的私有字段。 当使用`val`关键字，该字段没有指定值，该对象创建的但改为使用默认值初始化时。 有关详细信息，请参阅[显式字段： val 关键字](explicit-fields-the-val-keyword.md)。
+此外可以使用`val`关键字创建的私有字段。 当使用`val`关键字，该字段没有指定值，该对象创建的但改为使用默认值初始化时。 有关详细信息，请参阅[显式字段：Val 关键字](explicit-fields-the-val-keyword.md)。
 
 可以使用成员定义和添加关键字，还定义一个类的私有字段`private`到定义。 这很有用，如果您希望更改而无需重新编写代码的成员的可访问性。 有关详细信息，请参阅[访问控制](../access-control.md)。
 

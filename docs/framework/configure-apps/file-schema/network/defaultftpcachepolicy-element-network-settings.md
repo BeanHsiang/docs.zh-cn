@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultFtpCachePolicy&gt;元素 （网络设置）'
+title: <defaultFtpCachePolicy> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultFtpCachePolicy
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: a8c71551adc2b88b5300994134eaec329a083709
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eda246c93660c1a37f7db3a6a38144a44a0ae1d3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188282"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279703"
 ---
-# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt;元素 （网络设置）
+# <a name="defaultftpcachepolicy-element-network-settings"></a>\<defaultFtpCachePolicy > 元素 （网络设置）
 介绍 FTP 缓存功能是否处于活动状态并介绍了默认的缓存策略。  
   
  \<configuration>  
 \<system.net>  
-\<requestCaching >  
-\<defaultFtpCachePolicy >  
+\<requestCaching>  
+\<defaultFtpCachePolicy>  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +42,7 @@ ms.locfileid: "50188282"
   
 ## <a name="policylevel-attribute"></a>policyLevel 属性  
   
-|“值”|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |`Default`|如果资源是最新、 内容长度是准确的并且存在过期、 修改和内容长度属性将，返回缓存的资源。|  
 |`BypassCache`|从服务器返回的资源。|  
@@ -79,8 +79,8 @@ ms.locfileid: "50188282"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.Cache>  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.Cache.RequestCacheLevel>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.Cache>
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.Cache.RequestCacheLevel>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

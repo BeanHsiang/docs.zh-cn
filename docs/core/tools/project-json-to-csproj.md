@@ -1,15 +1,15 @@
 ---
-title: 比较 project.json 和 csproj - .NET Core
+title: 比较 project.json 和 csproj
 description: 查看 project.json 和 csproj 元素之间的映射。
 author: natemcmaster
-ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: 0079164470f87df665be6f9de62bc98d3fb51696
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397707"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747406"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 和 csproj 属性之间的映射
 
@@ -39,7 +39,7 @@ ms.locfileid: "47397707"
 }
 ```
 
-不再支持。 在 csproj 中，这取决于项目文件名（由目录名称定义）。 例如 `MyProjectName.csproj`。
+不再支持。 在 csproj 中，这取决于项目文件名（通常与目录名称匹配）。 例如 `MyProjectName.csproj`。
 
 默认情况下，项目文件名还指定 `<AssemblyName>` 和 `<PackageId>` 属性的值。
 
@@ -676,4 +676,4 @@ MSBuild 中没有 `owners` 元素的等效项。
 
 ## <a name="see-also"></a>请参阅
 
-* [CLI 中更改的简要概述](../tools/cli-msbuild-architecture.md)
+- [CLI 中更改的简要概述](../tools/cli-msbuild-architecture.md)

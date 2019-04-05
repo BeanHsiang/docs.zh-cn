@@ -8,18 +8,16 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation within applications
 - UI Automation, implementing client-side provider within application
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: becd247e07a2ece2865251e7a8bbd10f0750ddb3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 102a2fe1cb2598078af7246d5f88df928064693f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195805"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676637"
 ---
 # <a name="implement-ui-automation-providers-in-a-client-application"></a>在客户端应用程序中实现 UI 自动化提供程序
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题所包含的代码示例演示如何在应用程序中实现客户端 UI 自动化提供程序。  
   
@@ -31,8 +29,8 @@ ms.locfileid: "47195805"
  [!code-csharp[UIAClientSideProvider_snip#201](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/ClientImplementationProgram.cs#201)]
  [!code-vb[UIAClientSideProvider_snip#201](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/clientimplementationprogram.vb#201)]  
   
-## <a name="see-also"></a>请参阅  
- [UI 自动化提供程序概述](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [注册客户端提供程序程序集](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
- [创建客户端 UI 自动化提供程序](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  
- [客户端 UI 自动化提供程序的实现](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)
+## <a name="see-also"></a>请参阅
+- [UI 自动化提供程序概述](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [注册客户端提供程序程序集](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)
+- [创建客户端 UI 自动化提供程序](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
+- [客户端 UI 自动化提供程序的实现](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)

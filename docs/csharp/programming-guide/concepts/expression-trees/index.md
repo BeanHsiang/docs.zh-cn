@@ -2,17 +2,17 @@
 title: 表达式树 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: f17b4fba92c502ca6d53fef7ac6d01f2fdefc02e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7744954d3a3f552d5765e6e7085950f08a5adf55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720923"
 ---
 # <a name="expression-trees-c"></a>表达式树 (C#)
 表达式树以树形数据结构表示代码，其中每一个节点都是一种表达式，比如方法调用和 `x < y` 这样的二元运算等。  
   
- 你可以对表达式树中的代码进行编辑和运算。 这样能够动态修改可执行代码、在不同数据库中执行 LINQ 查询以及创建动态查询。 有关 LINQ 中表达式树的详细信息，请参阅[如何：使用表达式树生成动态查询 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)。  
+ 你可以对表达式树中的代码进行编辑和运算。 这样能够动态修改可执行代码、在不同数据库中执行 LINQ 查询以及创建动态查询。 若要详细了解 LINQ 中的表达式树，请参阅[操作说明：使用表达式树生成动态查询 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)。  
   
  表达式树还能用于动态语言运行时 (DLR) 以提供动态语言和 .NET Framework 之间的互操作性，同时保证编译器编写员能够发射表达式树而非 Microsoft 中间语言 (MSIL)。 有关 DLR 的详细信息，请参阅[动态语言运行时概述](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
   
@@ -149,9 +149,9 @@ Console.WriteLine(expr.Compile()(4));
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Linq.Expressions>  
-- [如何：执行表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
-- [如何：修改表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
-- [Lambda 表达式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [动态语言运行时概述](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+- <xref:System.Linq.Expressions>
+- [如何：执行表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [如何：修改表达式树 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [Lambda 表达式](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [动态语言运行时概述](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [编程概念 (C#)](../../../../csharp/programming-guide/concepts/index.md)

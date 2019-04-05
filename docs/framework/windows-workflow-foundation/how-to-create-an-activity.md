@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872952"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709011"
 ---
 # <a name="how-to-create-an-activity"></a>如何：创建活动
 
@@ -42,8 +42,8 @@ ms.locfileid: "48872952"
 
 4.  将现有的 `ReadInt` 定义替换为下面的定义。
 
-     [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
-     [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
+     [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
+     [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
     > `ReadInt` 活动派生自 <xref:System.Activities.NativeActivity%601> 而不是 <xref:System.Activities.CodeActivity>，这是默认的代码活动模板。 如果活动提供单个结果，可以使用 <xref:System.Activities.CodeActivity%601>，它是通过 <xref:System.Activities.Activity%601.Result%2A> 参数公开的，但是 <xref:System.Activities.CodeActivity%601> 不支持使用书签，因此使用 <xref:System.Activities.NativeActivity%601>。
@@ -74,7 +74,7 @@ ms.locfileid: "48872952"
 
 12. 类型`Text`成**名称**框中，选择**中**从**方向**下拉列表中，选择**字符串**从**自变量类型**下拉列表，再按**Enter**保存该自变量。
 
-     在以下步骤中，这三个自变量将绑定到添加到 <xref:System.Activities.Statements.WriteLine> 活动中的 `ReadInt` 和 `Prompt` 活动的相应自变量。
+     在以下步骤中，这三个参数将绑定到添加到 <xref:System.Activities.Statements.WriteLine> 活动中的 `ReadInt` 和 `Prompt` 活动的相应参数。
 
 13. 单击**自变量**左下角的活动设计器，以关闭**自变量**窗格。
 
@@ -100,13 +100,13 @@ ms.locfileid: "48872952"
 
 ## <a name="next-steps"></a>后续步骤
 
-有关说明如何使用这些活动创建工作流教程中，请参阅下一步[如何： 创建工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。
+有关说明如何使用这些活动创建工作流教程中，请参阅下一步[如何：创建工作流](how-to-create-a-workflow.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [设计和实现自定义活动](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)
-- [入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [如何：创建工作流](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [在自定义活动设计器中使用 ExpressionTextBox](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [设计和实现自定义活动](designing-and-implementing-custom-activities.md)
+- [入门教程](getting-started-tutorial.md)
+- [如何：创建工作流](how-to-create-a-workflow.md)
+- [在自定义活动设计器中使用 ExpressionTextBox](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

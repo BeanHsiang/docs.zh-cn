@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7654a91180dd0b4148cfb85b35bf1ce730764f28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 25a9d287e6520f1fc7826d85dfbcd8e9a6da22f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422680"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481052"
 ---
 # <a name="icordebugsteppersetinterceptmask-method"></a>ICorDebugStepper::SetInterceptMask 方法
 设置一个值，指定的单步执行代码的类型。  
@@ -35,20 +35,20 @@ HRESULT SetInterceptMask (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `mask`  
- [in]指定的代码类型 CorDebugIntercept 枚举的值的组合。  
+ [in]CorDebugIntercept 枚举用于指定代码的类型的值的组合。  
   
 ## <a name="remarks"></a>备注  
- 如果设置了拦截器位，遇到给定的类型的截获代码时，将完成分档器。 如果位将被清除，则将跳过截获的代码。  
+ 如果设置了拦截器位，则遇到给定的类型的拦截代码时将完成分档器。 如果清除了位，则将跳过截取代码。  
   
- `SetInterceptMask`方法可能具有与出现未预见的交互[icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) （从用户的角度来看）。 例如，如果仅可见 (即非内部) 类初始化代码部分中的缺少映射信息，因而 STOP_NO_MAPPING_INFO 未设置 (请参阅[icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)方法和CorDebugUnmappedStop 枚举） 分档器将逐过程执行类初始化。 默认情况下，只对 INTERCEPT_NONE 数值`CorDebugIntercept`将使用枚举。  
+ `SetInterceptMask`方法有与无法预见的交互[icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) （从用户的角度来看）。 例如，如果仅可见 (即，非内部) 类初始化代码部分中的缺少映射信息，STOP_NO_MAPPING_INFO 未设置 (请参阅[icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)方法和CorDebugUnmappedStop 枚举），分档器将逐过程类初始化。 默认情况下，仅的 INTERCEPT_NONE 值`CorDebugIntercept`将使用枚举。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

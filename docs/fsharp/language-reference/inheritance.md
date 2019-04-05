@@ -1,13 +1,13 @@
 ---
-title: 继承 (F#)
-description: '了解如何指定 F # 继承关系，使用继承关键字。'
+title: 继承
+description: 了解如何指定F#使用继承关键字的继承关系。
 ms.date: 05/16/2016
-ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864464"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610133"
 ---
 # <a name="inheritance"></a>继承
 
@@ -34,7 +34,7 @@ type MyDerived(...) =
 
 ## <a name="virtual-methods-and-overrides"></a>虚方法和重写
 
-虚方法 （和属性） 工作方式略有不同 F # 中与其他.NET 语言相比。 若要声明新的虚拟成员，请使用`abstract`关键字。 无论您是否提供的默认实现，该方法执行此操作。 因此在基类中虚方法的完整定义采用这种模式：
+虚方法 （和属性） 在某种程度上以不同方式处理F#与其他.NET 语言相比。 若要声明新的虚拟成员，请使用`abstract`关键字。 无论您是否提供的默认实现，该方法执行此操作。 因此在基类中虚方法的完整定义采用这种模式：
 
 ```fsharp
 abstract member [method-name] : [type]

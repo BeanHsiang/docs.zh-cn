@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: e38be762fbfdaccc7d5ba01a1f24f5f3086ca8bf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eac8c932e9f661933f943a507485a170dc6b6132
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503592"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713051"
 ---
 # <a name="application-settings-overview"></a>应用程序设置概述
 本主题讨论如何代表你的应用程序和你的用户创建和存储设置数据。  
@@ -27,34 +27,34 @@ ms.locfileid: "43503592"
   
  应用程序设置通过提供一种简便方法，将应用程序范围设置和用户范围设置存储在客户端计算机上，从而满足了上述这两种需求。 使用 Visual Studio 或代码编辑器，可以通过指定设置的名称、数据类型和范围（应用程序或用户）来定义给定属性的设置。 还可以将相关设置放在命名组中以方便使用和读取。 定义设置后，这些设置将保持不变并在运行时被自动读回到内存中。 可插入体系结构允许更改保持机制，但默认情况下使用本地文件系统。  
   
- 应用程序设置的工作方式是：根据设置是应用程序范围设置还是用户范围设置，将数据作为 XML 保持在不同的配置文件 (.config) 中。 在大多数情况下，应用程序范围设置是只读的；因为它们是编程信息，通常不需要覆盖它们。 相反，在运行时可以安全地读写用户范围设置，即使应用程序在部分信任环境下运行也是如此。 有关分部信任的详细信息，请参阅 [Security in Windows Forms Overview](../../../../docs/framework/winforms/security-in-windows-forms-overview.md)。  
+ 应用程序设置的工作方式是：根据设置是应用程序范围设置还是用户范围设置，将数据作为 XML 保持在不同的配置文件 (.config) 中。 在大多数情况下，应用程序范围设置是只读的；因为它们是编程信息，通常不需要覆盖它们。 相反，在运行时可以安全地读写用户范围设置，即使应用程序在部分信任环境下运行也是如此。 有关部分信任的详细信息，请参阅 [Windows 窗体中的安全性概述](../security-in-windows-forms-overview.md)。  
   
  设置在配置文件中存储为 XML 片段。 应用程序范围设置由 `<application.Settings>` 元素表示，这些设置通常位于 *app*.exe.config 中，其中 *app* 是主可执行文件的名称。 用户范围设置由 `<userSettings>` 元素表示，这些设置位于 *user*.config 中，其中 *user* 是当前运行应用程序的用户的用户名。 *app*.exe.config 文件必须与应用程序一起部署；当应用程序首次保存用户设置时，设置体系结构将按要求创建 *user*.config 文件。 还可以在 `<userSettings>` app *.exe.config 中定义*块，以便为用户范围设置提供默认值。  
   
- 自定义控件还可通过实现 <xref:System.Configuration.IPersistComponentSettings> 接口保存它们自己的设置，该接口公开 <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> 方法。 Windows 窗体 <xref:System.Windows.Forms.ToolStrip> 控件实现此接口，以在应用程序会话之间保存工具栏和工具栏项的位置。 有关自定义控件和应用程序设置的详细信息，请参阅 [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)。  
+ 自定义控件还可通过实现 <xref:System.Configuration.IPersistComponentSettings> 接口保存它们自己的设置，该接口公开 <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> 方法。 Windows 窗体 <xref:System.Windows.Forms.ToolStrip> 控件实现此接口，以在应用程序会话之间保存工具栏和工具栏项的位置。 有关自定义控件和应用程序设置的详细信息，请参阅 [Application Settings for Custom Controls](application-settings-for-custom-controls.md)。  
   
 ## <a name="limitations-of-application-settings"></a>应用程序设置的限制  
  应用程序设置无法用于托管 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的非托管应用程序。 这些设置在以下环境中将无效：Visual Studio 外接程序、用于 Microsoft Office 的 C++、托管在 Internet Explorer 中的控件或 Microsoft Outlook 外接程序和项目。  
   
  当前无法绑定到 Windows 窗体中的某些属性。 最需要引起注意的是 <xref:System.Windows.Forms.Form.ClientSize%2A> 属性，因为绑定到该属性会导致在运行时发生不可预测的行为。 通常可以通过以编程方式保存和加载这些设置来解决这些问题。  
   
- 应用程序设置不具备用于自动加密信息的内置功能。 切勿以明文形式存储与安全有关的信息，例如数据库密码。 如果要存储此类敏感信息，你作为应用程序开发人员有责任确保它是安全的。 如果要存储连接字符串，我们建议你使用 Windows 集成安全性，而不采用将密码硬编码到 URL 中的做法。 有关更多信息，请参见 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)。  
+ 应用程序设置不具备用于自动加密信息的内置功能。 切勿以明文形式存储与安全有关的信息，例如数据库密码。 如果要存储此类敏感信息，你作为应用程序开发人员有责任确保它是安全的。 如果要存储连接字符串，我们建议你使用 Windows 集成安全性，而不采用将密码硬编码到 URL 中的做法。 有关详细信息，请参阅[代码访问安全性和 ADO.NET](../../data/adonet/code-access-security.md)。  
   
 ## <a name="getting-started-with-application-settings"></a>开始使用应用程序设置  
  如果使用 Visual Studio，则可以在 Windows 窗体设计器中使用“属性”  窗口中的“(ApplicationSettings)”  属性来定义设置。 当以这种方式定义设置时，Visual Studio 自动创建一个自定义托管包装器类，该包装器类将每个设置与一个类属性关联。 Visual Studio 还负责将设置绑定到窗体或控件上的属性，以便在显示控件窗体时自动还原控件设置，并在关闭窗体时自动保存控件设置。  
   
- 如果要对设置进行更细致的控制，你可以定义自己的自定义应用程序设置包装器类。 此操作的实现步骤如下：从 <xref:System.Configuration.ApplicationSettingsBase>派生一个类，然后添加与每个设置相对应的属性，最后将特殊的特性应用到这些属性。 有关创建包装类的详细信息，请参阅 [Application Settings Architecture](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)。  
+ 如果要对设置进行更细致的控制，你可以定义自己的自定义应用程序设置包装器类。 此操作的实现步骤如下：从 <xref:System.Configuration.ApplicationSettingsBase>派生一个类，然后添加与每个设置相对应的属性，最后将特殊的特性应用到这些属性。 有关创建包装类的详细信息，请参阅 [Application Settings Architecture](application-settings-architecture.md)。  
   
  还可以使用 <xref:System.Windows.Forms.Binding> 类以编程方式将设置绑定到窗体和控件上的属性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Configuration.ApplicationSettingsBase>  
- <xref:System.Configuration.SettingsProvider>  
- <xref:System.Configuration.LocalFileSettingsProvider>  
- <xref:System.Configuration.IPersistComponentSettings>  
- [如何：验证应用程序设置](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
- [管理应用程序设置 (.NET)](https://msdn.microsoft.com/library/35254321-ad14-47d9-b8c6-39ab3203c5d9)  
- [如何：在运行时使用 C# 读取设置](../../../../docs/framework/winforms/advanced/how-to-read-settings-at-run-time-with-csharp.md)  
- [使用应用程序设置和用户设置](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
- [应用程序设置体系结构](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [自定义控件的应用程序设置](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Configuration.ApplicationSettingsBase>
+- <xref:System.Configuration.SettingsProvider>
+- <xref:System.Configuration.LocalFileSettingsProvider>
+- <xref:System.Configuration.IPersistComponentSettings>
+- [如何：验证应用程序设置](how-to-validate-application-settings.md)
+- [管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+- [如何：在运行时读取设置C#](how-to-read-settings-at-run-time-with-csharp.md)
+- [使用应用程序设置和用户设置](using-application-settings-and-user-settings.md)
+- [应用程序设置体系结构](application-settings-architecture.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)

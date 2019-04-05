@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64b09c173e2f66d4c650083cc12f8a0ac2c92007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15addd0b35c43945f643386f8983fc14c9312bae
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417223"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492330"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification 方法
-提供了执行代码遇到的应用程序正在调试中的托管调试助手 (MDA) 的通知。  
+提供了执行代码遇到正在调试的应用程序中托管调试助手 (MDA) 的通知。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,41 +37,41 @@ HRESULT MDANotification(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pController`  
  [in]ICorDebugController 接口公开进程或在其中发生 MDA 的应用程序域的指针。  
   
- 调试器不应作出有关控制器是否为进程或应用程序域中，任何假设，尽管它始终可以查询该接口来做出决定。  
+ 调试程序不应造成任何假设控制器是一个进程或应用程序域，但它始终可以查询接口来确定。  
   
  `pThread`  
- [in]指向公开调试事件发生在其的托管的线程的 ICorDebugThread 接口的指针。  
+ [in]指向公开托管的线程在其调试事件发生的 ICorDebugThread 接口的指针。  
   
- 如果 MDA 出现在非托管线程的值`pThread`将为 null。  
+ 如果 MDA 将出现在非托管线程，值`pThread`将为 null。  
   
- 你必须从 MDA 对象本身中获取的操作系统 (OS) 线程 ID。  
+ 你必须从 MDA 对象本身获取操作系统 (OS) 线程 ID。  
   
  `pMDA`  
- [in]指向的指针[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)公开 MDA 信息的接口。  
+ [in]一个指向[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)公开 MDA 的信息的接口。  
   
 ## <a name="remarks"></a>备注  
- MDA 是启发式警告并且不需要任何显式调试器操作除外调用[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)若要继续执行的应用程序正在调试。  
+ MDA 是启发式警告，无需任何显式调试器操作调用除外[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)恢复正在调试的应用程序的执行。  
   
- 公共语言运行时 (CLR) 可以确定要激发 Mda 哪些，以及哪些数据是在任意给定 MDA 在任何时间。 因此，调试器不应生成需要特定的 MDA 模式的任何功能。  
+ 公共语言运行时 (CLR) 可以确定哪些 Mda 会触发，以及哪些数据是在任意给定 MDA 在任何时间。 因此，调试器不应生成需要特定的 MDA 模式的任何功能。  
   
- Mda 可能排队，并可以激发不久后遇到 MDA。 如果运行时需要等待，直到它达到某一安全点中用于激发 MDA，而不是它遇到 MDA 时激发，则可能发生这种情况。 它还意味着，运行时可以激发一套排队的回调 （类似于"附加"事件操作） 的数字的 Mda。  
+ 可能已排队并触发遇到 MDA 后不久 Mda。 如果运行时需要等待，直到它达到中用于引发 MDA，而不是 MDA 激发，则当它遇到某一安全点，则可能发生这种情况。 这还意味着在运行时可能会激发在排队的回调 （类似于"附加"事件操作） 的一组多个 Mda。  
   
- 调试器应释放对引用`ICorDebugMDA`后立即从返回的实例`MDANotification`回调，以允许 CLR 回收 MDA 占用的内存。 释放实例可能会提高性能，如果多个 Mda 还将触发。  
+ 调试程序应发布到的引用`ICorDebugMDA`后立即从返回的实例`MDANotification`回调，以允许 CLR 回收 MDA 所占用的内存。 如果多个 Mda 还将触发，释放实例可能会提高性能。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [使用托管调试助手诊断错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [ICorDebugManagedCallback2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>请参阅
+- [使用托管调试助手诊断错误](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [ICorDebugManagedCallback2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

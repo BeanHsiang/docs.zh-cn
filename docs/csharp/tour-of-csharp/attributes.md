@@ -3,12 +3,12 @@ title: C# 特性 - C#语言介绍
 description: 了解在 C# 中使用特性的声明性编程
 ms.date: 08/10/2016
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: 671023f268ae78d63db8868ef6046b8f13880659
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: a8ee40e5d4956667dd54cf25cc7993d041cba6e7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "34312230"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151078"
 ---
 # <a name="attributes"></a>特性
 
@@ -31,4 +31,4 @@ C# 程序中的类型、成员和其他实体支持使用修饰符来控制其�
 [!code-csharp[AttributeRead](../../../samples/snippets/csharp/tour/attributes/Program.cs#ReadAttributes)]
 
 >[!div class="step-by-step"]
-[上一篇](delegates.md)
+>[上一篇](delegates.md)

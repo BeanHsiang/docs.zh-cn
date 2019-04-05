@@ -1,5 +1,5 @@
 ---
-title: 如何：使用数字签名为 XML 文档签名
+title: 如何：使用数字签名为 XML 文档
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 49999ae8b66b01ca71c0027bdf43c13272fbe8a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622619"
 ---
-# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>如何：使用数字签名为 XML 文档签名
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>如何：使用数字签名为 XML 文档
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类通过数字签名对 XML 文档或部分 XML 文档进行签名。  使用 XML 数字签名 (XMLDSIG)，你可以验证签名后的数据没有被更改。  有关 XMLDSIG 标准的详细信息，请参阅 World Wide Web 联合会 (W3C) 建议[XML 签名语法和处理](https://www.w3.org/TR/xmldsig-core/)。  
   
  此过程中的代码示例演示了如何对整个 XML 文档进行数字签名，以及如何将签名附加到文档中的 <`Signature`> 元素中。  该示例创建一个 RSA 签名密钥，并将该密钥添加到安全密钥容器，然后使用该密钥对 XML 文档进行数字签名。  然后可以检索该密码来验证 XML 数字签名，或使用它对另一个 XML 文档进行签名。  
   
- 有关如何验证使用此过程创建的 XML 数字签名的信息，请参阅[如何： 验证 XML 文档数字签名](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)。  
+ 有关如何验证使用此过程创建的 XML 数字签名的信息，请参阅[如何：验证 XML 文档的数字签名](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)。  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>对 XML 文档进行数字签名  
   
@@ -120,5 +120,5 @@ ms.locfileid: "45664600"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Security.Cryptography.Xml>  
+- <xref:System.Security.Cryptography.Xml>
 - [如何：验证 XML 文档的数字签名](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

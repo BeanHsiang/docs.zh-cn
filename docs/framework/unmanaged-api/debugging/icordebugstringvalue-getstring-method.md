@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63d3df561a3b48a4b26426235455ef1a074512f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1bf62d8855b3f9de5629b9cfc6e0bcd0878a0d17
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417955"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489912"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString 方法
-获取此 ICorDebugStringValue 所引用的字符串。  
+获取此 ICorDebugStringValue 引用的字符串。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,21 +38,21 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `cchString`  
  [in] `szString` 数组的大小。  
   
  `pcchString`  
- [out]指向中返回的字符数的指针`szString`数组。  
+ [out]指向中返回的字符数的`szString`数组。  
   
  `szString`  
  [out]一个数组，将检索到的字符串存储。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

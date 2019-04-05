@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: b134b4c875a2360712d14bc0b6c11ad0e13a89e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122755"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477474"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe（资源文件生成器）
 资源文件生成器 (Resgen.exe) 将文本（.txt 或 .restext）文件和基于 XML 的资源格式 (.resx) 文件转换为公共语言运行时二进制 (.resources) 文件，后者可嵌入到运行时二进制可执行文件或附属程序集中。 （请参阅[创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。）  
@@ -55,7 +55,7 @@ resgen /?
   
  如果使用 Resgen.exe 生成二进制 .resources 文件，则可以使用语言编译器将二进制文件嵌入到可执行程序集中，或者可以使用[程序集链接器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 将其编译到附属程序集中。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -69,9 +69,9 @@ resgen  [/define:symbol1[,symbol2,...]] [/useSourcePath] filename.extension  | /
 resgen filename.extension [outputDirectory]  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
   
-|参数或开关|描述|  
+|参数或开关|说明|  
 |-------------------------|-----------------|  
 |`/define:` symbol1[, symbol2,...]|从 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 开始，支持基于文本（.txt 或 .restext）的资源文件中的条件编译。 如果 symbol 对应于 `#ifdef` 构造中的输入文本文件中包含的符号，则关联的字符串资源将包含在 .resources 文件中。 如果输入文本文件包含带符号（此符号未由 `#if !` 开关定义）的 `/define` 语句，则关联的字符串资源将包含在资源文件中。<br /><br /> 如果将 `/define` 与非文本文件一起使用，则它将被忽略。 符号是区分大小写的。<br /><br /> 有关此选项的更多信息，请参阅本主题后面的[条件编译资源](#Conditional)。|  
 |`useSourcePath`|指定输入文件的当前目录将用于解析相对文件路径。|  
@@ -329,9 +329,9 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [工具](../../../docs/framework/tools/index.md)  
- [桌面应用中的资源](../../../docs/framework/resources/index.md)  
- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>请参阅
+- [工具](../../../docs/framework/tools/index.md)
+- [桌面应用中的资源](../../../docs/framework/resources/index.md)
+- [创建资源文件](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
+- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

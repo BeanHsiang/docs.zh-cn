@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 721693166c561babb9d7825f480e92d14a5f347c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308547"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154432"
 ---
 # <a name="code-contracts"></a>代码协定
 代码协定提供了在代码中指定前置条件、后置条件和对象固定的方法。 前置条件是输入方法或属性时必须满足的要求。 后置条件描述在方法或属性代码退出时的预期。 对象固定描述处于良好状态的类的预期状态。  
@@ -23,11 +23,11 @@ ms.locfileid: "49308547"
   
  代码协定包括以下优点：  
   
--   改进测试：代码协定提供静态协定验证、运行时检查和文档生成。  
+-   改进了测试：代码协定提供静态协定验证、 运行时检查和文档生成。  
   
--   自动测试工具：可通过过滤掉不满足前置条件的无意义的测试参数，使用代码协定来生成更有意义的单元测试。  
+-   自动测试工具：您可以使用代码约定通过过滤掉不满足前置条件的无意义的测试参数生成更有意义的单元测试。  
   
--   静态验证：静态检查器无需运行程序即可决定是否存在任何协定冲突。 它可检查隐式协定（如 null 取消引用和数组绑定）和显式协定。  
+-   静态验证：静态检查程序可以决定是否存在任何协定冲突而无需运行该程序。 它可检查隐式协定（如 null 取消引用和数组绑定）和显式协定。  
   
 -   参考文档：文档生成器扩充具有协定信息的现有 XML 文档文件。 还提供了可与 [Sandcastle ](https://github.com/EWSoftware/SHFB)一起使用的样式表，因此，生成的文档页具有协定部分。  
   
@@ -42,11 +42,15 @@ ms.locfileid: "49308547"
   
  例如，以下前置条件表示参数 `x` 必须为非 null。  
   
- `Contract.Requires( x != null );`  
+ ```csharp
+ Contract.Requires(x != null);
+ ```
   
  如果你的代码必须在前置条件失败时引发特定异常，可使用 <xref:System.Diagnostics.Contracts.Contract.Requires%2A> 的泛型重载，如下所示。  
   
- `Contract.Requires<ArgumentNullException>( x != null, "x" );`  
+ ```csharp
+ Contract.Requires<ArgumentNullException>(x != null, "x");
+ ```
   
 ### <a name="legacy-requires-statements"></a>旧版需要语句  
  大多数代码包含一些参数验证，其形式为 `if`-`then`-`throw` 代码。 在以下情况中，协定工具将这些语句识别为前置条件：  
@@ -57,12 +61,12 @@ ms.locfileid: "49308547"
   
  `if`-`then`-`throw` 语句显示为此形式时，工具会将其识别为旧的 `requires` 语句。 如果 `if`-`then`-`throw` 序列后未接其他协定，则代码以 <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType> 方法结束。  
   
-```  
-if ( x == null ) throw new ...  
-Contract.EndContractBlock(); // All previous "if" checks are preconditions  
-```  
+```csharp
+if (x == null) throw new ...
+Contract.EndContractBlock(); // All previous "if" checks are preconditions
+```
   
- 请注意，上述测试中的条件是取反的前置条件。 （实际前置条件为 `x != null`。）取反的前置条件高度受限：它必须按上例所示方式进行编写；即，不应包含 `else` 子句，并且 `then` 子句的主体必须是单个 `throw` 语句。 `if` 测试受纯度和可见性规则约束（请参阅[使用准则](#usage_guidelines)），但 `throw` 表达式仅受纯度规则约束。 但是，引发的异常类型必须与发生协定的方法同样可见。  
+ 请注意，上述测试中的条件是取反的前置条件。 （实际前置条件为 `x != null`。）求反的前置条件是高度受限：必须按上例; 中所示进行编写也就是说，不应包含`else`子句，并且正文`then`子句必须是单个`throw`语句。 `if` 测试受纯度和可见性规则约束（请参阅[使用准则](#usage_guidelines)），但 `throw` 表达式仅受纯度规则约束。 但是，引发的异常类型必须与发生协定的方法同样可见。  
   
 ## <a name="postconditions"></a>Postconditions  
  后置条件是方法终止时的方法的状态协定。 刚好退出方法前检查后置条件。 运行时分析器确定后置条件失败时的运行时行为。  
@@ -72,12 +76,16 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ### <a name="standard-postconditions"></a>标准后置条件  
  可使用 <xref:System.Diagnostics.Contracts.Contract.Ensures%2A> 方法表达标准后置条件。 后置条件表示方法正常终止时必须为 `true` 的条件。  
   
- `Contract.Ensures( this.F > 0 );`  
+ ```csharp
+ Contract.Ensures(this.F > 0);
+ ```
   
 ### <a name="exceptional-postconditions"></a>异常后置条件  
  异常后置条件是在方法引发特定异常时应为 `true` 的后置条件。 可使用 <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType> 方法来指定这些后置条件，如下例所示。  
   
- `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
+ ```csharp
+ Contract.EnsuresOnThrow<T>(this.F > 0);
+ ```
   
  自变量是指每次引发作为 `T` 的子类型的异常时必须为 `true` 的条件。  
   
@@ -86,7 +94,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
 ### <a name="special-postconditions"></a>特殊后置条件  
  以下方法可能仅在后置条件中使用：  
   
--   通过使用表达式 `Contract.Result<T>()`（其中 `T` 替换为方法的返回类型），可引用后置条件中的方法返回值。 编译器无法推断出类型时，必须显式提供此类型。 例如，C# 编译器无法推断不带任何参数的方法类型，因此它需要后置条件 `Contract.Ensures(0 <Contract.Result<int>())`。返回类型为 `void` 的方法无法引用后置条件中的 `Contract.Result<T>()`。  
+-   通过使用表达式 `Contract.Result<T>()`（其中 `T` 替换为方法的返回类型），可引用后置条件中的方法返回值。 编译器无法推断出类型时，必须显式提供此类型。 例如，C#编译器不能推断类型的方法不采用任何参数，因此它需要后置条件：`Contract.Ensures(0 <Contract.Result<int>())` 方法的返回类型`void`不能引用`Contract.Result<T>()`后置条件中。  
   
 -   后置条件中的预状态值是指方法或属性开头的表达式的值。 它使用表达式 `Contract.OldValue<T>(e)`，其中 `T` 是 `e` 的类型。 每次编译器可推断出类型时，都可发出泛型类型参数。 （例如，C# 编译器始终可推断出类型，因为它采用了参数。）对于 `e` 和可能出现旧表达式的上下文中会执行的操作，存在一些限制。 旧表达式中不能包含其他旧表达式。 最重要的是，旧表达式必须引用方法前置条件状态中的一个值。 换言之，只要方法前置条件为 `true`，此表达式都必须可以进行计算。 以下是此规则的几个实例。  
   
@@ -94,7 +102,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
     -   不能引用旧表达式中方法的返回值：  
   
-        ```  
+        ```csharp
         Contract.OldValue(Contract.Result<int>() + x) // ERROR  
         ```  
   
@@ -102,30 +110,31 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
     -   如果限定符的范围取决于方法的返回值，则旧表达式不能依赖限定符的绑定变量：  
   
-        ```  
-        Contract. ForAll (0,Contract. Result<int>(),  
-        i => Contract.OldValue(xs[i]) > 3); // ERROR  
+        ```csharp
+        Contract.ForAll(0, Contract.Result<int>(), i => Contract.OldValue(xs[i]) > 3); // ERROR
         ```  
   
     -   旧表达式不能引用 <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> 或 <xref:System.Diagnostics.Contracts.Contract.Exists%2A> 调用中的匿名委托的参数，除非它被用作方法调用的索引器或参数：  
   
-        ```  
-        Contract. ForAll (0, xs .Length, i => Contract.OldValue(xs[i]) > 3); // OK  
-        Contract. ForAll (0, xs .Length, i => Contract.OldValue(i) > 3); // ERROR  
+        ```csharp
+        Contract.ForAll(0, xs.Length, i => Contract.OldValue(xs[i]) > 3); // OK
+        Contract.ForAll(0, xs.Length, i => Contract.OldValue(i) > 3); // ERROR
         ```  
   
     -   如果旧表达式的值取决于匿名委托的任一参数，匿名委托的主体中不能出现旧表达式，除非匿名委托是 <xref:System.Diagnostics.Contracts.Contract.ForAll%2A> 或 <xref:System.Diagnostics.Contracts.Contract.Exists%2A> 方法的参数：  
   
-        ```  
-        Method( ... (T t) => Contract.OldValue(... t ...) ... ); // ERROR  
+        ```csharp
+        Method(... (T t) => Contract.OldValue(... t ...) ...); // ERROR
         ```  
   
     -   `Out` 参数出现问题，因为协定显示在方法主体之前，而大多数编译器不允许引用后置条件中的 `out` 参数。 若要解决此问题，<xref:System.Diagnostics.Contracts.Contract> 类需提供 <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> 方法，它允许基于 `out` 参数的后置条件。  
   
-        ```  
-        public void OutParam(out int x) f  
-        Contract.Ensures(Contract.ValueAtReturn(out x) == 3);  
-        x = 3;  
+        ```csharp
+        public void OutParam(out int x)
+        {
+            Contract.Ensures(Contract.ValueAtReturn(out x) == 3);
+            x = 3;
+        }
         ```  
   
          与 <xref:System.Diagnostics.Contracts.Contract.OldValue%2A> 方法一样，每次编译器能推断出类型时都可发出泛型类型参数。 协定重写程序将方法调用替换为 `out` 参数的值。 <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> 方法仅可在后置条件中出现。 方法的参数必须为 `out` 参数或结构 `out` 参数的字段。 在引用结构构造函数后置条件中的字段时，后者也非常有用。  
@@ -138,14 +147,14 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
  固定协定方法的标识方式是以 <xref:System.Diagnostics.Contracts.ContractInvariantMethodAttribute> 属性进行标记。 除了 <xref:System.Diagnostics.Contracts.Contract.Invariant%2A> 方法的调用序列（其中每个调用指定一个固定协定），固定协定方法不可包含任何代码，如以下示例所示。  
   
-```  
+```csharp
 [ContractInvariantMethod]  
 protected void ObjectInvariant ()   
 {  
-Contract.Invariant(this.y >= 0);  
-Contract.Invariant(this.x > this.y);  
-...  
-}  
+    Contract.Invariant(this.y >= 0);
+    Contract.Invariant(this.x > this.y);
+    ...
+}
 ```  
   
  固定协定由 CONTRACTS_FULL 预处理器符号有条件地进行定义。 在运行时检查期间，每次公共方法结束都要检查固定协定。 如果固定协定提到相同类中的公共方法，则将禁用通常在此公共方法结束时执行的固定协定检查。 相反，仅在此方法的最外层方法调用结束时进行检查。 如果因调用其他类上的方法而重新输入类，也会发生此类情况。 对于对象终结器不检查固定条件和一个<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>实现。  

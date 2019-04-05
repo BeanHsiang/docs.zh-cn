@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f25eaaa17d4c4bd2e9522591bb0fd66445cdb6f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036021"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362003"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>使映像更易于在.NET 中进行调试
 
@@ -34,7 +34,7 @@ ms.locfileid: "48036021"
 
 例如，如果你想要调试该程序集名为*MyApp.exe*，则可以创建一个名为文本文件*MyApp.ini*，在相同的文件夹*MyApp.exe*，其中包含以下三行：
 
-```txt
+```ini
 [.NET Framework Debugging Control]
 GenerateTrackingInfo=1
 AllowOptimize=0
@@ -51,7 +51,7 @@ AllowOptimize=0
 DebuggableAttribute 一次应用于整个程序集，而不是应用于程序集中的单个模块。 因此，开发工具必须将自定义属性附加到程序集元数据令牌，如果已经创建程序集，则附加到名为 System.Runtime.CompilerServices.AssemblyAttributesGoHere 的类。 然后，ALink 工具升级这些**DebuggableAttribute**它们的一部分可以从每个模块的程序集的属性。 如果没有冲突，ALink 操作失败。
 
 > [!NOTE]
-> 在 .NET Framework 1.0 版本中，当指定 /clr 和 /Zi 编译器选项时，Microsoft Visual C++ 编译器将添加 DebuggableAttribute。 在 .NET Framework 1.1 版本中，必须在代码中手动添加 DebugabbleAttribute，或者使用 /ASSEMBLYDEBUG 链接器选项。
+> 在 .NET Framework 1.0 版本中，当指定 /clr 和 /Zi 编译器选项时，Microsoft Visual C++ 编译器将添加 DebuggableAttribute。 在.NET framework 版本 1.1 中，您必须添加**DebuggableAttribute**手动在代码或使用 **/ASSEMBLYDEBUG**链接器选项。
 
 ## <a name="see-also"></a>请参阅
 

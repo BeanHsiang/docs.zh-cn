@@ -1,5 +1,5 @@
 ---
-title: '&lt;mscorlib&gt;加密设置的元素'
+title: 加密设置的 <mscorlib> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
@@ -8,20 +8,18 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 6a8a589077aba413fa89518e560373df816f8943
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 84eb12916c2d1ec2d35830fae2c6ce07f1c7c664
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187840"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259609"
 ---
-# <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt;加密设置的元素
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > 加密设置的元素
 包含[ \<cryptographySettings > 元素](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)。  
   
  \<configuration>  
-\<mscorlib >  
+\<mscorlib>  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,10 +68,10 @@ ms.locfileid: "50187840"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>  
-- <xref:System.Security.Cryptography>  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+## <a name="see-also"></a>请参阅
+- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
+- <xref:System.Security.Cryptography>
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [加密设置架构](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [配置加密类](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

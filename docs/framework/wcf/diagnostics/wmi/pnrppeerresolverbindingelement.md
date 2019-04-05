@@ -2,12 +2,12 @@
 title: PnrpPeerResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 050f24bf-dc23-4181-ad1e-a4cce1dc89fb
-ms.openlocfilehash: cc43d894282b858208bccaaa02c65ecc9c10d552
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6d7727383509668172bb85487d2f9e05754d8e20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687006"
 ---
 # <a name="pnrppeerresolverbindingelement"></a>PnrpPeerResolverBindingElement
 PnrpPeerResolverBindingElement  
@@ -28,5 +28,5 @@ class PnrpPeerResolverBindingElement : PeerResolverBindingElement
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>

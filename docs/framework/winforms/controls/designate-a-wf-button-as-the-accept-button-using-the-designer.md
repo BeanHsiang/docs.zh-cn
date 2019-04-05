@@ -1,5 +1,5 @@
 ---
-title: 如何：使用设计器将 Windows 窗体按钮指定为“接受”按钮
+title: 如何：将 Windows 窗体按钮指定为接受按钮使用设计器
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [Windows Forms], default on Windows Forms
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: a1da0590-755f-49f2-aca7-609fac6351bf
-ms.openlocfilehash: ca049e86ab53fbd84cb24e81b0a850050ec2823f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 61f0c99560d008cc10c94403ac936e5b97267d3a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702915"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707646"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button-using-the-designer"></a>如何：使用设计器将 Windows 窗体按钮指定为“接受”按钮
+# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button-using-the-designer"></a>如何：将 Windows 窗体按钮指定为接受按钮使用设计器
 在任何 Windows 窗体中，可以将指定<xref:System.Windows.Forms.Button>控件成为接受按钮，也称为默认按钮。 每当用户按 ENTER 键，无论哪个窗体上的其他控件具有焦点单击默认按钮。 为以下情形时具有焦点的控件是另一个按钮的异常，将在这种情况下，单击具有焦点的按钮，或多行文本框中或捕获 ENTER 键的自定义控件。  
   
 > [!NOTE]
@@ -26,10 +26,10 @@ ms.locfileid: "46702915"
   
 2.  在中**属性**窗口中，将窗体的<xref:System.Windows.Forms.Form.AcceptButton%2A>属性设置为<xref:System.Windows.Forms.Button>控件的名称。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Form.AcceptButton%2A>  
- [Button 控件概述](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [如何选择 Windows 窗体 Button 控件](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [如何：响应 Windows 窗体 Button 控件单击](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [如何：使用设计器将 Windows 窗体按钮指定为“取消”按钮](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
- [Button 控件](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Form.AcceptButton%2A>
+- [Button 控件概述](button-control-overview-windows-forms.md)
+- [如何选择 Windows 窗体 Button 控件](ways-to-select-a-windows-forms-button-control.md)
+- [如何：响应 Windows 窗体按钮单击](how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：将 Windows 窗体按钮指定为使用设计器的取消按钮](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Button 控件](button-control-windows-forms.md)

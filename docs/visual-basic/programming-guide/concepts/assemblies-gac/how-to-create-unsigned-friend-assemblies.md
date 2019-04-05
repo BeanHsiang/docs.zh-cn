@@ -1,15 +1,15 @@
 ---
-title: 如何： 创建未签名的友元程序集 (Visual Basic)
+title: 如何：创建未签名的友元程序集 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 814c2584ea9e1e14c3af003a0515166f53b6d913
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188310"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819380"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>如何： 创建未签名的友元程序集 (Visual Basic)
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>如何：创建未签名的友元程序集 (Visual Basic)
 本示例演示如何将友元程序集和未签名的程序集一起使用。  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>创建程序集和友元程序集  
@@ -79,14 +79,15 @@ ms.locfileid: "50188310"
   
 6.  运行 friend_signed_B.exe 文件。  
   
-     该程序显示两个字符串:"Class1.Test"和"Class2.Test"。  
+     程序将显示两个字符串：“Class1.Test”和“Class2.Test”。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 类之间具有相似之处。 主要区别是，<xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全权限来运行一段特定代码，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性控制 `Friend` 类型和成员的可见性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [程序集和全局程序集缓存 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [如何： 创建签名的友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [编程指南概念](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
+- [.NET 中的程序集](../../../../standard/assembly/index.md)
+- [友元程序集](../../../../standard/assembly/friend-assemblies.md)
+- [如何：创建签名的友元程序集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
+- [编程指南概念](../../../../visual-basic/programming-guide/concepts/index.md)

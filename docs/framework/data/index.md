@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 86250d974a4f85e5ccbe2ac636dc252beff0d485
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198148"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091716"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework 中的数据和建模
 本节提供有关如何使用 ADO.NET、语言集成查询 (LINQ)、WCF 数据服务和 XML 访问数据的信息。  
@@ -20,8 +20,11 @@ ms.locfileid: "44198148"
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  描述 ADO.NET 结构，并介绍如何使用 ADO.NET 类管理应用程序数据和与数据源（包括 Microsoft SQL Server、OLE DB 数据源和 XML）进行交互。  
   
- [LINQ 门户网站](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
- 提供指向语言集成查询 (LINQ) 的相关文档的链接。  
+ [语言集成查询 (LINQ)](../../csharp/programming-guide/concepts/linq/index.md)  
+ 提供指向相关文档的语言集成查询 (LINQ) 使用C#。  
+  
+ [语言集成查询 (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
+ 提供指向相关文档的语言集成查询 (LINQ) 使用 Visual Basic。  
   
  [事务处理](../../../docs/framework/data/transactions/index.md)  
  讨论对事务的 .NET Framework 支持。  

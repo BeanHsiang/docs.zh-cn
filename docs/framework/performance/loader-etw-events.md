@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397424"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578999"
 ---
 # <a name="loader-etw-events"></a>加载程序 ETW 事件
 <a name="top"></a> 这些事件将收集与加载和卸载应用程序域、程序集和模块相关的信息。  
@@ -55,7 +55,7 @@ ms.locfileid: "33397424"
 |字段名|数据类型|描述|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|应用程序域的唯一标识符。|  
-|AppDomainFlags|win:UInt32|0x1：默认域。<br /><br /> 0x2：可执行。<br /><br /> 0x4：应用程序域，位 28-31：共享此域的策略。<br /><br /> 0：一个共享域。|  
+|AppDomainFlags|win:UInt32|0x1:默认域。<br /><br /> 0x2:可执行文件。<br /><br /> 0x4:应用程序域，位 28-31:共享此域的策略。<br /><br /> 0:共享的域。|  
 |AppDomainName|win:UnicodeString|友好的应用程序域名。 可能会在进程生存期内更改。|  
 |AppDomainIndex|win:UInt32|此应用程序域的索引。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
@@ -88,7 +88,7 @@ ms.locfileid: "33397424"
 |AssemblyID|win:UInt64|程序集的唯一 ID。|  
 |AppDomainID|win:UInt64|此程序集的域的 ID。|  
 |BindingID|win:UInt64|唯一地标识程序集绑定的 ID。|  
-|AssemblyFlags|win:UInt32|0x1：非特定于域的程序集。<br /><br /> 0x2：动态程序集。<br /><br /> 0x4：程序集具有本机映像。<br /><br /> 0x8：可回收程序集。|  
+|AssemblyFlags|win:UInt32|0x1:域非特定程序集。<br /><br /> 0x2:动态程序集。<br /><br /> 0x4:程序集具有本机映像。<br /><br /> 0x8:可回收程序集。|  
 |AssemblyName|win:UnicodeString|完全限定程序集名称。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
@@ -120,7 +120,7 @@ ms.locfileid: "33397424"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|模块的唯一 ID。|  
 |AssemblyID|win:UInt64|此模块所驻留的程序集的 ID。|  
-|ModuleFlags|win:UInt32|0x1：非特定于域的模块。<br /><br /> 0x2：模块具有本机映像。<br /><br /> 0x4：动态模块。<br /><br /> 0x8：清单模块。|  
+|ModuleFlags|win:UInt32|0x1:非特定域的模块。<br /><br /> 0x2:模块具有本机映像。<br /><br /> 0x4:动态模块。<br /><br /> 0x8:清单模块。|  
 |Reserved1|win:UInt32|保留的字段。|  
 |ModuleILPath|win:UnicodeString|模块的 Microsoft 中间语言 (MSIL) 映像的路径；如果是动态程序集（以 null 结尾），则为动态模块名。|  
 |ModuleNativePath|win:UnicodeString|如果存在（以 null 结尾），则为模块本机映像的路径。|  
@@ -167,7 +167,7 @@ ms.locfileid: "33397424"
 |ModuleID|win:UInt64|标识此模块所属的程序集。|  
 |AssemblyID|win:UInt64|此模块所驻留的程序集的 ID。|  
 |AppDomainID|win:UInt64|其中使用此模块的应用程序域的 ID。|  
-|ModuleFlags|win:UInt32|0x1：非特定于域的模块。<br /><br /> 0x2：模块具有本机映像。<br /><br /> 0x4：动态模块。<br /><br /> 0x8：清单模块。|  
+|ModuleFlags|win:UInt32|0x1:非特定域的模块。<br /><br /> 0x2:模块具有本机映像。<br /><br /> 0x4:动态模块。<br /><br /> 0x8:清单模块。|  
 |Reserved1|win:UInt32|保留的字段。|  
 |ModuleILPath|win:UnicodeString|模块的 MSIL 映像的路径；如果是动态程序集（以 null 结尾），则为动态模块名。|  
 |ModuleNativePath|win:UnicodeString|如果存在（以 null 结尾），则为模块本机映像的路径。|  
@@ -212,5 +212,5 @@ ms.locfileid: "33397424"
   
  在任何大于或等于 4 的 ETW 级别下引发模块范围事件，并将其归类为信息性事件。  
   
-## <a name="see-also"></a>请参阅  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>请参阅
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

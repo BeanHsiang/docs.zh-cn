@@ -1,17 +1,17 @@
 ---
-title: 度量单位 (F#)
-description: '了解如何浮点和 F # 中的带符号的整数值可以具有关联的度量值，这些信息通常用于指示长度、 卷和大容量单位。'
+title: 度量单位
+description: 了解如何浮点和的有符号整数值F#可以具有关联的度量值，这些信息通常用于指示长度、 卷和大容量单位。
 ms.date: 05/16/2016
-ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45972512"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610978"
 ---
 # <a name="units-of-measure"></a>度量单位
 
-F # 中的浮点点和带符号的整数值可以具有关联之类的度量单位通常用于指示长度、 体积、 成批，依此类推。 通过使用个单位的数量，使编译器无法验证算术关系具有正确的单位，从而有助于防止出现编程错误。
+浮点数和的有符号整数值F#可以具有关联的单元的度量值，这些信息通常用于指示长度、 卷、 大容量，等等。 通过使用个单位的数量，使编译器无法验证算术关系具有正确的单位，从而有助于防止出现编程错误。
 
 ## <a name="syntax"></a>语法
 
@@ -113,7 +113,7 @@ That temperature in degrees Celsius is    32.22.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>F # 核心库中的度量单位
+## <a name="units-of-measure-in-the-f-core-library"></a>中的度量单位F#核心库
 
 单元库现已推出`FSharp.Data.UnitSystems.SI`命名空间。 它包括这两个符号形式的 SI 单位 (如`m`测定仪) 中`UnitSymbols`子命名空间和其完整名称 (如`meter`测定仪) 中`UnitNames`子命名空间。
 

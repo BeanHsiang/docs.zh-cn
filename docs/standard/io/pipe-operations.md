@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdc12091a377a118dc533e5f299fa4833af64baf
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 919d4606e4ba72f07ba382244f8508975beffec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741228"
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>.NET Framework 中的管道操作
 管道为进程间通信提供了平台。 管道分为两种类型：  
@@ -38,6 +38,6 @@ ms.locfileid: "44081864"
   
 ## <a name="see-also"></a>请参阅
 
-- [文件和流 I/O](../../../docs/standard/io/index.md)  
-- [如何：使用匿名管道进行本地进程间通信](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
+- [文件和流 I/O](../../../docs/standard/io/index.md)
+- [如何：使用匿名管道进行本地进程间通信](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
 - [如何：使用命名管道进行网络进程间通信](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

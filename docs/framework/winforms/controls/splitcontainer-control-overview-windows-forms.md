@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 81898e09ff513043b205cde13378ae24ee755226
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e99683bf6746cc5a85448bb22a996c04b7dcaa8c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002862"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709687"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 控件概述（Windows 窗体）
 Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个复合控件；它是由可移动条隔开的两个面板。 当鼠标指针位于条上方时，指针将改变形状以表示条可移动。  
@@ -46,10 +46,10 @@ Windows 窗体 <xref:System.Windows.Forms.SplitContainer> 控件可视为一个�
 |<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 属性|确定在从左边缘或上边缘到可移动拆分条的像素的距离。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 属性|确定的最小距离，以像素为单位，用户可以移动拆分器。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> 属性|确定的粗细，以像素为单位的拆分器。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving>事件|当拆分器移动时发生。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved>事件|当拆分器移动时发生。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 事件|当拆分器移动时发生。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 事件|当拆分器移动时发生。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [SplitContainer 控件示例](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer 控件](splitcontainer-control-windows-forms.md)
+- [SplitContainer 控件示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

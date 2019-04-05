@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 025e4b2865fe3938e5f1454f87e90bae7a85bcfd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9ec844c37ee2ef7979c82b308cdf167a46a3c072
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747965"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034425"
 ---
 # <a name="xmllang-handling-in-xaml"></a>XAML 中 xml:lang 的处理
 `xml:lang` 属性是 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]定义的属性，用于在 XML 中声明元素的语言和区域性信息。 此属性的相同含义在 XAML 中持续存在；但有一些其他注意事项。  
@@ -27,7 +27,7 @@ ms.locfileid: "43747965"
   
 |||  
 |-|-|  
-|*rfc3066lang*|一个字符串，派生自[RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454)标准，并标识一种语言-地区。 当为后者时，将由一个连字符分隔语言和区域。 请参阅 <xref:System.Windows.Markup.XmlLanguage> ，以了解有关值和格式的更多信息。|  
+|*rfc3066lang*|派生自 [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) 标准的字符串，并标识一种语言或语言-地区。 当为后者时，将由一个连字符分隔语言和区域。 请参阅 <xref:System.Windows.Markup.XmlLanguage> ，以了解有关值和格式的更多信息。|  
   
 ## <a name="remarks"></a>备注  
  `xml:lang` 中 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 属性的定义派生自 `xml:lang` ，又由 [!INCLUDE[TLA#tla_w3c](../../../includes/tlasharptla-w3c-md.md)] 定义为 [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]的“特殊特性”。 语言和区域性信息可能由元素根据其实现以不同方式进行处理；但是， [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 属性没有默认的 `xml:lang` 处理方式。  
@@ -43,5 +43,5 @@ ms.locfileid: "43747965"
 ## <a name="wpf-usage-nodes"></a>WPF 使用情况节点  
  对于身为 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement>派生类的元素，可以使用等效 <xref:System.Windows.FrameworkElement.Language%2A> 依赖项属性取代 `xml:lang` 属性。 默认情况下，如果未通过属性或通过处理 <xref:System.Windows.FrameworkElement.Language%2A> 属性来另外设置 `xml:lang` 属性，则它使用“en-US”。  
   
-## <a name="see-also"></a>请参阅  
- [WPF 全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>请参阅
+- [WPF 全球化](../wpf/advanced/globalization-for-wpf.md)

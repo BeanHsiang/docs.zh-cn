@@ -1,20 +1,20 @@
 ---
-title: '&lt;schemeSettings&gt;元素 （Uri 设置）'
+title: <schemeSettings> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 7c75e9a6d29637e1701fe0b9e05adf0ccc3596b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 06cb07b1620a603f0c0cf67a9236be143c2ec4a2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192546"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260186"
 ---
-# <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt;元素 （Uri 设置）
+# <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > 元素 （Uri 设置）
 指定如何分析特定方案的 <xref:System.Uri>。  
   
  \<configuration>  
-\<uri >  
-\<schemeSettings >  
+\<uri>  
+\<schemeSettings>  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ ms.locfileid: "50192546"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[Uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
+|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
   
 ## <a name="remarks"></a>备注  
  默认情况下，<xref:System.Uri?displayProperty=nameWithType>类取消转义百分号编码执行路径压缩前的路径分隔符。 此操作实施为针对攻击，如以下一种安全机制：  
@@ -83,11 +83,11 @@ ms.locfileid: "50192546"
 |验证文件||  
 |可以为空||  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

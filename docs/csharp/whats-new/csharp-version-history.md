@@ -3,20 +3,32 @@ title: C# 发展历史 - C# 指南
 description: 这些语言在最早版本中是什么样的，它又是如何演化的？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316254"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126144"
 ---
-# <a name="the-history-of-c"></a>C# 发展历史 #
+# <a name="the-history-of-c"></a>C\# 发展历史
 
-最初版本的语言是什么样的？ 之后又是如何演化的？
+本页介绍了 C# 语言每个主要版本的发展历史。 C# 团队将继续创新，以添加新功能。 可以在 GitHub 上的 [dotnet/roslyn 存储库](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md)上找到详细的语言功能状态，包括考虑在即将发布的版本中添加的功能。
+
+> [!IMPORTANT]
+> 为了提供一些功能，C# 语言依赖 C# 规范定义为标准库所用的类型和方法。 .NET 平台通过许多包交付这些类型和方法。 例如，异常处理。 为了确保引发的对象派生自 <xref:System.Exception>，将会检查每个 `throw` 语句或表达式。 同样，还会检查每个 `catch`，以确保捕获的类型派生自 <xref:System.Exception>。 每个版本都可能会新增要求。 若要在旧版环境中使用最新语言功能，可能需要安装特定库。 每个特定版本的页面中记录了这些依赖项。 若要了解此依赖项的背景信息，可以详细了解[语言与库的关系](relationships-between-language-and-library.md)。
+
+C# 生成工具将最新的主要语言版本视为默认语言版本。 主要版本之间可能有单点修正发行版。有关详细信息，请参阅本节中的其他文章。 若要使用单点版本中的最新功能，需要[配置编译器语言版本](../language-reference/configure-language-version.md)并选择版本。 自 C# 7.0 起，已有三个单点修正发行版：
+
+* [C# 7.3](csharp-7-3.md)：
+  - C# 7.3 目前在 [Visual Studio 2017 版本 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) 和 [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md) 中可用。
+* [C# 7.2](csharp-7-2.md)：
+  - C# 7.2 目前在 [Visual Studio 2017 版本 15.5](https://visualstudio.microsoft.com/vs/whatsnew/), 和 [.NET Core 2.0 SDK](../../core/whats-new/index.md) 中可用。
+* [C# 7.1](csharp-7-1.md)：
+  - [Visual Studio 2017 版本 15.3](https://visualstudio.microsoft.com/vs/whatsnew/), 和 [.NET Core 2.0 SDK](../../core/whats-new/index.md) 中增加了这些功能。
 
 ## <a name="c-version-10"></a>C# 1.0 版
 
-回想起来，C# 1.0 版非常像 Java。 在 [ECMA 制定的设计目标](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)中，它旨在成为一种“简单、现代、面向对象的常规用途语言”。  当时，它和 Java 类似，说明已经实现了上述早期设计目标。
+回想起来，C# 1.0 版非常像 Java。 在 [ECMA 制定的设计目标](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)中，它旨在成为一种“简单、现代、面向对象的常规用途语言”。  当时，它和 Java 类似，说明已经实现了上述早期设计目标。
 
 不过如果现在回顾 C# 1.0，你会觉得有点晕。 它没有习以为常的内置异步功能和以泛型为中心的巧妙功能。 其实它完全不具备泛型。  那 [LINQ](../linq/index.md) 呢？ 尚不可用。 这些新增内容需要几年才能推出。
 
@@ -33,7 +45,7 @@ C# 1.0 的主要功能包括：
 - [表达式](../programming-guide/statements-expressions-operators/expressions.md)
 - [语句](../programming-guide/statements-expressions-operators/statements.md)
 - [特性](../programming-guide/concepts/attributes/index.md)
-- 文本
+- [文本](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# 版本 1.2
 
@@ -72,9 +84,9 @@ C# 3.0 版和 Visual Studio 2008 一起发布于 2007 年下半年，但完整�
 - [自动实现的属性](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名类型](../programming-guide/classes-and-structs/anonymous-types.md)
 - [查询表达式](../linq/query-expression-basics.md)
-- [Lambda 表达式](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
-- [表达式树](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
-- [扩展方法](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
+- [Lambda 表达式](../programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [表达式树](../expression-trees.md)
+- [扩展方法](../programming-guide/classes-and-structs/extension-methods.md)
 - [隐式类型本地变量](../language-reference/keywords/var.md)
 - [分部方法](../language-reference/keywords/partial-method.md)
 - [对象和集合初始值设定项](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
@@ -96,7 +108,7 @@ C# 4.0 版很难达到 3.0 版的创新水平。 在 3.0 版中，C# 已经完�
 - [动态绑定](../language-reference/keywords/dynamic.md)
 - [命名参数/可选参数](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [泛型协变和逆变](../../standard/generics/covariance-and-contravariance.md)
-- [嵌入的互操作类型](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
+- [嵌入的互操作类型](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 嵌入的互操作类型缓和了部署难点。 泛型协变和逆变提供了更强的功能来使用泛型，但风格比较偏学术，应该最受框架和库创建者的喜爱。 命名参数和可选参数帮助消除了很多方法重载，让使用更方便。 但是这些功能都没有完全改变模式。
 
@@ -106,14 +118,14 @@ C# 4.0 版很难达到 3.0 版的创新水平。 在 3.0 版中，C# 已经完�
 
 ## <a name="c-version-50"></a>C# 5.0 版
 
-C# 5.0 版是该语言有针对性的一个版本。 在此版本中所做的所有工作几乎都针对另一个突破性的语言概念：适用于异步编程的 `async` 和 `await` 模型。  下面是主要功能列表：
+C# 5.0 版是该语言有针对性的一个版本。 对此版本中所做的几乎所有工作都归入另一个突破性语言概念：适用于异步编程的 `async` 和 `await` 模型。  下面是主要功能列表：
 
 - [异步成员](../async.md)
 - [调用方信息特性](../programming-guide/concepts/caller-information.md)
 
 ### <a name="see-also"></a>请参阅
 
-* [代码项目：C# 5.0 中的调用方信息属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [代码工程：C# 5.0 中的调用方信息属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 调用方信息特性让你可以轻松检索上下文的信息，不需要采用大量样本反射代码。 这在诊断和日志记录任务中也很有用。
 
@@ -123,14 +135,14 @@ C# 5.0 版是该语言有针对性的一个版本。 在此版本中所做的所
 
 C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 在 6.0 版中，它不再推出主导性的杀手锏，而是发布了很多使得 C# 编程更有效率的小功能。 以下介绍了部分功能：
 
-- [静态导入](../language-reference/keywords/using-static.md)
-- [异常筛选器](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
-- [属性初始值设定项](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
-- [Expression bodied 成员](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
-- [Null 传播器](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
-- [字符串内插](../language-reference/tokens/interpolated.md)
-- [nameof 运算符](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [索引初始值设定项](csharp-6.md#index-initializers)
+- [静态导入](./csharp-6.md#using-static)
+- [异常筛选器](./csharp-6.md#exception-filters)
+- [自动属性初始化表达式](./csharp-6.md#auto-property-initializers)
+- [Expression bodied 成员](./csharp-6.md#expression-bodied-function-members)
+- [Null 传播器](./csharp-6.md#null-conditional-operators)
+- [字符串内插](./csharp-6.md#string-interpolation)
+- [nameof 运算符](./csharp-6.md#the-nameof-expression)
+- [索引初始值设定项](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 其他新功能包括：
 
@@ -145,20 +157,18 @@ C# 在 3.0 版和 5.0 版对面向对象的语言添加了主要的新功能。 
 
 C# 7.0 版是最新的主版本。 虽然该版本继承和发展了 C# 6.0，但不包含编译器即服务。 以下介绍了部分新增功能：
 
-- [Out 变量](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
-- [元组和析构函数](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
+- [Out 变量](./csharp-7.md#out-variables)
+- [元组和析构函数](./csharp-7.md#tuples)
 - [模式匹配](./csharp-7.md#pattern-matching)
-- [本地函数](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [本地函数](./csharp-7.md#local-functions)
 - [已扩展 expression bodied 成员](./csharp-7.md#more-expression-bodied-members)
 - [Ref 局部变量和返回结果](./csharp-7.md#ref-locals-and-returns)
 
 其他功能包括：
 
-- [弃元](../discards.md)
-- [二进制文本](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
-- [数字分隔符](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
-- ref 返回值和局部变量
-- [引发表达式](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+- [弃元](./csharp-7.md#discards)
+- [二进制文本和数字分隔符](./csharp-7.md#numeric-literal-syntax-improvements)
+- [引发表达式](./csharp-7.md#throw-expressions)
 
 这些都为开发者提供了很棒的新功能，帮助编写比以往任何时候都简洁的代码。 重点是缩减了使用 `out` 关键字的变量声明，并通过元组实现了多个返回值。
 

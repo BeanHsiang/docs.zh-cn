@@ -1,5 +1,5 @@
 ---
-title: 如何：用反射发出定义泛型类型
+title: 如何：使用反射发出定义泛型类型
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085246"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221142"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：用反射发出定义泛型类型
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>如何：使用反射发出定义泛型类型
 此主题说明如何创建具有两个参数的简单泛型类型、如何对类型参数应用类约束、接口约束和特殊约束，以及如何创建使用类的类型参数作为参数类型和返回类型的成员。  
   
 > [!IMPORTANT]
->  某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 多数泛型类型上的方法都不是泛型方法，如本示例所示。 有关发出泛型方法的示例，请参阅[如何：用反射发出定义泛型方法](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)。  
+>  某方法只要属于泛型类型，且使用该类型的类型参数，就不是泛型方法。 只有当方法有属于自己的类型参数列表时才是泛型方法。 多数泛型类型上的方法都不是泛型方法，如本示例所示。 有关发出泛型方法的示例，请参阅[如何：使用反射发出定义泛型方法](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md)。  
   
 ### <a name="to-define-a-generic-type"></a>定义泛型类型  
   
@@ -135,7 +135,7 @@ ms.locfileid: "44085246"
   
 -   使用 csc.exe、vbc.exe 或 cl.exe 在命令行编译代码。 若要在 Visual Studio 中编译代码，请将代码置于控制台应用程序项目模板中。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [使用反射发出](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [反射发出动态程序集应用场景](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+## <a name="see-also"></a>请参阅
+- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
+- [使用反射发出](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [反射发出动态程序集应用场景](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

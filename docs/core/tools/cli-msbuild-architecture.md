@@ -1,21 +1,20 @@
 ---
 title: .NET Core 命令行工具体系结构
 description: 了解 .NET Core 工具层及最新版本中的更改。
-author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e9226a314932eb73c6474c0fd17c77c87683e6db
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46696323"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675688"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中变更的高级概述
 
-此文档介绍了与从 project.json 移动到 MSBuild 和 csproj 项目系统有关的更改，其中包含关于 .NET Core 工具的分层和 CLI 命令的实现的更改的信息。 这些更改与 2017 年 3 月 7 日 .NET Core SDK 1.0 和 Visual Studio 2017 的发布同时发生（请参阅[通知](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)），但是最初是在 .NET Core SDK 预览 3 版本中实现的。
+此文档介绍了与从 project.json 移动到 MSBuild 和 csproj 项目系统有关的更改，其中包含关于 .NET Core 工具的分层和 CLI 命令的实现的更改的信息。 这些更改与 2017 年 3 月 7 日 .NET Core SDK 1.0 和 Visual Studio 2017 的发布同时发生（请参阅[通知](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/)），但是最初是在 .NET Core SDK 预览 3 版本中实现的。
 
 ## <a name="moving-away-from-projectjson"></a>弃用 project.json
-.NET Core 工具的最大变更无疑是[弃用 project.json，改用 csproj](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/) 作为项目系统。 最新版本的命令行工具不支持 *project.json* 文件。 这意味着它不能用于生成、运行或发布基于 project.json 的应用程序和库。 若要使用此版本的工具，需要迁移现有项目或启动新的项目。 
+.NET Core 工具的最大变更无疑是[弃用 project.json，改用 csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/) 作为项目系统。 最新版本的命令行工具不支持 *project.json* 文件。 这意味着它不能用于生成、运行或发布基于 project.json 的应用程序和库。 若要使用此版本的工具，需要迁移现有项目或启动新的项目。 
 
 作为此次移动的一部分，开发用于生成 project.json 项目的自定义生成引擎被替换为一个功能完整的成熟生成引擎，即 [MSBuild](https://github.com/Microsoft/msbuild)。 MSBuild 是.NET 社区中的知名引擎，因为自该平台首个版本以来，它一直作为一项关键技术。 当然，因为它需要生成 .NET Core 应用程序，所以 MSBuild 已经移植到 .NET Core，并可在 .NET Core 运行的任何平台上使用。 .NET Core 的一个主要的好处是跨平台开发堆栈，我们已确保本次迁移不会破坏此好处。
 

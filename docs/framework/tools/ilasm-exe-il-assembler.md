@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409784"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492577"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe（IL 汇编程序）
 
 IL 汇编程序可利用中间语言 (IL) 生成可移植可执行 (PE) 文件。 （有关 IL 的详细信息，请参阅[托管执行过程](../../../docs/standard/managed-execution-process.md)。）可以运行生成的可执行文件（包含 IL 和所需的元数据）以确定 IL 是否按预期执行。
 
-此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
 
 在命令提示符处，键入以下内容：
 
@@ -34,21 +34,21 @@ IL 汇编程序可利用中间语言 (IL) 生成可移植可执行 (PE) 文件�
 ilasm [options] filename [[options]filename...]
 ```
 
-#### <a name="parameters"></a>参数
+## <a name="parameters"></a>参数
 
-| 参数 | 描述 |
+| 参数 | 说明 |
 | -------- | ----------- |
-|`filename`|.il 源文件的名称。 该文件包含元数据声明指令和符号化 IL 指令。 可以提供多个源文件参数，以便用 Ilasm.exe 生成单个 PE 文件。 请注意：确保 .il 源文件中的最后一行代码具有尾随空格或行尾字符。|
+|`filename`|.il 源文件的名称。 该文件包含元数据声明指令和符号化 IL 指令。 可以提供多个源文件参数，以便用 Ilasm.exe 生成单个 PE 文件。 **注意：** 确保 .il 源文件中的最后一行代码具有尾随空格或行尾字符。|
 
-| 选项 | 描述 |
+| 选项 | 说明 |
 | ------ | ----------- |
 |**/32bitpreferred**|创建 32 位首选映像 (PE32+)。|
 |**/alignment:** `integer`|将 FileAlignment 设置为由 NT Optional 标头中的 `integer` 指定的值。 如果在文件中指定了 .alignment IL 指令，则此选项将重写它。|
 |**/appcontainer**|生成在 Windows 应用容器中运行的 .dll 或 .exe 文件作为输出。|
 |**/arm**|指定高级 RISC 计算机 (ARM) 作为目标处理器。<br /><br /> 如果未指定映像位数，则默认值为 **/32bitpreferred**。|
 |**/base:** `integer`|将 ImageBase 设置为由 NT Optional 标头中的 `integer` 指定的值。 如果在文件指定了 .imagebase IL 指令，则此选项将重写它。|
-|**/clock**|为指定的 .il 源文件测量并报告下列编译时间（以毫秒为单位）：<br /><br /> **总运行时间**：执行后面的所有特定操作所花费的总时间。<br /><br /> **启动**：加载并打开文件。<br /><br /> **发出 MD**：发出元数据。<br /><br /> **定义引用解析**：解析对文件中的定义的引用。<br /><br /> **CEE 文件生成**：在内存中生成文件映像。<br /><br /> **PE 文件写入**：将映像写入 PE 文件。|
-|**/debug**[:**IMPL**|**OPT**]|包括调试信息（局部变量名和参数名以及行号）。 创建 PDB 文件。<br /><br /> 不带任何附加值的 **/debug** 禁用 JIT 优化，并使用 PDB 文件中的序列点。<br /><br /> **IMPL** 禁用 JIT 优化，并使用隐式序列点。<br /><br /> **OPT** 启用 JIT 优化，并使用隐式序列点。|
+|**/clock**|为指定的 .il 源文件测量并报告下列编译时间（以毫秒为单位）：<br /><br /> 总运行时间：执行后面的所有特定操作所花费的总时间。<br /><br /> 启动：加载并打开文件。<br /><br /> 发出 MD：发出元数据。<br /><br /> 定义引用解析：解析对文件中的定义的引用。<br /><br /> CEE 文件生成：在内存中生成文件映像。<br /><br /> PE 文件写入：将映像写入 PE 文件。|
+|**/debug**[:**IMPL**&#124;**OPT**]|包括调试信息（局部变量名和参数名以及行号）。 创建 PDB 文件。<br /><br /> 不带任何附加值的 **/debug** 禁用 JIT 优化，并使用 PDB 文件中的序列点。<br /><br /> **IMPL** 禁用 JIT 优化，并使用隐式序列点。<br /><br /> **OPT** 启用 JIT 优化，并使用隐式序列点。|
 |**/dll**|生成 .dll 文件作为输出。|
 |**/enc:** `file`|从指定的源文件创建“编辑并继续”增量。<br /><br /> 此参数仅可用于教学目的，不支持商业使用。|
 |**/exe**|生成可执行文件作为输出。 这是默认设置。|
@@ -65,7 +65,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|当未指定基类时，禁用从 <xref:System.Object> 的默认继承。|
 |**/nocorstub**|取消生成 CORExeMain 存根。|
 |**/nologo**|取消显示 Microsoft 启动版权标志。|
-|**/output:** `file.ext`|指定输出文件名和扩展名。 默认情况下，输出文件名与第一个源文件的名称相同。 默认扩展名为 .exe。 如果指定 /dll 选项，则默认扩展名为 .dll。 请注意：指定 /output:myfile.dll 不会设置 /dll 选项。 如果不指定 /dll，结果将会是名为 myfile.dll 的可执行文件。|
+|**/output:** `file.ext`|指定输出文件名和扩展名。 默认情况下，输出文件名与第一个源文件的名称相同。 默认扩展名为 .exe。 如果指定 /dll 选项，则默认扩展名为 .dll。 **注意：** 指定 /output:myfile.dll 并不会设置 /dll 选项。 如果不指定 /dll，结果将会是名为 myfile.dll 的可执行文件。|
 |**/optimize**|将长指令优化为短指令。 例如，将 `br` 优化为 `br.s`。|
 |**/pe64**|创建 64 位映像 (PE32+)。<br /><br /> 如果未指定目标处理器，则默认值为 `/itanium`。|
 |**/pdb**|创建 PDB 文件但不启用调试信息跟踪。|
@@ -229,7 +229,7 @@ public class Hello
 
 ## <a name="see-also"></a>请参阅
 
-[工具](../../../docs/framework/tools/index.md)  
-[Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
-[托管执行过程](../../../docs/standard/managed-execution-process.md)  
-[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [工具](../../../docs/framework/tools/index.md)
+- [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [托管执行过程](../../../docs/standard/managed-execution-process.md)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

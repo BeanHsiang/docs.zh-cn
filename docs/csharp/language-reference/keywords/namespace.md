@@ -1,5 +1,6 @@
 ---
-title: 命名空间关键字（C# 参考）
+title: namespace 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 2cdc1e33d86dae675411b571e553b467e5c1f891
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b5c6b8081c188d5b184930222d54ad8f4b5d7a71
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856421"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242758"
 ---
 # <a name="namespace-c-reference"></a>命名空间（C# 参考）
 

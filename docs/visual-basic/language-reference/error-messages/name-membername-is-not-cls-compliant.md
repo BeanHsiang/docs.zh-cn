@@ -1,5 +1,5 @@
 ---
-title: 名称&lt;membername&gt;不符合 CLS
+title: 名称 <membername> 不符合 CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40031
@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: 26ff13de461d5a96724868b7928129a326cdf1d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33593336"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824619"
 ---
-# <a name="name-ltmembernamegt-is-not-cls-compliant"></a>名称&lt;membername&gt;不符合 CLS
-程序集标记为`<CLSCompliant(True)>`但公开了一个具有此名称的名称以下划线开头的成员 (`_`)。  
+# <a name="name-membername-is-not-cls-compliant"></a>名称\<成员名称 > 不符合 cls 的
+程序集标记为`<CLSCompliant(True)>`公开的成员名称以下划线开头的名称，但 (`_`)。  
   
- 编程元素可以包含一个或多个下划线，但要符合[语言独立性和独立于语言的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，它必须不以下划线开头。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 编程元素可以包含一个或多个下划线，但要符合[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，它必须不以下划线开头。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  当将 <xref:System.CLSCompliantAttribute> 应用到编程元素中时，需要将该特性的 `isCompliant` 参数设置为 `True` 或 `False` 来指示符合或不符合性。 此参数没有默认值，必须为其提供一个值。  
   
@@ -29,11 +29,11 @@ ms.locfileid: "33593336"
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   如果你有控制的源代码，更改成员名称，以便它不以下划线开头。  
+-   如果必须对源代码控制，更改成员名称，以便它不以下划线开头。  
   
--   如果你需要的成员名称保持不变，删除<xref:System.CLSCompliantAttribute>从其定义或将其标记为`<CLSCompliant(False)>`。 你仍然可以将标记该程序集作为`<CLSCompliant(True)>`。  
+-   如果你需要成员名称保持不变，删除<xref:System.CLSCompliantAttribute>从其定义或将其标记为`<CLSCompliant(False)>`。 仍然可以将标记为程序集`<CLSCompliant(True)>`。  
   
-## <a name="see-also"></a>请参阅  
- [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
+## <a name="see-also"></a>请参阅
 
+- [已声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Visual Basic 命名约定](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

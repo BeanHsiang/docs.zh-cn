@@ -2,12 +2,12 @@
 title: 在 WCF 中排队
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: f04055df2c6d4b0a51b36040a5b377bb8738c534
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: fcdd38cf02157829bdc476cc289ea89ff8767487
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086591"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559458"
 ---
 # <a name="queuing-in-wcf"></a>在 WCF 中排队
 本部分介绍如何使用 Windows Communication Foundation (WCF) 中的排队的通信。  
@@ -48,7 +48,7 @@ ms.locfileid: "49086591"
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce 和 Durable 属性  
  `ExactlyOnce` 和 `Durable` 属性影响消息在队列之间的传输方式：  
   
--   `ExactlyOnce`：当设置为 `true`（默认值）时，排队通道可确保消息在传递时不会重复， 还可确保消息不会丢失。 如果无法传递消息，或在传递消息前已超过消息的生存时间，则将在死信队列中记录传递失败的消息以及失败原因。 当设置为 `false` 时，排队通道将尽量传输消息。 在这种情况下，可以任意选择一个死信队列。  
+-   `ExactlyOnce`：如果设置为`true`（默认值），则排队的通道可确保确认消息，如果传递，不重复。 还可确保消息不会丢失。 如果无法传递消息，或在传递消息前已超过消息的生存时间，则将在死信队列中记录传递失败的消息以及失败原因。 当设置为 `false` 时，排队通道将尽量传输消息。 在这种情况下，可以任意选择一个死信队列。  
   
 -   `Durable:`：当设置为 `true`（默认值）时，排队通道确保 MSMQ 将消息永久存储在磁盘上。 因而，如果 MSMQ 服务要停止并重新启动，则磁盘上的消息将传输到目标队列或传递到服务。 当设置为 `false` 时，消息将存储在可变存储区中，而且会在停止并重新启动 MSMQ 服务时丢失。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "49086591"
   
  绑定具有两个相关属性：  
   
--   `DeadLetterQueue`：该属性是一个枚举，指示是否请求死信队列。 如果请求某类死信队列，则该枚举还包含这种死信队列。 该属性的值为 `None`、`System` 和 `Custom`。 有关这些属性的解释的详细信息，请参阅[使用死信队列来处理消息传输失败](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`：此属性是一个枚举，指示是否请求死信队列。 如果请求某类死信队列，则该枚举还包含这种死信队列。 该属性的值为 `None`、`System` 和 `Custom`。 有关这些属性的解释的详细信息，请参阅[使用死信队列来处理消息传输失败](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
--   `CustomDeadLetterQueue`：该属性是应用程序特定死信队列的统一资源标识符 (URI) 地址。 如果这是必需`DeadLetterQueue`。`Custom` 选择。  
+-   `CustomDeadLetterQueue`：此属性是特定于应用程序的死信队列的统一资源标识符 (URI) 地址。 如果这是必需`DeadLetterQueue`。`Custom` 选择。  
   
 #### <a name="poison-message-handling-properties"></a>病毒消息处理属性  
  当服务从事务中的目标队列读取消息时，服务可能由于种种原因而无法处理消息。 然后，将消息放回队列以备再次读取。 若要处理反复失败的消息，可以在绑定中配置一组病毒消息处理属性。 有如下四个属性：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 有关这些属性的详细信息，请参阅[病毒消息处理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
@@ -83,13 +83,13 @@ ms.locfileid: "49086591"
 #### <a name="other-properties"></a>其他属性  
  除了上述各属性，在绑定中公开的其他 MSMQ 特定的属性还包括：  
   
--   `UseSourceJournal`：指示打开源日记记录的属性。 源日记记录是一项 MSMQ 功能，用于跟踪从传输队列成功传输的消息。  
+-   `UseSourceJournal`：打开以指示源日记记录的属性。 源日记记录是一项 MSMQ 功能，用于跟踪从传输队列成功传输的消息。  
   
--   `UseMsmqTracing`：指示打开 MSMQ 跟踪的属性。 每当消息离开或到达承载 MSMQ 队列管理器的计算机时，MSMQ 跟踪都会向报告队列发送报告消息。  
+-   `UseMsmqTracing`：要指示已打开 MSMQ 跟踪的属性。 每当消息离开或到达承载 MSMQ 队列管理器的计算机时，MSMQ 跟踪都会向报告队列发送报告消息。  
   
--   `QueueTransferProtocol`：要用于队列到队列的消息传输的协议的枚举。 MSMQ 实现本机队列到队列的传输协议和称为 SOAP 可靠消息传输协议 (SRMP) 的基于 SOAP 的协议。 当使用 HTTP 传输进行队列到队列的传输时将使用 SRMP。 当使用 HTTPS 进行队列到队列的传输时将使用 SRMP 安全。  
+-   `QueueTransferProtocol`：要用于队列到队列的消息传输协议的枚举。 MSMQ 实现本机队列到队列的传输协议和称为 SOAP 可靠消息传输协议 (SRMP) 的基于 SOAP 的协议。 当使用 HTTP 传输进行队列到队列的传输时将使用 SRMP。 当使用 HTTPS 进行队列到队列的传输时将使用 SRMP 安全。  
   
--   `UseActiveDirectory`：一个布尔值，指示是否必须使用 Active Directory 进行队列地址解析。 默认情况下，此功能处于关闭状态。 有关详细信息，请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
+-   `UseActiveDirectory`：一个布尔值以指示是否必须使用 Active Directory 进行队列地址解析。 默认情况下，此功能处于关闭状态。 有关详细信息，请参阅[服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  `MsmqIntegrationBinding`希望 WCF 终结点与在 C、 c + +、 COM 或 System.Messaging Api 编写的现有 MSMQ 应用程序进行通信时使用。  
@@ -105,7 +105,7 @@ ms.locfileid: "49086591"
 ### <a name="sample-code"></a>代码示例  
  有关编写使用 MSMQ 的 WCF 服务的分步指导，请参见下列主题：  
   
--   [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [如何：使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
 -   [如何：使用 WCF 终结点交换排队消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
@@ -125,6 +125,6 @@ ms.locfileid: "49086591"
   
 -   [基于消息队列的消息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
-## <a name="see-also"></a>请参阅  
- [服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
- [承载排队应用程序的 Web](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>请参阅
+- [服务终结点和队列寻址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [承载排队应用程序的 Web](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

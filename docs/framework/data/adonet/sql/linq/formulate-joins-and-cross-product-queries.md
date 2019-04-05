@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-ms.openlocfilehash: 20b46ce37d93119330e336f583ac68b5c1dc4c4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a06c7d451d9ad2856092910065f1195a86c737ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548504"
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>构建联接和跨产品查询
 下面的示例演示如何组合来自多个表的结果。  
   
 ## <a name="example"></a>示例  
- 下面的示例使用中的外键导航`From`在 Visual Basic 中的子句 (`from`子句在 C# 中) 以选择位于伦敦的客户的所有订单。  
+ 下面的示例中使用外的键导航`From`在 Visual Basic 中的子句 (`from`中的子句C#) 来选择位于伦敦的客户的所有订单。  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>示例  
- 下面的示例使用中的外键导航`Where`在 Visual Basic 中的子句 (`where`子句在 C# 中) 来筛选出的 stock`Products`其`Supplier`是在美国。  
+ 下面的示例中使用外的键导航`Where`在 Visual Basic 中的子句 (`where`中的子句C#) 来筛选出的股票`Products`其`Supplier`是在美国。  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>示例  
- 下面的示例使用中的外键导航`From`在 Visual Basic 中的子句 (`from`子句在 C# 中) 来筛选出存在位于西雅图的员工并列出它们所在的地区。  
+ 下面的示例中使用外的键导航`From`在 Visual Basic 中的子句 (`from`中的子句C#) 来筛选位于西雅图的员工并列出它们所在的地区。  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>示例  
- 下面的示例使用中的外键导航`Select`在 Visual Basic 中的子句 (`select`子句在 C# 中) 来筛选出存在关系的雇员对其中一个员工隶属于另且这两位雇员均来自同一`City`。  
+ 下面的示例中使用外的键导航`Select`在 Visual Basic 中的子句 (`select`中的子句C#) 进行筛选的雇员对向另一个员工报告的位置是且这两位雇员来自相同`City`。  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>示例  
- 下面的 Visual Basic 示例查找所有客户和订单、 可确保相应的订单匹配给客户，并保证对于该列表中每个客户，都提供了联系人名称。  
+ 下面的 Visual Basic 示例查找所有客户和订单，可确保相应的订单匹配到的客户，并保证对于该列表中每个客户，都提供了联系人姓名。  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   
@@ -79,5 +79,5 @@ ms.locfileid: "33360256"
  [!code-csharp[DLinqQueryExamples#56](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#56)]
  [!code-vb[DLinqQueryExamples#56](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#56)]  
   
-## <a name="see-also"></a>请参阅  
- [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a>请参阅
+- [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

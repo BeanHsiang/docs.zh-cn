@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d3a7168ce0ee3484384ae0e2d10ca00367fc9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 63e6ec271634a52abe7c640bbbabdaedebd2a31d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432854"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471896"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID 函数
-获取适当的公共语言运行时 (CLR) 版本信息，使用指定的类`CLSID`。  
+获取相应的公共语言运行时 (CLR) 版本信息，为具有指定类`CLSID`。  
   
- 此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,12 +40,12 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `rclsid`  
  [in] `CLSID`的组件。  
   
  `pVersion`  
- [out] 包含成功完成后的版本号字符串的缓冲区。  
+ [out] 包含成功完成后的版本字符串的缓冲区。  
   
  `cchBuffer`  
  [in] 大小，以宽字符为单位的`pVersion`缓冲区。  
@@ -56,26 +56,26 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  `dwResolutionFlags`  
  [in] CLSID_RESOLUTION_FLAGS 值之一。 支持以下值：  
   
--   CLSID_RESOLUTION_DEFAULT: (0x0) 该默认互操作行为指定应使用。  
+-   CLSID_RESOLUTION_DEFAULT:(0x0) 指定应使用默认互操作行为。  
   
--   CLSID_RESOLUTION_REGISTERED: (0x1) 指定注册表应搜索并填充策略应为应用。  
+-   CLSID_RESOLUTION_REGISTERED:(0x1) 指定应搜索注册表和应应用填充程序策略。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|该函数成功返回。|  
-|E_INVALIDARG|其中一个参数具有无效的类型或格式。|  
-|ERROR_INSUFFICIENT_BUFFER|`pVersion`的缓冲区不可足以容纳完整版本字符串。|  
-|REGDB_E_CLASSNOTREG|没有注册使用指定的类`CLSID`。|  
-|E_POINTER|`dwLength` 为 null，或`cchBuffer`足够大，能够容纳的版本字符串，但`pVersion`为 null。|  
+|S_OK|该函数返回成功。|  
+|E_INVALIDARG|参数之一具有无效的类型或格式。|  
+|ERROR_INSUFFICIENT_BUFFER|`pVersion`缓冲区不是大到足以保留完整版本字符串。|  
+|REGDB_E_CLASSNOTREG|没有与指定注册类`CLSID`。|  
+|E_POINTER|`dwLength` 为 null，或`cchBuffer`足够大以保存的版本字符串，但`pVersion`为 null。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>请参阅
+- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

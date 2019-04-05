@@ -1,18 +1,18 @@
 ---
-title: 中 Visual Basic2 XML 文本简介
+title: 在 Visual Basic2 XML 文本简介
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: bac0a4a297dcecce5465e5a1a1c02e4cbc9848a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646804"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841262"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic 中的 XML 文本简介
-本部分提供有关在 Visual Basic 中创建 XML 树的信息。  
+本部分提供有关 Visual Basic 中创建 XML 树的信息。  
   
- 有关使用 LINQ 查询的结果作为内容的 XML 树的信息，请参阅[函数构造 (LINQ to XML) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
+ 有关使用 LINQ 查询的结果作为内容的 XML 树的信息，请参阅[功能构造 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
   
  在 Visual Basic 中的 XML 文本的详细信息，请参阅[概述的 LINQ to XML 在 Visual Basic 中](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
   
@@ -195,5 +195,6 @@ Child1 was cloned
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>请参阅
+
+- [创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

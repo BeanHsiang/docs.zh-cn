@@ -9,24 +9,24 @@ helpviewer_keywords:
 - page functions [WPF], returning from
 - functions [WPF], returning from
 ms.assetid: 87804905-7e8f-417b-b0e3-5622da686396
-ms.openlocfilehash: 3251b373b11dc7682235251b6d82e22705456737
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60e1d9d96104a9f4160280ba7208b7fe3680c1c0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545502"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361039"
 ---
 # <a name="how-to-return-from-a-page-function"></a>如何：从页函数返回
 本示例显示如何从页函数返回结果。  
   
 ## <a name="example"></a>示例  
- 若要从页函数返回，你需要调用<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>和传递的实例<xref:System.Windows.Navigation.ReturnEventArgs%601>。  
+ 若要从页函数返回，需要调用<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>的实例传递和<xref:System.Windows.Navigation.ReturnEventArgs%601>。  
   
- [!code-xaml[HOWTOPageFunctionSnippets#PageFunctionReturnAResultXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/GetStringPageFunction.xaml#pagefunctionreturnaresultxaml1)]  
-[!code-xaml[HOWTOPageFunctionSnippets#PageFunctionReturnAResultXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/GetStringPageFunction.xaml#pagefunctionreturnaresultxaml2)]  
+ [!code-xaml[HOWTOPageFunctionSnippets#PageFunctionReturnAResultXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/GetStringPageFunction.xaml#pagefunctionreturnaresultxaml1)]  
+[!code-xaml[HOWTOPageFunctionSnippets#PageFunctionReturnAResultXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/GetStringPageFunction.xaml#pagefunctionreturnaresultxaml2)]  
   
- [!code-csharp[HOWTOPageFunctionSnippets#PageFunctionReturnAResultCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/GetStringPageFunction.xaml.cs#pagefunctionreturnaresultcodebehind)]
- [!code-vb[HOWTOPageFunctionSnippets#PageFunctionReturnAResultCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/GetStringPageFunction.xaml.vb#pagefunctionreturnaresultcodebehind)]  
+ [!code-csharp[HOWTOPageFunctionSnippets#PageFunctionReturnAResultCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/GetStringPageFunction.xaml.cs#pagefunctionreturnaresultcodebehind)]
+ [!code-vb[HOWTOPageFunctionSnippets#PageFunctionReturnAResultCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/GetStringPageFunction.xaml.vb#pagefunctionreturnaresultcodebehind)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Navigation.PageFunction%601>
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Navigation.PageFunction%601>

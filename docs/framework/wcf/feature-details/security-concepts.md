@@ -2,12 +2,12 @@
 title: 安全性概念
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-ms.openlocfilehash: cdac8ab2ee257924327cc082a55839903c32f80c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 61e993e8491a380410ffe772baa4d9f817f8cb23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610807"
 ---
 # <a name="security-concepts"></a>安全性概念
 本部分简要介绍 Windows Communication Foundation (WCF) 安全相关的概念。  
@@ -36,7 +36,7 @@ ms.locfileid: "50185584"
 ## <a name="related-sections"></a>相关章节  
  [扩展安全性](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>请参阅  
- [安全性](../../../../docs/framework/wcf/feature-details/security.md)  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>请参阅
+- [安全性](../../../../docs/framework/wcf/feature-details/security.md)
+- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

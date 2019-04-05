@@ -8,12 +8,12 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 9c1d9943c59a8ed4c3f2002fdbcdefeefafe42ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b0ebbb6a86cc2c71882427afd33e7d9e0fe7a04
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604258"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826530"
 ---
 # <a name="as-clause-visual-basic"></a>As 子句 (Visual Basic)
 引入了`As`子句，用于标识声明语句或泛型类型参数上的约束列表中的数据类型。  
@@ -59,10 +59,11 @@ ms.locfileid: "33604258"
   
  [重试...Catch...Finally 语句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
-## <a name="see-also"></a>请参阅  
- [如何：创建新变量](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [数据类型](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [类型列表](../../../visual-basic/language-reference/statements/type-list.md)  
- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [关键字](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>请参阅
+
+- [如何：创建新的变量](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [数据类型](../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [变量声明](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [类型列表](../../../visual-basic/language-reference/statements/type-list.md)
+- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [关键字](../../../visual-basic/language-reference/keywords/index.md)

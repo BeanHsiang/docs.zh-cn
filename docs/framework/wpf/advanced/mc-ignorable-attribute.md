@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: e8fa4c084ae9c775a18de06c344b2c0b439c2b1b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 432df80fca58311d1c0931d9ba3b224fc9e271ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517356"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375384"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 特性
 指定哪些[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]可能会忽略在标记文件中遇到的命名空间前缀[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器。 `mc:Ignorable`属性支持标记兼容性，对自定义的命名空间映射以及[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]版本控制。  
@@ -59,14 +59,14 @@ ms.locfileid: "43517356"
   
  如果要实现[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器，处理器实现不能引发分析或处理的任何元素或属性由标识为前缀限定的类型解析错误`mc:Ignorable`。 但仍可以引发作为是辅助的结果无法加载或处理，如前面给出的一个子元素示例某元素的异常。  
   
- 默认情况下，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器将忽略已忽略元素中的内容。 但是，可以指定其他属性， [mc: processcontent 特性](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)、 需要继续的处理中忽略了元素的下一个可用的父元素的内容。  
+ 默认情况下，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]处理器将忽略已忽略元素中的内容。 但是，可以指定其他属性， [mc: processcontent 特性](mc-processcontent-attribute.md)、 需要继续的处理中忽略了元素的下一个可用的父元素的内容。  
   
  可以使用一个或多个空白字符作为分隔符，例如在属性中指定多个前缀： `mc:Ignorable="ignore1 ignore2"`。  
 
  [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空间定义其他元素和属性的未记录的此区域内[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]。 有关详细信息，请参阅[XML 标记兼容性规范](/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Markup.XamlReader>  
- [PresentationOptions:Freeze 特性](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Markup.XamlReader>
+- [PresentationOptions:Freeze 特性](presentationoptions-freeze-attribute.md)
+- [XAML 概述 (WPF)](xaml-overview-wpf.md)
+- [WPF 中的文档](documents-in-wpf.md)

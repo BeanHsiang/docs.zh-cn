@@ -2,7 +2,9 @@
 title: 处理 .NET 中的 I/O 错误
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
-ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
@@ -11,12 +13,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50dee427913e1ec94a06f1202966bb0f7f5f2099
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46696412"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126870"
 ---
 # <a name="handling-io-errors-in-net"></a>处理 .NET 中的 I/O 错误
 
@@ -55,8 +57,8 @@ ms.locfileid: "46696412"
 | <xref:System.OperationCanceledException> | 是 | 是 |
 | <xref:System.UnauthorizedAccessException> | 是 | 是 |
 | <xref:System.ArgumentException> | .NET core 2.0 及早期版本| 是 |
-| <xref:System.NotSupportedException> | 否 | 是 |
-| <xref:System.Security.SecurityException> | 否 | 仅受限的信任 |
+| <xref:System.NotSupportedException> | No | 是 |
+| <xref:System.Security.SecurityException> | No | 仅受限的信任 |
 
 ## <a name="handling-ioexception"></a>处理 IOException
 
@@ -71,7 +73,7 @@ ms.locfileid: "46696412"
 
 在 <xref:System.IO.IOException> 情况下，可以从 [IOException.HResult](xref:System.Exception.HResult) 属性获取更多错误信息。 若要将 HResult 值转换为 Win32 错误代码，可以删除 32 位值的前 16 位。 下表列出了可能包装在 <xref:System.IO.IOException> 中的错误代码。
 
-| HResult | 返回的常量 | 描述 |
+| HResult | 返回的常量 | 说明 |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | 缺少文件名称，或文件或目录正在使用中。 |
 | ERROR_FILE_EXISTS | 80 | 该文件已存在。 |

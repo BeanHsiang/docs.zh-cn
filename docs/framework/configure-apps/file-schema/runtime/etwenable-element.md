@@ -1,5 +1,5 @@
 ---
-title: '&lt;etwEnable&gt;元素'
+title: <etwEnable> 元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - etwEnable element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 267a4a29282881d18201d0cb2062e91b4ff974a9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dd6d6d9e192fdf43ba9436cda54920bdeba9ab64
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745170"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279170"
 ---
-# <a name="ltetwenablegt-element"></a>&lt;etwEnable&gt;元素
+# <a name="etwenable-element"></a>\<etwEnable > 元素
 指定是否为公共语言运行时事件启用 Windows 事件跟踪 (ETW)。  
   
  \<配置 > 元素  
 \<运行时 > 元素  
-\<etwEnabled >  
+\<etwEnabled>  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ ms.locfileid: "32745170"
   
 |值|描述|  
 |-----------|-----------------|  
-|true|启用 ETW。 这是从开始在 Windows Vista 和 Windows Server 2008 操作系统的 Windows 版本的默认值。|  
+|true|启用 ETW。 这是 Windows 从开始，在 Windows Vista 和 Windows Server 2008 操作系统的版本的默认值。|  
 |False|禁用 ETW。 这是早期版本的 Windows 的默认值。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -54,10 +54,10 @@ ms.locfileid: "32745170"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 从 Windows Vista 开始，将默认启用 ETW。 使用此元素用于禁用 ETW 的应用程序。 在早期版本的 Windows 中，使用此元素可为应用程序启用 ETW。  
+ 从 Windows Vista 开始，默认情况下启用 ETW。 使用此元素用于禁用 ETW 的应用程序。 在早期版本的 Windows 中，使用此元素为应用程序启用 ETW。  
   
 > [!NOTE]
->  可以启用或通过使用注册表设置的服务器上全局禁用 ETW。 请参阅[控制.NET Framework 日志记录](../../../../../docs/framework/performance/controlling-logging.md)。  
+>  ETW 可以启用或被全局禁用服务器上通过使用注册表设置。 请参阅[控制.NET Framework 日志记录](../../../../../docs/framework/performance/controlling-logging.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何启用应用程序的 ETW 跟踪。  
@@ -70,7 +70,7 @@ ms.locfileid: "32745170"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [控制 .NET Framework 日志记录](../../../../../docs/framework/performance/controlling-logging.md)
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [控制 .NET Framework 日志记录](../../../../../docs/framework/performance/controlling-logging.md)

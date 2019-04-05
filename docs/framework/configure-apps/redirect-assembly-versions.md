@@ -8,14 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c4c96b874456297ede61c96e46fee8d90ebcafb6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 68169063c9cf152942ff8a7757a1b3d97886002a
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123613"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083933"
 ---
 # <a name="redirecting-assembly-versions"></a>重定向程序集版本
 
@@ -67,7 +65,7 @@ ms.locfileid: "49123613"
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-如果你的应用面向.NET Framework 的较旧版本，则可以启用自动绑定重定向。 通过在 app.config 文件中的绑定重定向信息提供任何程序集，或通过关闭绑定重定向功能，可以重写此默认行为。 有关如何启用或禁用此功能的信息，请参阅[如何： 启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。
+如果你的应用面向.NET Framework 的较旧版本，则可以启用自动绑定重定向。 通过在 app.config 文件中的绑定重定向信息提供任何程序集，或通过关闭绑定重定向功能，可以重写此默认行为。 有关如何启用或禁用此功能的信息，请参阅[如何：启用和禁用自动绑定重定向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)。
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>跳过发布服务器策略
@@ -142,11 +140,11 @@ ms.locfileid: "49123613"
 
 ```xml
 <assemblyBinding xmlns="..." appliesTo="v3.5 ">
-  <!—.NET Framework version 3.5 redirects here -->
+  <!--.NET Framework version 3.5 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="..." appliesTo="v4.0.30319">
-  <!—.NET Framework version 4.0 redirects here -->
+  <!--.NET Framework version 4.0 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="...">
@@ -163,7 +161,6 @@ ms.locfileid: "49123613"
 - [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [配置应用程序](../../../docs/framework/configure-apps/index.md)
-- [配置.NET Framework 应用](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
 - [运行时设置架构](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [配置文件架构](../../../docs/framework/configure-apps/file-schema/index.md)
-- [如何：创建发行者策略](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)
+- [如何：创建发布服务器策略](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

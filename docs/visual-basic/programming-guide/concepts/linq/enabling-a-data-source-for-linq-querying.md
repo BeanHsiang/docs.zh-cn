@@ -2,12 +2,12 @@
 title: 有关 LINQ Querying2 启用数据源
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: 6d2601e807a00ce2a6f8c342a565f5542ffc8f5b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f705db90f4838479621117bd9303f5a374d33d4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676492"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>启用数据源以进行 LINQ 查询
 
@@ -29,7 +29,7 @@ ms.locfileid: "48582822"
  通过两种方式，可以使 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 能够查询内存中数据。 如果数据的类型实现了 <xref:System.Collections.Generic.IEnumerable%601>，您可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects 来查询数据。 如果无法通过实现 <xref:System.Collections.Generic.IEnumerable%601> 接口启用类型枚举，可以在该类型中定义 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 标准查询运算符方法，或创建扩展该类型的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 标准查询运算符方法。 标准查询运算符的自定义实现应使用延迟执行来返回结果。
 
 ### <a name="remote-data"></a>远程数据
- 使 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 能够查询远程数据源的最佳选择是实现 <xref:System.Linq.IQueryable%601> 接口。 但是，这与为数据源扩展提供程序（比如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]）有所不同。 没有用于扩展现有的提供程序模型[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]技术，如[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]到 Visual Studio 2008 中提供了其他类型的数据源。
+ 使 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 能够查询远程数据源的最佳选择是实现 <xref:System.Linq.IQueryable%601> 接口。 但是，这与为数据源扩展提供程序（比如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]）有所不同。 Visual Studio 2008 中没有用于将现有 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 技术（比如 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]）扩展为其他数据源类型的提供程序模型。
 
 ## <a name="iqueryable-linq-providers"></a>IQueryable LINQ 提供程序
  实现 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 的 <xref:System.Linq.IQueryable%601> 提供程序之间的复杂性可能差别很大。 本节讨论这些不同程度的复杂性。

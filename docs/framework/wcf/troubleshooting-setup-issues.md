@@ -2,12 +2,12 @@
 title: 安装问题疑难解答
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 69cc6bce08f3d98d3d63570005582bc6f50240bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840542"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532547"
 ---
 # <a name="troubleshooting-setup-issues"></a>安装问题疑难解答
 本主题介绍如何对 Windows Communication Foundation (WCF) 设置问题进行故障排除。  
@@ -38,17 +38,17 @@ ms.locfileid: "48840542"
   
 4.  事件日志或安装跟踪日志文件中可能会列出以下异常之一：  
   
-     ServiceModelReg [11:09:59:046]: System.ApplicationException: 使用“E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof”执行 E:\WINDOWS\system32\wbem\mofcomp.exe 发生意外结果 3  
+     ServiceModelReg [11:09:59:046]:System.ApplicationException:意外的结果 3 执行 E:\WINDOWS\system32\wbem\mofcomp.exe 使用"E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
      或：  
   
-     ServiceModelReg [07:19:33:843]: System.TypeInitializationException: “System.Management.ManagementPath”的类型初始值设定项引发异常。 ---> System.Runtime.InteropServices.COMException (0x80040154): 检索 COM 类工厂中 CLSID 为 {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} 的组件时失败，原因是出现以下错误: 80040154。  
+     ServiceModelReg [07:19:33:843]:System.TypeInitializationException:System.Management.ManagementPath 的类型初始值设定项引发了异常。 ---> System.Runtime.InteropServices.COMException (0x80040154):检索具有 CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} 因以下错误失败的组件的 COM 类工厂：80040154.  
   
      或：  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: 无法加载文件或程序集“C:\WINDOWS\system32\wbem\mofcomp.exe”或其一个依赖项。 系统找不到指定的文件。  
+     ServiceModelReg [07:19:32:750]:System.IO.FileNotFoundException:无法加载文件或程序集 C:\WINDOWS\system32\wbem\mofcomp.exe 或其某个依赖项。 系统找不到指定的文件。  
   
-     文件名:“C:\WINDOWS\system32\wbem\mofcomp.exe”  
+     文件名：'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
  若要解决前面说明的问题，必须按照以下步骤操作。  
   
@@ -73,5 +73,5 @@ ms.locfileid: "48840542"
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [设置说明](../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a>请参阅
+- [设置说明](../../../docs/framework/wcf/samples/set-up-instructions.md)

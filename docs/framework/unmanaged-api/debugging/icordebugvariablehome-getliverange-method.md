@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0f9c586a9e95fc2e57c4956601f6dce2b988159
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 06c8ae378c10eda986740dfb73f3bf60ea8647a6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423060"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468840"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome::GetLiveRange 方法
 获取对其此变量是实时的本机范围。  
@@ -36,21 +36,21 @@ HRESULT GetLiveRange(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pStartOffset`  
- [out]从该处的变量是第一个实时逻辑偏移量。  
+ [out]在该变量是第一个实时逻辑偏移量。  
   
  `pEndOffset`  
- [out]从该处的变量是最后一个实时点后立即逻辑偏移量。  
+ [out]立即后的变量是最后一个实时的点的逻辑偏移量。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugVariableHome 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugVariableHome 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

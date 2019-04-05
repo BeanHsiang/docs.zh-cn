@@ -1,61 +1,86 @@
 ---
 title: 如何：使用 MMC 管理单元查看证书
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: d924121b9d9fa267fa7d1ada13c9dc5f5bf1523d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493345"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200281"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>如何：使用 MMC 管理单元查看证书
-凭据的一种常见类型是 X.509 证书。 在创建安全服务或客户端时，可以通过使用如 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 这样的方法来指定使用证书作为客户端或服务凭据。 该方法需要多个参数，如存储证书的存储位置和搜索证书时使用的值。 下面的过程演示如何检查计算机上的存储以查找相应的证书。 查找证书指纹的示例，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
+当您创建安全的客户端或服务时，可以使用[证书](working-with-certificates.md)作为凭据。 例如，常见的凭据类型是 X.509 证书，创建具有<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>方法。 
+
+有三种不同类型的可以检查 Windows 系统上使用 Microsoft 管理控制台 (MMC) 的证书存储：
+
+- 本地计算机：存储是在设备本地和全局上设备的所有用户。
+
+- 当前用户：在存储区是本地的设备上的当前用户帐户。
+
+- 服务帐户：在存储区是本地的设备上的特定服务。
+
   
-### <a name="to-view-certificates-in-the-mmc-snap-in"></a>在 MMC 管理单元中查看证书  
+## <a name="view-certificates-in-the-mmc-snap-in"></a>在 MMC 管理单元中查看证书 
+
+下面的过程演示如何检查本地设备以查找相应的证书上的存储区： 
   
-1.  打开一个命令提示符窗口。  
+1. 选择**运行**从**启动**菜单中，然后输入*mmc*。 
+
+    将显示在 MMC。 
   
-2.  类型`mmc`然后按 ENTER 键。 请注意，若要查看本地计算机存储中的证书，您必须具有管理员角色。  
+2. 从**文件**菜单中，选择**添加/删除管理单元**。 
+    
+    **添加或删除管理单元**窗口会显示。
   
-3.  上**文件**菜单上，单击**添加/删除管理单元中**。  
+3. 从**可用的管理单元**列表中，选择**证书**，然后选择**添加**。  
+
+    ![添加证书管理单元](./media/mmc-add-certificate-snap-in.png)
   
-4.  单击 **添加**。  
+4. 在中**管理单元中的证书**窗口中，选择**计算机帐户**，然后选择**下一步**。 
   
-5.  在**添加独立管理单元中**对话框中，选择**证书**。  
+    或者，您可以选择**我的用户帐户**当前用户或**服务帐户**针对特定服务。 
+
+    > [!NOTE]
+    > 如果您不管理员为你的设备，你可以仅对你的用户帐户的管理证书。
   
-6.  单击 **添加**。  
+5. 在中**选择计算机**窗口中，保留**本地计算机**选择，并选择**完成**。  
   
-7.  在**证书管理单元**对话框中，选择**计算机帐户**单击**下一步**。 或者，您可以选择**我的用户帐户**或**服务帐户**。 如果您不是计算机的管理员，则您只能管理您的用户帐户的证书。  
+6. 在中**管理单元中添加或删除**窗口中，选择**确定**。  
   
-8.  在**选择计算机**对话框中，单击**完成**。  
+    ![添加证书管理单元](./media/mmc-certificate-snap-in-selected.png)
+
+7. 可选：从**文件**菜单中，选择**保存**或**另存为**保存 MMC 控制台文件以供将来使用。  
+
+8. 若要查看你的证书 MMC 管理单元中，选择**控制台根节点**在左窗格中，然后展开**证书 （本地计算机）**。
+
+    将显示每种类型的证书的目录的列表。 从每个证书目录中，可以查看、 导出、 导入，并删除其证书。
   
-9. 在**添加独立管理单元中**对话框中，单击**关闭**。  
+
+## <a name="view-certificates-with-the-certificate-manager-tool"></a>使用证书管理器工具查看证书
+
+您还可以查看、 导出、 导入，和使用证书管理器工具中删除证书。
+
+### <a name="to-view-certificates-for-the-local-device"></a>若要查看本地设备的证书
+
+1. 选择**运行**从**启动**菜单中，然后输入*certlm.msc*。 
+
+    将显示本地设备的证书管理器工具。 
   
-10. 上**添加/删除管理单元中**对话框中，单击**确定**。  
+2. 若要查看您的证书，在**证书-本地计算机**在左窗格中，展开你想要查看的证书的类型的目录。
+
+### <a name="to-view-certificates-for-the-current-user"></a>若要查看当前用户证书
+
+1. 选择**运行**从**启动**菜单中，然后输入*certmgr.msc*。 
+
+    当前用户的证书管理器工具会显示。 
   
-11. 在**控制台根节点**窗口中，单击**证书 （本地计算机）** 以查看证书存储的计算机。  
+2. 若要查看您的证书，在**证书-当前用户**在左窗格中，展开你想要查看的证书的类型的目录。
+
   
-12. 可选。 若要查看您的帐户证书，请重复步骤 3 到步骤 6。 在步骤 7，而不是选择**计算机帐户**，单击**我的用户帐户**并重复执行步骤 8 到 10。  
-  
-13. 可选。 上**文件**菜单上，单击**保存**或**另存为**。 保存控制台文件供以后重复使用。  
-  
-## <a name="viewing-certificates-with-internet-explorer"></a>使用 Internet Explorer 查看证书  
- 您也可以通过使用 Internet Explorer 来查看、导出、导入和删除证书。  
-  
-#### <a name="to-view-certificates-with-internet-explorer"></a>使用 Internet Explorer 查看证书  
-  
-1.  在 Internet Explorer 中，单击**工具**，然后单击**Internet 选项**以显示**Internet 选项**对话框。  
-  
-2.  单击**内容**选项卡。  
-  
-3.  下**证书**，单击**证书**。  
-  
-4.  若要查看的任何证书的详细信息，选择的证书，单击**视图**。  
-  
-## <a name="see-also"></a>请参阅  
- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [如何：创建开发期间使用的临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
- [如何：检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+## <a name="see-also"></a>请参阅
+- [使用证书](working-with-certificates.md)
+- [如何：创建开发期间使用的临时证书](how-to-create-temporary-certificates-for-use-during-development.md)
+- [如何：检索证书的指纹](how-to-retrieve-the-thumbprint-of-a-certificate.md)

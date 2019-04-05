@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a1e4dacf66cc17182265e8ea9f132938017a54e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698422"
 ---
 # <a name="registration-free-com-interop"></a>免注册 COM 互操作
 免注册 COM 互操作在不使用 Windows 注册表来存储程序集信息的情况下激活组件。 不是在部署过程中在计算机上注册组件，而是在设计时创建包含有关绑定和激活信息的 Win32 样式清单文件。 正是这些清单文件（而不是注册表项）指导对象的激活。  
@@ -54,5 +54,5 @@ ms.locfileid: "46002224"
     > [!NOTE]
     >  并行执行是一项 .NET Framework 功能，它使得多个版本的运行时，以及使用同一个运行时版本的多个版本的应用程序和组件，能够在同一台计算机上同时运行。 并行执行和并行程序集是提供并行功能的两种不同机制。  
   
-## <a name="see-also"></a>请参阅  
- [如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+## <a name="see-also"></a>请参阅
+- [如何：配置基于 .NET Framework 的 COM 组件以进行免注册激活](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

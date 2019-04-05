@@ -1,6 +1,7 @@
 ---
-title: 垃圾回收的基础
-ms.date: 03/30/2017
+title: 垃圾回收的基本知识
+description: 了解垃圾回收器的工作原理以及如何配置它以获得最佳性能。
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 741ddd0171244daceb4d5e283c0172e71b82f3d2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582744"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712469"
 ---
-# <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基础
+# <a name="fundamentals-of-garbage-collection"></a>垃圾回收的基本知识
 <a name="top"></a> 在公共语言运行时 (CLR) 中，垃圾回收器用作自动内存管理器。 它提供如下优点：  
   
 -   使你可以在开发应用程序时不必释放内存。  
@@ -30,28 +31,8 @@ ms.locfileid: "48582744"
   
 -   通过确保对象不能使用另一个对象的内容来提供内存安全。  
   
- 本主题介绍垃圾回收的核心概念。 它包含下列部分：  
-  
--   [内存基础知识](#fundamentals_of_memory)  
-  
--   [垃圾回收的条件](#conditions_for_a_garbage_collection)  
-  
--   [托管堆](#the_managed_heap)  
-  
--   [代数](#generations)  
-  
--   [垃圾回收过程中发生的情况](#what_happens_during_a_garbage_collection)  
-  
--   [操作非托管资源](#manipulating_unmanaged_resources)  
-  
--   [工作站和服务器垃圾回收](#workstation_and_server_garbage_collection)  
-  
--   [并行垃圾回收](#concurrent_garbage_collection)  
-  
--   [后台工作站垃圾回收](#background_garbage_collection)  
-  
--   [后台服务器垃圾回收](#background_server_garbage_collection)  
-  
+ 本主题介绍垃圾回收的核心概念。 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>内存基础知识  
  下面的列表总结了重要的 CLR 内存概念。  
@@ -98,7 +79,7 @@ ms.locfileid: "48582744"
   
  每个托管进程都有一个托管堆。 进程中的所有线程都在同一堆上分配对象记忆。  
   
- 若要保留内存，垃圾回收器将调用 Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) 函数，并且每次会为托管应用程序保留一个内存段。 垃圾回收器还会根据需要保留段，并通过调用 Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) 函数将段释放回操作系统（在清除所有对象的段之后）。  
+ 若要保留内存，垃圾回收器将调用 Win32 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 函数，并且每次会为托管应用程序保留一个内存段。 垃圾回收器还会根据需要保留段，并通过调用 Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) 函数将段释放回操作系统（在清除所有对象的段之后）。  
   
 > [!IMPORTANT]
 >  垃圾回收器分配的段大小特定于实现，并且随时可能更改（包括定期更新）。 应用程序不应假设特定段的大小或依赖于此大小，也不应尝试配置段分配可用的内存量。  
@@ -109,9 +90,9 @@ ms.locfileid: "48582744"
   
  垃圾回收的侵入性（频率和持续时间）是由分配的数量和托管堆上保留的内存数量决定的。  
   
- 此堆可视为两个堆的累计：大对象堆和小对象堆。  
+ 此堆可视为两个堆的累计：[大对象堆](large-object-heap.md)和小对象堆。  
   
- 大对象堆包含其大小为 85,000 个字节和更多字节的对象。 大对象堆上的对象通常是数组。 非常大的实例对象是很少见的。  
+ [大对象堆](large-object-heap.md)包含大小为 85,000 个字节和更多字节的大型对象。 大对象堆上的对象通常是数组。 非常大的实例对象是很少见的。  
   
  [返回页首](#top)  
   
@@ -172,7 +153,7 @@ ms.locfileid: "48582744"
   
  垃圾回收器使用以下信息来确定对象是否为活动对象：  
   
--   **堆栈根**。 由实时 (JIT) 编译器和堆栈查看器提供的堆栈变量。  
+-   **堆栈根**。 由实时 (JIT) 编译器和堆栈查看器提供的堆栈变量。 请注意，JIT 优化可以延长或缩短报告给垃圾回收器的堆栈变量内的代码的区域。
   
 -   **垃圾回收句柄**。 指向托管对象且可由用户代码或公共语言运行时分配的句柄。  
   

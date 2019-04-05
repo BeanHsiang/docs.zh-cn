@@ -2,12 +2,12 @@
 title: 简化配置
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 7df686188099aea45cac81ea94a49b98e5c65f89
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 22595a3d428da9dbd3cb8b6e67ca8b40bf39d457
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838945"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305621"
 ---
 # <a name="simplified-configuration"></a>简化配置
 配置 Windows Communication Foundation (WCF) 服务可能相当复杂的任务。 该任务涉及多个不同选项，并且有时会很难确定需要哪些设置。 虽然配置文件提高灵活性的 WCF 服务，它们也是带来了许多难以发现的问题。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]解决了这些问题，并向用户提供了一种减小服务配置大小和降低复杂性的方法。  
@@ -113,10 +113,10 @@ ms.locfileid: "48838945"
 > [!IMPORTANT]
 >  此功能只与 WCF 服务配置相关，与客户端配置无关。 大多数时候，使用 svcutil.exe 之类的工具或从 Visual Studio 添加服务引用将生成 WCF 客户端配置。 如果您在手动配置 WCF 客户端将需要添加\<客户端 > 配置元素，并指定你想要调用任何终结点。  
   
-## <a name="see-also"></a>请参阅  
- [使用配置文件配置服务](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [配置服务绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
- [配置系统提供的绑定](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [配置服务](../../../docs/framework/wcf/configuring-services.md)  
- [配置 Windows Communication Foundation 应用程序](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [在代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)
+## <a name="see-also"></a>请参阅
+- [使用配置文件配置服务](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [配置服务绑定](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
+- [配置系统提供的绑定](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [配置服务](../../../docs/framework/wcf/configuring-services.md)
+- [配置 WCF 服务](configuring-services.md)
+- [在代码中配置 WCF 服务](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)

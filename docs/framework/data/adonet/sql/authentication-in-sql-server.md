@@ -2,12 +2,12 @@
 title: SQL Server 中的身份验证
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 8d7fcb149059c06b7875663e4df5272312121c87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 060d756306226ef34fb968a87425bc0d4ea545f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630926"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server 中的身份验证
 SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合模式。  
@@ -19,7 +19,7 @@ SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合�
 > [!IMPORTANT]
 >  我们建议尽可能使用 Windows 身份验证。 Windows 身份验证使用一系列加密消息验证 SQL Server 中的用户。 当使用 SQL Server 登录名时，SQL Server 登录名和加密的密码传递通过网络，这使它们不太安全。  
   
- 使用 Windows 身份验证，已经登录到 Windows 的用户不必再单独登录到 SQL Server。 下面的 `SqlConnection.ConnectionString` 可指定 Windows 身份验证，而无需用户名或密码。  
+ 使用 Windows 身份验证，已经登录到 Windows 的用户不必再单独登录到 SQL Server。 以下`SqlConnection.ConnectionString`指定 Windows 身份验证，而无需用户提供用户名或密码。  
   
 ```  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
@@ -78,9 +78,9 @@ SQL Server 支持两种身份验证模式，Windows 身份验证模式和混合�
 |--------------|-----------------|  
 |[主体](/sql/relational-databases/security/authentication-access/principals-database-engine)|描述登录和其他 SQL Server 中的安全主体。|  
   
-## <a name="see-also"></a>请参阅  
- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [连接到数据源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [保证 ADO.NET 应用程序的安全](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [SQL Server 中的应用程序安全性方案](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [连接到数据源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [连接字符串](../../../../../docs/framework/data/adonet/connection-strings.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

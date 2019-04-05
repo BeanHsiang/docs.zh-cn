@@ -1,5 +1,5 @@
 ---
-title: 如何：使用传输安全和消息凭据
+title: 如何：使用传输安全性和消息凭据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f678c4713bff342cb3e788a85d7e58fc6e47820c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731863"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>如何：使用传输安全和消息凭据
-保护具有传输和消息凭据的服务使用的传输和消息安全模式的最佳 Windows Communication Foundation (WCF) 中。 总之，传输层安全提供了完整性和机密性，而消息层安全则提供了严格的传输安全机制所不可能提供的多种凭据。 本主题演示使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 绑定通过消息凭据实现传输的基本步骤。 有关设置安全模式的详细信息，请参阅[如何： 将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
+# <a name="how-to-use-transport-security-and-message-credentials"></a>如何：使用传输安全性和消息凭据
+保护具有传输和消息凭据的服务使用的传输和消息安全模式的最佳 Windows Communication Foundation (WCF) 中。 总之，传输层安全提供了完整性和机密性，而消息层安全则提供了严格的传输安全机制所不可能提供的多种凭据。 本主题演示使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 绑定通过消息凭据实现传输的基本步骤。 有关设置安全模式的详细信息，请参阅[如何：将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
   
  在将安全模式设置为 `TransportWithMessageCredential` 时，传输会确定实际提供传输级安全的机制。 对于 HTTP，该机制为基于 HTTP 的安全套接字层 (SSL)（SSL over HTPP，或 HTTPS）；对于 TCP，该机制为 SSL over TCP 或 Windows。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "50187603"
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>使用 WSHttpBinding 和证书来获得传输安全（在代码中）  
   
-1.  使用 HttpCfg.exe 工具将 SSL 证书绑定到计算机上的某个端口。 有关详细信息，请参阅[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+1.  使用 HttpCfg.exe 工具将 SSL 证书绑定到计算机上的某个端口。 有关详细信息，请参阅[如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
 2.  创建 <xref:System.ServiceModel.WSHttpBinding> 类的一个实例，并将 <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 属性设置为 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "50187603"
   
 #### <a name="to-use-the-wshttpbinding"></a>使用 WSHttpBinding  
   
-1.  使用绑定到某个端口的 SSL 证书配置计算机。 (有关详细信息，请参阅[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md))。 不需要设置 <`transport`> 使用此配置元素的值。  
+1.  使用绑定到某个端口的 SSL 证书配置计算机。 (有关详细信息，请参阅[如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md))。 不需要设置 <`transport`> 使用此配置元素的值。  
   
 2.  指定消息级安全的客户端凭据类型。 下面的示例设置`clientCredentialType`属性的 <`message`> 元素`UserName`。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "50187603"
     </bindings>  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [如何：设置安全模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [保护服务](../../../../docs/framework/wcf/securing-services.md)  
- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- [如何：将安全模式设置](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [保护服务](../../../../docs/framework/wcf/securing-services.md)
+- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

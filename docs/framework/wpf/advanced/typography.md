@@ -8,28 +8,28 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: d673ccec58cd9f8ba0b49fafa9871efd208e4a40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f9257414a90cd3d4f64653893c5fa6e19963ad3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546118"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369547"
 ---
 # <a name="typography"></a>版式
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包括丰富表示的文本内容的支持。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文本通过 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 技术呈现，该技术增强了文本的清晰度和可读性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 此外支持[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体，提供其他功能超出定义的那些[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]格式。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 还支持丰富的文本内容演示。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文本通过 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 技术呈现，该技术增强了文本的清晰度和可读性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 此外支持[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字体，它提供的定义之外的其他功能[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]格式。  
   
 ## <a name="in-this-section"></a>本节内容  
- [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [ClearType 概述](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [ClearType 注册表设置](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)  
- [绘制格式化文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [高级文本格式设置](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [字体](../../../../docs/framework/wpf/advanced/fonts-wpf.md)  
- [字形](../../../../docs/framework/wpf/advanced/glyphs.md)  
- [帮助主题](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
+ [WPF 中的版式](typography-in-wpf.md)  
+ [ClearType 概述](cleartype-overview.md)  
+ [ClearType 注册表设置](cleartype-registry-settings.md)  
+ [绘制格式化文本](drawing-formatted-text.md)  
+ [高级文本格式设置](advanced-text-formatting.md)  
+ [字体](fonts-wpf.md)  
+ [字形](glyphs.md)  
+ [帮助主题](typography-how-to-topics.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Documents.Typography>  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [OpenType 字体功能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Documents.Typography>
+- [WPF 中的文档](documents-in-wpf.md)
+- [OpenType 字体功能](opentype-font-features.md)
+- [优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)

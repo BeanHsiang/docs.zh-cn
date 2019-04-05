@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 73bf7ca1f05bd388239d970fcc6e33bf30810111
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9894d96c74741477b871d6073d78ea95413b8299
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837888"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675661"
 ---
 # <a name="get-started-with-c"></a>C\# 入门
 
@@ -42,10 +42,6 @@ ms.locfileid: "48837888"
 
 ## <a name="related-sections"></a>相关章节
 
-* [使用 Visual Studio C# 开发环境](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
-
-    提供使用 Visual C# 集成开发环境的指南。
-
 * [C# 编程指南](../../csharp/programming-guide/index.md)
 
     提供关于 C# 编程概念的信息并描述如何用 C# 执行各种任务。
@@ -54,14 +50,10 @@ ms.locfileid: "48837888"
 
     提供关于 C# 关键字、运算符、预处理器指令、编译器选项以及编译器错误与警告的详细参考信息。
 
-* [Visual Studio 示例](/visualstudio/ide/visual-studio-samples)
-
-    提供有关如何访问联机示例的信息。
-
 * [演练](../../csharp/walkthroughs.md)
 
     提供指向使用 C# 的编程演练和每个演练的简要概述的链接。
 
 ## <a name="see-also"></a>请参阅
 
-* [借助 Visual Studio 开始使用 Visual C# 和 Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- * [使用 Visual Studio 进行 C# 开发](/visualstudio/get-started/csharp/)

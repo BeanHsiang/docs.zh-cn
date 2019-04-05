@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 4755d950da6726f007ae3333a558f3cafdcada9b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508155"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719424"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>如何：使用 SaveFileDialog 组件保存文件
 <xref:System.Windows.Forms.SaveFileDialog>组件让用户可以浏览文件系统并选择要保存的文件。 对话框返回用户在对话框中所选的文件路径和名称。 但是必须编写代码才能真正地将文件写入磁盘。  
@@ -32,7 +32,7 @@ ms.locfileid: "43508155"
      在以下示例中，没有<xref:System.Windows.Forms.Button>向其分配了图像控件。 单击按钮时<xref:System.Windows.Forms.SaveFileDialog>使用一个允许的类型.gif、.jpeg 和.bmp 文件筛选器实例化组件。 如果在“保存文件”对话框中选择了此类型的文件，那么按钮的图像将会保存。  
   
     > [!IMPORTANT]
-    >  获取或设置<xref:System.Windows.Forms.FileDialog.FileName%2A>属性，您的程序集需要的特权等级授予通过<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>类。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../docs/framework/misc/code-access-security-basics.md)。  
+    >  获取或设置<xref:System.Windows.Forms.FileDialog.FileName%2A>属性，您的程序集需要的特权等级授予通过<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>类。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 有关详细信息，请参阅[代码访问安全性基础知识](../../misc/code-access-security-basics.md)。  
   
      该示例假定窗体具有<xref:System.Windows.Forms.Button>与控制其<xref:System.Windows.Forms.ButtonBase.Image%2A>属性设置为的类型.gif、.jpeg 或.bmp 文件。  
   
@@ -177,6 +177,6 @@ ms.locfileid: "43508155"
     > [!NOTE]
     >  某些控件，如<xref:System.Windows.Forms.RichTextBox>控制，以及用于保存文件。 有关详细信息，请参阅 MSDN 联机库技术文章 [Windows 窗体对话框的基本代码](https://go.microsoft.com/fwlink/?LinkID=102575)中的“SaveFileDialog 组件”部分。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.SaveFileDialog>  
- [SaveFileDialog 组件](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.SaveFileDialog>
+- [SaveFileDialog 组件](savefiledialog-component-windows-forms.md)

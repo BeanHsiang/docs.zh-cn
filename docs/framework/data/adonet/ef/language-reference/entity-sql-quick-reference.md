@@ -2,12 +2,12 @@
 title: Entity SQL 快速参考
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 0617ce96acaf5a6eafb2658cfe218cc8f4135f6e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 20d8d1cb1e4b5cbf37dffcce6a7e79c2a4c265d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539398"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL 快速参考
 本主题提供 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询的快速参考。 本主题中的查询基于 AdventureWorks 销售模型。  
@@ -72,7 +72,7 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>类型构造函数  
   
 ### <a name="row"></a>ROW  
- [行](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)构造匿名结构上类型化 （记录） 中的值，作为： `ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [行](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)构造一个匿名的结构化类型 （记录） 值作为： `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  示例:  
   
@@ -108,7 +108,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
 |842|Touring-Panniers, Large|PA-T100|…|  
   
 ### <a name="object"></a>对象  
- [命名类型构造函数](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)构造 （已命名） 的用户定义的对象，如`person("abc", 12)`。  
+ [命名类型构造函数](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)构造 （命名的） 用户定义的对象，如`person("abc", 12)`。  
   
  示例:  
   
@@ -164,7 +164,7 @@ SELECT VALUE REF(p).Name FROM
 |...|  
   
 ### <a name="deref"></a>DEREF  
- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)取消引用一个引用值并取消引用的结果的生成。 例如，下面的查询生成 Orders 实体集中每一个 Order 的 Order 实体：`SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2`。  
+ [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)取消引用一个引用值并生成的结果。 例如，下面的查询生成 Orders 实体集中每一个 Order 的 Order 实体：`SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2`。  
   
  示例：  
   
@@ -183,7 +183,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
 |...|  
   
 ### <a name="createref-and-key"></a>CREATEREF 和 KEY  
- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)创建传递键的引用。 [密钥](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)提取具有类型引用的表达式的键部分。  
+ [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)创建传递键的引用。 [密钥](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)提取的密钥类型引用的表达式的一部分。  
   
  示例:  
   
@@ -204,7 +204,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 ## <a name="functions"></a>函数  
   
 ### <a name="canonical"></a>规范  
- 命名空间[规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)为 Edm，如`Edm.Length("string")`。 您无需指定命名空间，除非导入的另一个命名空间中包含与规范函数同名的函数。 如果两个命名空间有相同的函数，用户应指定完整名称。  
+ 命名空间[规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)是 Edm 中，如`Edm.Length("string")`。 您无需指定命名空间，除非导入的另一个命名空间中包含与规范函数同名的函数。 如果两个命名空间有相同的函数，用户应指定完整名称。  
   
  示例：  
   
@@ -223,7 +223,7 @@ SELECT Length(c. FirstName) As NameLen FROM
 |5|  
   
 ### <a name="microsoft-provider-specific"></a>特定于 Microsoft 提供程序  
- [Microsoft 提供程序特定函数](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)中`SqlServer`命名空间。  
+ [Microsoft 提供程序特定的函数](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)位于`SqlServer`命名空间。  
   
  示例:  
   
@@ -242,7 +242,7 @@ SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM
 |26|  
   
 ## <a name="namespaces"></a>命名空间  
- [使用](../../../../../../docs/framework/data/adonet/ef/language-reference/using-entity-sql.md)指定查询表达式中使用命名空间。  
+ [使用](../../../../../../docs/framework/data/adonet/ef/language-reference/using-entity-sql.md)指定查询表达式中使用的命名空间。  
   
  示例:  
   
@@ -257,7 +257,7 @@ using SqlServer; LOWER('AA');
 |aa|  
   
 ## <a name="paging"></a>分页  
- 可以通过声明表示分页[跳过](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)和[限制](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)于子子句[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)子句。  
+ 可以通过声明表示分页[跳过](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)并[限制](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)于子子句[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)子句。  
   
  示例:  
   
@@ -275,7 +275,7 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
 |12|Aguilar|  
   
 ## <a name="grouping"></a>分组  
- [GROUPING BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)指定为查询返回的对象的组 ([选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 表达式的放置。  
+ [GROUPING BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)组指定为查询返回的对象 ([选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 表达式的放置。  
   
  示例:  
   
@@ -294,7 +294,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
 |...|  
   
 ## <a name="navigation"></a>导航  
- 关系导航运算符用于导航从一个实体（起始端）到另一个实体（结束端）的关系。 [导航](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)采用关系类型限定为\<命名空间 >。\<关系类型名称 >。 导航返回 Ref\<T > 如果的基数结束为 1。 如果的基数为 n，集合结束 < Ref\<T >> 将返回。  
+ 关系导航运算符用于导航从一个实体（起始端）到另一个实体（结束端）的关系。 [NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)接受限定为关系类型\<命名空间 >。\<关系类型名称 >。 导航返回 Ref\<T > 如果的基数为 1 结束。 如果的基数为 n，集合结束 < Ref\<T >> 将返回。  
   
  示例:  
   
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE 和 SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了 SELECT VALUE 子句以跳过隐式行构造。 SELECT VALUE 子句中只能指定一项。 当使用这样的子句、 SELECT 子句中中的项会构造没有行包装器和所需形状的集合可以生成，例如： `SELECT VALUE a`。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了 SELECT VALUE 子句以跳过隐式行构造。 SELECT VALUE 子句中只能指定一项。 当使用这样的子句、 SELECT 子句中的项会构造没有行包装器和所需形状的集合可生成，例如： `SELECT VALUE a`。  
   
  示例:  
   
@@ -348,7 +348,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|...|  
   
 ## <a name="case-expression"></a>CASE 表达式  
- [Case 表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)求出一组布尔表达式的值以确定结果。  
+ [Case 表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)计算一组布尔表达式，以确定结果。  
   
  示例:  
   
@@ -362,6 +362,6 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
 |-----------|  
 |true|  
   
-## <a name="see-also"></a>请参阅  
- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>请参阅
+- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -1,17 +1,18 @@
 ---
-title: 接口（C# 参考）
+title: 接口 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - interface_CSharpKeyword
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 4adc7ba106e0044ba6aff94ea3180d9c8e3ded7b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ce3cb95617c87d1bf66879f4a2432b4de4ac40f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586457"
 ---
 # <a name="interface-c-reference"></a>接口（C# 参考）
 
@@ -53,13 +54,13 @@ ms.locfileid: "48872938"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
-- [C# 关键字](index.md)  
-- [引用类型](reference-types.md)  
-- [接口](../../programming-guide/interfaces/index.md)  
-- [使用属性](../../programming-guide/classes-and-structs/using-properties.md)  
-- [使用索引器](../../programming-guide/indexers/using-indexers.md)  
-- [class](class.md)  
-- [struct](struct.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](index.md)
+- [引用类型](reference-types.md)
+- [接口](../../programming-guide/interfaces/index.md)
+- [使用属性](../../programming-guide/classes-and-structs/using-properties.md)
+- [使用索引器](../../programming-guide/indexers/using-indexers.md)
+- [class](class.md)
+- [struct](struct.md)
 - [接口](../../programming-guide/interfaces/index.md)

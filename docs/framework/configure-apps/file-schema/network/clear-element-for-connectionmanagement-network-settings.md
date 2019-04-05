@@ -1,5 +1,5 @@
 ---
-title: '&lt;清除&gt;connectionManagement （网络设置） 的元素'
+title: connectionManagement -> <clear> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/clear
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: dba05128220b34bed34da4309a4994cbc4e1bd40
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b90bdacc962eba1cd449f347f958f04cd72225d4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205095"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273918"
 ---
-# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;清除&gt;connectionManagement （网络设置） 的元素
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<清除 > connectionManagement （网络设置） 的元素
 清除连接管理列表。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
-\<清除 >  
+\<connectionManagement>  
+\<clear>  
   
 ## <a name="syntax"></a>语法  
   
@@ -67,7 +67,7 @@ ms.locfileid: "50205095"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

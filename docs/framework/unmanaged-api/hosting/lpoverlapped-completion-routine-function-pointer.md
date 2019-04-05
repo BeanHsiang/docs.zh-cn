@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4b7ffef9c0ba3aba54387245b2d5c9ec1ae906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f957ff6949ea2335c6606eb112352a5180e2c1c8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441751"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500312"
 ---
 # <a name="lpoverlappedcompletionroutine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE 函数指针
-指向通知时的重叠的宿主的函数 (即异步) 对设备 i/o 操作已完成。  
+指向通知主机时的重叠的函数 (即异步) 到设备的 I/O 已完成。  
   
  中已弃用此函数指针[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
@@ -38,29 +38,29 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwErrorCode`  
  [in]一个值，如果设备已关闭; 是一个错误代码否则，此值为零。  
   
- 关闭设备，则会立即完成所有挂起的设备 I/O。  
+ 关闭设备将导致所有挂起的设备对 i/o 操作立即完成。  
   
  `dwNumberOfBytesTransfered`  
- [in]传输字节的 I/O 操作的数。  
+ [in]I/O 操作传输的字节数。  
   
  `lpOverlapped`  
- [in]指向包含要使用完成 I/O 请求信息的结构的指针。  
+ [in]指向包含要用来完成 I/O 请求的信息的结构的指针。  
   
 ## <a name="remarks"></a>备注  
- 到函数`LPOVERLAPPED_COMPLETION_ROUTINE`点是一个回调函数，必须在承载应用程序的编写器实现。 回调函数允许宿主处理已完成的 I/O 请求。  
+ 该函数`LPOVERLAPPED_COMPLETION_ROUTINE`点是回调函数，必须由主机应用程序的编写器实现。 回调函数允许主机来处理已完成的 I/O 请求。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorWks.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>请参阅
+- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

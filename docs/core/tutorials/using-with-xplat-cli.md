@@ -1,18 +1,18 @@
 ---
-title: 使用 CLI 实现 .NET Core 入门
+title: 通过 CLI 开始使用 .NET Core
 description: 一个分步教程，演示如何使用 .NET Core 命令行接口 (CLI) 开始在 Windows、Linux 或 macOS 上使用 .NET Core。
 author: cartermp
-ms.author: mairaw
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
-ms.openlocfilehash: b31a0324c0d762e9898c681cc6581b3860d41f89
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: seodec18
+ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025566"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545359"
 ---
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令行在 Windows/Linux/macOS 上入门 .NET Core
+# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>通过命令行开始在 Windows/Linux/macOS 上使用 .NET Core
 
 本主题将演示如何使用 .NET Core CLI 工具开始在计算机上开发跨平台应用。
 
@@ -30,13 +30,13 @@ ms.locfileid: "48025566"
 打开命令提示符，创建一个名为“Hello”的文件夹。 导航到创建的文件夹，键入下列内容：
 
 ```console
-$ dotnet new console
-$ dotnet run
+dotnet new console
+dotnet run
 ```
 
 让我们进行快速演练：
 
-1. `$ dotnet new console`
+1. `dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) 会创建一个最新的 `Hello.csproj` 项目文件，其中包含生成控制台应用所必需的依赖项。  它还将创建 `Program.cs`，这是包含应用程序的入口点的基本文件。
 
@@ -47,7 +47,7 @@ $ dotnet run
    项目文件指定还原依赖项和生成程序所需的一切。
 
    * `OutputType` 标记指定我们要生成的可执行文件，即控制台应用程序。
-   * `TargetFramework` 标记指定要定位的 .NET 实现代码。 在高级方案中，可以指定多个目标框架，并在单个操作中生成所有目标框架。 在本教程中，我们将仅针对 .NET Core 1.0 进行生成。
+   * `TargetFramework` 标记指定要定位的 .NET 实现代码。 在高级方案中，可以指定多个目标框架，并在单个操作中生成所有目标框架。 在本教程中，我们将仅针对 .NET Core 2.1 进行生成。
 
    `Program.cs`：
 
@@ -59,12 +59,12 @@ $ dotnet run
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   `dotnet new` 隐式调用 [`dotnet restore`](../tools/dotnet-restore.md)。 `dotnet restore` 调用到 [NuGet](https://www.nuget.org/)（.NET 包管理器）以还原依赖项树。 NuGet 分析 Hello.csproj 文件、下载文件中定义的依赖项（或从计算机缓存中获取）并编写 obj/project.assets.json 文件，在编译和运行示例时需要使用该文件。 
-   
+   `dotnet new` 隐式调用 [`dotnet restore`](../tools/dotnet-restore.md)。 `dotnet restore` 调用到 [NuGet](https://www.nuget.org/)（.NET 包管理器）以还原依赖项树。 NuGet 分析 Hello.csproj 文件、下载文件中定义的依赖项（或从计算机缓存中获取）并编写 obj/project.assets.json 文件，在编译和运行示例时需要使用该文件。
+
    > [!IMPORTANT]
    > 如果你使用的是 .NET Core 1.x 版本的 SDK，在调用 `dotnet new` 后，必须自行调用 `dotnet restore`。
 
-2. `$ dotnet run`
+2. `dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) 调用 [`dotnet build`](../tools/dotnet-build.md) 来确保已生成要生成的目标，然后调用 `dotnet <assembly.dll>` 运行目标应用程序。
 
@@ -74,6 +74,7 @@ $ dotnet run
     ```
 
     或者，还可以执行 [`dotnet build`](../tools/dotnet-build.md) 来编译代码，无需运行已生成的控制台应用程序。 这使得编译的应用程序（作为 DLL 文件）可以在 Windows 上使用 `dotnet bin\Debug\netcoreapp2.1\Hello.dll` 运行（将 `/` 用于非 Windows 系统）。 还可以对应用程序指定参数，相关操作将在本主题稍后部分进行介绍。
+
     ```console
     $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!
@@ -118,7 +119,8 @@ $ dotnet run
 
 ## <a name="working-with-multiple-files"></a>使用多个文件
 
-对于简单的一次性程序，使用单个文件即可，但如果要生成更复杂的应用，则项目上可能需要多个源文件。让我们通过缓存一些 Fibonacci 值，基于之前的 Fibonacci 示例来生成这类应用，并添加一些递归特性。
+单个文件适用于简单的一次性程序，但如果要构建较为复杂的应用，则项目中可能会有多个源文件。
+我们通过缓存一些 Fibonacci 值并添加一些递归特性来基于之前的 Fibonacci 示例进行构建。
 
 1. 使用以下代码将新文件添加到名为 *FibonacciGenerator.cs* 的 *Hello* 目录：
 
@@ -157,4 +159,4 @@ $ dotnet run
 
 ## <a name="see-also"></a>请参阅
 
-* [使用 .NET Core CLI 工具组织和测试项目](testing-with-cli.md)
+- [使用 .NET Core CLI 工具组织和测试项目](testing-with-cli.md)

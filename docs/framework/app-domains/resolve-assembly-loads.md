@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdd610ade931bedc9ee387b65b18efd1909ef58b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a93052cba4693e63b3cb702a5ab8f6e15a8d8dec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684484"
 ---
 # <a name="resolving-assembly-loads"></a>解决程序集加载
 .NET Framework 为对程序集加载需要更强控制的应用程序提供了 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 通过处理此事件，应用程序可从常规探测路径外部将程序集加载到加载上下文、从几个程序集版本中选择要加载的版本、发出动态程序集并返回此程序集，等等。 本主题指导如何处理 <xref:System.AppDomain.AssemblyResolve> 事件。  
@@ -72,7 +72,7 @@ ms.locfileid: "50202206"
  处理 <xref:System.AppDomain.AssemblyResolve> 事件的主要规则是不应试图返回无法识别的程序集。 编写处理程序时应了解哪些程序集可能会导致引发该事件。 处理程序集应对其他程序集返回 null。  
   
 > [!IMPORTANT]
->  从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始，<xref:System.AppDomain.AssemblyResolve> 事件针对附属程序集引发。 此更改会影响为早期版本的 .NET Framework 编写的事件处理程序（如果此类事件处理程序尝试解决所有程序集加载请求）。 此更改不会影响忽略其无法识别的程序集的事件处理程序：此类处理程序返回 null 并遵循常规回退机制。  
+>  从 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开始，<xref:System.AppDomain.AssemblyResolve> 事件针对附属程序集引发。 此更改会影响为早期版本的 .NET Framework 编写的事件处理程序（如果此类事件处理程序尝试解决所有程序集加载请求）。 忽略无法识别的程序集的事件处理程序不受此更改的影响：这些程序会返回 NULL，并遵循正常的回退机制。  
   
  加载程序集时，事件处理程序禁止使用可导致递归引发 <xref:System.AppDomain.AssemblyResolve> 事件的任何 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法重载，因为可能导致堆栈溢出。 （请参阅本主题前面部分提供的列表。）即使为加载请求提供异常处理也会发生此情况，因为异常都是在所有事件处理程序返回后引发的。 因此，如果未找到 `MyAssembly`，下面的代码将导致堆栈溢出：  
   
@@ -80,6 +80,6 @@ ms.locfileid: "50202206"
  [!code-csharp[AssemblyResolveRecursive#1](../../../samples/snippets/csharp/VS_Snippets_CLR/assemblyresolverecursive/cs/example.cs#1)]
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
-- [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>请参阅
+- [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [使用应用程序域](../../../docs/framework/app-domains/use.md)

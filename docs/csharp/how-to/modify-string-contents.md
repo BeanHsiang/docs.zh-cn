@@ -3,12 +3,12 @@ title: 如何：修改字符串内容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 349269f8158f7d4db5e2058791087a258f504460
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664004"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何：修改以 C\# 编写的字符串内容
 
@@ -73,5 +73,5 @@ ms.locfileid: "49453432"
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 正则表达式](../../standard/base-types/regular-expressions.md)  
-- [正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [.NET Framework 正则表达式](../../standard/base-types/regular-expressions.md)
+- [正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)

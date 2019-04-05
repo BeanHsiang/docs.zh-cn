@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: fbe75d8ec4a677c47a98a5868c4e7e44c95f1d93
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714875"
 ---
 # <a name="service-application-programming-architecture"></a>服务应用程序编程体系结构
 Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 类继承的类。 可以替代此类中的方法并为其定义功能，以确定服务的行为方式。  
@@ -57,7 +57,7 @@ Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?disp
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    >  这些示例使用 <xref:System.ServiceProcess.ServiceBase> 类型的数组，可将应用程序包含的每项服务添加到其中，然后所有服务均可一同运行。 但是，如果仅创建单个服务，则可以选择不使用该数组，然后只声明从 <xref:System.ServiceProcess.ServiceBase> 继承的新对象，然后运行它。 有关示例，请参阅[如何：以编程方式编写服务](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)。  
+    >  这些示例使用 <xref:System.ServiceProcess.ServiceBase> 类型的数组，可将应用程序包含的每项服务添加到其中，然后所有服务均可一同运行。 但是，如果仅创建单个服务，则可以选择不使用该数组，然后只声明从 <xref:System.ServiceProcess.ServiceBase> 继承的新对象，然后运行它。 有关示例，请参见 [如何：以编程方式编写服务](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)。  
   
 -   <xref:System.ServiceProcess.ServiceBase> 类的一系列属性。 这些属性确定可对服务调用的方法。 例如，当 <xref:System.ServiceProcess.ServiceBase.CanStop%2A> 属性设置为 `true` 时，可以调用服务上的 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法。 当 <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> 属性设置为 `true` 时，可以调用 <xref:System.ServiceProcess.ServiceBase.OnPause%2A> 和 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 方法。 在将其中一个属性设置为 `true` 时，应该替代并定义关联方法的处理进程。  
   
@@ -66,6 +66,6 @@ Windows 服务应用程序基于从 <xref:System.ServiceProcess.ServiceBase?disp
   
  还可以使用名为 <xref:System.ServiceProcess.ServiceController> 的组件与现有服务进行通信并控制其行为。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a>请参阅
+- [Windows 服务应用程序介绍](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)

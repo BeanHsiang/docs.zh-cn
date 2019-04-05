@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ecc2f62a6bb8119b7fe06a82aea827a58d04ecb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a614ad1bd9738c993775667ccd261a089e8b57a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441663"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624247"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags 枚举
 包含值，用于描述对的调用中定义的文件类型[imetadataassemblyemit:: Definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)。  
@@ -41,15 +41,15 @@ typedef enum CorFileFlags {
   
 |成员|描述|  
 |------------|-----------------|  
-|`ffContainsMetaData`|指示该文件不是资源文件。|  
-|`ffContainsNoMetaData`|指示该文件，可能是资源文件，不包含元数据。|  
+|`ffContainsMetaData`|指示该文件不是一个资源文件。|  
+|`ffContainsNoMetaData`|指示该文件，可能是资源文件不包含元数据。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

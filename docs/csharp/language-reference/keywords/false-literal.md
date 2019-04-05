@@ -1,31 +1,28 @@
 ---
-title: false 文本（C# 参考）
-ms.date: 07/20/2015
+title: false 文本 - C# 参考
+ms.custom: seodec18
+ms.date: 12/03/2018
 helpviewer_keywords:
 - false literal keyword [C#]
 ms.assetid: fcc1c1a5-0e42-4226-a128-81492a9bf719
-ms.openlocfilehash: f0743ead2836a4570d1b2dc0fc4cf20d2343a9a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f47c9cab7b0b3813f59faa8be0110e0c6318f36e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507973"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241202"
 ---
 # <a name="false-literal-c-reference"></a>false 文本（C# 参考）
 
-表示布尔值 false。
+表示[布尔](bool.md)值 `false`：
 
-## <a name="example"></a>示例
-
-[!code-csharp[csrefKeywordsOperator#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#3)]
-
-## <a name="c-language-specification"></a>C# 语言规范
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+[!code-csharp-interactive[false literal example](~/samples/snippets/csharp/keywords/TrueFalseLiteralsExamples.cs#FalseLiteral)]
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
-- [C# 关键字](index.md)  
-- [true](true.md)  
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](index.md)
+- [true](true.md)
+- [true 和 false 运算符](true-false-operators.md)
+- [?:运算符](../operators/conditional-operator.md)

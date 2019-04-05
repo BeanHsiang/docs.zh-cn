@@ -1,31 +1,30 @@
 ---
-title: '&lt;channelPoolSettings&gt;'
+title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: ad722fbc34617ef7f424d5f1c4418e1e1cb45344
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dd6cf74560694e7e16103c624b33a4c590ce5d50
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747231"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266918"
 ---
-# <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
+# <a name="channelpoolsettings"></a>\<channelPoolSettings>
 指定自定义绑定的通道池设置。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
-\<oneWay >  
-\<channelPoolSettings >  
+\<binding>  
+\<oneWay>  
+\<channelPoolSettings>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<channelPoolSettings  
-    idleTimeout"TimeSpan"  
-        leaseTimeout"TimeSpan"  
-    maxOutboundConnectionsPerEndpopint="Integer" />  
+<channelPoolSettings idleTimeout="TimeSpan"
+                     leaseTimeout="TimeSpan"
+                     maxOutboundConnectionsPerEndpopint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -46,7 +45,7 @@ ms.locfileid: "32747231"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|针对自定义绑定启用数据包路由。|  
+|[\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|针对自定义绑定启用数据包路由。|  
   
 ## <a name="remarks"></a>备注  
  配额用作一种策略机制，防止消耗过多资源。 它们可防止恶意或无意的拒绝服务 (DOS) 攻击。 在设置自定义通道的通道配额时使用此元素。  
@@ -59,14 +58,14 @@ ms.locfileid: "32747231"
   
 -   `maxOutboundChannelsPerEndpoint` 配额设置服务器与客户端上的缓存限制，用于提高可靠性。 其默认值基于资源的保守适度分配，适用于开发环境和小型安装方案。 如果某个安装耗尽了资源或是连接受到限制，则无论是否还有其他资源可用，服务管理员都应检查该值。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.ChannelPoolSettings>  
- <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>  
- <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<oneWay >](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.ChannelPoolSettings>
+- <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>
+- <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

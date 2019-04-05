@@ -2,12 +2,12 @@
 title: 标准查询运算符概述 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 27b144ae75054dbdc535b6ad894e4a5a0b8529e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bfdf2163be52d9016a800d65006bbc4fbf560a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653567"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841467"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>标准查询运算符概述 (Visual Basic)
 *标准查询运算符*是组成 LINQ 模式的方法。 这些方法中的大多数都作用于序列；其中序列指其类型实现 <xref:System.Collections.Generic.IEnumerable%601> 接口或 <xref:System.Linq.IQueryable%601> 接口的对象。 标准查询运算符提供包括筛选、投影、聚合、排序等在内的查询功能。  
@@ -64,7 +64,7 @@ MsgBox(output.ToString())
 ```  
   
 ## <a name="query-expression-syntax"></a>查询表达式语法  
- 某些使用更频繁的标准查询运算符具有专用的 C# 和 Visual Basic 语言关键字语法，使用这些语法可以在*查询**表达式*中调用这些运算符。 有关具有专用的关键字和其相应的语法的标准查询运算符的详细信息，请参阅[标准查询运算符 (Visual Basic 中) 的查询表达式语法](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)。  
+ 某些使用更频繁的标准查询运算符具有专用的 C# 和 Visual Basic 语言关键字语法，使用这些语法可以在*查询**表达式*中调用这些运算符。 有关具有专用关键字及其对应语法的标准查询运算符的详细信息，请参阅[标准查询运算符 (Visual Basic 中) 的查询表达式语法](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)。  
   
 ## <a name="extending-the-standard-query-operators"></a>扩展标准查询运算符  
  通过创建适合于目标域或技术的特定于域的方法，可以增大标准查询运算符的集合。 也可以用自己的实现来替换标准查询运算符，这些实现提供诸如远程计算、查询转换和优化之类的附加服务。 有关示例，请参见 <xref:System.Linq.Enumerable.AsEnumerable%2A>。  
@@ -78,13 +78,13 @@ MsgBox(output.ToString())
   
  [筛选数据 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)  
   
- [限定符操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
+ [限定符运算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)  
   
  [投影运算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)  
   
  [分区数据 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)  
   
- [联接运算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
+ [联接操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)  
   
  [对数据进行分组 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)  
   
@@ -100,10 +100,11 @@ MsgBox(output.ToString())
   
  [聚合操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [LINQ 简介 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- [标准查询运算符 (Visual Basic) 的查询表达式语法](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [按执行 (Visual Basic) 方式的标准查询运算符的分类](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [LINQ 简介 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [标准查询运算符 (Visual Basic 中) 的查询表达式语法](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [标准查询运算符按执行 (Visual Basic) 方式的分类](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+- [扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

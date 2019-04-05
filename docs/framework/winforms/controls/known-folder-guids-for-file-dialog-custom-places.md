@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 69fa8837f616969e018e4ec7191f0b30a2df5b62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ffd0b78e37b663b197620694d9459cd4e0129d9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541559"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703447"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>文件对话框自定义区域的已知文件夹 GUID
-你使用<xref:System.Guid>指定[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知文件夹添加到的文件夹时<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。 已知文件夹 Guid 不区分大小写和在 KnownFolders.h 文件中定义[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]。  
+您使用<xref:System.Guid>来指定[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知文件夹添加到文件夹时<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。 已知文件夹 Guid 不区分大小写和中的 KnownFolders.h 文件中定义[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]。  
   
 > [!NOTE]
->  在某些情况下，已知的文件夹添加到<xref:System.Windows.Forms.FileDialogCustomPlacesCollection>将不会显示在**收藏夹链接**区域。 例如，如果指定的已知文件夹不存在运行应用程序的计算机上，将不会显示已知文件夹。  
+>  在某些情况下，已知文件夹添加到<xref:System.Windows.Forms.FileDialogCustomPlacesCollection>不会显示在**收藏夹链接**区域。 例如，如果指定的已知文件夹不存在正在运行该应用程序的计算机上，不显示已知文件夹。  
   
 ## <a name="list-of-guids"></a>Guid 的列表  
  下表列出[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知文件夹和其关联<xref:System.Guid>。  
@@ -70,7 +70,7 @@ ms.locfileid: "33541559"
  联系人  
  56784854-C6CB-462B-8169-88E350ACB882  
   
- 控制面板  
+ ControlPanel  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
  Cookie  
@@ -193,7 +193,7 @@ ms.locfileid: "33541559"
  PublicVideos  
  2400183A-6185-49FB-A2D8-4A392A602BA3  
   
- 在快速启动  
+ QuickLaunch  
  52A4F021-7B75-48A9-9F6B-4B87A210BC8F  
   
  Recent  
@@ -226,7 +226,7 @@ ms.locfileid: "33541559"
  SavedGames  
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
- savedSearches  
+ SavedSearches  
  7D1D3A04-DEBB-4115-95CF-2F29DA2920DA  
   
  SEARCH_CSC  
@@ -238,7 +238,7 @@ ms.locfileid: "33541559"
  SearchHome  
  190337D1-B8CA-4121-A639-6D472D16972A  
   
- 发送到  
+ SendTo  
  8983036C-27C0-404B-8F08-102D10DCFD74  
   
  SidebarDefaultParts  
@@ -286,6 +286,6 @@ ms.locfileid: "33541559"
  Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.FileDialogCustomPlace>  
- [如何：向文件对话框添加自定义区域](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.FileDialogCustomPlace>
+- [如何：将自定义区域添加到文件对话框](how-to-add-a-custom-place-to-a-file-dialog-box.md)

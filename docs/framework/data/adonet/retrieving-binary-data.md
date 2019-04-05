@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: ec4ef17687e4e1bf2cc18182a64fc7361fe3b6f7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7b0cfb9273603850d2451245b81f1bb651f16d56
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421978"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094056"
 ---
 # <a name="retrieving-binary-data"></a>检索二进制数据
 默认情况下**DataReader**作为行加载传入数据，只要整个行的数据不可用。 但是，对于二进制大对象 (BLOB) 则需要进行不同的处理，因为它们可能包含数十亿字节的数据，而单个行中无法包含如此多的数据。 **Command.ExecuteReader**方法具有需要较长的一个重载<xref:System.Data.CommandBehavior>参数来修改的默认行为**DataReader**。 可以将传递<xref:System.Data.CommandBehavior.SequentialAccess>到**ExecuteReader**方法来修改的默认行为**DataReader**以便而不是加载的数据行，它将加载数据按顺序接收。 这是加载 BLOB 或其他大数据结构的理想方案。 请注意，该行为可能会因数据源的不同而不同。 例如，从 Microsoft Access 中返回 BLOB 会将整个 BLOB 加载到内存中，而不是按照顺序在接收到数据时立即将其加载。  
@@ -153,7 +153,6 @@ reader.Close();
 connection.Close();  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用 Datareader](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [SQL Server 二进制和大值数据](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [SQL Server 二进制和大值数据](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

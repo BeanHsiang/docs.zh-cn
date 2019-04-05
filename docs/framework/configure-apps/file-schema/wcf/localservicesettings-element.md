@@ -1,42 +1,42 @@
 ---
-title: '&lt;localServiceSettings&gt; 元素'
+title: <localServiceSettings> 元素
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 1257b151f75d05b610fe3463f8bef5f78d2b2fcd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7d0b96badd1ee0abd3b1765dc777bdb73918a1fa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751150"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288829"
 ---
-# <a name="ltlocalservicesettingsgt-element"></a>&lt;localServiceSettings&gt; 元素
+# <a name="localservicesettings-element"></a>\<localServiceSettings > 元素
 指定此绑定的本地服务安全设置。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<security>  
-   <localServiceSettings detectReplays="Boolean"  
-      inactivityTimeout="TimeSpan"  
-      issuedCookieLifeTime="TimeSpan"  
-      maxCachedCookies="Integer"   
-      maxClockSkew="TimeSpan"   
-      maxPendingSessions="Integer"  
-      maxStatefulNegotiations="Integer"  
-      negotiationTimeout="TimeSpan"  
-      reconnectTransportOnFailure="Boolean"  
-            replayCacheSize="Integer"  
-      replayWindow="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      timestampValidityDuration="TimeSpan" />  
-</security>  
+<security>
+  <localServiceSettings detectReplays="Boolean"
+                        inactivityTimeout="TimeSpan"
+                        issuedCookieLifeTime="TimeSpan"
+                        maxCachedCookies="Integer"
+                        maxClockSkew="TimeSpan"
+                        maxPendingSessions="Integer"
+                        maxStatefulNegotiations="Integer"
+                        negotiationTimeout="TimeSpan"
+                        reconnectTransportOnFailure="Boolean"
+                        replayCacheSize="Integer"
+                        replayWindow="TimeSpan"
+                        sessionKeyRenewalInterval="TimeSpan"
+                        sessionKeyRolloverInterval="TimeSpan"
+                        timestampValidityDuration="TimeSpan" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -69,7 +69,7 @@ ms.locfileid: "32751150"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自定义绑定的安全选项。|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用于启动安全对话服务的默认值。|  
+|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用于启动安全对话服务的默认值。|  
   
 ## <a name="remarks"></a>备注  
  这些设置并非作为安全策略的组成部分而发布，而且不影响客户端绑定，因此是本地的。  
@@ -86,15 +86,15 @@ ms.locfileid: "32751150"
   
  请注意，在安全对话会话中，绑定上的 `inactivityTimeout` 和 `receiveTimeout` 属性将影响会话超时。 两个属性中时间较短者将确定何时发生超时。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
+- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [自定义绑定安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

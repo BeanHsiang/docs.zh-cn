@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f57385b930ce533de3ff12b0dbd363690f04082d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636009"
 ---
 # <a name="configuring-message-logging"></a>配置消息日志记录
 本主题描述如何针对不同的方案配置消息日志记录。  
@@ -83,11 +83,11 @@ ms.locfileid: "44085142"
 ### <a name="other-options"></a>其他选项  
  除了日志记录的级别外，用户可以指定以下选项：  
   
--   记录整个消息（`logEntireMessage` 属性）：该值指定是否记录整个消息（标头和正文）。 默认值为 `false`，这意味着仅记录标头。 此设置会影响服务和传输消息日志记录级别。  
+-   记录整个消息 (`logEntireMessage`属性):此值指定是否记录整个消息 （消息标头和正文）。 默认值为 `false`，这意味着仅记录标头。 此设置会影响服务和传输消息日志记录级别。  
   
--   要记录的最大消息数（`maxMessagesToLog` 属性）：该值指定要记录的最大消息数。 所有的消息（服务、传输和格式不正确消息）都统计到该配额中。 达到配额上限时，会发出一个跟踪，并且不再记录更多的消息。 默认值为 10000。  
+-   若要记录的最大消息 (`maxMessagesToLog`属性):此值指定要记录消息的最的大数。 所有的消息（服务、传输和格式不正确消息）都统计到该配额中。 达到配额上限时，会发出一个跟踪，并且不再记录更多的消息。 默认值为 10000。  
   
--   要记录的消息的最大大小（`maxSizeOfMessageToLog` 属性）：该值指定要记录的消息的最大大小（以字节为单位）。 超过该大小限制的消息将不作记录，也不对该消息执行任何其他活动。 此设置会影响所有跟踪级别。 如果 ServiceModel 跟踪打开，将在第一个记录点发出警告级别的跟踪（ServiceModelSend* 或 TransportReceive）以通知用户。 服务级别和传输级别的消息的默认值为 256K，而格式不正确消息的默认值为 4K。  
+-   要记录消息的最大大小 (`maxSizeOfMessageToLog`属性):此值指定要记录以字节为单位的消息的最大大小。 超过该大小限制的消息将不作记录，也不对该消息执行任何其他活动。 此设置会影响所有跟踪级别。 如果 ServiceModel 跟踪打开，将在第一个记录点发出警告级别的跟踪（ServiceModelSend* 或 TransportReceive）以通知用户。 服务级别和传输级别的消息的默认值为 256K，而格式不正确消息的默认值为 4K。  
   
     > [!CAUTION]
     >  计算出来与 `maxSizeOfMessageToLog` 进行比较的消息大小是序列化之前内存中的消息大小。 该大小可能与正在记录的消息字符串的实际长度不同，在很多情况下比实际大小更大。 结果可能无法记录消息。 可以通过将 `maxSizeOfMessageToLog` 属性指定为比预期的消息大小大 10% 来解决这个问题。 此外，如果记录了格式不正确的消息，消息日志所占用的实际磁盘空间可能达到 `maxSizeOfMessageToLog` 所指定的值的 5 倍。  
@@ -163,7 +163,7 @@ ms.locfileid: "44085142"
   
  请您注意，`type` 属性应该设置为该类型的限定程序集名称。  
   
-## <a name="see-also"></a>请参阅  
- [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
- [消息日志记录](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [跟踪和消息日志记录的推荐设置](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+## <a name="see-also"></a>请参阅
+- [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [消息日志记录](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [跟踪和消息日志记录的推荐设置](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

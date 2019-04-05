@@ -2,18 +2,18 @@
 title: 聚合规范函数
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: e4772176130fc72a22645462921c90dd5b7967b2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506633"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372797"
 ---
 # <a name="aggregate-canonical-functions"></a>聚合规范函数
 
 聚合是缩减一系列输入值（例如，缩减为单个值）的表达式。 聚合通常与 SELECT 表达式的 GROUP BY 子句一起使用，对于可以使用聚合的位置存在一些约束。
 
-## <a name="aggegate-entity-sql-canonical-functions"></a>Aggegate Entity SQL 规范函数
+## <a name="aggregate-entity-sql-canonical-functions"></a>聚合 Entity SQL 规范函数
 
 下面是聚合的 Entity SQL 规范函数。
 
@@ -31,7 +31,7 @@ ms.locfileid: "43506633"
 
 **示例**
 
-[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
 [!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
 
 ### <a name="bigcountexpression"></a>BigCount(expression)
@@ -48,10 +48,10 @@ ms.locfileid: "43506633"
 
 **示例**
 
-[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
 [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
 
-### <a name="countexpression"></a>Count(expression) 
+### <a name="countexpression"></a>Count(expression)
 
 返回包含 null 值和重复值的聚合的大小。
 
@@ -74,7 +74,8 @@ ms.locfileid: "43506633"
 
 **参数**
 
-`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
+
+  `Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
 
 **返回值**
 
@@ -91,7 +92,8 @@ ms.locfileid: "43506633"
 
 **参数**
 
-`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
+
+  `Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
 
 **返回值**
 
@@ -108,7 +110,8 @@ ms.locfileid: "43506633"
 
 **参数**
 
-`Int32`、`Int64`、`Double`、`Decimal`。
+
+  `Int32`、`Int64`、`Double`、`Decimal`。
 
 **返回值**
 
@@ -125,7 +128,8 @@ ms.locfileid: "43506633"
 
 **参数**
 
-`Int32`、`Int64`、`Double`、`Decimal`。
+
+  `Int32`、`Int64`、`Double`、`Decimal`。
 
 **返回值**
 
@@ -142,7 +146,8 @@ ms.locfileid: "43506633"
 
 **参数**
 
-`Int32`、`Int64`、`Double`、`Decimal`。
+
+  `Int32`、`Int64`、`Double`、`Decimal`。
 
 **返回值**
 
@@ -159,7 +164,8 @@ ms.locfileid: "43506633"
 
 **参数**
 
-`Int32`、`Int64`、`Double`、`Decimal`。
+
+  `Int32`、`Int64`、`Double`、`Decimal`。
 
 **返回值**
 
@@ -176,7 +182,8 @@ ms.locfileid: "43506633"
 
 **参数**
 
-`Int32`、`Int64`、`Double`、`Decimal`。
+
+  `Int32`、`Int64`、`Double`、`Decimal`。
 
 **返回值**
 
@@ -185,7 +192,7 @@ ms.locfileid: "43506633"
 **示例**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
-[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
 Microsoft SQL 客户端托管提供程序中提供了等效功能。 有关详细信息，请参阅[用于实体框架函数的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。
 
@@ -206,7 +213,7 @@ min(select value o.ShipDate from LOB.Orders as o)
 以下示例计算每种产品的平均订购数量：
 
 ```sql
-select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
@@ -224,8 +231,8 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 将在 WHERE 子句表达式可见的名称解析范围内计算基于组的聚合中的表达式。
 
-如[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]，基于组的聚合也可以指定 ALL 或 DISTINCT 修饰符。 如果指定 DISTINCT 修饰符，则将从聚合输入集合中消除重复项，然后计算聚合。 如果指定 ALL 修饰符（或者未指定修饰符），则不执行重复项消除。  
+如[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]，基于组的聚合也可以指定 ALL 或 DISTINCT 修饰符。 如果指定 DISTINCT 修饰符，则将从聚合输入集合中消除重复项，然后计算聚合。 如果指定 ALL 修饰符（或者未指定修饰符），则不执行重复项消除。
 
 ## <a name="see-also"></a>请参阅
 
-[规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [规范函数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

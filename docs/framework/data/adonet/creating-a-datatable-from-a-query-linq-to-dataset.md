@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: f4ea8749c6e1c853f87f17e735887bbdd4d72e2a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fd2b639f98dbb381cf4bea70cc790fd99ebf185f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758823"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708345"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>从查询创建数据表 (LINQ to DataSet)
 数据绑定是 <xref:System.Data.DataTable> 对象的一种常用形式。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法接收查询结果并将数据复制到 <xref:System.Data.DataTable> 中，后者随后会使用该数据进行数据绑定。 在执行数据操作后，新的 <xref:System.Data.DataTable> 将合并回源 <xref:System.Data.DataTable>。  
@@ -29,7 +29,7 @@ ms.locfileid: "32758823"
   
  当 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法在源表的行中遇到空引用或可以为 null 的值类型时，它将用 <xref:System.DBNull.Value> 替换该值。 这样可以在返回的 <xref:System.Data.DataTable> 中正确处理 Null 值。  
   
- 注意：<xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法接受可从多个 <xref:System.Data.DataTable> 或 <xref:System.Data.DataSet> 对象返回行的查询作为输入。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法将数据（不包括属性）从源 <xref:System.Data.DataTable> 或 <xref:System.Data.DataSet> 对象复制到返回的 <xref:System.Data.DataTable>。 您将需要显式设置返回的 <xref:System.Data.DataTable> 的属性，例如 <xref:System.Data.DataTable.Locale%2A> 和 <xref:System.Data.DataTable.TableName%2A>。  
+ 注意:<xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法接受可从多个 <xref:System.Data.DataTable> 或 <xref:System.Data.DataSet> 对象返回行的查询作为输入。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法将数据（不包括属性）从源 <xref:System.Data.DataTable> 或 <xref:System.Data.DataSet> 对象复制到返回的 <xref:System.Data.DataTable>。 您将需要显式设置返回的 <xref:System.Data.DataTable> 的属性，例如 <xref:System.Data.DataTable.Locale%2A> 和 <xref:System.Data.DataTable.TableName%2A>。  
   
  下面的示例查询 SalesOrderHeader 表中 2001 年 8 月 8 日以后的订单，并使用 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法通过查询创建 <xref:System.Data.DataTable>。 然后将 <xref:System.Data.DataTable> 绑定到作为 <xref:System.Windows.Forms.BindingSource> 的代理的 <xref:System.Windows.Forms.DataGridView>。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "32758823"
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
 ## <a name="creating-a-custom-copytodatatablet-method"></a>创建自定义 CopyToDataTable\<T > 方法  
- 仅在 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 源上（其中泛型参数 <xref:System.Collections.Generic.IEnumerable%601> 类型为 `T`）执行现有 <xref:System.Data.DataRow> 方法。 虽然这十分有用，但是它并不允许从标量类型的序列、返回匿名类型的查询或执行表联接的查询来创建表。 有关如何实现两个自定义的示例`CopyToDataTable`从标量或匿名类型的序列中加载表的方法请参阅[如何： 实现 CopyToDataTable\<T > 其中泛型类型 T 不是 DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s。  
+ 仅在 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 源上（其中泛型参数 <xref:System.Collections.Generic.IEnumerable%601> 类型为 `T`）执行现有 <xref:System.Data.DataRow> 方法。 虽然这十分有用，但是它并不允许从标量类型的序列、返回匿名类型的查询或执行表联接的查询来创建表。 有关如何实现两个自定义的示例`CopyToDataTable`方法从标量或匿名类型序列加载表，请参阅[如何：实现 CopyToDataTable\<T > 的泛型类型 T 不是 DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s。  
   
  本节的示例使用以下自定义类型：  
   
@@ -74,7 +74,7 @@ ms.locfileid: "32758823"
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
-## <a name="see-also"></a>请参阅  
- [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [泛型字段和 SetField 方法](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
- [LINQ to DataSet 示例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a>请参阅
+- [编程指南](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [泛型字段和 SetField 方法](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+- [LINQ to DataSet 示例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

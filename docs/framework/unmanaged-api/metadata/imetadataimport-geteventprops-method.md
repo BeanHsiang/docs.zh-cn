@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ac1ecb73257782888c963082953ed243177a86b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6f2eec9fce1909f6a83190f5ba3e99162461bbc4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448799"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492148"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps 方法
-获取表示指定的事件标记，包括声明类型、 添加和删除方法的委托，任何标志及其他关联的数据的事件的元数据信息。  
+获取由指定的事件标记，包括声明类型、 添加和删除方法的委托，任何标志及其他关联的数据所表示的事件的元数据信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,30 +47,30 @@ HRESULT GetEventProps (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ev`  
  [in]表示要获取的元数据的事件的事件元数据标记。  
   
  `pClass`  
- [out]指向表示声明该事件的类的 TypeDef 标记的指针。  
+ [out]指向表示声明事件的类的 TypeDef 标记的指针。  
   
  `szEvent`  
- [out]引用的事件的名称`ev`。  
+ [out]引用的事件名称`ev`。  
   
  `pchEvent`  
  [in]请求的长度以宽字符为单位`szEvent`。  
   
  `pdwEventFlags`  
- [out]返回的长度以宽字符为单位`szEvent`。  
+ [out]中的宽字符返回的长度`szEvent`。  
   
  `ptkEventType`  
- [out]一个指向 TypeRef 或 TypeDef 元数据令牌表示<xref:System.Delegate>事件类型。  
+ [out]一个指向 TypeRef 或 TypeDef 元数据令牌表示<xref:System.Delegate>事件的类型。  
   
  `pmdAddOn`  
- [out]指向表示添加的处理程序事件的方法的元数据标记的指针。  
+ [out]指向表示为事件添加处理程序的方法的元数据标记的指针。  
   
  `pmdRemoveOn`  
- [out]指向表示中移除事件处理程序的方法的元数据标记的指针。  
+ [out]指向表示移除事件处理程序的方法的元数据标记的指针。  
   
  `pmdFire`  
  [out]指向表示引发事件的方法的元数据标记的指针。  
@@ -82,17 +82,17 @@ HRESULT GetEventProps (
  [in] `rmdOtherMethod` 数组的最大大小。  
   
  `pcOtherMethod`  
- [out]在中返回的令牌数`rmdOtherMethod`。  
+ [out]在返回的标记数`rmdOtherMethod`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

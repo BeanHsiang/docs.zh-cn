@@ -2,12 +2,12 @@
 title: 演练：简单对象模型和查询 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 2c2529c828c0b02ec2f53c7ea899bbe728ba88d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25e23b77f6f5547a5516c6db240537cb00685edc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686863"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>演练：简单对象模型和查询 (C#)
 本演练提供了复杂性最小的基本端对端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 方案。 您将创建一个可为示例 Northwind 数据库中的 Customers 表建模的实体类。 然后您将创建一个简单查询，用于列出位于伦敦的客户。  
@@ -44,15 +44,15 @@ ms.locfileid: "33362359"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>创建 LINQ to SQL 解决方案  
   
-1.  在 Visual Studio**文件**菜单上，指向**新建**，然后单击**项目**。  
+1.  在 Visual Studio**文件**菜单，依次指向**新建**，然后单击**项目**。  
   
-2.  在**项目类型**窗格**新项目**对话框中，单击**Visual C#**。  
+2.  在中**项目类型**窗格**新项目**对话框中，单击**Visual C#** 。  
   
 3.  在“模板”窗格中，单击“控制台应用程序”。  
   
-4.  在**名称**框中，键入**LinqConsoleApp**。  
+4.  在中**名称**框中，键入**LinqConsoleApp**。  
   
-5.  在**位置**框中，确认你要存储项目文件。  
+5.  在中**位置**框中，确认你想要用于存储项目文件。  
   
 6.  单击 **“确定”**。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "33362359"
   
 #### <a name="to-add-systemdatalinq"></a>添加 System.Data.Linq  
   
-1.  在**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
+1.  在中**解决方案资源管理器**，右键单击**引用**，然后单击**添加引用**。  
   
-2.  在**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，，然后单击**确定**。  
+2.  在中**添加引用**对话框中，单击 **.NET**，单击 System.Data.Linq 程序集，然后单击**确定**。  
   
      此程序集即被添加到项目中。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33362359"
      [!code-csharp[DLinqWalk1CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#4)]  
   
 ## <a name="creating-a-simple-query"></a>创建简单查询  
- 在此步骤中，您将创建一个查询，查找数据库中的 Customers 表内的哪些客户位于伦敦。 此步骤中的查询代码只描述查询。 它不执行查询。 此方法被称为*延迟执行*。 有关详细信息，请参阅 [LINQ 查询简介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
+ 在此步骤中，您将创建一个查询，查找数据库中的 Customers 表内的哪些客户位于伦敦。 此步骤中的查询代码只描述查询。 它不执行查询。 这种方法称为*延迟执行*。 有关详细信息，请参阅 [LINQ 查询简介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
   
  您还将生成一个日志输出，显示 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 生成的 SQL 命令。 此日志记录功能（使用 <xref:System.Data.Linq.DataContext.Log%2A>）对调试有帮助，并有助于确定发送给数据库的命令是否准确地表示您的查询。  
   
@@ -150,9 +150,9 @@ ms.locfileid: "33362359"
 3.  在控制台窗口中按 Enter 以关闭应用程序。  
   
 ## <a name="next-steps"></a>后续步骤  
- [演练： 跨关系查询 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)主题持续到本演练结束。 跨关系查询演练演示如何[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可以跨表查询，类似于*联接*关系数据库中。  
+ [演练：跨关系查询 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)主题将继续本演练结束的位置。 跨关系查询演练演示了如何[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可以跨表查询，类似于*联接*关系数据库中。  
   
  如果您希望进行“跨关系查询”演练，请务必保存您刚完成演练的解决方案，这是“跨关系查询”演练的前提条件。  
   
-## <a name="see-also"></a>请参阅  
- [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>请参阅
+- [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

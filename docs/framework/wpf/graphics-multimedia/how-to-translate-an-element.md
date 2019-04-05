@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 04e1e8288bcccc4a310f05abff01fbdf160cdb11
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6ff606e495eb37e0e74150bb5ad20f11744b74ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505903"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354903"
 ---
 # <a name="how-to-translate-an-element"></a>如何：平移元素
 以下示例显示如何平移 （移动） 元素来使用<xref:System.Windows.Media.TranslateTransform>。  
@@ -21,9 +21,9 @@ ms.locfileid: "43505903"
  下面的示例使用<xref:System.Windows.Media.TranslateTransform>可以向下移动到右和 50 个像素的元素 50 像素。  
   
 ## <a name="example"></a>示例  
- [!code-xaml[transformsSample#53](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
+ [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
  有关完整示例，请参阅 [2D 转换示例](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
-## <a name="see-also"></a>请参阅  
- [转换概述](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+## <a name="see-also"></a>请参阅
+- [转换概述](transforms-overview.md)

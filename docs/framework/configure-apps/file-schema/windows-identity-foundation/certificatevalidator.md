@@ -1,22 +1,22 @@
 ---
-title: '&lt;certificateValidator&gt;'
+title: <certificateValidator>
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-ms.openlocfilehash: 65b8aa6fa4422579ce0d1c5e33d3418ea051612a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: df52212305e0865b8c03fdd49068cb7c7da4fa38
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849693"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277442"
 ---
-# <a name="ltcertificatevalidatorgt"></a>&lt;certificateValidator&gt;
+# <a name="certificatevalidator"></a>\<certificateValidator>
 指定证书验证的自定义类型。 仅当使用此类型`certificateValidationMode`的属性[ \<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)元素设置为"自定义"。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<certificatevalidation 设置 >  
-\<certificateValidator >  
+\<certificateValidation>  
+\<certificateValidator>  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48849693"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制令牌处理程序用来验证证书的设置。|  
+|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|控制令牌处理程序用来验证证书的设置。|  
   
 ## <a name="example"></a>示例  
   

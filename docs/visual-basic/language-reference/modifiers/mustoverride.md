@@ -15,18 +15,18 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: 5dabd90d29bc41d017436876af24a67fa87e8e17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ddd7d0d2a57afc02aa7483ba5e83b65c48af534
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599865"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822812"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
-指定属性或过程中此类未实现，并且必须重写派生类中才可以使用。  
+指定属性或过程未实现此类中，必须重写派生类中，然后才能使用。  
   
 ## <a name="remarks"></a>备注  
- 只能在属性或过程声明语句中使用 `MustOverride`。 属性或过程的指定`MustOverride`必须是类的成员并且类必须加以标记[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。  
+ 只能在属性或过程声明语句中使用 `MustOverride`。 属性或过程的指定`MustOverride`必须是类的成员，类必须标记[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。  
   
 ## <a name="rules"></a>规则  
   
@@ -46,10 +46,11 @@ ms.locfileid: "33599865"
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>请参阅  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
- [关键字](../../../visual-basic/language-reference/keywords/index.md)  
- [在 Visual Basic 中隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a>请参阅
+
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
+- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [关键字](../../../visual-basic/language-reference/keywords/index.md)
+- [在 Visual Basic 中隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

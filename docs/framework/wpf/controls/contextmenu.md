@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550119"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354630"
 ---
 # <a name="contextmenu"></a>ContextMenu
-<xref:System.Windows.Controls.ContextMenu>允许控件显示<xref:System.Windows.Controls.Menu>特定于控件的上下文。 通常情况下，<xref:System.Windows.Controls.ContextMenu>中公开[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]通过鼠标右键按钮或键盘的菜单按钮。  
+<xref:System.Windows.Controls.ContextMenu>允许控件来显示<xref:System.Windows.Controls.Menu>这就是特定于控件的上下文。 通常情况下，<xref:System.Windows.Controls.ContextMenu>中公开[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]通过鼠标右键按钮或键盘上的菜单按钮。  
   
- 下图说明了<xref:System.Windows.Controls.ContextMenu>中两个不同状态: 打开状态和的默认状态。 在默认状态下，该控件处于折叠状态。 通过菜单的父按下鼠标右键按钮时，控件将展开，并显示的菜单项。  
+ 下图说明了<xref:System.Windows.Controls.ContextMenu>中两个不同的状态： 默认状态，并打开状态。 在默认状态下，该控件处于折叠状态。 通过菜单的父按下鼠标右键时，该控件将展开并显示菜单项。  
   
- ![ContextMenu 状态](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
-ContextMenu 处于其他状态  
+ ![ContextMenu 状态](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ContextMenu 在不同的状态  
   
 ## <a name="in-this-section"></a>本节内容  
- [ContextMenu 概述](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [ContextMenu 概述](contextmenu-overview.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.ContextMenu>  

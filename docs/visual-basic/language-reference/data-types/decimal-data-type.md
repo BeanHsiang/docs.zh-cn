@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180457"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834096"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 数据类型 (Visual Basic)
 保存有符号表示 96 位 （12 字节） 整数数字 10 的可变次幂缩放的 128 位 （16 字节） 值。 比例因子指定小数点; 右侧的位数其范围从 0 到 28。 小数位数为 0 （没有小数位），最大值为 + /-79228162514264337593543950335 (+ /-7.9228162514264337593543950335E + 28)。 具有 28 位小数，最大值为 + /-7.9228162514264337593543950335，并最小的非零值为 + /-0.0000000000000000000000000001 （+ /-1E 28)。  
@@ -78,13 +78,14 @@ Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
   
  有关`bigDec3`，文本类型字符`D`解决了问题，通过强制编译器将解释为文字`Decimal`而不是作为`Long`。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Decimal?displayProperty=nameWithType>  
- <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>  
- <xref:System.Math.Round%2A?displayProperty=nameWithType>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [Single 数据类型](../../../visual-basic/language-reference/data-types/single-data-type.md)  
- [Double 数据类型](../../../visual-basic/language-reference/data-types/double-data-type.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Decimal?displayProperty=nameWithType>
+- <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>
+- <xref:System.Math.Round%2A?displayProperty=nameWithType>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [Single 数据类型](../../../visual-basic/language-reference/data-types/single-data-type.md)
+- [Double 数据类型](../../../visual-basic/language-reference/data-types/double-data-type.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

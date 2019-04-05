@@ -1,5 +1,6 @@
 ---
-title: '&lt;seealso&gt;（C# 编程指南）'
+title: <seealso> - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cref
@@ -12,21 +13,21 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: bb881c5309aaa721f12cfd60469aeeddd0a68446
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cccb338d2dbed7889512428a53804324795c66bd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865795"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498284"
 ---
-# <a name="ltseealsogt-c-programming-guide"></a>&lt;seealso&gt;（C# 编程指南）
+# <a name="seealso-c-programming-guide"></a>\<seealso>（C# 编程指南）
 ## <a name="syntax"></a>语法  
   
 ```xml  
 <seealso cref="member"/>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  cref = " `member`"  
  对可从当前编译环境调用的成员或字段的引用。 编译器检查是否存在给定的码位元素，并将 `member` 传递到输出 XML 中的元素名称。`member` 必须在双引号 (" ") 内。  
   
@@ -42,5 +43,5 @@ ms.locfileid: "43865795"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

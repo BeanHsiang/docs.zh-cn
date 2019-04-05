@@ -1,5 +1,5 @@
 ---
-title: '&lt;publisherPolicy&gt;元素'
+title: <publisherPolicy> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy
@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cc3b7220fe34f5dc049a3da71b160a88f82fdb1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: be87c91b798256f3913779bdbe36f3548066018b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746093"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55253933"
 ---
-# <a name="ltpublisherpolicygt-element"></a>&lt;publisherPolicy&gt;元素
+# <a name="publisherpolicy-element"></a>\<publisherPolicy > 元素
 指定运行时是否使用发布者策略。  
   
  \<configuration>  
 \<运行时 >  
-\<assemblyBinding >  
-\<dependentAssembly >  
-\<publisherPolicy >  
+\<assemblyBinding>  
+\<dependentAssembly>  
+\<publisherPolicy>  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,13 +41,13 @@ ms.locfileid: "32746093"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`apply`|指定是否要应用发布服务器策略。|  
+|`apply`|指定是否将应用发布者策略。|  
   
 ## <a name="apply-attribute"></a>应用特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`yes`|将发布服务器策略的应用。 此为默认设置。|  
+|`yes`|将发布服务器策略应用。 此为默认设置。|  
 |`no`|不适用于发布服务器策略。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -61,14 +61,14 @@ ms.locfileid: "32746093"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 当组件供应商释放程序集的新版本时，供应商可以包括发布服务器策略，因此现在使用旧版本的应用程序使用新版本。 若要指定是否为特定的程序集应用出版商策略，请将 **\<publisherPolicy >** 中的元素 **\<dependentAssembly >** 元素。  
+ 时组件供应商发布新版本的程序集，供应商可以包括发布服务器策略，以便现在使用旧版本的应用程序使用新版本。 若要指定是否为特定的程序集应用出版商策略，请将 **\<publisherPolicy >** 中的元素 **\<dependentAssembly >** 元素。  
   
- 默认设置**应用**属性是**是**。 设置**应用**属性设为**没有**替代以前所有**是**的程序集的设置。  
+ 默认设置为**应用**属性是**是**。 设置**应用**归于**没有**替代以前所有**是**程序集的设置。  
   
- 权限是必需的应用程序显式忽略发行者策略使用[ \<publisherPolicy 适用 ="no"/ >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)应用程序配置文件中的元素。 通过设置授予此权限<xref:System.Security.Permissions.SecurityPermissionFlag>标志<xref:System.Security.Permissions.SecurityPermission>。 有关详细信息，请参阅[程序集绑定重定向安全权限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。  
+ 权限是以显式忽略发行者策略使用的应用需要[ \<apply ="no"/ >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)应用程序配置文件中的元素。 通过设置授予权限<xref:System.Security.Permissions.SecurityPermissionFlag>标志<xref:System.Security.Permissions.SecurityPermission>。 有关详细信息，请参阅[程序集绑定重定向安全权限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例从发布服务器策略关闭后的程序集`myAssembly`。  
+ 下面的示例会关闭发行者策略程序集， `myAssembly`。  
   
 ```xml  
 <configuration>  
@@ -85,8 +85,8 @@ ms.locfileid: "32746093"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [重定向程序集版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

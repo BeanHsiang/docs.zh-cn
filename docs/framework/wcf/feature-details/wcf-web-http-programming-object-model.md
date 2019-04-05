@@ -2,12 +2,12 @@
 title: WCF Web HTTP 编程对象模型
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739360"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP 编程对象模型
 WCF WEB HTTP 编程模型允许开发人员无需 SOAP 提供通过基本 HTTP 请求的 Windows Communication Foundation (WCF) Web 服务。 WCF WEB HTTP 编程模型是基于现有的 WCF 扩展性模型。 它定义以下各类：  
@@ -94,15 +94,15 @@ WCF WEB HTTP 编程模型允许开发人员无需 SOAP 提供通过基本 HTTP �
  <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> 类使用 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 类调度对服务操作的调用。  
   
 ## <a name="compatibility"></a>兼容性  
- WCF WEB HTTP 编程模型不使用基于 SOAP 的消息，因此不支持 WS-* 协议。 但是，您可以通过两个终结点公开同一协定：一个终结点使用 SOAP，另一个终结点不使用 SOAP。 请参阅[如何： 向 SOAP 和 Web 客户端公开协定](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)有关的示例。  
+ WCF WEB HTTP 编程模型不使用基于 SOAP 的消息，因此不支持 WS-* 协议。 但是，您可以通过两个终结点公开同一协定：一个终结点使用 SOAP，另一个终结点不使用 SOAP。 请参阅[如何：向 SOAP 和 Web 客户端公开协定](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)有关的示例。  
   
 ## <a name="security"></a>安全性  
  因为 WCF WEB HTTP 编程模型不支持 WS-* 协议的 WCF WEB HTTP 编程模型上生成的 Web 服务安全的唯一方法是使用 SSL 公开服务。 有关设置 SSL 的详细信息[!INCLUDE[iisver](../../../../includes/iisver-md.md)]请参阅[如何在 IIS 中实现 SSL](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>  
- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
+- [WCF Web HTTP 编程模型概述](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

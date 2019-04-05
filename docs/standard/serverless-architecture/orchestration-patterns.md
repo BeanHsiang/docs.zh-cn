@@ -4,12 +4,12 @@ description: Azure Durable functions 拉取请求
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 241eff4f30e63b2bb34664d6f783f854a000e7fd
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 8be499a24e2c5a94132ce07241e17f675e8a1274
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49369804"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843753"
 ---
 # <a name="orchestration-patterns"></a>业务流程模式
 
@@ -154,8 +154,8 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 ## <a name="recommended-resources"></a>推荐的资源
 
 * [Azure Durable 函数](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [.NET Core 和 .NET Standard 中的单元测试](https://docs.microsoft.com/dotnet/core/testing/)
+* [.NET Core 和 .NET Standard 中的单元测试](../../core/testing/index.md)
 
 >[!div class="step-by-step"]
-[上一页](durable-azure-functions.md)
-[下一页](serverless-business-scenarios.md)
+>[上一页](durable-azure-functions.md)
+>[下一页](serverless-business-scenarios.md)

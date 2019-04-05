@@ -5,12 +5,12 @@ description: 了解如何在 Windows 8 上安装 .NET Framework
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 2304e8e2865c00ef480cc3d595195248db3f4d2a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 46f0401075f434a5406d7ba19e6ef4b7a6639caf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196539"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542790"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>在 Windows 8 和 Windows Server 2012 上安装 .NET Framework
 
@@ -23,7 +23,7 @@ ms.locfileid: "50196539"
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 > [!div class="button"]
-[下载 .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [下载 .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
 Windows Server 2012 不支持 .NET Framework 4.7.2。 它在 Windows 8 上不受支持。
 
@@ -47,6 +47,6 @@ Windows Server 2012 不支持 .NET Framework 4.7.2。 它在 Windows 8 上不受
 
 ## <a name="see-also"></a>请参阅
 
-[下载 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[安装和卸载 .NET Framework 受阻疑难解答](troubleshoot-blocked-installations-and-uninstallations.md)   
-[安装面向开发者的 .NET Framework](guide-for-developers.md)
+- [下载 .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [安装和卸载 .NET Framework 受阻疑难解答](troubleshoot-blocked-installations-and-uninstallations.md)
+- [安装面向开发者的 .NET Framework](guide-for-developers.md)

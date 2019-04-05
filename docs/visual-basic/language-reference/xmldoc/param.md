@@ -1,18 +1,18 @@
 ---
-title: '&lt;param&gt; (Visual Basic)'
+title: <param> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 4cb3de06d574f8b9abb3e3e11641a6ada750b56a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4bcfe96361de9e196cb684ac4ba734f82442e25c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856486"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825555"
 ---
-# <a name="ltparamgt-visual-basic"></a>&lt;param&gt; (Visual Basic)
+# <a name="param-visual-basic"></a>\<param > (Visual Basic)
 定义的参数名称和说明。  
   
 ## <a name="syntax"></a>语法  
@@ -21,7 +21,7 @@ ms.locfileid: "43856486"
 <param name="name">description</param>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `name`  
  方法参数的名称。 用双引号 (" ") 将名称引起来。  
   
@@ -42,7 +42,8 @@ ms.locfileid: "43856486"
 ## <a name="example"></a>示例  
  此示例使用`<param>`标记来描述`id`参数。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

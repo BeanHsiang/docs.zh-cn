@@ -1,19 +1,19 @@
 ---
-title: 演练：设置 WPF 内容的样式
+title: 演练：WPF 内容的样式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: bd056bb9d5ad429e35e0b2625dee99ae5f18b527
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845549"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712391"
 ---
-# <a name="walkthrough-styling-wpf-content"></a>演练：设置 WPF 内容的样式
+# <a name="walkthrough-styling-wpf-content"></a>演练：WPF 内容的样式
 本演练显示了如何将样式应用到 Windows 窗体上承载的 Windows Presentation Foundation (WPF) 控件中。
 
  在本演练中，你将要执行以下任务：
@@ -30,7 +30,7 @@ ms.locfileid: "48845549"
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   Visual Studio 2012。  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建 Windows 窗体项目。  
@@ -47,9 +47,9 @@ ms.locfileid: "48845549"
   
 #### <a name="to-create-wpf-control-types"></a>创建 WPF 控件类型  
   
-1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参阅[演练： 创建新 WPF 内容在设计时的 Windows 窗体上](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 项目添加到解决方案。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
-2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何： 选择和设计图面上移动元素](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。  
+2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
   
 3.  在中**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>并<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。  
   
@@ -68,7 +68,8 @@ ms.locfileid: "48845549"
   
 2.  在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`窗体上。  
   
-     `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
+     
+  `UserControl1` 的实例托管在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
   
 3.  中的智能标记面板`elementHost1`，单击**编辑所承载的内容**从下拉列表。  
   
@@ -76,7 +77,7 @@ ms.locfileid: "48845549"
   
 4.  在 XAML 视图中，将以下 XAML 插到 `<UserControl>` 开始标记后面。  
   
-     此 XAML 创建具有对比渐变边框的渐变。 单击此控件后，将更改渐变以生成按下按钮的外观。 有关详细信息，请参阅[样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+     此 XAML 创建具有对比渐变边框的渐变。 单击此控件后，将更改渐变以生成按下按钮的外观。 有关详细信息，请参阅[样式设置和模板化](../../wpf/controls/styling-and-templating.md)。  
   
 ```xaml  
 <UserControl.Resources>  
@@ -149,11 +150,11 @@ ms.locfileid: "48845549"
   
 5.  单击“确定”和“取消”按钮并查看差异。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [使用 WPF 控件](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [迁移和互操作性](../../wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控件](using-wpf-controls.md)
+- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [XAML 概述 (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
+- [样式设置和模板化](../../wpf/controls/styling-and-templating.md)

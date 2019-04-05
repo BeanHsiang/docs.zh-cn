@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb520169f8e7925862d415a4dfb65af09263b0d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004226"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642826"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>如何：取消任务及其子级
 这些示例展示了如何执行下列任务：  
@@ -40,10 +40,10 @@ ms.locfileid: "46004226"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>  
-- <xref:System.Threading.CancellationToken?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
-- [基于任务的异步编程](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
-- [附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)  
+- <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>
+- <xref:System.Threading.CancellationToken?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
+- [基于任务的异步编程](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+- [附加和分离的子任务](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)
 - [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

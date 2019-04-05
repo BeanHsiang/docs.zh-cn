@@ -1,5 +1,5 @@
 ---
-title: 如何：指定 XML 流的替代元素名称
+title: 如何：指定 XML Stream 的替代元素名称
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,18 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d11fd0353faccdb19e1a39b7a57df9fe3bca3190
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582367"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465472"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>如何：指定 XML 流的替代元素名称
-[代码示例](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>如何：指定 XML Stream 的替代元素名称
   
- 使用 [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) 可以用同一组类生成多个 XML 流。 由于两个不同的 XML Web services 需要的基本信息相同（略有差异），因此您或许希望用同一组类生成多个 XML 流。 例如，假设有两个处理书籍订单的 XML Web services，它们都需要 ISBN 号。 一个服务使用标记 \<ISBN>，而另一个使用标记 \<BookID>。 您已经有一个名为 `Book` 的类，其中包含名为 `ISBN` 的字段。 当序列化 `Book` 类的实例时，该实例将在默认情况下使用成员名称 (ISBN) 作为标记元素名称。 对于第一个 XML Web services，以上行为与预期相同。 但如果要将 XML 流发送至第二个 XML Web services，则必须重写序列化，以便使标记的元素名称采用 `BookID`。  
+使用 <xref:System.Xml.Serialization.XmlSerializer>，可以用同一组类生成多个 XML 流。 由于两个不同的 XML Web services 需要的基本信息相同（略有差异），因此您或许希望用同一组类生成多个 XML 流。 例如，假设有两个处理书籍订单的 XML Web services，它们都需要 ISBN 号。 一个服务使用标记 \<ISBN>，而另一个使用标记 \<BookID>。 您已经有一个名为 `Book` 的类，其中包含名为 `ISBN` 的字段。 当序列化 `Book` 类的实例时，该实例将在默认情况下使用成员名称 (ISBN) 作为标记元素名称。 对于第一个 XML Web services，以上行为与预期相同。 但如果要将 XML 流发送至第二个 XML Web services，则必须重写序列化，以便使标记的元素名称采用 `BookID`。  
   
-### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>用替代元素名称创建 XML 流  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>用替代元素名称创建 XML 流  
   
 1.  创建 <xref:System.Xml.Serialization.XmlElementAttribute> 类的一个实例。  
   
@@ -94,11 +93,10 @@ public class SerializeOverride()
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.Serialization.XmlElementAttribute>  
-- <xref:System.Xml.Serialization.XmlAttributes>  
-- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
-- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
-- [如何：序列化对象](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+- <xref:System.Xml.Serialization.XmlElementAttribute>
+- <xref:System.Xml.Serialization.XmlAttributes>
+- <xref:System.Xml.Serialization.XmlAttributeOverrides>
+- [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [如何：将对象序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：反序列化对象](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

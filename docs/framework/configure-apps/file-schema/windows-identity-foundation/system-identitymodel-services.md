@@ -1,19 +1,19 @@
 ---
-title: '&lt;system.identityModel.services&gt;'
+title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: c7261d20ae2379ad33679cadecdef484f2afdecf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9728f3caee4dba367e4fc4a3e68213b1055cc3d1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873396"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362950"
 ---
-# <a name="ltsystemidentitymodelservicesgt"></a>&lt;system.identityModel.services&gt;
+# <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
 使用 WS 联合身份验证协议进行身份验证的配置节。  
   
- \<system.identityModel.services >  
+ \<system.identityModel.services>  
   
 ## <a name="syntax"></a>语法  
   

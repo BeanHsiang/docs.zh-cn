@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74c196c0f6525214e2ea25e6506e9c89f4e48906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1136dd3220b189d60b4972410ce0ce6657d07cd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389988"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218978"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>如何：使用 Tlbimp.exe 生成主互操作程序集
 有两种生成主互操作程序集的方法：  
@@ -46,7 +46,7 @@ ms.locfileid: "33389988"
   
  当具有不同于原始类型库的版本号的依赖主互操作程序集安装在当前目录时，此程序集是不可发现的。 必须在 Windows 注册表中注册此依赖主互操作程序集，或者使用 /reference 选项确保 Tlbimp.exe 可以找到依赖 DLL。  
   
- 还可以包装类型库的多个版本。 有关说明，请参阅[如何：包装类型库的多个版本](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100))。  
+ 还可以包装类型库的多个版本。 有关说明，请参阅[如何：包装类型库的多个版本](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))。  
   
 ## <a name="example"></a>示例  
  以下示例导入 COM 类型库 `LibUtil.tlb` 并借助密钥文件 `CompanyA.snk` 为程序集 `LibUtil.dll` 签署强名称。 通过省略特定的命名空间名称，此示例将生成默认的命名空间，`LibUtil`。  
@@ -67,5 +67,5 @@ tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /o
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [如何：注册主互操作程序集](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+## <a name="see-also"></a>请参阅
+- [如何：注册主互操作程序集](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

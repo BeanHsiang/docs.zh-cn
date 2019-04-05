@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c73f1a4373583530d5afde113c5c4ec049bcea4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195887"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358166"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>编写大型的响应式 .NET Framework 应用
 本文提供用于改进大型 .NET Framework 应用或处理大量数据（如文件或数据库）的应用的性能的提示。 这些提示来自在托管代码中重写的 C# 和 Visual Basic 编译器，并且本文包括来自 C# 编译器的几个真实示例。 
@@ -28,20 +28,20 @@ ms.locfileid: "50195887"
 ## <a name="just-the-facts"></a>事实小结  
  在优化性能和创建响应性 .NET Framework 应用时，请考虑以下事实。 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>事实 1：切勿过早优化  
+### <a name="fact-1-dont-prematurely-optimize"></a>事实 1:切勿过早优化  
  编写比实际需要更为复杂的代码，将产生维护、调试和改进成本。 有经验的程序员对如何解决编码问题并编写出更高效的代码有一个直观的把握。 然而，有时他们过早地优化了代码。 例如，当一个简单的数组就足够的时候，他们却使用哈希表或使用可能泄漏内存的复杂缓存，而不是简单地重新计算值。 即使你是一个有经验的程序员，当你发现问题时，应该测试性能并分析你的代码。 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事实 2：若不测量，便只是猜测  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>事实 2:如果不测量，便只猜测  
  配置文件和度量不会撒谎。 配置文件向你显示 CPU 是否已满或者你是否在磁盘 I/O 上受阻。 配置文件可告知正在分配的内存类型和大小，以及 CPU 是否在[垃圾回收](../../../docs/standard/garbage-collection/index.md) (GC) 中花费了大量的时间。 
   
  你应该为应用中的关键客户体验或方案设定性能目标，并编写测试来测量性能。 应用科学的方法调查失败的测试：使用配置文件来指导你、假设有可能是什么问题，并用利用试验或代码更改来测试你的假设。 使用定期测试建立一段时间内的基线性能测量，以便你可以隔离导致性能衰退的更改。 通过以严格的方式处理性能工作，你可以避免将时间浪费在不需要的代码更新上。 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>事实 3：好的工具将使一切大不相同  
- 好的工具可以让你快速深入地了解最大的性能问题（CPU、内存或磁盘）并帮助你找到导致那些瓶颈的代码。 Microsoft 提供多种性能工具，如 [Visual Studio 探查器](/visualstudio/profiling/beginners-guide-to-performance-profiling)、[Windows Phone 分析工具](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f)和 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。 
+### <a name="fact-3-good-tools-make-all-the-difference"></a>事实 3:好的工具使一切大不相同  
+ 好的工具可以让你快速深入地了解最大的性能问题（CPU、内存或磁盘）并帮助你找到导致那些瓶颈的代码。 Microsoft 提供多种性能工具，如[Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling)并[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)。 
   
  PerfView 是一个免费且功能极为强大的工具，它可以帮助你专注于深层问题，如磁盘 I/O、GC 事件和内存。 可以捕获与性能相关的 [Windows 事件跟踪](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) 事件，并很轻松地查看每个应用、每个进程、每个堆栈和每个线程信息。 PerfView 向你显示应用分配了多少内存以及分配了何种内存，并显示哪些函数或调用堆栈提供了内存分配以及他们提供了多少。 有关详细信息，请参见丰富的帮助主题、演示以及工具随附的视频（如第 9 频道上的 [PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)）。 
   
-### <a name="fact-4-its-all-about-allocations"></a>事实 4：一切皆与分配有关  
+### <a name="fact-4-its-all-about-allocations"></a>事实 4:分配综述  
  你可能会认为构建一个响应性 .NET Framework 应用只与算法（如使用快速排序，而不是气泡排序）相关，但事实并非如此。 构建一个响应性应用的最关键因素是分配内存，尤其是当你的应用非常大或需要处理大量数据的时候。 
   
  几乎所有使用新编译器 API 来构建响应性 IDE 体验的工作，均涉及到避免分配和管理缓存策略。 PerfView 跟踪显示新的 C# 和 Visual Basic 编译器的性能很少受 CPU 约束。 在读取数十万行或数百万行的代码、读取元数据或发出生成的代码时，编译器可能会受 I/O 约束。 所有 UI 线程延迟几乎都是由垃圾回收造成的。 .NET Framework GC 的性能经过高度优化，能够在执行应用代码的同时，并行完成其大部分工作。 但是，单个分配可能会触发昂贵的 [gen2](../../../docs/standard/garbage-collection/fundamentals.md) 回收，从而停止所有线程。 
@@ -197,7 +197,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
   
  `WriteFormattedDocComment()` 的第一个版本分配了一个数组、多个子字符串、一个修整的子字符串和一个空 `params` 数组。 它还会检查为"/ /"。 修改后的代码仅使用索引且不执行分配。 它找到的第一个字符不是空白区域，然后检查逐字符以查看字符串是否以与"/ /"。 新代码将使用`IndexOfFirstNonWhiteSpaceChar`而不是<xref:System.String.TrimStart%2A>返回出现非空白字符的位置 （在指定的开始索引） 的第一个索引。 修复并不完整，但你可以看到如何为完整解决方案应用类似的修复。 通过在整个代码中应用此方法，你可以删除 `WriteFormattedDocComment()` 中的所有分配。 
   
- **示例 4：StringBuilder**  
+ **示例 4:StringBuilder**  
   
  此示例使用 <xref:System.Text.StringBuilder> 对象。 以下函数生成泛型类型的完整类型名称：  
   
@@ -278,7 +278,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 ### <a name="linq-and-lambdas"></a>LINQ 和 lambda  
 语言集成查询 (LINQ)，与 lambda 表达式结合使用是工作效率功能的一个示例。 但是，它的使用可能对随着时间的推移性能产生重大影响，并且可能会发现您需要重新编写您的代码。
   
- **示例 5：Lambda、List\<T> 和 IEnumerable\<T>**  
+ **示例 5:列表的 lambda\<T >，和 IEnumerable\<T >**  
   
  此示例使用 [LINQ 和功能性代码](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx)在编译器模型中查找符号，给定的名称字符串为：  
   
@@ -361,11 +361,12 @@ public Symbol FindMatchingSymbol(string name)
  此代码不使用 LINQ 扩展方法、lambda 或枚举器，并且它不会导致分配。 不存在分配，因为编译器可以理解 `symbols` 集合是一个 <xref:System.Collections.Generic.List%601> 并且可以使用正确的类型将结果枚举器（一个结构）绑定到本地变量，从而避免装箱。 此函数的原始版本是展示 C# 表现力以及 .NET Framework 工作效率的出色示例。 这种新的并且更有效的版本保留了那些品质，且未添加任何用于维护的复杂代码。 
   
 ### <a name="async-method-caching"></a>异步方法缓存  
- 下一个示例显示当尝试在[异步](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)方法中使用缓存结果时，将遇到的一个常见问题。 
+
+下一个示例显示当尝试在[异步](../../csharp/programming-guide/concepts/async/index.md)方法中使用缓存结果时，将遇到的一个常见问题。
   
  **示例 6：在异步方法中缓存**  
   
- 在新的 C# 和 Visual Basic 编译器上构建的 Visual Studio IDE 功能频繁地提取语法树，并且编译器在执行此操作时使用异步来保持 Visual Studio 的响应性。 以下是你可以编写的、用于获取语法树的该代码的第一个版本：  
+ 在新的 C# 和 Visual Basic 编译器上构建的 Visual Studio IDE 功能频繁地获取语法树，并且编译器在执行此操作时使用异步来保持 Visual Studio 的响应性。 以下是你可以编写的、用于获取语法树的该代码的第一个版本：  
   
 ```csharp  
 class SyntaxTree { /*...*/ }  
@@ -462,12 +463,10 @@ class Compilation { /*...*/
   
 ## <a name="see-also"></a>请参阅
 
-- [本主题的演示视频](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
-- [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
-- [性能](../../../docs/framework/performance/index.md)  
-- [.NET 性能提示](https://msdn.microsoft.com/library/ms973839.aspx)  
-- [Windows Phone 性能分析工具](https://msdn.microsoft.com/magazine/hh781024.aspx)  
-- [查找与 Visual Studio Profiler 的应用程序瓶颈](https://msdn.microsoft.com/magazine/cc337887.aspx)  
-- [通道 9 PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [本主题的演示视频](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [性能分析初学者指南](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [性能](../../../docs/framework/performance/index.md)
+- [.NET 性能提示](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
+- [通道 9 PerfView 教程](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET 编译器平台 SDK](../../csharp/roslyn-sdk/index.md)
 - [GitHub 上的 dotnet/roslyn 存储库](https://github.com/dotnet/roslyn)

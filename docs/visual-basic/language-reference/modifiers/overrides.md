@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 81118b9e97f320bffdbb58e5e1a2859052c4cee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9eb19bf5e89b12a32cae28b2c087570acc10f3ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602513"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826582"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 指定某一属性或过程可重写从基类中继承的具有相同名称的属性或过程。  
@@ -31,7 +31,7 @@ ms.locfileid: "33602513"
   
 -   **组合的修饰符。** 不能在同一过程声明中同时指定 `Overrides` 和 `Shadows` 或 `Shared`。 由于重写元素是隐式可重写的，因此不能将 `Overridable` 与 `Overrides` 组合到一起。  
   
--   **匹配的签名。** 此声明的签名必须完全匹配*签名*的属性或过程，它将重写。 这意味着参数列表必须具有相同数量的参数，并且排序顺序和数据类型都必须完全相同。  
+-   **匹配的签名。** 此声明的签名必须完全匹配*签名*属性或过程，它会重写。 这意味着参数列表必须具有相同数量的参数，并且排序顺序和数据类型都必须完全相同。  
   
      除签名外，重写的声明还必须完全匹配以下项：  
   
@@ -61,11 +61,12 @@ ms.locfileid: "33602513"
   
  [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>请参阅  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [关键字](../../../visual-basic/language-reference/keywords/index.md)  
- [在 Visual Basic 中隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [类型列表](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a>请参阅
+
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [关键字](../../../visual-basic/language-reference/keywords/index.md)
+- [在 Visual Basic 中隐藏](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [类型列表](../../../visual-basic/language-reference/statements/type-list.md)

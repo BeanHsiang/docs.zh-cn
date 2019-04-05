@@ -1,31 +1,31 @@
 ---
 title: Seedwork（适用于域模型的可重用基类和接口）
-description: 容器化 .NET 应用程序的 .NET 微服务| Seedwork（域模型的可重用基类和接口）
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 seedwork 概念作为开始实现面向 DDD 的域模型的起点。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: 7a38d90caab2232c17d8d58ca0c57d5bb56b3ce9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 38de5d686c17810f406a57d58554046ba2d888d9
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198378"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545723"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork（适用于域模型的可重用基类和接口）
 
-解决方案文件夹包含 SeedWork 文件夹。 SeedWork 文件夹包含可以用作域实体和值对象的基础的自定义基类。 使用这些基类，从而在每个域的对象类中避免冗余代码。 这些类型的类的文件夹称为 SeedWork，而不是类似于 Framework。 它称为 SeedWork，因为该文件夹仅包含可重用类的一个小型子集，不能将其视为一个框架。  Seedwork 是由 [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的一个术语，并且由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 推广普及，但也可将该文件夹命名为 Common、SharedKernel 或类似名称。
+解决方案文件夹包含 SeedWork 文件夹。 此文件夹包含可以用作域实体和值对象的基础的自定义基类。 使用这些基类，从而在每个域的对象类中避免冗余代码。 这些类型的类的文件夹称为 SeedWork，而不是类似于 Framework。 它称为 SeedWork，因为该文件夹仅包含可重用类的一个小型子集，不能将其视为一个框架。  Seedwork 是由 [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的一个术语，并且由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 推广普及，但也可将该文件夹命名为 Common、SharedKernel 或类似名称。
 
-图 9-12 显示在排序的微服务中形成域模型的 seedwork 的类。 它还包含 Entity、ValueObject 和 Enumeration 等自定义基类，以及一些接口。 这些接口（IRepository 和 IUnitOfWork）告知基础结构层需要实现的内容。 还可通过应用程序层中的依赖关系注入使用这些接口。
+图 7-12 显示在排序的微服务中形成域模型的 seedwork 的类。 它还包含 Entity、ValueObject 和 Enumeration 等自定义基类，以及一些接口。 这些接口（IRepository 和 IUnitOfWork）告知基础结构层需要实现的内容。 还可通过应用程序层中的依赖关系注入使用这些接口。
 
-![](./media/image13.PNG)
+![SeedWork 文件夹的详细内容，包含基类和接口：Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs 和 ValueObject.cs](./media/image13.PNG)
 
-**图 9-12**。 域模型“seedwork”基类和接口的示例集
+**图 7-12**。 域模型“seedwork”基类和接口的示例集
 
 这是许多开发者在项目之间共享的复制和粘贴重用类型，不是正式框架。 seedwork 可存在于任何层或库中。 但是，如果类和接口的集足够大，可能需要创建单个类库。
 
 ## <a name="the-custom-entity-base-class"></a>自定义实体基类
 
-以下代码是实体基类的示例，可在其中放置可由任何域实体以相同方式使用的代码，例如实体 ID、[相等运算符](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal)、每个实体的域事件列表等。
+以下代码是实体基类的示例，可在其中放置可由任何域实体以相同方式使用的代码，例如实体 ID、[相等运算符](~/docs/csharp/language-reference/operators/equality-operators.md)、每个实体的域事件列表等。
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
@@ -105,13 +105,13 @@ public abstract class Entity
 }
 ```
 
-使用每个实体的域事件列表的上一个代码将在下一部分（重点是域事件）介绍。 
+使用每个实体的域事件列表的上一个代码将在下一部分（重点是域事件）介绍。
 
 ## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>域模型层中的存储库协定（接口）
 
-存储库协定是表达存储库的协定要求的 .NET 接口，用于每个聚合。 
+存储库协定是表达存储库的协定要求的 .NET 接口，用于每个聚合。
 
-存储库本身（包含 EF Core 代码或其他任何基础结构依赖项和代码（Linq、SQL 等）不能在域模型内实现，存储库应仅实现你定义的接口。 
+存储库本身（包含 EF Core 代码或其他任何基础结构依赖项和代码（Linq、SQL 等）不能在域模型内实现，存储库应仅实现你在域模型中定义的接口。
 
 这种做法（在域模型层中放置存储库接口）的相关模式是分隔接口模式。 正如 Martin Fowler [所述](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)，“使用分隔接口在一个包中定义接口，但在另一个包中实现它。 这样一来，需要接口依赖项的客户端可能完全不会识别出实现。”
 
@@ -124,7 +124,7 @@ public abstract class Entity
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
-        
+
     void Update(Order order);
 
     Task<Order> GetAsync(int orderId);
@@ -139,10 +139,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Martin Fowler。Separated Interface.**（分隔接口）
-    [https://www.martinfowler.com/eaaCatalog/separatedInterface.html](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
-
+- **Martin Fowler。Separated Interface.**（分隔接口） \
+  [https://www.martinfowler.com/eaaCatalog/separatedInterface.html](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 >[!div class="step-by-step"]
-[上一页](net-core-microservice-domain-model.md)
-[下一页](implement-value-objects.md)
+>[上一页](net-core-microservice-domain-model.md)
+>[下一页](implement-value-objects.md)

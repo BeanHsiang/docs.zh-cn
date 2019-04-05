@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d154985e9c1614e6b8f13a55410ead0cb5e861b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0a072e124343641c9f75fb9f924a6409efc8e1d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719932"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions 枚举
 指定用于选择元数据链接器的选项的标志。  
@@ -39,15 +39,15 @@ typedef enum CorLinkerOptions {
   
 |成员|描述|  
 |------------|-----------------|  
-|`MDAssembly`|不会保留的专用类型和全局函数。|  
+|`MDAssembly`|不保留的专用类型和全局函数。|  
 |`MDNetModule`|保留的专用类型和全局函数。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

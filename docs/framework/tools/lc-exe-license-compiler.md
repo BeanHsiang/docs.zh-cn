@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: c5a8b38e819c323a06faad2edba586cb18d26edc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409073"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601684"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe（许可证编译器）
 许可证编译器读取包含授权信息的文本文件，并产生一个可作为资源嵌入到公共语言运行时可执行文件中的二进制文件。  
@@ -26,7 +26,7 @@ ms.locfileid: "33409073"
   
  在生成项目时，如果使用许可证编译器，则不支持在 32 位与 64 位之间进行交叉编译。 这是因为，许可证编译器必须加载程序集，而不允许从 32 位应用程序加载 64 位程序集，反之亦然。 在这种情况下，使用许可证编译器从命令行手动编译许可证，并指定相应的体系结构。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "33409073"
 /i:modules [/nologo] [/v]  
 ```  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**/complist:** *filename*|指定包含授权组件列表的文件名，这些授权组件要包含在 .licenses 文件中。 每个组件用它的全名引用，并且每行只有一个组件。<br /><br /> 命令行用户可为项目中的每个窗体指定一个单独的文件。 Lc.exe 接受多个输入文件并产生一个 .licenses 文件。|  
 |**/h**[**elp**]|显示该工具的命令语法和选项。|  
@@ -92,7 +92,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 lc @response.rsp  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [工具](../../../docs/framework/tools/index.md)  
- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>请参阅
+- [工具](../../../docs/framework/tools/index.md)
+- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -1,15 +1,15 @@
 ---
-title: 将 XML 投影为不同的形状 (Visual Basic)
+title: 不同的形状 (Visual Basic 中) 中投影 XML
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: d5fe201b14bdfa81bd4c750e17eaef6ba6e895f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645650"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814232"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>将 XML 投影为不同的形状 (Visual Basic)
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>不同的形状 (Visual Basic 中) 中投影 XML
 本主题演示对形状不同于源 XML 的 XML 进行投影的示例。  
   
  许多典型的 XML 转换由链接的查询组成，如本示例中所示。 一种很常见的做法是从某种格式的 XML 开始，将中间结果投影为匿名类型或命名类型的集合，最后将结果投影回与源 XML 形状完全不同的 XML。  
@@ -17,7 +17,7 @@ ms.locfileid: "33645650"
 ## <a name="example"></a>示例  
  本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。 本示例还标识每个段落的样式和文本。 最后，本示例将以不同的形状投影 XML。 本示例以本教程中前面的一些示例为基础构建。 下面代码中的注释标识出了执行投影操作的新语句。  
   
- 用于创建此示例中的源文档的说明，请参阅[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 有关创建此示例中的源文档的说明，请参阅[创建源 Office Open XML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
  本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
@@ -230,7 +230,8 @@ End Module
 ## <a name="next-steps"></a>后续步骤  
  下面的示例通过查询查找 Word 文档中的所有文本：  
   
--   [在 Word 文档 (Visual Basic 中) 中查找文本](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+-   [查找 Word 文档 (Visual Basic 中) 中的文本](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>请参阅  
- [教程： 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>请参阅
+
+- [教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

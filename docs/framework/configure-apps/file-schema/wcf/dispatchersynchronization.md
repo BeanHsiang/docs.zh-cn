@@ -1,35 +1,38 @@
 ---
-title: '&lt;dispatcherSynchronization&gt;'
+title: <dispatcherSynchronization>
 ms.date: 03/30/2017
 ms.assetid: cc030f9c-4e38-4b14-94dc-9a0e41ec8e2d
-ms.openlocfilehash: 34c12a05ee363df6b6cfc9ff3809bab50ee8d522
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6be9752e8102a5d4db4fed31aae8ff6d56fdd24e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747572"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273327"
 ---
-# <a name="ltdispatchersynchronizationgt"></a>&lt;dispatcherSynchronization&gt;
-
-指定允许服务进行异步答复的终结点行为。
-
-\<system.serviceModel >\<行为 > \<endpointBehaviors >\<行为 >
-
-## <a name="syntax"></a>语法
-
-```xml
-<dispatcherSynchronizationBehavior asynchronousSendEnabled="Boolean" 
+# <a name="dispatchersynchronization"></a>\<dispatcherSynchronization>
+  
+指定允许服务进行异步答复的终结点行为。  
+  
+\<system.serviceModel>  
+\<behaviors>  
+\<endpointBehaviors>  
+\<behavior>  
+  
+## <a name="syntax"></a>语法  
+  
+```xml  
+<dispatcherSynchronizationBehavior asynchronousSendEnabled="Boolean"
                                    maxPendingReceives="Integer" />
-```
-
-## <a name="type"></a>类型
-
-`Type`
-
-## <a name="attributes-and-elements"></a>特性和元素
-
-下列各节描述了特性、子元素和父元素。
-
+```  
+  
+## <a name="type"></a>类型  
+  
+`Type`  
+  
+## <a name="attributes-and-elements"></a>特性和元素  
+  
+下列各节描述了特性、子元素和父元素。  
+  
 ### <a name="attributes"></a>特性
 
 | 特性               | 描述       |
@@ -45,8 +48,9 @@ ms.locfileid: "32747572"
 
 | 元素 | 描述 |  
 | ------- | ----------- |  
-| [\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。 |
+| [\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定终结点行为。 |
 
 ## <a name="see-also"></a>请参阅
 
- <xref:System.ServiceModel.Configuration.DispatcherSynchronizationElement> <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior>
+- <xref:System.ServiceModel.Configuration.DispatcherSynchronizationElement>
+- <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior>

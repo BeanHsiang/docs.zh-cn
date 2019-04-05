@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aa7f8a158a851baf76455da685059f02c69cb6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7eeef33745ebc8209fc7f69a9337af4093c1e8a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567043"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>如何：将程序集加载到仅反射上下文中
 通过仅反射加载上下文，可检查为其他平台或 .NET Framework 的其他版本编译的程序集。 只能检查，不能执行加载到此上下文中的代码。 这意味着无法创建对象，因为无法执行构造函数。 因为该代码无法执行，所以不会自动加载依赖项。 如果需要对依赖项进行检查，必须自行加载。  
@@ -52,7 +52,7 @@ ms.locfileid: "33398721"
  [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
  [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- <xref:System.Reflection.Assembly.ReflectionOnly%2A>  
- <xref:System.Reflection.CustomAttributeData>
+## <a name="see-also"></a>请参阅
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
+- <xref:System.Reflection.Assembly.ReflectionOnly%2A>
+- <xref:System.Reflection.CustomAttributeData>

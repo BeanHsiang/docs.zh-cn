@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2af0f82e66da1c8db5e17863dfad861c8a7d195e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: df928ec6494da6da368b3cef1f1d25a84a692aa2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45742477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741777"
 ---
 # <a name="how-to-return-a-value-from-a-task"></a>如何：从任务中返回值
 此示例演示如何使用 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 类型，以返回 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性的值。 它要求 C:\Users\Public\Pictures\Sample Pictures\ 目录存在，并且该目录包含文件。  
@@ -30,5 +30,5 @@ ms.locfileid: "45742477"
   
 ## <a name="see-also"></a>请参阅
 
-- [基于任务的异步编程](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
+- [基于任务的异步编程](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
 - [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

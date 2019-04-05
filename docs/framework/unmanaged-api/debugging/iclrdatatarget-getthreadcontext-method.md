@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4ce7b90b417e0126337283ff16790f136cb16fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7c2e1dc374a5205c774e4470363b38c604fa0862
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407683"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500494"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext 方法
 获取目标进程中的给定线程的当前执行上下文。 由公共语言运行时数据访问服务调用此方法。  
@@ -39,12 +39,12 @@ HRESULT GetThreadContext (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `threadID`  
- [in]目标进程中线程的操作系统标识符。  
+ [in]目标进程中线程的操作系统的系统标识符。  
   
  `contextFlags`  
- [in]指定要返回的上下文中的哪些部分的标志。 实现将返回至少这些部分的上下文。  
+ [in]指定要返回的上下文中的哪些部分的标志。 实现将返回上下文的至少包含这些部件。  
   
  `contextSize`  
  [in]上下文的大小。  
@@ -52,19 +52,19 @@ HRESULT GetThreadContext (
  `context`  
  [out]指向要在其中放置上下文缓冲区的指针。  
   
- 中的数据`context`Win32 的格式必须为缓冲区`CONTEXT`结构。 上下文指定特定于处理器的寄存器数据，因此将 win32 定义`CONTEXT`结构取决于处理器的体系结构。 参阅 WinNT.h 中的标头文件的定义 Win32`CONTEXT`结构。  
+ 中的数据`context`Win32 的格式必须为缓冲区`CONTEXT`结构。 上下文指定特定于处理器的寄存器数据，因此定义的 Win32`CONTEXT`结构取决于处理器的体系结构。 请参阅 WinNT.h 中的标头文件定义的 Win32`CONTEXT`结构。  
   
 ## <a name="remarks"></a>备注  
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl、 ClrData.h  
+ **标头：** ClrData.idl, ClrData.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICLRDataTarget 接口](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

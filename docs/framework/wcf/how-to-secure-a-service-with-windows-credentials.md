@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Windows 凭据保护服务的安全
+title: 如何：使用 Windows 凭据保护服务
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: c47539e0c614992efd74296171034b8091ba3f15
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183316"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410922"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>如何：使用 Windows 凭据保护服务的安全
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>如何：使用 Windows 凭据保护服务
 本主题演示如何启用驻留在 Windows 域，并且由同一个域中的客户端调用的 Windows Communication Foundation (WCF) 服务上的传输安全。 有关此方案的详细信息，请参阅[使用 Windows 身份验证的传输安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 示例应用程序，请参阅[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)示例。  
   
  本主题假定您已定义一个现有的协定接口和实现及其加载项。 您还可以修改一个现有的服务和客户端。  
   
- 您完全可以在代码中使用 Windows 凭据来保护服务。 或者，也可以通过使用配置文件省略某些代码。 本主题演示了这两种方法。 请务必仅使用其中一种方法，而不是同时使用两种方法。  
+ 你完全可以在代码中使用 Windows 凭据来保护服务。 或者，也可以通过使用配置文件省略某些代码。 本主题演示了这两种方法。 请务必仅使用其中一种方法，而不是同时使用两种方法。  
   
  前三个过程演示如何使用代码保护服务。 第四个和第五个过程演示如何使用配置文件保护服务。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "50183316"
   
 2.  创建一个名为 <xref:System.Type> 的 `contractType` 变量，并为其分配接口类型 (`ICalculator`)。 当使用 Visual Basic，使用`GetType`运算符; 在使用 C# 中，使用`typeof`关键字。  
   
-3.  创建另一个名为 `Type` 的 `serviceType` 变量，并为其分配所实现的协定的类型 (`Calculator`)。  
+3.  创建另一个名为 <xref:System.Type> 的 `serviceType` 变量，并为其分配所实现的协定的类型 (`Calculator`)。  
   
 4.  使用该服务的基址创建 <xref:System.Uri> 类的一个实例，该实例名为 `baseAddress`。 基址必须具有与传输匹配的方案。 在这种情况下，传输方案为 HTTP，且地址包含特殊的统一资源标识符 (URI)"localhost"和端口号 (8036) 以及终结点基址 ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "50183316"
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>通过代码在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 有关详细信息，请参阅[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承<xref:System.ServiceModel.ClientBase%601>类，该类可确保每个客户端具有必要的构造函数、 方法和属性与 WCF 服务进行通信。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
+1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码。 有关详细信息，请参阅[如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 生成的代理代码继承<xref:System.ServiceModel.ClientBase%601>类，该类可确保每个客户端具有必要的构造函数、 方法和属性与 WCF 服务进行通信。 在本示例中，生成的代码包括 `CalculatorClient` 类，该类实现了 `ICalculator` 接口，以便与服务代码兼容。  
   
 2.  在客户端程序的 `Main` 方法的开头插入此过程的代码。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "50183316"
   
 1.  添加[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)元素[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素节的配置文件。  
   
-2.  将一个 <`binding`> 元素添加到 <`WSHttpBinding`> 元素中，并将 `configurationName` 属性设置为适合于应用程序的值。  
+2.  添加 <`binding`> 元素为 <`WSHttpBinding`> 元素，并设置`configurationName`属性为适合于你的应用程序的值。  
   
-3.  添加一个 <`security`> 元素，并将 `mode` 属性设置为 Message。  
+3.  添加 <`security`> 元素，并设置`mode`属性为消息。  
   
-4.  添加一个 <`message`> 元素，并将 `clientCredentialType` 属性设置为 Windows。  
+4.  添加 <`message`> 元素，并设置`clientCredentialType`属性到 Windows。  
   
 5.  在服务的配置文件中，使用下面的代码替换 `<bindings>` 节。 如果你还没有服务配置文件，请参阅[到配置服务和客户端使用的绑定](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "50183316"
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>通过配置在客户端中使用绑定  
   
-1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码和配置文件。 有关详细信息，请参阅[如何： 创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+1.  使用 SvcUtil.exe 工具根据服务的元数据生成代理代码和配置文件。 有关详细信息，请参阅[如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 2.  替换[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)部分与上一节中的配置代码生成的配置文件。  
   
@@ -147,9 +147,9 @@ ms.locfileid: "50183316"
  [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)] 
  [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.WSHttpBinding>  
- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [保护服务](../../../docs/framework/wcf/securing-services.md)  
- [安全性概述](../../../docs/framework/wcf/feature-details/security-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.WSHttpBinding>
+- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [如何：创建客户端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [保护服务](../../../docs/framework/wcf/securing-services.md)
+- [安全性概述](../../../docs/framework/wcf/feature-details/security-overview.md)

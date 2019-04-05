@@ -11,23 +11,23 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: b1931b17c0902eec590c3c998c52f6e9d84133dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543450"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375176"
 ---
 # <a name="globalization-and-localization"></a>全球化和本地化
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 世界通用的应用程序的开发提供广泛支持。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 开发全球通用应用程序提供了广泛支持。  
   
 ## <a name="in-this-section"></a>本节内容  
- [WPF 全球化和本地化概述](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
- [WPF 全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [本地化特性和注释](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
- [WPF 中的双向功能概述](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+ [WPF 全球化和本地化概述](wpf-globalization-and-localization-overview.md)  
+ [WPF 全球化](globalization-for-wpf.md)  
+ [使用自动布局概述](use-automatic-layout-overview.md)  
+ [本地化特性和注释](localization-attributes-and-comments.md)  
+ [WPF 中的双向功能概述](bidirectional-features-in-wpf-overview.md)  
+ [帮助主题](globalization-and-localization-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Globalization>  
@@ -36,6 +36,6 @@ ms.locfileid: "33543450"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML 中 xml:lang 的处理](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML 中 xml:lang 的处理](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>相关章节

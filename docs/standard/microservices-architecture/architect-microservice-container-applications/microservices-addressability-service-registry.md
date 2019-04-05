@@ -1,15 +1,15 @@
 ---
 title: 微服务可寻址性和服务注册表
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 微服务可寻址性和服务注册表
+description: 了解容器映像注册表在微服务体系结构中的角色。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: ec0617c5a5c1861f3596e12f3d7a7017a448239e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.date: 09/20/2018
+ms.openlocfilehash: 9bfd2a834039af9f71d263df3606d1b65a2d784f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865562"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466343"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>微服务可寻址性和服务注册表
 
@@ -17,22 +17,21 @@ ms.locfileid: "43865562"
 
 [服务注册表模式](https://microservices.io/patterns/service-registry.html)是发现服务的一个关键部分。 注册表是包含服务实例的网络位置的数据库。 服务注册表需保持高度可用且是最新状态。 客户端可缓存从服务注册表获得的网络位置。 但是，该信息最终也会过时，客户端便无法再发现服务实例。 因此，服务注册表包含了一个服务器群集，使用复制协议来维护一致性。
 
-在某些微服务部署环境中（称为集群，将在后面章节中介绍），服务发现是内置的。 例如，在 Azure 容器服务环境中，具有 Marathon 的 Kubernetes 和 DC/OS 可以处理服务实例注册和注销。 这二者还可在每个群集主机（充当服务器端发现路由器角色）上运行一个代理。 另一个示例是 Azure Service Fabric，它可通过其开箱即用的命名服务提供服务注册表。
+在某些微服务部署环境中（称为集群，将在后面章节中介绍），服务发现是内置的。 例如，具有 Kubernetes (AKS) 环境的 Azure 容器服务可以处理服务实例注册和注销。 它还可在每个群集主机（充当服务器端发现路由器角色）上运行一个代理。 另一个示例是 Azure Service Fabric，它可通过其开箱即用的命名服务提供服务注册表。
 
 请注意，服务注册表和 API 网关模式之间存在一定的重叠，这也有助于解决此问题。 例如，[Service Fabric 反向代理](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)是 API 网关的实现类型，该网关基于 Service Fabric 命名服务并且有助于解析内部服务的地址解析。
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Chris Richardson.Pattern: Service registry**（模式：服务注册表）
-    https://microservices.io/patterns/service-registry.html
+- **Chris Richardson.模式：Service Registry（服务注册表）** \
+  [https://microservices.io/patterns/service-registry.html](https://microservices.io/patterns/service-registry.html)
 
--   **Auth0.The Service Registry**（服务注册表）
-    [https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
+- **Auth0.The Service Registry**（服务注册表） \
+  [https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
 
--   **Gabriel Schenker.Service discovery**（服务发现）
-    [https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
-
+- **Gabriel Schenker.Service discovery**（服务发现） \
+  [https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
 
 >[!div class="step-by-step"]
-[上一页](maintain-microservice-apis.md)
-[下一页](microservice-based-composite-ui-shape-layout.md)
+>[上一页](maintain-microservice-apis.md)
+>[下一页](microservice-based-composite-ui-shape-layout.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43c32d1ce4f804da8980dc0c566a77e5b076661b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 286d8494990c528e810f20f3fe5bfb986fdd267a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459608"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487677"
 ---
 # <a name="icorprofilerfunctioncontrolsetcodegenflags-method"></a>ICorProfilerFunctionControl::SetCodegenFlags 方法
-设置从一个或多个标志[COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)枚举控制代码生成中实时 (JIT) 重新编译函数。  
+设置从一个或多个标志[COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)枚举来控制代码生成的在实时 (JIT) 重新编译函数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,23 +34,23 @@ HRESULT SetCodegenFlags(
     [in] DWORD flags);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `flags`  
- [in]从一个或多个标志[COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)枚举。  
+ [in]中的一个或多个标志[COR_PRF_CODEGEN_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)枚举。  
   
 ## <a name="remarks"></a>备注  
- 探查器获取通过此接口的实例[icorprofilercallback4:: Getrejitparameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md)回调。 `SetCodegenFlags` 允许探查器控制重新编译函数的代码生成。 与所有其他 JIT 重新编译参数一样，代码生成标志将应用于函数的所有实例。  
+ 探查器获取通过此接口的实例[ICorProfilerCallback4::GetReJITParameters](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-getrejitparameters-method.md)回调。 `SetCodegenFlags` 允许探查器来控制重新编译函数的代码生成。 与所有其他 JIT 重新编译参数一样的代码生成标志适用于函数的所有实例。  
   
- JIT 编译器认为这些编译标志，以及其他编译函数时，由其他源中，指定的标志。  其他源包括调试器，探查器在启动时通过使用设置的全局标志[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法 (使用值`COR_PRF_DISABLE_INLINING`和`COR_PRF_DISABLE_OPTIMIZATIONS`)，和探查器的[Icorprofilercallback:: Jitinlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)回调。  JIT 编译器赋予优先级与请求最少量的优化的源。  例如，如果探查器指定`COR_PRF_DISABLE_INLINING`上启动，但未指定`COR_PRF_CODEGEN_DISABLE_INLINING`中[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)回调，内联仍处于禁用状态。  同样，如果未指定探查器`COR_PRF_CODEGEN_DISABLE_INLINING`中`SetCodegenFlags`，但然后禁用通过使用内联[icorprofilercallback:: Jitinlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)回调，内联处于禁用状态。  
+ JIT 编译器会考虑这些编译标志，以及编译函数时，由其他源中，指定其他标志。  其他源包括调试器、 探查器在启动时通过使用设置的全局标志[icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法 (使用值`COR_PRF_DISABLE_INLINING`并`COR_PRF_DISABLE_OPTIMIZATIONS`)，以及探查器的[Icorprofilercallback:: Jitinlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)回调。  JIT 编译器提供优先级到最少量的优化请求的源。  例如，如果探查器指定`COR_PRF_DISABLE_INLINING`在启动时，但未指定`COR_PRF_CODEGEN_DISABLE_INLINING`中[icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md)回调，内联仍处于禁用状态。  同样，如果未指定探查器`COR_PRF_CODEGEN_DISABLE_INLINING`中`SetCodegenFlags`，但然后禁用使用内联[icorprofilercallback:: Jitinlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)禁用回调，内联。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerFunctionControl 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerFunctionControl 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cc481c7370a21c56daf9ce2949247e65fa33bda
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 608991878b49bf0bafe9ebf90dbfc8eaec69e0e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698864"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>如何：使用命名管道进行网络进程间通信
 命名管道在管道服务器和一个或多个管道客户端之间提供进程间通信。 它们比匿名管道（用于在本地计算机上提供进程间的通信）提供更多的功能。 命名管道支持跨网络和多个服务器实例的全双工通信、基于消息的通信以及客户端模拟，这样连接进程便可在远程服务器上使用自己的权限集。  
@@ -47,7 +47,7 @@ ms.locfileid: "48836096"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Security.Principal.TokenImpersonationLevel>  
-- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>  
-- [管道](../../../docs/standard/io/pipe-operations.md)  
+- <xref:System.Security.Principal.TokenImpersonationLevel>
+- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>
+- [管道](../../../docs/standard/io/pipe-operations.md)
 - [如何：使用匿名管道进行本地进程间通信](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

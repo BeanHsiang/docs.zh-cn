@@ -8,38 +8,38 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: 5621a2c0bba2e922e62006feba9ca0381181c780
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7aa4de8a0d646c441d0921fb2561ef5a9480f4e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525042"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711211"
 ---
 # <a name="three-categories-of-graphics-services"></a>图形服务的三个类别
-Windows 窗体中的图形产品划分为以下三大类：  
+在 Windows 窗体中的图形产品/服务划分为以下三个大类：  
   
--   二维 (2-d) 向量图形  
+-   二维 (2-d) 矢量图形  
   
--   映像  
+-   图像处理  
   
 -   版式  
   
-## <a name="2-d-vector-graphics"></a>二维向量图形  
- 二维向量图形是基元;直线、 曲线和图形; 例如指定的坐标系统上的点集。 例如，由其两个终结点，指定一条直线和矩形指定通过提供其左上角和一对数字使其宽度和高度的位置的点。 通过由直线连接的点数组指定简单的路径。 指定由四个控制点的复杂的曲线的贝塞尔样条。  
+## <a name="2-d-vector-graphics"></a>二维矢量图形  
+ 二维矢量图形是基元;如直线、 曲线和图形;由组点坐标系统上指定的。 例如，由其两个终结点，指定一条直线和矩形指定点使其左上角和一对数字使其宽度和高度的位置。 指定简单路径是由直线连接的点数组。 贝塞尔样条是指定由四个控制点的复杂的曲线。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供类和存储有关的基元本身的信息的结构、 存储有关如何将绘制基元，信息的类和实际执行绘图的类。 例如，<xref:System.Drawing.Rectangle>结构存储的位置和大小的矩形;<xref:System.Drawing.Pen>类存储线条颜色、 线条宽度和线条样式; 有关的信息和<xref:System.Drawing.Graphics>类具有绘制线条、 矩形、 路径的方法和其他图中。 有几种<xref:System.Drawing.Brush>存储有关如何信息的类封闭图形和路径中将填充颜色或图案。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供类和存储有关基元本身的信息的结构、 存储有关如何将绘制基元，信息的类和实际执行绘制的类。 例如，<xref:System.Drawing.Rectangle>结构存储的位置和大小的矩形;<xref:System.Drawing.Pen>类存储线条颜色、 线条宽度和线条样式; 有关的信息和<xref:System.Drawing.Graphics>类具有绘制线条、 矩形、 路径的方法和其他数字。 有几种<xref:System.Drawing.Brush>存储有关如何信息的类封闭图形和路径中将填充颜色或图案。  
   
- 你可以在图元文件中记录的图形命令序列矢量图像。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供<xref:System.Drawing.Imaging.Metafile>类录制、 显示和保存图元文件。 与<xref:System.Drawing.Imaging.MetafileHeader>和<xref:System.Drawing.Imaging.MetaHeader>类，你可以检查图元文件标头中存储的数据。  
+ 可将矢量图像，这是一系列图形命令，记录中图元文件。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了<xref:System.Drawing.Imaging.Metafile>类用于记录、 显示和保存图元文件。 与<xref:System.Drawing.Imaging.MetafileHeader>和<xref:System.Drawing.Imaging.MetaHeader>类，可以检查存储在图元文件头中的数据。  
   
-## <a name="imaging"></a>映像  
- 某些种类的图片很难或无法显示使用矢量图形的技术。 例如，在工具栏按钮的图片和以图标形式显示的图片就是难以指定为集合的直线和曲线。 高分辨率数码相片拥挤的棒体育场是创建使用矢量技术变得更加困难。 此类型的图像存储为位图，是表示屏幕上的各个点的颜色的数字的数组。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供<xref:System.Drawing.Bitmap>用于显示、 操作和保存位图的类。  
+## <a name="imaging"></a>图像处理  
+ 某些类型的图片很难或无法显示矢量图形的方法。 例如，在工具栏按钮的图片和以图标形式显示的图片是难以指定为直线和曲线的集合。 高分辨率的数字照片的拥挤的棒球体育场，甚至更加困难，若要创建使用矢量技术。 此类型的映像存储为位图，是表示屏幕上的各个点的颜色的数字的数组。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了<xref:System.Drawing.Bitmap>用于显示、 操作和保存位图的类。  
   
 ## <a name="typography"></a>版式  
- 版式是文本的在多个字体、 大小和样式的显示。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 此复杂的任务提供广泛支持。 中的新功能之一[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]子像素抗锯齿，它可以使文本上呈现 LCD 屏幕模型更流畅的外观。  
+ 版式是文本的不同的字体、 大小和样式的显示。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 为此项复杂的任务提供广泛支持。 中的新功能之一[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]子像素抗锯齿功能，它可以使文本呈现在 LCD 屏幕外观更流畅。  
   
- 此外，Windows 窗体提供的选项，绘制文本[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]中的功能其<xref:System.Windows.Forms.TextRenderer>类。  
+ 此外，Windows 窗体提供用于绘制文本的选项[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]中的功能及其<xref:System.Windows.Forms.TextRenderer>类。  
   
-## <a name="see-also"></a>请参阅  
- [图形概述](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
- [关于 GDI+ 托管代码](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
- [使用托管图形类](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+## <a name="see-also"></a>请参阅
+- [图形概述](graphics-overview-windows-forms.md)
+- [关于 GDI+ 托管代码](about-gdi-managed-code.md)
+- [使用托管图形类](using-managed-graphics-classes.md)

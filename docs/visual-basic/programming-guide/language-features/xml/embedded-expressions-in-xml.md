@@ -8,19 +8,19 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: f99735df2512fd4b1477bab9126e18f5afbbfa8c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932924"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827570"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML 中的嵌入式表达式 (Visual Basic)
 嵌入的表达式，可以创建包含在运行时计算的表达式的 XML 文本。 嵌入式表达式的语法是`<%=` `expression` `%>`，这是相同的语法中使用[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]。  
   
  例如，您可以创建一个 XML 元素文本，组合嵌入式的表达式包含文字文本内容。  
   
- [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_1.vb)]  
+ [!code-vb[VbXMLSamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#27)]  
   
  如果`isbnNumber`包含整数 12345 并`modifiedDate`包含的日期 3/5/2006，当此代码执行时，值`book`是：  
   
@@ -44,27 +44,27 @@ ms.locfileid: "42932924"
   
 -   XML 元素名称中嵌入表达式的示例：  
   
-     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_2.vb)]  
+     [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
 -   XML 元素的内容中嵌入表达式的示例：  
   
-     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_3.vb)]  
+     [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
 -   XML 元素属性名称中嵌入表达式的示例：  
   
-     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_4.vb)]  
+     [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
 -   嵌入表达式的 XML 元素特性值中的示例：  
   
-     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_5.vb)]  
+     [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
 -   XML 元素特性中嵌入表达式的示例：  
   
-     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_6.vb)]  
+     [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
 -   XML 文档的根元素中的嵌入式表达式的示例：  
   
-     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_7.vb)]  
+     [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   
  如果启用`Option Strict`，编译器会检查每个嵌入表达式的类型加宽到所需的类型。 唯一的例外是在代码运行时验证 XML 文档的根元素。 如果编译而无需`Option Strict`，可以将嵌入类型的表达式`Object`和在运行时验证它们的类型。  
   
@@ -80,10 +80,11 @@ ms.locfileid: "42932924"
 > [!NOTE]
 >  当使用声明 XML 命名空间前缀`xmlns`命名空间属性的属性值必须是常量字符串。 在这方面，使用`xmlns`属性就像使用`Imports`语句声明 XML 命名空间。 不能使用嵌入式的表达式来指定 XML 命名空间值。  
   
-## <a name="see-also"></a>请参阅  
- [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML 文档文本](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [XML 元素文本](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [XML 文本概述](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)
+## <a name="see-also"></a>请参阅
+
+- [在 Visual Basic 中创建 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML 文档文本](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [XML 元素文本](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Option Strict 语句](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Imports 语句（.NET 命名空间和类型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [XML 文本概述](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)

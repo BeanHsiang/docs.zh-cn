@@ -2,12 +2,12 @@
 title: CallbackBehavior
 ms.date: 03/30/2017
 ms.assetid: 42acd302-2b62-4849-a2d1-a03084343ecd
-ms.openlocfilehash: 38a38a71db2927d187ccdd93e5e364b0d4955373
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 2854671eaabb37066b57d87a7496183c9e5bba4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54562840"
 ---
 # <a name="callbackbehavior"></a>CallbackBehavior
 CallbackBehavior  
@@ -30,7 +30,7 @@ class CallbackBehavior : Behavior
 ## <a name="methods"></a>方法  
  CallbackBehavior 类未定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  CallbackBehavior 类具有以下属性：  
   
 ### <a name="automaticsessionshutdown"></a>AutomaticSessionShutdown  
@@ -87,5 +87,5 @@ class CallbackBehavior : Behavior
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.CallbackBehaviorAttribute>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.CallbackBehaviorAttribute>

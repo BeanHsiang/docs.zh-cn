@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508517"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303383"
 ---
 # <a name="unmanaged-api-reference"></a>非托管 API 参考
 本节包括有关可由与托管代码相关的应用程序（例如运行时主机、编译器、反汇编程序、模糊处理程序、调试器和探查器）使用的非托管 API 的信息。  
@@ -32,7 +32,7 @@ ms.locfileid: "43508517"
  [常量](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  描述在 CorSym.idl 中定义的常量。  
   
- [自定义接口特性](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [自定义接口特性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  描述组件对象模型 (COM) 的自定义接口特性。  
   
  [调试](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -64,5 +64,3 @@ ms.locfileid: "43508517"
   
 ## <a name="related-sections"></a>相关章节  
  [开发指南](../../../docs/framework/development-guide.md)  
-  
- [.NET Framework 高级读物](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

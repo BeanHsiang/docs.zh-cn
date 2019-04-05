@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: bc170334496ca4c2a2028b9c493385674d235ca6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e410b92f90f775471ef5d89365549ccd5bb7f085
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745604"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361897"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>如何：创建具有访问键和文本换行的控件
 此示例演示如何创建具有访问键且支持文本换行的控件。 该示例使用<xref:System.Windows.Controls.Label>控件来说明这些概念。  
@@ -24,7 +24,7 @@ ms.locfileid: "43745604"
   
  <xref:System.Windows.Controls.Label>控件不支持文本换行。 如果需要一个多次换行的标签，可以嵌套其他支持文本换行的元素，并将该元素放在标签内。 下面的示例演示如何使用<xref:System.Windows.Controls.TextBlock>进行包装若干行文本的标签。  
   
- [!code-xaml[LabelSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
+ [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
  **将访问键和文本换行添加到标签**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "43745604"
   
  下面的示例演示如何创建<xref:System.Windows.Controls.Label>的具有访问键且支持文本换行。 若要启用文本换行，该示例设置<xref:System.Windows.Controls.AccessText.TextWrapping%2A>属性，并使用下划线字符指定访问密钥。 （紧跟下划线字符后面的字符就是访问键。）  
   
- [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
+ [!code-xaml[LabelSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
-## <a name="see-also"></a>请参阅  
- [如何：设置 Label 的目标属性](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+## <a name="see-also"></a>请参阅
+- [如何：设置标签的目标属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

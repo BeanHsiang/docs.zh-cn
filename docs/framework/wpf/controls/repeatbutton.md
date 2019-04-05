@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], RepeatButton
 - RepeatButton control [WPF]
 ms.assetid: 5702b603-95e6-438a-88c0-76509367e876
-ms.openlocfilehash: 4dff6497fe6d6483b12d09b6dc84fdb0f2fbd95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1eaaaae2e42bc366d6859ad72a90b149341eef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555001"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367137"
 ---
 # <a name="repeatbutton"></a>RepeatButton
-<xref:System.Windows.Controls.Primitives.RepeatButton>类似于<xref:System.Windows.Controls.Button>。 但是，<xref:System.Windows.Controls.Primitives.RepeatButton>元素，可以控制何时以及如何<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件发生。  
+<xref:System.Windows.Controls.Primitives.RepeatButton>类似于<xref:System.Windows.Controls.Button>。 但是，<xref:System.Windows.Controls.Primitives.RepeatButton>元素使您能够控制何时和如何<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件发生。  
   
- 下图显示了重复的按钮控件、 默认、 PointerFocused，和已按的三个状态的示例。 第一个按钮显示的默认状态<xref:System.Windows.Controls.Primitives.RepeatButton>。 第二部分演示如何按钮的外观更改当鼠标指针悬停于按钮上，给予它焦点。 最后一个按钮显示的外观<xref:System.Windows.Controls.Primitives.RepeatButton>当用户按鼠标按钮控件。  
+ 下图显示了三种的重复按钮控件、 默认、 PointerFocused 和 Pressed 状态的示例。 第一个按钮显示的默认状态<xref:System.Windows.Controls.Primitives.RepeatButton>。 第二个显示按钮的外观如何更改鼠标指针悬停在按钮上时为其提供焦点。 最后一个按钮显示的外观<xref:System.Windows.Controls.Primitives.RepeatButton>用户控件上按鼠标按钮。  
   
- ![重复按钮状态](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
+ ![重复按钮状态](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
 典型 RepeatButton  
   
 ## <a name="in-this-section"></a>本节内容  

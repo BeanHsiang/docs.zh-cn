@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15957ce03925d75021d88bc81d12809c3fe31c2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e20502cfd64e7e4e40bee0b815729e914c3dd4a2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389936"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553706"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
 写入 <xref:System.IO.StreamWriter> 时，将激活 `streamWriterBufferedDataLost` 托管调试助手 (MDA)，但随后，在销毁 <xref:System.IO.StreamWriter> 的实例前不再调用 <xref:System.IO.StreamWriter.Flush%2A> 或 <xref:System.IO.StreamWriter.Close%2A> 方法。 启用此 MDA 时，运行时确定 <xref:System.IO.StreamWriter> 内是否仍然有任何缓冲数据。 如果缓冲数据确实存在，则将激活 MDA。 调用 <xref:System.GC.Collect%2A> 和 <xref:System.GC.WaitForPendingFinalizers%2A> 方法可以强制运行终结器。 否则，终结器将似乎在任意时刻运行，并且在进程退出时可能根本没有运行。 在启用了此 MDA 的情况下显式运行终结器将有助于更可靠地重现此类问题。  
@@ -104,6 +104,6 @@ static WriteToFile()
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IO.StreamWriter>  
- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.IO.StreamWriter>
+- [使用托管调试助手诊断错误](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

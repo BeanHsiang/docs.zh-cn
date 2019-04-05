@@ -2,15 +2,14 @@
 title: .NET Core 指南
 description: .NET Core 是一种用于创建 Windows、Linux 和 Mac 应用的模块式高性能的 .NET 实现。 了解 .NET Core 以开始使用。
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 448edabf624f04311695e8b8c224f653b9939966
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199456"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030277"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -20,15 +19,15 @@ ms.locfileid: "50199456"
 
 请学习 [.NET Core 教程](tutorials/index.md)，了解如何创建简单的 .NET Core 应用程序。 只需几分钟即可生成并运行第一个应用。 若要尝试在浏览器中使用 .NET Core，请参阅 [C# 中的数字](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml)在线教程。
 
-## <a name="download-net-core-21"></a>下载 .NET Core 2.1
+## <a name="download-net-core-22"></a>下载 .NET Core 2.2
 
-下载 [.NET Core 2.1 SDK](https://www.microsoft.com/net/download)，以尝试在 Windows、macOS 或 Linux 计算机上使用 .NET Core。 若要使用 Docker 容器，请访问 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)。
+下载 [.NET Core 2.2 SDK](https://www.microsoft.com/net/download)，以尝试在 Windows、macOS 或 Linux 计算机上使用 .NET Core。 若要使用 Docker 容器，请访问 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)。
 
 若要使用其他版本 .NET Core，可以在 [.NET Core 下载内容](https://www.microsoft.com/net/download/archives)中找到所有版本 .NET Core。
 
-## <a name="net-core-21"></a>.NET Core 2.1
+## <a name="net-core-22"></a>.NET Core 2.2
 
-最新版是 [.NET Core 2.1](whats-new/dotnet-core-2-1.md)。 新功能包括：全局工具、高性能 API（如 <xref:System.Span%601?displayProperty=nameWithType>）、分层 JIT 编译、[生成](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/)和[运行时性能改进](https://blogs.msdn.microsoft.com/dotnet/2018/04/18/performance-improvements-in-net-core-2-1/)，并支持 Alpine 和 ARM32。
+最新版是 [.NET Core 2.2](whats-new/dotnet-core-2-2.md)。 新功能包括：框架依赖部署、启动挂钩、使用 Azure SQL 进行 AAD 身份验证以及对 Windows ARM32 的支持。
 
 ## <a name="create-your-first-application"></a>创建首个应用程序
 

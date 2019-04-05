@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: 64e566fb8d0cfadc2a46d0a335ddb2799739f9f9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187775"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646261"
 ---
 # <a name="how-to-examine-the-security-context"></a>如何：检查安全上下文
 在编程时 Windows Communication Foundation (WCF) 服务，服务安全上下文，可确定客户端凭据和声明用来与服务进行身份验证的详细信息。 这是使用 <xref:System.ServiceModel.ServiceSecurityContext> 类的属性进行的。  
@@ -54,6 +54,6 @@ ms.locfileid: "50187775"
   
 -   <xref:System.IdentityModel.Claims>  
   
-## <a name="see-also"></a>请参阅  
- [保护服务](../../../docs/framework/wcf/securing-services.md)  
- [服务标识和身份验证](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>请参阅
+- [保护服务](../../../docs/framework/wcf/securing-services.md)
+- [服务标识和身份验证](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

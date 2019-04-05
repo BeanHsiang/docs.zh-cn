@@ -2,12 +2,12 @@
 title: ServiceSecurityAuditBehavior
 ms.date: 03/30/2017
 ms.assetid: 2c5809e7-5364-44ce-bc71-848be4672e2a
-ms.openlocfilehash: e8b24877c2d76a3f2f90c27ae83374c7bca1328b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dc48b8742c60714720be3cf4b22ba672f73c720a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570221"
 ---
 # <a name="servicesecurityauditbehavior"></a>ServiceSecurityAuditBehavior
 ServiceSecurityAuditBehavior  
@@ -27,7 +27,7 @@ class ServiceSecurityAuditBehavior : Behavior
 ## <a name="methods"></a>方法  
  ServiceSecurityAuditBehavior 类不定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  ServiceSecurityAuditBehavior 类具有下列属性：  
   
 ### <a name="auditloglocation"></a>AuditLogLocation  
@@ -64,5 +64,5 @@ class ServiceSecurityAuditBehavior : Behavior
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 8a28b52d786793308d8609704b564b75f23d95d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 929b0ee8b0904d43f44857e8051ff52fc04a4f82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734443"
 ---
 # <a name="understanding-generated-client-code"></a>了解生成的客户端代码
-[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 可生成用于生成客户端应用程序的客户端代码和客户端应用程序配置文件。 本主题提供了有关标准服务协定方案的生成代码示例的教程。 有关生成使用生成的代码的客户端应用程序的详细信息，请参阅[WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。  
+[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 可生成用于生成客户端应用程序的客户端代码和客户端应用程序配置文件。 本主题提供了有关标准服务协定方案的生成代码示例的教程。 有关生成客户端应用程序使用生成的代码的详细信息，请参阅[WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)。  
   
 ## <a name="overview"></a>概述  
- 如果你使用 Visual Studio 为你的项目生成 Windows Communication Foundation (WCF) 客户端类型，通常不需要检查生成的客户端代码。 如果您并未使用为您执行相同服务的开发环境，您可以使用 Svcutil.exe 之类的工具来生成客户端代码，然后使用该代码开发客户端应用程序。  
+ 如果使用 Visual Studio 为你的项目生成 Windows Communication Foundation (WCF) 客户端类型，通常不需要检查生成的客户端代码。 如果您并未使用为您执行相同服务的开发环境，您可以使用 Svcutil.exe 之类的工具来生成客户端代码，然后使用该代码开发客户端应用程序。  
   
  由于 Svcutil.exe 具有许多可以修改生成的类型信息的选项，因此本主题并不对所有方案进行讨论。 但是，以下标准任务涉及查找生成的代码：  
   
@@ -39,10 +39,10 @@ ms.locfileid: "33501351"
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- 你可以使用生成的服务协定接口和<xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>类，以创建用来调用服务操作的 WCF 通道对象。 有关详细信息，请参阅[如何： 使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)。  
+ 可以使用生成的服务协定接口一起<xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>类，以创建用来调用服务操作的 WCF 通道对象。 有关详细信息，请参阅[如何：考虑使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)。  
   
 ### <a name="finding-wcf-client-classes"></a>查找 WCF 客户端类  
- 若要查找实现你想要使用的服务协定的 WCF 客户端类，请搜索的扩展名<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>，其中类型参数是服务协定接口，您先前查找到的且扩展该接口。 下面的代码示例演示类型为 <xref:System.ServiceModel.ClientBase%601> 的 `ISampleService`类。  
+ 若要查找实现你想要使用的服务协定的 WCF 客户端类，请搜索的扩展<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>，其中类型参数是服务协定接口，您以前位于和扩展该接口。 下面的代码示例演示类型为 <xref:System.ServiceModel.ClientBase%601> 的 `ISampleService`类。  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
@@ -60,10 +60,10 @@ ms.locfileid: "33501351"
   
  [!code-csharp[C_GeneratedCodeFiles#30](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#30)]  
   
- 在本示例中，数据类型为客户端上的特定异常（一个 <xref:System.ServiceModel.FaultException%601> ，其中详细信息类型为 `microsoft.wcf.documentation.SampleFault`）引发的详细信息类型。 有关数据类型的详细信息，请参阅[指定服务协定中的数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。 有关在客户端中处理异常的详细信息，请参阅[发送和接收错误](../../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
+ 在本示例中，数据类型为客户端上的特定异常（一个 <xref:System.ServiceModel.FaultException%601> ，其中详细信息类型为 `microsoft.wcf.documentation.SampleFault`）引发的详细信息类型。 有关数据类型的详细信息，请参阅[Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。 有关在客户端中处理异常的详细信息，请参阅[Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>查找双工服务的回调协定  
- 如果要查找协定接口为其 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 属性指定一个值的服务协定，则该协定指定一个双工协定。 双工协定要求客户端应用程序创建一个回调类，该类实现回调协定并将此类的一个实例传递给 <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> 或用来与服务进行通信的 <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType>。 有关双工客户端的详细信息，请参阅[如何： 使用双工协定访问服务](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。  
+ 如果要查找协定接口为其 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 属性指定一个值的服务协定，则该协定指定一个双工协定。 双工协定要求客户端应用程序创建一个回调类，该类实现回调协定并将此类的一个实例传递给 <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> 或用来与服务进行通信的 <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> 。 有关双工客户端的详细信息，请参阅[如何：使用双工协定访问服务](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。  
   
  下面的协定指定一个 `SampleDuplexHelloCallback`类型的回调协定。  
   
@@ -80,5 +80,5 @@ ms.locfileid: "33501351"
   
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
-## <a name="see-also"></a>请参阅  
- [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)
+## <a name="see-also"></a>请参阅
+- [WCF 客户端概述](../../../../docs/framework/wcf/wcf-client-overview.md)

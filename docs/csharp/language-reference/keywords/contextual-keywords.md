@@ -1,20 +1,21 @@
 ---
-title: 上下文关键字（C# 参考）
+title: 上下文关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 7b5f79f41306d6e4a8d2f1aa432ba6c2e0879f74
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47232945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708436"
 ---
 # <a name="contextual-keywords-c-reference"></a>上下文关键字（C# 参考）
 上下文关键字用于在代码中提供特定含义，但它不是 C# 中的保留字。 本部分介绍下面这些上下文关键字：  
   
-|关键字|描述|  
+|关键字|说明|  
 |-------------|-----------------|  
 |[add](../../../csharp/language-reference/keywords/add.md)|定义一个自定义事件访问器，客户端代码订阅事件时会调用该访问器。|  
 |[async](../../../csharp/language-reference/keywords/async.md)|指示修改后的方法、lambda 表达式或匿名方法是异步的。|  
@@ -25,7 +26,7 @@ ms.locfileid: "47232945"
 |[partial](../../../csharp/language-reference/keywords/partial-type.md)|在整个同一编译单元内定义分部类、结构和接口。|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|定义一个自定义事件访问器，客户端代码取消订阅事件时会调用该访问器。|  
 |[set](../../../csharp/language-reference/keywords/set.md)|为属性或索引器定义访问器方法。|  
-|[value](../../../csharp/language-reference/keywords/value.md)|用于设置访问器和添加或删除事件处理程序。|  
+|[值](../../../csharp/language-reference/keywords/value.md)|用于设置访问器和添加或删除事件处理程序。|  
 |[var](../../../csharp/language-reference/keywords/var.md)|使编译器能够确定在方法作用域中声明的变量类型。|  
 |[when](when.md)|指定 `catch` 块的筛选条件或 `switch` 语句的 `case` 标签。|
 |[where](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|将约束添加到泛型声明。 （另请参阅 [where](../../../csharp/language-reference/keywords/where-clause.md)）。|  
@@ -35,6 +36,6 @@ ms.locfileid: "47232945"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [C# 关键字](../../../csharp/language-reference/keywords/index.md)

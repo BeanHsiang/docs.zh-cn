@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF]
 ms.assetid: 5d5f656b-8e05-4839-9d53-b0324d902aa9
-ms.openlocfilehash: 4b23287abebafd6583d77362c4b4ef12f504f7df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b422294095425d163665f59f2bfb451da3158c8a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551760"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378903"
 ---
 # <a name="adorners"></a>装饰器
-本部分提供有关装饰器的信息和[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装饰器框架。  
+本部分提供关于装饰器的信息和[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]装饰器框架。  
   
 ## <a name="in-this-section"></a>本节内容  
- [装饰器概述](../../../../docs/framework/wpf/controls/adorners-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)  
+ [装饰器概述](adorners-overview.md)  
+ [帮助主题](adorners-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

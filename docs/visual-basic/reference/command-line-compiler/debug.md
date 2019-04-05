@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: 92ff9c5ea7352506c1949a77b4fb6291d63758d7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9bf7170cee31f92481b15fb1227f21895cd3734d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193794"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827973"
 ---
 # <a name="-debug-visual-basic"></a>-调试 (Visual Basic)
 使编译器生成调试信息并将其放在输出文件。  
@@ -50,7 +50,8 @@ ms.locfileid: "50193794"
 vbc -debug -out:app.exe test.vb  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

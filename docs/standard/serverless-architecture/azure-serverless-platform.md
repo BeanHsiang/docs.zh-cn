@@ -4,12 +4,12 @@ description: Azure 无服务器平台提供功能，包括事件触发即时扩�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: bf3196fa9fe51bfe88ac33162fb31a634a240417
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6149e79f45422be0b4f1ebc719543efd1b0b750c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369655"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126417"
 ---
 # <a name="azure-serverless-platform"></a>Azure 无服务器平台
 
@@ -22,5 +22,5 @@ Azure 无服务器平台中包含 Azure Functions、 逻辑应用和事件网格
 这一章将分解每个组件的基础知识。
 
 >[!div class="step-by-step"]
-[上一页](serverless-design-examples.md)
-[下一页](azure-functions.md)
+>[上一页](serverless-design-examples.md)
+>[下一页](azure-functions.md)

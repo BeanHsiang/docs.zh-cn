@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c5bc63da7ebe86b653c9bef7caeb1cf28d3a7f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: abab67f28a5fabfc6c348af6b8b502b46510d460
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548750"
 ---
 # <a name="osinfo-structure"></a>OSINFO 结构
 包含有关操作系统的程序集或模块的详细信息。  
@@ -40,22 +40,22 @@ typedef struct {
   
 |成员|描述|  
 |------------|-----------------|  
-|`dwOSPlatformId`|一个由 Microsoft Windows 平台函数定义的标识符值`GetVersionEx`。 支持以下值：<br /><br /> -VER_PLATFORM_WIN32s 或 0x0000，要指定 Microsoft Windows 3.1。<br />-VER_PLATFORM_WIN32_WINDOWS 或从 0x0001，指定 Windows 95、 Windows 98 或继承自此它们的操作系统。<br />-VER_PLATFORM_WIN32_NT 或 0x0010，指定 Windows NT 或继承自此它的操作系统。|  
-|`dwOSMajorVersion`|操作系统主要版本或 NULL 值以指示任何版本。|  
-|`dwOSMinorVersion`|操作系统次要版本或 NULL 值以指示任何版本。|  
+|`dwOSPlatformId`|一个由 Microsoft Windows 平台函数定义的标识符值`GetVersionEx`。 支持以下值：<br /><br /> -VER_PLATFORM_WIN32s 或 0x0000，指定 Microsoft Windows 3.1。<br />-VER_PLATFORM_WIN32_WINDOWS 或从 0x0001，以指定 Windows 95 和 Windows 98 或继承自此它们的操作系统。<br />-VER_PLATFORM_WIN32_NT 或 0x0010，若要指定 Windows NT 或继承自它的操作系统。|  
+|`dwOSMajorVersion`|操作系统主版本或 NULL 值，以指示任何版本。|  
+|`dwOSMinorVersion`|操作系统次版本或 NULL 值，以指示任何版本。|  
   
 ## <a name="remarks"></a>备注  
- `OSINFO` 基于`OSVERSIONINFOEX`结构，它是 Microsoft Windows 平台函数调用中使用的`GetVersionEx`。 此结构是 ASSEMBLYMETADATA 结构用于指示其操作系统的支持。  
+ `OSINFO` 基于`OSVERSIONINFOEX`结构，它是 Microsoft Windows 平台函数调用中使用的`GetVersionEx`。 ASSEMBLYMETADATA 结构使用此结构以指示其操作系统的支持。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [元数据结构](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>请参阅
+- [元数据结构](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

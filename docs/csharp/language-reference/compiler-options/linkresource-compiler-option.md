@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: feca4713fe0e704799e2abbae3818edd0f3a5c84
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 699ae27df2423638f38a22cc17dc83b828383394
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523170"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711340"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# 编译器选项)
 在输出文件中创建指向 .NET Framework 资源的链接。 不会在输出文件中添加资源文件。 这不同于会在输出文件中嵌入资源文件的 [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) 选项。  
@@ -31,10 +31,10 @@ ms.locfileid: "43523170"
  `filename`  
  希望从程序集链接到的 .NET Framework 资源文件。  
   
- `identifier`（可选）  
+ `identifier` （可选）  
  资源的逻辑名称；用于加载资源的名称。 默认值是文件的名称。  
   
- `accessibility-modifier`（可选）  
+ `accessibility-modifier` （可选）  
  资源的可访问性：public 或 private。 默认值为 public。  
   
 ## <a name="remarks"></a>备注  
@@ -74,9 +74,9 @@ al -out:A.dll A.netmodule -link:N.dll
 gacutil -i A.dll  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
-- [Al.exe（程序集链接器）](../../../framework/tools/al-exe-assembly-linker.md)  
-- [使用程序集和全局程序集缓存](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [Al.exe（程序集链接器）](../../../framework/tools/al-exe-assembly-linker.md)
+- [使用程序集和全局程序集缓存](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

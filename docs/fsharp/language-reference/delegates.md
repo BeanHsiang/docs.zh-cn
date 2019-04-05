@@ -1,17 +1,17 @@
 ---
-title: 委托 (F#)
-description: '了解如何在使用 F # 中的委托。'
+title: 委托
+description: 了解如何在使用中的委托F#。
 ms.date: 05/16/2016
-ms.openlocfilehash: be58997dffe8fcd949bbc2d47d86ffccc157d43e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 772685488b7caef92123979d817929c631248afb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45745489"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612889"
 ---
 # <a name="delegates"></a>委托
 
-一个委托作为一个对象表示一个函数调用。 在 F # 中，通常应使用函数的值来表示作为一类值; 函数但是，委托在.NET Framework 中使用，因此时，需要与所希望的 Api 进行互操作。 可能还会使用它们时从其他.NET Framework 语言创作库设计用于使用。
+一个委托作为一个对象表示一个函数调用。 在F#，你通常应使用函数的值来表示作为一类值; 函数但是，委托在.NET Framework 中使用，因此时，需要与所希望的 Api 进行互操作。 可能还会使用它们时从其他.NET Framework 语言创作库设计用于使用。
 
 ## <a name="syntax"></a>语法
 
@@ -23,7 +23,7 @@ type delegate-typename = delegate of type1 -> type2
 
 在上述语法中，`type1`表示的参数类型和`type2`表示返回类型。 由自变量类型`type1`会自动进行扩充。 这表明，如果目标函数的参数会进行扩充，使用元组形式的此类型和已在元组形式的参数的带括号的元组。 自动科中删除一组括号，离开匹配的目标方法的元组参数。 请参阅中每种情况下应使用的语法的代码示例。
 
-委托可以附加到 F # 函数值，和静态或实例方法。 F # 函数值可以直接作为要委托构造函数参数传递。 对于静态方法，使用的类和方法名称构造委托。 对于实例方法，需要提供的对象实例和一个自变量中的方法。 在这两种情况下，成员访问运算符 (`.`) 使用。
+可以将委托附加到F#函数的值以及静态或实例方法。 F#可以直接作为要委托构造函数自变量传递函数值。 对于静态方法，使用的类和方法名称构造委托。 对于实例方法，需要提供的对象实例和一个自变量中的方法。 在这两种情况下，成员访问运算符 (`.`) 使用。
 
 `Invoke`委托类型的方法调用封装的函数。 此外，还可以引用不带括号的 Invoke 方法名称作为函数值传递委托。
 

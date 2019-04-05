@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee5f223d5e92d9a60776df6bf2108a4fd14b9e0f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554551"
 ---
 # <a name="in-process-side-by-side-execution"></a>进程内并行执行
 从 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 开始，可使用进程内并行承载在单个进程中运行多个公共语言运行时 (CLR) 版本。 默认情况下，托管 COM 组件使用其生成所用的 .NET Framework 版本运行，而不考虑为进程加载的 .NET Framework 版本。  
@@ -40,8 +40,8 @@ ms.locfileid: "50195198"
   
     |.NET Framework 版本|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|不适用|否|是|  
-    |2.0 - 3.5|否|不适用|是|  
+    |1.1|不适用|No|是|  
+    |2.0 - 3.5|No|不适用|是|  
     |4|是|是|不适用|  
   
 > [!NOTE]
@@ -50,15 +50,15 @@ ms.locfileid: "50195198"
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>常见的并行承载方案  
   
--   方案 1：使用由旧版 .NET Framework 生成的 COM 组件的本机应用程序。  
+-   **方案 1：** 使用由旧版 .NET Framework 生成的 COM 组件的本机应用程序。  
   
-     已安装的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 和 COM 组件使用的 .NET Framework 所有其他版本。  
+     已安装的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 和 COM 组件使用的所有其他 .NET Framework 版本。  
   
      要执行的操作：此方案中，不执行任何操作。 COM 组件将在其注册的 .NET Framework 版本上运行。  
   
--   方案 2：使用 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 生成的托管应用程序，希望将其与 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 一起运行，但如果没有 2.0 版本，则希望让其在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 上运行。  
+-   **方案 2**：使用 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 生成的托管应用程序，并将其与 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] 一起运行，但如果没有 2.0 版本，则希望让其在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 上运行。  
   
-     已安装的 .NET Framework 版本：旧版 .NET Framework 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
+     已安装的 .NET Framework 版本：早期版本的 .NET Framework 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   
      要执行的操作：在应用程序目录的[应用程序配置文件](../../../docs/framework/configure-apps/index.md)中，使用 [\<startup> 元素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)和 [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)进行如下设置：  
   
@@ -71,7 +71,7 @@ ms.locfileid: "50195198"
     </configuration>  
     ```  
   
--   方案 3：使用由旧版 .NET Framework 生成的 COM 组件的本机应用程序，并将其与 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起运行。  
+-   **方案 3：** 使用由旧版 .NET Framework 生成的 COM 组件的本机应用程序，并将其与 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起运行。  
   
      已安装的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "50195198"
   
  若要运行以下示例，请使用 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 编译和注册以下托管 COM 组件。 若要注册该组件，请在“项目”菜单上，依次单击“属性”、“生成”选项卡，然后选中“注册 COM 互操作”复选框。  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -115,7 +115,7 @@ namespace BasicComObject
   
  编译以下非托管 C++ 应用程序，这将激活上例创建的 COM 对象。  
   
-```  
+```cpp
 #include "stdafx.h"  
 #include <string>  
 #include <iostream>  
@@ -173,6 +173,6 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- [\<startup> 元素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+## <a name="see-also"></a>请参阅
+- [\<startup> 元素](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
 - [\<supportedRuntime> 元素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

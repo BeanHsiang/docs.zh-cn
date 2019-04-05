@@ -1,5 +1,6 @@
 ---
-title: 如何：使用平台调用播放波形文件（C# 编程指南）
+title: 如何：使用平台调用播放波形文件 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - platform invoke, sound files
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: a83d0a11aacac3676aa78d9952f24f505949d24c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 209a0f03197e0f77e23be0dc1170789688f3e09a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522548"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967212"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>如何：使用平台调用播放波形文件（C# 编程指南）
 下面的 C# 代码示例说明了如何使用平台调用服务在 Windows 操作系统中播放波形声音文件。  
@@ -22,9 +23,9 @@ ms.locfileid: "43522548"
   
  通过筛选器设置对“打开文件”对话框进行筛选，以仅显示扩展名为 .wav 的文件：  
   
- [!code-csharp[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_1.cs)]  
+ [!code-csharp[csProgGuideInterop#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#5)]  
   
- [!code-csharp[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_2.cs)]  
+ [!code-csharp[csProgGuideInterop#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#3)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
   
@@ -36,7 +37,7 @@ ms.locfileid: "43522548"
   
 3.  复制以下代码，然后用 `InitializeComponent()` 方法将其粘贴到 `Form1.Designer.cs` 文件中任何现有代码之后。  
   
-     [!code-csharp[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_3.cs)]  
+     [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
 4.  编译并运行该代码。  
   
@@ -45,7 +46,7 @@ ms.locfileid: "43522548"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [互操作性概述](../../../csharp/programming-guide/interop/interoperability-overview.md)  
-- [平台调用详解](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [互操作性概述](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [平台调用详解](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [用平台调用封送数据](../../../framework/interop/marshaling-data-with-platform-invoke.md)

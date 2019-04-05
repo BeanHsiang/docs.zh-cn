@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: fe22dbdff0e5e9ea6bfe55fc24c492414e01cd6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569149"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>从实体缓存检索对象
 本主题介绍从 <xref:System.Data.Linq.DataContext> 管理的标识缓存中返回对象的 LINQ to SQL 查询类型。  
@@ -20,7 +20,7 @@ ms.locfileid: "33357603"
  通常，如果 LINQ to SQL 查询要从标识缓存中返回对象，该查询必须基于对象的主键，并且必须返回单一对象。 特别是，该查询必须具有下面显示的常规形式之一。  
   
 > [!NOTE]
->  预编译的查询不会从标识缓存中返回对象。 有关预编译的查询的详细信息，请参阅<xref:System.Data.Linq.CompiledQuery>和[如何： 存储和重复使用查询](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)。  
+>  预编译的查询不会从标识缓存中返回对象。 有关预编译查询的详细信息，请参阅<xref:System.Data.Linq.CompiledQuery>和[如何：存储和重用查询](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)。  
   
  查询必须具有以下常规形式之一，才能从标识缓存中检索对象：  
   
@@ -64,8 +64,8 @@ ms.locfileid: "33357603"
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [对象标识](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [对象标识](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+## <a name="see-also"></a>请参阅
+- [查询概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [对象标识](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [对象标识](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

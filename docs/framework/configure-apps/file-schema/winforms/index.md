@@ -4,12 +4,12 @@ ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18d8e1e24af73c9521b3a5bb45f1c86fc52ff1e9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bbb2c4157ba702182056c98c959a60569e8c3d1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649462"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows 窗体配置节
 Windows 窗体配置设置允许 Windows 窗体应用存储和检索有关自定义应用程序设置的信息，如多显示器支持、高 DPI 支持和其他预定义配置设置。
@@ -54,5 +54,5 @@ Windows 窗体应用程序配置设置存储在应用程序配置文件的 `Syst
 
 ## <a name="see-also"></a>请参阅
 
-[配置文件架构](../index.md)   
-[Windows 窗体中的高 DPI 支持](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+- [配置文件架构](../index.md)
+- [Windows 窗体中的高 DPI 支持](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

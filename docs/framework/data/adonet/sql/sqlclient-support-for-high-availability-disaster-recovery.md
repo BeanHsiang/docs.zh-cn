@@ -2,12 +2,12 @@
 title: SqlClient 对高可用性的支持，灾难恢复
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609117"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient 对高可用性的支持，灾难恢复
 本主题介绍对高可用性、灾难恢复（AlwaysOn 可用性组）的 SqlClient支持（[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中的新功能）。  AlwaysOn 可用性组功能已添加到 SQL Server 2012。 有关 AlwaysOn 可用性组的详细信息，请参阅 SQL Server 联机丛书。  
@@ -51,7 +51,7 @@ ms.locfileid: "43513021"
   
 -   连接到 SQL Server 实例配置有 64 个以上的 IP 地址将导致连接失败。  
   
--   使用的应用程序的行为`MultiSubnetFailover`连接属性不受影响的身份验证的类型： SQL Server 身份验证、 Kerberos 身份验证或 Windows 身份验证。  
+-   使用的应用程序的行为`MultiSubnetFailover`连接属性不受影响的身份验证的类型：SQL Server 身份验证、 Kerberos 身份验证或 Windows 身份验证。  
   
 -   增加 `Connect Timeout` 的值以延长故障转移时间并减少应用程序连接重试次数。  
   
@@ -96,6 +96,6 @@ ms.locfileid: "43513021"
   
  只读路由可能需要比连接到主副本更长的时间，因为只读路由要先连接到主副本，然后查找最可能可用的可读辅助副本。 为此，您应增加您的登录超时值。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

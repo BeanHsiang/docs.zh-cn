@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-author: BrucePerlerMS
-ms.openlocfilehash: e26665b76518e33de266c73600e1da918eb2a51d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 872283f55ae6f085b2cdf5c64c229b9d459b71f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701269"
 ---
 # <a name="message-security-with-a-user-name-client"></a>用户名客户端的消息安全
 下图显示了 Windows Communication Foundation (WCF) 服务和客户端使用消息级安全保护。 服务使用 X.509 证书进行身份验证。 客户端使用用户名和密码进行身份验证。  
@@ -126,9 +125,9 @@ ms.locfileid: "47203493"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
- [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<标识 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>请参阅
+- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [用户名消息安全](../../../../docs/framework/wcf/samples/message-security-user-name.md)
+- [服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

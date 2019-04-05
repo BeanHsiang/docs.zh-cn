@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 2fefdf81ab25d2e109f265f0c895a3415ad5673d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2de5fe82f1969a2fdb305d45951d7d698252c0c8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656001"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816429"
 ---
 # <a name="-addmodule"></a>-addmodule
 使编译器让指定文件中的所有类型信息可供当前正在编译的项目使用。  
@@ -24,33 +24,34 @@ ms.locfileid: "33656001"
   
 ## <a name="arguments"></a>自变量  
  `fileList`  
- 必须的。 包含的元数据，但不是包含程序集清单的文件以逗号分隔列表。 文件名称中包含空格应该用引号引起来 ("")。  
+ 必需。 以逗号分隔列表，包含元数据，但不是包含程序集清单的文件。 包含空格的文件名应该用引号引起来 ("")。  
   
 ## <a name="remarks"></a>备注  
- 通过列出的文件`fileList`参数必须用来创建`-target:module`选项，或与另一编译器等效于`-target:module`。  
+ 通过列出的文件`fileList`必须与创建参数`-target:module`选项，或使用其他编译器的等效于`-target:module`。  
   
- 使用添加的所有模块`-addmodule`必须在运行时是输出文件所在的同一目录中。 也就是说，你也可以在编译时，指定在任何目录中的模块，但在运行时的模块必须在应用程序目录。 如果不是这样，你将获取<xref:System.TypeLoadException>错误。  
+ 添加的所有模块`-addmodule`在运行时必须位于与输出文件相同的目录中。 也就是说，可以在编译时，在任何目录中指定模块，但在运行时模块必须在应用程序目录。 如果不存在，则获取<xref:System.TypeLoadException>错误。  
   
- 如果您指定 （隐式或显式） 任何[-目标 (Visual Basic 中)](../../../visual-basic/reference/command-line-compiler/target.md)选项而不`-target:module`与`-addmodule`，传递给文件`-addmodule`成为项目的程序集的一部分。 运行具有一个输出文件所需的程序集或使用更多的文件添加`-addmodule`。  
+ 如果指定 （隐式或显式） 任何[-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)选项而`-target:module`与`-addmodule`，将传递到的文件`-addmodule`成为项目的程序集的一部分。 运行具有一个输出文件所需的程序集或更多的文件添加与`-addmodule`。  
   
- 使用[/reference (Visual Basic 中)](../../../visual-basic/reference/command-line-compiler/reference.md)从包含程序集的文件导入元数据。  
+ 使用[/reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)包含程序集文件中导入元数据。  
   
 > [!NOTE]
->  `-addmodule`选项不是可从 Visual Studio 开发环境中; 仅当从命令行进行编译时，它才可用。  
+>  `-addmodule`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。  
   
 ## <a name="example"></a>示例  
  下面的代码创建一个模块。  
   
- [!code-vb[VbVbalrCompiler#47](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_1.vb)]  
+ [!code-vb[VbVbalrCompiler#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#47)]  
   
- 下面的代码导入模块的类型。  
+ 以下代码导入模块的类型。  
   
- [!code-vb[VbVbalrCompiler#48](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
+ [!code-vb[VbVbalrCompiler#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#48)]  
   
- 当你运行`t1`，它将输出`802`。  
+ 在运行时`t1`，它将输出`802`。  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [-参考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-参考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

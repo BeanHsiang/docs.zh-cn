@@ -1,5 +1,5 @@
 ---
-title: 如何：以特定类型返回 LINQ 查询结果 (Visual Basic)
+title: 如何：LINQ 查询结果返回为特定的类型 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], specific type returned
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 720660153cb357c11168ab45ebf8343559faf82a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ba6479852f7a78fb26743a04fd08adea07c1ffff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514280"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835864"
 ---
-# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>如何：以特定类型返回 LINQ 查询结果 (Visual Basic)
+# <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>如何：LINQ 查询结果返回为特定的类型 (Visual Basic)
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。 默认情况下，LINQ 查询以匿名类型返回的对象的列表。 此外可以指定一个查询使用返回特定类型的列表`Select`子句。  
   
  下面的示例演示如何创建新应用程序对 SQL Server 数据库执行查询并将结果投影为特定的命名类型。 有关详细信息，请参阅[匿名类型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)并[Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)。  
@@ -63,7 +63,7 @@ ms.locfileid: "43514280"
   
 3.  之后`End Class`语句的 Form1 类中，添加以下代码以创建`CustomerInfo`类型，以保留此示例的查询结果。  
   
-     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#16)]  
   
 4.  当表添加到 O/R 设计器时，在设计器添加<xref:System.Data.Linq.DataContext>到你的项目的对象。 此对象包含必须具有访问这些表，以及访问单个对象和集合的每个表的代码。 <xref:System.Data.Linq.DataContext>对象将项目命名为根据.dbml 文件的名称。 对于此项目，<xref:System.Data.Linq.DataContext>对象被命名为`northwindDataContext`。  
   
@@ -71,12 +71,13 @@ ms.locfileid: "43514280"
   
      在`Load`事件 Form1 类中，添加以下代码以查询作为数据上下文的属性公开的表。 `Select`子句的查询将创建一个新`CustomerInfo`类型而不是匿名类型的查询结果的每一项。  
   
-     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#15)]  
   
 5.  按 F5 以运行您的项目并查看结果。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查询](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>请参阅
+
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查询](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

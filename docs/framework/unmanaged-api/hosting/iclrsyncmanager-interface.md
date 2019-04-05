@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 4b949466c5557415ec06bac601380675beed7fd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549858"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 接口
 定义允许主机以获取有关请求的任务的信息并在其同步实现检测死锁的方法。  
@@ -36,16 +36,16 @@ ms.locfileid: "50041825"
 |[GetRWLockOwnerNext 方法](iclrsyncmanager-getrwlockownernext-method.md)|获取在当前的读取器 / 编写器锁等待下一个任务。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Threading.Thread>  
- [IHostSyncManager 接口](ihostsyncmanager-interface.md)  
- [托管和非托管线程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
- [承载接口](hosting-interfaces.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Threading.Thread>
+- [IHostSyncManager 接口](ihostsyncmanager-interface.md)
+- [托管和非托管线程处理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [承载接口](hosting-interfaces.md)

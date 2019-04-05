@@ -2,12 +2,12 @@
 title: 消息相关性
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: dbe4408a3f2a5de92cad1cb286b9aedd963e8440
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f60d34ba7348b75f10be326319738fd1555d42df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520654"
 ---
 # <a name="message-correlation"></a>消息相关性
 此示例演示消息队列 (MSMQ) 应用程序如何可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务以及如何消息也可以在请求/响应方案中的发送方和接收方应用程序之间关联起来。 此示例使用 msmqIntegrationBinding 绑定。 这种情况下的服务是自承载控制台应用程序，通过它可以观察接收排队消息的服务。 k  
@@ -312,6 +312,6 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
-## <a name="see-also"></a>请参阅  
- [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)
+## <a name="see-also"></a>请参阅
+- [在 WCF 中排队](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)

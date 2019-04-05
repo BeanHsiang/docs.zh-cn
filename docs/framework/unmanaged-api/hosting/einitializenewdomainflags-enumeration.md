@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0175ab1d06a8166a5bbfd0c42018085a801740f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 826e02789f6940923538f3e01744345dacf4b2ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705279"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags 枚举
-使主机可以为运行时提供相关的应用程序域初始化信息。  
+使宿主能够在运行时提供的应用程序域初始化信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,21 +37,21 @@ typedef enum {
   
 |成员|描述|  
 |------------|-----------------|  
-|`eInitializeNewDomainFlags_None`|任何标志。|  
+|`eInitializeNewDomainFlags_None`|无标志。|  
 |`eInitializeNewDomainFlags_NoSecurityChanges`|通知公共语言运行时 (CLR) 主机中的应用程序域的安全状态将不进行更改<xref:System.AppDomainManager.InitializeNewDomain%2A>方法。|  
   
 ## <a name="remarks"></a>备注  
  [Iclrdomainmanager:: Setappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)方法采用一个参数类型`EInitializeNewDomainFlags`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
- [SetAppDomainManagerType 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)
+## <a name="see-also"></a>请参阅
+- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [SetAppDomainManagerType 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)

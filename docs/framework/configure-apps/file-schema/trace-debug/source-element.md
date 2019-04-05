@@ -1,5 +1,5 @@
 ---
-title: '&lt;源&gt;元素'
+title: <source> 元素
 ms.date: 09/29/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
@@ -7,22 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a528e0f77efea6df7379a0f01495bc09d2ed0b24
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231884"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254478"
 ---
-# <a name="ltsourcegt-element"></a>&lt;源&gt;元素
+# <a name="source-element"></a>\<源 > 元素
 指定用于启动跟踪消息的跟踪源。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<源 >  
-\<源 >  
+\<system.diagnostics>  
+\<sources>  
+\<source>  
   
 ## <a name="syntax"></a>语法  
   
@@ -84,6 +82,6 @@ ms.locfileid: "47231884"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [跟踪开关](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>请参阅
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [跟踪开关](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

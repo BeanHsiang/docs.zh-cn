@@ -1,29 +1,29 @@
 ---
-title: '&lt;serviceThrottling&gt;'
+title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: b0f5197bf4e9017007f29f86048756b43e3b15fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 87952a92bab1ef7147100332bcef87b6f0534817
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750162"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270365"
 ---
-# <a name="ltservicethrottlinggt"></a>&lt;serviceThrottling&gt;
+# <a name="servicethrottling"></a>\<serviceThrottling>
 指定 Windows Communication Foundation (WCF) 服务的限制机制。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
+\<behavior>  
 \<serviceThrottling>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<serviceThrottling maxConcurrentCalls="Integer"  
-    maxConcurrentInstances="Integer"  
-    maxConcurrentSessions="Integer" />  
+<serviceThrottling maxConcurrentCalls="Integer"
+                   maxConcurrentInstances="Integer"
+                   maxConcurrentSessions="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -44,7 +44,7 @@ ms.locfileid: "32750162"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
  限制控件会对并发调用、实例或会话的数目施加限制以防止过度使用资源。  
@@ -55,20 +55,20 @@ ms.locfileid: "32750162"
  下面的配置示例指定服务将最大并发调用数限制为 2，并将最大并发实例数限制为 10。 运行此示例的详细示例，请参阅[限制](../../../../../docs/framework/wcf/samples/throttling.md)。  
   
 ```xml  
-<behaviors>   
-  <serviceBehaviors>   
-    <behavior name="CalculatorServiceBehavior">   
-      <serviceDebug includeExceptionDetailInFaults="False" />   
-      <serviceMetadata httpGetEnabled="True"/>   
-      <!-- Specify throttling behavior -->  
-      <serviceThrottling maxConcurrentCalls="2"   
-           maxConcurrentInstances="10"/>   
-    </behavior>  
-  </serviceBehaviors>  
-</behaviors>  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="CalculatorServiceBehavior">
+      <serviceDebug includeExceptionDetailInFaults="False" />
+      <serviceMetadata httpGetEnabled="True" />
+      <!-- Specify throttling behavior -->
+      <serviceThrottling maxConcurrentCalls="2"
+                         maxConcurrentInstances="10" />
+    </behavior>
+  </serviceBehaviors>
+</behaviors>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>  
- <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>  
- [使用 ServiceThrottlingBehavior 控制 WCF 服务性能](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
+- <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
+- [使用 ServiceThrottlingBehavior 控制 WCF 服务性能](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

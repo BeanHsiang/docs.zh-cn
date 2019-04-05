@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21f1f948e0bcd088cbe14316760708e10285124b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649305"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>数据协定中的枚举类型
 枚举可以用数据协定模型来表示。 本主题演练几个介绍编程模型的示例。  
@@ -30,7 +30,7 @@ ms.locfileid: "33494512"
  可以照常将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性（<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 和 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>）用于枚举数据协定。  
   
 ### <a name="enumeration-member-values"></a>枚举成员值  
- 通常数据协定包括枚举成员名称，而不包括数值。 但是，当使用数据协定模型中，如果接收方是 WCF 客户端，则导出的架构保留数值。 请注意，这不是这样使用时[使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
+ 通常数据协定包括枚举成员名称，而不包括数值。 但是，在使用数据协定模型中，如果接收方是 WCF 客户端，则导出的架构保留数值。 请注意，这种情况下使用时不[使用 XmlSerializer 类](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
   
  在上面的示例中，如果将 `condition` 设置为 `Used` 并且将数据序列化为 XML，则生成的 XML 是 `<condition>Used</condition>` 而不是 `<condition>1</condition>`。 因此，下面的数据协定等效于 `CarConditionEnum` 的数据协定。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "33494512"
   
 1.  尝试查找映射到数值的枚举成员（应用了 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性）。 如果可以找到，请发送仅包含该成员的列表。  
   
-2.  尝试将此数值分解为和的形式，以便枚举成员（每个成员都应用了 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性）可以映射到和的各个部分。 发送包含所有这些成员的列表。 请注意，*贪婪算法*用于查找这样的和，并因此就不能保证即使存在找到这样的和。 为避免出现这种问题，请确保枚举成员的数值为 2 的幂。  
+2.  尝试将此数值分解为和的形式，以便枚举成员（每个成员都应用了 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性）可以映射到和的各个部分。 发送包含所有这些成员的列表。 请注意，*贪婪算法*用于查找总和，并因此没有此类找到即使存在不能保证。 为避免出现这种问题，请确保枚举成员的数值为 2 的幂。  
   
 3.  如果上面的两个步骤均无法实现并且数值为非零，则引发一个 <xref:System.Runtime.Serialization.SerializationException>。 如果数值为零，则发送空列表。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "33494512"
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

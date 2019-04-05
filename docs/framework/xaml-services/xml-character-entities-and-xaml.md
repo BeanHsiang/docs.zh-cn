@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33564736"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048057"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 字符实体和 XAML
 XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一些特定的字符实体和 XAML 中其他 XML 概念的一般注意事项。  
@@ -34,7 +34,7 @@ XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一
 ## <a name="character-entities-and-escaping-issues-that-are-unique-to-xaml"></a>XAML 独有的字符实体和转义问题  
  XAML 标记通常使用相同的字符实体和在 XML 中定义的转义序列。  
   
- 主要的例外是大括号（{ 和 }）在 XAML 中具有意义，因为这些字符通知 XAML 处理器必须将括在大括号中的字符序列解释为标记扩展。 有关标记扩展的详细信息，请参阅 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
+ 主要的例外是大括号（{ 和 }）在 XAML 中具有意义，因为这些字符通知 XAML 处理器必须将括在大括号中的字符序列解释为标记扩展。 有关标记扩展的详细信息，请参阅 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
  但是，你仍可通过使用特定于 XAML（而非 XML）的转义序列将大括号显示为原义字符。 有关详细信息，请参阅[{}转义序列-标记扩展](escape-sequence-markup-extension.md)。  
   
@@ -47,12 +47,12 @@ XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一
 |字符|实体|说明|  
 |---------------|------------|-----------|  
 |&（"and"符）|\&amp;|必须用于属性值和元素内容两者。|  
-|>（大于号字符）|\&gt;|必须用于属性值，只要 < 不在 > 之前，> 就可作为元素内容。|  
-|<（小于号字符）|\&lt;|必须用于属性值，但\<是可作为内容的元素，只要 > 不跟随其后。|  
+|> (大于-号字符)|\&gt;|必须用于属性值，但 > 是可作为内容的元素，只要 < 不之前。|  
+|< (小于-号字符)|\&lt;|必须用于属性值，但\<是可作为内容的元素，只要 > 不跟随其后。|  
 |"（直双引号）|\&quot;|必须用于属性值，但直双引号 (") 可作为元素内容。 请注意，属性值可能括在直单引号 (') 或直双引号 (") 内；首先出现的字符定义属性值的引号，另一个引号则可用作值内部的文字。|  
 |'（直单引号）|\&apos;|必须用于属性值，但直单引号 (') 可作为元素内容。 请注意，属性值可能括在直单引号 (') 或直双引号 (") 内；首先出现的字符定义属性值的引号，另一个引号则可用作值内部的文字。|  
 |（数字字符映射）|&#*[整数]*; 或 &#x *[十六进制]*;|XAML 支持向处于活动状态的编码的数字字符映射。|  
-|（不间断空格）|&\#160;（假定 utf-8 编码）|对于流文档元素或采用文本（如 WPF <xref:System.Windows.Controls.TextBox>）的元素，不间断空格没有超出标记范围进行规范化，甚至是对于 `xml:space="default"` 也是如此。 (有关详细信息，请参阅[空格处理在 XAML 中](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。)|  
+|（不间断空格）|&\#160;（假定 utf-8 编码）|对于流文档元素或采用文本（如 WPF <xref:System.Windows.Controls.TextBox>）的元素，不间断空格没有超出标记范围进行规范化，甚至是对于 `xml:space="default"` 也是如此。 (有关详细信息，请参阅[空格处理在 XAML 中](whitespace-processing-in-xaml.md)。)|  
   
 <a name="xml_comment_format"></a>   
 ## <a name="xml-comment-format"></a>XML 注释格式  
@@ -62,8 +62,8 @@ XAML 使用在 XML 中为特殊字符定义的字符实体。 本主题介绍一
 ## <a name="xml-processing-instructions"></a>XML 处理指令  
  XAML 根据 XML 规范处理 XML 处理指令，该规范说明必须传递指令。 在.NET Framework XAML 服务中处理的 XAML 不使用任何处理指令。 使用 XAML 的其他现有框架也不会使用 XAML 中的处理指令。  
   
-## <a name="see-also"></a>请参阅  
- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [XamlName 语法](../../../docs/framework/xaml-services/xamlname-grammar.md)  
- [在 XAML 中处理空白](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+## <a name="see-also"></a>请参阅
+- [XAML 概述 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [标记扩展和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName 语法](xamlname-grammar.md)
+- [在 XAML 中处理空白](whitespace-processing-in-xaml.md)

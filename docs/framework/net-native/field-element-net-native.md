@@ -1,17 +1,17 @@
 ---
-title: '&lt;Field&gt; 元素 (.NET Native)'
+title: <Field>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b713eefa4f23aec34b5f55c0c3457381f54ef931
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4a062e060e7b367f0d56b3633238de74ae8ed88
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394616"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281666"
 ---
-# <a name="ltfieldgt-element-net-native"></a>&lt;Field&gt; 元素 (.NET Native)
+# <a name="field-element-net-native"></a>\<字段 > 元素 (.NET Native)
 将运行时反射策略应用到一个字段。  
   
 ## <a name="syntax"></a>语法  
@@ -60,7 +60,7 @@ ms.locfileid: "33394616"
 ## <a name="remarks"></a>备注  
  如果一个字段的策略没有得到显式定义，它将继承其父元素的运行时策略。  
   
-## <a name="see-also"></a>请参阅  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>请参阅
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

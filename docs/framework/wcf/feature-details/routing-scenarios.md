@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699592"
 ---
 # <a name="routing-scenarios"></a>路由方案
 尽管路由服务可高度自定义，但是，如果要从头开始创建新配置，设计高效的路由逻辑很富有挑战性。  然而，大多数路由服务配置都遵循一些常见方案。 虽然这些方案可能并不直接适用于特定配置，但是了解如何配置路由服务以处理这些方案有助于您了解路由服务。  
@@ -34,17 +34,17 @@ ms.locfileid: "47200431"
   
  使用路由服务，您可以公开一个终结点以接收来自客户端应用程序的消息，然后基于消息内容将各消息路由到正确的服务版本。 最基本的实现涉及在消息中添加自定义标头，用于指示将对消息进行处理的服务版本。 路由服务可以使用 XPathMessageFilter 检查各消息中是否存在自定义标头，并将消息路由到适当的目标终结点。  
   
- 用于创建版本控制的服务配置的步骤，请参阅[How To： 服务版本控制](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。
+ 用于创建版本控制的服务配置的步骤，请参阅[How To:服务版本控制](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。
   
 ### <a name="service-data-partitioning"></a>服务数据分区  
  设计分布式环境时，通常需要在多台计算机之间分布处理负载以提供高可用性，降低各计算机上的处理负载，或为特定消息子集提供专用资源。 虽然路由服务无法取代专用负载平衡解决方案，但是它具有执行基于内容的路由的功能，可以利用这一功能将其他类似的消息路由到特定目标。 例如，您可能需要单独处理从特定客户端接收的消息和从其他客户端接收的消息。  
   
- 用于创建数据分区配置的服务的步骤，请参阅[How To： 服务数据分区](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)。  
+ 用于创建数据分区配置的服务的步骤，请参阅[How To:服务数据分区](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)。  
   
 ### <a name="dynamic-routing"></a>动态路由  
  通常需要修改路由配置以满足不断变化的业务需求，例如，在服务的较新版本中添加一个路由，更改路由条件或更改筛选器将特定消息路由到的目标终结点。 路由服务允许您通过 <xref:System.ServiceModel.Routing.RoutingExtension>（用于在运行时提供新 RoutingConfiguration）实现此操作。 新配置将立即生效，但只影响路由服务处理的任何新会话。  
   
- 用于实现动态路由的步骤，请参阅[How To： 动态更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)。
+ 用于实现动态路由的步骤，请参阅[How To:动态更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)。
   
 ### <a name="multicast"></a>多播  
  路由消息时，您通常需要将各消息路由到一个特定的目标终结点。  但是，有时您可能需要将消息副本路由到多个目标终结点。 若要执行多播路由，必须满足以下条件：  
@@ -63,16 +63,16 @@ ms.locfileid: "47200431"
   
  路由服务将为遇到网络或通信相关故障的消息提供可靠的错误处理功能，从而纠正此状况。 通过创建可能的目标终结点列表并将此列表与各消息筛选器相关联，可以避免由于只有一个可能的终结点而导致的单点故障。 出现故障时，路由服务会尝试将消息传递到列表中的下一个终结点，直到已传递此消息、出现非通信故障或所有终结点已耗尽。  
   
- 用于配置错误处理的步骤，请参阅[How To： 错误处理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)。
+ 用于配置错误处理的步骤，请参阅[How To:错误处理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)。
   
 ### <a name="in-this-section"></a>本节内容  
  [如何：服务版本控制](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [如何：实现服务数据分区](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [如何：服务数据分区](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
  [如何：动态更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
  [如何：错误处理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
-## <a name="see-also"></a>请参阅  
- [路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a>请参阅
+- [路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

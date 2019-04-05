@@ -1,16 +1,16 @@
 ---
 title: 在 C# 中编写 LINQ 查询
 description: 了解如何在 C# 中编写 LINQ 查询。
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: 2ebba0d2d601932c976a88726fbe3ed37daffdcb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: df77326b921d22d90cf90c12e9c0f472d808ed95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214974"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981330"
 ---
-# <a name="write-linq-queries-in-c"></a>在 C# 中编写 LINQ 查询 #
+# <a name="write-linq-queries-in-c"></a>在 C\# 中编写 LINQ 查询
 
 本文介绍可以用于在 C# 中编写 LINQ 查询的三种方法：
 

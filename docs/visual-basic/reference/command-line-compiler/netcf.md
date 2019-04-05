@@ -9,12 +9,12 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: d213f0f95d047a3758a4c85e4dc8263f82dcac8a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7b9485c1bc2f87ca9f007a4e1ce2f63c055100c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184564"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815974"
 ---
 # <a name="-netcf"></a>-netcf
 设置编译器从而以 [!INCLUDE[Compact](~/includes/compact-md.md)] 为目标。  
@@ -37,15 +37,15 @@ ms.locfileid: "50184564"
   
 -   [最终\<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)关键字，这将终止执行程序，已禁用。 以下程序编译和运行而无需`-netcf`但在编译时会失败`-netcf`。  
   
-     [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
+     [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]  
   
 -   后期绑定，在所有表单中，已禁用。 当遇到已识别的后期绑定方案时，会生成编译时错误。 以下程序编译和运行而无需`-netcf`但在编译时会失败`-netcf`。  
   
-     [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
+     [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]  
   
 -   [自动](../../../visual-basic/language-reference/modifiers/auto.md)， [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)，并[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)修饰符处于禁用状态。 语法[Declare 语句](../../../visual-basic/language-reference/statements/declare-statement.md)语句也被修改为`Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`。 下面的代码演示的效果`-netcf`上一次编译。  
   
-     [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
+     [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]  
   
 -   使用已从 Visual Basic 的 Visual Basic 6.0 关键字生成不同的错误时`-netcf`使用。 这会影响以下关键字的错误消息：  
   
@@ -88,7 +88,8 @@ ms.locfileid: "50184564"
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

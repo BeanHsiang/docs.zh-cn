@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: 18d09d8018303aab6a69801c84c7ec9c6ea19ca9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: fbca9fa8aa227d8d5b6488bef179f4bda08bb38c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083827"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830053"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 子句 (Visual Basic)
 将当前的范围变量，以消除重复值在后续查询子句中的值限制。  
@@ -30,11 +30,12 @@ Distinct
 ## <a name="example"></a>示例  
  下面的查询表达式联接客户列表和客户订单的列表。 `Distinct`子句是包括在内，以返回的唯一客户名称列表，并且订单日期。  
   
- [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/distinct-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查询](../../../visual-basic/language-reference/queries/index.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查询](../../../visual-basic/language-reference/queries/index.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)

@@ -7,41 +7,41 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: c43505497b947004ffb282346459967579d52375
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f5d6ae2d21058e7e6dd9fa9736800237082766d1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199539"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364744"
 ---
 # <a name="xaml-resources"></a>XAML 资源
-资源是可以在应用程序中的不同位置重复使用的对象。 资源的示例包括画笔和样式。 本概述介绍如何使用中的资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 此外可以创建并使用代码，或者通过互换使用代码访问资源和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 有关详细信息，请参阅[资源和代码](../../../../docs/framework/wpf/advanced/resources-and-code.md)。  
+资源是可以在应用程序中的不同位置重复使用的对象。 资源的示例包括画笔和样式。 本概述介绍如何使用中的资源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 此外可以创建并使用代码，或者通过互换使用代码访问资源和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 有关详细信息，请参阅[资源和代码](resources-and-code.md)。  
   
 > [!NOTE]
->  本主题中所述的资源文件是不同的资源文件中所述[WPF 应用程序资源、 内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)和不同于嵌入或链接的资源中所述[管理应用程序资源 (.NET)](https://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e)。  
+>  本主题中所述的资源文件是不同的资源文件中所述[WPF 应用程序资源、 内容和数据文件](../app-development/wpf-application-resource-content-and-data-files.md)和不同于嵌入或链接的资源中所述[管理应用程序资源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)。  
   
   
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>在 XAML 中使用资源  
  下面的示例定义<xref:System.Windows.Media.SolidColorBrush>作为页面的根元素上的资源。 该示例然后引用的资源，并使用它来设置多个子元素，其中包括的属性<xref:System.Windows.Shapes.Ellipse>、 一个<xref:System.Windows.Controls.TextBlock>，和一个<xref:System.Windows.Controls.Button>。  
   
- [!code-xaml[FEResourceSH_snip#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]  
+ [!code-xaml[FEResourceSH_snip#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]  
   
  每个框架级元素 (<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>) 具有<xref:System.Windows.FrameworkElement.Resources%2A>属性，它是包含资源的属性 (作为<xref:System.Windows.ResourceDictionary>) 某个资源定义。 您可以在任意元素上定义资源。 但是，资源最常定义在根元素，它是<xref:System.Windows.Controls.Page>在示例中。  
   
- 资源字典中的每个资源都必须具有唯一键。 在标记中定义的资源，则指定通过唯一键[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)。 通常情况下，这个键是一个字符串；但是，也可使用相应的标记扩展将其设置为其他对象类型。 非字符串键用于资源使用的某些功能区中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，尤其是样式、 组件资源和数据样式。  
+ 资源字典中的每个资源都必须具有唯一键。 在标记中定义的资源，则指定通过唯一键[X:key 指令](../../xaml-services/x-key-directive.md)。 通常情况下，这个键是一个字符串；但是，也可使用相应的标记扩展将其设置为其他对象类型。 非字符串键用于资源使用的某些功能区中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，尤其是样式、 组件资源和数据样式。  
   
  在定义好资源后，可以使用能够指定键名称的资源标记扩展语法来引用该资源以用于属性值，例如：  
   
- [!code-xaml[FEResourceSH_snip#KeyNameUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]  
+ [!code-xaml[FEResourceSH_snip#KeyNameUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]  
   
  在前面的示例中，当[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]加载程序处理值`{StaticResource MyBrush}`的<xref:System.Windows.Controls.Control.Background%2A>属性<xref:System.Windows.Controls.Button>，资源查找逻辑首先检查的资源字典<xref:System.Windows.Controls.Button>元素。 如果<xref:System.Windows.Controls.Button>不具有定义的资源键`MyBrush`（不是; 其资源集合为空），查找接下来检查父元素的<xref:System.Windows.Controls.Button>，这是<xref:System.Windows.Controls.Page>。 因此，当您定义资源上<xref:System.Windows.Controls.Page>根元素，在逻辑树中的所有元素<xref:System.Windows.Controls.Page>可以访问它，并可以重复使用相同的资源，为设置任何属性的值时，接受<xref:System.Type>的资源表示。 在上一示例中，相同`MyBrush`资源设置两个不同的属性：<xref:System.Windows.Controls.Control.Background%2A>的<xref:System.Windows.Controls.Button>，和<xref:System.Windows.Shapes.Shape.Fill%2A>的<xref:System.Windows.Shapes.Rectangle>。  
   
 <a name="staticdynamic"></a>   
 ## <a name="static-and-dynamic-resources"></a>静态和动态资源  
- 资源可以作为静态资源或动态资源加以引用。 这是通过使用任一[StaticResource 标记扩展](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)或[DynamicResource 标记扩展](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)。 标记扩展是一项功能[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]使您可以通过使用标记扩展来处理属性字符串，并返回到该对象指定的对象引用由此[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]加载程序。 有关标记扩展行为的详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
+ 资源可以作为静态资源或动态资源加以引用。 这是通过使用任一[StaticResource 标记扩展](staticresource-markup-extension.md)或[DynamicResource 标记扩展](dynamicresource-markup-extension.md)。 标记扩展是一项功能[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]使您可以通过使用标记扩展来处理属性字符串，并返回到该对象指定的对象引用由此[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]加载程序。 有关标记扩展行为的详细信息，请参阅[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
- 当使用标记扩展时，通常会以字符串的形式提供一个或多个参数，这些参数由该特定标记扩展来处理，而不是在所设置属性的上下文中进行计算。 [StaticResource 标记扩展](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)通过查找所有可用的资源字典中的键的值来处理键。 这个操作会在加载期间执行；执行时，加载进程需要分配采用静态资源引用的属性值。 [DynamicResource 标记扩展](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)改为进程通过创建一个表达式，并且该表达式的键会一直保持未计算直到实际运行该应用程序，在这段时间表达式进行计算，并提供一个值。  
+ 当使用标记扩展时，通常会以字符串的形式提供一个或多个参数，这些参数由该特定标记扩展来处理，而不是在所设置属性的上下文中进行计算。 [StaticResource 标记扩展](staticresource-markup-extension.md)通过查找所有可用的资源字典中的键的值来处理键。 这个操作会在加载期间执行；执行时，加载进程需要分配采用静态资源引用的属性值。 [DynamicResource 标记扩展](dynamicresource-markup-extension.md)改为进程通过创建一个表达式，并且该表达式的键会一直保持未计算直到实际运行该应用程序，在这段时间表达式进行计算，并提供一个值。  
   
  在引用某个资源时，下列注意事项可能会对于使用静态资源引用还是使用动态资源引用产生影响：  
   
@@ -66,7 +66,7 @@ ms.locfileid: "44199539"
   
 -   正在使用资源设置大量依赖属性。 依赖属性会通过属性系统启用有效值缓存功能；因此，如果为可在加载时进行计算的依赖属性提供了值，则该依赖属性不必检查是否存在重新计算的表达式并可返回上一个有效值。 此项技术可以提高性能。  
   
--   你想要为所有使用者更改基础资源，或者你想要使用的每个使用者维护单独的可写实例[x： 共享属性](../../../../docs/framework/xaml-services/x-shared-attribute.md)。  
+-   你想要为所有使用者更改基础资源，或者你想要使用的每个使用者维护单独的可写实例[x： 共享属性](../../xaml-services/x-shared-attribute.md)。  
   
 #### <a name="static-resource-lookup-behavior"></a>静态资源查找行为  
   
@@ -133,32 +133,32 @@ ms.locfileid: "44199539"
   
 -   要设置的属性必须是属性上<xref:System.Windows.Freezable>提供的值作为<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>属性，或<xref:System.Windows.Setter>值。  
   
- 因为要设置的属性必须是<xref:System.Windows.DependencyProperty>或<xref:System.Windows.Freezable>属性，属性的大多数更改可以传播到 UI，因为属性更改 （更改的动态资源值） 会经由属性系统。 大多数控件都包含逻辑将强制执行控件的另一个布局，如果<xref:System.Windows.DependencyProperty>更改和属性可能会影响布局。 但是，并非所有属性都都会[DynamicResource 标记扩展](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)作为它们的值保证提供的值中在 UI 中的实时更新的方式。 此功能可能仍会因属性、属性所属的类型，甚至因应用程序的逻辑结果而异。  
+ 因为要设置的属性必须是<xref:System.Windows.DependencyProperty>或<xref:System.Windows.Freezable>属性，属性的大多数更改可以传播到 UI，因为属性更改 （更改的动态资源值） 会经由属性系统。 大多数控件都包含逻辑将强制执行控件的另一个布局，如果<xref:System.Windows.DependencyProperty>更改和属性可能会影响布局。 但是，并非所有属性都都会[DynamicResource 标记扩展](dynamicresource-markup-extension.md)作为它们的值保证提供的值中在 UI 中的实时更新的方式。 此功能可能仍会因属性、属性所属的类型，甚至因应用程序的逻辑结果而异。  
   
 <a name="stylesimplicitkeys"></a>   
 ## <a name="styles-datatemplates-and-implicit-keys"></a>样式、数据模板和隐式键  
  前面曾提到中的所有项<xref:System.Windows.ResourceDictionary>必须有一个键。 但是，这并不并不意味着所有资源必须都具有显式`x:Key`。 多种对象类型在定义为资源时都支持隐式键，其键值会与另一属性的值绑定。 这称为隐式键，而`x:Key`属性则为显式键。 任何隐式键都可通过指定显式键来覆盖。  
   
- 资源的一个非常重要的方案是在定义时<xref:System.Windows.Style>。 事实上，<xref:System.Windows.Style>由于样式本质上是可供重复使用几乎始终定义为使用的资源字典中的条目。 有关样式的详细信息，请参阅[样式和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ 资源的一个非常重要的方案是在定义时<xref:System.Windows.Style>。 事实上，<xref:System.Windows.Style>由于样式本质上是可供重复使用几乎始终定义为使用的资源字典中的条目。 有关样式的详细信息，请参阅[样式和模板化](../controls/styling-and-templating.md)。  
   
- 控件样式可通过隐式键来创建和引用。 用于定义控件默认外观的主题样式依赖于该隐式键。 从请求它的角度来看，隐式键是<xref:System.Type>控件本身。 从资源定义的角度来看，隐式键是<xref:System.Windows.Style.TargetType%2A>的样式。 因此，如果要创建自定义控件的主题，现有主题样式，即创建进行交互的样式不需要指定[X:key 指令](../../../../docs/framework/xaml-services/x-key-directive.md)为此， <xref:System.Windows.Style>。 另外，如果想要使用主题样式，则根本无需指定任何样式。 例如，以下样式定义的工作原理，即使<xref:System.Windows.Style>资源似乎不具有键：  
+ 控件样式可通过隐式键来创建和引用。 用于定义控件默认外观的主题样式依赖于该隐式键。 从请求它的角度来看，隐式键是<xref:System.Type>控件本身。 从资源定义的角度来看，隐式键是<xref:System.Windows.Style.TargetType%2A>的样式。 因此，如果要创建自定义控件的主题，现有主题样式，即创建进行交互的样式不需要指定[X:key 指令](../../xaml-services/x-key-directive.md)为此， <xref:System.Windows.Style>。 另外，如果想要使用主题样式，则根本无需指定任何样式。 例如，以下样式定义的工作原理，即使<xref:System.Windows.Style>资源似乎不具有键：  
   
- [!code-xaml[FEResourceSH_snip#ImplicitStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
+ [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- 该样式实际上有一个键： 隐式键`typeof(` <xref:System.Windows.Controls.Button> `)`。 在标记中，可以指定<xref:System.Windows.Style.TargetType%2A>直接作为类型名称 (或者可以根据需要使用[{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) 若要返回<xref:System.Type>。  
+ 该样式实际上有一个键： 隐式键`typeof(` <xref:System.Windows.Controls.Button> `)`。 在标记中，可以指定<xref:System.Windows.Style.TargetType%2A>直接作为类型名称 (或者可以根据需要使用[{x: Type...}](../../xaml-services/x-type-markup-extension.md) 若要返回<xref:System.Type>。  
   
- 通过使用的默认主题样式机制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，为运行时样式的应用样式<xref:System.Windows.Controls.Button>页上，即使<xref:System.Windows.Controls.Button>本身不会尝试指定其<xref:System.Windows.FrameworkElement.Style%2A>属性或特定资源引用的样式。 在页面中定义的样式位于查找序列中的靠前位置（在主题字典样式之前），其所用的键与主题字典样式的键相同。 您可能只需指定`<Button>Hello</Button>`页上，使用定义的样式中的任意位置<xref:System.Windows.Style.TargetType%2A>的`Button`会应用于该按钮。 如果需要，可以仍显式键使用类型值与相同的样式<xref:System.Windows.Style.TargetType%2A>、 清楚起见，在您的标记，但这是可选的。  
+ 通过使用的默认主题样式机制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，为运行时样式的应用样式<xref:System.Windows.Controls.Button>页上，即使<xref:System.Windows.Controls.Button>本身不会尝试指定其<xref:System.Windows.FrameworkElement.Style%2A>属性或特定资源引用的样式。 比主题字典样式，使用相同键的主题字典样式位于查找序列中先前找到的页中定义的样式。 您可能只需指定`<Button>Hello</Button>`页上，使用定义的样式中的任意位置<xref:System.Windows.Style.TargetType%2A>的`Button`会应用于该按钮。 如果需要，可以仍显式键使用类型值与相同的样式<xref:System.Windows.Style.TargetType%2A>、 清楚起见，在您的标记，但这是可选的。  
   
- 如果不在控件上适用样式的隐式键<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>是`true`(另请注意，<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>可能设置为本机行为对于控件类中，而不是显式的控件实例的一部分)。 此外，为了支持派生的类应用场景的隐式键，控件必须重写<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(作为的一部分提供的所有现有控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]执行此操作)。 有关样式、 主题和控件设计的详细信息，请参阅[控件的设计准则的指导原则](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)。  
+ 如果不在控件上适用样式的隐式键<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>是`true`(另请注意，<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>可能设置为本机行为对于控件类中，而不是显式的控件实例的一部分)。 此外，为了支持派生的类应用场景的隐式键，控件必须重写<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(作为的一部分提供的所有现有控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]执行此操作)。 有关样式、 主题和控件设计的详细信息，请参阅[控件的设计准则的指导原则](../controls/guidelines-for-designing-stylable-controls.md)。  
   
- <xref:System.Windows.DataTemplate> 还有一个隐式键。 隐式键<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>属性值。 <xref:System.Windows.DataTemplate.DataType%2A> 也可以指定为的类型名称而不是使用显式[{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 有关详细信息，请参阅[数据模板化概述](../../../../docs/framework/wpf/data/data-templating-overview.md)。  
+ <xref:System.Windows.DataTemplate> 还有一个隐式键。 隐式键<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>属性值。 <xref:System.Windows.DataTemplate.DataType%2A> 也可以指定为的类型名称而不是使用显式[{x: Type...}](../../xaml-services/x-type-markup-extension.md). 有关详细信息，请参阅[数据模板化概述](../data/data-templating-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.ResourceDictionary>  
- [应用程序资源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
- [资源和代码](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [定义和引用资源](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [x:Type 标记扩展](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [StaticResource 标记扩展](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [DynamicResource 标记扩展](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.ResourceDictionary>
+- [应用程序资源](optimizing-performance-application-resources.md)
+- [资源和代码](resources-and-code.md)
+- [定义和引用资源](how-to-define-and-reference-a-resource.md)
+- [应用程序管理概述](../app-development/application-management-overview.md)
+- [x:Type 标记扩展](../../xaml-services/x-type-markup-extension.md)
+- [StaticResource 标记扩展](staticresource-markup-extension.md)
+- [DynamicResource 标记扩展](dynamicresource-markup-extension.md)

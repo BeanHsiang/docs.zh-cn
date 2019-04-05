@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: b17de01c4a5e89051393aa3c6bb2d0079535dbf6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703670"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816312"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>演练：演示可视化继承
 通过 Visual 继承，可以查看基本表单上的控件和添加新控件。 在本演练中，你将创建基窗体，并将其编译到类库。 将此类库导入另一个项目，并创建一个从基窗体继承的新窗体。 在本演练中，你将学会如何执行以下任务：  
@@ -70,7 +70,7 @@ ms.locfileid: "46703670"
   
 #### <a name="to-add-a-button-that-inheritors-of-the-base-form-can-modify"></a>添加基窗体的继承者可修改的按钮  
   
-1.  打开**Form1**在设计器中。  
+1.  在设计器中打开“Form1”。  
   
 2.  上**所有 Windows 窗体**选项卡**工具箱**，双击**按钮**到窗体添加一个按钮。 使用鼠标来定位按钮和调整其大小。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "46703670"
   
 5.  继承的窗体 (**Form2**) 在设计器中双击它，如果已打开。  
   
-     继承的按钮在设计器中，有一个符号 (![VisualBasicInheritanceSymbol 屏幕截图](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 在其上角，指示它们继承。  
+     继承的按钮在设计器中，有一个符号 （![Visual Basic 继承符号的屏幕截图。](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) 在其上角，指示它们继承。  
   
 6.  选择**Say Hello**按钮，然后观察调整大小图柄。 由于此按钮受保护，继承者可以对其进行移动、调整大小、更改标题和进行其他修改。  
   
@@ -161,9 +161,9 @@ ms.locfileid: "46703670"
 12. 按 F5 运行此应用程序，并观察继承的窗体的行为。  
   
 ## <a name="next-steps"></a>后续步骤  
- 用户控件的继承方式大致相同。 打开新的类库项目并添加用户控件。 在其上放置构成控件，然后编译项目。 打开另一个新的类库项目，并添加对已编译的类库的引用。 此外，请尝试添加继承的控件 (通过**添加新项**对话框的) 到该项目并使用**继承选择器**。 添加一个用户控件，并将更改`Inherits`(`:`在 Visual C#) 语句。 有关详细信息，请参阅[如何： 继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。  
+ 用户控件的继承方式大致相同。 打开新的类库项目并添加用户控件。 在其上放置构成控件，然后编译项目。 打开另一个新的类库项目，并添加对已编译的类库的引用。 此外，请尝试添加继承的控件 (通过**添加新项**对话框的) 到该项目并使用**继承选择器**。 添加一个用户控件，并将更改`Inherits`(`:`在 Visual C#) 语句。 有关详细信息，请参阅[如何：继承 Windows 窗体](how-to-inherit-windows-forms.md)。  
   
-## <a name="see-also"></a>请参阅  
- [如何：继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Windows 窗体可视化继承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [Windows 窗体](../../../../docs/framework/winforms/index.md)
+## <a name="see-also"></a>请参阅
+- [如何：继承 Windows 窗体](how-to-inherit-windows-forms.md)
+- [Windows 窗体可视化继承](windows-forms-visual-inheritance.md)
+- [Windows 窗体](../index.md)

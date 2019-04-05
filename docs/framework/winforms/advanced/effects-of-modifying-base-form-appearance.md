@@ -8,14 +8,14 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: adaf9224fd340c6ea4342e2591806a7c877e83ff
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: a253fef2bc7220d13c0ca373a38a5bf2f5842415
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084404"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715550"
 ---
-# <a name="effects-of-modifying-a-base-form39s-appearance"></a>修改基窗体的外观的效果
+# <a name="effects-of-modifying-a-base-forms-appearance"></a>修改基窗体的外观的效果
 在应用程序开发过程中，可能经常需要更改基窗体的外观，该项目（或其他项目）中的其他窗体继承自此基窗体。  
   
  在设计时，如果生成了包含基窗体的项目，则对基窗体外观所做更改（属性的设置或控件的增减）将反映在继承的窗体上。 仅将更改保存到基窗体是不够的。 若要生成项目，请从“生成”菜单选择“生成”。  
@@ -25,7 +25,7 @@ ms.locfileid: "44084404"
   
  在运行时对基窗体所做修改不影响已实例化的继承窗体。  
   
-## <a name="see-also"></a>请参阅  
- [base](~/docs/csharp/language-reference/keywords/base.md)  
- [如何：继承 Windows 窗体](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Windows 窗体可视化继承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>请参阅
+- [base](~/docs/csharp/language-reference/keywords/base.md)
+- [如何：继承 Windows 窗体](how-to-inherit-windows-forms.md)
+- [Windows 窗体可视化继承](windows-forms-visual-inheritance.md)

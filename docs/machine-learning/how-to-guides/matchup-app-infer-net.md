@@ -1,23 +1,27 @@
 ---
 title: 使用 Infer.NET 和概率性编程创建游戏匹配列表
 description: 了解如何使用概率性编程和 Infer.NET 创建基于简化版 TrueSkill 的游戏匹配列表应用。
-ms.date: 10/04/2018
-ms.topic: how-to
-ms.custom: mvc
-ms.openlocfilehash: 990fd60d809c893730bf2682946f89dbe59f36a5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.date: 03/05/2019
+ms.custom: mvc,how-to
+ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "49401691"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679126"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 和概率性编程创建游戏匹配列表
 
+> [!NOTE]
+> 本主题引用 ML.NET（目前处于预览状态），且材料可能会更改。 有关详细信息，请访问 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
+
+此操作说明和相关示例目前使用的是 ML.NET 版本 0.10。 有关详细信息，请参阅 [dotnet/machinelearning GitHub 存储库](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)上的发行说明。
+
 此操作指南介绍了如何使用 Infer.NET 进行概率性编程。 概率性编程是一种将自定义模型表示为计算机程序的机器学习方法。 借助它可以在模型中包含专业知识，使机器学习系统更易理解。 它还支持在线推断，即在新数据到达时进行学习的过程。 Azure、Xbox 及必应中的多种 Microsoft 产品均使用了 Infer.NET。
 
-## <a name="what-is-probabilistic-programming"></a>什么是概率性编程？ 
+## <a name="what-is-probabilistic-programming"></a>什么是概率性编程？
 
-借助概率性编程，可创建真实过程的统计模型。 
+借助概率性编程，可创建真实过程的统计模型。
 
 ## <a name="prerequisites"></a>系统必备
 
@@ -46,9 +50,9 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>设计模型
 
-示例使用在 Office 中进行的乒乓球或桌上足球比赛。 我们具有参赛者的信息和每场比赛的结果。  我们想要通过此数据推断玩家的实力。 假设每位玩家的潜在实力呈正态分布，且他们在给定比赛中的表现是此实力受干扰后的状态。 此数据会将胜者的表现约束在优于败者的表现。 这是热门的 [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) 模型的简化版，此模型也支持团队、平局及其他扩展项。 热销的 Halo 和 Gears of War 游戏中的比赛安排使用了此模型的[高级版](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)。
+示例使用在 Office 中进行的乒乓球或桌上足球比赛。 你具有参赛者的信息和每场比赛的结果。  你想要通过此数据推断玩家的实力。 假设每位玩家的潜在实力呈正态分布，且他们在给定比赛中的表现是此实力受干扰后的状态。 此数据会将胜者的表现约束在优于败者的表现。 这是热门的 [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) 模型的简化版，此模型也支持团队、平局及其他扩展项。 热销的 Halo 和 Gears of War 游戏中的比赛安排使用了此模型的[高级版](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)。
 
-我们需要列出所推断玩家的实力及其方差（实力不确定性的度量值）。
+需要列出所推断玩家的实力及其方差（实力不确定性的度量值）。
 
 *游戏结果示例数据*
 
@@ -86,7 +90,7 @@ namespace myApp
             var winnerData = new[] { 0, 0, 0, 1, 3, 4 };
             var loserData = new[] { 1, 3, 4, 2, 1, 2 };
 
-            // Define the statistical model as a probabilistic program 
+            // Define the statistical model as a probabilistic program
             var game = new Range(winnerData.Length);
             var player = new Range(winnerData.Concat(loserData).Max() + 1);
             var playerSkills = Variable.Array<double>(player);
@@ -150,7 +154,7 @@ Player 1 skill: Gaussian(4.955, 3.503)
 Player 2 skill: Gaussian(2.639, 4.288)
 ```
 
-请注意，在结果中根据我们的模型玩家 3 排名略高于玩家 4。 因为玩家 3 战胜了玩家 1 的意义大于玩家 4 战胜玩家 2 的意义 – 请注意玩家 1 打败了玩家 2. 玩家 0 是总冠军！  
+请注意，在结果中根据我们的模型玩家 3 排名略高于玩家 4。 因为玩家 3 战胜了玩家 1 的意义大于玩家 4 战胜玩家 2 的意义 – 请注意玩家 1 打败了玩家 2. 玩家 0 是总冠军！
 
 ## <a name="keep-learning"></a>继续学习
 

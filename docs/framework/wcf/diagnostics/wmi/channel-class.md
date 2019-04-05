@@ -2,12 +2,12 @@
 title: Channel 类
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: 108d5f8e3cd092863dbd48e2bb9d180798b091a4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3fbf398cca7ae9adbbecb9439bf3cbd32eb03969
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668387"
 ---
 # <a name="channel-class"></a>Channel 类
 通道  
@@ -39,7 +39,7 @@ class Channel
  通道的本地终结点。  
   
 ### <a name="ref"></a>ref  
- 数据类型：Endpoint  
+ 数据类型：终结点  
   
  访问类型：只读  
   
@@ -72,5 +72,5 @@ class Channel
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.ChannelBase>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.ChannelBase>

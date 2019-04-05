@@ -1,15 +1,15 @@
 ---
-title: 递归函数：rec 关键字 (F#)
-description: '了解如何使用 let 关键字使用 F # rec 关键字定义的递归函数。'
+title: 递归函数：Rec 关键字
+description: 了解如何F#rec 关键字用于与 let 关键字定义的递归函数。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9f9c7e1a4468de9551b3852d0e7b4381025b2699
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48024514"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612902"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>递归函数：rec 关键字
+# <a name="recursive-functions-the-rec-keyword"></a>递归函数：Rec 关键字
 
 `rec`一起使用关键字`let`关键字来定义的递归函数。
 
@@ -30,14 +30,14 @@ function2-body
 
 ## <a name="remarks"></a>备注
 
-递归函数，函数调用自身，F # 语言中显式标识。 这使正在定义的标识符可在函数的作用域中。
+递归函数，调用本身，这些函数中显式标识F#语言。 这使正在定义的标识符可在函数的作用域中。
 
 以下代码演示了递归函数，用于计算*n*<sup>th</sup>斐波纳契数。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
->[!NOTE]
-在实践中，上面这类代码是一种浪费的内存和处理器时间，因为它涉及的以前计算的值重新计算。
+> [!NOTE]
+> 在实践中，上面这类代码是一种浪费的内存和处理器时间，因为它涉及的以前计算的值重新计算。
 
 方法是隐式类型; 中递归无需添加`rec`关键字。 类中的 let 的绑定不是隐式递归。
 

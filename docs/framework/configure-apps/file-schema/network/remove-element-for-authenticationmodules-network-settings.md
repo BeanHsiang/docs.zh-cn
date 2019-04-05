@@ -1,5 +1,5 @@
 ---
-title: '&lt;删除&gt;authenticationModules （网络设置） 的'
+title: authenticationModules -> <remove> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/remove
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 65b5b7f717912ecaee73a5b24e65d22b902a4e44
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a8afdf442f8dc4e57a407583ea6c452330dae53f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180700"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281016"
 ---
-# <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>&lt;删除&gt;authenticationModules （网络设置） 的
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<删除 > authenticationModules （网络设置） 的
 从应用程序中删除身份验证模块。  
   
  \<configuration>  
 \<system.net>  
-\<authenticationModules >  
+\<authenticationModules>  
 \<remove>  
   
 ## <a name="syntax"></a>语法  
@@ -72,7 +72,7 @@ ms.locfileid: "50180700"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.IAuthenticationModule>  
-- <xref:System.Net.AuthenticationManager>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.IAuthenticationModule>
+- <xref:System.Net.AuthenticationManager>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

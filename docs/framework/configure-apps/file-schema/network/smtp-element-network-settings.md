@@ -1,5 +1,5 @@
 ---
-title: '&lt;smtp&gt;元素 （网络设置）'
+title: <smtp> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 362c5ba479c845a8183fe705e72ea3a12fb7a94c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ecd780da7224389685b61c39c796c7a80587709c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195640"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273577"
 ---
-# <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;元素 （网络设置）
+# <a name="smtp-element-network-settings"></a>\<smtp > 元素 （网络设置）
 配置传递格式、 传递方法和发件人发送电子邮件地址。  
   
  \<configuration>  
@@ -26,13 +26,13 @@ ms.locfileid: "50195640"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-      <smtp  
-        deliveryFormat="format"   
-        deliveryMethod="method"   
-        from="from address">
-          <specifiedPickupDirectory> … </ specifiedPickupDirectory >  
-          <network> … </network>  
-      </smtp>  
+<smtp  
+  deliveryFormat="format"  
+  deliveryMethod="method"  
+  from="from address">
+    <specifiedPickupDirectory>...</specifiedPickupDirectory>  
+    <network>...</network>  
+</smtp>  
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -78,9 +78,9 @@ ms.locfileid: "50195640"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
-- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
-- <xref:System.Net.Mail.SmtpDeliveryFormat>  
-- <xref:System.Net.Mail.SmtpDeliveryMethod>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
+- <xref:System.Net.Mail.SmtpDeliveryFormat>
+- <xref:System.Net.Mail.SmtpDeliveryMethod>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

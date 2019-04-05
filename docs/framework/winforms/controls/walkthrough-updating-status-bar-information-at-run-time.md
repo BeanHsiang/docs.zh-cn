@@ -1,5 +1,5 @@
 ---
-title: 演练：在运行时更新状态栏信息
+title: 演练：在运行时的更新状态栏信息
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 49722d5dadf694e8ee3037646652b921ddda3e91
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3ad76899f86013e3395b5b7859538c4c59c9b1ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746025"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716460"
 ---
-# <a name="walkthrough-updating-status-bar-information-at-run-time"></a>演练：在运行时更新状态栏信息
+# <a name="walkthrough-updating-status-bar-information-at-run-time"></a>演练：在运行时的更新状态栏信息
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.StatusStrip>并<xref:System.Windows.Forms.ToolStripStatusLabel>控件替换，并将功能添加到<xref:System.Windows.Forms.StatusBar>并<xref:System.Windows.Forms.StatusBarPanel>控制; 但是，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控件将保留用于向后兼容性并供将来使用，如果你选择。  
   
@@ -30,16 +30,16 @@ ms.locfileid: "45746025"
   
 1.  创建新的 Windows 窗体。  
   
-2.  向窗体添加一个 <xref:System.Windows.Forms.StatusBar> 控件。 有关详细信息，请参阅[如何：向 Windows 窗体添加控件](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。  
+2.  向窗体添加一个 <xref:System.Windows.Forms.StatusBar> 控件。 有关详细信息，请参阅[如何：将控件添加到 Windows 窗体](how-to-add-controls-to-windows-forms.md)。  
   
-3.  添加到状态栏面板在<xref:System.Windows.Forms.StatusBar>控件。 有关详细信息，请参阅[如何：向 StatusBar 控件添加面板](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)。  
+3.  添加到状态栏面板在<xref:System.Windows.Forms.StatusBar>控件。 有关详细信息，请参阅[如何：向 StatusBar 控件添加面板](how-to-add-panels-to-a-statusbar-control.md)。  
   
 4.  有关<xref:System.Windows.Forms.StatusBar>控件添加到窗体中，设置<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>属性设置为`true`。  
   
 5.  添加 Windows 窗体<xref:System.Windows.Forms.Timer>组件到窗体。  
   
     > [!NOTE]
-    >  Windows 窗体<xref:System.Windows.Forms.Timer?displayProperty=nameWithType>组件专为 Windows 窗体环境。 如果需要适合服务器环境的计时器，请参阅[基于服务器的计时器介绍](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。  
+    >  Windows 窗体<xref:System.Windows.Forms.Timer?displayProperty=nameWithType>组件专为 Windows 窗体环境。 如果需要适合服务器环境的计时器，请参阅[基于服务器的计时器介绍](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))。  
   
 6.  将 <xref:System.Windows.Forms.Timer.Enabled%2A> 属性设置为 `true`。  
   
@@ -84,9 +84,9 @@ ms.locfileid: "45746025"
     > [!NOTE]
     >  大约 30 秒之后，时钟才会出现在状态栏上。 这样可以获得最精确的时间。 相反，若要使时钟早些出现，可以减少的值<xref:System.Windows.Forms.Timer.Interval%2A>在前一过程中的步骤 7 中设置的属性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.StatusBar>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [如何：向 StatusBar 控件添加面板](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
- [如何：确定 Windows 窗体 StatusBar 控件中的哪个面板获得了单击](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [StatusBar 控件概述](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.StatusBar>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- [如何：向 StatusBar 控件添加面板](how-to-add-panels-to-a-statusbar-control.md)
+- [如何：确定已单击 Windows 窗体 StatusBar 控件中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar 控件概述](statusbar-control-overview-windows-forms.md)

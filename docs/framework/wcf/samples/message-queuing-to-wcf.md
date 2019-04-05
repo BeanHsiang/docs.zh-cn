@@ -2,12 +2,12 @@
 title: 到 Windows Communication Foundation 的消息队列
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: cbbbab700a6602fa02160733c383a0fcaa84297b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: fa8bb6036b38456066922c0c2991a4893a22c117
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676648"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>到 Windows Communication Foundation 的消息队列
 此示例演示消息队列 (MSMQ) 应用程序如何可以将 MSMQ 消息发送到 Windows Communication Foundation (WCF) 服务。 此服务是自承载控制台应用程序，通过它可以观察服务接收排队消息。  
@@ -153,7 +153,7 @@ Console.ReadLine();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
-## <a name="see-also"></a>请参阅  
- [WCF 中的队列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [如何：与 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)
+## <a name="see-also"></a>请参阅
+- [WCF 中的队列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [如何：使用 WCF 终结点和消息队列应用程序交换消息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [消息队列](https://go.microsoft.com/fwlink/?LinkId=94968)

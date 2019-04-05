@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 457310fbf12ef2d6143586116f76df1720b59a6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdccc0d60cb5f4bbee5da9b07072a9aa14a8fde9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500729"
 ---
 # <a name="trace-listeners"></a>跟踪侦听器
 使用 Trace、Debug 和 <xref:System.Diagnostics.TraceSource> 时，必须具有用于收集和记录发送的消息的机制。 跟踪消息可由侦听器接收。 侦听器的用途是收集、存储和路由跟踪消息。 侦听器会将跟踪输出定向到适当的目标，如日志、窗口或文本文件。  
@@ -40,7 +40,7 @@ ms.locfileid: "33391742"
   
 -   <xref:System.Diagnostics.XmlWriterTraceListener> 将跟踪或调试输出以 XML 编码数据的形式定向到 <xref:System.IO.TextWriter> 或 <xref:System.IO.Stream>，例如 <xref:System.IO.FileStream>。  
   
- 如果你希望 <xref:System.Diagnostics.DefaultTraceListener> 以外的任何侦听器接收 Debug、Trace 和 <xref:System.Diagnostics.TraceSource> 输出，则必须将其添加到 `Listeners` 集合。 有关详细信息，请参阅[如何：创建和初始化跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)和[如何：将 TraceSource 和筛选器与跟踪侦听器一起使用](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)。 侦听器集合中的任何侦听器均从跟踪输出方法获取相同消息。 例如，假设你设置了两个侦听器：TextWriterTraceListener 和 EventLogTraceListener。 每个侦听器接收相同消息。 TextWriterTraceListener 将输出定向到流，而 EventLogTraceListener 将输出定向到事件日志。  
+ 如果你希望 <xref:System.Diagnostics.DefaultTraceListener> 以外的任何侦听器接收 Debug、Trace 和 <xref:System.Diagnostics.TraceSource> 输出，则必须将其添加到 `Listeners` 集合。 有关详细信息，请参阅[如何：创建和初始化跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)和[如何：使用 TraceSource 和筛选器与跟踪侦听器](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)。 侦听器集合中的任何侦听器均从跟踪输出方法获取相同消息。 例如，假设你设置了两个侦听器：TextWriterTraceListener 和 EventLogTraceListener。 每个侦听器接收相同消息。 TextWriterTraceListener 将输出定向到流，而 EventLogTraceListener 将输出定向到事件日志。  
   
  以下示例演示如何将输出发送到 Listeners 集合。  
   
@@ -76,10 +76,10 @@ System.Diagnostics.Trace.Listeners.Add(
 ## <a name="developer-defined-listeners"></a>开发人员定义的侦听器  
  可以通过从 TraceListener 基类继承并用自定义方法重写其方法来定义侦听器。 有关创建开发人员定义的侦听器的详细信息，请参阅 .NET Framework 参考中的 <xref:System.Diagnostics.TraceListener>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TraceListener>  
- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
- [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TraceListener>
+- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)

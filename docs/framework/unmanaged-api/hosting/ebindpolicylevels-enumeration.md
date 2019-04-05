@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 635cf7c4e8ff715096728414506b4a7e683727b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704207"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels 枚举
-提供一些标志以指定在哪个应用或修改的程序集策略级别。  
+提供用于指定要应用或修改的程序集策略级别的标志。  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,25 +47,25 @@ typedef enum {
 |------------|-----------------|  
 |`ePolicyLevelAdmin`|指定应在管理员级别应用策略。|  
 |`ePolicyLevelApp`|指定应在应用程序级别应用策略。|  
-|`ePolicyLevelHost`|指定应在主机级别上应用策略。|  
-|`ePolicyLevelNone`|不指定任何策略级别标志。|  
+|`ePolicyLevelHost`|指定应在主机级别应用策略。|  
+|`ePolicyLevelNone`|指定没有策略级别的标志。|  
 |`ePolicyLevelPublisher`|指定应在发布服务器级别应用策略。|  
 |`ePolicyLevelRetargetable`|指定策略应适用变量级别。|  
-|`ePolicyPortability`|指定策略应支持的.NET Framework 程序集的实现之间的可移植性。 请参阅[ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)配置文件元素。|  
-|`ePolicyUnifiedToCLR`|指定策略应统一到的公共语言运行时 (CLR)。|  
+|`ePolicyPortability`|指定策略应支持的.NET Framework 程序集实现之间的可移植性。 请参阅[ \<supportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)配置文件元素。|  
+|`ePolicyUnifiedToCLR`|指定策略应统一到，公共语言运行时 (CLR)。|  
   
 ## <a name="remarks"></a>备注  
- 此枚举传递给方法的[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)接口来在应用程序策略中指定的更改。  
+ 此枚举传递给方法的[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)接口以在应用程序策略中指定的更改。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRAssemblyIdentityManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [ICLRAssemblyIdentityManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

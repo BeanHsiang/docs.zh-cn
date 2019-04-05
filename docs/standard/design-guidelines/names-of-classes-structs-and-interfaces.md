@@ -1,6 +1,6 @@
 ---
 title: 类、结构和接口的名称
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 helpviewer_keywords:
 - type names, guidelines
 - classes [.NET Framework], names
@@ -12,14 +12,13 @@ helpviewer_keywords:
 - interfaces [.NET Framework], names
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c56f840bc5ebd5070c9b686384751acab3f0203
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+author: KrzysztofCwalina
+ms.openlocfilehash: c0790cd20daf859ec81e2252dc9bce46673daf90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621820"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>类、结构和接口的名称
 以下命名准则适用于常规类型命名。  
@@ -99,9 +98,9 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
 - [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)

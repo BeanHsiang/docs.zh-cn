@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645894"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正则表达式中的分组构造
 分组构造描述了正则表达式的子表达式，用于捕获输入字符串的子字符串。 你可以使用分组构造来完成下列任务：  
@@ -59,7 +59,7 @@ ms.locfileid: "44041595"
  其中 *子表达式* 为任何有效正则表达式模式。 使用括号的捕获按正则表达式中左括号的顺序从一开始从左到右自动编号。 捕获元素编号为零的捕获是由整个正则表达式模式匹配的文本。  
   
 > [!NOTE]
->  默认情况下， `(`*子表达式*`)` 语言元素捕获匹配的子表达式。 不过，如果正则表达式模式匹配方法的 <xref:System.Text.RegularExpressions.RegexOptions> 参数包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 标志，或者如果 `n` 选项应用于此子表达式（请参阅本主题稍后将介绍的[组选项](#group_options)），就不会捕获匹配的子表达式。  
+>  默认情况下， `(`*子表达式*`)` 语言元素捕获匹配的子表达式。 但是，如果正则表达式模式匹配方法的 <xref:System.Text.RegularExpressions.RegexOptions> 参数包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 标志，或者如果 `n` 选项应用于此子表达式（参见本主题后面的 [组选项](#group_options) ），则不会捕获匹配的子表达式。  
   
  可以四种方法访问捕获的组：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "44041595"
   
 -   通过使用正则表达式中的命名的反向引用构造。 使用语法 `\k<`*name*`>`在同一正则表达式中引用匹配的子表达式，其中 *name* 是捕获组的名称，或使用 `\k<`*数字*`>`在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获组的初始数字。 捕获组具有与其原始编号相同的默认名称。 有关更多信息，请参见本主题后面的 [命名匹配的子表达式](#named_matched_subexpression) 。  
   
--   通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `$`数字 替换序列，其中“数字”为捕获的子表达式的序号。  
+-   通过使用 `$`*数字* $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中 *数字* 是捕获的表达式的初始数字。  
   
 -   以编程的方式，通过使用 <xref:System.Text.RegularExpressions.GroupCollection> 对象的方式，该对象由 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 属性返回。 集合中位置零上的成员表示正则表达式匹配。 每个后续成员表示匹配的子表达式。 有关更多信息，请参见 [Grouping Constructs and Regular Expression Objects](#Objects) 一节。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "44041595"
   
  下表演示了如何解释正则表达式模式。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`(\w+)`|匹配一个或多个单词字符。 这是第一个捕获组。|  
 |`\s`|与空白字符匹配。|  
@@ -108,7 +108,7 @@ ms.locfileid: "44041595"
  其中 *名称* 是有效的组名称，而 *子表达式* 是任何有效的正则表达式模式。 *名称* 不得包含任何标点符号字符，并且不能以数字开头。  
   
 > [!NOTE]
->  如果正则表达式模式匹配方法的 <xref:System.Text.RegularExpressions.RegexOptions> 参数包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 标志，或者如果 `n` 选项应用于此子表达式（请参阅本主题稍后将介绍的[组选项](#group_options)），捕获子表达式的唯一方法是显式命名捕获组。  
+>  如果正则表达式模式匹配方法的 <xref:System.Text.RegularExpressions.RegexOptions> 参数包含 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 标志，或者如果 `n` 选项应用于此子表达式（参见本主题后面的 [组选项](#group_options) ），则捕获子表达式的唯一方法就是显式命名捕获组。  
   
  可用以下方式访问已命名的捕获组：  
   
@@ -116,7 +116,7 @@ ms.locfileid: "44041595"
   
 -   通过使用正则表达式中的反向引用构造。 使用语法 `\`*数字*在同一正则表达式中引用匹配的子表达式，其中 *数字* 是捕获的表达式的初始数字。 已命名的匹配子表达式在匹配子表达式后从左到右连续编号。  
   
--   通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `${`名称`}` 替换序列，其中“名称”为捕获的子表达式的名称。  
+-   通过使用 `${`*name*`}` $ <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> number <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 替换序列，其中 *name* 是捕获子表达式的名称。  
   
 -   通过在 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 或 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法调用中使用 `$`数字 替换序列，其中“数字”为捕获的子表达式的序号。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "44041595"
   
  下表演示了正则表达式的含义。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`(?<duplicateWord>\w+)`|匹配一个或多个单词字符。 命名此捕获组 `duplicateWord`。|  
 |`\s`|与空白字符匹配。|  
@@ -164,7 +164,7 @@ ms.locfileid: "44041595"
   
  下表演示了正则表达式的含义。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\D+`|匹配一个或多个非十进制数字字符。|  
 |`(?<digit>\d+)`|匹配一个或多个十进制数字字符。 将匹配分配到 `digit` 命名组。|  
@@ -205,7 +205,7 @@ ms.locfileid: "44041595"
   
  正则表达式按如下方式解释：  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从字符串的开头部分开始。|  
 |`[^<>]*`|匹配零个或多个不是左侧或右侧角度方括号的字符。|  
@@ -270,7 +270,7 @@ ms.locfileid: "44041595"
   
  正则表达式 `(?:\b(?:\w+)\W*)+\.` 匹配由句号终止的语句。 因为正则表达式重点介绍句子，而不是个别单词，所以分组构造以独占方式用作限定符。 正则表达式模式可以解释为下表中所示内容。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`(?:\w+)`|匹配一个或多个单词字符。 不将匹配的文本分配给捕获的组。|  
@@ -293,7 +293,7 @@ ms.locfileid: "44041595"
   
  例如，以下示例中的正则表达式 `\b(?ix: d \w+)\s` 使用分组构造中的内联选项，以启用不区分大小写的匹配和在识别所有以字母“d”开头的单词时忽略模式空白。 该正则表达式的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`(?ix: d \w+)`|使用不区分大小写的匹配并忽略此模式中的白色空间，匹配后跟一个或多个单词字符的“d”。|  
@@ -319,7 +319,7 @@ ms.locfileid: "44041595"
   
  正则表达式 `\b\w+(?=\sis\b)` 可以解释为下表中所示内容。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`\w+`|匹配一个或多个单词字符。|  
@@ -342,7 +342,7 @@ ms.locfileid: "44041595"
   
  正则表达式 `\b(?!un)\w+\b` 可以解释为下表中所示内容。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`(?!un)`|确定接下来的两个的字符是否为“un”。 如果没有，则可能匹配。|  
@@ -356,7 +356,7 @@ ms.locfileid: "44041595"
   
  正则表达式 `\b\w+\b(?!\p{P})` 可以解释为下表中所示内容。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`\w+`|匹配一个或多个单词字符。|  
@@ -369,7 +369,7 @@ ms.locfileid: "44041595"
   
  `(?<=` *子表达式* `)`  
   
- 其中 *子表达式* 为任何正则表达式模式。 若要成功匹配，则 *子表达式* 不得在输入字符串当前位置左侧出现，尽管 `subexpression` 未包含在匹配结果中。 零宽度正回顾后发断言不会回溯。  
+ 其中 *子表达式* 为任何正则表达式模式。 若要成功匹配，则 *子表达式* 必须在输入字符串当前位置左侧出现，尽管 `subexpression` 未包含在匹配结果中。 零宽度正回顾后发断言不会回溯。  
   
  零宽度正预测后发断言通常在正则表达式的开头使用。 它们定义的模式是一个匹配的前提条件，但它不是匹配结果的一部分。  
   
@@ -380,7 +380,7 @@ ms.locfileid: "44041595"
   
  正则表达式模式 `(?<=\b20)\d{2}\b` 的含义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\d{2}`|匹配两个十进制数字。|  
 |`(?<=\b20)`|如果两个十进制数字的字边界以小数位数“20”开头，则继续匹配。|  
@@ -405,7 +405,7 @@ ms.locfileid: "44041595"
   
  正则表达式模式 `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` 的含义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`\w+`|匹配一个或多个后跟空白字符的单词字符。|  
@@ -434,7 +434,7 @@ ms.locfileid: "44041595"
   
  非回溯正则表达式 `(?>(\w)\1+).\b` 的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`(\w)`|匹配单个单词字符，并将其分配给第一捕获组。|  
 |`\1+`|一次或多次匹配的第一个捕获子字符串的值。|  
@@ -452,7 +452,7 @@ ms.locfileid: "44041595"
   
 -   最后的 <xref:System.Text.RegularExpressions.Group> 对象组表示命名的捕获组。 它们以在正则表达式中定义的顺序出现，从左至右。 第一个名为捕获组的索引值是一个大于最后一个未命名的捕获组的索引。 如果正则表达式中没有未命名捕获组，则第一个命名的捕获组的索引值为 1。  
   
- 如果将限定符应用于捕获组，则对应的 <xref:System.Text.RegularExpressions.Group> 对象的 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>、 <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> 属性反映捕获组捕获的最后一个子字符串。 可以检索一整组子字符串，其是按组捕获的并具有来自 <xref:System.Text.RegularExpressions.CaptureCollection> 对象的限定符，其由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。  
+ 如果将限定符应用于捕获组，则对应的 <xref:System.Text.RegularExpressions.Group> 对象的 <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>、 <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>和 <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> 属性反映捕获组捕获的最后一个子字符串。 可以检索一整组子字符串，其是按组捕获的并具有来自 <xref:System.Text.RegularExpressions.CaptureCollection> 对象的限定符，其由 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 属性返回。  
   
  下面的示例阐释 <xref:System.Text.RegularExpressions.Group> 和 <xref:System.Text.RegularExpressions.Capture> 对象之间的关系。  
   
@@ -461,7 +461,7 @@ ms.locfileid: "44041595"
   
  正则表达式模式 `\b(\w+)\W+)+` 从字符串提取各个单词。 其定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`(\w+)`|匹配一个或多个单词字符。 这些字符一起构成一个单词。 这是第二个捕获组。|  
@@ -472,5 +472,5 @@ ms.locfileid: "44041595"
   
 ## <a name="see-also"></a>请参阅
 
-- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

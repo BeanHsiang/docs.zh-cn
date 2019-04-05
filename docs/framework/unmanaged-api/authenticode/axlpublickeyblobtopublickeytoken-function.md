@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56333165d179abd79e82f1416342a2700029eb12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 37957931f9d1e2f8da44f70e5b99d3544bf0ae4f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401669"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497491"
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a>_AxlPublicKeyBlobToPublicKeyToken 函数
 从 CSP PUBLICKEYBLOB 格式计算强名称公钥标记。  
@@ -29,7 +29,7 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pCspPublicKeyBlob`  
  [in] CSP 公钥 Blob。  
   
@@ -39,5 +39,5 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
 ## <a name="return-value"></a>返回值  
  如果函数成功，则为 `S_OK`；否则为 `S_FALSE`。  
   
-## <a name="see-also"></a>请参阅  
- [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>请参阅
+- [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)

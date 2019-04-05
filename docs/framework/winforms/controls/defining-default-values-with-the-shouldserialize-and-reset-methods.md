@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 8d7645e8de5edee711c30bbe7edde8ba7b5b1dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2cb23220be2b4a3564c4869016c05065afe7c27c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529787"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704440"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>使用 ShouldSerialize 和 Reset 方法定义默认值
-`ShouldSerialize` 和`Reset`是为属性，可以提供的可选方法，如果相应属性不具有简单的默认值。 如果该属性具有简单的默认值，则应对应用<xref:System.ComponentModel.DefaultValueAttribute>并改为提供给特性类构造函数的默认值。 这些机制任一启用了设计器中的以下功能：  
+`ShouldSerialize` 和`Reset`是可以提供的属性的可选方法，如果相应属性不具有简单的默认值。 如果该属性具有简单的默认值，则应该应用<xref:System.ComponentModel.DefaultValueAttribute>并改为提供给特性类构造函数的默认值。 任何机制可以在设计器中的使用下列功能：  
   
--   如果它进行修改得到了其默认值，该属性提供属性浏览器中的视觉指示。  
+-   如果已修改从其默认值，则属性提供属性浏览器中的可视指示。  
   
 -   用户可以在属性上右键单击并选择**重置**将该属性还原为其默认值。  
   
--   该设计器生成更高效的代码。  
+-   在设计器生成更高效的代码。  
   
     > [!NOTE]
-    >  可以应用<xref:System.ComponentModel.DefaultValueAttribute>或提供`Reset` *PropertyName*和`ShouldSerialize` *PropertyName*方法。 不要使用两者。  
+    >  请应用<xref:System.ComponentModel.DefaultValueAttribute>或提供`Reset` *PropertyName*并`ShouldSerialize` *PropertyName*方法。 不要同时使用。  
   
- `Reset` *PropertyName*方法为其默认值，设置一个属性，如下面的代码段中所示。  
+ `Reset` *PropertyName*方法将属性设置为其默认值，如下面的代码段中所示。  
   
 ```vb  
 Public Sub ResetMyFont()  
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  如果属性不具有`Reset`方法，未标记为<xref:System.ComponentModel.DefaultValueAttribute>，并且没有默认值在其声明中，提供`Reset`选项在快捷菜单的情况下禁用该属性对**属性**的 Visual Studio 中的 Windows 窗体设计器窗口。  
+>  如果属性不具有`Reset`方法中，未标有<xref:System.ComponentModel.DefaultValueAttribute>，并且没有在其声明中提供的默认值`Reset`选项的快捷菜单中禁用该属性**属性** Visual Studio 中的 Windows 窗体设计器窗口。  
   
- 例如，Visual Studio 设计器都使用`ShouldSerialize` *PropertyName*更改方法可检查属性是否已从其默认值以及到窗体仅当属性编写代码，从而允许更高效的代码生成。 例如：  
+ 使用设计器，例如 Visual Studio `ShouldSerialize` *PropertyName*方法检查属性已更改其默认值，并编写代码到窗体仅当属性已更改，从而允许更高效的代码生成。 例如：  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -141,9 +141,9 @@ public class MyControl : Control {
 }  
 ```  
   
- 在此情况下，访问私有变量的值的情况下，即使`MyFont`属性是`null`，属性浏览器不会显示`null`; 相反，它显示<xref:System.Windows.Forms.Control.Font%2A>父级，如果不是属性`null`，默认值或<xref:System.Windows.Forms.Control.Font%2A>中定义值<xref:System.Windows.Forms.Control>。 因此的默认值为`MyFont`不能只需设置，和一个<xref:System.ComponentModel.DefaultValueAttribute>不能应用于此属性。 相反，`ShouldSerialize`和`Reset`方法必须为实现`MyFont`属性。  
+ 在本例中为私有变量的值进行访问时，甚至`MyFont`属性是`null`，在属性浏览器不会显示`null`; 相反，它将显示<xref:System.Windows.Forms.Control.Font%2A>的父对象，如果不是`null`，或默认值<xref:System.Windows.Forms.Control.Font%2A>中定义值<xref:System.Windows.Forms.Control>。 因此的默认值为`MyFont`不能只需设置，和一个<xref:System.ComponentModel.DefaultValueAttribute>不能应用于此属性。 相反，`ShouldSerialize`并`Reset`必须为实现方法`MyFont`属性。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 窗体控件中的属性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [定义属性](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
- [属性更改事件](../../../../docs/framework/winforms/controls/property-changed-events.md)
+## <a name="see-also"></a>请参阅
+- [Windows 窗体控件中的属性](properties-in-windows-forms-controls.md)
+- [定义属性](defining-a-property-in-windows-forms-controls.md)
+- [属性更改事件](property-changed-events.md)

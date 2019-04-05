@@ -4,12 +4,12 @@ description: 用于构建基于云的企业应用程序，从到无服务器的 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 21e191f17e7d0b4f2d64454fb14c46a4831a8375
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "49369780"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126740"
 ---
 # <a name="architecture-approaches"></a>体系结构方法
 
@@ -97,5 +97,5 @@ N 层应用程序分区到特定层的应用程序逻辑。 最常见的层包�
 最终有的解决方案来满足所有这些挑战，包括利用讨论了更高版本的无服务器的优势。
 
 >[!div class="step-by-step"]
-[上一页](index.md)
-[下一页](architecture-deployment-approaches.md)
+>[上一页](index.md)
+>[下一页](architecture-deployment-approaches.md)

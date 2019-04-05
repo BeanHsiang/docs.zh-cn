@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
-ms.openlocfilehash: 5d201d331d766d865d0ee7afb164813084fa3651
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cca909e67464d08c0bb4ff8a0d0186d9d600ce18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596340"
 ---
 # <a name="comparison-expressions"></a>比较表达式
 比较表达式检查常量值、属性值或方法结果是否等于、不等于、大于或小于另一个值。 如果特定比较对 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 无效，则将引发异常。 所有比较（无论隐式和显式）都要求所有组件在数据源中是可比较的。 比较表达式通常在 `Where` 子句中用于限制查询结果。  
@@ -53,5 +53,5 @@ ms.locfileid: "32761501"
  [!code-csharp[DP L2E Conceptual Examples#MethodAsConstantFails](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#methodasconstantfails)]
  [!code-vb[DP L2E Conceptual Examples#MethodAsConstantFails](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodasconstantfails)]  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to Entities 查询中的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+## <a name="see-also"></a>请参阅
+- [LINQ to Entities 查询中的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

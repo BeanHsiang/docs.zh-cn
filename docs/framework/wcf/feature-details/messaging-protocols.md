@@ -2,12 +2,12 @@
 title: 消息协议
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183849"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129748"
 ---
 # <a name="messaging-protocols"></a>消息协议
 
@@ -47,7 +47,18 @@ Windows Communication Foundation (WCF) 通道堆栈采用编码和传输通道�
 
 在本主题中使用以下 XML 命名空间和关联的前缀：
 
-|前缀 |Namespace 统一资源标识符 (URI) |[---|---| | s11 |`http://schemas.xmlsoap.org/soap/envelope` | | s12 |`http://www.w3.org/2003/05/soap-envelope` | | wsa |`http://www.w3.org/2004/08/addressing` | | wsam |`http://www.w3.org/2007/05/addressing/metadata` | | wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` | | wsa10 |`http://www.w3.org/2005/08/addressing` | | wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` | | xop |`http://www.w3.org/2004/08/xop/include` | | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | |dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
+| 前缀 | 命名空间统一资源标识符 (URI) |
+|------------|---------------------------------------------------|
+| s11 | `http://schemas.xmlsoap.org/soap/envelope` |
+| s12 |`http://www.w3.org/2003/05/soap-envelope` |
+| wsa |`http://www.w3.org/2004/08/addressing` |
+| wsam |`http://www.w3.org/2007/05/addressing/metadata` |
+| wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` |
+| wsa10 |`http://www.w3.org/2005/08/addressing` |
+| wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` |
+| xop |`http://www.w3.org/2004/08/xop/include` |
+| xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` |
+| 分发点 |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 和 SOAP 1.2
 
@@ -63,36 +74,36 @@ WCF 遵循规则处理标头标记`mustUnderstand`有以下变化的 SOAP 1.1 �
 
 这样的分层处理实现了 SOAP 节点的基础结构层和应用层之间的分离。
 
-- B1111： 无法理解的标头是检测到由 WCF 基础结构通道堆栈处理消息之后但在应用程序处理之前
+- B1111:由 WCF 基础结构通道堆栈处理消息之后但在应用程序处理之前检测到不理解的标头
 
      在 SOAP 1.1 和 SOAP 1.2 中，`mustUnderstand` 标头值不相同。 Basic Profile 1.1 要求，在 SOAP 1.1 消息中，`mustUnderstand` 值为 0 或 1。 SOAP 1.2 可以使用 0、1、`false` 和 `true` 作为值，但建议使用 `xs:boolean` 值的规范表示形式（`false` 和 `true`）。
 
-- B1112: WCF 发出`mustUnderstand`值 0，1 表示 SOAP 1.1 和 SOAP 1.2 版本的 SOAP 信封。 WCF 接受的整个值空间`xs:boolean`有关`mustUnderstand`标头 (0、 1、 `false`， `true`)
+- B1112:WCF 发出`mustUnderstand`值 0，1 表示 SOAP 1.1 和 SOAP 1.2 版本的 SOAP 信封。 WCF 接受的整个值空间`xs:boolean`有关`mustUnderstand`标头 (0、 1、 `false`， `true`)
 
 #### <a name="soap-faults"></a>SOAP 错误
 下面是一组特定于 WCF 的 SOAP 错误实现。
 
-- B2121: WCF 返回以下 SOAP 1.1 错误代码： `s11:mustUnderstand`， `s11:Client`，和`s11:Server`。
+- B2121:WCF 将返回以下 SOAP 1.1 错误代码： `s11:mustUnderstand`， `s11:Client`，和`s11:Server`。
 
-- B2122: WCF 返回以下 SOAP 1.2 错误代码： `s12:MustUnderstand`， `s12:Sender`，和`s12:Receiver`。
+- B2122:WCF 将返回以下 SOAP 1.2 错误代码： `s12:MustUnderstand`， `s12:Sender`，和`s12:Receiver`。
 
 ### <a name="http-binding"></a>HTTP 绑定
 
 #### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP 绑定
 WCF 实现 SOAP1.1 HTTP 绑定遵循 Basic Profile 1.1 规范第 3.4 节如下说明：
 
-- B2211: WCF 服务不实现 HTTP POST 请求的重定向。
+- B2211:WCF 服务不实现 HTTP POST 请求的重定向。
 
-- B2212: WCF 客户端 3.4.8 支持 HTTP Cookie。
+- B2212:WCF 客户端 3.4.8 支持 HTTP Cookie。
 
 #### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP 绑定
 WCF 实现 SOAP 1.2 HTTP 绑定的 SOAP 1.2-part 2 (SOAP12Part2) 规范如下说明中所述。
 
 SOAP 1.2 为 `application/soap+xml` 媒体类型提供了一个可选的操作参数。 在未使用 WS-Addressing 时，采用此参数优化消息调度很有用，这种情况下，不需要分析 SOAP 消息的正文。
 
-- R2221：`application/soap+xml` 操作参数出现在 SOAP 1.2 请求中时，必须与相应 WSDL 绑定内的 `soapAction` 元素的 `wsoap12:operation` 属性匹配。
+- R2221:`application/soap+xml` Action 参数时出现在 SOAP 1.2 请求中，必须与匹配`soapAction`特性，可以在`wsoap12:operation`相应 WSDL 绑定内的元素。
 
-- R2222：如果使用 WS-Addressing 2004/08 或 WS-Addressing 1.0，`application/soap+xml` 操作参数出现在 SOAP 1.2 消息中时，必须与 `wsa:Action` 匹配。
+- R2222： 如果`application/soap+xml`操作参数出现在 SOAP 1.2 消息时，必须匹配`wsa:Action`时使用的 Ws-addressing 2004/08 或 Ws-addressing 1.0。
 
 如果 WS-Addressing 禁用，并且传入的请求不包含操作参数，则视为未指定消息 `Action`。
 
@@ -118,7 +129,7 @@ WCF 实现多使用 Ws-addressing 的基础结构协议，尤其`EndpointReferen
 #### <a name="endpoint-references-and-metadata"></a>终结点引用和元数据
 很多情况下，需要对给定终结点进行元数据或元数据引用通信。
 
-B3121: WCF 采用 Ws-metadataexchange (MEX) 规范第 6 节通过值或引用包含终结点引用的元数据中所述的机制。
+B3121:WCF 应采用的 Ws-metadataexchange (MEX) 规范第 6 节通过值或引用包含终结点引用的元数据中所述的机制。
 
 请考虑其中的 WCF 服务要求使用由在令牌颁发者颁发的安全断言标记语言 (SAML) 令牌身份验证的方案`http://sts.fabrikam123.com`。 WCF 终结点通过使用描述此身份验证要求`sp:IssuedToken`包含嵌套的断言`sp:Issuer`指向令牌颁发者的断言。 访问该 `sp:Issuer` 断言的客户端应用程序需要知道如何与令牌颁发机构终结点进行通信。 客户端需要知道令牌颁发机构的有关元数据。 使用 MEX 中定义的终结点引用元数据扩展，WCF 提供了对令牌颁发者元数据的引用。
 
@@ -148,7 +159,7 @@ B3121: WCF 采用 Ws-metadataexchange (MEX) 规范第 6 节通过值或引用包
 #### <a name="message-headers"></a>消息头
 这两个 Ws-addressing 版本，WCF 使用以下消息标头，规范中规定`wsa:To`， `wsa:ReplyTo`， `wsa:Action`， `wsa:MessageID`，和`wsa:RelatesTo`。
 
-B3211： 对于所有 Ws-addressing 版本，WCF 但不会生成默认情况下，Ws-addressing 消息头`wsa:FaultTo`和`wsa:From`。
+B3211:对于所有 Ws-addressing 版本，WCF 但不会生成默认情况下，Ws-addressing 消息头`wsa:FaultTo`和`wsa:From`。
 
 交互的应用程序与 WCF 应用程序可以添加这些消息标头和 WCF 将进行相应处理。
 
@@ -156,7 +167,7 @@ B3211： 对于所有 Ws-addressing 版本，WCF 但不会生成默认情况下�
 
 WCF 实现的终结点引用参数和引用属性根据各自规范的处理。
 
-B3221： 时配置为使用 Ws-addressing 2004/08，WCF 终结点不区分处理引用属性和引用参数。
+B3221:当配置为使用 Ws-addressing 2004/08，WCF 终结点不区分处理引用属性和引用参数。
 
 ### <a name="message-exchange-patterns"></a>消息交换模式
 Web 服务操作调用所涉及的消息序列称为*消息交换模式*。 WCF 支持单向、 请求-答复和双工消息交换模式。 本节根据所用的消息交换模式说明 WS-Addressing 对消息处理的需求。
@@ -166,36 +177,36 @@ Web 服务操作调用所涉及的消息序列称为*消息交换模式*。 WCF 
 #### <a name="one-way-message"></a>单向消息
 当 WCF 终结点配置为支持消息与给定`Action`要遵循单向模式时，WCF 终结点下面的以下行为和需求。 除非另行指定，否则行为和规则将适用于这两个版本的 Ws-addressing 在 WCF 中受支持：
 
-- R3311：请求方必须包含 `wsa:To`、`wsa:Action` 以及表示终结点引用所指定的所有引用参数的标头。 如果使用 WS-Addressing 2004/08 并且终结点引用指定了 [reference properties]，则对应的标头必须也添加到消息中。
+- R3311:请求方必须包含`wsa:To`， `wsa:Action`，和终结点引用所指定的所有引用参数的标头。 如果使用 WS-Addressing 2004/08 并且终结点引用指定了 [reference properties]，则对应的标头必须也添加到消息中。
 
-- B3312：请求方可以包含 `MessageID`、`ReplyTo` 和 `FaultTo` 标头。 接收方基础结构将忽略这些标头，并且这些标头将传给应用程序。
+- B3312:请求者可能包括`MessageID`， `ReplyTo`，和`FaultTo`标头。 接收方基础结构将忽略这些标头，并且这些标头将传给应用程序。
 
-- R3313：在使用 HTTP 并且没有通过 HTTP 响应发送任何消息时，响应方必须发送一个正文为空且 HTTP 状态码为 202 的 HTTP 响应。
+- R3313:当使用 HTTP 和在 HTTP 响应路线上发送任何消息时，响应方必须不发送 HTTP 响应正文为空且具有 HTTP 202 状态代码。
 
      如果使用的是 HTTP 传输，并且操作协定声明消息是单向的，则 HTTP 响应仍可用于发送基础结构消息 — 例如，可靠消息传递可通过 HTTP 响应发送 `SequenceAcknowledgement` 消息。
 
-- B3314: WCF 响应方不发送响应的单向消息的错误消息。
+- B3314:WCF 响应方不发送响应的单向消息中的错误消息。
 
 #### <a name="request-reply"></a>请求-答复
 WCF 终结点配置为使用一条消息时给定`Action`遵循请求-答复模式，则 WCF 终结点遵循以下行为和需求。 除非另行指定，行为和规则将适用于这两个版本的 Ws-addressing 在 WCF 中受支持：
 
-- R3321： 请求者必须在请求中包含`wsa:To`， `wsa:Action`， `wsa:MessageID`，和的所有引用参数或引用属性 （或两者） 终结点引用所指定的标头。
+- R3321:请求者必须在请求中包含`wsa:To`， `wsa:Action`， `wsa:MessageID`，和的所有引用参数或引用属性 （或两者） 终结点引用所指定的标头。
 
-- R3322：使用 WS-Addressing 2004/08 时，还必须在请求中包含 `ReplyTo`。
+- R3322： 使用当使用 Ws-addressing 2004/08 时，`ReplyTo`还必须包含在请求中。
 
-- R3323： 如果使用 Ws-addressing 1.0 和`ReplyTo`请求，使用 [address] 属性等于的默认终结点引用中不存在`http://www.w3.org/2005/08/addressing/anonymous`使用。
+- R3323:何时使用 Ws-addressing 1.0 和`ReplyTo`请求，使用 [address] 属性等于的默认终结点引用中不存在`http://www.w3.org/2005/08/addressing/anonymous`使用。
 
-- R3324： 请求方必须包含`wsa:To`， `wsa:Action`，并`wsa:RelatesTo`中答复消息的标头，以及用于所有引用参数或引用属性 （或两者） 指定的标头`ReplyTo`中的终结点引用请求。
+- R3324:请求方必须包含`wsa:To`， `wsa:Action`，并`wsa:RelatesTo`中答复消息的标头，以及用于所有引用参数或引用属性 （或两者） 指定的标头`ReplyTo`请求中的终结点引用。
 
 ### <a name="web-services-addressing-faults"></a>Web 服务寻址错误
-R3411: WCF 生成的 Ws-addressing 2004/08 所定义的以下错误。
+R3411:WCF 生成的 Ws-addressing 2004/08 所定义的以下错误。
 
 | 代码 | 原因 |
 |----------|-----------|
 | `wsa:DestinationUnreachable` | 到达的消息所带有的 `ReplyTo` 不同于为此通道建立的答复地址；在 To 标头中指定的地址上，没有终结点在进行侦听。 |
 | `wsa:ActionNotSupported` | 与终结点关联的基础结构通道或调度程序不能识别在 `Action` 标头中指定的操作。 |
 
-R3412: WCF 生成的 Ws-addressing 1.0 定义的以下错误。
+R3412:WCF 生成的 Ws-addressing 1.0 定义的以下错误。
 
 | 代码 | 原因 |
 |----------|-----------|
@@ -280,11 +291,11 @@ WCF 提供一项功能，通过这两个基础传输通道可构成一个复合�
 
 上面的陈述对于请求消息的 `wsa:ReplyTo` 标头提出了以下要求：
 
-- R3514： 请求消息发送到终结点必须有`ReplyTo`标头`[address]`属性不等于`http://www.w3.org/2005/08/addressing/anonymous`如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有的策略备`wsap10:UsingAddressing`或`wsap:UsingAddressing`断言结合`cdp:CompositeDuplex`附加。
+- R3514:请求消息发送到终结点必须有`ReplyTo`标头`[address]`属性不等于`http://www.w3.org/2005/08/addressing/anonymous`如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有的策略备`wsap10:UsingAddressing`或`wsap:UsingAddressing`断言再加上`cdp:CompositeDuplex`附加。
 
-- R3515： 请求消息发送到终结点必须有`ReplyTo`标头`[address]`属性等于`http://www.w3.org/2005/08/addressing/anonymous`，或不具有`ReplyTo`根本，如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有的策略备的标头`wsap10:UsingAddressing`断言，但不`cdp:CompositeDuplex`附加。
+- R3515:请求消息发送到终结点必须有`ReplyTo`标头`[address]`属性等于`http://www.w3.org/2005/08/addressing/anonymous`，或不具有`ReplyTo`根本，如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有的策略备的标头`wsap10:UsingAddressing`断言，但不`cdp:CompositeDuplex`附加。
 
-- R3516： 请求消息发送到终结点必须有`ReplyTo`标头`[address]`属性等于`http://www.w3.org/2005/08/addressing/anonymous`如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有的策略备`wsap:UsingAddressing`断言，并没有`cdp:CompositeDuplex`附加的断言。
+- R3516:请求消息发送到终结点必须有`ReplyTo`标头`[address]`属性等于`http://www.w3.org/2005/08/addressing/anonymous`如果终结点使用 WSDL 1.1 SOAP 1.x HTTP 绑定，并且有的策略备`wsap:UsingAddressing`断言，但不`cdp:CompositeDuplex`附加的断言。
 
 WS-addressing WSDL 规范力图描述类似协议绑定，它引入了一个带有 3 个文本值（required、optional 和 prohibited）的 `<wsaw:Anonymous/>` 元素来指示对 `wsa:ReplyTo` 标头的要求（第 3.2 节）。 遗憾的是，在 WS-Policy 的上下文中，这样的元素定义不特别适合用作断言，因为它要求使用特定于域的扩展来支持将此类元素用作断言的备选项的交集。 这样的元素定义还指示 `ReplyTo` 标头的值在传输时与终结点行为相反，这使它只能特定于 HTTP 传输。
 
@@ -297,18 +308,18 @@ WS-Addressing 2004/08 为 `wsa:Action` 元素定义了一个 `wsdl:portType/wsdl
 
 若要解决此争议，WCF 支持的单个版本`Action`属性。
 
-B3521: WCF 使用`wsaw10:Action`特性，可以在`wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]`元素中 WS-ADDR10-WSDL 来确定定义`Action`而不考虑终结点所使用的 Ws-addressing 版本的相应消息的 URI。
+B3521:使用 WCF`wsaw10:Action`特性，可以在`wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]`元素中 WS-ADDR10-WSDL 来确定定义`Action`而不考虑终结点所使用的 Ws-addressing 版本的相应消息的 URI。
 
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>在 WSDL 端口内使用终结点引用
 WS-ADDR10-WSDL 4.1 节扩展了 `wsdl:port` 元素以包含 `<wsa10:EndpointReference…/>` 子元素，从而以 WS-Addressing 方式描述终结点。 WCF 扩展的 Ws-addressing 2004/08，这一实用工具允许`<wsa:EndpointReference…/>`若要显示的子元素为`wsdl:port`。
 
-- R3531：如果终结点有一个带有 `<wsaw10:UsingAddressing/>`wsdl:port 策略断言的附加策略备选项，则对应的`wsdl:port`元素可包含子元素`<wsa10:EndpointReference …/>`。
+- R3531:如果终结点有的附加的策略备`<wsaw10:UsingAddressing/>`策略断言，相应`wsdl:port`元素可以包含子元素`<wsa10:EndpointReference …/>`。
 
-- R3532： 如果`wsdl:port`包含一个子元素`<wsa10:EndpointReference …/>`，则`wsa10:EndpointReference/wsa10:Address`子元素值必须匹配的值`@address`的同级元素的特性`wsdl:port` / `wsdl:location`元素。
+- R3532:如果`wsdl:port`包含一个子元素`<wsa10:EndpointReference …/>`，则`wsa10:EndpointReference/wsa10:Address`子元素值必须匹配的值`@address`的同级元素的特性`wsdl:port` / `wsdl:location`元素。
 
-- R3533：如果终结点有一个带有 `<wsap:UsingAddressing/>`wsdl:port 策略断言的附加策略备选项，则对应的`wsdl:port` 元素可包含子元素`<wsa:EndpointReference …/>`。
+- R3533:如果终结点有的附加的策略备`<wsap:UsingAddressing/>`策略断言，相应`wsdl:port`元素可以包含子元素`<wsa:EndpointReference …/>`。
 
-- R3534： 如果`wsdl:port`包含一个子元素`<wsa:EndpointReference …/>`，则`wsa:EndpointReference/wsa:Address`子元素值必须匹配的值`@address`的同级元素的特性`wsdl:port` / `wsdl:location`元素。
+- R3534:如果`wsdl:port`包含一个子元素`<wsa:EndpointReference …/>`，则`wsa:EndpointReference/wsa:Address`子元素值必须匹配的值`@address`的同级元素的特性`wsdl:port` / `wsdl:location`元素。
 
 ### <a name="composition-with-ws-security"></a>与 WS-Security 的结合
 根据 WS-ADDR 和 WS-ADDR10 中的安全注意事项章节，建议将所有寻址消息头和消息正文一起签名，以便将它们绑定在一起。
@@ -320,9 +331,9 @@ WS-ADDR10-WSDL 4.1 节扩展了 `wsdl:port` 元素以包含 `<wsa10:EndpointRefe
 #### <a name="one-way-message"></a>单向消息
 在此方案中，发送方向接收方发出单向消息。 使用 SOAP 1.2、HTTP 1.1 和 W3C WS-Addressing 1.0。
 
-请求消息结构：消息头包含 `wsa10:To` 和 `wsa10:Action` 元素。 消息正文包含来自应用程序命名空间的一个特定 `<app:Ping>` 元素。
+请求消息结构：消息标头包括`wsa10:To`和`wsa10:Action`元素。 消息正文包含来自应用程序命名空间的一个特定 `<app:Ping>` 元素。
 
-HTTP 标头： POST 中的目标与中的 URI 匹配`wsa10:To`元素。
+HTTP 标头：POST 中的目标中的 URI 匹配`wsa10:To`元素。
 
 按照 SOAP 1.2 的要求，Content-Type 标头的值为 `application/soap+xml`。 此外，还包含参数 `charset` 和 `action`。 Content-Type 标头的 `action` 参数与 `wsa10:Action` 消息头的值匹配。
 
@@ -435,21 +446,21 @@ MTOM 格式利用了包含 MTOM 本身、XOP 以及 MIME 在内的大型规范�
 #### <a name="http-content-type-header"></a>HTTP Content-Type 标头
 以下是 WCF 所说明的格式的 HTTP 内容类型标头的 SOAP 1.x MTOM 编码消息派生自 MTOM 规范本身所述的要求的列表，并从 MTOM 和 RFC 2387 派生。
 
-- R4131：HTTP Content-Type 标头必须具有值 multipart/related（不区分大小写）及其参数。 参数名不区分大小写。 参数顺序并不重要。
+- R4131:HTTP 内容类型标头必须具有值 multipart/related （不区分大小写） 和其参数。 参数名不区分大小写。 参数顺序并不重要。
 
 - RFC 2045 第 5.1 节中列出了 MIME 消息 Content-Type 标头的完全 Backus-Naur 形式 (BNF)。
 
-- R4132：HTTP Content-Type 标头必须具有一个类型参数，并且值 `application/xop+xml` 括在双引号中。
+- R4132:HTTP 内容类型标头必须具有值的类型参数`application/xop+xml`括在双引号。
 
 要求使用双引号引起来，尽管不是在 RFC 2387 中显式文本观察到的所有 multipart/related 媒体类型参数最有可能包含保留的字符，如"\@"或"/"，因此需要双引号将标记。
 
-- R4133：HTTP Content-Type 标头应该有一个 start 参数，其值为包含 SOAP 1.x 信封的 MIME 部分的 Content-ID 标头，并且括在双引号中。 如果省略 start 参数，则第一个 MIME 部分必须包含 SOAP 1.x 信封。
+- R4133:HTTP 内容类型标头应具有一个 start 参数，包含 SOAP 的 MIME 部分的 CONTENT-ID 标头的值与 1.x 信封，括在双引号。 如果省略 start 参数，则第一个 MIME 部分必须包含 SOAP 1.x 信封。
 
-- R4134：SOAP 1.1 MTOM 编码消息的 HTTP Content-Type 标头必须包含值为 text/xml（括在双引号中）的 start-info 参数。
+- R4134:SOAP 1.1 MTOM 编码消息的 HTTP 内容类型标头必须包含值为 text/xml，括在双引号内 start-info 参数。
 
-- R4135：SOAP 1.2 MTOM 编码消息的 HTTP Content-Type 标头必须包含值为 `application/soap+xml`（括在双引号中）的 start-info 参数。
+- R4135:SOAP 1.2 MTOM 编码消息的 HTTP 内容类型标头必须包含的值的启动信息参数`application/soap+xml`、 括在双引号。
 
-- R4136：SOAP 1.x MTOM 编码消息的 HTTP Content-Type 标头必须具有边界参数，其值（括在双引号中）与 RFC 2046 第 5.1.1 节中定义的 MIME 边界 BNF 匹配。
+- R4136:SOAP 1.x MTOM 编码消息的 HTTP Content-type 标头必须具有边界参数匹配的 MIME 边界 BNF RFC 2046 第 5.1.1 节中定义的值 （括在双引号内）
 
     ```
     boundary := 0*69<bchars> bcharsnospace 
@@ -481,9 +492,9 @@ MTOM 格式利用了包含 MTOM 本身、XOP 以及 MIME 在内的大型规范�
 #### <a name="infoset-mime-part"></a>Infoset MIME 部分
 SOAP 1.x 信封封装为 XOP MIME 包的根部分，通常称为 `infoset` 部分。
 
-- R4141：SOAP 1.x 信封必须封装为 XOP MIME 包的根部分，称为 `infoset` 部分，并从 HTTP Content-Type 引用。
+- R4141:SOAP 1.x 信封必须封装为 XOP MIME 包，名为的根部分`infoset`部分并从 HTTP Content-type 引用。
 
-- R4142：SOAP `Infoset` 部分必须包含以下 MIME 标头：`Content-ID`、`Content-Transfer-Encoding` 和 `Content-Type`。
+- R4142:SOAP`Infoset`部分必须包含以下 MIME 标头： `Content-ID`， `Content-Transfer-Encoding`，和`Content-Type`。
 
 Content-ID 标头的格式根据 RFC 2045 定义为
 
@@ -499,7 +510,7 @@ msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]
 
 并且有效的电子邮件地址括起"\<"和">"。 RFC 2822 中增加了 `[CFWS]` 前缀和后缀，用于携带注释，不应用于保持互操作性。
 
-R4143：Infoset MIME 部分的 Content-ID 标头的值必须遵循 RFC 2822 中的 `msg-id` 结果，并省略 `[CFWS]` 前缀和后缀部分。
+R4143:Infoset MIME 部分的 CONTENT-ID 标头的值必须遵循`msg-id`RFC 2822 中的生产`[CFWS]`省略前缀和后缀部分。
 
 多 MIME 实现放宽要求括起来的值"\<"和">"电子邮件地址并用`absoluteURI`括在"\<"，">"除了电子邮件地址。 此版本的 WCF 使用窗体的 CONTENT-ID MIME 标头的值：
 
@@ -507,7 +518,7 @@ R4143：Infoset MIME 部分的 Content-ID 标头的值必须遵循 RFC 2822 中�
 Content-ID: <http://tempuri.org/0> 
 ```
 
-R4144：MTOM 处理程序应接受符合以下宽松 `msg-id` 的 Content-ID 标头值。
+R4144:处理程序应接受内容 ID 标头值的符合以下宽松`msg-id`。
 
 ```
 msg-id-relaxed =     [CFWS] "<" (absoluteURI | mail-address) ">" [CFWS]
@@ -516,22 +527,22 @@ mail-address   =     id-left "@" id-right
 
 MIME (RFC 2045) 提供 Content-Transfer-Encoding 标头来传递 MIME 部分内容的编码。 为 Content-Transfer-Encoding 定义的默认值为 7-bit，它不适合于大多数 SOAP 消息，因此，需要使用 Content-Transfer-Encoding 标头以获得更好的互操作性：
 
-- R4145：SOAP Infoset 部分必须包含 Content-Transfer-Encoding 标头。
+- R4145:Infoset 部分必须包含的内容传输编码标头。
 
-- R4146：如果 SOAP 信封字符编码为 UTF-8，则 Content-Transfer-Encoding 标头的值必须为 8-bit。
+- R4146:如果 SOAP 信封字符编码为 utf-8，内容传输编码标头的值必须是 8 位。
 
-- R4147：如果 SOAP 信封字符编码为 UTF-16，则 Content-Transfer-Encoding 标头的值必须为 binary。
+- R4147:如果 SOAP 信封字符编码为 utf-16，内容传输编码标头的值必须是二进制。
 
 - 根据 [XOP] 第 5 节，
 
-- R4148: SOAP1.1 Infoset 部分必须包含媒体类型为 application/xop + xml 的 Content-type 标头以及参数 type ="text/xml"和 charset
+- R4148:SOAP1.1 Infoset 部分必须包含媒体类型为 application/xop + xml 的 Content-type 标头以及参数 type ="text/xml"和 charset
 
     ```
     Content-Type: application/xop+xml;
                   charset=utf-8;type="text/xml"
     ```
 
-- R4149: SOAP 1.2 Infoset 部分必须包含媒体类型的内容类型标头`application/xop+xml`以及参数 type ="`application/soap+xml`"和`charset`。
+- R4149:SOAP 1.2 Infoset 部分必须包含媒体类型的内容类型标头`application/xop+xml`以及参数 type ="`application/soap+xml`"和`charset`。
 
     ```
     Content-Type: application/xop+xml;
@@ -540,14 +551,14 @@ MIME (RFC 2045) 提供 Content-Transfer-Encoding 标头来传递 MIME 部分内�
 
      虽然 XOP 定义 `charset` 参数对于 `application/xop+xml` 是可选的，但是对于类似于 BP 1.1 对 `charset` 媒体类型要求有 `text/xml` 参数的互操作性，该参数仍然是需要的。
 
-- R41410：`type` 和 `charset` 参数必须出现在 SOAP 1.x Infoset 部分的 Content-Type 标头中。
+- R41410:`type`和`charset`参数必须出现在 SOAP 1.x Infoset 部分的内容类型标头。
 
 #### <a name="wcf-endpoint-support-for-mtom"></a>WCF 对 MTOM 的终结点支持
 MTOM 的用途是对 SOAP 消息进行编码，以优化 base64 编码数据。 下面列出了相关约束：
 
-- R4151：任何包含 base64 编码数据的元素信息项都可以优化。
+- R4151:任何包含 base64 编码数据的元素信息项可能被优化。
 
-- B4152: WCF 可以优化包含 base64 编码数据和超过 1024 字节的长度的元素信息项。
+- B4152:WCF 可以优化包含 base64 编码数据和超过 1024 字节的长度的元素信息项。
 
 WCF 终结点配置为使用 MTOM 会始终发送 MTOM 编码的消息。 即使没有一个部分符合必需的标准，消息仍然是 MTOM 编码消息（序列化为一个 MIME 包，具有包含 SOAP 信封的单个 MIME 部分）。
 
@@ -558,9 +569,9 @@ WCF 使用下面的策略断言来指示终结点的 MTOM 的使用情况：
 <wsoma:OptimizedMimeSerialization ... />
 ```
 
-- R4211：上面的策略断言有一个终结点策略主题，并指定终结点收发的所有消息都必须使用 MTOM 进行优化。
+- R4211:上面的策略断言具有终结点策略主题，并指定必须使用 MTOM 优化发送到和从终结点接收的所有消息。
 
-- B4212： 配置为使用 MTOM 优化时，WCF 终结点将添加一个 MTOM 策略断言附加到相应的策略到`wsdl:binding`。
+- B4212:WCF 终结点配置为使用 MTOM 优化时，将一个 MTOM 策略断言添加到附加到相应的策略`wsdl:binding`。
 
 ### <a name="composition-with-ws-security"></a>与 WS-Security 的结合
 MTOM 是一种编码机制，类似于`text/xml`和 WCF 二进制 XML。 MTOM 可以与 WS-Security 及其他 WS-* 协议自然结合：使用 WS-Security 进行保护的消息可使用 MTOM 优化。

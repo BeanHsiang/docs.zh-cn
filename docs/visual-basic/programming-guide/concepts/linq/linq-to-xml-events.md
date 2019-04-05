@@ -2,12 +2,12 @@
 title: LINQ to XML 事件 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: 216c2af87d2ae3a767548ccaa1efe118215cc6a0
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: dcdaf321cfb75ca77e1d8b3f5a541a9418c3f512
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245281"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823332"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML 事件 (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 事件使你可以在 XML 树发生改变时得到通知。  
@@ -114,5 +114,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>请参阅
+
+- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

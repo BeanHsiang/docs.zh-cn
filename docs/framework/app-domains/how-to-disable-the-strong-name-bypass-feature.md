@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 628bc1f89e5e09b47c70e39e107987753697cdb4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cd4e5ea1907ec3de4536d09b3d76ca4956c8756d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494297"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>如何：禁用强名称跳过功能
 从 .NET Framework 3.5 版 Service Pack 1 (SP1) 开始，当程序集加载到完全信任的 <xref:System.AppDomain> 对象（如 `MyComputer` 区域的默认 <xref:System.AppDomain>）时，不会验证强名称签名。 这被称之为强名称跳过功能。 在完全信任的环境中，对于已签名的完全信任的程序集，无需考虑其签名，对 <xref:System.Security.Permissions.StrongNameIdentityPermission> 的要求总是成功。 唯一的限制是该程序集必须完全受信任，因为其区域是完全受信任的。 因为在这些条件下，强名称不是决定性因素，所以没有理由验证强名称。 跳过验证强名称签名可显著提高性能。  
@@ -53,7 +53,7 @@ ms.locfileid: "50198323"
 > [!NOTE]
 >  只有对计算机启用了跳过功能，才能打开和关闭针对应用程序的强名称验证。 如果对计算机关闭了跳过功能，将对所有应用程序验证强名称，并且不能对单个应用程序跳过验证。  
   
-## <a name="see-also"></a>请参阅  
-- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
-- [\<bypassTrustedAppStrongNames> Element](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)  
+## <a name="see-also"></a>请参阅
+- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [\<bypassTrustedAppStrongNames> Element](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
 - [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

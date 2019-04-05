@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14bf011c3711a267b8cf5a1fc0497a347468387d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121745"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540970"
 ---
 # <a name="how-to-create-com-wrappers"></a>如何：创建 COM 包装
 
@@ -73,7 +73,7 @@ ms.locfileid: "49121745"
   
 可以在任何目录中的程序集上运行 Regasm.exe，然后运行 [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)以将其移动到全局程序集缓存中。 移动此程序集不会使位置注册表项失效，因为如果未在其他位置找到此程序集，则会始终对全局程序集缓存进行检查。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md)  
+- [运行时可调用包装器](../../../docs/framework/interop/runtime-callable-wrapper.md)
 - [COM 可调用包装器](../../../docs/framework/interop/com-callable-wrapper.md)

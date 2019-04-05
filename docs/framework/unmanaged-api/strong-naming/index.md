@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5eb67e9b9f8f972075a98415de63d50585974823
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193950"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305628"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>强命名（非托管 API 参考）
 强命名 API 允许客户端管理程序集的强名称签名。  
@@ -21,8 +21,6 @@ ms.locfileid: "50193950"
  使用强名称对程序集进行签名将向包含程序集清单的文件添加公钥加密。 强名称签名帮助验证名称的唯一性，避免名称欺骗，并在解析引用时向调用方提供唯一标识。 但是，任何信任级别都不会与强名称关联。  
   
 ## <a name="in-this-section"></a>本节内容  
- [强命名全局静态函数](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
- 描述强命名 API 使用的非托管全局静态函数。  
   
 > [!NOTE]
 >  从 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 开始，所有这些函数都已弃用。 有关建议的替代方案，请参阅 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) 接口。  
@@ -105,12 +103,9 @@ ms.locfileid: "50193950"
  [StrongNameTokenFromPublicKey 函数](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  获取表示公钥的令牌。 从 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 开始，该函数已弃用。  
   
- [强命名结构](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
- 描述强命名 API 用于管理程序集的强名称签名的非托管结构。  
-  
  [PublicKeyBlob Strong Naming](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  表示二进制格式的公钥/私钥对中的公钥。  
   
-## <a name="see-also"></a>请参阅  
- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
- [非托管 API 参考](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>请参阅
+- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [非托管 API 参考](../../../../docs/framework/unmanaged-api/index.md)

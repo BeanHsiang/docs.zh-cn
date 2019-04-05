@@ -2,12 +2,12 @@
 title: Windows Workflow (WF) 示例文档
 ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: e451ecd18b68ba42aa2c8a71e394077ee6b492ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2d36c4d029050fc052f2469134e93125f56da3fa
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201328"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719749"
 ---
 # <a name="windows-workflow-wf-samples"></a>Windows 工作流 (WF) 示例
 
@@ -20,8 +20,8 @@ ms.locfileid: "50201328"
 
 ## <a name="in-this-section"></a>本节内容
 
-[应用程序](../../../../docs/framework/windows-workflow-foundation/samples/application.md)-提供了与工作流应用程序相关的示例。
+[应用程序](application.md)-提供了与工作流应用程序相关的示例。
 
-[基本](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)-提供示例，用于演示 Windows Workflow Foundation (WF) 的基本功能。
+[基本](basic.md)-提供示例，用于演示 Windows Workflow Foundation (WF) 的基本功能。
 
-[方案](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)-提供有关 Windows Workflow Foundation (WF) 方案的示例。
+[方案](scenario.md)-提供有关 Windows Workflow Foundation (WF) 方案的示例。

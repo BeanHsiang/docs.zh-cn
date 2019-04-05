@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e09391af9b5d71cfa423b3bf1a2b307117d0dee1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 640940cea30b489683972debdd14b592d565ef4b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517593"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469686"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken 函数
 
@@ -31,7 +31,7 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 );  
 ```  
   
-### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pModulusBlob`  
  [in]Base64 编码的模数 blob (从\<取模 > 元素)。  请参阅[CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)结构。  
   
@@ -44,5 +44,5 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 ## <a name="return-value"></a>返回值  
  如果此函数成功，则返回 `S_OK`。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
- [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+## <a name="see-also"></a>请参阅
+- [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)

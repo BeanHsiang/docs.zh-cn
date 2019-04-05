@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Computer.Mouse object [Visual Basic], tasks
 - mouse [Visual Basic], accessing [Visual Basic]
 ms.assetid: 6d31a3d2-d860-459d-9d13-3aa192d62ba2
-ms.openlocfilehash: e08c5c24e0de0f467d012870238663b967656973
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d5b79aa91abac37cfa860463df4044d080e8074
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582585"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688254"
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>访问鼠标 (Visual Basic)
 `My.Computer.Mouse` 对象提供一种方法用于查找有关计算机鼠标的信息，例如是否存在鼠标、鼠标按钮数，以及有关鼠标轮的详细信息。  
@@ -24,5 +24,5 @@ ms.locfileid: "33582585"
 |确定是否已掉换鼠标的左右按钮|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
 |设置鼠标轮滚过一个凹槽时要滚动的范围。|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.Devices.Mouse>
+## <a name="see-also"></a>请参阅
+- <xref:Microsoft.VisualBasic.Devices.Mouse>

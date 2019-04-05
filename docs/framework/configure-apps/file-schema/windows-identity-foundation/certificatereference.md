@@ -1,22 +1,22 @@
 ---
-title: '&lt;CertificateReference&gt;'
+title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: e04dc90134aadfb8af7b0800c7144963d267f513
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c9c77f96ff6032de43d9b5a257bc0796a19b858
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206886"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269336"
 ---
-# <a name="ltcertificatereferencegt"></a>&lt;CertificateReference&gt;
+# <a name="certificatereference"></a>\<certificateReference>
 指定用于查找和验证的证书存储区中的 X.509 证书的设置。  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
-\<serviceCertificate >  
-\<certificateReference >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<serviceCertificate>  
+\<certificateReference>  
   
 ## <a name="syntax"></a>语法  
   
@@ -56,7 +56,7 @@ ms.locfileid: "47206886"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|配置用于加密和解密令牌的证书。|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|配置用于加密和解密令牌的证书。|  
   
 ## <a name="remarks"></a>备注  
  `<certificateReference>`元素指定用于查找和验证的证书存储区中的 X.509 证书的设置。 当指定的子元素为`<serviceCertficate>`元素，它指定用于加密和解密令牌的 X.509 证书的位置和验证设置。 `<certificateReference>`元素表示由<xref:System.ServiceModel.Configuration.CertificateReferenceElement>类。

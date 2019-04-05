@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac17993a4980e96cbd05fc2523567138e7b56262
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c2eb1898f03a52306a8a2763059cf198208b7b88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196435"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551834"
 ---
 # <a name="deploying-the-net-framework"></a>部署 .NET Framework
 本部分 .NET Framework 文档所提供的信息适用于安装应用程序的同时想一并安装 .NET Framework 的开发人员，以及想在网络中部署 .NET Framework 的管理员。 本文还讨论与部署相关的激活和重启问题，并介绍如何监视 .NET Framework 安装的进度。  
@@ -36,5 +36,5 @@ ms.locfileid: "50196435"
  [如何：调试 CLR 激活问题](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  介绍如何查看和调试 CLR 激活日志，解决使用正确版本的 CLR 运行应用程序时可能遇到的问题。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 - [开发指南](../../../docs/framework/development-guide.md)

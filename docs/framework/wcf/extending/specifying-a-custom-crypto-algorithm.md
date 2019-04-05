@@ -2,12 +2,12 @@
 title: 指定自定义加密算法
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537681"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>指定自定义加密算法
 WCF 允许指定在加密数据或计算数字签名时使用的自定义加密算法。 为此，请执行下列步骤：  
@@ -105,7 +105,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- 下的部分 <`cryptoClasses`> 元素创建 SHA256CryptoServiceProvider 与别名"SHA256CSP"之间的映射。 <`nameEntry`> 元素创建"SHA256CSP"别名和指定的 URL 之间的映射 (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm )。  
+ 下的部分 <`cryptoClasses`> 元素将创建 SHA256CryptoServiceProvider 与别名"SHA256CSP"之间的映射。 <`nameEntry`> 元素将创建"SHA256CSP"别名与指定的 URL 之间的映射 (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm )。  
   
  要在代码中注册自定义算法，可使用 <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> 方法。 该方法可创建这两个映射。 以下示例揭示了如何调用此方法：  
   
@@ -125,8 +125,8 @@ WSHttpBinding binding = new WSHttpBinding();
   
  有关完整的代码示例，请参阅[WCF 安全中的加密灵活性](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)示例。  
   
-## <a name="see-also"></a>请参阅  
- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [保护服务](../../../../docs/framework/wcf/securing-services.md)  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+## <a name="see-also"></a>请参阅
+- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保护服务](../../../../docs/framework/wcf/securing-services.md)
+- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)

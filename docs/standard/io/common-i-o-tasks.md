@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: ac2b0eafa64b809d2b40ac6471806dc9ab3c8c53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45641503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609624"
 ---
 # <a name="common-io-tasks"></a>通用 I/O 任务
 <xref:System.IO> 命名空间提供若干个类，通过这些类可以对文件、目录和流执行各种操作（如读取和写入）。 有关详细信息，请参阅[文件和流 I/O](../../../docs/standard/io/index.md)。  
@@ -22,8 +22,8 @@ ms.locfileid: "45641503"
 |若要执行此操作...|请参见本主题中的示例...|  
 |-------------------|--------------------------------------|  
 |创建文本文件|<xref:System.IO.File.CreateText%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.CreateText%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.File.Create%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.Create%2A?displayProperty=nameWithType> 方法|  
-|写入到文本文件|[如何：向文件写入文本](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [如何：编写文本文件 (C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
-|从文本文件读取|[如何：从文件读取文本](../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
+|写入到文本文件|[如何：将文本写入文件](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [如何：编写文本文件 (C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
+|从文本文件读取|[如何：从文件中读取文本](../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
 |向文件中追加文本|[如何：打开并追加到日志文件](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType> 方法|  
 |重命名或移动文件|<xref:System.IO.File.Move%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType> 方法|  
 |删除文件|<xref:System.IO.File.Delete%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.Delete%2A?displayProperty=nameWithType> 方法|  
@@ -43,7 +43,7 @@ ms.locfileid: "45641503"
   
 |若要执行此操作...|请参见本主题中的示例...|  
 |-------------------|--------------------------------------|  
-|访问特定文件夹（如“My Documents”）中的文件|[如何：向文件写入文本](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
+|访问特定文件夹（如“My Documents”）中的文件|[如何：将文本写入文件](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
 |创建目录|<xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType> 属性|  
 |创建子目录|<xref:System.IO.DirectoryInfo.CreateSubdirectory%2A?displayProperty=nameWithType> 方法|  
 |重命名或移动目录|<xref:System.IO.Directory.Move%2A?displayProperty=nameWithType> 方法<br /><br /> <xref:System.IO.DirectoryInfo.MoveTo%2A?displayProperty=nameWithType> 方法|  
@@ -55,6 +55,6 @@ ms.locfileid: "45641503"
   
 ## <a name="see-also"></a>请参阅
 
-- [文件和流 I/O](../../../docs/standard/io/index.md)  
-- [撰写流](../../../docs/standard/io/composing-streams.md)  
-- [异步文件 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [文件和流 I/O](../../../docs/standard/io/index.md)
+- [撰写流](../../../docs/standard/io/composing-streams.md)
+- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

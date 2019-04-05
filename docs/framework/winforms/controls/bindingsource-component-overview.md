@@ -7,22 +7,22 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 047df677ade3837e167845ace2bdc6ca14738c3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcec2fd81bfb9a662fc98c811ab69ffde5949916
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529599"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724457"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 组件概述
 <xref:System.Windows.Forms.BindingSource> 组件旨在简化将控件绑定到基础数据源的过程。 <xref:System.Windows.Forms.BindingSource> 组件同时充当管道和其他控件可以绑定的数据源。 将命令传递到基础数据列表时，它提供窗体数据连接的抽象。 此外，可以直接向其添加数据，以便组件本身可用作数据源。  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>作为中介的 BindingSource 组件  
- <xref:System.Windows.Forms.BindingSource> 组件为窗体上的某些或全部控件充当数据源。 在 Visual Studio 中，<xref:System.Windows.Forms.BindingSource>可以绑定到控件通过`DataBindings`属性，它是可从访问**属性**窗口。 另请参阅[如何：使用设计器将 Windows 窗体控件与 BindingSource 组件进行绑定](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)。  
+ <xref:System.Windows.Forms.BindingSource> 组件为窗体上的某些或全部控件充当数据源。 在 Visual Studio 中，<xref:System.Windows.Forms.BindingSource>可以绑定到通过控件`DataBindings`属性，它是从可访问**属性**窗口。 另请参阅[如何：将 Windows 窗体控件与 BindingSource 组件使用设计器绑定](bind-wf-controls-with-the-bindingsource.md)。  
   
  可以将 <xref:System.Windows.Forms.BindingSource> 组件同时绑定到两个简单的数据源（如一个对象或一个基本集合（如 <xref:System.Collections.ArrayList>）的单个属性）和复杂的数据源（如数据库表）。 <xref:System.Windows.Forms.BindingSource> 组件充当提供绑定和货币管理服务的中介。 在设计时或运行时中，通过将 <xref:System.Windows.Forms.BindingSource> 组件的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 和 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 属性分别设置为数据库和表，可将其绑定到复杂的数据源。 下图演示 <xref:System.Windows.Forms.BindingSource> 组件在何处能够融入现有的绑定数据的体系结构。  
   
- ![绑定源和数据绑定体系结构](../../../../docs/framework/winforms/controls/media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
+ ![绑定源和数据绑定体系结构](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
 >  在设计时，某些操作（如将数据库表从数据窗口拖到空白的窗体中）会创建 <xref:System.Windows.Forms.BindingSource> 组件，将其绑定到基础数据源，并添加数据识别控件，而这些只需通过一个操作即可完成。 另请参阅[在 Visual Studio 中将 Windows 窗体控件绑定到数据](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)。  
@@ -30,10 +30,10 @@ ms.locfileid: "33529599"
 ## <a name="bindingsource-component-as-a-data-source"></a>作为数据源的 BindingSource 组件  
  如果开始将项添加到 <xref:System.Windows.Forms.BindingSource> 组件，而不先指定一个用于绑定的列表，则该组件将充当列表样式的数据源并接受这些添加的项。  
   
- 此外，通过 <xref:System.Windows.Forms.BindingSource.AddingNew> 事件，可以编写代码来提供自定义的“AddNew”功能，此事件在添加项到列表之前调用 <xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法时引发。 有关详细信息，请参阅 [BindingSource 组件体系结构](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)。  
+ 此外，通过 <xref:System.Windows.Forms.BindingSource.AddingNew> 事件，可以编写代码来提供自定义的“AddNew”功能，此事件在添加项到列表之前调用 <xref:System.Windows.Forms.BindingSource.AddNew%2A> 方法时引发。 有关详细信息，请参阅 [BindingSource 组件体系结构](bindingsource-component-architecture.md)。  
   
 ## <a name="navigation"></a>导航  
- 对于需要为窗体上的数据进行导航的用户，<xref:System.Windows.Forms.BindingNavigator> 组件与 <xref:System.Windows.Forms.BindingSource> 组件配合使用可使你导航和处理数据。 有关详细信息，请参阅 [BindingNavigator 控件](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)。  
+ 对于需要为窗体上的数据进行导航的用户，<xref:System.Windows.Forms.BindingNavigator> 组件与 <xref:System.Windows.Forms.BindingSource> 组件配合使用可使你导航和处理数据。 有关详细信息，请参阅 [BindingNavigator 控件](bindingnavigator-control-windows-forms.md)。  
   
 ## <a name="data-manipulation"></a>数据操作  
  <xref:System.Windows.Forms.BindingSource> 为其所有绑定充当 <xref:System.Windows.Forms.CurrencyManager>，因此可提供对有关数据源的货币和位置信息的访问。 下表显示 <xref:System.Windows.Forms.BindingSource> 组件提供的用于访问和操作基础数据的组件成员。  
@@ -57,11 +57,11 @@ ms.locfileid: "33529599"
 |<xref:System.Windows.Forms.BindingSource.Sort%2A> 属性|如果数据源是 <xref:System.ComponentModel.IBindingList>，则获取或设置用于排序的列名称并对顺序信息进行排序。 如果数据源是 <xref:System.ComponentModel.IBindingListView> 并支持高级排序，则获取用于排序的多个列名称并对顺序信息进行排序|  
 |<xref:System.Windows.Forms.BindingSource.Filter%2A> 属性|如果数据源是 <xref:System.ComponentModel.IBindingListView>，则获取或设置用于筛选已查看的行的表达式。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.BindingNavigator>  
- [BindingSource 组件体系结构](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)  
- [BindingSource 组件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [BindingNavigator 控件](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Windows 窗体数据绑定](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.BindingNavigator>
+- [BindingSource 组件体系结构](bindingsource-component-architecture.md)
+- [BindingSource 组件](bindingsource-component.md)
+- [BindingNavigator 控件](bindingnavigator-control-windows-forms.md)
+- [Windows 窗体数据绑定](../windows-forms-data-binding.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)

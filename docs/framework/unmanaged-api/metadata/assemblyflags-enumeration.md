@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fc6d08e960b0ba82c76945a318ec723546f71b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9796dd234611fd6bbdf2b949b8a0ed66527aaba9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521252"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags 枚举
-包含值，用于描述程序集的运行时功能。  
+包含描述运行时功能的程序集的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,24 +42,24 @@ typedef enum {
   
 |成员|描述|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|指定导出的类型定义是隐式包含该程序集的文件内。 在.NET framework 1.0 和 1.1 版中，此值始终假定要设置。|  
-|`afImplicitResources`|指定资源定义是隐式包含该程序集的文件内。 在.NET Framework 1.0 和 1.1 中，此值始终假定要设置。|  
-|`afNonSideBySideAppDomain`|指定程序集无法与其他版本执行，是否它们在同一应用程序域中运行。|  
-|`afNonSideBySideProcess`|指定程序集无法与其他版本执行，是否它们相同的进程中运行。|  
-|`afNonSideBySideMachine`|指定程序集无法与其他版本执行，是否同一台计算机上运行。|  
+|`afImplicitExportedTypes`|指定导出的类型定义是隐式包含程序集的文件中。 在.NET framework 1.0 和 1.1 版中，此值始终假定要设置。|  
+|`afImplicitResources`|指定的资源定义中是隐式包含程序集的文件。 在.NET Framework 1.0 和 1.1 中，此值始终假定要设置。|  
+|`afNonSideBySideAppDomain`|指定是否在同一应用程序域中运行该程序集不能执行与其他版本。|  
+|`afNonSideBySideProcess`|指定是否在同一进程中运行该程序集不能执行与其他版本。|  
+|`afNonSideBySideMachine`|指定是否在同一台计算机上运行该程序集不能执行与其他版本。|  
   
 ## <a name="remarks"></a>备注  
- 0x0010 和 0x0070 （含)，之间的值用于描述的引用的程序集的并排显示兼容性功能。 如果这些值均未设置，则假定程序集是通过并行兼容。  
+ 0x0010 和 0x0070 非独占，之间的值用于描述通过并行兼容性功能的引用的程序集。 如果没有这些值设置，该程序集被假定为通过并行兼容。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MsCorEE.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

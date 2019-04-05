@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40b98e01d6c34fb01a1f508f2ea52309f2f7938b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554239"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>如何：处理 PLINQ 查询中的异常
 本主题中的第一个示例展示了如何处理 PLINQ 查询在执行时可能会抛出的 <xref:System.AggregateException?displayProperty=nameWithType>。 第二个示例展示了如何将 try-catch 块置于委托中，并尽可能靠近抛出异常的代码位置。 这样一来，可以在异常发生时尽快捕获它们，并继续执行查询。 如果允许异常向上冒泡回到联接线程，则查询也许可以在引发异常后继续处理一些项。  
@@ -50,5 +50,5 @@ ms.locfileid: "45989516"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Linq.ParallelEnumerable>  
+- <xref:System.Linq.ParallelEnumerable>
 - [并行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

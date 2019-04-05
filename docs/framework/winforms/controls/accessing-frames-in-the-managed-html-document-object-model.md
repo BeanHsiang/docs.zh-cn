@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: b1a858e88ff27de19e2ebbd69c14060813873c13
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f02e5cf054f8891b134ee914b54e22e975d835a9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308482"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723785"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>在托管 HTML 文档对象模型中访问框架
 一些 HTML 文档组成共*帧*，或可以存放其自己独特的 HTML 文档的 windows。 使用框架可以轻松地创建 HTML 页面，页面中的一个或多个部分（如导航栏）保持静态，而其它框架则不断更改内容。  
@@ -38,8 +38,6 @@ ms.locfileid: "49308482"
   
  此规则也适用于使用 <xref:System.Windows.Forms.HtmlWindow.Open%2A> 和 <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> 方法打开的窗口。 如果打开的窗口位于与 <xref:System.Windows.Forms.WebBrowser> 控件中托管的页面不同的域中，则你将不能移动该窗口或检查其内容。 如果使用 <xref:System.Windows.Forms.WebBrowser> 控件来显示与用于部署基于 Windows 窗体的应用程序的网站不同的网站，也会强制这些限制。 如果使用 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 部署技术来安装来自网站 A 的应用程序，并且使用 <xref:System.Windows.Forms.WebBrowser> 来显示网站 B，将不能访问网站 B 的数据。  
   
- 有关跨站点脚本的详细信息，请参阅[关于跨框架脚本和安全](https://msdn.microsoft.com/library/ms533028.aspx)。  
-  
-## <a name="see-also"></a>请参阅  
- [框架元素&#124;框架对象](https://msdn.microsoft.com/library/ms535250.aspx)  
- [使用托管 HTML 文档对象模型](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>请参阅
+- [\<帧 > 元素](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
+- [使用托管 HTML 文档对象模型](using-the-managed-html-document-object-model.md)

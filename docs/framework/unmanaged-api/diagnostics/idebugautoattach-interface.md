@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a88f8b2ad1ac59cf7044ca5d7ace5a468510b6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3492cac305370c8b9aa969dbb0a88e1d9c45af34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550651"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach 接口
-定义服务器调用调试器自动附加的接口。  
+服务器调用调试器自动连接定义的接口。  
   
 ## <a name="methods"></a>方法  
   
@@ -35,5 +35,5 @@ ms.locfileid: "33424750"
 ## <a name="requirements"></a>要求  
  **标头：** DbgAutoAttach.idl  
   
-## <a name="see-also"></a>请参阅  
- [诊断符号存储区接口](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [诊断符号存储区接口](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

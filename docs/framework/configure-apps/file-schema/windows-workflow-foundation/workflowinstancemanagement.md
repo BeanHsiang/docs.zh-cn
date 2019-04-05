@@ -1,23 +1,23 @@
 ---
-title: '&lt;workflowInstanceManagement&gt;'
+title: <workflowInstanceManagement>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 63ac89ba-c844-4ae2-96ae-cd752a90a109
-ms.openlocfilehash: d86b0f61c6741fa156e04da75a62853f459324d1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: baa1ccbe0accd2db701fac9ef53cdc6357713c5d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767097"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257416"
 ---
-# <a name="ltworkflowinstancemanagementgt"></a>&lt;workflowInstanceManagement&gt;
+# <a name="workflowinstancemanagement"></a>\<workflowInstanceManagement>
 一种服务行为，可用于指定控制工作流实例如何运行的设置，包括持久性、未经处理的异常行为和空闲行为。  
   
 \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
-\<workflowInstanceManagement >  
+\<behavior>  
+\<workflowInstanceManagement>  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,6 +49,6 @@ ms.locfileid: "32767097"
 |-------------|-----------------|  
 |[\<行为 > 的\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|指定行为元素。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Activities.Description.WorkflowInstanceManagementBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.WorkflowInstanceManagementElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Activities.Description.WorkflowInstanceManagementBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.WorkflowInstanceManagementElement>

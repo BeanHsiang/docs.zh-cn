@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 97e0ccd46f413cc05b659731436bb141ee178419
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 5555f83107a40b40c7f05c7cc5729f721727f67c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729991"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 创建指向托管资源的链接。  
@@ -29,7 +29,7 @@ ms.locfileid: "48849898"
   
 ## <a name="arguments"></a>自变量  
  `filename`  
- 必须的。 要链接到程序集的资源文件。 如果文件名包含空格，将名称括在引号 ("")。  
+ 必需。 要链接到程序集的资源文件。 如果文件名包含空格，将名称括在引号 ("")。  
   
  `identifier`  
  可选。 资源的逻辑名称。 用于加载资源名称。 默认值是文件的名称。 或者，可以指定文件是否是公共或私有程序集清单，例如： `-linkres:filename.res,myname.res,public`。 默认情况下，`filename`在程序集是公共的。  
@@ -57,7 +57,7 @@ vbc -linkresource:rf.resource in.vb
   
 ## <a name="see-also"></a>请参阅
 
-- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
-- [-资源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)  
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-目标 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-资源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
 - [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

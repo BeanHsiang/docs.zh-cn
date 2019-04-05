@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f050a3d9d37e43713c40896fb162bcf9932c6512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed5a7657affde335acf79952d77bbdb7ac42c7a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403365"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490458"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee 方法
-获取被调用链的链。  
+获取此链调用链。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,18 +35,18 @@ HRESULT GetCallee (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppChain`  
- [out]指向一个表示调用的链的 ICorDebugChain 对象的地址的指针。 如果此证书链当前正在执行 （即，如果此证书链不等待调用链返回），`ppChain`将为 null。  
+ [out]指向一个 ICorDebugChain 对象，表示被调用的链的地址的指针。 如果当前正在执行此链，（即，如果此证书链不等待被调用链返回），`ppChain`将为 null。  
   
 ## <a name="remarks"></a>备注  
- 此证书链将等待调用链返回，然后才会继续执行。 对于跨线程封送调用另一个线程可能会被调用的链。  
+ 此链将等待被调用链返回，然后再继续执行。 调用的链可能对于跨线程封送调用另一个线程上。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

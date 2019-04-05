@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: 2c724e3f67bbf6554abffb44f101d2f28f748023
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee35b6c02637c3013a42303dcd7aa7c813bd183c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693157"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 事务配置
-Windows Communication Foundation (WCF) 提供了配置的服务的事务的三个属性： `transactionFlow`， `transactionProtocol`，和`transactionTimeout`。  
+Windows Communication Foundation (WCF) 提供三个属性用于配置服务事务： `transactionFlow`， `transactionProtocol`，和`transactionTimeout`。  
   
 ## <a name="configuring-transactionflow"></a>配置 transactionFlow  
- WCF 提供了包含的预定义绑定的大多数`transactionFlow`和`transactionProtocol`属性，以便你可以配置为接受使用特定的事务流协议特定终结点的传入事务的绑定。 此外，您可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成您自己的自定义绑定。 有关设置的配置元素的详细信息，请参阅[\<绑定 >](../../../../docs/framework/misc/binding.md)和[WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
+ WCF 提供了包含的预定义绑定的大多数`transactionFlow`和`transactionProtocol`属性，以便你可以配置为接受传入事务使用的是特定事务流协议特定的终结点的绑定。 此外，你可以使用 `transactionFlow` 元素及其 `transactionProtocol` 特性生成你自己的自定义绑定。 有关设置的配置元素的详细信息，请参阅[\<绑定 >](../../../../docs/framework/misc/binding.md)并[WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
   
  `transactionFlow` 属性指定是否为使用绑定的服务终结点启用事务流。  
   
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) 提供了配置的服务的事务的三�
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>配置 transactionTimeout  
- 你可以配置`transactionTimeout`属性中的 WCF 服务`behavior`配置文件元素。 下面的代码演示如何执行此操作。  
+ 你可以配置`transactionTimeout`属性中，WCF 服务`behavior`配置文件元素。 下面的代码演示如何执行此操作。  
   
 ```xml  
 <configuration>  
@@ -62,6 +62,6 @@ Windows Communication Foundation (WCF) 提供了配置的服务的事务的三�
   
  请注意，所使用的超时值是此 `transactionTimeout` 配置设置和任何 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 属性之间的较小值。  
   
-## <a name="see-also"></a>请参阅  
- [\<绑定 >](../../../../docs/framework/misc/binding.md)  
- [WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)
+## <a name="see-also"></a>请参阅
+- [\<binding>](../../../../docs/framework/misc/binding.md)
+- [WCF 配置架构](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

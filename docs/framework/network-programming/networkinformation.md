@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: 333baa68f4bd80b98e8bb03929ab41dc9cbed7a1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: de8cb03e6205a83d2cc93ee300eb3fcac1ac5b74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50088697"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497165"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> 命名空间使你能够收集有关网络事件、更改、统计信息和属性的信息。 还可使用 <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> 类来确定是否可以访问远程主机。  
@@ -23,8 +23,8 @@ ms.locfileid: "50088697"
 ## <a name="determine-if-a-remote-host-is-reachable"></a>确定是否可访问远程主机  
  可使用 <xref:System.Net.NetworkInformation.Ping> 类来确定远程主机是否运行、是否在线及是否可访问。 有关详细信息，请参阅[如何：Ping 主机](../../../docs/framework/network-programming/how-to-ping-a-host.md)。  
   
-## <a name="see-also"></a>请参阅  
- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [网络信息技术示例](https://go.microsoft.com/fwlink/?LinkID=179564)  
- [NetStat 工具技术示例](https://go.microsoft.com/fwlink/?LinkID=179562)  
- [Ping 客户端技术示例](https://go.microsoft.com/fwlink/?LinkID=179565)
+## <a name="see-also"></a>请参阅
+- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)
+- [网络信息技术示例](https://go.microsoft.com/fwlink/?LinkID=179564)
+- [NetStat 工具技术示例](https://go.microsoft.com/fwlink/?LinkID=179562)
+- [Ping 客户端技术示例](https://go.microsoft.com/fwlink/?LinkID=179565)

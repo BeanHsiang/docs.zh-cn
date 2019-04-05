@@ -1,29 +1,30 @@
 ---
-title: 命令行参数（C# 编程指南）
+title: 命令行参数 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: a55e40a4a4880c39c74186c55b0886e06dc33bcb
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083944"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980708"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令行参数（C# 编程指南）
 可以通过以下方式之一定义方法来将自变量发送到 `Main` 方法：  
   
- [!code-csharp[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
+ [!code-csharp[csProgGuideMain#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#2)]  
   
- [!code-csharp[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
+ [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
 >  若要在 Windows 窗体应用程序中的 `Main` 方法中启用命令行参数，必须手动修改 program.cs 中 `Main` 的签名。 Windows 窗体设计器生成的代码创建没有输入参数的 `Main`。 还可使用 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 或 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> 从控制台或 Windows 应用程序的任意位置访问命令行参数。  
   
  `Main` 方法的参数是一个表示命令行参数的 <xref:System.String> 数组。 通常，通过测试 `Length` 属性来确定参数是否存在，例如：  
   
- [!code-csharp[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
+ [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]  
   
  还可以使用 <xref:System.Convert> 类或 `Parse` 方法将字符串参数转换为数字类型。 例如，以下语句使用 <xref:System.Int64.Parse%2A> 方法将 `string` 转换为 `long` 数字：  
   
@@ -52,7 +53,7 @@ long num = Convert.ToInt64(s);
   
 1.  将以下代码粘贴到任何文本编辑器中，然后将该文件保存为名为 `Factorial.cs` 的文本文件。  
   
-     [!code-csharp[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
+     [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
 2.  从“开始”屏幕或“开始”菜单中，打开 Visual Studio“开发人员命令提示”窗口，然后导航到包含刚刚创建的文件的文件夹。  
   
@@ -71,14 +72,14 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  在 Visual Studio 中运行应用程序时，可在[“项目设计器”->“调试”页](/visualstudio/ide/reference/debug-page-project-designer)中指定命令行参数。  
   
- 有关如何使用命令行参数的更多示例，请参阅[如何：使用命令行创建和使用程序集](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
+ 有关如何使用命令行参数的更多示例，请参阅[操作说明：使用命令行创建和使用程序集](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Environment?displayProperty=nameWithType>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-- [如何：使用 foreach 访问命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
-- [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+- <xref:System.Environment?displayProperty=nameWithType>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [Main() 和命令行参数](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [如何：显示命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [如何：使用 foreach 访问命令行参数](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [Main() 返回值](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [类](../../../csharp/programming-guide/classes-and-structs/classes.md)

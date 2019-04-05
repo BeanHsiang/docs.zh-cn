@@ -2,12 +2,12 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 9237518f5bfa48401e60e47ccc40e4ee303dec35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3216b578ffed23091a27c4449abfe1aa6a2a97c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502997"
 ---
 # <a name="hosting"></a>宿主
 本节中的主题介绍服务承载。 通过 Internet 信息服务 (IIS)、 Windows 进程激活服务 (WAS)、 Windows Server AppFabric、 Windows 服务或托管的应用程序可以承载服务，此选项通常称为*自我托管*。  
@@ -33,6 +33,6 @@ ms.locfileid: "44209229"
  [支持多个 IIS 站点绑定](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
  描述如何使用同一 URI 方案在一个网站上为一个服务指定多个基址。  
   
-## <a name="see-also"></a>请参阅  
- [托管服务](../../../../docs/framework/wcf/hosting-services.md)  
- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>请参阅
+- [托管服务](../../../../docs/framework/wcf/hosting-services.md)
+- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

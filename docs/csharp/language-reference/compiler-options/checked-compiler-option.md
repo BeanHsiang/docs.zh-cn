@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: cf6fa0e87654d0f9d61f34ea9b29ad80921a5720
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 44a86a2e1ab9346280f655d4ee75e7282c6c9cd5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54578378"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked（C# 编译器选项）
 -checked 选项指定，不在 [checked](../../../csharp/language-reference/keywords/checked.md) 或 [unchecked](../../../csharp/language-reference/keywords/unchecked.md) 关键字的范围内、并且产生的值超出数据类型范围的整数算法语句是否将导致运行时异常。  
@@ -52,7 +52,7 @@ ms.locfileid: "44084850"
 csc t2.cs -checked  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
-- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

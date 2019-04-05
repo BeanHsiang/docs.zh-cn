@@ -2,12 +2,12 @@
 title: 如何：使用 LINQ 查询 ArrayList (C#)
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: 7cf804bc86dc6f8378e62e01ba373bb82821de52
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9276ebe02858d7a7e295430b0125c590b9c2f308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43740229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651796"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>如何：使用 LINQ 查询 ArrayList (C#)
 如果使用 LINQ 来查询非泛型 <xref:System.Collections.IEnumerable> 集合（例如 <xref:System.Collections.ArrayList>），必须显式声明范围变量的类型，以反映集合中对象的特定类型。 例如，如果有 `Student` 对象的 <xref:System.Collections.ArrayList>，那么 [from 子句](../../../../csharp/language-reference/keywords/from-clause.md)应如下所示：  

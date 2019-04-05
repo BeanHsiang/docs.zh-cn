@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 29db884a88f5150cd93571ba8fa7bf72be2b8c69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514563"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903818"
 ---
 # <a name="establishing-the-connection"></a>建立连接
 要连接到 Microsoft SQL Server，请使用 SQL Server .NET Framework 数据提供程序的 <xref:System.Data.SqlClient.SqlConnection> 对象。 要连接到 OLE DB 数据源，请使用 OLE DB .NET Framework 数据提供程序的 <xref:System.Data.OleDb.OleDbConnection> 对象。 要连接到 ODBC 数据源，请使用 ODBC .NET Framework 数据提供程序的 <xref:System.Data.Odbc.OdbcConnection> 对象。 要连接到 Oracle 数据源，请使用 Oracle .NET Framework 数据提供程序的 <xref:System.Data.OracleClient.OracleConnection> 对象。 有关安全地存储和检索连接字符串，请参阅[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
@@ -51,7 +51,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>集成安全性和 ASP.NET  
  SQL Server 集成安全性（也称为受信任连接）有助于在连接到 SQL Server 时提供保护，因为它不会在连接字符串中公开用户 ID 和密码，是对连接进行身份验证的建议方法。 集成安全性使用正在执行的进程的当前安全标识或标记。 对于桌面应用程序，安全标识或标记通常是当前登录的用户的标识。  
   
- ASP.NET 应用程序的安全标识可设置为几个不同的选项之一。 若要更好地了解 ASP.NET 应用程序连接到 SQL Server 时使用的安全标识，请参阅[ASP.NET 模拟](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d)， [ASP.NET 身份验证](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)，和[如何： 访问 SQL服务器使用 Windows 集成安全性](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5)。  
+ ASP.NET 应用程序的安全标识可设置为几个不同的选项之一。 若要更好地了解 ASP.NET 应用程序连接到 SQL Server 时使用的安全标识，请参阅[ASP.NET 模拟](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))， [ASP.NET 身份验证](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100))，和[如何：访问 SQL 服务器使用 Windows 集成安全性](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100))。  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>连接到 OLE DB 数据源  
  用于 OLE DB.NET Framework 数据提供程序提供连接到数据源使用 OLE DB 公开 （通过 SQLOLEDB，OLE DB Provider for SQL Server)，使用**OleDbConnection**对象。  
@@ -142,8 +142,8 @@ OracleConnection nwindConn = new OracleConnection("Data Source=MyOracleServer;In
 nwindConn.Open();  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)  
- [OLE DB、ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)
+- [OLE DB、ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

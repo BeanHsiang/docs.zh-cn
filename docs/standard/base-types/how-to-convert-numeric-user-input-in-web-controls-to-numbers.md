@@ -1,5 +1,5 @@
 ---
-title: 如何：将用户在 Web 控件中输入的数值转换为数字
+title: 如何：将用户在 Web 控件中输入的数值转换成数字
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722356"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>如何：将用户在 Web 控件中输入的数值转换为数字
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>如何：将用户在 Web 控件中输入的数值转换成数字
 由于世界各地的人都可以查看网页，因此用户能够在 <xref:System.Web.UI.WebControls.TextBox> 控件中以几乎无限种格式输入数字数据。 所以，请务必确定网页用户的区域设置和区域性。 分析用户输入后，可以应用用户的区域设置和区域性定义的格式设置约定。  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>将 Web 文本框控件中的数字输入转换为数字的具体步骤  
@@ -73,5 +73,5 @@ ms.locfileid: "49349132"
   
 ## <a name="see-also"></a>请参阅
 
-- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [分析数值字符串](../../../docs/standard/base-types/parsing-numeric.md)

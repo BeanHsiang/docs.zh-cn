@@ -6,33 +6,33 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-ms.openlocfilehash: 1b91cbc21abe8cc92a9718a71712c52219ad0174
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5093bfa6bc4051c1c6cf3ca059831b0cbe137ef0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521773"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709934"
 ---
 # <a name="coordinate-systems-and-transformations"></a>坐标系和坐标转换
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供世界变换和页转换，以便你可以将转换 （旋转、 缩放、 转换，等等） 所绘制的项。 两个转换还允许你各种各样的坐标系统中的工作。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了世界转换和页转换，以便可以转换 （旋转、 缩放、 转换，等等） 所绘制的项。 两种转换还可以在各种坐标系统中工作。  
   
 ## <a name="in-this-section"></a>本节内容  
- [坐标系统类型](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  
+ [坐标系统类型](types-of-coordinate-systems.md)  
  引入了坐标系和坐标变换。  
   
- [转换的矩阵表示形式](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)  
- 讨论如何使用用于坐标变换的矩阵。  
+ [转换的矩阵表示形式](matrix-representation-of-transformations.md)  
+ 讨论如何使用的坐标转换的矩阵。  
   
- [全局转换和局部转换](../../../../docs/framework/winforms/advanced/global-and-local-transformations.md)  
+ [全局转换和局部转换](global-and-local-transformations.md)  
  讨论全局和局部转换。  
   
 ## <a name="reference"></a>参考  
  <xref:System.Drawing.Drawing2D.Matrix>  
- 封装表示几何转换的 3x3 仿射矩阵。  
+ 封装表示几何变换的 3x3 仿射矩阵。  
   
 ## <a name="related-sections"></a>相关章节  
- [在托管 GDI+ 中使用转换](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
- 提供主题提供有关如何使用矩阵转换的详细信息的列表。  
+ [在托管 GDI+ 中使用转换](using-transformations-in-managed-gdi.md)  
+ 提供了一系列主题提供了有关如何使用矩阵转换的详细信息。  
   
- [关于 GDI+ 托管代码](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
- 包含描述你可以使用.NET Framework 中的图形构造的主题列表。
+ [关于 GDI+ 托管代码](about-gdi-managed-code.md)  
+ 包含的主题描述可以使用.NET Framework 中的图形构造的列表。

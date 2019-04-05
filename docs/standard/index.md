@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: cbe08d87e90d319c074e85d0157e62fe023cce8c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 2db6d713d699a733f5c65d2170620eaccd8f0691
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105167"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415398"
 ---
 # <a name="net-guide"></a>.NET 指南
 
@@ -49,7 +49,7 @@ ms.locfileid: "37105167"
 
 * [.NET 体系结构组件](components.md)
 * [.NET Standard](net-standard.md)
-* [本机互操作性](native-interop.md)
+* [本机互操作性](native-interop/index.md)
 * [垃圾回收](garbagecollection/index.md)
 * [.NET 中的基类型](base-types/index.md)
 * [集合](collections/index.md)

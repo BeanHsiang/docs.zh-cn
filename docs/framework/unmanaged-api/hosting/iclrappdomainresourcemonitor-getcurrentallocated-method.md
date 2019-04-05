@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4011881e98c109458bf87efcc1b09463c064f23f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97b00ff01125e000dec7840f122ed0c69ec9878f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431950"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502523"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>ICLRAppDomainResourceMonitor::GetCurrentAllocated 方法
-获取用字节表示，已由应用程序域创建以来，不扣除已进行垃圾回收的内存的所有内存分配的总大小。  
+获取用字节表示，因为它创建的而无需减去已进行垃圾回收的内存进行的应用程序域的所有内存分配的总大小。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,12 +34,12 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
                             [out] ULONGLONG* pBytesAllocated);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwAppDomainId`  
  [in]请求的应用程序域的 ID。  
   
  `pBytesAllocated`  
- [out]指向的所有内存分配的总大小的指针。  
+ [out]指向所有内存分配的总大小的指针。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -50,19 +50,19 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
 |COR_E_APPDOMAINUNLOADED|应用程序域已被卸载，或不存在。|  
   
 ## <a name="remarks"></a>备注  
- 此方法是托管的非托管等效项<xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>属性。  
+ 此方法相当于非托管的托管<xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>属性。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRAppDomainResourceMonitor 接口](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- [应用程序域资源监视](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)  
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>请参阅
+- [ICLRAppDomainResourceMonitor 接口](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [应用程序域资源监视](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

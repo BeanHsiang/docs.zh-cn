@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: da559a7e009861faaba16484276eb97be537482b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205160"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048043"
 ---
 # <a name="white-space-processing-in-xaml"></a>在 XAML 中处理空白
 XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器实现。 本主题介绍这些 XAML 语言规则。 它还介绍了由定义的其他空格处理[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]XAML 处理器和序列化的 XAML 编写器的实现。  
@@ -35,7 +35,7 @@ XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla
   
 5.  删除结束标记前紧跟的一个空格。  
   
- “默认”对应于由 [xml: space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md) 属性的默认值表示的状态。  
+ “默认”对应于由 [xml: space](xml-space-handling-in-xaml.md) 属性的默认值表示的状态。  
   
 <a name="whitespace_in_inner_text_and_string_primitives"></a>   
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>内部文本和字符串基元中的空白区域  
@@ -53,13 +53,13 @@ XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla
 ## <a name="preserving-white-space"></a>保留空白  
  有几种方法来保留源中的空白[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]不受影响的最终表现形式为[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器空格标准化。  
   
- **xml: space ="preserve"**： 指定此属性在需要时保留空白的元素的级别。 这样保留了所有的空格，其中包括可能由代码编辑应用程序添加到“优质打印”对齐元素以作为可视化直观嵌套的空格。 但是，是否呈现这些空白是由包含元素的内容模型决定的。 避免指定`xml:space="preserve"`根级别因为大多数对象模型不会将白色空间而不考虑如何设置该属性为重要。 全局设置 `xml:space` 可能对 XAML 在某些实现中的处理（特别是序列化）产生性能后果。 它是更好的做法，以仅呈现字符串内的空白或空格重要集合的元素级别上特别设置该属性。  
+ **xml:space="preserve"**:指定此属性在需要时保留空白的元素的级别。 这样保留了所有的空格，其中包括可能由代码编辑应用程序添加到“优质打印”对齐元素以作为可视化直观嵌套的空格。 但是，是否呈现这些空白是由包含元素的内容模型决定的。 避免指定`xml:space="preserve"`根级别因为大多数对象模型不会将白色空间而不考虑如何设置该属性为重要。 全局设置 `xml:space` 可能对 XAML 在某些实现中的处理（特别是序列化）产生性能后果。 它是更好的做法，以仅呈现字符串内的空白或空格重要集合的元素级别上特别设置该属性。  
   
  **实体和非换行空格**： [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 支持在文本对象模型中放置任何 [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] 实体。 可以使用专用的实体，例如不间断空格 (&\#160; utf-8 编码中)。 还可以使用支持不间断空格字符的富文本控件。 如果使用实体来模拟布局特征（例如缩进），则应当小心，因为实体的运行时输出将根据更大数量的因素变化，而不是根据在典型布局系统中产生缩进结果的能力，如面板和边距的正确使用。 例如，实体映射到字体，并且可以响应用户的字体选择更改大小。  
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>东亚字符  
- “中文字符”定义为一组 [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] 字符，范围是 U+20000 到 U+2FFFD 与 U+30000 到 U+3FFFD。 此子集有时也称为“CJK 表意文字”。 有关详细信息，请参阅 <https://www.unicode.org> 。  
+ “中文字符”定义为一组 [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] 字符，范围是 U+20000 到 U+2FFFD 与 U+30000 到 U+3FFFD。 此子集有时也称为“CJK 表意文字”。 有关详细信息，请参阅 <https://www.unicode.org>。  
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="white-space-and-text-content-models"></a>空格和文本内容模型  
@@ -74,7 +74,7 @@ XAML 的语言规则状态必须由处理该有意义的空白[!INCLUDE[TLA2#tla
   
  此外，隐含流文档模型中的某些内联元素应有意不引入额外空格，即使在空白有意义集合。 例如，<xref:System.Windows.Documents.LineBreak>元素具有相同的目的\<b R / > 标记中的[!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]，并以提高可读性，在标记中，通常<xref:System.Windows.Documents.LineBreak>从任何后续文本分隔编写的换行符。 不应标准化该换行符以使它成为后续行中的前导空格。 若要启用此行为的类定义<xref:System.Windows.Documents.LineBreak>元素适用<xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，它然后解释由[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]处理器来表示该空白区域周围<xref:System.Windows.Documents.LineBreak>始终被裁剪。  
   
-## <a name="see-also"></a>请参阅  
- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XML 字符实体和 XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [xml: space 处理在 XAML 中](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+## <a name="see-also"></a>请参阅
+- [XAML 概述 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XML 字符实体和 XAML](xml-character-entities-and-xaml.md)
+- [xml: space 处理在 XAML 中](xml-space-handling-in-xaml.md)

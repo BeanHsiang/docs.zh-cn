@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrMouse_NoMouseIsPresent
 ms.assetid: 4472fd57-4217-4463-9d3c-dc4a8fe88f1b
-ms.openlocfilehash: ee04ed880f8aa24bbd155c5658ad6de856e2c388
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: c0e4e2a8cb0aa641b179d8b2608af384d7d4181e
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259975"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58044640"
 ---
 # <a name="no-mouse-is-present"></a>没有鼠标
 调用了 `My.Computer.Mouse` 对象的一个属性，但是计算机未安装鼠标或鼠标端口。  
@@ -22,7 +22,8 @@ ms.locfileid: "44259975"
   
 -   在计算机上安装鼠标。  
   
-## <a name="see-also"></a>请参阅  
- [My.Computer.Mouse](xref:Microsoft.VisualBasic.Devices.Mouse)  
- [异常和 Visual Basic 中的错误处理](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
- [Try...Catch...Finally 语句](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>请参阅
+
+- [My.Computer.Mouse](xref:Microsoft.VisualBasic.Devices.Mouse)
+- [在 .NET 中处理和引发异常](../../standard/exceptions/index.md)
+- [Try...Catch...Finally 语句](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

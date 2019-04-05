@@ -2,12 +2,12 @@
 title: DataAdapter 和 DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f4588187aad910d0b50b0c804e6de20a477b567b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516772"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583504"
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter 和 DataReader
 可以使用 ADO.NET **DataReader**若要从数据库中检索数据的只读、 只进流。 结果作为查询执行，并且存储在客户端上的网络缓冲区中，直到请求它们返回，使用**读**方法**DataReader**。 使用**DataReader**检索数据，只要它不可用，并且默认情况下，可以提高应用程序性能将只有一个行存储在内存中，从而降低系统开销，一次。  
@@ -44,9 +44,9 @@ ms.locfileid: "43516772"
  [使用 DataAdapter 执行批处理操作](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  说明在从 `DataSet` 应用更新时，如何通过减少与 SQL Server 之间的往返次数来提高应用程序的性能。  
   
-## <a name="see-also"></a>请参阅  
- [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [数据集、数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [数据集、数据表和数据视图](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

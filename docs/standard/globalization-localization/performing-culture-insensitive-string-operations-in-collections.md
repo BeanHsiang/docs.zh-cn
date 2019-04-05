@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e458f45fea8e2207ced930daebf10e653901fa7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 86ddb4ed45479e483dde447983f6dc31edcc8930
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582796"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738834"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>在集合中执行不区分区域性的字符串操作
 <xref:System.Collections> 命名空间中包含默认提供区域性敏感型行为的类和成员。 <xref:System.Collections.CaseInsensitiveComparer> 和 <xref:System.Collections.CaseInsensitiveHashCodeProvider> 类的默认构造函数使用 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 属性初始化新实例。 默认情况下，<xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> 方法的所有重载都会使用 `Thread.CurrentCulture` 属性新建 <xref:System.Collections.Hashtable> 类的实例。 默认情况下，<xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> 方法重载使用 `Thread.CurrentCulture` 执行区域性敏感型排序。 将字符串用作键时，<xref:System.Collections.SortedList> 中的排序和查找可能会受 `Thread.CurrentCulture` 影响。 请按本节提供的用法建议，在 `Collections` 命名空间中的这些类和方法中获取不区分区域性的结果。  
@@ -135,11 +135,11 @@ internal class InvariantComparer : IComparer
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Collections.CaseInsensitiveComparer>  
-- <xref:System.Collections.CaseInsensitiveHashCodeProvider>  
-- <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>  
-- <xref:System.Collections.SortedList>  
-- <xref:System.Collections.Hashtable>  
-- <xref:System.Collections.IComparer>  
-- [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+- <xref:System.Collections.CaseInsensitiveComparer>
+- <xref:System.Collections.CaseInsensitiveHashCodeProvider>
+- <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>
+- <xref:System.Collections.SortedList>
+- <xref:System.Collections.Hashtable>
+- <xref:System.Collections.IComparer>
+- [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>

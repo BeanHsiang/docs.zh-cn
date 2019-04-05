@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88092c22e763e427203350065ff62b7c5e040b97
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: fac921bbe6250b039aba8527a1b9b5203af0972e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492944"
 ---
 # <a name="lazy-initialization"></a>迟缓初始化
 对象的迟缓初始化意味着推迟创建该对象，直到它被首次使用。 （在本主题中，术语迟缓初始化和迟缓实例化是同义词。）迟缓初始化主要用于提升性能、避免计算浪费和降低程序内存需求。 以下是常见方案：  
@@ -140,7 +140,7 @@ ms.locfileid: "37073211"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Parallel.For 和 ForEach 中的线程本地变量  
- 当使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法来并行循环访问数据源时，可以使用包含针对线程本地数据的内置支持的重载。 在这些方法中，通过使用本地委托来创建、访问和清理数据，可以实现线程本地性。 有关详细信息，请参阅[如何： 编写具有线程局部变量的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[如何： 编写具有分区局部变量的 Parallel.ForEach 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
+ 当使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法来并行循环访问数据源时，可以使用包含针对线程本地数据的内置支持的重载。 在这些方法中，通过使用本地委托来创建、访问和清理数据，可以实现线程本地性。 有关详细信息，请参阅[如何：编写具有线程局部变量的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[如何：编写具有分区局部变量的 Parallel.ForEach 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>将迟缓初始化用于开销较低的方案  
  在必须迟缓初始化大量对象的方案中，你可能会认为在 <xref:System.Lazy%601> 中包装每个对象需要过多的内存或过多的计算资源。 或者，你可能对如何公开迟缓初始化有严格要求。 在这种情况下，可以使用 <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> 类的 `static`（Visual Basic 中的 `Shared`）方法来迟缓初始化每个对象，而不会将其包装在 <xref:System.Lazy%601> 的实例中。  
@@ -152,8 +152,8 @@ ms.locfileid: "37073211"
   
  在此示例中，请注意循环的每次迭代都会调用初始化过程。 在多线程方案中，所有线程都会知道调用初始化过程的第一个线程的值。 后续线程也会调用初始化过程，但不会使用其值。 如果这种潜在的争用条件是不可接受的，请使用 <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> 的重载，获取布尔参数和同步对象。  
   
-## <a name="see-also"></a>请参阅  
- [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)  
- [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)  
- [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [如何：执行对象的迟缓初始化](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+## <a name="see-also"></a>请参阅
+- [托管线程处理基本知识](../../../docs/standard/threading/managed-threading-basics.md)
+- [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)
+- [任务并行库 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [如何：执行对象的迟缓初始化](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

@@ -1,41 +1,41 @@
 ---
-title: '&lt;udpAnnouncementEndpoint&gt; 的 &lt;udpTransportSettings&gt;'
+title: <udpTransportSettings> 的 <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: 624dbada56a609452310218d26c5c6ff0ca49d64
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e7cdff1b26afcbea94424ecad5d8d0d9438b54d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767071"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375694"
 ---
-# <a name="ltudptransportsettingsgt-of-ltudpannouncementendpointgt"></a>&lt;udpAnnouncementEndpoint&gt; 的 &lt;udpTransportSettings&gt;
-此配置元素公开 UDP 传输设置[ \<udpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md)。  
+# <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings> of \<udpAnnouncementEndpoint>
+此配置元素公开的 UDP 传输设置[ \<udpAnnouncementEndpoint >](udpannouncementendpoint.md)。  
   
 \<system.ServiceModel>  
-\<standardEndpoints >  
-\<udpAnnouncementEndpoint >  
+\<standardEndpoints>  
+\<udpAnnouncementEndpoint>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <udpAnnouncementEndpoint>
       <standardEndpoint>
-        <updTransportSettings duplicateMessageHistoryLength="Integer" 
-                              maxBufferPoolSize="Integer" 
-                              maxMulticastRetransmitCount="Integer" 
-                              maxPendingMessageCount="Integer" 
-                              maxReceivedMessageSize="Integer" 
-                              maxUnicastRetransmitCount="Integer" 
-                              multicastInterfaceId="String" 
-                              socketReceiveBufferSize="Integer" 
+        <updTransportSettings duplicateMessageHistoryLength="Integer"
+                              maxBufferPoolSize="Integer"
+                              maxMulticastRetransmitCount="Integer"
+                              maxPendingMessageCount="Integer"
+                              maxReceivedMessageSize="Integer"
+                              maxUnicastRetransmitCount="Integer"
+                              multicastInterfaceId="String"
+                              socketReceiveBufferSize="Integer"
                               timeToLive="Integer" />
       </standardEndpoint>
     </udpAnnouncementEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -62,7 +62,7 @@ ms.locfileid: "32767071"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<udpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md)|具有固定公告协定和 UDP 传输绑定的标准终结点。|  
+|[\<udpAnnouncementEndpoint>](udpannouncementendpoint.md)|具有固定公告协定和 UDP 传输绑定的标准终结点。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Discovery.UdpTransportSettings>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Discovery.UdpTransportSettings>

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 90e00e4264ff808151c9e1c58fdaf290765620c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 19b09c9ec789419f2774207b051b8ee488b6725d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625544"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>如何：以异步方式调用 WCF 服务操作
-本主题介绍客户端如何以异步方式访问服务操作。 本主题中的服务可实现 `ICalculator` 接口。 通过使用事件驱动的异步调用模型，客户端可以对此接口异步调用操作。 (有关基于事件的异步调用模型的详细信息，请参阅[使用基于事件的异步模式进行多线程编程](https://go.microsoft.com/fwlink/?LinkId=248184))。 有关演示如何在服务中异步实现操作的示例，请参阅[如何： 实现异步服务操作](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。 有关同步和异步操作的详细信息，请参阅[同步和异步操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。  
+本主题介绍客户端如何以异步方式访问服务操作。 本主题中的服务可实现 `ICalculator` 接口。 通过使用事件驱动的异步调用模型，客户端可以对此接口异步调用操作。 (有关基于事件的异步调用模型的详细信息，请参阅[使用基于事件的异步模式进行多线程编程](https://go.microsoft.com/fwlink/?LinkId=248184))。 有关演示如何在服务中异步实现操作的示例，请参阅[如何：实现异步服务操作](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。 有关同步和异步操作的详细信息，请参阅[同步和异步操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。  
   
 > [!NOTE]
->  使用 <xref:System.ServiceModel.ChannelFactory%601> 时，不支持事件驱动的异步调用模型。 了解如何进行异步调用使用<xref:System.ServiceModel.ChannelFactory%601>，请参阅[如何： 调用操作以异步方式使用通道工厂](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)。  
+>  使用 <xref:System.ServiceModel.ChannelFactory%601> 时，不支持事件驱动的异步调用模型。 了解如何进行异步调用使用<xref:System.ServiceModel.ChannelFactory%601>，请参阅[如何：调用操作以异步方式使用的通道工厂](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)。  
   
 ## <a name="procedure"></a>过程  
   
@@ -63,5 +63,5 @@ ms.locfileid: "47200326"
  [!code-csharp[EventAsync#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#6)]
  [!code-vb[EventAsync#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#6)]  
   
-## <a name="see-also"></a>请参阅  
- [如何：实现异步服务操作](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)
+## <a name="see-also"></a>请参阅
+- [如何：实现异步服务操作](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)

@@ -1,5 +1,6 @@
 ---
-title: double 关键字（C# 参考）
+title: double 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - double
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 3354f22f5d1c1f1807388542c4ada5e67a9d5a14
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 50e11e8547c2887ace677d2c86dcf055326ff9a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50192702"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708150"
 ---
 # <a name="double-c-reference"></a>double（C# 参考）
 
@@ -62,11 +63,11 @@ double x = 3D;
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)  
-- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [浮点型表](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [默认值表](../../../csharp/language-reference/keywords/default-values-table.md)
+- [内置类型表](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [浮点型表](../../../csharp/language-reference/keywords/floating-point-types-table.md)
+- [隐式数值转换表](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [显式数值转换表](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

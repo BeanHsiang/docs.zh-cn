@@ -1,5 +1,6 @@
 ---
-title: '&lt;代码&gt;（C# 编程指南）'
+title: '&lt;code&gt; - C#编程指南'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - code
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: a578e6a1b92ab2db62df7146d7a473d7843ff2e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f12ce759776d4fe744e0853fd71db597dd468b7c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606343"
 ---
 # <a name="ltcodegt-c-programming-guide"></a>&lt;代码&gt;（C# 编程指南）
 ## <a name="syntax"></a>语法  
@@ -36,5 +37,5 @@ ms.locfileid: "43516841"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

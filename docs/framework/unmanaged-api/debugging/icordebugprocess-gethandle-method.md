@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60bd7567f541a0bbaa3591d2f2905d13064dec3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5d81564a34ed8e7ef75840e3a174661c36f5411
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423437"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498081"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle 方法
 获取进程的句柄。  
@@ -33,18 +33,18 @@ ms.locfileid: "33423437"
 HRESULT GetHandle([out] HPROCESS *phProcessHandle);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `phProcessHandle`  
- [out]指向的指针`HPROCESS`，它是进程的句柄。  
+ [out]一个指向`HPROCESS`，它是进程的句柄。  
   
 ## <a name="remarks"></a>备注  
- 检索到的句柄归调试接口。 调试器应重复使用它之前的句柄。  
+ 调试接口为所有检索到的句柄。 调试器应重复使用它之前的句柄。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

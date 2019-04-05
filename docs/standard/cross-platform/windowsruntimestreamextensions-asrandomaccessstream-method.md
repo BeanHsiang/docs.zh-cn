@@ -12,12 +12,12 @@ api_location:
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8935a8c282bbe812ad76ac6d4228c38ab12626a4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d5dd2829a9a00f869af3d7f370f99361979b8106
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193583"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758789"
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 方法
 
@@ -25,7 +25,7 @@ ms.locfileid: "44193583"
 
 将指定的流转换为随机访问流。
 
-**Namespace:** <xref:System.IO?displayProperty=nameWithType> 
+**命名空间：**<xref:System.IO?displayProperty=nameWithType>
 **程序集：** System.Runtime.WindowsRuntime （在 system.runtime.windowsruntime.dll 中）
 
 ## <a name="syntax"></a>语法
@@ -55,7 +55,7 @@ Public Shared Function AsRandomAccessStream ( _
 类型：<xref:Windows.Storage.Streams.RandomAccessStream>  
 一个[!INCLUDE[wrt](../../../includes/wrt-md.md)]随机访问流，表示已转换的流。
 
-## <a name="exceptions"></a>异常
+## <a name="exceptions"></a>Exceptions
 
 |例外|条件|
 |---------------|---------------|
@@ -72,9 +72,8 @@ Public Shared Function AsRandomAccessStream ( _
 
 **适用于 Windows 应用商店应用程序的.NET**
 
-受支持：Windows 8.1
+支持版本：Windows 8.1
 
 ## <a name="see-also"></a>请参阅
 
--[System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)
--[如何：.NET Framework 流和 Windows 运行时流之间转换](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
+- [如何：在 .NET Framework 流和 Windows 运行时流之间进行转换](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)

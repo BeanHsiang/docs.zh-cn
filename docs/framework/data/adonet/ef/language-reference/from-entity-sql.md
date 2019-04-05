@@ -2,12 +2,12 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: de2ad24e5c6399ed1ca91e3907da4a66c056e337
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a2550b667617ccf945acad79f0d63c52df118061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516327"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 指定中使用的集合[选择](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)语句。  
@@ -96,14 +96,14 @@ LOB.Customers
 >  与 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中不同，在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中，不需要显式取消嵌套的步骤。  
   
 > [!NOTE]
->  `CROSS` 中引入了 `OUTER APPLY` 和 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 运算符。 在某些情况下，查询管道可能生成包含 `CROSS APPLY` 和/或 `OUTER APPLY` 运算符的 Transact-SQL。 因为某些后端提供程序，包括 SQL Server 的版本早于[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]，不支持这些运算符，对这些后端提供程序不能执行此类查询。  
+>  `CROSS` 中引入了 `OUTER APPLY` 和 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 运算符。 在某些情况下，查询管道可能生成包含 `CROSS APPLY` 和/或 `OUTER APPLY` 运算符的 Transact-SQL。 因为某些后端提供程序，包括 SQL Server 的版本早于[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]、 不支持这些运算符，不能对这些后端提供程序执行此类查询。  
 >   
 >  下面是一些可能导致输出查询中出现 `CROSS APPLY` 和/或 `OUTER APPLY`运算符的典型情况：分页相关子查询；相关子查询或导航所生成的集合上的 AnyElement；使用接受元素选择器的分组方法的 LINQ 查询；显式指定 `CROSS APPLY` 或 `OUTER APPLY` 的查询；在 `DEREF` 构造上具有 `REF` 构造的查询。  
   
 ## <a name="multiple-collections-in-the-from-clause"></a>FROM 子句中的多个集合  
  `FROM` 子句不能包含逗号分隔的多个集合。 在这些情况下，假定集合将联接在一起。 将它们视为一个 n 向 CROSS JOIN。  
   
- 在下面的示例中，`C`和`D`是独立集合，但`c.Names`依赖于`C`。  
+ 在以下示例中，`C`并`D`是独立集合，但`c.Names`取决于`C`。  
   
 ```  
 FROM C AS c, D AS d, c.Names AS e  
@@ -152,7 +152,7 @@ select c.Orders from Customers as c
 select {1} from {2, 3}  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [查询表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
- [可以为 NULL 的结构化类型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+## <a name="see-also"></a>请参阅
+- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [查询表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [可以为 NULL 的结构化类型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

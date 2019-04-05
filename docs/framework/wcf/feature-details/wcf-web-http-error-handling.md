@@ -2,15 +2,15 @@
 title: WCF Web HTTP 错误处理
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 228f8cdbe5ddde63f2b6afd82a27055f2241e058
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c331d70a69740a9830cafb5cafdfcf1de14b541b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498480"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499237"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 错误处理
-Windows Communication Foundation (WCF) Web HTTP 错误处理可用于从指定 HTTP 状态代码和返回使用相同的格式与操作 （例如，XML 或 JSON） 的错误详细信息的 WCF Web HTTP 服务返回的错误。  
+Windows Communication Foundation (WCF) Web HTTP 错误处理，可从指定 HTTP 状态代码，并返回错误详细信息使用相同的格式与操作 （例如，XML 或 JSON） 的 WCF Web HTTP 服务返回的错误。  
   
 ## <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 错误处理  
  <xref:System.ServiceModel.Web.WebFaultException> 类定义可用于指定 HTTP 状态代码的构造函数。 随后会将此状态代码返回到客户端。 <xref:System.ServiceModel.Web.WebFaultException> 类的泛型版本 <xref:System.ServiceModel.Web.WebFaultException%601> 可用于返回用户定义的类型，该类型中包含有关所出现错误的信息。 将使用由操作指定的格式序列化此自定义对象，并将它返回到客户端。 下面的示例演示如何返回 HTTP 状态代码。  
@@ -49,9 +49,9 @@ Public string Operation2()
   
  <xref:System.ServiceModel.Web.WebFaultException> 是一个 <xref:System.ServiceModel.FaultException>，因此可用作公开 SOAP 终结点和 Web HTTP 终结点的服务的错误异常编程模型。  
   
-## <a name="see-also"></a>请参阅  
- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
- [定义和指定错误](../../../../docs/framework/wcf/defining-and-specifying-faults.md)  
- [处理异常和错误](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
- [发送和接收错误](../../../../docs/framework/wcf/sending-and-receiving-faults.md)
+## <a name="see-also"></a>请参阅
+- [WCF Web HTTP 编程模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [WCF Web HTTP 格式设置](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
+- [定义和指定错误](../../../../docs/framework/wcf/defining-and-specifying-faults.md)
+- [处理异常和错误](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [发送和接收错误](../../../../docs/framework/wcf/sending-and-receiving-faults.md)

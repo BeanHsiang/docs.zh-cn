@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-ms.openlocfilehash: c2f16f74638341cfe6c6d0f3b25967082fc99c97
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ca9d93dc6bfe9c6f01130b00d0a6ad07efcc7bd8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180161"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829338"
 ---
 # <a name="basic-data-contract"></a>基本数据协定
 本示例演示如何实现数据协定。 数据协定允许您在服务中传入和传出结构化数据。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)但使用复数代替基本数字类型。  
@@ -147,4 +147,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`  
   
-## <a name="see-also"></a>请参阅

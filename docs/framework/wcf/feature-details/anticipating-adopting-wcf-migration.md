@@ -1,15 +1,15 @@
 ---
-title: Windows Communication Foundation 使用展望：使未来迁移轻而易举
+title: 预期采用 Windows Communication Foundation:使未来迁移轻而易举
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 171a31b375eae4c032849c2a1c2090f5d9ff856f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 41deb6cb982e65b2af054840cdcb84e3d1db3451
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837364"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695252"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation 使用展望：使未来迁移轻而易举
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>预期采用 Windows Communication Foundation:使未来迁移轻而易举
 若要确保新的 ASP.NET 应用程序到 WCF 为简化未来迁移，请遵循之前提出的建议，以及以下建议。  
   
 ## <a name="protocols"></a>协议  
@@ -36,7 +36,7 @@ ms.locfileid: "48837364"
   
 -   使用 `MessageName` 的 <xref:System.Web.Services.WebMethodAttribute> 参数为服务的操作提供显式名称。  
   
-    ```  
+    ```csharp  
     [WebMethod(MessageName="ExplicitName")]  
     string Echo(string input);  
     ```  
@@ -47,7 +47,7 @@ ms.locfileid: "48837364"
   
 -   使用 <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> 为 SOAPAction HTTP 标头提供显式值，HTTP 请求将通过此标头路由到方法。  
   
-    ```  
+    ```csharp  
     [WebMethod]  
     [SoapDocumentMethod(RequestElementName="ExplicitAction")]  
     string Echo(string input);  
@@ -63,7 +63,7 @@ ms.locfileid: "48837364"
 ## <a name="exception-handling"></a>异常处理  
  在设计服务发送和接收的数据类型的结构时，请同时设计表示异常的不同类型的结构，这些异常可能发生在人们希望传送到客户端的服务中。  
   
-```  
+```csharp  
 [Serializable]  
 [XmlRoot(  
      Namespace="ExplicitNamespace", IsNullable=true)]  
@@ -84,7 +84,7 @@ ms.locfileid: "48837364"
   
  使这些类能够将其自身序列化为 XML：  
   
-```  
+```csharp  
 public XmlNode ToXML()  
 {  
      XmlSerializer serializer = new XmlSerializer(  
@@ -103,7 +103,7 @@ public XmlNode ToXML()
   
  然后，可使用这些类为显式引发的 <xref:System.Web.Services.Protocols.SoapException> 实例提供详细信息：  
   
-```  
+```csharp  
 AnctipatedException exception = new AnticipatedException();  
 exception.AnticipatedExceptionInformation = "…";  
 throw new SoapException(  
@@ -124,5 +124,5 @@ throw new SoapException(
   
 -   请务必考虑使用 ASP.NET 2.0 角色提供程序来授权对服务资源的访问。  
   
-## <a name="see-also"></a>请参阅  
- [预期采用 Windows Communication Foundation：便于以后集成](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+## <a name="see-also"></a>请参阅
+- [预期采用 Windows Communication Foundation:便于以后集成](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

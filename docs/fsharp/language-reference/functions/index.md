@@ -1,13 +1,13 @@
 ---
-title: 函数 (F#)
-description: '了解有关 F # 和 F # 如何支持通用函数编程构造中的函数。'
+title: 函数
+description: 了解如何在函数F#以及F#支持通用函数编程构造。
 ms.date: 05/16/2016
-ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839562"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610913"
 ---
 # <a name="functions"></a>函数
 
@@ -142,7 +142,7 @@ let vol = cylinderVolume 2.0 3.0
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-可通过使用 `fun` 关键字来定义 lambda 表达式。 lambda 表达式类似于函数定义，只不过使用了 `->` 标记将参数列表与函数体分隔，而不是使用 `=` 标记。 与在常规函数定义中一样，可推断或显式指定参数类型，并且从主体中最后一个表达式的类型推断出 lambda 表达式的返回类型。 有关详细信息，请参阅 [Lambda 表达式：`fun` 关键字](../functions/lambda-expressions-the-fun-keyword.md)。
+可通过使用 `fun` 关键字来定义 lambda 表达式。 lambda 表达式类似于函数定义，只不过使用了 `->` 标记将参数列表与函数体分隔，而不是使用 `=` 标记。 与在常规函数定义中一样，可推断或显式指定参数类型，并且从主体中最后一个表达式的类型推断出 lambda 表达式的返回类型。 有关详细信息，请参阅[Lambda 表达式：`fun`关键字](../functions/lambda-expressions-the-fun-keyword.md)。
 
 ## <a name="function-composition-and-pipelining"></a>函数组合和流水线处理
 

@@ -2,14 +2,14 @@
 title: dotnet store 命令
 description: “dotnet store”命令可将指定的程序集存储到运行时包存储区。
 author: bleroy
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: a12738d0cc8edcbb65d5b6fab6e7c8b209b0f4b5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: seodec18
+ms.openlocfilehash: 58889039d117a2231cda693e4aca7790f018d1b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606746"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -23,7 +23,7 @@ ms.locfileid: "48029890"
 
 `dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet store` 将指定的程序集存储到[运行时包存储区](../deploying/runtime-store.md)。 默认情况下，程序集更适用于目标运行时和框架。 有关详细信息，请参阅[运行时包存储区](../deploying/runtime-store.md)主题。
 
@@ -83,4 +83,4 @@ ms.locfileid: "48029890"
 
 ## <a name="see-also"></a>请参阅
 
-* [运行时包存储](../deploying/runtime-store.md)
+- [运行时包存储](../deploying/runtime-store.md)

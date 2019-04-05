@@ -2,12 +2,12 @@
 title: 松散类型化扩展示例
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: f46cf3dfcdb60669f0a02337b54de97d4af3efdc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 19d39e4a70022304262c5872636d3ea03a3b861b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042187"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668478"
 ---
 # <a name="loosely-typed-extensions-sample"></a>松散类型化扩展示例
 联合对象模型为处理扩展数据（在联合源的 XML 表示形式中存在，但是未由 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 等类显式公开的信息）提供了丰富的支持。 此示例阐释用来处理扩展数据的基本技术。  
@@ -155,6 +155,6 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
-## <a name="see-also"></a>请参阅  
- [强类型扩展](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  
- [WCF 联合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+## <a name="see-also"></a>请参阅
+- [强类型扩展](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
+- [WCF 联合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

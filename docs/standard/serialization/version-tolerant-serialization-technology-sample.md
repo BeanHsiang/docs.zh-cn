@@ -2,12 +2,12 @@
 title: 版本容错序列化技术示例
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: 34dccc9065c0100a01a7969a1fe762001e2999a9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b874a347924f6d15e2e6164092b819321384ca3f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681113"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>版本容错序列化技术示例
 [下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -47,5 +47,5 @@ ms.locfileid: "44210849"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>
 - <xref:System.IO.FileStream>

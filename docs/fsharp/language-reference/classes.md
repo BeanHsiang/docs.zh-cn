@@ -1,13 +1,13 @@
 ---
-title: 类 (F#)
-description: '了解如何 F # 类是表示可以具有属性、 方法和事件的对象的类型。'
+title: 类
+description: 了解如何F#类是表示可以具有属性、 方法和事件的对象的类型。
 ms.date: 05/16/2016
-ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6bf838e98acecb89436d3e87809d9eb6da0c66d5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48845731"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611173"
 ---
 # <a name="classes"></a>类
 
@@ -33,7 +33,7 @@ and [access-modifier] type-name2 ...
 
 ## <a name="remarks"></a>备注
 
-类表示.NET 对象类型; 的基本说明此类是在 F # 中支持面向对象的编程的主要类型概念。
+类表示.NET 对象类型; 的基本说明类是支持面向对象的编程中的主类型概念F#。
 
 在上述语法中，`type-name`是任何有效的标识符。 `type-params`介绍了可选的泛型类型参数。 它包含类型参数名称和括在尖括号中的约束 (`<`和`>`)。 有关详细信息，请参阅[泛型](generics/index.md)并[约束](generics/constraints.md)。 `parameter-list`介绍构造函数参数。 第一个访问修饰符与类型;第二个与主构造函数。 在这两种情况下，默认值是`public`。
 
@@ -51,7 +51,7 @@ and [access-modifier] type-name2 ...
 
 ## <a name="constructors"></a>构造函数
 
-构造函数是可创建类类型的实例的代码。 类构造函数在 F # 中工作方式略有不同，不同用其他.NET 语言。 在 F # 类，存在始终是主构造函数中所述该形参的实参`parameter-list`后面的类型名称，其正文组成`let`(和`let rec`) 开头的类声明并绑定`do`遵循的绑定。 在主构造函数的参数是在类声明整个范围内。
+构造函数是可创建类类型的实例的代码。 类构造函数中稍有不同工作F#不是它们在其他.NET 语言中执行操作。 在F#类中，始终是主构造函数中所述该形参的实参`parameter-list`后面的类型名称，其正文组成`let`(和`let rec`) 在类声明开头的绑定和`do`遵循的绑定。 在主构造函数的参数是在类声明整个范围内。
 
 可以使用添加其他构造函数`new`关键字添加成员，按如下所示：
 
@@ -104,7 +104,7 @@ type MyClass2(dataIn) as self =
 
 ## <a name="specifying-inheritance"></a>指定继承
 
-`inherit`子句标识直接基类，如果有的话。 在 F # 中，允许仅一个直接基类。 一个类实现的接口不会考虑基类。 接口中讨论[接口](Interfaces.md)主题。
+`inherit`子句标识直接基类，如果有的话。 在F#中，只有一个直接基类允许。 一个类实现的接口不会考虑基类。 接口中讨论[接口](Interfaces.md)主题。
 
 您可以访问的方法和属性的基类派生类中使用的语言关键字`base`作为标识符后, 跟一个句点 （.） 和成员的名称。
 
@@ -112,7 +112,7 @@ type MyClass2(dataIn) as self =
 
 ## <a name="members-section"></a>成员部分
 
-可以在本部分中定义静态或实例方法、 属性、 接口实现、 抽象成员，事件声明和其他构造函数。 允许和执行操作的绑定不能出现在本部分中。 成员可以添加到不同的 F # 类型除了类之外，因为它们在单独主题中，讨论[成员](members/index.md)。
+可以在本部分中定义静态或实例方法、 属性、 接口实现、 抽象成员，事件声明和其他构造函数。 允许和执行操作的绑定不能出现在本部分中。 因为可以将成员添加到的各种F#类型的类，除了他们讨论了在单独主题中，[成员](members/index.md)。
 
 ## <a name="mutually-recursive-types"></a>相互递归类型
 
@@ -124,7 +124,7 @@ type MyClass2(dataIn) as self =
 
 ## <a name="when-to-use-classes-unions-records-and-structures"></a>何时使用类、 联合、 记录和结构
 
-给定类型可供选择的多样性，需要充分了解什么每种类型专为以选择特定的情况下的相应类型。 类旨在供在面向对象的编程上下文中使用。 面向对象的编程是为.NET Framework 编写的应用程序中使用的主流模式。 如果 F # 代码必须与.NET Framework 或另一个面向对象的库，密切合作，尤其是当您必须扩展从诸如 UI 库之类的面向对象的类型系统，类可能适用。
+给定类型可供选择的多样性，需要充分了解什么每种类型专为以选择特定的情况下的相应类型。 类旨在供在面向对象的编程上下文中使用。 面向对象的编程是为.NET Framework 编写的应用程序中使用的主流模式。 如果在F#代码必须与.NET Framework 或另一个面向对象的库，紧密合作，尤其是当您必须扩展从诸如 UI 库之类的面向对象的类型系统，和类可能适当。
 
 如果您不紧密地与代码交互操作的面向对象的或者您编写的是自包含且因此频繁交互，面向对象的代码从受保护的代码，您应该考虑使用记录和可区分联合。 单一的精心构思的可区分的联合，以及合适的模式匹配的代码中，通常可用作对象层次结构的更简单的替代。 有关可区分联合的详细信息，请参阅[可区分联合](discriminated-unions.md)。
 

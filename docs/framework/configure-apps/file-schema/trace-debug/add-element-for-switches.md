@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;元素&lt;开关&gt;'
+title: <add> 的 <switches> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -7,21 +7,19 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 88cd8c9ba7244256ca9ddd3b2957f86d9485933c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209121"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273288"
 ---
-# <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;添加&gt;元素&lt;开关&gt;
+# <a name="add-element-for-switches"></a>\<添加 > 元素\<开关 >
 指定对跟踪开关设置的级别。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<开关 >  
+\<system.diagnostics>  
+\<switches>  
 \<add>  
   
 ## <a name="syntax"></a>语法  
@@ -39,7 +37,7 @@ ms.locfileid: "47209121"
 |特性|描述|  
 |---------------|-----------------|  
 |**name**|必需的特性。<br /><br /> 指定的交换机的名称。 此属性的值对应于*displayName*传递切换构造函数的参数。|  
-|**value**|必需的特性。<br /><br /> 指定此开关的级别。|  
+|**值**|必需的特性。<br /><br /> 指定此开关的级别。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -69,8 +67,8 @@ ms.locfileid: "47209121"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.Switch>  
- <xref:System.Diagnostics.TraceSwitch>  
- <xref:System.Diagnostics.BooleanSwitch>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.Switch>
+- <xref:System.Diagnostics.TraceSwitch>
+- <xref:System.Diagnostics.BooleanSwitch>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

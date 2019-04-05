@@ -1,5 +1,6 @@
 ---
-title: descending 上下文关键字（C# 参考）
+title: descending 上下文关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - descending
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - descending keyword [C#]
 ms.assetid: 8d2cd1e5-9c1c-4dfc-b84c-60e2d3240927
-ms.openlocfilehash: a052763cdffeeea1eb9de09b1bc71a592fa70b50
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ccf8e8a70b6ab0c7179143f7827bd2e0cf51eb51
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44198200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741121"
 ---
 # <a name="descending-c-reference"></a>descending（C# 参考）
 
@@ -26,6 +27,6 @@ ms.locfileid: "44198200"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [ascending](../../../csharp/language-reference/keywords/ascending.md)

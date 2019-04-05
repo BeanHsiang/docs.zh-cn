@@ -31,10 +31,10 @@ ms.locfileid: "50191141"
 |类型|有符号/无符号|大小（以字节为单位）|最小值|最大值|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|无符号|1|0|255|  
-|<xref:System.Int16?displayProperty=nameWithType>|签名|2|-32,768|32,767|  
-|<xref:System.Int32?displayProperty=nameWithType>|签名|4|-2,147,483,648|2,147,483,647|  
-|<xref:System.Int64?displayProperty=nameWithType>|签名|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
-|<xref:System.SByte?displayProperty=nameWithType>|签名|1|-128|127|  
+|<xref:System.Int16?displayProperty=nameWithType>|有符号|2|-32,768|32,767|  
+|<xref:System.Int32?displayProperty=nameWithType>|有符号|4|-2,147,483,648|2,147,483,647|  
+|<xref:System.Int64?displayProperty=nameWithType>|有符号|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
+|<xref:System.SByte?displayProperty=nameWithType>|有符号|1|-128|127|  
 |<xref:System.UInt16?displayProperty=nameWithType>|无符号|2|0|65,535|  
 |<xref:System.UInt32?displayProperty=nameWithType>|无符号|4|0|4,294,967,295|  
 |<xref:System.UInt64?displayProperty=nameWithType>|无符号|8|0|18,446,744,073,709,551,615|  

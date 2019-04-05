@@ -1,5 +1,6 @@
 ---
-title: into（C# 参考）
+title: into - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - into_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: 6d46ae67dd84650172125c62ea70dc109671a89b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b209062a2a3e563ea8e70cb7883d9bbfa3662231
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631511"
 ---
 # <a name="into-c-reference"></a>into（C# 参考）
 
@@ -30,6 +31,6 @@ ms.locfileid: "43507838"
 
 ## <a name="see-also"></a>请参阅
 
-- [查询关键字 (LINQ)](query-keywords.md)  
-- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [group 子句](group-clause.md)  
+- [查询关键字 (LINQ)](query-keywords.md)
+- [LINQ 查询表达式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [group 子句](group-clause.md)

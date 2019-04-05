@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7a95f09d1baebed65bae994550431d88ba0dfc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65a374f942697ee670507987c4a97a7977970b69
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412466"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481087"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate 方法
-终止指定的退出代码的进程。  
+终止与指定的退出代码的过程。  
   
 > [!NOTE]
->  此方法是 Win32 的包装器`TerminateProcess`函数。 因此，`Terminate`在同一个中使用的退出代码的方式 Win32`TerminateProcess`函数使用它。  
+>  此方法是 Win32 的包装器`TerminateProcess`函数。 因此，`Terminate`在同一个使用退出代码的方式 Win32`TerminateProcess`函数使用它。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,24 +38,24 @@ HRESULT Terminate (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `exitCode`  
- [in]数字值，退出代码。 Winbase.h 中定义的有效的数字值。  
+ [in]数字值，退出代码。 在 Winbase.h 中定义的有效数值。  
   
 ## <a name="remarks"></a>备注  
- 如果该进程已停止时`Terminate`是调用，该过程继续使用[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法，以便调试器接收确认通过终止[Icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)或[icordebugmanagedcallback:: Exitappdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)回调。  
+ 如果该进程已停止时`Terminate`是调用，该过程应继续通过使用[icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法，以便调试程序将会收到确认通过终止的[Icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)或[icordebugmanagedcallback:: Exitappdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)回调。  
   
 > [!NOTE]
->  此方法由不实现应用程序域。 也就是说，未实现在<xref:System.AppDomain>级别。  
+>  应用程序域不实现此方法。 即，未实现在<xref:System.AppDomain>级别。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

@@ -3,12 +3,12 @@ title: 使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 description: 语法可视化工具提供了可视化工具，用于浏览 .NET Compiler Platform SDK 为代码生成的模型。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750201"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307196"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>使用 Visual Studio 中的 Roslyn 语法可视化工具浏览代码
 
@@ -32,7 +32,7 @@ ms.locfileid: "45750201"
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![将 C# 语法树可视化](media/syntax-visualizer/visualize-csharp.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 ![将 VB 语法树可视化](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -62,7 +62,7 @@ ms.locfileid: "45750201"
 可视化工具会以图解形式显示以所选项为根的关系子树。 针对 C# 示例中对应于 `Main()` 方法的 MethodDeclaration 节点，尝试以下步骤。 可视化工具显示如下所示的语法关系图：
 
 ![查看 C# 语法关系图](media/syntax-visualizer/csharp-syntax-graph.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
 针对前面的 VB 示例中对应于 `Main()` 方法的 SubBlock 节点，尝试相同的操作。 可视化工具显示如下所示的语法关系图：
 
@@ -80,11 +80,11 @@ ms.locfileid: "45750201"
 
 另一种选择在双监视器配置中，将语法关系图窗口放在第二个监视器上。
 
-# <a name="inspecting-semantics"></a>检查语义
+## <a name="inspecting-semantics"></a>检查语义
 
 语法可视化工具可以对符号和语义信息进行基本检查。 在 C# 示例中的 Main() 内键入 `double x = 1 + 1;`。 然后在代码编辑器窗口中选择表达式 `1 + 1`。 可视化工具突出显示了 AddExpression 节点。 右键单击 AddExpression，然后单击“查看符号(如果有)”。 请注意，大部分菜单项都带有“如果有”这个限定条件。 语法可视化工具检查节点的属性，包括不是所有节点都有的属性。 
 
-可视化工具中的属性网格会更新，如下图所示：该表达式的符号为 SynthesizedIntrinsicOperatorSymbol，其中 Kind = Method。
+可视化工具中的属性网格更新如下图所示：该表达式的符号是 SynthesizedIntrinsicOperatorSymbol，其中种类 = 方法。
 
 ![符号属性](media/syntax-visualizer/symbol-properties.png)
 
@@ -128,7 +128,7 @@ End Module
 
 在 C# 中可以轻松重复上述 VB 示例。 为别名键入 `using C = System.Console;` 以代替 `Imports C = System.Console`。 在 C# 中完成的上述步骤会在可视化工具窗口中产生相同的结果。
 
-语义检查操作只能用于节点。 不能用于标记和琐事。 并非所有节点都有相关的语义信息可供检查。 如果某个节点不具备相关的语义信息，单击“查看 * 符号(如果有)”会显示空白的属性网格。
+语义检查操作只能用于节点。 不能用于标记和琐事。 并非所有节点都有相关的语义信息可供检查。 如果某个节点不具备相关的语义信息，单击“查看 \* 符号(如果有)”会显示空白的属性网格。
 
 可阅读[使用语义](work-with-semantics.md)概述文档，详细了解执行语义分析的 API。
 

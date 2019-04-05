@@ -2,12 +2,12 @@
 title: 传输安全
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: 7fab84b830917c22d684a06dfbfb2dd540703845
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cb184c1fae3088f6bc682e4e54c63f201ac8c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192494"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559926"
 ---
 # <a name="transport-security"></a>传输安全
 Windows Communication Foundation (WCF) 中的传输安全性取决于选定的绑定。 绑定所实现的传输决定实际的安全机制。 本节中的主题说明所实现的机制及其选项。  
@@ -38,5 +38,5 @@ Windows Communication Foundation (WCF) 中的传输安全性取决于选定的�
 ## <a name="related-sections"></a>相关章节  
  [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
-## <a name="see-also"></a>请参阅  
- [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>请参阅
+- [WCF 安全编程](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

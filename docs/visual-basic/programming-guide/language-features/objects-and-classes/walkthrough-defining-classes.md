@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: aac30a8b0272ae6c141138a91585953237ab8098
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c41d3b2c8d905395f1249b15709da8dbdf5d4632
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640428"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>演练：定义类 (Visual Basic)
 
@@ -30,7 +30,7 @@ ms.locfileid: "43403537"
   
 ## <a name="to-define-a-class"></a>若要定义的类
   
-1.  通过单击创建项目**新的项目**上**文件**菜单。 此时将出现 “新建项目” 对话框。  
+1.  通过单击创建项目**新的项目**上**文件**菜单。 此时将出现“新建项目”对话框。  
   
 2.  从 Visual Basic 项目模板，以显示新项目的列表中选择 Windows 应用程序。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "43403537"
   
 1.  通过按 F5 运行应用程序。 单击要调用的测试过程的窗体上的按钮。 它将显示一条消息的原始`UserName`是"MOORE，BOBBY"，因为该过程调用`Capitalize`对象的方法。  
   
-2.  单击**确定**以关闭消息框。 `Button1 Click`过程将更改的值`UserName`属性，并显示一条消息，指出的新值`UserName`是"Worden，Joe"。  
+2.  单击“确定”，关闭该消息框。 `Button1 Click`过程将更改的值`UserName`属性，并显示一条消息，指出的新值`UserName`是"Worden，Joe"。  
   
 ## <a name="see-also"></a>请参阅
 
-[面向对象的编程 (Visual Basic)](../../concepts/object-oriented-programming.md)  
-[对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [面向对象的编程 (Visual Basic)](../../concepts/object-oriented-programming.md)
+- [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -9,18 +9,16 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 9f2f5b157d8999cd254d6b389cdf7a2ca8ca1f8f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 88e703d6cee608676be541961614403cf34a53c7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840506"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674830"
 ---
 # <a name="use-the-automationid-property"></a>使用 AutomationID 属性
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题包含一些方案和代码示例，这些方案和代码示例演示如何以及在何时能够使用 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树中找到元素。  
   
@@ -47,7 +45,7 @@ ms.locfileid: "48840506"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>使用持久的路径返回到之前标识的 AutomationElement  
   
--   客户端应用程序（从简单的测试脚本到强大的录制和播放实用程序）可能需要访问当前未实例化并因此不存在于 UI 自动化树中的元素（如打开文件对话框或菜单项）。 只能使用 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 属性（例如 AutomationID）控件模式和事件侦听器，通过重现（或“播放”）特定的一系列 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 操作来实例化这些元素。 请参阅[测试脚本生成器示例](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0)有关的示例，使用[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]生成基于与用户交互的测试脚本[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]。  
+-   客户端应用程序（从简单的测试脚本到强大的录制和播放实用程序）可能需要访问当前未实例化并因此不存在于 UI 自动化树中的元素（如打开文件对话框或菜单项）。 仅可以通过重现 （或"播放"） 一系列通过 UI 自动化属性，例如 AutomationID、 控件模式和事件侦听器使用的 UI 操作的特定实例化这些元素。
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
@@ -58,7 +56,7 @@ ms.locfileid: "48840506"
   
 -   在某些情况下，由于只能保证 AutomationID 在同级项之间唯一，因此 UI 自动化树中的多个元素可能具有相同的 AutomationID 属性值。 对于这些情况，可以基于父项（必要情况下使用其祖父项）来唯一地标识元素。 例如，开发人员可能提供一个包含多个菜单项（其中每个菜单项又包含多个子菜单项）的菜单栏，其中的子项是用连续的 AutomationID（如“Item1”、“Item2”，依此类推）标识的。 然后，可以通过其 AutomationID 以及其父项（必要情况下使用其祖父项）的 AutomationID 来唯一地标识每个菜单项。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>  
- [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [基于属性条件查找 UI 自动化元素](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
+- [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [基于属性条件查找 UI 自动化元素](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

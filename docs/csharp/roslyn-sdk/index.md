@@ -3,23 +3,23 @@ title: .NET Compiler Platform SDK (Roslyn API)
 description: 了解如何使用 .NET Compiler Platform SDK（亦称为“Roslyn API”）来理解 .NET 代码、发现并修复错误。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 4fb67b1d7ff963a01696ce163fdcef0b7944dcee
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925026"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185839"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
 编译器在验证代码语法和语义时生成应用代码的详细模型。 此模型可用于根据源代码生成可执行输出。 .NET Compiler Platform SDK 提供对此模型的访问权限。 我们越来越依赖 IntelliSense、重构、智能重命名、“查找所有引用”和“转到定义”等集成开发环境 (IDE) 功能来提高工作效率。 我们依靠代码分析工具来提升代码质量，并依靠代码生成器来帮助构造应用。 随着这些工具越来越智能化，它们需要越来越多地访问仅由编译器在处理应用代码时创建的模型。 这就是 Roslyn API 的核心任务所在：打开“黑匣”，让工具和最终用户能够共享编译器生成的大量代码相关信息。
-编译器通过 Roslyn 成为平台，即可以在工具和应用中执行代码相关任务的 API，而不是输入源代码并输出对象代码的不透明转换器。
+通过 Roslyn，编译器成为平台（而不是不透明的源代码输入和目标代码输出转换器）：可用于在工具和应用程序中完成代码相关任务的 API。
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>.NET Compiler Platform SDK 概念
 
 .NET Compiler Platform SDK 极大地降低了创建以代码为中心的工具和应用的门槛。 在元编程、代码生成和转换、C# 和 VB 语言的交互式使用以及在域专属语言中嵌入 C# 和 VB 等领域，它带来了许多创新机遇。
 
-使用 .NET Compiler Platform SDK，可以生成分析器和代码修补程序，从而发现和更正编码错误。 分析器不仅理解代码的语法和结构，还能检测应更正的做法。 代码修补程序建议一处或多处修复，以修复分析器发现的编码错误。 通常情况下，分析器和关联的代码修补程序一起打包在一个项目中。 
+使用 .NET Compiler Platform SDK，可以生成分析器和代码修补程序，从而发现和更正编码错误。 分析器不仅理解代码的语法和结构，还能检测应更正的做法。 代码修补程序建议一处或多处修复，以修复分析器发现的编码错误。 通常情况下，分析器和关联的代码修补程序一起打包在一个项目中。
 
 分析器和代码修补程序通过静态分析来理解代码。 它们既不运行代码，也未带来其他测试方面的好处。 但是，它们可以指出经常导致 bug 的做法、无法维护的代码或标准指导性验证。
 
@@ -31,7 +31,7 @@ ms.locfileid: "42925026"
 
 1. [*强制执行团队编码标准*](#enforce-team-coding-standards)
 1. [*提供库包方面的指导*](#provide-guidance-with-library-packages)
-1. [*提供常规编码指南*](#provide-general-coding-guidance)
+1. [*提供常规指南*](#provide-general-guidance)
 
 ## <a name="enforce-team-coding-standards"></a>强制执行团队编码标准
 
@@ -46,7 +46,7 @@ ms.locfileid: "42925026"
 NuGet 上有大量适用于 .NET 开发人员的库。
 一些来自 Microsoft，一些来自第三方公司，另一些来自社区成员和志愿者。 如果开发人员可以成功使用这些库后，它们的采用率和评价就会有所提升。
 
-除了提供文档之外，还可以提供分析程序和代码修补程序，用于发现和更正库的常见错误用法。 这些即时更正有助于开发人员更快地成功使用库。 
+除了提供文档之外，还可以提供分析程序和代码修补程序，用于发现和更正库的常见错误用法。 这些即时更正有助于开发人员更快地成功使用库。
 
 可以将分析器和代码修补程序与 NuGet 上的库一起打包。 在这种情况下，每个安装了 NuGet 包的开发人员都还将安装分析器包。 所有使用库的开发人员都会立即从团队获得指导，即有关错误和建议更正做法的即时反馈。
 
@@ -60,14 +60,14 @@ NuGet 上有大量适用于 .NET 开发人员的库。
 
 .NET Compiler Platform SDK 包括用于代码生成、分析和重构的最新语言对象模型。 此部分从概念上概述了 .NET Compiler Platform SDK。 有关更多详细信息，可以参阅快速入门、示例和教程部分。
 
-若要详细了解 .NET Compiler Platform SDK 概念，可以参阅下列四个主题：
+若要详细了解 .NET Compiler Platform SDK 概念，可以参阅下列五个主题：
 
- - [使用语法可视化工具浏览代码](syntax-visualizer.md)
- - [了解编译器 API 模型](compiler-api-model.md)
- - [处理语法](work-with-syntax.md)
- - [处理语义](work-with-semantics.md)
- - [处理工作区](work-with-workspace.md)
- 
+- [使用语法可视化工具浏览代码](syntax-visualizer.md)
+- [了解编译器 API 模型](compiler-api-model.md)
+- [处理语法](work-with-syntax.md)
+- [处理语义](work-with-semantics.md)
+- [处理工作区](work-with-workspace.md)
+
 若要开始，需要安装 .NET 编译器平台 SDK：
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]

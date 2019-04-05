@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696879"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680264"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -44,7 +44,7 @@ API 分析器使用 API 专用错误代码，这些代码以 DE（全称是“De
 
 弃用的 API 每出现一次，“错误列表”窗口中都会显示具有唯一 ID 的警告，如下面的示例所示 (`DE004`)： 
 
-![“显示警告 ID 和说明的‘错误列表’窗口屏幕截图”](media/api-analyzer/warnings.jpg)
+![“显示警告 ID 和说明的‘错误列表’窗口屏幕截图”](media/api-analyzer/warnings-id-and-descriptions.jpg "包含警告的“错误列表”窗口。")
 
 单击 ID 后，便会转到详细信息网页，其中说明了 API 遭弃用的原因，以及有关可用替换 API 的建议。
 
@@ -55,7 +55,7 @@ API 分析器使用 API 专用错误代码，这些代码以 DE（全称是“De
 
 ### <a name="suppressing-warnings-locally"></a>在本地禁止显示警告
 
-若要在本地禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构” > “禁止诊断 ID \<诊断 ID> > “在源中”。 此时，[#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告预处理器指令会添加到源代码中定义的范围内：![“用 #pragma 警告禁用指令框定的代码屏幕截图”](media/api-analyzer/suppress-in-source.jpg)
+若要在本地禁止显示警告，请右键单击要对其禁止显示警告的成员，再依次选择“快速操作和重构” > “禁止诊断 ID \<诊断 ID> > “在源中”。 此时，[#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告预处理器指令会添加到定义的范围内的源代码中：![“用 #pragma 警告禁用指令框定的代码屏幕截图”](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>在全局禁止显示警告
 
@@ -104,7 +104,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 所有这些诊断不仅可以通过 IDE 获取，还能通过命令行在生成项目期间获取（包括 CI 服务器）。
 
-## <a name="configuration"></a>配置
+## <a name="configuration"></a>Configuration
 
 由用户确定应如何处理这些诊断，是生成警告、错误、建议，还是禁用诊断。 例如，作为架构师，可以确定应将兼容性问题处理为错误，对调用某些弃用的 API 生成警告，而对其他情况仅生成建议。 可以按诊断 ID 和按项目单独对此进行配置。 为此，请在“解决方案资源管理器”中转到项目下的“依赖关系”节点。 依次展开节点“依赖关系” > “分析器” > “Microsoft.DotNet.Analyzers.Compatibility”。 右键单击诊断 ID，选择“设置规则集严重性”，并选中相应选项。
 
@@ -112,5 +112,5 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="see-also"></a>请参阅
 
-* [API 分析器简介](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/)博客文章。
-* YouTube 上的 [API 分析器](https://youtu.be/eeBEahYXGd0)演示视频。
+- [API 分析器简介](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/)博客文章。
+- YouTube 上的 [API 分析器](https://youtu.be/eeBEahYXGd0)演示视频。

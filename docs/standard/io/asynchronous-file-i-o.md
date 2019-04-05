@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c6e1db7d1edacfd0ce8770b9cc7b7f3f9c8ca2a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7bfa35b8361f154fcbaa2ea7d7f8ddff5321003d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025316"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610422"
 ---
 # <a name="asynchronous-file-io"></a>异步文件 I/O
 
@@ -40,7 +40,7 @@ C# 和 Visual Basic 分别具有两个用于异步编程的关键字：
 
 - `Await` (Visual Basic) 或 `await` (C#) 运算符，可以应用到异步方法的结果中。
 
-如下面的示例所示，若要实现异步 I/O 操作，请把这些关键字和异步方法结合使用。 有关详细信息，请参阅[使用 Async 和 Await 的异步编程](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)。
+如下面的示例所示，若要实现异步 I/O 操作，请把这些关键字和异步方法结合使用。 有关详细信息，请参阅[使用 async 和 await 的异步编程 (C#)](../../csharp/programming-guide/concepts/async/index.md) 或 [使用 Async 和 Await 的异步编程 (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)。
 
 下面的示例演示如何使用两个 <xref:System.IO.FileStream> 对象把文件从一个目录异步复制到另一个目录。 需要注意 <xref:System.Web.UI.WebControls.Button.Click> 控件的 <xref:System.Windows.Controls.Button> 事件处理程序具有 `async` 修饰符标记，因为它调用异步方法。
 
@@ -62,5 +62,6 @@ C# 和 Visual Basic 分别具有两个用于异步编程的关键字：
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.IO.Stream>
-- [文件和流 I/O](../../../docs/standard/io/index.md)
-- [使用 Async 和 Await 的异步编程](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+- [文件和流 I/O](index.md)
+- [使用 Async 和 Await 的异步编程 (C#)](../../csharp/programming-guide/concepts/async/index.md)
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

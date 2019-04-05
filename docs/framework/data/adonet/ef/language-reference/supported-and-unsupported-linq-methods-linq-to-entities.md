@@ -2,18 +2,18 @@
 title: 支持和不支持的 LINQ 方法 (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: a57e8facdd0ece7223ec780a9ef22a1be7c53221
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e805eba7cc14b322b4d3dafe9036691b51ecec02
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502238"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904278"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>支持和不支持的 LINQ 方法 (LINQ to Entities)
 本节提供有关 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中支持和不支持的语言集成查询 (LINQ) 标准查询运算符的信息。 许多 LINQ 标准查询运算符都有可接受整数自变量的重载版本。 该整数参数对应于正在操作的序列中从零开始的索引，<xref:System.Collections.Generic.IEqualityComparer%601> 或 <xref:System.Collections.Generic.IComparer%601>。 除非专门指定，否则这些 LINQ 标准查询运算符的重载版本并不受支持，尝试使用它们将引发异常。  
   
 ## <a name="projection-and-restriction-methods"></a>投影和限制方法  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中支持大多数 LINQ 投影和限制方法，除了那些接受位置参数的方法。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的投影和限制方法。  
+ [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查询中支持大多数 LINQ 投影和限制方法，除了那些接受位置自变量的方法。 有关详细信息，请参阅[LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)。 下表列出了支持的和不支持的投影和限制方法。  
   
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -145,7 +145,7 @@ ms.locfileid: "43502238"
 |<xref:System.Linq.Queryable.Sum%2A>|不支持|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>类型方法  
- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中支持用于处理 CLR 类型转换和测试的 LINQ 标准查询运算符。 LINQ to Entities 中仅支持映射到概念模型类型的 CLR 类型。 有关概念模型类型的列表，请参阅[概念模型类型 (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)。 下表列出了支持的和不支持的类型方法。  
+ 实体框架支持处理 CLR 类型转换和测试 LINQ 标准查询运算符。 LINQ to Entities 中仅支持映射到概念模型类型的 CLR 类型。 有关概念模型类型的列表，请参阅[概念模型类型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)。 下表列出了支持的和不支持的类型方法。  
   
 |方法|支持|Visual Basic 函数签名|C# 方法签名|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -178,5 +178,5 @@ ms.locfileid: "43502238"
 |<xref:System.Linq.Queryable.TakeWhile%2A>|不支持|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.TakeWhile%2A>|不支持|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)
+## <a name="see-also"></a>请参阅
+- [LINQ to Entities 查询中的标准查询运算符](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)

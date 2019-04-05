@@ -5,15 +5,15 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5192030fa2eda45431dd8a3765603d3081b93fa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595313"
 ---
 # <a name="data-transfer-and-serialization"></a>数据传输和序列化
-在已连接的系统中，服务和客户端依赖于数据交换来完成任何任务。 作为开发人员的服务或客户端，您还必须了解 Windows Communication Foundation (WCF) 如何才能创建高效且易于维护应用程序处理了数据和数据序列化。  
+在已连接的系统中，服务和客户端依赖于数据交换来完成任何任务。 作为服务或客户端的开发人员，您还必须了解 Windows Communication Foundation (WCF) 如何才能创建高效且易于维护的应用程序处理了数据和数据序列化。  
   
 ## <a name="in-this-section"></a>本节内容  
  [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "33489201"
  描述在对数据传输和序列化进行编程时要注意的项。  
   
  [数据传输体系结构概述](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- 描述在 WCF 中的数据传输的总体设计视图。  
+ 介绍 WCF 中的数据传输的总体设计视图。  
   
 ## <a name="reference"></a>参考  
  <xref:System.ServiceModel>  
@@ -60,6 +60,6 @@ ms.locfileid: "33489201"
 ## <a name="related-sections"></a>相关章节  
  [扩展编码器和序列化程序](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>请参阅  
- [最佳做法：数据协定版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [服务版本控制](../../../../docs/framework/wcf/service-versioning.md)
+## <a name="see-also"></a>请参阅
+- [最佳做法：数据协定版本管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [服务版本控制](../../../../docs/framework/wcf/service-versioning.md)

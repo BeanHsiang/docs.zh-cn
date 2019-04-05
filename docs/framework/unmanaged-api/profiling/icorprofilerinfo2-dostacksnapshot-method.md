@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f3a558ad6f87995d6c0a0d164cf96376fba12da4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969780"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485260"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 方法
 对指定线程的堆栈上指导托管的帧，并将信息发送到通过回调探查器。  
@@ -39,7 +39,7 @@ HRESULT DoStackSnapshot(
     [in] ULONG32 contextSize);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `thread`  
  [in]目标线程的 ID。  
   
@@ -73,7 +73,7 @@ HRESULT DoStackSnapshot(
   
  在其中堆栈被遍历的顺序是如何帧被推入到堆栈的相反： 最后一个叶 （上一次推送） 帧第一个、 主 （第一个推送） 框架。  
   
- 有关如何对探查器以审核托管的堆栈的详细信息，请参阅[.NET Framework 2.0 中的 Profiler 堆栈审核： 基础和超越](https://go.microsoft.com/fwlink/?LinkId=73638)。  
+ 有关如何对探查器以审核托管的堆栈的详细信息，请参阅[.NET Framework 2.0 中的 Profiler 堆栈审核：基础和超越](https://go.microsoft.com/fwlink/?LinkId=73638)。  
   
  以下各节中所述，可以同步或异步的堆栈遍历。  
   
@@ -100,14 +100,14 @@ HRESULT DoStackSnapshot(
  此外，还有的死锁风险如果调用`DoStackSnapshot`从您的探查器已创建，以便您可以放心离开，单独的目标线程的堆栈的线程。 第一次你创建的线程进入某些`ICorProfilerInfo*`方法 (包括`DoStackSnapshot`)，CLR 将执行每个线程，该线程上的特定于 CLR 的初始化。 如果您的探查器已挂起目标线程想要遍历，其堆栈，并且该目标线程恰巧拥有锁所需执行此每个线程初始化，将发生死锁。 若要避免这种死锁，进行初始调用到`DoStackSnapshot`单独从在探查器创建的线程以遍历目标线程，但不是先挂起目标线程。 此初始调用可确保每个线程初始化可以完成而无需死锁。 如果`DoStackSnapshot`成功，并且报告至少一个框架，该时间点后，将会挂起任何目标线程和调用该探查器创建线程安全`DoStackSnapshot`来遍历该目标线程的堆栈。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -3,12 +3,12 @@ title: 标准 .NET 事件模式
 description: 介绍 .NET 事件模式，如何创建标准事件源以及订阅并处理代码中的标准事件。
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266762"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201243"
 ---
 # <a name="standard-net-event-patterns"></a>标准 .NET 事件模式
 
@@ -47,7 +47,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 让我们通过填充 FileSearcher 类来搜索与模式匹配的文件，并在发现匹配时引发正确的事件。
 
-[!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>定义并引发类似字段的事件
 
@@ -117,7 +117,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 ## <a name="adding-another-event-declaration"></a>添加另一个事件声明
 
-让我们再添加一项功能，并演示事件的其它语言习惯用语。 让我们添加搜索文件时遍历所有子目录的 `Search()` 方法的重载。
+让我们再添加一项功能，并演示事件的其它语言习惯用语。 让我们添加搜索文件时遍历所有子目录的 `Search` 方法的重载。
 
 在拥有多个子目录的目录中，此操作可能要花较长时间。 让我们添加一个在每次新目录搜索开始时引发的事件。 这让订阅服务器可以跟踪进度，并根据进度更新用户。 目前为止，你所创建的所有示例都是公共的。 让我们把这个示例设为内部事件。 这意味着你也可以将这些类型用于参数内部。
 
@@ -133,7 +133,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 在许多方面，此处编写的代码可反映编译器为你已见过的字段事件定义所生成的代码。 创建事件所使用的语法与用于[属性](properties.md)的语法是极为相似的。 请注意，处理程序的名称各不相同：`add` 和 `remove`。 通过调用它们来订阅事件，或取消订阅事件。 请注意，还必须声明一个私有支持字段以存储事件变量。 它初始化为 null。
 
-接下来，让我们添加 Search() 方法的重载，该重载遍历子目录，并引发这两个事件。 要实现此目的，最简单的方法是使用默认参数来指定你要搜索所有目录：
+接下来，让我们添加 `Search` 方法的重载，该重载遍历子目录，并引发这两个事件。 要实现此目的，最简单的方法是使用默认参数来指定你要搜索所有目录：
 
 [!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
@@ -148,4 +148,4 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 接下来，将了解在 .NET 的最新版本中关于这些模式的一些更改。
 
-[下一篇](modern-events.md)
+[下一页](modern-events.md)

@@ -2,12 +2,12 @@
 title: 生成 Windows Communication Foundation 示例
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: d39419d766c52fb3822e935b08289bba95102dc1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b6b541b93661f3da656e36d65ef3f94d76cae0c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658866"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>生成 Windows Communication Foundation 示例
 

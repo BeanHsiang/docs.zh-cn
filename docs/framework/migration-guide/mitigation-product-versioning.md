@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 483a6532ad62fb7e1561ac5cc4de37aeaaf45fa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fa603381bec9d352eff705116c6dfc31380d523
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573174"
 ---
 # <a name="mitigation-product-versioning"></a>缓解：产品版本控制
 在 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和更高版本中，产品版本控制已更改，不再是早期版本的 .NET Framework（.NET Framework 4、4.5、4.5.1 和 4.5.2）。  
@@ -28,7 +28,7 @@ ms.locfileid: "33389400"
 ### <a name="handling-the-product-versioning-changes"></a>处理产品版本控制更改  
  一般情况下，应用程序应依赖于用于检测诸如 .NET Framework 的运行时版本和安装目录等内容的推荐技术：  
   
--   若要检测 .NET Framework 的运行时版本，请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。  
+-   要检测 .NET Framework 的运行时版本，请参阅[如何：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。  
   
 -   若要确定 .NET Framework 的安装路径，请使用 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 密钥中的 `InstallPath` 条目的值。  
   
@@ -39,6 +39,6 @@ ms.locfileid: "33389400"
   
 -   若要获取 CLR 版本，请调用 <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType> 方法。   对于 .NET Framework 4 及其点版本（.NET Framework 4.5、4.5.1、4.5.2 以及 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]、4.6.1、4.6.2 和 4.7），它将返回字符串 `v4.0.30319`。  
   
-## <a name="see-also"></a>请参阅  
- [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
- 
+## <a name="see-also"></a>请参阅
+- [运行时更改](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+

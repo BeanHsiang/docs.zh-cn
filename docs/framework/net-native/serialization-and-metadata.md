@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e4db59da7a17e47b8e3df939ec64f5124e04454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78c778cc4bc1172763c2473b472d02dc7b19d545
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622866"
 ---
 # <a name="serialization-and-metadata"></a>序列化和元数据
 如果你的应用会序列化和反序列化对象，你可能需要将条目添加到运行时指令 (.rd.xml) 文件以确保必要的元数据在运行时间存在。 有两类序列化序列化程序，并且每一类要求在你的运行时指令文件中进行不同处理：  
@@ -64,8 +64,8 @@ ms.locfileid: "33395968"
   
  有关示例中所使用语法的信息，请参阅 [\<Type> 元素](../../../docs/framework/net-native/type-element-net-native.md)。  
   
-## <a name="see-also"></a>请参阅  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)  
- [\<Namespace > 元素](../../../docs/framework/net-native/namespace-element-net-native.md)
+## <a name="see-also"></a>请参阅
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)
+- [\<Namespace > 元素](../../../docs/framework/net-native/namespace-element-net-native.md)

@@ -1,32 +1,32 @@
 ---
-title: '&lt;serviceCredentials&gt; 的 &lt;peer&gt;'
+title: <peer> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: 94f93a7955af3bff1c17e59a11af3fad85c9134d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c1df586916ebf165942c66ff2113c3199e31c3aa
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514734"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758516"
 ---
-# <a name="ltpeergt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;peer&gt;
+# <a name="peer-of-servicecredentials"></a>\<peer> of \<serviceCredentials>
 指定对等节点的当前凭据。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
+\<behavior>  
 \<serviceCredentials>  
-\<对等 >  
+\<peer>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<peer>  
-  <certificate/>  
-  <peerAuthentication/>  
-  <messageSenderAuthentication/>  
-</peer>  
+<peer>
+  <certificate />
+  <peerAuthentication />
+  <messageSenderAuthentication />
+</peer>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -49,13 +49,13 @@ ms.locfileid: "43514734"
 |-------------|-----------------|  
 |[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|指定要用于对服务进行身份验证的凭据以及与客户端凭据验证相关的设置。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>  
- <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>  
- <xref:System.ServiceModel.Security.PeerCredential>  
- [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [对等通道消息身份验证](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [对等通道自定义身份验证](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
- [保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.PeerCredentialElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>
+- <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>
+- <xref:System.ServiceModel.Security.PeerCredential>
+- [对等网络](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
+- [对等通道消息身份验证](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [对等通道自定义身份验证](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [保护对等通道应用程序](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

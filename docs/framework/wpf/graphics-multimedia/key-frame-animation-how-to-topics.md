@@ -7,28 +7,28 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 4efd6ea1ee5987efcabb038152fca7f1ed90c8f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ee0f8a6cd40e6293062b62b8bc81bd4c54903c0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561958"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361429"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>关键帧动画帮助主题
-此部分中的主题演示如何使用关键帧动画进行动画处理超过两个属性值和控件内插。  
+在本部分中的主题演示如何使用关键帧动画进行动画处理超过两个属性值和控制内插。  
   
 ## <a name="in-this-section"></a>本节内容  
- [使用关键帧为对象设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [使用关键帧为布尔值设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [使用关键帧为双精度值设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [使用关键帧为矩阵设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [使用关键帧为点设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [使用关键帧为矩形几何形状设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [使用关键帧为字符串设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [使用关键帧为颜色设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [使用关键帧为大小变化设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [使用关键帧为边框粗细设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [控制关键帧动画计时](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+ [使用关键帧为对象设置动画效果](how-to-animate-an-object-by-using-key-frames.md)  
+ [使用关键帧为布尔值设置动画效果](how-to-animate-a-boolean-by-using-key-frames.md)  
+ [使用关键帧为双精度值设置动画效果](how-to-animate-a-double-by-using-key-frames.md)  
+ [使用关键帧为矩阵设置动画效果](how-to-animate-a-matrix-by-using-key-frames.md)  
+ [使用关键帧为点设置动画效果](how-to-animate-a-point-by-using-key-frames.md)  
+ [使用关键帧为矩形几何形状设置动画效果](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [使用关键帧为字符串设置动画效果](how-to-animate-a-string-by-using-key-frames.md)  
+ [使用关键帧为颜色设置动画效果](how-to-animate-color-by-using-key-frames.md)  
+ [使用关键帧为大小变化设置动画效果](how-to-animate-size-changes-by-using-key-frames.md)  
+ [使用关键帧为边框粗细设置动画效果](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [控制关键帧动画计时](how-to-control-key-frame-animation-timing.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
@@ -37,7 +37,7 @@ ms.locfileid: "33561958"
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a>请参阅  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>请参阅
+- [图形和多媒体](index.md)
+- [动画概述](animation-overview.md)
+- [关键帧动画概述](key-frame-animations-overview.md)

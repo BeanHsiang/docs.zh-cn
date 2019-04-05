@@ -16,12 +16,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: 39b5aeecba39c0e5377fd4f76902dae4b678c324
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3437b0f90593eed2900829212866cf689ff54e8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660172"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign（C# 编译器选项）
 -filealign 选项用于指定输出文件中各节的大小。  
@@ -55,7 +55,7 @@ ms.locfileid: "43530397"
   
  有关如何以编程方式设置此编译器选项的信息，请参阅 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

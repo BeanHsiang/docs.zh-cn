@@ -2,12 +2,12 @@
 title: 安全 Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: db7b45fef28b0b28e7da550c24d510da73c02aa9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183524"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091794"
 ---
 # <a name="security-overview"></a>安全性概述
 保护应用程序的安全是一个持续的过程。 因为不可能预知将来会出现哪种新的攻击技术，所以开发人员永远都不能保证某一应用程序可以免受所有的攻击。 仅因为还没有人发现（或发布）系统中的安全性缺陷，也不意味着不存在或可能不存在安全性缺陷。 在项目的设计阶段，您需要对安全性进行规划，并规划如何在应用程序生存期内维护其安全。  
@@ -89,7 +89,7 @@ ms.locfileid: "50183524"
 |资源|描述|  
 |--------------|-----------------|  
 |[SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|提供 SQL Server 安全性和应用方案的概述，这些应用方案提供用于创建针对 SQL Server 的安全 ADO.NET 应用程序的指南。|  
-|[有关数据访问策略建议](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|提供用于访问数据和执行数据库操作的建议。|  
+|[有关数据访问策略建议](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|提供用于访问数据和执行数据库操作的建议。|  
   
 ## <a name="security-policy-and-administration"></a>安全策略和管理  
  不正确管理代码访问安全性 (CAS) 策略可能会导致安全漏洞。 应用程序一旦部署，就应使用监视安全性的技术，因为将出现评估为新威胁的风险。  
@@ -98,11 +98,11 @@ ms.locfileid: "50183524"
   
 |资源|描述|  
 |--------------|-----------------|  
-|[NIB： 安全策略管理](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|提供有关创建和管理安全策略的信息。|  
-|[NIB： 安全策略最佳实践](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|提供描述如何管理安全策略的链接。|  
+|[安全策略管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|提供有关创建和管理安全策略的信息。|  
+|[安全策略最佳实践](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|提供描述如何管理安全策略的链接。|  
   
-## <a name="see-also"></a>请参阅  
- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [本机代码和 .NET Framework 代码的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [保证 ADO.NET 应用程序的安全](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [.NET 中的安全性](../../../standard/security/index.md)
+- [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

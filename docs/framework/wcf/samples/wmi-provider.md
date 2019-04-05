@@ -2,12 +2,12 @@
 title: WMI 提供程序
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 4541c411d6bd1f13a03a0b6750e6683a7c2b3f3f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 938eb4fd376c699ddbfedf80f05ef62f81232ca2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497178"
 ---
 # <a name="wmi-provider"></a>WMI 提供程序
 此示例演示如何使用 WCF 中内置的 Windows Management Instrumentation (WMI) 提供程序从 Windows Communication Foundation (WCF) 服务在运行时收集数据。 另外，此示例还演示如何向服务添加用户定义的 WMI 对象。 该示例激活的 WMI 提供程序[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) ，并演示如何收集数据从`ICalculator`在运行时服务。  
@@ -143,5 +143,5 @@ cscript EnumerateCustomObjects.js
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>请参阅  
- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>请参阅
+- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

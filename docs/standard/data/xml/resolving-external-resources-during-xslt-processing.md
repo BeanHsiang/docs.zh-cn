@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 958699b8e3a00cfe3f8fd8ac4bb96914dcd0598c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7f73edf5912f8158db51ed070da8816d5b988b8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44185121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555474"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>在 XSLT 处理期间解析外部资源
 XSLT 转换过程中会有几个场合需要解析外部资源。  
@@ -36,7 +36,7 @@ XSLT 转换过程中会有几个场合需要解析外部资源。
   
 -   如果要自定义行为，可以实现自己的 <xref:System.Xml.XmlResolver> 类并使用该类解析资源。  
   
--   如果要确保不访问任何外部资源，可以为 `null` 参数指定 <xref:System.Xml.XmlResolver>。  
+-   如果要确保不访问任何外部资源，可以为 `null` 自变量指定 <xref:System.Xml.XmlResolver>。  
   
 ## <a name="example"></a>示例  
  以下示例编译存储在网络资源上的样式表。 <xref:System.Xml.XmlUrlResolver> 对象指定访问该样式表所需的凭据。  
@@ -46,6 +46,6 @@ XSLT 转换过程中会有几个场合需要解析外部资源。
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- <xref:System.Xml.Xsl.XsltSettings>  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- <xref:System.Xml.Xsl.XsltSettings>
 - [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)

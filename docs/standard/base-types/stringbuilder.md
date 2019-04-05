@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 099e2de40458e42c9df34e74dee8d9fc7c425dea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f18bdfaee1d79ce84a5b2822d52231f4bed098c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44197309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620053"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>使用 .NET 中的 StringBuilder 类
 <xref:System.String> 对象不可变。 每次使用 <xref:System.String?displayProperty=nameWithType> 类中的方法之一，都要在内存中新建字符串对象，这就需要为新对象分配新空间。 在需要重复修改字符串的情况下，与新建 <xref:System.String> 对象关联的开销可能会非常大。 若要修改字符串（而不新建对象），可以使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 类。 例如，如果在循环中将许多字符串连接在一起，使用 <xref:System.Text.StringBuilder> 类可以提升性能。  
@@ -113,6 +113,6 @@ ms.locfileid: "44197309"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
-- [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)  
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>
+- [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)
 - [格式设置类型](../../../docs/standard/base-types/formatting-types.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb894e3f52d28ce419ddda90f9fc0ac0e8dce022
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12f76059387f00316888cbe6d839bece33e3eef9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520255"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>ICorProfilerInfo::GetFunctionFromToken 方法
-获取函数的 ID。 此方法是.NET Framework 2.0 版中过时。 使用[icorprofilerinfo2:: Getfunctionfromtokenandtypeargs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)方法相反。  
+获取函数的 ID。 此方法是在.NET Framework 2.0 版中已过时。 使用[ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)方法相反。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,16 +37,16 @@ HRESULT GetFunctionFromToken(
 ```  
   
 ## <a name="remarks"></a>备注  
- `GetFunctionFromToken`方法将不能用于泛型函数或泛型类型中的函数; 现已过时。 使用`ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs`以外的所有函数。  
+ `GetFunctionFromToken`方法不适用于泛型函数或泛型类型中的函数; 现已过时。 使用`ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs`之外的所有函数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 1.1、 1.0  
+ **.NET framework 版本：** 1.1, 1.0  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

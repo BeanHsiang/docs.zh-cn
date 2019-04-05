@@ -1,5 +1,6 @@
 ---
 title: .NET 中的正则表达式最佳做法
+description: 了解如何在 .NET 中创建高效、有效的正则表达式。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.custom: serodec18
+ms.openlocfilehash: 02847a813566c4675f7df2c88fa2e4e1f6138ecb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925719"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152807"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正则表达式最佳做法
 <a name="top"></a> .NET 中的正则表达式引擎是一款功能强大且完备的工具，根据模式匹配（而不是比较和匹配文本）处理文本。 在大多数情况下，它可以快速、高效地执行模式匹配。 但在某些情况下，正则表达式引擎的速度似乎很慢。 在极端情况下，它甚至看似停止响应，因为它会用若干个小时甚至若干天处理相对小的输入。  
@@ -82,7 +84,7 @@ ms.locfileid: "42925719"
   
 -   可以调用静态模式匹配方法，如 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>。 这不需要实例化正则表达式对象。  
   
--   可以实例化一个 <xref:System.Text.RegularExpressions.Regex> 对象并调用已解释的正则表达式的实例模式匹配方法。 这是将正则表达式引擎绑定到正则表达式模式的默认方法。 如果实例化 <xref:System.Text.RegularExpressions.Regex> 对象时未使用包括 `options` 标记的 <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 参数，则会生成此方法。  
+-   可以实例化一个 <xref:System.Text.RegularExpressions.Regex> 对象并调用已解释的正则表达式的实例模式匹配方法。 这是将正则表达式引擎绑定到正则表达式模式的默认方法。 如果实例化 <xref:System.Text.RegularExpressions.Regex> 对象时未使用包括 `options` 标记的 <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 自变量，则会生成此方法。  
   
 -   可以实例化一个 <xref:System.Text.RegularExpressions.Regex> 对象并调用已编译的正则表达式的实例模式匹配方法。 当使用包括 <xref:System.Text.RegularExpressions.Regex> 标记的 `options` 参数实例化 <xref:System.Text.RegularExpressions.RegexOptions.Compiled> 对象时，正则表达式对象表示已编译的模式。  
   
@@ -115,7 +117,7 @@ ms.locfileid: "42925719"
   
  此示例中使用的正则表达式 `\p{Sc}+\s*\d+` 可验证输入字符串是否包含一个货币符号和至少一个十进制数。 模式的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\p{Sc}+`|与 Unicode 符号、货币类别中的一个或多个字符匹配。|  
 |`\s*`|匹配零个或多个空白字符。|  
@@ -136,7 +138,7 @@ ms.locfileid: "42925719"
   
  该示例中使用的正则表达式模式 `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]` 的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`\w+`|匹配一个或多个单词字符。|  
@@ -181,7 +183,7 @@ ms.locfileid: "42925719"
   
  通常，尽管回溯不是匹配所必需的，但应用程序会因使用回溯而对性能产生负面影响。 例如，正则表达式 `\b\p{Lu}\w*\b` 将匹配以大写字符开头的所有单词，如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-|-|  
 |`\b`|在单词边界处开始匹配。|  
 |`\p{Lu}`|匹配大写字符。|  
@@ -204,7 +206,7 @@ ms.locfileid: "42925719"
   
  在这些情况下，可通过移除嵌套限定符并将外部子表达式替换为零宽度预测先行和回顾断言来优化正则表达式性能。 预测先行和回顾断言是定位点；它们不在输入字符串中移动指针，而是通过预测先行或回顾来检查是否满足指定条件。 例如，可将部件号正则表达式重写为 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`。 此正则表达式模式的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从输入字符串的开头部分开始匹配。|  
 |`[0-9A-Z]`|匹配字母数字字符。 部件号至少要包含此字符。|  
@@ -218,9 +220,9 @@ ms.locfileid: "42925719"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]  
   
- .NET 中的正则表达式语言包括以下可用于消除嵌套限定符的语言元素。 有关详细信息，请参阅[分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ .NET 中的正则表达式语言包括以下可用于消除嵌套限定符的语言元素。 有关详细信息，请参阅 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
-|语言元素|描述|  
+|语言元素|说明|  
 |----------------------|-----------------|  
 |`(?=` `subexpression` `)`|零宽度正预测先行。 查看当前位置，以确定 `subexpression` 是否与输入字符串匹配。|  
 |`(?!` `subexpression` `)`|零宽度负预测先行。 查看当前位置，以确定 `subexpression` 是否不与输入字符串匹配。|  
@@ -258,7 +260,7 @@ ms.locfileid: "42925719"
   
  通常，只在正则表达式中使用分组构造，这样可对其应用限定符，而且以后不会使用这些子表达式捕获的组。 例如，正则表达式 `\b(\w+[;,]?\s?)+[.?!]` 用于捕获整个句子。 下表描述了此正则表达式模式中的语言元素及其对 <xref:System.Text.RegularExpressions.Match> 对象的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合的影响。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`\b`|在单词边界处开始匹配。|  
 |`\w+`|匹配一个或多个单词字符。|  
@@ -283,7 +285,7 @@ ms.locfileid: "42925719"
   
 -   使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 选项。 在正则表达式模式中禁用所有未命名或隐式捕获。 使用此选项时，只能捕获与使用 `(?<name>subexpression)` 语言元素定义的命名组匹配的子字符串。 可将 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 标记传递给 `options` 类构造函数的 <xref:System.Text.RegularExpressions.Regex> 参数或 `options` 静态匹配方法的 <xref:System.Text.RegularExpressions.Regex> 参数。  
   
--   在 `n` 语言元素中使用 `(?imnsx)` 选项。 此选项将在元素出现的正则表达式模式中的点处禁用所有未命名或隐式捕获。 捕获将一直禁用到模式结束或 `(-n)` 选项启用未命名或隐式捕获。 有关详细信息，请参阅[其他构造](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
+-   在 `n` 语言元素中使用 `(?imnsx)` 选项。 此选项将在元素出现的正则表达式模式中的点处禁用所有未命名或隐式捕获。 捕获将一直禁用到模式结束或 `(-n)` 选项启用未命名或隐式捕获。 有关详细信息，请参阅 [Miscellaneous Constructs](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
   
 -   在 `n` 语言元素中使用 `(?imnsx:subexpression)` 选项。 此选项可在 `subexpression` 中禁用所有未命名或隐式捕获。 同时禁用任何未命名或隐式的嵌套捕获组进行的任何捕获。  
   
@@ -292,7 +294,7 @@ ms.locfileid: "42925719"
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|标题|说明|  
 |-----------|-----------------|  
 |[正则表达式行为的详细信息](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|在 .NET 中检查正则表达式引擎的实现。 该主题重点介绍正则表达式的灵活性，并说明开发人员确保正则表达式引擎高效、强健运行的职责。|  
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|说明何为回溯及其对正则表达式性能有何影响，并检查为回溯提供替代项的语言元素。|  

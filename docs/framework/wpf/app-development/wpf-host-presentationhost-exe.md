@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: ca8198e17bec62866b6a58e6fd14ea468308f48b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8275777c58363c31d981f46172ad2f3f18e34861
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552683"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369690"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主机 (PresentationHost.exe)
-Windows Presentation Foundation (WPF) 主机 (PresentationHost.exe) 是应用程序，使[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]中兼容的浏览器托管的应用程序 (包括[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]及更高版本)。 默认情况下，Windows Presentation Foundation (WPF) 主机注册为 shell 和[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]处理程序浏览器承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]内容，其中包括：  
+Windows Presentation Foundation (WPF) 主机 (PresentationHost.exe) 是应用程序，使[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]兼容的浏览器中托管应用程序 (包括[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]及更高版本)。 默认情况下，Windows Presentation Foundation (WPF) 主机注册为 shell 并[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]处理程序的浏览器承载[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]内容，其中包括：  
   
 -   松散（未编译）[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 文件 (.xaml)。  
   
@@ -21,7 +21,7 @@ Windows Presentation Foundation (WPF) 主机 (PresentationHost.exe) 是应用程
   
  对于这些类型，Windows Presentation Foundation (WPF) 主机的文件：  
   
--   启动注册[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]处理程序来承载 Windows Presentation Foundation (WPF) 的内容。  
+-   启动注册[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]处理程序来承载 Windows Presentation Foundation (WPF) 内容。  
   
 -   加载的所需的正确版本[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]和 Windows Presentation Foundation (WPF) 程序集。  
   
@@ -57,5 +57,5 @@ Windows Presentation Foundation (WPF) 主机 (PresentationHost.exe) 是应用程
 ### <a name="visual-studio-debugging-in-zone"></a>在区域中进行 Visual Studio 调试  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>请参阅  
- [安全性](../../../../docs/framework/wpf/security-wpf.md)
+## <a name="see-also"></a>请参阅
+- [安全性](../security-wpf.md)

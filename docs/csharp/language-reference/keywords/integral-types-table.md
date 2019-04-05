@@ -1,5 +1,6 @@
 ---
-title: 整型类型表（C# 参考）
+title: 整型表 - C# 参考
+ms.custom: seodec18
 description: 内置 C# 整型类型的概述
 ms.date: 08/20/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 4ac16d185a52cdb03fcb22f57ebf7506f2fb2745
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078843"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396781"
 ---
 # <a name="integral-types-table-c-reference"></a>整型类型表（C# 参考）
 
@@ -35,7 +36,7 @@ ms.locfileid: "44078843"
   
 如果由整数字面量所表示的值超出了 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，则将出现编译器错误 [CS1021](../../misc/cs1021.md)。
 
-使用 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 类来表示任意大的带符号整数。
+使用 <xref:System.Numerics.BigInteger?displayProperty=nameWithType> 结构来表示任意大的带符号整数。
   
 ## <a name="see-also"></a>请参阅
 
@@ -47,3 +48,4 @@ ms.locfileid: "44078843"
 - [默认值表](default-values-table.md)
 - [设置数值结果表的格式](formatting-numeric-results-table.md)
 - [内置类型表](built-in-types-table.md)
+- [.NET 中的数字](../../../standard/numerics.md)

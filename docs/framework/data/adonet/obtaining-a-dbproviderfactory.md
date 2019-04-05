@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: fdda1bd4d3aca440558998231f411b614bd5542e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1099d8ec8e9d516b2269232857c695f9ff04d99c
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506171"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904597"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>获取 DbProviderFactory
 获取 <xref:System.Data.Common.DbProviderFactory> 的过程涉及将有关数据提供程序的信息传递给 <xref:System.Data.Common.DbProviderFactories> 类。 <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> 方法将基于此信息创建一个强类型提供程序工厂。 例如，若要创建 <xref:System.Data.SqlClient.SqlClientFactory>，可以向 `GetFactory` 传递一个将提供程序名称指定为“System.Data.SqlClient”的字符串。 `GetFactory` 的其他重载采用 <xref:System.Data.DataRow>。 创建该提供程序工厂后，可以使用其方法创建其他对象。 `SqlClientFactory` 的部分方法包括 <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>、<xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> 和 <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>。  
@@ -95,8 +95,8 @@ ms.locfileid: "43506171"
  [!code-csharp[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/VB/source.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)  
- [使用配置类](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [连接字符串](../../../../docs/framework/data/adonet/connection-strings.md)
+- [使用配置类](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
+- [ADO.NET 概述](ado-net-overview.md)

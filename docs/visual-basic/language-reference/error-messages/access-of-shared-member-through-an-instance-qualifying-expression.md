@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 035882b60c90d9a6141ad0d34b4c40682e0c32a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588978"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843560"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>通过实例访问共享成员；将不计算限定表达式
-使用类或结构的一个实例变量访问`Shared`变量、 属性、 过程或在该类或结构中定义的事件。 如果使用实例变量访问的类或结构，例如常量或枚举，或一个嵌套的类或结构的隐式共享的成员，也会发生此警告。  
+使用类或结构的实例变量访问`Shared`变量、 属性、 过程或在该类或结构中定义的事件。 如果使用实例变量访问类或结构，例如常量或枚举，或一个嵌套的类或结构的隐式共享的成员，也可能发生此警告。  
   
- 共享成员的目的是创建仅该成员的单个副本并将该单个副本提供的类或结构声明它的每个实例。 它是与此目的访问一致`Shared`成员通过其类或结构的名称而不是包含的单独实例，该类或结构的变量。  
+ 共享某个成员的目的是创建仅该成员的一个副本并使该单个副本可供类或结构声明它的每个实例。 为此目的，若要访问与一致`Shared`成员通过其类或结构的名称而不是包含的单独实例，该类或结构的变量。  
   
- 访问`Shared`成员通过实例变量会导致代码更难理解通过隐藏该成员是事实`Shared`。 此外，如果表达式的一部分进行访问时，将执行其他操作，如`Function`返回共享的成员的实例的过程，Visual Basic 将忽略表达式以及它将执行的任何其他操作。  
+ 访问`Shared`通过实例变量的成员可以使代码更难以理解通过隐藏该成员是这一事实`Shared`。 此外，如果此类访问是表达式的一部分执行其他操作，如`Function`返回的共享成员实例的过程，Visual Basic 将忽略表达式以及它将执行的任何其他操作。  
   
- 有关详细信息及示例，请参阅[共享](../../../visual-basic/language-reference/modifiers/shared.md)。  
+ 有关详细信息和示例，请参阅[共享](../../../visual-basic/language-reference/modifiers/shared.md)。  
   
- 默认情况下，此消息是一个警告。 有关隐藏警告或将警告视为错误的详细信息，请参阅[在 Visual Basic 中的配置警告](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
+ 默认情况下，此消息是一个警告。 若要深入了解如何隐藏警告或将警告视为错误，请参阅 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)。  
   
  **错误 ID:** BC42025  
   
 ## <a name="to-correct-this-error"></a>更正此错误  
   
--   使用的类或结构，它定义名称`Shared`成员来访问它，如下面的示例中所示。  
+-   使用类或结构，它定义的名称`Shared`成员来访问它，如下面的示例中所示。  
   
 ```vb  
 Public Class testClass  
@@ -53,8 +53,9 @@ End Module
 ```  
   
 > [!NOTE]
->  当两个编程元素具有相同名称时，则发出警报的作用域的效果。 在上一示例中，如果你使用声明实例`Dim testClass as testClass = Nothing`，编译器将调用`testClass.sayHello()`通过类名称和任何警告的方法的访问权限发生时。  
+>  当两个编程元素具有相同名称时，警报是作用域的影响。 在上一示例中，如果通过使用声明的实例`Dim testClass as testClass = Nothing`，则编译器将调用`testClass.sayHello()`发生时通过类名，并不会出现警告的方法的访问。  
   
-## <a name="see-also"></a>请参阅  
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
- [在 Visual Basic 中的作用域](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a>请参阅
+
+- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
+- [在 Visual Basic 中的作用域](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

@@ -2,12 +2,12 @@
 title: 服务跟踪查看器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: a03c459355f18ad30849113f353e35e97b6141ae
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251779"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680381"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服务跟踪查看器工具 (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助你分析生成的 WCF 的诊断跟踪。 服务跟踪查看器使您能够轻松地合并、 查看和筛选日志中的跟踪消息，以便可以诊断、 修复和验证 WCF 服务问题。  
@@ -50,7 +50,13 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
 |活动跟踪|处理活动与组件之间的流事件。<br /><br /> 此级别允许管理员和开发人员关联同一应用程序域中的各应用程序。<br /><br /> -活动边界跟踪： 启动/停止。<br />-传输跟踪。|  
   
  可以使用 `add` 指定要使用的跟踪侦听器的名称和类型。 在示例配置中，将侦听器命名为 `sdt` 并作为类型添加了标准 .NET Framework 跟踪侦听器 (`System.Diagnostics.XmlWriterTraceListener`)。 使用 `initializeData` 设置该侦听器的日志文件的名称。 此外，还可以用一个简单文件名来替换完全限定路径。  
-  
+
+从.NET Framework 4.8，在某些高对比度主题中的组合框控件显示在正确的颜色。 可以通过删除中的以下设置来禁用此更改*svcTraceViewer.exe.config*文件：
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>使用服务跟踪查看器工具  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>打开并查看 WCF 跟踪文件  
@@ -227,9 +233,9 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
 #### <a name="using-the-filter-toolbar"></a>使用筛选器工具栏  
  筛选器工具栏显示在工具的顶部。 如果不存在，则可以激活中**视图**菜单。 此工具栏具有三个组件：  
   
--   查找：**寻找**定义要查找在筛选器操作中的主题。 例如，如果你想要在进程 X 的上下文中查找已发出的所有跟踪，将此字段设置为 X 和**搜索在**进程名称字段。 如果选择了某个基于时间的筛选器，则此字段更改为 DateTime 选择器控件。  
+-   查找：**查找**定义要查找在筛选器操作中的主题。 例如，如果你想要在进程 X 的上下文中查找已发出的所有跟踪，将此字段设置为 X 和**搜索在**进程名称字段。 如果选择了某个基于时间的筛选器，则此字段更改为 DateTime 选择器控件。  
   
--   搜索范围：此字段定义要应用的筛选器类型。  
+-   在中搜索：此字段定义要应用筛选器的类型。  
   
 -   级别：级别设置定义筛选器允许的最小跟踪级别。 例如，如果级别设置为“错误及严重错误”，则只会显示“错误”和“严重”级别的跟踪。 此筛选器与“查找”和“搜索范围”指定的条件结合使用。  
   
@@ -259,7 +265,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
   
 3.  在出现的对话框中，输入筛选器名称。 在此示例中，输入`Thread ID`。 此外，还可以提供筛选器说明。  
   
-4.  左侧的树视图显示您在步骤 1 中选择的跟踪记录的结构。 通过浏览找到要为其创建条件的元素。 在此示例中，浏览到位于 XPath 的 ThreadID:/E2ETraceEvent/System/Execution/@ThreadID节点。 在树视图中双击“ThreadID”属性。 这样可在对话框右侧为该属性创建一个表达式。  
+4.  左侧的树视图显示你在步骤 1 中选择的跟踪记录的结构。 通过浏览找到要为其创建条件的元素。 在此示例中，浏览到位于 XPath 的 ThreadID:/E2ETraceEvent/System/Execution/@ThreadID节点。 在树视图中双击“ThreadID”属性。 这样可在对话框右侧为该属性创建一个表达式。  
   
 5.  更改将 ThreadID 条件的参数字段从无到{0}。 通过这一步骤，在应用筛选器时就可以配置 ThreadID 值。 （请参见“如何应用筛选器”一节）最多可以定义四个参数。 条件是用“或”运算符组合在一起的。  
   
@@ -286,7 +292,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
   
 2.  单击**筛选器现在**，并观察操作的结果。  
   
- 如果筛选器使用多个参数，请在使用; 作为分隔符，在**查找内容**字段。 例如，以下字符串定义 3 个参数：“1;findValue;text”。 在查看器应用于"1"{0}筛选器的参数。 findValue 和文本将应用于{1}和{2}分别。  
+ 如果筛选器使用多个参数，请在使用; 作为分隔符，在**查找内容**字段。 例如，以下字符串定义 3 个参数：1; findValue; text。 在查看器应用于"1"{0}筛选器的参数。 findValue 和文本将应用于{1}和{2}分别。  
   
 ###### <a name="sharing-custom-filters"></a>共享自定义筛选器  
  可以在不同会话和不同用户之间共享自定义筛选器。 可以将筛选器导出到一个定义文件，然后在另一个位置导入该文件。  
@@ -321,9 +327,9 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
   
  “查找”工具栏显示在查看器的顶部。 如果不存在，则可以激活中**视图**菜单。 此工具栏具有两个组件：  
   
--   查找内容：可在其中输入搜索关键字。  
+-   查找内容：可以输入搜索关键字。  
   
--   查找范围：可在其中输入搜索范围。 可以选择在所有活动中搜索，也可以选择仅在当前活动中搜索。  
+-   所示：可以输入搜索范围。 可以选择在所有活动中搜索，也可以选择仅在当前活动中搜索。  
   
  查找对话框提供两个附加选项：  
   
@@ -335,7 +341,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
   
     -   "已记录消息"选项仅在消息中搜索关键字。  
   
--   忽略根活动： 搜索会忽略"000000000000"活动中的跟踪。 如果根活动有数千个跟踪，而其中大多数为传输跟踪时，选择此选项会提高大型跟踪文件的性能。  
+-   忽略根活动：搜索会忽略"000000000000"活动中的跟踪。 如果根活动有数千个跟踪，而其中大多数为传输跟踪时，选择此选项会提高大型跟踪文件的性能。  
   
 ### <a name="navigating-traces"></a>定位跟踪  
  由于在应用程序运行时期间，跟踪是逐步记录的，因此定位跟踪有助于调试应用程序。 服务跟踪查看器提供多种定位跟踪方法。  
@@ -343,23 +349,23 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
 #### <a name="step-forward-or-backward"></a>逐步向前或逐步向后  
  如果在程序中行作为考虑每个跟踪，逐步向前是代码的非常类似于"逐过程"在 Visual Studio 集成开发环境 (IDE)。 区别在于，在跟踪中还可以逐步向后。 逐步向前意味着移动到活动中的下一个跟踪。  
   
--   逐步向前： 使用**活动**菜单中或按"F10"。 您还可以在跟踪窗格中"降低"中使用箭头键。  
+-   逐步向前：使用**活动**菜单中或按"F10"。 您还可以在跟踪窗格中"降低"中使用箭头键。  
   
--   逐步向后： 使用**活动**菜单中或按"F9"。 您还可以在跟踪窗格中"up"中使用箭头键。  
+-   向后的步骤：使用**活动**菜单中或按"F9"。 您还可以在跟踪窗格中"up"中使用箭头键。  
   
 > [!NOTE]
 >  这可以帮助您的活动发生在不同进程中或者甚至不同计算机，因为 WCF 消息可以传送跨计算机的活动 Id。  
   
 #### <a name="follow-transfer"></a>追踪传输  
- 传输跟踪是跟踪文件中的特殊跟踪。 一个活动可以通过传输跟踪而传输到另一个活动。 例如，"活动 A"可能会将传输到"活动 B"。 在这种情况下，在"活动 A"名称"至： 活动"并带有传输图标没有传输跟踪。 此传输跟踪是两个跟踪之间的链接。 在"活动 B"，还可能要将传送回"活动 A"的活动结束时的传输跟踪。 这类似于程序中的函数调用：A 调用 B，然后 B 返回。  
+ 传输跟踪是跟踪文件中的特殊跟踪。 一个活动可以通过传输跟踪而传输到另一个活动。 例如，"活动 A"可能会将传输到"活动 B"。 在这种情况下，没有传输跟踪在"活动 A"名称"到：活动"和传输图标。 此传输跟踪是两个跟踪之间的链接。 在"活动 B"，还可能要将传送回"活动 A"的活动结束时的传输跟踪。 它类似于程序中的函数调用：A 调用 B，然后 B 返回。  
   
  "追踪传输"是类似于"单步执行"在调试器中。 它追踪从 A 到 B 的传输。它对其他跟踪没有任何影响。  
   
  有两种追踪传输的方法：使用鼠标或使用键盘：  
   
--   使用鼠标：在跟踪窗格中双击传输跟踪。  
+-   使用鼠标：双击跟踪窗格中的传输跟踪。  
   
--   使用键盘： 选择传输跟踪，然后使用"追踪传输"中**活动**菜单中或按"F11"  
+-   使用键盘：选择传输跟踪，并使用"追踪传输"中**活动**菜单中或按"F11"  
   
 > [!NOTE]
 >  在很多情况下，当活动 A 传输到活动 B 时，活动 A 会等待，直到活动 B 传输回活动 A 为止。这意味着活动 A 在活动 B 主动跟踪期间没有记录跟踪。 但是，也有可能活动 A 不等待，而是持续记录跟踪。 此外，活动 B 还可能不传输回活动 A。因此在这个意义上，活动传输与函数调用仍有不同。 在图形视图中可以更好地理解活动传输。  
@@ -367,9 +373,9 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
 #### <a name="jump-to-next-or-previous-transfer"></a>跳转到下一个或上一个传输  
  在分析当前活动或选定的活动（如果选择了多个活动）时，可能希望快速找到它传输到的活动。 "跳转到下一个传输"，可在活动中查找下一个传输跟踪。 一旦找到传输跟踪，您可以使用"追踪传输"来单步执行下一个活动。  
   
--   跳转到下一个传输： 使用**活动**菜单中或按"Ctrl + F10"。  
+-   跳转到下一个传输：使用**活动**菜单中或按"Ctrl + F10"。  
   
--   跳转到上一个传输： 使用**活动**菜单中或按"Ctrl + F9"。  
+-   跳转到上一个传输：使用**活动**菜单中或按"Ctrl + F9"。  
   
 #### <a name="navigate-in-graph-view"></a>在图形视图中定位  
  尽管在活动窗格和跟踪窗格中导航是类似于调试，但使用**Graph**视图提供了更好的体验，在导航栏中。 有关详细信息，请参阅"关系图视图"部分。  
@@ -404,41 +410,41 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
   
 |图标|描述|  
 |----------|-----------------|  
-|![警告跟踪](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|“警告”跟踪：在警告级别发出的跟踪|  
-|![错误跟踪](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|“错误”跟踪：在错误级别发出的跟踪。|  
-|![活动开始跟踪：](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|“活动开端”跟踪：标记活动开头的跟踪。 它包含活动的名称。 应用程序设计人员或开发人员应为每个进程或线程的每个活动 ID 定义一个活动“开端”跟踪。<br /><br /> 如果活动 ID 在跟踪关联的跟踪源之间传播，随后将可看到同一活动 ID 有多个“开端”（每个跟踪源一个）。 如果为跟踪源启用了 ActivityTracing，则会发出“开端”跟踪。|  
-|![活动停止跟踪](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|“活动结尾”跟踪：标记活动结尾的跟踪。 . 它包含活动的名称。 应用程序设计人员或开发人员应为每个跟踪源的每个活动 ID 定义一个活动“结尾”跟踪。 在给定跟踪源发出的活动结尾之后不会显示该跟踪源中的任何跟踪，除非跟踪时间间隔不够小。 如果发生这种情况，时间相同的两个跟踪（包括“结尾”跟踪）在显示时可能会交错。 如果活动 ID 在跟踪关联的跟踪源之间传播，将可看到同一活动 ID 有多个“结尾”（每个跟踪源一个）。 如果为跟踪源启用了 ActivityTracing，则会发出“结尾”跟踪。|  
-|![活动挂起跟踪](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|“活动挂起”跟踪：标记活动暂停时间的跟踪。 在活动继续之前，不会在挂起的活动中发出任何跟踪。 挂起的活动表示不会在该活动的跟踪源范围内进行任何处理。 “挂起”/“继续”跟踪对于进行分析十分有用。 如果为跟踪源启用了 ActivityTracing，则会发出“挂起”跟踪。|  
-|![活动继续跟踪](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|“活动继续”跟踪：标记活动在暂停后继续进行的时间的跟踪。 可以在该活动中再次发出跟踪。 “挂起”/“继续”跟踪对于进行分析十分有用。 如果为跟踪源启用了 ActivityTracing，则会发出“继续”跟踪。|  
-|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|传输：将逻辑控制流从一个活动传输到另一个活动时发出的跟踪。 作为传输来源的活动可以继续与作为传输目标的活动并行工作。 如果为跟踪源启用了 ActivityTracing，则会发出“传输”跟踪。|  
-|![将从传输](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|传输自：定义从另一个活动到当前活动的传输的跟踪。|  
-|![将传输到](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|传输至：定义从当前活动到另一个活动的逻辑控制流传输的跟踪。|  
+|![警告跟踪](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|警告跟踪：在警告级别发出的跟踪|  
+|![错误跟踪](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|错误跟踪：在错误级别发出跟踪。|  
+|![活动开始跟踪：](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|活动开始跟踪：标记活动开头的跟踪。 它包含活动的名称。 应用程序设计人员或开发人员应为每个进程或线程的每个活动 ID 定义一个活动“开端”跟踪。<br /><br /> 如果活动 ID 在跟踪关联的跟踪源之间传播，随后将可看到同一活动 ID 有多个“开端”（每个跟踪源一个）。 如果为跟踪源启用了 ActivityTracing，则会发出“开端”跟踪。|  
+|![活动停止跟踪](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|活动停止跟踪：标记活动结束的跟踪。 . 它包含活动的名称。 应用程序设计人员或开发人员应为每个跟踪源的每个活动 ID 定义一个活动“结尾”跟踪。 在给定跟踪源发出的活动结尾之后不会显示该跟踪源中的任何跟踪，除非跟踪时间间隔不够小。 如果发生这种情况，时间相同的两个跟踪（包括“结尾”跟踪）在显示时可能会交错。 如果活动 ID 在跟踪关联的跟踪源之间传播，将可看到同一活动 ID 有多个“结尾”（每个跟踪源一个）。 如果为跟踪源启用了 ActivityTracing，则会发出“结尾”跟踪。|  
+|![活动挂起跟踪](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|活动挂起跟踪：标记将活动的时间的跟踪已暂停。 在活动继续之前，不会在挂起的活动中发出任何跟踪。 挂起的活动表示不会在该活动的跟踪源范围内进行任何处理。 “挂起”/“继续”跟踪对于进行分析十分有用。 如果为跟踪源启用了 ActivityTracing，则会发出“挂起”跟踪。|  
+|![活动继续跟踪](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|活动恢复跟踪：标记在暂停后恢复活动的时间的跟踪。 可以在该活动中再次发出跟踪。 “挂起”/“继续”跟踪对于进行分析十分有用。 如果为跟踪源启用了 ActivityTracing，则会发出“继续”跟踪。|  
+|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|传输：当逻辑控制流从一个活动传输到另一个时，发出跟踪。 作为传输来源的活动可以继续与作为传输目标的活动并行工作。 如果为跟踪源启用了 ActivityTracing，则会发出“传输”跟踪。|  
+|![将从传输](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|将从传输：定义从另一个活动到当前活动的传输跟踪。|  
+|![Transfer To](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|将传输到：定义逻辑控制流从当前活动到另一个活动的传输跟踪。|  
   
 ### <a name="wcf-traces"></a>WCF 跟踪  
   
 |图标|描述|  
 |----------|-----------------|  
-|![消息日志跟踪](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|消息日志跟踪： 当 WCF 消息记录的消息日志记录功能时，发出的跟踪时`System.ServiceModel.MessageLogging`启用跟踪源。 单击此跟踪可以显示消息。 一条消息有四个可配置的日志记录点：ServiceLevelSendRequest、TransportSend、TransportReceive 和 ServiceLevelReceiveRequest，消息日志跟踪的 `messageSource` 属性中也指明了它们。|  
-|![消息已接收跟踪](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|消息已接收跟踪： 发出的跟踪时收到 WCF 消息时，如果`System.ServiceModel`Information 或 Verbose 级别启用跟踪源。 此跟踪是必需的活动中查看消息相关箭头**Graph**视图。|  
-|![消息已发送的跟踪](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|消息已发送的跟踪： 如果发送 WCF 消息时发出的跟踪`System.ServiceModel`Information 或 Verbose 级别启用跟踪源。 此跟踪是必需的活动中查看消息相关箭头**Graph**视图。|  
+|![消息日志跟踪](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|消息日志跟踪：当 WCF 消息记录的消息日志记录功能时，发出的跟踪时`System.ServiceModel.MessageLogging`启用跟踪源。 单击此跟踪可以显示消息。 有一条消息的四个可配置的记录点：ServiceLevelSendRequest、 TransportSend、 TransportReceive 和 ServiceLevelReceiveRequest，还可以通过指定`messageSource`消息日志跟踪中的属性。|  
+|![消息已接收跟踪](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|消息已接收跟踪：发出的跟踪时收到 WCF 消息时，如果`System.ServiceModel`Information 或 Verbose 级别启用跟踪源。 此跟踪是必需的活动中查看消息相关箭头**Graph**视图。|  
+|![消息已发送的跟踪](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|消息已发送的跟踪：如果发送 WCF 消息时发出的跟踪`System.ServiceModel`Information 或 Verbose 级别启用跟踪源。 此跟踪是必需的活动中查看消息相关箭头**Graph**视图。|  
   
 ### <a name="activities"></a>活动  
   
 |图标|描述|  
 |----------|-----------------|  
 |![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|活动：指示当前活动为一般活动。|  
-|![根活动](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|根活动：指示进程的根活动。|  
+|![根活动](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|根活动：指示的根活动的进程。|  
   
 ### <a name="wcf-activities"></a>WCF 活动  
   
 |图标|描述|  
 |----------|-----------------|  
-|![环境活动](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|环境活动： 创建、 打开或关闭 WCF 主机或客户端的活动。 在这些阶段中发生的错误将出现在此活动中。|  
-|![侦听活动](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|“侦听”活动：可对与侦听器相关的跟踪进行记录的活动。 可以在此活动内查看侦听器信息和连接请求。|  
-|![接收字节活动](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|“接收字节”活动：一种活动，可对与在两个终结点之间的连接上接收传入字节相关的所有跟踪进行分组。 在与传播其活动 ID 的传输活动（比如 http.sys）建立关联时，此活动是必需的。 诸如中止等连接错误将出现在此活动中。|  
-|![处理消息活动](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|处理消息活动： 与创建 WCF 消息的跟踪进行分组的活动相关。 由于包装错误或消息格式不正确而导致的错误将出现在该活动中。 可以在此活动内检测消息头，以确定是否从调用方传播了活动 ID。 如果已传播，则在传输到“处理操作”活动（下一个图标）时，我们还可以为该活动分配传播的活动 ID，以便在调用方和被调用方的跟踪之间建立关联。|  
-|![消息日志跟踪](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|处理操作活动： 与 WCF 请求在两个终结点之间的所有跟踪进行都分组的活动相关。 如果配置中两个终结点上的 `propagateActivity` 都设置为 `true`，则会将来自两个终结点的所有跟踪合并为一个活动，以便直接关联。 此类活动将包含由于传输或安全处理、延伸到用户代码边界及回退（如果存在响应）而发生的错误。|  
-|![处理消息活动](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|“执行用户代码”活动：一种可对用户代码跟踪进行分组以处理请求的活动。|  
+|![环境活动](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|环境活动：创建、 打开或关闭 WCF 主机或客户端活动。 在这些阶段中发生的错误将出现在此活动中。|  
+|![侦听活动](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Listen 活动：日志跟踪与侦听器相关的活动。 可以在此活动内查看侦听器信息和连接请求。|  
+|![接收字节活动](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|接收字节活动：一个与两个终结点之间的连接上接收传入字节相关的所有跟踪进行都分组的活动。 在与传播其活动 ID 的传输活动（比如 http.sys）建立关联时，此活动是必需的。 诸如中止等连接错误将出现在此活动中。|  
+|![处理消息活动](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|处理消息活动：一个与创建 WCF 消息相关的跟踪进行分组的活动。 由于包装错误或消息格式不正确而导致的错误将出现在该活动中。 可以在此活动内检测消息头，以确定是否从调用方传播了活动 ID。 如果已传播，则在传输到“处理操作”活动（下一个图标）时，我们还可以为该活动分配传播的活动 ID，以便在调用方和被调用方的跟踪之间建立关联。|  
+|![消息日志跟踪](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|处理操作活动：跨两个终结点与 WCF 请求相关的所有跟踪进行都分组的活动。 如果配置中两个终结点上的 `propagateActivity` 都设置为 `true`，则会将来自两个终结点的所有跟踪合并为一个活动，以便直接关联。 此类活动将包含由于传输或安全处理、延伸到用户代码边界及回退（如果存在响应）而发生的错误。|  
+|![处理消息活动](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|执行用户代码活动：一个用于处理请求的用户代码跟踪进行分组的活动。|  
   
 ## <a name="troubleshooting"></a>疑难解答  
  如果没有写入注册表的权限，您收到以下错误消息"未向系统注册 Microsoft 服务跟踪查看器"时使用"`svctraceviewer /register`"命令，注册工具。 如果出现这种情况，您应使用对注册表有写访问权限的帐户登录。  
@@ -449,7 +455,7 @@ Windows Communication Foundation (WCF) 服务跟踪查看器工具可以帮助�
   
  如果打开使用阿拉伯语操作系统创建的跟踪日志，您可能会注意到时间筛选器不起作用。 例如，2005 年对应于阿拉伯日历中的 1427 年。 但是，服务跟踪查看器工具筛选器所支持的时间范围不支持早于 1752 年的日期。 这表示您不能在筛选器中选择正确的日期。 若要解决此问题，可以创建自定义筛选器 (**视图/自定义筛选器**) 使用 XPath 表达式包含特定的时间范围。  
   
-## <a name="see-also"></a>请参阅  
- [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [配置跟踪](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [活动跟踪和传播的端到端跟踪关联的](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+## <a name="see-also"></a>请参阅
+- [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [配置跟踪](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [端到端跟踪](./diagnostics/tracing/end-to-end-tracing.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3085812f2467c1e73d94335530441d6bb12db6af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47234674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613800"
 ---
 # <a name="generic-interfaces"></a>泛型接口
 本主题概述跨泛型类型系列提供通用功能的泛型接口。  
@@ -44,9 +44,9 @@ ms.locfileid: "47234674"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Collections.Generic?displayProperty=nameWithType>  
-- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
-- [泛型](../../../docs/standard/generics/index.md)  
-- [.NET Framework 中的泛型集合](../../../docs/standard/generics/collections.md)  
-- [用于控制数组和列表的泛型委托](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- <xref:System.Collections.Generic?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
+- [泛型](../../../docs/standard/generics/index.md)
+- [.NET Framework 中的泛型集合](../../../docs/standard/generics/collections.md)
+- [用于控制数组和列表的泛型委托](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
 - [协变和逆变](../../../docs/standard/generics/covariance-and-contravariance.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: 0f6a06bfb9d1e5274df047e45a5042353515e206
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32a81ba462eccfc6f4ba2a694793895810074b7e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190764"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817027"
 ---
 # <a name="session"></a>会话
 “会话”示例演示如何实现需要会话的协定。 会话提供用来执行多个操作的上下文。 这允许服务将某个状态与给定的会话相关联，从而使后续操作可以使用上一个操作的状态。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它可实现计算器服务。 `ICalculator` 协定已进行修改，允许在保持运行结果的同时执行一组算术运算。 此功能由 `ICalculatorSession` 协定定义。 服务在调用多个服务操作以执行一个计算时维护客户端的状态。 客户端可以通过调用 `Result()` 来检索当前结果，通过调用 `Clear()` 将结果清零。  
@@ -92,4 +92,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Session`  
   
-## <a name="see-also"></a>请参阅

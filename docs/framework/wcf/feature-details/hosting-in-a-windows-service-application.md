@@ -2,12 +2,12 @@
 title: 在 Windows 服务应用程序中承载
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 2b3935babec0c7cdc3ffca5dd11d693fdfee7a89
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 52c62ef1be7dafc97c5cf958f30444e47f900e92
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621966"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服务应用程序中承载
 Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于下面这样的应用程序的进程模型：必须在长时间运行的可执行程序中生存，并且不显示任何形式的用户界面。 Windows 服务应用程序的进程生存期由服务控制管理器 (SCM) 管理，您可以通过该管理器启动、停止和暂停 Windows 服务应用程序。 可以配置为在计算机启动，使其合适的托管环境的"always on"应用程序时自动启动的 Windows 服务进程。 Windows 服务应用程序的详细信息，请参阅[Windows 服务应用程序](https://go.microsoft.com/fwlink/?LinkId=89450)。  
@@ -36,10 +36,10 @@ Windows 服务（以前称为 Windows NT 服务）提供了一种尤其适合于
   
      托管 WCF 服务的 Windows 服务应用程序部署和作为 Windows 服务应用程序，不要使用 WCF 的管理的方式相同。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceProcess>  
- [演练：在组件设计器中创建 Windows 服务应用程序](https://go.microsoft.com/fwlink/?LinkId=94875)  
- [如何：在托管 Windows 服务中承载 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
- [Windows 服务主机](../../../../docs/framework/wcf/samples/windows-service-host.md)  
- [服务应用程序编程体系结构](https://go.microsoft.com/fwlink/?LinkId=94876)  
- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceProcess>
+- [演练：在组件设计器中创建 Windows 服务应用程序](https://go.microsoft.com/fwlink/?LinkId=94875)
+- [如何：主机托管的 Windows 服务中的 WCF 服务](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Windows 服务主机](../../../../docs/framework/wcf/samples/windows-service-host.md)
+- [服务应用程序编程体系结构](https://go.microsoft.com/fwlink/?LinkId=94876)
+- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

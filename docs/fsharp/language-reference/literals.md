@@ -1,24 +1,24 @@
 ---
-title: 文本 (F#)
-description: '了解有关 F # 编程语言中的文本类型。'
-ms.date: 05/16/2016
-ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: 文本
+description: 了解有关在中的文本类型F#编程语言。
+ms.date: 02/08/2019
+ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087620"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092158"
 ---
 # <a name="literals"></a>文本
 
 > [!NOTE]
-在本文中的 API 参考链接将转至 MSDN （适用于暂时）。
+> 在本文中的 API 参考链接将转至 MSDN （适用于暂时）。
 
-本主题提供了演示如何指定 F # 中的文本类型的表。
+本主题提供了表显示了如何指定的类型中的文本F#。
 
 ## <a name="literal-types"></a>文本类型
 
-下表显示 F # 中的文本的类型。 表示以十六进制表示法表示的数字的字符不区分大小写;标识类型的字符是区分大小写。
+下表显示了中的文本类型F#。 表示以十六进制表示法表示的数字的字符不区分大小写;标识类型的字符是区分大小写。
 
 |类型|描述|后缀或前缀|示例|
 |----|-----------|----------------|--------|
@@ -41,13 +41,13 @@ ms.locfileid: "44087620"
 |String|Unicode 字符串|无|`"text\n"`<br /><br />或<br /><br />`@"c:\filename"`<br /><br />或<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />或<br /><br />`"string1" + "string2"`<br /><br />另请参阅[字符串](Strings.md)。|
 |byte|ASCII 字符|B|`'a'B`|
 |byte[]|ASCII 字符串|B|`"text"B`|
-|字符串或 byte]|逐字字符串|@ 前缀|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
+|字符串或 byte]|逐字字符串|@ prefix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
 ## <a name="remarks"></a>备注
 
 Unicode 字符串可包含可以通过使用指定的显式编码`\u`跟 16 位十六进制代码或可以通过使用指定的 UTF-32 编码`\U`跟表示 Unicode 的 32 位十六进制代码代理项对。
 
-自 F # 3.1，您可以使用`+`符号合并字符串文本。 你还可以使用按位或 (`|||`) 运算符来组合枚举标志。 例如，下面的代码是在 F # 3.1 中合法的：
+在F#3.1 中，可以使用`+`符号合并字符串文本。 你还可以使用按位或 (`|||`) 运算符来组合枚举标志。 例如，下面的代码是合法中F#3.1:
 
 ```fsharp
 [<Literal>]
@@ -76,20 +76,20 @@ let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 有符号的 32 位整数，还可以指定在使用十六进制、 八进制或二进制`0x`，`0o`或`0b`分别前缀。
 
 ```fsharp
-let Numbers = (0x9F, 0o77, 0b1010)
-// Result: Numbers : int * int * int = (159, 63, 10)
+let numbers = (0x9F, 0o77, 0b1010)
+// Result: numbers : int * int * int = (159, 63, 10)
 ```
 
 ## <a name="underscores-in-numeric-literals"></a>数值文字中的下划线
 
-从 F # 4.1 开始，你可以分隔数字使用下划线字符 (`_`)。
+从F#4.1，您可以使用下划线字符分隔数字 (`_`)。
 
 ```fsharp
-let DeadBeef = 0xDEAD_BEEF
+let value = 0xDEAD_BEEF
 
-let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
+let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
-let ExampleSSN = 123_456_7890
+let exampleSSN = 123_456_7890
 ```
 
 ## <a name="see-also"></a>请参阅

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be4935d74affa227386aa6c63dad13e7e2f7d3dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 052773c615bcc4ddb5b735ae8164d44ed70bd935
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513485"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>基于事件的异步模式 (EAP)
 
@@ -67,6 +67,6 @@ ms.locfileid: "47207451"
   
 ## <a name="see-also"></a>请参阅
 
-- [托管线程处理的最佳做法](../threading/managed-threading-best-practices.md)  
-- [事件](../events/index.md)  
+- [托管线程处理的最佳做法](../threading/managed-threading-best-practices.md)
+- [事件](../events/index.md)
 - [异步编程设计模式](index.md)

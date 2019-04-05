@@ -1,22 +1,22 @@
 ---
-title: '&lt;customCookieHandler&gt;'
+title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 51ca91de5c77727f5f5506118461d19354f12c14
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 752b1188fccb6f09cdcab6a50653abf26e8e2a53
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836415"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288179"
 ---
-# <a name="ltcustomcookiehandlergt"></a>&lt;customCookieHandler&gt;
+# <a name="customcookiehandler"></a>\<customCookieHandler>
 设置自定义 cookie 处理程序类型。 此元素仅可能存在如果`mode`属性的`<cookieHandler>`元素是"自定义"。 自定义的类型必须派生自<xref:System.IdentityModel.Services.CookieHandler>类。  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
-\<cookieHandler >  
-\<customCookieHandler >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<cookieHandler>  
+\<customCookieHandler>  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48836415"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|配置<xref:System.IdentityModel.Services.CookieHandler>的<xref:System.IdentityModel.Services.SessionAuthenticationModule>用于读取和写入 cookie。|  
+|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|配置<xref:System.IdentityModel.Services.CookieHandler>的<xref:System.IdentityModel.Services.SessionAuthenticationModule>用于读取和写入 cookie。|  
   
 ## <a name="remarks"></a>备注  
  通过设置指定自定义 cookie 处理程序时`mode`的属性`<cookieHandler>`元素为"Custom"，必须指定自定义 cookie 处理程序的类型，通过包括`<customCookieHandler>`引用 cookie 处理程序类型的子元素。 不能为此元素时指定`mode`属性设置为"Chunked"或"Default"。 自定义 cookie 处理程序必须派生自<xref:System.IdentityModel.Services.CookieHandler>类。  
@@ -63,5 +63,5 @@ ms.locfileid: "48836415"
 </cookieHandler>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Services.CookieHandler>
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Services.CookieHandler>

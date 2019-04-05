@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ to SQL 数据源创建数据服务（WCF 数据服务）
+title: 如何：创建数据服务使用 LINQ to SQL 数据源 （WCF 数据服务）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: e65d9dc48f128d7808f0731057ec0a5e52e65444
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7447a9f2ab0b2a9cca396ee947a0eb5fe2cc8715
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608568"
 ---
-# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>如何：使用 LINQ to SQL 数据源创建数据服务（WCF 数据服务）
+# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>如何：创建数据服务使用 LINQ to SQL 数据源 （WCF 数据服务）
 
 WCF 数据服务公开实体数据作为数据服务。 反射提供程序，可定义基于任何公开的成员的类的数据模型，可返回<xref:System.Linq.IQueryable%601>实现。 为了能够更新数据源中的数据，这些类还必须实现 <xref:System.Data.Services.IUpdatable> 接口。 有关详细信息，请参阅[数据服务提供商](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。 本主题演示如何创建通过使用反射提供程序来访问 Northwind 示例数据库的 LINQ to SQL 类，以及如何创建基于这些数据类的数据服务。
 
@@ -74,6 +74,6 @@ WCF 数据服务公开实体数据作为数据服务。 反射提供程序，可
 
 ## <a name="see-also"></a>请参阅
 
-- [如何：使用 ADO.NET 实体框架数据源创建数据服务](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)
-- [如何：使用反射提供程序创建数据服务](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
+- [如何：创建数据服务使用 ADO.NET 实体框架数据源](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)
+- [如何：创建数据服务使用反射提供程序](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
 - [数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

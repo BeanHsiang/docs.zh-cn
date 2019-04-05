@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 782a6cf70aa3e3446d8da3160712d57245afe176
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b7d152edac34449a08b4bcfbe5525b63abcba0fb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405520"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480762"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypes-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypes 方法
-获取所有缓存的枚举数[!INCLUDE[wrt](../../../../includes/wrt-md.md)]类型。  
+获取所有缓存的枚举器[!INCLUDE[wrt](../../../../includes/wrt-md.md)]类型。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,9 +35,9 @@ HRESULT GetCachedWinRTTypes (
 ;  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppGuidToTypeEnum`  
- [out]指向的指针[ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)可以枚举的托管的表示形式的接口对象[!INCLUDE[wrt](../../../../includes/wrt-md.md)]当前加载到应用程序域中的类型。  
+ [out]一个指向[ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)接口对象的可枚举的托管的表示形式[!INCLUDE[wrt](../../../../includes/wrt-md.md)]应用程序域中当前加载的类型。  
   
 ## <a name="requirements"></a>要求  
  **平台：** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
@@ -46,7 +46,7 @@ HRESULT GetCachedWinRTTypes (
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugAppDomain3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugAppDomain3 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)

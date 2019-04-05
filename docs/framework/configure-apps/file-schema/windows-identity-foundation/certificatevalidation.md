@@ -1,21 +1,21 @@
 ---
-title: '&lt;certificatevalidation 设置&gt;'
+title: <certificateValidation>
 ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
-ms.openlocfilehash: 29881be43f02d275ad135efd97dc8b25a7409beb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7b8823d792e3f15846a9483d670994be4b368980
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838325"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273892"
 ---
-# <a name="ltcertificatevalidationgt"></a>&lt;certificatevalidation 设置&gt;
+# <a name="certificatevalidation"></a>\<certificateValidation>
 控制令牌处理程序用来验证证书的设置。 如果特定的处理程序配置了其自己的验证程序，则将重写这些设置。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<certificatevalidation 设置 >  
+\<certificateValidation>  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,14 +46,14 @@ ms.locfileid: "48838325"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md)|指定证书验证的自定义类型。 仅当使用此类型`certificateValidationMode`的属性[ \<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)元素设置为"自定义"。|  
+|[\<certificateValidator>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md)|指定证书验证的自定义类型。 仅当使用此类型`certificateValidationMode`的属性[ \<certificatevalidation 设置 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)元素设置为"自定义"。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
   
 ## <a name="remarks"></a>备注  
  一个`<certificateValidation>`可以在服务级别下指定元素`<identityConfiguration>`元素下的安全令牌处理程序集合级别上或`<securityTokenHandlerConfiguration>`元素。 标记处理程序集合上的设置将覆盖在服务上指定的。 一些令牌处理程序，可在配置中指定的证书验证设置。 在服务级别和对安全令牌处理程序集合上单个令牌处理程序设置将覆盖指定的维数。  

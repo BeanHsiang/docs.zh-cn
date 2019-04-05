@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a9ce105c-6495-49ab-b0e5-903a48ebadb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8aa9fd6aee09df9473395df694ffe96fab78c88c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95b1f39ca3504b64df45c47330c6fe3946b2b384
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425462"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473573"
 ---
 # <a name="isymunmanagedasyncmethodhascatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethod::HasCatchHandlerILOffset 方法
 请参阅[DefineCatchHandlerILOffset 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)。  
@@ -20,7 +20,7 @@ ms.locfileid: "33425462"
 HRESULT HasCatchHandlerILOffset(    [out, retval] BOOL* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
   
 |参数|描述|  
 |---------------|-----------------|  
@@ -30,7 +30,7 @@ HRESULT HasCatchHandlerILOffset(    [out, retval] BOOL* pRetVal);
  返回 `HRESULT`。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedAsyncMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedAsyncMethod 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID96
 ms.assetid: e40b19a2-8100-43ff-a1a4-0ddee3cc7f9a
-ms.openlocfilehash: 46e8b41567820df24c5206a2acd8ac661faeed28
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: a766fc9a854ea2ad7ebad2d74b33a67b508f7534
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087409"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58026300"
 ---
 # <a name="unable-to-sink-events-of-object-because-the-object-is-already-firing-events-to-the-maximum-number-of-event-receivers-it-supports"></a>无法接收对象的事件，因为该对象激发的事件数已达到它所支持的事件接收器的最大数
 已超出对象支持的最大事件接收器数目。  
@@ -18,6 +18,7 @@ ms.locfileid: "44087409"
   
 -   减少事件接收器的数目。  
   
-## <a name="see-also"></a>请参阅  
- [如何： 引发 COM 接收器所处理的事件](https://msdn.microsoft.com/library/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd)  
- [演练：处理事件](../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)
+## <a name="see-also"></a>请参阅
+
+- [如何：引发 COM 接收器所处理的事件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd8bf0x3(v=vs.100))
+- [演练：处理事件](../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)

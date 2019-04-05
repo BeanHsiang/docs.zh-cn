@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548789"
 ---
 # <a name="creating-user-defined-bindings"></a>创建用户定义的绑定
 有多种方式可以创建系统未提供的绑定：  
@@ -23,7 +23,7 @@ ms.locfileid: "50186052"
 ## <a name="the-order-of-binding-elements"></a>绑定元素的顺序  
  发送或接收消息时，每个绑定元素都表示一个处理步骤。 在运行时，绑定元素会创建必要的通道和侦听器，用以生成传出和传入通道堆栈。  
   
- 有三种主要的绑定元素类型：协议绑定元素、编码绑定元素和传输绑定元素。  
+ 有三种主要类型的绑定元素：协议绑定元素、 编码绑定元素和传输绑定元素。  
   
  协议绑定元素 – 这些元素表示对消息执行的更高级别的处理步骤。 由这些绑定元素创建的通道和侦听器可以添加、移除或修改消息内容。 给定的绑定可以具有任意数量的协议绑定元素，每一个元素都从 <xref:System.ServiceModel.Channels.BindingElement> 继承。 Windows Communication Foundation (WCF) 包括多个协议绑定元素，其中包括<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>和<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。  
   
@@ -56,7 +56,7 @@ Binding customBinding = new CustomBinding(
 );  
 ```  
   
- 写入新的绑定元素的方式取决于元素的确切功能。 其中一个示例中，[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)，提供了如何实现一种类型的绑定元素的详细的说明。  
+ 写入新的绑定元素的方式取决于元素的确切功能。 其中一个示例，[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)，提供了如何实现一种类型的绑定元素的详细的说明。  
   
 ## <a name="creating-a-new-binding"></a>创建新的绑定  
  可以通过两种方式使用用户创建的绑定元素。 上一节演示了第一种方式：通过自定义绑定。 自定义绑定允许用户基于任意一组绑定元素（包括用户创建的绑定元素）创建自己的绑定。  
@@ -118,6 +118,6 @@ public override BindingElementCollection CreateBindingElements()
 ## <a name="deriving-from-a-standard-binding"></a>派生自标准绑定  
  也许可以扩展一个现有的系统提供的绑定，而不用创建一个全新的绑定类。 与上一个示例非常类似，必须重写 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法和 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 属性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.Binding>  
- [自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.Binding>
+- [自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)

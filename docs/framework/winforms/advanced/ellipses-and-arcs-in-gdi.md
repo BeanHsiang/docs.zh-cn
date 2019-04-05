@@ -12,44 +12,45 @@ helpviewer_keywords:
 - ellipses
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-ms.openlocfilehash: 6835127d03f984bda8a95cf5b9ca9798122de804
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f6969f9ad838ae913f049c4fc65d987e1aff9fa
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718475"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>GDI+ 中的椭圆和弧线
-您可以轻松地绘制椭圆和弧使用<xref:System.Drawing.Graphics.DrawEllipse%2A>和<xref:System.Drawing.Graphics.DrawArc%2A>方法<xref:System.Drawing.Graphics>类。  
+您可以轻松地绘制椭圆和弧线使用<xref:System.Drawing.Graphics.DrawEllipse%2A>并<xref:System.Drawing.Graphics.DrawArc%2A>方法的<xref:System.Drawing.Graphics>类。  
   
 ## <a name="drawing-an-ellipse"></a>绘制椭圆  
- 若要绘制一个椭圆，你需要<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供<xref:System.Drawing.Graphics.DrawEllipse%2A>方法，与<xref:System.Drawing.Pen>对象存储特性，如宽度和用于呈现椭圆的线条颜色。 <xref:System.Drawing.Pen>对象作为一个自变量传递<xref:System.Drawing.Graphics.DrawEllipse%2A>方法。 其余的自变量传递给<xref:System.Drawing.Graphics.DrawEllipse%2A>方法指定椭圆的边框。 下图显示以及其边界的矩形的椭圆。  
+ 若要绘制一个椭圆，需要<xref:System.Drawing.Graphics>对象和一个<xref:System.Drawing.Pen>对象。 <xref:System.Drawing.Graphics>对象提供<xref:System.Drawing.Graphics.DrawEllipse%2A>方法，和<xref:System.Drawing.Pen>对象将存储属性，例如宽度和颜色，用来呈现椭圆的行。 <xref:System.Drawing.Pen>对象作为一个自变量传递<xref:System.Drawing.Graphics.DrawEllipse%2A>方法。 其余的参数传递给<xref:System.Drawing.Graphics.DrawEllipse%2A>方法指定角的椭圆的边框。 下图显示一个椭圆，以及其边界的矩形。  
   
- ![椭圆和弧](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art05.gif "Aboutgdip02_art05")  
+ ![椭圆和弧线](./media/aboutgdip02-art05.gif "Aboutgdip02_art05")  
   
- 下面的示例绘制一个椭圆;边界的矩形的宽度为 80，高度为 40 和的左上角都 （100，50）：  
+ 下面的示例绘制一个椭圆;边界矩形具有宽度为 80，高度为 40 和的左上角 （100，50）：  
   
- [!code-csharp[LinesCurvesAndShapes#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#51)]
- [!code-vb[LinesCurvesAndShapes#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#51)]  
+ [!code-csharp[LinesCurvesAndShapes#51](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#51)]
+ [!code-vb[LinesCurvesAndShapes#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#51)]  
   
- <xref:System.Drawing.Graphics.DrawEllipse%2A> 属于重载的方法的<xref:System.Drawing.Graphics>类，因此有几种方法，你可以向其提供自变量。 例如，可以构造<xref:System.Drawing.Rectangle>并将传递<xref:System.Drawing.Rectangle>到<xref:System.Drawing.Graphics.DrawEllipse%2A>作为自变量的方法：  
+ <xref:System.Drawing.Graphics.DrawEllipse%2A> 是一种重载的方法<xref:System.Drawing.Graphics>类，因此有几种方法可以提供该文件使用的参数。 例如，可以构造<xref:System.Drawing.Rectangle>并传递<xref:System.Drawing.Rectangle>到<xref:System.Drawing.Graphics.DrawEllipse%2A>作为参数的方法：  
   
- [!code-csharp[LinesCurvesAndShapes#52](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#52)]
- [!code-vb[LinesCurvesAndShapes#52](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#52)]  
+ [!code-csharp[LinesCurvesAndShapes#52](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#52)]
+ [!code-vb[LinesCurvesAndShapes#52](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#52)]  
   
 ## <a name="drawing-an-arc"></a>绘制一段弧线，  
- 一段弧线，是椭圆的的一部分。 若要绘制一段弧线，请调用<xref:System.Drawing.Graphics.DrawArc%2A>方法<xref:System.Drawing.Graphics>类。 参数<xref:System.Drawing.Graphics.DrawArc%2A>方法都是相同的参数作为<xref:System.Drawing.Graphics.DrawEllipse%2A>方法，只不过<xref:System.Drawing.Graphics.DrawArc%2A>需要起始角度和扫描角度。 下面的示例绘制一段弧线，使用 30 度起始角度和扫描角度为 180 度：  
+ 一段弧线的椭圆的一部分。 若要绘制一段弧线，则调用<xref:System.Drawing.Graphics.DrawArc%2A>方法的<xref:System.Drawing.Graphics>类。 参数<xref:System.Drawing.Graphics.DrawArc%2A>方法将与参数的相同<xref:System.Drawing.Graphics.DrawEllipse%2A>方法，不同之处在于<xref:System.Drawing.Graphics.DrawArc%2A>需要起始角度和扫描角度。 下面的示例绘制一段弧线，使用 30 度的起始角度和扫描角度为 180 度：  
   
- [!code-csharp[LinesCurvesAndShapes#53](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#53)]
- [!code-vb[LinesCurvesAndShapes#53](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#53)]  
+ [!code-csharp[LinesCurvesAndShapes#53](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#53)]
+ [!code-vb[LinesCurvesAndShapes#53](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#53)]  
   
- 下图显示弧、 椭圆和的边框。  
+ 下图显示了弧线、 椭圆和边界的矩形。  
   
- ![椭圆和弧](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
+ ![椭圆和弧线](./media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
- <xref:System.Drawing.Pen?displayProperty=nameWithType>  
- [直线、曲线和形状](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [如何：创建用于绘制的图形对象](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [如何：创建笔](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- [如何：绘制显示边框的形状](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Drawing.Graphics?displayProperty=nameWithType>
+- <xref:System.Drawing.Pen?displayProperty=nameWithType>
+- [直线、曲线和形状](lines-curves-and-shapes.md)
+- [如何：创建用于绘制图形对象](how-to-create-graphics-objects-for-drawing.md)
+- [如何：创建钢笔](how-to-create-a-pen.md)
+- [如何：绘制空心的形状](how-to-draw-an-outlined-shape.md)

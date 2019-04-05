@@ -2,12 +2,12 @@
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: f9e1c043579f632f16a7cf36bf34c2467a743e47
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e89dbe35a5232c612555b273c3d771aad42aeb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584800"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
 TcpConnectionPoolSettings  
@@ -27,7 +27,7 @@ class TcpConnectionPoolSettings
 ## <a name="methods"></a>方法  
  TcpConnectionPoolSettings 类不定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  TcpConnectionPoolSettings 类具有以下属性：  
   
 ### <a name="groupname"></a>GroupName  
@@ -64,5 +64,5 @@ class TcpConnectionPoolSettings
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>

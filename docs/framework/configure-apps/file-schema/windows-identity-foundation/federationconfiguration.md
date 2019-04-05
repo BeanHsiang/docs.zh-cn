@@ -1,20 +1,20 @@
 ---
-title: '&lt;federationConfiguration&gt;'
+title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 66fa16992d779b08ee8c55598efc98f8f5267656
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: befa74f02ccb0dde4448f36c0698feebaf6201ce
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181704"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286398"
 ---
-# <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
+# <a name="federationconfiguration"></a>\<federationConfiguration>
 配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) 时使用联合身份验证通过 WS 联合身份验证协议。 配置<xref:System.Security.Claims.ClaimsAuthorizationManager>使用时<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>类以提供基于声明的访问控制。  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +39,9 @@ ms.locfileid: "50181704"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|配置由 SAM 使用的 cookie 处理程序。 可选。|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|配置用于加密和解密令牌的证书。 可选。|  
-|[\<wsFederation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|配置 WS 联合身份验证模块 (WSFAM)。 可选。|  
+|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|配置由 SAM 使用的 cookie 处理程序。 可选。|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|配置用于加密和解密令牌的证书。 可选。|  
+|[\<wsFederation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|配置 WS 联合身份验证模块 (WSFAM)。 可选。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -91,8 +91,8 @@ ms.locfileid: "50181704"
 </system.identityModel.services>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>  
- [\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+- <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>
+- [\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: badd79926e8f039cf6b947dd6655e2cd679e3000
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 572087bd6f14c43b439910be32fca54af66a2e8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585531"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag 枚举
 指示上下文是来自堆栈上的活动（或叶）帧，还是已通过从另一个帧展开来进行计算。  
@@ -41,20 +41,20 @@ typedef enum CorDebugSetContextFlag
 |成员|描述|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|上下文是线程的活动上下文。|  
-|SET_CONTEXT_FLAG_UNWIND_FRAME|已通过从另一个帧展开来计算上下文。|  
+|SET_CONTEXT_FLAG_UNWIND_FRAME|通过从另一个帧展开来计算上下文。|  
   
 ## <a name="remarks"></a>备注  
- `CorDebugSetContextFlag` 提供使用的值[icordebugstackwalk:: Setcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)方法。  
+ `CorDebugSetContextFlag` 提供了使用的值[icordebugstackwalk:: Setcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

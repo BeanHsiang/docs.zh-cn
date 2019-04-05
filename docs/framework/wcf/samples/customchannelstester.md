@@ -2,12 +2,12 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: eebe4f15095c7cefbd32971fd2f3ee308e9916b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 372e4128667a0ab1288372ce0ec077b3a4ee2ec6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499383"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842065"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` 是一个可用于依据一组预定义的服务协定测试自定义通道实现的工具。 可以通过使用 XML 文件选择这组服务协定并将其传递给该工具。 然后，该工具将生成服务和客户端，该客户端会在消息交换过程中测试您的自定义通道实现。  
@@ -16,7 +16,7 @@ ms.locfileid: "33499383"
   
 1.  若要生成解决方案，请按照中的说明[生成 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2.  生成该解决方案将会生成三个文件：CustomChannelsTester.exe、TestSpec.xml 和 SampleRun.cmd。 文件 SampleRun.cmd 具有命令行示例，演示如何使用此工具测试[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
+2.  生成解决方案将生成三个文件：CustomChannelsTester.exe、 TestSpec.xml 和 SampleRun.cmd。 SampleRun.cmd 文件有一个示例命令行，演示如何使用此工具来测试[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。  
   
 ### <a name="to-run-the-tool"></a>运行此工具  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33499383"
   
      需要使用 `/binding` 选项。  
   
-     `/dll` 如果"绑定"不是由 Windows Communication Foundation (WCF) 提供的系统提供的绑定，是必需的。  
+     `/dll` 如果"绑定"不是通过 Windows Communication Foundation (WCF) 提供系统提供的绑定，是必需的。  
   
      `/testspec` 是可选的。  
   
@@ -69,4 +69,3 @@ ms.locfileid: "33499383"
     </TestSpec>  
     ```  
   
-## <a name="see-also"></a>请参阅

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857149"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202868"
 ---
 # <a name="how-to-search-strings"></a>如何：搜索字符串
 
@@ -74,12 +74,12 @@ ms.locfileid: "43857149"
 
 可通过查看 [GitHub 存储库](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的代码来尝试这些示例。 也可以下载这些示例的 [zip 文件](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../programming-guide/index.md)  
-- [字符串](../programming-guide/strings/index.md)  
+- [C# 编程指南](../programming-guide/index.md)
+- [字符串](../programming-guide/strings/index.md)
 - [LINQ 和字符串](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [.NET Framework 正则表达式](../../standard/base-types/regular-expressions.md)
 - [正则表达式语言 - 快速参考](../../standard/base-types/regular-expression-language-quick-reference.md)
-- [有关使用 .NET 中字符串的最佳做法](../../standard/base-types/best-practices-strings.md)  
+- [有关使用 .NET 中字符串的最佳做法](../../standard/base-types/best-practices-strings.md)

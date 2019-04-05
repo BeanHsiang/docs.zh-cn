@@ -3,13 +3,13 @@ title: 官方 .NET Docker 映像
 description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 官方 .NET Docker 映像
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.date: 01/07/2019
+ms.openlocfilehash: c4fce49b079473ddcc2b840527b8aeb951fec780
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075563"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674648"
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 
@@ -23,21 +23,21 @@ ms.locfileid: "47075563"
 
 为开发人员生成 Docker 映像时，Microsoft 侧重于以下主要方案：
 
--   用于开发和生成 .NET Core 应用的映像。
+- 用于开发和生成 .NET Core 应用的映像。
 
--   用于运行 .NET Core 应用的映像。
+- 用于运行 .NET Core 应用的映像。
 
 为什么是多个映像？ 因为在开发、生成和运行容器化应用程序时，通常具有不同的优先级。 通过为这些单独的任务提供不同的映像，Microsoft 有助于优化开发、生成和部署应用程序的单独进程。
 
 ### <a name="during-development-and-build"></a>在开发和生成过程中
 
-在开发期间，重要的是可循环访问更改的速度以及调试更改的能力。 与更改代码的能力和快速查看更改相比，映像的大小不是那么重要。 某些工具和“build-agent 容器”在开发和生成进程中使用开发 .NET Core 映像 (microsoft/dotnet:2.1-sdk)。 在 Docker 容器中生成时，重要方面是为了编译应用所需要的元素。 这包括编译器和任何其他 .NET 依赖项。
+在开发期间，重要的是可循环访问更改的速度以及调试更改的能力。 与更改代码的能力和快速查看更改相比，映像的大小不是那么重要。 某些工具和“build-agent 容器”在开发和生成进程中使用开发 .NET Core 映像 (microsoft/dotnet:2.2-sdk)。 在 Docker 容器中生成时，重要方面是为了编译应用所需要的元素。 这包括编译器和任何其他 .NET 依赖项。
 
 为什么此类型的生成映像很重要？ 不能将此映像部署到生产中。 相反，它是用于生成放置在生产映像中的内容的映像。 此映像将用于持续集成 (CI) 环境，或在使用 Docker 多阶段生成时用于生成环境。
 
 ### <a name="in-production"></a>生产中
 
-在生产中重要的是基于生产 .NET Core 映像部署和启动容器的速度。 因此，基于 microsoft/dotnet:2.1-aspnetcore-runtime 的仅运行时映像很小，以便它可以通过网络从 Docker 注册表快速传输到 Docker 主机。 已准备运行内容，以此实现从启动容器到处理结果的最快时间。 在 Docker 模型中，不需要编译 C\# 代码，但在使用生成容器运行 dotnet 生成或 dotnet 发布时需要。
+在生产中重要的是基于生产 .NET Core 映像部署和启动容器的速度。 因此，基于 microsoft/dotnet:2.2-aspnetcore-runtime 的仅运行时映像很小，以便它可以通过网络从 Docker 注册表快速传输到 Docker 主机。 已准备运行内容，以此实现从启动容器到处理结果的最快时间。 在 Docker 模型中，不需要编译 C\# 代码，但在使用生成容器运行 dotnet 生成或 dotnet 发布时需要。
 
 在此优化的映像中，只放置运行应用程序所需的二进制文件和其他内容。 例如，由 dotnet 发布创建的内容仅包含已编译的.NET 二进制文件、映像、.js 和 .css 文件。 随着时间推移，将推出包含预实时编译（在运行时进行从中间语言到本机语言的编译）包的映像。
 
@@ -47,10 +47,9 @@ ms.locfileid: "47075563"
 
 | 图像                                       | 注释                                                                                          |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| microsoft/dotnet:2.1-aspnetcore-runtime | ASP.NET Core，包含仅运行时和 ASP.NET Core 优化，适用于 Linux 和 Windows（多体系结构） |
-| microsoft/dotnet:2.1-sdk                | .NET Core，包含 SDK，适用于 Linux 和 Windows（多体系结构）                                  |
+| microsoft/dotnet:2.2-aspnetcore-runtime | ASP.NET Core，包含仅运行时和 ASP.NET Core 优化，适用于 Linux 和 Windows（多体系结构） |
+| microsoft/dotnet:2.2-sdk                | .NET Core，包含 SDK，适用于 Linux 和 Windows（多体系结构）                                  |
 
-
->[!div class="step-by-step"]
-[上一页](net-container-os-targets.md)
-[下一页](../architect-microservice-container-applications/index.md)
+> [!div class="step-by-step"]
+> [上一页](net-container-os-targets.md)
+> [下一页](../architect-microservice-container-applications/index.md)

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d23fc48a53ee47aacfc290b52887b800ce37477f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 000d5d94b19907dfed40ac03f3172b9b8449c6f2
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086240"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083441"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>将对象标识符映射到加密算法
 数字签名确保数据不被篡改时它从一个程序发送到另一个。 通常通过将一个数学函数应用于的数据进行签名的哈希计算的数字签名。 当设置格式的哈希值进行签名，某些数字签名算法将格式设置操作的一部分 ASN.1 对象标识符 (OID)。 OID 标识用于计算哈希的算法。 您可以映射到对象标识符，以扩展加密机制，以便使用自定义算法的算法。 下面的示例演示如何将对象标识符映射到新的哈希算法。  
@@ -42,6 +40,6 @@ ms.locfileid: "49086240"
   
  [ \<OidEntry > 元素](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)包含两个属性。 **OID**属性是对象标识符编号。 **名称**属性是值**名称**属性从[ \<nameEntry > 元素](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)。 必须从算法名称映射到一个类之前的对象标识符可以映射到一个简单的名称。  
   
-## <a name="see-also"></a>请参阅  
- [配置加密类](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>请参阅
+- [配置加密类](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

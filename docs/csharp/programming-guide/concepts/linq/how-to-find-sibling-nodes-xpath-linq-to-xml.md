@@ -2,12 +2,12 @@
 title: 如何：查找同级节点 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: e10b23c311e4e7debf228c01c898f3582e2ac8d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b71bf1123461e4b0c0db5024eac3330bcf666ecc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646758"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>如何：查找同级节点 (XPath-LINQ to XML) (C#)
 您可能需要查找某一节点的具有特定名称的所有同级。 如果上下文节点也具有该特定名称，则生成的集合可能会包括上下文节点。  
@@ -19,7 +19,7 @@ ms.locfileid: "43865353"
 ## <a name="example"></a>示例  
  本示例首先查找一个 `Book` 元素，然后查找名为 `Book` 的所有同级元素。 生成的集合包括上下文节点。  
   
- 本示例使用以下 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: 1b10379e626c8e53b2e1e6eddaa964f13f9e4b62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1da5de4971928ca23a23c4dcfc5f338c4d7a3875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196916"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719568"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 数据类型 (Visual Basic)
 
@@ -58,13 +58,13 @@ Dim number As SByte = &H_F9
 
 - 通过编译与禁用整数边界检查`/removeintchecks`编译器开关。
 
-- 使用[类型字符](../../programming-guide\language-features\data-types/type-characters.md)显式定义你想要分配到的文本值`SByte`。 下面的示例将负文字`Short`值设为`SByte`。 请注意，对于负数，数字文本的高序位字的高顺序位必须进行设置。 对于本示例中，这位文字的 15`Short`值。
+- 使用[类型字符](../../programming-guide/language-features/data-types/type-characters.md)显式定义你想要分配到的文本值`SByte`。 下面的示例将负文字`Short`值设为`SByte`。 请注意，对于负数，数字文本的高序位字的高顺序位必须进行设置。 对于本示例中，这位文字的 15`Short`值。
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
 ## <a name="programming-tips"></a>编程提示
   
--   **CLS 遵从性。** `SByte`数据类型不属于[公共语言规范](http://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
+-   **CLS 遵从性。** `SByte`数据类型不属于[公共语言规范](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS)，因此符合 cls 的代码不能使用使用它的组件。
 
 -   **扩大转换。** `SByte`数据类型加宽到`Short`， `Integer`， `Long`， `Decimal`， `Single`，和`Double`。 这意味着可以将转换`SByte`而不会遇到这些类型的任何<xref:System.OverflowException?displayProperty=nameWithType>错误。
   
@@ -74,11 +74,11 @@ Dim number As SByte = &H_F9
   
 ## <a name="see-also"></a>请参阅
 
- <xref:System.SByte?displayProperty=nameWithType>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.SByte?displayProperty=nameWithType>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Short 数据类型](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

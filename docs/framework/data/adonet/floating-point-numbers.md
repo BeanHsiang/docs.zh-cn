@@ -2,12 +2,12 @@
 title: 浮点数
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 2ab583a07c78cfa06ac597c369486f89e19ca66e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a30252d7d25b3c3e09dd5e59f364d94aa40dd272
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042329"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903974"
 ---
 # <a name="floating-point-numbers"></a>浮点数
 此主题描述了开发人员在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中使用浮点数时经常遇到的一些问题。 这些问题是由计算机存储浮点数的方式所导致的，并不是特定提供程序（如 <xref:System.Data.SqlClient> 或 <xref:System.Data.OracleClient>）所特有的。  
@@ -18,6 +18,6 @@ ms.locfileid: "44042329"
   
  若要使用相等比较来解决这些问题，请考虑对您的应用程序进行编码，以便忽略最低有效位数的变化。 例如，用一个数减去另一个数，而不是通过比较，来了解两个数字是否相等。 如果差异在可接受舍入范围内，您的应用程序可以将这些数视为同一个数。  
   
-## <a name="see-also"></a>请参阅  
- [为何浮点数可能丢失精度](https://msdn.microsoft.com/library/1acb1add-ac06-4134-a2fd-aff13d8c4c15)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [为何浮点数可能丢失精度](/cpp/build/reference/why-floating-point-numbers-may-lose-precision)
+- [ADO.NET 概述](ado-net-overview.md)

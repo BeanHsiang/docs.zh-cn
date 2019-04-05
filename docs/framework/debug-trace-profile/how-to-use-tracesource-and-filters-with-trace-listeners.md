@@ -1,5 +1,5 @@
 ---
-title: 如何：将 TraceSource 和筛选器与跟踪侦听器一起使用
+title: 如何：使用 TraceSource 和筛选器与跟踪侦听器
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7a912386d93e727a1f4cd2253ad06be76ae3385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e87e9d82ec16c9bcb1621c14756f401bd4f7b8a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491093"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>如何：将 TraceSource 和筛选器与跟踪侦听器一起使用
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>如何：使用 TraceSource 和筛选器与跟踪侦听器
 .NET Framework 版本 2.0 的新功能之一是增强型的跟踪系统。 基本前提不变：跟踪消息通过交换机发送到侦听器，侦听器将数据报告给相关联的输出介质。 2.0 版的主要区别是，可以通过 <xref:System.Diagnostics.TraceSource> 类的实例启动跟踪。 <xref:System.Diagnostics.TraceSource> 用作增强型跟踪系统，并可用来代替较旧的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 跟踪类的静态方法。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 类仍存在，但建议使用 <xref:System.Diagnostics.TraceSource> 类进行跟踪。  
   
- 本主题描述如何将 <xref:System.Diagnostics.TraceSource> 与应用程序配置文件结合使用。  可在不使用配置文件的情况下使用 <xref:System.Diagnostics.TraceSource> 进行跟踪，但是不建议这样做。 有关在不使用配置文件的情况下进行跟踪的信息，请参阅[如何：创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)。  
+ 本主题描述如何将 <xref:System.Diagnostics.TraceSource> 与应用程序配置文件结合使用。  可在不使用配置文件的情况下使用 <xref:System.Diagnostics.TraceSource> 进行跟踪，但是不建议这样做。 无需配置文件的跟踪信息，请参阅[如何：创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)。  
   
 ### <a name="to-create-and-initialize-your-trace-source"></a>创建和初始化跟踪源  
   
 1.  使用跟踪检测应用程序的第一步是创建跟踪源。 在含有各种组件的大型项目中，可以为每个组件创建一个单独的跟踪源。 建议将应用程序名称作为跟踪源名称。 这会使不同的跟踪更容易保持独立。 以下代码创建一个新的跟踪源 (`mySource)` 并调用跟踪事件的方法 (`Activity1`)。  跟踪消息是通过默认跟踪侦听器写入的。  
   
-    ```  
+    ```csharp
     using System;  
     using System.Diagnostics;  
     using System.Threading;  
@@ -101,7 +101,7 @@ ms.locfileid: "33388337"
   
 1.  配置文件在初始化应用程序时初始化跟踪源的设置。 若要更改这些设置，必须更改配置文件并重启应用，或使用 <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> 方法以编程方式刷新应用程序。 应用程序可以动态更改配置文件设置的属性，以重写用户指定的任何设置。  例如，可能想要确保始终将关键消息发送到文本文件，而不管当前配置设置如何。  
   
-    ```  
+    ```csharp
     using System;  
     using System.Diagnostics;  
     using System.Threading;  
@@ -163,10 +163,10 @@ ms.locfileid: "33388337"
     }  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.ConsoleTraceListener>  
- <xref:System.Diagnostics.EventTypeFilter>  
- [如何：创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
- [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.ConsoleTraceListener>
+- <xref:System.Diagnostics.EventTypeFilter>
+- [如何：创建和初始化跟踪源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)

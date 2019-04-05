@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 810417529f71ec366f940c062a416a675bfecd2a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842783"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376814"
 ---
 # <a name="input-overview"></a>输入概述
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]子系统提供了一个强大[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]用于获取输入不同的设备，包括鼠标、 键盘、 触控和触笔。 本主题介绍了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的服务，并说明了输入系统的体系结构。
@@ -37,7 +37,7 @@ ms.locfileid: "48842783"
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>输入 API
- 主要的输入[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]找到基元素类上公开： <xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>。  有关基元素的详细信息，请参阅[基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)。  这些类提供有关输入事件（例如按键、鼠标按钮、鼠标滚轮、鼠标移动、焦点管理和鼠标捕获等）的功能。 通过将输入 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 放置在基元素上，而不是将所有输入事件视作一项服务，该输入体系结构使输入事件可以由 UI 中的特定对象指明其出处，并支持事件路由方案，从而使得多个元素有机会处理输入事件。 许多输入事件都具有与之相关联的一对事件。  例如，键按下事件与<xref:System.Windows.Input.Keyboard.KeyDown>和<xref:System.Windows.Input.Keyboard.PreviewKeyDown>事件。  这些事件的区别在于它们如何路由至目标元素。  预览事件将元素树从根元素到目标元素向下进行隧道操作。  冒泡事件从目标元素到根元素向上进行冒泡操作。  本概述后面部分和[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)中更详细地讨论了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的事件路由。
+ 主要的输入[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]找到基元素类上公开： <xref:System.Windows.UIElement>， <xref:System.Windows.ContentElement>， <xref:System.Windows.FrameworkElement>，和<xref:System.Windows.FrameworkContentElement>。  有关基元素的详细信息，请参阅[基元素概述](base-elements-overview.md)。  这些类提供有关输入事件（例如按键、鼠标按钮、鼠标滚轮、鼠标移动、焦点管理和鼠标捕获等）的功能。 通过将输入 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 放置在基元素上，而不是将所有输入事件视作一项服务，该输入体系结构使输入事件可以由 UI 中的特定对象指明其出处，并支持事件路由方案，从而使得多个元素有机会处理输入事件。 许多输入事件都具有与之相关联的一对事件。  例如，键按下事件与<xref:System.Windows.Input.Keyboard.KeyDown>和<xref:System.Windows.Input.Keyboard.PreviewKeyDown>事件。  这些事件的区别在于它们如何路由至目标元素。  预览事件将元素树从根元素到目标元素向下进行隧道操作。  冒泡事件从目标元素到根元素向上进行冒泡操作。  本概述后面部分和[路由事件概述](routed-events-overview.md)中更详细地讨论了 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的事件路由。
 
 ### <a name="keyboard-and-mouse-classes"></a>键盘和鼠标类
  除了输入[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]基元素类上<xref:System.Windows.Input.Keyboard>类和<xref:System.Windows.Input.Mouse>类提供其他[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]用于处理键盘和鼠标输入。
@@ -46,30 +46,30 @@ ms.locfileid: "48842783"
 
  下面的示例使用<xref:System.Windows.Input.Keyboard.GetKeyStates%2A>方法，以确定如果<xref:System.Windows.Input.Key>处于关闭状态。
 
- [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
- [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
+ [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
+ [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
 
  输入的示例[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]上<xref:System.Windows.Input.Mouse>类<xref:System.Windows.Input.Mouse.MiddleButton%2A>，用于获取鼠标中键的状态和<xref:System.Windows.Input.Mouse.DirectlyOver%2A>，后者将获取该元素在鼠标指针当前位于。
 
  下面的示例确定是否<xref:System.Windows.Input.Mouse.LeftButton%2A>鼠标位于<xref:System.Windows.Input.MouseButtonState.Pressed>状态。
 
- [!code-csharp[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MouseRelatedSnippets/CSharp/Window1.xaml.cs#mouserelatedsnippetsgetleftbuttonmouse)]
- [!code-vb[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MouseRelatedSnippets/visualbasic/window1.xaml.vb#mouserelatedsnippetsgetleftbuttonmouse)]
+ [!code-csharp[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](~/samples/snippets/csharp/VS_Snippets_Wpf/MouseRelatedSnippets/CSharp/Window1.xaml.cs#mouserelatedsnippetsgetleftbuttonmouse)]
+ [!code-vb[mouserelatedsnippets#MouseRelatedSnippetsGetLeftButtonMouse](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MouseRelatedSnippets/visualbasic/window1.xaml.vb#mouserelatedsnippetsgetleftbuttonmouse)]
 
  <xref:System.Windows.Input.Mouse>和<xref:System.Windows.Input.Keyboard>中更详细地介绍本概述介绍了类。
 
 ### <a name="stylus-input"></a>触笔输入
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持集成的<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是变得流行的笔输入[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序可以通过使用鼠标 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 将触笔视为鼠标，但 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也公开了触笔设备抽象，其使用的模型与键盘和鼠标类似。  所有与触笔相关的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 都包含单词“触笔”。
 
- 由于触笔可充当鼠标，因此仅支持鼠标输入的应用程序仍可以自动获得一定程度的触笔支持。 以这种方式使用触笔时，应用程序有能力处理相应的触笔事件，然后处理相应的鼠标事件。 此外，通过触笔设备抽象也可以使用墨迹输入等较高级别的服务。  有关墨迹输入的详细信息，请参阅[墨迹入门](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)。
+ 由于触笔可充当鼠标，因此仅支持鼠标输入的应用程序仍可以自动获得一定程度的触笔支持。 以这种方式使用触笔时，应用程序有能力处理相应的触笔事件，然后处理相应的鼠标事件。 此外，通过触笔设备抽象也可以使用墨迹输入等较高级别的服务。  有关墨迹输入的详细信息，请参阅[墨迹入门](getting-started-with-ink.md)。
 
 <a name="event_routing"></a>
 ## <a name="event-routing"></a>事件路由
- 一个<xref:System.Windows.FrameworkElement>可以包含其他元素，作为在其内容模型中，从而形成一个树的元素的子元素。  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，父元素可以通过处理事件来参与定向到其子元素或其他后代的输入。 这特别适合于从较小的控件中生成控件，该过程称为“控件组合”或“合成”。 有关元素树以及元素树如何与事件路由关联的详细信息，请参阅 [WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)。
+ 一个<xref:System.Windows.FrameworkElement>可以包含其他元素，作为在其内容模型中，从而形成一个树的元素的子元素。  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，父元素可以通过处理事件来参与定向到其子元素或其他后代的输入。 这特别适合于从较小的控件中生成控件，该过程称为“控件组合”或“合成”。 有关元素树以及元素树如何与事件路由关联的详细信息，请参阅 [WPF 中的树](trees-in-wpf.md)。
 
- 事件路由是将事件转发到多个元素的过程，以便使路由中的特定对象或元素可以选择对已由其他元素指明来源的事件提供重要响应（通过处理）。  路由事件使用三种路由机制的其中一种：直接、浮升和隧道。  在直接路由中，源元素是收到通知的唯一元素，事件不会路由至任何其他元素。 但是相对于标准 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件，直接路由事件仍然提供一些仅针对路由事件而存在的其他功能。 浮升操作在元素树中向上进行，首先通知指明了事件来源的第一个元素，然后是父元素等等。  隧道操作从元素树的根开始，然后向下进行，以原始的源元素结束。  有关路由事件的详细信息，请参阅[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。
+ 事件路由是将事件转发到多个元素的过程，以便使路由中的特定对象或元素可以选择对已由其他元素指明来源的事件提供重要响应（通过处理）。  路由事件使用三种路由机制的其中一种：直接、浮升和隧道。  在直接路由中，源元素是收到通知的唯一元素，事件不会路由至任何其他元素。 但是相对于标准 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件，直接路由事件仍然提供一些仅针对路由事件而存在的其他功能。 浮升操作在元素树中向上进行，首先通知指明了事件来源的第一个元素，然后是父元素等等。  隧道操作从元素树的根开始，然后向下进行，以原始的源元素结束。  有关路由事件的详细信息，请参阅[路由事件概述](routed-events-overview.md)。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 输入事件通常成对出现，由一个隧道事件和一个冒泡事件组成。  隧道事件与冒泡事件的不同之处在于它有“预览”前缀。  例如，<xref:System.Windows.Input.Mouse.PreviewMouseMove>是鼠标移动事件的隧道版本和<xref:System.Windows.Input.Mouse.MouseMove>是此事件的冒泡版本。 此事件配对是在元素级别实现的一种约定，不是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系统的固有功能。 有关详细信息，请参阅[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)中的 WPF 输入事件部分。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 输入事件通常成对出现，由一个隧道事件和一个冒泡事件组成。  隧道事件与冒泡事件的不同之处在于它有“预览”前缀。  例如，<xref:System.Windows.Input.Mouse.PreviewMouseMove>是鼠标移动事件的隧道版本和<xref:System.Windows.Input.Mouse.MouseMove>是此事件的冒泡版本。 此事件配对是在元素级别实现的一种约定，不是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系统的固有功能。 有关详细信息，请参阅[路由事件概述](routed-events-overview.md)中的 WPF 输入事件部分。
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>处理输入事件
@@ -82,33 +82,33 @@ ms.locfileid: "48842783"
 
  该示例的第一个部分创建<xref:System.Windows.Controls.StackPanel>并<xref:System.Windows.Controls.Button>，并将附加的事件处理程序<xref:System.Windows.UIElement.KeyDown>。
 
- [!code-xaml[InputOvw#Input_OvwKeyboardExampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwkeyboardexamplexaml)]
+ [!code-xaml[InputOvw#Input_OvwKeyboardExampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwkeyboardexamplexaml)]
 
- [!code-csharp[InputOvw#Input_OvwKeyboardExampleUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexampleuicodebehind)]
- [!code-vb[InputOvw#Input_OvwKeyboardExampleUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexampleuicodebehind)]
+ [!code-csharp[InputOvw#Input_OvwKeyboardExampleUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexampleuicodebehind)]
+ [!code-vb[InputOvw#Input_OvwKeyboardExampleUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexampleuicodebehind)]
 
  第二部分用代码编写，定义了事件处理程序。  向左的箭头键按下时，<xref:System.Windows.Controls.Button>具有键盘焦点，处理程序将运行并<xref:System.Windows.Controls.Control.Background%2A>的颜色<xref:System.Windows.Controls.Button>更改。  如果按下了键，但它不是向的左键<xref:System.Windows.Controls.Control.Background%2A>颜色<xref:System.Windows.Controls.Button>更改回其开始颜色。
 
- [!code-csharp[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexamplehandlercodebehind)]
- [!code-vb[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexamplehandlercodebehind)]
+ [!code-csharp[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwkeyboardexamplehandlercodebehind)]
+ [!code-vb[InputOvw#Input_OvwKeyboardExampleHandlerCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwkeyboardexamplehandlercodebehind)]
 
 ### <a name="mouse-input-event-example"></a>鼠标输入事件示例
  在以下示例中，<xref:System.Windows.Controls.Control.Background%2A>色<xref:System.Windows.Controls.Button>当鼠标指针进入更改<xref:System.Windows.Controls.Button>。  <xref:System.Windows.Controls.Control.Background%2A>颜色将还原当鼠标离开<xref:System.Windows.Controls.Button>。
 
  该示例的第一个部分创建<xref:System.Windows.Controls.StackPanel>和<xref:System.Windows.Controls.Button>控制，并将附加的事件处理程序<xref:System.Windows.UIElement.MouseEnter>并<xref:System.Windows.UIElement.MouseLeave>事件到<xref:System.Windows.Controls.Button>。
 
- [!code-xaml[InputOvw#Input_OvwMouseExampleXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwmouseexamplexaml)]
+ [!code-xaml[InputOvw#Input_OvwMouseExampleXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwmouseexamplexaml)]
 
- [!code-csharp[InputOvw#Input_OvwMouseExampleUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleuicodebehind)]
- [!code-vb[InputOvw#Input_OvwMouseExampleUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleuicodebehind)]
+ [!code-csharp[InputOvw#Input_OvwMouseExampleUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleuicodebehind)]
+ [!code-vb[InputOvw#Input_OvwMouseExampleUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleuicodebehind)]
 
  该示例的第二部分用代码编写，定义了事件处理程序。  当鼠标进入<xref:System.Windows.Controls.Button>，则<xref:System.Windows.Controls.Control.Background%2A>的颜色<xref:System.Windows.Controls.Button>更改为<xref:System.Windows.Media.Brushes.SlateGray%2A>。  当鼠标离开<xref:System.Windows.Controls.Button>，则<xref:System.Windows.Controls.Control.Background%2A>的颜色<xref:System.Windows.Controls.Button>更改回<xref:System.Windows.Media.Brushes.AliceBlue%2A>。
 
- [!code-csharp[InputOvw#Input_OvwMouseExampleEneterHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleeneterhandler)]
- [!code-vb[InputOvw#Input_OvwMouseExampleEneterHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleeneterhandler)]
+ [!code-csharp[InputOvw#Input_OvwMouseExampleEneterHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleeneterhandler)]
+ [!code-vb[InputOvw#Input_OvwMouseExampleEneterHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleeneterhandler)]
 
- [!code-csharp[InputOvw#Input_OvwMouseExampleLeaveHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleleavehandler)]
- [!code-vb[InputOvw#Input_OvwMouseExampleLeaveHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleleavehandler)]
+ [!code-csharp[InputOvw#Input_OvwMouseExampleLeaveHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwmouseexampleleavehandler)]
+ [!code-vb[InputOvw#Input_OvwMouseExampleLeaveHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwmouseexampleleavehandler)]
 
 <a name="text_input"></a>
 ## <a name="text-input"></a>文本输入
@@ -122,19 +122,19 @@ ms.locfileid: "48842783"
 
  第一段代码或标记创建用户界面。
 
- [!code-xaml[InputOvw#Input_OvwTextInputXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwtextinputxaml)]
+ [!code-xaml[InputOvw#Input_OvwTextInputXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#input_ovwtextinputxaml)]
 
- [!code-csharp[InputOvw#Input_OvwTextInputUICodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputuicodebehind)]
- [!code-vb[InputOvw#Input_OvwTextInputUICodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputuicodebehind)]
+ [!code-csharp[InputOvw#Input_OvwTextInputUICodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputuicodebehind)]
+ [!code-vb[InputOvw#Input_OvwTextInputUICodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputuicodebehind)]
 
  第二段代码包含事件处理程序。
 
- [!code-csharp[InputOvw#Input_OvwTextInputHandlersCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputhandlerscodebehind)]
- [!code-vb[InputOvw#Input_OvwTextInputHandlersCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputhandlerscodebehind)]
+ [!code-csharp[InputOvw#Input_OvwTextInputHandlersCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml.cs#input_ovwtextinputhandlerscodebehind)]
+ [!code-vb[InputOvw#Input_OvwTextInputHandlersCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InputOvw/VisualBasic/Page1.xaml.vb#input_ovwtextinputhandlerscodebehind)]
 
  由于输入的事件的事件路由，向上冒泡<xref:System.Windows.Controls.StackPanel>接收的输入不管哪个元素具有键盘焦点。 <xref:System.Windows.Controls.TextBox>控件首先得到通知并`OnTextInputKeyDown`仅当调用处理程序<xref:System.Windows.Controls.TextBox>未处理输入。 如果<xref:System.Windows.UIElement.PreviewKeyDown>而不是使用事件<xref:System.Windows.UIElement.KeyDown>事件，`OnTextInputKeyDown`首先调用处理程序。
 
- 在此示例中，处理逻辑写入了两次，分别针对 CTRL+O和按钮的单击事件。 使用命令，而不是直接处理输入事件，可简化此过程。  本概述和[命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)中将讨论这些命令。
+ 在此示例中，处理逻辑写入了两次，分别针对 CTRL+O和按钮的单击事件。 使用命令，而不是直接处理输入事件，可简化此过程。  本概述和[命令概述](commanding-overview.md)中将讨论这些命令。
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>触摸和操作
@@ -210,11 +210,11 @@ ms.locfileid: "48842783"
 
 -   <xref:System.Windows.UIElement.LostTouchCapture>
 
- 像键盘和鼠标事件一样，触摸事件也是路由事件。 以 `Preview` 开头的事件是隧道事件，以 `Touch` 开头的事件是冒泡事件。 有关路由事件的详细信息，请参阅[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。 在您处理这些事件，可以通过调用获取的输入，相对于任何元素的位置<xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A>或<xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A>方法。
+ 像键盘和鼠标事件一样，触摸事件也是路由事件。 以 `Preview` 开头的事件是隧道事件，以 `Touch` 开头的事件是冒泡事件。 有关路由事件的详细信息，请参阅[路由事件概述](routed-events-overview.md)。 在您处理这些事件，可以通过调用获取的输入，相对于任何元素的位置<xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A>或<xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A>方法。
 
  为了理解触控事件之间的交互，请考虑以下这种情况：用户将一个手指放在元素上，在该元素中移动手指，然后将手指从该元素上移开。 下图显示了冒泡事件的执行（为简单起见，省略了隧道事件）。
 
- ![触摸事件的顺序。](../../../../docs/framework/wpf/advanced/media/ndp-touchevents.png "NDP_TouchEvents")触摸事件
+ ![触摸事件的顺序。](./media/ndp-touchevents.png "NDP_TouchEvents")触摸事件
 
  下列内容描述了上图中的事件顺序。
 
@@ -243,7 +243,7 @@ ms.locfileid: "48842783"
 
  使对象响应操作时，可以让对象看起来具有惯性。 这样可以使对象模拟真实的世界。 例如，在桌子上推一本书时，如果你足够用力，书将在你松手后继续移动。 利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，可以通过在用户的手指松开对象后引发操作事件来模拟这种行为。
 
- 如需深入了解如何创建使用户可以对对象进行移动、调整大小和旋转的应用程序，请参阅[演练：创建你的第一个触控应用程序](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)。
+ 有关如何创建使用户能够移动、 调整大小和旋转对象的应用程序的信息，请参阅[演练：创建第一个触控应用程序](walkthrough-creating-your-first-touch-application.md)。
 
  <xref:System.Windows.UIElement>定义了以下操作事件。
 
@@ -266,7 +266,7 @@ ms.locfileid: "48842783"
 
  下图显示了操作事件的执行路径和每个事件的重要信息。
 
- ![操作事件的顺序。](../../../../docs/framework/wpf/advanced/media/ndp-manipulationevents.png "NDP_ManipulationEvents")操作事件
+ ![操作事件的顺序。](./media/ndp-manipulationevents.png "NDP_ManipulationEvents")操作事件
 
  下列内容描述了上图中的事件顺序。
 
@@ -297,7 +297,7 @@ ms.locfileid: "48842783"
 ### <a name="the-relationship-between-touch-and-manipulation-events"></a>触摸事件和操作事件之间的关系
  一个<xref:System.Windows.UIElement>始终可以接收触控事件。 当<xref:System.Windows.UIElement.IsManipulationEnabled%2A>属性设置为`true`、<xref:System.Windows.UIElement>可以接收触摸和操作事件。  如果<xref:System.Windows.UIElement.TouchDown>不处理事件 (即<xref:System.Windows.RoutedEventArgs.Handled%2A>属性是`false`)，操作逻辑的元素触摸屏输入捕获和生成操作事件。 如果<xref:System.Windows.RoutedEventArgs.Handled%2A>属性设置为`true`中<xref:System.Windows.UIElement.TouchDown>事件，操作逻辑不会生成操作事件。 下图显示了触摸事件和操作事件之间的关系。
 
- ![触摸和操作事件之间的关系](../../../../docs/framework/wpf/advanced/media/ndp-touchmanipulateevents.png "NDP_TouchManipulateEvents")触摸和操作事件
+ ![触摸和操作事件之间的关系](./media/ndp-touchmanipulateevents.png "NDP_TouchManipulateEvents")触摸和操作事件
 
  下列内容描述了上图中所示的触摸事件和操作事件之间的关系。
 
@@ -322,10 +322,10 @@ ms.locfileid: "48842783"
 
  下面的示例使用<xref:System.Windows.Input.Keyboard.Focus%2A>上设置键盘焦点<xref:System.Windows.Controls.Button>。  应用程序中设置初始焦点的建议的位置是在<xref:System.Windows.FrameworkElement.Loaded>事件处理程序。
 
- [!code-csharp[focussample#FocusSampleSetFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
- [!code-vb[focussample#FocusSampleSetFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]
+ [!code-csharp[focussample#FocusSampleSetFocus](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplesetfocus)]
+ [!code-vb[focussample#FocusSampleSetFocus](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplesetfocus)]
 
- 有关键盘焦点的详细信息，请参阅[焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)。
+ 有关键盘焦点的详细信息，请参阅[焦点概述](focus-overview.md)。
 
 ### <a name="logical-focus"></a>逻辑焦点
  逻辑焦点指<xref:System.Windows.Input.FocusManager.FocusedElement%2A?displayProperty=nameWithType>焦点范围中。  一个应用程序中可以有多个具有逻辑焦点的元素，但在一个特定的焦点范围中只能有一个具有逻辑焦点的元素。
@@ -336,10 +336,10 @@ ms.locfileid: "48842783"
 
  以下示例使<xref:System.Windows.Controls.StackPanel>转变为焦点范围，通过设置<xref:System.Windows.Input.FocusManager.IsFocusScope%2A>附加属性。
 
- [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]
+ [!code-xaml[MarkupSnippets#MarkupIsFocusScopeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/MarkupSnippets/CSharp/Window1.xaml#markupisfocusscopexaml)]
 
- [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
- [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]
+ [!code-csharp[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
+ [!code-vb[FocusSnippets#FocusSetIsFocusScope](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]
 
  中的类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]为焦点范围的默认值是<xref:System.Windows.Window>， <xref:System.Windows.Controls.Menu>， <xref:System.Windows.Controls.ToolBar>，和<xref:System.Windows.Controls.ContextMenu>。
 
@@ -347,7 +347,7 @@ ms.locfileid: "48842783"
 
  若要确定焦点范围中具有焦点的元素，请使用<xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>。 若要更改焦点范围的焦点的元素，请使用<xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>。
 
- 有关逻辑焦点的详细信息，请参阅[焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)。
+ 有关逻辑焦点的详细信息，请参阅[焦点概述](focus-overview.md)。
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>鼠标位置
@@ -355,7 +355,7 @@ ms.locfileid: "48842783"
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>鼠标捕获
- 鼠标设备专门保留称为鼠标捕获的模式特征。 鼠标捕获用于在拖放操作开始时保持转换的输入状态，从而不一定发生涉及鼠标指针的标称屏幕位置的其他操作。 拖动过程中，未终止拖放时用户无法单击，这使得大多数鼠标悬停提示在拖动来源拥有鼠标捕获时是不合适的。 输入系统公开了可确定鼠标捕获状态的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 以及可强制在特定元素上捕获鼠标或清除鼠标捕获状态的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 有关拖放操作的详细信息，请参阅[拖放概述](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)。
+ 鼠标设备专门保留称为鼠标捕获的模式特征。 鼠标捕获用于在拖放操作开始时保持转换的输入状态，从而不一定发生涉及鼠标指针的标称屏幕位置的其他操作。 拖动过程中，未终止拖放时用户无法单击，这使得大多数鼠标悬停提示在拖动来源拥有鼠标捕获时是不合适的。 输入系统公开了可确定鼠标捕获状态的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 以及可强制在特定元素上捕获鼠标或清除鼠标捕获状态的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 有关拖放操作的详细信息，请参阅[拖放概述](drag-and-drop-overview.md)。
 
 <a name="commands"></a>
 ## <a name="commands"></a>命令
@@ -363,18 +363,18 @@ ms.locfileid: "48842783"
 
  <xref:System.Windows.Input.RoutedCommand> 是[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的实现<xref:System.Windows.Input.ICommand>。  当<xref:System.Windows.Input.RoutedCommand>执行时，<xref:System.Windows.Input.CommandManager.PreviewExecuted>和<xref:System.Windows.Input.CommandManager.Executed>的隧道和冒泡元素树与其他输入一样在命令目标上引发事件。  如果未设置命令目标，则具有键盘焦点的元素将成为命令目标。  执行此命令的逻辑附加到<xref:System.Windows.Input.CommandBinding>。  当<xref:System.Windows.Input.CommandManager.Executed>事件到达<xref:System.Windows.Input.CommandBinding>针对该特定命令<xref:System.Windows.Input.ExecutedRoutedEventHandler>上<xref:System.Windows.Input.CommandBinding>调用。  此处理程序执行该命令的操作。
 
- 有关命令的详细信息，请参阅[命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)。
+ 有关命令的详细信息，请参阅[命令概述](commanding-overview.md)。
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一个常用的命令组成的库<xref:System.Windows.Input.ApplicationCommands>， <xref:System.Windows.Input.MediaCommands>， <xref:System.Windows.Input.ComponentCommands>， <xref:System.Windows.Input.NavigationCommands>，和<xref:System.Windows.Documents.EditingCommands>，也可以定义您自己。
 
  下面的示例演示如何设置<xref:System.Windows.Controls.MenuItem>，以便单击时它将调用<xref:System.Windows.Input.ApplicationCommands.Paste%2A>命令<xref:System.Windows.Controls.TextBox>，那么<xref:System.Windows.Controls.TextBox>具有键盘焦点。
 
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]
 
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]
 
- 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的命令的详细信息，请参阅[命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)。
+ 有关 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的命令的详细信息，请参阅[命令概述](commanding-overview.md)。
 
 <a name="the_input_system_and_base_elements"></a>
 ## <a name="the-input-system-and-base-elements"></a>输入系统和基元素
@@ -388,7 +388,11 @@ ms.locfileid: "48842783"
 ## <a name="whats-next"></a>下一步
  现在有多种方法来处理 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的输入。  你还应该对 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用的各种类型的输入事件和路由事件机制有进一步的了解。
 
- 也可以获取更详细说明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 框架元素和事件路由的详细资源。 有关详细信息，请参阅以下概述：[命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)、[焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)、[基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)、[WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)和[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。
+ 也可以获取更详细说明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 框架元素和事件路由的详细资源。 有关详细信息，请参阅以下概述：[命令概述](commanding-overview.md)、[焦点概述](focus-overview.md)、[基元素概述](base-elements-overview.md)、[WPF 中的树](trees-in-wpf.md)和[路由事件概述](routed-events-overview.md)。
 
 ## <a name="see-also"></a>请参阅
- [焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)[命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)[基元素概述](../../../../docs/framework/wpf/advanced/base-elements-overview.md)[属性](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [焦点概述](focus-overview.md)
+- [命令概述](commanding-overview.md)
+- [路由事件概述](routed-events-overview.md)
+- [基元素概述](base-elements-overview.md)
+- [属性](properties-wpf.md)

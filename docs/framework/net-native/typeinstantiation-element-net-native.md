@@ -1,17 +1,17 @@
 ---
-title: '&lt;类型实例化&gt;元素 (.NET Native)'
+title: <TypeInstantiation>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5277b056c11de4c3e32d33c72bafc8f64ee17d05
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 928d3c528bef6d319f50464a0648e61de2603eb2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033859"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256615"
 ---
-# <a name="lttypeinstantiationgt-element-net-native"></a>&lt;类型实例化&gt;元素 (.NET Native)
+# <a name="typeinstantiation-element-net-native"></a>\<类型实例化 > 元素 (.NET Native)
 将运行时反射策略应用到一个构造泛型类型。  
   
 ## <a name="syntax"></a>语法  
@@ -116,7 +116,7 @@ ms.locfileid: "50033859"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>请参阅
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

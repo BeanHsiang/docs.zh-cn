@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23612e6729314d988eed9401539547b133d4a9fa
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d861aa59b31871d20d21d88d9587239f76ae386d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201632"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203634"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 迁移问题
 
@@ -42,10 +42,10 @@ ms.locfileid: "50201632"
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
-| **浏览器定义文件** | 浏览器定义文件已更新，以包括有关新的和已更新的浏览器和设备的信息。 旧式浏览器和设备（如 Netscape Navigator）已被删除，并且已添加更新的浏览器和设备（如 Google Chrome 和 Apple iPhone）。<br><br>如果应用程序包含的自定义浏览器定义继承自一个已删除的浏览器定义，将会出现错误。<br><br><xref:System.Web.HttpBrowserCapabilities> 对象（由页的 `Request.Browse` 属性公开）由浏览器定义文件驱动。 因此，通过在 ASP.NET 4 中访问此对象的属性返回的信息可能与早期版本的 ASP.NET 中已返回的信息不同。 | 如果应用程序依赖于旧式浏览器定义文件，可从以下文件夹复制这些文件：<br><br>Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers<br><br>将这些文件复制到 ASP.NET 4 对应的 \\CONFIG\\Browsers 文件夹中。 复制这些文件之后，请运行 [Aspnet_regbrowsers.exe](https://msdn.microsoft.com/library/ms229858.aspx) 命令行工具。 有关详细信息，请参阅 [https://www.asp.net/mobile](/aspnet/mobile/overview) 网站。 |
+| **浏览器定义文件** | 浏览器定义文件已更新，以包括有关新的和已更新的浏览器和设备的信息。 旧式浏览器和设备（如 Netscape Navigator）已被删除，并且已添加更新的浏览器和设备（如 Google Chrome 和 Apple iPhone）。<br><br>如果应用程序包含的自定义浏览器定义继承自一个已删除的浏览器定义，将会出现错误。<br><br><xref:System.Web.HttpBrowserCapabilities> 对象（由页的 `Request.Browse` 属性公开）由浏览器定义文件驱动。 因此，通过在 ASP.NET 4 中访问此对象的属性返回的信息可能与早期版本的 ASP.NET 中已返回的信息不同。 | 如果应用程序依赖于旧式浏览器定义文件，可从以下文件夹复制这些文件：<br><br>Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers<br><br>将这些文件复制到 ASP.NET 4 对应的 \\CONFIG\\Browsers 文件夹中。 复制这些文件之后，请运行 [Aspnet_regbrowsers.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229858(v=vs.90)) 命令行工具。 有关详细信息，请参阅 [https://www.asp.net/mobile](/aspnet/mobile/overview) 网站。 |
 | **在混合版本的 ASP.NET 下运行的子应用程序** | 由于配置或编译错误，配置为运行 ASP.NET 早期版本的应用程序子级的 ASP.NET 4 应用程序可能无法启动。 发生的具体错误取决于应用程序是在 IIS 6.0、IIS 7 还是 IIS 7.5 下运行。 | 可对受影响应用程序的配置文件进行更改，以便配置系统能正确识别 ASP.NET 4 应用程序。 有关必须进行的更改的信息，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes)（ASP.NET 4 重大更改）文档中“ASP.NET 4 子应用程序在 ASP.NET 2.0 或 ASP.NET 3.5 应用程序下启动失败”一节。 |
 | **ClientID 更改** | 利用 ASP.NET 4 中的新 `clientIDMode` 设置，可指定 ASP.NET 生成 HTML 元素的 `id` 特性的方式。 在 ASP.NET 的早期版本中，默认行为与 `clientIDMode` 的 `AutoID` 设置等效。 现在的默认设置为 `Predictable`。 有关详细信息，请参阅 [ASP.NET Web 服务器控件标识](https://docs.microsoft.com/previous-versions/aspnet/1d04y8ss%28v=vs.100%29)。 | 如果使用 Visual Studio 从 ASP.NET 2.0 或 ASP.NET 3.5 升级应用程序，则此工具会自动向 Web.config 文件添加设置，保留早期版本的 .NET Framework 的行为。 但是，如果通过在 IIS 中将应用程序池更改为面向 .NET Framework 4 来升级应用程序，ASP.NET 默认使用新的模式。 若要禁用新的客户端 ID 模式，请将以下设置添加到 Web.config 文件：<br><br>`<pages clientIDMode="AutoID" />` |
-| **代码访问安全性 (CAS)** | ASP.NET 3.5 中已添加的 ASP.NET 2.0 NET 功能使用 .NET Framework 1.1 和 .NET Framework 2.0 代码访问安全性 (CAS) 模型。 但是，实质上已对 ASP.NET 4 中的 CAS 实现进行了检查。 因此，依赖于在全局程序集缓存中运行的受信任代码的部分信任 ASP.NET 应用程序可能失败，并引发各种安全异常。 此外，依赖于对计算机 CAS 策略进行的大量修改的部分信任应用程序也可能失败，并引发安全异常。 | 可通过使用 `trust` 配置元素中的新 `legacyCasModel` 特性，将部分信任 ASP.NET 4 应用程序还原为 ASP.NET 1.1 和 2.0 的行为，如下面的示例所示：<br><br>`<trust level= "Medium" legacyCasModel="true" />`<br><br>重要说明：还原为早期 CAS 模型可能会降低安全性。<br><br>有关新 ASP.NET 4 代码访问安全性模型的详细信息，请参阅 [ASP.NET 4 应用程序中的代码访问安全性](https://msdn.microsoft.com/library/dd984947.aspx)。 |
+| **代码访问安全性 (CAS)** | ASP.NET 3.5 中已添加的 ASP.NET 2.0 NET 功能使用 .NET Framework 1.1 和 .NET Framework 2.0 代码访问安全性 (CAS) 模型。 但是，实质上已对 ASP.NET 4 中的 CAS 实现进行了检查。 因此，依赖于在全局程序集缓存中运行的受信任代码的部分信任 ASP.NET 应用程序可能失败，并引发各种安全异常。 此外，依赖于对计算机 CAS 策略进行的大量修改的部分信任应用程序也可能失败，并引发安全异常。 | 可通过使用 `trust` 配置元素中的新 `legacyCasModel` 特性，将部分信任 ASP.NET 4 应用程序还原为 ASP.NET 1.1 和 2.0 的行为，如下面的示例所示：<br><br>`<trust level= "Medium" legacyCasModel="true" />`<br><br>重要提示：还原为早期 CAS 模型可能会降低安全性。<br><br>有关新 ASP.NET 4 代码访问安全性模型的详细信息，请参阅 [ASP.NET 4 应用程序中的代码访问安全性](https://docs.microsoft.com/previous-versions/dd984947(v=vs.100))。 |
 | **配置文件** | .NET Framework 和 ASP.NET 4 的根配置文件（machine.config 文件和根 Web.config 文件）已经更新，包含在 ASP.NET 3.5 的应用程序 Web.config 文件中找到的大多数样本配置信息。 由于托管 IIS 7 和 IIS 7.5 配置系统的复杂性，在 ASP.NET 4 下以及在 IIS 7 和 IIS 7.5 下运行 ASP.NET 3.5 应用程序会导致 ASP.NET 出错或 IIS 出错。 | 使用 Visual Studio 中的项目升级工具将 ASP.NET 3.5 应用程序升级到 ASP.NET 4。 Visual Studio 2010 自动修改 ASP.NET 3.5 应用程序的 Web.config 文件，以包含 ASP.NET 4 的相应设置。<br><br>不过，可使用 .NET Framework 4 运行 ASP.NET 3.5 应用程序，而无需重新编译。 在此情况下，可能必须先手动修改应用程序的 Web.config 文件，然后在 .NET Framework 4 和 IIS 7 或 IIS 7.5 下运行应用程序。 必须进行的特定更改取决于所使用的软件组合，包括 Service Pack (SP) 版本。 有关受此更改影响的可能软件组合以及如何解决特定组合相关问题的信息，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes)（ASP.NET 4 重大更改）文档中“有关新的 ASP.NET 4 根配置的配置错误”一节。 |
 | **控件呈现** | 在 ASP.NET 的早期版本中，某些控件发出了无法禁用的标记。 默认情况下，ASP.NET 4 中不再生成此类标记。 呈现更改将影响下列控件：<br><br>* `Image` 和 `ImageButton` 控件不再呈现 `border="0"` 特性。<br>* 默认情况下，`BaseValidator` 类和派生自该类的验证控件不再呈现红色文本。<br>* `HtmlForm` 控件不呈现 `name` 特性。<br>* `Table` 控件不再呈现 `border="0"` 特性。<br><br>对于并不设计用于用户输入的控件（例如，`Label` 控件），如果其 `Enabled` 属性设置为 `false`（或者它们从容器控件继承此设置），则这些控件不再呈现 `disabled="disabled"` 特性。 | 如果使用 Visual Studio 从 ASP.NET 2.0 或 ASP.NET 3.5 升级应用程序，此工具会自动向 Web.config 文件添加设置，保留旧的呈现方式。 但是，如果通过在 IIS 中将应用程序池更改为面向 .NET Framework 4 来升级应用程序，ASP.NET 默认使用新的呈现模式。 若要禁用新的呈现模式，请将以下设置添加到 Web.config 文件：<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
 | **默认文档中的事件处理程序** | 在对无扩展的 URL 发出请求（此 URL 具有已映射到它的默认文档）时，ASP.NET 4 会将 HTML `form` 元素的 `action` 特性呈现为空字符串。 在 ASP.NET 的早期版本中，对 `http://contoso.com` 的请求会导致对 Default.aspx 的请求。 在该文档中，开始 `form` 标记的呈现方式如以下示例所示：<br><br>`<form action="Default.aspx" />`<br><br>在 ASP.NET 4 中，对 `http://contoso.com` 的请求还会导致对 Default.aspx 的请求，但此时 ASP.NET 会按以下示例所示方式呈现 HTML 开始 `form` 标记：<br><br>`<form action="" />`<br><br>当 `action` 特性为空字符串时，IIS `DefaultDocumentModule` 对象将创建对 Default.aspx 的子请求。 在大多数情况下，此子请求对于应用程序代码是透明的，并且 Default.aspx 页会正常运行。 但托管代码和 IIS 7 或 IIS 7.5 集成模式之间可能的交互会导致托管 .aspx 页在子请求期间停止正常工作。 如果出现以下情况，则对默认 .aspx 文档的子请求将导致发生错误或意外行为：<br><br>* 将 .aspx 页发送到其 `form` 元素的 `action` 特性设置为 "" 的浏览器。<br>* 将窗体回发到 ASP.NET。<br>* 托管 HTTP 模块读取实体正文的某一部分，如 `Request.Form` 或 `Request.Params`。 这会使 POST 请求的实体正文读入托管内存中。 因此，实体正文不再对在 IIS 7 或 IIS 7.5 集成模式中运行的任何本机代码模块可用。<br>* IIS `DefaultDocumentModule` 对象最终运行并创建对 Default.aspx 文档的子请求。 但由于一段托管代码已读取实体正文，因此没有可发送给子请求的实体正文。<br>* 在对子请求运行 HTTP 管道时，将在处理程序执行阶段运行 .aspx 文件的处理程序。<br><br>由于没有实体正文，因此不存在窗体变量和视图状态。 这样一来，便没有可供 .aspx 页处理程序用来确定应引发哪个事件（如果有）的信息。 因此，不会运行针对受影响 .aspx 页的任何回发事件处理程序。 | 有关解决可能因为此更改而引发的问题的方法，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes)（ASP.NET 4 重大更改）文档中“可能会在 IIS 7 或 IIS 7.5 集成模式下的默认文档中引发的事件处理程序”。 |
@@ -55,12 +55,12 @@ ms.locfileid: "50201632"
 | **ASP.NET 2.0 应用程序中的 HttpException 错误** | 在 IIS 6 上启用 ASP.NET 4 后，IIS 6 上运行的 ASP.NET 2.0 应用程序（在 Windows Server 2003 或 Windows Server 2003 R2 中）可能会生成错误，如下所示：`System.Web.HttpException: Path '/[yourApplicationRoot]/eurl.axd/[Value]' was not found.` | * 如果无需 ASP.NET 4 即可运行网站，请重新映射该网站以改用 ASP.NET 2.0。<br><br>或<br><br>* 如果需要 ASP.NET 4 才能运行网站，请将所有子 ASP.NET 2.0 虚拟目录移至映射到 ASP.NET 2.0 的其他网站。<br><br>或<br><br>* 禁用无扩展 URL。 有关详细信息，请参阅 ASP.NET 网站上的 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes)（ASP.NET 4 重大更改）文档中“ASP.NET 2.0 应用程序可能生成引用 eurl.axd 的 HttpException 错误”。 |
 | **成员资格类型** | 已将 ASP.NET 成员资格中使用的某些类型（例如 <xref:System.Web.Security.MembershipProvider>）从 System.Web.dll 移至 System.Web.ApplicationServices.dll 程序集。 移动这些类型是为了解析客户端中的类型与扩展的 .NET Framework SKU 中的类型之间的体系结构层依赖关系。 | 对于已从早期版本的 ASP.NET 升级的类库以及使用已移动的成员资格类型的类库，在 ASP.NET 4 项目中使用这些类库时，可能无法编译它们。 如果是这样，请在类库项目中添加对 System.Web.ApplicationServices.dll 的引用。 |
 | **Menu 控件更改** | 对 <xref:System.Web.UI.WebControls.Menu> 控件进行更改会导致发生以下行为：<br><br>* 如果 <xref:System.Web.UI.WebControls.MenuRenderingMode> 设置为 `List`，或者 <xref:System.Web.UI.WebControls.MenuRenderingMode> 设置为 `Default`，且 <xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion> 设置为 `4.0` 或更高版本，则 <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl> 属性不起作用。<br>* 如果在 <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> 和 <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl> 属性中设置的路径包含反斜杠 (\\)，则图像不会呈现。 （在 ASP.NET 的早期版本中，路径可包含反斜杠。） | * 设置父 <xref:System.Web.UI.WebControls.Menu> 控件的 <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> 或 <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl>，而不是设置单个菜单项的 <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl> 属性。<br><br>或<br><br>将 <xref:System.Web.UI.WebControls.MenuRenderingMode> 设置为 `Table`，或者将 <xref:System.Web.UI.WebControls.MenuRenderingMode> 设置为 `Default`，并将 <xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion> 设置为 `3.5`。 这些设置会导致 <xref:System.Web.UI.WebControls.Menu> 控件使用在早期版本的 ASP.NET 中使用的基于 HTML 表的布局。<br>* 如果 <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> 或 <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl> 属性中的路径包含反斜杠 (\\)，请替换为斜杠字符 (/)。 |
-| **Web.config 文件中的移动程序集** | 在早期版本的 ASP.NET 中，对 System.Web.Mobile.dll 程序集的引用位于根 Web.config 文件 `assemblies` 节中的 `system.web`/`compilation` 下。 为了提高性能，已删除对此程序集的引用。<br><br>注意：System.Web.Mobile.dll 程序集和 ASP.NET 移动控件包含在 ASP.NET 4 中，但它们已被弃用。 | 若要使用此程序集中的类型，请在根 Web.config 文件或应用程序 Web.config 文件中添加对此程序集的引用。 |
+| **Web.config 文件中的移动程序集** | 在早期版本的 ASP.NET 中，对 System.Web.Mobile.dll 程序集的引用位于根 Web.config 文件 `assemblies` 节中的 `system.web`/`compilation` 下。 为了提高性能，已删除对此程序集的引用。<br><br>注意:System.Web.Mobile.dll 程序集和 ASP.NET 移动控件包含在 ASP.NET 4 中，但它们已被弃用。 | 若要使用此程序集中的类型，请在根 Web.config 文件或应用程序 Web.config 文件中添加对此程序集的引用。 |
 | **输出缓存** | 在 ASP.NET 1.0 中，Bug 会导致缓存页（这些页指定 `Location="ServerAndClient"` 作为输出缓存设置）在响应中发出 `Vary:*` HTTP 标头。 这还能起到告知客户端浏览器绝不要本地对页进行缓存的作用。 ASP.NET 1.1 中已添加 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 方法，可调用此方法来禁止显示 `Vary:*` 标头。 但 Bug 报告表明开发人员不了解现有 `SetOmitVaryStar` 行为。<br><br>在 ASP.NET 4 中，不再从指定以下指令的响应中发出 `Vary:*` HTTP 标头：<br><br>`<%@ OutputCache Location="ServerAndClient" %>`<br><br>因此，不再需要使用 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> 方法即可禁止显示 `Vary:*` 标头。 在为 `Location` 特性指定“ServerAndClient”的应用程序中，可在浏览器中对页进行缓存而无需调用 <xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A>。 | 如果应用程序中的页必须发出 `Vary:*`，请调用 <xref:System.Web.HttpResponse.AppendHeader%2A> 方法，如以下示例所示：<br><br>`System.Web.HttpResponse.AppendHeader("Vary","*");`<br><br>或者，可将输出缓存 `Location` 特性的值更改为“Server”。 |
 | **页分析** | ASP.NET 4 中针对 ASP.NET 网页（.aspx 文件）和用户控件（.aspx 文件）的页分析器不仅比早期版本的 ASP.NET 中的页分析器更为严格，而且会将更多的标记设为无效。 | 检查在页运行时产生的错误消息并纠正因无效标记导致的错误。 |
 | **Passport 类型** | 由于 Passport（现在为 Live ID SDK）中的更改，ASP.NET 2.0 中内置的 Passport 支持已过时且不受支持。 因此，现在用 `ObsoleteAttribute` 特性标记 <xref:System.Web.Security> 中与 Passport 相关的类型。 | 更改使用 <xref:System.Web.Security> 命名空间中的 Passport 类型（例如，<xref:System.Web.Security.PassportIdentity>）的所有代码，以使用 [SDK](https://go.microsoft.com/fwlink/?LinkId=106346)。 |
 | **FilePath 属性中的 PathInfo 信息** | ASP.NET 4 不再将 `PathInfo` 值加入从属性（如 <xref:System.Web.HttpRequest.FilePath>、<xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath> 和 <xref:System.Web.HttpRequest.CurrentExecutionFilePath>）返回的值中。 而是在 <xref:System.Web.HttpRequest.PathInfo> 中提供 `PathInfo` 信息。 例如，假定以下 URL 片段：<br><br>`/testapp/Action.mvc/SomeAction`<br><br>在 ASP.NET 的早期版本中，<xref:System.Web.HttpRequest> 属性具有以下值：<br><br>* <xref:System.Web.HttpRequest.FilePath>：`/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>：（空）<br><br>而在 ASP.NET 4 中，<xref:System.Web.HttpRequest> 属性具有以下值：<br><br>* <xref:System.Web.HttpRequest.FilePath>：`/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>：`SomeAction` | 检查所依赖 <xref:System.Web.HttpRequest> 类的属性所在位置的代码以返回路径信息；更改代码以反映对返回路径信息的方式的更改。 |
-| **请求验证** | 为了改进请求验证，将在请求生命周期中提早调用 ASP.NET 请求验证。 因此，将为不是针对 .aspx 文件的请求（如针对 Web 服务调用和自定义处理程序的请求）运行请求验证。 此外，在请求处理管道中运行自定义 HTTP 模块时，请求验证也处于活动状态。<br><br>进行此更改后，针对 .aspx 文件之外的资源的请求可能会引发请求验证错误。 在请求管道（例如，自定义 HTTP 模块）中运行的自定义代码也可能会引发请求验证错误。 | 如有必要，可通过使用 Web 配置文件中的以下设置，还原为仅让 .aspx 页触发请求验证这一旧行为：<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>警告：如果还原为旧行为，请确保现有处理程序中的所有代码、模块和其他自定义代码对潜在的不安全 HTTP 输入（可能是 XSS 攻击途径）进行检查。 |
+| **请求验证** | 为了改进请求验证，将在请求生命周期中提早调用 ASP.NET 请求验证。 因此，将为不是针对 .aspx 文件的请求（如针对 Web 服务调用和自定义处理程序的请求）运行请求验证。 此外，在请求处理管道中运行自定义 HTTP 模块时，请求验证也处于活动状态。<br><br>进行此更改后，针对 .aspx 文件之外的资源的请求可能会引发请求验证错误。 在请求管道（例如，自定义 HTTP 模块）中运行的自定义代码也可能会引发请求验证错误。 | 如有必要，可通过使用 Web 配置文件中的以下设置，还原为仅让 .aspx 页触发请求验证这一旧行为：<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>警告：如果还原为旧行为，请确保现有处理程序中的所有代码、模块和其他自定义代码对潜在不安全的 HTTP 输入（可能是 XSS 攻击途径）进行检查。 |
 | **路由** | 如果在 Visual Studio 2010 中创建一个文件系统网站，并且该网站位于其名称包含点 (.) 的文件夹中，则 URL 路由不会可靠地工作。 从某些虚拟路径返回 HTTP 404 错误。 发生此情况的原因是，Visual Studio 2010 使用错误的根虚拟目录路径启动了 Visual Studio 开发服务器。 | * 在基于文件的网站的“属性”页中，将“虚拟路径”特性更改为“/”。<br><br>或<br><br>* 创建 Web 应用程序项目而非网站项目。 Web 应用程序项目不会出现此问题，并且 URL 路由会正常工作，即使项目文件夹的名称中包含点也是如此。<br><br>或<br><br>* 创建在 IIS 中托管的基于 HTTP 的网站。 IIS 托管的网站可在虚拟路径和项目文件文件夹中包含点。 |
 | **SharePoint 站点** | 如果尝试运行部署为 SharePoint 网站（包含名为 `WSS_Minimal` 的自定义部分信任级别）的子级的 ASP.NET 4 网站，将出现以下错误：<br><br>`Could not find permission set named 'ASP.Net'.` | 目前，所有版本的 SharePoint 都与 ASP.NET 不兼容。 因此，不应尝试将 ASP.NET 4 网站作为 SharePoint 网站的子级运行。 |
 | **XHTML 1.1 标准** | 为了实现新网站的 XHTML 1.1 符合性，.NET Framework 4 中的 ASP.NET 控件将生成符合 XHTML 1.1 的 HTML。 使用 `<system.Web>` 元素内 Web.config 文件中的以下选项可启用此呈现：<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>默认情况下，此选项设置为 4.0。 从 Visual Studio 2008 进行升级的 Web 项目启用 3.5 设置以实现兼容性。 | 无。 |
@@ -95,7 +95,7 @@ ms.locfileid: "50201632"
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
-| **区域性名称** | 以下名称更改影响德语、第维埃语和非洲语区域性：<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>：德语（瑞士）(de-CH) 区域性的货币名称已从“sFr.”更改 为“Fr.”。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>：第维埃语（马尔代夫）(dv-MV) 区域性的长日期模式已从“dd/MMMM/yyyy”更改为“dd/MM/yyyy”。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>： 南非荷兰语（南非）(af-ZA) 区域性的 P.M. 指示符已从“nm”更改为“PM”。 | 注意区域性名称更改。 |
+| **区域性名称** | 以下名称更改影响德语、第维埃语和非洲语区域性：<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>：德语（瑞士）(de-CH) 区域性的货币名称已从“sFr.”更改 为“Fr.”。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>：第维埃语（马尔代夫）(dv-MV) 区域性的长日期模式已从“dd/MMMM/yyyy”更改为“dd/MM/yyyy”。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>：此 南非荷兰语（南非）(af-ZA) 区域性的 P.M. 指示符已从“nm”更改为“PM”。 | 注意区域性名称更改。 |
 | **LCID 参数** | 为了与自动化服务器设置中的预期行为保持一致，CLR 不再将 `LCID` 参数的当前区域性传递给基于 COM 的非托管应用程序。 而是为区域性传递 1033 (en-us)。 | 无需进行任何修改，只不过本机应用程序需要指定的区域性。 |
 | **已过时的区域性类型** | <xref:System.Globalization.CultureTypes> 和 <xref:System.Globalization.CultureTypes> 区域性类型现已过时。<br><br>为了实现向后兼容，<xref:System.Globalization.CultureTypes> 现返回 .NET Framework 早期版本中附带的非特定区域性和特定区域性，而 <xref:System.Globalization.CultureTypes> 现返回一个空列表。 | 使用 <xref:System.Globalization.CultureTypes> 枚举的其他值。 |
 | **检索区域性** | 自 Windows 7 开始，.NET Framework 4 从操作系统检索区域性信息，而不是存储数据本身。 此外，.NET Framework 与 Windows 同步，以便对数据进行排序并设置其大小写。 | 无。 |
@@ -157,7 +157,7 @@ ms.locfileid: "50201632"
 
 下表介绍了对之前具有限制或其他问题的功能的改进。
 
-命名空间：<xref:System.Data>、<xref:System.Data.Objects> 和 <xref:System.Data.Objects.DataClasses>；程序集：System.Data.Entity（在 System.Data.Entity.dll 中）
+命名空间：<xref:System.Data>、<xref:System.Data.Objects>、<xref:System.Data.Objects.DataClasses>；程序集：System.Data.Entity（在 System.Data.Entity.dll 中）
 
 | 功能 | 与 3.5 SP1 的差异 |
 | ------- | ------------------------ |
@@ -181,7 +181,7 @@ ms.locfileid: "50201632"
 
 下表介绍了对之前具有限制或其他问题的功能的改进。
 
-命名空间：<xref:System.Data.Services>、<xref:System.Data.Services.Client>、<xref:System.Data.Services.Common> 和 <xref:System.Data.Services.Providers>；程序集：System.Data.Services（在 System.Data.dll 中）、System.Data.Services.Client（在 System.Data.Entity.dll 中）
+命名空间：<xref:System.Data.Services>、<xref:System.Data.Services.Client>、<xref:System.Data.Services.Common>、<xref:System.Data.Services.Providers>；程序集：System.Data.Services（在 System.Data.Services.dll 中）、System.Data.Services.Client（在 System.Data.Services.Client.dll 中）
 
 | 功能 | 与 3.5 SP1 的差异 |
 | ------- | ------------------------ |
@@ -222,7 +222,7 @@ ms.locfileid: "50201632"
 
 ### <a name="controls"></a>控件
 
-命名空间：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>；程序集：PresentationFramework（在 PresentationFramework.dll 中）、PresentationCore（在 PresentationCore.dll 中）、WindowsBase（在 WindowsBase.dll 中）
+命名空间：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>；程序集：PresentationFramework（在 PresentationFramework.dll 中）、PresentationCore（在 PresentationCore.dll 中）和 WindowsBase（在 WindowsBase.dll 中）
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
@@ -238,7 +238,7 @@ ms.locfileid: "50201632"
 
 ### <a name="graphics"></a>图形
 
-命名空间：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input> 和 <xref:System.Windows.Media.Effects>；程序集：PresentationFramework（在 PresentationFramework.dll 中）、PresentationCore（在 PresentationCore.dll 中）和 WindowsBase（在 WindowsBase.dll 中）
+命名空间：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>、<xref:System.Windows.Media.Effects>；程序集：PresentationFramework（在 PresentationFramework.dll 中）、PresentationCore（在 PresentationCore.dll 中）和 WindowsBase（在 WindowsBase.dll 中）
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
@@ -248,7 +248,7 @@ ms.locfileid: "50201632"
 
 ### <a name="input"></a>输入
 
-命名空间：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>；程序集：PresentationFramework（在 PresentationFramework.dll 中）、PresentationCore（在 PresentationCore.dll 中）、WindowsBase（在 WindowsBase.dll 中）
+命名空间：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>；程序集：PresentationFramework（在 PresentationFramework.dll 中）、PresentationCore（在 PresentationCore.dll 中）和 WindowsBase（在 WindowsBase.dll 中）
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |
@@ -272,7 +272,7 @@ ms.locfileid: "50201632"
 
 ### <a name="xaml"></a>XAML
 
-命名空间：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input> 和 <xref:System.Windows.Markup>；程序集：PresentationFramework（在 PresentationFramework.dll 中）、PresentationCore（在 PresentationCore.dll 中）和 WindowsBase（在 WindowsBase.dll 中）
+命名空间：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>、<xref:System.Windows.Markup>；程序集：PresentationFramework（在 PresentationFramework.dll 中）、PresentationCore（在 PresentationCore.dll 中）和 WindowsBase（在 WindowsBase.dll 中）
 
 | 功能 | 与 3.5 SP1 的差异 | 建议的更改 |
 | ------- | ------------------------ | ------------------- |

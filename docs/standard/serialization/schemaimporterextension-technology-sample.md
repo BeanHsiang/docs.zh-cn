@@ -2,12 +2,12 @@
 title: SchemaImporterExtension 技术示例
 ms.date: 03/30/2017
 ms.assetid: 3f5eb78f-0ef6-433a-b095-3a63b1ce0bc9
-ms.openlocfilehash: 042ea9eecb7820d4ffb88bdb8862aec1e7f6e483
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 04e2b3f9fb1ea6f9bbb3c1e1886911cbacda7a62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042486"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633893"
 ---
 # <a name="schemaimporterextension-technology-sample"></a>SchemaImporterExtension 技术示例
 [下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
@@ -41,18 +41,18 @@ ms.locfileid: "44042486"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.CodeDom.CodeCompileUnit>  
-- <xref:System.CodeDom.CodeNamespace>  
-- <xref:System.CodeDom.CodeNamespaceImport>  
-- <xref:Microsoft.CSharp.CSharpCodeProvider>  
-- <xref:System.Xml.Serialization.IXmlSerializable>  
-- <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>  
-- <xref:System.CodeDom>  
-- <xref:System.CodeDom.Compiler>  
-- <xref:System.Web.Services.Description>  
-- <xref:System.Web.Services.Discovery>  
-- <xref:System.Xml.Serialization>  
-- <xref:System.Uri>  
-- <xref:Microsoft.VisualBasic.VBCodeProvider>  
-- <xref:System.Web.Services.Description.WebReference>  
+- <xref:System.CodeDom.CodeCompileUnit>
+- <xref:System.CodeDom.CodeNamespace>
+- <xref:System.CodeDom.CodeNamespaceImport>
+- <xref:Microsoft.CSharp.CSharpCodeProvider>
+- <xref:System.Xml.Serialization.IXmlSerializable>
+- <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>
+- <xref:System.CodeDom>
+- <xref:System.CodeDom.Compiler>
+- <xref:System.Web.Services.Description>
+- <xref:System.Web.Services.Discovery>
+- <xref:System.Xml.Serialization>
+- <xref:System.Uri>
+- <xref:Microsoft.VisualBasic.VBCodeProvider>
+- <xref:System.Web.Services.Description.WebReference>
 - <xref:System.Xml.Serialization.XmlSchemaImporter>

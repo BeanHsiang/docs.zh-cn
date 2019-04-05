@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b9070a12-1094-44d6-bb87-a23b50bcb0af
-ms.openlocfilehash: e7c63591baa609e38a70c721ea57a797b7631b97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1890ab2fcc7e1427d9c74f6c981e232802b0eb1d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358887"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643736"
 ---
 # <a name="querying-the-datarowview-collection-in-a-dataview"></a>在 DataView 中查询 DataRowView 集合
 <xref:System.Data.DataView> 公开了 <xref:System.Data.DataRowView> 对象的可枚举集合。 <xref:System.Data.DataRowView> 表示 <xref:System.Data.DataRow> 的自定义视图，并在控件中显示特定版本的 <xref:System.Data.DataRow>。 只有一种版本的 <xref:System.Data.DataRow> 可通过控件显示，例如 <xref:System.Windows.Forms.DataGridView>。 您可以通过 <xref:System.Data.DataRow> 的 <xref:System.Data.DataRowView> 属性访问 <xref:System.Data.DataRowView.Row%2A> 公开的 <xref:System.Data.DataRowView>。 当使用 <xref:System.Data.DataRowView> 查看值时，<xref:System.Data.DataView.RowStateFilter%2A> 属性决定公开基础 <xref:System.Data.DataRow> 的哪个行版本。 有关访问使用不同的行版本信息<xref:System.Data.DataRow>，请参阅[行状态和行版本](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。 因为 <xref:System.Data.DataRowView> 公开的 <xref:System.Data.DataView> 对象的集合是可枚举的，所以您可以使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 对它执行查询。  
@@ -25,5 +25,5 @@ ms.locfileid: "33358887"
  [!code-csharp[DP DataView Samples#QueryDataView1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#querydataview1)]
  [!code-vb[DP DataView Samples#QueryDataView1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#querydataview1)]  
   
-## <a name="see-also"></a>请参阅  
- [数据绑定和 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+## <a name="see-also"></a>请参阅
+- [数据绑定和 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)

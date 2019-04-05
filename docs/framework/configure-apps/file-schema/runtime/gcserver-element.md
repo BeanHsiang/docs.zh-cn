@@ -1,5 +1,5 @@
 ---
-title: '&lt;gcServer&gt;元素'
+title: <gcServer> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bfe0db3d6fcbdbbcfb90ff488ab19cdbfaab75e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9125ee35b081a1723f379bd3fbdec808d085c675
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216140"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674446"
 ---
-# <a name="ltgcservergt-element"></a>&lt;gcServer&gt;元素
+# <a name="gcserver-element"></a>\<gcServer > 元素
 指定公共语言运行时是否运行服务器垃圾回收。  
   
  \<configuration>  
@@ -78,8 +78,8 @@ ms.locfileid: "44216140"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [如何： 禁用并发垃圾回收](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [若要禁用并发垃圾回收](gcconcurrent-element.md#to-disable-background-garbage-collection)

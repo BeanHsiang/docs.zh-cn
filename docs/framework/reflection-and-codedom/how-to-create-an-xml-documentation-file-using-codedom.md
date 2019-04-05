@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81d09188ade29b0cac8985da218494f5373980cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8086a512d117767127260bcf779fc11555cd67dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632824"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>如何：使用 CodeDOM 创建 XML 文档文件
 可使用 CodeDOM 创建生成 XML 文档的代码。 该进程包括创建包含 XML 文档注释的 CodeDOM 图、生成代码和通过创建 XML 文档输出的编译器选项编译生成的代码。  
@@ -79,7 +79,7 @@ ms.locfileid: "33397148"
   
 -   需要 `FullTrust` 权限集才可成功执行此代码示例。  
   
-## <a name="see-also"></a>请参阅  
- [使用 XML 记录代码](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
- [XML 文档注释](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [XML 文档](/cpp/ide/xml-documentation-visual-cpp)
+## <a name="see-also"></a>请参阅
+- [使用 XML 记录代码](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [XML 文档注释](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML 文档](/cpp/ide/xml-documentation-visual-cpp)

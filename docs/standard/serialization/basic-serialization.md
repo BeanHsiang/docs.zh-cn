@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: cb42c265d9057ea4fdb76e72fc9cdb2368309cae
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 9a7cdd0b9e5bd12d5730d92f39c2432bdc84a18e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47081080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605963"
 ---
 # <a name="basic-serialization"></a>基本序列化
 
@@ -66,8 +66,8 @@ Console.WriteLine("str: {0}", obj.str);
 <SOAP-ENV:Envelope  
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-  xmlns:SOAP- ENC="http://schemas.xmlsoap.org/soap/encoding/"  
-  xmlns:SOAP- ENV="http://schemas.xmlsoap.org/soap/envelope/"  
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"  
   SOAP-ENV:encodingStyle=  
   "http://schemas.microsoft.com/soap/encoding/clr/1.0"  
   "http://schemas.xmlsoap.org/soap/encoding/"  
@@ -96,5 +96,5 @@ public class MyStuff : MyObject
   
 ## <a name="see-also"></a>请参阅
 
-- [二进制序列化](binary-serialization.md)  
+- [二进制序列化](binary-serialization.md)
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

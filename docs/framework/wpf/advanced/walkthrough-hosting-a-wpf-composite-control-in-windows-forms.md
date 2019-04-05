@@ -1,20 +1,20 @@
 ---
-title: 演练：在 Windows 窗体中承载 WPF 复合控件
+title: 演练：承载 WPF 复合控件在 Windows 窗体中
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: b49d09ce81c0605ecd82b67ec4c0b24973ac293c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d38a9c67edb5df89554e9e02274410a825b3384b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582809"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654544"
 ---
-# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>演练：在 Windows 窗体中承载 WPF 复合控件
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当您有大量投入时[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]代码，它可以更有效地扩展现有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序与[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不是从头开始重新编写。 常见情况是你想要嵌入其中一个或多个控件实现的与[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]在 Windows 窗体应用程序中。 有关自定义 WPF 控件的详细信息，请参阅[控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)。  
+# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>演练：承载 WPF 复合控件在 Windows 窗体中
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了用于创建应用程序的丰富环境。 但是，当您有大量投入时[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]代码，它可以更有效地扩展现有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]应用程序与[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不是从头开始重新编写。 常见情况是你想要嵌入其中一个或多个控件实现的与[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]在 Windows 窗体应用程序中。 有关自定义 WPF 控件的详细信息，请参阅[控件自定义](../controls/control-customization.md)。  
   
- 本演练将引导你通过应用程序承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]复合控件以在 Windows 窗体应用程序中执行数据输入。 复合控件打包在一个 DLL 中。 此常规步骤可扩展到更复杂的应用程序和控件。 本演练旨在几乎完全相同的外观和功能提供给[演练： 承载 Windows 窗体复合控件在 WPF 中](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)。 主要区别在于承载方案是相反的。  
+ 本演练将引导你通过应用程序承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]复合控件以在 Windows 窗体应用程序中执行数据输入。 复合控件打包在一个 DLL 中。 此常规步骤可扩展到更复杂的应用程序和控件。 本演练旨在几乎完全相同的外观和功能到[演练：在 WPF 中承载 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)。 主要区别在于承载方案是相反的。  
   
  本演练分为两个部分。 第一部分简要介绍的实现[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]复合控件。 第二个部分详细讨论了如何承载 Windows 窗体应用程序中的复合控件、 接收来自控件的事件和访问的某些控件的属性。  
   
@@ -28,13 +28,15 @@ ms.locfileid: "48582809"
   
 ## <a name="prerequisites"></a>系统必备  
 
-需要 Visual Studio 来完成本演练。  
+若要完成本演练，必须具有 Visual Studio。  
   
 ## <a name="implementing-the-wpf-composite-control"></a>实现 WPF 复合控件  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]此示例中使用的复合控件是一种简单的数据输入形式，采用用户的名称和地址。 当用户单击两个按钮的其中一个以指示任务已完成时，该控件会引发将该信息返回给主机的自定义事件。 下图显示呈现的控件。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]此示例中使用的复合控件是一种简单的数据输入形式，采用用户的名称和地址。 当用户单击两个按钮的其中一个以指示任务已完成时，该控件会引发将该信息返回给主机的自定义事件。 下图显示呈现的控件。 
+
+ 下图显示了 WPF 复合控件： 
+
   
- ![简单的 WPF 控件](../../../../docs/framework/wpf/advanced/media/avaloncontrol.png "AvalonControl")  
-WPF 复合控件  
+ ![显示简单的 WPF 控件的屏幕截图。](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-presentation-foundation-composite-control.png)  
   
 ### <a name="creating-the-project"></a>创建项目  
  启动项目：  
@@ -71,35 +73,35 @@ WPF 复合控件
   
  在 MyControl1.xaml 中，将现有 XAML 替换为以下 XAML。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#101)]  
-[!code-xaml[WindowsFormsHostingWpfControl#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#102)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#101](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#101)]  
+[!code-xaml[WindowsFormsHostingWpfControl#102](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#102)]  
   
 #### <a name="adding-textblock-and-textbox-elements-to-the-grid"></a>向 Grid 添加 TextBlock 和 TextBox 元素  
- 您将放[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]通过设置元素的网格中的元素<xref:System.Windows.Controls.Grid.RowProperty>和<xref:System.Windows.Controls.Grid.ColumnProperty>属性到相应的行和列号。 请记住行号和列号是从零开始的。 你可以通过设置跨多个列的元素及其<xref:System.Windows.Controls.Grid.ColumnSpanProperty>属性。 有关详细信息<xref:System.Windows.Controls.Grid>元素，请参阅[创建网格元素](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)。  
+ 您将放[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]通过设置元素的网格中的元素<xref:System.Windows.Controls.Grid.RowProperty>和<xref:System.Windows.Controls.Grid.ColumnProperty>属性到相应的行和列号。 请记住行号和列号是从零开始的。 你可以通过设置跨多个列的元素及其<xref:System.Windows.Controls.Grid.ColumnSpanProperty>属性。 有关详细信息<xref:System.Windows.Controls.Grid>元素，请参阅[创建网格元素](../controls/how-to-create-a-grid-element.md)。  
   
  以下 XAML 演示复合控件<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.TextBlock>元素及其<xref:System.Windows.Controls.Grid.RowProperty>和<xref:System.Windows.Controls.Grid.ColumnProperty>属性，它们被设置为将元素正确放置在网格中。  
   
  在 MyControl1.xaml 中，添加以下 XAML 中的<xref:System.Windows.Controls.Grid>元素。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#103)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#103](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#103)]  
   
 #### <a name="styling-the-ui-elements"></a>设置 UI 元素的样式  
  数据输入窗体上的许多元素外观相似，这意味着它们对于其若干属性具有相同的设置。 而不是单独设置每个元素的特性，使用上一个 XAML<xref:System.Windows.Style>元素可定义为类的元素的标准属性设置。 这种方法可以降低控件的复杂性，并使你能够通过单个样式特性更改多个元素的外观。  
   
- <xref:System.Windows.Style>元素包含在<xref:System.Windows.Controls.Grid>元素的<xref:System.Windows.FrameworkElement.Resources%2A>属性，因此它们可以由该控件中的所有元素。 如果命名了某样式，您将其应用于元素通过添加<xref:System.Windows.Style>元素设置为该样式的名称。 未命名的样式将成为该元素的默认样式。 有关详细信息[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]样式，请参阅[样式和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ <xref:System.Windows.Style>元素包含在<xref:System.Windows.Controls.Grid>元素的<xref:System.Windows.FrameworkElement.Resources%2A>属性，因此它们可以由该控件中的所有元素。 如果命名了某样式，您将其应用于元素通过添加<xref:System.Windows.Style>元素设置为该样式的名称。 未命名的样式将成为该元素的默认样式。 有关详细信息[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]样式，请参阅[样式和模板化](../controls/styling-and-templating.md)。  
   
  下面的 XAML 演示<xref:System.Windows.Style>复合控件元素。 若要查看样式如何应用于元素，请参阅前一个 XAML。 例如上, 一次<xref:System.Windows.Controls.TextBlock>元素具有`inlineText`样式和最后一个<xref:System.Windows.Controls.TextBox>元素使用的默认样式。  
   
  在 MyControl1.xaml 中，添加以下 XAML 之后<xref:System.Windows.Controls.Grid>开始元素。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#104)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#104](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#104)]  
   
 #### <a name="adding-the-ok-and-cancel-buttons"></a>添加“确定”和“取消”按钮  
  复合控件上的最后一个元素是**确定**并**取消**<xref:System.Windows.Controls.Button>元素，它们占用的最后一行的前两个列<xref:System.Windows.Controls.Grid>。 这些元素使用常见的事件处理程序`ButtonClicked`，默认值和<xref:System.Windows.Controls.Button>上一个 XAML 中定义的样式。  
   
  在 MyControl1.xaml 中，最后一个后面添加以下 XAML<xref:System.Windows.Controls.TextBox>元素。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]复合控件的一部分现已完成。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#105)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#105](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#105)]  
   
 ### <a name="implementing-the-code-behind-file"></a>实现代码隐藏文件  
  代码隐藏文件 MyControl1.xaml.cs 实现三个基本任务：
@@ -110,7 +112,7 @@ WPF 复合控件
   
 3.  引发自定义`OnButtonClick`事件，通知主机用户已完成，并将数据传递回主机。  
   
- 该控件还公开多个可用来更改外观的颜色和字体属性。 与不同<xref:System.Windows.Forms.Integration.WindowsFormsHost>类，该类用于承载 Windows 窗体控件<xref:System.Windows.Forms.Integration.ElementHost>类公开控件的<xref:System.Windows.Controls.Panel.Background%2A>只属性。 若要维护此代码示例和讨论的示例中之间的相似性[演练： 承载 Windows 窗体复合控件在 WPF 中](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)，该控件直接公开其余属性。  
+ 该控件还公开多个可用来更改外观的颜色和字体属性。 与不同<xref:System.Windows.Forms.Integration.WindowsFormsHost>类，该类用于承载 Windows 窗体控件<xref:System.Windows.Forms.Integration.ElementHost>类公开控件的<xref:System.Windows.Controls.Panel.Background%2A>只属性。 若要维护此代码示例和讨论的示例中之间的相似性[演练：承载 Windows 窗体复合控件在 WPF 中](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)，该控件直接公开其余属性。  
   
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>代码隐藏文件的基本结构  
  代码隐藏文件包含的单个命名空间，由`MyControls`，其中包含两个类`MyControl1`和`MyControlEventArgs`。  
@@ -133,7 +135,7 @@ namespace MyControls
   
  打开 MyControl1.xaml.cs。 更改现有的类声明，以便它具有以下名称并继承<xref:System.Windows.Controls.Grid>。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#21)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#21](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#21)]  
   
 #### <a name="initializing-the-control"></a>初始化控件  
  下面的代码实现几个基本任务：  
@@ -146,7 +148,7 @@ namespace MyControls
   
  删除现有的构造函数并将以下代码添加到你`MyControl1`类。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#11)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#11)]  
   
 #### <a name="handling-the-buttons-click-events"></a>处理按钮的单击事件  
  用户指示数据输入任务已完成通过单击**确定**按钮或**取消**按钮。 这两个按钮都使用相同<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件处理程序`ButtonClicked`。 这两个按钮都具有名称，`btnOK`或`btnCancel`，这样，要确定通过检查的值被单击的按钮的处理程序`sender`参数。 该处理程序执行以下任务：  
@@ -159,30 +161,31 @@ namespace MyControls
   
  将以下代码添加到您`MyControl1`类后,`Init`方法。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#12)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#12)]  
   
 #### <a name="creating-properties"></a>创建属性  
  类的其余部分只是公开对应于前面所述的全局变量的属性。 当属性更改时，set 访问器会通过更改对应的元素属性并更新基础全局变量来修改控件的外观。  
   
  将以下代码添加到你`MyControl1`类。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#13)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#13)]  
   
 #### <a name="sending-the-data-back-to-the-host"></a>将数据发送回主机  
  在文件中的最后一个组件是`MyControlEventArgs`类，该类用于将收集的数据发送回主机。  
   
  将以下代码添加到你`MyControls`命名空间。 该实现非常简单明了，因而不再进一步讨论。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#14)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#14)]  
   
  生成解决方案。 生成将产生一个名为 MyControls.dll 的 DLL。  
   
 <a name="winforms_host_section"></a>   
 ## <a name="implementing-the-windows-forms-host-application"></a>实现 Windows 窗体主机应用程序  
  Windows 窗体承载应用程序使用<xref:System.Windows.Forms.Integration.ElementHost>对象承载[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]复合控件。 该应用程序处理`OnButtonClick`事件以接收来自复合控件的数据。 该应用程序还具有一组可用于修改控件外观的选项按钮。 下图显示应用程序。  
-  
- ![Windows 窗体承载 Avalon 控件](../../../../docs/framework/wpf/advanced/media/wfhost.png "WFHost")  
-Windows 窗体应用程序中承载的 WPF 复合控件  
+
+下图显示了在 Windows 窗体应用程序中承载的 WPF 复合控件"  
+
+ ![显示 Windows 窗体承载 Avalon 控件的 Scteenshot。](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>创建项目  
  启动项目：  
@@ -228,7 +231,7 @@ Windows 窗体应用程序中承载的 WPF 复合控件
   
 4.  以下代码添加到<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>到窗体控件。  
   
-    |name|Text|  
+    |名称|Text|  
     |----------|----------|  
     |groupBox1|背景色|  
     |groupBox2|前景色|  
@@ -240,7 +243,7 @@ Windows 窗体应用程序中承载的 WPF 复合控件
   
 5.  添加以下<xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>控件添加到<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控件。  
   
-    |GroupBox|name|Text|  
+    |GroupBox|名称|Text|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|原始|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -261,7 +264,7 @@ Windows 窗体应用程序中承载的 WPF 复合控件
   
 6.  添加以下<xref:System.Windows.Forms.Label?displayProperty=nameWithType>到最后一个控制<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 这些控件显示返回的数据[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]复合控件。  
   
-    |GroupBox|name|文本|  
+    |GroupBox|名称|文本|  
     |--------------|----------|----------|  
     |groupBox7|lblName|姓名:|  
     |groupBox7|lblAddress|街道地址:|  
@@ -274,11 +277,11 @@ Windows 窗体应用程序中承载的 WPF 复合控件
   
  在 Windows 窗体设计器中，双击窗体创建<xref:System.Windows.Forms.Form.Load>事件处理程序。 在 Form1.cs 顶部，添加以下`using`语句。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#10)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#10](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#10)]  
   
  现有内容替换为`Form1`用下面的代码的类。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#2)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#2](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#2)]  
   
  `Form1_Load`方法在前面的代码演示了托管的一般过程[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件：  
   
@@ -307,7 +310,7 @@ Windows 窗体应用程序中承载的 WPF 复合控件
   
  添加下面的按钮单击事件处理程序代码与`Form1`类。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#3)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#3)]  
   
  生成并运行应用程序。 在 WPF 复合控件中添加一些文本，然后单击**确定**。 文本将显示在标签中。 此时，尚未添加代码来处理单选按钮。  
   
@@ -316,13 +319,13 @@ Windows 窗体应用程序中承载的 WPF 复合控件
   
  双击每个<xref:System.Windows.Forms.RadioButton>要创建的窗体上控件<xref:System.Windows.Forms.RadioButton.CheckedChanged>事件处理程序。 替换为<xref:System.Windows.Forms.RadioButton.CheckedChanged>事件处理程序替换下面的代码。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#4)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#4)]  
   
  生成并运行应用程序。 单击不同的单选按钮来查看在 WPF 复合控件上的效果。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [演练：在 WPF 中托管 Windows 窗体复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [演练：在 Windows 窗体中承载 3-D WPF 复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [演练：承载在 WPF 中的 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [演练：承载 3-D WPF 复合控件在 Windows 窗体中](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

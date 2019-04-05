@@ -1,58 +1,62 @@
 ---
-title: '&lt;netMsmqBinding&gt;'
+title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 0fb174488f3505eeab8195df361af1f203d0f8a5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 22303a81d32369e77f745d32ff1f66e21a3c3156
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839074"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759400"
 ---
-# <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
+# <a name="netmsmqbinding"></a>\<netMsmqBinding>
 定义适用于跨计算机通信的排队绑定。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<netMsmqBinding>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<netMsmqBinding>  
-    <binding   
-       closeTimeout="TimeSpan"   
-       customDeadLetterQueue="Uri"  
-       deadLetterQueue="Uri"  
-       durable="Boolean"  
-       exactlyOnce="Boolean"   
-       maxBufferPoolSize="Integer"  
-       maxReceivedMessageSize"Integer"  
-       maxRetryCycles="Integer"   
-       name="string"   
-       openTimeout="TimeSpan"   
-       poisonMessageHandling="Disabled/EnabledIfSupported"   
-       queueTransferProtocol="Native/Srmp/SrmpSecure"  
-       receiveErrorHandling="Drop/Fault/Move/Reject"  
-       receiveTimeout="TimeSpan"   
-       receiveRetryCount="Integer"  
-       rejectAfterLastRetry="Boolean"   
-       retryCycleDelay="TimeSpan"    
-       sendTimeout="TimeSpan"   
-       timeToLive="TimeSpan"    
-       useActiveDirectory="Boolean"  
-       useMsmqTracing="Boolean  
-       useSourceJournal="Boolean"  
-          <security>  
-                  <message    
-                        algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-            clientCredentialType="None/Windows/UserName/Certificate/InfoCard "/>  
-                  <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"  
-            msmqEncryptionAlgorithm="RC4Stream/AES"  
-            msmqProtectionLevel="None/Sign/EncryptAndSign"  
-            msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-          </security>  
-       <readerQuotas             maxArrayLength="Integer"            maxBytesPerRead="Integer"            maxDepth="Integer"             maxNameTableCharCount="Integer"                     maxStringContentLength="Integer" />   </binding></netMsmqBinding>  
+<netMsmqBinding>
+  <binding closeTimeout="TimeSpan"
+           customDeadLetterQueue="Uri"
+           deadLetterQueue="Uri"
+           durable="Boolean"
+           exactlyOnce="Boolean"
+           maxBufferPoolSize="Integer"
+           maxReceivedMessageSize="Integer"
+           maxRetryCycles="Integer"
+           name="String"
+           openTimeout="TimeSpan"
+           poisonMessageHandling="Disabled/EnabledIfSupported"
+           queueTransferProtocol="Native/Srmp/SrmpSecure"
+           receiveErrorHandling="Drop/Fault/Move/Reject"
+           receiveTimeout="TimeSpan"
+           receiveRetryCount="Integer"
+           rejectAfterLastRetry="Boolean"
+           retryCycleDelay="TimeSpan"
+           sendTimeout="TimeSpan"
+           timeToLive="TimeSpan"
+           useActiveDirectory="Boolean"
+           useMsmqTracing="Boolean"
+           useSourceJournal="Boolean">
+    <security>
+      <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+               clientCredentialType="None/Windows/UserName/Certificate/InfoCard" />
+      <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"
+                 msmqEncryptionAlgorithm="RC4Stream/AES"
+                 msmqProtectionLevel="None/Sign/EncryptAndSign"
+                 msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</netMsmqBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -87,14 +91,14 @@ ms.locfileid: "48839074"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定义可由采用此绑定配置的终结点进行处理的 SOAP 消息的复杂性约束。 此元素的类型为 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|定义绑定的安全设置。 此元素的类型为 <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
+|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|此元素包含标准绑定和自定义绑定的集合。|  
   
 ## <a name="remarks"></a>备注  
  `netMsmqBinding` 绑定通过利用 Microsoft 消息队列 (MSMQ) 作为传输来提供队列支持，并且为松耦合应用程序、故障隔离、负载均衡和断开连接的操作提供支持。 有关这些功能的讨论，请参阅[WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。  
@@ -102,42 +106,42 @@ ms.locfileid: "48839074"
 ## <a name="example"></a>示例  
   
 ```xml  
-<configuration>  
-<system.ServiceModel>  
-    <bindings>  
-           <netMsmqBinding>  
-                <binding   
-                         closeTimeout="00:00:10"   
-                         openTimeout="00:00:20"   
-                         receiveTimeout="00:00:30"  
-                         sendTimeout="00:00:40"  
-                         deadLetterQueue="net.msmq://localhost/blah"   
-                         durable="true"   
-                         exactlyOnce="true"   
-                         maxReceivedMessageSize="1000"  
-                         maxRetries="11"  
-                         maxRetryCycles="12"   
-                         poisonMessageHandling="Disabled"   
-                         rejectAfterLastRetry="false"   
-                         retryCycleDelay="00:05:55"   
-                         timeToLive="00:11:11"   
-                         sourceJournal="true"  
-                         useMsmqTracing="true"  
-                         useActiveDirectory="true">  
-                         <security>  
-                             <message clientCredentialType="Windows" />  
-                         </security>  
-            </netMsmqBinding>  
-    </bindings>  
-</system.ServiceModel>  
-</configuration>  
+<configuration>
+  <system.ServiceModel>
+    <bindings>
+      <netMsmqBinding>
+        <binding closeTimeout="00:00:10"
+                 openTimeout="00:00:20"
+                 receiveTimeout="00:00:30"
+                 sendTimeout="00:00:40"
+                 deadLetterQueue="net.msmq://localhost/blah"
+                 durable="true"
+                 exactlyOnce="true"
+                 maxReceivedMessageSize="1000"
+                 maxRetries="11"
+                 maxRetryCycles="12"
+                 poisonMessageHandling="Disabled"
+                 rejectAfterLastRetry="false"
+                 retryCycleDelay="00:05:55"
+                 timeToLive="00:11:11"
+                 sourceJournal="true"
+                 useMsmqTracing="true"
+                 useActiveDirectory="true">
+          <security>
+            <message clientCredentialType="Windows" />
+          </security>
+        </binding>
+      </netMsmqBinding>
+    </bindings>
+  </system.ServiceModel>
+</configuration>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.NetMsmqBinding>  
- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.NetMsmqBinding>
+- <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [WCF 中的队列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

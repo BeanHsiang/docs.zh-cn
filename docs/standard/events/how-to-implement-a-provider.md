@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34ad5b9cc0014db05bc6e7483e389488e145beb3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: eecf16625c20ad5ff89791e221a4a40b2777956b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543784"
 ---
 # <a name="how-to-implement-a-provider"></a>如何：实现提供程序
 观察程序设计模式要求区分提供程序（监视数据并发送通知）和一个或多个观察程序（通过提供程序接收通知（回调））。 本主题介绍了如何创建提供程序。 相关主题[如何：实现观察程序](../../../docs/standard/events/how-to-implement-an-observer.md)介绍了如何创建观察程序。  
@@ -62,7 +62,7 @@ ms.locfileid: "44087321"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.IObservable%601>  
-- [观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)  
-- [如何：实现监视程序](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- <xref:System.IObservable%601>
+- [观察程序设计模式](../../../docs/standard/events/observer-design-pattern.md)
+- [如何：实现监视程序](../../../docs/standard/events/how-to-implement-an-observer.md)
 - [监视程序设计模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)

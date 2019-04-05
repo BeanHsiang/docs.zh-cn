@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |更�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 17838381f42a760caa7fba7e09ab798c6284bccb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683198"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151053"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>更新运行的.NET 应用到云优化的应用程序的原因
 
@@ -23,7 +23,7 @@ ms.locfileid: "45683198"
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>云计算得到优化的应用程序的原则和原则 
 
-在云中的改进主要致力于满足以下两个目标： 降低成本并通过提高灵活性来提高业务增长。 通过简化过程并减少冲突时发布和提供应用程序实现这些目标。
+在云中的改进主要致力于满足两个目标中：降低成本并通过提高灵活性来提高业务增长。 通过简化过程并减少冲突时发布和提供应用程序实现这些目标。
 
 如果您可以在是灵活多变的方式开发应用自主从其他本地应用程序，然后释放，部署，自动缩放云优化应用程序的监视和诊断你的应用在云中。
 
@@ -68,5 +68,5 @@ ms.locfileid: "45683198"
 在以下部分中，这些优势更详细地介绍了，并链接到特定技术。
 
 >[!div class="step-by-step"]
-[上一页](index.md)
-[下一页](microsoft-technologies-in-cloud-optimized-applications.md)
+>[上一页](index.md)
+>[下一页](microsoft-technologies-in-cloud-optimized-applications.md)

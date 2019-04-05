@@ -2,12 +2,12 @@
 title: 如何：编写 LINQ to XML 轴方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 74ed60fa3c78bcbc233e27868b1abe357a85c62a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e00ba6ba2880ab4f26f59a0b8543ac9f58dfbb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529744"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>如何：编写 LINQ to XML 轴方法 (C#)
 你可以编写自己的轴方法以便从 XML 树中检索集合。 执行此操作的最佳方式之一是编写可返回元素或属性集合的扩展方法。 您可以基于应用程序的需求编写扩展方法以返回元素或属性的特定子集。  
@@ -15,7 +15,7 @@ ms.locfileid: "43510528"
 ## <a name="example"></a>示例  
  下面的示例使用两个扩展方法。 第一个扩展方法 `GetXPath` 在 <xref:System.Xml.Linq.XObject> 上操作并返回一个 XPath 表达式，在计算该表达式时，将返回节点或属性。 第二个扩展方法 `Find` 在 <xref:System.Xml.Linq.XElement> 上操作。 它返回 <xref:System.Xml.Linq.XAttribute> 对象和包含某些指定文本的 <xref:System.Xml.Linq.XElement> 对象的集合。  
   
- 本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 public static class MyExtensions  

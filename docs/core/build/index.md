@@ -2,15 +2,10 @@
 title: 从源生成 .NET Core
 description: 了解如何从源代码生成 .NET Core 和 .NET Core CLI。
 author: bleroy
-ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47231107"
+ms.custom: seodec18
 ---
+
 # <a name="build-net-core-from-source"></a>从源生成 .NET Core
 
 能从 .NET Core 的源代码生成它在多个方面都体现出其重要性：能更轻松地将 .NET Core 移植到新平台；可实现对产品做出贡献和修复；并支持创建自定义版本的 .NET。
@@ -101,6 +96,6 @@ bin\Log 目录包含生成期间生成的日志文件（生成失败时这些日
 
 ## <a name="see-also"></a>另请参阅
 
-* [.NET Core 公共语言运行时 (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
-* [.NET Core CLI 开发人员指南](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
-* [.NET Core 分发打包](./distribution-packaging.md)
+- [.NET Core 公共语言运行时 (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [.NET Core CLI 开发人员指南](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
+- [.NET Core 分发打包](./distribution-packaging.md)

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 03615c1c49f2acf2a7c7f0910860f36de0a4f2d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d963d9c8b7ddfba0c24fcb10ddf9cc45a2f4d0c5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547337"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363977"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject 的安全构造函数模式
-通常，类构造函数不应调用诸如虚拟方法或委托等回叫，其原因是构造函数可作为派生类的构造函数的基本初始化进行调用。 输入该虚拟的操作可能会在任何给定对象的不完全初始化状态下进行。 但是，属性系统本身在内部调用并公开回叫，作为依赖属性系统的一部分。 为简单一个操作作为设置依赖项属性值与<xref:System.Windows.DependencyObject.SetValue%2A>调用可能包括回调某个位置中决定。 因此，在构造函数体内设置依赖属性值时应保持谨慎（将类型用作基类可能会导致问题）。 没有特定的模式，用于实现<xref:System.Windows.DependencyObject>可避免依赖项属性的状态和固有的回调中，对特定问题这此处记录的构造函数。  
+通常，类构造函数不应调用诸如虚拟方法或委托等回叫，其原因是构造函数可作为派生类的构造函数的基本初始化进行调用。 输入该虚拟的操作可能会在任何给定对象的不完全初始化状态下进行。 但是，属性系统本身在内部调用并公开回叫，作为依赖属性系统的一部分。 与设置具有依赖项属性值一样简单操作<xref:System.Windows.DependencyObject.SetValue%2A>调用可能包括回叫某个位置在决定中。 因此，在构造函数体内设置依赖属性值时应保持谨慎（将类型用作基类可能会导致问题）。 没有特定的模式，用于实现<xref:System.Windows.DependencyObject>构造函数可避免对依赖属性状态和内在回叫的特定问题此处进行了说明。  
   
  
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>属性系统虚拟方法  
- 在计算的期间可能调用以下虚拟方法或回调<xref:System.Windows.DependencyObject.SetValue%2A>设置的依赖项属性值的调用： <xref:System.Windows.ValidateValueCallback>， <xref:System.Windows.PropertyChangedCallback>， <xref:System.Windows.CoerceValueCallback>， <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>。 这些虚拟方法或回叫中的每一个在扩展 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统和依赖属性的多样性方面都具有特定的用途。 有关如何使用这些虚拟方法对属性值确定进行自定义的详细信息，请参阅[依赖属性回调和验证](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)。  
+ 在的计算结果的过程可能会调用以下虚拟方法或回叫<xref:System.Windows.DependencyObject.SetValue%2A>调用，用于设置依赖项属性值： <xref:System.Windows.ValidateValueCallback>， <xref:System.Windows.PropertyChangedCallback>， <xref:System.Windows.CoerceValueCallback>， <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>。 这些虚拟方法或回叫中的每一个在扩展 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 属性系统和依赖属性的多样性方面都具有特定的用途。 有关如何使用这些虚拟方法对属性值确定进行自定义的详细信息，请参阅[依赖属性回调和验证](dependency-property-callbacks-and-validation.md)。  
   
 ### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>FXCop 规则强制与属性系统虚拟方法  
  如果将 Microsoft 工具 FXCop 用作生成过程的一部分，并从某些调用基构造函数的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 框架类派生，或在派生的类上实现自己的依赖属性，则可能会违反某个 FXCop 规则。 此违反事件的名称字符串为：  
@@ -62,7 +62,7 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- 当应用程序代码调用 `new MyClass(objectvalue)` 时，这会调用默认构造函数和基类构造函数。 然后，它设置`Property1 = object1`，从而调用虚方法`OnPropertyChanged`上拥有`MyClass` <xref:System.Windows.DependencyObject>。  重写引用尚未初始化的 `_myList`。  
+ 当应用程序代码调用 `new MyClass(objectvalue)` 时，这会调用默认构造函数和基类构造函数。 然后它会设置`Property1 = object1`，它调用虚拟方法`OnPropertyChanged`上的拥有`MyClass` <xref:System.Windows.DependencyObject>。  重写引用尚未初始化的 `_myList`。  
   
  避免这些问题的一个方法是：确保回叫仅使用其他依赖属性，并且每个这样的依赖属性都有一个确立的默认值作为其注册元数据的一部分。  
   
@@ -112,9 +112,9 @@ public MyClass : SomeBaseClass {
  对于基类型具有多个签名的情况，必须在设置更多属性之前特意将所有可能的签名与自己的构造函数的实现相匹配，该实现使用建议的类默认构造函数调用模式。  
   
 #### <a name="setting-dependency-properties-with-setvalue"></a>使用 SetValue 设置依赖属性  
- 如果你要设置一个属性，不包含具有为属性设置方便起见，包装并设置值，将应用相同的模式<xref:System.Windows.DependencyObject.SetValue%2A>。 对你调用<xref:System.Windows.DependencyObject.SetValue%2A>该传递构造函数参数还应调用类的默认构造函数进行初始化。  
+ 如果您在设置一个属性，没有为属性设置方便起见，包装，并且设置的值，这些模式同样适用<xref:System.Windows.DependencyObject.SetValue%2A>。 对调用<xref:System.Windows.DependencyObject.SetValue%2A>通过构造函数参数阶段还应调用类的默认构造函数进行初始化。  
   
-## <a name="see-also"></a>请参阅  
- [自定义依赖属性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [依赖属性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+## <a name="see-also"></a>请参阅
+- [自定义依赖属性](custom-dependency-properties.md)
+- [依赖项属性概述](dependency-properties-overview.md)
+- [依赖属性的安全性](dependency-property-security.md)

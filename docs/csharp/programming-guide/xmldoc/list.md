@@ -1,5 +1,6 @@
 ---
-title: '&lt;列表&gt;（C# 编程指南）'
+title: <list> - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 3f9d1e2b08b672ca58e96767aedaa71a8826c0ab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9ac1d749d18a9d02ce28f8cf600495f345ec0e89
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512427"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489262"
 ---
-# <a name="ltlistgt-c-programming-guide"></a>&lt;列表&gt;（C# 编程指南）
+# <a name="list-c-programming-guide"></a>\<list>（C# 编程指南）
 ## <a name="syntax"></a>语法  
   
 ```xml  
@@ -35,7 +36,7 @@ ms.locfileid: "43512427"
 </list>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `term`  
  要定义的术语，将在 `description` 中进行定义。  
   
@@ -52,9 +53,9 @@ ms.locfileid: "43512427"
  使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- [!code-csharp[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

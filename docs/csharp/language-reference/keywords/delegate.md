@@ -1,5 +1,6 @@
 ---
-title: 委托（C# 参考）
+title: delegate - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - delegate_CSharpKeyword
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - delegate keyword [C#]
 - function pointers [C#]
 ms.assetid: 0bb8cb6d-2f87-47c7-9d1f-d65c1cd01e9f
-ms.openlocfilehash: 7a5f46d137e22da01b2ab6cd3eee57d66c411e8f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f9df40c3ca721ca97b575a05377bbac29a29aec9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45648455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560602"
 ---
 # <a name="delegate-c-reference"></a>委托（C# 参考）
 
@@ -45,11 +46,12 @@ public delegate int TestDelegate(MyType m, long num);
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)  
-- [委托](../../../csharp/programming-guide/delegates/index.md)  
-- [事件](../../../csharp/programming-guide/events/index.md)  
-- [带有命名方法的委托与带有匿名方法的委托](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [引用类型](../../../csharp/language-reference/keywords/reference-types.md)
+- [委托](../../../csharp/programming-guide/delegates/index.md)
+- [事件](../../../csharp/programming-guide/events/index.md)
+- [带有命名方法的委托与带有匿名方法的委托](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
 - [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Lambda 表达式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

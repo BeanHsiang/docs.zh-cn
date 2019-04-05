@@ -1,18 +1,18 @@
 ---
-title: '&lt;值&gt;(Visual Basic)'
+title: <value> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: ef14836c438cf6a1de300270d9882c1e53e716ee
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2938d485bf6c547c792431b93fc8959c9c36befa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855928"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821408"
 ---
-# <a name="ltvaluegt-visual-basic"></a>&lt;值&gt;(Visual Basic)
+# <a name="value-visual-basic"></a>\<值 > (Visual Basic)
 指定属性的说明。  
   
 ## <a name="syntax"></a>语法  
@@ -21,7 +21,7 @@ ms.locfileid: "43855928"
 <value>property-description</value>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `property-description`  
  属性的说明。  
   
@@ -33,7 +33,8 @@ ms.locfileid: "43855928"
 ## <a name="example"></a>示例  
  此示例使用`<value>`标记来描述哪些值`Counter`属性保存。  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

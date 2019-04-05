@@ -1,27 +1,27 @@
 ---
 title: 使用 RabbitMQ 实现用于开发或测试环境的事件总线
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 |使用 RabbitMQ 实现用于开发或测试环境的事件总线
+description: 容器化 .NET 应用程序的 .NET 微服务架构 | 使用 RabbitMQ 实现用于开发或测试环境的集成事件的事件总线消息传递。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: fb9bf51d947774cddd7b42ade0f05abc8fb3d7e9
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 2bcd3491c58884653cd6c119753696019151bfed
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104748"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584364"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>使用 RabbitMQ 实现用于开发或测试环境的事件总线
 
 首先应假设基于在容器中运行的 RabbitMQ 创建自定义事件总线，正如 eShopOnContainers 应用程序一样，它应仅用于你的开发和测试环境。 你不应将其用于生产环境，除非你要将其构建为生产就绪服务总线的一部分。 简单的自定义事件总线可能缺少商业服务总线具有的许多生产就绪关键功能。
 
-eShopOnContainers 中的事件总线自定义实现之一基本上是一个使用 RabbitMQ API 的库（还有另一个基于 Azure 服务总线的实现）。 
+eShopOnContainers 中的事件总线自定义实现之一基本上是一个使用 RabbitMQ API 的库（还有另一个基于 Azure 服务总线的实现）。
 
-RabbitMQ 的事件总线实现允许微服务订阅事件、发布事件和接收事件，如图 8-21 所示。
+借助 RabbitMQ 的事件总线实现，微服务可订阅事件、发布事件和接收事件，如图 6-21 所示。
 
-![](./media/image22.png)
+![RabbitMQ 充当消息发布服务器和订阅者之间的中介，处理分发。](./media/image22.png)
 
-**图 8-21。** 事件总线的 RabbitMQ 实现
+**图 6-21。** 事件总线的 RabbitMQ 实现
 
 在代码中，EventBusRabbitMQ 类实现了泛型 IEventBus 接口。 这基于依赖项注入，以便可以从此开发/测试版本交换到生产版本。
 
@@ -30,13 +30,14 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Implementation using RabbitMQ API
     //...
+}
 ```
 
-示例开发/测试事件总线的 RabbitMQ 实现是样板代码。 它必须处理与 RabbitMQ 服务器的连接，并提供用于将消息事件发布到队列的代码。 它还必须为每个事件类型实现收集集成事件处理程序的字典；这些事件类型可以对每个接收器微服务具有不同的实例化和不同的订阅，如图 8-21 所示。
+示例开发/测试事件总线的 RabbitMQ 实现是样板代码。 它必须处理与 RabbitMQ 服务器的连接，并提供用于将消息事件发布到队列的代码。 它还必须为每个事件类型实现收集集成事件处理程序的字典；这些事件类型可以对每个接收器微服务具有不同的实例化和不同的订阅，如图 6-21 所示。
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>使用 RabbitMQ 实现一个简单的发布方法
 
-下面的代码摘自 RabbitMQ 的简化事件总线实现，在 eShopOnContainers 的[实际代码](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs)中得到了改进。 除非要进行改进，否则通常不需要对其进行编码。 该代码获取到 RabbitMQ 的连接和通道，创建消息，然后将消息发布到队列中。
+下面的代码是 RabbitMQ 的事件总线实现的简化版，用以展示整个方案。 你真的不必以这种方式处理连接。 要查看完整的实现，请参阅 [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) 存储库中的实际代码。 
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -109,7 +110,6 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 订阅方法接受一个 IIntegrationEventHandler 对象，该对象相当于当前微服务中的回调方法，以及其相关的 IntegrationEvent 对象。 然后，代码将该事件处理程序添加到事件处理程序列表，每个客户端微服务的每个集成事件类型都可具有事件处理程序。 如果客户端代码尚未订阅事件，该代码将为事件类型创建一个通道，以便在从任何其他服务中发布事件时，它可以从 RabbitMQ 以推送方式接收事件。
 
-
 >[!div class="step-by-step"]
-[上一页](integration-event-based-microservice-communications.md)
-[下一页](subscribe-events.md)
+>[上一页](integration-event-based-microservice-communications.md)
+>[下一页](subscribe-events.md)

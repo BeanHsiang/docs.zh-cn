@@ -1,5 +1,6 @@
 ---
-title: 类型参考表（C# 参考）
+title: 类型引用表 - C# 参考
+ms.custom: seodec18
 ms.date: 09/21/2018
 f1_keywords:
 - cs.referencetables
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - types [C#], reference tables
 - C# language, data types
 ms.assetid: 1d2b6a9b-31fd-4fa6-a7b2-bfd9c806ac8a
-ms.openlocfilehash: f75a1cf0b118becd940bd1aa8ac66550d0852773
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ef924c6dd092947f0ec05c770a2cfbe12f48000a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035839"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239382"
 ---
 # <a name="reference-tables-for-types-c-reference"></a>类型参考表（C# 参考）
 
 以下参考表概括了 C# 类型：
 
-|表|描述|
+|表|说明|
 |---------|---------|
 |[内置类型](built-in-types-table.md)|列出了内置的 C# 类型和相应的 .NET 类型。|
 |[整型类型](integral-types-table.md)|提供整型类型的概述。|

@@ -2,18 +2,18 @@
 title: 使用 project.json 减少包依赖项
 description: 创建基于 project.json 的库时减少包依赖项。
 author: cartermp
-ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.custom: seodec18
+ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50040876"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674960"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>使用 project.json 减少包依赖项
 
-本文介绍创作 `project.json` 库时减少包依赖项需要了解的内容。 本文结束后，用户将了解如何撰写库，使其仅使用所需的依赖项。 
+本文介绍创作 `project.json` 库时减少包依赖项需要了解的内容。 本文结束后，用户将了解如何撰写库，使其仅使用所需的依赖项。
 
 ## <a name="why-its-important"></a>为什么这十分重要
 
@@ -27,18 +27,17 @@ ms.locfileid: "50040876"
 
 1. 在 `project.json` 的 `dependencies` 部分中引用 `NETStandard.Library` 版本 `1.6.0`。
 2. 使用 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）从命令行中还原包。
-3. 检查 `project.lock.json` 文件并找到 `NETSTandard.Library` 部分。  它在文件的开头附近。
+3. 检查 `project.lock.json` 文件并找到 `NETStandard.Library` 部分。  它在文件的开头附近。
 4. 复制 `dependencies` 下所有列出的包。
 5. 删除 `.NETStandard.Library` 引用并将其替换为复制的包。
 6. 删除不需要的包引用。
-
 
 可以通过下面其中一种方式查找不需要的包：
 
 1. 试用和错误。  这包括删除包、还原以及查看库是否仍在编译，并重复此过程。
 2. 使用如 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 或 [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) 等工具快速浏览引用，以查看代码实际使用的内容。  然后，可以删除与正在使用的类型不相对应的包。
 
-## <a name="example"></a>示例 
+## <a name="example"></a>示例
 
 假设编写了一个为泛型集合类型提供其他功能的库。  此类库需要依赖于如 `System.Collections` 的包，但可能根本不会依赖于如 `System.Net.Http` 的包。  因此，将包依赖项修剪为只剩该库所需的依赖项是个好办法！
 
@@ -56,7 +55,7 @@ ms.locfileid: "50040876"
 }
 ```
 
-接着，使用 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）还原包，检查 `project.lock.json` 文件，并查找为 `NETSTandard.Library` 还原的所有包。
+接着，使用 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）还原包，检查 `project.lock.json` 文件，并查找为 `NETStandard.Library` 还原的所有包。
 
 以下是以 `netstandard1.0` 为目标时，`project.lock.json` 文件中相关部分的内容：
 

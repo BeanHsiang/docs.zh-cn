@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232932"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837528"
 ---
 # <a name="error-statement"></a>Error 语句
 模拟错误的匹配项。  
@@ -28,14 +28,14 @@ Error errornumber
   
 ## <a name="parts"></a>部件  
  `errornumber`  
- 必须的。 可以是任何有效的错误号。  
+ 必需。 可以是任何有效的错误号。  
   
 ## <a name="remarks"></a>备注  
  `Error`语句支持向后兼容性。 在新代码，尤其是在创建对象时，使用`Err`对象的`Raise`方法以生成运行时错误。  
   
  如果`errornumber`定义，则`Error`语句的属性后调用错误处理程序`Err`对象分配以下默认值：  
   
-|属性|“值”|  
+|属性|值|  
 |--------------|-----------|  
 |`Number`|值指定为参数`Error`语句。 可以是任何有效的错误号。|  
 |`Source`|当前的 Visual Basic 项目的名称。|  
@@ -58,14 +58,15 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>要求  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **命名空间：**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **程序集：** Visual Basic 运行库 （在 Microsoft.VisualBasic.dll 中)  
+ **程序集：** Visual Basic 运行库（在 Microsoft.VisualBasic.dll 中）  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>  
- <xref:Microsoft.VisualBasic.Information.Err%2A>  
- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>  
- [On Error 语句](../../../visual-basic/language-reference/statements/on-error-statement.md)  
- [Resume 语句](../../../visual-basic/language-reference/statements/resume-statement.md)  
- [错误消息](../../../visual-basic/language-reference/error-messages/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
+- <xref:Microsoft.VisualBasic.Information.Err%2A>
+- <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>
+- [On Error 语句](../../../visual-basic/language-reference/statements/on-error-statement.md)
+- [Resume 语句](../../../visual-basic/language-reference/statements/resume-statement.md)
+- [错误消息](../../../visual-basic/language-reference/error-messages/index.md)

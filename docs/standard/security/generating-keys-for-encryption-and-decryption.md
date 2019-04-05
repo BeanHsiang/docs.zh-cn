@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 839a04d8a06e782582705cf0d9ad92d2e2df6af6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c566c54343f1dd7c3da2701c2b7ea9f815e22e7b
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173117"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583662"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>生成加密和解密的密钥
 创建和管理密钥是加密过程的一个重要部分。 对称算法要求创建密钥和初始化向量 (IV)。 密钥必须对不应解密数据的任何人保密。 IV 并不是一定要保密，但应定期更改。 非对称算法要求创建公钥和私钥。 公钥可以公开给任何人，而私钥必须只有将解密用公钥加密的数据的参与方知道。 本节介绍如何生成和管理对称和非对称算法的密钥。  
@@ -34,27 +34,27 @@ ms.locfileid: "47173117"
  下列示例演示如何创建 <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider> 类的新实例，该类会实现 TripleDES 算法。  
   
 ```vb  
-Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
+Dim tdes As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
 ```  
   
 ```csharp  
-TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();  
+TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();  
 ```  
   
  执行前面的代码后，将生成新的密钥和 IV，并分别置于 **Key** 和 **IV** 属性中。  
   
- 有时可能需要生成多个密钥。 在这种情况下，你可以创建会实现对称算法的类的新实例，然后通过调用 **GenerateKey** 和 **GenerateIV** 方法来创建新的密钥和 IV。 下列代码示例说明了如何在创建非对称加密类的新实例后创建一个新的密钥和 IV。  
+ 有时可能需要生成多个密钥。 在这种情况下，你可以创建会实现对称算法的类的新实例，然后通过调用 **GenerateKey** 和 **GenerateIV** 方法来创建新的密钥和 IV。 下面的代码示例说明了如何创建新的密钥和 Iv 后对称加密类的新实例。  
   
 ```vb  
-Dim TDES As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
-TDES.GenerateIV()  
-TDES.GenerateKey()  
+Dim tdes As TripleDESCryptoServiceProvider = new TripleDESCryptoServiceProvider()  
+tdes.GenerateIV()  
+tdes.GenerateKey()  
 ```  
   
 ```csharp  
-TripleDESCryptoServiceProvider TDES = new TripleDESCryptoServiceProvider();  
-TDES.GenerateIV();  
-TDES.GenerateKey();  
+TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();  
+tdes.GenerateIV();  
+tdes.GenerateKey();  
 ```  
   
  执行前面的代码后，在创建 **TripleDESCryptoServiceProvider** 的新实例时会生成一个密钥和 IV。 调用 **GenerateKey** 和 **GenerateIV** 方法时会创建另一个密钥和 IV。  
@@ -70,27 +70,27 @@ TDES.GenerateKey();
   
  这两种方法接受一个布尔值，该值指示是只返回公钥信息还是同时返回公钥和私钥信息。 通过使用 **方法，** RSACryptoServiceProvider **类可以初始化为** RSAParameters <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> 结构的值。  
   
- 非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。 如果需要存储私钥，则应使用密钥容器。 有关如何在密钥容器中存储私钥的详细信息，请参阅 [如何：将非对称密钥存储在密钥容器中r](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。  
+ 非对称私钥永远不应以原义或纯文本形式存储在本地计算机上。 如果需要存储私钥，则应使用密钥容器。 有关如何将私钥存储在密钥容器的详细信息，请参阅[如何：将非对称密钥存储在密钥容器](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。  
   
  下列代码示例通过创建公钥/私钥对来创建 **RSACryptoServiceProvider** 类的新实例，并将公钥信息保存到 **RSAParameters** 结构。  
   
 ```vb  
 'Generate a public/private key pair.  
-Dim RSA as RSACryptoServiceProvider = new RSACryptoServiceProvider()  
+Dim rsa as RSACryptoServiceProvider = new RSACryptoServiceProvider()  
 'Save the public key information to an RSAParameters structure.  
-Dim RSAKeyInfo As RSAParameters = RSA.ExportParameters(false)  
+Dim rsaKeyInfo As RSAParameters = rsa.ExportParameters(false)  
 ```  
   
 ```csharp  
 //Generate a public/private key pair.  
-RSACryptoServiceProvider RSA = new RSACryptoServiceProvider();  
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
 //Save the public key information to an RSAParameters structure.  
-RSAParameters RSAKeyInfo = RSA.ExportParameters(false);  
+RSAParameters rsaKeyInfo = rsa.ExportParameters(false);  
 ```  
   
 ## <a name="see-also"></a>请参阅
 
-- [加密数据](../../../docs/standard/security/encrypting-data.md)  
-- [解密数据](../../../docs/standard/security/decrypting-data.md)  
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
-- [如何：将非对称密钥存储在密钥容器中](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [加密数据](../../../docs/standard/security/encrypting-data.md)
+- [解密数据](../../../docs/standard/security/decrypting-data.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [如何：将非对称密钥存储在密钥容器](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

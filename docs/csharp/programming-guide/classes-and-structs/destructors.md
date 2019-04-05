@@ -1,20 +1,21 @@
 ---
-title: 终结器（C# 编程指南）
-ms.date: 05/10/2017
+title: 终结器 - C# 编程指南
+ms.custom: seodec18
+ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: b98d5eac29f498672000a7b0354734c15fd7400c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526030"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202881"
 ---
 # <a name="finalizers-c-programming-guide"></a>终结器（C# 编程指南）
-终结器用于析构类的实例。  
+终结器（也称为析构函数）用于在垃圾回收器收集类实例时执行任何必要的最终清理操作。  
   
 ## <a name="remarks"></a>备注  
   
@@ -30,7 +31,7 @@ ms.locfileid: "43526030"
   
  例如，以下是类 `Car` 的终结器声明。
   
- [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#86](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#86)]  
 
 终结器也可以作为表达式主体定义实现，如下面的示例所示。
 
@@ -71,7 +72,7 @@ protected override void Finalize()
   
  有关清除资源的详细信息，请参阅下列主题：  
   
--   [Cleaning Up Unmanaged Resources](../../../standard/garbage-collection/unmanaged.md)（清理未托管资源）  
+-   [清理未托管资源](../../../standard/garbage-collection/unmanaged.md)（清理未托管资源）  
   
 -   [实现 Dispose 方法](../../../standard/garbage-collection/implementing-dispose.md)  
   
@@ -80,14 +81,15 @@ protected override void Finalize()
 ## <a name="example"></a>示例  
  以下示例创建了三个类，并且这三个类构成了一个继承链。 类 `First` 是基类，`Second` 派生自 `First`，`Third` 派生自 `Second`。 这三个类都具有终结器。 在 `Main` 中，已创建派生程度最高的类的一个实例。 程序运行时，请注意，将按顺序（从派生程度最高到派生程度最低）自动调用这三个类的终结器。  
   
- [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
   
 ## <a name="c-language-specification"></a>C# 语言规范  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+有关详细信息，请参阅 [C# 语言规范](../../language-reference/language-specification/index.md)中的[析构函数](~/_csharplang/spec/classes.md#destructors)部分。
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.IDisposable>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- <xref:System.IDisposable>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [构造函数](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 - [垃圾回收](../../../standard/garbage-collection/index.md)

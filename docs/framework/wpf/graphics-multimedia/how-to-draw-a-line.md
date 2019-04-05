@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: bee343676175098493df347823a3bdbdf17b205f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a194fad5471cafcb567aa00522a597a4186ef4af
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45963765"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374176"
 ---
 # <a name="how-to-draw-a-line"></a>如何：绘制线条
 此示例演示如何通过使用绘制线条<xref:System.Windows.Shapes.Line>元素。  
@@ -23,10 +23,10 @@ ms.locfileid: "45963765"
  下面的示例绘制内的三个行<xref:System.Windows.Controls.Canvas>元素。  
   
 ## <a name="example"></a>示例  
- [!code-xaml[drawingwithshapeelements#LineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
+ [!code-xaml[drawingwithshapeelements#LineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
  此示例摘自一个更大的示例;有关完整示例，请参阅[形状元素示例](https://go.microsoft.com/fwlink/?LinkID=160037)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Shapes.Line>  
- [形状元素示例](https://go.microsoft.com/fwlink/?LinkID=160037)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Shapes.Line>
+- [形状元素示例](https://go.microsoft.com/fwlink/?LinkID=160037)

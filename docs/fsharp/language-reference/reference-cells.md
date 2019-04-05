@@ -1,13 +1,13 @@
 ---
-title: 引用单元格 (F#)
-description: '了解 F # 引用单元格的存储位置，您可以创建具有引用语义的可变值的方式。'
+title: 引用单元格
+description: 了解如何F#引用单元格是使您能够创建具有引用语义的可变值的存储位置。
 ms.date: 05/16/2016
-ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44192246"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612759"
 ---
 # <a name="reference-cells"></a>引用单元格
 
@@ -57,6 +57,7 @@ let ref x = { contents = x }
 |`ref`（运算符）|将值封装到新的引用单元格中。|`'a -> 'a ref`|`let ref x = { contents = x }`|
 |`Value`（属性）|获取或设置基础值。|`unit -> 'a`|`member x.Value = x.contents`|
 |`contents`（记录字段）|获取或设置基础值。|`'a`|`let ref x = { contents = x }`|
+
 可通过多种方式来访问基础值。 取消引用运算符 (`!`) 返回的值不是可赋值的值。 因此，如果要修改基础值，您必须改用赋值运算符 (`:=`)。
 
 `Value` 属性和 `contents` 字段都是可赋值的值。 因此，你可以使用它们来访问或更改基础值，如下面的代码所示。
@@ -74,7 +75,7 @@ let ref x = { contents = x }
 
 提供字段 `contents` 的目的是为了与其他版本的 ML 兼容，并且该字段将在编译过程中产生警告。 若要禁用警告，请使用 `--mlcompatibility` 编译器选项。 有关详细信息，请参阅[编译器选项](compiler-options.md)。
 
-C# 程序员应知道`ref`C# 中不是是与相同的`ref`F # 中。 F # 中的等效构造是[byref](byrefs.md)，这是从引用单元格不同的概念。
+C#程序员应知道`ref`在C#不是与相同`ref`中F#。 中的构造等效于F#都[byref](byrefs.md)，这是从引用单元格不同的概念。
 
 值标记为`mutable`可能会自动提升为`'a ref`如果捕获的闭包中; 请参阅[值](values/index.md)。
 

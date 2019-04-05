@@ -1,17 +1,17 @@
 ---
-title: '基本类型 （F #）'
-description: '了解 F # 语言中使用的基础的基本类型。'
+title: 基本类型
+description: 发现的基础的基本类型中使用F#语言。
 ms.date: 07/09/2018
-ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 74a276792e2566b8f18b87f4bdcfb923b713b9c5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48026928"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610406"
 ---
 # <a name="basic-types"></a>基本类型
 
-本主题列出了在 F # 语言中定义的基本类型。 这些类型是最基本的 F # 中，几乎每个 F # 程序的基础。 它们是.NET 基元类型的一个超集。
+本主题列出了在中定义的基本类型F#语言。 这些类型是最基本中F#，从而形成的几乎每个基础F#程序。 它们是.NET 基元类型的一个超集。
 
 |类型|.NET 类型|描述|
 |----|---------|-----------|
@@ -34,8 +34,8 @@ ms.locfileid: "48026928"
 |`float32`， `single`|<xref:System.Single>|32 位浮点类型。|
 |`float`， `double`|<xref:System.Double>|64 位浮点类型。|
 
->[!NOTE]
-通过执行 64 位整数类型具有整数太大的计算[bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa)类型。 `bigint` 不被视为一种基本类型;是的缩写`System.Numerics.BigInteger`。
+> [!NOTE]
+> 通过执行 64 位整数类型具有整数太大的计算[bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa)类型。 `bigint` 不被视为一种基本类型;是的缩写`System.Numerics.BigInteger`。
 
 ## <a name="see-also"></a>请参阅
 

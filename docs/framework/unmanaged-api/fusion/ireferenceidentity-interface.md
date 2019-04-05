@@ -16,31 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4708fa173725e4c91a13f5b92cdbb1fdf8a8a4d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb8686342b20bd6afe0a4c4803d64428ed95c98b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665768"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity 接口
-表示对代码对象的唯一签名的引用。  
+表示代码对象的唯一签名的引用。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|到新获取的接口指针`IReferenceIdentity`是否与此实例`IReferenceIdentity`，除指定的属性更改外。|  
-|`IReferenceIdentity::EnumAttributes`|获取到的接口指针`IEnumIDENTITY_ATTRIBUTE`实例，其中包含与此关联的特性`IReferenceIdentity`。|  
-|`IReferenceIdentity::GetAttribute`|获取属性的值中指定的命名空间，具有指定名称。|  
-|`IReferenceIdentity::SetAttribute`|设置具有指定的命名空间和指定的名称与指定的值的属性。|  
+|`IReferenceIdentity::Clone`|为新获取的接口指针`IReferenceIdentity`是否与此实例`IReferenceIdentity`，除了指定的属性更改。|  
+|`IReferenceIdentity::EnumAttributes`|获取到的接口指针`IEnumIDENTITY_ATTRIBUTE`实例，它包含与此相关联的属性`IReferenceIdentity`。|  
+|`IReferenceIdentity::GetAttribute`|获取具有指定名称的指定命名空间中的属性的值。|  
+|`IReferenceIdentity::SetAttribute`|设置具有指定的命名空间和指定的值将指定的名称的特性。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Isolation.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IEnumIDENTITY_ATTRIBUTE 接口](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+## <a name="see-also"></a>请参阅
+- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IEnumIDENTITY_ATTRIBUTE 接口](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)

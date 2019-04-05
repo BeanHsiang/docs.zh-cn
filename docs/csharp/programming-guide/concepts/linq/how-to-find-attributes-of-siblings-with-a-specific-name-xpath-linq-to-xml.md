@@ -2,12 +2,12 @@
 title: 如何：查找具有特定名称的同级属性 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 60b6529f310ccbb02160ff96e1db7870bcc71058
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 562f3a40e1670a76778a64570f980326d946a4c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584670"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>如何：查找具有特定名称的同级属性 (XPath-LINQ to XML) (C#)
 本主题演示如何查找上下文节点的同级的所有属性。 只返回集合中具有特定名称的属性。  
@@ -19,7 +19,7 @@ ms.locfileid: "43863116"
 ## <a name="example"></a>示例  
  本示例首先查找 `Book` 元素，然后查找名为 `Book` 的所有同级元素，再查找名为 `id` 的所有属性。 结果是一个属性集合。  
   
- 本示例使用以下 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
-ms.openlocfilehash: 66b410c42214719ce688f8965e7a38143a115326
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537468"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353122"
 ---
 # <a name="digital-ink"></a>数字墨迹
-此部分讨论了中的数字墨迹使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 传统上只能在 Tablet PC SDK 中找到，数字墨迹现已在核心 Windows Presentation Foundation。 这意味着你现在可以通过使用 Windows Presentation Foundation 的强大开发完备 Tablet PC 应用程序。  
+本部分介绍如何使用中的数字墨迹[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 传统上只能在 Tablet PC SDK 中找到，数字墨迹现已在 Windows Presentation Foundation 的核心。 这意味着现在可以通过使用 Windows Presentation Foundation 的强大开发成熟的 Tablet PC 应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
- [概述](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
-  [帮助主题](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
+ [概述](digital-ink-overviews.md)  
+  [帮助主题](digital-ink-how-to-topics.md)  
   
 ## <a name="related-sections"></a>相关章节  
- [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)
+ [Windows Presentation Foundation](../index.md)

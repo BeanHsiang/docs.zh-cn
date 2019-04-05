@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185844"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970566"
 ---
 # <a name="net-class-library-overview"></a>.NET 类库概述
 
@@ -86,7 +86,7 @@ ms.locfileid: "50185844"
   
  下表列出了 .NET 提供的基类型，并对每种类型进行了简单描述，同时指出了 Visual Basic、C#、C++ 和 F# 中的相应类型。  
   
-|类别|类名|描述|Visual Basic 数据类型|C# 数据类型|C++/CLI 数据类型|F# 数据类型|  
+|类别|类名|说明|Visual Basic 数据类型|C# 数据类型|C++/CLI 数据类型|F# 数据类型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |整数|<xref:System.Byte>|8 位无符号整数。|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|8 位有符号整数。<br /><br /> 不符合 CLS。|**SByte**|**sbyte**|**char**<br /> 或<br /> signed char|**sbyte**|  
@@ -96,8 +96,8 @@ ms.locfileid: "50185844"
 ||<xref:System.UInt16>|16 位无符号整数。<br /><br /> 不符合 CLS。|**UShort**|**ushort**|**unsigned short**|**uint16**|  
 ||<xref:System.UInt32>|32 位无符号整数。<br /><br /> 不符合 CLS。|**UInteger**|**uint**|**unsigned int**<br /> 或<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64 位无符号整数。<br /><br /> 不符合 CLS。|**ULong**|**ulong**|unsigned __int64|**uint64**|  
-|浮点|<xref:System.Single>|单精度（32 位）浮点数字。|**单精度**|**float**|**float**|**float32**</br> 或</br>**single**|  
-||<xref:System.Double>|双精度（64 位）浮点数字。|**双精度**|**double**|**double**|**float**</br> 或 </br> **double**|  
+|浮点|<xref:System.Single>|单精度（32 位）浮点数字。|**单精度**|**float**|**float**|**float32**<br> or<br>**single**|  
+||<xref:System.Double>|双精度（64 位）浮点数字。|**双精度**|**double**|**double**|**float**<br> or <br> **double**|  
 |逻辑运算|<xref:System.Boolean>|布尔值（真或假）。|**布尔值**|**bool**|**bool**|**bool**|  
 |其他|<xref:System.Char>|Unicode（16 位）字符。|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|十进制（128 位）值。|**小数**|**decimal**|**小数**|**decimal**|  
@@ -106,12 +106,13 @@ ms.locfileid: "50185844"
 ||<xref:System.Object>|对象层次结构的根。|**对象**|**object**|**Object^**|**obj**|  
 ||<xref:System.String>|Unicode 字符的不变的定长串。|**字符串**|**string**|**String^**|**string**|  
   
- 除了基本数据类型外，<xref:System> 命名空间还包含 100 多个类，范围从处理异常的类到处理核心运行时概念的类，如应用程序域和垃圾回收器。 <xref:System> 命名空间还包含许多二级命名空间。  
+ 除了基本数据类型外，<xref:System> 命名空间还包含 100 多个类，范围从处理异常的类到处理核心运行时概念的类，如应用程序域和垃圾回收器。 
+  <xref:System> 命名空间还包含许多二级命名空间。  
   
  有关命名空间的详细信息，请使用 [.NET API 浏览器](https://docs.microsoft.com/dotnet/api)来浏览 .NET 类库。 API 参考文档提供了有关每个名称空间及其类型和每个成员的文档。  
   
 ## <a name="see-also"></a>请参阅
 
-- [常规类型系统](../../docs/standard/base-types/common-type-system.md)  
-- [.NET API 浏览器](https://docs.microsoft.com/dotnet/api)  
+- [常规类型系统](../../docs/standard/base-types/common-type-system.md)
+- [.NET API 浏览器](../../api/index.md)
 - [概述](../../docs/framework/get-started/overview.md)

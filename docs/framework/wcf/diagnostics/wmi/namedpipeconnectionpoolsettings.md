@@ -2,12 +2,12 @@
 title: NamedPipeConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
-ms.openlocfilehash: 77d8403947d341ea2efcef98bbf166f94f75f31f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3dddfa878e3cb5bd89fb76009d0dba530debb297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188724"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725072"
 ---
 # <a name="namedpipeconnectionpoolsettings"></a>NamedPipeConnectionPoolSettings
 NamedPipeConnectionPoolSettings  
@@ -26,7 +26,7 @@ class NamedPipeConnectionPoolSettings
 ## <a name="methods"></a>方法  
  NamedPipeConnectionPoolSettings 类不定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  NamedPipeConnectionPoolSettings 类具有以下属性：  
   
 ### <a name="groupname"></a>GroupName  
@@ -56,5 +56,5 @@ class NamedPipeConnectionPoolSettings
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>

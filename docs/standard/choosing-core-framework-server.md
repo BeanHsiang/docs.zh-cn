@@ -4,12 +4,12 @@ description: 关于在 .NET 中生成服务器应用时应考虑使用哪种 .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202232"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678795"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>为服务器应用选择 .NET Core 或 .NET Framework
 
@@ -52,7 +52,7 @@ ms.locfileid: "50202232"
 
 容器通常与微服务体系结构结合使用。 还可使用容器将遵循任何体系结构模式的 Web 应用或服务容器化。 可在 Windows 容器上使用 .NET Framework，但 .NET Core 的模块化和轻型性质使之成为容器的更佳选择。 在创建和部署容器时，使用 .NET Core 时容器的映像大小要远小于使用 .NET Framework 时的大小。 例如，因为它是跨平台的，所以可将服务器应用部署到 Linux Docker 容器。
 
-Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管在 [Azure 容器服务](https://azure.microsoft.com/services/container-service/)等云服务中。 Azure 容器服务可管理、协调和缩放云中基于容器的应用程序。
+Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管在 [Azure Kubernetes 服务](https://azure.microsoft.com/services/kubernetes-service/)等云服务中。 Azure Kubernetes 服务可管理、协调和缩放云中基于容器的应用程序。
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>高性能和可扩展系统的需求
 
@@ -77,7 +77,7 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 库很快将使用 .NET Standard。 通过 .NET Standard 可跨各种 .NET 实现（包括 .NET Core）共享代码。 使用 .NET Standard 2.0 则更简单：
 
 - API 曲面已变为更大。 
-- 引入了 .NET Framework 兼容性模式。 此兼容性模式允许 .NET Standard/.NET Core 项目引用.NET Framework 库。 若要详细了解兼容性模式，请参阅 [Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/)（宣布发布 .NET Standard 2.0）。
+- 引入了 .NET Framework 兼容性模式。 此兼容性模式允许 .NET Standard/.NET Core 项目引用.NET Framework 库。 若要详细了解兼容性模式，请参阅 [Announcing .NET Standard 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/)（宣布发布 .NET Standard 2.0）。
 
 因此，只有在库或 NuGet 包使用的技术在 .NET Standard/.NET Core 中不可用的情况下，才需要使用 .NET Framework。
 
@@ -99,15 +99,15 @@ Docker 容器可托管在自己的 Linux 或 Windows 基础结构中，或托管
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>需要使用不支持 .NET Core 的平台
 
-某些 Microsoft 或第三方平台不支持 .NET Core。 例如，某些 Azure 服务（如 Service Fabric Stateful Reliable Services 和 Service Fabric Reliable Actors）需要 .NET Framework。 某些其他服务提供尚不可用于 .NET Core 的 SDK。 这只是过渡情况，因为所有 Azure 服务都将使用 .NET Core。 在此期间，可用始终使用等效的 REST API 取代客户端 SDK。
+某些 Microsoft 或第三方平台不支持 .NET Core。 某些 Azure 服务提供尚不可用于 .NET Core 的 SDK。 这只是过渡情况，因为所有 Azure 服务都将使用 .NET Core。 在此期间，可用始终使用等效的 REST API 取代客户端 SDK。
 
 ## <a name="see-also"></a>请参阅
 
-* [在 ASP.NET 和 ASP.NET Core 之间进行选择](/aspnet/core/choose-aspnet-framework)
-* [面向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
-* [目标框架](frameworks.md)
-* [.NET Core 指南](../core/index.md)  
-* [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)  
-* [Docker 上的 .NET Framework 指南](../framework/docker/index.md)  
-* [.NET 组件概述](components.md)  
-* [.NET 微服务 - 适用于容器化 .NET 应用程序的体系结构](microservices-architecture/index.md)
+- [在 ASP.NET 和 ASP.NET Core 之间进行选择](/aspnet/core/choose-aspnet-framework)
+- [面向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
+- [目标框架](frameworks.md)
+- [.NET Core 指南](../core/index.md)
+- [从 .NET Framework 移植到 .NET Core](../core/porting/index.md)
+- [Docker 上的 .NET Framework 指南](../framework/docker/index.md)
+- [.NET 组件概述](components.md)
+- [.NET 微服务 - 适用于容器化 .NET 应用程序的体系结构](microservices-architecture/index.md)

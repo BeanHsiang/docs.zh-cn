@@ -6,12 +6,12 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: d1c69d2e9e89e0a4fed767216e8743a0ac9ac81d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2805ebc66be5908c333e9a5db41076518ad77c1a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201798"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705852"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>演练：使用 Windows 窗体控件上的智能标记执行常规任务
 在 Windows 窗体应用程序构造窗体和控件，如有需要反复执行的许多任务。 以下是一些你将遇到的执行常用任务：  
@@ -53,21 +53,21 @@ ms.locfileid: "44201798"
   
 #### <a name="to-use-smart-tags"></a>若要使用智能标记  
   
-1.  拖动<xref:System.Windows.Forms.TabControl>从**工具箱**拖动到窗体。 请注意的智能标记标志符号 (![智能标记标志符号](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 旁边的显示<xref:System.Windows.Forms.TabControl>。  
+1.  拖动<xref:System.Windows.Forms.TabControl>从**工具箱**拖动到窗体。 请注意的智能标记标志符号 (![智能标记标志符号](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 旁边的显示<xref:System.Windows.Forms.TabControl>。  
   
 2.  单击智能标记标志符号。 在标志符号旁边显示的快捷菜单，选择**添加选项卡**项。 观察到的新选项卡页添加到<xref:System.Windows.Forms.TabControl>。  
   
-3.  拖动<xref:System.Windows.Forms.TableLayoutPanel>控件从**工具箱**拖动到窗体。  
+3.  从 <xref:System.Windows.Forms.TableLayoutPanel> “工具箱” **将** 控件拖到你的窗体上。  
   
 4.  单击智能标记标志符号。 在标志符号旁边显示的快捷菜单，选择**添加列**项。 观察新列添加到<xref:System.Windows.Forms.TableLayoutPanel>控件。  
   
-5.  拖动<xref:System.Windows.Forms.SplitContainer>控件从**工具箱**拖动到窗体。  
+5.  从 <xref:System.Windows.Forms.SplitContainer> “工具箱” **将** 控件拖到你的窗体上。  
   
 6.  单击智能标记标志符号。 在标志符号旁边显示的快捷菜单，选择**水平拆分器方向**项。 观察<xref:System.Windows.Forms.SplitContainer>现在是控件的分隔条水平。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.TextBox>  
- <xref:System.Windows.Forms.TabControl>  
- <xref:System.Windows.Forms.SplitContainer>  
- <xref:System.ComponentModel.Design.DesignerActionList>  
- [演练： 向 Windows 窗体组件添加智能标记](https://msdn.microsoft.com/library/a6814169-fa7d-4527-808c-637ca5c95f63)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.TextBox>
+- <xref:System.Windows.Forms.TabControl>
+- <xref:System.Windows.Forms.SplitContainer>
+- <xref:System.ComponentModel.Design.DesignerActionList>
+- [演练：向 Windows 窗体组件添加智能标记](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171829(v=vs.120))

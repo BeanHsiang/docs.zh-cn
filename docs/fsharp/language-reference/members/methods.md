@@ -1,13 +1,13 @@
 ---
-title: 方法 (F#)
-description: '了解如何与用于公开和实现的功能和行为的对象和类型的类型相关联的函数的 F # 方法。'
+title: 方法
+description: 了解如何F#方法是与用于公开和实现的功能和行为的对象和类型的类型相关联的函数。
 ms.date: 05/16/2016
-ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44253203"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614020"
 ---
 # <a name="methods"></a>方法
 
@@ -59,7 +59,7 @@ override self-identifier.method-name parameter-list [ : return-type ] =
 
 ## <a name="instance-methods"></a>实例方法
 
-实例方法声明具有`member`关键字和一个*自我标识符*后, 跟一个句点 （.） 的方法名称和参数。 对于这种情况`let`绑定，*参数列表*可以是一种模式。 通常情况下，则将的方法参数括在圆括号中元组形式，这是方法方法出现在 F # 时在其他.NET Framework 语言中创建。 但是，扩充的形式 （用空格分隔的参数） 也很常见，并且还支持其他模式。
+实例方法声明具有`member`关键字和一个*自我标识符*后, 跟一个句点 （.） 的方法名称和参数。 对于这种情况`let`绑定，*参数列表*可以是一种模式。 通常情况下，则将括在圆括号中元组形式，这是方法方法的参数出现在方法F#及其在其他.NET Framework 语言中的创建时间。 但是，扩充的形式 （用空格分隔的参数） 也很常见，并且还支持其他模式。
 
 下面的示例演示定义和使用非抽象实例方法。
 
@@ -97,11 +97,11 @@ override self-identifier.method-name parameter-list [ : return-type ] =
 
 ## <a name="overloaded-methods"></a>重载方法
 
-重载的方法是在给定类型中具有相同名称但具有不同参数的方法。 在 F # 中，而不是重载方法通常用于可选参数。 但是，重载的方法允许在语言中，参数是在元组形式中，不是扩充形式。
+重载的方法是在给定类型中具有相同名称但具有不同参数的方法。 在F#，而不是重载方法通常使用可选参数。 但是，重载的方法允许在语言中，参数是在元组形式中，不是扩充形式。
 
 ## <a name="optional-arguments"></a>可选实参
 
-从 F # 4.1 开始，你还可以使用默认参数值的可选参数在方法中。  这是为了便于与 C# 代码的互操作。  下面的示例演示了该语法：
+从F#4.1，您还可以使用默认参数值的可选参数在方法中。  这是为了便于与 C# 代码的互操作。  下面的示例演示了该语法：
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.
@@ -111,7 +111,7 @@ type C() =
 
 请注意，为传入的值`DefaultParameterValue`必须与输入的类型匹配。  在上面的示例，它是`int`。  尝试将传递到一个非整数值`DefaultParameterValue`将导致编译错误。
 
-## <a name="example-properties-and-methods"></a>示例： 属性和方法
+## <a name="example-properties-and-methods"></a>示例:属性和方法
 
 下面的示例包含具有字段、 私有函数、 属性和静态方法的示例的类型。
 

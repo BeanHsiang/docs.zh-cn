@@ -3,12 +3,12 @@ title: 适用于 Visual Studio 2012 的标识和访问工具
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: 1177048d8124c955220605e52dde539b84510cba
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a1b5456f9081d807a3c9e29e1010cbfbf91e637f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678546"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>适用于 Visual Studio 2012 的标识和访问工具
 本主题描述了适用于 Visual Studio 11 的新的标识和访问工具。 可以从以下 URL 下载此工具： [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849)或直接从 Visual Studio 11 中搜索"标识"直接在扩展管理器中。  
@@ -25,7 +25,7 @@ ms.locfileid: "48584152"
   
 -   您可以在单个屏幕上使用 Active Directory 联合身份验证服务 (AD FS) 2.0（或其他 WS 联合身份验证提供程序）建立联合身份验证。  
   
--   此工具将 Microsoft Azure 访问控制服务 (ACS) 的功能与要使用的所有标识提供程序的复选框列表结合使用：Facebook、Google、Live ID、Yahoo!、任何 OpenID 提供程序以及任何 WS 联合身份验证提供程序。 选择标识提供程序，单击“确定”，然后按 F5，这会自动配置你的应用程序和 ACS，并且你的测试应用程序将是 ACS 感知的。  
+-   该工具为你想要使用的所有标识提供者可利用 Windows Azure 访问控制服务 (ACS) 功能使用一个简单的复选框列表：Facebook、 Google、 Live ID、 yahoo ！、 任何 OpenID 提供程序和任何 WS 联合身份验证提供程序。 选择标识提供程序，单击“确定”，然后按 F5，这会自动配置你的应用程序和 ACS，并且你的测试应用程序将是 ACS 感知的。  
   
-## <a name="see-also"></a>请参阅  
- [WIF 功能](../../../docs/framework/security/wif-features.md)
+## <a name="see-also"></a>请参阅
+- [WIF 功能](../../../docs/framework/security/wif-features.md)

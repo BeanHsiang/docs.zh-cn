@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 59828e988659b9fc5644ff801f77171103630660
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 86d4d4628313ff248618f37637b0a25e80820b06
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519911"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903618"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 ADO.NET 为创建分布式数据共享应用程序提供了一组丰富的组件。 它提供了对关系数据、XML 和应用程序数据的访问，因此是 .NET Framework 中不可缺少的一部分。 ADO.NET 支持多种开发需求，包括创建由应用程序、工具、语言或 Internet 浏览器使用的前端数据库客户端和中间层业务对象。  
@@ -44,24 +44,21 @@ ADO.NET 是一组向 .NET Framework 程序员公开数据访问服务的类。 A
  描述 Oracle .NET Framework 数据提供程序特定的功能和行为。  
   
 ## <a name="related-sections"></a>相关章节  
- [本机代码和 .NET Framework 代码的安全性](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- 提供指向 Visual Studio、.NET Framework 和加密的相关安全主题的链接。  
+ [语言集成查询 (LINQ)-C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ 提供指向 LINQ 主题和示例使用C#。  
   
- [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- 提供指向 LINQ 主题和示例的链接。  
+ [语言集成查询 (LINQ) 的 Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ 提供指向 LINQ 主题和使用 Visual Basic 示例。  
   
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
  描述如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]在实现开放式数据协议 (OData) 的 Web 或 Intranet 上部署数据服务。  
   
- [核心开发技术](https://msdn.microsoft.com/library/csxbhtye.aspx)  
+ [.NET Framework 开发指南](../../development-guide.md)  
  提供与 .NET Framework 中的标准开发任务有关的信息的链接。  
   
- [高级开发技术](https://msdn.microsoft.com/library/a493kdy6.aspx)  
- 提供与 .NET Framework 中的复杂开发任务和方法有关的信息的链接。  
+ [示例和教程](../../../samples-and-tutorials/index.md)  
+ 提供.NET 示例和教程的列表。
   
- [示例与快速入门](https://msdn.microsoft.com/library/ms184422.aspx)  
- 提供与 .NET Framework 关联的所有示例和 QuickStart 示例的完整列表。  
-  
-## <a name="see-also"></a>请参阅  
- [在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [在 Visual Studio 中访问数据](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

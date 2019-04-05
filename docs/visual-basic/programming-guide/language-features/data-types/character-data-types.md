@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 3b031c6e3dc04637128f95ca8e922d3298981287
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 14085172a8f9f9d60af0495a36dd4ba7592213fa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863198"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840973"
 ---
 # <a name="character-data-types-visual-basic"></a>字符数据类型 (Visual Basic)
 Visual Basic 提供了一些*字符数据类型*来处理可打印和可显示的字符。 尽管它们都处理 Unicode 字符`Char`包含一个字符，而`String`包含字符数量不确定。  
@@ -39,11 +39,12 @@ Visual Basic 提供了一些*字符数据类型*来处理可打印和可显示�
   
  有关详细信息，请参阅[字符串数据类型](../../../../visual-basic/language-reference/data-types/string-data-type.md)。  
   
-## <a name="see-also"></a>请参阅  
- [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a>请参阅
+
+- [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Visual Basic 中的泛型类型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0063e33a6a7861815ebb9d9eb3dabec64dd4b9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 218279684304b766a9bf009f5891ac4910254a3c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419648"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492161"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory 方法
 读取此进程的内存的指定的区域。  
@@ -37,31 +37,31 @@ HRESULT ReadMemory(
     [out] SIZE_T *read);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `address`  
- [in]A`CORDB_ADDRESS`指定的内存要读取的基址的值。  
+ [in]一个`CORDB_ADDRESS`值，该值指定要读取的内存的基址。  
   
  `size`  
  [in]要从内存读取的字节数。  
   
  `buffer`  
- [out]用于接收缓冲区的内存的内容。  
+ [out]该缓冲区用于接收内存的内容。  
   
  `read`  
- [out]指向的字节数的传输到指定的缓冲区。  
+ [out]到指定的缓冲区传输到的字节数的指针。  
   
 ## <a name="remarks"></a>备注  
- `ReadMemory`方法主要用于通过互操作调试用于检查正在使用的调试对象的非托管部分的内存区域。 此方法还可以用于读取 Microsoft 中间语言 (MSIL) 代码和本机 JIT 编译代码。  
+ `ReadMemory`方法主要用于通过互操作调试用于检查正在使用的调试对象的非托管部分的内存区域。 此方法还可以用于读取 Microsoft 中间语言 (MSIL) 代码和 JIT 编译的本机代码。  
   
- 将从中返回的数据中删除任何托管的断点`buffer`参数。 将进行任何调整，为本机断点通过设置[icordebugprocess2:: Setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)。  
+ 将从中返回的数据中删除任何托管的断点`buffer`参数。 为本机断点集将进行任何调整[ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)。  
   
- 执行进程内存无缓存。  
+ 执行进程内存没有缓存。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

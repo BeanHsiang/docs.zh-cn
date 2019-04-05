@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 978ef8f0abe3b65110864773a19c15f0c8363236
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f85b45186c7cbc299e68f6f914f591f337aa3993
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517066"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS、通过 TCP 的 SSL 与 SOAP 安全之间的证书验证差异
 您可以使用证书在 Windows Communication Foundation (WCF) 消息层 (SOAP) 安全传输层安全性 (TLS) 除了通过 HTTP (HTTPS) 或 TCP。 本主题介绍此类证书的验证方式的差异。  
   
 ## <a name="validation-of-https-client-certificates"></a>验证 HTTPS 客户端证书  
- 当使用 HTTPS 在客户端和服务间通信时，客户端用于向服务进行身份验证的证书必须支持链信任。 也就是说，它必须链至受信任的根证书颁发机构。 否则，HTTP 层将引发<xref:System.Net.WebException>，并显示消息“远程服务器返回错误: (403) 禁止。” WCF 将作为此异常显示<xref:System.ServiceModel.Security.MessageSecurityException>。  
+ 当使用 HTTPS 在客户端和服务间通信时，客户端用于向服务进行身份验证的证书必须支持链信任。 也就是说，它必须链至受信任的根证书颁发机构。 否则，HTTP 层引发<xref:System.Net.WebException>并显示消息"远程服务器返回了错误：(403) 禁止。" WCF 将作为此异常显示<xref:System.ServiceModel.Security.MessageSecurityException>。  
   
 ## <a name="validation-of-https-service-certificates"></a>验证 HTTPS 服务证书  
  当使用 HTTPS 在客户端和服务间通信时，服务器身份验证使用的证书默认情况下必须支持链信任。 也就是说，它必须链至受信任的根证书颁发机构。 不会执行任何在线检查来查看证书是否已吊销。 可以通过注册 <xref:System.Net.Security.RemoteCertificateValidationCallback> 回调来重写此行为，如以下代码所示。  
@@ -47,6 +47,6 @@ ms.locfileid: "50183589"
  [!code-csharp[c_CertificateValidationDifferences#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#4)]
  [!code-vb[c_CertificateValidationDifferences#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#4)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Net.Security.RemoteCertificateValidationCallback>  
- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.Security.RemoteCertificateValidationCallback>
+- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

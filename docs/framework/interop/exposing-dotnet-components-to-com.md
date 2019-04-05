@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f11928388dba9b0e9b442578bfb7b6f751c2e172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d90b3c23af39125d888824dbfabf798a3e73985
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387427"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218731"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>向 COM 公开 .NET Framework 组件
 对开发人员而言，编写 .NET 类型以及从非托管代码使用该类型是不同的活动。 本部分介绍编写与 COM 客户端互操作的托管代码的几个提示：  
@@ -42,14 +42,14 @@ ms.locfileid: "33387427"
   
      COM 开发人员可使用当前使用的相同工具和技术引用程序集中的类型。  
   
-3.  [调用 .NET 对象](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))。  
+3.  [调用 .NET 对象](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))。  
   
      COM 开发人员可采用在任何非托管类型上调用方法的方式在 .NET 对象上调用方法。 例如，COM CoCreateInstance API 激活 .NET 对象。  
   
-4.  [为 COM 访问部署应用程序](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))。  
+4.  [为 COM 访问部署应用程序](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))。  
   
      具有强名称的程序集可安装在全局程序集缓存中，并向其发布者请求签名。 不具有强名称的程序集必须安装在客户端的应用程序目录中。  
   
-## <a name="see-also"></a>请参阅  
- [与非托管代码交互操作](../../../docs/framework/interop/index.md)  
- [COM 互操作示例：COM 客户端和 .NET 服务器](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+## <a name="see-also"></a>请参阅
+- [与非托管代码交互操作](../../../docs/framework/interop/index.md)
+- [COM 互操作示例：COM 客户端和 .NET 服务器](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

@@ -1,8 +1,7 @@
 ---
 title: DataMemberFieldEditor 类
 ms.date: 03/30/2017
-ms.technology:
-- dotnet-winforms
+ms.technology: dotnet-winforms
 api_name:
 - System.Windows.Forms.Design.DataMemberFieldEditor
 api_location:
@@ -14,12 +13,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 52c95c5977dafb6d348e69f3c2f5280bafc3b342
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452948"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633759"
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor 类
 
@@ -32,7 +31,7 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberFieldEditor`类是内部，不应在代码中直接使用。
+> `DataMemberFieldEditor`类内部使用并且不应在代码中直接使用。
 > 
 > 在生产应用程序在任何情况下，Microsoft 不支持此类使用。
 
@@ -40,9 +39,9 @@ internal class DataMemberFieldEditor : UITypeEditor
 
 **Namespace**：<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**程序集：** System.Design （在 System.Design.dll)  
+**程序集：**（在 System.Design.dll) System.Design  
   
-**.NET framework 版本**：自 2.0 之后可用。  
+**.NET framework 版本：** 自 2.0 之后可用。  
   
 ## <a name="see-also"></a>请参阅
 

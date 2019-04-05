@@ -9,17 +9,17 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: aa8877150d654bf9659dbb34b91436c0ee9ff8b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526290"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705826"
 ---
 # <a name="how-to-validate-application-settings"></a>如何：验证应用程序设置
 本主题演示如何在保留应用程序设置前先验证它们。  
   
- 由于应用程序设置是强类型设置，因此在一定程度上可以相信用户无法向给定设置分配错误类型的数据。 但是，用户仍有可能尝试向设置分配超出可接受范围的值，例如，用户提供的出生日期可能是一个将来日期。 <xref:System.Configuration.ApplicationSettingsBase>所有的应用程序设置类的父类公开四个事件，若要启用此类边界检查。 处理这些事件会将所有验证代码放置在同一位置中，而不是将其分散到整个项目。  
+ 由于应用程序设置是强类型设置，因此在一定程度上可以相信用户无法向给定设置分配错误类型的数据。 但是，用户仍有可能尝试向设置分配超出可接受范围的值，例如，用户提供的出生日期可能是一个将来日期。 <xref:System.Configuration.ApplicationSettingsBase>所有应用程序设置类的父类公开四个事件，若要启用此类边界检查。 处理这些事件会将所有验证代码放置在同一位置中，而不是将其分散到整个项目。  
   
  所用事件取决于需要何时验证设置，如下表所述。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "33526290"
 |<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|在更改单个设置属性的值之后发生。<br /><br /> 更改单个属性之后，使用此事件验证该属性。 除非需要进行长时间的异步验证处理，否则很少将此事件用于验证操作。|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|在存储设置属性组之前发生。<br /><br /> 将属性组保留到磁盘之前，使用此事件验证整个属性组的值。|  
   
- 通常，不会在同一应用程序中使用所有这些事件进行验证操作。 例如，它通常是可以通过仅处理满足所有的验证要求<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>事件。  
+ 通常，不会在同一应用程序中使用所有这些事件进行验证操作。 例如，则通常可以通过仅处理满足所有验证需求<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>事件。  
   
  事件处理程序检测到无效值时通常执行以下操作之一：  
   
@@ -38,11 +38,11 @@ ms.locfileid: "33526290"
   
 -   再次询问服务器代码用户，以获取信息。  
   
--   对于如及其关联的操作之前引发的事件<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>和<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>，使用<xref:System.ComponentModel.CancelEventArgs>参数来取消该操作。  
+-   如及其关联的操作之前引发的事件<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>并<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>，使用<xref:System.ComponentModel.CancelEventArgs>参数来取消该操作。  
   
- 有关事件处理的详细信息，请参阅[事件处理程序概述](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)。  
+ 有关事件处理的详细信息，请参阅[事件处理程序概述](../event-handlers-overview-windows-forms.md)。  
   
- 下面的过程演示如何测试使用的有效的出生日期<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>或<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>事件。 这些过程是在假定已创建应用程序设置的情况下编写的；在此示例中，我们将对名为 `DateOfBirth` 的设置执行边界检查。 有关创建设置的详细信息，请参阅[如何：创建应用程序设置](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
+ 以下过程介绍如何测试使用的有效的出生日期<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>或<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>事件。 这些过程是在假定已创建应用程序设置的情况下编写的；在此示例中，我们将对名为 `DateOfBirth` 的设置执行边界检查。 有关创建设置的详细信息，请参阅[如何：创建应用程序设置](how-to-create-application-settings.md)。  
   
 ### <a name="to-obtain-the-application-settings-object"></a>获取应用程序设置对象  
   
@@ -58,13 +58,13 @@ ms.locfileid: "33526290"
         MySettings.Default   
         ```  
   
-         -或-  
+         或  
   
     -   如果是 Visual Basic 开发人员并使用项目设计器创建应用程序设置，则可通过使用 [My.Settings Object](~/docs/visual-basic/language-reference/objects/my-settings-object.md) 对象来检索设置。  
   
-         -或-  
+         或  
   
-    -   如果由派生自创建你的设置<xref:System.Configuration.ApplicationSettingsBase>直接，你需要手动实例化类。  
+    -   如果通过从派生来创建你的设置<xref:System.Configuration.ApplicationSettingsBase>直接，您需要手动实例化类。  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  
@@ -78,9 +78,9 @@ ms.locfileid: "33526290"
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>设置更改时验证应用程序设置  
   
-1.  如果你是 C# 开发人员，在窗体或控件的`Load`事件，添加事件处理程序<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>事件。  
+1.  如果您是C#开发人员，在窗体或控件的`Load`事件添加事件处理程序<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>事件。  
   
-     -或-  
+     或  
   
      如果是 Visual Basic 开发人员，则应使用 `WithEvents` 关键字声明 `Settings` 变量。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "33526290"
   
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>保存时验证应用程序设置  
   
-1.  在窗体或控件的`Load`事件，添加事件处理程序<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>事件。  
+1.  在窗体或控件的`Load`事件，添加的事件处理程序<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>事件。  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -160,6 +160,6 @@ ms.locfileid: "33526290"
     End Sub  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [在 Windows 窗体中创建事件处理程序](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [如何：创建应用程序设置](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+## <a name="see-also"></a>请参阅
+- [在 Windows 窗体中创建事件处理程序](../creating-event-handlers-in-windows-forms.md)
+- [如何：创建应用程序设置](how-to-create-application-settings.md)

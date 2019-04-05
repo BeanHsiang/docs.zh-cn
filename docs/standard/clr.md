@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fd04a68a34f6cfb0e59a861b27178d4d2a9e857
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 740c804dae32a79dd06f951751bd0980fb34ca07
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042382"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904118"
 ---
 # <a name="common-language-runtime-clr-overview"></a>公共语言运行时 (CLR) 概述
 
@@ -80,7 +80,7 @@ ms.locfileid: "44042382"
 
 ## <a name="related-topics"></a>相关主题
 
-|标题|描述|
+|Title|说明​​|
 |-----------|-----------------|
 |[托管执行过程](managed-execution-process.md)|描述使用公共语言运行时所需要的步骤。|
 |[自动内存管理](automatic-memory-management.md)|描述垃圾回收器如何分配和释放内存。|

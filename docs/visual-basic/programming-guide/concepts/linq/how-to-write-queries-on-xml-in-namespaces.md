@@ -1,15 +1,15 @@
 ---
-title: 如何： 命名空间 (Visual Basic 中) 中的 XML 编写查询
+title: 如何：命名空间 (Visual Basic) 中的 XML 编写查询
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: f4e895e560d0fb11c128248e4f42d1d5124bc124
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645559"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833433"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>如何： 命名空间 (Visual Basic 中) 中的 XML 编写查询
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>如何：命名空间 (Visual Basic) 中的 XML 编写查询
 若要针对命名空间中的 XML 编写查询，必须使用具有正确命名空间的 <xref:System.Xml.Linq.XName> 对象。  
   
  在 Visual Basic 中，最常用的方法是定义一个全局命名空间，然后使用那些使用该全局命名空间的 XML 文本和 XML 属性。 您可以定义一个全局默认命名空间，在这种情况中，XML 文本中的元素将默认位于该命名空间中。 或者，您可以定义一个具有前缀的全局命名空间，然后根据需要在 XML 文本和 XML 属性中使用该前缀。 与其他形式的 XML 一样，默认情况下，属性始终不在任何命名空间中。  
@@ -88,5 +88,6 @@ End Module
 3  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [处理 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>请参阅
+
+- [使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

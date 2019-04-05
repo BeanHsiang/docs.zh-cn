@@ -1,5 +1,5 @@
 ---
-title: 如何：指定 Windows 窗体 DataGridView 控件的编辑模式
+title: 如何：Windows 窗体 DataGridView 控件中指定的编辑模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,34 +8,34 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 5117dfe2e017cf4af1d352fdbf23c6599c0e56a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00c5bb85eb1b238371e58a631d90b69a41c49140
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536268"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725295"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>如何：指定 Windows 窗体 DataGridView 控件的编辑模式
-默认情况下，用户可以编辑的当前内容<xref:System.Windows.Forms.DataGridView>文本框单元格中通过键入它，或按 f2 键。 这将单元格置于编辑模式为如果满足所有以下条件：  
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>如何：Windows 窗体 DataGridView 控件中指定的编辑模式
+默认情况下，用户可以编辑的当前内容<xref:System.Windows.Forms.DataGridView>通过在其中键入内容或按 F2 的文本框单元。 这使该单元格进入编辑模式为如果满足所有以下条件：  
   
 -   基础数据源支持编辑。  
   
--   <xref:System.Windows.Forms.DataGridView>启用控制。  
+-   <xref:System.Windows.Forms.DataGridView>启用控件。  
   
 -   <xref:System.Windows.Forms.DataGridView.EditMode%2A>属性值不是<xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>。  
   
--   `ReadOnly`的单元格、 行、 列和控件的属性都设置为`false`。  
+-   `ReadOnly`单元格、 行、 列和控件的属性都设置为`false`。  
   
- 在编辑模式下，用户可以更改单元格的值，然后按 enter 键以提交更改或按 ESC 键还原到其原始值的单元格。  
+ 在编辑模式下，用户可以更改单元格的值，然后按 enter 键以提交更改或 ESC 键恢复到其原始值的单元格。  
   
- 你可以配置<xref:System.Windows.Forms.DataGridView>控制，以便在单元格进入编辑模式，只要它成为当前的单元格。 ENTER 和 ESC 键的行为是在这种情况下，不变，但此单元格处于编辑模式后的值是提交或还原。 以便单元格进入编辑模式，仅在单元格或仅当用户按 F2 用户键入时，还可以配置控件。 最后，可以防止单元格进入编辑模式，除非当调用<xref:System.Windows.Forms.DataGridView.BeginEdit%2A>方法。  
+ 你可以配置<xref:System.Windows.Forms.DataGridView>控件，以便在单元格进入编辑模式，只要它成为当前的单元格。 在这种情况下，不变的 ENTER 和 ESC 键的行为，但此单元格处于编辑模式后的值是已提交或还原。 此外可以配置该控件，以便仅在单元格或仅当用户按 F2 用户键入时，单元格进入编辑模式。 最后，可以防止单元格进入编辑模式，除非在调用<xref:System.Windows.Forms.DataGridView.BeginEdit%2A>方法。  
   
-### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>更改 DataGridView 控件的编辑模式  
+### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>若要更改 DataGridView 控件的编辑模式  
   
--   设置<xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>到适当的属性<xref:System.Windows.Forms.DataGridViewEditMode>枚举。  
+-   设置<xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>属性设置为相应<xref:System.Windows.Forms.DataGridViewEditMode>枚举。  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
-     [!code-vb[System.Windows.Forms.DataGridViewMisc#067](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
+     [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
   
 ## <a name="compiling-the-code"></a>编译代码  
  此示例需要：  
@@ -44,7 +44,7 @@ ms.locfileid: "33536268"
   
 -   对 <xref:System> 和 <xref:System.Windows.Forms> 程序集的引用。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>  
- [Windows 窗体 DataGridView 控件中的数据输入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
+- [Windows 窗体 DataGridView 控件中的数据输入](data-entry-in-the-windows-forms-datagridview-control.md)

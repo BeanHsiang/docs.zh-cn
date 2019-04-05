@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 6578a410e389a313b0bad70f043691240e288887
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 75e60cb2a3a934956099ce6fc7d81bf6ecea4d11
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865753"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841636"
 ---
 # <a name="numeric-data-types-visual-basic"></a>数值型数据类型 (Visual Basic)
 Visual Basic 提供若干*数值数据类型*来处理各种表示形式中的数字。 *整型*类型表示仅整数 （正数、 负数和零），并*nonintegral*类型具有整数和小数部分表示的数字。  
@@ -78,9 +78,10 @@ Visual Basic 提供若干*数值数据类型*来处理各种表示形式中的�
 ### <a name="small-fractional-numbers"></a>小小数位的数字  
  如果不需要的全部`Double`数据类型，则可以使用`Single`数据类型，它包含从-3.4028235E + 38 到 3.4028235E + 38 浮点数。 最小最小量值为`Single`变量是-1.401298E-45 为负值，1.401298E-45 对于正值。 如果您有非常大量的变量，用于保存小的浮点数，公共语言运行时有时可以存储在`Single`变量更有效地，以节省内存消耗。  
   
-## <a name="see-also"></a>请参阅  
- [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [字符数据类型](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [杂项数据类型](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [如何：调用采用无符号类型的 Windows 函数](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+## <a name="see-also"></a>请参阅
+
+- [基本数据类型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [字符数据类型](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
+- [杂项数据类型](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)
+- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [如何：调用需要使用无符号类型的 Windows 函数](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

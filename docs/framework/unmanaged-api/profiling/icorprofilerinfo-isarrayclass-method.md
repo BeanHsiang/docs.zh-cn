@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f34fee19c796f65d315fcbd26d55e1d5322303a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf8e74094b15163fe86e18c397f4637557df8329
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453023"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468229"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass 方法
-确定指定的类是否是一个数组类。  
+确定指定的类是否为数组类。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,30 +37,30 @@ HRESULT IsArrayClass(
     [out] ULONG          *pcRank);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `classId`  
  [in]要检查其类的 ID。  
   
  `pBaseElemType`  
- [out]指向 CorElementType 枚举，该值指示数组元素的类型的值的指针。  
+ [out]CorElementType 枚举，指示数组元素的类型的值指向的指针。  
   
  `pBaseClassId`  
- [out]指向数组元素，在可用时的类 ID 的指针。  
+ [out]指向数组元素、 可用时的类 ID 的指针。  
   
  `pcRank`  
- [out]指向一个整数，指示该数组的秩 （也就是说，多个维度） 的指针。  
+ [out]指向一个整数，指示数组的秩 （即维数） 的指针。  
   
 ## <a name="remarks"></a>备注  
- 如果指定的类是一个数组类、`IsArrayClass`方法返回，则为 S_OK HRESULT 和任何非 null 输出参数的值。 否则，它将返回 S_FALSE。  
+ 如果指定的类是数组类，`IsArrayClass`方法返回 S_OK HRESULT 和任何非 null 输出参数的值。 否则，它返回 S_FALSE。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

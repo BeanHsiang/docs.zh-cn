@@ -1,15 +1,15 @@
 ---
-title: 如何： 使用批注以转换 LINQ to XML 树的 XSLT 样式 (Visual Basic)
+title: 如何：使用批注以转换 LINQ to XML 树中 XSLT 样式 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: c19d290e5b7acdf2702e24383a176ed06c9c7a1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8db5f9dc29b4053321c81c9da58e12610ef63c7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650252"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824866"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何： 使用批注以转换 LINQ to XML 树的 XSLT 样式 (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>如何：使用批注以转换 LINQ to XML 树中 XSLT 样式 (Visual Basic)
 使用批注可帮助进行 XML 树的转换。  
   
  有些 XML 文档“以文档为中心兼有混合内容”。 对于这样的文档，您不必知道元素的子节点的形状。 例如，包含文本的节点可能具有像下面这样的外观：  
@@ -18,7 +18,7 @@ ms.locfileid: "33650252"
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- 任何给定的文本节点都可以具有任意数量的子 `<b>` 和 `<i>` 元素。 此方法可扩展到很多其他情况： 例如，可以包含各种子元素，如规则段落、 带项目符号的段落和位图的页。 表中的单元格可以包含文本，下拉列表或位图。 以文档为中心的 XML 的一个主要特性是您不必知道任一特定元素将具有哪些子元素。  
+ 任何给定的文本节点都可以具有任意数量的子 `<b>` 和 `<i>` 元素。 此方法可扩展到很多其他情况： 如页面可以包含各种子元素，如规则段落、 带项目符号的段落和位图。 表中的单元格可以包含文本，下拉列表或位图。 以文档为中心的 XML 的一个主要特性是您不必知道任一特定元素将具有哪些子元素。  
   
  如果在转换树中的元素时不必知道有关要转换元素的子级的太多信息，则这种方法（使用批注）就是一种有效的方法。  
   
@@ -378,5 +378,6 @@ After Transform
 </Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>请参阅
+
+- [高级的 LINQ to XML 编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

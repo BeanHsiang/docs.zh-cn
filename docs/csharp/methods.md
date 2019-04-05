@@ -5,14 +5,14 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038300"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186073"
 ---
-# <a name="methods"></a>方法 #
+# <a name="methods"></a>方法
 
 方法是包含一系列语句的代码块。 程序通过调用该方法并指定任何所需的方法参数使语句得以执行。 在 C# 中，每个执行的指令均在方法的上下文中执行。 `Main` 方法是每个 C# 应用程序的入口点，并在启动程序时由公共语言运行时 (CLR) 调用。
 
@@ -36,7 +36,8 @@ ms.locfileid: "50038300"
 - [迭代器](#iterators)
 
 <a name="signatures"></a>
-## <a name="method-signatures"></a>方法签名 ##
+
+## <a name="method-signatures"></a>方法签名
 
 通过指定在 `class` 或 `struct` 中声明方法：
 
@@ -58,7 +59,8 @@ ms.locfileid: "50038300"
 请注意，`Motorcycle` 类包括一个重载的方法 `Drive`。 两个方法具有相同的名称，但必须根据其参数类型来区分。
 
 <a name="invocation"></a>
-## <a name="method-invocation"></a>方法调用 ##
+
+## <a name="method-invocation"></a>方法调用
 
 方法可以是实例的或静态的。 调用实例方法需要将对象实例化，并对该对象调用方法；实例方法可对该实例及其数据进行操作。 通过引用该方法所属类型的名称来调用静态方法；静态方法不对实例数据进行操作。 尝试通过对象实例调用静态方法会引发编译器错误。
 
@@ -80,8 +82,9 @@ ms.locfileid: "50038300"
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
- <a name="inherited"></a>
- ## <a name="inherited-and-overridden-methods"></a>继承和重写方法 ##
+<a name="inherited"></a>
+
+## <a name="inherited-and-overridden-methods"></a>继承和重写方法
 
 除了类型中显式定义的成员，类型还继承在其基类中定义的成员。 由于托管类型系统中的所有类型都直接或间接继承自 <xref:System.Object> 类，因此所有类型都继承其成员，如 <xref:System.Object.Equals(System.Object)>、<xref:System.Object.GetType> 和 <xref:System.Object.ToString>。 下面的示例定义 `Person` 类，实例化两个 `Person` 对象，并调用 `Person.Equals` 方法来确定两个对象是否相等。 但是，`Equals` 方法不是在 `Person` 类中定义；而是继承自 <xref:System.Object>。
 
@@ -92,12 +95,14 @@ ms.locfileid: "50038300"
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
 <a name="passing"></a>
-## <a name="passing-parameters"></a>传递参数 ##
+
+## <a name="passing-parameters"></a>传递参数
 
 C# 中的所有类型不是值类型就是引用类型。 有关内置值类型的列表，请参阅[类型和变量](./tour-of-csharp/types-and-variables.md)。 默认情况下，值类型和引用类型均按值传递给方法。
 
 <a name="byval"></a>
-### <a name="passing-parameters-by-value"></a>按值传递参数 ###
+
+### <a name="passing-parameters-by-value"></a>按值传递参数
 
 值类型按值传递给方法时，传递的是对象的副本而不是对象本身。 因此，当控件返回调用方时，对已调用方法中的对象的更改对原始对象无影响。
 
@@ -112,7 +117,8 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 [!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
 <a name="byref"></a>
-### <a name="passing-parameters-by-reference"></a>按引用传递参数 ###
+
+### <a name="passing-parameters-by-reference"></a>按引用传递参数
 
 如果想要更改方法中的自变量值并想要在控件返回到调用方法时反映出这一更改，请按引用传递参数。 要按引用传递参数，请使用 [`ref`](language-reference/keywords/ref.md) 或 [`out`](language-reference/keywords/out-parameter-modifier.md) 关键字。 还可以使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 关键字，按引用传递值以避免复制，但仍防止修改。
 
@@ -127,7 +133,8 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 通过传递引用类型的参数，可以更改引用本身的值，而不是其单个元素或字段的值。
 
 <a name="paramarray"></a>
-### <a name="parameter-arrays"></a>参数数组 ###
+
+### <a name="parameter-arrays"></a>参数数组
 
 有时，向方法指定精确数量的自变量这一要求是受限的。 通过使用 `params` 关键字来指示一个参数是一个参数数组，可通过可变数量的自变量来调用方法。 使用 `params` 关键字标记的参数必须为数组类型，并且必须是该方法的参数列表中的最后一个参数。
 
@@ -142,7 +149,8 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 [!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
 
 <a name="optional"></a>
-## <a name="optional-parameters-and-arguments"></a>可选参数和自变量 ##
+
+## <a name="optional-parameters-and-arguments"></a>可选参数和自变量
 
 方法定义可指定其参数是必需的还是可选的。 默认情况下，参数是必需的。 通过在方法定义中包含参数的默认值来指定可选参数。 调用该方法时，如果未向可选参数提供自变量，则改为使用默认值。
 
@@ -158,7 +166,7 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-如果使用位置自变量调用包含多个可选自变量的方法，调用方必须逐一向所有需要自变量的可选参数提供自变量。 例如，在使用 `ExampleMethod` 方法的情况下，如果调用方向 `description` 参数提供自变量，还必须向 `optionalInt` 参数提供一个自变量。 `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` 是一个有效的方法调用；`opt.ExampleMethod(2, , "Addition of 2 and 0);` 生成编译器错误“缺少自变量”。
+如果使用位置自变量调用包含多个可选自变量的方法，调用方必须逐一向所有需要自变量的可选参数提供自变量。 例如，在使用 `ExampleMethod` 方法的情况下，如果调用方向 `description` 参数提供自变量，还必须向 `optionalInt` 参数提供一个自变量。 `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` 是一个有效的方法调用；`opt.ExampleMethod(2, , "Addition of 2 and 0");` 生成编译器错误“缺少自变量”。
 
 如果使用命名的自变量或位置自变量和命名的自变量的组合来调用某个方法，调用方可以省略方法调用中的最后一个位置自变量后的任何自变量。
 
@@ -172,8 +180,9 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 - 如果找到多个候选项，则会将用于首选转换的重载决策规则应用于显式指定的自变量。 将忽略可选形参已省略的实参。
 - 如果两个候选项不相上下，则会将没有可选形参的候选项作为首选项，对于这些可选形参，已在调用中为其省略了实参。 这是重载决策中的常规引用的结果，该引用用于参数较少的候选项。
 
- <a name="return"></a>
- ## <a name="return-values"></a>返回值 ##
+<a name="return"></a>
+
+## <a name="return-values"></a>返回值
 
 方法可以将值返回到调用方。 如果列在方法名之前的返回类型不是 `void`，则该方法可通过使用 `return` 关键字返回值。 带 `return` 关键字且后跟与返回类型匹配的变量、常数或表达式的语句将向方法调用方返回该值。 具有非空的返回类型的方法都需要使用 `return` 关键字来返回值。 `return` 关键字还会停止执行该方法。
 
@@ -197,10 +206,7 @@ C# 中的所有类型不是值类型就是引用类型。 有关内置值类型�
 public (string, string, string, int) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -208,8 +214,7 @@ public (string, string, string, int) GetPersonalInfo(string id)
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-if (person != null)
-   Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 还可向元组类型定义中的元组元素分配名称。 下面的示例展示 `GetPersonalInfo` 方法的替代版本，该方法使用命名的元素：
@@ -218,10 +223,7 @@ if (person != null)
 public (string FName, string MName, string LName, int Age) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -229,16 +231,16 @@ public (string FName, string MName, string LName, int Age) GetPersonalInfo(strin
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-if (person != null)
-   Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 如果将数组作为自变量传递给一个方法，并修改各个元素的值，则该方法不一定会返回该数组，尽管选择这么操作的原因是为了实现更好的样式或功能性的值流。  这是因为 C# 会按值传递所有引用类型，而数组引用的值是指向该数组的指针。 在下面的示例中，引用该数组的任何代码都能观察到在 `DoubleValues` 方法中对 `values` 数组内容的更改。
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
- <a name="exten"></a>
- ## <a name="extension-methods"></a>扩展方法 ##
+<a name="extension"></a>
+
+## <a name="extension-methods"></a>扩展方法
 
 通常，可以通过两种方式向现有类型添加方法：
 
@@ -250,7 +252,8 @@ if (person != null)
 有关详细信息，请参阅[扩展方法](programming-guide/classes-and-structs/extension-methods.md)。
 
 <a name="async"></a>
-## <a name="async-methods"></a>异步方法 ##
+
+## <a name="async-methods"></a>异步方法
 
 通过使用异步功能，你可以调用异步方法而无需使用显式回调，也不需要跨多个方法或 lambda 表达式来手动拆分代码。
 
@@ -270,7 +273,8 @@ if (person != null)
  有关异步方法的详细信息，请参阅[使用 Async 和 Await 的异步编程](async.md)、[异步程序中的控制流](programming-guide/concepts/async/control-flow-in-async-programs.md)和[异步返回类型](programming-guide/concepts/async/async-return-types.md)。
 
 <a name="expr"></a>
-## <a name="expression-bodied-members"></a>Expression-Bodied 成员 ##
+
+## <a name="expression-bodied-members"></a>Expression-Bodied 成员
 
 具有立即仅返回表达式结果，或单个语句作为方法主题的方法定义很常见。  以下是使用 `=>` 定义此类方法的语法快捷方式：
 
@@ -286,7 +290,8 @@ public Customer this[long id] => store.LookupCustomer(id);
 如果该方法返回 `void` 或是异步方法，则该方法的主体必须是语句表达式（与 lambda 相同）。  对于属性和索引器，两者必须是只读，并且不使用 `get` 访问器关键字。
 
 <a name="iterators"></a>
-## <a name="iterators"></a>Iterators ##
+
+## <a name="iterators"></a>Iterators
 
 迭代器对集合执行自定义迭代，如列表或数组。 迭代器使用 [yield return](language-reference/keywords/yield.md) 语句返回元素，每次返回一个。 到达 `yield return` 语句后，会记住当前位置，以便调用方可以请求序列中的下一个元素。
 
@@ -294,14 +299,14 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 有关更多信息，请参见 [迭代器](programming-guide/concepts/iterators.md)。
 
-## <a name="see-also"></a>请参阅 ##
+## <a name="see-also"></a>请参阅
 
-- [访问修饰符](language-reference/keywords/access-modifiers.md)   
-- [静态类和静态类成员](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
-- [继承](programming-guide/classes-and-structs/inheritance.md)   
-- [抽象类、密封类及类成员](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
-- [params](language-reference/keywords/params.md)   
-- [out](language-reference/keywords/out-parameter-modifier.md)   
-- [ref](language-reference/keywords/ref.md)   
-- [in](language-reference/keywords/in-parameter-modifier.md)   
+- [访问修饰符](language-reference/keywords/access-modifiers.md)
+- [静态类和静态类成员](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+- [继承](programming-guide/classes-and-structs/inheritance.md)
+- [抽象类、密封类及类成员](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [params](language-reference/keywords/params.md)
+- [out](language-reference/keywords/out-parameter-modifier.md)
+- [ref](language-reference/keywords/ref.md)
+- [in](language-reference/keywords/in-parameter-modifier.md)
 - [传递参数](programming-guide/classes-and-structs/passing-parameters.md)

@@ -8,30 +8,31 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: f566b5139f839ae37b90c4ea30a4bdfafa696ede
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358779"
 ---
 # <a name="graphics-how-to-topics"></a>图形帮助主题
 以下主题演示如何使用的图形功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
   
 ## <a name="in-this-section"></a>本节内容  
- [为矩形设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [使用 PointAnimation 为对象位置设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [转换点和矢量](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [将玻璃框扩展到 WPF 应用程序中](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [如何：通过缓存元素来提升呈现性能](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [如何：将缓存的元素用作画笔](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+ [为矩形设置动画效果](how-to-animate-a-rectangle.md)  
+ [使用 PointAnimation 为对象位置设置动画效果](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [转换点和矢量](how-to-transform-points-and-vectors.md)  
+ [将玻璃框扩展到 WPF 应用程序中](extend-glass-frame-into-a-wpf-application.md)  
+ [如何：改善呈现性能，通过缓存元素](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [如何：缓存的元素用作画笔](how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Shapes.Shape>  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Media.Geometry>  
- <xref:System.Windows.Media.Drawing>  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Effects.BitmapEffect>  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Shapes.Shape>
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Media.Geometry>
+- <xref:System.Windows.Media.Drawing>
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Effects.BitmapEffect>
+- [图形和多媒体](index.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)

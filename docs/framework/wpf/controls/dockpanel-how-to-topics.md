@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DockPanel control [WPF], how-to topics
 - controls [WPF], DockPanel
 ms.assetid: 62544800-db6a-4124-8cb0-ed9bc4a90901
-ms.openlocfilehash: f5cac5055ed3d60f37955b20de923fe1735c3900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff2f23a0515f8a086d3082c6bf3000c49ed91dfd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550649"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355530"
 ---
 # <a name="dockpanel-how-to-topics"></a>DockPanel 帮助主题
-本部分中的主题介绍如何使用<xref:System.Windows.Controls.DockPanel>元素来定位边缘的布局容器的子元素。  
+在本部分中的主题介绍如何使用<xref:System.Windows.Controls.DockPanel>元素来定位子元素的布局容器的边缘。  
   
 ## <a name="in-this-section"></a>本节内容  
- [获取或设置 Dock 值](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
- [创建 DockPanel](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
- [使用 DockPanel 元素对空间进行分区](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
+ [获取或设置 Dock 值](how-to-get-or-set-a-dock-value.md)  
+ [创建 DockPanel](how-to-create-a-dockpanel.md)  
+ [使用 DockPanel 元素对空间进行分区](how-to-partition-space-by-using-the-dockpanel-element.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ ms.locfileid: "33550649"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相关章节  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)  
+ [布局](../advanced/layout.md)  
   
- [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概述](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概述](scrollviewer-overview.md)

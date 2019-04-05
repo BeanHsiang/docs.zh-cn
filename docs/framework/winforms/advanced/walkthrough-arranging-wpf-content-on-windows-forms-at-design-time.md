@@ -1,5 +1,5 @@
 ---
-title: 演练：设计时在 Windows 窗体上排列 WPF 内容
+title: 演练：在设计时排列 Windows 窗体上的 WPF 内容
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0738d1522c8ade8f026a3bf69fbff0bc2c2d6d85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846469"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712456"
 ---
-# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>演练：设计时在 Windows 窗体上排列 WPF 内容
+# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>演练：在设计时排列 Windows 窗体上的 WPF 内容
 本演练演示如何使用 Windows 窗体布局功能（例如锚定和对齐线）排列 Windows Presentation Foundation (WPF) 控件。
 
  在本演练中，你将要执行以下任务：
@@ -37,7 +37,7 @@ ms.locfileid: "48846469"
 ## <a name="prerequisites"></a>系统必备  
  你需要以下组件来完成本演练：  
   
--   Visual Studio 2012。  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>创建项目  
  第一步是创建 Windows 窗体项目。  
@@ -54,9 +54,9 @@ ms.locfileid: "48846469"
   
 #### <a name="to-create-wpf-controls"></a>创建 WPF 控件  
   
-1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 添加到项目。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参阅[演练： 创建新 WPF 内容在设计时的 Windows 窗体上](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1.  将新的 WPF <xref:System.Windows.Controls.UserControl> 添加到项目。 使用控件类型的默认名称，`UserControl1.xaml`。 有关详细信息，请参见[演练：在设计时在 Windows 窗体上创建新的 WPF 内容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
-2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何： 选择和设计图面上移动元素](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474)。  
+2.  在设计视图中，请确保已选中 `UserControl1`。 有关详细信息，请参阅[如何：选择并在设计图面上移动元素](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
   
 3.  在中**属性**窗口中，设置的值<xref:System.Windows.FrameworkElement.Width%2A>并<xref:System.Windows.FrameworkElement.Height%2A>属性设置为`200`。  
   
@@ -79,24 +79,26 @@ ms.locfileid: "48846469"
   
 5.  在中**工具箱**，双击`UserControl1`若要创建的实例`UserControl1`中的第一个单元<xref:System.Windows.Forms.TableLayoutPanel>控件。  
   
-     `UserControl1` 的实例承载在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
+     
+  `UserControl1` 的实例承载在名为 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
   
 6.  在中**工具箱**，双击`UserControl1`的第二个单元格中创建另一个实例<xref:System.Windows.Forms.TableLayoutPanel>控件。  
   
-7.  在中**文档大纲**窗口中，选择`tableLayoutPanel1`。 有关详细信息，请参阅[文档大纲窗口](https://msdn.microsoft.com/library/9054f2bc-f6f8-4242-9fe0-be71089b12f8)。  
+7.  在中**文档大纲**窗口中，选择`tableLayoutPanel1`。 有关详细信息，请参阅[文档大纲窗口](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/46xf4h0w(v=vs.100)#using-the-document-outline-window-for-silverlight-and-wpf)。  
   
 8.  在中**属性**窗口中，设置的值<xref:System.Windows.Forms.Control.Padding%2A>属性设置为`10, 10, 10, 10`。  
   
      调整两个 <xref:System.Windows.Forms.Integration.ElementHost> 控件的大小以适应新的布局。  
   
 ## <a name="using-snaplines-to-align-wpf-controls"></a>使用对齐线对齐 WPF 控件  
- 使用对齐线能够轻松对齐窗体上的控件。 还可以使用对齐线对齐 WPF 控件。 有关详细信息，请参阅[演练： Windows 窗体使用对齐线上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
+ 使用对齐线能够轻松对齐窗体上的控件。 还可以使用对齐线对齐 WPF 控件。 有关详细信息，请参见[演练：在 Windows 上排列控件窗体使用对齐线](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>若要使用对齐线对齐 WPF 控件  
   
 1.  从**工具箱**，一个实例的拖放`UserControl1`拖到窗体并将它放在下方的空间<xref:System.Windows.Forms.TableLayoutPanel>控件。  
   
-     `UserControl1` 的实例承载在名为 `elementHost3` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
+     
+  `UserControl1` 的实例承载在名为 `elementHost3` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控件中。  
   
 2.  使用对齐线，将 `elementHost3` 的左边缘与 <xref:System.Windows.Forms.TableLayoutPanel> 控件的左边缘对齐。  
   
@@ -145,14 +147,14 @@ ms.locfileid: "48846469"
   
      所有三个 <xref:System.Windows.Forms.Integration.ElementHost> 控件将相应地调整大小。  
   
-     有关详细信息，请参阅[如何： 定位和停靠在 TableLayoutPanel 控件中的子控件](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)。  
+     有关详细信息，请参阅[如何：锚定和停靠在 TableLayoutPanel 控件中的子控件](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [如何：在 TableLayoutPanel 控件中锚定和停靠子控件](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
- [如何：设计时将控件与窗体边缘对齐](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- [演练：使用对齐线在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [迁移和互操作性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [使用 WPF 控件](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [如何：锚定和停靠在 TableLayoutPanel 控件中的子控件](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [如何：将控件与窗体边缘对齐在设计时](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [演练：使用对齐线的 Windows 窗体上排列控件](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [迁移和互操作性](../../wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控件](using-wpf-controls.md)
+- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

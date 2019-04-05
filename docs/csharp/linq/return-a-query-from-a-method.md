@@ -3,12 +3,12 @@ title: 从方法中返回查询
 description: 如何返回查询。
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 1c5fa534f3f39f8201d93b986e687d85bb303736
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fe2192a3edb683d7284ffae3b66cb9f70e8854b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519094"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>如何：从方法中返回查询（C# 编程指南）
 此示例演示如何以返回值和 `out` 参数形式从方法中返回查询。  

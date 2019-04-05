@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 2c707d9ab2fd2be611fe0872501b45665d0a349e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0cac4433ec9fe54721752c63d2b3b37f9d874c19
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517165"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719307"
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows 窗体的应用程序设置
 借助 Windows 窗体的应用程序设置功能，可轻松地在客户端创建、存储和维护自定义应用程序和用户首选项。 借助应用程序设置，可存储应用程序数据（如数据库连接字符串）以及用户特定的数据（如工具栏位置和最近使用的列表）。  
@@ -27,7 +27,7 @@ ms.locfileid: "33517165"
  [应用程序设置特性](~/docs/framework/winforms/advanced/application-settings-attributes.md)  
  列出并介绍了可应用于应用程序设置包装类或其设置属性的属性。  
   
- [自定义控件的应用程序设置](~/docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
+ [Application Settings for Custom Controls](~/docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
  讨论必须执行什么操作以使自定义控件在第三方应用程序中承载时可以保存应用程序设置。  
   
  [如何：创建应用程序设置](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
@@ -38,9 +38,9 @@ ms.locfileid: "33517165"
   
 ## <a name="related-topics"></a>相关主题
 
-[Windows 窗体配置节](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
-在 Windows 窗体应用程序从.NET Framework 4.7 中文档的设置以启用高 DPI 的支持。
+[Windows 窗体配置节](../../configure-apps/file-schema/winforms/index.md)    
+文档支持在 Windows 窗体应用程序从.NET Framework 4.7 开始启用高 DPI 的设置。
 
-## <a name="see-also"></a>请参阅  
-  
-[Windows 窗体](../index.md)
+## <a name="see-also"></a>请参阅
+
+- [Windows 窗体](../index.md)

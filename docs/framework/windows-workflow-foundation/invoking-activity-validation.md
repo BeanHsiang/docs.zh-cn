@@ -2,12 +2,12 @@
 title: 调用活动验证
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 61491e906bfc58bbd19cf43a5980b2781493411b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 19c2d4773cf15245ba20ff8523ebd7e67d5b9c1d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035131"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711143"
 ---
 # <a name="invoking-activity-validation"></a>调用活动验证
 活动验证提供了一种在执行任何活动配置之前标识和报告此配置中的错误的方法。 当在工作流设计器中修改工作流，并且工作流设计器中显示任何验证错误或警告时，将执行验证。 此外，当调用工作流时，如果发生任何验证错误，默认验证逻辑将引发 <xref:System.Activities.InvalidWorkflowException>，此时，也将在运行时执行验证。 Windows Workflow Foundation (WF) 提供了<xref:System.Activities.Validation.ActivityValidationServices>可用于工作流应用程序和工具开发人员显式验证活动的类。 本主题说明如何使用 <xref:System.Activities.Validation.ActivityValidationServices> 执行活动验证。  
@@ -76,8 +76,8 @@ else
   
  当对此示例工作流调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 时，返回两个验证错误。  
   
- **错误： 未提供必需的活动自变量 Operand2 的值。**  
-**错误： 未提供必需的活动自变量 Operand1 的值。**  如果已调用此工作流，将引发 <xref:System.Activities.InvalidWorkflowException>，如下面的示例所示。  
+ **错误：未提供必需的活动自变量 Operand2 的值。**  
+**错误：未提供必需的活动自变量 Operand1 的值。**  如果已调用此工作流，将引发 <xref:System.Activities.InvalidWorkflowException>，如下面的示例所示。  
   
 ```csharp  
 try  
@@ -92,8 +92,8 @@ catch (Exception ex)
   
  **System.Activities.InvalidWorkflowException:**  
 **处理工作流树时遇到以下错误：**   
-**添加： 未提供必要活动参数 Operand2 的值。**   
-**添加： 未提供必要活动参数 Operand1 的值。**  为使此示例工作流有效，必须绑定 `Add` 活动的两个必需参数。 在下面的示例中，这两个必需参数绑定到工作流变量和结果值。 在此示例中，<xref:System.Activities.Activity%601.Result%2A> 参数与这两个必需参数绑定在一起。 不必绑定 <xref:System.Activities.Activity%601.Result%2A> 参数，因为如果未绑定该参数，并不会导致验证错误。 如果在工作流中的其他位置使用 <xref:System.Activities.Activity%601.Result%2A> 的值，工作流作者应负责绑定该参数。  
+**添加:未提供必需的活动自变量 Operand2 的值。**   
+**添加:未提供必需的活动自变量 Operand1 的值。**  为使此示例工作流有效，必须绑定 `Add` 活动的两个必需自变量。 在下面的示例中，这两个必需参数绑定到工作流变量和结果值。 在此示例中，<xref:System.Activities.Activity%601.Result%2A> 参数与这两个必需参数绑定在一起。 不必绑定 <xref:System.Activities.Activity%601.Result%2A> 参数，因为如果未绑定该参数，并不会导致验证错误。 如果在工作流中的其他位置使用 <xref:System.Activities.Activity%601.Result%2A> 的值，工作流作者应负责绑定该参数。  
   
 ```csharp  
 new Add  
@@ -123,10 +123,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.ArgumentException： 根活动的参数的设置不正确。**  
+ **System.ArgumentException：根活动的参数设置不正确。**  
 **修复工作流定义，或提供输入的值来修复这些错误：**   
-**添加： 未提供必要活动参数 Operand2 的值。**   
-**添加： 未提供必要活动参数 Operand1 的值。**  传递正确的自变量之后，工作流将成功完成，如下面的示例所示。  
+**添加:未提供必需的活动自变量 Operand2 的值。**   
+**添加:未提供必需的活动自变量 Operand1 的值。**  传递正确的自变量之后，工作流将成功完成，如下面的示例所示。  
   
 ```csharp  
 Add wf = new Add();  
@@ -228,13 +228,13 @@ else
 }  
 ```  
   
- **错误： 成本必须是小于或等于价格。**  
-**错误： 未提供必需的活动自变量 Description 的值。**    
+ **错误：成本必须小于或等于价格。**  
+**错误：未提供必需的活动自变量 Description 的值。**    
 > [!NOTE]
 >  自定义活动作者可以在活动的 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 重写中提供验证逻辑。 由 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 引发的任何异常不会视为验证错误。 这些异常将从对 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的调用中转义，并且必须由调用方进行处理。  
   
 ## <a name="using-validationsettings"></a>使用 ValidationSettings  
- 默认情况下，当 <xref:System.Activities.Validation.ActivityValidationServices> 调用验证时，将计算活动树中的所有活动。 <xref:System.Activities.Validation.ValidationSettings> 允许通过配置其三个属性，采用多种不同方法来自定义验证。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> 指定验证程序是应遍历整个活动树，还是仅向提供的活动应用验证逻辑。 该值的默认值为 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 指定从类型映射到约束列表的其他约束。 对于计算的活动树中的每个活动的基类型，将查找 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>。 如果找到匹配的约束列表，则会针对活动计算该列表中的所有约束。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 指定验证程序是应计算所有约束还是仅计算 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中指定的约束。 默认值为 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 和 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 有助于工作流主机作者为工作流添加其他验证，例如，适用于 FxCop 等工具的策略约束。 有关约束的详细信息，请参阅[声明性约束](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md)。  
+ 默认情况下，当 <xref:System.Activities.Validation.ActivityValidationServices> 调用验证时，将计算活动树中的所有活动。 <xref:System.Activities.Validation.ValidationSettings> 允许通过配置其三个属性，采用多种不同方法来自定义验证。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> 指定验证程序是应遍历整个活动树，还是仅向提供的活动应用验证逻辑。 该值的默认值为 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 指定从类型映射到约束列表的其他约束。 对于计算的活动树中的每个活动的基类型，将查找 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>。 如果找到匹配的约束列表，则会针对活动计算该列表中的所有约束。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 指定验证程序是应计算所有约束还是仅计算 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中指定的约束。 默认值为 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 和 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 有助于工作流主机作者为工作流添加其他验证，例如，适用于 FxCop 等工具的策略约束。 有关约束的详细信息，请参阅[声明性约束](declarative-constraints.md)。  
   
  若要使用 <xref:System.Activities.Validation.ValidationSettings>，请配置所需属性，然后在调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 时传递这些属性。 在此示例中，将验证由包含自定义 <xref:System.Activities.Statements.Sequence> 活动的 `Add` 组成的工作流。 `Add` 活动具有两个必需参数。  
   

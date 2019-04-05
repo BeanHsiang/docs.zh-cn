@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10ba2930dcaee6c118562e685ad49dd73c980564
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 72778f769c2c3f030de0cd31d087e0a90ba6f508
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191098"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675031"
 ---
 # <a name="how-to-view-assembly-contents"></a>如何：查看程序集内容
 可使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)查看文件中的 Microsoft 中间语言 (MSIL) 信息。 如果要检查的文件是程序集，此信息可包括程序集的属性以及对其他模块和程序集的引用。 此信息有助于确定文件是程序集还是程序集的一部分，以及文件是否具有对其他模块或程序集的引用。  
@@ -74,7 +74,7 @@ ms.locfileid: "50191098"
   
  下表描述了本例所使用 Hello.exe 程序集的程序集清单中的各项指令。  
   
-|指令|描述|  
+|指令|说明​​|  
 |---------------|-----------------|  
 |.assembly extern \< assembly name >|指定包含当前模块所引用项目的另一程序集（在此示例中为 `mscorlib`）。|  
 |.publickeytoken \< token >|指定引用程序集的实际密钥的标记。|  
@@ -86,9 +86,9 @@ ms.locfileid: "50191098"
 |.subsystem \< value >|指定程序要求的应用程序环境。 在此示例中，值 3 表示该可执行文件从控制台运行。|  
 |.corflags|当前是元数据中的一个保留字段。|  
   
- 根据程序集的内容，程序集清单可包含许多不同的指令。 有关程序集清单中指令的详尽列表，请参阅 ECMA 文档，特别是“Partition II: Metadata Definition and Semantics”（第 2 部分：元数据定义和语义）和“Partition III: CIL Instruction Set”（第 3 部分：CIL 指令集）。 可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](https://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)。  
+ 根据程序集的内容，程序集清单可包含许多不同的指令。 有关程序集清单中指令的详尽列表，请参阅 ECMA 文档，特别是“Partition II:Metadata Definition and Semantics”（第 2 部分：元数据定义和语义）和“Partition III:CIL Instruction Set”（第 3 部分：CIL 指令集）。 可联机获取该文档；请参阅 MSDN 上的 [ECMA C# 和公共语言基础结构标准](https://go.microsoft.com/fwlink/?LinkID=99212)和 Ecma International 网站上的[标准 ECMA-335 - 公共语言基础结构 (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)。  
   
-## <a name="see-also"></a>请参阅  
-- [应用程序域和程序集](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)  
-- [应用程序域和程序集用法主题](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
+## <a name="see-also"></a>请参阅
+- [应用程序域和程序集](application-domains.md#application-domains-and-assemblies)
+- [应用程序域和程序集用法主题](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
 - [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

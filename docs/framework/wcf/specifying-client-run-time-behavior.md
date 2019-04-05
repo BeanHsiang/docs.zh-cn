@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: bc104c4f51ebc64154bd3d9b39ac2bca13b2fab1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587172"
 ---
 # <a name="specifying-client-run-time-behavior"></a>指定客户端运行时行为
 Windows Communication Foundation (WCF) 客户端，如 Windows Communication Foundation (WCF) 服务，可以配置为修改以满足客户端应用程序的运行时行为。 有三个属性可用于指定客户端运行时行为。 双工客户端回调对象可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性修改其运行时行为。 另一个属性 <xref:System.ServiceModel.Description.ClientViaBehavior> 可用于将逻辑目标与直接网络目标分开。 此外，双工客户端回调类型可以使用某些服务端行为。 有关详细信息，请参阅[指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
@@ -36,12 +36,12 @@ Windows Communication Foundation (WCF) 客户端，如 Windows Communication Fou
   
 -   仅在受控调试方案中才能这样做。  
   
- 下面的代码示例演示客户端，指示托管的异常信息从客户端回调对象中返回 SOAP 消息的 WCF 配置文件。  
+ 下面的代码示例演示客户端指示 WCF 在返回托管的异常信息从客户端回调对象在 SOAP 消息中的配置文件。  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  
 ## <a name="using-the-clientviabehavior-behavior"></a>使用 ClientViaBehavior 行为  
  可以使用 <xref:System.ServiceModel.Description.ClientViaBehavior> 行为指定应为其创建传输通道的统一资源标识符。 当直接网络目标不是消息的预期处理者时，可使用此行为。 当调用应用程序不需要知道最终目标时，或者当目标 `Via` 标头不是地址时，使用此行为可启用多跃点对话。  
   
-## <a name="see-also"></a>请参阅  
- [指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+## <a name="see-also"></a>请参阅
+- [指定服务运行时行为](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

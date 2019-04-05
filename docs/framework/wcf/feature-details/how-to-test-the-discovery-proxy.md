@@ -2,21 +2,21 @@
 title: 如何：测试发现代理
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: 35edbd03e912ae2d9c491afb28dee1c4a3055d14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c159481813266386706b34d172bbf9614a8253d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590508"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>如何：测试发现代理
-本主题是演示如何实现发现代理的四个主题中的第四个。 在前面的主题中，[如何： 实现的客户端应用程序使用发现代理查找服务](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)，实现的 WCF 客户端应用程序使用发现代理查找服务，然后调用该服务。 本主题说明如何验证发现代理、服务以及客户端应用程序是否按预期方式工作。  
+本主题是演示如何实现发现代理的四个主题中的第四个。 在上一主题中，[如何：实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)，实现使用发现代理查找服务，然后调用该服务的 WCF 客户端应用。 本主题说明如何验证发现代理、服务以及客户端应用程序是否按预期方式工作。  
   
 ### <a name="run-the-discovery-proxy"></a>运行发现代理  
   
 1.  作为管理员打开命令提示。  
   
-2.  您可能会看到显示如下内容的对话框：Windows 防火墙已经阻止此程序的部分功能。 如果你看到此消息，请单击**解除阻止**按钮。  
+2.  可能会看到一个对话框，指出：Windows 防火墙已阻止此程序的某些功能。 如果看到此消息，请单击**解除阻止**按钮。  
   
 3.  在命令提示中，运行发现代理 DiscoveryProxy.exe。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "33491217"
   
 2.  在命令提示中，运行 client.exe 应用程序。  
   
-3.  几秒钟后，客户端应用程序显示以下文本：Connecting to [Service-Endpoint]。  
+3.  几秒钟后客户端应用程序显示以下文本：连接到 [服务终结点]。  
   
-4.  然后，service.exe 应显示以下文本：Greeting request received, I will respond.  
+4.  然后，service.exe 应显示以下文本：请求已收到的问候语，我将响应。  
   
-5.  然后，client.exe 应显示以下文本：Hello Client!  
+5.  然后，client.exe 应显示以下文本：客户端 hello ！  
   
 ### <a name="shut-down-the-applications"></a>关闭应用程序  
   
@@ -50,8 +50,8 @@ ms.locfileid: "33491217"
   
 3.  关闭发现代理。  
   
-## <a name="see-also"></a>请参阅  
- [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [如何：实现向发现代理注册的可检测服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- [如何：实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+## <a name="see-also"></a>请参阅
+- [WCF 发现概述](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [如何：实现发现代理](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [如何：实现向发现代理注册的可发现服务](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [如何：实现使用发现代理查找服务的客户端应用程序](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

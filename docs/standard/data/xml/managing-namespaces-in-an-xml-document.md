@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 620f9e59d65630895c01aff7d47c76876f3319d1
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 4b0ace73d81783852242a52bec006b0ad2edaadd
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347794"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836131"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>管理 XML 文档中的命名空间
 XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定义的 URI 关联起来。 要创建这些关联，您应为命名空间 URI 定义前缀，并使用这些前缀来限定 XML 数据中的元素和属性名称。 命名空间可防止元素和属性名称冲突，并允许以不同方式处理和验证同名的元素和属性。  
@@ -58,12 +58,13 @@ XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定�
 ```  
   
 ## <a name="managing-namespaces"></a>管理命名空间  
- <xref:System.Xml.XmlNamespaceManager> 类存储命名空间 URI 及其前缀的集合，您可在此集合中查找、添加和删除命名空间。 在某些上下文中，需要使用此类以获得更佳 XML 处理性能。 例如，<xref:System.Xml.Xsl.XsltContext> 类使用 <xref:System.Xml.XmlNamespaceManager> 以获得 XPath 支持。  
+ 
+  <xref:System.Xml.XmlNamespaceManager> 类存储命名空间 URI 及其前缀的集合，您可在此集合中查找、添加和删除命名空间。 在某些上下文中，需要使用此类以获得更佳 XML 处理性能。 例如，<xref:System.Xml.Xsl.XsltContext> 类使用 <xref:System.Xml.XmlNamespaceManager> 以获得 XPath 支持。  
   
  命名空间管理器对命名空间不执行任何验证，而是假定前缀和命名空间已经过验证并符合 [W3C 命名空间](https://www.w3.org/TR/REC-xml-names/)规范。  
   
 > [!NOTE]
->  [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) 不使用 <xref:System.Xml.XmlNamespaceManager> 管理命名空间。 若要了解如何在使用 LINQ to XML 时管理命名空间，请参阅 LINQ 文档中的[使用 XML 命名空间](https://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430)。  
+> [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) 不使用 <xref:System.Xml.XmlNamespaceManager> 来管理命名空间。 若要了解如何在使用 LINQ to XML 时管理命名空间，请参阅 LINQ 文档中的[使用 XML 命名空间 (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) 和[使用 XML 命名空间 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
   
  下面是可使用 <xref:System.Xml.XmlNamespaceManager> 类执行的一些管理和查找任务。 有关更多信息和示例，请遵循指向每个方法或属性的引用页的链接。  
   
@@ -81,5 +82,5 @@ XML 命名空间将 XML 文档中的元素和属性名称与自定义和预定�
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.XmlNamespaceManager>  
+- <xref:System.Xml.XmlNamespaceManager>
 - [XML 文档和数据](../../../../docs/standard/data/xml/index.md)

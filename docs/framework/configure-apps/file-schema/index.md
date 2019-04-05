@@ -21,14 +21,12 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4543802c3918a4761daa5a4fbbab366695823f73
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6ebb6487136bff567c57143e3000a20270c1f87e
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839013"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674901"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework 的配置文件架构
 
@@ -77,10 +75,10 @@ ms.locfileid: "48839013"
 
 ## <a name="related-sections"></a>相关章节
 
-[远程处理设置架构](https://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e)描述对实现远程处理的客户端和服务器应用程序进行配置的元素。
+[远程处理设置架构](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))描述对实现远程处理的客户端和服务器应用程序进行配置的元素。
 
-[ASP.NET 设置架构](https://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx)描述控制 ASP.NET Web 应用程序的行为的元素。
+[ASP.NET 设置架构](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))描述控制 ASP.NET Web 应用程序的行为的元素。
 
-[Web 服务设置架构](https://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e)描述控制 ASP.NET Web 服务及其客户端的行为的元素。
+[Web 服务设置架构](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))描述控制 ASP.NET Web 服务及其客户端的行为的元素。
 
-[配置 .NET Framework 应用](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)描述如何在 .NET Framework 中配置安全性、程序集绑定和远程处理。
+[配置 .NET Framework 应用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))描述如何在 .NET Framework 中配置安全性、程序集绑定和远程处理。

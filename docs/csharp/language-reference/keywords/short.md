@@ -1,5 +1,6 @@
 ---
-title: short（C# 参考）
+title: short - C# 参考
+ms.custom: seodec18
 ms.date: 03/14/2017
 f1_keywords:
 - short
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-ms.openlocfilehash: 0d90f31da49b94eee490e95f0cdf1d582bb0b059
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c38a4158f627f41d1667eb96478cd499de78772
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184148"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238894"
 ---
 # <a name="short-c-reference"></a>short（C# 参考）
 
@@ -100,7 +101,7 @@ short y = (short)3.0;   // OK: explicit conversion
 
 ## <a name="c-language-specification"></a>C# 语言规范
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[整型类型](~/_csharplang/spec/types.md#integral-types)。 该语言规范是 C# 语法和用法的权威资料。
 
 ## <a name="see-also"></a>请参阅
 

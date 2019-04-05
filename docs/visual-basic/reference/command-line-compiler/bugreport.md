@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: e8366e1050217f3d993d510683252728aba0c3d9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527346"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820902"
 ---
 # <a name="-bugreport"></a>-bugreport
 创建提交 bug 报告时，可以使用一个文件。  
@@ -26,7 +26,7 @@ ms.locfileid: "43527346"
   
 |术语|定义|  
 |---|---|  
-|`file`|必须的。 将包含 bug 报告文件的名称。 将文件名括在引号 ("") 如果名称包含空格。|  
+|`file`|必需。 将包含 bug 报告文件的名称。 将文件名括在引号 ("") 如果名称包含空格。|  
   
 ## <a name="remarks"></a>备注  
  以下信息添加到`file`:  
@@ -60,9 +60,10 @@ ms.locfileid: "43527346"
 vbc -bugreport:problem.txt t2.vb  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-调试 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)  
- [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [（ASP.NET 设置架构） securityPolicy 的 trustLevel 元素](https://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-调试 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [（ASP.NET 设置架构） securityPolicy 的 trustLevel 元素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))

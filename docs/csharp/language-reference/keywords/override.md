@@ -1,5 +1,6 @@
 ---
-title: override 修饰符（C# 参考）
+title: override 修饰符 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - override
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: cbd5e21e7ca71a4986099a0386c684a6db37c3e8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6a8e79da3897e867fa3becab5fcfc70afe72e614
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45591168"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244435"
 ---
 # <a name="override-c-reference"></a>override（C# 参考）
 
@@ -26,7 +27,7 @@ ms.locfileid: "45591168"
 
 `override` 方法提供从基类继承的成员的新实现。 通过 `override` 声明重写的方法称为重写基方法。 重写基方法必须具有与 `override` 方法相同的签名。 有关继承的信息，请参阅[继承](../../programming-guide/classes-and-structs/inheritance.md)。
 
-不能重新非虚方法或静态方法。 重写基方法必须是 `virtual`、`abstract` 或 `override`。
+不能重写非虚方法或静态方法。 重写基方法必须是 `virtual`、`abstract` 或 `override`。
 
 `override` 声明不能更改 `virtual` 方法的可访问性。 `override` 方法和 `virtual` 方法必须具有相同[级别访问修饰符](access-modifiers.md)。
 

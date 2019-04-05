@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecf6bff10e98ab7f008cfd176f59687f34d89553
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f0182de9b998b7eb88a3bd003543bee876398633
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216459"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304643"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 接口
 提供了使宿主能够启动和停止公共语言运行时 (CLR) 明确，若要创建和配置应用程序域，若要访问默认域，并要枚举的进程中运行的所有域的方法。  
@@ -53,18 +53,18 @@ ms.locfileid: "44216459"
 |[UnloadDomain 方法](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|卸载当前的过程中指定的应用程序域。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** 1.0、 1.1  
+ **.NET framework 版本：** 1.0, 1.1  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.AppDomain>  
- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [ICLRRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [运行时主机](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [CorRuntimeHost 组件类](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.AppDomain>
+- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [运行时主机](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
+- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [CorRuntimeHost 组件类](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

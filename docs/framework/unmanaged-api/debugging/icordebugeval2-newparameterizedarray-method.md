@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413275"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487678"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray 方法
 分配的指定的元素类型和维度的一个新数组。  
@@ -38,7 +38,7 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pElementType`  
  [in]指向一个 ICorDebugType 对象，表示存储在数组中元素的类型的指针。  
   
@@ -49,16 +49,16 @@ HRESULT NewParameterizedArray(
  [in]以字节为单位，每个维度的数组大小。  
   
  `lowBounds`  
- [in] 可选。 数组的每个维度的下限。 如果省略此值，每个维度假设下限为零。  
+ [in] 可选。 数组的每个维度的下限。 如果省略此值，下限为零则假定为每个维度。  
   
 ## <a name="remarks"></a>备注  
  数组的元素可能是泛型类型的实例。 始终在线程当前运行的应用程序域中创建数组。 在.NET Framework 2.0 中，值`rank`必须为 1。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

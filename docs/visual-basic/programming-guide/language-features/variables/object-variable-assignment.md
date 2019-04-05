@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dff1b9bb9e87f827663786cac3f33531db41b2c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201933"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840271"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>对象变量赋值 (Visual Basic)
 使用普通赋值语句将对象分配给对象变量。 可以分配对象表达式或[Nothing](../../../../visual-basic/language-reference/nothing.md)关键字，如下面的示例说明了。  
@@ -75,10 +75,11 @@ End Sub
 addStandardText(Me)  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [如何： 声明对象变量并在 Visual Basic 中为其分配对象](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
- [如何：使对象变量不引用任何实例](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
- [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>请参阅
+
+- [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [如何：声明对象变量并在 Visual Basic 中为其分配对象](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [如何：使对象变量不引用任何实例](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
+- [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

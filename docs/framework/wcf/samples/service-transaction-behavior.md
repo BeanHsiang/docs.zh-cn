@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: bfdf0c9ddb8654bf7a6736bcccb0d9350e9a12a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dafc75c9db0dfe9b51c7425a269c166182bbcc87
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198466"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843027"
 ---
 # <a name="service-transaction-behavior"></a>服务事务行为
 此示例演示客户端协调事务的用法，以及为了控制服务事务行为而对 ServiceBehaviorAttribute 和 OperationBehaviorAttribute 进行的设置。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) ，实现计算器服务，但扩展来维护数据库表和有状态运行总数计算器操作中所执行操作的服务器日志。 持久写入服务器日志表依赖于客户端协调事务的结果 - 如果客户端事务未完成，Web 服务事务可以确保不会提交对数据库的更新。  
@@ -100,7 +100,7 @@ client.Close();
   
     -   `ReleaseServiceInstanceOnTransactionComplete` 属性指定当事务完成后是否回收服务实例。 如果将此属性设置为 `false`，服务将在所有操作请求中维护相同的服务实例。 这是维护运行总数所必需的。 如果设置为 `true`，每完成一个操作就会生成一个新实例。  
   
-    -   `TransactionAutoCompleteOnSessionClose` 属性指定会话关闭时是否完成未处理的事务。 通过将其设置为`false`，对单个操作所需设置`OperationBehaviorAttribute``TransactionAutoComplete`属性设置为`true`或者显式要求调用`SetTransactionComplete`方法以完成事务。 此示例对这两种方法进行了演示。  
+    -   `TransactionAutoCompleteOnSessionClose` 属性指定会话关闭时是否完成未处理的事务。 通过将其设置为`false`，对单个操作所需设置<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType>属性设置为`true`或者显式要求调用<xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType>方法以完成事务。 此示例对这两种方法进行了演示。  
   
 -   在 `ServiceContractAttribute` 上：  
   
@@ -265,4 +265,3 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   
-## <a name="see-also"></a>请参阅

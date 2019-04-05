@@ -2,19 +2,19 @@
 title: 使用委托中的变体 (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 5be4f786d2e1b8a0ead3fd58fe056e188faa916a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44a6153a9a1c0aa0aebb18710ea9e770fd4e57fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667266"
 ---
 # <a name="using-variance-in-delegates-c"></a>使用委托中的变体 (C#)
 向委托分配方法时，协变和逆变为匹配委托类型和方法签名提供了灵活性。 协变允许方法具有的派生返回类型多于委托中定义的类型。 逆变允许方法具有的派生参数类型少于委托类型中的类型。  
   
 ## <a name="example-1-covariance"></a>示例 1：协变  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  本示例演示如何将委托与具有返回类型的方法一起使用，这些返回类型派生自委托签名中的返回类型。 `DogsHandler` 返回的数据类型属于 `Dogs` 类型，它派生自委托中定义的 `Mammals` 类型。  
   
 ### <a name="code"></a>代码  
@@ -50,7 +50,7 @@ class Program
   
 ## <a name="example-2-contravariance"></a>示例 2：逆变  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>说明  
  本示例演示如何将委托与具有某个类型的参数的方法一起使用，这些返回类型是委托签名参数类型的基类型。 通过逆变可以使用一个事件处理程序而不是多个单独的处理程序。 例如，可以创建接受 `EventArgs` 输入参数的事件处理程序，并将其与将 `MouseEventArgs` 类型作为参数发送的 `Button.MouseClick` 事件一起使用，也可以将其与发送 `KeyEventArgs` 参数的 `TextBox.KeyDown` 事件一起使用。  
   
 ### <a name="code"></a>代码  
@@ -79,5 +79,5 @@ public Form1()
   
 ## <a name="see-also"></a>请参阅
 
-- [委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
+- [委托中的变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
 - [对 Func 和 Action 泛型委托使用变体 (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

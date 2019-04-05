@@ -1,17 +1,17 @@
 ---
-title: 模块 (F#)
-description: '了解如何与 F # 模块是 F # 代码，例如值、 类型和函数值，F # 程序中的分组。'
+title: 模块
+description: 了解如何F#模块是一组F#中的代码，例如值、 类型和函数值，F#程序。
 ms.date: 04/24/2017
-ms.openlocfilehash: fb0aa1d508d1141933b4fbdf10633f67ed078dc7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9e5bef4ffe3301a69bbe32483625652d988f8a35
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45528521"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611108"
 ---
 # <a name="modules"></a>模块
 
-F # 语言的上下文中*模块*是 F # 代码，例如值、 类型和函数值，F # 程序中的分组。 对模块中的代码进行分组有助于将相关代码放在一起，并有助于避免程序中的名称冲突。
+在上下文中的F#语言中，*模块*是一组F#中的代码，例如值、 类型和函数值，F#程序。 对模块中的代码进行分组有助于将相关代码放在一起，并有助于避免程序中的名称冲突。
 
 ## <a name="syntax"></a>语法
 
@@ -26,7 +26,7 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>备注
 
-F # 模块是 F # 代码构造如类型、 值、 函数值和代码中的分组`do`绑定。 它只包含静态成员的公共语言运行时 (CLR) 类作为实现。 有两种类型的模块声明，具体取决于该模块中是否包含整个文件： 顶级模块声明和本地模块声明。 顶级模块声明模块中包括整个文件。 顶级模块声明可以显示仅为一个文件中的第一个声明。
+F#模块是一组F#的代码如类型、 值、 函数值和中的代码构造`do`绑定。 它只包含静态成员的公共语言运行时 (CLR) 类作为实现。 有两种类型的模块声明，具体取决于该模块中是否包含整个文件： 顶级模块声明和本地模块声明。 顶级模块声明模块中包括整个文件。 顶级模块声明可以显示仅为一个文件中的第一个声明。
 
 在顶级模块声明，可选的语法*限定命名空间*是包含该模块的嵌套命名空间名称的序列。 限定命名空间不需要声明过。
 
@@ -44,7 +44,7 @@ F # 模块是 F # 代码构造如类型、 值、 函数值和代码中的分组
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6603.fs)]
 
-如果有多个文件在项目中或在单个编译时，或者如果要构建一个库，则必须包含命名空间声明或在文件顶部的模块声明。 F # 编译器仅确定模块名称隐式时在项目或编译命令行中，只有一个文件且要创建应用程序。
+如果有多个文件在项目中或在单个编译时，或者如果要构建一个库，则必须包含命名空间声明或在文件顶部的模块声明。 F#编译器仅确定模块名称隐式时在项目或编译命令行中，只有一个文件且要创建应用程序。
 
 *可访问性修饰符*可以是以下之一： `public`， `private`， `internal`。 有关详细信息，请参阅[访问控制](access-control.md)。 默认值为 public。
 
@@ -88,7 +88,7 @@ F # 模块是 F # 代码构造如类型、 值、 函数值和代码中的分组
 
 ## <a name="recursive-modules"></a>递归模块
 
-F # 4.1 中引入了允许的所有包含的代码要相互递归的模块的概念。  这是通过`module rec`。  使用`module rec`可以缓解一些烦恼无法编写类型和模块之间相互引用代码中的。  以下是此示例：
+F#4.1 中引入了允许的所有包含的代码要相互递归的模块的概念。  这是通过`module rec`。  使用`module rec`可以缓解一些烦恼无法编写类型和模块之间相互引用代码中的。  以下是此示例：
 
 ```fsharp
 module rec RecursiveModule =
@@ -128,12 +128,12 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-请注意，异常`DontSqueezeTheBananaException`和类`Banana`两者相互引用。  此外，模块`BananaHelpers`和类`Banana`也相互引用。  这就不可能 express 在 F # 中，如果你删除`rec`关键字从`RecursiveModule`模块。
+请注意，异常`DontSqueezeTheBananaException`和类`Banana`两者相互引用。  此外，模块`BananaHelpers`和类`Banana`也相互引用。  这就不可能在 expressF#如果你删除`rec`关键字从`RecursiveModule`模块。
 
-此功能，还可以在[命名空间](namespaces.md)F # 4.1。
+此功能，还可以在[命名空间](namespaces.md)与F#4.1。
 
 ## <a name="see-also"></a>请参阅
 
-- [F# 语言参考](index.md)  
-- [命名空间](namespaces.md)  
-- [F # RFC FS-1009-允许通过在文件中的较大范围的相互引用类型和模块](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)  
+- [F# 语言参考](index.md)
+- [命名空间](namespaces.md)
+- [F#RFC FS-1009-允许通过在文件中的较大范围的相互引用类型和模块](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

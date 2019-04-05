@@ -2,12 +2,12 @@
 title: -subsystemversion（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: ff4cd196edc1ec04f8abcecfa1a7a4e99e32dd56
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: cafa10447e08758499f5d5dc66ab61c5bbd1d54a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025434"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474873"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion（C# 编译器选项）
 指定可以运行生成的可执行文件的子系统的最低版本，以此确定可以运行该可执行文件的 Windows 版本。 大多数情况下，此选项确保该可执行文件可以利用早期 Windows 版本中未提供的特定安全功能。  
@@ -21,7 +21,7 @@ ms.locfileid: "48025434"
 -subsystemversion:major.minor  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `major.minor`  
  所需的子系统最低版本，以主版本和次要版本之间使用点标记的方式表示。 例如，如果将此选项的值设置为 6.01，则可以指定应用程序不能在低于 Windows 7 的操作系统上运行（如本主题后面的表中所述）。 必须将 `major` 和 `minor` 的值指定为整数。  
   
@@ -58,6 +58,6 @@ ms.locfileid: "48025434"
 ## <a name="setting-this-option"></a>设置此选项  
  若要在 Visual Studio 中设置 -subsystemversion 编译器选项，必须打开 .csproj 文件，并在 MSBuild XML 中为 `SubsystemVersion` 属性指定一个值。 不能在 Visual Studio IDE 中设置此选项。 有关详细信息，请参阅本主题前面的“默认值”或[常用的 MSBuild 项目属性](/visualstudio/msbuild/common-msbuild-project-properties)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
 - [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

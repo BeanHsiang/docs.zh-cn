@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: decde09c2225da0af420813b477b86f4564d42f7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873714"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411793"
 ---
 # <a name="data-contract-schema-reference"></a>数据协定架构参考
 本主题介绍 <xref:System.Runtime.Serialization.DataContractSerializer> 用来描述 XML 序列化的公共语言运行库 (CLR) 类型的 XML 架构 (XSD) 的子集。  
@@ -56,13 +56,13 @@ ms.locfileid: "48873714"
 |--------------|------------|  
 |`include`|支持。 `DataContractSerializer` 支持 xs:include 和 xs:import。 但是，从本地文件加载元数据时，Svcutil.exe 会限制下面的 `xs:include/@schemaLocation` 和 `xs:import/@location` 引用。 在这种情况下，必须通过带外机制而非通过 `include` 来传递架构文件的列表；将忽略 `include`架构文档。|  
 |`redefine`|已禁止。 出于安全方面的原因， `xs:redefine` 禁止使用 `DataContractSerializer` ： `x:redefine` 要求后跟 `schemaLocation` 。 在某些情况下，使用 DataContract 的 Svcutil.exe 会限制 `schemaLocation`的使用。|  
-|`import`|支持。 `DataContractSerializer` 支持 `xs:include` 和 `xs:import`。 但是，从本地文件加载元数据时，Svcutil.exe 会限制下面的 `xs:include/@schemaLocation` 和 `xs:import/@location` 引用。 在这种情况下，必须通过带外机制而非通过 `include` 来传递架构文件的列表；将忽略 `include` 架构文档。|  
+|`import`|支持。 `DataContractSerializer` 支持 `xs:include` 和 `xs:import`。 但是，从本地文件加载元数据时，Svcutil.exe 会限制下面的 `xs:include/@schemaLocation` 和 `xs:import/@location` 引用。 在这种情况下，必须通过带外机制而非通过 `include` 来传递架构文件的列表；将忽略 `include`架构文档。|  
 |`simpleType`|支持。 请参见“ `xs:simpleType` ”一节。|  
 |`complexType`|支持，将映射到数据协定。 请参见“ `xs:complexType` ”一节。|  
-|`group`|已忽略。 `DataContractSerializer` 不支持使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 这些声明将作为 `xs:schema` 子级被忽略，但无法从 `complexType` 或其他支持的结构内引用。|  
+|`group`|已忽略。 `DataContractSerializer` 不支持使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 这些声明将作为 `xs:schema`子级被忽略，但无法从 `complexType` 或其他支持的结构内引用。|  
 |`attributeGroup`|已忽略。 `DataContractSerializer` 不支持使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 这些声明将作为 `xs:schema`子级被忽略，但无法从 `complexType` 或其他支持的结构内引用。|  
 |`element`|支持。 请参见“全局元素声明 (GED)”。|  
-|`attribute`|已忽略。 `DataContractSerializer` 不支持使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 这些声明将作为 `xs:schema` 子级被忽略，但无法从 `complexType` 或其他支持的结构内引用。|  
+|`attribute`|已忽略。 `DataContractSerializer` 不支持使用 `xs:group`、 `xs:attributeGroup`和 `xs:attribute`。 这些声明将作为 `xs:schema`子级被忽略，但无法从 `complexType` 或其他支持的结构内引用。|  
 |`notation`|已忽略。|  
   
 ## <a name="complex-types--xscomplextype"></a>复杂类型 – \<xs:complexType >  
@@ -202,7 +202,7 @@ ms.locfileid: "48873714"
   
  \* 使用时`simpleType`和`complexType,`匿名类型的映射与非匿名类型相同，只不过没有匿名数据协定，因此创建已命名的数据协定后，使用生成的名称派生自元素名称。 下面的列表中是匿名类型的规则：  
   
--   WCF 实现详细信息： 如果`xs:element`名称不能包含句点、 匿名类型映射到外部数据协定类型的内部类型。 如果名称包含句点，则结果数据协定类型是独立的（不是内部类型）。  
+-   WCF 实现详细信息：如果`xs:element`名称不能包含句点、 匿名类型映射到外部数据协定类型的内部类型。 如果名称包含句点，则结果数据协定类型是独立的（不是内部类型）。  
   
 -   内部类型的生成数据协定名称是由外部类型的数据协定名称后跟一个句点、元素名称和字符串“Type”构成。  
   
@@ -290,15 +290,14 @@ ms.locfileid: "48873714"
   
  下面的代码演示 C# 枚举类。  
   
-```  
+```csharp  
 public enum MyEnum  
 {  
-   first = 3,  
-   second = 4,  
-   third =5  
+  first = 3,  
+  second = 4,  
+  third =5  
+}  
 ```  
-  
- }  
   
  此类通过 `DataContractSerializer`映射到下面的架构。 如果枚举值从 1 开始，则不生成 `xs:annotation` 块。  
   
@@ -329,7 +328,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs: list >  
+### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` 将用 `System.FlagsAttribute` 标记的枚举类型映射到从 `xs:list` 派生的 `xs:string`。 不支持其他 `xs:list` 变体。  
   
 ### <a name="xslist-attributes"></a>\<xs: list >： 属性  
@@ -349,7 +348,7 @@ public enum MyEnum
   
  例如，下面的代码标志一个枚举类型。  
   
-```  
+```csharp  
 [Flags]  
 public enum AuthFlags  
 {    
@@ -402,7 +401,7 @@ rialization/">64</EnumerationValue>
   
  例如，下面的代码是数据协定。  
   
-```  
+```csharp  
 [DataContract]  
 public class Person  
 {  
@@ -524,7 +523,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>。|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 类型映射  
- 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 中，已引入 `ISerializable` 作为一种用于序列化持久性或数据传输对象的机制。 有许多实现 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 `ISerializable` 类型，这些类型可以在应用程序之间进行传递。 `DataContractSerializer` 自然支持 `ISerializable` 类。 `DataContractSerializer` 映射到 `ISerializable` 实现架构类型，这些类型仅在类型的 QName（限定名）上存在不同，并且实际上是属性集合。 例如，`DataContractSerializer`映射<xref:System.Exception>到中的以下 XSD 类型 `http://schemas.datacontract.org/2004/07/System` 命名空间。  
+ 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本 1.0 中，已引入 <xref:System.Runtime.Serialization.ISerializable> 作为一种用于序列化持久性或数据传输对象的机制。 有许多实现 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的 `ISerializable` 类型，这些类型可以在应用程序之间进行传递。 <xref:System.Runtime.Serialization.DataContractSerializer> 自然支持 `ISerializable` 类。 `DataContractSerializer` 映射到 `ISerializable` 实现架构类型，这些类型仅在类型的 QName（限定名）上存在不同，并且实际上是属性集合。 例如，`DataContractSerializer`映射<xref:System.Exception>到中的以下 XSD 类型 `http://schemas.datacontract.org/2004/07/System` 命名空间。  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -619,7 +618,7 @@ public class Employee : Person
 ## <a name="importing-non-datacontract-schemas"></a>导入非 DataContract 架构  
  `DataContractSerializer` 具有 `ImportXmlTypes` 选项，可允许导入不符合 `DataContractSerializer` XSD 配置文件的架构（请参见 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 属性）。 将此选项设置为 `true` 可接受不符合要求的架构类型，并将其映射到下面的实现，即包装 <xref:System.Xml.Serialization.IXmlSerializable> 数组的 <xref:System.Xml.XmlNode> （仅类名称不同）。  
   
-```  
+```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
 [System.Xml.Serialization.XmlSchemaProviderAttribute("ExportSchema")]  
 [System.Xml.Serialization.XmlRootAttribute(IsNullable=false)]  
@@ -675,16 +674,16 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
       <xs:sequence minOccurs="1" maxOccurs="1">  
          <xs:element name="DateTime" type="xs:dateTime"  
          minOccurs="1" maxOccurs="1" />  
-         <xs:elementname="OffsetMinutes" type="xs:short"  
+         <xs:element name="OffsetMinutes" type="xs:short"  
          minOccurs="1" maxOccurs="1" />  
       </xs:sequence>  
    </xs:complexType>  
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

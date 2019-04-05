@@ -1,5 +1,5 @@
 ---
-title: '&lt;system.diagnostics&gt;元素'
+title: < System.diagnostics > 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -8,20 +8,18 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 35fe167beb53c27aa511e08507415a26b1749ca2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 31768c1a66accab33a8867fac6e813c6ae93bda7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029433"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284214"
 ---
-# <a name="ltsystemdiagnosticsgt-element"></a>&lt;system.diagnostics&gt;元素
+# <a name="systemdiagnostics-element"></a>\<system.diagnostics > 元素
 指定用于收集、存储和路由消息的跟踪侦听器以及对跟踪开关设置的级别。  
   
  \<configuration>  
-\<system.diagnostics >  
+\<system.diagnostics>  
   
 ## <a name="syntax"></a>语法  
   
@@ -74,7 +72,7 @@ ms.locfileid: "48029433"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.Debug>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.Debug>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

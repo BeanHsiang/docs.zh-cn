@@ -2,15 +2,15 @@
 title: 如何：使用 Svcutil.exe 验证已编译的服务代码
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-ms.openlocfilehash: 9e7bdf98f578e9b5f9ef2be9c46ccbe811358467
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a06cf57fce883753af4686b294396d6d6da73a13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490456"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531923"
 ---
 # <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>如何：使用 Svcutil.exe 验证已编译的服务代码
-你可以使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)不承载服务的情况下检测服务实现和配置中的错误。  
+可以使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)不承载服务的情况下检测服务实现和配置中的错误。  
   
 ### <a name="to-validate-a-service"></a>验证服务  
   
@@ -18,7 +18,7 @@ ms.locfileid: "33490456"
   
 2.  打开一个 SDK 命令提示  
   
-3.  在命令提示符处，使用下面的格式启动 Svcutil.exe 工具。 有关的各种参数的详细信息，请参阅的服务 Validationsection [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)主题。  
+3.  在命令提示符处，使用下面的格式启动 Svcutil.exe 工具。 有关各种参数的详细信息，请参阅的服务 Validationsection [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)主题。  
   
     ```  
     svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*  
@@ -35,5 +35,5 @@ ms.locfileid: "33490456"
 svcutil /validate /serviceName:myServiceName myServiceHost.exe  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>请参阅
+- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

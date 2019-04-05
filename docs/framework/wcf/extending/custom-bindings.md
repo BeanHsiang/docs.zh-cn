@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e3954e90ed091d03656f25ce1a9b1ff35ffaa9ea
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192805"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260720"
 ---
 # <a name="custom-bindings"></a>自定义绑定
-当系统提供的某个绑定不符合服务的要求时，可使用 <xref:System.ServiceModel.Channels.CustomBinding> 类。 所有绑定都是从绑定元素的有序集构造而来的。 自定义绑定可以从一组系统提供的绑定元素生成，也可以包含用户定义的自定义绑定元素。 例如，可以使用自定义绑定元素在服务终结点使用新的传输或编码器。 有关工作示例，请参阅[自定义绑定示例](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08)。 有关详细信息，请参阅[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+当系统提供的某个绑定不符合服务的需求时，可使用 <xref:System.ServiceModel.Channels.CustomBinding> 类。 所有绑定都是从绑定元素的有序集构造而来的。 自定义绑定可以从一组系统提供的绑定元素生成，也可以包含用户定义的自定义绑定元素。 例如，可以使用自定义绑定元素在服务终结点使用新的传输或编码器。 有关工作示例，请参阅[自定义绑定示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90))。 有关详细信息，请参阅[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
 ## <a name="construction-of-a-custom-binding"></a>自定义绑定的构造  
  自定义绑定是使用 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 构造函数并通过“堆叠”在一起的绑定元素的集合构造的，这些元素的特定顺序如下：  
@@ -72,10 +72,10 @@ ms.locfileid: "47192805"
   
  此外，可以定义自己的绑定元素，并将它们插在前面定义的任何层之间。  
   
-## <a name="see-also"></a>请参阅  
- [终结点创建概述](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [使用绑定配置服务和客户端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [如何：自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)  
- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [自定义绑定](../../../../docs/framework/wcf/samples/custom-binding.md)
+## <a name="see-also"></a>请参阅
+- [终结点创建概述](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [使用绑定配置服务和客户端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [如何：自定义系统提供的绑定](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [自定义绑定](../../../../docs/framework/wcf/samples/custom-binding.md)

@@ -1,5 +1,6 @@
 ---
-title: 命名实参和可选实参（C# 编程指南）
+title: 命名参数和可选参数 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: f536499e95611bad6ac1766e117d4a2f1463e53d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 751f8a0745322e7e8573d392a504ea02cb18572e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857977"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654024"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>命名实参和可选实参（C# 编程指南）
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 介绍命名实参和可选实参。 通过*命名实参*，你可以为特定形参指定实参，方法是将实参与该形参的名称关联，而不是与形参在形参列表中的位置关联。 通过*可选参数*，你可以为某些形参省略实参。 这两种技术都可与方法、索引器、构造函数和委托一起使用。  
@@ -60,7 +61,7 @@ ms.locfileid: "43857977"
 ## <a name="example"></a>示例  
  以下代码执行本节以及某些其他节中的示例。  
   
- [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/program.cs#1)]  
   
 ## <a name="optional-arguments"></a>可选实参  
  方法、构造函数、索引器或委托的定义可以指定其形参为必需还是可选。 任何调用都必须为所有必需的形参提供实参，但可以为可选的形参省略实参。  
@@ -75,7 +76,7 @@ ms.locfileid: "43857977"
   
  可选参数定义于参数列表的末尾和必需参数之后。 如果调用方为一系列可选形参中的任意一个形参提供了实参，则它必须为前面的所有可选形参提供实参。 实参列表中不支持使用逗号分隔的间隔。 例如，在以下代码中，使用一个必选形参和两个可选形参定义实例方法 `ExampleMethod`。  
   
- [!code-csharp[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/optional.cs#15)]  
   
  下面对 `ExampleMethod` 的调用会导致编译器错误，原因是为第三个形参而不是为第二个形参提供了实参。  
   
@@ -85,10 +86,9 @@ ms.locfileid: "43857977"
   
  `anExample.ExampleMethod(3, optionalint: 4);`  
   
- IntelliSense 使用括号表示可选形参，如下图所示。  
+ IntelliSense 使用括号表示可选形参，如下图所示：  
   
- ![ExampleMethod 方法的 IntelliSense 快速信息。](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
-ExampleMethod 中的可选形参  
+ ![显示 ExampleMethod 方法的 IntelliSense 快速信息的屏幕截图。](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
 >  此外，还可通过使用 .NET <xref:System.Runtime.InteropServices.OptionalAttribute> 类声明可选参数。 `OptionalAttribute` 形参不需要默认值。  
@@ -96,25 +96,24 @@ ExampleMethod 中的可选形参
 ## <a name="example"></a>示例  
  在以下示例中，`ExampleClass` 的构造函数具有一个可选形参。 实例方法 `ExampleMethod` 具有一个必选形参（`required`）和两个可选形参（`optionalstr` 和 `optionalint`）。 `Main` 中的代码演示了可用于调用构造函数和方法的不同方式。  
   
- [!code-csharp[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/optional.cs#2)]  
   
 ## <a name="com-interfaces"></a>COM 接口  
  命名实参和可选实参，以及对动态对象的支持和其他增强功能大大提高了与 COM API（例如 Office Automation API）的互操作性。  
   
- 例如，Microsoft Office Excel 的 <xref:Microsoft.Office.Interop.Excel.Range> 接口中的 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 方法有七个可选形参。 这些形参如下图所示。  
+ 例如，Microsoft Office Excel 的 <xref:Microsoft.Office.Interop.Excel.Range> 接口中的 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 方法有七个可选形参。 这些形参如下图所示：  
   
- ![AutoFormat 方法的 IntelliSense 快速信息。](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
-AutoFormat 形参  
+ ![显示 AutoFormat 方法的 IntelliSense 快速信息的屏幕截图。](./media/named-and-optional-arguments/autoformat-method-parameters.png)  
   
  在 C# 3.0 以及早期版本中，每个形参都需要一个实参，如下例所示。  
   
- [!code-csharp[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#3)]  
   
  但是，可以通过使用 C# 4.0 中引入的命名实参和可选实参来大大简化对 `AutoFormat` 的调用。 如果不希望更改形参的默认值，则可以通过使用命名实参和可选实参来为可选形参省略实参。 在下面的调用中，仅为 7 个形参中的其中一个指定了值。  
   
- [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 有关详细信息和示例，请参阅[如何：在 Office 编程中使用命名实参和可选实参](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何：使用 Visual C# 功能访问 Office 互操作性对象](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)。  
+ 有关详细信息和示例，请参阅[操作说明：在 Office 编程中使用命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)和[操作说明：使用 Visual C# 功能访问 Office 互操作对象](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)。  
   
 ## <a name="overload-resolution"></a>重载决策  
  使用命名实参和可选实参将在以下方面对重载决策产生影响：  
@@ -130,7 +129,7 @@ AutoFormat 形参
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：在 Office 编程中使用命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
-- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [如何：在 Office 编程中使用命名参数和可选参数](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [使用类型 dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [使用构造函数](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
 - [使用索引器](../../../csharp/programming-guide/indexers/using-indexers.md)

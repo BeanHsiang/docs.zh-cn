@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 32b89caf56c010f9e6ed7b78309ef30b56b682ea
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332891"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840505"
 ---
 # <a name="get-statement"></a>Get 语句
 声明`Get`用于检索属性值的属性过程。  
@@ -34,9 +34,9 @@ End Get
 |术语|定义|  
 |---|---|  
 |`attributelist`|可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|在最多一个的可选`Get`和`Set`中此属性的语句。 可以是以下各项之一：<br /><br /> -   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [专用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`accessmodifier`|在最多一个的可选`Get`和`Set`中此属性的语句。 可以是以下各项之一：<br /><br /> -   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [专用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
 |`statements`|可选。 运行时的一个或多个语句`Get`调用属性过程。|  
-|`End Get`|必须的。 终止的定义`Get`属性过程。|  
+|`End Get`|必需。 终止的定义`Get`属性过程。|  
   
 ## <a name="remarks"></a>备注  
  每个属性必须具有`Get`属性过程除非该属性标记为`WriteOnly`。 `Get`过程用于返回属性的当前值。  
@@ -71,20 +71,21 @@ End Get
   
      下面的示例演示两种方法的只读属性`quoteForTheDay`可保存在私有变量的值返回`quoteValue`。  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
-     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_2.vb)]  
+     [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]  
   
-     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_3.vb)]  
+     [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>示例  
  下面的示例使用`Get`语句返回的属性值。  
   
- [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
   
-## <a name="see-also"></a>请参阅  
- [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)  
- [Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [演练：定义类](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)
+## <a name="see-also"></a>请参阅
+
+- [Set 语句](../../../visual-basic/language-reference/statements/set-statement.md)
+- [Property 语句](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Exit 语句](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [演练：定义类](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)

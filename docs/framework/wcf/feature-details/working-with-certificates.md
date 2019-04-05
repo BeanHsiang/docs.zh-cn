@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693605"
 ---
 # <a name="working-with-certificates"></a>使用证书
 对 Windows Communication Foundation (WCF) 安全性进行编程时，通常使用 X.509 数字证书对客户端和服务器进行身份验证，以及对消息进行加密和数字签名。 本主题将简要说明 X.509 数字证书的功能以及如何在 WCF 中使用它们，并提供一些主题的链接，这些主题对这些概念进行了深入说明，或揭示了如何使用 WCF 和证书来完成常见任务。  
@@ -52,12 +52,12 @@ ms.locfileid: "49453458"
 -   如果服务或客户端是在某个用户帐户下运行的应用程序，则使用“当前用户”存储区。  
   
 ### <a name="accessing-stores"></a>访问存储区  
- 与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 在创建由 Internet 信息服务 (IIS) 承载的服务时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 进程运行在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帐户下。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 要了解如何使用 WinHttpCertConfig.exe 工具修改访问列表，请参阅[如何：创建开发期间使用的临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 有关在 IIS 中使用客户端证书的详细信息，请参阅 [How to call a Web service by using a client certificate for authentication in an ASP.NET Web application](https://go.microsoft.com/fwlink/?LinkId=88914)（如何在 ASP.NET Web 应用程序中通过使用客户端证书进行身份验证来调用 Web 服务）。  
+ 与计算机上的文件夹一样，存储区也受访问控制列表 (ACL) 保护。 在创建由 Internet 信息服务 (IIS) 承载的服务时，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 进程运行在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帐户下。 该帐户必须有权访问包含服务所用证书的存储区。 每个主要存储区都由一个默认访问列表保护，但这些列表是可以修改的。 如果创建一个单独的角色访问存储区，则必须向该角色授予访问权限。 若要了解如何修改使用 WinHttpCertConfig.exe 工具的访问列表，请参阅[如何：创建开发期间使用临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 有关在 IIS 中使用客户端证书的详细信息，请参阅 [How to call a Web service by using a client certificate for authentication in an ASP.NET Web application](https://go.microsoft.com/fwlink/?LinkId=88914)（如何在 ASP.NET Web 应用程序中通过使用客户端证书进行身份验证来调用 Web 服务）。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>链信任和证书颁发机构  
  证书是在某种层次结构中创建的，其中每个证书都链接到颁发该证书的 CA。 该链接指向 CA 的证书。 然后，CA 的证书颁发原始 CA 的证书的 CA 的链接。 这一过程不断重复，直至到达根 CA 的证书。 根 CA 的证书将以继承方式受到信任。  
   
- 使用数字证书对实体进行身份验证时就依赖这一层次结构，它也称为信任链。 在 MMC 管理单元中，双击任何证书，再单击“证书路径”选项卡，可以查看任何证书链。有关为证书颁发机构导入证书链的详细信息，请参阅[如何：指定用于验证签名的证书颁发机构证书链](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
+ 使用数字证书对实体进行身份验证时就依赖这一层次结构，它也称为信任链。 在 MMC 管理单元中，双击任何证书，再单击“证书路径”选项卡，可以查看任何证书链。有关导入的证书颁发机构的证书链的详细信息，请参阅[如何：指定用于验证签名的证书颁发机构证书链](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
   
 > [!NOTE]
 >  通过将颁发机构的证书放入受信任的根颁发机构证书存储区中，可以向任何颁发机构指定受信任的根颁发机构。  
@@ -96,7 +96,7 @@ ms.locfileid: "49453458"
   
 3.  将根颁发机构证书导入到受信任的根证书颁发机构存储区中。  
   
-4.  有关分步说明，请参阅[如何：创建开发期间使用的临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。  
+4.  有关分步说明，请参阅[如何：创建开发期间使用临时证书](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。  
   
 ## <a name="which-certificate-to-use"></a>要使用哪个证书？  
  关于证书的常见问题是要使用哪个证书以及使用它的原因。 答案取决于是对客户端编程还是对服务编程。 下面的信息提供了一个一般准则，但未对这些问题提供详尽解答。  
@@ -170,9 +170,9 @@ ms.locfileid: "49453458"
   
  在 WCF 第一版中，可在无需考虑域策略的情况下，执行映射。 因此，如果启用了映射，而 X.509 证书不满足域策略，则在第一版下运行正常的早期应用程序，可能会失败。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels>  
- <xref:System.ServiceModel.Security>  
- <xref:System.ServiceModel>  
- <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels>
+- <xref:System.ServiceModel.Security>
+- <xref:System.ServiceModel>
+- <xref:System.Security.Cryptography.X509Certificates.X509FindType>
+- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

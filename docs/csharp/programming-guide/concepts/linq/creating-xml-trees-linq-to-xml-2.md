@@ -2,12 +2,12 @@
 title: 在 C# 中创建 XML 树 (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 9fb03800f04a3c0615fa5b7fc44eb078e224eebc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503157"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>在 C# 中创建 XML 树 (LINQ to XML)
 本节提供有关使用 C# 来创建 XML 树的信息。  
@@ -42,7 +42,7 @@ XElement contacts =
 ## <a name="xelement-constructors"></a>XElement 构造函数  
  <xref:System.Xml.Linq.XElement> 类使用下面的构造函数用于函数构造。 请注意，对于 <xref:System.Xml.Linq.XElement>，存在其他一些构造函数，但是由于它们不用于函数构造，因此没有在此列出。  
   
-|构造函数|描述|  
+|构造函数|说明|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|创建 <xref:System.Xml.Linq.XElement>。 `name` 参数指定元素的名称；`content` 指定元素的内容。|  
 |`XElement(XName name)`|创建一个 <xref:System.Xml.Linq.XElement>，其 <xref:System.Xml.Linq.XName> 初始化为指定名称。|  

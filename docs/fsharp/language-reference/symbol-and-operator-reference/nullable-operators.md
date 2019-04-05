@@ -1,13 +1,13 @@
 ---
-title: 可以为 null 的运算符 (F#)
-description: '了解有关 F # 编程语言中可用的可以为 null 运算符。'
+title: 可以为 null 的运算符
+description: 了解有关中可用的可以为 null 运算符的信息F#编程语言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b17c0de2d81a1ef88b31d833a49ff9e3f9d34e8d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44086278"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610588"
 ---
 # <a name="nullable-operators"></a>可以为 null 的运算符
 
@@ -15,7 +15,7 @@ ms.locfileid: "44086278"
 
 ## <a name="table-of-nullable-operators"></a>可以为 Null 的运算符的表
 
-下表列出了可以为 null 的 F # 语言支持的运算符。
+下表列出了可以为 null 的运算符中支持F#语言。
 
 |在左侧可以为 null|右侧可以为 null|双方可以为 null|
 |---|---|---|
@@ -55,7 +55,7 @@ printfn "%f" (float nullableFloat)
 
 查询运算符可以为 null 的数据字段，如`sumByNullable`，也存在在查询表达式中使用。 不可以为 null 的类型的查询运算符不兼容的类型与 null 的类型，因此使用可以为 null 数据值时，必须使用相应的查询运算符的可以为 null 版本。 有关详细信息，请参阅[查询表达式](../query-expressions.md)。
 
-下面的示例演示 F # 查询表达式中使用可以为 null 的运算符。 第一个查询显示如何编写查询中不可以为 null 的运算符;第二个查询显示了使用可以为 null 的运算符的等效查询。 有关完整的上下文，包括如何将数据库设置为使用此代码示例，请参阅[演练： 访问 SQL 数据库的使用类型提供程序](../../tutorials/type-providers/accessing-a-sql-database.md)。
+下面的示例演示如何使用可以为 null 的运算符中的F#查询表达式。 第一个查询显示如何编写查询中不可以为 null 的运算符;第二个查询显示了使用可以为 null 的运算符的等效查询。 有关完整的上下文，包括如何将数据库设置为使用此代码示例，请参阅[演练：使用类型提供程序访问 SQL 数据库](../../tutorials/type-providers/accessing-a-sql-database.md)。
 
 ```fsharp
 open System

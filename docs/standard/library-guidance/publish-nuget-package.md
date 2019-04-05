@@ -1,47 +1,47 @@
 ---
 title: 发布 NuGet 包
-description: 用于将.NET 库发布到 NuGet 的最佳做法建议。
+description: 将 .NET 库发布到 NuGet 的最佳做法建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0602712311411ef3d59825bec8c5e550bc8d8265
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
-ms.translationtype: MT
+ms.openlocfilehash: 036aa99c89790274628c40824be7e230d81850fe
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49369800"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144064"
 ---
 # <a name="publishing-a-nuget-package"></a>发布 NuGet 包
 
-NuGet 包发布和使用包存储库中。 虽然 NuGet.org 最广为已知和已用存储库，有许多地方会发布 NuGet 包：
+从包存储库发布和使用 NuGet 包。 虽然 NuGet.org 是最广为人知和使用范围最广的存储库，但有很多平台可以发布 NuGet 包：
 
-* **[NuGet.org](https://www.nuget.org/)** 是 NuGet 包的主联机存储库。 在 NuGet.org 上的所有包都都向每个人都使用公开提供。 默认情况下，Visual Studio NuGet.org 作为包源，因此很多开发人员 NuGet.org 它们将与之交互的唯一包存储库。 NuGet.org 是发布稳定的包和预发行包上所需社区反馈的最佳位置。
+* [NuGet.org](https://www.nuget.org/) 是 NuGet 包的主要联机存储库。 NuGet.org 上的所有包是向所有用户公开提供的。 默认情况下，Visual Studio 将 NuGet.org 作为包源，并且对于许多开发人员来说，NuGet.org 是他们与之交互的唯一包存储库。 NuGet.org 是发布想要获得社区反馈的稳定包和预发行包的最佳位置。
 
-* **[MyGet](https://myget.org/)** 存储库服务支持[可用的自定义包源的开放源代码项目](https://www.myget.org/opensource)。 MyGet 公共自定义源是一个理想位置用于发布所创建的 CI 服务的预发行包。 MyGet 还许可后出于商业目的提供了专用源。
+* [MyGet](https://myget.org/) 是支持开源项目的自定义包源的存储库服务。 MyGet 公共自定义源是发布由你的 CI 服务创建的预发行包的理想位置。 MyGet 还提供用于商业目的的专用源。
 
-* 一个**[本地数据源](/nuget/hosting-packages/local-feeds)** 使您可以将包存储库等的文件夹，并使`*.nupkg`nuget 的可访问文件夹中的文件。 本地数据源可用于测试之前将其发布到 NuGet.org 的 NuGet 包。
+* [本地源](/nuget/hosting-packages/local-feeds)使你能够将文件夹视为包存储库并使文件夹中的 `*.nupkg` 文件可由 NuGet 访问。 本地源可用于在将 NuGet 发布到 MyGet.org 前对 NuGet 包进行测试。
 
 > [!NOTE]
-> NuGet.org[不允许要删除的包](/nuget/policies/deleting-packages)是上传。 包可以是未列出，以便它不是在 UI 中公开可见，但`*.nupkg`仍可还原上下载。 此外，nuget.org 不允许重复的包版本。 若要更正的错误必须取消列出包不正确的 NuGet 包，递增的版本号和发布包的新版本。
+> 上传包后，NuGet.org [不允许将其删除](/nuget/policies/deleting-packages)。 可以不列出包，使其不在 UI 中公开可见，但仍可在还原后下载 `*.nupkg`。 此外，nuget.org 不允许重复的包版本。 若要更正存在错误的 NuGet 包，必须取消列出不正确的包，递增版本号并发布新版本的包。
 
-**执行 ✔️** [发布稳定的包和预发行包](/nuget/create-packages/publish-a-package)想到 NuGet.org 的社区反馈。
+✔️ 务必[将想要获取社区反馈的稳定包和预发行包发布](/nuget/create-packages/publish-a-package)到 NuGet.org。
 
-**请考虑 ✔️**预发行包发布到 MyGet 源从持续集成生成。
+✔️ 请考虑将预发行包从持续集成版本发布到 MyGet 源。
 
-**请考虑 ✔️**使用本地数据源或 MyGet 在开发环境中测试包。 请检查包的工作原理，然后将其发布到 NuGet.org。
+✔️ 请考虑使用本地源或 MyGet 在开发环境中测试包。 检查包是否运行正常，然后将其发布到 NuGet.org。
 
 ## <a name="nugetorg-security"></a>NuGet.org 安全
 
-务必不良参与方无法访问你的 NuGet 帐户并上传恶意版本的库。 发布包时，NuGet.org 将提供双因素身份验证和电子邮件通知。 在登录到 NuGet.org 后启用这些功能**帐户设置**页。
+不良因素不能访问 NuGet 帐户且不能上传库的恶意版本，这一点很重要。 NuGet.org 在发布包时提供双因素身份验证和电子邮件通知。 登录到“帐户设置”页面上的 NuGet.org 后，启用这些功能。
 
-![替换文字](./media/publish-nuget-package/nuget-2fa.png "NuGet 帐户安全")
+![替换文本](./media/publish-nuget-package/nuget-2fa.png "NuGet 帐户安全")
 
-**✔️ 执行**使用 Microsoft 帐户登录到 NuGet。
+✔️ 务必使用 Microsoft 帐户登录到 NuGet。
 
-**✔️ 执行**启用双因素身份验证用于访问 NuGet。
+✔️ 务必启用双因素身份验证来访问 NuGet。
 
-**✔️ 执行**发布包时启用电子邮件通知。
+✔️ 务必在发布包时启用电子邮件通知。
 
 >[!div class="step-by-step"]
-[上一页](./sourcelink.md)
-[下一页](./versioning.md)
+>[上一页](sourcelink.md)
+>[下一页](versioning.md)

@@ -1,23 +1,23 @@
 ---
-title: 如何：作为 Atom 和 RSS 公开源
+title: 如何：公开源作为 Atom 和 RSS
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 6b26dabb9ed5c2c7bb2410dc1e844add6a69bdf3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 43ad8ae0b12b07e2d0abe3e208f6d1ccdb2ec77d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842718"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681165"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>如何：作为 Atom 和 RSS 公开源
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>如何：公开源作为 Atom 和 RSS
 Windows Communication Foundation (WCF) 可以创建公开联合源的服务。 本主题讨论如何使用 Atom 1.0 和 RSS 2.0 创建公开联合源的联合服务。 此服务公开一个可以返回任一联合格式的终结点。 为了简单起见，本示例中使用的服务为自承载服务。 在生产环境中，此类型的服务将承载在 IIS 或 WAS 下。 有关不同 WCF 托管选项的详细信息，请参阅[Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>创建基本联合服务  
   
-1.  使用通过 <xref:System.ServiceModel.Web.WebGetAttribute> 属性标记的接口定义服务协定。 作为联合源公开的每个操作都会返回一个 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 对象。 请注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的参数。 `UriTemplate` 指定用于调用此服务操作的 URL。 为此参数字符串包含文本和大括号中的变量 ({*格式*})。 此变量与服务操作的 `format` 参数相对应。 有关详细信息，请参阅<xref:System.UriTemplate>。 `BodyStyle` 会影响此服务操作所发送和接收的消息的写入方式。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> 指定不使用基础结构定义的 XML 元素包装发送到和接收自此服务操作的数据。 有关详细信息，请参阅<xref:System.ServiceModel.Web.WebMessageBodyStyle>。  
+1.  使用通过 <xref:System.ServiceModel.Web.WebGetAttribute> 属性标记的接口定义服务协定。 作为联合源公开的每个操作都会返回一个 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 对象。 请注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的参数。 `UriTemplate` 指定用于调用此服务操作的 URL。 为此参数字符串包含文本和大括号中的变量 ({*格式*})。 此变量与服务操作的 `format` 参数相对应。 有关详细信息，请参阅 <xref:System.UriTemplate>。 `BodyStyle` 会影响此服务操作所发送和接收的消息的写入方式。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> 指定不使用基础结构定义的 XML 元素包装发送到和接收自此服务操作的数据。 有关详细信息，请参阅 <xref:System.ServiceModel.Web.WebMessageBodyStyle>。  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
@@ -95,6 +95,6 @@ Windows Communication Foundation (WCF) 可以创建公开联合源的服务。 �
 ## <a name="compiling-the-code"></a>编译代码  
  编译前面的代码时，请引用 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>

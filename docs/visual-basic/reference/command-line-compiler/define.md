@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195172"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834304"
 ---
 # <a name="-define-visual-basic"></a>-定义 (Visual Basic)
 定义条件编译器常数。  
@@ -50,10 +50,11 @@ ms.locfileid: "50195172"
 ## <a name="example"></a>示例  
  下面的代码定义并使用两个条件编译器常数。  
   
- [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/define_1.vb)]  
+ [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [#If...Then...#Else 指令](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [#Const 指令](../../../visual-basic/language-reference/directives/const-directive.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [#If...Then...#Else 指令](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [#Const 指令](../../../visual-basic/language-reference/directives/const-directive.md)
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

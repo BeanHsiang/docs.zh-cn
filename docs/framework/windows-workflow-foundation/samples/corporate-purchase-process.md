@@ -2,12 +2,12 @@
 title: 企业采购过程
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837176"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442238"
 ---
 # <a name="corporate-purchase-process"></a>企业采购过程
 此示例演示如何使用自动最佳建议书选择来创建基于购买过程的非常基本的征求建议书 (RFP)。 它将 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、<xref:System.Activities.Statements.ForEach%601> 和一个自定义活动组合在一起来创建一个表示该过程的工作流。
@@ -16,7 +16,7 @@ ms.locfileid: "48837176"
 
 ## <a name="requirements"></a>要求
 
--   Visual Studio 2012。
+-   Visual Studio 2012.
 
 -   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。
 
@@ -108,7 +108,7 @@ ms.locfileid: "48837176"
 |RequestForProposal|征求建议书 (RFP) 是一份邀请，旨在请求供应商提交有关特定商品或服务的建议书。|  
 |VendorProposal|供应商针对具体的 RFP 提交的建议书。|  
 |VendorRepository|供应商的储存库。 此实现包含一个内存中的集合，其中包括供应商实例和用于公开这些实例的方法。|  
-|RfpRepository|征求建议书的储存库。 此实现将使用 Linq to XML 来查询由程式化的持久性所生成的征求建议书的 XML 文件。 此类实现[System.Runtime.Persistence.IDataViewMapper](https://msdn.microsoft.com/library/system.runtime.persistence.idataviewmapper(v=vs.110).aspx)。|  
+|RfpRepository|征求建议书的储存库。 此实现将使用 Linq to XML 来查询由程式化的持久性所生成的征求建议书的 XML 文件。 |  
 |IOHelper|此类处理所有与 I/O 有关的问题（文件夹、路径等。）|  
   
 ### <a name="web-client"></a>Web 客户端  
@@ -155,20 +155,20 @@ ms.locfileid: "48837176"
   
 ### <a name="web-client-options"></a>Web Client 选项  
   
--   **创建新的 RFP**： 创建新的请求的征求建议书 (RFP) 并启动购买过程工作流。  
+-   **创建新的 RFP**:创建新的请求的征求建议书 (RFP) 并启动购买过程工作流。  
   
--   **刷新**： 刷新活动和在主窗口中已完成的 Rfp 的列表。  
+-   **刷新**:刷新活动和在主窗口中已完成的 Rfp 的列表。  
   
--   **视图**： 显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
+-   **视图**：显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
   
--   为视图： 用户可以访问通过选择所需的参与者中使用不同的标识 RFP**视作**中活动的 Rfp 网格的组合框。  
+-   以查看：用户可以访问通过选择所需的参与者中使用不同的标识 RFP**视作**中活动的 Rfp 网格的组合框。  
   
 ### <a name="winforms-client-options"></a>WinForms Client 选项  
   
--   **创建 RFP**： 创建新的请求的征求建议书 (RFP) 并启动购买过程工作流。  
+-   **创建 RFP**:创建新的请求的征求建议书 (RFP) 并启动购买过程工作流。  
   
--   **刷新**： 刷新活动和在主窗口中已完成的 Rfp 的列表。  
+-   **刷新**:刷新活动和在主窗口中已完成的 Rfp 的列表。  
   
--   **查看 RFP**： 显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
+-   **查看 RFP**:显示现有 RFP 的内容。 供应商可提交其建议书（如果受到邀请或 RFP 尚未完成）。  
   
--   **Connect As**： 用户可以访问通过选择所需的参与者中使用不同的标识 RFP**视为**中活动的 Rfp 网格的组合框。
+-   **连接为**:用户可以访问通过选择所需的参与者中使用不同的标识 RFP**视作**中活动的 Rfp 网格的组合框。

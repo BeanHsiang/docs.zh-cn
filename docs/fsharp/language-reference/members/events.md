@@ -1,18 +1,18 @@
 ---
-title: 事件 (F#)
-description: '了解 F # 事件如何使您能够将函数调用关联的用户操作，在 GUI 编程中很重要。'
+title: 事件
+description: 了解如何F#事件使你能够将函数调用关联的用户操作，在 GUI 编程中很重要。
 ms.date: 05/16/2016
-ms.openlocfilehash: ce547bc9ec7b5e0ef9a7492c0889bb690e3040c2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 38eb15e59611d018b6005f64a957c9275ec931a4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43871928"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612161"
 ---
 # <a name="events"></a>事件
 
 > [!NOTE]
-本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
+> 本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 事件允许您将函数调用与用户操作关联，并且是 GUI 编程的关键所在。 事件也可以由应用程序或操作系统触发。
 
@@ -28,7 +28,7 @@ ms.locfileid: "43871928"
 
 ## <a name="creating-custom-events"></a>创建自定义事件
 
-F # 事件由 F #[事件](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)类，该类实现[IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)接口。 `IEvent` 本身是一个接口，它结合了两个其他接口的功能`System.IObservable<'T>`并[IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)。 因此，在其他语言中，`Event` 具有委托的同等功能，以及来自 `IObservable` 的附加功能，这意味着 F# 事件支持事件筛选并使用 F# 第一类函数和 lambda 表达式作为事件处理程序。 中提供此功能[事件模块](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)。
+F#事件由F#[事件](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)类，该类实现[IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)接口。 `IEvent` 本身是一个接口，它结合了两个其他接口的功能`System.IObservable<'T>`并[IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)。 因此，在其他语言中，`Event` 具有委托的同等功能，以及来自 `IObservable` 的附加功能，这意味着 F# 事件支持事件筛选并使用 F# 第一类函数和 lambda 表达式作为事件处理程序。 中提供此功能[事件模块](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)。
 
 若要像任何其他 .NET Framework 事件一样为某个类创建事件，请向该类添加一个 `let` 绑定，用于将 `Event` 定义为类中的字段。 您可以将所需的事件参数类型指定为类型参数，或将其保留为空，让编译器推断出相应的类型。 还必须定义一个将事件公开为 CLI 事件的事件成员。 该成员应具有[CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333)属性。 下方声明了一个属性，其实现是只是调用[发布](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e)事件的属性。 类用户可使用已发布事件的 `Add` 方法来添加处理程序。 `Add` 方法的参数可以为 lambda 表达式。 你可以使用事件的 `Trigger` 属性来引发事件，并将自变量传递给处理程序函数。 下面的代码示例阐释了这一点。 在此示例中，事件的推断类型参数是一个元组，它表示 lambda 表达式的自变量。
 
@@ -179,7 +179,7 @@ Application.Run(appForm)
 
 - [成员](index.md)
 - [处理和引发事件](../../../../docs/standard/events/index.md)
-- [Lambda 表达式：`fun`关键字](../functions/lambda-expressions-the-fun-keyword.md)
+- [Lambda 表达式：`fun` 关键字](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control.Event 模块](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.Event&#60;不&#62;类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 - [Control.Event&#60;Delegate，参数&#62;类](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

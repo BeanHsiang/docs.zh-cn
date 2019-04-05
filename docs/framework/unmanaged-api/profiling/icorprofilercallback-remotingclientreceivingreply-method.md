@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04956fb5519c66141f4bd7330367f6c78b4e7bc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fff5b25706353d999ab6875092e31f554438f28c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453953"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469152"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply 方法
-通知探查器的远程处理调用的服务器端部分已完成，并且客户端正在接收并即将处理回复。  
+通知探查器的远程处理调用的服务器端部分已完成，而客户端正在接收并即将处理回复。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,29 +35,29 @@ HRESULT RemotingClientReceivingReply(
     [in] BOOL fIsAsync);   
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pCookie`  
- [in]中提供的值与一个值，将对应[icorprofilercallback:: Remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)在这些情况下：  
+ [in]中提供的值的值将对应[icorprofilercallback:: Remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)在这些情况下：  
   
 -   远程处理 GUID cookie 处于活动状态。  
   
 -   通道成功传输消息。  
   
--   GUID cookie 上处于活动状态的服务器端过程。  
+-   GUID cookie 处于活动状态的服务器端的过程。  
   
  这允许轻松配对的远程处理调用。  
   
  `fIsAsync`  
- [in]一个值，是`true`如果调用的是异步的; 否则为`false`。  
+ [in]一个值，则该值`true`的调用是异步的; 否则为如果`false`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

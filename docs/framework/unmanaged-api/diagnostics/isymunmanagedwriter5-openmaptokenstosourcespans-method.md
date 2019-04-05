@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 93ad2517-b0dc-464c-8688-a58a30eda18d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d3bc8b00b568f96cd55b7811f310d34c1ff700d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60c1984e6193481efdaaeb82a2bc025aef67a33f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534430"
 ---
 # <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a>ISymUnmanagedWriter5::OpenMapTokensToSourceSpans 方法
-打开一个特殊的自定义数据部分，以便发出令牌源范围映射到的信息。 方法已打开，或反之，是一个错误时，请打开此部分。  
+打开一个特殊的自定义数据分区发出令牌源范围映射到的信息。 方法已打开，或反之，是错误时，请打开此部分。  
   
 ## <a name="syntax"></a>语法  
   
@@ -24,7 +24,7 @@ HRESULT OpenMapTokensToSourceSpans();
  返回 `HRESULT`。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedWriter5 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedWriter5 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)

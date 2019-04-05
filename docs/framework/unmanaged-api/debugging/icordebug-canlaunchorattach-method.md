@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f86cc83936dd8150ca6b3f28c9b6a624278e2b36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7c29859a54b89956e017f06b8eeb97a6171eabbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406266"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476212"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 方法
-返回一个 HRESULT，指示是否可以在当前的计算机和运行时配置的上下文中启动新的进程或附加到指定的现有进程。  
+返回一个 HRESULT，指示是否可以在当前的计算机和运行时配置的上下文中启动一个新的进程或附加到指定的现有进程。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,15 +36,15 @@ HRESULT CanLaunchOrAttach (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwProcessId`  
- [in]现有的进程 ID。  
+ [in]现有的进程的 ID。  
   
  `win32DebuggingEnabled`  
- [in]传入`true`如果打算使用 Win32 调试启用，启动的虚拟机或模板，若要使用 Win32 调试启用的; 否则为附加传递`false`。  
+ [in]传入`true`如果打算使用 Win32 调试启用，启动或 Win32 调试已启用; 否则为附加传递`false`。  
   
 ## <a name="return-value"></a>返回值  
- 如果调试服务确定启动新的进程或附加到给定的进程，则为 S_OK 是有可能，提供有关当前的计算机和运行时配置的信息。 可能的 HRESULT 值有：  
+ 如果调试服务确定启动新进程或附加到给定的进程，则返回 S_OK 提供有关当前的计算机和运行时配置的信息。 可能的 HRESULT 值为：  
   
 -   S_OK  
   
@@ -55,18 +55,18 @@ HRESULT CanLaunchOrAttach (
 -   CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>备注  
- 此方法是仅用于提供信息。 接口不会停止你启动和附加到进程，而不考虑值返回的`CanLaunchOrAttach`。  
+ 此方法是仅用于提供信息。 接口不会妨碍您启动或附加到进程，而不考虑值返回`CanLaunchOrAttach`。  
   
- 如果你打算使用 Win32 调试启用启动或使用 Win32 调试启用附加，则传递`true`为`win32DebuggingEnabled`。 通过返回的 HRESULT`CanLaunchOrAttach`可能会与不同，如果使用此选项。  
+ 如果你打算使用 Win32 调试启用了启动或启用 Win32 调试附加，则传递`true`为`win32DebuggingEnabled`。 通过返回的 HRESULT`CanLaunchOrAttach`如果使用此选项可能不同。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

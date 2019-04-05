@@ -2,12 +2,12 @@
 title: 自定义流升级
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 12c2b56d65b2ff41d6919e978dfad7560d05782c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611314"
 ---
 # <a name="custom-stream-upgrades"></a>自定义流升级
 面向流的传输（如 TCP 和命名管道）对客户端与服务器之间的连续字节流进行操作。 该流通过 <xref:System.IO.Stream> 对象实现。 在流升级中，客户端需要向通道堆栈中添加可选的协议层，并要求通信通道的另一端也执行该操作。 流升级包括使用升级后的对象替换原始 <xref:System.IO.Stream> 对象的过程。  
@@ -19,11 +19,11 @@ ms.locfileid: "33806027"
 ## <a name="how-stream-upgrades-work"></a>流升级如何工作  
  流升级过程包括四个部分。  
   
-1.  升级流*发起程序*开始该过程： 在运行时，它可以启动到其连接的另一端升级通道传输层的请求。  
+1.  升级流*发起方*开始该过程： 在运行时，它可以启动到其连接的另一端升级通道传输层的请求。  
   
-2.  升级流*接受程序*执行该升级： 在运行时接收来自其他计算机中，升级请求，并且如果可能，将接受该升级。  
+2.  升级流*接受程序*执行该升级： 在运行时它接收的升级请求来自其他计算机，并且如果可能，请接受升级。  
   
-3.  升级*提供程序*创建*发起程序*客户端上与*接受程序*服务器上。  
+3.  升级*提供程序*创建*发起方*客户端上并*接受程序*在服务器上。  
   
 4.  流升级*绑定元素*添加到服务和客户端上的绑定，并在运行时创建提供程序。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "33806027"
 ## <a name="security-upgrades"></a>安全升级  
  添加安全升级是常规流升级过程的专用版本。  
   
- WCF 已为升级流安全提供了两个绑定元素。 传输级安全的配置由 <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> 封装，可以对该两个元素进行配置并将其添加到自定义绑定。 这些绑定元素扩展用于生成客户端和服务器流升级提供程序的 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> 类。 这些绑定元素包含的方法可用于创建专用的安全流升级提供程序类（不是 `public`），因此对于这两种情况，您需要做的只是将绑定元素添加到绑定。  
+ WCF 已为升级流安全提供两个绑定元素。 传输级安全的配置由 <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> 和 <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> 封装，可以对该两个元素进行配置并将其添加到自定义绑定。 这些绑定元素扩展用于生成客户端和服务器流升级提供程序的 <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> 类。 这些绑定元素包含的方法可用于创建专用的安全流升级提供程序类（不是 `public`），因此对于这两种情况，您需要做的只是将绑定元素添加到绑定。  
   
  对于上述两个绑定元素都不满足的安全方案，可从上述发起程序、接受程序和提供程序的基类派生三个与安全相关的 `abstract` 类：  
   
@@ -92,13 +92,13 @@ ms.locfileid: "33806027"
   
 4.  每次调用 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> 和 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> 之后，都会升级该流。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>  
- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>  
- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>  
- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>
+- <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor>
+- <xref:System.ServiceModel.Channels.StreamUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider>
+- <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>

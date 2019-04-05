@@ -1,18 +1,18 @@
 ---
-title: Expression Trees
+title: 表达式树
 description: 介绍 .NET Core 中的表达式树，以及如何用它们将代码表示为可以检查、修改和执行的结构。
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b7a39ccec293a22e4b4d7d01b30f9f441fd0079b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190731"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125832"
 ---
-# <a name="expression-trees"></a>Expression Trees
+# <a name="expression-trees"></a>表达式树
 
-如果你使用过 LINQ，则会有丰富库（其中 `Func` 类型是 API 集的一部分）的经验。 （如果尚不熟悉 LINQ，则可能需要阅读 [LINQ 教程](linq/index.md)以及在此之前的有关 [lambda 表达式](lambda-expressions.md)的教程。）表达式树提供与作为函数的参数的更丰富的交互。
+如果你使用过 LINQ，则会有丰富库（其中 `Func` 类型是 API 集的一部分）的经验。 （如果尚不熟悉 LINQ，建议阅读 [LINQ 教程](linq/index.md)，以及本文前面有关 [lambda 表达式](./programming-guide/statements-expressions-operators/lambda-expressions.md)的文章。）表达式树提供与作为函数的参数的更丰富的交互。
 
 在创建 LINQ 查询时，通常使用 Lambda 表达式编写函数参数。 在典型的 LINQ 查询中，这些函数参数会被转换为编译器创建的委托。 
 

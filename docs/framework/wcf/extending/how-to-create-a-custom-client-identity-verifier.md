@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 19be92acb16ffb5e98eb39ba36a406d66e58d97b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804471"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464016"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>如何：创建自定义客户端标识验证工具
-*标识*功能的 Windows Communication Foundation (WCF) 使客户端能够预先指定服务所需的标识。 无论服务器何时向客户端验证其自身身份，都将检查该标识是否为所需的标识。 (有关标识以及它如何工作的说明，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)  
+*标识*功能的 Windows Communication Foundation (WCF) 使客户端能够预先指定所需的服务标识。 无论服务器何时向客户端验证其自身身份，都将检查该标识是否为所需的标识。 (有关标识和其工作原理的说明，请参阅[服务标识和身份验证](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)  
   
- 如果需要，可使用自定义标识验证工具自定义该验证。 例如，您可以执行其他服务标识验证检查。 在本示例中，自定义标识验证工具将检查从服务器返回的 X.509 证书中的其他声明。 有关示例应用程序，请参阅[服务标识示例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。  
+ 如果需要，可使用自定义标识验证工具自定义该验证。 例如，您可以执行其他服务标识验证检查。 在本示例中，自定义标识验证工具将检查从服务器返回的 X.509 证书中的其他声明。 示例应用程序，请参阅[服务标识示例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。  
   
 ### <a name="to-extend-the-endpointidentity-class"></a>扩展 EndpointIdentity 类  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33804471"
   
 ### <a name="to-implement-the-trygetidentity-method"></a>实现 TryGetIdentity 方法  
   
-1.  实现 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 方法，该方法确定客户端是否可返回 <xref:System.ServiceModel.EndpointIdentity> 类的实例。 WCF 基础结构调用的实现`TryGetIdentity`方法首先从消息中检索服务的标识。 然后，该基础结构使用返回的 `CheckAccess` 和 `EndpointIdentity` 调用 <xref:System.IdentityModel.Policy.AuthorizationContext> 实现。  
+1.  实现 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 方法，该方法确定客户端是否可返回 <xref:System.ServiceModel.EndpointIdentity> 类的实例。 WCF 基础结构将调用的实现`TryGetIdentity`方法首先从消息中检索服务的标识。 然后，该基础结构使用返回的 `CheckAccess` 和 `EndpointIdentity` 调用 <xref:System.IdentityModel.Policy.AuthorizationContext> 实现。  
   
 2.  在 `TryGetIdentity` 方法中，添加以下代码：  
   
@@ -81,10 +81,9 @@ ms.locfileid: "33804471"
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- <xref:System.ServiceModel.EndpointIdentity>  
- <xref:System.ServiceModel.Security.IdentityVerifier>  
- [服务标识示例](../../../../docs/framework/wcf/samples/service-identity-sample.md)  
- [授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)  
- [授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- <xref:System.ServiceModel.EndpointIdentity>
+- <xref:System.ServiceModel.Security.IdentityVerifier>
+- [服务标识示例](../../../../docs/framework/wcf/samples/service-identity-sample.md)
+- [授权策略](../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -1,19 +1,19 @@
 ---
 title: 设计微服务域模型
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计微服务域模型
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解设计面向 DDD 的域模型时的关键概念。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/09/2017
-ms.openlocfilehash: 9a54679fc28bb2adf803a38fe5e43f67048a4cfd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 7df274e90d5466581b6f93fe210b6c9310815833
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048471"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465888"
 ---
-# <a name="designing-a-microservice-domain-model"></a>设计微服务域模型
+# <a name="design-a-microservice-domain-model"></a>设计微服务域模型
 
-*为每个业务微服务或绑定上下文定义一个丰富域模型*
+为每个业务微服务或绑定上下文定义一个丰富域模型。
 
 你的目标是为每个业务微服务或绑定上下文 (BC) 创建一个内聚域模型。 但请记住，BC 或业务微服务有时可能由共享一个域模型的多个物理服务组成。 域模型必须捕获它所代表的单个绑定上下文或业务微服务的规则、行为、业务语言和约束。
 
@@ -23,19 +23,19 @@ ms.locfileid: "50048471"
 
 *实体的标识可以跨多个微服务或绑定上下文。*
 
-同一标识（但不是同一实体）可以跨多个绑定上下文或微服务建模。 不过，这并不意味着具有相同属性和逻辑的相同实体会在多个绑定上下文中实现。 相反，每个绑定上下文中的实体会将其属性和行为限制为该绑定上下文域中所需的属性和行为。
+同一标识（即，同一 `Id`，不过可能不是同一域实体）可以跨多个绑定上下文或微服务建模。 不过，这并不意味着具有相同属性和逻辑的相同实体会在多个绑定上下文中实现。 相反，每个绑定上下文中的实体会将其属性和行为限制为该绑定上下文域中所需的属性和行为。
 
 例如，买家实体可能具有某个人的大部分属性，这些属性在配置文件或标识微服务的用户实体中定义，其中包括标识。 但是订购微服务中的买家实体可能具有较少的属性，因为只有某些买家数据与订单流程相关。 每个微服务的上下文或每个绑定上下文都会影响其域模型。
 
-*除了实现数据属性外，域实体还必须实现行为*
+除了实现数据属性外，域实体还必须实现行为。
 
 DDD 中的域实体必须实现与实体数据（在内存中访问的对象）相关的域逻辑或行为。 例如，作为订单实体类的一部分，你必须将业务逻辑和操作作为任务（例如添加订单项、数据验证和总计算）的方法实现。 实体的方法负责处理实体的不变量和规则，而不是将这些规则分布在应用层中。
 
-图 9-8 展示了一个域实体，它不仅实现数据属性，还实现具有相关域逻辑的操作或方法。
+图 7-8 展示了一个域实体，它不仅实现数据属性，还实现具有相关域逻辑的操作或方法。
 
-![](./media/image9.png)
+![域模型实体通过方法实现行为，即，它不是“贫乏”模型。](./media/image9.png)
 
-**图 9-8**. 实现数据加行为的域实体设计示例
+**图 7-8**。 实现数据加行为的域实体设计示例
 
 当然，实体有时可能不会在实体类中实现任何逻辑。 如果某个聚合内的子实体没有任何特殊逻辑，因为大多数逻辑都在聚合根中定义，则该子实体可能出现这种情况。 如果你有一个复杂的微服务，它在服务类而非域实体中实现了大量逻辑，那么你可能会陷入贫乏域模型中，下一节将对此进行解释。
 
@@ -57,15 +57,14 @@ Martin Fowler 在他的博客文章 [AnemicDomainModel](https://martinfowler.com
 
 #### <a name="additional-resources"></a>其他资源
 
--   **DevIQ.域实体**
-    [*https://deviq.com/entity/*](https://deviq.com/entity/)
+- **DevIQ.Domain Entity** \（域实体）
+  [https://deviq.com/entity/](https://deviq.com/entity/)
 
--   **Martin Fowler。域模型**
-    [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
+- **Martin Fowler。The Domain Model** \（域模型）
+  [https://martinfowler.com/eaaCatalog/domainModel.html](https://martinfowler.com/eaaCatalog/domainModel.html)
 
--   **Martin Fowler。The Anemic Domain Model**（贫乏域模型）
-
-    <https://martinfowler.com/bliki/AnemicDomainModel.html>
+- **Martin Fowler。The Anemic Domain Model** \（贫乏域模型）
+  [https://martinfowler.com/bliki/AnemicDomainModel.html](https://martinfowler.com/bliki/AnemicDomainModel.html)
 
 ### <a name="the-value-object-pattern"></a>值对象模式
 
@@ -79,18 +78,21 @@ Martin Fowler 在他的博客文章 [AnemicDomainModel](https://martinfowler.com
 
 值对象在关系数据库和 ORM（如 EF）中很难管理，而在面向文档的数据库中，它们更易于实现和使用。
 
+EF Core 2.0 包含[实体](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，这样可以更易于处理值对象，如我们稍后详细介绍的一样。
+
 #### <a name="additional-resources"></a>其他资源
 
--   **Martin Fowler。值对象模式**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Martin Fowler。Value Object pattern** \（值对象模式）
+  [https://martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html)
 
--   **值对象**
-    [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
+- Value Object \（值对象）
+  [https://deviq.com/value-object/](https://deviq.com/value-object/)
 
--   **测试驱动开发中的值对象**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+- Value Objects in Test-Driven Development \（测试驱动开发中的值对象）
+  [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道。） （书；包括值对象的讨论）[https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software.**（域驱动设计：软件核心复杂性应对之道） （书；包括值对象的讨论）\
+  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>聚合模式
 
@@ -106,13 +108,13 @@ Martin Fowler 在他的博客文章 [AnemicDomainModel](https://martinfowler.com
 
 聚合根的目的是确保聚合的一致性；它应该是通过聚合根类中的方法或操作更新聚合的唯一入口点。 只能通过聚合根对聚合内的实体进行更改。 它是聚合的一致性守护者，它会考虑到可能需要在聚合中遵守的所有不变量和一致性规则。 如果单独更改某个子实体或值对象，聚合根无法确保聚合处于有效状态。 这就像一张桌脚松动了的桌子。 保持一致性是聚合根的主要目的。
 
-在图 9-9 中，可以看到一些示例聚合，例如买家聚合，其中包含一个实体（聚合根 Buyer）。 订单聚合包含多个实体和一个值对象。
+在图 7-9 中，可以看到一些示例聚合，例如买家聚合，其中包含一个实体（聚合根 Buyer）。 订单聚合包含多个实体和一个值对象。
 
-![](./media/image10.png)
+![DDD 域模型由聚合组成，聚合可以只具有一个实体或多个实体，并且还可以包含值对象。](./media/image10.png)
 
-**图 9-9**. 包含多个或单个实体的聚合示例
+**图 7-9**。 包含多个或单个实体的聚合示例
 
-请注意，视你的域而定，Buyer 聚合可能会有其他子实体，就像在 eShopOnContainers 参考应用程序的订购微服务中那样。 图 9-9 仅列举了买家具有单个实体的情况，作为仅包含聚合根的聚合示例。
+请注意，视你的域而定，Buyer 聚合可能会有其他子实体，就像在 eShopOnContainers 参考应用程序的订购微服务中那样。 图 7-9 仅列举了买家具有单个实体的情况，作为仅包含聚合根的聚合示例。
 
 为了让聚合一直相互隔离并保持它们之间的清晰界限，建议禁止在 DDD 域模型中的聚合之间直接导航，并且模型仅具有外键 (FK) 字段，正如在 eShopOnContainers 的[订购微服务域模型](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)中所实现的那样。 Order 实体针对买家只有 FK 字段，没有 EF Core 导航属性，如以下代码所示：
 
@@ -133,24 +135,24 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>其他资源
 
--   **Vaughn Vernon。高效聚合设计 - 第 I 部分：创建单个聚合模型**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon。Effective Aggregate Design - Part I:Modeling a Single Aggregate**（来自 <http://dddcommunity.org/>）\（有效的聚合设计 - 第 1 部分：单个聚合建模）
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
--   **Vaughn Vernon。高效聚合设计 - 第 II 部分：协同聚合**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon。Effective Aggregate Design - Part II:Making Aggregates Work Together**（来自 <http://dddcommunity.org/>）\（有效的聚合设计 - 第 2 部分：让聚合共同工作）
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
--   **Vaughn Vernon。高效聚合设计 - 第 III 部分：通过发现获得见解**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon。Effective Aggregate Design - Part III:Gaining Insight Through Discovery**（来自 <http://dddcommunity.org/>）\（有效的聚合设计 - 第 3 部分：通过发现获取见解）
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
--   **Sergey Grybniak。DDD 战术设计模式**
-    [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+- **Sergey Grybniak。DDD Tactical Design Patterns** \（DDD 战术设计模式）
+  [https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson.使用聚合开发事务微服务**
-    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+- **Chris Richardson.Developing Transactional Microservices Using Aggregates** \（使用聚合开发事务微服务）
+  [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ.聚合模式**
-    [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
+- **DevIQ.The Aggregate pattern** \（聚合模式）
+  [https://deviq.com/aggregate-pattern/](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
-[上一页](ddd-oriented-microservice.md)
-[下一页](net-core-microservice-domain-model.md)
+>[上一页](ddd-oriented-microservice.md)
+>[下一页](net-core-microservice-domain-model.md)

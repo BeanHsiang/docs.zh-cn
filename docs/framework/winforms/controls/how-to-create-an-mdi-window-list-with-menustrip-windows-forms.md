@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 MenuStrip 创建 MDI 窗口列表（Windows 窗体）
+title: 如何：使用 （Windows 窗体） MenuStrip 创建 MDI 窗口列表
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: c87ffadaef2842f10d40f6fd84eb1c70c6dfe37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e58f35304f70c82973ebbc9928bae5a7477e9c53
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530817"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716122"
 ---
-# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>如何：使用 MenuStrip 创建 MDI 窗口列表（Windows 窗体）
-使用多文档界面 (MDI) 来创建应用程序可以打开几个文档的相同的时间和复制并粘贴到另一个文档内容。  
+# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>如何：使用 （Windows 窗体） MenuStrip 创建 MDI 窗口列表
+使用多文档界面 (MDI) 创建的应用程序可以打开多个文档在同一时间和复制并粘贴到另一个文档内容。  
   
- 此过程演示如何在父窗口菜单上创建的所有活动子窗体表单的列表。  
+ 此过程演示如何创建父级的窗口菜单上的所有活动子窗体的列表。  
   
 ### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>若要在 MenuStrip 创建 MDI 窗口列表  
   
@@ -30,13 +30,13 @@ ms.locfileid: "33530817"
   
 4.  将子菜单项添加到 `&File` 菜单项，并将其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 属性设置为 `&Open`。  
   
-5.  设置<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>属性<xref:System.Windows.Forms.MenuStrip>到`&Window` <xref:System.Windows.Forms.ToolStripMenuItem>。  
+5.  设置<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>的属性<xref:System.Windows.Forms.MenuStrip>到`&Window` <xref:System.Windows.Forms.ToolStripMenuItem>。  
   
-6.  向项目添加窗体并将所需的控件添加到它，如另一个<xref:System.Windows.Forms.MenuStrip>。  
+6.  向项目添加窗体并将所需的控件添加到它，例如另一个<xref:System.Windows.Forms.MenuStrip>。  
   
 7.  为 `&New`<xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Click> 事件创建一个事件处理程序。  
   
-8.  在事件处理程序，插入类似于以下几点，以创建新的实例和显示代码`Form2`作为的 MDI 子级`Form1`。  
+8.  事件处理程序中插入类似于以下内容，以创建和显示的新实例的代码`Form2`作为的 MDI 子级`Form1`。  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  
@@ -61,7 +61,7 @@ ms.locfileid: "33530817"
     }  
     ```  
   
-9. 将类似中的以下代码放`&New`<xref:System.Windows.Forms.ToolStripMenuItem>以注册事件处理程序。  
+9. 将放置在以下代码`&New`<xref:System.Windows.Forms.ToolStripMenuItem>注册事件处理程序。  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
@@ -81,7 +81,7 @@ ms.locfileid: "33530817"
   
 -   对 <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 程序集的引用。  
   
-## <a name="see-also"></a>请参阅  
- [如何：创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [如何：创建 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [MenuStrip 控件](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- [如何：创建 MDI 父窗体](../advanced/how-to-create-mdi-parent-forms.md)
+- [如何：创建 MDI 子窗体](../advanced/how-to-create-mdi-child-forms.md)
+- [MenuStrip 控件](menustrip-control-windows-forms.md)

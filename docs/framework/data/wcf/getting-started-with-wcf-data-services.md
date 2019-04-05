@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: 5fc37ed215ada6aa35ac8801ef33e5787ba77584
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e8270fc181779950222b21fd196a1a1a6226e2b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597239"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF 数据服务入门
 在本部分中的主题帮助你快速了解[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以及如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公开和使用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]馈送通过说明基础技术。 本部分包括这两个概念内容和一个[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)教程。  
@@ -40,5 +40,5 @@ ms.locfileid: "43523686"
   
  [入门](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
-## <a name="see-also"></a>请参阅  
- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+## <a name="see-also"></a>请参阅
+- [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)

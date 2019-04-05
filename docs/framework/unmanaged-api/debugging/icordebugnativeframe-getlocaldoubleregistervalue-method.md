@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9de77f942a1b89b0ab11ef71229e491a5305cafc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 573949f50135ddf29ac9aa88bf4d1dd480001219
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420747"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471701"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>ICorDebugNativeFrame::GetLocalDoubleRegisterValue 方法
-获取自变量或此本机帧的两个指定寄存器中存储的本地变量的值。  
+获取参数或此本机框架的两个指定寄存器中存储的本地变量的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,33 +39,33 @@ HRESULT GetLocalDoubleRegisterValue (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `highWordReg`  
- [in]指定包含值的高位字的寄存器"CorDebugRegister"枚举的值。  
+ [in]"CorDebugRegister"枚举，指定包含值的高位字的寄存器的值。  
   
  `lowWordReg`  
- [in]值为`CorDebugRegister`枚举，它指定包含值的低位字的寄存器。  
+ [in]值为`CorDebugRegister`枚举，用于指定包含值的低位字的寄存器。  
   
  `cbSigBlob`  
- [in]一个整数，指定的二进制元数据签名，这由引用的大小`pvSigBlob`参数。  
+ [in]一个整数，指定的二进制元数据签名的由引用大小`pvSigBlob`参数。  
   
  `pvSigBlob`  
- [in]A`PCCOR_SIGNATURE`值，该值指向的值类型的二进制元数据签名。  
+ [in]一个`PCCOR_SIGNATURE`指向值类型的二进制元数据签名的值。  
   
  `ppValue`  
- [out]指向表示检索到的值存储在指定的寄存器中的"ICorDebugValue"对象的地址的指针。  
+ [out]指向表示检索到的值存储在指定寄存器中的"ICorDebugValue"对象的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- `GetLocalDoubleRegisterValue`方法可用于在本机框架或在实时 (JIT) 中的编译的框架。  
+ `GetLocalDoubleRegisterValue`在本机帧或在实时 (JIT) 中，可以使用方法的编译的框架。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

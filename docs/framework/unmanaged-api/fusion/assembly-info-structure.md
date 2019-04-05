@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed65181abab58117d539d23fcfeffe71ac19388
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b69aa42fc2ebb9f59cbf699d83b521704805ea5f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519744"
 ---
 # <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO 结构
 包含有关在全局程序集缓存中注册程序集的信息。  
@@ -42,19 +42,19 @@ typedef struct _ASSEMBLY_INFO {
   
 |成员|描述|  
 |------------|-----------------|  
-|`cbAssemblyInfo`|以字节为单位，结构的大小。 此字段保留供将来扩展。|  
-|`dwAssemblyFlags`|指示程序集有关的安装详细信息的标志。 支持以下值：<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED 值，该值指示安装了程序集。 .NET Framework 的当前版本始终设置`dwAssemblyFlags`为此值。<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT 值，该值指示程序集是常驻的负载。 .NET Framework 的当前版本永远不会设置`dwAssemblyFlags`为此值。|  
-|`uliAssemblySizeInKB`|总的大小，以千字节为单位，该程序集包含的文件。|  
-|`pszCurrentAssemblyPathBuf`|指向包含清单的文件的当前路径的字符串缓冲区的指针。 该路径必须以 null 字符结尾。|  
-|`cchBuf`|宽字符，包括 null 终止符，数，`pszCurrentAssemblyPathBuf`包含。|  
+|`cbAssemblyInfo`|以字节为单位，该结构的大小。 此字段保留为将来的扩展。|  
+|`dwAssemblyFlags`|指示有关程序集的安装详细信息的标志。 支持以下值：<br /><br /> -ASSEMBLYINFO_FLAG_INSTALLED 值，该值指示安装了该程序集。 .NET Framework 的当前版本始终设置`dwAssemblyFlags`为此值。<br />-ASSEMBLYINFO_FLAG_PAYLOADRESIDENT 值，该值指示该程序集是常驻的有效负载。 .NET Framework 的当前版本永远不会设置`dwAssemblyFlags`为此值。|  
+|`uliAssemblySizeInKB`|总大小，以千字节为单位，该程序集包含的文件。|  
+|`pszCurrentAssemblyPathBuf`|指向包含到清单文件的当前路径的字符串缓冲区的指针。 路径必须以 null 字符结尾。|  
+|`cchBuf`|包括 null 终止符的宽字符数的`pszCurrentAssemblyPathBuf`包含。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [合成结构](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
- [全局程序集缓存](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>请参阅
+- [合成结构](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [全局程序集缓存](../../../../docs/framework/app-domains/gac.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 321038a148c27086ca499e2f448eb50cb93525ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 92dfc2bec33501a5cd9ca6b4ec4c3629b6d89946
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405507"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487949"
 ---
 # <a name="importtypes-method"></a>ImportTypes 方法
-启动从通过导入每个作用域的类型的导入[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  
+启动导入的类型从通过导入每个作用域[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,32 +39,32 @@ HRESULT ImportTypes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `AssemblyID`  
  要导入到的程序集的 ID。  
   
  `FileToken`  
- 要从中导入的文件 ID。  
+ 若要从导入的文件的 ID。  
   
  `dwScope`  
  要导入的从零开始范围。  
   
  `phEnum`  
- 接收此范围中的类型的枚举器句柄。  
+ 在此作用域中接收的类型的枚举器句柄。  
   
  `ppImportScope`  
- （可选） 接收[IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)接口。  
+ 可选择性地接收[IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)接口。  
   
  `pdwCountOfTypes`  
- （可选） 指定范围内接收的类型的计数。  
+ 可选择性地指示作用域中接收的类型的计数。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回，则为 S_OK。  
+ 如果该方法成功，返回，则为 S_OK。  
   
 ## <a name="requirements"></a>要求  
  需要 alink.h  
   
-## <a name="see-also"></a>请参阅  
- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>请参阅
+- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

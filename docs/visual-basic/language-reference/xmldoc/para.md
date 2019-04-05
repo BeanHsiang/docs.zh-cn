@@ -1,18 +1,18 @@
 ---
-title: '&lt;para&gt; (Visual Basic)'
+title: <para> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: fa11c713a5ed5793b50865753f8bcdeaabf56e83
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 16d10b2f955a4d9a02075ee4cc40dfa2b18c3541
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994281"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814505"
 ---
-# <a name="ltparagt-visual-basic"></a>&lt;para&gt; (Visual Basic)
+# <a name="para-visual-basic"></a>\<para > (Visual Basic)
 指定内容的格式设置为一个段落。  
   
 ## <a name="syntax"></a>语法  
@@ -21,7 +21,7 @@ ms.locfileid: "45994281"
 <para>content</para>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `content`  
  段落文本。  
   
@@ -33,7 +33,8 @@ ms.locfileid: "45994281"
 ## <a name="example"></a>示例  
  此示例使用`<para>`拆分备注部分的标记`UpdateRecord`分成两个段落的方法。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

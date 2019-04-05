@@ -1,16 +1,17 @@
 ---
-title: 可访问性级别（C# 参考）
+title: 可访问性级别 - C# 参考
+ms.custom: seodec18
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 4679fd2564454e7f1ade5cb4813729b65f433012
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: ca7bef8bf68b80015128619336db9fc6a8f5c237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661814"
 ---
 # <a name="accessibility-levels-c-reference"></a>可访问性级别（C# 参考）
 
@@ -47,15 +48,15 @@ ms.locfileid: "45617035"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)  
-- [可访问域](../../../csharp/language-reference/keywords/accessibility-domain.md)  
-- [对使用可访问性级别的限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
-- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [专用](../../../csharp/language-reference/keywords/private.md)  
-- [protected](../../../csharp/language-reference/keywords/protected.md)  
+## <a name="see-also"></a>请参阅
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [访问修饰符](../../../csharp/language-reference/keywords/access-modifiers.md)
+- [可访问域](../../../csharp/language-reference/keywords/accessibility-domain.md)
+- [对使用可访问性级别的限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
+- [访问修饰符](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+- [public](../../../csharp/language-reference/keywords/public.md)
+- [专用](../../../csharp/language-reference/keywords/private.md)
+- [受保护](../../../csharp/language-reference/keywords/protected.md)
 - [internal](../../../csharp/language-reference/keywords/internal.md)

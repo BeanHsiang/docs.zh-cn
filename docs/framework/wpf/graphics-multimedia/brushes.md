@@ -8,24 +8,24 @@ helpviewer_keywords:
 - painting [WPF]
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
-ms.openlocfilehash: 2ebb4553ed55e89cb0b7acf6336f21b422d4753f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557259"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366720"
 ---
 # <a name="brushes"></a>画笔
-以下主题介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画笔"绘制"到屏幕的内容  
+以下主题介绍如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画笔来"绘画"在屏幕上的内容  
   
 ## <a name="in-this-section"></a>本节内容  
- [WPF 画笔概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [画笔转换概述](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [不透明蒙板概述](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [使用纯色和渐变进行绘制概述](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [使用图像、绘图和视觉对象进行绘制](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [TileBrush 概述](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [WPF 画笔概述](wpf-brushes-overview.md)  
+ [画笔转换概述](brush-transformation-overview.md)  
+ [不透明蒙板概述](opacity-masks-overview.md)  
+ [使用纯色和渐变进行绘制概述](painting-with-solid-colors-and-gradients-overview.md)  
+ [使用图像、绘图和视觉对象进行绘制](painting-with-images-drawings-and-visuals.md)  
+ [TileBrush 概述](tilebrush-overview.md)  
+ [帮助主题](brushes-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Media.Brush>  
@@ -41,6 +41,6 @@ ms.locfileid: "33557259"
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>相关章节  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [图形和多媒体](index.md)  
   
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)

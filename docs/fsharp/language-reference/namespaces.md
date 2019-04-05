@@ -1,31 +1,33 @@
 ---
-title: 命名空间 (F#)
-description: '了解如何使用 F # 命名空间，可将代码组织到相关的功能区域，通过它可以将名称附加到的程序元素的分组。'
-ms.date: 04/24/2017
-ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: 命名空间
+description: 了解如何F#命名空间，可将代码组织到相关的功能区域，通过它可以将名称附加到的程序元素分组。
+ms.date: 12/08/2018
+ms.openlocfilehash: 526d7a07e4804751811c15fa91b0c74c1954d591
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44178237"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613435"
 ---
 # <a name="namespaces"></a>命名空间
 
-命名空间通过使你能够将名称附加一组程序元素，实现将代码整理到相关的功能区域。
+命名空间，可以将代码组织到相关的功能区域，通过它可以将名称附加一组F#的程序元素。 命名空间是在通常顶级元素F#文件。
 
 ## <a name="syntax"></a>语法
 
 ```fsharp
-namespace [parent-namespaces.]identifier
+namespace [rec] [parent-namespaces.]identifier
 ```
 
 ## <a name="remarks"></a>备注
 
-如果你想要将代码放入一个命名空间，文件中的第一个声明必须声明命名空间。 然后，整个文件的内容成为命名空间的一部分。
+如果你想要将代码放入一个命名空间，文件中的第一个声明必须声明命名空间。 然后将整个文件的内容会成为该命名空间的一部分，提供任何其他命名空间声明不存在更多的文件中。 如果是这种情况，然后被视为下一步的命名空间声明之前的所有代码可在第一个命名空间中。
 
 命名空间不能直接包含的值和函数。 相反，必须在模块中，包含值和函数以及模块包含命名空间中。 命名空间可以包含类型和模块。
 
-命名空间可以显式声明命名空间关键字，或隐式声明模块时。 若要显式声明命名空间，请使用命名空间关键字后跟的命名空间名称。 下面的示例演示声明一个命名空间的小组件的类型和该命名空间中提供的模块的代码文件。
+XML 文档注释可以声明一个命名空间，上面，但它们将被忽略。 编译器指令还可以上述命名空间声明。
+
+命名空间可以显式声明命名空间关键字，或隐式声明模块时。 若要显式声明命名空间，请使用命名空间关键字后跟的命名空间名称。 下面的示例演示声明一个命名空间的代码文件`Widgets`的类型和该命名空间中提供的模块。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
@@ -74,7 +76,7 @@ Module2 5 6
 
 ## <a name="recursive-namespaces"></a>递归命名空间
 
-F # 4.1 中引入了允许的所有包含的代码要相互递归的命名空间的概念。  这是通过`namespace rec`。  使用`namespace rec`可以缓解一些烦恼无法编写类型和模块之间相互引用代码中的。  以下是此示例：
+此外可以为递归，从而允许所有包含的代码要相互递归声明命名空间。  这是通过`namespace rec`。 使用`namespace rec`可以缓解一些烦恼无法编写类型和模块之间相互引用代码中的。 以下是此示例：
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-请注意，异常`DontSqueezeTheBananaException`和类`Banana`两者相互引用。  此外，模块`BananaHelpers`和类`Banana`也相互引用。  这就不可能 express 在 F # 中，如果你删除`rec`关键字从`MutualReferences`命名空间。
+请注意，异常`DontSqueezeTheBananaException`和类`Banana`两者相互引用。  此外，模块`BananaHelpers`和类`Banana`也相互引用。 这不是可能表示F#如果你删除`rec`关键字从`MutualReferences`命名空间。
 
-此功能也仅适用于顶级[模块](modules.md)中 F # 4.1 或更高版本。
+此功能也仅适用于顶级[模块](modules.md)。
 
 ## <a name="see-also"></a>请参阅
 
 - [F# 语言参考](index.md)
 - [模块](modules.md)
-- [F # RFC FS-1009-允许通过在文件中的较大范围的相互引用类型和模块](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009-允许通过在文件中的较大范围的相互引用类型和模块](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

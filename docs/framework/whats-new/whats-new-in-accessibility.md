@@ -9,22 +9,22 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fe7e15e482028b9988d7e560b98be19b6c07427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2bdb1bf5d7e32c2e05eb779eed16c311cbd3eae7
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509211"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212503"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 中辅助功能的新增功能
 
-.NET Framework 旨在让用户更轻松地使用应用程序。 辅助功能使应用程序能够为辅助技术用户提供最佳体验。 从 .NET Framework 4.7.1 开始，.NET Framework 包括大量辅助功能改进，使开发人员能够创建易于访问的应用程序。 
+.NET Framework 旨在让用户更轻松地使用应用程序。 辅助功能使应用程序能够为辅助技术用户提供最佳体验。 从 .NET Framework 4.7.1 开始，.NET Framework 包括大量辅助功能改进，使开发人员能够创建易于访问的应用程序。
 
 ## <a name="accessibility-switches"></a>辅助功能开关
 
 如果应用面向 .NET Framework 4.7 或更低版本，但是在 .NET Framework 4.7.1 或更高版本上运行，可以将应用配置为选择使用辅助功能。 如果应用面向 .NET Framework 4.7.1 或更高版本，还可以将应用配置为使用旧版功能（且不使用辅助功能）。 包括辅助功能的每个 .NET Framework 版本都有一个特定于版本的辅助开关，请将它添加到应用程序配置文件 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 部分中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素。 以下是受支持的开关：
 
-|版本|开关|
+|Version|开关|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -51,7 +51,7 @@ ms.locfileid: "33509211"
 
 ### <a name="restoring-legacy-behavior"></a>还原旧行为
 
-对于面向 .NET Framework 4.7.1 或更高版本的应用程序，可通过将开关添加到应用程序配置文件 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 部分中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素并将其值设为 `true` 来禁用辅助功能。 例如，以下配置选择弃用 .NET Framework 4.7.2 中引入的辅助功能：  
+对于面向 .NET Framework 4.7.1 或更高版本的应用程序，可通过将开关添加到应用程序配置文件 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 部分中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 元素并将其值设为 `true` 来禁用辅助功能。 例如，以下配置选择弃用 .NET Framework 4.7.2 中引入的辅助功能：
 
 ```xml
 <runtime>
@@ -69,6 +69,7 @@ ms.locfileid: "33509211"
 - [Windows Presentation Foundation (WPF)](#wpf472)
 
 <a name="winforms472"></a>
+
 ### <a name="windows-forms"></a>Windows 窗体
 
 **高对比度主题中的 OS 定义的颜色**
@@ -80,7 +81,7 @@ ms.locfileid: "33509211"
 - <xref:System.Windows.Forms.ButtonBase.FlatStyle> 设为 <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> 或 <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> 的 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.RadioButton> 和 <xref:System.Windows.Forms.CheckBox> 控件。 以前，所选文本和背景颜色对比度低，难以阅读。
 
 - <xref:System.Windows.Forms.Control.Enabled> 属性设为 `false` 的 <xref:System.Windows.Forms.GroupBox> 中所包含的控件。
- 
+
 - 在高对比度模式下，<xref:System.Windows.Forms.ToolStripButton>、<xref:System.Windows.Forms.ToolStripComboBox> 和 <xref:System.Windows.Forms.ToolStripDropDownButton> 控件的亮度对比度提高。
 
 - <xref:System.Windows.Forms.DataGridViewLinkCell> 的 <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> 属性。
@@ -89,7 +90,7 @@ ms.locfileid: "33509211"
 
 自 .NET Framework 4.7.2 起，讲述人支持在以下几个方面改进：
 
-- 它在公布 <xref:System.Windows.Forms.ToolStripMenuItem> 的文本时会公布 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> 属性的值。 
+- 它在公布 <xref:System.Windows.Forms.ToolStripMenuItem> 的文本时会公布 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> 属性的值。
 
 - 当 <xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Enabled> 属性设置为 `false` 时，它会有所指示。
 
@@ -122,6 +123,7 @@ ms.locfileid: "33509211"
 - <xref:System.Windows.Forms.ToolStripButton> 控件允许在焦点包含在 <xref:System.Windows.Forms.ToolStripPanel>（其 <xref:System.Windows.Forms.ToolStripPanel.TabStop> 属性设置为 `true`）中时进行聚焦
 
 <a name="wpf472"></a>
+
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
 **对复选框和单选按钮控件的更改**
@@ -151,6 +153,7 @@ ms.locfileid: "33509211"
 - [Windows Workflow Foundation (WF) 工作流设计器](#wf471)
 
 <a name="wpf471"></a>
+
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
 **屏幕阅读器改进**
@@ -160,14 +163,14 @@ ms.locfileid: "33509211"
 - 在 .NET Framework 4.7 及更低版本中，<xref:System.Windows.Controls.Expander> 控件由屏幕阅读器宣称为按钮。 从 .NET Framework 4.7.1 开始，它们被正确地称为可展开/可折叠组。
 
 - 在 .NET Framework 4.7 及更低版本中，<xref:System.Windows.Controls.DataGridCell> 控件由屏幕阅读器宣称为“自定义”。 从 .NET Framework 4.7.1 开始，它们被正确地称为数据网格单元格（已本地化）。
- 
+
 - 从 .NET Framework 4.7.1 开始，屏幕阅读器读出可编辑 <xref:System.Windows.Controls.ComboBox> 的名称。
 
 - 在 .NET Framework 4.7 及更低版本中，<xref:System.Windows.Controls.PasswordBox> 控件被宣称为“视图中没有任何项”或有其他错误行为。 此问题已在 .NET Framework 4.7.1 及更高版本中解决。
 
 **UIAutomation LiveRegion 支持**
 
-屏幕阅读器（如讲述人）可帮助用户阅读应用程序的 UI 内容，通常通过具有焦点的 UI 内容的文本到语音转换输出实现。 但是，如果 UI 元素更改，并且不具有焦点，则用户可能不会收到通知，并且可能会错过重要信息。 活动区域旨在解决此问题。 开发人员可使用它们来通知屏幕阅读器或任何其他 UIAutomation 客户端 UI 元素有重要更改。 然后，屏幕阅读器可确定向用户通知此更改的方式和时间。 
+屏幕阅读器（如讲述人）可帮助用户阅读应用程序的 UI 内容，通常通过具有焦点的 UI 内容的文本到语音转换输出实现。 但是，如果 UI 元素更改，并且不具有焦点，则用户可能不会收到通知，并且可能会错过重要信息。 活动区域旨在解决此问题。 开发人员可使用它们来通知屏幕阅读器或任何其他 UIAutomation 客户端 UI 元素有重要更改。 然后，屏幕阅读器可确定向用户通知此更改的方式和时间。
 
 为了支持活动区域，向 WPF 添加了以下 API：
 
@@ -176,19 +179,19 @@ ms.locfileid: "33509211"
 - AutomationProperties.LiveSetting 附加属性，用于向屏幕阅读器通知 UI 更改对用户的重要性。
 
 - <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType> 属性，用于标识 AutomationProperties.LiveSetting 附加属性。
- 
+
 - <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore%2A?displayProperty=nameWithType> 方法，可替代该方法以提供 LiveSetting 值。
 
 - <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting%2A?displayProperty=nameWithType> 方法，用于获取和设置 LiveSetting 值。
- 
+
 - <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 枚举，用于定义以下可能的 LiveSetting 值：
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>。 如果活动区域的内容已更改，则该元素不会发送通知。   
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>。 如果活动区域的内容已更改，则该元素将发送非中断通知。   
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>。 如果活动区域的内容已更改，则该元素不会发送通知。
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>。 如果活动区域的内容已更改，则该元素将发送非中断通知。
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>。 如果活动区域的内容已更改，则该元素将发送中断通知。   
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>。 如果活动区域的内容已更改，则该元素将发送中断通知。
 
-可通过对相关元素设置 AutomationProperties.LiveSetting 属性来创建 LiveRegion，如以下示例所示：   
+可通过对相关元素设置 AutomationProperties.LiveSetting 属性来创建 LiveRegion，如以下示例所示：
 
 ```xaml
 <TextBlock Name="myTextBlock" AutomationProperties.LiveSetting="Assertive">announcement</TextBlock>
@@ -215,35 +218,35 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     <xref:System.Windows.Controls.Expander> 控件的焦点视觉对象现在可见。 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox> 和 <xref:System.Windows.Controls.RadioButton> 控件的键盘视觉对象也可见。 例如:
 
-    在此之前: 
-    
+    在此之前: 
+
     ![辅助功能改进前具有焦点的 Expander 控件](media/expander-before.png)
 
-    之后： 
+    之后： 
 
     ![辅助功能改进后具有焦点的 Expander 控件](media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控件
- 
+
     在高对比度主题下选中时，<xref:System.Windows.Controls.CheckBox> 和 <xref:System.Windows.Controls.RadioButton> 控件中的文本更易于查看。 例如:
 
-    在此之前: 
+    在此之前: 
 
     ![辅助功能改进前具有焦点的高对比度单选按钮](media/radio-button-before.png)
-    
-    之后： 
+
+    之后： 
 
     ![辅助功能改进后具有焦点的高对比度单选按钮](media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox> 控件
- 
+
     从 .NET Framework 4.7.1 开始，已禁用的 <xref:System.Windows.Controls.ComboBox> 控件的边框与禁用的文本颜色相同。 例如:
-    
-    在此之前: 
+
+    在此之前: 
 
      ![辅助功能改进前禁用的 ComboBox 边框和文本](media/combo-disabled-before.png)
 
-    之后：   
+    之后：   
 
      ![辅助功能改进后禁用的 ComboBox 边框和文本](media/combo-disabled-after.png)
 
@@ -251,48 +254,49 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     在此之前:
 
-    ![辅助功能改进前的按钮主题颜色](media/button-themes-before.png) 
-    
-    之后： 
+    ![辅助功能改进前的按钮主题颜色](media/button-themes-before.png) 
 
-    ![辅助功能改进后的按钮主题颜色](media/button-themes-after.png) 
+    之后： 
+
+    ![辅助功能改进后的按钮主题颜色](media/button-themes-after.png) 
 
     最后，在 .NET Framework 4.7 及更低版本中，将 <xref:System.Windows.Controls.ComboBox> 控件的样式设置为 `Toolbar.ComboBoxStyleKey` 会导致下拉箭头不可见。 此问题已在 .NET Framework 4.7.1 及更高版本中解决。 例如:
 
-    在此之前: 
+    在此之前: 
 
-    ![辅助功能改进前的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
-    
-    之后： 
+    ![辅助功能改进前的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-before.png) 
 
-    ![辅助功能改进后的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
+    之后： 
+
+    ![辅助功能改进后的 Toolbar.ComboBoxStyleKey](media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid> 控件
 
     从 .NET Framework 4.7.1 开始，<xref:System.Windows.Controls.DataGrid> 控件中的排序指示符箭头现在使用正确的主题颜色。 例如:
 
-    在此之前: 
+    在此之前: 
 
-    ![辅助功能改进前的排序指示符箭头](media/sort-indicator-before.png) 
-    
-    之后：   
- 
-    ![辅助功能改进后的排序指示符箭头](media/sort-indicator-after.png) 
-    
+    ![辅助功能改进前的排序指示符箭头](media/sort-indicator-before.png) 
+
+    之后：   
+
+    ![辅助功能改进后的排序指示符箭头](media/sort-indicator-after.png) 
+
     此外，在 .NET Framework 4.7 及更低版本中，在高对比度模式下，默认链接样式在鼠标悬停在其上时更改为不正确的颜色。 此问题已在 .NET Framework 4.7.1 及更高版本中解决。 同样，从 .NET Framework 4.7.1 开始，<xref:System.Windows.Controls.DataGrid> 复选框列对键盘焦点反馈使用预期的颜色。
 
-    在此之前: 
+    在此之前: 
 
-    ![辅助功能改进前的 DataGrid 默认链接样式](media/default-link-style-before.png) 
- 
-    之后：    
-  
-    ![辅助功能改进后的 DataGrid 默认链接样式](media/default-link-style-after.png)  
+    ![辅助功能改进前的 DataGrid 默认链接样式](media/default-link-style-before.png) 
+
+    之后：    
+
+    ![辅助功能改进后的 DataGrid 默认链接样式](media/default-link-style-after.png) 
 
 有关 .NET Framework 4.7.1 中 WPF 辅助功能改进的详细信息，请参阅 [WPF 辅助功能改进](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)。
 
 <a name="winforms471"></a>
-## <a name="windows-forms-accessibility-improvements"></a>Windows 窗体辅助功能改进
+
+### <a name="windows-forms-accessibility-improvements"></a>Windows 窗体辅助功能改进
 
 在 .NET Framework 4.7.1 中，Windows 窗体 (WinForms) 包括以下几个方面的辅助功能改进。
 
@@ -304,6 +308,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 <!-- Windows 10 -->
 <supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
 ```
+
 高对比度更改的一些示例包括：
 
 - <xref:System.Windows.Forms.MenuStrip> 项中的复选标记更易于查看。
@@ -316,11 +321,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
     在此之前:
 
-    ![辅助功能改进前禁用的文本](media/wf-disabled-before.png) 
+    ![辅助功能改进前禁用的文本](media/wf-disabled-before.png) 
 
     之后：
 
-    ![辅助功能改进后禁用的文本](media/wf-disabled-after.png) 
+    ![辅助功能改进后禁用的文本](media/wf-disabled-after.png) 
 
 - “线程异常”对话框中的高对比度改进。
 
@@ -331,9 +336,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - 讲述人以及其他 UI 自动化工具可访问 <xref:System.Windows.Forms.MonthCalendar> 控件。
 
 - 当某个项的选中状态更改时，<xref:System.Windows.Forms.CheckedListBox> 控件会通知讲述人，因此用户可获知更改了列表项的值。
- 
+
 - <xref:System.Windows.Forms.DataGridViewCell> 控件向讲述人报告正确的只读状态。
- 
+
 - 讲述人现在可以阅读已禁用的 <xref:System.Windows.Forms.ToolStripMenuItem> 文本，而以前它会跳过禁用的菜单项。
 
 **增强了对 UIAutomation 辅助功能模式的支持**
@@ -341,9 +346,9 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 从 .NET Framework 4.7.1 开始，辅助功能技术工具的开发人员可以利用常见的 API 辅助功能模式和多个 WinForms 控件的属性。 这些辅助功能改进包括：
 
 - <xref:System.Windows.Forms.ComboBox> 和 <xref:System.Windows.Forms.ToolStripSplitButton> 现在支持[展开/折叠模式](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)。
- 
+
 - <xref:System.Windows.Forms.DataGridViewCheckBoxCell> 现在支持[切换模式](../ui-automation/implementing-the-ui-automation-toggle-control-pattern.md)。
- 
+
 - <xref:System.Windows.Forms.ToolStripItem> 控件支持 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> 属性和[展开/折叠模式](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md)。
 
 - <xref:System.Windows.Forms.NumericUpDown> 和 <xref:System.Windows.Forms.DomainUpDown> 控件支持 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name> 属性。
@@ -356,9 +361,10 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - 减少不必要的制表位。
 - 更好地报告控件类型。
 - 改进了讲述人行为。
- 
+
 <a name="aspnet471"></a>
-## <a name="aspnet-web-controls"></a>ASP.NET Web 控件
+
+### <a name="aspnet-web-controls"></a>ASP.NET Web 控件
 
 自 .NET Framework 4.7.1 和 Visual Studio 2017 15.3 起，ASP.NET 改进了 ASP.NET Web 控件与 Visual Studio 中的辅助功能技术配合使用的方式。 包括以下更改：
 
@@ -369,14 +375,16 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - 改善以下控件的键盘导航体验：例如 DataPager 控件的“编辑页导航字段”向导中的“字段”对话框、“配置 ObjectContext”对话框或“配置数据源”向导的“配置数据选择”对话框。
 
 <a name="tools471"></a>
-## <a name="net-sdk-tools"></a>.NET SDK 工具
 
-[配置编辑器工具 (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) 和[服务跟踪查看器工具 (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 通过修复各种辅助功能问题得到改进。 其中大多数都是一些小问题，如未定义名称或未正确实现某些 UI 自动化模式。 虽然许多用户不会意识到这些小问题的重要性，但使用屏幕阅读器等辅助技术的客户会发现这些 SDK 工具更易于访问。 
+### <a name="net-sdk-tools"></a>.NET SDK 工具
+
+[配置编辑器工具 (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) 和[服务跟踪查看器工具 (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 通过修复各种辅助功能问题得到改进。 其中大多数都是一些小问题，如未定义名称或未正确实现某些 UI 自动化模式。 虽然许多用户不会意识到这些小问题的重要性，但使用屏幕阅读器等辅助技术的客户会发现这些 SDK 工具更易于访问。
 
 这些改进更改了某些旧行为，例如键盘焦点顺序。
 
 <a name="wf471"></a>
-## <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) 工作流设计器
+
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) 工作流设计器
 
 工作流设计器中的辅助功能更改包括：
 
@@ -441,5 +449,4 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Framework 的新增功能](whats-new.md)
- 
+- [.NET Framework 的新增功能](whats-new.md)

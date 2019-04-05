@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b4e8f0902e0d3ebd010ff639b329707881c29fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52800b204873604d927193e1280f2eb6ccbcce0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638361"
 ---
 # <a name="runtime-directive-elements"></a>运行时指令元素
 运行时指令 (rd.xml) 文件格式支持以下运行时指令元素。 请参阅[运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)了解分层表示形式。  
@@ -66,7 +66,7 @@ ms.locfileid: "33398009"
  将运行时策略应用到一个构造泛型类型。  
   
  [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
- 将运行时策略应用到以传递到方法为代表的 <xref:System.Type> 参数类型。  
+ 将运行时策略应用到以传递到方法为代表的 <xref:System.Type> 自变量类型。  
   
-## <a name="see-also"></a>请参阅  
- [rd.xml 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>请参阅
+- [rd.xml 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

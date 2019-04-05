@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 023e112aa8273d99efce2e0f2116f95569ac0c3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97d2959a27bb848d05dc44492152866b2d535b68
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438963"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503159"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped 方法
-为宿主提供初始化任何自定义的数据，可将附加到 Win32 的机会`OVERLAPPED`用于异步 I/O 请求的结构。  
+为宿主提供初始化要追加到 Win32 的任何自定义数据的机会`OVERLAPPED`用于异步 I/O 请求的结构。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,40 +35,40 @@ HRESULT InitializeHostOverlapped (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pvOverlapped`  
- [in]一个指向 Win32`OVERLAPPED`结构要包含在 I/O 请求。  
+ [in]一个指向 Win32`OVERLAPPED`结构将包括 I/O 请求。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|`InitializeHostOverlapped` 已成功返回。|  
-|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
-|HOST_E_TIMEOUT|调用操作已超时。|  
+|HOST_E_CLRNOTAVAILABLE|公共语言运行时 (CLR) 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
+|HOST_E_TIMEOUT|呼叫已超时。|  
 |HOST_E_NOT_OWNER|调用方不拥有该锁。|  
-|HOST_E_ABANDONED|事件已被取消时被阻塞的线程，或者纤程正在等待它。|  
-|E_FAIL|出现未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再可用进程内。 到托管方法的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
-|E_OUTOFMEMORY|没有足够的内存的可用，无法分配请求的资源。|  
+|HOST_E_ABANDONED|事件已取消时被阻塞的线程或纤程正在等待它。|  
+|E_FAIL|发生未知的灾难性故障。 如果某方法返回 E_FAIL，CLR 不再在进程内可用。 对托管方法的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|E_OUTOFMEMORY|没有足够的内存是可用于分配请求的资源。|  
   
 ## <a name="remarks"></a>备注  
- Windows 平台函数使用`OVERLAPPED`结构，用于存储有关异步 I/O 请求的状态。 CLR 调用`InitializeHostOverlapped`方法以便为主机提供自定义将数据追加到机会`OVERLAPPED`实例。  
+ Windows 平台函数使用`OVERLAPPED`结构存储异步 I/O 请求的状态。 CLR 调用`InitializeHostOverlapped`方法，从而使主机能够自定义将数据追加到`OVERLAPPED`实例。  
   
 > [!IMPORTANT]
->  若要获取其自定义数据块的开头，主机必须设置偏移量的大小`OVERLAPPED`结构 (`sizeof(OVERLAPPED)`)。  
+>  若要获取对其自定义数据块的开头，主机必须设置偏移量的大小`OVERLAPPED`结构 (`sizeof(OVERLAPPED)`)。  
   
- 返回值 E_OUTOFMEMORY 指示主机具有无法初始化其自定义数据。 在这种情况下，CLR 报告错误，并且无法进行调用。  
+ 返回值 E_OUTOFMEMORY 指示主机无法初始化其自定义数据。 在这种情况下，CLR 将报告错误并调用失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)  
- [GetHostOverlappedSize 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-gethostoverlappedsize-method.md)  
- [IHostIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICLRIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [GetHostOverlappedSize 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-gethostoverlappedsize-method.md)
+- [IHostIoCompletionManager 接口](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

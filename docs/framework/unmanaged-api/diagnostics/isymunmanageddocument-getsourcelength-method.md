@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3341159600c85915cd3c1a138265dc386edbb766
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11ab9f8077a4b2a9e97c321c6edbe629dc0de19d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424113"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500728"
 ---
 # <a name="isymunmanageddocumentgetsourcelength-method"></a>ISymUnmanagedDocument::GetSourceLength 方法
 获取嵌入源的长度（以字节表示）。  
@@ -34,12 +34,12 @@ HRESULT GetSourceLength(
     [out, retval]  ULONG32*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pRetVal`  
  [out]指向指示嵌入源的长度，以字节为单位的变量的指针。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则为 S_OK。  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

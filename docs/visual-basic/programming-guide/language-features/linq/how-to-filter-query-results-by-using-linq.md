@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ 筛选查询结果 (Visual Basic)
+title: 如何：使用 LINQ (Visual Basic) 筛选查询结果
 ms.date: 07/20/2015
 helpviewer_keywords:
 - filtering [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: f9854650b1f89a2330cfa81910187e3fb01c54b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4de6ed4436f6a1769d178508210ed20e0162f647
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519643"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822877"
 ---
-# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ 筛选查询结果 (Visual Basic)
+# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ (Visual Basic) 筛选查询结果
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。  
   
  下面的示例演示如何创建新应用程序对 SQL Server 数据库执行查询并使用特定值筛选结果`Where`子句。 有关详细信息，请参阅[Where 子句](../../../../visual-basic/language-reference/queries/where-clause.md)。  
@@ -69,16 +69,17 @@ ms.locfileid: "43519643"
   
      将以下代码添加到`Load`事件以查询作为数据上下文的属性公开的表。 查询筛选结果，并返回位于中的客户`London`。  
   
-     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#11)]  
   
 4.  按 F5 以运行您的项目并查看结果。  
   
 5.  以下是可以尝试一些其他筛选器。  
   
-     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]  
   
-## <a name="see-also"></a>请参阅  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查询](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>请参阅
+
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查询](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

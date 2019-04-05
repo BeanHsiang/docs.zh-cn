@@ -1,15 +1,15 @@
 ---
-title: 函数编程与过程性编程 (LINQ to XML) (Visual Basic)
+title: 函数编程与过程编程 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-ms.openlocfilehash: 55f1e354f71e58c3592f91e198925c0fd5f0da71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 892c6b7113fe1efdb8e855749c86ac5f9da8cbe4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643674"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813453"
 ---
-# <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>函数编程与过程性编程 (LINQ to XML) (Visual Basic)
+# <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>函数编程与过程编程 (LINQ to XML) (Visual Basic)
 XML 应用程序有多种类型：  
   
 -   有些应用程序采用源 XML 文档并生成与源文档形状不同的新 XML 文档。  
@@ -38,7 +38,8 @@ XML 应用程序有多种类型：
   
  若要对比查看这两种方法，请参阅[内存中 XML 树修改与功能构造 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)。  
   
- 有关编写函数转换的教程，请参阅[纯功能转换的 XML (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
+ 编写函数转换的教程，请参阅[纯 XML 的功能转换 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to XML 编程概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ to XML 编程概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

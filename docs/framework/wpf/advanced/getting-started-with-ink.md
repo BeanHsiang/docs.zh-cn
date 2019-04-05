@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 600d8528125606c6e1af5b031e2fc31aabb79206
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925039"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365563"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>在 WPF 中的墨迹入门
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) 具有墨迹功能，可以轻松地将数
 
 ## <a name="prerequisites"></a>系统必备
 
-若要使用以下示例中，首先[安装 Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 它还有助于了解如何编写基本的 WPF 应用程序。 WPF 入门的帮助，请参阅[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。
+若要使用以下示例中，首先[安装 Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 它还有助于了解如何编写基本的 WPF 应用程序。 WPF 入门的帮助，请参阅[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
 ## <a name="quick-start"></a>快速入门
 
@@ -42,7 +42,7 @@ Windows Presentation Foundation (WPF) 具有墨迹功能，可以轻松地将数
 
 3. 类型`<InkCanvas/>`之间`<Grid>`标记。
 
-   ![使用 InkCanvas 标记的 XAML 设计器](media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![使用 InkCanvas 标记的 XAML 设计器](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
 4. 按**F5**若要在调试器中启动应用程序。
 
@@ -70,7 +70,7 @@ Windows Presentation Foundation (WPF) 具有墨迹功能，可以轻松地将数
 
 此 XAML 创建渐变画笔背景墨迹书写表面上。
 
-![墨迹书写在 WPF 应用中的图面上的渐变颜色](media/getting-started-with-ink/gradient-colors.png)
+![墨迹书写在 WPF 应用中的图面上的渐变颜色](./media/getting-started-with-ink/gradient-colors.png)
 
 ### <a name="add-some-code-behind-the-xaml"></a>添加一些代码隐藏 XAML
 
@@ -78,12 +78,12 @@ Windows Presentation Foundation (WPF) 具有墨迹功能，可以轻松地将数
 
 1. 设置`MouseRightButtonUp`在 XAML 中的处理程序：
 
-   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+   [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
 1. 在中**解决方案资源管理器**，展开 MainWindow.xaml 并打开代码隐藏文件 （MainWindow.xaml.cs 或 MainWindow.xaml.vb）。 添加以下事件处理程序代码：
 
-   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
-   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+   [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
 1. 运行该应用程序。 添加一些墨迹，然后用鼠标右键单击或执行与触笔按下保持等效。
 
@@ -99,18 +99,18 @@ Windows Presentation Foundation (WPF) 具有墨迹功能，可以轻松地将数
 
 1. 将以下代码粘贴到 Program.cs 或 Program.vb 文件：
 
-   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
-   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+   [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
 1. 通过右键单击添加对 PresentationCore、 PresentationFramework、 和 WindowsBase 程序集的引用**引用**中**解决方案资源管理器**，然后选择**添加引用**.
 
-   ![引用管理器显示 PresentationCore 和 PresentationFramework](media/getting-started-with-ink/references.png)
+   ![引用管理器显示 PresentationCore 和 PresentationFramework](./media/getting-started-with-ink/references.png)
 
 1. 生成应用程序通过按**F5**。
 
 ## <a name="see-also"></a>请参阅
 
-- [数字墨迹](../../../../docs/framework/wpf/advanced/digital-ink.md)
-- [收集墨迹](../../../../docs/framework/wpf/advanced/collecting-ink.md)
-- [手写识别](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
-- [存储墨迹](../../../../docs/framework/wpf/advanced/storing-ink.md)
+- [数字墨迹](digital-ink.md)
+- [收集墨迹](collecting-ink.md)
+- [手写识别](handwriting-recognition.md)
+- [存储墨迹](storing-ink.md)

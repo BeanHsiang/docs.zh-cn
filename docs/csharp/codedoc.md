@@ -3,12 +3,12 @@ title: 使用 XML 注释来记录代码
 description: 了解如何使用 XML 文档注释来记录代码和在编译时生成 XML 文档文件。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b52fba24750747772c36959324cd16e21067910e
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453263"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583701"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 注释来记录代码
 
@@ -20,7 +20,7 @@ XML 文档注释是一种特殊注释，添加在任何用户定义的类型或�
 
 可通过执行下列操作之一在编译时生成 XML 文件：
 
-- 如果要使用 .NET Core 从命令行开发应用程序，可以将 [DocumentationFile 元素](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)添加到 .csproj 项目文件的 `<PropertyGroup>` 部分。 下面的示例使用与程序集相同的根文件夹名在项目目录中生成 XML 文件：
+- 如果要使用 .NET Core 从命令行开发应用程序，可以将 [DocumentationFile 元素](/visualstudio/msbuild/common-msbuild-project-properties)添加到 .csproj 项目文件的 `<PropertyGroup>` 部分。 下面的示例使用与程序集相同的根文件夹名在项目目录中生成 XML 文件：
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -53,7 +53,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 现在，希望能够从代码中为使用库但无源代码访问权限的第三方开发人员创建 API 引用文档。
 如前面所述，XML 文档标记可用于实现此目的。 现在介绍 C# 编译器支持的标准 XML 标记。
 
-### <a name="ltsummarygt"></a>&lt;summary&gt;
+### <a name="summary"></a>\<summary>
 
 `<summary>` 标记可添加关于类型或成员的信息摘要。
 这里通过将其添加到 `Math` 类定义和第一个 `Add` 方法来演示其用法。 可随意将其应用于代码的其余部分。
@@ -62,27 +62,27 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 `<summary>` 标记非常重要，建议包含，因为其内容是 IntelliSense 或 API 参考文档中的类型或成员信息的主要来源。
 
-### <a name="ltremarksgt"></a>&lt;remarks&gt;
+### <a name="remarks"></a>\<remarks>
 
 `<remarks>`标记可补充关于 `<summary>` 标记提供的类型或成员的信息。 在此示例中，只需将其添加到类。
 
 [!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
-### <a name="ltreturnsgt"></a>&lt;returns&gt;
+### <a name="returns"></a>\<returns>
 
 `<returns>` 标记描述方法声明的返回值。
 与以前一样，下面的示例展示第一个 `Add` 方法上的 `<returns>` 标记。 可以对其他方法执行相同操作。
 
 [!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
-### <a name="ltvaluegt"></a>&lt;值&gt;
+### <a name="value"></a>\<value>
 
 `<value>` 标记类似于 `<returns>` 标记，只不过前者用于属性。
 假设 `Math` 库有一个名为 `PI` 的静态属性，下面是此标记的用法：
 
 [!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-### <a name="ltexamplegt"></a>&lt;example&gt;
+### <a name="example"></a>\<example>
 
 使用 `<example>` 标记可在 XML 文档中包含一个示例。
 此操作包括使用子 `<code>` 标记。
@@ -91,14 +91,14 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 `code` 标记保留较长示例的换行符和缩进。
 
-### <a name="ltparagt"></a>&lt;para&gt;
+### <a name="para"></a>\<para>
 
 `<para>` 标记可用于设置其父标记内的内容的格式。 `<para>` 通常在标记内使用，如 `<remarks>` 或 `<returns>`，作用是将文本分成段落。
 可以为类定义设置 `<remarks>` 标记的内容的格式。
 
 [!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
-### <a name="ltcgt"></a>&lt;c&gt;
+### <a name="c"></a>\<c>
 
 还是关于格式设置，使用 `<c>` 标记可将部分文本标记为代码。
 与 `<code>` 标记类似，但是内联的。 想要显示快速代码示例并将其作为标记内容一部分时，这很有帮助。
@@ -106,7 +106,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 [!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-### <a name="ltexceptiongt"></a>&lt;exception&gt;
+### <a name="exception"></a>\<exception>
 
 通过使用 `<exception>` 标记，可以让开发人员了解到，方法有可能引发特定异常。
 查看 `Math` 库，可以看到，如果满足特定条件，两个 `Add` 方法都会引发异常。 如果 `b` 参数为零，则 `Divide` 方法也会引发异常，尽管不是很常见。 现在将异常文档添加到此方法。
@@ -116,7 +116,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 `cref` 属性表示可从当前编译环境中实现的异常引用。
 其类型可为项目中或引用的程序集中定义的任何类型。 如果无法解析编译器的值，则该编译器将发出一条警告。
 
-### <a name="ltseegt"></a>&lt;see&gt;
+### <a name="see"></a>\<see>
 
 使用 `<see>` 标记，可以创建可单击的链接，指向另一个代码元素的文档页面。 在下一个示例中，将创建两个 `Add` 方法之间的可单击的链接。
 
@@ -125,7 +125,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 `cref` 是表示可从当前编译环境引用的类型或其成员的**必需**属性。
 其类型可为项目中或引用的程序集中定义的任何类型。
 
-### <a name="ltseealsogt"></a>&lt;seealso&gt;
+### <a name="seealso"></a>\<seealso>
 
 可以通过使用 `<see>` 标记的方式使用 `<seealso>`标记。 唯一的区别是其内容通常位于“另请参见”部分。 以下将在整数 `Add` 方法上添加 `seealso` 标记，从而在接受整数参数的类中引用其他方法：
 
@@ -134,33 +134,33 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 `cref` 属性表示可从当前编译环境进行的对类型或其成员的引用。
 其类型可为项目中或引用的程序集中定义的任何类型。
 
-### <a name="ltparamgt"></a>&lt;param&gt;
+### <a name="param"></a>\<param>
 
-使用 `<param>` 标记来描述方法的参数。 下面是关于双 `Add` 方法的示例：标记所描述的参数在**必需**的 `name` 属性中指定。
+使用 `<param>` 标记来描述方法的参数。 以下是关于双 `Add` 方法的示例：标记描述的参数在所需的 `name` 属性中指定。
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
-### <a name="lttypeparamgt"></a>&lt;typeparam&gt;
+### <a name="typeparam"></a>\<typeparam>
 
 `<typeparam>` 标记的用法与 `<param>` 标记一样，但前者由泛型类型或方法声明用来描述泛型参数。
 将快速泛型方法添加到 `Math` 类，以检查某个数量是否大于另一个数量。
 
 [!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
-### <a name="ltparamrefgt"></a>&lt;paramref&gt;
+### <a name="paramref"></a>\<paramref>
 
 有时可能正在通过一个 `<summary>` 标记描述一个方法的作用，并且想要引用一个参数。 这时 `<paramref>` 标记就很适合用来实现这一目的。 现在来更新双基 `Add` 方法的摘要。 与 `<param>` 标记一样，参数名称在**必需**的 `name` 属性中指定。
 
 [!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
-### <a name="lttypeparamrefgt"></a>&lt;typeparamref&gt;
+### <a name="typeparamref"></a>\<typeparamref>
 
 `<typeparamref>` 标记的用法与 `<paramref>` 标记一样，但前者由泛型类型或方法声明用来描述泛型参数。
 可以使用之前创建的那个泛型方法。
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-### <a name="ltlistgt"></a>&lt;list&gt;
+### <a name="list"></a>\<list>
 
 使用 `<list>` 标记可将文档信息格式化为有序列表、无序列表或表格。
 制作 `Math` 库支持的所有数学操作的无序列表。
@@ -179,7 +179,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 需要筛查的信息浩如烟海，这对任何要参与此代码编写的开发人员都是噩梦。
 幸好有一个 XML 标记，可帮助解决这个问题：
 
-### <a name="ltincludegt"></a>&lt;include&gt;
+### <a name="include"></a>\<include>
 
 使用 `<include>` 标记，可以引用单独的 XML 文件中的注释（该文件描述源代码中的类型和成员），而不是将文档注释直接放入源代码文件中。
 
@@ -194,9 +194,9 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 
 现在好了，代码又变得可读了，并且未丢失任何文档信息。
 
-`filename` 属性表示包含文档的 XML 文件的名称。
+`file` 属性表示包含文档的 XML 文件的名称。
 
-`path` 属性表示一个 [XPath](https://msdn.microsoft.com/library/ms256115.aspx) 查询，该查询的对象为指定的 `filename` 中的 `tag name`。
+`path` 属性表示一个 [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) 查询，该查询的对象为指定的 `file` 中的 `tag name`。
 
 `name` 属性表示位于注释前的标记中的名称说明符。
 
@@ -205,7 +205,7 @@ XML 文档注释使用三个正斜杠 (`///`) 和 XML 格式的注释正文。 �
 ### <a name="user-defined-tags"></a>用户定义的标记
 
 上述所有标记均表示由 C# 编译器识别的标记。 但用户可随意定义自己的标记。
-Sandcastle 等工具支持其他标记，如 [`<event>`](http://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)、 [`<note>`](http://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)，甚至支持[编制命名空间文档](http://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)。
+Sandcastle 等工具支持其他标记，如 [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)、 [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)，甚至支持[编制命名空间文档](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)。
 自定义或内部文档生成工具也可与标准标记配合使用，并支持 HTML 到 PDF 等多种输出格式。
 
 ## <a name="recommendations"></a>建议
@@ -222,5 +222,5 @@ Sandcastle 等工具支持其他标记，如 [`<event>`](http://ewsoftware.githu
 
 ## <a name="see-also"></a>请参阅
 
-* [XML 文档注释（C# 编程指南）](programming-guide/xmldoc/xml-documentation-comments.md)
-* [建议的文档注释标记（C# 编程指南）](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [XML 文档注释（C# 编程指南）](programming-guide/xmldoc/xml-documentation-comments.md)
+- [建议的文档注释标记（C# 编程指南）](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

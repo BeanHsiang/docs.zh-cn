@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea977b1ccecf9de5a04e1f1127658ca6c15043a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28d54becc2d7cd4359c78415f25f579b968cb3f4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416535"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482335"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>ICorDebugProcess::GetThreadContext 方法
-获取此进程中给定的线程的上下文。  
+获取此过程中的给定线程的上下文。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,28 +37,28 @@ HRESULT GetThreadContext(
     BYTE context[]);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `threadID`  
- [in]为其检索上下文线程的 ID。  
+ [in]若要检索的上下文的线程的 ID。  
   
  `contextSize`  
  [in] `context` 数组的大小。  
   
  `context`  
- [在中，out]描述线程的上下文的字节数组。  
+ [in、 out]一个描述在线程的上下文的字节数组。  
   
- 上下文指定在其执行线程的处理器的体系结构。  
+ 上下文指定在其执行该线程的处理器体系的结构。  
   
 ## <a name="remarks"></a>备注  
- 调试器应调用此方法，而不是 Win32`GetThreadContext`方法，因为该线程可能实际上处于"被劫持"状态，在其中其上下文已被暂时更改。 只有当线程处于本机代码时，应使用此方法。 使用[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)托管代码中的线程。  
+ 调试程序应调用此方法，而不是 Win32`GetThreadContext`方法，因为线程实际上可能是在"被劫持"状态下，在其中其上下文已被暂时更改。 仅当线程在本机代码中时，才应使用此方法。 使用[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)托管代码中的线程。  
   
- 返回的数据是当前平台的上下文结构。 只需与 Win32`GetThreadContext`方法中，调用方应初始化`context`之前调用此方法的参数。  
+ 返回的数据是在当前平台的上下文结构。 就像使用 Win32 一样`GetThreadContext`方法，调用方应初始化`context`之前调用此方法的参数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

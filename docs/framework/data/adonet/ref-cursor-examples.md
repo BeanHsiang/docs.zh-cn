@@ -2,12 +2,12 @@
 title: REF CURSOR 示例
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: 803c921b76369aa9268c7fd34d1f15dd51bb17f3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 00e1cd1b9c13514979ee22b32996d35e1bd1c3e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615343"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR 示例
 REF CURSOR 示例包括下列三个 Visual Basic 示例，演示如何使用 REF CURSOR。  
@@ -26,7 +26,7 @@ REF CURSOR 示例包括下列三个 Visual Basic 示例，演示如何使用 REF
 ## <a name="creating-the-oracle-package-and-package-body"></a>创建 Oracle 包和包正文  
  这些示例要求服务器上存在以下 PL/SQL 包和包正文。 在 Oracle 服务器上创建以下 Oracle 包。  
   
-```  
+```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS   
     TYPE T_CURSOR IS REF CURSOR;   
     PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,   
@@ -39,7 +39,7 @@ END CURSPKG;
   
  在 Oracle 服务器上创建下面的 Oracle 包正文。  
   
-```  
+```sql
 CREATE OR REPLACE PACKAGE BODY CURSPKG AS  
     PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,  
                                IO_CURSOR IN OUT T_CURSOR)  
@@ -79,6 +79,6 @@ END CURSPKG;
 /  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Oracle REF CURSORs](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [Oracle REF CURSORs](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

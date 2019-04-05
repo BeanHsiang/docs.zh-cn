@@ -1,5 +1,6 @@
 ---
-title: goto 语句（C# 参考）
+title: goto 语句 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - goto_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C#]
 ms.assetid: 2c03c9c1-8119-44ef-b740-fb3d287a42fe
-ms.openlocfilehash: d4fd9f1f26b82b409d704c45e4bcf18cceef8282
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e4642d0e43a538217493298b58d572e435db5dae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645322"
 ---
 # <a name="goto-c-reference"></a>goto（C# 参考）
 
@@ -40,8 +41,8 @@ ms.locfileid: "43507518"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
-- [C# 关键字](index.md)  
-- [goto 语句 (C++)](/cpp/cpp/goto-statement-cpp)  
-- [跳转语句](jump-statements.md)  
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](index.md)
+- [goto 语句 (C++)](/cpp/cpp/goto-statement-cpp)
+- [跳转语句](jump-statements.md)

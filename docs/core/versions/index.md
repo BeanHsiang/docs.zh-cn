@@ -1,21 +1,16 @@
 ---
-title: .NET Core 版本控制
-description: 了解 .NET Core 版本控制的工作原理。
+title: 如何对 .NET Core 运行时和 SDK 进行版本控制
+description: 本文介绍了 .NET Core SDK 和运行时的版本控制方式（类似于语义版本控制）。
 author: bleroy
-ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188464"
+ms.custom: seodec18
 ---
-# <a name="net-core-versioning"></a>.NET Core 版本控制
+
+# <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 的版本控制方式概述
 
 .NET Core 是指 .NET Core 运行时和 .NET Core SDK，它包含开发应用程序所需的工具。 .NET Core SDK 可与任何以前版本的 .NET Core 运行时一起使用。 本文介绍运行时和 SDK 版本策略。 有关 .NET Standard 版本号的说明，请参阅介绍 [.NET Standar](../../standard/net-standard.md#net-implementation-support) 的文章。
 
-.NET Core 运行时和 .NET Core SDK 以不同的速率添加新功能，通常情况下，.NET Core SDK 提供更新工具的速度比 .NET Core 运行时更改生产中所用运行时的速度快。 但麻烦的是，这个问题导致过去几年出现了多种版本控制策略。 可在有关 [.NET Core 版本控制](version-history.md)的文章中了解相关历史记录。
+.NET Core 运行时和 .NET Core SDK 以不同的速率添加新功能，通常情况下，.NET Core SDK 提供更新工具的速度比 .NET Core 运行时更改生产中所用运行时的速度快。
 
 ## <a name="versioning-details"></a>版本控制详细信息
 
@@ -32,7 +27,7 @@ SDK 版本号的第三个位置同时传达次要编号和修补程序编号。 
 | 运行时和 SDK 修补程序 | 2.2.1             | 2.2.102           |
 | SDK 功能更改    | 2.2.1             | 2.2.200           |
 
-(\*) 此图表以未来的 2.2 .NET Core 运行时示例，因为历史项目 .NET Core 2.1 的第一个 SDK 是 2.1.300。 有关详细信息，请参阅 [.NET Core 版本控制历史记录](version-history.md)。
+(\*) 此图表以未来的 2.2 .NET Core 运行时示例，因为历史项目 .NET Core 2.1 的第一个 SDK 是 2.1.300。 有关详细信息，请参阅 [.NET Core 版本选择](selection.md)页。
 
 注意：
 
@@ -106,8 +101,8 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="see-also"></a>请参阅
 
-* [目标框架](../../standard/frameworks.md)  
-* [.NET Core 分发打包](../build/distribution-packaging.md)  
-* [.NET Core 支持生命周期简报](https://www.microsoft.com/net/core/support)  
-* [.NET Core 2 和版本绑定](https://github.com/dotnet/designs/issues/3)  
-* [.NET Core 的 Docker 映像](https://hub.docker.com/r/microsoft/dotnet/)
+- [目标框架](../../standard/frameworks.md)
+- [.NET Core 分发打包](../build/distribution-packaging.md)
+- [.NET Core 支持生命周期简报](https://www.microsoft.com/net/core/support)
+- [.NET Core 2 和版本绑定](https://github.com/dotnet/designs/issues/3)
+- [.NET Core 的 Docker 映像](https://hub.docker.com/r/microsoft/dotnet/)

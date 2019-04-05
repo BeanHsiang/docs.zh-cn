@@ -1,16 +1,17 @@
 ---
-title: 接口中的索引器（C# 编程指南）
+title: 接口中的索引器 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: c3ddb48590087d49402482e8cbf3760027da1a2a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c56369b28f8e1bab1ca8e8c13ebd9710c8f1d9fb
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799458"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200099"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>接口中的索引器（C# 编程指南）
 可以在[接口](../../../csharp/language-reference/keywords/interface.md)上声明索引器。 接口索引器的访问器与[类](../../../csharp/language-reference/keywords/class.md)索引器的访问器有所不同，差异如下：  
@@ -23,14 +24,14 @@ ms.locfileid: "43799458"
   
  下面是接口索引器访问器的示例：  
   
- [!code-csharp[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#3)]  
   
  索引器的签名必须不同于同一接口中声明的所有其他索引器的签名。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何实现接口索引器。  
   
- [!code-csharp[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#4)]  
   
  在前面的示例中，可通过使用接口成员的完全限定名来使用显示接口成员实现。 例如:  
   
@@ -60,7 +61,7 @@ string ICitizen.this[int index]
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [索引器](../../../csharp/programming-guide/indexers/index.md)  
-- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [索引器](../../../csharp/programming-guide/indexers/index.md)
+- [属性](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [接口](../../../csharp/programming-guide/interfaces/index.md)

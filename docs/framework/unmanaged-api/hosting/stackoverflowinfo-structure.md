@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1e652588d27521a04015228e86eb9af9c53346e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0c1723facca3c547c275ee44f0abefe21a177eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572024"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 结构
-由于溢出时引发的异常上存储的溢出发生和信息的类型。  
+由于发生溢出时引发的异常上存储的类型发生溢出和信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +39,20 @@ typedef struct _StackOverflowInfo {
   
 |成员|描述|  
 |------------|-----------------|  
-|`soType`|值为[StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md)指定溢出的类型的枚举。|  
-|`pExceptionInfo`|一个指向 Win32`EXCEPTION_POINTERS`对象，其中包含一个异常记录异常的独立于计算机的说明和在异常发生时的处理器上下文依赖于计算机的说明的上下文记录。|  
+|`soType`|值为[StackOverflowType](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md)枚举，用于指定溢出的类型。|  
+|`pExceptionInfo`|一个指向 Win32`EXCEPTION_POINTERS`对象，其中包含与计算机无关的描述异常的异常记录以及具有依赖于计算机的说明的处理器上下文时的异常的上下文记录。|  
   
 ## <a name="remarks"></a>备注  
- A`StackOverflowInfo`对象传递给[iactiononclrevent:: Onevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)方法`Event_StackOverflow`事件。  
+ 一个`StackOverflowInfo`对象传递给[iactiononclrevent:: Onevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md)方法`Event_StackOverflow`事件。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.idl  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [承载结构](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>请参阅
+- [承载结构](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

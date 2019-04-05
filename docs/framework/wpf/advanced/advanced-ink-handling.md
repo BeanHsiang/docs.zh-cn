@@ -8,20 +8,20 @@ helpviewer_keywords:
 - InkCanvas control [WPF]
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
-ms.openlocfilehash: eb347f5477974851e91c6a00b423bd4acf1f0b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539022"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367865"
 ---
 # <a name="advanced-ink-handling"></a>高级墨迹处理
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]附带<xref:System.Windows.Controls.InkCanvas>，，是您可以将其放在应用程序以立即开始收集和显示墨迹元素。 但是，如果<xref:System.Windows.Controls.InkCanvas>控件不提供足够精细的控制级别，你可以通过自定义你自己的墨迹集合和墨迹呈现类使用保留在较高级别控制<xref:System.Windows.Input.StylusPlugIns>。  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]附带<xref:System.Windows.Controls.InkCanvas>，并且您可以将其放在应用程序并立即开始收集和显示墨迹的元素。 但是，如果<xref:System.Windows.Controls.InkCanvas>控件不提供足够精细的控制级别，你可以通过自定义您自己的墨迹收集和使用手写内容呈现类可以保持较高级别上的控制<xref:System.Windows.Input.StylusPlugIns>。  
   
- <xref:System.Windows.Input.StylusPlugIns>类提供用于通过实现低级别的控制的机制<xref:System.Windows.Input.Stylus>输入和动态呈现墨迹。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类提供机制来实现自定义行为，并将其应用到来自触笔设备以获得最佳性能的数据的流。 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>，一个专用<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>，允许你自定义动态呈现墨迹数据进行实时这意味着，<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>绘制数字墨迹立即作为<xref:System.Windows.Input.StylusPoint>生成数据，因此它显示为"流"从触笔设备。  
+ <xref:System.Windows.Input.StylusPlugIns>类提供用于通过实现低级别控制的机制<xref:System.Windows.Input.Stylus>输入和动态呈现墨迹。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>类提供了一种机制，以实现自定义行为，并将其应用到从触笔设备以获得最佳性能的数据的流。 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>，一个专用<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>，这意味着，允许您动态自定义呈现墨迹数据进行实时<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>绘制数字墨迹立即作为<xref:System.Windows.Input.StylusPoint>生成数据，因此它显示为"流"从触笔设备。  
   
 ## <a name="in-this-section"></a>本节内容  
- [自定义呈现墨迹](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
-  [截获触笔输入](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
-  [创建墨迹输入控件](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
-  [墨迹线程模型](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)
+ [自定义呈现墨迹](custom-rendering-ink.md)  
+  [截获触笔输入](intercepting-input-from-the-stylus.md)  
+  [创建墨迹输入控件](creating-an-ink-input-control.md)  
+  [墨迹线程模型](the-ink-threading-model.md)

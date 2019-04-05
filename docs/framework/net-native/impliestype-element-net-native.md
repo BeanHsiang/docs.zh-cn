@@ -1,17 +1,17 @@
 ---
-title: '&lt;暗示类型&gt;元素 (.NET Native)'
+title: <ImpliesType>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97b3e63ceb4b121c3e71e33a00fdf725258039c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1739c2a5e15d4c120d487c849819b6439afabade
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395585"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288010"
 ---
-# <a name="ltimpliestypegt-element-net-native"></a>&lt;暗示类型&gt;元素 (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<暗示类型 > 元素 (.NET Native)
 如果该策略已应用到该包含类型或方法，将该策略应用到一个类型。  
   
 ## <a name="syntax"></a>语法  
@@ -99,7 +99,7 @@ ms.locfileid: "33395585"
 </Type>  
 ```  
   
- `<ImpliesType>` 元素也可能出现在 `<Method>` 元素内部，因为在某些情况下泛型方法暗示着反射到了一个类型实例化上。 例如，想象一个特定的库可以动态访问的泛型方法 `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)` 以及相关的 <xref:System.Collections.Generic.List%601> 和 <xref:System.Array> 类型。 这可以表示为：  
+ `<ImpliesType>` 元素也可能出现在 `<Method>` 元素内部，因为在某些情况下泛型方法暗示着反射到了一个类型实例化上。 例如，假设一个泛型方法`IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)`的给定的库可以动态访问以及相关<xref:System.Collections.Generic.List%601>和<xref:System.Array>类型。 这可以表示为：  
   
 ```xml  
 <Type Name="MyType">  
@@ -110,7 +110,7 @@ ms.locfileid: "33395585"
 </Type>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>请参阅
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

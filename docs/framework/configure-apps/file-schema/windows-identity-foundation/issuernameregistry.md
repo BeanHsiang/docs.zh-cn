@@ -1,23 +1,23 @@
 ---
-title: '&lt;issuerNameRegistry&gt;'
+title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: de3ceb5d84d17307c69e9155834a0a584e6920a1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: db4e0492772d6fd0e155843422b7350aa630f713
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185909"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369677"
 ---
-# <a name="ltissuernameregistrygt"></a>&lt;issuerNameRegistry&gt;
+# <a name="issuernameregistry"></a>\<issuerNameRegistry>
 配置颁发者名称注册的标记处理程序集合中的处理程序使用。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<issuerNameRegistry >  
+\<securityTokenHandlerConfiguration>  
+\<issuerNameRegistry>  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,13 +48,13 @@ ms.locfileid: "50185909"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|当`type`属性指定基于配置的颁布者名称注册表 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类)，则[ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)必须指定元素。 [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)元素可能需要`<add>`， `<clear>`，或`<remove>`元素作为子元素。|  
+|[\<trustedIssuers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|当`type`属性指定基于配置的颁布者名称注册表 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>类)，则[ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)必须指定元素。 [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)元素可能需要`<add>`， `<clear>`，或`<remove>`元素作为子元素。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
   
 ## <a name="remarks"></a>备注  
  所有颁发者令牌进行验证使用颁发者名称注册表。 这是一个对象，派生自<xref:System.IdentityModel.Tokens.IssuerNameRegistry>类。 颁发者名称注册表用于将验证由相应发行人生成的标志签名所需的加密材料的助记键名称相关联。 颁发者名称注册表维护信赖方 (RP) 应用程序由受信任的颁发者列表。 使用指定的颁发者名称注册表类型`type`属性。 `<issuerNameRegistry>`元素可以具有一个或多个提供指定类型的配置的子元素。 提供处理通过重写这些子元素的逻辑<xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A>方法。  
@@ -77,6 +77,6 @@ ms.locfileid: "50185909"
 </issuerNameRegistry>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>  
- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>
+- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>

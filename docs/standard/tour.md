@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232841"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415918"
 ---
 # <a name="tour-of-net"></a>.NET 教程
 
@@ -64,7 +64,7 @@ Microsoft 积极开发和支持三种 .NET 语言：C#、F# 和 Visual Basic (VB
 有关更多详细信息，请参阅下列主题：
 
 * 对于 C#，请参阅 [using 语句（C# 参考）](../csharp/language-reference/keywords/using-statement.md)主题。
-* 对于 F#，请参阅[资源管理：use 关键字](../fsharp/language-reference/resource-management-the-use-keyword.md)。
+* 有关 F#，请参阅[资源管理：使用关键字](../fsharp/language-reference/resource-management-the-use-keyword.md)。
 * 对于 VB，请参阅 [Using 语句 (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) 主题。
 
 ## <a name="type-safety"></a>类型安全
@@ -89,13 +89,13 @@ C#、VB 和 F# 支持本地类型推理。 类型推理是指编译器根据右�
 
 委托用方法签名表示。 可将任何使用该签名的方法分配给该委托，调用该委托时会执行这些方法。
 
-委托类似于 C++ 函数指针，只是它们是类型安全的。 它们是 CLR 类型系统中某种断开连接的方法。 正则方法已连接到某个类，只能通过静态或实例调用约定来直接调用。
+委托类似于 C++ 函数指针，只是它们是类型安全的。 它们是 CLR 类型系统中某种断开关联的方法。 正则方法会关联到某个类，只能通过静态或实例调用约定来直接调用。
 
 在 .NET 中，委托通常用于事件处理程序、定义异步操作以及 lambda 表达式，它们是 LINQ 的基础。 有关详细信息，请参见[委托和 lambda](delegates-lambdas.md) 主题。
 
 ## <a name="generics"></a>泛型
 
-泛型可让程序员在设计类时引入一个“类型参数”，这样，客户端代码（类型的用户）便可指定要使用哪个确切的类型来取代类型参数。
+泛型可让程序员在设计类时引入一个*类型参数*，这样，客户端代码（类型的使用者）便可指定要使用哪个确切的类型来取代类型参数。
 
 添加泛型的目的是帮助程序员实现通用数据结构。 在泛型问世之前，要将 `List` 等类型用作泛型，必须处理 `object` 类型的元素。 这会造成各种性能和语义问题，甚至造成微妙的运行时错误。 例如，当数据结构包含整数和字符串时，如果在处理列表的成员时引发 `InvalidCastException`，则就会出现运行时错误这种非常棘手的问题。
 
@@ -125,7 +125,7 @@ LINQ 是适用于 C# 和 VB 的强大功能集，可用于编写简单的声明�
 
 针对 Java 和 Objective-C 的 Mono（以及 Xamarin）互操作性支持基本上以类似的方式构建，也就是说，它们运用相同的原理。
 
-有关本机互操作性的的详细信息，请参阅[本机互操作性](native-interop.md)主题。
+有关本机互操作性的详细信息，请参阅[本机互操作性](native-interop/index.md)一文。
 
 ## <a name="unsafe-code"></a>不安全代码
 

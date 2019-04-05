@@ -9,11 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 333a85bc59ded3fd42bef6aff5845c9a6ddeb49b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356716"
 ---
 # <a name="how-to-specify-the-binding-source"></a>如何：指定绑定源
 在数据绑定中，绑定源对象是指从其获取数据的对象。 本主题描述了指定绑定源的不同方法。  
@@ -23,29 +24,29 @@ ms.lasthandoff: 05/04/2018
   
  在下面的示例中，数据上下文建立在应用程序的根元素上。 这允许所有子元素继承该数据上下文。 绑定的数据来自自定义数据类 `NetIncome`，可通过映射直接引用该类，已为该类分配了 `incomeDataSource` 资源键。  
   
- [!code-xaml[DirectionalBinding#DataContext1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
-[!code-xaml[DirectionalBinding#DataContext2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
+ [!code-xaml[DirectionalBinding#DataContext1](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
+[!code-xaml[DirectionalBinding#DataContext2](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
   
  下面的示例展示了 `NetIncome` 类的定义。  
   
- [!code-csharp[DirectionalBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
- [!code-vb[DirectionalBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
+ [!code-csharp[DirectionalBinding#DataObject](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
+ [!code-vb[DirectionalBinding#DataObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
   
 > [!NOTE]
->  以上示例实例化标记中的对象，并将其用作资源。 如果希望绑定到已在代码中实例化的对象，需要通过编程方式设置 `DataContext` 属性。 有关示例，请参阅[使数据可用于 XAML 中的绑定](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)。  
+>  以上示例实例化标记中的对象，并将其用作资源。 如果希望绑定到已在代码中实例化的对象，需要通过编程方式设置 `DataContext` 属性。 有关示例，请参阅[使数据可用于 XAML 中的绑定](how-to-make-data-available-for-binding-in-xaml.md)。  
   
  另外，如果希望在个别绑定上显式指定源，可以选择以下选项。 这些选项优先于继承的数据上下文。  
   
 |属性|描述|  
 |--------------|-----------------|  
-|<xref:System.Windows.Data.Binding.Source%2A>|使用此属性将源设置为对象的实例。 如果你不需要建立中的作用域的功能的多个属性继承相同的数据上下文，则可以使用<xref:System.Windows.Data.Binding.Source%2A>属性而不是`DataContext`属性。 有关详细信息，请参阅<xref:System.Windows.Data.Binding.Source%2A>。|  
+|<xref:System.Windows.Data.Binding.Source%2A>|使用此属性将源设置为对象的实例。 如果不需要特定功能（用于建立其中有多个属性继承相同的数据上下文的作用域），则可以使用 <xref:System.Windows.Data.Binding.Source%2A> 属性而不是 `DataContext` 属性。 有关详细信息，请参阅<xref:System.Windows.Data.Binding.Source%2A>。|  
 |<xref:System.Windows.Data.Binding.RelativeSource%2A>|当希望指定相对于绑定目标位置的源时，这很有用。 当想要将元素的一个属性绑定到同一元素的另一个属性时，或者如果要在样式或模板中定义绑定，则可能需要使用此属性。 有关详细信息，请参阅<xref:System.Windows.Data.Binding.RelativeSource%2A>。|  
-|<xref:System.Windows.Data.Binding.ElementName%2A>|指定一个表示希望绑定到的元素的字符串。 当希望绑定到应用程序上另一个元素的属性时，这很有用。 例如，如果你想要使用<xref:System.Windows.Controls.Slider>来控制应用程序中的另一个控件的高度或如果你想要绑定<xref:System.Windows.Controls.ContentControl.Content%2A>的控件与<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>属性你<xref:System.Windows.Controls.ListBox>控件。 有关详细信息，请参阅<xref:System.Windows.Data.Binding.ElementName%2A>。|  
+|<xref:System.Windows.Data.Binding.ElementName%2A>|指定一个字符串，用于表示你希望绑定到的元素。 当希望绑定到应用程序上另一个元素的属性时，这很有用。 例如，想用 <xref:System.Windows.Controls.Slider> 来控制应用程序中另一个控件的高度，或想将控件的 <xref:System.Windows.Controls.ContentControl.Content%2A> 绑定到 <xref:System.Windows.Controls.ListBox> 控件的 <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>属性。 有关详细信息，请参阅 <xref:System.Windows.Data.Binding.ElementName%2A>。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>  
- [属性值继承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [绑定声明概述](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
+- [属性值继承](../advanced/property-value-inheritance.md)
+- [数据绑定概述](data-binding-overview.md)
+- [绑定声明概述](binding-declarations-overview.md)
+- [帮助主题](data-binding-how-to-topics.md)

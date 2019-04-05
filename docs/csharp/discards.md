@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
 ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50045647"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143592"
 ---
 # <a name="discards---c-guide"></a>弃元 - C# 指南
 

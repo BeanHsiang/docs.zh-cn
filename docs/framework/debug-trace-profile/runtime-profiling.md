@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fec1fb5a2dc3d6589f49d4a5864dabfb03a5477c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17530537e6d74b247aaf8708efed28ef169f9d57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491241"
 ---
 # <a name="runtime-profiling"></a>运行时分析
 分析是用于在任何开发或部署方案中收集性能数据的方法。 本节面向想要收集有关应用程序性能的信息的开发人员和系统管理员。  
@@ -42,7 +42,7 @@ ms.locfileid: "33393050"
   
 6.  在“选定对象的实例”列表框中，单击“\<所有实例>”，指定要在全局（也就是在整个系统范围内）监视公共语言运行时的性能计数器。  
   
-     -或-  
+     或  
   
      在“选定对象的实例”  列表框中，单击要监视该应用程序的性能计数器的应用程序的名称。  
   
@@ -66,5 +66,5 @@ ms.locfileid: "33393050"
 |<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|指定 `PerformanceCounter` 组件的安装程序。|  
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|为 `NextValue` 指定用于计算 `PerformanceCounter`的方法。|  
   
-## <a name="see-also"></a>请参阅  
- [性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)
+## <a name="see-also"></a>请参阅
+- [性能计数器](../../../docs/framework/debug-trace-profile/performance-counters.md)

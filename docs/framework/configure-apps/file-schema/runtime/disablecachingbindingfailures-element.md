@@ -1,5 +1,5 @@
 ---
-title: '&lt;disableCachingBindingFailures&gt;元素'
+title: <disableCachingBindingFailures> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#disableCachingBindingFailures
@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 422888a595e8fdea01f9cb9d256830467d6822ac
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c99eb6b77a969a1c5003743b0407821e2537b683
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745674"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289713"
 ---
-# <a name="ltdisablecachingbindingfailuresgt-element"></a>&lt;disableCachingBindingFailures&gt;元素
-指定是否禁用缓存绑定故障的发生是因为通过探测找不到程序集。  
+# <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > 元素
+指定是否禁用缓存绑定故障的原因是通过探测找不到程序集。  
   
  \<配置 > 元素  
 \<运行时 > 元素  
-\<disableCachingBindingFailures >  
+\<disableCachingBindingFailures>  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,14 +39,14 @@ ms.locfileid: "32745674"
   
 |特性|描述|  
 |---------------|-----------------|  
-|enabled|必需的特性。<br /><br /> 指定是否禁用缓存绑定故障的发生是因为通过探测找不到程序集。|  
+|enabled|必需的特性。<br /><br /> 指定是否禁用缓存绑定故障的原因是通过探测找不到程序集。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|0|不要禁用缓存绑定故障的发生是因为通过探测找不到程序集。 这是从.NET Framework 2.0 版开始的默认绑定行为。|  
-|1|禁用缓存绑定故障的发生是因为通过探测找不到程序集。 此设置将恢复为.NET Framework 1.1 版的绑定行为。|  
+|0|不要禁用绑定失败的原因是通过探测找不到程序集缓存。 这是从.NET Framework 2.0 版的默认绑定行为。|  
+|1|禁用的绑定失败的原因是通过探测找不到程序集缓存。 此设置将恢复为.NET Framework 1.1 版的绑定行为。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -59,18 +59,18 @@ ms.locfileid: "32745674"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 从.NET Framework 2.0 版开始，加载程序集的默认行为是缓存所有绑定和加载失败。 也就是说，如果加载程序集的尝试失败，后续请求加载相同程序集将立即失败，而无需任何尝试查找程序集。 此元素禁用绑定故障的发生是因为探测路径中找不到程序集的默认行为。 这些故障引发<xref:System.IO.FileNotFoundException>。  
+ 从.NET Framework 2.0 版开始，加载程序集的默认行为是缓存所有绑定和加载失败。 即，如果尝试加载程序集失败，后续请求同一程序集加载立即失败，而无需任何尝试查找程序集。 此元素将禁用绑定失败的原因是探测路径中找不到程序集的默认行为。 这些失败引发<xref:System.IO.FileNotFoundException>。  
   
- 一些绑定和加载失败不会影响此元素，也始终缓存。 由于程序集已找到，但无法加载，将出现这些故障。 它们将引发<xref:System.BadImageFormatException>或<xref:System.IO.FileLoadException>。 以下列表包含此类故障的一些示例。  
+ 一些绑定和加载失败不受此元素，并始终进行缓存。 这些失败原因是该程序集已找到，但无法加载。 它们将引发<xref:System.BadImageFormatException>或<xref:System.IO.FileLoadException>。 以下列表包含此类故障的一些示例。  
   
--   如果你尝试加载的文件不是有效的程序集，加载程序集的后续尝试将会失败，即使错误的文件将被替换为正确的程序集。  
+-   如果你尝试加载文件不是有效的程序集，即使错误的文件将被替换为正确的程序集加载程序集的后续尝试将失败。  
   
--   如果你尝试加载已锁定的文件系统程序集，加载程序集的后续尝试将失败，即使程序集发布的文件系统。  
+-   如果尝试加载已锁定的文件系统程序集，加载程序集的后续尝试将失败，即使文件系统发布程序集。  
   
--   如果你尝试加载的程序集的一个或多个版本是在探测路径中，但它们之间的不是您请求的特定版本，加载该版本的后续尝试将失败，即使正确的版本将移到探测路径。  
+-   如果尝试加载的程序集的一个或多个版本位于探测路径中，但在它们之间的不是你请求的特定版本，加载该版本的后续尝试将失败，即使正确的版本将移到探测路径。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何禁用的发生是因为通过探测找不到程序集的程序集绑定故障缓存。  
+ 下面的示例演示如何禁用的原因是通过探测找不到程序集的程序集绑定故障缓存。  
   
 ```xml  
 <configuration>  
@@ -80,7 +80,7 @@ ms.locfileid: "32745674"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [运行时如何定位程序集](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

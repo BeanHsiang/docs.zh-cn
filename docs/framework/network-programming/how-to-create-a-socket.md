@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 2c3bfb6435901ac8154bc801ae2a420b252d5849
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e8f90d2a9e2f2e4bef8d1ab360bfe677bd2bf695
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589696"
 ---
 # <a name="how-to-create-a-socket"></a>如何：创建套接字
 必须先使用协议和网络地址信息初始化套接字，然后才能使用套接字与远程设备进行通信。 <xref:System.Net.Sockets.Socket> 类的构造函数包含的参数可以指定地址系列、套接字类型，以及套接字用于建立连接的协议类型。  
@@ -60,6 +60,6 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
   
  套接字创建完成后，可启动与远程终结点的连接或接收来自远程设备的连接。  
   
-## <a name="see-also"></a>请参阅  
- [使用客户端套接字](../../../docs/framework/network-programming/using-client-sockets.md)  
- [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)
+## <a name="see-also"></a>请参阅
+- [使用客户端套接字](../../../docs/framework/network-programming/using-client-sockets.md)
+- [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)

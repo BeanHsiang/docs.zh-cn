@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f5a70a01937c52197978db776b90028e1fcb7c6
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e08e90f61429f01f360808866fdc3d963323ba23
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580152"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835338"
 ---
 # <a name="converting-times-between-time-zones"></a>在各时区之间转换时间
 
@@ -27,7 +27,7 @@ ms.locfileid: "48580152"
 
 ## <a name="converting-to-coordinated-universal-time"></a>转换为协调世界时
 
-协调世界时 (UTC) 是一项高精度的原子时标准。 世界的时区表示为相对于 UTC 的正/负偏移量。 因此，UTC 提供一种无时区或中间时区的时间。 如果日期和时间在计算机之间的可移植性非常重要，则建议使用 UTC 时间。 (有关详细信息和使用日期和时间的其他最佳做法，请参阅[编码在.NET Framework 中使用 DateTime 的最佳实践](https://msdn.microsoft.com/library/ms973825.aspx)。)通过将各个时区转换为 UTC，可以简化时间的比较。
+协调世界时 (UTC) 是一项高精度的原子时标准。 世界的时区表示为相对于 UTC 的正/负偏移量。 因此，UTC 提供一种无时区或中间时区的时间。 如果日期和时间在计算机之间的可移植性非常重要，则建议使用 UTC 时间。 (有关详细信息和使用日期和时间的其他最佳做法，请参阅[编码在.NET Framework 中使用 DateTime 的最佳实践](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10))。)通过将各个时区转换为 UTC，可以简化时间的比较。
 
 > [!NOTE]
 > 此外可以序列化<xref:System.DateTimeOffset>结构，明确时间表示的单一点。 因为<xref:System.DateTimeOffset>对象存储以及其相对于 UTC 的偏移量的日期和时间值，它们始终为 UTC 表示的特定点的关系中的时间。
@@ -122,6 +122,6 @@ ms.locfileid: "48580152"
 
 ## <a name="see-also"></a>请参阅
 
-* <xref:System.TimeZoneInfo>
-* [日期、时间和时区](../../../docs/standard/datetime/index.md)
-* [查找本地系统上定义的时区](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- <xref:System.TimeZoneInfo>
+- [日期、时间和时区](../../../docs/standard/datetime/index.md)
+- [查找本地系统上定义的时区](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)

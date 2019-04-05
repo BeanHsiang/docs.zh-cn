@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: b6461ffe6525b377e7f836a686a401033d344a4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492790"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708930"
 ---
 # <a name="data-contract-equivalence"></a>数据协定等效性
 对于客户端要将某种类型的数据成功发送到服务，或者服务要将数据成功发送到客户端的情况，接收端上并不一定必须存在此发送数据类型。 唯一的需求是两种类型的数据协定应该等效。 (有时，严格等效性不是必需的如中所述[数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。)  
@@ -54,15 +54,15 @@ ms.locfileid: "33492790"
  [!code-csharp[C_DataContractNames#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#8)]
  [!code-vb[C_DataContractNames#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#8)]  
   
- 在客户端和服务之间传递参数和返回值时，如果接收终结点要求来自派生类的数据协定，则不能发送来自基类的数据协定。 这一点符合面向对象的编程原则。 在前面的示例中，类型的对象`Person`不能发送`Employee`预期。  
+ 在客户端和服务之间传递参数和返回值时，如果接收终结点要求来自派生类的数据协定，则不能发送来自基类的数据协定。 这一点符合面向对象的编程原则。 在上一示例中，类型的对象`Person`时不能发送`Employee`预期。  
   
- 如果要求来自基类的数据协定，则可发送来自派生类的数据协定，但前提是接收终结点通过 <xref:System.Runtime.Serialization.KnownTypeAttribute>“知道”该派生类型。 有关详细信息，请参阅[数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。 在前面的示例中，当要求 `Employee` 时，可以发送 `Person` 类型的对象，但前提是接收方代码使用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 将它包含在已知类型列表中。  
+ 如果要求来自基类的数据协定，则可发送来自派生类的数据协定，但前提是接收终结点通过 <xref:System.Runtime.Serialization.KnownTypeAttribute>“知道”该派生类型。 有关详细信息，请参阅[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。 在前面的示例中，当要求 `Employee` 时，可以发送 `Person` 类型的对象，但前提是接收方代码使用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 将它包含在已知类型列表中。  
   
- 在应用程序之间传递参数和返回值时，如果所需类型为接口，则等效于所需类型为 <xref:System.Object> 类型。 由于每种类型最终都派生自 <xref:System.Object>，因此所有数据协定最终都派生自 <xref:System.Object> 的数据协定。 这样，在要求使用接口时，就可以传递任何数据协定类型。 需要其他步骤来成功处理的接口;有关详细信息，请参阅[数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
+ 在应用程序之间传递参数和返回值时，如果所需类型为接口，则等效于所需类型为 <xref:System.Object> 类型。 由于每种类型最终都派生自 <xref:System.Object>，因此所有数据协定最终都派生自 <xref:System.Object> 的数据协定。 这样，在要求使用接口时，就可以传递任何数据协定类型。 已成功使用接口; 需要其他步骤有关详细信息，请参阅[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [数据成员顺序](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- [数据成员顺序](../../../../docs/framework/wcf/feature-details/data-member-order.md)
+- [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

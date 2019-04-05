@@ -8,26 +8,26 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542582"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361208"
 ---
 # <a name="events-wpf"></a>事件 (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 引入了路由事件，这些事件可在应用程序的元素树中调用存在于各个侦听器上的处理程序。  
   
 ## <a name="in-this-section"></a>本节内容  
- [路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [附加事件概述](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [对象生存期事件](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [将路由事件标记为“已处理”和“类处理”](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [预览事件](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [属性更改事件](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Visual Basic 和 WPF 事件处理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [弱事件模式](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [帮助主题](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [路由事件概述](routed-events-overview.md)  
+ [附加事件概述](attached-events-overview.md)  
+ [对象生存期事件](object-lifetime-events.md)  
+ [将路由事件标记为“已处理”和“类处理”](marking-routed-events-as-handled-and-class-handling.md)  
+ [预览事件](preview-events.md)  
+ [属性更改事件](property-change-events.md)  
+ [Visual Basic 和 WPF 事件处理](visual-basic-and-wpf-event-handling.md)  
+ [弱事件模式](weak-event-patterns.md)  
+ [帮助主题](events-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.RoutedEvent>  
@@ -37,13 +37,13 @@ ms.locfileid: "33542582"
  <xref:System.Windows.RoutingStrategy>  
   
 ## <a name="related-sections"></a>相关章节  
- [WPF 体系结构](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF 中的 XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [基元素](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [元素树和序列化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [属性](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [输入](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [资源](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [WPF 内容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [线程模型](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF 体系结构](wpf-architecture.md)  
+  [WPF 中的 XAML](xaml-in-wpf.md)  
+  [基元素](base-elements.md)  
+  [元素树和序列化](element-tree-and-serialization.md)  
+  [属性](properties-wpf.md)  
+  [输入](input-wpf.md)  
+  [资源](resources-wpf.md)  
+  [样式设置和模板化](../controls/styling-and-templating.md)  
+  [WPF 内容模型](../controls/wpf-content-model.md)  
+  [线程模型](threading-model.md)

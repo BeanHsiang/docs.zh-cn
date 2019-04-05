@@ -1,15 +1,15 @@
 ---
-title: 如何： 比较两个文件夹 (LINQ) (Visual Basic) 的内容
+title: 如何：比较两个文件夹 (LINQ) (Visual Basic 中) 的内容
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 02f05f540afb9dcb398cc63a16f0fbbb80a7f4cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 668f72e2a891a9332093b97ebc927c156ad2087c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643908"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820290"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>如何： 比较两个文件夹 (LINQ) (Visual Basic) 的内容
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>如何：比较两个文件夹 (LINQ) (Visual Basic 中) 的内容
 此示例演示了比较两个文件列表的 3 种方法：  
   
 -   通过查询布尔值指定两个文件列表是否相同。  
@@ -116,6 +116,7 @@ End Module
 ## <a name="compiling-the-code"></a>编译代码  
  创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ 和文件目录 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

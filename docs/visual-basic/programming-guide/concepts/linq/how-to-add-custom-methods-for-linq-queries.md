@@ -1,15 +1,15 @@
 ---
-title: 如何： 为 LINQ 查询 (Visual Basic 中) 添加自定义方法
+title: 如何：为 LINQ 查询 (Visual Basic 中) 添加自定义方法
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: 6fa212ff05547e8edd3964a6e1c9f76c11cdbe08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a58ced83a01e41be707f2483cabe9c8e867e2c1a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644051"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829169"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>如何： 为 LINQ 查询 (Visual Basic 中) 添加自定义方法
+# <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>如何：为 LINQ 查询 (Visual Basic 中) 添加自定义方法
 可通过向 <xref:System.Collections.Generic.IEnumerable%601> 接口添加扩展方法扩展可用于 LINQ 查询的方法集。 例如，除了标准平均值或最大值运算，还可以创建自定义聚合方法，从一系列值计算单个值。 此外可以创建一个方法，用作一个值序列的自定义筛选器或用于对其进行特定数据转换，并返回新的序列。 <xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Reverse%2A> 就是此类方法的示例。  
   
  扩展 <xref:System.Collections.Generic.IEnumerable%601> 接口时，可以将自定义方法应用于任何可枚举集合。 有关详细信息，请参阅[扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。  
@@ -51,7 +51,7 @@ End Module
  使用从 <xref:System.Collections.Generic.IEnumerable%601> 接口调用其他聚合方法的方式为任何可枚举集合调用此扩展方法。  
   
 > [!NOTE]
->  在 Visual Basic 中，你可以使用方法调用或标准查询语法`Aggregate`或`Group By`子句。 有关详细信息，请参阅[Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)和[组 By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
+>  在 Visual Basic 中，您可以使用方法调用或标准的查询语法`Aggregate`或`Group By`子句。 有关详细信息，请参阅[Aggregate 子句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)并[组 By 子句](../../../../visual-basic/language-reference/queries/group-by-clause.md)。  
   
  下面的代码示例说明如何为类型 `double` 的数组使用 `Median` 方法。  
   
@@ -125,7 +125,7 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function  
 ```  
   
- 现在，可以为任何类型的对象序列调用 `Median` 方法。 如果类型不具有自己的方法重载，必须手动传递委托参数。 在 Visual Basic 中，你可以为此目的使用 lambda 表达式。 此外，如果你使用`Aggregate`或`Group By`子句而不是方法调用中的，可以传递任何值或处于范围内，此子句的表达式。  
+ 现在，可以为任何类型的对象序列调用 `Median` 方法。 如果类型不具有自己的方法重载，必须手动传递委托参数。 在 Visual Basic 中，可以实现此目的使用 lambda 表达式。 此外，如果您使用`Aggregate`或`Group By`子句而不是方法调用中的，可以传递任何值或处于范围内，此子句的表达式。  
   
  下面的代码示例演示如何为整数数组和字符串数组调用 `Median` 方法。 对于字符串，将计算数组中字符串长度的中值。 该示例演示如何将 <xref:System.Func%602> 委托参数传递给每个用例的 `Median` 方法。  
   
@@ -197,6 +197,7 @@ Next
 ' e  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Collections.Generic.IEnumerable%601>
+- [扩展方法](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

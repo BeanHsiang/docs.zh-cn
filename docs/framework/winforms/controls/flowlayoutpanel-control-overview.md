@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, dynamic layout
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-ms.openlocfilehash: 73767114da1c04222fb8ceaf812153421c4597aa
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 02d111a630459344efbc5d1e45b53daffcde427f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261402"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702604"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel 控件概述
 <xref:System.Windows.Forms.FlowLayoutPanel> 控件沿水平或纵排方向排列其内容。 可从一行到下一行，或从一列到下一列来进行控件内容换行。 或者，可以剪切其内容，而非进行换行。  
@@ -25,9 +25,9 @@ ms.locfileid: "48261402"
   
  任何 Windows 窗体控件均可以是 <xref:System.Windows.Forms.FlowLayoutPanel> 控制的子控件，包括 <xref:System.Windows.Forms.FlowLayoutPanel> 的其他实例。 使用此功能，可以构造在运行时适应窗体尺寸的复杂布局。  
   
- 另请参阅[演练： 在 Windows 窗体使用 FlowLayoutPanel 排列控件](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\))。  
+ 另请参阅[演练：使用 FlowLayoutPanel 的 Windows 窗体上排列控件](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- [FlowLayoutPanel 控件](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- [FlowLayoutPanel 控件](flowlayoutpanel-control-windows-forms.md)

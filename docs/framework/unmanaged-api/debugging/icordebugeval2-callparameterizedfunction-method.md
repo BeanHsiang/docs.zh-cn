@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77d9ec0cf1cbca63382e7f29de85c2f9566dc2bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cba4eb2b76d7057a5ed66a35342a79615cb8539f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416161"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487715"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction 方法
-设置指定 ICorDebugFunction，可以嵌套在其构造函数采用类调用<xref:System.Type>参数或可以本身采取<xref:System.Type>参数。  
+设置了对可以嵌套在其构造函数采用一个类内部指定 ICorDebugFunction<xref:System.Type>参数或可以本身采取<xref:System.Type>参数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,34 +39,34 @@ HRESULT CallParameterizedFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pFunction`  
- [in]指向的指针`ICorDebugFunction`表示被调用函数的对象。  
+ [in]一个指向`ICorDebugFunction`对象，表示要调用的函数。  
   
  `nTypeArgs`  
- [in]该函数采用的参数的数目。  
+ [in]该函数采用的参数数目。  
   
  `ppTypeArgs`  
- [in]一个指针数组，其中每个指向对象的表示的函数自变量。  
+ [in]一个指针数组，其中每个指向对象的表示函数的参数。  
   
  `nArgs`  
  [in]在函数中传递的值的数目。  
   
  `ppArgs`  
- [in]函数参数中传递的指针，其中每个指向 ICorDebugValue 对象，表示值的数组。  
+ [in]函数参数中传递的指针的数组，其中每个指向 ICorDebugValue 对象表示的值。  
   
 ## <a name="remarks"></a>备注  
- `CallParameterizedFunction` 就像[icordebugeval:: Callfunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)只不过函数可能具有类型参数的类中，可能本身需要和 / 或类型参数。 对于类，然后为函数，应首先提供的类型自变量。  
+ `CallParameterizedFunction` 就像[icordebugeval:: Callfunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)只不过该函数可能使用的类型参数的类的内部，可能本身需要和 / 或类型参数。 对于类，然后为该函数，应首先提供的类型参数。  
   
- 如果该函数是在不同的应用程序域中，则将发生转换。 但是，所有类型和值的自变量必须都是目标应用程序域中。  
+ 如果该函数是在不同的应用程序域中，将发生转换。 但是，所有类型和值参数都必须在目标应用程序域中。  
   
- 仅在有限情况下，可以执行函数求值。 如果`CallParameterizedFunction`或`ICorDebugEval::CallFunction`失败，返回的 HRESULT 将指示失败的最常规的可能原因。  
+ 仅在有限情况下，可以执行函数求值。 如果`CallParameterizedFunction`或`ICorDebugEval::CallFunction`失败，返回的 HRESULT 会指示失败的最常规的可能原因。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

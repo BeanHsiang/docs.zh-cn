@@ -1,17 +1,17 @@
 ---
-title: 'Fixed 的关键字 （F #）'
-description: '了解如何可以固定到堆栈上的本地，以防止使用 F # 集合 fixed 关键字。'
+title: Fixed 的关键字
+description: 了解如何将 pin 到堆栈上的本地，以防止具有集合F#固定关键字。
 ms.date: 04/24/2017
-ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45624504"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614324"
 ---
 # <a name="the-fixed-keyword"></a>Fixed 的关键字
 
-F # 4.1 中引入了`fixed`关键字，以便您可以"固定"到堆栈上的本地，以防止其被收集或在垃圾回收期间移动。  它用于低级别的编程方案。
+F#4.1 中引入了`fixed`关键字，以便您可以"固定"到堆栈上的本地，以防止其被收集或在垃圾回收期间移动。  它用于低级别的编程方案。
 
 ## <a name="syntax"></a>语法
 

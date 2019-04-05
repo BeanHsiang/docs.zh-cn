@@ -2,15 +2,15 @@
 title: 日期和时间函数
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
-ms.openlocfilehash: 56ef2f0b0a62f6b2cf6db5fe2c6713c58228ff6f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b0272f4a9301b02bc654a00c09c1b8bb799d8309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690769"
 ---
 # <a name="date-and-time-functions"></a>日期和时间函数
-SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了日期和时间函数，这些函数针对 `System.DateTime` 输入值执行运算并返回 `string`、数值或 `System.DateTime` 值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。下表显示 SqlClient 日期和时间函数。  
+SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了日期和时间函数，这些函数针对 `System.DateTime` 输入值执行运算并返回 `string`、数值或 `System.DateTime` 值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。 下表显示 SqlClient 日期和时间函数。  
   
 |函数|描述|  
 |--------------|-----------------|  
@@ -33,5 +33,5 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了日期和时�
 |---------------------|---------------------|---------------------|  
 |[日期和时间函数 (Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115908)|[日期和时间函数 (Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115909)|[日期和时间函数 (Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|  
   
-## <a name="see-also"></a>请参阅  
- [用于实体框架函数的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a>请参阅
+- [用于实体框架函数的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

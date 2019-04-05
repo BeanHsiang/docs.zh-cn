@@ -1,16 +1,17 @@
 ---
-title: 如何：标识可以为 null 的类型（C# 编程指南）
+title: 如何：确定可以为 null 的类型 - C# 编程指南
+ms.custom: seodec18
 description: 了解如何确定类型是否是可以为 null 的类型或实例是否是可以为 null 的类型
 ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 33169315f8bef45aba52f0696d4acac031584817
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582622"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>如何：确定可以为 null 的类型（C# 编程指南）
 
@@ -34,6 +35,6 @@ ms.locfileid: "48261337"
   
 ## <a name="see-also"></a>请参阅
 
-- [可以为 null 的类型](index.md)  
-- [使用可以为 null 的类型](using-nullable-types.md)  
-- <xref:System.Nullable.GetUnderlyingType%2A>  
+- [可以为 null 的类型](index.md)
+- [使用可以为 null 的类型](using-nullable-types.md)
+- <xref:System.Nullable.GetUnderlyingType%2A>

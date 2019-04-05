@@ -2,12 +2,12 @@
 title: 数据类型和函数
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: deb8df0d64b4e8db24e5d611332e512781ef01b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520734"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091430"
 ---
 # <a name="data-types-and-functions"></a>数据类型和函数
 下表列出的主题介绍了对公共语言运行库 (CLR) 的成员、构造和强制转换的 LINQ to SQL 支持。 受支持的成员和构造可以在 LINQ to SQL 查询中使用。  
@@ -31,7 +31,6 @@ ms.locfileid: "43520734"
 |[System.TimeSpan 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|介绍对 <xref:System.TimeSpan?displayProperty=nameWithType> 结构的成员的 LINQ to SQL 支持。|  
 |[不支持的功能](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|介绍 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支持的功能。|  
   
-## <a name="see-also"></a>请参阅  
- [SQL-CLR 类型不匹配](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [在 Visual Studio 中的.NET framework 类库](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)
+## <a name="see-also"></a>请参阅
+- [SQL-CLR 类型不匹配](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

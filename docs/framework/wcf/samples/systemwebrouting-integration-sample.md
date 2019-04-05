@@ -2,12 +2,12 @@
 title: SystemWebRouting 集成示例
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 95372d6052690af30042061d623b6004699c21d9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1724fee816ddd210ffba73159596529bd4bc803e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083723"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548233"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 集成示例
 此示例演示 <xref:System.Web.Routing> 命名空间中承载层与类的集成。 通过 <xref:System.Web.Routing> 命名空间中的类，应用程序可以使用不直接与物理资源对应的 URL。 使用 Web 路由允许开发人员为随后映射回实际 WCF 服务的 HTTP 创建虚拟地址。 如果必须以不使用物理文件或资源的方式承载 WCF 服务，或者必须使用不包含 .html 或 .aspx 这类文件的 URL 访问服务时，这会十分有用。 此示例演示如何利用 <xref:System.Web.Routing.RouteTable> 类创建映射到 global.asax 中定义的运行服务的虚拟 URI。 
@@ -64,7 +64,7 @@ ms.locfileid: "44083723"
   
     3.  有关**物理路径**，选择项目中的服务文件夹。  
   
-    4.  按**确定**。  
+    4.  按“确定”。  
   
 4.  启动应用程序，右键单击 Web 应用程序并选择**管理应用程序**，然后**浏览**。  
   
@@ -83,5 +83,5 @@ ms.locfileid: "44083723"
 > [!NOTE]
 >  必须更新到默认应用程序池版本[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]如果设置为版本 2。  
   
-## <a name="see-also"></a>请参阅  
- [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>请参阅
+- [AppFabric 承载和持久性示例](https://go.microsoft.com/fwlink/?LinkId=193961)

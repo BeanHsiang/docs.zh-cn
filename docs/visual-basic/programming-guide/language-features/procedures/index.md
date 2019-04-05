@@ -8,15 +8,15 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: a4a168fd1fad75f5038044d49886782f391ceb1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655126"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814921"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的过程
-A*过程*是的 Visual Basic 语句括在声明语句块 (`Function`， `Sub`， `Operator`， `Get`， `Set`) 和一个匹配`End`声明。 在 Visual Basic 中的所有可执行语句必须位于某个过程内。  
+一个*过程*是 Visual Basic 语句括在声明语句块 (`Function`， `Sub`， `Operator`， `Get`， `Set`) 和一个匹配`End`声明。 在 Visual Basic 中的所有可执行语句必须位于某个过程内。  
   
 ## <a name="calling-a-procedure"></a>调用过程  
  从代码中的其他位置调用过程。 这称为过程调用。 过程运行完毕后，会将控件返回到调用它的代码，称为调用代码。 调用代码是一个语句或语句中的一个表达式，它通过名称指定过程并将控件转移给该过程。  
@@ -61,14 +61,15 @@ A*过程*是的 Visual Basic 语句括在声明语句块 (`Function`， `Sub`，
   
 -   开发可供某一程序使用的过程后，也可在其他程序中使用它们，通常只需很少修改或无需修改。 这有助于避免代码重复。  
   
-## <a name="see-also"></a>请参阅  
- [如何：创建过程](./how-to-create-a-procedure.md)  
- [Sub 过程](./sub-procedures.md)  
- [Function 过程](./function-procedures.md)  
- [属性过程](./property-procedures.md)  
- [运算符过程](./operator-procedures.md)  
- [过程参数和自变量](./procedure-parameters-and-arguments.md)  
- [递归过程](./recursive-procedures.md)  
- [过程重载](./procedure-overloading.md)  
- [在 Visual Basic 中的泛型过程](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>请参阅
+
+- [如何：创建过程](./how-to-create-a-procedure.md)
+- [Sub 过程](./sub-procedures.md)
+- [Function 过程](./function-procedures.md)
+- [属性过程](./property-procedures.md)
+- [运算符过程](./operator-procedures.md)
+- [过程参数和自变量](./procedure-parameters-and-arguments.md)
+- [递归过程](./recursive-procedures.md)
+- [过程重载](./procedure-overloading.md)
+- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

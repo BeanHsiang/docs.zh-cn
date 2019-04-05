@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: e2cfb3068a416da40b99072a0c7dfd751d3578c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524179"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463795"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>如何：创建顺序工作流
-工作流可基于内置活动以及自定义活动来构造。 本主题将指导逐步创建如使用这两个内置的活动的工作流<xref:System.Activities.Statements.Sequence>活动，并从以前的自定义活动[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主题。 该工作流模拟猜数游戏。  
+工作流可基于内置活动以及自定义活动来构造。 本主题将指导逐步创建如使用这两个内置的活动的工作流<xref:System.Activities.Statements.Sequence>活动，并从以前的自定义活动[如何：创建活动](how-to-create-an-activity.md)主题。 该工作流模拟猜数游戏。  
   
 > [!NOTE]
->  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成[如何： 创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)。  
+>  入门教程中的每个主题都依赖于前面的主题。 若要完成本主题，必须先完成[如何：创建活动](how-to-create-an-activity.md)。  
   
 > [!NOTE]
->  若要下载本教程的完整的版本，请参阅[Windows Workflow Foundation (WF45)-入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  若要下载完整版教程，请参阅 [Windows Workflow Foundation (WF45) — 入门教程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
-### <a name="to-create-the-workflow"></a>创建工作流  
+## <a name="to-create-the-workflow"></a>创建工作流  
   
 1.  右键单击**NumberGuessWorkflowActivities**中**解决方案资源管理器**，然后选择**添加**，**新项**。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "43524179"
   
 4.  拖动**序列**活动从**控制流**一部分**工具箱**放到**在此处放置活动**上的标签工作流设计图面。  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>创建工作流变量和自变量  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>创建工作流变量和自变量  
   
 1.  双击**SequentialNumberGuessWorkflow.xaml**中**解决方案资源管理器**如果未显示在设计器中，显示工作流。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "43524179"
   
 13. 单击**变量**左下角的活动设计器，以关闭**变量**窗格。  
   
-### <a name="to-add-the-workflow-activities"></a>添加工作流活动  
+## <a name="to-add-the-workflow-activities"></a>添加工作流活动  
   
 1.  拖动**分配**活动从**基元**一部分**工具箱**放到**序列**活动。 类型`Target`成**到**框中，以下表达式**输入 C# 表达式**或**输入 VB 表达式**框。  
   
@@ -137,31 +137,31 @@ ms.locfileid: "43524179"
   
 13. 单击**WriteLine**中的活动**然后**部分以选中它，并键入以下表达式**文本**属性值框。  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. 单击**WriteLine**中的活动**Else**部分以选中它，并键入以下表达式**文本**属性值框。  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
-     下面的示例阐释已完成的工作流。  
+     下面的示例说明了完成的工作流：  
   
-     ![完成顺序工作流](../../../docs/framework/windows-workflow-foundation/media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
+     ![显示已完成的顺序工作流的屏幕截图。](./media/how-to-create-a-sequential-workflow/complete-sequential-workflow.jpg)  
   
-### <a name="to-build-the-workflow"></a>生成工作流  
+## <a name="to-build-the-workflow"></a>生成工作流  
   
 1.  按 Ctrl+Shift+B 生成解决方案。  
   
-     有关如何运行工作流，说明，请参阅下一主题[如何： 运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。 如果你已完成[如何： 运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)使用不同样式的工作流步骤并希望使用此步骤中的顺序工作流运行它，请直接跳转到[生成并运行应用程序](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一节[如何： 运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)。  
+     有关如何运行工作流，说明，请参阅下一主题[如何：运行工作流](how-to-run-a-workflow.md)。 如果你已完成[如何：运行工作流](how-to-run-a-workflow.md)使用不同样式的工作流步骤并希望使用此步骤中的顺序工作流运行它，请直接跳转到[生成并运行应用程序](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一部分[如何：运行工作流](how-to-run-a-workflow.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Activities.Statements.Flowchart>  
- <xref:System.Activities.Statements.FlowDecision>  
- [Windows Workflow Foundation 编程](../../../docs/framework/windows-workflow-foundation/programming.md)  
- [设计工作流](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
- [入门教程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [如何：创建活动](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [如何：运行工作流](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Activities.Statements.Flowchart>
+- <xref:System.Activities.Statements.FlowDecision>
+- [Windows Workflow Foundation 编程](programming.md)
+- [设计工作流](designing-workflows.md)
+- [入门教程](getting-started-tutorial.md)
+- [如何：创建活动](how-to-create-an-activity.md)
+- [如何：运行工作流](how-to-run-a-workflow.md)

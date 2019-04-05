@@ -1,17 +1,18 @@
 ---
-title: .NET Core 版本选择
-description: 了解 .NET Core 如何查找和选择适用于程序的运行时版本。
+title: 选择要使用的 .NET Core 版本
+description: 了解 .NET Core 如何自动查找和选择适用于程序的运行时版本。 此外，本文还将介绍如何强制使用特定版本。
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841535"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127233"
 ---
-# <a name="net-core-version-selection"></a>.NET Core 版本选择
+# <a name="select-the-net-core-version-to-use"></a>选择要使用的 .NET Core 版本
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
@@ -80,7 +81,7 @@ SDK 命令包括 `dotnet new` 和 `dotnet run`。 .NET Core CLI 必须为每个 
 
 ## <a name="framework-dependent-apps-roll-forward"></a>依赖于框架的应用会前滚
 
-使用 [`dotnet run`](../tools/dotnet-run.md) 从源运行应用程序。 `dotnet run` 可生成和运行应用程序。 `dotnet` 可执行文件是开发环境中的应用程序的主机。
+在使用 [`dotnet run`](../tools/dotnet-run.md) 从源运行应用程序时，在使用 [`dotnet myapp.dll`](../tools/dotnet.md#description) 从[框架相关部署](../deploying/index.md#framework-dependent-deployments-fdd)运行应用程序时，或使用 `myapp.exe` 从[框架相关可执行文件](../deploying/index.md#framework-dependent-executables-fde)运行应用程序时，`dotnet` 可执行文件是应用程序的主机。
 
 该主机选择计算机上安装的最新修补程序版本。 例如，如果在项目文件中指定 `netcoreapp2.0`，并且 `2.0.4` 是安装的最新 .NET 运行时，则使用 `2.0.4` 运行时。
 

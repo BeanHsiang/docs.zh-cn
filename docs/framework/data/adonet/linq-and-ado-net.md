@@ -2,12 +2,12 @@
 title: LINQ 和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 13532401a56c6ab2c77a2df575d5b3dde573df2d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f57d50e6c76b3d95c1d87b6beafe345f9a251e04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714810"
 ---
 # <a name="linq-and-adonet"></a>LINQ 和 ADO.NET
 现在，许多业务开发人员必须使用两个 （或多个） 的编程语言： 对于业务逻辑和表示层 （如 Visual C# 或 Visual Basic），一种高级语言和用于与数据库交互的查询语言 (如[!INCLUDE[tsql](../../../../includes/tsql-md.md)])。 这要求开发人员精通多种语言才能奏效，同时也导致在开发环境中语言不匹配。 例如，使用数据访问 API 对数据库执行查询的应用程序会将查询指定为用引号括起的字符串。 编译器不能读取此查询字符串，因此不会检查是否有错误，如语法无效或引用的列或行是否实际存在。 不会检查查询参数的类型，也不支持 `IntelliSense`。  
@@ -41,8 +41,8 @@ ms.locfileid: "43485685"
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
-- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)  
-- [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+- [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)
+- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [语言集成查询 (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)
 - [ADO.NET 概述](ado-net-overview.md)

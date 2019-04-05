@@ -1,17 +1,15 @@
 ---
 title: .NET 可移植性分析器 - .NET
 description: 了解如何使用 .NET 可移植性分析器工具，评估代码在各种 .NET 实现（包括 .NET Core、.NET Standard、UWP 和 Xamarin）间的可移植性。
-author: blackdwarf
-ms.author: mairaw
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 515dd7a393d87811377aa5d9fb02de35943b6966
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205752"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717643"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET 可移植性分析器
 
@@ -21,7 +19,7 @@ ms.locfileid: "44205752"
 
 * [.NET Core](../../core/index.md)：采用模块化设计，可并行工作，面向跨平台方案。 可并行工作意味着无需破坏其他应用即可采用新的 .NET Core 版本。
 * [ASP.NET Core](/aspnet/core)：构建在 .NET Core 基础之上的新型 Web 框架，为开发人员提供与 .NET Core 相同的优势。
-* [通用 Windows 平台](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance)：使用 .NET Native 的静态编译，提高 x64 和 ARM 计算机上运行的 Windows 应用商店应用的性能。 
+* [通用 Windows 平台](https://devblogs.microsoft.com/dotnet/net-native-performance/)：使用 .NET Native 的静态编译，提高 x64 和 ARM 计算机上运行的 Windows 应用商店应用的性能。 
 * .NET Core + 平台扩展：除 WCF、ASP.NET Core、FSharp 和 Azure 等 .NET 生态系统中的其他 API 外还包括 .NET Core API。
 * .NET Standard + 平台扩展：除 WCF、ASP.NET Core、FSharp 和 Azure 等 .NET 生态系统中的其他 API 外还包括 .NET Standard API。
 

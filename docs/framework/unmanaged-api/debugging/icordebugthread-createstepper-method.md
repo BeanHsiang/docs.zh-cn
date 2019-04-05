@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 626f313c41c85e08901648f429d99c829ba35e2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 89182739633984011aaab3d7900d376b6db5ef99
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418995"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476199"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>ICorDebugThread::CreateStepper 方法
 创建允许逐句通过此 ICorDebugThread 活动帧的 ICorDebugStepper 对象。  
@@ -35,20 +35,20 @@ HRESULT CreateStepper (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppStepper`  
- [out]指向的地址的指针`ICorDebugStepper`允许逐句通过此线程的活动帧的对象。  
+ [out]指向的地址的指针`ICorDebugStepper`对象，它允许通过此线程的活动帧的单步执行。  
   
 ## <a name="remarks"></a>备注  
- 活动帧可能非托管的代码。  
+ 活动帧可能为非托管的代码。  
   
  `ICorDebugStepper`必须使用接口来执行实际单步执行。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

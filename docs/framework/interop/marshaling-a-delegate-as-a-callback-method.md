@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 579bc56a538707fd19d6d089c7f3c0c0561ea9eb
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 23079343244c8471f9ae5ff0a7613d0d8a84242b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454416"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219732"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>将委托作为回调方法进行封送
 此示例演示如何将委托传递给需要函数指针的非托管函数。 委托是可以容纳方法引用的类，等效于类型安全函数指针或回调函数。  
   
 > [!NOTE]
->  在调用内使用委托时，公共语言运行时防止在该调用的持续时间内对委托执行垃圾回收。 但是，如果非托管函数存储了该委托，以便在调用完成后使用，则必须手动防止垃圾回收，直到非托管函数结束对该委托的使用为止。 有关详细信息，请参阅 [HandleRef 示例](https://msdn.microsoft.com/library/ab23b04e-1d53-4ec7-b27a-e892d9298959(v=vs.100))和 [GCHandle 示例](https://msdn.microsoft.com/library/6acce798-0385-4ded-a790-77da842c113f(v=vs.100))。  
+>  在调用内使用委托时，公共语言运行时防止在该调用的持续时间内对委托执行垃圾回收。 但是，如果非托管函数存储了该委托，以便在调用完成后使用，则必须手动防止垃圾回收，直到非托管函数结束对该委托的使用为止。 有关详细信息，请参阅 [HandleRef 示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hc662t8k(v=vs.100))和 [GCHandle 示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/44ey4b32(v=vs.100))。  
   
  回调示例使用以下非托管函数（与其原始函数声明一同显示）：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "49454416"
  [!code-csharp[Conceptual.Interop.Marshaling#38](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/callback.cs#38)]
  [!code-vb[Conceptual.Interop.Marshaling#38](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/callback.vb#38)]  
   
-## <a name="see-also"></a>请参阅  
- [其他封送处理示例](https://msdn.microsoft.com/library/a915c948-54e9-4d0f-a525-95a77fd8ed70(v=vs.100))  
- [平台调用数据类型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [在托管代码中创建原型](creating-prototypes-in-managed-code.md)
+## <a name="see-also"></a>请参阅
+- [其他封送处理示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
+- [平台调用数据类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ac7ay120(v=vs.100))
+- [在托管代码中创建原型](creating-prototypes-in-managed-code.md)

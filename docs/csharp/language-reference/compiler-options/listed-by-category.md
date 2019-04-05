@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 891e5eac249f4bd22b6eadde7509de2d07cd1576
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bceb6283e202dfa699115edd6e0a1a040095783d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527182"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58028699"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>按类别列出的 C# 编译器选项
 
@@ -54,7 +54,8 @@ ms.locfileid: "43527182"
 |[-reference](reference-compiler-option.md)|从包含程序集的文件导入元数据。|
 |-analyzer|从此程序集（缩写形式：/a）运行分析器|
 |-additionalfile|命名其他文件，这些文件不会直接影响代码生成，但可能由分析器用于生成错误或警告。|
-
+|-embed|在 PDB 中嵌入所有源文件。|
+|-embed:\<file list>|在 PDB 中嵌入特定文件。|
 ## <a name="debuggingerror-checking"></a>调试/错误检查
 
 |选项|目标|
@@ -95,16 +96,16 @@ ms.locfileid: "43527182"
 |[-codepage](codepage-compiler-option.md)|指定要用于编译中所有源代码文件的代码页。|
 |[-help](help-compiler-option.md)|列出到 stdout 的编译器选项。|
 |[-highentropyva](highentropyva-compiler-option.md)|指定可执行文件支持地址空间布局随机化 (ASLR)。|
-|[-langversion](langversion-compiler-option.md)|指定语言版本：默认、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或最新版 |
+|[-langversion](langversion-compiler-option.md)|指定语言版本：默认、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或最新版本 |
 |[-main](main-compiler-option.md)|指定 Main 方法的位置。|
 |[-noconfig](noconfig-compiler-option.md)|指示编译器不使用 csc.rsp 进行编译。|
 |[-nologo](nologo-compiler-option.md)|禁止显示编译器横幅信息。|
 |[-recurse](recurse-compiler-option.md)|搜索要编译的源文件的子目录。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|指定可执行文件可以使用的子系统的最低版本。|
-|[不安全](unsafe-compiler-option.md)|启用使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 关键字的代码编译。|
+|[unsafe](unsafe-compiler-option.md)|启用使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 关键字的代码编译。|
 |[-utf8output](utf8output-compiler-option.md)|显示使用 UTF-8 编码的编译器输出。|
 |-parallel[+&#124;-]|指定是否使用并发生成 (+)。|
-|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  支持的值为：SHA1（默认值）或 SHA256。|
+|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。|
 
 ## <a name="obsolete-options"></a>已过时的选项
 
@@ -114,6 +115,6 @@ ms.locfileid: "43527182"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](index.md)  
-- [按字母顺序列出的 C# 编译器选项](listed-alphabetically.md)  
-- [如何：为 Visual Studio 命令行设置环境变量](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [C# 编译器选项](index.md)
+- [按字母顺序列出的 C# 编译器选项](listed-alphabetically.md)
+- [如何：设置 Visual Studio 命令行的环境变量](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

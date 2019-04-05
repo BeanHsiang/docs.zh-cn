@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 761dd55d2ae48739f24a03b8ce81c571fb211a5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fbb4aa43757df86037d9c883e76ee38cef5eeb86
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453152"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494423"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface 方法
-对于"ICorDebugProcess"接口获取可以查询的对象。 此方法是.NET Framework 2.0 版中过时。  
+对于"ICorDebugProcess"接口获取可查询的对象。 此方法是在.NET Framework 2.0 版中已过时。  
   
 ## <a name="syntax"></a>语法  
   
@@ -34,21 +34,21 @@ HRESULT GetInprocInspectionInterface(
     [out] IUnknown **ppicd);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppicd`  
- [out](/cpp/atl/iunknown)为查询的对象`ICorDebugProcess`接口。  
+ [out](/cpp/atl/iunknown)对象，可用于查询`ICorDebugProcess`接口。  
   
 ## <a name="remarks"></a>备注  
- 公共语言运行时 (CLR) 调试 API 支持.NET Framework 1.0 版中进程内调试的限制。 探查器使用了调试 API 的检查部分启用进程内调试。 由于客户反馈，进程内调试已从.NET Framework 2.0 版中，在中删除和替换为一组是根据分析 API 的详细信息的功能。  
+ 公共语言运行时 (CLR) 调试 API 支持.NET Framework 1.0 版中的有限进程内调试。 探查器可以使用调试 API 的检查部分启用进程内调试。 由于客户反馈，进程内调试已删除从.NET Framework 版本 2.0 中，并替换为一系列更加符合分析 API 的功能。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
  **.NET framework 版本：** 1.0  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

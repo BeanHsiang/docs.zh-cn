@@ -1,15 +1,15 @@
 ---
-title: '&lt;idn&gt;元素 （Uri 设置）'
+title: <idn> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 96d70f76f8d29368505dd5054edf3db253b89016
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 6abbc70e16a6c9ff8e4a7b52df7a7c3d74c7498a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50037004"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288907"
 ---
-# <a name="ltidngt-element-uri-settings"></a>&lt;idn&gt;元素 （Uri 设置）
+# <a name="idn-element-uri-settings"></a>\<idn > 元素 （Uri 设置）
 指定是否对域名应用国际化域名 (IDN) 分析。  
   
 ## <a name="schema-hierarchy"></a>架构层次结构  
@@ -17,7 +17,7 @@ ms.locfileid: "50037004"
   
  [\<Uri > 元素 （Uri 设置）](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [\<idn >](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
+ [\<idn>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ ms.locfileid: "50037004"
   
 |**元素**|**说明**|  
 |-----------------|---------------------|  
-|[Uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
+|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何处理使用统一资源标识符 (Uri) 表示的 web 地址的设置。|  
   
 ## <a name="remarks"></a>备注  
  现有<xref:System.Uri>类具有.NET Framework 3.5 中进行了扩展。 3.0 SP1 和 2.0 SP1 中的对国际资源标识符 (IRI) 和国际化域名 (IDN) 的支持。 当前用户不会看到从.NET Framework 2.0 行为的任何更改，除非专门启用 IRI 和 IDN 支持。 这确保了 NET Framework 以前版本的应用程序兼容性。  
@@ -93,7 +93,7 @@ ms.locfileid: "50037004"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

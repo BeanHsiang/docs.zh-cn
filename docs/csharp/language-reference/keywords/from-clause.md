@@ -1,5 +1,6 @@
 ---
-title: from 子句（C# 参考）
+title: from 子句 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - from_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: c8c124f44df292b8323560cce541cca2765e2790
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: d44c0b7a2f6617a01416ccc5bd1eb857b1f782da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607889"
 ---
 # <a name="from-clause-c-reference"></a>from 子句（C# 参考）
 
@@ -33,9 +34,9 @@ ms.locfileid: "48033397"
 
 数据源实现 <xref:System.Collections.Generic.IEnumerable%601> 时，编译器推断范围变量的类型。 例如，如果源具有 `IEnumerable<Customer>` 类型，则范围变量会被推断为 `Customer`。 仅在以下情况下必须显式指定类型：源是 <xref:System.Collections.ArrayList> 等非泛型 `IEnumerable` 类型时。 有关详细信息，请参阅[如何：使用 LINQ 查询 ArrayList](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)。
 
-在以上示例中，`num` 推断为 `int` 类型。 由于强类型化了范围变量，所以可以在其上调用方法，或将其用于其他操作中。 例如，不再编写 `select num`，而编写 `select num.ToString()`，使查询表达式返回字符串序列，而不是整数序列。 或者可以编写 `select n + 10`，使表达式返回序列 14、11、13、12、10。 有关详细信息，请参阅 [select 子句](select-clause.md)。
+在以上示例中，`num` 推断为 `int` 类型。 由于强类型化了范围变量，所以可以在其上调用方法，或将其用于其他操作中。 例如，不再编写 `select num`，而编写 `select num.ToString()`，使查询表达式返回字符串序列，而不是整数序列。 或者可以编写 `select num + 10`，使表达式返回序列 14、11、13、12、10。 有关详细信息，请参阅 [select 子句](select-clause.md)。
 
-范围变量与 [foreach](foreach-in.md) 语句中的迭代变量类似，一项非常重要的区别除外：范围变量从不实际存储来自源的数据。 它只是一种语法上的便利，使执行查询时，查询能够描述将发生什么情况。 有关详细信息，请参阅 [LINQ 查询简介 (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md)。
+范围变量与 [foreach](foreach-in.md) 语句中的迭代变量类似，一项非常重要的区别除外：范围变量从不实际存储来自源的数据。 它只是一种语法上的便利，让查询能够描述执行查询时将发生的情况。 有关详细信息，请参阅 [LINQ 查询简介 (C#)](../../programming-guide/concepts/linq/introduction-to-linq-queries.md)。
 
 ## <a name="compound-from-clauses"></a>复合 from 子句
 
@@ -55,5 +56,5 @@ ms.locfileid: "48033397"
 
 ## <a name="see-also"></a>请参阅
 
-- [查询关键字 (LINQ)](query-keywords.md)  
-- [语言集成查询 (LINQ)](../../linq/index.md)  
+- [查询关键字 (LINQ)](query-keywords.md)
+- [语言集成查询 (LINQ)](../../linq/index.md)

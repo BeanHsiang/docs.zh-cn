@@ -8,15 +8,15 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 99e0c22a66eb1d839f1594cf53373a74fc3dd02d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e2217cdac8edcab2f4b9e28484fb0758a149b72c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806869"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590586"
 ---
 # <a name="defining-and-specifying-faults"></a>定义和指定错误
-SOAP 错误可将错误情况信息从服务传达到客户端，在双工情况下，还可以以互操作方式从客户端传达到服务。 此主题讨论何时并且如何自定义错误内容并指定可以返回错误的操作。 有关服务或双工客户端如何发送这些错误和客户端或服务应用程序如何处理这些错误的详细信息，请参阅[发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 Windows Communication Foundation (WCF) 应用程序中的错误处理的概述，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
+SOAP 错误可将错误情况信息从服务传达到客户端，在双工情况下，还可以以互操作方式从客户端传达到服务。 此主题讨论何时并且如何自定义错误内容并指定可以返回错误的操作。 有关服务或双工客户端如何发送这些错误，以及客户端或服务应用程序如何处理这些错误的详细信息，请参阅[Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 Windows Communication Foundation (WCF) 应用程序中的错误处理的概述，请参阅[指定和处理在协定和服务中的错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
 ## <a name="overview"></a>概述  
  声明的 SOAP 错误是指其中的某个操作具有 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 的错误，该属性指定自定义 SOAP 错误类型。 未声明的 SOAP 错误是指那些未在相应操作的协定中指定的错误。 本主题帮助您识别这些错误情况并为您的服务创建一个错误协定，当收到自定义 SOAP 错误时，客户端可以用它正确地处理这些错误情况。 基本任务依次为：  
@@ -28,7 +28,7 @@ SOAP 错误可将错误情况信息从服务传达到客户端，在双工情况
 3.  标记您的操作，以便以 WSDL 向客户端公开这些操作引发的特定 SOAP 错误。  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>定义客户端应该知道的错误情况  
- SOAP 错误是公开描述的、传达特定操作的错误信息的消息。 由于它们是同其他操作消息一起以 WSDL 描述的，因此客户端应该知道它们且希望在调用某个操作时处理这样的错误。 但是，由于 WCF 服务用托管代码编写，决定在托管代码中的条件将转换到错误，并返回到客户端的错误时，可以机会分开正式错误的错误情况和你的服务中的 bug你与客户端会话。  
+ SOAP 错误是公开描述的、传达特定操作的错误信息的消息。 由于它们是同其他操作消息一起以 WSDL 描述的，因此客户端应该知道它们且希望在调用某个操作时处理这样的错误。 但是，由于 WCF 服务用托管代码中，决定哪些错误条件在托管代码中的要转换为错误和返回到客户端提供了单独的正式错误的错误情况和你的服务中的 bug 的机会您与客户端的会话。  
   
  例如，下面的代码示例演示一个采用两个整数并返回另一个整数的操作。 这里可引发若干个异常，因此设计错误协定时，必须确定哪些是客户端最重要的错误情况。 在这种情况下，服务应该删除 <xref:System.DivideByZeroException?displayProperty=nameWithType> 异常。  
   
@@ -66,7 +66,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- 如何确保你的数据是可序列化有关的详细信息，请参阅[指定服务协定中的数据传输](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。 有关序列化的列表支持<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>提供，请参阅[类型受数据协定序列化程序](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+ 详细了解如何确保你的数据是可序列化，请参阅[Specifying Data Transfer in Service Contracts](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。 有关的序列化列表支持<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>提供了，请参阅[支持的数据协定序列化程序类型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>标记操作以建立错误协定  
  定义了一个将作为自定义 SOAP 错误的一部分返回的可序列化数据结构后，最后一步是将操作协定标记为引发该类型的一个 SOAP 错误。 为此，可以使用 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 属性并传递构造的自定义数据类型的类型。 下面的代码示例演示如何使用 <xref:System.ServiceModel.FaultContractAttribute> 属性将 `Divide` 运算指定为可以返回一个 `MathFault` 类型的 SOAP 错误。 现在也可以将其他基于数学的运算指定为可以返回 `MathFault`。  
@@ -76,7 +76,7 @@ End Class
   
  可以将某个操作指定为返回一个以上的自定义错误，方法为使用一个以上的 <xref:System.ServiceModel.FaultContractAttribute> 属性标记该操作。  
   
- 主题中介绍的下一步骤，在操作实现中，实现错误协定[发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
+ 主题中介绍的下一步骤，在操作实现中，实现错误协定[Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
   
 #### <a name="soap-wsdl-and-interoperability-considerations"></a>SOAP、WSDL 和互操作性的注意事项  
  在某些情况下，特别是与其他平台进行互操作时，控制错误在 SOAP 消息中的显示方式或在 WSDL 元数据中对它的描述方式可能会十分重要。  
@@ -85,15 +85,15 @@ End Class
   
  根据 SOAP 标准，一个错误可有一个 `Action`、一个 `Code`，以及一个 `Reason`。 `Action` 受 <xref:System.ServiceModel.FaultContractAttribute.Action%2A> 属性控制。 <xref:System.ServiceModel.FaultException.Code%2A> 属性和 <xref:System.ServiceModel.FaultException.Reason%2A> 属性是 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 类的两个属性，该类是泛型 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 的父类。 `Code` 属性包含一个 <xref:System.ServiceModel.FaultCode.SubCode%2A> 成员。  
   
- 在访问生成错误的非服务时，存在某些限制。 WCF 支持仅使用详细信息类型的错误的架构描述和与数据协定兼容。 例如，如以上所述，WCF 不支持在其详细信息类型，请使用 XML 属性的错误或故障的详细信息部分中的多个顶级元素。  
+ 在访问生成错误的非服务时，存在某些限制。 WCF 支持仅详细信息类型的错误的架构描述和与数据协定兼容。 例如，如上面所述，WCF 不支持其详细信息的类型，请使用 XML 属性的错误或错误的详细信息部分中的多个顶级元素。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.FaultContractAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [在协定和服务中指定并处理错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)  
- [如何：在服务协定中声明错误](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)  
- [了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)  
- [如何：设置 ProtectionLevel 属性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [在服务协定中指定数据传输](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.FaultContractAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- [在协定和服务中指定并处理错误](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [发送和接收错误](../../../docs/framework/wcf/sending-and-receiving-faults.md)
+- [如何：在服务协定中声明错误](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
+- [了解保护级别](../../../docs/framework/wcf/understanding-protection-level.md)
+- [如何：设置 ProtectionLevel 属性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [在服务协定中指定数据传输](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

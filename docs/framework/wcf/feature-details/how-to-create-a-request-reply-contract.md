@@ -2,12 +2,12 @@
 title: 如何：创建请求-答复协定
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 0d41973d04fc75f70011505a3361e71e89a05276
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 085514e09eb13676d5c939724071e89535d443f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663604"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>如何：创建请求-答复协定
 请求-答复协定指定返回答复的方法。 必须根据此协定的条款发送答复并与请求相关联。 即使该方法不返回任何答复（采用 C# 语言时，返回 `void`，采用 Visual Basic 语言时，返回 `Sub`），基础结构也将创建一条空消息并将其发送给调用方。 若要防止发送空答复消息，请对操作使用单向协定。  
@@ -47,7 +47,7 @@ public interface ICalculator
   
 -   在部署了服务之后，应用 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 特性会导致在 Web 服务描述语言 (WSDL) 文档中自动生成服务协定定义。 通过将 `?wsdl` 追加到该服务的 HTTP 基址，可下载此文档。 例如，`http://microsoft/CalculatorService?wsdl`  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)  
- [如何：创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [如何：创建双工协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db23b424d4357ad94b8b0de66ca71726b765321e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 810b29b4abde174e3634a03d5c7b5e0e43de11b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47234804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637763"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>如何：使用匿名管道进行本地进程间通信
 匿名管道在本地计算机上提供进程间通信。 它们提供的功能比命名管道少，但所需要的系统开销也少。 使用匿名管道，可以在本地计算机上更轻松地进行进程间通信。 不能使用匿名管道进行网络通信。  
@@ -47,5 +47,5 @@ ms.locfileid: "47234804"
   
 ## <a name="see-also"></a>请参阅
 
-- [管道](../../../docs/standard/io/pipe-operations.md)  
+- [管道](../../../docs/standard/io/pipe-operations.md)
 - [如何：使用命名管道进行网络进程间通信](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

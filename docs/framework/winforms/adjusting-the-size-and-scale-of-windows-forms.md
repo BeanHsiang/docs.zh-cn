@@ -1,30 +1,30 @@
 ---
-title: 调整大小和 Windows 窗体的比例
+title: 调整大小和小数位数为 Windows 窗体
 ms.date: 04/07/2017
 helpviewer_keywords:
 - Windows Forms, changing size
 - Windows Forms, adjusting size
 - Windows Forms, changing scale
 ms.assetid: a014d2b3-3273-4521-95e1-00171033bf58
-ms.openlocfilehash: 811153b8b2c8545371f794e7aafd05333f7b50f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4e793c3e007e74a33c691cddefa321df6ca6879
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516408"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717301"
 ---
-# <a name="adjusting-the-size-and-scale-of-windows-forms"></a>调整大小和 Windows 窗体的比例
+# <a name="adjusting-the-size-and-scale-of-windows-forms"></a>调整大小和小数位数为 Windows 窗体
 本主题提供有关调整 Windows 窗体大小的信息的链接。  
   
 ## <a name="in-this-section"></a>本节内容  
- [如何：重设 Windows 窗体大小](~/docs/framework/winforms/how-to-resize-windows-forms.md)  
+ [如何：调整 Windows 窗体的大小](~/docs/framework/winforms/how-to-resize-windows-forms.md)  
  提供用于指定 Windows 窗体大小的说明。  
   
  [Windows 窗体中的自动缩放](~/docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
  讨论自动缩放如何使窗体及其控件在计算机之间正确显示。  
   
- [Windows 窗体中的高 DPI 支持](../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)    
- 介绍对高 DPI 和动态缩放 Windows 窗体的支持。 
+ [在 Windows 窗体中的高 DPI 支持](high-dpi-support-in-windows-forms.md)    
+ 讨论对高 DPI 和动态缩放 Windows 窗体的支持。 
   
 ## <a name="reference"></a>参考  
  <xref:System.Drawing.Size>  

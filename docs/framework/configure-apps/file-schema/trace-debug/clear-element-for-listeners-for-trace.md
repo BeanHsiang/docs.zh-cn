@@ -1,5 +1,5 @@
 ---
-title: '&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;'
+title: <clear> 的 <listeners> 的 <trace> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -7,23 +7,21 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 91b4b4f132138fa6752c1da9b28e7a3ab7fad006
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b199f24a2c1e1c8154c0ec22bef6367e5ba0ec26
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033437"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262596"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;清除&gt;的元素&lt;侦听器&gt;为&lt;跟踪&gt;
+# <a name="clear-element-for-listeners-for-trace"></a>\<清除 > 元素\<侦听器 > 为\<跟踪 >
 清除跟踪的 `Listeners` 集合。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<跟踪 >  
-\<侦听器 >  
-\<清除 >  
+\<system.diagnostics>  
+\<trace>  
+\<listeners>  
+\<clear>  
   
 ## <a name="syntax"></a>语法  
   
@@ -79,11 +77,11 @@ ms.locfileid: "48033437"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.Trace.Listeners%2A>  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.Debug>  
- <xref:System.Diagnostics.TraceSource>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)  
- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.Trace.Listeners%2A>
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.Debug>
+- <xref:System.Diagnostics.TraceSource>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)
+- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

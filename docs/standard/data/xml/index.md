@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1edd267ed388f630cc332caa278d5c47a40d77d5
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202954"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835117"
 ---
 # <a name="xml-documents-and-data"></a>XML 文档和数据
 .NET Framework 提供了一组全面而集成的类，可用来方便地生成可以识别 XML 的应用程序。 通过以下命名空间中的类，可以分析和编写 XML，编辑内存中的 XML 数据，进行数据验证以及 XSLT 转换。  
@@ -25,7 +25,7 @@ ms.locfileid: "50202954"
   
 -   <xref:System.Xml.Linq>  
   
- 有关完整列表，请参阅 [System.Xml 命名空间](https://msdn.microsoft.com/library/gg145036.aspx)网页。  
+ 若要查看完整的列表，请在 [.NET API 浏览器](https://docs.microsoft.com/dotnet/api/?term=system.xml)上搜索“System.Xml”。  
   
  这些命名空间中的类支持万维网联合会 (W3C) 建议。 例如:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "50202954"
   
  .NET Framework 中的 XML 类具有以下优点：  
   
--   **高效率。** 通过 [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)，可更方便地用 XML 编程，并可得到与 SQL 类似的查询体验。  
+-   **高效率。** 通过 [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)，能够更轻松地使用 XML 编程，并且能够得到与 SQL 类似的查询体验。  
   
 -   **扩展性。** .NET Framework 中的 XML 类可使用抽象基类和虚拟方法进行扩展。 例如，您可以创建 <xref:System.Xml.XmlUrlResolver> 类的一个派生类，用以将缓存流存储到本地磁盘。  
   
@@ -55,14 +55,16 @@ ms.locfileid: "50202954"
   
      为了在需要进行 XSLT 处理时都获得更佳性能，您可以使用 <xref:System.Xml.XPath.XPathDocument> 类，这是一个用于 XPath 查询的经过优化的只读存储，旨在高效地与 <xref:System.Xml.Xsl.XslCompiledTransform> 类结合使用。  
   
--   **与 ADO.NET 集成。** XML 类和 [ADO.NET](../../../../docs/framework/data/adonet/index.md) 紧密集成，将关系数据和 XML 组合在一起。 <xref:System.Data.DataSet> 类是从数据库中检索到的数据在内存中的缓存。 <xref:System.Data.DataSet> 类能够使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 类读取和写入 XML，以 XML 架构 (XSD) 形式保持其内部关系架构结构，并可以推断 XML 文档的架构结构。  
+-   **与 ADO.NET 集成。** XML 类和 [ADO.NET](../../../../docs/framework/data/adonet/index.md) 紧密集成，将关系数据和 XML 组合在一起。 
+  <xref:System.Data.DataSet> 类是从数据库中检索到的数据在内存中的缓存。 
+  <xref:System.Data.DataSet> 类能够使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 类读取和写入 XML，以 XML 架构 (XSD) 形式保持其内部关系架构结构，并可以推断 XML 文档的架构结构。  
   
 ## <a name="in-this-section"></a>本节内容  
  [XML 处理选项](../../../../docs/standard/data/xml/xml-processing-options.md)  
  讨论用于处理 XML 数据的选项。  
   
  [内存中 XML 数据处理](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
- 讨论用于处理内存中 XML 数据的三种模型。 [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)、<xref:System.Xml.XmlDocument> 类（基于 W3C 文档对象模型）和 <xref:System.Xml.XPath.XPathDocument> 类（基于 XPath 数据模型）。  
+ 讨论用于处理内存中 XML 数据的三种模型：[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)、<xref:System.Xml.XmlDocument> 类（基于 W3C 文档对象模型）以及 <xref:System.Xml.XPath.XPathDocument> 类（基于 XPath 数据模型）。  
   
  [XSLT 转换](../../../../docs/standard/data/xml/xslt-transformations.md)  
  描述如何使用 XSLT 处理器。  

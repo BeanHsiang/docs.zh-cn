@@ -2,12 +2,12 @@
 title: 如何：使用筛选器
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530984"
 ---
 # <a name="how-to-use-filters"></a>如何：使用筛选器
 本主题概述创建使用多个筛选器的路由配置所需执行的基本步骤。 在本示例中，消息将路由到两个计算器服务实现，即 regularCalc 和 roundingCalc。 这两个实现都支持相同的运算；但其中一个服务在返回计算结果前会将所有计算结果舍入到最接近的整数值。 客户端应用程序必须能够指示是否使用服务的舍入版本；如果未表示任何服务首选项，则消息将在这两个服务间执行负载平衡。 这两个服务公开的运算包括：  
@@ -325,5 +325,5 @@ ms.locfileid: "48840753"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>请参阅
+- [路由服务](../../../../docs/framework/wcf/samples/routing-services.md)

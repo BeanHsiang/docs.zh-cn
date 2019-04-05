@@ -8,26 +8,26 @@ helpviewer_keywords:
 - backgrounds [WPF], drawing text to
 - typography [WPF], drawing text to control backgrounds
 ms.assetid: 686d8fba-f61c-4974-a871-c635d67a7f69
-ms.openlocfilehash: f79ec4f2c394fdc9462f4fd00942673b4536d713
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 025b13d83aeb668fa3a9f8af35d7213ae677eefc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542972"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378738"
 ---
-# <a name="how-to-draw-text-to-a-control39s-background"></a>如何：将文本绘制到控件的背景上
-通过将文本字符串转换，可以直接到控件的背景绘制文本<xref:System.Windows.Media.FormattedText>对象，并在其中绘制对象到控件的<xref:System.Windows.Media.DrawingContext>。 你也可以使用此方法，从派生的对象的背景的绘制的<xref:System.Windows.Controls.Panel>，如<xref:System.Windows.Controls.Canvas>和<xref:System.Windows.Controls.StackPanel>。  
+# <a name="how-to-draw-text-to-a-controls-background"></a>如何：将文本绘制到控件的背景上
+可以直接到控件的背景中绘制文本的文本字符串转换为<xref:System.Windows.Media.FormattedText>对象，并在其中绘制到控件的对象<xref:System.Windows.Media.DrawingContext>。 此外可以使用此技术用于绘制到的对象的背景派生自<xref:System.Windows.Controls.Panel>，如<xref:System.Windows.Controls.Canvas>和<xref:System.Windows.Controls.StackPanel>。  
   
- ![控件文本作为背景显示](../../../../docs/framework/wpf/advanced/media/drawtext2background01.png "DrawText2Background01")  
+ ![文本显示为背景的控件](./media/drawtext2background01.png "DrawText2Background01")  
 具有自定义文本背景的控件的示例  
   
 ## <a name="example"></a>示例  
- 若要绘制到控件的背景，创建一个新<xref:System.Windows.Media.DrawingBrush>对象，并绘制对象的已转换的文本<xref:System.Windows.Media.DrawingContext>。 然后，将分配新<xref:System.Windows.Media.DrawingBrush>到控件的背景属性。  
+ 若要绘制到控件的背景，请创建一个新<xref:System.Windows.Media.DrawingBrush>对象，并绘制到对象的已转换的文本<xref:System.Windows.Media.DrawingContext>。 然后，将分配新<xref:System.Windows.Media.DrawingBrush>给控件的背景属性。  
   
- 下面的代码示例演示如何创建<xref:System.Windows.Media.FormattedText>对象，并绘制到的背景<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.Button>对象。  
+ 下面的代码示例演示如何创建<xref:System.Windows.Media.FormattedText>对象，并绘制到背景<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.Button>对象。  
   
- [!code-csharp[DrawTextToControlBackground#DrawTextToControlBackground1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawTextToControlBackground/CSHARP/Window1.xaml.cs#drawtexttocontrolbackground1)]  
+ [!code-csharp[DrawTextToControlBackground#DrawTextToControlBackground1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawTextToControlBackground/CSHARP/Window1.xaml.cs#drawtexttocontrolbackground1)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.FormattedText>  
- [绘制格式化文本](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.FormattedText>
+- [绘制格式化文本](drawing-formatted-text.md)

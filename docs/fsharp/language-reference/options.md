@@ -1,17 +1,17 @@
 ---
-title: 选项 (F#)
-description: '了解如何使用 F # 类型时的实际值可能不存在的选项为命名的值或变量。'
+title: 选项
+description: 了解如何使用F#选项时的实际值可能不存在为命名的值或变量的类型。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6d32693bccc74c2cab642e4f626c9463092e8a39
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46479515"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634097"
 ---
 # <a name="options"></a>选项
 
-实际值可能不存在为命名的值或变量时使用 F # 中的选项类型。 选项有一个基础类型，并可以保存该类型的值或它可能不具有值。
+中的选项类型F#的实际值可能不存在为命名的值或变量时使用。 选项有一个基础类型，并可以保存该类型的值或它可能不具有值。
 
 ## <a name="remarks"></a>备注
 
@@ -33,13 +33,15 @@ ms.locfileid: "46479515"
 
 在上面的代码列表是以递归方式搜索。 该函数`tryFindMatch`会将一个谓词函数`pred`，返回一个布尔值，以及要搜索的列表。 如果找到满足谓词的元素，则递归将结束并且该函数返回值作为表达式中的一个选项`Some(head)`。 递归过程结束时匹配空列表。 在该点的值`head`未找到，和`None`返回。
 
-很多 F # 库函数可能会或可能不存在返回的值在集合中搜索`option`类型。 按照约定，这些函数开头`try`前缀，例如， [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)。
+许多F#可能会或可能不存在返回的值在集合中搜索的库函数`option`类型。 按照约定，这些函数开头`try`前缀，例如， [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)。
 
 值可能不存在，例如，它是否可以尝试构造值时，将引发异常时，选项也会有用。 下面的代码示例阐释了这一点。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1402.fs)]
 
 `openFile`上一示例中的函数具有类型`string -> File option`因为它将返回`File`对象如果成功打开该文件和`None`如果发生异常。 根据具体情况，可能不会捕获异常，而不是允许其传播一个适当的设计选择。
+
+此外，就仍然可以将传递`null`或为 null 值`Some`事例的某个选项。 这通常是为了避免使用，并且通常在例程F#进行编程，但可能是由于在.NET 中的引用类型的特性。
 
 ## <a name="option-properties-and-methods"></a>选项属性和方法
 

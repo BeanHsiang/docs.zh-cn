@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6f8b896d50bb659897291d7bf85e836482611a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1361d6e93fcf39a86951a78f1245e9158d6ed314
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428981"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483610"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable 方法
-在当前词法范围内定义单个变量。 在范围内具有多个 home 具有相同名称的变量，此方法可以调用多次。 在此情况下，但是，值`startOffset`和`endOffset`参数不能重叠。  
+在当前词法范围内定义单个变量。 在范围内具有多个家庭的相同名称的变量，此方法可以调用多次。 在此情况下，但是，值`startOffset`和`endOffset`参数不能重叠。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,44 +43,44 @@ HRESULT DefineLocalVariable(
     [in] ULONG32      endOffset);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `name`  
- [in]指向的指针`WCHAR`，它定义的本地变量的名称。  
+ [in]一个指向`WCHAR`，用于定义本地变量的名称。  
   
  `attributes`  
- [in]本地变量的特性。  
+ [in]局部变量特性。  
   
  `cSig`  
- [in]A`ULONG32`指示的大小，以字节为单位，`signature`缓冲区。  
+ [in]一个`ULONG32`指示的大小，以字节为单位，`signature`缓冲区。  
   
  `signature`  
  [in]局部变量签名。  
   
  `addrKind`  
- [in]地址类型中。  
+ [in]地址类型。  
   
  `addr1`  
  [in]参数规格的第一个地址。  
   
  `addr2`  
- [in]参数规范第二个地址。  
+ [in]参数规格的第二个地址。  
   
  `addr3`  
  [in]参数规格的第三个地址。  
   
  `startOffset`  
- [in]变量起始偏移量。 此参数可选。 如果该值为 0，将忽略此参数，并在整个范围内定义变量。 如果它为非零值，该变量将位于偏移量的当前作用域内。  
+ [in]变量的起始偏移量。 此参数可选。 如果该值为 0，则忽略此参数，并在整个范围内定义的变量。 如果它是一个非零值，该变量在当前作用域的偏移量之内。  
   
  `endOffset`  
- [in]变量结束偏移量。 此参数可选。 如果该值为 0，将忽略此参数，并在整个范围内定义变量。 如果它为非零值，该变量将位于偏移量的当前作用域内。  
+ [in]变量的结束偏移量。 此参数可选。 如果该值为 0，则忽略此参数，并在整个范围内定义的变量。 如果它是一个非零值，该变量在当前作用域的偏移量之内。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [DefineGlobalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)  
- [DefineLocalVariable2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedWriter 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [DefineGlobalVariable 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+- [DefineLocalVariable2 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a6830f47d5cac2cf9c84144c18486489b0ec581
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 25797822fc147c973ee06a52669aa9bf3c25422e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424526"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496243"
 ---
 # <a name="isymunmanageddocumentgetlanguagevendor-method"></a>ISymUnmanagedDocument::GetLanguageVendor 方法
 获取此文档的语言供应商。  
@@ -34,12 +34,12 @@ HRESULT GetLanguageVendor(
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pRetVal`  
- [out]指向接收的语言供应商的变量的指针。  
+ [out]指向一个变量来接收的语言供应商的指针。  
   
 ## <a name="return-value"></a>返回值  
  如果该方法成功，则为 S_OK。  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedDocument 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

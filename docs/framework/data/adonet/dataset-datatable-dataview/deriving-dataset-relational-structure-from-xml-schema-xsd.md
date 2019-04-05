@@ -2,17 +2,17 @@
 title: 从 XML 架构派生数据集关系结构 (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 76fd0126f32eb2b22a12ee0b67e1f81794ff9445
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8d11fdbcb973eb3e4b7487eb6aacb28374c4c654
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195289"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717933"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>从 XML 架构派生数据集关系结构 (XSD)
 本节将概述如何从 XML 架构定义语言 (XSD) 架构文档生成 `DataSet` 的关系架构。 一般情况下，为每个`complexType`架构元素的子元素，将生成一个表中`DataSet`。 表结构取决于复杂类型的定义。 在中创建表`DataSet`架构中的顶级元素。 但是，一个表只能创建为顶级`complexType`元素时`complexType`元素嵌套在另一个`complexType`元素，在这种情况下嵌套`complexType`元素映射到`DataTable`内`DataSet`。  
   
- 有关 XSD 的详细信息，请参阅 World Wide Web 联合会 (W3C) [XML 架构第 0 部分： 入门建议](https://www.w3.org/TR/xmlschema-0/)，则[XML 架构第 1 部分： 结构建议](https://www.w3.org/TR/xmlschema-1/)，和[XML架构第 2 部分： 数据类型建议](https://www.w3.org/TR/xmlschema-2/)。  
+ 有关 XSD 的详细信息，请参阅 World Wide Web 联合会 (W3C) [XML 架构第 0 部分：入门建议](https://www.w3.org/TR/xmlschema-0/)，则[XML 架构第 1 部分：结构建议](https://www.w3.org/TR/xmlschema-1/)，和[XML 架构第 2 部分：数据类型建议](https://www.w3.org/TR/xmlschema-2/)。  
   
  下面的示例演示一个 XML 架构位置`customers`子元素的`MyDataSet`元素，即**数据集**元素。  
   
@@ -96,5 +96,5 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  介绍如何加载和保持关系的结构和中的数据`DataSet`作为 XML 数据。  
   
-## <a name="see-also"></a>请参阅  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

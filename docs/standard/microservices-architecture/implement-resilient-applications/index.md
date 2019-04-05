@@ -1,27 +1,26 @@
 ---
-title: 实现具有恢复能力的应用程序
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 实现具有恢复能力的应用程序
+title: Implementing Resilient Applications
+description: Learn about resilience, a core concept in a microservices architecture. You must know how to handle transient failures gracefully because they will occur.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.date: 10/16/2018
+ms.openlocfilehash: 00724509ba6e027ef73f72bfb6f85b8ec0aa9d25
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875114"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362738"
 ---
-# <a name="implementing-resilient-applications"></a>实现具有恢复能力的应用程序
+# <a name="implement-resilient-applications"></a>Implement Resilient Applications
 
-微服务和基于云的应用程序必须允许最终必然会发生的部分故障。需要设计应用程序，使其可从这些部分故障中恢复。
+*Your microservice and cloud-based applications must embrace the partial failures that will certainly occur eventually. You must design your application to be resilient to those partial failures.*
 
-恢复能力是指从故障中恢复并继续工作的能力。 这并不是指避免故障，而是接受会发生故障这一事实，并以能够避免停机或数据丢失的方式对故障做出响应。 恢复的目标是使应用程序在发生故障后回到完全正常运行的状态。
+Resiliency is the ability to recover from failures and continue to function. It isn't about avoiding failures but accepting the fact that failures will happen and responding to them in a way that avoids downtime or data loss. The goal of resiliency is to return the application to a fully functioning state after a failure.
 
-设计和部署基于微服务的应用程序已经非常具有挑战性。 然而还需要让应用程序在必然发生某种故障的环境中保持正常运行。 因此，应用程序应具有恢复能力。 应将其设计为能够处理部分故障，如网络中断或者云中节点或 VM 故障。 甚至将微服务（容器）移动到群集内的另一个节点，也可能导致应用程序出现间歇性的功能短缺故障。
+It's challenging enough to design and deploy a microservices-based application. But you also need to keep your application running in an environment where some sort of failure is certain. Therefore, your application should be resilient. It should be designed to cope with partial failures, like network outages or nodes or VMs crashing in the cloud. Even microservices (containers) being moved to a different node within a cluster can cause intermittent short failures within the application.
 
-应用程序的各个组件还应涵盖运行状况监视功能。 遵循本章节中的准则，可创建这样的应用程序：即使在基于云的复杂部署中出现短暂停机或暂时中断，它也能平稳运行。
-
+The many individual components of your application should also incorporate health monitoring features. By following the guidelines in this chapter, you can create an application that can work smoothly in spite of transient downtime or the normal hiccups that occur in complex and cloud-based deployments.
 
 >[!div class="step-by-step"]
-[上一页](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
-[下一页](handle-partial-failure.md)
+>[Previous](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[Next](handle-partial-failure.md)

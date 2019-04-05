@@ -5,15 +5,15 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: f08a52add4e735ce794ecef2c3bd4b186b3c01a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655690"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831119"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>变量疑难解答 (Visual Basic)
-此页列出了一些使用 Visual Basic 中的变量时可能发生的常见问题。  
+此页列出了使用 Visual Basic 中的变量时可能发生的一些常见问题。  
   
 ## <a name="unable-to-access-members-of-an-object"></a>无法访问对象的成员  
  如果你的代码尝试访问对象上的属性或方法，可能会出现两种错误结果：  
@@ -24,12 +24,12 @@ ms.locfileid: "33655690"
   
  当 [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 设置类型检查 `On`时，对象变量仅可访问声明它所用的类的方法和属性。 下面的示例阐释了这一点。  
 
- [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/troubleshooting-variables_1.vb)]  
+ [!code-vb[VbVbalrVariables#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#2)]  
   
  在此示例中， `p` 仅可使用 <xref:System.Object> 类的成员，这不包括 `Left` 属性。 另一方面， `q` 已声明为 <xref:System.Windows.Forms.Label>类型，因此它可以使用 <xref:System.Windows.Forms.Label> 命名空间中 <xref:System.Windows.Forms> 类的所有方法和属性。  
   
 ### <a name="correct-approach"></a>正确方法  
- 若要能够访问特定类的对象的所有成员，则尽可能将对象变量声明为该类的类型。 如果你不能这样做（例如如果你不知道编译时的对象类型），则必须将 `Option Strict` 设置为 `Off` ，并声明变量为 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)中的变量时可能出现的一些常见问题。 这将允许将任意类型的对象分配给该变量，你应该采取措施确保当前分配的对象是可接受的类型。 你可以使用[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)做出此判断。  
+ 若要能够访问特定类的对象的所有成员，则尽可能将对象变量声明为该类的类型。 如果你不能这样做（例如如果你不知道编译时的对象类型），则必须将 `Option Strict` 设置为 `Off` ，并声明变量为 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)中的变量时可能出现的一些常见问题。 这将允许将任意类型的对象分配给该变量，你应该采取措施确保当前分配的对象是可接受的类型。 可以使用[TypeOf 运算符](../../../../visual-basic/language-reference/operators/typeof-operator.md)能够做出此判断。  
   
 ## <a name="other-components-cannot-access-your-variable"></a>其他组件不能访问你的变量  
  Visual Basic 名称不*不区分大小写*。 如果这两个名称只是字母大小写不同，编译器会将其解析为相同的名称。 例如，它认为 `ABC` 和 `abc` 指的是同一个声明的元素。  
@@ -47,13 +47,14 @@ ms.locfileid: "33655690"
 ### <a name="correct-approach"></a>正确方法  
  避免使用名称相同范围不同的变量。 如果你正在使用其他程序集或项目，尽量避免使用在那些外部组件中定义的任何名称。 如果你有名称相同的多个变量，确保限定对它的每个引用。 有关详细信息，请参阅 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
-## <a name="see-also"></a>请参阅  
- [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [如何：访问对象的成员](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
- [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [如何：确定对象变量引用的类型](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)  
- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+## <a name="see-also"></a>请参阅
+
+- [变量](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [变量声明](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [对象变量](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [对象变量声明](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [如何：访问对象的成员](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [对象变量值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [如何：确定对象变量引用的类型](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
+- [对已声明元素的引用](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [已声明的元素名称](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

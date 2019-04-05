@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365301"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375241"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用事务范围实现隐式事务
 <xref:System.Transactions.TransactionScope> 类提供了一种简单方法，使您无需与事务自身进行交互，就可以在参与事务时对代码块进行标记。 事务范围可以自动选择和管理环境事务。 由于 <xref:System.Transactions.TransactionScope> 具有简单易用性和高效性，因此建议您在开发事务应用程序时使用该类。  
@@ -23,25 +23,25 @@ ms.locfileid: "33365301"
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- 创建一个新后启动的事务范围<xref:System.Transactions.TransactionScope>对象。  中的代码示例所示，建议你创建作用域与**使用**语句。 **使用**语句是 C# 中，在 Visual Basic 中可用，且工作方式类似于**try … 最后**块以确保已正确释放的作用域。  
+ 创建新后，即会启动事务范围<xref:System.Transactions.TransactionScope>对象。  中的代码示例所示，建议创建范围**使用**语句。 **使用**语句是可在C#，而在 Visual Basic 和工作方式类似于**try...最后**块来确保后正确处理的作用域。  
   
- 在实例化 <xref:System.Transactions.TransactionScope> 时，事务管理器确定哪些事务参与进来。 一旦确定，该范围将始终参与该事务。 决策基于两个因素： 是否存在环境事务和的值**TransactionScopeOption**构造函数中的参数。 环境事务是指在其中执行代码的事务。 可通过调用 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> 类的静态 <xref:System.Transactions.Transaction> 属性，获取对环境事务的引用。 有关如何使用此参数的详细信息，请参阅[管理使用 TransactionScopeOption 的事务流](#ManageTxFlow)本主题的部分。  
+ 在实例化 <xref:System.Transactions.TransactionScope> 时，事务管理器确定哪些事务参与进来。 一旦确定，该范围将始终参与该事务。 根据两个因素决定： 是否存在环境事务和的值**TransactionScopeOption**构造函数中的参数。 环境事务是指在其中执行代码的事务。 可通过调用 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> 类的静态 <xref:System.Transactions.Transaction> 属性，获取对环境事务的引用。 有关如何使用此参数的详细信息，请参阅[管理事务流使用 TransactionScopeOption](#ManageTxFlow)本主题的部分。  
   
 ## <a name="completing-a-transaction-scope"></a>完成事务范围  
- 当应用程序完成它要在一个事务中执行的所有工作以后，您应当只调用一次 <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> 方法，来通知事务管理器它可以提交事务。 它是很好的做法，将调用<xref:System.Transactions.TransactionScope.Complete%2A>作为中的最后一个语句**使用**块。  
+ 当应用程序完成它要在一个事务中执行的所有工作以后，您应当只调用一次 <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> 方法，来通知事务管理器它可以提交事务。 它是很好的做法将调用<xref:System.Transactions.TransactionScope.Complete%2A>中的最后一个语句**使用**块。  
   
- 无法调用此方法将中止事务，因为事务管理器将此解释为系统故障时或等效于在事务范围内引发的异常。 但是，调用此方法并不保证会提交事务。 它只是一种将状态通知给事务管理器的方式。 调用 <xref:System.Transactions.TransactionScope.Complete%2A> 方法之后，就不能再通过 <xref:System.Transactions.Transaction.Current%2A> 属性访问环境事务，尝试这样做将会导致引发异常。  
+ 未能调用此方法将中止事务，因为事务管理器将此解释为系统故障或等效于在事务范围内引发了异常。 但是，调用此方法并不保证会提交事务。 它只是一种将状态通知给事务管理器的方式。 调用 <xref:System.Transactions.TransactionScope.Complete%2A> 方法之后，就不能再通过 <xref:System.Transactions.Transaction.Current%2A> 属性访问环境事务，尝试这样做将会导致引发异常。  
   
- 如果<xref:System.Transactions.TransactionScope>对象最初，创建事务提交事务管理器事务的实际工作中的代码的最后一行后发生**使用**块。 如果该对象未创建事务，则每当 <xref:System.Transactions.CommittableTransaction.Commit%2A> 对象的所有者调用 <xref:System.Transactions.CommittableTransaction> 时都会执行提交。 在该点的事务管理器调用资源管理器，并告知用户提交或回滚，基于是否<xref:System.Transactions.TransactionScope.Complete%2A>上调用了方法<xref:System.Transactions.TransactionScope>对象。  
+ 如果<xref:System.Transactions.TransactionScope>对象最初，创建了事务的提交事务的事务管理器的实际工作中代码的最后一行后发生**使用**块。 如果该对象未创建事务，则每当 <xref:System.Transactions.CommittableTransaction.Commit%2A> 对象的所有者调用 <xref:System.Transactions.CommittableTransaction> 时都会执行提交。 在该点的事务管理器调用资源管理器，并告知用户提交或回滚，根据是否<xref:System.Transactions.TransactionScope.Complete%2A>上调用了方法<xref:System.Transactions.TransactionScope>对象。  
   
- **使用**语句可确保<xref:System.Transactions.TransactionScope.Dispose%2A>方法<xref:System.Transactions.TransactionScope>对象称为即使发生异常。 <xref:System.Transactions.TransactionScope.Dispose%2A> 方法标志着事务范围的结束。 在调用此方法之后所发生的异常不会影响事务。 此方法还将环境事务还原到其前一状态。  
+ **使用**语句可确保<xref:System.Transactions.TransactionScope.Dispose%2A>方法的<xref:System.Transactions.TransactionScope>对象称为即使发生异常。 <xref:System.Transactions.TransactionScope.Dispose%2A> 方法标志着事务范围的结束。 在调用此方法之后所发生的异常不会影响事务。 此方法还将环境事务还原到其前一状态。  
   
  如果范围创建事务，则会引发 <xref:System.Transactions.TransactionAbortedException>，从而中止事务。 如果事务管理器无法做出提交决定，则会引发 <xref:System.Transactions.TransactionInDoubtException>。 如果已提交事务，则不会引发异常。  
   
 ## <a name="rolling-back-a-transaction"></a>回滚事务  
  如果要回滚事务，则不应在事务范围中调用 <xref:System.Transactions.TransactionScope.Complete%2A> 方法。 例如，可以在该范围中引发异常。 这样，就会回滚该范围所参与的事务。  
   
-##  <a name="ManageTxFlow"></a> 管理使用 TransactionScopeOption 的事务流  
+## <a name="ManageTxFlow"></a> 使用 TransactionScopeOption 管理事务流  
  可通过调用一个方法来嵌套事务范围，该方法在使用其自己范围的方法中使用 <xref:System.Transactions.TransactionScope>，下面示例中的 `RootMethod` 方法就是前者这样的方法。  
   
 ```csharp  
@@ -87,9 +87,9 @@ void SomeMethod()
   
 |TransactionScopeOption|参与环境事务|范围参与|  
 |----------------------------|-------------------------|-----------------------------|  
-|必需|No|参与新事务（将成为根范围）|  
-|Requires New|No|参与新事务（将成为根范围）|  
-|Suppress|No|不参与任何事务|  
+|必需|否|参与新事务（将成为根范围）|  
+|Requires New|否|参与新事务（将成为根范围）|  
+|Suppress|否|不参与任何事务|  
 |必需|是|参与环境事务|  
 |Requires New|是|参与新事务（将成为根范围）|  
 |Suppress|是|不参与任何事务|  
@@ -121,11 +121,11 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- 下面的示例演示一个不包含任何环境事务的代码块，它使用 `scope1` 创建了一个新范围 (<xref:System.Transactions.TransactionScopeOption.Required>)。 范围 `scope1` 是根范围，因为它创建了一个新事务（事务 A），并使事务 A 成为环境事务。 `Scope1` 然后又创建三个对象，每个都有一个不同的 <xref:System.Transactions.TransactionScopeOption> 值。 例如，`scope2` 是用 <xref:System.Transactions.TransactionScopeOption.Required> 创建的；由于存在环境事务，因此该范围联接 `scope1` 所创建的第一个事务。 请注意，`scope3` 是新事务的根范围，而 `scope4` 则没有环境事务。  
+ 下面的示例演示一个不包含任何环境事务的代码块，它使用 `scope1` 创建了一个新范围 (<xref:System.Transactions.TransactionScopeOption.Required>)。 范围 `scope1` 是根范围，因为它创建了一个新事务（事务 A），并使事务 A 成为环境事务。 `Scope1` 然后，创建三个对象，每个都有一个不同<xref:System.Transactions.TransactionScopeOption>值。 例如，`scope2` 是用 <xref:System.Transactions.TransactionScopeOption.Required> 创建的；由于存在环境事务，因此该范围联接 `scope1` 所创建的第一个事务。 请注意，`scope3` 是新事务的根范围，而 `scope4` 则没有环境事务。  
   
  虽然 <xref:System.Transactions.TransactionScopeOption> 的默认值和最常用的值是 <xref:System.Transactions.TransactionScopeOption.Required>，但其他各值都有其独有的用途。  
   
- 如果要保留代码段所执行的操作，并且不希望在操作失败的情况下中止环境事务，此时 <xref:System.Transactions.TransactionScopeOption.Suppress> 十分有用。 例如，在要执行日志记录或审核操作时，或者在无论环境事务提交还是中止都要将事件发布给订户时。 使用此值，可以在事务范围中包含非事务代码段，如下面的示例所示。  
+ <xref:System.Transactions.TransactionScopeOption.Suppress> 你想要保留在代码部分执行的操作并不希望中止环境事务，如果操作失败时很有用。 例如，在要执行日志记录或审核操作时，或者在无论环境事务提交还是中止都要将事件发布给订户时。 使用此值，可以在事务范围中包含非事务代码段，如下面的示例所示。  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())  
@@ -166,8 +166,8 @@ using(TransactionScope scope1 = new TransactionScope())
  在使用嵌套的 <xref:System.Transactions.TransactionScope> 对象时，如果要联接环境事务，则必须将所有嵌套范围配置为使用完全相同的隔离级别。 如果嵌套的 <xref:System.Transactions.TransactionScope> 对象尝试联接环境事务但却指定了不同的隔离级别，则会引发 <xref:System.ArgumentException>。  
   
 ## <a name="interop-with-com"></a>与 COM+ 交互  
- 在创建新的 <xref:System.Transactions.TransactionScope> 实例时，可以在某一构造函数中使用 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举来指定与 COM+ 交互的方式。 有关这方面的详细信息，请参阅[与企业服务和 COM + 事务互操作性](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)。  
+ 在创建新的 <xref:System.Transactions.TransactionScope> 实例时，可以在某一构造函数中使用 <xref:System.Transactions.EnterpriseServicesInteropOption> 枚举来指定与 COM+ 交互的方式。 有关这方面的详细信息，请参阅[与企业服务和 COM + 事务的互操作性](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Transactions.Transaction.Clone%2A>  
- <xref:System.Transactions.TransactionScope>
+## <a name="see-also"></a>请参阅
+- <xref:System.Transactions.Transaction.Clone%2A>
+- <xref:System.Transactions.TransactionScope>

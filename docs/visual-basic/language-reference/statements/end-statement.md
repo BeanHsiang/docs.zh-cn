@@ -14,12 +14,12 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 8fd489dc9f12f7e80ef2dd49c6e2dee6c28ae761
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4fc4fd36fb6b057195e9d8a79eb0a5b3ac9ff95c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395717"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832016"
 ---
 # <a name="end-statement"></a>End 语句
 立即终止执行。  
@@ -50,12 +50,13 @@ End
 ## <a name="example"></a>示例  
  下面的示例使用`End`语句终止执行代码，如果用户请求它。  
   
- [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/end-statement_1.vb)]  
+ [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
 ## <a name="smart-device-developer-notes"></a>智能设备开发人员说明  
  不支持此语句。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Security.Permissions.SecurityPermissionFlag>  
- [Stop 语句](../../../visual-basic/language-reference/statements/stop-statement.md)  
- [结束\<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Security.Permissions.SecurityPermissionFlag>
+- [Stop 语句](../../../visual-basic/language-reference/statements/stop-statement.md)
+- [结束\<关键字 > 语句](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

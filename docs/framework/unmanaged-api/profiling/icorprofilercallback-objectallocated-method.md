@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7d62b1b6031f6ebdd5327626f42de38b18b3fa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0deadc3783663fe595d8217a167d18e6916c6be9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452044"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465993"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated 方法
-通知探查器在堆的内存已分配对象。  
+通知探查器内存中堆分配的对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,26 +35,26 @@ HRESULT ObjectAllocated(
     [in] ClassID classId);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `objectId`  
- [in]为其分配内存的对象 ID。  
+ [in]为其分配内存的对象的 ID。  
   
  `classId`  
- [in]对象的实例的类 ID。  
+ [in]类对象的实例的 ID。  
   
 ## <a name="remarks"></a>备注  
- `ObjectedAllocated`方法不会为从堆栈或非托管的内存中分配的调用。 `classId`参数可以引用尚未加载的托管代码中的类。 探查器会收到为该类的类负载回调后立即`ObjectAllocated`回调。  
+ `ObjectedAllocated`对于从堆栈或非托管的内存分配不调用方法。 `classId`参数可以引用尚未加载的托管代码中的类。 探查器将接收此类的类加载回调后立即`ObjectAllocated`回调。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ClassLoadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)  
- [ClassLoadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ClassLoadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+- [ClassLoadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)

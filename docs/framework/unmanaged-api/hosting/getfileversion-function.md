@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b772de720a8c3b669bd3cbe9591637d931cb8763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 214f16f970cfb2c319f3a26afc882e6102c1be71
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430614"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498258"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion 函数
 获取指定的文件，使用指定的缓冲区的公共语言运行时 (CLR) 版本信息。  
   
- 此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,25 +39,25 @@ HRESULT GetFileVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `szFilename`  
  [in]要检查的文件的路径。  
   
  `szBuffer`  
- [在中，out]为返回的版本信息分配的缓冲区。  
+ [in、 out]有关返回的版本信息分配的缓冲区。  
   
  `cchBuffer`  
  [in]大小，以宽字符为单位的`szBuffer`。  
   
  `dwLength`  
- [out]大小，以字节为单位，则返回的`szBuffer`。  
+ [out]大小 （字节），则返回的`szBuffer`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>请参阅
+- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10b2471d13d410826cec3404725117649442297b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 451893cf09b0d1ebdfb33d0020376aa35240b6d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650988"
 ---
 # <a name="building-xml-schemas"></a>生成 XML 架构
 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空间中的类映射到万维网联合会 (W3C) XML 架构建议中定义的结构，可以用于在内存中生成 XML 架构。  
@@ -90,10 +90,10 @@ ms.locfileid: "48842614"
   
 ## <a name="see-also"></a>请参阅
 
-- [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
-- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [编辑 XML 架构](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [后架构编译信息集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

@@ -1,63 +1,55 @@
 ---
 title: 如何：将数据绑定到 Windows 窗体 DataGridView 控件
-ms.date: 03/30/2017
+ms.date: 02/08/2019
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - data binding [Windows Forms], grids
 - data binding [Windows Forms], DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
-ms.openlocfilehash: 4064ef26ee550c02ac8825ac4c1a417472b64de6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: cbcc04625a14ebc23cacfb567951bf8f76f14985
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836175"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725098"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>如何：将数据绑定到 Windows 窗体 DataGridView 控件
-<xref:System.Windows.Forms.DataGridView> 控件支持标准 Windows 窗体数据绑定模型，因此它可以绑定到各种数据源。 但在多数情况下，该控件将会绑定到用于管理数据源交互详细信息的 <xref:System.Windows.Forms.BindingSource> 组件。 <xref:System.Windows.Forms.BindingSource> 组件可表示任何 Windows 窗体数据源，并在选择或修改数据位置时提供很大的灵活性。 有关支持的数据源的详细信息<xref:System.Windows.Forms.DataGridView>控件，请参阅[DataGridView 控件概述](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)。  
+
+<xref:System.Windows.Forms.DataGridView>控件支持标准 Windows 窗体数据绑定模型，因此它可以绑定到各种数据源。 通常情况下，您将绑定到<xref:System.Windows.Forms.BindingSource>的管理与数据源的交互。 <xref:System.Windows.Forms.BindingSource>可以是任何 Windows 窗体数据源，这将使您能非常灵活地选择或修改数据的位置时。 有关数据源的详细信息<xref:System.Windows.Forms.DataGridView>控件支持，请参阅[DataGridView 控件概述](datagridview-control-overview-windows-forms.md)。  
+
+Visual Studio 可以绑定到 DataGridView 控件的数据的广泛支持。 有关详细信息，请参阅[如何：将数据绑定到使用设计器在 Windows 窗体 DataGridView 控件](bind-data-to-the-datagrid-using-the-designer.md)。  
+
+DataGridView 控件连接到数据：
+
+1. 实现方法来处理检索数据的详细信息。 下面的代码示例实现`GetData`方法初始化<xref:System.Data.SqlClient.SqlDataAdapter>，并使用它来填充<xref:System.Data.DataTable>。 然后将绑定<xref:System.Data.DataTable>到<xref:System.Windows.Forms.BindingSource>。 
+
+2. 在窗体的<xref:System.Windows.Forms.Form.Load>事件处理程序中，绑定<xref:System.Windows.Forms.DataGridView>控制对<xref:System.Windows.Forms.BindingSource>，并调用`GetData`方法来检索数据。  
+
+## <a name="example"></a>示例
+
+此完整的代码示例从数据库填充在 Windows 窗体 DataGridView 控件中检索数据。 窗体还提供按钮以重新加载数据并将更改提交到数据库。  
+
+此示例需要： 
+
+- 访问 Northwind SQL Server 示例数据库。 有关安装 Northwind 示例数据库的详细信息，请参阅[获取这些示例数据库的 ADO.NET 代码示例](../../data/adonet/sql/linq/downloading-sample-databases.md)。 
+
+- 引用 System、 System.Windows.Forms、 System.Data 和 System.Xml 程序集。  
+
+若要生成并运行此示例中，粘贴到代码*Form1*中新的 Windows 窗体项目代码文件。 有关从生成的信息C#或 Visual Basic 命令行，请参阅[命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)或[中的命令行生成](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。  
   
- Visual Studio 中对此任务提供广泛支持。  另请参阅[如何：使用设计器将数据绑定到 Windows 窗体的 DataGridView 控件](https://msdn.microsoft.com/library/33w255ac\(v=vs.110\))。  
+填充`connectionString`变量中的示例使用 Northwind SQL Server 示例数据库连接的值。 Windows 身份验证，也称为集成的安全性，是更安全的方式连接到比将密码存储在连接字符串中的数据库。 有关连接安全性的详细信息，请参阅[保护连接信息](../../data/adonet/protecting-connection-information.md)。  
+
+[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
+[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
-## <a name="procedure"></a>过程  
-  
-#### <a name="to-connect-a-datagridview-control-to-data"></a>将 DataGridView 控件连接到数据  
-  
-1.  实现方法以处理有关从数据库检索数据的详细信息。 下面的代码示例实现一个 `GetData` 方法，该方法对一个 <xref:System.Data.SqlClient.SqlDataAdapter> 组件进行初始化，并使用该组件填充 <xref:System.Data.DataTable>。 然后，将 <xref:System.Data.DataTable> 绑定到 <xref:System.Windows.Forms.BindingSource> 组件。 请确保将 `connectionString` 变量设置为适合数据库的值。 将需要访问安装了 Northwind SQL Server 示例数据库的服务器。  
-  
-     [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#20)]
-     [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#20)]
-     [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#20)]  
-  
-2.  在窗体的 <xref:System.Windows.Forms.Form.Load> 事件处理程序中，将 <xref:System.Windows.Forms.DataGridView> 控件绑定到 <xref:System.Windows.Forms.BindingSource> 组件，并调用 `GetData` 方法，以从数据库检索数据。  
-  
-     [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#10)]
-     [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#10)]
-     [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#10)]  
-  
-## <a name="example"></a>示例  
- 下面的完整代码示例提供的按钮用于从数据库重新加载数据和向数据库提交更改。  
-  
- [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#00)]
- [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#00)]  
-  
-## <a name="compiling-the-code"></a>编译代码  
- 此示例需要：  
-  
--   对 System、System.Windows.Forms、System.Data 和 System.XML 程序集的引用。  
-  
- Visual Basic 或 Visual C# 生成命令行中的此示例的信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[命令行上使用 csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 也可以通过将代码粘贴到新的项目中生成此示例在 Visual Studio 中。  另请参阅[如何：使用 Visual Studio 编译和运行完整的 Windows 窗体代码示例](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\))。  
-  
-## <a name="net-framework-security"></a>.NET Framework 安全性  
- 将敏感信息（如密码）存储在连接字符串中可能会影响应用程序的安全性。 若要控制对数据库的访问，一种较为安全的方法是使用 Windows 身份验证（也称为集成安全性）。 有关详细信息，请参阅[保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
-  
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.BindingSource>  
- [在 Windows 窗体 DataGridView 控件中显示数据](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [保护连接信息](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.BindingSource>
+- [Windows 窗体 DataGridView 控件中显示数据](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [保护连接信息](../../data/adonet/protecting-connection-information.md)

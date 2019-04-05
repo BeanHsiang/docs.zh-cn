@@ -1,5 +1,5 @@
 ---
-title: 如何：确定程序集的完全限定的名称
+title: 如何：确定程序集的完全限定名
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb5978859ba25e1595ac3da7a2d7dad8cc2cad85
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 32beb648bed37281e798f51e6b4a316197c23845
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041097"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283512"
 ---
-# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>如何：确定程序集的完全限定的名称
+# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>如何：确定程序集的完全限定名
 若要在全局程序集缓存中查找一个程序集的完全限定名，请使用全局程序集缓存工具 ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md))。 请参阅[如何：查看全局程序集缓存的内容](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)。  
   
  对于不在全局程序集缓存中的程序集，可以通过多种方式获取完全限定的程序集名称：可使用代码将信息输出到控制台或变量，也可使用 [Ildasm.exe（IL 反汇编程序）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)检查包含完全限定名的程序集元数据。  
@@ -42,10 +42,10 @@ ms.locfileid: "50041097"
  [!code-csharp[Assembly.Fullname#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.FullName/CS/example2.cs#2)]
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
-## <a name="see-also"></a>请参阅  
-- [程序集名称](../../../docs/framework/app-domains/assembly-names.md)  
-- [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)  
-- [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
-- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)  
-- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>请参阅
+- [程序集名称](../../../docs/framework/app-domains/assembly-names.md)
+- [创建程序集](../../../docs/framework/app-domains/create-assemblies.md)
+- [创建和使用具有强名称的程序集](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [全局程序集缓存](../../../docs/framework/app-domains/gac.md)
+- [运行时如何定位程序集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [使用程序集编程](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -1,36 +1,37 @@
 ---
-title: 使用委托（C# 编程指南）
+title: 使用委托 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 07bc0e38455335e068719137c349daf65f8fab6b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: eb5721d1c04ad761821bcdae03159f290a802ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042200"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979835"
 ---
 # <a name="using-delegates-c-programming-guide"></a>使用委托（C# 编程指南）
 [委托](../../../csharp/language-reference/keywords/delegate.md)是安全封装方法的类型，类似于 C 和 C++ 中的函数指针。 与 C 函数指针不同的是，委托是面向对象的、类型安全的和可靠的。 委托的类型由委托的名称确定。 以下示例声明名为 `Del` 的委托，该委托可以封装采用[字符串](../../../csharp/language-reference/keywords/string.md)作为参数并返回 [void](../../../csharp/language-reference/keywords/void.md) 的方法：  
   
- [!code-csharp[csProgGuideDelegates#21](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
  委托对象通常通过提供委托将封装的方法的名称或使用[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)构造。 对委托进行实例化后，委托会将对其进行的方法调用传递到该方法。 调用方传递到委托的参数将传递到该方法，并且委托会将方法的返回值（如果有）返回到调用方。 这被称为调用委托。 实例化的委托可以按封装的方法本身进行调用。 例如:  
   
- [!code-csharp[csProgGuideDelegates#22](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_2.cs)]  
+ [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
- [!code-csharp[csProgGuideDelegates#23](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_3.cs)]  
+ [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]  
   
- 委托类型派生自 .NET Framework 中的 <xref:System.Delegate> 类。 委托类型是[密封的](../../../csharp/language-reference/keywords/sealed.md)，它们不能派生自 <xref:System.Delegate>，也不能从其派生出自定义类。 由于实例化的委托是一个对象，因此可以作为参数传递或分配给一个属性。 这允许方法作为参数接受委托并在稍后调用委托。 这被称为异步回调，是在长进程完成时通知调用方的常用方法。 当以这种方式使用委托时，使用委托的代码不需要知道要使用的实现方法。 功能类似于封装接口提供的功能。  
+ 委托类型派生自 .NET Framework 中的 <xref:System.Delegate> 类。 委托类型是[封装的](../../../csharp/language-reference/keywords/sealed.md)，它们不能派生自 <xref:System.Delegate>，也不能从其派生出自定义类。 由于实例化的委托是一个对象，因此可以作为参数传递或分配给一个属性。 这允许方法作为参数接受委托并在稍后调用委托。 这被称为异步回调，是在长进程完成时通知调用方的常用方法。 当以这种方式使用委托时，使用委托的代码不需要知道要使用的实现方法。 功能类似于封装接口提供的功能。  
   
  回调的另一个常见用途是定义自定义比较方法并将该委托传递到短方法。 它允许调用方的代码成为排序算法的一部分。 以下示例方法使用 `Del` 类型作为参数：  
   
- [!code-csharp[csProgGuideDelegates#24](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_4.cs)]  
+ [!code-csharp[csProgGuideDelegates#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#24)]  
   
  然后，你可以将上面创建的委托传递到该方法：  
   
- [!code-csharp[csProgGuideDelegates#25](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_5.cs)]  
+ [!code-csharp[csProgGuideDelegates#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#25)]  
   
  并将以下输出接收到控制台：  
   
@@ -40,21 +41,21 @@ ms.locfileid: "44042200"
   
  当委托构造为封装实例方法时，委托将同时引用实例和方法。 委托不知道除其所封装方法以外的实例类型，因此委托可以引用任何类型的对象，只要该对象上有与委托签名匹配的方法。 当委托构造为封装静态方法时，委托仅引用方法。 请考虑以下声明：  
   
- [!code-csharp[csProgGuideDelegates#26](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_6.cs)]  
+ [!code-csharp[csProgGuideDelegates#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#26)]  
   
  加上之前显示的静态 `DelegateMethod`，我们现在已有三个 `Del` 实例可以封装的方法。  
   
  调用时，委托可以调用多个方法。 这被称为多播。 若要向委托的方法列表（调用列表）添加其他方法，只需使用加法运算符或加法赋值运算符（“+”或“+=”）添加两个委托。 例如:  
   
- [!code-csharp[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_7.cs)]  
+ [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]  
   
- 此时，`allMethodsDelegate` 的调用列表中包含三个方法，分别为 `Method1`、`Method2` 和 `DelegateMethod`。 原有的三个委托（`d1`、`d2` 和 `d3`）保持不变。 调用 `allMethodsDelegate` 时，将按顺序调用所有三个方法。 如果委托使用引用参数，引用将按顺序传递到所有这三个方法，并且一种方法进行的任何更改都将在另一种方法上见到。 当方法引发未在方法内捕获到的异常时，该异常将传递到委托的调用方，并且不会调用调用列表中的后续方法。 如果委托具有返回值和/或输出参数，它将返回上次调用方法的返回值和参数。 若要删除调用列表中的方法，请使用减法运算符或减法赋值运算符（“+”或“+=”）。 例如:  
+ 此时，`allMethodsDelegate` 的调用列表中包含三个方法，分别为 `Method1`、`Method2` 和 `DelegateMethod`。 原有的三个委托（`d1`、`d2` 和 `d3`）保持不变。 调用 `allMethodsDelegate` 时，将按顺序调用所有三个方法。 如果委托使用引用参数，引用将按相反的顺序传递到所有这三个方法，并且一种方法进行的任何更改都将在另一种方法上见到。 当方法引发未在方法内捕获到的异常时，该异常将传递到委托的调用方，并且不会调用调用列表中的后续方法。 如果委托具有返回值和/或输出参数，它将返回上次调用方法的返回值和参数。 若要删除调用列表中的方法，请使用减法运算符或减法赋值运算符（“+”或“+=”）。 例如:  
   
- [!code-csharp[csProgGuideDelegates#28](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_8.cs)]  
+ [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]  
   
  由于委托类型派生自 `System.Delegate`，因此可以在委托上调用该类定义的方法和属性。 例如，若要查询委托调用列表中方法的数量，你可以编写：  
   
- [!code-csharp[csProgGuideDelegates#29](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_9.cs)]  
+ [!code-csharp[csProgGuideDelegates#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#29)]  
   
  调用列表中具有多个方法的委托派生自 <xref:System.MulticastDelegate>，该类属于 `System.Delegate` 的子类。 由于这两个类都支持 `GetInvocationList`，因此在其他情况下，上述代码也将产生作用。  
   
@@ -62,7 +63,7 @@ ms.locfileid: "44042200"
   
  在编译时比较分配的两个不同类型的委托将导致编译错误。 如果委托实例是静态的 `System.Delegate` 类型，则允许比较，但在运行时将返回 false。 例如:  
   
- [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
+ [!code-csharp[csProgGuideDelegates#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#30)]  
   
 ## <a name="see-also"></a>请参阅
 

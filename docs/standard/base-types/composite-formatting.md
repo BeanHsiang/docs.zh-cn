@@ -1,6 +1,6 @@
 ---
 title: 复合格式设置
-ms.date: 03/30/2017
+ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,31 +15,34 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517677"
 ---
 # <a name="composite-formatting"></a>复合格式设置
+
 .NET 复合格式设置功能使用对象列表和复合格式字符串作为输入。 复合格式字符串由固定文本和索引占位符混和组成，其中索引占位符称为格式项，对应于列表中的对象。 格式设置操作产生的结果字符串由原始固定文本和列表中对象的字符串表示形式混和组成。  
   
- 复合格式设置功能受诸如以下方法的支持：  
+> [!IMPORTANT]
+> 相较使用复合格式字符串，如果正在使用的语言和语言版本支持，则可使用*内插字符串*。 内插字符串是包含内插表达式的字符串。 每个内插表达式都使用表达式的值进行解析，并在分配字符串时包含在结果字符串中。 有关详细信息，请参阅[字符串内插（C# 参考）](../../csharp/language-reference/tokens/interpolated.md)和[内插字符串（Visual Basic 参考）](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)。
+
+复合格式设置功能受诸如以下方法的支持：  
   
--   <xref:System.String.Format%2A?displayProperty=nameWithType>，它返回格式化的结果字符串。  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>，它返回格式化的结果字符串。  
   
--   <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>，它将格式化的结果字符串追加到 <xref:System.Text.StringBuilder> 对象。  
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>，它将格式化的结果字符串追加到 <xref:System.Text.StringBuilder> 对象。   
+- <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法的某些重载，它将格式化的结果字符串显示到控制台上。  
   
--   <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法的某些重载，它将格式化的结果字符串显示到控制台上。  
+- <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> 方法的某些重载，它将格式化的结果字符串写入流或文件中。 派生自 <xref:System.IO.TextWriter> 的类（如 <xref:System.IO.StreamWriter> 和 <xref:System.Web.UI.HtmlTextWriter>）也共享此功能。  
   
--   <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> 方法的某些重载，它将格式化的结果字符串写入流或文件中。 派生自 <xref:System.IO.TextWriter> 的类（如 <xref:System.IO.StreamWriter> 和 <xref:System.Web.UI.HtmlTextWriter>）也共享此功能。  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>，它将格式化消息输出到跟踪侦听器。  
   
--   <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>，它将格式化消息输出到跟踪侦听器。  
+- <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，它们将格式化消息输出到跟踪侦听器。  
   
--   <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，它们将格式化消息输出到跟踪侦听器。  
-  
--   <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，它将信息性方法写入跟踪侦听器中。  
+- <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法，它将信息性方法写入跟踪侦听器中。  
   
 ## <a name="composite-format-string"></a>复合格式字符串  
  复合格式字符串和对象列表将用作支持复合格式设置功能的方法的参数。 复合格式字符串由零个或多个固定文本段与一个或多个格式项混和组成。 固定文本是所选择的任何字符串，并且每个格式项对应于列表中的一个对象或装箱的结构。 复合格式设置功能返回新的结果字符串，其中每个格式项都被列表中相应对象的字符串表示形式取代。  
@@ -64,7 +67,7 @@ ms.locfileid: "47397928"
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- 通过指定相同的参数说明符，多个格式项可以引用对象列表中的同一个元素。 例如，通过指定“0x{0:X} {0:E} {0:N}”等复合格式字符串，可以将同一个数值设置为十六进制、科学记数法和数字格式，如下面的示例所示。  
+ 通过指定相同的参数说明符，多个格式项可以引用对象列表中的同一个元素。 例如，可以将同一个数值设置为十六进制、科学记数法和数字格式，方法是通过指定复合格式字符串（例如：“0x{0:X} {0:E} {0:N}”），如以下示例所示。  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -113,7 +116,7 @@ ms.locfileid: "47397928"
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>处理顺序  
- 如果对复合格式设置方法的调用包括其值不为 <xref:System.IFormatProvider> 的 `null` 参数，则运行时会调用其 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法来请求 <xref:System.ICustomFormatter> 实现。 如果此方法能够返回 <xref:System.ICustomFormatter> 实现，那么它将在复合格式方法调用期间缓存。
+ 如果对复合格式设置方法的调用包括其值不为 <xref:System.IFormatProvider> 的 `null` 自变量，则运行时会调用其 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法来请求 <xref:System.ICustomFormatter> 实现。 如果此方法能够返回 <xref:System.ICustomFormatter> 实现，那么它将在复合格式方法调用期间缓存。
   
  如下所示，将参数列表中与格式项对应的每个值转换为字符串：  
   
@@ -121,11 +124,11 @@ ms.locfileid: "47397928"
   
 2.  如果 <xref:System.ICustomFormatter> 实现可用，则运行时将调用其 <xref:System.ICustomFormatter.Format%2A> 方法。 它向方法传递格式项的 formatString 值（若有）或 `null`（若无）以及 <xref:System.IFormatProvider> 实现。 如果对 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 方法的调用返回 `null`，则继续执行下一步骤，将返回 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 调用的结果。
   
-3.  如果该值实现 <xref:System.IFormattable> 接口，则调用此接口的 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 方法。 如果格式项中存在 formatString 值，则向方法传递该值；如果不存在该值，则传递 `null`。 按如下方式确定 <xref:System.IFormatProvider> 参数：  
+3.  如果该值实现 <xref:System.IFormattable> 接口，则调用此接口的 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 方法。 如果格式项中存在 formatString 值，则向方法传递该值；如果不存在该值，则传递 `null`。 按如下方式确定 <xref:System.IFormatProvider> 自变量：  
   
-    -   对于数值，如果调用带非 null <xref:System.IFormatProvider> 参数的复合格式设置方法，则运行时从其 <xref:System.Globalization.NumberFormatInfo> 方法请求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 对象。 在以下情况下，使用当前线程区域性的 <xref:System.Globalization.NumberFormatInfo> 对象：无法提供该值、参数值为 `null` 或复合格式设置方法没有 <xref:System.IFormatProvider> 参数。  
+    -   对于数值，如果调用带非 null <xref:System.IFormatProvider> 自变量的复合格式设置方法，则运行时从其 <xref:System.Globalization.NumberFormatInfo> 方法请求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 对象。 在以下情况下，使用当前线程区域性的 <xref:System.Globalization.NumberFormatInfo> 对象：无法提供该值、参数值为 `null` 或复合格式设置方法没有 <xref:System.IFormatProvider> 参数。  
   
-    -   对于日期和时间值，如果调用带非 null <xref:System.IFormatProvider> 参数的复合格式设置方法，则运行时从其 <xref:System.Globalization.DateTimeFormatInfo> 方法请求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 对象。 在以下情况下，使用当前线程区域性的 <xref:System.Globalization.DateTimeFormatInfo> 对象：无法提供该值、参数值为 `null` 或复合格式设置方法没有 <xref:System.IFormatProvider> 参数。  
+    -   对于日期和时间值，如果调用带非 null <xref:System.IFormatProvider> 自变量的复合格式设置方法，则运行时从其 <xref:System.Globalization.DateTimeFormatInfo> 方法请求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 对象。 在以下情况下，使用当前线程区域性的 <xref:System.Globalization.DateTimeFormatInfo> 对象：无法提供该值、参数值为 `null` 或复合格式设置方法没有 <xref:System.IFormatProvider> 参数。  
   
     -   对于其他类型的对象，如果调用带 <xref:System.IFormatProvider> 参数的复合格式设置方法，它的值会直接传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。 否则，`null` 传递到 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 实现。  
   
@@ -158,15 +161,15 @@ ms.locfileid: "47397928"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Console.WriteLine%2A>  
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- [字符串内插 (C#)](../../csharp/language-reference/tokens/interpolated.md)  
-- [字符串内插 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
-- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)  
-- [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
-- [标准 TimeSpan 格式字符串](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
-- [自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- <xref:System.Console.WriteLine%2A>
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- [字符串内插 (C#)](../../csharp/language-reference/tokens/interpolated.md)
+- [字符串内插 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+- [格式设置类型](../../../docs/standard/base-types/formatting-types.md)
+- [标准数字格式字符串](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [自定义数字格式字符串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [标准 TimeSpan 格式字符串](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+- [自定义 TimeSpan 格式字符串](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

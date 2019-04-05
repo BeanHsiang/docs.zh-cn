@@ -1,5 +1,5 @@
 ---
-title: '&lt;system.codedom&gt;元素'
+title: < System.codedom > 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: de0b026b0e4e76b7409e873813f4700c6ced9afd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e2c65044b99e2d5fda7025f24d1d4c4082ded4ec
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187892"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268218"
 ---
-# <a name="ltsystemcodedomgt-element"></a>&lt;system.codedom&gt;元素
+# <a name="systemcodedom-element"></a>\<system.codedom > 元素
 指定可用语言提供程序的编译器配置设置。  
   
  \<配置 > 元素  
@@ -89,9 +87,9 @@ ms.locfileid: "50187892"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [编译器和语言提供程序设置架构](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)  
+## <a name="see-also"></a>请参阅
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [编译器和语言提供程序设置架构](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
 - [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

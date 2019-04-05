@@ -1,5 +1,5 @@
 ---
-title: 类型&#39; &lt;typename&gt; &#39;没有构造函数
+title: 类型“<typename>”没有构造函数
 ms.date: 07/20/2015
 f1_keywords:
 - bc30251
@@ -7,13 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 16b64365ecd5dcfe592c47745dcb66878c2ee5a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b06c1d930a3551e9bc175c814a6297894799237d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837971"
 ---
-# <a name="type-39lttypenamegt39-has-no-constructors"></a>类型&#39; &lt;typename&gt; &#39;没有构造函数
+# <a name="type-typename-has-no-constructors"></a>类型\<类型名称 > 没有构造函数
 某个类型不支持对 `Sub New()` 的调用。 一个可能的原因是编译器或二进制文件被损坏。  
   
  **错误 ID:** BC30251  
@@ -28,6 +29,7 @@ ms.lasthandoff: 05/04/2018
   
 4.  如果仍然出现错误，则收集有关该情况的信息并通知 Microsoft 产品支持服务。  
   
-## <a name="see-also"></a>请参阅  
- [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [与我们交流](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>请参阅
+
+- [对象和类](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [与我们交流](/visualstudio/ide/talk-to-us)

@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;表达式&gt;&#39;不能用作类型约束'
+title: “<expression>”不能用作类型约束
 ms.date: 07/20/2015
 f1_keywords:
 - bc32061
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: 8e9aad2ec65e037b15e19ca2e624fdc8f28bc94e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8dbf510d7c6ee80e2dcd2f9d2552bc870413cbab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588169"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838100"
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a>&#39;&lt;表达式&gt;&#39;不能用作类型约束
+# <a name="expression-cannot-be-used-as-a-type-constraint"></a>\<表达式 > 不能用作类型约束
 约束列表包含的表达式不表示对类型形参的有效约束。  
   
  约束列表对传递给类型形参的类型实参有一定要求。 你可以采用任意组合指定以下要求：  
@@ -41,10 +41,10 @@ ms.locfileid: "33588169"
   
 -   如果表达式不符合前面列出的要求，请从约束列表中将其删除。  
   
--   如果表达式引用接口或类，请验证编译器是否有权访问该接口或类。 可能需要限定其名称，并可能需要添加一个项目引用。 有关详细信息，请参阅"项目引用"[对声明的元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
+-   如果表达式引用接口或类，请验证编译器是否有权访问该接口或类。 可能需要限定其名称，并可能需要添加一个项目引用。 详细信息，请参阅"项目引用"中[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [值类型和引用类型](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- 
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [值类型和引用类型](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [对已声明元素的引用](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aeb0415395a59e59b4d5dc78c11d8b8f0902bad8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04c4e1db35b59748067b76cc037c0def6437c531
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536641"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 跟踪 ETW 事件
 <a name="top"></a> 这些事件可收集有关实时 (JIT) 内联和 JIT 尾调用成功或失败的信息。  
@@ -149,5 +149,5 @@ ms.locfileid: "33397554"
 |TailCallType|win:UnicodeString|尾调用的类型。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
-## <a name="see-also"></a>请参阅  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>请参阅
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

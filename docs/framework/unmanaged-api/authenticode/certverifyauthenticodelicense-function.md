@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c10d5f363d454a64f9052315514e896f90f7081
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a644e3e2df2544e8164cdaf3bbef3c44d3cd567f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208843"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502539"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 函数
 验证验证码 XrML 许可证的有效性。  
@@ -31,7 +31,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pLicenseBlob`  
  [in] 要验证的验证码 XrML 许可证。  
   
@@ -65,7 +65,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 ## <a name="return-value"></a>返回值  
  如果成功，则返回 `S_OK`。 否则，返回错误代码。  
   
-## <a name="see-also"></a>请参阅  
- [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)  
- [GetHashFromHandle 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)  
- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>请参阅
+- [验证码](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [GetHashFromHandle 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName 接口](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

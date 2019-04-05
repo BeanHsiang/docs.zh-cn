@@ -2,12 +2,12 @@
 title: 使用 ModelItem 编辑上下文
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-ms.openlocfilehash: 17334b5571148e494067683bdf96ebc4be4ea995
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8d2e7d055099a6aedd13dd48dd78403cdff2a50
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519144"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846267"
 ---
 # <a name="using-the-modelitem-editing-context"></a>使用 ModelItem 编辑上下文
 <xref:System.Activities.Presentation.Model.ModelItem> 编辑上下文是主机应用程序用来与设计器进行通信的对象。 <xref:System.Activities.Presentation.EditingContext> 公开两个可以使用的方法：<xref:System.Activities.Presentation.EditingContext.Items%2A> 和 <xref:System.Activities.Presentation.EditingContext.Services%2A>  
@@ -95,51 +95,51 @@ protected override void OnModelItemChanged(object newItem)
  使用项集合与使用服务集合类似，但使用的是 <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>，而不是 Publish。 此集合更适合在设计器与主机之间的共享简单的数据，不适合复杂的功能。  
   
 ## <a name="editingcontext-host-items-and-services"></a>EditingContext 主机项和服务  
- .Net Framework 提供了大量通过编辑上下文访问的内置项和服务。  
+ .NET Framework 提供了许多内置项和服务通过编辑上下文访问。  
   
  项：  
   
--   <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>：管理将在控件（如表达式编辑器）的工作流内部使用的引用和本地程序集的列表。  
+-   <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>：管理用于将工作流内的控件 （如表达式编辑器中） 引用本地程序集的列表。  
   
--   <xref:System.Activities.Presentation.Hosting.ReadOnlyState>：指示设计器是否处于只读状态。  
+-   <xref:System.Activities.Presentation.Hosting.ReadOnlyState>：指示在设计器是否处于只读状态。  
   
 -   <xref:System.Activities.Presentation.View.Selection>：定义当前所选对象的集合。  
   
 -   <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>：  
   
--   <xref:System.Activities.Presentation.WorkflowFileItem>：提供有关当前编辑会话所基于的文件的信息。  
+-   <xref:System.Activities.Presentation.WorkflowFileItem>：提供有关当前编辑会话所基于的文件信息。  
   
  服务：  
   
--   <xref:System.Activities.Presentation.Model.AttachedPropertiesService>：允许使用 <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A> 将属性添加到当前实例中。  
+-   <xref:System.Activities.Presentation.Model.AttachedPropertiesService>：允许属性添加到当前实例使用<xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>。  
   
 -   <xref:System.Activities.Presentation.View.DesignerView>：允许访问设计器画布的属性。  
   
 -   <xref:System.Activities.Presentation.IActivityToolboxService>：允许更新工具箱的内容。  
   
--   <xref:System.Activities.Presentation.Hosting.ICommandService>：用于将设计器命令（如上下文菜单）与自定义的服务实现集成。  
+-   <xref:System.Activities.Presentation.Hosting.ICommandService>：用于将设计器命令 （例如上下文菜单） 与自定义提供的服务实现集成。  
   
 -   <xref:System.Activities.Presentation.Debug.IDesignerDebugView>：为设计器调试器提供功能。  
   
--   <xref:System.Activities.Presentation.View.IExpressionEditorService>：提供对“表达式编辑器”对话框的访问。  
+-   <xref:System.Activities.Presentation.View.IExpressionEditorService>：提供对表达式编辑器对话框访问。  
   
--   <xref:System.Activities.Presentation.IIntegratedHelpService>：为设计器提供集成的帮助功能。  
+-   <xref:System.Activities.Presentation.IIntegratedHelpService>：在设计器提供集成的帮助功能。  
   
--   <xref:System.Activities.Presentation.Validation.IValidationErrorService>：使用 <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> 提供对验证错误的访问。  
+-   <xref:System.Activities.Presentation.Validation.IValidationErrorService>：提供对使用的验证错误的访问<xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>。  
   
--   <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>：提供内部服务以存储和检索数据。 此服务由 .Net Framework 内部使用，不能在外部使用。  
+-   <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>：提供了一个内部服务来存储和检索数据。 此服务由.NET Framework 中，在内部使用，不应供外部使用。  
   
--   <xref:System.Activities.Presentation.IXamlLoadErrorService>：使用 <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A> 提供对 XAML 加载错误集合的访问。  
+-   <xref:System.Activities.Presentation.IXamlLoadErrorService>：提供对 XAML 加载错误集合使用的访问<xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>。  
   
--   <xref:System.Activities.Presentation.Services.ModelService>：由设计器用来与正在编辑的工作流模型进行交互。  
+-   <xref:System.Activities.Presentation.Services.ModelService>：由设计器用于与工作流正在编辑的模型进行交互。  
   
--   <xref:System.Activities.Presentation.Model.ModelTreeManager>：使用 <xref:System.Activities.Presentation.Model.ModelItem.Root%2A> 提供对模型项树根的访问。  
+-   <xref:System.Activities.Presentation.Model.ModelTreeManager>：提供对模型项树中使用的根访问<xref:System.Activities.Presentation.Model.ModelItem.Root%2A>。  
   
 -   <xref:System.Activities.Presentation.UndoEngine>：提供撤消和重做功能。  
   
 -   <xref:System.Activities.Presentation.Services.ViewService>：将可视元素映射到基础模型项。  
   
--   <xref:System.Activities.Presentation.View.ViewStateService>：存储模型项的视图状态。  
+-   <xref:System.Activities.Presentation.View.ViewStateService>：存储的视图模型项的状态。  
   
 -   <xref:System.Activities.Presentation.View.VirtualizedContainerService>：用于自定义虚拟容器 UI 行为。  
   

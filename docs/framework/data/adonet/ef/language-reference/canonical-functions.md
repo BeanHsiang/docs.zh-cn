@@ -2,12 +2,12 @@
 title: 规范函数
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: fed6e45056e318ec0bf34951097304ef3c98f629
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4657fd2b68008e4194fc39982dc2ac5b34a644ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513875"
 ---
 # <a name="canonical-functions"></a>规范函数
 本节讨论所有数据提供程序支持的并可由所有查询技术使用的规范函数。 规范函数不能由提供程序扩展。  
@@ -47,8 +47,8 @@ ms.locfileid: "32760929"
  [其他 Canonical 函数](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
  讨论未分类为按位、日期/时间、字符串、数字或聚合函数的函数。  
   
-## <a name="see-also"></a>请参阅  
- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [SQL Server 函数映射的规范化概念模型](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
- [用户定义的函数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+## <a name="see-also"></a>请参阅
+- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [SQL Server 函数映射的规范化概念模型](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)
+- [用户定义的函数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

@@ -2,12 +2,12 @@
 title: 对不同形状的 XML 进行投影 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: fe6166a333988d4b0a4550900a9307f1c4951aec
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43786975"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723779"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>对不同形状的 XML 进行投影 (C#)
 本主题演示对形状不同于源 XML 的 XML 进行投影的示例。  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: daa8097bc5dfee203f988915b1e4a8bdcd2c50e0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e5a48c5caf9239e0e7b7f2e7a3ad8ab5df168ba1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684185"
 ---
 # <a name="finding-rows"></a>查找行
 可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法，根据排序关键字值搜索行。 中的值以搜索是否区分大小写**查找**并**FindRows**方法由**CaseSensitive**属性的基础<xref:System.Data.DataTable>。 搜索值必须完全匹配现有排序关键字值才能返回结果。  
@@ -93,8 +93,8 @@ else
       myDRV["ContactName"].ToString());  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Data.DataTable>  
- <xref:System.Data.DataView>  
- [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- <xref:System.Data.DataTable>
+- <xref:System.Data.DataView>
+- [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

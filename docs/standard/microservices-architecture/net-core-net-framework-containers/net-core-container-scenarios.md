@@ -4,12 +4,12 @@ description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b2ede45afee93e8d87a22b2b489eb2a230e04e7d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873370"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57844270"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>何时为 Docker 容器选择 .NET Core
 
@@ -29,9 +29,9 @@ ms.locfileid: "48873370"
 
 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) 是一个 IDE，由 Xamarin Studio 演变而来，在 macOS 上运行并支持基于 Docker 的应用程序环境。 对于使用 Mac 计算机工作而又希望使用功能强大的 IDE 的开发者而言，这应当是理想之选。
 
-还可在 macOS、Linux 和 Windows 中使用 [Visual Studio Code](https://code.visualstudio.com/) (VS Code)。 VS Code 支持 .NET Core，包括 IntelliSense 和调试。 由于 VS Code 是轻量型编辑器，可以使用它，同时结合使用 Docker CLI 和 [.NET Core 命令行接口 (CLI)](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x)来开发面向 Mac 的容器化应用。 还可以使用大多数第三方编辑器（如 Sublime、Emacs、VI）和同时提供 IntelliSense 支持的开源 OmniSharp 项目来面向 .NET Core。
+还可在 macOS、Linux 和 Windows 中使用 [Visual Studio Code](https://code.visualstudio.com/) (VS Code)。 VS Code 支持 .NET Core，包括 IntelliSense 和调试。 由于 VS Code 是轻量型编辑器，可以使用它，同时结合使用 Docker CLI 和 [.NET Core 命令行接口 (CLI)](../../../core/tools/index.md)来开发面向 Mac 的容器化应用。 还可以使用大多数第三方编辑器（如 Sublime、Emacs、VI）和同时提供 IntelliSense 支持的开源 OmniSharp 项目来面向 .NET Core。
 
-除了 IDE 和编辑器，还可为所有支持的平台使用 [.NET Core CLI](https://docs.microsoft.com/dotnet/core/tools/?tabs=netcore2x) 工具。
+除了 IDE 和编辑器，还可为所有支持的平台使用 [.NET Core CLI](../../../core/tools/index.md) 工具。
 
 ## <a name="using-containers-for-new-green-field-projects"></a>为新（“绿地”）项目使用容器
 
@@ -53,7 +53,6 @@ ms.locfileid: "48873370"
 
 这一点对微服务体系结构尤为重要，可以运行数百个微服务（容器）。 在 Linux 或 Windows Nano 上使用 ASP.NET Core 映像（基于 .NET Core 运行时），运行系统时所需的服务器或 VM 数量要少得多，最终可以节省基础结构和托管的费用。
 
-
 >[!div class="step-by-step"]
-[上一页](general-guidance.md)
-[下一页](net-framework-container-scenarios.md)
+>[上一页](general-guidance.md)
+>[下一页](net-framework-container-scenarios.md)

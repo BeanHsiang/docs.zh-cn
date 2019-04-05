@@ -1,5 +1,6 @@
 ---
-title: 显式数值转换表（C# 参考）
+title: 显式数值转换表 - C# 参考
+ms.custom: seodec18
 ms.date: 09/06/2018
 helpviewer_keywords:
 - conversions [C#], explicit numeric
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 948961d19518343c1f8ee14cd48dc33ec72cf23d
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 90691ae0d9de35831b7b3119493e4e9cd81720e6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49478916"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236305"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>显式数值转换表（C# 参考）
 

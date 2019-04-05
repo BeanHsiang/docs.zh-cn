@@ -1,15 +1,15 @@
 ---
-title: 异常：try...finally 表达式 (F#)
-description: '了解如何在 F # try...最后表达式使您可以执行清理代码，即使代码块将引发异常。'
+title: 异常:try...finally 表达式
+description: 了解如何F#try...最后表达式使您可以执行清理代码，即使代码块将引发异常。
 ms.date: 05/16/2016
-ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 24613185818c8ea30b27dcf639b22af320c4b401
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45970313"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611615"
 ---
-# <a name="exceptions-the-tryfinally-expression"></a>异常：try...finally 表达式
+# <a name="exceptions-the-tryfinally-expression"></a>异常:try...finally 表达式
 
 `try...finally`表达式使您可以执行清理代码，即使代码块将引发异常。
 
@@ -50,4 +50,4 @@ Exception handled.
 ## <a name="see-also"></a>请参阅
 
 - [异常处理](index.md)
-- [异常：`try...with` 表达式](the-try-with-expression.md)
+- [异常：`try...with`表达式](the-try-with-expression.md)

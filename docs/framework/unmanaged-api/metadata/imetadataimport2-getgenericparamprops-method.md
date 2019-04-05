@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc2d64a97d02d6f6036646634113cf485119eba7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448669"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490354"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps 方法
-获取与指定标记所表示的泛型参数关联的元数据。  
+获取与指定的标记表示的泛型参数相关联的元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,21 +42,21 @@ HRESULT GetGenericParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `gp`  
- [in]表示用于返回元数据的泛型参数标记。  
+ [in]表示要为其返回的元数据的泛型参数的标记。  
   
  `pulParamSeq`  
  [out]序号位置`Type`父构造函数或方法中的参数。  
   
  `pdwParamFlags`  
- [out]值为[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)描述枚举`Type`为泛型参数。  
+ [out]值为[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)枚举，用于描述`Type`泛型形参。  
   
  `ptOwner`  
  [out]TypeDef 或 MethodDef 标记表示的参数的所有者。  
   
  `reserved`  
- [out]留待将来扩展。  
+ [out]保留供将来的扩展。  
   
  `wzName`  
  [out]泛型参数的名称。  
@@ -65,17 +65,17 @@ HRESULT GetGenericParamProps (
  [in]大小`wzName`缓冲区。  
   
  `pchName`  
- [out]返回的名称，以宽字符为单位的大小。  
+ [out]该名称，以宽字符为单位返回的大小。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

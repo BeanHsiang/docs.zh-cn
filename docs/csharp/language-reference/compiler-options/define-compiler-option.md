@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 17bb0f246407804306a0ea0142f8944b5cf1ee30
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 56028bcf3b843a4f6884e2d7cc7d409621adba34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558810"
 ---
 # <a name="-define-c-compiler-options"></a>-define（C# 编译器选项）
 -define 选项将 `name` 定义为程序中所有源代码文件的符号。  
@@ -28,7 +28,7 @@ ms.locfileid: "43524279"
 ```  
   
 ## <a name="arguments"></a>自变量  
- `name`, `name2`  
+ `name`， `name2`  
  一个或多个要定义的符号的名称。  
   
 ## <a name="remarks"></a>备注  
@@ -78,7 +78,7 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

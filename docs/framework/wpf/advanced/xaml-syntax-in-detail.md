@@ -29,15 +29,15 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ecea2575503ad8fe4ff8a190a417bae75a7b31f7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485724"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367955"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 语法详述
-本主题定义的术语，用于描述的 XAML 语法的元素。 这些条款通常使用，本文档中，同时用于 WPF 文档的其余部分专门以及其他使用 XAML 或通过 XAML 语言支持在 System.Xaml 级别启用的基本 XAML 概念的框架。 本主题进一步在本主题中引入的基本术语[XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
+本主题定义的术语，用于描述的 XAML 语法的元素。 这些条款通常使用，本文档中，同时用于 WPF 文档的其余部分专门以及其他使用 XAML 或通过 XAML 语言支持在 System.Xaml 级别启用的基本 XAML 概念的框架。 本主题进一步在本主题中引入的基本术语[XAML 概述 (WPF)](xaml-overview-wpf.md)。  
   
 
   
@@ -68,11 +68,11 @@ ms.locfileid: "43485724"
   
  例如，下面的示例是实例化的新实例的对象元素语法<xref:System.Windows.Controls.Button>类，并且还指定了<xref:System.Windows.FrameworkElement.Name%2A>属性和该属性值：  
   
- [!code-xaml[XAMLOvwSupport#SyntaxOE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxoe)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxOE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxoe)]  
   
  下面的示例是对象元素语法，它还包括 XAML 内容属性语法。 中包含的内部文本将用于设置<xref:System.Windows.Controls.TextBox>XAML 内容属性<xref:System.Windows.Controls.TextBox.Text%2A>。  
   
- [!code-xaml[XAMLOvwSupport#ThisIsATextBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#thisisatextbox)]  
+ [!code-xaml[XAMLOvwSupport#ThisIsATextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#thisisatextbox)]  
   
 ### <a name="content-models"></a>内容模型  
  类可能支持作为 XAML 对象元素语法中，根据使用情况，但该元素将仅在中正常工作的应用程序或页放在整体内容的模型或元素树的预期位置。 例如，<xref:System.Windows.Controls.MenuItem>通常只能放置的小孩<xref:System.Windows.Controls.Primitives.MenuBase>派生类，如<xref:System.Windows.Controls.Menu>。 内容模型的特定元素编写为的控件和其他类页上的备注部分一部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可以用作 XAML 元素的类。  
@@ -88,7 +88,7 @@ ms.locfileid: "43485724"
  特性语法是通过现有的对象元素上声明属性来设置属性的值的 XAML 标记语法。 属性名称必须与支持相关对象元素的类的属性的 CLR 成员名称相匹配。 属性名称后跟赋值运算符 （=）。 特性值必须括在引号内的字符串。  
   
 > [!NOTE]
->  可以使用替代引号将文本引号在特性中。 例如可以作为一种方式使用单引号来声明包含在其中一个双引号字符的字符串。 无论使用单引号或双引号时，应使用匹配对用于打开和关闭属性值字符串。 也有转义序列或其他技术可用于解决施加任何特定的 XAML 语法的字符限制。 请参阅[XML 字符实体和 XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)。  
+>  可以使用替代引号将文本引号在特性中。 例如可以作为一种方式使用单引号来声明包含在其中一个双引号字符的字符串。 无论使用单引号或双引号时，应使用匹配对用于打开和关闭属性值字符串。 也有转义序列或其他技术可用于解决施加任何特定的 XAML 语法的字符限制。 请参阅[XML 字符实体和 XAML](../../xaml-services/xml-character-entities-and-xaml.md)。  
   
  若要通过特性语法进行设置，属性必须是公共的并且必须是可写。 在后备类型系统中的属性的值必须是值类型，或必须一个引用类型，可以实例化或访问相关时引用由 XAML 处理器支持类型。  
   
@@ -130,11 +130,11 @@ ms.locfileid: "43485724"
   
  或者，可以引用的附加的属性或附加事件，独立于包含的对象元素。 （下一节讨论是附加的属性）。  
   
- 也可以命名通过使用可通过默认命名空间访问的任何对象中的任何事件*typeName*。*事件*部分限定的名称; 此语法支持附加路由事件的处理程序用于处理从子元素，但父元素路由事件处理程序未安装该事件在其成员表中。 此语法类似于附加的事件语法，但此处的事件不是真正的附加的事件。 相反，正在引用具有限定名称的事件。 有关详细信息，请参阅[路由事件概述](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
+ 也可以命名通过使用可通过默认命名空间访问的任何对象中的任何事件*typeName*。*事件*部分限定的名称; 此语法支持附加路由事件的处理程序用于处理从子元素，但父元素路由事件处理程序未安装该事件在其成员表中。 此语法类似于附加的事件语法，但此处的事件不是真正的附加的事件。 相反，正在引用具有限定名称的事件。 有关详细信息，请参阅[路由事件概述](routed-events-overview.md)。  
   
- 在某些情况下，作为一个属性，而不是属性名称的值有时提供属性名称。 该属性名称还可以包括限定符，例如窗体中指定的属性*ownerType*。*依赖项属性名称*。 在 XAML 中编写样式或模板时，此方案中很常见。 处理规则的属性名称用作属性值不同，并按所设置的属性的类型或特定 WPF 子系统的行为受控。 有关详细信息，请参阅[样式和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ 在某些情况下，作为一个属性，而不是属性名称的值有时提供属性名称。 该属性名称还可以包括限定符，例如窗体中指定的属性*ownerType*。*依赖项属性名称*。 在 XAML 中编写样式或模板时，此方案中很常见。 处理规则的属性名称用作属性值不同，并按所设置的属性的类型或特定 WPF 子系统的行为受控。 有关详细信息，请参阅[样式和模板化](../controls/styling-and-templating.md)。  
   
- 当属性值描述的属性关系时，属性名称的另一个使用情况。 此功能用于数据绑定和情节提要目标和情况下启用<xref:System.Windows.PropertyPath>类，其类型转换器。 查找语义的更完整说明，请参阅[PropertyPath XAML 语法](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)。  
+ 当属性值描述的属性关系时，属性名称的另一个使用情况。 此功能用于数据绑定和情节提要目标和情况下启用<xref:System.Windows.PropertyPath>类，其类型转换器。 查找语义的更完整说明，请参阅[PropertyPath XAML 语法](propertypath-xaml-syntax.md)。  
   
 <a name="property_element_syntax"></a>   
 ## <a name="property-element-syntax"></a>属性元素语法  
@@ -144,11 +144,11 @@ ms.locfileid: "43485724"
   
  例如，以下是属性元素语法<xref:System.Windows.FrameworkElement.ContextMenu%2A>属性的<xref:System.Windows.Controls.Button>。  
   
- [!code-xaml[XAMLOvwSupport#ContextMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
+ [!code-xaml[XAMLOvwSupport#ContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
   
- 属性元素中的值可以还提供内部文本，在所指定的属性类型的基元值类型，情况下如<xref:System.String>，或指定名称的枚举。 这两种用法是某种程度上不常见，因为每个这种情况下也可以使用更简单的属性语法。 用字符串填充的属性元素的一个方案是不是 XAML 内容属性，但仍用于 UI 文本表示形式的属性和特定的空白元素，如的换行所需的 UI 文本中显示。 特性语法不能保留的换行，但属性元素语法可以前提是重要的空白区域保留处于活动状态 (有关详细信息，请参阅[处理在 XAML 中的空白区域](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md))。 另一种情况是，以便[X:uid 指令](../../../../docs/framework/xaml-services/x-uid-directive.md)可以应用于属性元素，并作为一个值，应在 WPF 中本地化输出 BAML 或通过其他技术，因此标记内的值。  
+ 属性元素中的值可以还提供内部文本，在所指定的属性类型的基元值类型，情况下如<xref:System.String>，或指定名称的枚举。 这两种用法是某种程度上不常见，因为每个这种情况下也可以使用更简单的属性语法。 用字符串填充的属性元素的一个方案是不是 XAML 内容属性，但仍用于 UI 文本表示形式的属性和特定的空白元素，如的换行所需的 UI 文本中显示。 特性语法不能保留的换行，但属性元素语法可以前提是重要的空白区域保留处于活动状态 (有关详细信息，请参阅[处理在 XAML 中的空白区域](../../xaml-services/whitespace-processing-in-xaml.md))。 另一种情况是，以便[X:uid 指令](../../xaml-services/x-uid-directive.md)可以应用于属性元素，并作为一个值，应在 WPF 中本地化输出 BAML 或通过其他技术，因此标记内的值。  
   
- WPF 逻辑树中不会显示的属性元素。 Property 元素是只是一种特定的语法，来设置属性，并且不具有的实例或对象支持它的元素。 (逻辑树概念的详细信息，请参阅[WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)。)  
+ WPF 逻辑树中不会显示的属性元素。 Property 元素是只是一种特定的语法，来设置属性，并且不具有的实例或对象支持它的元素。 (逻辑树概念的详细信息，请参阅[WPF 中的树](trees-in-wpf.md)。)  
   
  对于支持属性和属性元素语法的位置的属性，这两种语法通常具有相同的结果，尽管微妙之处，例如空白处理语法之间略有不同。  
   
@@ -160,11 +160,11 @@ ms.locfileid: "43485724"
   
 -   类型实现<xref:System.Collections.IDictionary>。  
   
--   派生自类型<xref:System.Array>(有关在 XAML 中数组的详细信息，请参阅[X:array 标记扩展](../../../../docs/framework/xaml-services/x-array-markup-extension.md)。)  
+-   派生自类型<xref:System.Array>(有关在 XAML 中数组的详细信息，请参阅[X:array 标记扩展](../../xaml-services/x-array-markup-extension.md)。)  
   
  如果属性的类型是一个集合，然后不需要为对象元素标记中指定推断的集合类型。 相反，旨在成为集合中的项的元素被指定为一个或多个属性元素的子元素。 每个此类项在加载期间计算为一个对象，然后通过调用添加到集合`Add`隐式集合的方法。 例如，<xref:System.Windows.Style.Triggers%2A>的属性<xref:System.Windows.Style>采用专用的集合类型<xref:System.Windows.TriggerCollection>，它可以实现<xref:System.Collections.IList>。 不需要实例化<xref:System.Windows.TriggerCollection>标记中的对象元素。 相反，您可以指定一个或多个<xref:System.Windows.Trigger>项中的元素作为`Style.Triggers`属性元素中，其中<xref:System.Windows.Trigger>（或派生的类） 是应作为项类型的强类型化和隐式类型<xref:System.Windows.TriggerCollection>。  
   
- [!code-xaml[XAMLOvwSupport#SyntaxPECollection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxpecollection)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxPECollection](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxpecollection)]  
   
  属性可能是集合类型和该类型的 XAML 内容属性和派生类型，对其进行讨论此主题的下一节中。  
   
@@ -231,7 +231,7 @@ ms.locfileid: "43485724"
 ## <a name="content-properties-and-collection-syntax-combined"></a>内容属性和集合语法组合  
  多个单个对象元素作为内容，以便接受内容属性的类型具体而言必须是集合类型。 为集合类型的属性元素语法类似，XAML 处理器必须确定属于集合类型的类型。 如果元素具有 XAML 内容属性，XAML 内容属性的类型是一个集合，然后隐含的集合类型不需要为对象元素标记中指定并不需要指定为属性 el XAML 内容属性ement。 因此在标记中明显的内容模型现在有多个分配作为内容的子元素。 以下是内容语法<xref:System.Windows.Controls.Panel>派生的类。 所有<xref:System.Windows.Controls.Panel>派生的类建立 XAML 内容属性为<xref:System.Windows.Controls.Panel.Children%2A>，这需要类型的值<xref:System.Windows.Controls.UIElementCollection>。  
   
- [!code-xaml[XAMLOvwSupport#SyntaxContent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
  请注意，对于既不在属性元素<xref:System.Windows.Controls.Panel.Children%2A>也不为元素<xref:System.Windows.Controls.UIElementCollection>所需的标记中。 这是 XAML 设计功能，使其以递归方式包含用于定义元素的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]更直观地表示为具有直接父-子元素间的关系，而无需干预属性元素标记嵌套元素树或集合对象。 事实上，<xref:System.Windows.Controls.UIElementCollection>不能指定显式标记为对象元素，通过设计。 因为其唯一用途是作为隐式的集合，<xref:System.Windows.Controls.UIElementCollection>不公开公共默认构造函数，因此无法实例化作为对象元素。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "43485724"
 ## <a name="xaml-namespaces"></a>XAML 命名空间  
  上述语法示例未指定默认 XAML 命名空间之外的 XAML 命名空间。 在典型[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序，默认 XAML 命名空间指定为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]命名空间。 您可以指定默认 XAML 命名空间之外的 XAML 命名空间，而且仍使用类似的语法。 但是，然后，任何位置其中一个类名为无法访问默认 XAML 命名空间内，则该类的名称必须在前面加上的 XAML 命名空间前缀映射到相应的 CLR 命名空间。 例如，`<custom:Example/>`是对象元素语法来实例化的实例`Example`类，其中包含此类 （和可能包含后备类型的外部程序集信息） 的 CLR 命名空间之前映射到`custom`前缀。  
   
- 有关 XAML 命名空间的详细信息，请参阅[XAML 命名空间和 WPF XAML Namespace 映射](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ 有关 XAML 命名空间的详细信息，请参阅[XAML 命名空间和 WPF XAML Namespace 映射](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>标记扩展  
@@ -256,13 +256,13 @@ ms.locfileid: "43485724"
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- 在这里，`StaticResource`标识<xref:System.Windows.StaticResourceExtension>类，用于提供标记扩展实现。 下一个字符串`MyStyle`作为输入用于非默认<xref:System.Windows.StaticResourceExtension>构造函数中，从扩展的字符串中提取的参数声明请求<xref:System.Windows.ResourceKey>。 `MyStyle` 应为[X:key](../../../../docs/framework/xaml-services/x-key-directive.md)的值<xref:System.Windows.Style>定义为资源。 [StaticResource 标记扩展](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)用法要求使用的资源，以提供<xref:System.Windows.Style>静态资源查找逻辑在加载时通过属性值。  
+ 在这里，`StaticResource`标识<xref:System.Windows.StaticResourceExtension>类，用于提供标记扩展实现。 下一个字符串`MyStyle`作为输入用于非默认<xref:System.Windows.StaticResourceExtension>构造函数中，从扩展的字符串中提取的参数声明请求<xref:System.Windows.ResourceKey>。 `MyStyle` 应为[X:key](../../xaml-services/x-key-directive.md)的值<xref:System.Windows.Style>定义为资源。 [StaticResource 标记扩展](staticresource-markup-extension.md)用法要求使用的资源，以提供<xref:System.Windows.Style>静态资源查找逻辑在加载时通过属性值。  
   
- 有关标记扩展的详细信息，请参阅[标记扩展和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。 有关标记扩展和编程功能在常规的.NET XAML 实现中启用其他 XAML 的参考，请参阅[XAML Namespace （x:）语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。 有关特定于 WPF 的标记扩展，请参阅[WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)。  
+ 有关标记扩展的详细信息，请参阅[标记扩展和 WPF XAML](markup-extensions-and-wpf-xaml.md)。 有关标记扩展和编程功能在常规的.NET XAML 实现中启用其他 XAML 的参考，请参阅[XAML Namespace （x:）语言功能](../../xaml-services/xaml-namespace-x-language-features.md)。 有关特定于 WPF 的标记扩展，请参阅[WPF XAML 扩展](wpf-xaml-extensions.md)。  
   
 <a name="attached_properties"></a>   
 ## <a name="attached-properties"></a>附加属性  
- 附加的属性是在 XAML 属性可以拥有和某个特定类型定义，由此引入了一个编程概念但设置为属性或属性元素上的任何元素。 主要方案用于附加的属性是能够向父元素报告信息的标记结构中的子元素而无需在所有元素之间的广泛共享的对象模型。 相反，报表信息传递到子元素的父元素可以使用附加的属性。 有关详细信息的附加的属性以及如何创建你自己的目的附加属性，请参阅[附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。  
+ 附加的属性是在 XAML 属性可以拥有和某个特定类型定义，由此引入了一个编程概念但设置为属性或属性元素上的任何元素。 主要方案用于附加的属性是能够向父元素报告信息的标记结构中的子元素而无需在所有元素之间的广泛共享的对象模型。 相反，报表信息传递到子元素的父元素可以使用附加的属性。 有关详细信息的附加的属性以及如何创建你自己的目的附加属性，请参阅[附加属性概述](attached-properties-overview.md)。  
   
  附加的属性使用语法看起来类似于属性元素语法中，您还指定*typeName*。*propertyName*组合。 有两个重要的差异：  
   
@@ -288,7 +288,7 @@ ms.locfileid: "43485724"
   
 <a name="optional_and_nonrecommended_xaml_usages"></a>   
 ## <a name="optional-and-nonrecommended-xaml-usages"></a>可选的查找 XAML 用法  
- 以下部分介绍了 XAML 用法，从技术上讲支持由 XAML 处理器，但的生成详细级别或剩余的可读的 XAML 文件会干扰其他美观问题您开发的应用程序包含 XAML 源.  
+ 以下各节介绍 XAML 用法，从技术上讲支持由 XAML 处理器，但的生成详细级别或开发包含 XAML 源的应用程序时剩余的可读的 XAML 文件会干扰其他美观问题。  
   
 ### <a name="optional-property-element-usages"></a>可选属性元素用法  
  可选属性元素用法包括显式写出元素内容属性的 XAML 处理器将视为隐式。 例如，当声明的内容<xref:System.Windows.Controls.Menu>，你可以选择显式声明<xref:System.Windows.Controls.ItemsControl.Items%2A>系列<xref:System.Windows.Controls.Menu>作为`<Menu.Items>`属性元素标记和位置<xref:System.Windows.Controls.MenuItem>内`<Menu.Items>`，而不是比使用隐式的 XAML 处理器行为的所有子元素<xref:System.Windows.Controls.Menu>必须是<xref:System.Windows.Controls.MenuItem>并放入<xref:System.Windows.Controls.ItemsControl.Items%2A>集合。 有时可选用法可以帮助直观地阐明对象结构，按标记中的表示形式。 或者，有时显式属性元素用法可以避免从技术上讲功能，但在视觉混乱，例如嵌套的标记扩展的特性值中的标记。  
@@ -296,29 +296,29 @@ ms.locfileid: "43485724"
 ### <a name="full-typenamemembername-qualified-attributes"></a>完全限定的类型属性  
  *TypeName*。*memberName*窗体的属性的实际工作比仅仅使用路由的事件的情况更为普遍。 但在其他情况下该窗体是多余的应避免它，如果只是为了实现标记样式和可读性。 在以下示例中，这三个对引用<xref:System.Windows.Controls.Control.Background%2A>属性是完全等效：  
   
- [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
+ [!code-xaml[XAMLOvwSupport#TypeNameProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
  `Button.Background` 有效，因为该属性的限定的查找<xref:System.Windows.Controls.Button>成功 (<xref:System.Windows.Controls.Control.Background%2A>从控件继承) 和<xref:System.Windows.Controls.Button>是对象元素的类或基类。 `Control.Background` 有效，因为<xref:System.Windows.Controls.Control>类实际上定义了<xref:System.Windows.Controls.Control.Background%2A>并<xref:System.Windows.Controls.Control>是<xref:System.Windows.Controls.Button>基类。  
   
  但是，以下*typeName*。*memberName*窗体示例不起作用，因此显示为注释：  
   
- [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
+ [!code-xaml[XAMLOvwSupport#TypeNameBadProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
  <xref:System.Windows.Controls.Label> 作为另一个派生的类的<xref:System.Windows.Controls.Control>，并且如果已指定`Label.Background`内<xref:System.Windows.Controls.Label>对象元素，这种用法会起作用。 但是，由于<xref:System.Windows.Controls.Label>不是类或类的基类<xref:System.Windows.Controls.Button>，然后处理指定的 XAML 处理器行为是`Label.Background`作为附加属性。 `Label.Background` 不是可附加的属性，并将故障这种用法。  
   
 ### <a name="basetypenamemembername-property-elements"></a>baseTypeName.memberName 属性元素  
  如何以类似方式*typeName*。*memberName*窗体适用于特性语法*b t y p*。*memberName*语法适用于属性元素语法。 例如，以下语法的工作原理：  
   
- [!code-xaml[XAMLOvwSupport#GoofyPE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofype)]  
+ [!code-xaml[XAMLOvwSupport#GoofyPE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofype)]  
   
  在这里，为提供的属性元素`Control.Background`即使属性元素已包含在`Button`。  
   
  但是，正如*typeName*。*memberName*属性，用于窗体*b t y p*。*memberName*是在标记中，良好的样式，应避免它。  
   
-## <a name="see-also"></a>请参阅  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML 命名空间 (x:) 语言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML 扩展](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [依赖项属性概述](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [TypeConverter 和 XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [XAML 及 WPF 的自定义类](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+## <a name="see-also"></a>请参阅
+- [XAML 概述 (WPF)](xaml-overview-wpf.md)
+- [XAML Namespace （x:）语言功能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [WPF XAML 扩展](wpf-xaml-extensions.md)
+- [依赖项属性概述](dependency-properties-overview.md)
+- [TypeConverter 和 XAML](typeconverters-and-xaml.md)
+- [XAML 及 WPF 的自定义类](xaml-and-custom-classes-for-wpf.md)

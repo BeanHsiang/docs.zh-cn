@@ -1,23 +1,23 @@
 ---
 title: 容器化整体式应用程序
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 容器化整体式应用程序
+description: 容器化整体式应用程序虽然无法从微服务体系结构中获得所有好处，但却具有可立即提供的重要部署优势。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 4e5b7a8202a0af26c8d61e315c3aa8f592ed45d9
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: d1de4c4beb8c60aa543e5c71243d93b83fe52072
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105918"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130859"
 ---
 # <a name="containerizing-monolithic-applications"></a>容器化整体式应用程序
 
 你可能想构建单个整体部署的 Web 应用程序或服务，并将其部署为容器。 应用程序本身在内部可能并非整体式，只是结构化为多个库、组件甚至层（应用程序层、域层、数据访问层等等）。 但在外部，应用程序则是单个容器 - 单个进程、单个 Web 应用程序或单个服务。
 
-若要管理此模型，可部署单个容器来表示应用程序。 若要纵向扩展，只需添加更多副本，并将负载均衡器置于前面即可。 为了简单起见，在单个容器或 VM 中管理单个部署。
+若要管理此模型，可部署单个容器来表示应用程序。 若要增加容量，可进行横向扩展，即，只需添加更多副本并将负载均衡器置于前面。 为了简单起见，在单个容器或 VM 中管理单个部署。
 
-![](./media/image1.png)
+![整体式容器化应用程序将其大部分功能集中在一个具有内部层或库的容器中，并通过在多个服务器/VM 上克隆容器来进行横向扩展](./media/image1.png)
 
 **图 4-1**。 容器化整体式应用程序的体系结构示例
 
@@ -33,15 +33,15 @@ ms.locfileid: "37105918"
 
 从基础结构的角度来看，每台服务器可以在同一台主机上运行多个应用程序，在资源使用率中具有可接受的效率比率，如图 4-2 所示。
 
-![](./media/image2.png)
+![一个主机可以运行多个整体式应用，每个应用位于一个单独的容器中。](./media/image2.png)
 
 **图 4-2**。 整体式方法：主机运行多个应用，每个应用作为一个容器运行
 
-Microsoft Azure 中的整体式应用程序可以使用每个实例的专用 VM 进行部署。 此外，使用 [Azure VM 缩放集](https://docs.microsoft.com/azure/virtual-machine-scale-sets/) 可轻松地缩放 VM。 [Azure 应用服务](https://azure.microsoft.com/services/app-service/)还可运行整体式应用程序和轻松缩放实例，无需管理 VM。 自 2016 年起，Azure 应用服务也可以运行 Docker 容器的单个实例，从而简化部署。
+Microsoft Azure 中的整体式应用程序可以使用每个实例的专用 VM 进行部署。 此外，使用 [Azure 虚拟机规模集](https://azure.microsoft.com/documentation/services/virtual-machine-scale-sets/)可轻松缩放 VM。 [Azure 应用服务](https://azure.microsoft.com/services/app-service/)还可运行整体式应用程序和轻松缩放实例，无需管理 VM。 自 2016 年起，Azure 应用服务也可以运行 Docker 容器的单个实例，从而简化部署。
 
 像 QA 环境或有限的生产环境一样，可以部署多个 Docker 主机 VM 并使用 Azure 平衡器平衡这些 VM，如图 4-3 所示。 这样，你可以使用粗粒度方法管理缩放，因为整个应用程序都在单个容器中。
 
-![](./media/image3.png)
+![多个主机，每个主机运行一个带有整体式应用程序的容器。](./media/image3.png)
 
 **图 4-3**。 多个主机纵向扩展单容器应用程序的示例
 
@@ -49,7 +49,7 @@ Microsoft Azure 中的整体式应用程序可以使用每个实例的专用 VM 
 
 ## <a name="deploying-a-monolithic-application-as-a-container"></a>将整体式应用程序部署为容器
 
-使用容器管理整体式应用程序部署具有一些益处。 缩放容器实例比再部署另外的 VM 要快得多，也容易地多。 即使是使用 VM 规模集，启动 VM 也需要时间。 部署为传统应用程序实例而非容器时，管理应用程序的配置就属于 VM 的一部分，这并不是理想的方式。
+使用容器管理整体式应用程序部署具有一些益处。 缩放容器实例比再部署另外的 VM 要快得多，也容易地多。 即使是使用虚拟机规模集，启动 VM 也需要时间。 部署为传统应用程序实例而非容器时，管理应用程序的配置就属于 VM 的一部分，这并不是理想的方式。
 
 将更新部署为 Docker 映像会快得多，并且网络效率更高。 Docker 映像通常会在几秒内启动，加快了推出速度。 拆除 Docker 映像实例与发出 `docker stop` 命令一样简单，通常在一秒钟以内便可完成。
 
@@ -61,17 +61,16 @@ Microsoft Azure 中的整体式应用程序可以使用每个实例的专用 VM 
 
 无论是想验证部署到 Azure 的容器，还是想应用程序只作为单容器应用程序，Azure 应用服务都能够用一种适合的方式可缩放的基于单个容器的服务。 Azure 应用服务使用简单。 此服务与 Git 完美集成，可方便获取代码、在 Visual Studio 中构建此服务并将其直接部署到 Azure。
 
-![](./media/image4.png)
+![用于将单容器应用程序从 Visual Studio 发布到 Azure 应用服务的向导](./media/image4.png)
 
 **图 4-4**。 将单容器应用程序从 Visual Studio 发布到 Azure 应用服务
 
-如果没有 Docker，需要 Azure 服务中不支持的其他功能、框架或依赖项时，则必须等到 Azure 团队更新应用服务中的这些依赖项。 或者必须切换到 Azure Service Fabric、Azure 云服务甚至 VM 等其他服务，你可以在其中获得更进一步的控制权，且可以为应用程序安装所需的组件或框架。
+如果没有 Docker，需要 Azure 应用服务中不支持的其他功能、框架或依赖项时，则必须等到 Azure 团队更新应用服务中的这些依赖项。 或者必须切换到 Azure Service Fabric、Azure 云服务甚至 VM 等其他服务，你可以在其中获得更进一步的控制权，且可以为应用程序安装所需的组件或框架。
 
 通过 Visual Studio 2017 中的容器支持，你能够在应用程序环境中包括任何想要的内容，如图 4-4 所示。 由于容器中正在运行此支持，因此如果向应用程序添加依赖项，则可以将依赖项包含在 Dockerfile 或 Docker 映像中。
 
 仍然如图 4-4 所示，发布流通过容器注册表发布映像。 这可以是 Azure 容器注册表（一个与 Azure 中的部署密切相关并由 Azure Active Directory 组和帐户保护的注册表），也可以是任何其他 Docker 注册表（如 Docker 中心或本地注册表）。
 
-
 >[!div class="step-by-step"]
-[上一页](index.md)
-[下一页](docker-application-state-data.md)
+>[上一页](index.md)
+>[下一页](docker-application-state-data.md)

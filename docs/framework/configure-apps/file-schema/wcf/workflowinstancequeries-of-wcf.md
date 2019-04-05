@@ -1,30 +1,30 @@
 ---
-title: WCF 的 &lt;workflowInstanceQueries&gt;
+title: <workflowInstanceQueries> WCF 的
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-ms.openlocfilehash: 300637031c64f7c9e072f04835fc3590348ddc9e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 89e122b87743a81a80ce63b382ae235c1c4863bc
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192689"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759244"
 ---
-# <a name="ltworkflowinstancequeriesgt-of-wcf"></a>WCF 的 &lt;workflowInstanceQueries&gt;
+# <a name="workflowinstancequeries-of-wcf"></a>\<workflowInstanceQueries > 的 WCF
 
 表示配置元素的集合，这些配置元素跟踪工作流实例生命周期的更改，例如已开始或已完成的事件。  
   
 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<跟踪 >  
+\<tracking>  
 \<配置文件 >  
 \<trackingProfile>  
-\<工作流 >  
+\<workflow>  
 \<workflowInstanceQueries>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -32,7 +32,7 @@ ms.locfileid: "50192689"
         <workflowInstanceQueries>
           <workflowInstanceQuery>
             <states>
-              <state name="Name"/>
+              <state name="Name" />
             </states>
           </workflowInstanceQuery>
         </workflowInstanceQueries>
@@ -40,7 +40,7 @@ ms.locfileid: "50192689"
     </trackingProfile>
   </profiles>
 </tracking>
-```
+```  
   
 ## <a name="attributes-and-elements"></a>特性和元素
 
@@ -60,7 +60,7 @@ ms.locfileid: "50192689"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<工作流 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含由标识为特定工作流的所有查询[activityDefinitionId](https://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx)属性。|  
+|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|一个配置元素，包含由标识为特定工作流的所有查询[activityDefinitionId](xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId)属性。|  
   
 ## <a name="remarks"></a>备注
 
@@ -82,13 +82,13 @@ ms.locfileid: "50192689"
   
 ```xml  
 <workflowInstanceQueries>
-  <workflowInstanceQuery>  
-    <states>  
-      <state name="Started"/>  
-    </states>  
-  </workflowInstanceQuery>  
+  <workflowInstanceQuery>
+    <states>
+      <state name="Started" />
+    </states>
+  </workflowInstanceQuery>
 </workflowInstanceQueries>
-```
+```  
   
 ## <a name="see-also"></a>请参阅
 

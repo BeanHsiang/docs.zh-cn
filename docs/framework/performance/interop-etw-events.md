@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bc9a90e9d889673d8f67e4f9158edebcb65235b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb458958f55a3f9fb2b79d87f0ee32d4a028e457
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611769"
 ---
 # <a name="interop-etw-events"></a>互操作 ETW 事件
 <a name="top"></a> 互操作事件捕获有关 Microsoft 中间语言 (MSIL) 存根生成和缓存的信息。  
@@ -83,5 +83,5 @@ ms.locfileid: "33396362"
   
  [返回页首](#top)  
   
-## <a name="see-also"></a>请参阅  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>请参阅
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

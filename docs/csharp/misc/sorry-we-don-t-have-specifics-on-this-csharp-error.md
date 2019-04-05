@@ -1,5 +1,5 @@
 ---
-title: 抱歉，我们不&#39;t 对此 C# 错误的详细信息
+title: 很抱歉，我们没有关于此 C# 错误的具体信息
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -882,32 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314065"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355787"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>抱歉，我们不&#39;t 对此 C# 错误的详细信息
-很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，还可以咨询其他开发人员，使用以下论坛之一：  
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>很抱歉，我们没有关于此 C# 错误的具体信息
+很抱歉，我们没有关于此错误的任何具体信息。 你可以在 Web 中搜索错误号和消息文本，以找到相关信息。 或者，您可以咨询其他开发人员使用以下论坛之一：  
   
  [Visual C# 语言](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- 提供论坛供有关的问题及常规讨论的 Visual C# 语言的语法和编译器。  
+ 提供了一个论坛问题有关及常规讨论的视觉对象C#语言语法和编译器。  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  提供有关如何在 Visual Studio 环境中的问题的论坛。  
   
  [Visual C# 常见问题解答](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- 提供论坛供大家讨论有关，因此会发出与 Visual C# 编写其他论坛中未涉及。  
+ 提供了一个论坛问题有关和与视觉对象问题C#不在其他论坛中讨论的。  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- 提供论坛供大家讨论有关，因此会发出使用 Visual C#。  
+ [堆栈溢出](https://stackoverflow.com/questions/tagged/c%23)  
+ 提供了一个论坛问题有关和与视觉对象问题C#。  
   
  另请参见：  
  [为 Visual C# 程序员提供的附加资源](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>请参阅  
- [C# 编程指南](../../csharp/programming-guide/index.md)  
- [C# 参考](../../csharp/language-reference/index.md)  
- [与我们交流](/visualstudio/ide/talk-to-us)  
+## <a name="see-also"></a>请参阅
+
+- [C# 编程指南](../../csharp/programming-guide/index.md)
+- [C# 参考](../../csharp/language-reference/index.md)
+- [与我们交流](/visualstudio/ide/talk-to-us)

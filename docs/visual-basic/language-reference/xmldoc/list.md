@@ -1,5 +1,5 @@
 ---
-title: '&lt;列表&gt;(Visual Basic)'
+title: <list> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - listheader XML tag
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 98c3b8bd809ac550468a5d80e01e6fd16e6d96ea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7d7b85867f4c701322c5e6c31f2d89ab38fad05d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924929"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818523"
 ---
-# <a name="ltlistgt-visual-basic"></a>&lt;列表&gt;(Visual Basic)
+# <a name="list-visual-basic"></a>\<列表 > (Visual Basic)
 定义列表或表。  
   
 ## <a name="syntax"></a>语法  
@@ -38,7 +38,7 @@ ms.locfileid: "42924929"
 </list>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `type`  
  列表的类型。 对于项目符号列表、 编号的列表，或两列的表"表"的"number"必须为"bullet"。  
   
@@ -60,7 +60,8 @@ ms.locfileid: "42924929"
 ## <a name="example"></a>示例  
  此示例使用`<list>`标记以在备注部分中定义的项目符号列表。  
   
- [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

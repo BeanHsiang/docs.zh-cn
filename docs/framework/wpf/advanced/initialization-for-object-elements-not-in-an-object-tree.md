@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: 219edcbdb09b4edbd9c5ec31e0def77cce6379bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545527"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376361"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>不在对象树中的对象元素的初始化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 初始化时某些方面会被推迟，在通常依赖连接到逻辑树或可视化树的元素的进程中执行。 本主题介绍了针对未连接到两种树之一的元素，将其初始化可能需要的步骤。  
@@ -27,22 +27,22 @@ ms.locfileid: "33545527"
   
  可视化树也参与此过程。 通过模板成为可视化树一部分的元素也是在连接后才完全实例化的。  
   
- 此行为的结果是依赖某个元素已完成的可视化特征的某些操作需要额外的步骤。 例如，如果你试图获取一个已构造但尚未附加到树中的类的可视化特征，就需要额外的步骤。 例如，如果你想要调用<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>上<xref:System.Windows.Media.Imaging.RenderTargetBitmap>，通过传递时的视觉对象是未连接到树中，元素的其他初始化步骤在完成之前，该元素不是直观地完成。  
+ 此行为的结果是依赖某个元素已完成的可视化特征的某些操作需要额外的步骤。 例如，如果你试图获取一个已构造但尚未附加到树中的类的可视化特征，就需要额外的步骤。 例如，如果你想要调用<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>上<xref:System.Windows.Media.Imaging.RenderTargetBitmap>均通过视觉对象是未连接到树中，元素和额外的初始化步骤在完成之前，该元素不是直观地完成。  
   
 ### <a name="using-begininit-and-endinit-to-initialize-the-element"></a>使用 BeginInit 和 EndInit 初始化元素  
- 中的各种类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]实现<xref:System.ComponentModel.ISupportInitialize>接口。 你使用<xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>和<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>接口来表示包含初始化步骤 （例如，设置属性值影响呈现的） 在代码中的一个区域的方法。 后<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>调用序列中，在布局系统可以处理元素并启动寻找隐式样式。  
+ 各个类中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]实现<xref:System.ComponentModel.ISupportInitialize>接口。 您使用<xref:System.ComponentModel.ISupportInitialize.BeginInit%2A>和<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>接口来表示包含初始化步骤 （例如，设置属性的值影响呈现的） 在代码中的区域的方法。 之后<xref:System.ComponentModel.ISupportInitialize.EndInit%2A>调用布局系统在序列中，可以处理元素并开始查找隐式样式。  
   
- 如果该元素设置属性上是<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>派生类，则可以调用的类版本<xref:System.Windows.FrameworkElement.BeginInit%2A>和<xref:System.Windows.FrameworkElement.EndInit%2A>而不是强制转换为<xref:System.ComponentModel.ISupportInitialize>。  
+ 如果该元素设置属性上是<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>派生的类，则可以调用的类版本<xref:System.Windows.FrameworkElement.BeginInit%2A>并<xref:System.Windows.FrameworkElement.EndInit%2A>而不是强制转换为<xref:System.ComponentModel.ISupportInitialize>。  
   
 ### <a name="sample-code"></a>代码示例  
- 下面的示例是使用呈现一个控制台应用程序的示例代码[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]和<xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType>宽松[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件来说明的正确位置<xref:System.Windows.FrameworkElement.BeginInit%2A>和<xref:System.Windows.FrameworkElement.EndInit%2A>相对于其他[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]调用调整影响呈现的属性。  
+ 下面的示例是使用呈现的控制台应用程序的示例代码[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]并<xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType>松散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]文件来说明的正确位置<xref:System.Windows.FrameworkElement.BeginInit%2A>并<xref:System.Windows.FrameworkElement.EndInit%2A>相对于其他[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]调用调整影响呈现的属性。  
   
  该示例仅演示主要函数。 函数 `Rasterize` 和 `Save`（未显示）是负责图像处理和 IO 的实用工具函数。  
   
- [!code-csharp[InitializeElements#Main](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
- [!code-vb[InitializeElements#Main](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
+ [!code-csharp[InitializeElements#Main](~/samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
+ [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
-## <a name="see-also"></a>请参阅  
- [WPF 中的树](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>请参阅
+- [WPF 中的树](trees-in-wpf.md)
+- [WPF 图形呈现概述](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [XAML 概述 (WPF)](xaml-overview-wpf.md)

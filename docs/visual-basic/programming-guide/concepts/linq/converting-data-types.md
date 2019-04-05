@@ -2,12 +2,12 @@
 title: 转换数据类型 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 9821b2d6caad8feeac856185b92518c25de88da3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad9594cabe0e2382ae4e19f2541eec4aa74ccd75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643740"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837047"
 ---
 # <a name="converting-data-types-visual-basic"></a>转换数据类型 (Visual Basic)
 转换方法可更改输入对象的类型。  
@@ -37,7 +37,7 @@ ms.locfileid: "33643740"
 |ToLookup|根据键选择器函数将元素放入 <xref:System.Linq.Lookup%602>（一对多字典）。 此方法强制执行查询。|不适用。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>查询表达式语法示例  
- 下面的代码示例使用`From As`子句在访问仅适用于子类型的成员之前转换为子类型。  
+ 下面的代码示例使用`From As`子句将类型转换为子类型访问仅在相应的子类型可用的成员之前。  
   
 ```vb  
 Class Plant  
@@ -77,8 +77,9 @@ Sub Cast()
 End Sub  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq>  
- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)  
- [如何： 查询 ArrayList 使用 LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq>
+- [标准查询运算符概述 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [From 子句](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [如何：使用 LINQ (Visual Basic) 查询 ArrayList](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

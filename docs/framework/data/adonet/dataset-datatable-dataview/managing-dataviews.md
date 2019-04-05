@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 847829f6b131a33cc5ff1ca77b10f7e756da920f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497074"
 ---
 # <a name="managing-dataviews"></a>管理 DataView
 可以使用 <xref:System.Data.DataViewManager> 来管理 <xref:System.Data.DataView> 中所有表的视图设置。 如果你想要将绑定到多个表的控件，如网格进行关系导航**DataViewManager**是理想之选。  
@@ -119,10 +119,10 @@ System.Windows.Forms.DataGrid grid = new System.Windows.Forms.DataGrid();
 grid.SetDataBinding(viewManager, "Customers");  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataViewManager>  
- <xref:System.Data.DataViewSetting>  
- <xref:System.Data.DataViewSettingCollection>  
- [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataViewManager>
+- <xref:System.Data.DataViewSetting>
+- <xref:System.Data.DataViewSettingCollection>
+- [数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

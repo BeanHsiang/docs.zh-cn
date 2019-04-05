@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: d0fc45b5ccabedb127061090eed1f6b63fd7acba
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199146"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664195"
 ---
 # <a name="metadata-architecture-overview"></a>元数据体系结构概述
 Windows Communication Foundation (WCF) 提供了用于导出、 发布、 检索和导入服务元数据的丰富基础结构。 WCF 服务使用元数据来描述如何与服务的终结点交互，以便诸如 Svcutil.exe 之类的工具，可以自动生成用于访问服务的客户端代码。  
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) 提供了用于导出、 发布、 检索
 > [!CAUTION]
 > 如果在应用程序配置文件中添加 MEX 终结点，然后尝试在代码中向服务主机添加 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>，则会得到以下异常：  
 >
-> System.InvalidOperationException: 在服务 Service1 实现的协定列表中找不到协定名称“ImetadataExchange”。 将 ServiceMetadataBehavior 添加到配置文件或直接添加到 ServiceHost，以启用对该协定的支持。  
+> System.InvalidOperationException：在服务 Service1 实现的协定列表中找不到协定名称 IMetadataExchange。 将 ServiceMetadataBehavior 添加到配置文件或直接添加到 ServiceHost，以启用对该协定的支持。  
 >
 > 通过在配置文件中 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 或在代码中同时添加终结点和 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>，可以解决此问题。  
 >
@@ -87,12 +87,12 @@ Windows Communication Foundation (WCF) 提供了用于导出、 发布、 检索
 ## <a name="dynamic-bindings"></a>动态绑定  
  如果终结点的绑定更改，或者希望为使用相同协定但具有不同绑定的终结点创建一个通道，则可以动态更新用来为服务终结点创建通道的绑定。 可以使用 <xref:System.ServiceModel.Description.MetadataResolver> 静态类在运行时为实现特定协定的服务终结点检索和导入元数据。 然后可以使用导入的 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 对象为所需终结点创建客户端或通道工厂。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description>  
- [元数据格式](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
- [导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [检索元数据](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description>
+- [元数据格式](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
+- [导出和导入元数据](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [发布元数据](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
+- [检索元数据](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)
+- [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [扩展元数据系统](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

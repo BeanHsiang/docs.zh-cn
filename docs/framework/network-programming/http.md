@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: 65a799355e35fc7d14e3aaad973209147f7e7eae
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0c8bcca55dc54b2dd89be2e45dade4d09a67362
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50182874"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574126"
 ---
 # <a name="http"></a>HTTP
 .NET Framework 使用 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.HttpWebResponse> 类提供对 HTTP 协议的全面支持，这构成所有 Internet 通信的主体。 这些类派生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，默认情况下将被返回，无论静态方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 遇到以“http”还是“https”开头的 URI。 大多数情况下，WebRequest 和 WebResponse 类提供发出请求的所有必需项，但如果需要访问作为属性公开的特定于 HTTP 的功能，可以将这些类转换为 HttpWebRequest 或 HttpWebResponse 类型。  
@@ -31,7 +31,7 @@ ms.locfileid: "50182874"
   
  应用程序通过捕获 <xref:System.Net.WebException>（其中 <xref:System.Net.WebException.Status%2A> 设置为 <xref:System.Net.WebExceptionStatus>）来接收 HTTP 协议错误。 <xref:System.Net.WebException.Response%2A> 属性包含由服务器发送的 WebResponse，并指示遇到的实际 HTTP 错误。  
   
-## <a name="see-also"></a>请参阅  
- [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md)  
- [如何：访问 HTTP 特定的属性](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+## <a name="see-also"></a>请参阅
+- [通过代理访问 Internet](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
+- [使用应用程序协议](../../../docs/framework/network-programming/using-application-protocols.md)
+- [如何：访问 HTTP 特定的属性](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)

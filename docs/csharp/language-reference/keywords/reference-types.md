@@ -1,5 +1,6 @@
 ---
-title: 引用类型（C# 参考）
+title: 引用类型 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.referencetypes
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: f99415fc9a2b728917cdf829ffb9e25823a824dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae7511c1bbe1b50e0070c41b25642e7b614c485d
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47207430"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241348"
 ---
 # <a name="reference-types-c-reference"></a>引用类型（C# 参考）
 

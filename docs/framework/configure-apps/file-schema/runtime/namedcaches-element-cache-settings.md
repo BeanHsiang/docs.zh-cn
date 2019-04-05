@@ -1,27 +1,25 @@
 ---
-title: '&lt;namedCaches&gt;元素 （缓存设置）'
+title: <namedCaches> 元素（缓存设置）
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namedCaches element
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a74dfaf883ea23514c6bc4641d9d576f5baf10b4
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1dedd3ca192b5fb0ee561ce138f0948c52581f89
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028267"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287477"
 ---
-# <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt;元素 （缓存设置）
+# <a name="namedcaches-element-cache-settings"></a>\<namedCaches > 元素 （缓存设置）
 指定的配置设置的命名集合<xref:System.Runtime.Caching.MemoryCache>实例。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>属性引用的配置设置集合中一个或多个`namedCaches`配置文件中的元素。  
   
  \<configuration>  
-\< system.runtime.caching >  
+\< system.runtime.caching>  
 \<memoryCache>  
-\<namedCaches >  
+\<namedCaches>  
   
 ## <a name="syntax"></a>语法  
   
@@ -89,5 +87,5 @@ ms.locfileid: "48028267"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [\<memoryCache > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)
+## <a name="see-also"></a>请参阅
+- [\<memoryCache > 元素 （缓存设置）](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

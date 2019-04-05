@@ -1,17 +1,17 @@
 ---
-title: 如何：在 Visual Basic 中将一个对象转换为其他类型
+title: 如何：将对象转换为 Visual Basic 中的另一种类型
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: f168b3021ee1dbe3c82edc22fc779767c30446b8
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912008"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814375"
 ---
-# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>如何：在 Visual Basic 中将一个对象转换为其他类型
+# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>如何：将对象转换为 Visual Basic 中的另一种类型
 您将转换`Object`通过使用转换关键字，如另一种数据类型的变量[CType 函数](../../../../visual-basic/language-reference/functions/ctype-function.md)。  
   
 ## <a name="example"></a>示例  
@@ -33,13 +33,14 @@ End Sub
   
 -   对 <xref:System?displayProperty=nameWithType> 命名空间的引用。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Object>  
- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [扩大转换和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [隐式转换和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [字符串和其他类型之间的转换](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [数组转换](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Object>
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [扩大转换和收缩转换](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [隐式转换和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [字符串和其他类型之间的转换](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [数组转换](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

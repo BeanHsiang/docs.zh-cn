@@ -1,16 +1,16 @@
 ---
-title: '使用 F # Azure 队列存储入门'
+title: 使用 Azure 队列存储入门F#
 description: Azure 队列提供可靠、 异步消息传送应用程序组件之间。 云消息传送使应用程序组件可单独缩放。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 14bbc657f965fc262d2a83b1fdf982fe5e75d55e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 58a46dfe905a32be77a13d11df8f0544546ea0ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569408"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974271"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>使用 F # Azure 队列存储入门 #
+# <a name="get-started-with-azure-queue-storage-using-f"></a>开始使用 Azure 队列存储中使用 F\#
 
 Azure 队列存储提供了云应用程序组件之间的消息传送。 在设计时缩放的应用程序，应用程序组件通常被分离，以便它们可以独立缩放。 队列存储可实现异步消息传送应用程序组件之间的通信是否在云中、 在桌面上、 在本地服务器上，或在移动设备上运行。 队列存储还支持管理异步任务以及构建过程工作流。
 
@@ -25,9 +25,9 @@ Azure 队列存储提供了云应用程序组件之间的消息传送。 在设�
 若要使用本指南，您必须首先[创建 Azure 存储帐户](/azure/storage/storage-create-storage-account)。
 此外需要为此帐户存储访问密钥。
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>创建 F # 脚本，并开始将 F # Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>创建F#脚本并启动F#交互式
 
-这篇文章中的示例可以在 F # 应用程序或 F # 脚本中使用。 若要创建 F # 脚本，创建的文件`.fsx`扩展，例如`queues.fsx`，在 F # 开发环境中。
+这篇文章中的示例可在F#应用程序或F#脚本。 若要创建F#脚本，创建的文件`.fsx`扩展，例如`queues.fsx`，在你F#开发环境。
 
 接下来，使用[程序包管理器](package-management.md)如[paket 依存](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/)安装`WindowsAzure.Storage`程序包和引用`WindowsAzure.Storage.dll`使用在脚本中`#r`指令。
 

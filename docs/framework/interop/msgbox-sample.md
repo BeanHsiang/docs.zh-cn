@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3c4d38b60f349f0ecb87204cb980dd6681a8cc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3393adf5beed02a5a4bda2e07bd26e29e47fae2f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388695"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219303"
 ---
 # <a name="msgbox-sample"></a>MsgBox 示例
 此示例演示如何通过值将字符串类型作为 In 参数传递，以及何时使用 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>、<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 和 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> 字段。  
@@ -44,9 +44,8 @@ ms.locfileid: "33388695"
  [!code-csharp[Conceptual.Interop.Marshaling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/msgbox.cs#6)]
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
-## <a name="see-also"></a>请参阅  
- [封送处理字符串](marshaling-strings.md)  
- [平台调用数据类型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [字符串的默认封送处理](default-marshaling-for-strings.md)  
- [在托管代码中创建原型](creating-prototypes-in-managed-code.md)  
- [指定字符集](specifying-a-character-set.md)
+## <a name="see-also"></a>请参阅
+- [封送处理字符串](marshaling-strings.md)
+- [字符串的默认封送处理](default-marshaling-for-strings.md)
+- [在托管代码中创建原型](creating-prototypes-in-managed-code.md)
+- [指定字符集](specifying-a-character-set.md)

@@ -1,23 +1,25 @@
 ---
-title: 使用 dotnet test 和 NUnit 在 .NET Core 中进行 Visual Basic 单元测试
+title: 使用 dotnet test 和 NUnit 对 .NET Core 中的 Visual Basic 进行单元测试
 description: 使用 NUnit 分步构建一个 Visual Basic 示例解决方案，在此交互式体验中学习 .NET Core 中的单元测试概念。
 author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: bed43ac6b6f918b1ee45715101f9142c1add777f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 2c8a6b86dd66b13faa242f94cf11cb940986fbd0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836894"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746871"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>使用 dotnet test 和 NUnit 进行 Visual Basic .NET Core 库的单元测试
 
 本教程介绍分步构建示例解决方案的交互式体验，以了解单元测试概念。 如果希望使用预构建解决方案学习本教程，请在开始前[查看或下载示例代码](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/)。 有关下载说明，请参阅[示例和教程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>系统必备 
-- [.NET Core SDK 2.1（版本2.1.400）](https://www.microsoft.com/net/download)或更高版本。 
+## <a name="prerequisites"></a>系统必备
+
+- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更高版本。
 - 按需选择的文本编辑器或代码编辑器。
 
 ## <a name="creating-the-source-project"></a>创建源项目
@@ -42,7 +44,7 @@ dotnet new sln
 dotnet new classlib -lang VB
 ```
 
-将 Class1.VB 重命名为 PrimeService.VB。 为了使用由测试驱动的开发 (TDD)，需对 `PrimeService` 类创建故障实现：
+将 Class1.VB 重命名为 PrimeService.VB。 创建 `PrimeService` 类的失败实现：
 
 ```vb
 Imports System
@@ -114,7 +116,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-TDD 方法要求编写一个失败的测试，使其通过测试，然后重复该过程。 在 PrimeService.Tests 目录中，将 UnitTest1.vb 文件重命名为 PrimeService_IsPrimeShould.VB，并将其整个内容替换为以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 在 PrimeService.Tests 目录中，将 UnitTest1.vb 文件重命名为 PrimeService_IsPrimeShould.VB，并将其整个内容替换为以下代码：
 
 ```vb
 Imports NUnit.Framework
@@ -152,7 +154,7 @@ End Function
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以将这些情况添加为具有 `<Test>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件。  `<TestCase>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<TestCase>` 属性来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0、-1。 可以将这些情况添加为具有 `<Test>` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件。  `<TestCase>` 属性表示执行相同代码，但具有不同输入参数一系列测试。 可以使用 `<TestCase>` 属性来指定这些输入的值。
 
 无需创建新测试，而是应用这两个属性来创建一系列测试，用于测试小于 2（最小质数）的几个值：
 

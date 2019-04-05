@@ -1,23 +1,32 @@
 ---
-title: 如何删除 .NET 运行时和 SDK
-description: 有关在 Windows、Mac 和 Linux 上删除 .NET Core 运行时和 SDK 组件的说明
+title: 删除 .NET Core 运行时和 SDK
+description: 本文介绍如何确定当前安装的 .NET Core 运行时和 SDK 的版本，以及如何在 Windows、Mac 和 Linux 上删除它们。
 ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
-ms.openlocfilehash: 1806d1af3b10e44ccc2eff788d8958ca976fe85b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 4e336abf62299e0dee2e4757bb83f967ed4aed59
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989808"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966016"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>如何删除 .NET Core 运行时和 SDK
 
 经过一段时间后，在安装 .NET Core 运行时和 SDK 的更新版本时，用户可能需要从计算机中删除过时的 .NET Core 版本。 如有关 [.NET Core 版本选择](selection.md)的文章中详述，删除旧版运行时可能会更改为运行共享框架应用程序所选择的运行时。
 
+## <a name="should-i-remove-a-version"></a>是否应删除某个版本？
+
+借助 [.NET Core 版本选择](selection.md)行为和 .NET Core 各个更新之间的运行时兼容性，可安全地删除以前的版本。 .NET Core 运行时更新在主版本“区段”（如 1.x 和 2.x）中兼容。 此外，较新版本的 .NET Core SDK 通常能够以兼容的方式生成以运行时的早期版本为目标的应用程序。
+
+通常，只需要应用程序所需的最新 SDK 和运行时的最新补丁版本。 保留旧版 SDK 或运行时版本的实例包括维护基于 project.json 的应用程序。 除非应用程序有需保留早期 SDK 或运行时的特定原因，否则可以安全地删除旧版本。
+
+## <a name="determine-what-is-installed"></a>确定安装内容
+
 从 .NET Core 2.1 开始，.NET CLI 提供一些可用于列出计算机上安装的 SDK 和运行时版本的选项。  使用 [`dotnet --list-sdks`](../tools/dotnet.md#options) 查看计算机上安装的 SDK 列表。 使用 [`dotnet --list-runtimes`](../tools/dotnet.md#options) 查看计算机上安装的运行时列表。 下文显示了 Windows、macOS 或 Linux 的典型输出：
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 ```console
 C:\> dotnet --list-sdks
@@ -55,7 +64,7 @@ Microsoft.NETCore.App 2.1.1 [C:\Program Files\dotnet\shared\Microsoft.NETCore.Ap
 Microsoft.NETCore.App 2.1.2 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 ```console
 $ dotnet --list-sdks
@@ -89,7 +98,7 @@ Microsoft.NETCore.App 2.1.0 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.1 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 ```console
 $ dotnet --list-sdks
@@ -123,11 +132,11 @@ Microsoft.NETCore.App 2.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-***
+---
 
 ## <a name="uninstalling-net-core"></a>卸载 .NET Core
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 .NET Core 使用 Windows“添加/删除程序”对话框来删除 .NET Core 运行时和 SDK 的版本。 下图显示了“添加/删除程序”对话框，其中包含已安装的多个版本的 .NET 运行时和 SDK。
 
@@ -135,7 +144,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 选择要从计算机中删除的任何版本，然后单击“卸载”。
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 Linux 还提供其他可用来卸载 .NET Core（SDK 或运行时）的选项。 卸载 .NET Core 的最佳方法是镜像用来安装 .NET Core 的操作。 具体取决于所选择的分发和安装方法。
 
@@ -149,7 +158,7 @@ Linux 还提供其他可用来卸载 .NET Core（SDK 或运行时）的选项。
 - [apt-get(8)](https://linux.die.net/man/8/apt-get) 由基于 Debian 的系统（包括 Ubuntu）使用。
 - [yum(8)](https://linux.die.net/man/8/yum) 用于 Fedora、CentOS 和 Oracle Linux。
 - [zypper(8)](https://en.opensuse.org/SDB:Zypper_manual_(plain)) 用于 openSUSE 和 SUSE Linux Enterprise System (SLES)。
-- [dnf(8)](https://dnf.readthedocs.io/latest/command_ref.html) 用于 Fedora。
+- [dnf(8)](https://dnf.readthedocs.io/en/latest/command_ref.html) 用于 Fedora。
 
 几乎在所有情况下，删除包的命令都是 `remove`。
 
@@ -178,7 +187,7 @@ sudo rm -rf /usr/share/dotnet/host/fxr/1.0.1
 
 SDK 和运行时的父目录列在 `dotnet --list-sdks` 和 `dotnet --list-runtimes` 命令的输出中，如上表所示。
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 在 Mac 上，必须通过删除包含该版本的目录，分别删除 SDK 和运行时。 例如，要删除 1.0.1 SDK 和运行时，可使用以下 bash 命令：
 
@@ -190,7 +199,5 @@ sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
 ```
 
 SDK 和运行时的父目录列在 `dotnet --list-sdks` 和 `dotnet --list-runtimes` 命令的输出中，如上表所示。
-
-从 .NET Core 2.1 开始，使用包管理器升级时无需卸载 .NET Core SDK。 包管理器 `update` 或 `refresh` 命令将在成功安装较新版本后自动删除旧版本。
 
 ---

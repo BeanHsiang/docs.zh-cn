@@ -2,12 +2,12 @@
 title: BinaryMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: e2bb3cdd-3bbd-4bb5-85fe-570457500a66
-ms.openlocfilehash: 326fe6a7ca8dc5dba0dd64b1c5fc97cec49279c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 330496d5f0f80affcb6bc44a1f66f4321a635f00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580585"
 ---
 # <a name="binarymessageencodingbindingelement"></a>BinaryMessageEncodingBindingElement
 BinaryMessageEncodingBindingElement  
@@ -64,5 +64,5 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>

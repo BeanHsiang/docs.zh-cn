@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8213d3d980edc9c37b5f50545edbcd8959616963
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745462"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>如何：实现支持基于事件的异步模式的组件
 若要编写的类有一些可能会带来明显延迟的操作，请考虑按照[基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)中的步骤操作，为它实现异步功能。  
@@ -48,7 +48,7 @@ ms.locfileid: "46003810"
   
 -   实现启动和取消方法  
   
- 若要将本主题中的代码复制为一个代码清单，请参阅[如何：实现基于事件的异步模式的客户端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
+ 要将本主题中的代码作为单个列表进行复制，请参阅[如何：实现基于事件的异步模式的客户端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
 ## <a name="creating-the-component"></a>创建组件  
  第一步是，创建实现基于事件的异步模式的组件。  
@@ -176,7 +176,7 @@ ms.locfileid: "46003810"
  `CalculateWorker` 方法包装在委托中，通过调用 `BeginInvoke` 进行异步调用。  
   
 > [!NOTE]
->  进度事件报告是在 `BuildPrimeNumberList` 方法中实现。 在快速运行的计算机上，`ProgressChanged` 事件可能会快速连续抛出。 对其抛出这些事件的客户端线程必须能够处理这种情况。 消息可能会像洪水般涌入用户界面代码，导致代码无法不断更新，继而导致挂起行为发生。 有关处理这种情况的示例用户界面，请参阅[如何：实现基于事件的异步模式的客户端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
+>  进度事件报告是在 `BuildPrimeNumberList` 方法中实现。 在快速运行的计算机上，`ProgressChanged` 事件可能会快速连续抛出。 对其抛出这些事件的客户端线程必须能够处理这种情况。 消息可能会像洪水般涌入用户界面代码，导致代码无法不断更新，继而导致挂起行为发生。 有关处理此情况的示例用户界面，请参阅[如何：实现基于事件的异步模式的客户端](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)。  
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>若要异步执行质数计算，请执行以下操作：  
   
@@ -253,6 +253,6 @@ ms.locfileid: "46003810"
   
 ## <a name="see-also"></a>请参阅
 
-- [如何：在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
-- [基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
-- [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [如何：在后台运行操作](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [基于事件的异步模式概述](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [基于事件的异步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

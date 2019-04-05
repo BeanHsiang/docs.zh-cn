@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: df526c93c195275751c393299b0e0d80337eee44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698557"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688891"
 ---
 # <a name="comparing-strings-in-net"></a>比较 .NET 中的字符串
 .NET 提供几种方法来比较字符串的值。 下表列出和描述值比较方法。  
@@ -61,7 +61,7 @@ ms.locfileid: "45698557"
   
  此示例向控制台显示 `-1` 。  
   
- 前面的示例默认区分区域性。 若要执行非区域性敏感型字符串比较，请使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法重载，这样就可以提供区域性参数，指定要使用的区域性。 有关展示了如何使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法执行非区域性敏感型比较的示例，请参阅[执行非区域性敏感型字符串比较](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
+ 前面的示例默认区分区域性。 若要执行不区分区域性的字符串比较，请使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法的重载，这样就可以通过提供 *区域性* 参数来指定要使用的区域性。 有关演示如何使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法来执行不区分区域性的比较的示例，请参阅 [执行不区分区域性的字符串比较](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 方法比较两个字符串对象而不考虑本地区域性。 此方法的返回值与上表中 **Compare** 方法返回的值相等。  
@@ -91,7 +91,7 @@ ms.locfileid: "45698557"
   
  此示例向控制台显示 `-1` 。  
   
- <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法的所有重载都默认执行区分大小写的区域性敏感型比较。 此方法不提供任何允许执行不区分区域性的比较的重载。 为了代码清楚起见，建议改用 String.Compare 方法，同时指定 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 执行区域性敏感型操作，或指定 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 执行非区域性敏感型操作。 有关演示如何使用 **String.Compare** 方法来执行区分和不区分区域性的比较的示例，请参阅 [执行不区分区域性的字符串比较](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
+ <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法的所有重载均默认执行区分区域性且区分大小写的比较。 此方法不提供任何允许执行不区分区域性的比较的重载。 为了代码的清楚起见，建议改为使用 **String.Compare** 方法，指定 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 执行区分区域性的操作或指定 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 执行不区分区域性的操作。 有关演示如何使用 **String.Compare** 方法来执行区分和不区分区域性的比较的示例，请参阅 [执行不区分区域性的字符串比较](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)。  
   
 ## <a name="equals"></a>Equals  
  **String.Equals** 方法能够轻松确定两个字符串是否相等。 这个区分大小写的方法返回 **true** 或 **false** 布尔值。 它可以在现有类中使用，如下一个示例所示。 以下示例使用 **Equals** 方法来确定一个字符串对象是否包含短语“Hello World”。  
@@ -152,7 +152,7 @@ ms.locfileid: "45698557"
   
 ## <a name="see-also"></a>请参阅
 
-- [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)  
+- [基本字符串操作](../../../docs/standard/base-types/basic-string-operations.md)
 - [执行不区分区域性的字符串操作](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - [排序权重表（适用于 Windows 上的 .NET）](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
 - [默认 Unicode 排序元素表（适用于 Linux 和 macOS 上 .NET Core）](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

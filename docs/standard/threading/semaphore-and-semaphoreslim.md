@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7d7f791fbc68a526f428f4f79d9b379a23ca771
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550482"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore 和 SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 类表示一个命名（系统范围内）或本地信号量。 它是环绕 Win32 信号量对象的精简包装器。 Win32 信号量是计数信号量，该可用于控制对资源池的访问。  
@@ -48,6 +48,6 @@ ms.locfileid: "50199482"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.Semaphore>  
-- <xref:System.Threading.SemaphoreSlim>  
+- <xref:System.Threading.Semaphore>
+- <xref:System.Threading.SemaphoreSlim>
 - [线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)

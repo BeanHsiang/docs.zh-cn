@@ -2,28 +2,28 @@
 title: 服务版本控制
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 75a19c62f52c1d9468976f7ebea72245d1d341eb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 62c8641e69ea461c3bf56b911c25b4894f63abe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649240"
 ---
 # <a name="service-versioning"></a>服务版本控制
-服务（及其公开的终结点）在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术需求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 每次更改都会引入服务的一个新版本。 本主题说明如何考虑版本控制中 Windows Communication Foundation (WCF)。  
+服务（及其公开的终结点）在初始部署之后，可能出于多种原因（例如，更改业务需求、信息技术需求，或者为了解决其他问题）而需要更改，并且在其生存期期间可能需要更改多次。 每次更改都会引入服务的一个新版本。 本主题说明如何考虑版本控制 Windows Communication Foundation (WCF) 中。  
   
 ## <a name="four-categories-of-service-changes"></a>服务更改的四个类别  
  可能需要的服务更改可分成四类：  
   
--   协定更改：例如，可能添加某个操作，或者可能添加或更改消息中的某个数据元素。  
+-   协定更改：例如，可能会添加一个操作，或在消息中的数据元素可能要添加或更改。  
   
--   地址更改：例如，服务移至另一个位置，终结点在此位置获得新地址。  
+-   地址更改：例如，服务将移动到终结点有新的地址的不同位置。  
   
--   绑定更改：例如，安全机制更改或其设置更改。  
+-   绑定的更改：例如，一种安全机制更改或其设置更改。  
   
--   实现更改：例如，当内部方法实现更改时。  
+-   实现更改：例如，当内部方法实现更改。  
   
- 这些更改中有一些称为“中断性”，而其他则为“非中断性”。 更改*不间断*如果将成功处理了早期版本中的所有消息已成功都处理，在新版本。 并不满足该条件的任何更改是*重大*更改。  
+ 这些更改中有一些称为“中断性”，而其他则为“非中断性”。 更改*不间断*如果新版本中已成功处理将成功处理的早期版本中的所有消息。 任何更改都不满足该条件是*重大*更改。  
   
 ## <a name="service-orientation-and-versioning"></a>面向服务和版本管理  
  面向服务的原则之一是服务和客户端自主（即独立）。 这其中的一层含义是，服务开发人员不能假设他们能控制，甚至是了解所有服务客户端。 这消除了在服务更改版本时重建和重新部署所有客户端的可能。 本主题假设服务遵循这一原则，并因此必须独立于其客户端进行更改或“版本变更”。  
@@ -35,7 +35,7 @@ ms.locfileid: "33809685"
   
  对于服务协定，兼容性意味着可以添加服务所公开的新操作，但是不能移除或从语义上更改现有操作。  
   
- 对于数据协定，兼容性意味着可以添加新的架构类型定义，但是不能以中断性方式更改架构类型定义。 中断性更改可包括移除数据成员或不兼容地更改其数据类型。 这一特点允许服务在某种程度上更改其协定的版本而又不中断客户端。 接下来的两节说明不间断和重大更改，可以对 WCF 数据服务协定。  
+ 对于数据协定，兼容性意味着可以添加新的架构类型定义，但是不能以中断性方式更改架构类型定义。 中断性更改可包括移除数据成员或不兼容地更改其数据类型。 这一特点允许服务在某种程度上更改其协定的版本而又不中断客户端。 接下来的两部分介绍非中断性和重大更改，可以对 WCF 数据服务协定。  
   
 ## <a name="data-contract-versioning"></a>数据协定版本管理  
  本节讨论使用 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.DataContractAttribute> 类时的数据版本管理。  
@@ -54,11 +54,11 @@ ms.locfileid: "33809685"
 ### <a name="lax-versioning"></a>宽松版本管理  
  在很多其他情况下，服务开发人员可假设向数据协定添加新的可选成员不会中断现有客户端。 这要求服务开发人员调查现有客户端是否并不执行架构验证，以及它们是否忽略未知数据成员。 在这些情况下，就可以利用以非中断的方式添加新成员的数据协定功能。 如果数据协定的版本管理功能已经用于服务的第一个版本，服务开发人员就可以肯定地作此假设。  
   
- WCF、 ASP.NET Web 服务和许多其他 Web 服务堆栈支持*宽松版本管理*： 即，它们不会引发异常为新的未知的数据成员中接收到的数据。  
+ WCF、 ASP.NET Web 服务和许多其他 Web 服务堆栈支持*宽松版本管理*： 即，它们不会引发异常的新的未知的数据成员中接收的数据。  
   
  很容易误以为添加新成员将不会中断现有客户端。 如果不确定所有客户端是否都能处理宽松版本管理，则建议使用严格版本管理准则，并将数据协定视为不可变。  
   
- 有关的数据协定的宽松和严格版本管理的详细指导，请参阅[最佳做法： 数据协定版本管理](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
+ 数据协定的宽松和严格版本控制的详细指南，请参阅[最佳实践：数据协定版本管理](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
   
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>区分数据协定和 .NET 类型  
  通过将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用于类，.NET 类或结构可映射为数据协定。 .NET 类型与其数据协定映射二者完全不同。 同一个数据协定映射可能有多个 .NET 类型。 此区别尤其有益于允许在保留映射的数据协定的同时更改 .NET 类型，从而甚至在是严格意义上保持与现有客户端的兼容性。 为了保持 .NET 类型与数据协定之间的这一区别，始终应该执行两项操作：  
@@ -93,13 +93,13 @@ ms.locfileid: "33809685"
 ## <a name="message-contract-versioning"></a>消息协定版本管理  
  消息协定版本管理的准则非常类似于数据协定的版本管理。 如果需要严格版本管理，则不应更改消息主体，而是应该创建具有唯一限定名的新消息协定。 如果确定可以使用宽松版本管理，则可添加新的消息主体部件，但不能更改或移除现有部件。 此准则同时适用于裸消息协定和包装消息协定。  
   
- 总是可以添加消息头，即使是使用了严格版本管理。 MustUnderstand 标志可能影响版本管理。 通常情况下，WCF 中的标头的版本管理模型是 SOAP 规范中所述。  
+ 总是可以添加消息头，即使是使用了严格版本管理。 MustUnderstand 标志可能影响版本管理。 一般情况下，WCF 中的标头版本控制模型是 SOAP 规范中所述。  
   
 ## <a name="service-contract-versioning"></a>服务协定版本管理  
  与数据协定版本管理相似，服务协定版本管理也涉及添加、更改和移除操作。  
   
 ### <a name="specifying-name-namespace-and-action"></a>指定名称、命名空间和动作  
- 默认情况下，服务协定的名称就是接口的名称。 默认命名空间" http://tempuri.org "，且每个操作采取任何措施" http://tempuri.org/contractname/methodname "。 建议您显式指定的名称和服务协定的命名空间和每个操作以避免使用的一项操作" http://tempuri.org "并防止在服务的协定中暴露接口和方法名称。  
+ 默认情况下，服务协定的名称就是接口的名称。 默认命名空间 "http://tempuri.org" ，且每个操作采取任何措施 "http://tempuri.org/contractname/methodname" 。 建议您显式指定的名称和服务协定的命名空间和每个操作以避免使用的一项操作 "http://tempuri.org" 并防止在服务的协定中暴露接口和方法名称。  
   
 ### <a name="adding-parameters-and-operations"></a>添加参数和操作  
  添加服务公开的服务操作是非中断性更改，因为现有客户端不需要考虑这些新操作。  
@@ -119,13 +119,13 @@ ms.locfileid: "33809685"
  服务的协定中所描述的错误列表并非详尽无遗。 操作可能随时返回其协定中未描述的错误。 因此，更改协定中描述的错误集合不会被视为中断性更改。 例如，使用 <xref:System.ServiceModel.FaultContractAttribute> 向协定添加新的错误，或者从协定中移除现有错误。  
   
 ### <a name="service-contract-libraries"></a>服务协定库  
- 组织可以有协定库，协定在这里发布到中心储存库，然后服务实现者从该储存库实现协定。 在此情况下，在将服务协定发布到储存库时，您无法控制谁将创建实现此协定的服务。 因此，在服务协定发布之后，就不能进行修改，这实际上是使协定不可变。 WCF 支持协定继承，可以用于创建扩展现有协定的新协定。 若要使用此功能，请定义一个继承自旧服务协定接口的新服务协定接口，然后向新接口添加方法。 然后将实现旧协定的服务更改为实现新协定，并将“versionOld”终结点定义更改为使用新协定。 对于“versionOld”客户端，终结点将仍然表现为公开“versionOld”协定；而对于“versionNew”客户端，终结点将表现为公开“versionNew”协定。  
+ 组织可以有协定库，协定在这里发布到中心储存库，然后服务实现者从该储存库实现协定。 在此情况下，在将服务协定发布到储存库时，您无法控制谁将创建实现此协定的服务。 因此，在服务协定发布之后，就不能进行修改，这实际上是使协定不可变。 WCF 支持协定继承，可用于创建扩展现有协定的新协定。 若要使用此功能，请定义一个继承自旧服务协定接口的新服务协定接口，然后向新接口添加方法。 然后将实现旧协定的服务更改为实现新协定，并将“versionOld”终结点定义更改为使用新协定。 对于“versionOld”客户端，终结点将仍然表现为公开“versionOld”协定；而对于“versionNew”客户端，终结点将表现为公开“versionNew”协定。  
   
 ## <a name="address-and-binding-versioning"></a>地址和绑定版本管理  
  对终结点地址和绑定的更改是中断性更改，除非客户端能够动态发现新的终结点地址或绑定。 实现此功能的一种机制是使用通用发现、描述和集成 (UDDI) 注册表以及 UDDI 调用模式，在此机制下，客户端尝试与终结点进行通信，并在失败时查询已知的 UDDI 注册表，以获得当前终结点元数据。 然后，客户端使用这些元数据中的地址和绑定来与终结点进行通信。 如果此通信成功，客户端将缓存这些地址和绑定信息以备将来使用。  
   
 ## <a name="routing-service-and-versioning"></a>路由服务和版本管理  
- 如果对服务所做的更改是中断性更改，并且您需要同时运行该服务的两个或多个不同版本，则可使用 WCF 路由服务将消息路由到适当的服务实例。 WCF 路由服务使用基于内容的路由，换句话说，该服务使用消息中的信息来确定将消息路由到何处。 WCF 路由服务，请参阅有关详细信息[路由服务](../../../docs/framework/wcf/feature-details/routing-service.md)。 有关如何使用 WCF 路由服务进行服务版本控制的示例，请参阅[How To： 服务版本控制](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
+ 如果对服务所做的更改是中断性更改，并且您需要同时运行该服务的两个或多个不同版本，则可使用 WCF 路由服务将消息路由到适当的服务实例。 WCF 路由服务使用基于内容的路由，换句话说，该服务使用消息中的信息来确定将消息路由到何处。 WCF 路由服务，请参见有关详细信息[路由服务](../../../docs/framework/wcf/feature-details/routing-service.md)。 有关如何使用 WCF 路由服务进行服务版本控制的示例，请参阅[How To:服务版本控制](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
   
 ## <a name="appendix"></a>附录  
  在需要严格版本管理时，通常的数据协定版本管理准则是将数据协定视为不可变，并在需要更改时创建新的协定。 对于每个新的数据协定，需要分别创建一个新类，因此需要一种机制来避免不得不获得按照旧数据协定类编写的现有代码，并按照新数据协定类重新编写代码。  
@@ -175,16 +175,16 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
   
  该服务协定将更新为包含按照 `PurchaseOrderV2` 编写的新操作。 按照 `IPurchaseOrderV1` 编写的现有业务逻辑对于 `PurchaseOrderV2` 仍然可用，并且需要 `OrderDate` 属性的新业务逻辑将按照 `IPurchaseOrderV2` 编写。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- <xref:System.Runtime.Serialization.ExtensionDataObject>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [数据协定等效性](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [版本容错序列化回调](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- <xref:System.Runtime.Serialization.ExtensionDataObject>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [数据协定等效性](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [版本容错序列化回调](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

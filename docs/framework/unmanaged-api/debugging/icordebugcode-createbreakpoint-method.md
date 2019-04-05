@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1173091a5f2d8814747c93f827150afe39b8b309
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: df27d2ab609551bb7a7f6f4b0ff8c7118c9f93f8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399103"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478669"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>ICorDebugCode::CreateBreakpoint 方法
-在此代码段中指定的偏移量处创建断点。  
+在此代码段中指定的偏移量位置处创建断点。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,26 +36,26 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `offset`  
- [in]若要创建断点送的偏移量。  
+ [in]从其创建断点的偏移量。  
   
  `ppBreakpoint`  
- [out]指向一个表示断点"ICorDebugFunctionBreakpoint"对象的地址的指针。  
+ [out]指向一个"ICorDebugFunctionBreakpoint"对象，表示该断点的地址的指针。  
   
 ## <a name="remarks"></a>备注  
- 断点处于活动状态之前，它必须添加到此进程对象中。  
+ 断点处于活动状态之前，必须添加到的进程对象。  
   
- 如果此代码为 Microsoft 中间语言 (MSIL) 代码，并且没有在实时 (JIT)-将在 JIT 编译代码以及应用已编译的本机版本的代码，该断点。 （相同如果为 true 的代码都是 JIT 编译更高版本。）  
+ 如果此代码为 Microsoft 中间语言 (MSIL) 代码，并且没有在实时 (JIT) 的已编译的本机版本的代码，断点将应用中也是 JIT 编译的代码。 （这同样适用如果代码为 JIT 编译更高版本。）  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

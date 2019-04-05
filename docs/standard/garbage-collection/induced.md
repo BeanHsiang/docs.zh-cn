@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 149597f0e34448d9c275a2cb8cd4ffc250bec619
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492113"
 ---
 # <a name="induced-collections"></a>被动回收
 在大多数情况下，垃圾回收器可以确定执行回收的最佳时间，应让其独立运行。 在某些不常见的情况下，强制回收可以提高应用程序的性能。 在这种情况下，可以使用 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法强制执行垃圾回收，从而诱导垃圾回收。  
@@ -22,7 +22,7 @@ ms.locfileid: "46003045"
 ## <a name="gc-collection-mode"></a>GC 回收模式  
  可以使用包含 <xref:System.GCCollectionMode> 值的 <xref:System.GC.Collect%2A?displayProperty=nameWithType> 方法重载之一，指定强制回收的行为，如下所示。  
   
-|`GCCollectionMode` 值|描述|  
+|`GCCollectionMode` 值|说明|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|对正在运行的 .NET 版本使用默认的垃圾回收设置。|  
 |<xref:System.GCCollectionMode.Forced>|强制立即执行垃圾回收。 这相当于调用 <xref:System.GC.Collect?displayProperty=nameWithType> 重载。 它会导致对所有分代进行完全阻塞回收。<br /><br /> 强制执行即时完全阻止式垃圾回收前，还可以将 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 属性设置为 <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType>，从而压缩大型对象堆。|  
@@ -38,5 +38,5 @@ ms.locfileid: "46003045"
   
 ## <a name="see-also"></a>请参阅
 
-- [延迟模式](../../../docs/standard/garbage-collection/latency.md)  
+- [延迟模式](../../../docs/standard/garbage-collection/latency.md)
 - [垃圾回收](../../../docs/standard/garbage-collection/index.md)

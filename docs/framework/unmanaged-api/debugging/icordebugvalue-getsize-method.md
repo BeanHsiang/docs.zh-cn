@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0023b8ad815b9204ed56791698c7242dfe90bec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 41a9ff2c94c98a5acc930d68e648b0ea577a82c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421653"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492304"
 ---
 # <a name="icordebugvaluegetsize-method"></a>ICorDebugValue::GetSize 方法
-获取用字节表示，此"ICorDebugValue"对象的大小。  
+获取大小，以字节为单位，此"ICorDebugValue"对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,24 +35,24 @@ HRESULT GetSize (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pSize`  
  [out]以字节为单位，此值对象的大小。  
   
 ## <a name="remarks"></a>备注  
- 如果值的类型是引用类型，此方法将返回指针的大小，而不是对象的大小。  
+ 如果值的类型是引用类型，此方法返回的指针的大小而不是对象的大小。  
   
- `ICorDebugValue::GetSize`方法返回`COR_E_OVERFLOW`大于 64 位平台上的 4 GB 的对象。 使用[icordebugvalue3:: Getsize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)方法相反的对象，是大于 4 GB。  
+ `ICorDebugValue::GetSize`方法将返回`COR_E_OVERFLOW`大于 64 位平台上的 4 GB 的对象。 使用[ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)方法改为对象，将大于 4 GB。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
-    
- [GetSize64 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)
+## <a name="see-also"></a>请参阅
+
+- [GetSize64 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)

@@ -10,22 +10,24 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fa91bb22de6492815f79bfd50e1fefc800c6047
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586508"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479563"
 ---
 # <a name="managed-threading-basics"></a>托管线程处理基本知识
-本节的前五个主题有助于确定何时使用托管线程，并介绍一些基本功能。 若要了解提供附加功能的类，请参阅[线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)和[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
+
+本节的前五个主题有助于确定何时使用托管线程处理，并介绍一些基本功能。 若要了解提供附加功能的类，请参阅[线程处理对象和功能](../../../docs/standard/threading/threading-objects-and-features.md)和[同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
   
  本节中的剩余主题涵盖了高级主题，其中包括托管线程与 Windows 操作系统的交互。  
   
 > [!NOTE]
 >  在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 中，任务并行库和 PLINQ 提供了多线程程序中的任务并行和数据并行 API。 有关详细信息，请参阅[并行编程](../../../docs/standard/parallel-programming/index.md)。  
   
-## <a name="in-this-section"></a>本节内容  
+## <a name="in-this-section"></a>本节内容
+
  [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)  
  介绍了多个线程的优缺点，并概述了可能创建线程或使用线程池线程的方案。  
   
@@ -34,9 +36,6 @@ ms.locfileid: "33586508"
   
  [为多线程处理同步数据](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
  介绍了在用于多个线程的类中同步数据的策略。  
-  
- [托管线程状态](../../../docs/standard/threading/managed-thread-states.md)  
- 介绍了基本线程状态，以及如何检测线程是否正在运行。  
   
  [前台和后台线程](../../../docs/standard/threading/foreground-and-background-threads.md)  
  介绍了前台和后台线程的区别。  
@@ -53,14 +52,16 @@ ms.locfileid: "33586508"
  [托管线程中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
  介绍了如何使用取消令牌取消异步操作或长时间运行的同步操作。  
   
-## <a name="reference"></a>参考  
+## <a name="reference"></a>参考
+
  <xref:System.Threading.Thread>  
  提供**线程**类的参考文档，无论该类是来自托管代码还是在托管应用程序中创建的，它都表示一个托管线程。  
   
  <xref:System.ComponentModel.BackgroundWorker>  
  提供了一种安全实现多线程处理与用户界面对象的方式。  
   
-## <a name="related-sections"></a>相关章节  
+## <a name="related-sections"></a>相关章节
+
  [同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
  介绍了用于同步多个线程活动的托管类。  
   

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - ListBox control [WPF]
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
-ms.openlocfilehash: 5363cc3a6939b829a7cde0a87b096932556fc5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe458ea2ca4107b7d43b160ba90b57c10b88a7f6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551682"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362222"
 ---
 # <a name="listbox"></a>ListBox
-A<xref:System.Windows.Controls.ListBox>控件提供用户提供的可选择项的列表。  
+一个<xref:System.Windows.Controls.ListBox>控件向用户提供了可选择项的列表。  
   
  下图说明了典型<xref:System.Windows.Controls.ListBox>。  
   
- ![ListBox 屏幕快照](../../../../docs/framework/wpf/controls/media/ss-ctl-listbox.gif "SS_CTL_listbox")  
+ ![列表框的屏幕截图](./media/ss-ctl-listbox.gif "SS_CTL_listbox")  
 典型的 ListBox  
   
 ## <a name="in-this-section"></a>本节内容  
- [帮助主题](../../../../docs/framework/wpf/controls/listbox-how-to-topics.md)  
+ [帮助主题](listbox-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.ListBox>  

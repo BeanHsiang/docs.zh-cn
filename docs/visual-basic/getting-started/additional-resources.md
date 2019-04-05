@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: a0ff04bf67faea4c834570e8faa4197369289fb7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b54c48fb7869fb3d308e238366f8e8b91368320a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195666"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675597"
 ---
 # <a name="additional-resources"></a>其他资源
 
@@ -26,7 +26,7 @@ ms.locfileid: "50195666"
 |术语|定义|
 |----------|----------------|
 |[Visual Basic .NET Language Design](https://github.com/dotnet/vblang)（Visual Basic .NET 语言设计）|GitHub 上用于 Visual Basic .NET 语言设计的官方存储库。|
-|[Microsoft Visual Basic 团队博客](https://blogs.msdn.microsoft.com/vbteam/)|提供对 Visual Basic Team Blog 的访问。|
+|[Microsoft Visual Basic 团队博客](https://devblogs.microsoft.com/vbteam/)|提供对 Visual Basic Team Blog 的访问。|
 
 ### <a name="code-samples"></a>代码示例
 
@@ -64,5 +64,5 @@ ms.locfileid: "50195666"
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Basic 入门](../../visual-basic/getting-started/index.md)  
-[与我们交流](/visualstudio/ide/talk-to-us)  
+- [Visual Basic 入门](../../visual-basic/getting-started/index.md)
+- [与我们交流](/visualstudio/ide/talk-to-us)

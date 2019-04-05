@@ -11,14 +11,12 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 8992c9e47e2b62e90191a67fc7353e138502ebf1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ab8225d664b658789f7eb9e7830d5ec527ded94a
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185662"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084362"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>编译器和语言提供程序设置架构
 编译器和语言提供程序设置指定可用语言提供程序的编译器配置元素。 每个编译器配置元素指定代码提供程序类型名称、编译器参数、支持语言名称以及支持的文件扩展名。  
@@ -58,8 +56,8 @@ ms.locfileid: "50185662"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>请参阅
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

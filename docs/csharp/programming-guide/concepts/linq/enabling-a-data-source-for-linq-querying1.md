@@ -2,12 +2,12 @@
 title: 启用数据源以进行 LINQ 查询 1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 1aa3a22028b0b3d7c705076a3e16379e09323271
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d3faeb15c5c8deedec3c3347c6317cac872224f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515714"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>启用数据源以进行 LINQ 查询
 可通过多种方式来扩展 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，以便能够在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式中查询任何数据源。 数据源可以是数据结构、Web 服务、文件系统或数据库等。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 模式使客户端可以轻松地查询能够进行 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查询的数据源，因为查询的语法和模式没有更改。 可通过以下方式将 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 扩展到这些数据源：  
@@ -41,8 +41,8 @@ ms.locfileid: "49122688"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Linq.IQueryable%601>  
-- <xref:System.Collections.Generic.IEnumerable%601>  
-- <xref:System.Linq.Enumerable>  
-- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- <xref:System.Linq.IQueryable%601>
+- <xref:System.Collections.Generic.IEnumerable%601>
+- <xref:System.Linq.Enumerable>
+- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

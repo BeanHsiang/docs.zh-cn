@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861732"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842286"
 ---
 # <a name="string-data-type-visual-basic"></a>String 数据类型 (Visual Basic)
 存储无符号的 16 位 （2 个字节） 码位的序列该范围从 0 到 65535 之间的值中。 每个*代码点*，或字符代码，表示单个 Unicode 字符。 一个字符串，可包含从 0 到大约 20 亿 (2 ^31) 的 Unicode 字符。  
@@ -78,11 +78,12 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Framework 类型。** .NET Framework 中的对应类型是<xref:System.String?displayProperty=nameWithType>类。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.String?displayProperty=nameWithType>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [Char 数据类型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [如何：调用采用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.String?displayProperty=nameWithType>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [Char 数据类型](../../../visual-basic/language-reference/data-types/char-data-type.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [如何：调用需要使用无符号类型的 Windows 函数](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

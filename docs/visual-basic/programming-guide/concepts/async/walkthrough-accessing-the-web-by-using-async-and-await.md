@@ -1,22 +1,22 @@
 ---
-title: 演练：使用 Async 和 Await 访问 Web (Visual Basic)
+title: 演练：访问 Web 使用 Async 和 Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 8998ed715306402f4d8cc98be82cbb8e4aac3f8e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4d8f650f5150f862a77cd194d91d906f505723a7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194158"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816988"
 ---
-# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>演练：使用 Async 和 Await 访问 Web (Visual Basic)
+# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>演练：访问 Web 使用 Async 和 Await (Visual Basic)
 使用 async/await 功能可以更轻松直观地编写异步程序。 你可以编写类似于同步代码的异步代码，并让编译器处理异步代码通常需要的疑难回调函数和延续。  
   
  有关 Async 功能的详细信息，请参阅[使用 Async 和 Await (Visual Basic 中) 的异步编程](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
   
  本演练从对网站列表中的字节数进行求和的同步 Windows Presentation Foundation (WPF) 应用程序入手， 然后使用新功能将该应用程序转换为异步解决方案。  
   
- 如果不想自行生成应用程序，可以从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载“Async 示例：访问 Web 演练（C# 和 Visual Basic）”。  
+ 如果不想自行生成应用程序，则可以下载"Async 示例：访问 Web 演练 (C#和 Visual Basic)"从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)。  
   
  在本演练中，你将完成下列任务：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "50194158"
 ## <a name="prerequisites"></a>系统必备  
  计算机上必须安装 Visual Studio 2012 或更高版本。 有关详细信息，请访问 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkId=235233)。  
   
-###  <a name="CreateWPFApp"></a> 创建 WPF 应用程序  
+### <a name="CreateWPFApp"></a> 创建 WPF 应用程序  
   
 1.  启动 Visual Studio。  
   
@@ -61,8 +61,8 @@ ms.locfileid: "50194158"
   
      新项目将出现在“解决方案资源管理器”中。  
   
-##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a> 设计简单的 WPF MainWindow  
+## <a name="BKMK_DesignWPFMainWin"></a>   
+### <a name="MainWindow"></a> 设计简单的 WPF MainWindow  
   
 1.  在 Visual Studio 代码编辑器中，选择 **“MainWindow.xaml”** 选项卡。  
   
@@ -90,8 +90,8 @@ ms.locfileid: "50194158"
   
      有关 WPF XAML 设计器的详细信息，请参阅[使用 XAML 设计器创建 UI](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)。  
   
-##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a>添加引用  
+## <a name="BKMK_AddReference"></a>   
+### <a name="AddRef"></a>添加引用  
   
 1.  在“解决方案资源管理器”中，突出显示项目的名称。  
   
@@ -107,8 +107,8 @@ ms.locfileid: "50194158"
   
 6.  选择“确定”按钮关闭对话框。  
   
-##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a> 若要添加必要的 Imports 语句  
+## <a name="BKMK_AddStatesandDirs"></a>   
+### <a name="ImportsState"></a> 若要添加必要的 Imports 语句  
   
 1.  在中**解决方案资源管理器**，打开 MainWindow.xaml.vb，快捷菜单，然后选择**查看代码**。  
   
@@ -120,8 +120,8 @@ ms.locfileid: "50194158"
     Imports System.IO  
     ```  
   
-##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a> 创建同步应用程序  
+## <a name="BKMK_CreatSynchApp"></a>   
+### <a name="synchronous"></a> 创建同步应用程序  
   
 1.  在设计窗口 MainWindow.xaml 中，双击**启动**按钮以创建`startButton_Click`MainWindow.xaml.vb 中的事件处理程序。  
   
@@ -221,8 +221,8 @@ ms.locfileid: "50194158"
     End Sub  
     ```  
   
-##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> 测试同步解决方案  
+## <a name="BKMK_TestSynchSol"></a>   
+### <a name="testSynch"></a> 测试同步解决方案  
   
 1.  按 F5 键以运行程序，然后选择 **“启动”** 按钮。  
   
@@ -247,8 +247,8 @@ ms.locfileid: "50194158"
   
      请注意，显示计数需要几秒钟时间。 与此同时，在等待请求的资源下载时，UI 线程处于被阻止状态。 因此，选择“启动”按钮后，将无法移动、最大化、最小化显示窗口，甚至也无法关闭显示窗口。 在字节计数开始显示之前，这些操作都会失败。 如果网站没有响应，将不会指示哪个网站失败。 甚至停止等待和关闭程序也会很困难。  
   
-##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a> 将 GetURLContents 转换为异步方法  
+## <a name="BKMK_ConvertGtBtArr"></a>   
+### <a name="GetURLContents"></a> 将 GetURLContents 转换为异步方法  
   
 1.  要将同步解决方案转换为异步解决方案，最佳着手点在 `GetURLContents` 中，因为对 <xref:System.Net.HttpWebRequest> 方法 <xref:System.Net.HttpWebRequest.GetResponse%2A> 的调用以及对 <xref:System.IO.Stream> 方法 <xref:System.IO.Stream.CopyTo%2A> 的调用是应用程序访问 Web 的位置。 .NET Framework 提供两种方法的异步版本，这让转换变得轻松。  
   
@@ -282,7 +282,7 @@ ms.locfileid: "50194158"
   
      对 `webReq.GetResponseAsync` 的调用返回 `Task(Of WebResponse)` 或 `Task<WebResponse>`。 然后`Await`运算符应用于任务以检索`WebResponse`值。  
   
-     如果你的异步方法需要完成不依赖于任务的完成的工作，则在调用异步方法之后及应用 await 运算符之前的这段时间，该方法可以在这两个语句之间继续完成该工作。 有关示例，请参阅[如何： 使用 Async 和 Await (Visual Basic 中) 的同时使多个 Web 请求](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)并[如何： 扩展异步演练使用 task.whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
+     如果你的异步方法需要完成不依赖于任务的完成的工作，则在调用异步方法之后及应用 await 运算符之前的这段时间，该方法可以在这两个语句之间继续完成该工作。 相关示例，请参阅[如何：并行发起多个 Web 请求，使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)和[如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
   
 3.  因为在上一步中添加了 `Await` 运算符，所以会发生编译器错误。 可以使用标记的方法中仅使用运算符[异步](../../../../visual-basic/language-reference/modifiers/async.md)修饰符。 当你重复转换步骤以使用对 `CopyToAsync` 的调用替换对 `CopyTo` 的调用时，请忽略该错误。  
   
@@ -329,8 +329,8 @@ ms.locfileid: "50194158"
   
      进行这几处更改后，`GetURLContents` 到异步方法的转换完成。  
   
-##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a> 将 SumPageSizes 转换为异步方法  
+## <a name="BKMK_ConvertSumPagSzs"></a>   
+### <a name="SumPageSizes"></a> 将 SumPageSizes 转换为异步方法  
   
 1.  为 `SumPageSizes` 重复之前过程中的步骤。 首先，将对 `GetURLContents` 的调用更改为异步调用。  
   
@@ -369,8 +369,8 @@ ms.locfileid: "50194158"
   
      从 `SumPageSizes` 到 `SumPageSizesAsync` 的转换完成。  
   
-##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a> 将 startButton_Click 转换为异步方法  
+## <a name="BKMK_Cnvrtbttn1"></a>   
+### <a name="startButton"></a> 将 startButton_Click 转换为异步方法  
   
 1.  在事件处理程序中，将调用的方法的名称从 `SumPageSizes` 更改为 `SumPageSizesAsync`（如果尚未执行此操作）。  
   
@@ -415,8 +415,8 @@ ms.locfileid: "50194158"
   
      项目从同步处理到异步处理的转换完成。  
   
-##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> 测试异步解决方案  
+## <a name="BKMK_testAsynchSolution"></a>   
+### <a name="testAsynch"></a> 测试异步解决方案  
   
 1.  按 F5 键以运行程序，然后选择 **“启动”** 按钮。  
   
@@ -426,8 +426,8 @@ ms.locfileid: "50194158"
   
     -   最重要的是，UI 线程在下载过程中未被阻止。 在 Web 资源下载、计数和显示期间，可以移动窗口或调整窗口大小。 如果其中一个网站速度缓慢或没有响应，则可以通过选择“关闭”按钮取消操作（右上角红色字段中的 x）。  
   
-##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> 使用 .NET Framework 方法替换方法 GetURLContentsAsync  
+## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
+### <a name="GetURLContentsAsync"></a> 使用 .NET Framework 方法替换方法 GetURLContentsAsync  
   
 1.  .NET Framework 4.5 提供可供你使用的许多异步方法。 其中一个是 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>，它可以执行本演练所需的操作。 你可以使用它来替代你在早前过程中创建的 `GetURLContentsAsync` 方法。  
   
@@ -452,7 +452,7 @@ ms.locfileid: "50194158"
   
      此版本的项目的行为应与“测试异步解决方案”过程描述的行为匹配，且你的工作量应该更少。  
   
-##  <a name="BKMK_CompleteCodeExamples"></a> 示例  
+## <a name="BKMK_CompleteCodeExamples"></a> 示例  
  下列代码包含使用你编写的异步 `GetURLContentsAsync` 方法从同步解决方案转换为异步解决方案的完整示例。 请注意，它与原始同步解决方案十分类似。  
   
 ```vb  
@@ -673,12 +673,13 @@ Class MainWindow
 End Class  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)（异步示例：访问 Web 演练（C# 和 Visual Basic））  
- [Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)  
- [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [异步返回类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [基于任务的异步编程 (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)  
- [如何：使用 Task.WhenAll 扩展异步演练 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
- [如何：使用 Async 和 Await 并行发出多个 Web 请求 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+## <a name="see-also"></a>请参阅
+
+- [异步示例：访问 Web 演练 (C#和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Await 运算符](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
+- [使用 Async 和 Await 的异步编程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [异步返回类型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [基于任务的异步编程 (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
+- [如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何：并行发起多个 Web 请求，使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

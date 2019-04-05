@@ -2,12 +2,12 @@
 title: DiscoveryClient 和 DynamicEndpoint
 ms.date: 03/30/2017
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-ms.openlocfilehash: ff8cc071b13123a8d04162a2c52a8c3fb486d6db
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6e7b1cf13309ba6fc1da424649c667efe255278e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709983"
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient 和 DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> 和 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是客户端上用来搜索服务的两个类。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 为您提供与一组特定条件相匹配的服务列表，并允许您连接到这些服务。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 执行相同的操作，另外会自动连接到所发现的服务之一。 可以将任何终结点转换为 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，也可以在配置中添加搜索条件，这样，如果您需要在解决方案中执行发现操作，但不希望修改客户端逻辑，则 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 会非常有用 – 此时您只需修改终结点。 另一方面，<xref:System.ServiceModel.Discovery.DiscoveryClient> 可用于对您的搜索操作获得更精细的控制。 下面对每个类的用途和优势加以详细说明。  
@@ -105,6 +105,6 @@ double result = client.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [通过范围进行发现](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [基本](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a>请参阅
+- [通过范围进行发现](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
+- [基本](../../../../docs/framework/wcf/samples/basic-sample.md)

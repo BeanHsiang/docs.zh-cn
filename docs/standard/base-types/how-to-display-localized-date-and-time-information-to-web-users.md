@@ -10,19 +10,22 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085220"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857653"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>如何：向 Web 用户显示本地化的日期和时间信息
 由于世界各地的人都可以查看网页，因此在与用户交互时，分析和设置日期和时间值的格式的操作不得依赖默认格式（通常是 Web 服务器本地区域性的格式）。 相反，处理用户输入的日期和时间字符串的 Web 窗体，应使用用户的首选区域性分析字符串。 同样，日期和时间数据应以符合用户区域性的格式向用户显示。 本主题演示如何执行此操作。  
   
-### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>分析用户输入的日期和时间字符串的具体步骤  
+## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>分析用户输入的日期和时间字符串的具体步骤  
   
 1.  确定是否已填充 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 属性返回的字符串数组。 如果没有，请继续执行第 6 步。  
   
@@ -40,7 +43,7 @@ ms.locfileid: "44085220"
   
 6.  如果转换仍失败或 <xref:System.Web.HttpRequest.UserLanguages%2A> 属性返回的字符串数组为空，请使用 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 属性返回的固定区域性分析字符串。  
   
-### <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>分析用户请求的本地日期和时间的具体步骤  
+## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>分析用户请求的本地日期和时间的具体步骤  
   
 1.  向 Web 窗体添加 <xref:System.Web.UI.WebControls.HiddenField> 控件。  
   
@@ -110,7 +113,7 @@ ms.locfileid: "44085220"
   
 ## <a name="see-also"></a>请参阅
 
-- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [执行格式设置操作](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [标准日期和时间格式字符串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [自定义日期和时间格式字符串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [分析日期和时间字符串](../../../docs/standard/base-types/parsing-datetime.md)

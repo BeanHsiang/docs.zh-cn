@@ -7,19 +7,19 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 189b50b4d35d061c511fbd06cc843296607062b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a6d5755507ca00de612677235912d86caf98553
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698058"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>缺少互操作数据异常类 (.NET Native)
 **适用于 Windows 10 的 .NET for Windows 应用，仅 [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
   
  当手动封送方法被调用但一个类型的元数据无法通过动态分析找到或无法在运行时指令文件中找到时，会引发该异常。  
   
- 命名空间：System.Runtime.CompilerServices  
+ **命名空间：** System.Runtime.CompilerServices  
   
 > [!IMPORTANT]
 >  `MissingInteropDataException` 类旨在仅供 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链内部使用。 它不用于在第三方代码中使用，也不应用它处理应用程序代码中的异常。 相反，你可以通过将条目添加到[运行时指令文件](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)来消除异常。 有关详细信息，请参阅“备注”部分。  
@@ -79,7 +79,7 @@ ms.locfileid: "33392965"
   
  `MissingInteropDataException` 类包含单个唯一成员，即 `MissingType` 属性，它表示一种类型，而如果想成功完成方法调用需使用到该类型的元数据。 所有剩余成员均继承自基类 <xref:System.Exception?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Exception?displayProperty=nameWithType>  
- [MissingMetadataException 类](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Exception?displayProperty=nameWithType>
+- [MissingMetadataException 类](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

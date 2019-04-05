@@ -1,33 +1,32 @@
 ---
 title: 使用作为容器而运行的数据库服务器
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用作为容器而运行的数据库服务器
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 仅出于开发目的使用作为容器运行的数据库服务器！ 了解原因。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/30/2017
-ms.openlocfilehash: 42b0bf43ace00b1eb4b48c39604b89ea76c99220
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106144"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463340"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>使用作为容器而运行的数据库服务器
 
-你可以将自己的数据库（SQL Server、PostgreSQL、MySQL 等）放在常规独立服务器、本地群集或云中的 PaaS 服务（如 Azure SQL DB）中。 但对于开发和测试环境来说，将数据库作为容器运行很方便，因为没有任何外部依赖项，只需运行 docker-compose 命令，即可启动整个应用程序。 将这些数据库作为容器也有利于集成测试，因为数据库在容器中启动，并且始终填充相同的样本数据，因此预测测试也就更容易了。
+你可以将自己的数据库（SQL Server、PostgreSQL、MySQL 等）放在常规独立服务器、本地群集或云中的 PaaS 服务（如 Azure SQL DB）中。 但对于开发和测试环境来说，将数据库作为容器运行很方便，因为没有任何外部依赖项，只需运行 `docker-compose up` 命令，即可启动整个应用程序。 将这些数据库作为容器也有利于集成测试，因为数据库在容器中启动，并且始终填充相同的样本数据，因此预测测试也就更容易了。
 
 ### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server 作为包含微服务相关数据库的容器运行
 
 在 eShopOnContainers 中，运行 SQL Server for Linux 的 [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) 文件中有一个名为 sql.data 的容器，包含微服务所需的所有 SQL Server 数据库。 （也可以为每个数据库设置一个 SQL Server 容器，但这会占用更多分配给 Docker 的内存。）微服务中重要的一点是每个微服务都有其相关数据，因此在这里是相关 SQL 数据库。 不过，这些数据库可以置于任何位置。
 
-示例应用程序中的 SQL Server 容器在 docker-compose.yml 文件中配置有下列 YAML 代码，在运行 docker-compose 时执行这些代码。 请注意，YAML 代码整合了来自通用 docker-compose.yml 文件和 docker-compose.override.yml 文件的配置信息。 （你通常会分离环境设置与 SQL Server 映像的相关基本信息或静态信息。）
+示例应用程序中的 SQL Server 容器在 docker-compose.yml 文件中配置有下列 YAML 代码，这些代码在运行 `docker-compose up` 时执行。 请注意，YAML 代码整合了来自通用 docker-compose.yml 文件和 docker-compose.override.yml 文件的配置信息。 （你通常会分离环境设置与 SQL Server 映像的相关基本信息或静态信息。）
 
 ```yml
   sql.data:
-    image: microsoft/mssql-server-linux
+    image: microsoft/mssql-server-linux:2017-latest
     environment:
-      - MSSQL_SA_PASSWORD=Pass@word
+      - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Developer
     ports:
       - "5434:1433"
 ```
@@ -35,10 +34,10 @@ ms.locfileid: "37106144"
 按照类似的方法，不使用 `docker-compose`，而使用下列 `docker run` 命令便可运行该容器：
 
 ```
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD= your@password' -p 1433:1433 -d microsoft/mssql-server-linux
+  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
-但是，如果要部署多容器应用程序（如 eShopOnContainers），使用 docker-compose up 命令为应用程序部署所有必需的容器会方便得多。
+但是，如果要部署多容器应用程序（如 eShopOnContainers），使用 `docker-compose up` 命令为应用程序部署所有必需的容器会更方便。
 
 首次启动此 SQL Server 容器时，容器使用提供的密码初始化 SQL Server。 SQL Server 作为容器运行后，可以通过连接任何常规 SQL 连接（例如 SQL Server Management Studio、Visual Studio 或 C\# 代码）来更新数据库。
 
@@ -48,11 +47,11 @@ eShopOnContainers 应用程序提供在启动时在数据库中设定数据，�
 
 #### <a name="additional-resources"></a>其他资源
 
--   **在 Linux、Mac 或 Windows 上运行 SQL Server Docker 映像**
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+- **Run the SQL Server Docker image on Linux, Mac, or Windows** \（在 Linux、Mac 或 Windows 上运行 SQL Server Docker 映像）
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **使用 sqlcmd 连接和查询 Linux 上的 SQL Server**
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+- **Connect and query SQL Server on Linux with sqlcmd** \（使用 sqlcmd 连接和查询 Linux 上的 SQL Server）
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>在 Web 应用程序启动时设定测试数据
 
@@ -166,7 +165,7 @@ public class Startup
 
 Redis 提供使用 Redis 的 Docker 映像。 该映像可在 Docker 中心获得，请访问此 URL：
 
-<https://hub.docker.com/_/redis/>
+[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
 
 可在命令提示符中执行以下 Docker CLI 命令来直接运行 Docker Redis 容器：
 
@@ -199,7 +198,8 @@ docker-compose.yml 中的这段代码基于 redis 映像定义了一个名为 ba
       - EventBusConnection=rabbitmq
 ```
 
+如前文所述，微服务的名称“asket.data”通过 docker 的内部网络 DNS 进行解析。
 
 >[!div class="step-by-step"]
-[上一页](multi-container-applications-docker-compose.md)
-[下一页](integration-event-based-microservice-communications.md)
+>[上一页](multi-container-applications-docker-compose.md)
+>[下一页](integration-event-based-microservice-communications.md)

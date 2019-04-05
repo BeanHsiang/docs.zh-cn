@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: f8fd3237d71bc1960678565192c7ef9ddcb2c366
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2648296d01f0e237847fc16535b01dbd8e9c5b62
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196624"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377086"
 ---
 # <a name="panels-overview"></a>面板概述
 <xref:System.Windows.Controls.Panel> 元素是控制呈现元素的组件，其大小和维度，其位置和子内容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供了许多预定义<xref:System.Windows.Controls.Panel>元素，以及构造自定义的功能<xref:System.Windows.Controls.Panel>元素。  
@@ -43,7 +43,7 @@ ms.locfileid: "47196624"
   
 <a name="Panels_declared_members"></a>   
 ## <a name="panel-common-members"></a>Panel 公共成员  
- 所有<xref:System.Windows.Controls.Panel>元素支持大小和位置定义的属性的基<xref:System.Windows.FrameworkElement>，其中包括<xref:System.Windows.FrameworkElement.Height%2A>， <xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>，和<xref:System.Windows.FrameworkElement.LayoutTransform%2A>。 有关定义的位置属性的更多信息<xref:System.Windows.FrameworkElement>，请参阅[Alignment、 Margin 和 Padding 概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)。  
+ 所有<xref:System.Windows.Controls.Panel>元素支持大小和位置定义的属性的基<xref:System.Windows.FrameworkElement>，其中包括<xref:System.Windows.FrameworkElement.Height%2A>， <xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>，和<xref:System.Windows.FrameworkElement.LayoutTransform%2A>。 有关定义的位置属性的更多信息<xref:System.Windows.FrameworkElement>，请参阅[Alignment、 Margin 和 Padding 概述](../advanced/alignment-margins-and-padding-overview.md)。  
   
  <xref:System.Windows.Controls.Panel> 公开至关重要的一点是了解和使用布局中的其他的属性。 <xref:System.Windows.Controls.Panel.Background%2A>属性用于填充派生的面板元素使用的边界之间的区域<xref:System.Windows.Media.Brush>。 <xref:System.Windows.Controls.Panel.Children%2A> 表示元素的子集合的<xref:System.Windows.Controls.Panel>组成。 <xref:System.Windows.Controls.Panel.InternalChildren%2A> 表示内容的<xref:System.Windows.Controls.Panel.Children%2A>集合以及通过数据绑定生成的成员。 同时组成<xref:System.Windows.Controls.UIElementCollection>承载父项中的子元素<xref:System.Windows.Controls.Panel>。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47196624"
 #### <a name="attached-properties"></a>附加属性  
  派生面板元素广泛使用附加属性。 附加属性是没有常规 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 属性“包装器”的依赖属性的特殊化形式。 附加属性在 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 中具有特殊化的语法，可在后面的几个示例中看到。  
   
- 附加属性的一个用途是允许子元素存储实际上由父元素定义的属性的唯一值。 此功能的一项应用是让子元素通知父级它们希望如何在 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中呈现，这对应用程序布局非常有用。 有关详细信息，请参阅[附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。  
+ 附加属性的一个用途是允许子元素存储实际上由父元素定义的属性的唯一值。 此功能的一项应用是让子元素通知父级它们希望如何在 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中呈现，这对应用程序布局非常有用。 有关详细信息，请参阅[附加属性概述](../advanced/attached-properties-overview.md)。  
   
 <a name="Panels_derived_elements"></a>   
 ## <a name="derived-panel-elements"></a>派生 Panel 元素  
@@ -106,13 +106,13 @@ ms.locfileid: "47196624"
 #### <a name="defining-and-using-a-canvas"></a>定义和使用 Canvas  
  一个<xref:System.Windows.Controls.Canvas>可以只需通过使用实例化[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]或代码。 下面的示例演示如何使用<xref:System.Windows.Controls.Canvas>以绝对方式定位内容。 此代码生成三个 100 像素正方形。 第一个正方形为红色，其左上角的 (*x, y*) 位置指定为 (0, 0)。 第二个正方形为绿色，其左上角位置为 (100, 100)，在第一个正方形的右下方。 第三个正方形为蓝色，其左上角为 (50, 50)，因此包含了第一个正方形的右下四分之一部分和第二个正方形的左上四分之一部分。 由于第三个正方形最后布置，因此它看起来在另外两个正方形上方，即，重叠部分采用第三个正方形的颜色。  
   
- [!code-csharp[CanvasOvwSample#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasOvwSample/CSharp/Canvas_Ovw_Sample.cs#1)]
- [!code-vb[CanvasOvwSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasOvwSample/VisualBasic/canvas_vb.vb#1)]
- [!code-xaml[CanvasOvwSample#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/CanvasOvwSample/XAML/default.xaml#1)]  
+ [!code-csharp[CanvasOvwSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CanvasOvwSample/CSharp/Canvas_Ovw_Sample.cs#1)]
+ [!code-vb[CanvasOvwSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasOvwSample/VisualBasic/canvas_vb.vb#1)]
+ [!code-xaml[CanvasOvwSample#1](~/samples/snippets/xaml/VS_Snippets_Wpf/CanvasOvwSample/XAML/default.xaml#1)]  
   
  经编译的应用程序产生新的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，外观如下。  
   
- ![典型的 Canvas 元素。](../../../../docs/framework/wpf/controls/media/panel-intro-canvas.PNG "panel_intro_canvas")  
+ ![典型的 Canvas 元素。](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
   
 <a name="Panels_overview_DockPanel_subsection"></a>   
 ### <a name="dockpanel"></a>DockPanel  
@@ -129,21 +129,21 @@ ms.locfileid: "47196624"
 #### <a name="defining-and-using-a-dockpanel"></a>定义和使用 DockPanel  
  下面的示例演示如何进行分区的空间使用<xref:System.Windows.Controls.DockPanel>。 五<xref:System.Windows.Controls.Border>元素添加为父级的子级<xref:System.Windows.Controls.DockPanel>。 每个使用不同的位置属性来<xref:System.Windows.Controls.DockPanel>对空间进行分区。 最后一个元素"填充"剩余的未分配空间。  
   
- [!code-cpp[DockPanelOvwSample#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DockPanelOvwSample/CPP/DockPanel_Ovw_Sample.cpp#1)]
- [!code-csharp[DockPanelOvwSample#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DockPanelOvwSample/CSharp/DockPanel_Ovw_Sample.cs#1)]
- [!code-vb[DockPanelOvwSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DockPanelOvwSample/VisualBasic/dockpanel_vb.vb#1)]
- [!code-xaml[DockPanelOvwSample#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DockPanelOvwSample/XAML/default.xaml#1)]  
+ [!code-cpp[DockPanelOvwSample#1](~/samples/snippets/cpp/VS_Snippets_Wpf/DockPanelOvwSample/CPP/DockPanel_Ovw_Sample.cpp#1)]
+ [!code-csharp[DockPanelOvwSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DockPanelOvwSample/CSharp/DockPanel_Ovw_Sample.cs#1)]
+ [!code-vb[DockPanelOvwSample#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DockPanelOvwSample/VisualBasic/dockpanel_vb.vb#1)]
+ [!code-xaml[DockPanelOvwSample#1](~/samples/snippets/xaml/VS_Snippets_Wpf/DockPanelOvwSample/XAML/default.xaml#1)]  
   
  经编译的应用程序产生新的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，外观如下。  
   
- ![典型的 DockPanel 方案。](../../../../docs/framework/wpf/controls/media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
+ ![典型的 DockPanel 方案。](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
 <a name="Panels_overview_Grid_subsection"></a>   
 ### <a name="grid"></a>Grid  
  <xref:System.Windows.Controls.Grid>元素合并绝对定位和表格数据控件的功能。 一个<xref:System.Windows.Controls.Grid>使你能够轻松地位置和样式元素。 <xref:System.Windows.Controls.Grid> 允许你定义灵活的行和列分组，并甚至还提供了一种机制来共享大小调整信息之间多<xref:System.Windows.Controls.Grid>元素。  
   
 #### <a name="how-is-grid-different-from-table"></a>网格与表格有何不同？  
- <xref:System.Windows.Documents.Table> 和<xref:System.Windows.Controls.Grid>共享某些通用功能，但每个都是最适用于不同的方案。 一个<xref:System.Windows.Documents.Table>专为流内容内使用 (请参阅[流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)有关流内容的详细信息)。 网格最适合在表单内（主要在流内容以外的任意位置）使用。 内<xref:System.Windows.Documents.FlowDocument>，<xref:System.Windows.Documents.Table>支持流内容行为，如分页、 列重排和内容时选择<xref:System.Windows.Controls.Grid>却没有。 一个<xref:System.Windows.Controls.Grid>另一方面最好使用之外<xref:System.Windows.Documents.FlowDocument>包括的原因有很多<xref:System.Windows.Controls.Grid>根据行和列索引添加元素<xref:System.Windows.Documents.Table>却没有。 <xref:System.Windows.Controls.Grid>元素可对子内容，从而允许多个元素共存于单个"单元格。"内进行分层 <xref:System.Windows.Documents.Table> 不支持分层。 子元素的<xref:System.Windows.Controls.Grid>相对于其"单元格"边界区域进行绝对定位。 <xref:System.Windows.Documents.Table> 不支持此功能。 最后，<xref:System.Windows.Controls.Grid>比更轻<xref:System.Windows.Documents.Table>。  
+ <xref:System.Windows.Documents.Table> 和<xref:System.Windows.Controls.Grid>共享某些通用功能，但每个都是最适用于不同的方案。 一个<xref:System.Windows.Documents.Table>专为流内容内使用 (请参阅[流文档概述](../advanced/flow-document-overview.md)有关流内容的详细信息)。 网格最适合在表单内（主要在流内容以外的任意位置）使用。 内<xref:System.Windows.Documents.FlowDocument>，<xref:System.Windows.Documents.Table>支持流内容行为，如分页、 列重排和内容时选择<xref:System.Windows.Controls.Grid>却没有。 一个<xref:System.Windows.Controls.Grid>另一方面最好使用之外<xref:System.Windows.Documents.FlowDocument>包括的原因有很多<xref:System.Windows.Controls.Grid>根据行和列索引添加元素<xref:System.Windows.Documents.Table>却没有。 <xref:System.Windows.Controls.Grid>元素可对子内容，从而允许多个元素共存于单个"单元格。"内进行分层 <xref:System.Windows.Documents.Table> 不支持分层。 子元素的<xref:System.Windows.Controls.Grid>相对于其"单元格"边界区域进行绝对定位。 <xref:System.Windows.Documents.Table> 不支持此功能。 最后，<xref:System.Windows.Controls.Grid>比更轻<xref:System.Windows.Documents.Table>。  
   
 #### <a name="sizing-behavior-of-columns-and-rows"></a>列和行的大小调整行为  
  列和行中定义<xref:System.Windows.Controls.Grid>可以充分利用<xref:System.Windows.GridUnitType.Star>为了按比例分配剩余空间大小调整。 当<xref:System.Windows.GridUnitType.Star>被选为的高度或宽度的行或列，该列或行将收到剩余的可用空间的加权的比例。 这是与<xref:System.Windows.GridUnitType.Auto>，这会将分发均匀地根据中的列或行的内容的大小的空间。 在使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 时，此值以 `*` 或 `2*` 的形式表示。 在第一种情况下，行或列将得到一倍的可用空间，在第二种情况下，将得到两倍的可用空间，依此类推。 通过将此技术来按比例分配空间的组合<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>并<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>的值`Stretch`是可能的布局空间分区的屏幕空间的百分比。 <xref:System.Windows.Controls.Grid> 是唯一的布局面板，可以将分发在这种方式中的空间。  
@@ -151,12 +151,12 @@ ms.locfileid: "47196624"
 #### <a name="defining-and-using-a-grid"></a>定义和使用 Grid  
  以下示例演示如何生成 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，该 UI 类似于 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]“开始”菜单上提供的“运行”对话框上的 UI。  
   
- [!code-csharp[GridRunDialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
- [!code-vb[GridRunDialog#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
+ [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
+ [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
  经编译的应用程序产生新的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，外观如下。  
   
- ![典型的 Grid 元素。](../../../../docs/framework/wpf/controls/media/avalon-run-dialog.PNG "avalon_run_dialog")  
+ ![典型的 Grid 元素。](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
   
 <a name="Panels_overview_StackPanel_subsection"></a>   
 ### <a name="stackpanel"></a>StackPanel  
@@ -167,24 +167,24 @@ ms.locfileid: "47196624"
   
  以下示例演示此主要区别。  
   
- [!code-cpp[StackPanelOvw4#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
- [!code-csharp[StackPanelOvw4#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
- [!code-vb[StackPanelOvw4#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
- [!code-xaml[StackPanelOvw4#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
+ [!code-cpp[StackPanelOvw4#1](~/samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
+ [!code-csharp[StackPanelOvw4#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
+ [!code-vb[StackPanelOvw4#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
+ [!code-xaml[StackPanelOvw4#1](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
   
  通过此图像可以看到呈现行为的区别。  
   
- ![屏幕截图：StackPanel 与 DockPanel 屏幕截图](../../../../docs/framework/wpf/controls/media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
+ ![屏幕快照：StackPanel 与 DockPanel 屏幕截图](./media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
   
 #### <a name="defining-and-using-a-stackpanel"></a>定义和使用 StackPanel  
  下面的示例演示如何使用<xref:System.Windows.Controls.StackPanel>创建一组垂直定位的按钮。 对于水平定位，设置<xref:System.Windows.Controls.StackPanel.Orientation%2A>属性设置为<xref:System.Windows.Controls.Orientation.Horizontal>。  
   
- [!code-csharp[StackPanel_ovw2#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanel_ovw2/CSharp/StackPanel_Ovw_Sample2.cs#1)]
- [!code-vb[StackPanel_ovw2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanel_ovw2/VisualBasic/StackPanelOvw.vb#1)]  
+ [!code-csharp[StackPanel_ovw2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/StackPanel_ovw2/CSharp/StackPanel_Ovw_Sample2.cs#1)]
+ [!code-vb[StackPanel_ovw2#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanel_ovw2/VisualBasic/StackPanelOvw.vb#1)]  
   
  经编译的应用程序产生新的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，外观如下。  
   
- ![典型的 StackPanel 元素。](../../../../docs/framework/wpf/controls/media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
+ ![典型的 StackPanel 元素。](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
   
 <a name="Panels_overview_VirtualizingStackPanel_subsection"></a>   
 #### <a name="virtualizingstackpanel"></a>VirtualizingStackPanel  
@@ -194,7 +194,7 @@ ms.locfileid: "47196624"
   
  以下标记演示如何使用<xref:System.Windows.Controls.VirtualizingStackPanel>作为项宿主。 <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizingProperty?displayProperty=nameWithType>附加的属性必须设置为`true`（默认值） 才能进行虚拟化。  
   
- [!code-xaml[VirtualizingStackPanel_Intro#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VirtualizingStackPanel_Intro/CS/default.xaml#1)]  
+ [!code-xaml[VirtualizingStackPanel_Intro#1](~/samples/snippets/csharp/VS_Snippets_Wpf/VirtualizingStackPanel_Intro/CS/default.xaml#1)]  
   
 <a name="Panels_overview_WrapPanel"></a>   
 ### <a name="wrappanel"></a>WrapPanel  
@@ -202,14 +202,14 @@ ms.locfileid: "47196624"
   
  下面的示例演示如何创建<xref:System.Windows.Controls.WrapPanel>以显示<xref:System.Windows.Controls.Button>当到达容器边缘时换行的控件。  
   
- [!code-cpp[WrapPanel_Intro#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/WrapPanel_Intro/CPP/WrapPanel_Code.cpp#1)]
- [!code-csharp[WrapPanel_Intro#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WrapPanel_Intro/CSharp/WrapPanel_Code.cs#1)]
- [!code-vb[WrapPanel_Intro#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WrapPanel_Intro/VisualBasic/WrapPanel_vb.vb#1)]
- [!code-xaml[WrapPanel_Intro#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/WrapPanel_Intro/XAML/default.xaml#1)]  
+ [!code-cpp[WrapPanel_Intro#1](~/samples/snippets/cpp/VS_Snippets_Wpf/WrapPanel_Intro/CPP/WrapPanel_Code.cpp#1)]
+ [!code-csharp[WrapPanel_Intro#1](~/samples/snippets/csharp/VS_Snippets_Wpf/WrapPanel_Intro/CSharp/WrapPanel_Code.cs#1)]
+ [!code-vb[WrapPanel_Intro#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WrapPanel_Intro/VisualBasic/WrapPanel_vb.vb#1)]
+ [!code-xaml[WrapPanel_Intro#1](~/samples/snippets/xaml/VS_Snippets_Wpf/WrapPanel_Intro/XAML/default.xaml#1)]  
   
  经编译的应用程序产生新的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，外观如下。  
   
- ![典型 WrapPanel 元素。](../../../../docs/framework/wpf/controls/media/wrappanel-element.PNG "WrapPanel_Element")  
+ ![典型 WrapPanel 元素。](./media/wrappanel-element.PNG "WrapPanel_Element")  
   
 <a name="Panels_nested_panel_elements"></a>   
 ## <a name="nested-panel-elements"></a>嵌套 Panel 元素  
@@ -219,12 +219,12 @@ ms.locfileid: "47196624"
   
  下面的示例演示如何创建[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]充分利用嵌套<xref:System.Windows.Controls.Panel>元素，以实现特定的布局。 在此特定情况下<xref:System.Windows.Controls.DockPanel>元素用于提供[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]结构，而嵌套<xref:System.Windows.Controls.StackPanel>元素， <xref:System.Windows.Controls.Grid>，和一个<xref:System.Windows.Controls.Canvas>用来定位子元素精确地在父级内的<xref:System.Windows.Controls.DockPanel>。  
   
- [!code-csharp[Nested_Panels#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Nested_Panels/CSharp/nestedpanels.cs#1)]
- [!code-vb[Nested_Panels#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Nested_Panels/VisualBasic/nestedpanels.vb#1)]  
+ [!code-csharp[Nested_Panels#1](~/samples/snippets/csharp/VS_Snippets_Wpf/Nested_Panels/CSharp/nestedpanels.cs#1)]
+ [!code-vb[Nested_Panels#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Nested_Panels/VisualBasic/nestedpanels.vb#1)]  
   
  经编译的应用程序产生新的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，外观如下。  
   
- ![充分利用嵌套面板的 UI。](../../../../docs/framework/wpf/controls/media/nested-panels.PNG "nested_panels")  
+ ![充分利用嵌套面板的 UI。](./media/nested-panels.PNG "nested_panels")  
   
 <a name="Panels_custom_panel_elements"></a>   
 ## <a name="custom-panel-elements"></a>自定义 Panel 元素  
@@ -234,9 +234,9 @@ ms.locfileid: "47196624"
   
  以下标记演示如何创建自定义<xref:System.Windows.Controls.Panel>元素。 这一新<xref:System.Windows.Controls.Panel>，其定义如下`PlotPanel`，支持通过使用硬编码的子元素定位*x 轴*并*y-* 坐标。 在此示例中，<xref:System.Windows.Shapes.Rectangle>元素 （未显示） 都位于绘图点 50 (*x*)，到 50 个 (*y*)。  
   
- [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
- [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
- [!code-vb[PlotPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
+ [!code-cpp[PlotPanel#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
+ [!code-csharp[PlotPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
+ [!code-vb[PlotPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
  若要查看更复杂的自定义面板实现，请参阅[创建自定义内容换行面板示例](https://go.microsoft.com/fwlink/?LinkID=159979)。  
   
@@ -244,21 +244,21 @@ ms.locfileid: "47196624"
 ## <a name="localizationglobalization-support"></a>本地化/全球化支持  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支持多种有助于创建可本地化的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。  
   
- 所有面板元素本身都支持<xref:System.Windows.FrameworkElement.FlowDirection%2A>属性，可用于动态地重排内容基于用户的区域设置或语言设置。 有关详细信息，请参阅<xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
+ 所有面板元素本身都支持<xref:System.Windows.FrameworkElement.FlowDirection%2A>属性，可用于动态地重排内容基于用户的区域设置或语言设置。 有关详细信息，请参阅 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
   
  <xref:System.Windows.Window.SizeToContent%2A>属性提供了一种机制，使应用程序开发人员要预测的需求本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 使用<xref:System.Windows.SizeToContent.WidthAndHeight>此属性，父值<xref:System.Windows.Window>始终动态调整大小以适应内容和不受人为的高度或宽度限制。  
   
  <xref:System.Windows.Controls.DockPanel><xref:System.Windows.Controls.Grid>，并<xref:System.Windows.Controls.StackPanel>所有选择适合的可本地化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 <xref:System.Windows.Controls.Canvas> 但是，是不是一个不错的选择，因为其内容以绝对方式定位，使其难以本地化。  
   
- 有关创建带有可本地化 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的其他信息，请参阅[使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)。  
+ 有关创建带有可本地化 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的其他信息，请参阅[使用自动布局概述](../advanced/use-automatic-layout-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [WPF 布局库示例](https://go.microsoft.com/fwlink/?LinkID=160054)  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)  
- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [对齐、边距和填充概述](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [创建自定义内容换行面板示例](https://go.microsoft.com/fwlink/?LinkID=159979)  
- [附加属性概述](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [使用自动布局概述](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+## <a name="see-also"></a>请参阅
+- [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [WPF 布局库示例](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [布局](../advanced/layout.md)
+- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [对齐、边距和填充概述](../advanced/alignment-margins-and-padding-overview.md)
+- [创建自定义内容换行面板示例](https://go.microsoft.com/fwlink/?LinkID=159979)
+- [附加属性概述](../advanced/attached-properties-overview.md)
+- [使用自动布局概述](../advanced/use-automatic-layout-overview.md)
+- [布局和示例](../advanced/optimizing-performance-layout-and-design.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54691785e3b2619b5f4a2eecc510800b4b5cee07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf2ca9719cdf62637292bdb39437d36f4b3fcd49
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446592"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494398"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef 方法
-创建一个类型定义的公共语言运行时类型，并获取该类型定义元数据标记。  
+创建公共语言运行时类型的类型定义并获取该类型定义元数据标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,38 +39,38 @@ HRESULT DefineTypeDef (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `szTypeDef`  
- [in]以 Unicode 类型的名称。  
+ [in]以 unicode 格式的类型的名称。  
   
  `dwTypeDefFlags`  
  [in]`TypeDef`属性。 这是一个位掩码的`CoreTypeAttr`值。  
   
  `tkExtends`  
- [in]基本类的标记。 它必须是`mdTypeDef`或`mdTypeRef`令牌。  
+ [in]基类的标记。 它必须是`mdTypeDef`或`mdTypeRef`令牌。  
   
  `rtkImplements`  
  [in]指定此类或接口实现的接口的令牌的数组。  
   
  `ptd`  
- [out]`mdTypeDef`分配的令牌。  
+ [out]`mdTypeDef`分配标记。  
   
 ## <a name="remarks"></a>备注  
- 一个标志`dwTypeDefFlags`指定正在创建的类型是通用类型系统引用类型 （类或接口） 还是通用类型系统值类型。  
+ 中的标志`dwTypeDefFlags`指定正在创建的类型是否为通用类型系统引用类型 （类或接口） 或通用类型系统值类型。  
   
- 根据提供的参数，此方法的副作用，还可以创建`mdInterfaceImpl`记录为每个接口继承或实现是用这种类型。 但是，，此方法不返回任何这些`mdInterfaceImpl`令牌。 如果客户端想要以后添加或修改`mdInterfaceImpl`令牌，它必须使用`IMetaDataImport`接口来枚举它们。 如果你想要使用的 COM 语义`[default]`接口，还应为中的第一个元素提供的默认接口`rtkImplements`; 在类上设置的自定义特性将指示此类具有的默认接口 (其始终被假定为第一次`mdInterfaceImpl`类声明的令牌)。  
+ 根据提供的参数，此方法，产生了负面影响，还可以创建`mdInterfaceImpl`记录为每个接口继承或由此类型实现的。 但是，此方法不返回其中的任何`mdInterfaceImpl`令牌。 如果客户端想要更高版本中添加或修改`mdInterfaceImpl`令牌，它必须使用`IMetaDataImport`接口来枚举它们。 如果你想要使用的 COM 语义`[default]`接口，您应作为中的第一个元素提供的默认接口`rtkImplements`; 在类上设置的自定义属性将指示类具有一个默认接口 (这始终被假定为第一次`mdInterfaceImpl`令牌声明的类)。  
   
- 每个元素`rtkImplements`数组`mdTypeDef`或`mdTypeRef`令牌。 数组中的最后一个元素必须是`mdTokenNil`。  
+ 每个元素`rtkImplements`数组持有`mdTypeDef`或`mdTypeRef`令牌。 数组中的最后一个元素必须是`mdTokenNil`。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

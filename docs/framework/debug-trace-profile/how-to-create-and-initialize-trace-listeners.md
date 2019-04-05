@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 943621b953fbe158b3be6ae0695ba7692b7c517f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583098"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>如何：创建和初始化跟踪侦听器
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 类向接收和处理消息的对象（成为侦听器）中发送消息。 在启用跟踪或调试后将自动创建并初始化一个如上所述的侦听器 <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>。 如果要将 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.Debug> 输出定向到任何其他源，则必须创建并初始化其他跟踪侦听器。  
@@ -94,8 +94,8 @@ ms.locfileid: "33389195"
     myListener.Flush();  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)  
- [如何：向应用程序代码添加跟踪语句](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>请参阅
+- [跟踪侦听器](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [跟踪开关](../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [如何：将跟踪语句添加到应用程序代码](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

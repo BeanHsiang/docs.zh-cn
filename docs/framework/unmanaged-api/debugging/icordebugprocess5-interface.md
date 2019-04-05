@@ -16,48 +16,48 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3aed85e989313e4778e12a6f6bb789ccef49747
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a105ca8838820b62e81dae4c0149734339bed7a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620209"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 接口
-扩展 ICorDebugProcess 接口以支持对托管堆，以提供有关垃圾回收的托管对象的信息的访问，并确定调试器是否从应用程序本地本机映像缓存加载映像。  
+扩展 ICorDebugProcess 接口以支持对托管堆，以提供有关垃圾回收的托管对象信息的访问，并确定调试器是否从应用程序本地本机映像缓存加载图像。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnableNGenPolicy 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)|设置一个值，确定如何应用程序加载托管调试器下运行时的本机映像。|  
-|[EnumerateGCReferences 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)|获取要进行垃圾回收的过程中的所有对象的枚举数。|  
-|[EnumerateHandles 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)|在进程中获取对象句柄的枚举数。|  
-|[EnumerateHeap 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)|托管堆上获取对象的枚举数。|  
-|[EnumerateHeapRegions 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md)|获取针对托管堆区域的枚举器。|  
-|[GetArrayLayout 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)|获取内存的布局信息的数组。|  
-|[GetGCHeapInformation 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)|获取一个指向[COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)结构，其中包含有关要进行垃圾回收托管堆上的对象的信息。|  
-|[GetObject 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)|获取托管堆上对象的指针。|  
-|[GetTypeFields 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)|获取一个指针指向包含有关基于其类型标识符的类型的字段信息的数组。|  
-|[GetTypeForTypeID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)|获取一个类型对象，提供有关基于其类型标识符的对象信息。|  
-|[GetTypeID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypeid-method.md)|指定地址处获取该对象类型标识符。|  
-|[GetTypeLayout 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypelayout-method.md)|在根据其类型标识符的内存中获取对象的布局信息。|  
+|[EnableNGenPolicy 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)|设置一个值，确定如何将应用程序加载托管调试器下运行时的本机映像。|  
+|[EnumerateGCReferences 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)|获取要进行垃圾回收的过程中的所有对象的枚举器。|  
+|[EnumerateHandles 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)|获取可枚举对象句柄的进程中。|  
+|[EnumerateHeap 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)|获取托管堆上对象的枚举器。|  
+|[EnumerateHeapRegions 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md)|获取区域托管堆的一个枚举器。|  
+|[GetArrayLayout 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)|获取内存中的布局信息的数组。|  
+|[GetGCHeapInformation 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)|获取一个指向[COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)结构，其中包含要进行垃圾回收托管堆上对象的信息。|  
+|[GetObject 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)|获取一个指针指向一个对象托管堆上。|  
+|[GetTypeFields 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)|获取一个指针指向包含基于其类型标识符的类型的字段信息的数组。|  
+|[GetTypeForTypeID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)|获取提供有关基于其类型标识符的对象信息的类型对象。|  
+|[GetTypeID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypeid-method.md)|获取指定地址处的对象的类型标识符。|  
+|[GetTypeLayout 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypelayout-method.md)|获取基于其类型标识符的内存中对象的布局信息。|  
   
 ## <a name="remarks"></a>备注  
- 此接口进行逻辑扩展 ICorDebugProcess，ICorDebugProcess2，和[ICorDebugProcess3](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md)接口。  
+ 此接口进行逻辑扩展 ICorDebugProcess，ICorDebugProcess2，并[ICorDebugProcess3](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md)接口。  
   
 > [!NOTE]
->  此接口不支持从另一台计算机或从另一个进程远程调用。  
+>  此接口不支持从另一台计算机或另一个进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

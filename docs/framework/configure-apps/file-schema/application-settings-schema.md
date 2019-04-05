@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: a74716bcdf3c85c08d0ff3bf66407dce30ee91cc
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123333"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083465"
 ---
 # <a name="application-settings-schema"></a>应用程序设置架构
 
@@ -26,9 +24,9 @@ ms.locfileid: "49123333"
 
 | 元素                    | 描述                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | 包含所有**\<设置 >** 标记特定于应用程序。                         |
-| **\<用户设置 >**        | 包含所有**\<设置 >** 特定于当前用户的标记。                        |
-| **\<设置 >**             | 定义设置。 子 **\<applicationSettings >** 或 **\<userSettings >**。 |
+| **\<applicationSettings>** | 包含所有**\<设置 >** 标记特定于应用程序。                         |
+| **\<userSettings>**        | 包含所有**\<设置 >** 特定于当前用户的标记。                        |
+| **\<setting>**             | 定义设置。 子 **\<applicationSettings >** 或 **\<userSettings >**。 |
 | **\<value>**               | 定义设置的值。 子级**\<设置 >**。                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > 元素
@@ -45,8 +43,8 @@ ms.locfileid: "49123333"
 
 | 特性        | 描述 |
 | ---------------- | ----------- |
-| **name**         | 必须的。 设置的唯一 ID。 通过 Visual Studio 创建的设置保存名称`ProjectName.Properties.Settings`。 |
-| **serializedAs** | 必须的。 要用来序列化的值为文本的格式。 有效值为：<br><br>- `string`. 值序列化为字符串使用<xref:System.ComponentModel.TypeConverter>。<br>- `xml`. 使用 XML 序列化序列化值。<br>- `binary`. 值序列化为文本编码的二进制文件使用二进制序列化。<br />- `custom`. 设置提供程序具有此设置的固有知识和序列化和反序列化。 |
+| **name**         | 必需。 设置的唯一 ID。 通过 Visual Studio 创建的设置保存名称`ProjectName.Properties.Settings`。 |
+| **serializedAs** | 必需。 要用来序列化的值为文本的格式。 有效值为：<br><br>- `string`. 值序列化为字符串使用<xref:System.ComponentModel.TypeConverter>。<br>- `xml`. 使用 XML 序列化序列化值。<br>- `binary`. 值序列化为文本编码的二进制文件使用二进制序列化。<br />- `custom`. 设置提供程序具有此设置的固有知识和序列化和反序列化。 |
 
 ## <a name="value-element"></a>\<值 > 元素
 
@@ -92,5 +90,5 @@ ms.locfileid: "49123333"
 
 ## <a name="see-also"></a>请参阅
 
-[应用程序设置概述](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[应用程序设置体系结构](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [应用程序设置概述](~/docs/framework/winforms/advanced/application-settings-overview.md)
+- [应用程序设置体系结构](~/docs/framework/winforms/advanced/application-settings-architecture.md)

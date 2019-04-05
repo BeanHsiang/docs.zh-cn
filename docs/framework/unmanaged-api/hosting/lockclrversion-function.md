@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f3b263efa95936190ed771e811a84886b11be75b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446079"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465743"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 函数
-允许宿主确定在进行显式初始化 CLR 之前将在过程内使用的公共语言运行时 (CLR) 的版本。  
+允许宿主确定在进行显式初始化 CLR 之前将在进程中使用的公共语言运行时 (CLR) 的版本。  
   
- 此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,18 +39,18 @@ HRESULT LockClrVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `hostCallback`  
  [in]要由 CLR 初始化时调用的函数。  
   
  `pBeginHostSetup`  
- [in]正在启动要宿主调用以通知 CLR 初始化的函数。  
+ [in]正在启动的初始化由主机以通知 CLR 调用的函数。  
   
  `pEndHostSetup`  
- [in]要初始化由要通知的 CLR 的主机调用的函数已完成。  
+ [in]函数将调用的主机，告知 CLR 初始化已完成。  
   
 ## <a name="return-value"></a>返回值  
- 此方法返回标准的 COM 错误代码，除了以下值中 WinError.h，定义。  
+ 此方法返回标准 COM 错误代码，定义在 WinError.h，除了以下值。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
@@ -58,7 +58,7 @@ HRESULT LockClrVersion (
 |E_INVALIDARG|一个或多个参数为 null。|  
   
 ## <a name="remarks"></a>备注  
- 宿主调用`LockClrVersion`之前初始化 CLR。 `LockClrVersion` 采用三个参数，这些全部都是类型的回调[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)。 此类型定义，如下所示。  
+ 在宿主调用`LockClrVersion`之前初始化 CLR。 `LockClrVersion` 采用三个参数，所有这些都是类型的回调[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)。 此类型定义，如下所示。  
   
 ```  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
@@ -66,13 +66,13 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  在运行时初始化时将执行以下步骤：  
   
-1.  宿主调用[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或其他运行时初始化函数之一。 或者，主机无法初始化运行时使用激活 COM 对象。  
+1.  在宿主调用[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或某个其他运行时初始化函数。 或者，主机无法初始化运行时使用激活 COM 对象。  
   
-2.  运行时调用指定函数的`hostCallback`参数。  
+2.  运行时调用由指定的函数`hostCallback`参数。  
   
-3.  所指定函数的`hostCallback`然后进行以下一系列的调用：  
+3.  由指定的函数`hostCallback`然后进行以下调用顺序：  
   
-    -   所指定函数的`pBeginHostSetup`参数。  
+    -   由指定的函数`pBeginHostSetup`参数。  
   
     -   `CorBindToRuntimeEx` （或另一个运行时初始化函数）。  
   
@@ -80,18 +80,18 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
     -   [Iclrruntimehost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)。  
   
-    -   所指定函数的`pEndHostSetup`参数。  
+    -   由指定的函数`pEndHostSetup`参数。  
   
- 从所有调用`pBeginHostSetup`到`pEndHostSetup`必须出现在单线程还是纤程中，具有相同的逻辑堆栈上。 此线程可以是不同于在其线程`hostCallback`调用。  
+ 从所有调用`pBeginHostSetup`到`pEndHostSetup`必须出现在单个线程或纤程，具有相同的逻辑堆栈上。 此线程可以不同于在其线程`hostCallback`调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>请参阅
+- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

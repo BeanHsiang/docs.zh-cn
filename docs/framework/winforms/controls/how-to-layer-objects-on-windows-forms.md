@@ -1,5 +1,5 @@
 ---
-title: 如何：对 Windows 窗体上的对象分层
+title: 如何：在 Windows 窗体上的层对象
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: d67d9b204c316dce5f3818496d791ed4c1b352f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea97e26d31d2cdda353b6ada554cac27c5b56c62
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000695"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719099"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>如何：对 Windows 窗体上的对象分层
+# <a name="how-to-layer-objects-on-windows-forms"></a>如何：在 Windows 窗体上的层对象
 当您创建复杂的用户界面，或使用多文档界面 (MDI) 窗体时，通常想要层控件和子窗体以创建更复杂的用户界面 (UI)。 若要移动跟踪的控件和 windows 组的上下文中，可操作其 z 顺序。 *Z 顺序*是沿窗体的 z 轴 （深度） 窗体上控件的可视化分层。 在窗口顶部的 z 顺序重叠所有其他窗口之上。 所有其他窗口重叠窗口底部的 z 顺序。  
   
 > [!NOTE]
@@ -52,9 +52,9 @@ ms.locfileid: "46000695"
 > [!NOTE]
 >  Windows 窗体支持*控件包含*。 控件包含涉及到将放置多个控件内包含的控件，例如的数目<xref:System.Windows.Forms.RadioButton>控件的<xref:System.Windows.Forms.GroupBox>控件。 然后可以层中包含的控件的控件。 移动分组框移动，这些控件，因为它们包含其内部。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 窗体控件](../../../../docs/framework/winforms/controls/index.md)  
- [在 Windows 窗体上排列控件](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [标记各个 Windows 窗体控件并创建它们的快捷键](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- [在 Windows 窗体上使用的控件](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [按功能列出的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>请参阅
+- [Windows 窗体控件](index.md)
+- [在 Windows 窗体上排列控件](arranging-controls-on-windows-forms.md)
+- [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows 窗体上使用的控件](controls-to-use-on-windows-forms.md)
+- [按功能列出的 Windows 窗体控件](windows-forms-controls-by-function.md)

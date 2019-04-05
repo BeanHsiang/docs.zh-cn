@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660744"
 ---
 # <a name="load-balancing"></a>负载平衡
-一种方法来增加 Windows Communication Foundation (WCF) 应用程序的容量是扩展通过将它们部署到的负载平衡服务器场。 WCF 应用程序可以进行负载平衡使用标准的负载平衡技术，包括诸如 Windows 网络负载平衡的软件负载平衡器以及基于硬件的负载平衡设备。  
+若要增加 Windows Communication Foundation (WCF) 应用程序的容量的一种方法是通过将它们部署到负载平衡服务器场中扩展它们。 WCF 应用程序可以使用标准负载均衡技术，包括如 Windows 网络负载平衡的软件负载均衡器，以及基于硬件的负载平衡设备达到负载平衡。  
   
- 以下各节讨论负载平衡使用各种系统提供绑定生成的 WCF 应用程序的注意事项。  
+ 以下各节讨论负载平衡使用各种系统提供的绑定生成的 WCF 应用程序的注意事项。  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>基本 HTTP 绑定的负载平衡  
- 从负载平衡，使用进行通信的 WCF 应用程序的角度<xref:System.ServiceModel.BasicHttpBinding>与其他普通类型的 HTTP 网络流量 （静态 HTML 内容、 ASP.NET 页或 ASMX Web 服务） 没有什么不同。 使用此绑定的 WCF 通道本质上是无状态的并在通道关闭时终止其连接。 因此，<xref:System.ServiceModel.BasicHttpBinding> 可以很好地与现有的 HTTP 负载平衡技术一起使用。  
+ 从负载平衡，使用进行通信的 WCF 应用程序的角度来看<xref:System.ServiceModel.BasicHttpBinding>与其他普通类型的 HTTP 网络流量 （静态 HTML 内容、 ASP.NET 页或 ASMX Web 服务） 没有什么不同。 使用此绑定的 WCF 通道本质上是无状态的并在通道关闭时终止它们的连接。 因此，<xref:System.ServiceModel.BasicHttpBinding> 可以很好地与现有的 HTTP 负载平衡技术一起使用。  
   
  默认情况下，<xref:System.ServiceModel.BasicHttpBinding> 会在消息中发送一个具有 `Keep-Alive` 值的连接 HTTP 标头，该标头可让客户端建立到支持这些客户端的服务的持续连接。 这种配置具有高的吞吐量，因为可以重新使用以前建立的连接向同一个服务器发送后续消息。 然而，重新使用连接可能导致客户端与负载平衡场中的特定服务器密切关联，从而降低循环负载平衡的效率。 如果不需要此行为，则可以使用 `Keep-Alive` 或用户定义的 <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> 在使用 <xref:System.ServiceModel.Channels.CustomBinding> 属性的服务器上禁用 HTTP <xref:System.ServiceModel.Channels.Binding>。 下面的示例演示如何使用配置来执行该操作。  
   
@@ -77,12 +77,12 @@ ms.locfileid: "33807520"
 </configuration>  
 ```  
   
- 有关默认终结点、 绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和[简化配置 WCF 服务](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+ 有关默认终结点、绑定和行为的详细信息，请参阅[简化配置](../../../docs/framework/wcf/simplified-configuration.md)和 [WCF 服务的简化配置](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>WSHttp 绑定和 WSDualHttp 绑定的负载平衡  
  如果对默认的绑定配置进行一些修改，则 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 都可以使用 HTTP 负载平衡技术来实现负载平衡。  
   
--   关闭安全上下文的建立：这可以通过将 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 上的 <xref:System.ServiceModel.WSHttpBinding> 属性设置为 `false` 来完成。 或者，如果安全会话是必需的则可能要使用有状态安全会话中所述[安全会话](../../../docs/framework/wcf/feature-details/secure-sessions.md)主题。 有状态安全会话使服务保持无状态，因为安全会话的所有状态都随每个请求作为保护安全令牌的一部分进行传输。 请注意，若要启用有状态安全会话，必须使用 <xref:System.ServiceModel.Channels.CustomBinding> 或用户定义的 <xref:System.ServiceModel.Channels.Binding>，因为系统提供的 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 上并不会公开必需的配置设置。  
+-   关闭安全上下文的建立：这可以通过将 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 上的 <xref:System.ServiceModel.WSHttpBinding> 属性设置为 `false` 来完成。 或者，如果安全会话是必需的则可以使用有状态安全会话中所述[安全会话](../../../docs/framework/wcf/feature-details/secure-sessions.md)主题。 有状态安全会话使服务保持无状态，因为安全会话的所有状态都随每个请求作为保护安全令牌的一部分进行传输。 请注意，若要启用有状态安全会话，必须使用 <xref:System.ServiceModel.Channels.CustomBinding> 或用户定义的 <xref:System.ServiceModel.Channels.Binding>，因为系统提供的 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.WSDualHttpBinding> 上并不会公开必需的配置设置。  
   
 -   不要使用可靠会话。 默认情况下此功能处于关闭状态。  
   
@@ -91,5 +91,5 @@ ms.locfileid: "33807520"
   
  若要在负载平衡方案中获得最佳性能，请考虑使用 <xref:System.ServiceModel.NetTcpSecurity>（<xref:System.ServiceModel.SecurityMode.Transport> 或 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>）。  
   
-## <a name="see-also"></a>请参阅  
- [Internet Information Services 承载最佳做法](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+## <a name="see-also"></a>请参阅
+- [Internet Information Services 承载最佳做法](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

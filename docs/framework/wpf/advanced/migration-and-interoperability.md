@@ -13,29 +13,29 @@ helpviewer_keywords:
 - WPF [WPF], interoperability
 - migration [WPF]
 ms.assetid: d655de05-bf63-4814-bc64-6b3be01c70a2
-ms.openlocfilehash: a94d855a88fafd0f8faf98c98601142802701dd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7576c8631a39a6dcf234f15b93fd5714f493276e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544848"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366616"
 ---
 # <a name="migration-and-interoperability"></a>迁移和互操作性
-此网页包含指向讨论如何实现之间进行互操作的文档[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序和其他类型的[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]应用程序。  
+此页面包含指向讨论如何实现之间的互操作的文档[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]应用程序和其他类型的[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]应用程序。  
   
 ## <a name="in-this-section"></a>本节内容  
- [WPF 和 Windows 窗体互操作](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)  
- [WPF 和 Win32 互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [WPF 和 Direct3D9 互操作](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
+ [WPF 和 Windows 窗体互操作](wpf-and-windows-forms-interoperation.md)  
+ [WPF 和 Win32 互操作](wpf-and-win32-interoperation.md)  
+ [WPF 和 Direct3D9 互操作](wpf-and-direct3d9-interoperation.md)  
   
 ## <a name="reference"></a>参考  
   
 |术语|定义|  
 |----------|----------------|  
-|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|你可以使用一个元素到主机[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]与某一元素的控件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]页。|  
-|<xref:System.Windows.Forms.Integration.ElementHost>|A[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件，可将主机到[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控件。|  
-|<xref:System.Windows.Interop.HwndSource>|主机[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内的区域[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序。|  
-|<xref:System.Windows.Interop.HwndHost>|基类<xref:System.Windows.Forms.Integration.WindowsFormsHost>，定义由承载时，所有基于 HWND 的技术使用一些基本功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 子类此处承载[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口内的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。|  
-|<xref:System.Windows.Interop.BrowserInteropHelper>|用于报告的条件的浏览器环境的帮助程序类[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]由浏览器承载的应用程序。|  
+|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|可以使用一个元素到主机[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件的元素作为[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]页。|  
+|<xref:System.Windows.Forms.Integration.ElementHost>|一个[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]可以使用的控件承载[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控件。|  
+|<xref:System.Windows.Interop.HwndSource>|主机[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]区域内的[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]应用程序。|  
+|<xref:System.Windows.Interop.HwndHost>|基类<xref:System.Windows.Forms.Integration.WindowsFormsHost>，定义所有基于 HWND 的技术使用由托管时，某些基本功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。 子类这来承载[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]窗口内的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]应用程序。|  
+|<xref:System.Windows.Interop.BrowserInteropHelper>|帮助器类，用于报告的浏览器环境条件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的浏览器承载的应用程序。|  
   
 ## <a name="related-sections"></a>相关章节

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: e6fbaabb97e4a8de3e4bdbcc0c105b6cf999c0d5
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: e7ba87a0e2a0a9dd0a4cd984dd88b4850a24040e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50037582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590677"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>如何：保护元数据终结点
 服务的元数据中可能包含恶意用户可以利用的关于您的应用程序的敏感信息。 服务使用者可能还要求一种用于获取关于服务的元数据的安全机制。 因此，有时需要使用安全终结点来发布元数据。  
@@ -21,7 +21,7 @@ ms.locfileid: "50037582"
   
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>在代码中创建安全的 HTTPS GET 元数据终结点  
   
-1.  使用适当的 X.509 证书配置端口。 该证书必须来自受信任的颁发机构，而且还必须有既定的“服务授权”用途。 必须使用 HttpCfg.exe 工具将该证书附加到该端口。 请参阅[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+1.  使用适当的 X.509 证书配置端口。 该证书必须来自受信任的颁发机构，而且还必须有既定的“服务授权”用途。 必须使用 HttpCfg.exe 工具将该证书附加到该端口。 请参阅[如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
     > [!IMPORTANT]
     >  该证书或其域名系统 (DNS) 的主题必须与计算机的名称匹配。 这一点非常重要，原因是 HTTPS 机制所执行的前几个步骤之一是检查是否将证书颁发给了在其上调用了该证书的地址的统一资源标识符 (URI)。  
@@ -92,11 +92,11 @@ ms.locfileid: "50037582"
   
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
+- [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [元数据的安全性注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

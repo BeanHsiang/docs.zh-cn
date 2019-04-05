@@ -1,5 +1,5 @@
 ---
-title: 如何：用对称密钥对 XML 元素进行加密
+title: 如何：使用对称密钥加密 XML 元素
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5c221dc05787c6d76d998977069ad327a3dfa83
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cbc06264dd2153818d69c0124e8a263bf4265ebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622827"
 ---
-# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>如何：用对称密钥对 XML 元素进行加密
+# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>如何：使用对称密钥加密 XML 元素
 可以使用 <xref:System.Security.Cryptography.Xml> 命名空间中的类加密 XML 文档内的元素。  XML 加密可用于存储或传输敏感 XML，而无需担心数据被轻易读取。  此过程使用高级加密标准 (AES) 算法（也称为 Rijndael）对 XML 元素进行解密。  
   
- 有关如何解密使用此过程加密的 XML 元素的信息，请参阅[如何： 用对称密钥解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)。  
+ 有关如何解密使用此过程加密的 XML 元素的信息，请参阅[如何：使用对称密钥解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)。  
   
  当使用对称算法（如 AES）来加密 XML 数据时，必须使用相同的密钥来加密和解密 XML 数据。  此过程中的示例假定加密的 XML 将使用相同的密钥进行解密，且加密方和解密方就要使用的算法和密钥达成了一致。  此示例不对加密的 XML 内的 AES 密钥进行存储或加密。  
   
@@ -103,5 +103,5 @@ ms.locfileid: "44177192"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Security.Cryptography.Xml>  
+- <xref:System.Security.Cryptography.Xml>
 - [如何：使用对称密钥解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)

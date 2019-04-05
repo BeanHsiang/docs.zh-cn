@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: a3c0749560d8cea1e46d96298347ce54f0bf9185
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3d6caeb1938e8e53e8ec2575f740cd5e49496f62
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863369"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839894"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While 子句 (Visual Basic)
 跳过集合中指定条件为 `true` 的任何元素，然后返回剩余元素。  
@@ -28,7 +28,7 @@ Skip While expression
   
 |术语|定义|  
 |---|---|  
-|`expression`|必须的。 一个表达式，表示要测试的元素的条件。 该表达式必须返回`Boolean`值或功能上等效，如`Integer`被视为`Boolean`。|  
+|`expression`|必需。 一个表达式，表示要测试的元素的条件。 该表达式必须返回`Boolean`值或功能上等效，如`Integer`被视为`Boolean`。|  
   
 ## <a name="remarks"></a>备注  
  `Skip While`子句跳过从之前所提供的查询结果开头的元素`expression`返回`false`。 之后`expression`返回`false`，该查询返回所有剩余元素。 `expression`忽略其余的结果。  
@@ -40,13 +40,14 @@ Skip While expression
 ## <a name="example"></a>示例  
  下面的代码示例使用`Skip While`子句以跳过的结果，直到找到从美国的第一个客户。  
   
- [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [查询](../../../visual-basic/language-reference/queries/index.md)  
- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Skip 子句](../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Take While 子句](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 中的 LINQ 简介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [查询](../../../visual-basic/language-reference/queries/index.md)
+- [Select 子句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Skip 子句](../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Take While 子句](../../../visual-basic/language-reference/queries/take-while-clause.md)
+- [Where 子句](../../../visual-basic/language-reference/queries/where-clause.md)

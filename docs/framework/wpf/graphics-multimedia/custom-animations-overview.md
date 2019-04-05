@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: a18898f340c68b7890c56b586c87870c50fd4686
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511888"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358517"
 ---
 # <a name="custom-animations-overview"></a>自定义动画概述
 本主题介绍如何以及何时通过以下方法来扩展 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画系统：创建自定义关键帧、动画类或者使用每帧回叫来绕过它。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 若要了解本主题，用户应当熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的不同动画类型。 有关详细信息，请参阅 From/To/By 动画概述、[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)和[路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)。  
+ 若要了解本主题，用户应当熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的不同动画类型。 有关详细信息，请参阅 From/To/By 动画概述、[关键帧动画概述](key-frame-animations-overview.md)和[路径动画概述](path-animations-overview.md)。  
   
- 由于动画类继承自<xref:System.Windows.Freezable>类，您应熟悉<xref:System.Windows.Freezable>对象以及如何从继承<xref:System.Windows.Freezable>。 有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ 由于动画类继承自<xref:System.Windows.Freezable>类，您应熟悉<xref:System.Windows.Freezable>对象以及如何从继承<xref:System.Windows.Freezable>。 有关详细信息，请参阅 [Freezable 对象概述](../advanced/freezable-objects-overview.md)。  
   
 <a name="extendingtheanimationsystem"></a>   
 ## <a name="extending-the-animation-system"></a>扩展动画系统  
@@ -45,7 +45,7 @@ ms.locfileid: "44511888"
   
 <a name="createacustomkeyframe"></a>   
 ## <a name="create-a-custom-key-frame"></a>创建自定义关键帧  
- 创建自定义关键帧类是扩展动画系统的最简单方法。 当希望为关键帧动画使用不同的内插方法时，请使用此方法。  如[关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)中所述，关键帧动画使用关键帧对象生成器输出值。 每个关键帧对象都执行三个功能：  
+ 创建自定义关键帧类是扩展动画系统的最简单方法。 当希望为关键帧动画使用不同的内插方法时，请使用此方法。  如[关键帧动画概述](key-frame-animations-overview.md)中所述，关键帧动画使用关键帧对象生成器输出值。 每个关键帧对象都执行三个功能：  
   
 -   指定目标值使用其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>属性。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "44511888"
   
  从 *\<Type>* KeyFrame 抽象类派生，并实现 InterpolateValueCore 方法。 InterpolateValueCore 方法返回关键帧的当前值。 它采用两个参数：上一个关键帧的值和范围是从 0 到 1 的进度值。 进度为 0 指示关键帧刚刚开始，如果值为 1 指示关键帧刚刚完成，并且应返回指定的值及其<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>属性。  
   
- 因为*\<类型 >* KeyFrame 类继承自<xref:System.Windows.Freezable>类，您还必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>核心以返回你的类的新实例。 如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ 因为*\<类型 >* KeyFrame 类继承自<xref:System.Windows.Freezable>类，您还必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>核心以返回你的类的新实例。 如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../advanced/freezable-objects-overview.md)。  
   
  创建自定义 *\<Type>* KeyFrame 动画后，可以将其与该类型的 *\<Type>* AnimationUsingKeyFrames 结合使用。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "44511888"
   
  从 *\<Type>* Animation 类派生并实现 GetCurrentValueCore 方法。 GetCurrentValueCore 方法返回动画的当前值。 它采用三个参数： 建议的起始值、 建议的结束值和一个<xref:System.Windows.Media.Animation.AnimationClock>，可用于确定动画的进度。  
   
- 因为*\<类型 >* AnimationBase 类继承自<xref:System.Windows.Freezable>类，您还必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>核心以返回你的类的新实例。 如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ 因为*\<类型 >* AnimationBase 类继承自<xref:System.Windows.Freezable>类，您还必须重写<xref:System.Windows.Freezable.CreateInstanceCore%2A>核心以返回你的类的新实例。 如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../advanced/freezable-objects-overview.md)。  
   
  有关详细信息，请参阅要进行动画处理的类型的 *\<Type>* AnimationBase 类的 GetCurrentValueCore 方法文档。 有关示例，请参阅[自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "44511888"
   
 -   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – 重写此属性以指示<xref:System.Type>动画产生的输出。  
   
- 如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
+ 如果该类不使用依赖属性存储其数据，或者它在创建后需要额外初始化，则可能需要重写其他方法；有关详细信息，请参阅 [Freezable 对象概述](../advanced/freezable-objects-overview.md)。  
   
  推荐的范例（由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 动画使用）是使用两个继承级别：  
   
@@ -123,13 +123,13 @@ ms.locfileid: "44511888"
   
  有关详细信息，请参阅<xref:System.Windows.Media.CompositionTarget.Rendering>页。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Animation.AnimationTimeline>  
- <xref:System.Windows.Media.Animation.IKeyFrame>  
- [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Freezable 对象概述](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [关键帧动画概述](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [路径动画概述](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [动画和计时系统概述](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Animation.AnimationTimeline>
+- <xref:System.Windows.Media.Animation.IKeyFrame>
+- [属性动画技术概述](property-animation-techniques-overview.md)
+- [Freezable 对象概述](../advanced/freezable-objects-overview.md)
+- [关键帧动画概述](key-frame-animations-overview.md)
+- [路径动画概述](path-animations-overview.md)
+- [动画概述](animation-overview.md)
+- [动画和计时系统概述](animation-and-timing-system-overview.md)
+- [自定义动画示例](https://go.microsoft.com/fwlink/?LinkID=159981)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 477921069411bb4b7ac32a5e93cc409bc7fbdec2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30836f7f1cbf742c621254ef92314d20a4fffd83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715058"
 ---
 # <a name="data-member-default-values"></a>数据成员默认值
-在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，类型具有的概念*默认值*。 例如，对于任何引用类型，默认值为 `null`，而整型的默认值为零。 如果某个数据成员设置为其默认值，有时会希望序列化数据中不包含该数据成员。 由于成员具有默认值，这个实际值不需要进行序列化；这样处理可以提高性能。  
+在中[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，类型具有的概念*默认值*。 例如，对于任何引用类型，默认值为 `null`，而整型的默认值为零。 如果某个数据成员设置为其默认值，有时会希望序列化数据中不包含该数据成员。 由于成员具有默认值，这个实际值不需要进行序列化；这样处理可以提高性能。  
   
  若要在序列化数据中忽略某个成员，请将 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 属性 (Attribute) 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性 (Property) 设置为 `false`（默认值为 `true`）。  
   
@@ -45,17 +45,17 @@ ms.locfileid: "33492120"
  `xsi:nil` 属性是万维网联合会 (W3C) XML 架构实例命名空间中的一个特殊属性，它提供一种显式表示 null 值的可互操作方式。 请注意，在 XML 中，没有 position、salary 和 bonus 数据成员的任何相关信息。 接收端可将它们分别解释为 `null`、零和 `null`。 无法确保第三方反序列化程序可以进行正确的解释，这就是不建议使用这种模式的原因。 <xref:System.Runtime.Serialization.DataContractSerializer> 类始终为缺少的值选择正确的解释。  
   
 ### <a name="interaction-with-isrequired"></a>与 IsRequired 交互  
- 中所述[数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)、<xref:System.Runtime.Serialization.DataMemberAttribute>属性具有<xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>属性 (默认值是`false`)。 该属性 (Property) 指示，当某个给定数据成员进行反序列化时，该数据成员是否必须出现在序列化数据中。 如果 `IsRequired` 设置为 `true`（指示值必须存在）并且 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 设置为 `false`（指示如果值设置为其默认值，则该值不得存在），则由于结果相互矛盾，此数据成员的默认值无法序列化。 如果这样的一个数据成员被设置为其默认值（通常为 `null` 或零）并且尝试进行序列化，则会引发 <xref:System.Runtime.Serialization.SerializationException>。  
+ 如中所述[数据协定版本管理](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)，则<xref:System.Runtime.Serialization.DataMemberAttribute>属性具有<xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>属性 (默认值是`false`)。 该属性 (Property) 指示，当某个给定数据成员进行反序列化时，该数据成员是否必须出现在序列化数据中。 如果 `IsRequired` 设置为 `true`（指示值必须存在）并且 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 设置为 `false`（指示如果值设置为其默认值，则该值不得存在），则由于结果相互矛盾，此数据成员的默认值无法序列化。 如果这样的一个数据成员被设置为其默认值（通常为 `null` 或零）并且尝试进行序列化，则会引发 <xref:System.Runtime.Serialization.SerializationException>。  
   
 ### <a name="schema-representation"></a>架构表示形式  
- XML 架构定义语言 (XSD) 架构表示形式的数据成员的详细信息时`EmitDefaultValue`属性设置为`false`中讨论了[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 下面是简要概述：  
+ XML 架构定义语言 (XSD) 架构表示形式的数据成员的详细信息时`EmitDefaultValue`属性设置为`false`中讨论[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 下面是简要概述：  
   
--   当<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>设置为`false`，它会在架构中表示为特定到 Windows Communication Foundation (WCF) 批注。 没有用于表示此信息的可交互操作方式。 特别是，架构中的“default”属性不用于此目的，`minOccurs` 属性仅受 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 设置的影响，而 `nillable` 属性仅受数据成员类型的影响。  
+-   当<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>设置为`false`，表示架构中为特定于 Windows Communication Foundation (WCF) 的批注。 没有用于表示此信息的可交互操作方式。 特别是，架构中的“default”属性不用于此目的，`minOccurs` 属性仅受 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 设置的影响，而 `nillable` 属性仅受数据成员类型的影响。  
   
 -   要使用的实际默认值在架构中不存在。 由接收终结点负责对缺少元素进行适当解释。  
   
- 在架构导入，<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>属性自动设置为`false`每当提到的 WCF 特定批注以前检测到。 对于 `false` 属性设置为 `nillable` 的引用类型，该属性也设置为 `false`，以支持在使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务时常遇到的特定互操作性方案。  
+ 在架构导入<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>属性自动设置为`false`时提到的特定于 WCF 的批注以前检测到。 对于 `false` 属性设置为 `nillable` 的引用类型，该属性也设置为 `false`，以支持在使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服务时常遇到的特定互操作性方案。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>

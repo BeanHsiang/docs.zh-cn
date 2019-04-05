@@ -2,12 +2,12 @@
 title: SAML 令牌提供程序
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: dfd693e262e7566c865d5b9faed5b9e00a8cfec9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 43a6d96716cedc6a732c350bb43ac6d34bebf969
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308521"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842234"
 ---
 # <a name="saml-token-provider"></a>SAML 令牌提供程序
 本示例演示如何实现一个自定义客户端 SAML 令牌提供程序。 Windows Communication Foundation (WCF) 中的令牌提供程序来提供凭据的安全基础结构。 令牌提供程序一般检查目标并颁发相应的凭据，以使安全基础结构能够确保消息的安全。 WCF 附带了默认凭据管理器令牌提供程序。 WCF 还附带[!INCLUDE[infocard](../../../../includes/infocard-md.md)]令牌提供程序。 自定义令牌提供程序在下列情况下有用：
@@ -158,7 +158,7 @@ ms.locfileid: "49308521"
 
 2.  编写自定义安全令牌管理器。
 
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类用于为在 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法中传入的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 `CreateSecurityTokenProvider`。 安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但它们不包括在本示例中。 在本示例中，自定义安全令牌管理器继承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类并重写 `CreateSecurityTokenProvider` 方法，以便当传递的令牌要求指示请求 SAML 令牌时返回自定义 SAML 令牌提供程序。 如果客户端凭据类（请参见步骤 3）未指定一个断言，则安全令牌管理器将创建一个相应的实例。
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> 类用于为在 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法中传入的特定 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 创建 `CreateSecurityTokenProvider`。 安全令牌管理器还用于创建令牌身份验证器和令牌序列化程序，但它们不包括在本示例中。 在本示例中，自定义安全令牌管理器继承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 类并重写 `CreateSecurityTokenProvider` 方法，以便当传递的令牌需求指示请求 SAML 令牌时返回自定义 SAML 令牌提供程序。 如果客户端凭据类（请参见步骤 3）未指定一个断言，则安全令牌管理器将创建一个相应的实例。
 
     ```
     public class SamlSecurityTokenManager :
@@ -371,7 +371,7 @@ ms.locfileid: "49308521"
   
 3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -379,7 +379,7 @@ ms.locfileid: "49308521"
   
 2.  将服务程序文件复制到服务计算机上的服务目录。 另外，将 Setup.bat 和 Cleanup.bat 文件复制到服务计算机上。  
   
-3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新 Service.exe.config 文件以反映此新证书名称。 可以通过修改 Setup.bat 批处理文件来创建服务器证书。 请注意，必须在使用管理员特权打开的 Visual Studio 命令提示窗口中运行 setup.bat 文件。 必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
+3.  必须具有一个其主题名称中包含计算机的完全限定域名的服务器证书。 必须更新 Service.exe.config 文件以反映此新证书名称。 可以通过修改 Setup.bat 批处理文件来创建服务器证书。 请注意，在开发人员命令提示符下使用管理员特权打开 Visual Studio 窗口必须在运行 setup.bat 文件。 必须将 `%SERVER_NAME%` 变量设置为用于承载服务的计算机的完全限定的主机名。  
   
 4.  将服务器证书复制到客户端的 CurrentUser-TrustedPeople 存储中。 如果服务器证书是由客户端受信任的颁发者颁发，则不需要执行此步骤。  
   
@@ -393,10 +393,9 @@ ms.locfileid: "49308521"
   
 9. 在客户端计算机上，从命令提示窗口中启动 `Client.exe`。  
   
-10. 如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+10. 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 1.  运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
-## <a name="see-also"></a>请参阅

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ad380b5e411a61db648495875a5b697df54e2849
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453130"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304682"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 入门
 
@@ -41,7 +41,7 @@ ms.locfileid: "49453130"
 
 - 并行执行。 通过允许同一台计算机上存在公共语言运行时的多个版本，.NET Framework 可帮助解决版本冲突。 这意味着应用的多个版本可以共存，并且应用可在构建它的 .NET Framework 版本上运行。 并行执行适用于 .NET Framework 版本组 1.0/1.1, 2.0/3.0/3.5, and 4/4.5.x/4.6.x/4.7.x。
 
-- 多定向。 通过面向 [.NET Standard](~/docs/standard/net-standard.md)，开发人员可创建适用于该标准版本支持的多种 .NET Framework 平台的类库。 例如，面向 .NET Framework 4.6.1、NET Core 2.0 和 UWP 10.0.16299 的应用可以使用面向 .NET Standard 2.0 的库。 
+- 多定向。 通过面向 [.NET Standard](../../standard/net-standard.md)，开发人员可创建适用于该标准版本支持的多种 .NET Framework 平台的类库。 例如，面向 .NET Framework 4.6.1、NET Core 2.0 和 UWP 10.0.16299 的应用可以使用面向 .NET Standard 2.0 的库。 
 
 <a name="ForUsers"></a>
 ## <a name="the-net-framework-for-users"></a>面向用户的 .NET Framework
@@ -54,7 +54,7 @@ ms.locfileid: "49453130"
 
 - 如果使用的应用依赖于特定版本的 .NET Framework，则该版本一旦删除，应用就会暂停。
 
-- 一些 .NET Framework 版本是早期版本的就地更新版。 例如，[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 是版本 2.0 的就地更新版，而 .NET Framework 4.7.2 是版本 4 到版本 4.7.1 的就地更新版。 有关详细信息，请参见 [.NET Framework 版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)。
+- 一些 .NET Framework 版本是早期版本的就地更新版。 例如，[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 是版本 2.0 的就地更新版，而 .NET Framework 4.7.2 是版本 4 到版本 4.7.1 的就地更新版。 有关详细信息，请参见 [.NET Framework 版本和依赖关系](../migration-guide/versions-and-dependencies.md)。
 
 在 Windows 8 之前版本的 Windows 上，如果选择删除 .NET Framework，请始终通过“控制面板”的“程序及功能”进行卸载。 请勿手动删除某个版本的 .NET Framework。 在 Windows 8 和更高版本的操作系统上，.NET Framework 是一个操作系统组件，不能单独卸载。
 
@@ -67,29 +67,29 @@ ms.locfileid: "49453130"
 
 若要开发 .NET Framework 应用或组件，请执行以下操作：
 
-1. 如果未在操作系统上预安装 .NET Framework，请安装应用所面向的 .NET Framework 版本。 最新生产版本是 .NET Framework 4.7.2。 此版本预安装在 Windows 10 2018 年 4 月更新和 Windows 10 2018 年 10 月更新中，并可下载到旧版 Windows 操作系统中。 有关 .NET Framework 系统要求，请参阅[系统要求](../../../docs/framework/get-started/system-requirements.md)。 有关安装其他版本的 .NET Framework 的信息，请参阅[安装指南](../../../docs/framework/install/guide-for-developers.md)。 其他 .NET Framework 包为带外发布，这意味着这些包在滚动基础上发布，没有任何定期或计划的发布周期。 有关这些包的信息，请参阅 [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)。
+1. 如果未在操作系统上预安装 .NET Framework，请安装应用所面向的 .NET Framework 版本。 最新生产版本是 .NET Framework 4.7.2。 此版本预安装在 Windows 10 2018 年 4 月更新和 Windows 10 2018 年 10 月更新中，并可下载到旧版 Windows 操作系统中。 有关 .NET Framework 系统要求，请参阅[系统要求](system-requirements.md)。 有关安装其他版本的 .NET Framework 的信息，请参阅[安装指南](../install/guide-for-developers.md)。 其他 .NET Framework 包为带外发布，这意味着这些包在滚动基础上发布，没有任何定期或计划的发布周期。 有关这些包的信息，请参阅 [.NET Framework 和带外版本](the-net-framework-and-out-of-band-releases.md)。
 
-2. 选择要用于开发应用的 .NET Framework 所支持的语言。 大量语言可供选择，包括来自 Microsoft 的 [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 和 C++/CLI。 （一种用于开发 .NET Framework 应用的编程语言，它遵循[公共语言基础结构 (CLI) 规范](https://go.microsoft.com/fwlink/?LinkId=199862)。）
+2. 选择要用于开发应用的 .NET Framework 所支持的语言。 大量语言可供选择，包括来自 Microsoft 的 [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md), 和 [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp)。 （一种用于开发 .NET Framework 应用的编程语言，它遵循[公共语言基础结构 (CLI) 规范](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)。）
 
 3. 选择并安装将用于创建应用并支持所选程序语言的开发环境。 适用于 .NET Framework 应用的 Microsoft 集成开发环境 (IDE) 是 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 它提供多种版本。
 
-若要深入了解如何开发面向.NET Framework 的应用，请参阅[开发指南](../../../docs/framework/development-guide.md)。
+若要深入了解如何开发面向.NET Framework 的应用，请参阅[开发指南](../development-guide.md)。
 
 ## <a name="related-topics"></a>相关主题
 
-| 标题 | 描述 |
+| Title | 说明​​ |
 | ----- |------------ |
-| [概述](../../../docs/framework/get-started/overview.md) | 为构建面向 .NET Framework 的应用的开发人员提供详细信息。 |
-| [安装指南](../../../docs/framework/install/index.md) | 提供有关安装 .NET Framework 的信息。 |  
-| [.NET Framework 和带外版本](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) | 介绍 .NET Framework 带外版本以及如何在应用中使用它们。 |
-| [系统要求](../../../docs/framework/get-started/system-requirements.md) | 列出运行 .NET Framework 的硬件和软件要求。 |
-| [.NET Core 和开放源代码](../../../docs/framework/get-started/net-core-and-open-source.md) | 介绍 .NET Core 与 .NET Framework 的关系，以及如何访问开放源代码 .NET Core 项目。 |
-| [.NET Core 文档](https://docs.microsoft.com/dotnet/) | 提供 .NET Core 的概念和 API 参考文档。 |
-| [.NET Standard](~/docs/standard/net-standard.md) | 讨论 .NET Standard，这是 .NET 实现支持的版本管理规范，用于保证可在多个平台上使用一致的 API 集。
+| [概述](overview.md) | 为构建面向 .NET Framework 的应用的开发人员提供详细信息。 |
+| [安装指南](../install/index.md) | 提供有关安装 .NET Framework 的信息。 |  
+| [.NET Framework 和带外版本](the-net-framework-and-out-of-band-releases.md) | 介绍 .NET Framework 带外版本以及如何在应用中使用它们。 |
+| [系统要求](system-requirements.md) | 列出运行 .NET Framework 的硬件和软件要求。 |
+| [.NET Core 和开放源代码](net-core-and-open-source.md) | 介绍 .NET Core 与 .NET Framework 的关系，以及如何访问开放源代码 .NET Core 项目。 |
+| [.NET Core 文档](../../core/index.md) | 提供 .NET Core 的概念和 API 参考文档。 |
+| [.NET Standard](../../standard/net-standard.md) | 讨论 .NET Standard，这是 .NET 实现支持的版本管理规范，用于保证可在多个平台上使用一致的 API 集。
 
 ## <a name="see-also"></a>请参阅
 
-- [.NET Framework 指南](../../../docs/framework/index.md)   
-- [新增功能](../../../docs/framework/whats-new/index.md)   
-- [.NET API 浏览器](/dotnet/api/)   
-- [开发指南](../../../docs/framework/development-guide.md)
+- [.NET Framework 指南](../index.md)
+- [新增功能](../whats-new/index.md)
+- [.NET API 浏览器](../../../api/index.md)
+- [开发指南](../development-guide.md)

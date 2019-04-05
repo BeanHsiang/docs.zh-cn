@@ -3,13 +3,13 @@ title: 开发 ASP.NET Core MVC 应用
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 开发 ASP.NET Core MVC 应用
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.date: 01/30/2019
+ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308586"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978327"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>开发 ASP.NET Core MVC 应用
 
@@ -17,6 +17,24 @@ ms.locfileid: "49308586"
 > — Andrew Hunt 和 David Thomas
 
 ASP.NET Core 是一个跨平台的开源框架，用于构建新式云优化 Web 应用程序。 ASP.NET Core 具有轻量级和模块化的特点，并且内置了对依赖关系注入的支持，因此具有更好的可测试性和可维护性。 而 MVC 支持构建新式 Web API 和基于视图的应用，ASP.NET Core 与之结合后将成为一个功能强大的框架，用于构建企业 Web 应用程序。
+
+## <a name="mvc-and-razor-pages"></a>MVC 和 Razor Pages
+
+ASP.NET Core MVC 提供了许多对构建基于 Web 的 API 和应用有用的功能。 术语 MVC 代表“模型 - 视图 - 控制器”，这是一种 UI 模式，它将响应用户请求的职责分为几个部分。 除了遵循此模式之外，还可以将 ASP.NET Core 应用中的功能实现为 Razor Pages。 Razor Pages 内置于 ASP.NET Core MVC 中，并使用相同的功能进行路由、模型绑定等。但是，Razor Pages 不会为控制器、视图等提供单独的文件夹和文件，也不会使用基于属性的路由，而是将它们放置在一个文件夹（“/Pages”）中，根据它们在此文件夹中的相对位置进行路由，并使用处理程序而非控制器操作处理请求。
+
+在创建新的 ASP.NET Core 应用时，应考虑好要构建的应用类型。 在 Visual Studio 中，你可以从多个模板中进行选择。 三个最常见的项目模板是 Web API、Web 应用程序和 Web 应用程序（模型 - 视图 - 控制器）。 虽然只能在首次创建项目时做出此决定，但此决定可以撤销。 Web API 项目使用标准的“模型 - 视图 - 控制器”控制器（默认情况下，它只缺少视图）。 同样，默认的 Web 应用程序模板使用 Razor Pages，因此也缺少 Views 文件夹。 可以稍后向这些项目添加 Views 文件夹以支持基于视图的行为。 默认情况下，Web API 和模型 - 视图 - 控制器项目不包含 Pages 文件夹，但可以稍后添加一个以支持基于 Razor Pages 的行为。 可以将这三个模板视为支持三种不同类型的默认用户交互：数据 (Web API)、基于页面和基于视图。 但是，如果你愿意，可以在单个项目中混合和匹配任何或所有这些模板。
+
+### <a name="why-razor-pages"></a>为何选择 Razor Pages？
+
+Razor Pages 是 Visual Studio 中新 Web 应用程序的默认方法。 Razor Pages 提供了一种较为简单的方法来构建基于页面的应用程序功能，例如非 SPA 表单。 通过使用控制器和视图，应用程序通常拥有非常大的控制器，这些控制器处理许多不同的依赖项和视图模型，并返回许多不同的视图。 这大大增加了复杂性，并且经常导致控制器不能有效地遵循单一责任原则或打开/关闭原则。 Razor Pages 通过使用其 Razor 标记在 Web 应用程序中封装给定逻辑“页面”的服务器端逻辑来解决此问题。 没有服务器端逻辑的 Razor Page 可以只包含一个 Razor 文件（例如，“Index.cshtml”）。 但是，大多数重要的 Razor Pages 都有关联的页面模型类，按照惯例，它的名称与带有“.cs”扩展名的 Razor 文件相同（例如，“Index.cshtml.cs”）。
+
+Razor Page 的页面模型结合了 MVC 控制器和视图模型的职责。 不通过控制器操作方法执行请求，而是执行“OnGet()”等页面模型处理程序，默认情况下，呈现其关联页面。 Razor Pages 简化了在 ASP.NET Core 应用中构建单个页面的过程，同时仍然提供了 ASP.NET Core MVC 的所有体系结构功能。 对于基于页面的新功能，它们是很好的默认选择。
+
+### <a name="when-to-use-mvc"></a>何时使用 MVC
+
+如果正在构建 Web API，则 MVC 模式比尝试使用 Razor Pages 更有意义。 如果项目只公开 Web API 终结点，那么最好从 Web API 项目模板开始，否则很容易向任何 ASP.NET Core 应用添加控制器和相关的 API 终结点。 如果要将现有应用程序从 ASP.NET MVC 5 或更早版本迁移到 ASP.NET Core MVC，并且希望以最少的工作量完成此操作，则还应使用基于视图的 MVC 方法。 完成初始迁移后，可以评估针对新功能甚至批量迁移采用 Razor Pages 是否有意义。
+
+无论选择使用 Razor Pages 还是 MVC 视图构建 web 应用，应用都将具有类似的性能，并将包括对依赖项注入、筛选器、模型绑定和验证等的支持。
 
 ## <a name="mapping-requests-to-responses"></a>将请求映射到响应
 
@@ -58,6 +76,18 @@ public class ProductsController : Controller
 }
 ```
 
+Razor Pages 不使用属性路由。 可以作为 Razor Pages 的 `@page` 指令的一部分为其指定其他路由模板信息：
+
+```csharp
+@page "{id:int}"
+```
+
+在前面的示例中，问题中的页面将匹配具有整数 `id` 参数的路由。 例如，位于 `/Pages` 根目录中的“Products.cshtml”页面将具有以下路由：
+
+```csharp
+"/Products/123"
+```
+
 给定请求与路由匹配之后，ASP.NET Core MVC 会对该请求执行[模型绑定](/aspnet/core/mvc/models/model-binding)和[模型验证](/aspnet/core/mvc/models/validation)，然后才调用操作方法。 模型绑定负责将传入到指定 .NET 类型的 HTTP 数据转换为要调用的操作方法的参数。 例如，如果操作方法需要一个 int id 参数，模型绑定将尝试根据请求中提供的值来提供此参数。 为此，模型绑定会查找已发布表单中的值、路由中的值和查询字符串值。 假设找到了 id 值，该值会被转换为整数，然后传入操作方法。
 
 模型验证发生在绑定模型之后，调用操作方法之前。 模型验证对模型类型使用可选属性，且有助于确保提供的模型对象符合特定数据要求。 可以将某些值指定为必需项，将其限制为特定长度，或将其限制在一定数值范围内，等等。如果指定了验证特性，但该模型不符合其要求，则属性 ModelState.IsValid 将为 false，并且失败的验证规则集将可被发送到发出请求的客户端。
@@ -66,16 +96,20 @@ public class ProductsController : Controller
 
 对于 Web API，ASP.NET Core MVC 支持[_内容协商_](/aspnet/core/mvc/models/formatting)，允许对指定如何设置响应格式进行请求。 根据请求中提供的标头，操作返回的数据将采用 XML、JSON 或其他支持格式作为响应的格式。 借助此功能，同一个 API 可供数据格式要求不同的多个客户端使用。
 
+Web API 项目应考虑使用 `[ApiController]` 属性，该属性可应用于单个控制器、基本控制器类或整个程序集。 此属性添加自动模型验证检查，任何具有无效模型的操作都将返回 BadRequest 以及验证错误的详细信息。 该属性还要求所有操作都具有属性路由，而不是使用传统路由，并返回更详细的 ProblemDetails 信息以响应错误。
+
 > ### <a name="references--mapping-requests-to-responses"></a>参考 - 将请求映射到响应
 >
 > - **路由到控制器操作**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
 > - **模型绑定**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **模型验证**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **筛选器**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+> - **ApiController 属性**
+ > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
 
 ## <a name="working-with-dependencies"></a>处理依赖关系
 
@@ -83,7 +117,7 @@ ASP.NET Core 内置了对[依赖关系注入](/aspnet/core/fundamentals/dependen
 
 类调用静态方法或访问静态属性时，会对基础结构造成负面影响或产生依赖关系，此时会发生静态粘附。 例如，如果一个方法调用静态方法，静态方法反过来又写入数据库，则该方法与该数据库紧密耦合。 破坏该数据库调用的任何内容都会破坏该方法。 测试此类方法非常困难，因为此类测试要么需要使用商业模拟库来模拟静态调用，要么只能使用已有测试数据库进行测试。 不依赖于任何基础结构的静态调用，尤其是完全无状态的静态调用可以进行正常调用，并且对耦合或可测试性没有任何影响（超越了将代码耦合到静态调用本身）。
 
-许多开发人员知道静态粘附和全局状态的风险，但仍会通过直接实例化将其代码与具体实现紧密耦合。 “新增即粘附”旨在提醒注意这种耦合，并非一律谴责使用新关键词。 和静态方法调用一样，没有外部依赖关系的类型的新实例通常不会将代码紧密耦合到具体的实现，这会增加测试的难度。 但每次将类实例化时，应花一点时间来考虑在该特定位置硬编码该特定实例是否有意义，或者说如果将该实例作为依赖项进行请求会不会更好。
+许多开发人员知道静态粘附和全局状态的风险，但仍会通过直接实例化将其代码与具体实现紧密耦合。 “新增即粘附”旨在提醒注意这种耦合，并非一律谴责使用 `new` 关键字。 和静态方法调用一样，没有外部依赖关系的类型的新实例通常不会将代码紧密耦合到具体的实现，这会增加测试的难度。 但每次将类实例化时，应花一点时间来考虑在该特定位置硬编码该特定实例是否有意义，或者说如果将该实例作为依赖项进行请求会不会更好。
 
 ### <a name="declare-your-dependencies"></a>声明依赖关系
 
@@ -132,13 +166,13 @@ Startup 类是一个范例，应照此构建 ASP.NET Core 应用程序的其他�
 
 实现的详细信息（例如如何执行保留或如何将通知发送给用户）保存在 Infrastructure 项目中。 此项目将引用特定于实现的包，例如 Entity Framework Core，但不应在此项目之外公开这些实现的详细信息。 基础结构服务和存储库应实现 ApplicationCore 项目中定义的接口，其持久性实现负责检索和存储 ApplicationCore 中定义的实体。
 
-ASP.NET Core UI 项目负责所有 UI 级问题，但不得包含业务逻辑或基础结构详细信息。 实际上，最理想的情况是它甚至没有对 Infrastructure 项目的依赖关系，这样可确保不意外引入两个项目之间的依赖关系。 第三方 DI 容器（例如 StructureMap）可用于定于每个项目中 Registry 类中的 DI 规则，从而帮助实现这一目的。
+ASP.NET Core UI 项目负责所有 UI 级问题，但不得包含业务逻辑或基础结构详细信息。 实际上，最理想的情况是它甚至没有对 Infrastructure 项目的依赖关系，这样可确保不意外引入两个项目之间的依赖关系。 第三方 DI 容器（例如 Autofac）可用于定于每个项目中模块类中的 DI 规则，从而帮助实现这一目的。
 
 将应用程序与实现详细信息分离开的另一种方法是让应用程序调用微服务，微服务可能部署在各 Docker 容器中。 相较于在两个项目之间利用 DI，这种方法更好地分离关注点，且解耦效果更好，但也更复杂一些。
 
 ### <a name="feature-organization"></a>功能整理
 
-默认情况下，ASP.NET Core 应用程序将其文件夹结构整理为包含 Controllers 和 Views，还经常包含 ViewModels。 支持这些服务器端结构的客户端代码通常单独存放在 wwwroot 文件夹中。 但是对于大型应用程序而言，这种整理方式可能会出现问题，因为处理任何给定功能通常会要求在这些文件夹之间跳转。 每个文件夹中的文件和子文件夹数量越多，通过解决方案资源管理器的滚动就越多，这种整理方式实现起来也就越难。 解决此问题的其中一种办法是按功能，而不要按文件类型来整理应用程序代码。 这种整理方式通常被称为功能文件夹或功能切片（另请参阅：[垂直切片](https://deviq.com/vertical-slices/)）。
+默认情况下，ASP.NET Core 应用程序将其文件夹结构整理为包含 Controllers 和 Views，还经常包含 ViewModels。 支持这些服务器端结构的客户端代码通常单独存放在 wwwroot 文件夹中。 但是对于大型应用程序而言，这种整理方式可能会出现问题，因为处理任何给定功能通常会要求在这些文件夹之间跳转。 每个文件夹中的文件和子文件夹数量越多，通过解决方案资源管理器的滚动就越多，这种整理方式实现起来也就越难。 解决此问题的其中一种办法是按功能，而不要按文件类型来整理应用程序代码。 这种整理方式通常被称为功能文件夹或[功能切片](https://msdn.microsoft.com/magazine/mt763233.aspx)（另请参阅：[垂直切片](https://deviq.com/vertical-slices/)）。
 
 ASP.NET Core MVC 支持使用 Areas 实现此目的。 使用区域可以在每个 Area 文件夹中创建单独的 Controllers 和 Views 文件夹集（以及任何关联的模型）。 图 7-1 显示了一个使用 Areas 的示例文件夹结构。
 
@@ -213,14 +247,14 @@ ASP.NET Core MVC 还使用约定来确定视图的位置。 可以使用自定�
 
 图 7-2 请求执行通过各过滤器和请求管道。
 
-过滤器通常作为属性实现，因此可应用于控制器或操作。 以这种方式添加时，在操作级别指定的筛选器会覆盖在控制器级别指定的筛选器（会覆盖全局筛选器）或在其基础之上生成。 例如，\[Route\] 属性可用来生成控制器和操作之间的路由。 同样，可以在控制器级别配置授权，然后被各操作覆盖，如下所示：
+筛选器通常作为属性实现，因此可应用于控制器或操作（甚至全局）。 以这种方式添加时，在操作级别指定的过滤器会覆盖在控制器级别指定的过滤器（会覆盖全局过滤器）或在其基础之上生成。 例如，\[Route\] 属性可用来生成控制器和操作之间的路由。 同样，可以在控制器级别配置授权，然后被各操作覆盖，如下所示：
 
 ```csharp
 [Authorize]
 public class AccountController : Controller
 
 {
-    [AllowAnonymous]
+    [AllowAnonymous] // overrides the Authorize attribute
     public async Task<IActionResult> Login() {}
     public async Task<IActionResult> ForgotPassword() {}
 }
@@ -263,6 +297,8 @@ public class ValidateModelAttribute : ActionFilterAttribute
 }
 ```
 
+可以通过包含 [Ardalis.ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel) 包将 `ValidateModelAttribute` 作为 NuGet 依赖项添加到项目中。 对于 API，可以使用 `ApiController` 属性强制执行此行为，而无需单独的 `ValidateModel` 筛选器。
+
 同样，可以使用过滤器来检查某条记录是否存在，并在执行操作前返回 404，而无需在操作中执行这些检查。 在将常见约定提取出来、整理解决方案、将基础结构代码和业务逻辑与 UI 分离开后，MVC 操作方法会变得极其精简：
 
 ```csharp
@@ -275,14 +311,14 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-可阅读 MSDN 文章[真实的 ASP.NET Core MVC 过滤器](https://msdn.microsoft.com/magazine/mt767699.aspx)，解有关实现过滤器的详细信息并下载工作示例。
+你可阅读 MSDN 文章[真实的 ASP.NET Core MVC 过滤器](https://msdn.microsoft.com/magazine/mt767699.aspx)，了解有关实现过滤器的详细信息并下载工作示例。
 
 > ### <a name="references--structuring-applications"></a>参考 - 构建应用程序
 >
 > - **区域**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN 杂志 - ASP.NET Core MVC 的功能切分**  
- > <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **过滤器**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN - 真实的 ASP.NET Core MVC 过滤器**  
@@ -384,6 +420,13 @@ public void ConfigureServices(IServiceCollection services)
 
 **图 7-4.** Web API 基于令牌的身份验证。
 
+可以创建自己的身份验证服务，与 Azure AD 和 OAuth 集成，或使用开源工具（如 [IdentityServer](https://github.com/IdentityServer)）实现服务。
+
+#### <a name="custom-security"></a>自定义安全
+
+要特别注意加密、用户成员身份或令牌生成系统的“自己回滚”实现。 有许多商业和开源替代方案可供使用，几乎可以肯定，它们比自定义实现更具安全性。
+
+
 > ### <a name="references--security"></a>参考 - 安全
 >
 > - **安全性文档概述**  
@@ -396,12 +439,14 @@ public void ConfigureServices(IServiceCollection services)
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Azure 应用服务中 API 应用的身份验证和授权**  
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
+> - **标识服务器**  
+>   <https://github.com/IdentityServer>
 
 ## <a name="client-communication"></a>客户端通信
 
 除了通过 Web API 提供页面和响应数据请求之外，ASP.NET Core 应用还能与已连接的客户端直接通信。 这种出站通信可以使用多种传输技术，其中最常见的是 WebSocket。 ASP.NET Core SignalR 是一个库，它简化了向应用程序添加某种实时服务器到客户端的通信功能的过程。 SignalR 支持多种传输技术，包括 WebSocket，并从开发人员处抽象出许多实现细节。
 
-ASP.NET Core SignalR 可用于 ASP.NET Core 2.1。
+从 2.1 版开始，ASP.NET Core SignalR 可用于 ASP.NET Core。
 
 无论是直接使用 WebSocket 还是使用其他技术，实时客户端通信在许多应用程序方案中都很有用。 一些示例包括：
 
@@ -559,5 +604,5 @@ ASP.NET Core 应用程序是控制台应用程序，服务器启动时必须启�
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[上一页](common-client-side-web-technologies.md)
-[下一页](work-with-data-in-asp-net-core-apps.md)
+>[上一页](common-client-side-web-technologies.md)
+>[下一页](work-with-data-in-asp-net-core-apps.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: abb679971771f6bff5bd1c84ff744e2fcbb9c45a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 084a31ec008d1651bb66f7d59731a21d4ef0ece7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47188721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732851"
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 类
 Windows Communication Foundation (WCF) 可以使用两种不同的序列化技术将客户端和服务，名为序列化的进程之间进行传输的 XML 应用程序中的数据。  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) 可以使用两种不同的序列化技�
  使用 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 时不支持 <xref:System.Xml.Serialization.XmlSerializer> 属性。  
   
 > [!NOTE]
->  在这种情况下，<xref:System.Xml.Serialization.XmlSerializer>将引发以下异常，这会在 WCF 之前发布:"在架构的顶级声明的元素不能具有`maxOccurs`> 1。 使用 `XmlArray` 或 `XmlArrayItem` 而不是 `XmlElementAttribute`，或使用换行的参数样式为“more”提供包装元素。”  
+>  在这种情况下，<xref:System.Xml.Serialization.XmlSerializer>引发以下异常，在 WCF 之前发布："在架构的顶级声明的元素不能具有`maxOccurs`> 1。 使用 `XmlArray` 或 `XmlArrayItem` 而不是 `XmlElementAttribute`，或使用换行的参数样式为“more”提供包装元素。”  
 >   
 >  如果您接收到此异常，请调查是否属于这种情况。  
   
@@ -163,7 +163,7 @@ Windows Communication Foundation (WCF) 可以使用两种不同的序列化技�
   
 -   生成的架构可能不是有效的数据协定架构。 例如，架构提供程序方法生成的架构可能包含在数据协定模型中不受支持的 XML 特性。 在此情况下，您可以将架构作为 `IXmlSerializable` 类型导入。 默认情况下未在此导入模式，但可以轻松地使用来启用 – 例如，`/importXmlTypes`到命令行开关[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 详细介绍[导入架构以生成类](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。 请注意，您必须直接处理您的类型实例的 XML。 您也可以考虑使用其他支持各种架构的不同序列化技术 – 请参见有关使用 `XmlSerializer` 的主题。  
   
--   您可能希望重新使用代理中的现有 `IXmlSerializable` 类型，而不生成新的类型。 在此情况下，“导入架构以生成类型”主题中介绍的引用类型功能可用于指示要重新使用的类型。 这对应于使用`/reference`svcutil.exe，指定包含要重复使用的类型的程序集上切换。  
+-   您可能希望重新使用代理中的现有 `IXmlSerializable` 类型，而不生成新的类型。 在此情况下，“导入架构以生成类型”主题中介绍的引用类型功能可用于指示要重新使用的类型。 这对应于在 svcutil.exe 上使用 `/reference` 开关，以指定包含要重新使用的类型的程序集。  
   
 ### <a name="xmlserializer-legacy-behavior"></a>XmlSerializer Legacy Behavior  
  在 .NET Framework 4.0 和更早版本中，XmlSerializer 通过将 C# 代码写入某一文件，生成临时序列化程序集。 然后将该文件编译为一个程序集。  这种行为会产生不想要的结果，例如序列化程序的启动时间延长。 在 .NET Framework 4.5 中，已对此行为进行了更改，无需使用该编译器即可生成程序集。 一些开发人员可能希望看到生成的 C# 代码。 您可以通过以下配置指定为使用这一旧行为：  
@@ -205,11 +205,11 @@ Windows Communication Foundation (WCF) 可以使用两种不同的序列化技�
 > [!NOTE]
 >  `<xmlSerializer useLegacySerializerGeneration="true"/>`交换机仅适用于运行.NET Framework 4.5 或更高版本的计算机。 上述`appSettings`方法适用于所有.NET Framework 版本上。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.DataContractFormatAttribute>  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- <xref:System.ServiceModel.MessageHeaderArrayAttribute>  
- [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
- [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [如何：使用 XmlSerializer 改善 WCF 客户端应用程序的启动时间](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.DataContractFormatAttribute>
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.ServiceModel.MessageHeaderArrayAttribute>
+- [在服务协定中指定数据传输](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+- [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [如何：改善启动时间的 WCF 客户端应用程序的使用 XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

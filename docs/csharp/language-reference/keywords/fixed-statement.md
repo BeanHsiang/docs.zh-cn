@@ -1,17 +1,18 @@
 ---
-title: fixed 语句（C# 参考）
+title: fixed 语句 - C# 参考
+ms.custom: seodec18
 ms.date: 05/10/2018
 f1_keywords:
 - fixed_CSharpKeyword
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 021fc3bd63922394bd70495bd4335b068fc51cdd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c93c00ca939bcb6c3c7feea4e6b6234f738298dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605527"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 语句（C# 参考）
 
@@ -73,8 +74,8 @@ fixed (byte* ps = srcarray, pd = dstarray)
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
-- [C# 关键字](index.md)  
-- [unsafe](unsafe.md)  
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [C# 关键字](index.md)
+- [unsafe](unsafe.md)
 - [固定大小的缓冲区](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04df65a29584f7e2de44389d815b915a541e38f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99b996cf848de968d71cc1d325d3bbda7bd5386f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715546"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 函数
 从指定对象创建新派生的类对象。    
@@ -47,7 +47,7 @@ HRESULT SpawnDerivedClass (
 [in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
 
 `lFlags`  
-[in]保留。 此参数必须为 0。
+[in] 保留。 此参数必须为 0。
 
 `ppNewClass`  
 [out]接收指向新的类定义对象的指针。 如果发生错误，新对象不是返回，和`ppNewClass`左侧不被修改。 其值不能为`null`。
@@ -74,11 +74,11 @@ HRESULT SpawnDerivedClass (
 新的对象中返回`ppNewClass`自动成为当前对象的子类。 不能重写此行为。 没有其他方法可以创建子类 （的派生类）。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

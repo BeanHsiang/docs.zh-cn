@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ef293daea1a768c26adf05d14107a42889226e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491280"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl 枚举
 包含一些值，用于描述方法实现功能。  
@@ -59,28 +59,28 @@ typedef enum CorMethodImpl {
 |成员|描述|  
 |------------|-----------------|  
 |`miCodeTypeMask`|描述代码类型的标志。|  
-|`miIL`|指定方法的实现是 Microsoft 中间语言 (MSIL)。|  
+|`miIL`|指定方法实现为 Microsoft 中间语言 (MSIL)。|  
 |`miNative`|指定方法实现为本机。|  
-|`miOPTIL`|指定方法的实现是 OPTIL。|  
-|`miRuntime`|指定方法的实现由公共语言运行时。|  
+|`miOPTIL`|指定该方法的实现是 OPTIL。|  
+|`miRuntime`|指定该方法的实现由公共语言运行时提供。|  
 |`miManagedMask`|指示是否是托管或非托管代码的标志。|  
-|`miUnmanaged`|指定方法的实现不受管理。|  
-|`miManaged`|指定管理方法的实现。|  
-|`miForwardRef`|指定定义方法。 此标志是主要用于合并方案。|  
-|`miPreserveSig`|指定方法签名，不能改变为使 HRESULT 转换。|  
-|`miInternalCall`|保留供内部使用公共语言运行时。|  
-|`miSynchronized`|指定的方法是单线程方式通过其正文。|  
+|`miUnmanaged`|指定该方法的实现不受管理。|  
+|`miManaged`|指定管理方法实现。|  
+|`miForwardRef`|指定该方法定义。 主要在合并方案中使用此标志。|  
+|`miPreserveSig`|指定方法签名不能将出错的 HRESULT 转换。|  
+|`miInternalCall`|公共语言运行时，保留供内部使用。|  
+|`miSynchronized`|指定的方法是单线程通过其主体。|  
 |`miNoInlining`|指定方法不能内联。|  
-|`miAggressiveInlining`|指定该方法应内联如有可能。|  
-|`miNoOptimization`|指定该方法不应优化。|  
-|`miMaxMethodImplVal`|最大有效值`CorMethodImpl`。|  
+|`miAggressiveInlining`|指定的方法应是内联在可能的情况。|  
+|`miNoOptimization`|指定该方法不应进行优化。|  
+|`miMaxMethodImplVal`|有效的最大值`CorMethodImpl`。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

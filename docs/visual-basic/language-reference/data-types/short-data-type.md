@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: c8085c0911cfe83a3ca56c03cfda5689b9338680
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d4dab1a72d1e240bc428b2c6b83a722584e35ecc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587656"
 ---
 # <a name="short-data-type-visual-basic"></a>Short 数据类型 (Visual Basic)
 保存有符号 16 位 （2 个字节） 整数，值的范围从-32,768 到 32767 之间。  
@@ -54,7 +54,7 @@ Dim number As Short = &H_3264
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-此外可以包含数值`S`[键入字符](../../programming-guide\language-features\data-types/type-characters.md)来表示`Short`数据类型，如以下示例所示。
+此外可以包含数值`S`[键入字符](../../programming-guide/language-features/data-types/type-characters.md)来表示`Short`数据类型，如以下示例所示。
 
 ```vb
 Dim number = &H_3264S
@@ -70,10 +70,10 @@ Dim number = &H_3264S
   
 ## <a name="see-also"></a>请参阅
 
- <xref:System.Int16?displayProperty=nameWithType>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int16?displayProperty=nameWithType>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Integer 数据类型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Long 数据类型](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

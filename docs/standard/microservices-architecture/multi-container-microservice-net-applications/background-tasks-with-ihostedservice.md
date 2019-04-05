@@ -1,15 +1,15 @@
 ---
 title: 使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
-description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
+description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解使用 IHostedService 和 BackgroundService 在微服务 .NET Core 中实现后台任务的新选项。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 981a20ca80f0652a9c3597d36b960d6b44d97912
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 01/07/2019
+ms.openlocfilehash: 7af65077eccfaddeaf25b5f403f1b9824ed4ea17
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195822"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465173"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>使用 IHostedService 和 BackgroundService 类在微服务中实现后台任务
 
@@ -17,19 +17,21 @@ ms.locfileid: "50195822"
 
 一般在 .NET Core 中，我们将这些类型的任务称为托管服务，因为它们是托管在主机/应用程序/微服务中的服务/逻辑。 请注意，在这种情况下，托管服务仅表示具有后台任务逻辑的类。
 
-自 .NET Core 2.0 开始，该框架提供名为 <xref:Microsoft.Extensions.Hosting.IHostedService> 的新接口，有助于轻松实现托管服务。 基本理念是，可以注册多个后台任务（托管服务），在 Web 主机或主机运行时在后台运行，如下图所示。
+自 .NET Core 2.0 开始，该框架提供名为 <xref:Microsoft.Extensions.Hosting.IHostedService> 的新接口，有助于轻松实现托管服务。 基本理念是，可以注册多个后台任务（托管服务），在 Web 主机或主机运行时在后台运行，如图 6-26 所示。
 
-![](./media/image26.png)
+![ASP.NET Core 1.x 和 2.x 支持将 IWebHost 用于 Web 应用中的后台进程，.NET Core 2.1 支持将 IHost 用于使用简单控制台应用的后台进程。](./media/image26.png)
 
-**图 8-25.** 在 WebHost 与主机中使用 IHostedService
+**图 6-26**. 在 WebHost 与主机中使用 IHostedService
 
-请注意 `WebHost` 和 `Host` 之间产生的差异。 ASP.NET Core 2.0 中的 `WebHost`（实现 `IWebHost` 的基类）是用于为进程提供 HTTP 服务器功能的基础结构项目，例如，如果正在实现 MVC Web 应用或 Web API 服务。 它提供 ASP.NET Core 中所有新的基础架构优点，使用户能够使用依赖项注入，在 HTTP 管道中插入中间件等，并精确地将这些 `IHostedServices` 用于后台任务。
+请注意 `WebHost` 和 `Host` 之间产生的差异。 
 
-但是，`Host`（实现 `IHost` 的基类）是 .NET Core 2.1 中的新内容。 基本上，`Host` 能让用户拥有与 `WebHost`（依赖项注入、托管服务等）相似的基础结构，但在这种情况下，只需拥有一个简单轻便的进程作为主机，与 MVC、Web API 或 HTTP 服务器功能无关。
+ASP.NET Core 2.0 中的 `WebHost`（实现 `IWebHost` 的基类）是用于为进程提供 HTTP 服务器功能的基础结构项目，例如，如果正在实现 MVC Web 应用或 Web API 服务。 它提供 ASP.NET Core 中所有新的基础结构优点，使用户能够使用依赖关系注入，在请求管道中插入中间件等，并精确地将这些 `IHostedServices` 用于后台任务。
+
+.NET Core 2.1 中引入了 `Host`（实现 `IHost` 的基类）。 基本上，`Host` 能让用户拥有与 `WebHost`（依赖项注入、托管服务等）相似的基础结构，但在这种情况下，只需拥有一个简单轻便的进程作为主机，与 MVC、Web API 或 HTTP 服务器功能无关。
 
 因此，可以选择一个专用主机进程，也可使用 IHost 创建一个来专门处理托管服务，例如仅用于托管 `IHostedServices` 的微服务，或者可以选择性地扩展现有的 ASP.NET Core `WebHost`，例如现有的 ASP.NET Core Web API 或 MVC 应用。 
 
-每种方法都有优缺点，具体取决于业务和可伸缩性需求。 重要的是，当它们在 .NET Core 2.1 中可用时，后台任务是否与应使用的 HTTP (IWebHost) 和 IHost 无关。
+每种方法都有优缺点，具体取决于业务和可伸缩性需求。 重要的是，如果后台任务与 HTTP (IWebHost) 无关，则应使用 IHost。
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>在 WebHost 或主机中注册托管服务
 
@@ -45,7 +47,7 @@ SignalR 是使用托管服务的项目的一个示例，但也可以将其用于
 
 基本上，可以将所有这些操作卸载至基于 IHostedService 的后台任务。
 
-向 `WebHost` 或 `Host` 添加一个或多个 `IHostedServices` 的方式是，通过 ASP.NET Core `WebHost`（或 .NET Core 2.1 中的 `Host`）中的标准 DI（依赖项注入）对它们进行注册。 基本上，必须在常见的 `Startup` 类的 `ConfigureServices()` 方法中注册托管服务，如以下典型的 ASP.NET WebHost 中的代码所示。 
+向 `WebHost` 或 `Host` 添加一个或多个 `IHostedServices` 的方式是，通过 ASP.NET Core `WebHost`（或 .NET Core 2.1 及更高版本中的 `Host`）中的标准 DI（依赖项注入）对它们进行注册。 基本上，必须在常见的 `Startup` 类的 `ConfigureServices()` 方法中注册托管服务，如以下典型的 ASP.NET WebHost 中的代码所示。 
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -65,7 +67,6 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 `IHostedService` 后台任务的执行与应用程序（就此而言，为主机或微服务）的生存期相协调。 当应用程序启动时注册任务，当应用程序关闭时，有机会执行某些正常操作或清理。
 
 始终可以启动后台线程来运行任何任务，而无需使用 `IHostedService`。 不同之处就在于应用的关闭时间，此时会直接终止线程，而没有机会执行正常的清理操作。
-
 
 ## <a name="the-ihostedservice-interface"></a>IHostedService 接口
 
@@ -100,13 +101,11 @@ namespace Microsoft.Extensions.Hosting
 
 可以从头开始创建自定义托管服务类并实现 `IHostedService`，因为在使用 .NET Core 2.0 时需执行这些操作。 
 
-但是，由于大多数后台任务在取消令牌管理和其他典型操作方面都有类似的需求，因此 .NET Core 2.1 将提供一个非常方便且可以从中进行派生的抽象基类，名为“BackgroundService”。
+但是，由于大多数后台任务在取消令牌管理和其他典型操作方面都有类似的需求，因此有一个非常方便且可以从中进行派生的抽象基类，名为 `BackgroundService`（自 .NET Core 2.1 起提供）。
 
-该类提供设置后台任务所需的主要工作。 请注意，此类将在 .NET Core 2.1 库中提供，因此无需编写。
+该类提供设置后台任务所需的主要工作。
 
-但是，截至撰写本文时，.NET Core 2.1 尚未发布。 因此，在目前使用 .NET Core 2.0 的 eShopOnContainers 中，我们只是暂时将 .NET Core 2.1 开放源代码存储库中（不需要除开放源代码许可以外的任何专有许可）的该类纳入其中，因为它与 .NET Core 2.0 中当前的 IHostedService 接口兼容。 当 .NET Core 2.1 发布时，只需要指向正确的 NuGet 包即可。
-
-下一个代码是在 .NET Core 2.1 中实现的抽象 BackgroundService 基类。
+下一个代码是在 .NET Core 中实现的抽象 BackgroundService 基类。
 
 ```csharp
 // Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0. 
@@ -179,40 +178,36 @@ public class GracePeriodManagerService : BackgroundService
     public GracePeriodManagerService(IOptions<OrderingBackgroundSettings> settings,
                                      IEventBus eventBus,
                                      ILogger<GracePeriodManagerService> logger)
+    {
+        //Constructor’s parameters validations...       
+    }
+
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        _logger.LogDebug($"GracePeriodManagerService is starting.");
+
+        stoppingToken.Register(() => 
+            _logger.LogDebug($" GracePeriod background task is stopping."));
+
+        while (!stoppingToken.IsCancellationRequested)
         {
-            //Constructor’s parameters validations...       
+            _logger.LogDebug($"GracePeriod task doing background work.");
+
+            // This eShopOnContainers method is querying a database table 
+            // and publishing events into the Event Bus (RabbitMS / ServiceBus)
+            CheckConfirmedGracePeriodOrders();
+
+            await Task.Delay(_settings.CheckUpdateTime, stoppingToken);
         }
-
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
-        {
-            _logger.LogDebug($"GracePeriodManagerService is starting.");
-
-            stoppingToken.Register(() => 
-                    _logger.LogDebug($" GracePeriod background task is stopping."));
-
-            while (!stoppingToken.IsCancellationRequested)
-            {
-                _logger.LogDebug($"GracePeriod task doing background work.");
-
-                // This eShopOnContainers method is querying a database table 
-                // and publishing events into the Event Bus (RabbitMS / ServiceBus)
-                CheckConfirmedGracePeriodOrders();
-
-                await Task.Delay(_settings.CheckUpdateTime, stoppingToken);
-            }
             
-            _logger.LogDebug($"GracePeriod background task is stopping.");
+        _logger.LogDebug($"GracePeriod background task is stopping.");
+    }
 
-        }
-
-        protected override async Task StopAsync (CancellationToken stoppingToken)
-        {
-               // Run your graceful clean-up actions
-        }
+    .../...
 }
 ```
 
-在 eShopOnContainers 的此特定情况下，它正在执行一个应用程序方法，该方法查询数据库表以查找具有特定状态的订单，并且在应用更改时，它会通过事件总线（其下可以使用 RabbitMQ 或 Azure 服务总线）发布集成事件。 
+在 eShopOnContainers 的此特定情况下，它正在执行一个应用程序方法，该方法查询数据库表以查找具有特定状态的订单，并且在应用更改时，它会通过事件总线（其下可以使用 RabbitMQ 或 Azure 服务总线）发布集成事件。
 
 当然，也可以改为运行任何其他业务的后台任务。
 
@@ -228,11 +223,11 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="summary-class-diagram"></a>摘要类图
 
-下图 8-26 显示了实施 IHostedServices 时涉及的类和接口的直观摘要。
+下图显示了实施 IHostedServices 时涉及的类和接口的直观摘要。
  
-![](./media/image27.png)
+![类图：IWebHost 和 IHost 可以托管许多服务，这些服务从实现 IHostedService 的 BackgroundService 继承。](./media/image27.png)
 
-**图 8-26.** 显示多个与 IHostedService 相关的类和接口的类图
+**图 6-27**。 显示多个与 IHostedService 相关的类和接口的类图
 
 ### <a name="deployment-considerations-and-takeaways"></a>部署注意事项和要点
 
@@ -242,21 +237,17 @@ WebHost.CreateDefaultBuilder(args)
 
 `IHostedService` 接口为在 ASP.NET Core Web 应用程序（在 .NET Core 2.0 中）或任何进程/主机（从使用 `IHost` 的 .NET Core 2.1 开始）中启动后台任务提供了一种便捷方式。 其主要优势在于，当主机本身将要关闭时，可以有机会进行正常取消以清理后台任务的代码。
 
-
 #### <a name="additional-resources"></a>其他资源
 
--   **Building a scheduled task in ASP.NET Core/Standard 2.0**（在 ASP.NET Core/Standard 2.0 中构建计划任务） 
+-   **Building a scheduled task in ASP.NET Core/Standard 2.0**（在 ASP.NET Core/Standard 2.0 中构建计划任务） <br/>
+    [https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html](https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html)
 
-    [*https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html*](https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html)
+-   **Implementing IHostedService in ASP.NET Core 2.0**（在 ASP.NET Core 2.0 中实现 IHostedService） <br/>
+    [https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
 
--   **Implementing IHostedService in ASP.NET Core 2.0**（在 ASP.NET Core 2.0 中实现 IHostedService） 
-
-    [*https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice*](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
-
--   **ASP.NET Core 2.1 托管示例** 
-
-    [*https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample*](https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample)
+-   **使用 ASP.NET Core 2.1 的 GenericHost 示例** <br/>
+    [https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample](https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample)
 
 >[!div class="step-by-step"]
-[上一页](test-aspnet-core-services-web-apps.md)
-[下一页](../microservice-ddd-cqrs-patterns/index.md)
+>[上一页](test-aspnet-core-services-web-apps.md)
+>[下一页](implement-api-gateways-with-ocelot.md)

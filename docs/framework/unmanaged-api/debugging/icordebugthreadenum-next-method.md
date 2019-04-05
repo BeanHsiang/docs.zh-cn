@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 050bfb08dfd95e29b6534f69dbd35400d59e6099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b80e0cc026ce80950c14436abb2e84548f9adb64
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419599"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499571"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next 方法
-从当前位置开始在枚举中获取指定 ICorDebugThread 实例数。  
+从当前位置开始枚举中获取指定 ICorDebugThread 实例数。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `celt`  
  [in]数`ICorDebugThread`要检索的实例。  
   
  `threads`  
- [out]一个指针，其中每个指向数组`ICorDebugThread`表示一个线程的对象。  
+ [out]一个指针，其中每个指向数组`ICorDebugThread`对象，表示一个线程。  
   
  `pceltFetched`  
- [out]指向数`ICorDebugThread`实际返回的实例。 此值可能为 null 如果`celt`是之一。  
+ [out]指向数`ICorDebugThread`实际返回的实例。 此值可能为 null 如果`celt`是其中一个。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

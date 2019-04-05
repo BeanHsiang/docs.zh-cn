@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a8cb3a62497379f60e9cc6dec3d342192361f865
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603708"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>如何：使用 String.Split 分析字符串（C# 指南）
 
@@ -52,6 +52,6 @@ ms.locfileid: "45746353"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../programming-guide/index.md)  
-- [字符串](../programming-guide/strings/index.md)  
+- [C# 编程指南](../programming-guide/index.md)
+- [字符串](../programming-guide/strings/index.md)
 - [.NET 正则表达式](../../standard/base-types/regular-expressions.md)

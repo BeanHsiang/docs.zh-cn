@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6909fa426fa952c0918638f40a571393c651e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db3b0f59884b2ec20ea3a2bd9779dbffd0fc8e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583751"
 ---
 # <a name="corprfclausetype-enumeration"></a>COR_PRF_CLAUSE_TYPE 枚举
 指示代码刚进入或离开的异常子句的类型。  
@@ -41,19 +41,19 @@ typedef enum {
   
 |成员|描述|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|异常子句无效。|  
-|`COR_PRF_CLAUSE_FILTER`|异常子句是一个筛选器表达式。|  
-|`COR_PRF_CLAUSE_CATCH`|该异常子句是`catch`语句。|  
-|`COR_PRF_CLAUSE_FINALLY`|该异常子句是`finally`语句。|  
+|`COR_PRF_CLAUSE_NONE`|在异常子句无效。|  
+|`COR_PRF_CLAUSE_FILTER`|在异常子句是筛选器表达式。|  
+|`COR_PRF_CLAUSE_CATCH`|在异常子句是`catch`语句。|  
+|`COR_PRF_CLAUSE_FINALLY`|在异常子句是`finally`语句。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [分析枚举](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

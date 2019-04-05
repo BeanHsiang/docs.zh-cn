@@ -1,13 +1,13 @@
 ---
-title: 运算符重载 (F#)
-description: '了解如何重载算术运算符的类或记录类型中和在 F # 中的全局级别。'
+title: 运算符重载
+description: 了解如何重载算术运算符的类或记录类型中并在全局级别的F#。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087294"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610757"
 ---
 # <a name="operator-overloading"></a>运算符重载
 
@@ -47,11 +47,11 @@ static member (~-) (v : Vector)
 
 只有运算符`?`并`?<-`可能与启动`?`。
 
-显示所有运算符的优先级了 F # 中的表可以位于[符号和运算符参考](symbol-and-operator-reference/index.md)。
+表中的所有运算符的优先顺序显示了F#中可以找到[符号和运算符参考](symbol-and-operator-reference/index.md)。
 
 ## <a name="overloaded-operator-names"></a>重载的运算符名称
 
-当 F # 编译器编译运算符表达式时，它将生成具有该运算符将编译器生成的名称的方法。 这是在 Microsoft 中间语言 (MSIL) 的方法和反射和 IntelliSense 中显示的名称。 通常不需要在 F # 代码中使用这些名称。
+当F#编译器将编译运算符表达式，它将生成具有该运算符将编译器生成的名称的方法。 这是在 Microsoft 中间语言 (MSIL) 的方法和反射和 IntelliSense 中显示的名称。 您不通常需要使用这些名称在F#代码。
 
 下表显示了标准运算符和其相应的生成名称。
 
@@ -151,7 +151,7 @@ static member (~-) (v : Vector)
 
 上面的代码的输出是`12`。
 
-因为 F # 的范围规则规定，新定义的运算符优先于内置运算符，可以重新定义这种方式中的正则算术运算符。
+因为的作用域的规则，您可以重新定义这种方式中的正则算术运算符F#指示新定义的运算符的优先于内置运算符。
 
 关键字`inline`通常会与全局运算符，这通常是最好集成到调用代码的较小函数使用。 制定运算符函数内联还使他们能够使用静态解析的类型参数，以生成静态解析的泛型代码。 有关详细信息，请参阅[内联函数](functions/inline-functions.md)并[静态解析的类型参数](generics/statically-resolved-type-parameters.md)。
 

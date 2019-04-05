@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: f640372504658c8f7935d3d219cd373f19ebf31f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 21172ccda5f5f8070d81726d5f4dc6f9d80ab071
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837529"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568993"
 ---
 # <a name="claims-and-tokens"></a>声明和令牌
 本主题介绍 Windows Communication Foundation (WCF) 从它支持的默认令牌创建的各种声明类型。  
@@ -64,9 +64,9 @@ ms.locfileid: "48837529"
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>标识声明和 ServiceSecurityContext.IsAnonymous  
  如果没有`ClaimSet`从客户端凭据生成的对象包含的声明`Right`的`Identity,`则<xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>属性返回`true`。 如果存在一个或多个此类声明，则 `IsAnonymous` 属性将返回 `false`。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Claims.ClaimSet>  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims.ClaimTypes>  
- [使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Claims.ClaimSet>
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims.ClaimTypes>
+- [使用标识模型管理声明和授权](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

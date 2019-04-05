@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3187809fadb275ed54a450f456d98d140d1100c9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408081"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485882"
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace 函数
 提供托管堆栈跟踪的文本表示形式以及 `CONTEXT` 记录的数组，其中每项对应非托管代码和托管代码之间的每个转换。  
@@ -40,42 +40,42 @@ HRESULT CALLBACK _EFN_StackTrace(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `Client`  
  [in]正在调试客户端。  
   
  `wszTextOut`  
- [out]文本表示形式的堆栈跟踪。  
+ [out]堆栈跟踪的文本表示形式。  
   
  `puiTextLength`  
- [out]中的字符数的指针`wszTextOut`。  
+ [out]指向中的字符数的`wszTextOut`。  
   
  `pTransitionContexts`  
  [out]转换上下文的数组。  
   
  `puiTransitionContextCount`  
- [out]指向数组中的转换上下文的数的指针。  
+ [out]一个指向数组中的转换上下文的数目。  
   
  `uiSizeOfContext`  
  [in]上下文结构的大小。  
   
  `Flags`  
- [in]设置为 0 或 SOS_STACKTRACE_SHOWADDRESSES (0x01) 以显示 EBP 寄存器和每个前面的输入堆栈指针 (ESP)`module!functionname`行。  
+ [in]设置为 0 或 SOS_STACKTRACE_SHOWADDRESSES (0x01) 以显示 EBP 寄存器和 enter 堆栈指针 (ESP) 前面每个`module!functionname`行。  
   
 ## <a name="remarks"></a>备注  
- `_EFN_StackTrace`结构可以从 WinDbg 编程接口进行调用。 参数的用法如下：  
+ `_EFN_StackTrace`结构可从 WinDbg 编程接口调用。 使用参数，如下所示：  
   
--   如果`wszTextOut`为 null 和`puiTextLength`是不为 null，则该函数将返回的字符串长度以`puiTextLength`。  
+-   如果`wszTextOut`为 null，`puiTextLength`是不为 null，该函数将返回的字符串长度以`puiTextLength`。  
   
--   如果`wszTextOut`是不为 null，函数将存储中的文本`wszTextOut`所指示的位置到`puiTextLength`。 成功返回如果没有足够的空间中的缓冲区或返回 E_OUTOFMEMORY 如果缓冲区长度不足。  
+-   如果`wszTextOut`是不为 null，函数将存储中的文本`wszTextOut`最多所指示的位置`puiTextLength`。 成功返回是否有足够的空间中的缓冲区，则返回 E_OUTOFMEMORY 如果缓冲区不够长。  
   
--   如果该函数的转换部分将被忽略`pTransitionContexts`和`puiTransitionContextCount`都为 null。 在这种情况下，函数提供与只有函数名称的文本输出的调用方。  
+-   如果该函数的转换部分则将忽略`pTransitionContexts`和`puiTransitionContextCount`都为 null。 在这种情况下，该函数提供了只有函数名称的文本输出的调用方。  
   
--   如果`pTransitionContexts`为 null 和`puiTransitionContextCount`是不为 null，则该函数将返回所需数量的上下文中的条目`puiTransitionContextCount`。  
+-   如果`pTransitionContexts`为 null，`puiTransitionContextCount`是不为 null，则该函数将返回所需数量的上下文中的条目`puiTransitionContextCount`。  
   
--   如果`pTransitionContexts`是不为 null，函数会将其视为数组的长度的结构`puiTransitionContextCount`。 通过给定的结构大小`uiSizeOfContext`，而且的大小必须[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)或`CONTEXT`体系结构。  
+-   如果`pTransitionContexts`是不为 null，则该函数将它作为数组的长度结构`puiTransitionContextCount`。 通过给定结构大小`uiSizeOfContext`，并且必须是大小[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)或`CONTEXT`体系结构。  
   
--   `wszTextOut` 是编写采用以下格式：  
+-   `wszTextOut` 采用以下格式：  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -84,22 +84,22 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   如果以十六进制表示偏移量为 0x0，则写入没有偏移量。  
+-   如果以十六进制表示的偏移量为 0x0，写入没有偏移量。  
   
 -   如果没有任何托管的代码的线程上当前上下文中，该函数将返回 SOS_E_NOMANAGEDCODE。  
   
--   `Flags`参数为 0 或 SOS_STACKTRACE_SHOWADDRESSES 若要查看每个前面的 EBP 和 ESP`module!functionname`行。 默认情况下，则为 0。  
+-   `Flags`参数为 0 或 SOS_STACKTRACE_SHOWADDRESSES 若要查看每个前面的 EBP 和 ESP`module!functionname`行。 默认情况下，它为 0。  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** SOS_Stacktrace.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试全局静态函数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>请参阅
+- [调试全局静态函数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

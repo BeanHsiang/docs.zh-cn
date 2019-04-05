@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: 3b19886b11def5c15425fc27f907b10314c73e0c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0e21f0acaf6c9bf0b0c7fc48648ad6a26876f9cb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181561"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826296"
 ---
 # <a name="message-security-certificate"></a>消息安全证书
 此示例演示如何实现一个应用程序，该应用程序对客户端使用 WS 安全性和 X.509 v3 证书身份验证，并要求使用服务器的 X.509 v3 证书进行服务器身份验证。 此示例使用默认设置，以便客户端和服务器之间的所有应用程序消息都经过签名和加密。 此示例基于[WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) ，客户端控制台程序和由 Internet 信息服务 (IIS) 承载的服务库组成。 该服务实现定义“请求-答复”通信模式的协定。  
@@ -202,7 +202,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- 通过运行消息安全示例随附的 Setup.bat 批处理文件，可以用相关的证书将客户端和服务器配置为运行承载应用程序，该应用程序需要基于证书的安全性。 该批处理文件可以在三个模式下运行。 若要在单计算机模式类型中运行**setup.bat**在 Visual Studio 命令提示符; 的服务模式类型**setup.bat service**; 以及客户端模式类型**setup.bat 客户端**. 在跨计算机运行示例时，可以使用客户端模式和服务器模式。 有关详细信息，请参见本主题末尾的设置过程。 下面提供了批处理文件不同节的简要概述，您可以修改这些批处理文件，使其能够在相应的配置中运行：  
+ 通过运行消息安全示例随附的 Setup.bat 批处理文件，可以用相关的证书将客户端和服务器配置为运行承载应用程序，该应用程序需要基于证书的安全性。 该批处理文件可以在三个模式下运行。 若要在单计算机模式类型中运行**setup.bat**在开发人员命令提示符的 Visual Studio; 服务模式类型**setup.bat service**; 个客户端模式类型和**setup.bat 客户端**. 在跨计算机运行示例时，可以使用客户端模式和服务器模式。 有关详细信息，请参见本主题末尾的设置过程。 下面提供了批处理文件不同节的简要概述，您可以修改这些批处理文件，使其能够在相应的配置中运行：  
   
 -   创建客户端证书。  
   
@@ -269,7 +269,7 @@ Press <ENTER> to terminate client.
     >  如果您使用的是非美国英文版本的 Windows，则必须编辑 Setup.bat 文件，并用与您所在的区域对应的帐户名称替换“NT AUTHORITY\NETWORK SERVICE”帐户名称。  
   
 > [!NOTE]
->  该批处理文件中使用的工具位于 C:\Program Files\Microsoft Visual Studio 8\Common7\tools 或 C:\Program Files\Microsoft SDKs\Windows\v6.0\bin 中。 这两个目录中必须有一个位于系统路径中。 如果您安装了 Visual Studio，则在您的路径中进入该目录的最简便方法就是打开 Visual Studio 命令提示。 单击**启动**，然后选择**所有程序**， **Visual Studio 2012**，**工具**。 此命令提示中已经配置了相应的路径。 否则，您必须向路径中手动添加相应的目录。  
+>  该批处理文件中使用的工具位于 C:\Program Files\Microsoft Visual Studio 8\Common7\tools 或 C:\Program Files\Microsoft SDKs\Windows\v6.0\bin 中。 这两个目录中必须有一个位于系统路径中。 如果已安装的 Visual Studio，在你的路径中进入该目录的最简单方法是打开 Visual Studio 开发人员命令提示。 单击**启动**，然后选择**所有程序**， **Visual Studio 2012**，**工具**。 此命令提示中已经配置了相应的路径。 否则，您必须向路径中手动添加相应的目录。  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -288,16 +288,16 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-run-the-sample-on-the-same-computer"></a>在同一计算机上运行示例  
   
-1.  使用管理员权限打开 Visual Studio 命令提示符，并从示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。  
+1.  使用管理员特权打开 Visual Studio 开发人员命令提示并从示例安装文件夹运行 Setup.bat。 这将安装运行示例所需的所有证书。  
   
     > [!NOTE]
-    >  Setup.bat 批处理文件设计为通过 Visual Studio 命令提示符运行。 这要求路径环境变量指向 SDK 的安装目录。 将在 Visual Studio 命令提示符 (2010) 中自动设置此环境变量。  
+    >  Setup.bat 批处理文件设计为 Visual Studio 的开发人员命令提示符运行。 这要求路径环境变量指向 SDK 的安装目录。 此环境变量自动设置为 Visual Studio (2010) 在开发人员命令提示中。  
   
 2.  验证是否可以通过输入地址使用浏览器的服务访问 `http://localhost/servicemodelsamples/service.svc` 。  
   
 3.  启动 \client\bin 中的 Client.exe。 客户端活动将显示在客户端控制台应用程序上。  
   
-4.  如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+4.  如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>跨计算机运行示例  
   
@@ -309,29 +309,28 @@ Press <ENTER> to terminate client.
   
 4.  将客户端程序文件复制到客户端计算机上的客户端目录中。 另外，将 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 文件复制到客户端上。  
   
-5.  在服务器上，运行**setup.bat 服务**在 Visual Studio 命令提示符下使用管理员权限。 运行**setup.bat**与**服务**参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
+5.  在服务器上，运行**setup.bat 服务**中具有管理员权限的 Visual Studio 的开发人员命令提示。 运行**setup.bat**与**服务**参数与计算机的名称的完全限定域名创建一个服务证书并将服务证书导出到名为 Service.cer 的文件。  
   
 6.  编辑 Web.config 以反映新的证书名称 (在`findValue`中的属性[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 与计算机的名称的完全限定域名相同。  
   
 7.  将服务目录中的 Service.cer 文件复制到客户端计算机上的客户端目录中。  
   
-8.  在客户端上运行**setup.bat 客户端**在 Visual Studio 命令提示符下使用管理员权限。 运行**setup.bat**与**客户端**参数创建一个名为 client.com 的客户端证书，并将客户端证书导出到名为 Client.cer 的文件。  
+8.  在客户端上运行**setup.bat 客户端**中具有管理员权限的 Visual Studio 的开发人员命令提示。 运行**setup.bat**与**客户端**参数创建一个名为 client.com 的客户端证书，并将客户端证书导出到名为 Client.cer 的文件。  
   
 9. 在客户端计算机上的 Client.exe.config 文件中，更改终结点的地址值，使其与服务的新地址相匹配。 通过用服务器的完全限定域名替换 localhost 来执行此操作。  
   
 10. 将客户端目录中的 Client.cer 文件复制到服务器上的服务目录中。  
   
-11. 在客户端上，使用管理特权在 Visual Studio 命令提示中运行 ImportServiceCert.bat。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
+11. 在客户端上运行 ImportServiceCert.bat 开发人员命令提示符中针对 Visual Studio 使用管理权限。 这会将 Service.cer 文件中的服务证书导入 CurrentUser – TrustedPeople 存储区。  
   
-12. 在服务器上，使用管理特权在 Visual Studio 命令提示中运行 ImportClientCert.bat。 这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。  
+12. 在服务器上，运行 ImportClientCert.bat 开发人员命令提示符中针对 Visual Studio 使用管理权限。 这会将 Client.cer 文件中的客户端证书导入 LocalMachine - TrustedPeople 存储区。  
   
-13. 在客户端计算机上，从命令提示窗口中启动 Client.exe。 如果客户端与服务无法进行通信，请参见 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+13. 在客户端计算机上，从命令提示窗口中启动 Client.exe。 如果客户端和服务能够进行通信，请参见[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>运行示例后进行清理  
   
 -   运行完示例后运行示例文件夹中的 Cleanup.bat。  
   
     > [!NOTE]
-    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 为此，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+    >  此脚本不会在跨计算机运行此示例时移除客户端上的服务证书。 如果有运行在计算机之间使用证书的 Windows Communication Foundation (WCF) 示例，请确保清除已安装在 CurrentUser-TrustedPeople 存储区中的服务证书。 若要执行此操作，请使用以下命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例如： `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="see-also"></a>请参阅

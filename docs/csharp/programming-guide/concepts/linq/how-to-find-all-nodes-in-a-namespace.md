@@ -2,12 +2,12 @@
 title: 如何：查找命名空间中的所有节点 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3d9a2780a5241bdc535938cb182441418346755f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524645"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>如何：查找命名空间中的所有节点 (C#)
 您可以对每个元素或属性的命名空间进行筛选，以便查找该特定命名空间中的所有节点。  
@@ -46,7 +46,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>示例  
  下面的查询所访问的 XML 文件包含两个位于不同命名空间中的采购订单。 该查询只用其中一个命名空间中的元素创建一个新树。  
   
- 本示例使用以下 XML 文档：[示例 XML 文件：合并的采购订单](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：合并采购单](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)。  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

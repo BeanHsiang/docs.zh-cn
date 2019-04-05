@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e64eeff8ef80aa264c9c49bd12a0cc45e0da18a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9659f37f0ae9297837dbc4b1602cb00b8eff2fd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461882"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471442"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences 方法
-通知探查器在内存中由指定的对象引用的对象有关。  
+通知有关指定的对象引用的对象的内存探查器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,36 +37,36 @@ HRESULT ObjectReferences(
     [in, size_is(cObjectRefs)] ObjectID objectRefIds[] );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `objectId`  
- [in]引用对象的对象 ID。  
+ [in]所引用对象的对象的 ID。  
   
  `classId`  
- [in]类的指定的对象的实例 ID。  
+ [in]指定的对象的实例的类的 ID。  
   
  `cObjectRefs`  
- [in]由指定的对象引用的对象的数目 (即中的元素数`objectRefIds`数组)。  
+ [in]将指定的对象引用的对象数 (即中的元素数`objectRefIds`数组)。  
   
  `objectRefIds`  
- [in]被引用的对象的 Id 的数组， `objectId`。  
+ [in]被引用的对象 Id 的数组`objectId`。  
   
 ## <a name="remarks"></a>备注  
- `ObjectReferences`针对每个垃圾回收完成后，为堆中剩余的对象调用方法。 如果探查器从此回调返回错误，则将停止分析服务下, 一次垃圾回收之前调用此回调。  
+ `ObjectReferences`完成垃圾回收后保留在堆中每个对象调用方法。 如果探查器从此回调返回错误，将停止分析服务下, 一次垃圾回收之前调用此回调。  
   
- `ObjectReferences`可结合使用回调[icorprofilercallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)回调来创建运行时的完整的对象引用关系图。 公共语言运行时 (CLR) 可确保每个对象引用一次报告的`ObjectReferences`方法。  
+ `ObjectReferences`可以结合使用回调[icorprofilercallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)回调来创建运行时的完整的对象引用关系图。 公共语言运行时 (CLR) 可确保每个对象引用一次报告的`ObjectReferences`方法。  
   
- 通过返回的对象 Id`ObjectReferences`不是有效在回调过程，因为垃圾回收可能正处于将对象移。 因此，探查器必须不尝试检查对象期间`ObjectReferences`调用。 当[icorprofilercallback2:: Garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)调用时，垃圾回收完成集合并检查，可以安全地进行。  
+ 通过返回的对象 Id`ObjectReferences`不能在该回调本身，因为垃圾回收可能正处于移动对象。 因此，探查器必须不尝试检查对象在`ObjectReferences`调用。 当[ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)调用时，垃圾收集完毕且可以安全地完成检查。  
   
- Null`ClassId`指示`objectId`具有正在卸载的类型。  
+ 为空`ClassId`指示`objectId`正在卸载的类型。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerCallback 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

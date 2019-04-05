@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086630"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042094"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 标记扩展
 提供 CLR<xref:System.Type>是指定的 XAML 类型的基础类型的对象。  
@@ -61,7 +61,7 @@ ms.locfileid: "49086630"
 ## <a name="wpf-usage-notes"></a>WPF 用法说明  
   
 ### <a name="default-xaml-namespace-and-type-mapping"></a>默认 XAML Namespace 和类型映射  
- WPF 编程的默认 XAML 命名空间包含大部分所需的典型 XAML 方案; XAML 类型因此，引用 XAML 类型的值时，通常可以避免前缀。 您可能需要，如果所引用的类型，从自定义程序集或类型存在于 WPF 程序集中，但来自未映射到默认 XAML 命名空间的 CLR 命名空间映射前缀。 有关前缀、 XAML 命名空间和映射 CLR 命名空间的详细信息，请参阅[XAML 命名空间和 WPF XAML 的 Namespace 映射](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ WPF 编程的默认 XAML 命名空间包含大部分所需的典型 XAML 方案; XAML 类型因此，引用 XAML 类型的值时，通常可以避免前缀。 您可能需要，如果所引用的类型，从自定义程序集或类型存在于 WPF 程序集中，但来自未映射到默认 XAML 命名空间的 CLR 命名空间映射前缀。 有关前缀、 XAML 命名空间和映射 CLR 命名空间的详细信息，请参阅[XAML 命名空间和 WPF XAML 的 Namespace 映射](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 ### <a name="type-properties-that-support-typename-as-string"></a>类型属性的支持类型名称作为-字符串  
  WPF 支持技术，使指定类型的某些属性的值<xref:System.Type>而无需`x:Type`标记扩展用法。 相反，您可以指定为的类型命名的字符串的值。 示例包括<xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType>和<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>。 通过类型转换器或标记扩展不提供此行为的支持。 相反，这是通过实现延迟行为<xref:System.Windows.FrameworkElementFactory>。  
@@ -71,7 +71,7 @@ ms.locfileid: "49086630"
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 提供额外支持泛型类型，并修改的功能行为`x:TypeArguments`和`x:Type`能够提供此支持。  
   
--   `x:TypeArguments` 并且，泛型对象实例化的关联的对象元素可在根以外的其他元素。 有关详细信息，请参阅"XAML 2009"一节[X:typearguments 指令](../../../docs/framework/xaml-services/x-typearguments-directive.md)。  
+-   `x:TypeArguments` 并且，泛型对象实例化的关联的对象元素可在根以外的其他元素。 有关详细信息，请参阅"XAML 2009"一节[X:typearguments 指令](x-typearguments-directive.md)。  
   
 -   XAML 2009 支持用于在标记中指定的泛型类型约束的语法。 这可由`x:TypeArguments`，也可由`x:Type`，或结合使用的两个功能。  
   
@@ -79,8 +79,8 @@ ms.locfileid: "49086630"
   
  在 WPF 中，可以使用 XAML 2009 功能但仅针对松散 XAML (未标记编译的 XAML) 中。 WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Style>  
- [样式设置和模板化](../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [XAML 概述 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Style>
+- [样式设置和模板化](../wpf/controls/styling-and-templating.md)
+- [XAML 概述 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [标记扩展和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultProxy&gt;元素 （网络设置）'
+title: <defaultProxy> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 54185c7cca734ced166fbe0a52b96214321d4469
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9d9e96296cb764d3fbb3cdcd561e036f9ad6aa2b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200497"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257208"
 ---
-# <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt;元素 （网络设置）
+# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 元素 （网络设置）
 配置超文本传输协议 (HTTP) 代理服务器。  
   
  \<configuration>  
@@ -25,13 +25,13 @@ ms.locfileid: "50200497"
 ## <a name="syntax"></a>语法  
   
 ```xml  
-      <defaultProxy  
-        enabled="true|false"  
-        useDefaultCredentials="true|false">  
-           <bypasslist> … </bypasslist>  
-           <proxy> … </proxy>  
-           <module> … </module>  
-      </defaultProxy>
+<defaultProxy  
+  enabled="true|false"  
+  useDefaultCredentials="true|false">  
+    <bypasslist>...</bypasslist>  
+    <proxy>...</proxy>  
+    <module>...</module>  
+</defaultProxy>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -50,7 +50,7 @@ ms.locfileid: "50200497"
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一组描述不使用代理的地址的正则表达式。|  
 |[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|向应用程序添加新的代理模块。|  
-|[代理](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|定义代理服务器。|  
+|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|定义代理服务器。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -86,6 +86,6 @@ ms.locfileid: "50200497"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

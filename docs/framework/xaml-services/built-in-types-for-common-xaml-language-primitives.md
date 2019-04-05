@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839087"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048676"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>常见 XAML 语言基元的内置类型
 XAML 2009 引入了对多种数据类型的 XAML 语言级支持（这些数据类型是公共语言运行时 (CLR) 和其他编程语言中的常用基元）。 XAML 2009 增加了对以下基元的支持： `x:Object`、 `x:Boolean`、 `x:Char`、 `x:String`、 `x:Decimal`、 `x:Single`、 `x:Double`、 `x:Int16`、 `x:Int32`、 `x:Int64`、 `x:TimeSpan`、 `x:Uri`、 `x:Byte`和 `x:Array`  
@@ -73,7 +73,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xsingle"></a>x:Single  
  对于 CLR 支持， `x:Single` 基元对应于 <xref:System.Single>。  
   
- 除了数值之外，`x:Single` 的文本语法还允许使用标记 `Infinity`、`-Infinity` 和 `NaN`。 这些标记被视为区分大小写。  
+ 除了数值之外， `x:Single` 的文本语法还允许使用标记 `Infinity`、 `-Infinity`和 `NaN`。 这些标记被视为区分大小写。  
   
  `x:Single` 支持采用科学记数法格式的值，条件是文本语法中的第一个字符为 `e` 或 `E`。  
   
@@ -82,7 +82,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdouble"></a>x:Double  
  对于 CLR 支持， `x:Double` 基元对应于 <xref:System.Double>。  
   
- 除了数值之外，`x:Double` 的文本语法还允许使用标记 `Infinity`、`-Infinity` 和 `NaN`。 这些标记被视为区分大小写。  
+ 除了数值之外， `x:Double` 的文本语法还允许使用标记 `Infinity`、 `-Infinity`和 `NaN`。 这些标记被视为区分大小写。  
   
  `x:Double` 支持采用科学记数法格式的值。 使用字符 `e` 或 `E` 可引入指数部分。  
   
@@ -125,7 +125,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xarray"></a>x:Array  
  对于 CLR 支持， `x:Array` 基元对应于 <xref:System.Array>。  
   
- 可以在 XAML 2006 中使用标记扩展语法定义一个数组；而 XAML 2009 语法是语言定义的基元，不需要访问标记扩展。 有关 XAML 2006 支持的更多信息，请参阅 [x:Array Markup Extension](../../../docs/framework/xaml-services/x-array-markup-extension.md)。  
+ 可以在 XAML 2006 中使用标记扩展语法定义一个数组；而 XAML 2009 语法是语言定义的基元，不需要访问标记扩展。 有关 XAML 2006 支持的更多信息，请参阅 [x:Array Markup Extension](x-array-markup-extension.md)。  
   
  有关 XAML 语言规范定义的请参阅[ \[MS XAML\] 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
@@ -133,4 +133,4 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ## <a name="wpf-support"></a>WPF 支持  
  在 WPF 中，可以使用 XAML 2009 功能，但仅针对未进行标记编译的 XAML。 WPF 的已编译标记的 XAML 以及 XAML 的 BAML 形式当前不支持 XAML 2009 关键字和功能。  
   
- 可以使用 XAML 2009 功能以及 WPF 的方案是创作宽松 XAML，然后将该 XAML 加载到 WPF 运行时和对象图与<xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>。 WPF<xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType>并将其<xref:System.Windows.Markup.XamlReader.Load%2A>可以 XAML 2009 语言关键字和功能处理成有效的对象图表示形式。
+ 可使用 XAML 2009 功能以及 WPF 的一种情况是创作宽松 XAML，然后使用 <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>将该 XAML 加载到 WPF 运行时和对象图中。 WPF <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> 及其 <xref:System.Windows.Markup.XamlReader.Load%2A> 可以将 XAML 2009 语言关键字和功能处理成一个有效的对象图表示形式。

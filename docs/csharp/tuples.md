@@ -3,14 +3,14 @@ title: 元组类型 - C# 指南
 description: 了解 C# 中的未命名元组类型和命名元组类型
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186026"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971395"
 ---
-# <a name="c-tuple-types"></a>C# 元组类型 #
+# <a name="c-tuple-types"></a>C# 元组类型
 
 C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的语法，基于元素数量（称为“基数”）和元素类型的转换规则，以及一致的副本、相等测试和赋值规则。 但另一方面，元组不支持一些与继承相关的面向对象的语法。 [C# 7.0 中的新增功能](whats-new/csharp-7.md#tuples)文章中的“元组”一节对其进行了概述。
 
@@ -82,37 +82,39 @@ C# 元组是使用轻量语法定义的类型。 其优点包括：更简单的�
 
 这两个条件可避免多义性。 如果这些名称已用作元组中某字段的字段名称，它们将导致多义。 这两个条件都不会导致编译时错误。 但不会向没有投影名称的元素投影语义名称。  以下示例说明了这两个条件：
 
-[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
+[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 这些情况不会导致编译器错误，因为当元组字段名称投影不可用时，它将成为使用 C# 7.0 编写的代码的一项重大改变。
 
 ## <a name="equality-and-tuples"></a>相等和元组
 
-从 C# 7.3 开始，元组类型支持 `==` 和 `!=` 运算符。 这些运算符按顺序将左边参数的每个成员与右边参数的每个成员进行比较。 这些比较将发生短路。 只要有一对不相等，`==` 运算符即停止计算成员。 只要有一对相等，`!=` 运算符即停止计算成员。 以下代码示例使用 `==`，但比较规则均适用于 `!=`。 以下代码示例演示两对整数的相等比较：
+从 C# 7.3 开始，元组类型支持 `==` 和 `!=` 运算符。 这些运算符按顺序将左边参数的每个成员与右边参数的每个成员进行比较。 这些比较将发生短路。 只要有一对不相等，它们即会停止计算成员。 以下代码示例使用 `==`，但比较规则均适用于 `!=`。 以下代码示例演示两对整数的相等比较：
 
-[!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
 有几条规则，可使元组相等测试更方便。 如果其中一个元组是可以为空值的元组，则元组相等将执行[提升转换](~/_csharplang/spec/conversions.md#lifted-conversion-operators)，如以下代码中所示：
 
-
-[!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
 元组相等还将对这两个元组的每个成员执行隐式转换。 这些转换包括提升转换、扩大转换或其他隐式转换。 以下示例演示整数 2 元组可以与较长的 2 元组进行比较，因为进行了从整数元组到较长元组的隐式转换：
 
-[!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
 元组成员名称不参与相等测试。 但是，如果其中一个操作数是含有显式名称的元组文本，则当这些名称与其他操作数的名称不匹配时，编译器将生成警告 CS8383。
 在两个操作数都为元组文本的情况下，警告位于右侧操作数，如以下示例中所述：
 
-[!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
 最后，元组可能包含嵌套元组。 元组相等通过嵌套元组比较每个操作数的“形状”，如以下示例中所示：
 
-[!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+
+当两个元组具有不同形状时，比较它们是否相等（或不相等）将出现编译时错误。 编译器不会尝试对嵌套元组进行任何析构来比较它们。
 
 ## <a name="assignment-and-tuples"></a>赋值和元组
 
-语言支持在具有相同元素数量的元组类型之间赋值，其中每个右侧元素都可被隐式转换为相应的左侧元素。 对于其他转换，不考虑进行赋值。 让我们看一下元组类型之间允许的赋值类型。
+语言支持在具有相同元素数量的元组类型之间赋值，其中每个右侧元素都可被隐式转换为相应的左侧元素。 对于其他转换，不考虑进行赋值。 当两个元组具有不同形状时，将一个元祖分配给另一个元祖将出现编译时错误。 编译器不会尝试对嵌套元组进行任何析构来分配它们。
+让我们看一下元组类型之间允许的赋值类型。
 
 注意以下示例中使用的这些变量：
 

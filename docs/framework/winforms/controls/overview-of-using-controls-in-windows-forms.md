@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 629a08a090178ffb1df1e9905182c9f246537533
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8ae5ec00ee488f0b7400bfa99483c4efc29e016
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537357"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703239"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>在“Windows 窗体”中使用控件的概述
-本主题介绍 Windows 窗体应用程序的重要元素，并提供一个简单的示例使用控件并处理在 Windows 窗体应用程序中的事件。  
+本主题描述 Windows 窗体应用程序的基本元素，并提供一个简单示例，使用控件以及处理 Windows 窗体应用程序中的事件。  
   
-## <a name="simple-windows-forms-applications"></a>简单的 Windows 窗体应用程序  
- 在最低限度上，Windows 窗体应用程序由以下元素组成：  
+## <a name="simple-windows-forms-applications"></a>简单 Windows 窗体应用程序  
+ 至少，Windows 窗体应用程序由以下元素组成：  
   
--   一个或多个派生自的类<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。  
+-   派生的一个或多个类<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。  
   
--   A`Main`时，将调用的方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法并传递<xref:System.Windows.Forms.Form>到它的实例。 <xref:System.Windows.Forms.Application.Run%2A>方法处理来自操作系统到应用程序的消息。  
+-   一个`Main`调用的方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法，并传递<xref:System.Windows.Forms.Form>到它的实例。 <xref:System.Windows.Forms.Application.Run%2A>方法处理从操作系统到应用程序的消息。  
   
- 下面的代码示例演示 Windows 窗体应用程序的重要元素。  
+ 下面的代码示例显示了 Windows 窗体应用程序的必备要素。  
   
 ```vb  
 Option Explicit  
@@ -75,7 +75,7 @@ public class MyForm : Form {
 ```  
   
 ## <a name="using-controls-in-a-windows-forms-application"></a>在 Windows 窗体应用程序中使用控件  
- 下面的代码示例演示的简单应用程序演示了 Windows 窗体应用程序如何使用控件和处理事件。 此示例由窗体; 上的三个按钮组成每个按钮更改单击时的背景色。  
+ 下面的代码示例显示了简单的应用程序说明了 Windows 窗体应用程序如何使用控件和处理事件。 示例包含三个按钮在窗体;每个按钮更改背景色在单击时。  
   
 ```vb  
 Option Explicit  
@@ -223,6 +223,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Windows 窗体控件开发基础知识](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a>请参阅
+- [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)
+- [Windows 窗体控件开发基础知识](windows-forms-control-development-basics.md)

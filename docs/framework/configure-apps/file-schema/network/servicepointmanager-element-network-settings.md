@@ -1,5 +1,5 @@
 ---
-title: '&lt;servicePointManager&gt;元素 （网络设置）'
+title: <servicePointManager> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: fed2b39d92557f25c4f7427bccf28af616d1c0a3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3a18f9eb3d38ef272b7a4df58d8588b622662184
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187269"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277545"
 ---
-# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt;元素 （网络设置）
+# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 元素 （网络设置）
 配置连接到网络资源。  
   
  \<configuration>  
 \<system.net>  
-\<设置 >  
-\<servicePointManager >  
+\<settings>  
+\<servicePointManager>  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,7 +66,7 @@ ms.locfileid: "50187269"
 ## <a name="configuration-files"></a>配置文件  
  此元素可在应用程序配置文件或计算机配置文件 (Machine.config) 中使用。  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.ServicePointManager>  
-- <xref:System.Net.Security.EncryptionPolicy>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.ServicePointManager>
+- <xref:System.Net.Security.EncryptionPolicy>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

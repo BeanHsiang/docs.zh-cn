@@ -2,12 +2,12 @@
 title: 带有扩展保护的集成 Windows 身份验证
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: e07bc903a60dfff5e9caaf93f9c2bfd579541a96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591612"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>带有扩展保护的集成 Windows 身份验证
 进行了可影响以下类处理集成式 Windows 身份验证的方式的改进：<xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream> 以及 <xref:System.Net> 和相关命名空间中的相关类。 添加了对扩展保护的支持以增强安全性。  
@@ -148,6 +148,6 @@ ms.locfileid: "50189701"
   
  这些扩展保护功能也可由服务器应用程序用于其他请求类型的、使用了受信任代理时的身份验证。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Security.Authentication.ExtendedProtection>  
- <xref:System.Security.Authentication.ExtendedProtection.Configuration>
+## <a name="see-also"></a>请参阅
+- <xref:System.Security.Authentication.ExtendedProtection>
+- <xref:System.Security.Authentication.ExtendedProtection.Configuration>

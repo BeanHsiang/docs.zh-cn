@@ -1,20 +1,20 @@
 ---
-title: 异步工作流 (F#)
-description: '了解有关支持在 F # 编程语言用于以异步方式执行计算的执行而不会阻止执行其他工作。'
+title: 异步工作流
+description: 了解有关支持在F#编程语言以异步方式执行计算执行而不会阻止执行其他工作。
 ms.date: 05/16/2016
-ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7643a26469ee6a6cf15940f90611fd430beef42e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861557"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610783"
 ---
 # <a name="asynchronous-workflows"></a>异步工作流
 
 > [!NOTE]
-API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
+> API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
-本主题介绍用于执行计算以异步方式，即，而不会阻止其他工作的执行中 F # 的支持。 例如，可以使用异步计算编写应用程序，因为应用程序会执行其他工作仍能响应用户的 ui。
+本主题介绍中的支持F#用于以异步方式执行计算，即，而不会阻止执行其他工作。 例如，可以使用异步计算编写应用程序，因为应用程序会执行其他工作仍能响应用户的 ui。
 
 ## <a name="syntax"></a>语法
 
@@ -41,17 +41,17 @@ let (result1 : Async<byte[]>) = stream.AsyncRead(bufferSize)
 let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 ```
 
-除了`let!`，可以使用`use!`执行异步绑定。 之间的差异`let!`并`use!`之间的区别相同`let`和`use`。 有关`use!`，在当前范围的结束位置释放的对象。 请注意，在当前版本的 F # 语言中，`use!`不允许使用值初始化为 null，即使`use`does。
+除了`let!`，可以使用`use!`执行异步绑定。 之间的差异`let!`并`use!`之间的区别相同`let`和`use`。 有关`use!`，在当前范围的结束位置释放的对象。 请注意，当前版本中的F#语言中，`use!`不允许使用值初始化为 null，即使`use`does。
 
 ## <a name="asynchronous-primitives"></a>异步基元
 
-执行单个异步任务并返回结果的方法，称为*异步基元*，，它们专门用于专门设计`let!`。 F # 核心库中定义多个异步基元。 该模块中定义的 Web 应用程序的两个此类方法[ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c)并[ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a)。 这两个基元从 Web 页上，给定的 URL 下载数据。 `AsyncGetResponse` 将生成`System.Net.WebResponse`对象，和`AsyncDownloadString`生成一个字符串，表示网页的 HTML。
+执行单个异步任务并返回结果的方法，称为*异步基元*，，它们专门用于专门设计`let!`。 多个异步基元中定义F#核心库。 该模块中定义的 Web 应用程序的两个此类方法[ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c)并[ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a)。 这两个基元从 Web 页上，给定的 URL 下载数据。 `AsyncGetResponse` 将生成`System.Net.WebResponse`对象，和`AsyncDownloadString`生成一个字符串，表示网页的 HTML。
 
 中包含用于异步 I/O 操作的多个基元[ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396)模块。 这些扩展方法`System.IO.Stream`类是[ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e)并[ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618)。
 
 此外可以通过定义其完整的主体括在异步块中的函数来编写您自己的异步基元。
 
-若要使用.NET Framework 中的异步方法设计的 F # 异步编程模型与其他异步模型，创建一个函数，返回的 F #`Async`对象。 F # 库都有这可以更轻松地执行操作的函数。
+若要为与其他异步模型使用.NET Framework 中设计的异步方法F#异步编程模型，创建一个函数，返回F#`Async`对象。 F#库具有函数，这可以更轻松地执行操作。
 
 使用异步工作流的一个示例是为了让;还有很多这样的方法的文档中[异步类](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)。
 

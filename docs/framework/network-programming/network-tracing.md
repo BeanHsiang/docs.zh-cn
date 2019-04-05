@@ -18,12 +18,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: 812fbd0a3f12f9b44e419986b5f3198d95d1e3a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e212b2c77a8b0b016e03bfe08f350a0b86ba6ee1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514694"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>.NET Framework 中的网络跟踪
 .NET Framework 中的网络跟踪允许访问有关方法调用的信息，以及有关托管应用程序所生成的网络流量的信息。 此功能可用于调试正在开发的应用程序，也可用于分析已部署的应用程序。 可以自定义网络跟踪所提供的输出，以支持在开发时和在生产环境中的不同使用方案。  
@@ -35,8 +35,8 @@ ms.locfileid: "50199638"
 > [!NOTE]
 >  当你在应用程序中启用网络跟踪后，此成员将输出跟踪信息。 有关详细信息，请参阅“网络跟踪”。  
   
-## <a name="see-also"></a>请参阅  
- [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
- [解释网络跟踪](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
-[跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+## <a name="see-also"></a>请参阅
+- [启用网络跟踪](../../../docs/framework/network-programming/enabling-network-tracing.md)
+- [如何：配置网络跟踪](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [解释网络跟踪](../../../docs/framework/network-programming/interpreting-network-tracing.md)
+- [跟踪应用程序和在应用程序中插入检测点](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

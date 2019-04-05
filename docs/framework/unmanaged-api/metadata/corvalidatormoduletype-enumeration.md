@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716773"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 枚举
 指定模块的类型。  
@@ -47,20 +47,20 @@ typedef enum
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|该模块是无效的类型。|  
 |`ValidatorModuleTypeMin`|最小值`CorValidatorModuleType`枚举。|  
-|`ValidatorModuleTypePE`|模块是一个可移植可执行 (PE) 文件。|  
-|`ValidatorModuleTypeObj`|模块是一个.obj 文件。|  
-|`ValidatorModuleTypeEnc`|该模块是编辑并继续调试器会话。|  
+|`ValidatorModuleTypePE`|该模块是可移植可执行 (PE) 文件。|  
+|`ValidatorModuleTypeObj`|该模块是.obj 文件。|  
+|`ValidatorModuleTypeEnc`|该模块是编辑并继续调试程序会话。|  
 |`ValidatorModuleTypeIncr`|该模块是指以增量方式生成。|  
 |`ValidatorModuleTypeMax`|最大值`CorValidatorModuleType`枚举。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

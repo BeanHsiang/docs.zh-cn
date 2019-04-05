@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 7b302a7d0643ed61d12cfedf26348590d40d18f3
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 78a0410876016ef2d5249fe3b6a667cacc432320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654849"
 ---
 # <a name="introduction-to-extensibility"></a>扩展性介绍
-Windows Communication Foundation (WCF) 应用程序模型设计用于解决任何分布式应用程序的通信要求更大一部分。 但是，总是会存在一些默认应用程序模型和系统提供的实现不支持的情况。 WCF 扩展性模型旨在支持自定义方案，使您能够修改在每个级别，即使到替换整个应用程序模型的点的系统行为。 本主题概述各个扩展范围并指出关于每个范围的更多信息。  
+Windows Communication Foundation (WCF) 应用程序模型旨在解决的任何分布式应用程序的通信要求更高版本的一部分。 但是，总是会存在一些默认应用程序模型和系统提供的实现不支持的情况。 WCF 扩展性模型旨在支持自定义方案，通过它可以修改在每个级别，甚至替换整个应用程序模型的系统行为。 本主题概述各个扩展范围并指出关于每个范围的更多信息。  
   
 ## <a name="areas-to-extend"></a>要扩展的范围  
  可以扩展：  
@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) 应用程序模型设计用于解决任�
 -   主机运行库。 此范围将主机应用程序域的关系扩展到通道和应用程序运行库。  
   
 ### <a name="extending-the-application-runtime"></a>扩展应用程序运行库  
- 在 WCF 应用程序，没有区分发往相应通道的消息与发往应用程序自身的消息。 通道消息支持某些与通道相关的功能，如建立安全对话或可靠会话。 这些消息对于应用程序运行库不可用；涉及应用程序层之前，将处理这些消息。  
+ 在 WCF 应用程序没有区别发往相应通道的消息和目标为应用程序本身的消息。 通道消息支持某些与通道相关的功能，如建立安全对话或可靠会话。 这些消息对于应用程序运行库不可用；涉及应用程序层之前，将处理这些消息。  
   
  应用程序消息中包含发往客户端或发往您或您的客户创建的服务操作的数据。 这些消息可用于采用消息或对象形式的应用程序级扩展系统，具体取决于您的需要。  
   
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) 应用程序模型设计用于解决任�
 ### <a name="extending-the-service-hosting-system"></a>扩展服务主机系统  
  若要修改服务范围的应用程序模型，必须扩展 <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> 类。 有关详细信息，请参阅[扩展 ServiceHost 和服务模型层](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
   
- 若要修改主机应用程序域和服务主机之间的关系，必须扩展 <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> 类。 有关详细信息，请参阅[扩展承载使用 ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)。  
+ 若要修改主机应用程序域和服务主机之间的关系，必须扩展 <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> 类。 有关详细信息，请参阅[扩展托管使用 ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)。  
   
-## <a name="see-also"></a>请参阅  
- [扩展 WCF](../../../docs/framework/wcf/extending/index.md)
+## <a name="see-also"></a>请参阅
+- [扩展 WCF](../../../docs/framework/wcf/extending/index.md)

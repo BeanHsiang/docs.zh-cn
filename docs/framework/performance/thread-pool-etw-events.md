@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41a37fa34b9d75eb8cfc1bdcb55b237faf137cad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 309570fb5a159d24f5b423d96fd9987ee3bb886f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396102"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503308"
 ---
 # <a name="thread-pool-etw-events"></a>线程池 ETW 事件
 <a name="top"></a> 这些事件收集有关工作线程和 I/O 线程的信息。  
@@ -215,5 +215,5 @@ ms.locfileid: "33396102"
 |NumRetired|win:UInt64|已停用的 I/O 线程数。|  
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
-## <a name="see-also"></a>请参阅  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>请参阅
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

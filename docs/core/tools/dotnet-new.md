@@ -1,15 +1,13 @@
 ---
-title: dotnet new 命令 - .NET Core CLI
+title: dotnet new 命令
 description: dotnet new 命令可根据指定模板新建 .NET Core 项目。
-author: mairaw
-ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5177c920fee6fa946d2bf5d96644f26309ed0a99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516143"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -49,7 +47,7 @@ dotnet new [-h|--help]
 
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet new` 命令为初始化有效的 .NET Core 项目提供了便捷方法。
 
@@ -71,6 +69,7 @@ dotnet new [-h|--help]
 | 类库                                | `classlib`       | [C#]、F#、VB  |
 | 单元测试项目                            | `mstest`         | [C#]、F#、VB  |
 | xUnit 测试项目                           | `xunit`          | [C#]、F#、VB  |
+| NUnit 试项目                           | `nunit`          | [C#]、F#、VB  |
 | Razor 页                                   | `page`           | [C#]          |
 | MVC ViewImports                              | `viewimports`    | [C#]          |
 | MVC ViewStart                                | `viewstart`      | [C#]          |
@@ -537,7 +536,7 @@ console、angular、react、reactredux、razorclasslib
 
 ## <a name="see-also"></a>请参阅
 
-* [dotnet new 自定义模板](custom-templates.md)  
-* [创建 dotnet new 自定义模板](~/docs/core/tutorials/create-custom-template.md)  
-* [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)  
-* [dotnet new 可用模板](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+- [dotnet new 自定义模板](custom-templates.md)
+- [创建 dotnet new 自定义模板](~/docs/core/tutorials/create-custom-template.md)
+- [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)
+- [dotnet new 可用模板](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

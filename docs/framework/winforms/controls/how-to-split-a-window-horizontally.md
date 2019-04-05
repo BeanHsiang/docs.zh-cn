@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: 1e097ce5623fab4c3c8c1d59d9bc8c9206abee2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e11e1d6730c6c8c9c0a1ac170aeb5393bf3153b7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533122"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708036"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>如何：水平拆分窗口
-下面的代码示例使拆分<xref:System.Windows.Forms.SplitContainer>控制水平。  
+下面的代码示例进行划分的拆分器<xref:System.Windows.Forms.SplitContainer>控制水平。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SplitContainer.Orientation%2A>属性<xref:System.Windows.Forms.SplitContainer>控件确定拆分器，而不是该控件本身的方向。  
+>  <xref:System.Windows.Forms.SplitContainer.Orientation%2A>属性的<xref:System.Windows.Forms.SplitContainer>控件将确定拆分器，而不是控件本身的方向。  
   
-### <a name="to-split-a-window-horizontally"></a>水平拆分窗口  
+### <a name="to-split-a-window-horizontally"></a>若要水平拆分窗口  
   
-1.  在过程中，设置<xref:System.Windows.Forms.SplitContainer.Orientation%2A>属性<xref:System.Windows.Forms.SplitContainer>控制转移到<xref:System.Windows.Forms.Orientation.Horizontal>。  
+1.  在程序中，设置<xref:System.Windows.Forms.SplitContainer.Orientation%2A>的属性<xref:System.Windows.Forms.SplitContainer>控制对<xref:System.Windows.Forms.Orientation.Horizontal>。  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -55,6 +55,6 @@ ms.locfileid: "33533122"
     }  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer 控件](splitcontainer-control-windows-forms.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 865b7b16d5807bd9161855f453128a63c84eab96
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 07932a12916138dd7cbee2576e4fc747898b8063
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610830"
 ---
 # <a name="exception-thrownv1-etw-event"></a>异常 Thrown_V1 ETW 事件
 该事件捕获有关引发的异常的信息。  
@@ -37,8 +37,8 @@ ms.locfileid: "43505218"
 |异常消息|win:UnicodeString|实际的异常消息。|  
 |EIPCodeThrow|win:Pointer|指向异常发生位置的指令指针。|  
 |ExceptionHR|win:UInt32|异常 [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679)。|  
-|ExceptionFlags|win:UInt16|0x01: HasInnerException（参阅 Visual Basic 文档中的 [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)）。<br /><br /> 0x02: IsNestedException。<br /><br /> 0x04: IsRethrownException。<br /><br /> 0x08: IsCorruptedStateException（表示进程状态已损坏，请参阅 MSDN 上的[处理损坏状态异常](https://go.microsoft.com/fwlink/?LinkId=179681)）。<br /><br /> 0x10: IsCLSCompliant（从 <xref:System.Exception> 派生的异常符合 CLS，此外的其他异常均不符合 CLS）。|  
+|ExceptionFlags|win:UInt16|0x01:HasInnerException (请参阅[CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)Visual Basic 文档中)。<br /><br /> 0x02:IsNestedException.<br /><br /> 0x04:IsRethrownException。<br /><br /> 0x08:IsCorruptedStateException (表示进程状态已损坏; 请参阅[处理损坏状态异常](https://go.microsoft.com/fwlink/?LinkId=179681)MSDN 上)。<br /><br /> 0x10:IsCLSCompliant (从派生的异常<xref:System.Exception>符合 CLS 規格; 否则为不符合 CLS 規格)。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 的实例的唯一 ID。|  
   
-## <a name="see-also"></a>请参阅  
- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>请参阅
+- [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

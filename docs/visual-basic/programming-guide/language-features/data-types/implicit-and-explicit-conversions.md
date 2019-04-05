@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 09d96b304ba3bcf2a9de2812ce37ae69dba73a41
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 82ff710629089cd14c7e982b4afa4301d0790811
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185345"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833992"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>隐式转换和显式转换 (Visual Basic)
 *隐式转换*不需要在源代码中的任何特殊语法。 在以下示例中，Visual Basic 将隐式转换的值`k`为单精度浮点值之前将其分配给`q`。  
@@ -56,8 +56,8 @@ k = CInt(q)
 |---|---|---|  
 |`CBool`|[Boolean 数据类型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|任何数值类型 (包括`Byte`， `SByte`，并枚举类型)， `String`， `Object`|  
 |`CByte`|[Byte 数据类型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|任何数值类型 (包括`SByte`和枚举类型)， `Boolean`， `String`， `Object`|  
-|`CChar`|[Char 数据类型](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|  
-|`CDate`|[Date 数据类型](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|  
+|`CChar`|[Char 数据类型](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`， `Object`|  
+|`CDate`|[Date 数据类型](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`， `Object`|  
 |`CDbl`|[Double 数据类型](../../../../visual-basic/language-reference/data-types/double-data-type.md)|任何数值类型 (包括`Byte`， `SByte`，并枚举类型)， `Boolean`， `String`， `Object`|  
 |`CDec`|[Decimal 数据类型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|任何数值类型 (包括`Byte`， `SByte`，并枚举类型)， `Boolean`， `String`， `Object`|  
 |`CInt`|[Integer 数据类型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|任何数值类型 (包括`Byte`， `SByte`，并枚举类型)， `Boolean`， `String`， `Object`|  
@@ -117,7 +117,7 @@ End If
  有关详细信息和示例，请参阅[数组转换](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)。  
   
 ### <a name="types-defining-ctype"></a>定义 CType 类型  
- 您可以定义`CType`上类或结构定义。 这可以与类或结构的类型转换的值。 有关详细信息和示例，请参阅[如何： 定义转换运算符](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
+ 您可以定义`CType`上类或结构定义。 这可以与类或结构的类型转换的值。 有关详细信息和示例，请参阅[如何：定义转换运算符](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
   
 > [!NOTE]
 >  与转换关键字一起使用的值必须是有效的目标数据类型，否则将出错。 例如，如果你尝试转换`Long`到`Integer`的值`Long`必须在有效范围内`Integer`数据类型。  
@@ -125,15 +125,16 @@ End If
 > [!CAUTION]
 >  指定`CType`如果源类型不从目标类型派生一个类类型从转换为另一个将在运行时失败。 此类故障引发<xref:System.InvalidCastException>异常。  
   
- 但是，如果一种类型的结构或类定义后，并已定义`CType`在该结构或类上，如果它满足的要求转换才能成功你`CType`。 请参阅[如何： 定义转换运算符](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
+ 但是，如果一种类型的结构或类定义后，并已定义`CType`在该结构或类上，如果它满足的要求转换才能成功你`CType`。 请参阅[如何：定义转换运算符](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
   
  执行的显式转换也称为非常*强制转换*为给定的数据类型或对象类的表达式。  
   
-## <a name="see-also"></a>请参阅  
- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [字符串和其他类型之间的转换](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [如何： 将对象转换为 Visual Basic 中的另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+## <a name="see-also"></a>请参阅
+
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [字符串和其他类型之间的转换](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [如何：将对象转换为 Visual Basic 中的另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [数据类型疑难解答](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

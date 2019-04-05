@@ -2,12 +2,12 @@
 title: 创建自定义特性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 9af0832e04308bf1942fc955afe5a67161096465
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90e8e9b9a3fa8e0b488f41d035b017d6113213b5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642863"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814349"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>创建自定义特性 (Visual Basic)
 可通过定义特性类创建自己的自定义特性，特性类是直接或间接派生自 <xref:System.Attribute> 的类，可快速轻松地识别元数据中的特性定义。 假设希望使用编写类型的程序员的姓名来标记该类型。 可能需要定义一个自定义 `Author` 特性类：  
@@ -62,11 +62,12 @@ End Class
 > [!NOTE]
 >  如果特性类包含属性，则该属性必须为读写属性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection>  
- [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)  
- [编写自定义特性](../../../../standard/attributes/writing-custom-attributes.md)  
- [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
- [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Reflection>
+- [Visual Basic 编程指南](../../../../visual-basic/programming-guide/index.md)
+- [编写自定义特性](../../../../standard/attributes/writing-custom-attributes.md)
+- [反射 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [使用反射访问特性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [AttributeUsage (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)

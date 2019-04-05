@@ -2,12 +2,12 @@
 title: 如何：与其他应用程序共享程序集 (C#)
 ms.date: 07/20/2015
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-ms.openlocfilehash: a5b20061c759fd914193f24aa123317f13d31dce
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: d440000ef509199bf69f06c2f3b5d0819e48f724
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45638391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713572"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>如何：与其他应用程序共享程序集 (C#)
 程序集可以是私有或共享程序集：默认情况下，大多数简单程序都包含一个私有程序集，因为它们并不打算由其他应用程序使用。  
@@ -28,5 +28,5 @@ ms.locfileid: "45638391"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../../csharp/programming-guide/index.md)  
+- [C# 编程指南](../../../../csharp/programming-guide/index.md)
 - [使用程序集编程](../../../../framework/app-domains/programming-with-assemblies.md)

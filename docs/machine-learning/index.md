@@ -1,39 +1,53 @@
 ---
-title: ML.NET 指南
+title: ML.NET 内容指南
 description: 了解如何使用 ML.NET 生成自定义 AI 解决方案并将其集成到 .NET 应用程序。
-author: aditidugar
-ms.date: 05/07/2018
-ms.openlocfilehash: a5be91283d8b8d00b727ec43d1137a0a245175d3
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.date: 01/18/2019
+ms.custom: seodec18
+ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "34862307"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920761"
 ---
-# <a name="mlnet-guide"></a>ML.NET 指南
+# <a name="mlnet-content-guide"></a>ML.NET 内容指南
 
-ML.NET 是一个免费的开源跨平台机器学习框架，可用于生成自定义机器学习解决方案并将其集成到 .NET 应用程序。 本指南提供了许多有关使用 ML.NET 的资源。
+此指南介绍基本概念，并提供有关使用 ML.NET 的教程和 API 参考。
 
-有关 ML.NET 的详细信息，请参阅 [ML.NET 简介：经验证的跨平台开源机器学习框架](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/introducing-ml-net-cross-platform-proven-and-open-source-machine-learning-framework/) .NET 博客文章。
+> [!NOTE]
+> 本文档引用 ML.NET（目前为预览版）。 材料可能会有所变化。 有关详细信息，请参阅 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
 
 ## <a name="get-started"></a>入门
 
-若要开始使用 ML.NET，请参阅[鸢尾花瓣预测快速入门](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet/get-started)或更多深入[教程](tutorials/index.md)。
+若要在 ML.NET 中安装并开始构建，请按照[入门教程](https://www.microsoft.com/net/learn/machinelearning-ai/ml-dotnet-get-started-tutorial)操作。
 
-如果不熟悉机器学习，还可以查看[机器学习基础知识](resources/basics.md)，可在其中找到有用的机器学习资源。
+若要了解有关 ML.NET 的信息，请参阅[什么是 ML.NET？](what-is-mldotnet.md)
 
-## <a name="how-the-mlnet-guide-is-organized"></a>ML.NET 指南的结构
+要了解基本知识，请参阅 [ML.NET 中模型定型的基本概念](basic-concepts-model-training-in-mldotnet.md)。
 
-ML.NET 指南分为多个部分。 可以按顺序阅读，也可以直接跳到最感兴趣的部分。
+## <a name="tutorials"></a>教程
 
-**[教程](tutorials/index.md)**
+[使用二元分类模型分析情绪](./tutorials/sentiment-analysis.md)演示如何构建确定情绪是积极还是消极的应用程序。
 
-在此部分可找到分步教程，指导你生成适用于常见开发人员方案的自定义机器学习模型。
+[使用多类分类模型对 GitHub 问题分类](./tutorials/github-issue-classification.md)展示了如何生成可确定 GitHub 问题的“区域”标签的应用。
 
-**[术语表](resources/glossary.md)**
+[使用回归模型预测价格](./tutorials/taxi-fare.md)演示如何构建一个使用历史数据中的许多因素来确定答案的预测性应用程序。
 
-可找到机器学习术语及其定义的列表。
+[根据特征对鸢尾花进行分类](./tutorials/iris-clustering.md)演示如何使用聚类分析模型来分析鸢尾花数据集。 
+
+## <a name="how-to-guide"></a>操作指南
+
+[使用 Infer.NET 和概率性编程建立一个游戏配对列表应用](./how-to-guides/matchup-app-infer-net.md)演示如何构建一个简化版的配对应用，就像在 Xbox 游戏中看到的那样。
+
+## <a name="resources"></a>资源
+
+[机器学习术语表](./resources/glossary.md)定义关键术语。
+
+[机器学习任务](./resources/tasks.md)描述任务，例如分类和异常情况检测。 
+
+[数据转换](./resources/transforms.md)介绍 ML.NET 中的数据准备功能。
+
 
 ## <a name="api-reference"></a>API 参考
 
-请查看 [ML.NET API 参考](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)，了解各种可用的 API。
+[ML.NET API 参考](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)介绍了各种可用的 API。

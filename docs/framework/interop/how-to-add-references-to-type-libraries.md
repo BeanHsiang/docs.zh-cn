@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03c05e7399e9378751f803ae56dfaf664490e6d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c12096739e66a47fadd89eb27e30ba3de43c7da3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388412"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836430"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>如何：添加对类型库的引用
 当添加对类型库的引用时，Visual Studio 将生成包含元数据的互操作程序集。 如果主互操作程序集可用，则 Visual Studio 在生成新的互操作程序集之前将使用现有程序集。  
@@ -40,14 +40,14 @@ ms.locfileid: "33388412"
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>添加对类型库的引用以进行命令行编译  
   
-1.  按照[如何从类型库中生成互操作程序集](how-to-generate-interop-assemblies-from-type-libraries.md)中所述，生成互操作程序集。  
+1.  按后列文章中所述，生成一个互操作程序集：[如何：从类型库生成互操作程序集](how-to-generate-interop-assemblies-from-type-libraries.md)。  
   
 2.  配合使用 [/link（C# 编译器选项）](../../csharp/language-reference/compiler-options/link-compiler-option.md)或 [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 编译器选项与互操作程序集名称，将 COM 类型的类型信息嵌入到可执行文件中。  
   
-## <a name="see-also"></a>请参阅  
- [将类型库作为程序集导入](importing-a-type-library-as-an-assembly.md)  
- [向 .NET Framework 公开 COM 组件](exposing-com-components.md)  
- [演练：嵌入 Microsoft Office 程序集中的类型信息](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
- [演练：嵌入托管程序集中的类型](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [/link（C# 编译器选项）](../../csharp/language-reference/compiler-options/link-compiler-option.md)  
- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+## <a name="see-also"></a>请参阅
+- [将类型库作为程序集导入](importing-a-type-library-as-an-assembly.md)
+- [向 .NET Framework 公开 COM 组件](exposing-com-components.md)
+- [演练：在 Visual Studio 中嵌入托管程序集中的类型 (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
+- [演练：在 Visual Studio 中嵌入托管程序集中的类型 (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [/link（C# 编译器选项）](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

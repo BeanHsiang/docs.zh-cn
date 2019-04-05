@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8aafd1586068dcd7aaf4a72ef5454e3a2698ccd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb537950ce240d77282551f847b637a77792a264
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645231"
 ---
 # <a name="accessing-custom-attributes"></a>访问自定义特性
 特性与程序元素相关联后，可使用反射来查询它们是否存在以及它们的值。 在 .NET Framework 1.0 和 1.1 版本中，在执行上下文中检查自定义特性。 .NET Framework 2.0 版本提供了新的加载上下文（仅反射上下文），可用于检查无法加载执行的代码。  
@@ -72,8 +72,8 @@ public class LocalizationExtenderProvider
  [!code-csharp[CustomAttributeData#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source2.cs#2)]
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
- [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [反射的安全注意事项](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
+- [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [反射的安全注意事项](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)

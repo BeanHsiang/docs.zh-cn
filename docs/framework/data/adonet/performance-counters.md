@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 3e66e4f34afcf8cba03c60c92b5b69d8ca01961b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e60df2b576980ecd1ff92af78cef36f025b71417
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706351"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903789"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 中的性能计数器
 ADO.NET 2.0 引入了对性能计数器的扩展支持，包括对 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 的支持。 在早期版本的 ADO.NET 中提供的 <xref:System.Data.SqlClient> 性能计数器已被否决，并已替换为本主题讨论的新性能计数器。 可以使用 ADO.NET 性能计数器来监视应用程序的状态和应用程序所使用的连接资源。 可以使用 Windows 性能监视器来监视性能计数器，或使用 <xref:System.Diagnostics.PerformanceCounter> 命名空间中的 <xref:System.Diagnostics> 类以编程方式访问性能计数器。  
@@ -202,27 +202,27 @@ Class Program
   
     Private Shared Function GetIntegratedSecurityConnectionString() As String  
         ' To avoid storing the connection string in your code,   
-        ' you can retrive it from a configuration file.   
+        ' you can retrieve it from a configuration file.   
         Return ("Data Source=.\SqlExpress;Integrated Security=True;" &   
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionString() As String  
         ' To avoid storing the connection string in your code,   
-        ' you can retrive it from a configuration file.   
+        ' you can retrieve it from a configuration file.   
         Return ("Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" &   
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionStringDifferent() As String  
         ' To avoid storing the connection string in your code,   
-        ' you can retrive it from a configuration file.   
+        ' you can retrieve it from a configuration file.   
         Return ("Initial Catalog=AdventureWorks;Data Source=.\SqlExpress;" & _  
           "User Id=LowPriv;Password=Data!05;")  
     End Function  
 End Class  
 ```  
-  
+
 ```csharp  
 using System;  
 using System.Data.SqlClient;  
@@ -372,32 +372,32 @@ class Program
     private static string GetIntegratedSecurityConnectionString()  
     {  
         // To avoid storing the connection string in your code,  
-        // you can retrive it from a configuration file.  
+        // you can retrieve it from a configuration file.  
         return @"Data Source=.\SqlExpress;Integrated Security=True;" +  
           "Initial Catalog=AdventureWorks";  
     }  
     private static string GetSqlConnectionString()  
     {  
         // To avoid storing the connection string in your code,  
-        // you can retrive it from a configuration file.  
+        // you can retrieve it from a configuration file.  
         return @"Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" +  
-        //  "Initial Catalog=AdventureWorks";  
+          "Initial Catalog=AdventureWorks";  
     }  
   
     private static string GetSqlConnectionStringDifferent()  
     {  
         // To avoid storing the connection string in your code,  
-        // you can retrive it from a configuration file.  
+        // you can retrieve it from a configuration file.  
         return @"Initial Catalog=AdventureWorks;Data Source=.\SqlExpress;" +  
           "User Id=LowPriv;Password=Data!05;";  
     }  
 }  
 ```  
-  
-## <a name="see-also"></a>请参阅  
- [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [OLE DB、ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [ASP.NET 性能计数器](https://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)  
- [运行时分析](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)  
- [监视性能阈值简介](https://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+## <a name="see-also"></a>请参阅
+- [连接到数据源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [OLE DB、ODBC 和 Oracle 连接池](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [ASP.NET 性能计数器](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
+- [运行时分析](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [监视性能阈值简介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [ADO.NET 概述](ado-net-overview.md)

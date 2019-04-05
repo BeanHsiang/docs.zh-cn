@@ -2,15 +2,9 @@
 title: Visual Basic 编程
 ms.date: 07/20/2015
 helpviewer_keywords:
-- programming [Visual Basic], Visual Basic
-- programming
+  - 'programming [Visual Basic], Visual Basic'
+  - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990019"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic 编程
 此部分将介绍在创建 Visual Basic 应用程序过程中可能想要详细了解的编程任务。  
@@ -37,8 +31,9 @@ ms.locfileid: "45990019"
  [处理驱动器、目录和文件](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
  所含文档介绍了如何使用 `My.Computer.FileSystem` 对象访问文件系统。  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 语言功能](../../../visual-basic/programming-guide/language-features/index.md)  
- [编程概念](../../../visual-basic/programming-guide/concepts/index.md)  
- [集合](../../../visual-basic/programming-guide/concepts/collections.md)  
- [使用 Visual Basic 开发应用程序](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 语言功能](../../../visual-basic/programming-guide/language-features/index.md)
+- [编程概念](../../../visual-basic/programming-guide/concepts/index.md)
+- [集合](../../../visual-basic/programming-guide/concepts/collections.md)
+- [使用 Visual Basic 开发应用程序](../../../visual-basic/developing-apps/index.md)

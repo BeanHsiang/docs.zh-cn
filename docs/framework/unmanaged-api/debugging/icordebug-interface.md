@@ -16,49 +16,49 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 05c95d47d57525aa2aebe16d536b771042600000
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509722"
 ---
 # <a name="icordebug-interface"></a>ICorDebug 接口
-提供允许开发人员调试应用程序在公共语言运行时 (CLR) 环境中的方法。  
+提供允许开发人员公共语言运行时 (CLR) 环境中调试应用程序的方法。  
   
 > [!NOTE]
->  在 Windows 95、 Windows 98 或 Windows ME，或在非 x86 平台 （例如 IA64 和 AMD64） 上不支持混合模式 （托管和本机代码） 调试。  
+>  在 Windows 95、 Windows 98 或 Windows ME，或在非 x86 平台 （如 IA64 和 AMD64） 上不支持混合 （托管和本机代码） 调试。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[CanLaunchOrAttach 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|确定是否可以在当前的计算机和运行时配置的上下文中启动新的进程或附加到给定的进程。|  
-|[CreateProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|将启动一个进程和调试器的控制之下其主线程。|  
-|[DebugActiveProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|将调试器附加到现有的进程。|  
+|[CanLaunchOrAttach 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|确定是否可以在当前的计算机和运行时配置的上下文中启动一个新的进程或附加到给定的进程。|  
+|[CreateProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|启动进程和调试器的控制下其主线程。|  
+|[DebugActiveProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|将调试器附加到现有进程。|  
 |[EnumerateProcesses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|获取正在调试的进程的枚举数。|  
-|[GetProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|返回"ICorDebugProcess"的对象与给定的进程 id。|  
+|[GetProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|返回"ICorDebugProcess"对象与给定的进程 id。|  
 |[Initialize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|初始化 `ICorDebug` 对象。|  
 |[SetManagedHandler 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|指定托管事件的事件处理程序对象。|  
 |[SetUnmanagedHandler 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|指定非托管事件的事件处理程序对象。|  
 |[Terminate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|终止`ICorDebug`对象。|  
   
 ## <a name="remarks"></a>备注  
- `ICorDebug` 表示调试器进程的事件处理循环。 调试器必须等待[icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)从在发布此接口之前正在调试的所有进程的回调。  
+ `ICorDebug` 表示调试器进程的事件处理循环。 调试器必须等待[icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)与正在调试之前释放此接口的所有进程的回调。  
   
- `ICorDebug`对象是控制所有进一步托管调试的初始对象。 在.NET framework 1.0 和 1.1 版中，此对象是`CoClass`从 com。 创建对象 在.NET Framework 2.0 版中，此对象将不再`CoClass`对象。 它必须由创建[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函数，这是多区别版本。 此新的创建函数使客户端可以获取的特定实现`ICorDebug`，这也模拟了调试 API 的特定版本。  
+ `ICorDebug`对象是初始的对象来控制所有进一步托管调试。 在.NET framework 1.0 和 1.1 版中，此对象是`CoClass`创建从 COM 对象 在.NET Framework 2.0 版中，此对象不再`CoClass`对象。 必须由创建[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函数，这是更区别版本。 使用此新的创建函数，客户端获取的特定实现`ICorDebug`，这也模拟了调试 API 的特定版本。  
   
 > [!NOTE]
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

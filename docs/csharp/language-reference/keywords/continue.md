@@ -1,5 +1,6 @@
 ---
-title: continue 语句（C# 参考）
+title: continue 语句 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - continue_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C#]
 ms.assetid: 8a5ac96f-f98a-4519-b32d-345847ed7be0
-ms.openlocfilehash: 37315caf14ba829dfc91da065bc49982f21b947f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0b3baf6eb4843ff67a3d76af06ca86ca9ec2db03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861401"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690587"
 ---
 # <a name="continue-c-reference"></a>continue（C# 参考）
 
@@ -30,8 +31,8 @@ ms.locfileid: "43861401"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [break 语句](/cpp/cpp/break-statement-cpp)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [break 语句](/cpp/cpp/break-statement-cpp)
 - [跳转语句](../../../csharp/language-reference/keywords/jump-statements.md)

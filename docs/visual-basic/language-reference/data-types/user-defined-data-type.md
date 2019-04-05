@@ -23,12 +23,12 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 1dac93145b6e11a0d149f03b43e1e0b28b770925
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698453"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814185"
 ---
 # <a name="user-defined-data-type"></a>用户定义的数据类型
 在您定义的格式保存数据。 `Structure`语句定义的格式。  
@@ -71,14 +71,15 @@ ms.locfileid: "45698453"
 End Structure  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ValueType>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.ValueType>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [转换摘要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [结构](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [有效使用数据类型](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

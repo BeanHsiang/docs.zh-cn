@@ -2,12 +2,12 @@
 title: 如何：使用 Svcutil.exe 下载元数据文档
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 6643f0a5dba98afcef38870cf24d91e7d69a1440
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: dc3a1d402a9f6ffb69c1f692800698609f9fa84b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603269"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>如何：使用 Svcutil.exe 下载元数据文档
 您可以使用 Svcutil.exe 从正在运行的服务中下载元数据并将元数据保存到本地文件。 对于 HTTP 和 HTTPS URL 方案，Svcutil.exe 会尝试使用 Ws-metadataexchange 检索元数据和[XML Web 服务发现](https://go.microsoft.com/fwlink/?LinkId=94950)。 对于所有其他 URL 架构，Svcutil.exe 仅使用 WS-MetadataExchange。  
@@ -46,5 +46,5 @@ ms.locfileid: "47195415"
 svcutil /t:metadata http://service/metadataEndpoint  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>请参阅
+- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

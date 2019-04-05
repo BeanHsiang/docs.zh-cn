@@ -2,14 +2,14 @@
 title: C#1 中默认命名空间的范围
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: bb0e111bfded0769c498b116f828711003036e33
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d60f489f616a413e25bf5cd427bd467852a97c7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510434"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379440"
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>C# 中默认命名空间的范围
+# <a name="scope-of-default-namespaces-in-c"></a>C\# 中默认命名空间的范围
 XML 树中表示的默认命名空间不在查询范围内。 如果您的 XML 在默认命名空间内，仍须声明一个 <xref:System.Xml.Linq.XNamespace> 变量，并将该变量与本地名称组合在一起，生成一个限定名，在查询中使用。  
   
  查询 XML 树时遇到的一个最常见问题是，如果 XML 树具有默认命名空间，开发人员在编写查询时，有时会将 XML 视为不在命名空间内。  
@@ -53,7 +53,7 @@ End of result set
 ## <a name="example"></a>示例  
  本示例演示如何在命名空间中创建 XML 和一个正确编码的查询。  
   
- 与上述不正确编码的示例相比，使用 C# 时的正确方法是声明和初始化一个 <xref:System.Xml.Linq.XNamespace> 对象，并在指定 <xref:System.Xml.Linq.XName> 对象时使用它。 在这种情况下，<xref:System.Xml.Linq.XElement.Elements%2A> 方法的参数是一个 <xref:System.Xml.Linq.XName> 对象。  
+ 与上述不正确编码的示例相比，使用 C# 时的正确方法是声明和初始化一个 <xref:System.Xml.Linq.XNamespace> 对象，并在指定 <xref:System.Xml.Linq.XName> 对象时使用它。 在这种情况下，<xref:System.Xml.Linq.XContainer.Elements%2A> 方法的参数是一个 <xref:System.Xml.Linq.XName> 对象。  
   
 ### <a name="code"></a>代码  
   

@@ -1,16 +1,17 @@
 ---
-title: 交错数组（C# 编程指南）
+title: 交错数组 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9fc05c8bdebf9c1c6b613db0b6a121e06765ac00
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396872"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200671"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>交错数组（C# 编程指南）
 
@@ -18,43 +19,43 @@ ms.locfileid: "47396872"
   
  下面声明一个具有三个元素的一维数组，其中每个元素都是一维整数数组：  
   
- [!code-csharp[csProgGuideArrays#19](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_1.cs)]  
+ [!code-csharp[csProgGuideArrays#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#19)]  
   
  必须初始化 `jaggedArray` 的元素后才可使用它。 可按下方操作初始化元素：  
   
- [!code-csharp[csProgGuideArrays#20](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_2.cs)]  
+ [!code-csharp[csProgGuideArrays#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#20)]  
   
  每个元素都是一维整数数组。 第一个元素是由 5 个整数组成的数组，第二个是由 4 个整数组成的数组，而第三个是由 2 个整数组成的数组。  
   
  也可使用初始化表达式通过值来填充数组元素，这种情况下不需要数组大小。 例如:  
   
- [!code-csharp[csProgGuideArrays#21](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_3.cs)]  
+ [!code-csharp[csProgGuideArrays#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#21)]  
   
  还可在声明数组时将其初始化，如：  
   
- [!code-csharp[csProgGuideArrays#22](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_4.cs)]  
+ [!code-csharp[csProgGuideArrays#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#22)]  
   
  可以使用下面的缩写形式。 请注意：不能从元素初始化中省略 `new` 运算符，因为不存在元素的默认初始化：  
   
- [!code-csharp[csProgGuideArrays#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_5.cs)]  
+ [!code-csharp[csProgGuideArrays#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#23)]  
   
  交错数组是数组的数组，因此其元素为引用类型且被初始化为 `null`。  
   
  可以如下例所示访问个别数组元素：  
   
- [!code-csharp[csProgGuideArrays#24](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_6.cs)]  
+ [!code-csharp[csProgGuideArrays#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#24)]  
   
  可以混合使用交错数组和多维数组。 下面声明和初始化一个包含大小不同的三个二维数组元素的一维交错数组。 有关二维数组的详细信息，请参阅[多维数组](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)。  
   
- [!code-csharp[csProgGuideArrays#25](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_7.cs)]  
+ [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
  可以如本例所示访问个别元素，示例显示第一个数组的元素 `[1,0]` 的值（值为 `5`）：  
   
- [!code-csharp[csProgGuideArrays#26](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_8.cs)]  
+ [!code-csharp[csProgGuideArrays#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#26)]  
   
  方法 `Length` 返回包含在交错数组中的数组的数目。 例如，假定已声明了前一个数组，则此行：  
   
- [!code-csharp[csProgGuideArrays#27](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_9.cs)]  
+ [!code-csharp[csProgGuideArrays#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#27)]  
   
  返回值 3。  
   
@@ -62,12 +63,12 @@ ms.locfileid: "47396872"
 
  本例生成一个数组，该数组的元素为数组自身。 每一个数组元素都有不同的大小。  
   
- [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
+ [!code-csharp[csProgGuideArrays#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#18)]  
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Array>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [数组](../../../csharp/programming-guide/arrays/index.md)  
-- [一维数组](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- <xref:System.Array>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [数组](../../../csharp/programming-guide/arrays/index.md)
+- [一维数组](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
 - [多维数组](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

@@ -10,34 +10,35 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: e18ff96ea97eb636de8ab73aaa094c07b10fd456
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 644e180e2f15592db2112a5cd6f5b0130c6abea8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722318"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>如何：用 GDI 绘制文本
-与<xref:System.Windows.Forms.TextRenderer.DrawText%2A>中的方法<xref:System.Windows.Forms.TextRenderer>类，可以访问[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]在窗体或控件上绘制文本的功能。 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 文本呈现通常提供更好的性能和更准确的文本比测量[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
+与<xref:System.Windows.Forms.TextRenderer.DrawText%2A>中的方法<xref:System.Windows.Forms.TextRenderer>类，可以访问[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]窗体或控件上绘制文本的功能。 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 文本呈现通常提供更好的性能和更准确的文本比测量[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法<xref:System.Windows.Forms.TextRenderer>不支持打印的类。 打印时，始终使用<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>类。  
+>  <xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法的<xref:System.Windows.Forms.TextRenderer>类不支持打印。 打印时，始终使用<xref:System.Drawing.Graphics.DrawString%2A>方法的<xref:System.Drawing.Graphics>类。  
   
 ## <a name="example"></a>示例  
  下面的代码示例演示如何在矩形使用中的多个行上绘制文本<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法。  
   
- [!code-csharp[System.Windows.Forms.TextRendererExamples#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#7)]
- [!code-vb[System.Windows.Forms.TextRendererExamples#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#7)]  
+ [!code-csharp[System.Windows.Forms.TextRendererExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#7)]
+ [!code-vb[System.Windows.Forms.TextRendererExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#7)]  
   
- 呈现与文本<xref:System.Windows.Forms.TextRenderer>类，你需要<xref:System.Drawing.IDeviceContext>，如<xref:System.Drawing.Graphics>和<xref:System.Drawing.Font>，用于绘制文本，并在其中应绘制的颜色的位置。 或者，可以指定文本格式使用<xref:System.Windows.Forms.TextFormatFlags>枚举。  
+ 呈现文本<xref:System.Windows.Forms.TextRenderer>类中，你需要<xref:System.Drawing.IDeviceContext>，如<xref:System.Drawing.Graphics>和一个<xref:System.Drawing.Font>，用于绘制文本，并应绘制单元的颜色的位置。 或者，您可以指定文本格式设置使用<xref:System.Windows.Forms.TextFormatFlags>枚举。  
   
- 有关获取详细信息<xref:System.Drawing.Graphics>，请参阅[如何： 创建图形对象的绘图](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)。 有关构造<xref:System.Drawing.Font>，请参阅[如何： 构造字体系列和字体](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)。  
+ 有关获取详细信息<xref:System.Drawing.Graphics>，请参阅[如何：创建用于绘制图形对象](how-to-create-graphics-objects-for-drawing.md)。 有关构造的详细信息<xref:System.Drawing.Font>，请参阅[如何：构造字体系列和字体](how-to-construct-font-families-and-fonts.md)。  
   
 ## <a name="compiling-the-code"></a>编译代码  
- 前面的代码示例专用于 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
+ 前面的代码示例设计为使用 Windows 窗体，并且它需要<xref:System.Windows.Forms.PaintEventArgs> `e`，这是一个参数的<xref:System.Windows.Forms.PaintEventHandler>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.TextRenderer>  
- <xref:System.Drawing.Font>  
- <xref:System.Drawing.Color>  
- <xref:System.Drawing.Color>  
- [使用字体和文本](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.TextRenderer>
+- <xref:System.Drawing.Font>
+- <xref:System.Drawing.Color>
+- <xref:System.Drawing.Color>
+- [使用字体和文本](using-fonts-and-text.md)

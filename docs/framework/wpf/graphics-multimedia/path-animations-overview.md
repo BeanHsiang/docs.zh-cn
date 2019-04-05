@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: 0f795ad00823e7b1c37221f7417b09d3982c4c18
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: c8e628e11debadb88c365ac95d355f1ee641bdbc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266820"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367851"
 ---
 # <a name="path-animations-overview"></a>路径动画概述
 <a name="introduction"></a>本主题介绍了路径动画，使你能够使用几何路径来生成输出值。 路径动画可用于沿着复杂路径移动和旋转对象。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 若要了解本主题，您应熟悉[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]动画功能。 有关动画功能的简介，请参阅[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+ 若要了解本主题，您应熟悉[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]动画功能。 有关动画功能的简介，请参阅[动画概述](animation-overview.md)。  
   
- 因为你使用<xref:System.Windows.Media.PathGeometry>对象来定义一个路径的动画，您还应熟悉<xref:System.Windows.Media.PathGeometry>以及不同类型的<xref:System.Windows.Media.PathSegment>对象。 有关详细信息，请参阅[几何概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
+ 因为你使用<xref:System.Windows.Media.PathGeometry>对象来定义一个路径的动画，您还应熟悉<xref:System.Windows.Media.PathGeometry>以及不同类型的<xref:System.Windows.Media.PathSegment>对象。 有关详细信息，请参阅[几何概述](geometry-overview.md)。  
   
 <a name="what_is_a_path_animation"></a>   
 ## <a name="what-is-a-path-animation"></a>什么是路径动画？  
@@ -30,14 +30,14 @@ ms.locfileid: "48266820"
   
  路径动画对沿着复杂路径的对象进行动画处理非常有用。 移动沿着路径针对对象是使用的一种方法<xref:System.Windows.Media.MatrixTransform>和一个<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>转换沿着复杂路径对象。 下面的示例演示通过使用此技术<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>对象进行动画处理<xref:System.Windows.Media.MatrixTransform.Matrix%2A>属性的<xref:System.Windows.Media.MatrixTransform>。 <xref:System.Windows.Media.MatrixTransform>应用于按钮，并使其沿着曲线路径移动。 因为<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A>属性设置为`true`，矩形将沿着路径的切线旋转。  
   
- [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathdoesrotatewithtangentexample.xaml#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
+ [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathdoesrotatewithtangentexample.xaml#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
- [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathDoesRotateWithTangentExample.cs#matrixanimationusingpathdoesrotatewithtangentwholepage)]
- [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathDoesRotateWithTangentExample.vb#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
+ [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathDoesRotateWithTangentExample.cs#matrixanimationusingpathdoesrotatewithtangentwholepage)]
+ [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathDoesRotateWithTangentExample.vb#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
- 有关详细信息中使用的路径语法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]示例中，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)概述。 有关完整示例，请参阅[路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)。  
+ 有关详细信息中使用的路径语法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]示例中，请参阅[路径标记语法](path-markup-syntax.md)概述。 有关完整示例，请参阅[路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)。  
   
- 通过使用应用于属性路径动画<xref:System.Windows.Media.Animation.Storyboard>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和代码，或通过使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>中代码的方法。 您还可以使用路径动画创建<xref:System.Windows.Media.Animation.AnimationClock>并将其应用到一个或多个属性。 有关应用动画的不同方法的详细信息，请参阅[属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
+ 通过使用应用于属性路径动画<xref:System.Windows.Media.Animation.Storyboard>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和代码，或通过使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>中代码的方法。 您还可以使用路径动画创建<xref:System.Windows.Media.Animation.AnimationClock>并将其应用到一个或多个属性。 有关应用动画的不同方法的详细信息，请参阅[属性动画技术概述](property-animation-techniques-overview.md)。  
   
 <a name="animation_types"></a>   
 ## <a name="path-animation-types"></a>路径动画类型  
@@ -53,9 +53,9 @@ ms.locfileid: "48266820"
   
 |属性类型|相应的路径动画类|示例|  
 |-------------------|----------------------------------------|-------------|  
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[沿着路径针对对象进行动画处理（双重动画）](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)|  
-|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[沿着路径针对对象进行动画处理（矩阵动画）](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)|  
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[沿着路径针对对象进行动画处理（点动画）](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)|  
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[沿着路径针对对象进行动画处理（双重动画）](how-to-animate-an-object-along-a-path-double-animation.md)|  
+|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[沿着路径针对对象进行动画处理（矩阵动画）](how-to-animate-an-object-along-a-path-matrix-animation.md)|  
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[沿着路径针对对象进行动画处理（点动画）](how-to-animate-an-object-along-a-path-point-animation.md)|  
   
  一个<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>生成<xref:System.Windows.Media.Matrix>值，从其<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>。 与一起使用时<xref:System.Windows.Media.MatrixTransform>、<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>可以移动沿着路径针对对象。 如果您设置<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A>的属性<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>到`true`，它还会沿着曲线路径针对对象。  
   
@@ -83,15 +83,15 @@ ms.locfileid: "48266820"
   
  中的各段<xref:System.Windows.Media.PathFigure>合并成一个几何形状，它使用段的终点作为下一段的起始点。 <xref:System.Windows.Media.PathFigure.StartPoint%2A>属性的<xref:System.Windows.Media.PathFigure>指定从中绘制第一条线段的点。 每个后续线段都从上一线段的终点开始。 例如，从竖线`10,50`到`10,150`可以通过设置定义<xref:System.Windows.Media.PathFigure.StartPoint%2A>属性设置为`10,50`和创建<xref:System.Windows.Media.LineSegment>与<xref:System.Windows.Media.LineSegment.Point%2A>属性设置`10,150`。  
   
- 有关详细信息<xref:System.Windows.Media.PathGeometry>对象，请参阅[Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
+ 有关详细信息<xref:System.Windows.Media.PathGeometry>对象，请参阅[Geometry 概述](geometry-overview.md)。  
   
- 在中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，还可以使用特殊的缩写的语法来设置<xref:System.Windows.Media.PathGeometry.Figures%2A>属性的<xref:System.Windows.Media.PathGeometry>。 有关详细信息，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)概述。  
+ 在中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，还可以使用特殊的缩写的语法来设置<xref:System.Windows.Media.PathGeometry.Figures%2A>属性的<xref:System.Windows.Media.PathGeometry>。 有关详细信息，请参阅[路径标记语法](path-markup-syntax.md)概述。  
   
- 有关详细信息中使用的路径语法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]示例中，请参阅[路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)概述。  
+ 有关详细信息中使用的路径语法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]示例中，请参阅[路径标记语法](path-markup-syntax.md)概述。  
   
-## <a name="see-also"></a>请参阅  
- [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [路径动画操作说明主题](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [属性动画技术概述](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+## <a name="see-also"></a>请参阅
+- [路径动画示例](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [路径标记语法](path-markup-syntax.md)
+- [路径动画操作说明主题](path-animation-how-to-topics.md)
+- [动画概述](animation-overview.md)
+- [属性动画技术概述](property-animation-techniques-overview.md)

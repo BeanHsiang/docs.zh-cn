@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: f77864d827ce12d40971dd7f7159e985ab4096ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b6c509bd150ec2443762134079427ebd2de8ba09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552608"
 ---
 # <a name="guide-to-the-documentation"></a>文档指南
 提供以下是有关 Windows Communication Foundation (WCF) 文档的指南。 建议从链接的文档开始，它们按照特定的兴趣和专业技术水平进行分组。  
@@ -44,7 +44,7 @@ ms.locfileid: "43520969"
   
 ## <a name="using-windows-communication-foundation-with-other-technologies"></a>与其他技术一起使用 Windows Communication Foundation  
   
--   若要创建与 ASP.NET 客户端进行通信的服务，请参阅[如何： 配置 WCF 服务以与 ASP.NET Web 服务客户端 Interoperate](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)。  
+-   若要创建与 ASP.NET 客户端进行通信的服务，请参阅[如何：配置 WCF 服务以便与 ASP.NET Web 服务客户端进行互操作](../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)。  
   
 -   与集成[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]远程处理所述[.NET 远程处理应用程序迁移到 WCF](../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)。  
   
@@ -52,17 +52,17 @@ ms.locfileid: "43520969"
   
 -   若要将现有的 COM 应用程序与 WCF 服务或客户端集成，请参阅[与 COM 应用程序集成](../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)。  
   
--   若要将现有 MSMQ 应用程序与 WCF 服务或客户端集成，请参阅[如何： 使用 WCF 终结点交换排队消息](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)和[如何： 使用 WCF 终结点和消息队列应用程序交换消息](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+-   若要将现有 MSMQ 应用程序与 WCF 服务或客户端集成，请参阅[如何：使用 WCF 终结点交换排队消息](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)和[如何：与 WCF 终结点交换消息和消息队列应用程序](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
   
 -   若要使用 Internet 信息服务 (IIS) 承载的服务，请参阅[托管服务](../../../docs/framework/wcf/hosting-services.md)。  
   
--   若要使用 WCF 来使用 Web 服务扩展 (WSE) 3.0 服务，请参阅[如何： 访问 WSE 3.0 服务](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)。  
+-   若要使用 WCF 来使用 Web 服务扩展 (WSE) 3.0 服务，请参阅[如何：访问 WSE 3.0 服务](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)。  
   
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation 中支持的 WS-* 协议  
  若要查看系统提供的绑定中支持的协议列表，请参阅[Web 服务协议支持的系统提供的互操作性绑定](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)。 若要查看系统提供的绑定的列表，请参阅[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Windows Communication Foundation 示例](../../../docs/framework/wcf/samples/index.md)  
- [概念性概述](../../../docs/framework/wcf/conceptual-overview.md)  
- [指南与最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- [生成客户端](../../../docs/framework/wcf/building-clients.md)
+## <a name="see-also"></a>请参阅
+- [Windows Communication Foundation 示例](../../../docs/framework/wcf/samples/index.md)
+- [概念性概述](../../../docs/framework/wcf/conceptual-overview.md)
+- [指南与最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [生成客户端](../../../docs/framework/wcf/building-clients.md)

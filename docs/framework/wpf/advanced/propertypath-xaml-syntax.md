@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 24dd4ca5663f2e6d98ed3888f07329724fdc353d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042538"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363509"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 语法
 <xref:System.Windows.PropertyPath>对象支持复杂内联[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]设置的各种属性的语法<xref:System.Windows.PropertyPath>类型作为其值。 本主题介绍<xref:System.Windows.PropertyPath>应用于绑定和动画语法的语法。  
@@ -28,7 +28,7 @@ ms.locfileid: "44042538"
 ## <a name="propertypath-for-objects-in-data-binding"></a>数据绑定中对象的 PropertyPath  
  数据绑定是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，借此可以绑定到任意依赖属性的目标值。 但是，此类数据绑定的源不需要是依赖属性；可以是适用数据提供程序能识别的任意属性类型。 属性路径特别用于<xref:System.Windows.Data.ObjectDataProvider>，用于获取从绑定源[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]对象及其属性。  
   
- 请注意，数据绑定到[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]不使用<xref:System.Windows.PropertyPath>，因为它不使用<xref:System.Windows.Data.Binding.Path%2A>中<xref:System.Windows.Data.Binding>。 相反，使用<xref:System.Windows.Data.Binding.XPath%2A>并指定到有效的 XPath 语法[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]的数据。 <xref:System.Windows.Data.Binding.XPath%2A> 此外指定为字符串，但未在此处; 介绍请参阅[XMLDataProvider 和 XPath 查询绑定到 XML 数据使用](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
+ 请注意，数据绑定到[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]不使用<xref:System.Windows.PropertyPath>，因为它不使用<xref:System.Windows.Data.Binding.Path%2A>中<xref:System.Windows.Data.Binding>。 相反，使用<xref:System.Windows.Data.Binding.XPath%2A>并指定到有效的 XPath 语法[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]的数据。 <xref:System.Windows.Data.Binding.XPath%2A> 此外指定为字符串，但未在此处; 介绍请参阅[XMLDataProvider 和 XPath 查询绑定到 XML 数据使用](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
   
  理解数据绑定中的属性路径的关键是将绑定到单个属性值设置为目标，或者改为绑定到采用列表或集合的目标属性。 如果要绑定的集合，例如绑定<xref:System.Windows.Controls.ListBox>，具体取决于在集合中，有多少数据项将展开，则属性路径应引用集合对象，而不是单个集合项。 数据绑定引擎将匹配的数据源的绑定目标的类型为自动，从而导致的行为，例如填充用作集合<xref:System.Windows.Controls.ListBox>使用项数组。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "44042538"
 <object Path="propertyName/propertyNameX" .../>  
 ```  
   
- 此语法中的 / 用于在分层数据源对象中导航，并且支持使用连续的 / 字符分多个步骤导航层次结构。 源遍历说明了当前记录指针位置，该位置是通过将数据与其视图的 UI 同步而确定的。 有关与分层数据源对象绑定的详细信息，以及数据绑定中当前记录指针的概念，请参阅[对分层数据使用主-从模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)或[数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ 此语法中的 / 用于在分层数据源对象中导航，并且支持使用连续的 / 字符分多个步骤导航层次结构。 源遍历说明了当前记录指针位置，该位置是通过将数据与其视图的 UI 同步而确定的。 有关与分层数据源对象绑定的详细信息，以及数据绑定中当前记录指针的概念，请参阅[对分层数据使用主-从模式](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)或[数据绑定概述](../data/data-binding-overview.md)。  
   
 > [!NOTE]
 >  此语法看起来类似 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]。 真正[!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]绑定到表达式[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]数据源不用作<xref:System.Windows.Data.Binding.Path%2A>值，而是应为互相排斥<xref:System.Windows.Data.Binding.XPath%2A>属性。  
@@ -142,7 +142,7 @@ or
   
 <a name="general"></a>   
 ### <a name="general-object-property-considerations-for-animations"></a>动画的一般对象-属性注意事项  
- 有关一般动画概念的详细信息，请参阅[情节提要概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)和[动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+ 有关一般动画概念的详细信息，请参阅[情节提要概述](../graphics-multimedia/storyboards-overview.md)和[动画概述](../graphics-multimedia/animation-overview.md)。  
   
  值类型或要进行动画处理的属性必须是<xref:System.Windows.Freezable>类型或基元。 开始路径的属性必须解析为存在于指定的依赖属性的名称<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>类型。  
   
@@ -168,7 +168,7 @@ or
   
  `propertyName2` 必须为依赖属性的名称，该属性存在于作为 `propertyName` 值的对象中。 换而言之，`propertyName2`作为依赖属性的类型上必须存在`propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。  
   
- 因为应用了样式和模板，所以间接设定动画的目标是必要的。 为了设定动画的目标，您需要<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>上的目标对象，并且名称由[X:name](../../../../docs/framework/xaml-services/x-name-directive.md)或<xref:System.Windows.FrameworkElement.Name%2A>。 虽然模板和样式元素也可以有名称，但这些名称仅在样式和模板的命名范围内有效。 （如果模板和样式与应用程序标记共享命名范围，则名称不唯一。 样式和模板的确在实例之间共享，并将保留重复名称。）因此，如果要进行动画处理的元素的各个属性来自样式或模板，则需要从不是来自样式模板的命名元素实例开始，然后将样式或模板可视化树设定为目标，以到达要进行动画处理的属性。  
+ 因为应用了样式和模板，所以间接设定动画的目标是必要的。 为了设定动画的目标，您需要<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>上的目标对象，并且名称由[X:name](../../xaml-services/x-name-directive.md)或<xref:System.Windows.FrameworkElement.Name%2A>。 虽然模板和样式元素也可以有名称，但这些名称仅在样式和模板的命名范围内有效。 （如果模板和样式与应用程序标记共享命名范围，则名称不唯一。 样式和模板的确在实例之间共享，并将保留重复名称。）因此，如果要进行动画处理的元素的各个属性来自样式或模板，则需要从不是来自样式模板的命名元素实例开始，然后将样式或模板可视化树设定为目标，以到达要进行动画处理的属性。  
   
  例如，<xref:System.Windows.Controls.Panel.Background%2A>的属性<xref:System.Windows.Controls.Panel>是一个完整<xref:System.Windows.Media.Brush>(实际上<xref:System.Windows.Media.SolidColorBrush>) 来自主题模板。 若要进行动画处理<xref:System.Windows.Media.Brush>完全，则需要 BrushAnimation (可能是一个用于每个<xref:System.Windows.Media.Brush>类型) 并不存在此类的类型。 若要对一个画笔进行动画处理，而是进行动画处理的特定属性<xref:System.Windows.Media.Brush>类型。 您需要获得<xref:System.Windows.Media.SolidColorBrush>到其<xref:System.Windows.Media.SolidColorBrush.Color%2A>应用<xref:System.Windows.Media.Animation.ColorAnimation>存在。 本示例的属性路径是 `Background.Color`。  
   
@@ -196,7 +196,7 @@ or
   
  一般情况下，<xref:System.Windows.PropertyPath>设计为使用两个不同的构造函数，另一个用于绑定用法和最简单的动画用法，一个用于复杂动画用法。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>签名对绑定用法，其中对象一个字符串。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>单步动画路径，其中对象是签名<xref:System.Windows.DependencyProperty>。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>复杂动画的签名。 后一种构造函数使用第一个参数的令牌字符串，以及在该令牌字符串中填充位置的对象的数组，以定义属性路径关系。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.PropertyPath>  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.PropertyPath>
+- [数据绑定概述](../data/data-binding-overview.md)
+- [演示图板概述](../graphics-multimedia/storyboards-overview.md)

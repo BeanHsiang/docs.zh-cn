@@ -1,5 +1,6 @@
 ---
-title: '&lt;value&gt;（C# 编程指南）'
+title: <value> - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <value>
@@ -7,21 +8,21 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: 24ef4aba13668cd04e20f17ebffac9eb68e796ca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 7f82008d000bf0316b505bfc5d40e9e64b2685a3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081851"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465188"
 ---
-# <a name="ltvaluegt-c-programming-guide"></a>&lt;value&gt;（C# 编程指南）
+# <a name="value-c-programming-guide"></a>\<value>（C# 编程指南）
 ## <a name="syntax"></a>语法  
   
 ```xml  
 <value>property-description</value>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `property-description`  
  属性的说明。  
   
@@ -31,9 +32,9 @@ ms.locfileid: "44081851"
  使用 [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 进行编译可以将文档注释处理到文件中。  
   
 ## <a name="example"></a>示例  
- [!code-csharp[csProgGuideDocComments#14](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/value_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#14)]  
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

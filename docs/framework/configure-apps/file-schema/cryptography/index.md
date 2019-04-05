@@ -10,14 +10,12 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 9bf94c28522d42e1a763726469cf9b1a03ccd86e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2958ab01cb92872026437e31d2225d12d8606e97
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196747"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083374"
 ---
 # <a name="cryptography-settings-schema"></a>密码设置架构
 加密设置架构包含元素，这些元素指定如何将友好算法名称映射到实现加密算法的类。  
@@ -51,6 +49,6 @@ ms.locfileid: "50196747"
 |[**\<oidEntry>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|将 ASN.1 对象标识符 (OID) 映射到友好名称。|  
 |[**\<oidMap>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|包含映射到类的 ASN.1 OID。|  
   
-## <a name="see-also"></a>请参阅  
-- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>请参阅
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invisible
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-ms.openlocfilehash: 51e804c7f01b55ed7504837042b6c32bf47d9405
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52ea2336bac1ec483cb86e24114090a1b3725038
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532407"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708972"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>如何：使控件在运行时不可见
-有的时候你可能想要创建用户控件在运行时不可见。 例如，用作闹钟控件可能除响警报时不可见。 这很容易实现通过设置<xref:System.Windows.Forms.Control.Visible%2A>属性。 如果<xref:System.Windows.Forms.Control.Visible%2A>属性是`true`，控件将显示为正常。 如果`false`，控件将被隐藏。 尽管在控件中的代码可能继续运行时不可见的你将不能与通过用户界面控件进行交互。 如果你想要创建的不可见的控件，仍可响应用户输入 （例如，鼠标单击），则应创建一个透明的控件。 有关详细信息，请参阅[使控件拥有透明背景](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)。  
+有些的时候您可能想要创建在运行时是不可见的用户控件。 例如，警报时钟控件可能不可见警报已响起时除外。 这很容易实现： 设置<xref:System.Windows.Forms.Control.Visible%2A>属性。 如果<xref:System.Windows.Forms.Control.Visible%2A>属性是`true`，控件将显示正常。 如果`false`，将隐藏控件。 尽管可能仍会在控件中的代码运行时不可见，则将不能与通过用户界面控件进行交互。 如果你想要创建的不可见控件，仍会响应用户输入 （例如鼠标单击），则应创建透明控件。 有关详细信息，请参阅[使控件拥有透明背景](how-to-give-your-control-a-transparent-background.md)。  
   
-### <a name="to-make-your-control-invisible-at-run-time"></a>要使控件在运行时不可见  
+### <a name="to-make-your-control-invisible-at-run-time"></a>若要使控件在运行时不可见  
   
 1.  将 <xref:System.Windows.Forms.Control.Visible%2A> 属性设置为 `false`。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33532407"
     myControl1.Visible = false;  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Control.Visible%2A>  
- [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [如何：为控件设置透明背景](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Control.Visible%2A>
+- [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)
+- [如何：使控件拥有透明背景](how-to-give-your-control-a-transparent-background.md)

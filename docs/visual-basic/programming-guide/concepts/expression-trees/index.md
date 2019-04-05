@@ -2,17 +2,17 @@
 title: 表达式树 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: babee41f7df48f270d0c56cb2af91e463407d5c1
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: c1e576439956a735962978d37430949ed6bc39d8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696934"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832485"
 ---
 # <a name="expression-trees-visual-basic"></a>表达式树 (Visual Basic)
 表达式树以树形数据结构表示代码，其中每一个节点都是一种表达式，比如方法调用和 `x < y` 这样的二元运算等。  
   
- 你可以对表达式树中的代码进行编辑和运算。 这样能够动态修改可执行代码、在不同数据库中执行 LINQ 查询以及创建动态查询。 有关 LINQ 中表达式树的详细信息，请参阅[如何：使用表达式树生成动态查询 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)。  
+ 你可以对表达式树中的代码进行编辑和运算。 这样能够动态修改可执行代码、在不同数据库中执行 LINQ 查询以及创建动态查询。 若要详细了解 LINQ 中的表达式树，请参阅[操作说明：使用表达式树来生成动态查询 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)。  
   
  表达式树还能用于动态语言运行时 (DLR) 以提供动态语言和 .NET Framework 之间的互操作性，同时保证编译器编写员能够发射表达式树而非 Microsoft 中间语言 (MSIL)。 有关 DLR 的详细信息，请参阅[动态语言运行时概述](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)。  
   
@@ -85,7 +85,7 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-有关详细信息，请参阅[在 Visual Studio 2010 中使用表达式树生成动态方法](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010)，该方法也适用于 Visual Studio 的更高版本。
+有关详细信息，请参阅[在 Visual Studio 2010 中使用表达式树生成动态方法](https://devblogs.microsoft.com/csharpfaq/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/)，该方法也适用于 Visual Studio 的更高版本。
   
 ## <a name="parsing-expression-trees"></a>解析表达式树  
  下列代码示例展示如何分解表示 Lambda 表达式 `Function(num) num < 5` 的表达式树。  
@@ -141,10 +141,11 @@ Console.WriteLine(expr.Compile()(4))
   
  有关详细信息，请参阅[如何：执行表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Linq.Expressions>  
- [如何： 执行表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [如何： 修改表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
- [Lambda 表达式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [动态语言运行时概述](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- [编程概念 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Linq.Expressions>
+- [如何：执行表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [如何：修改表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [Lambda 表达式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [动态语言运行时概述](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
+- [编程概念 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)

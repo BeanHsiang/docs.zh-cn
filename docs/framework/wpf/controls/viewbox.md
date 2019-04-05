@@ -9,23 +9,23 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
-ms.openlocfilehash: fe7184df5d889a93f2274dfd20669701947f0965
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 67c9277ba4a7ae0ee802c536699a765669ddf508
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212342"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361910"
 ---
 # <a name="viewbox"></a>Viewbox
 <xref:System.Windows.Controls.Viewbox>控件用来拉伸或缩放的子元素。  
   
 ## <a name="in-this-section"></a>本节内容  
- [向 Viewbox 的内容应用 Stretch 属性](../../../../docs/framework/wpf/controls/how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
+ [向 Viewbox 的内容应用 Stretch 属性](how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Viewbox>  
   
  <xref:System.Windows.Controls.Image>  
   
-## <a name="see-also"></a>请参阅  
- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a>请参阅
+- [WPF 控件库示例](https://go.microsoft.com/fwlink/?LinkID=160053)

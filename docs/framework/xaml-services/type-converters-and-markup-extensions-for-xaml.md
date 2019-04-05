@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 0c9cb7e87416860dda98df0da967ffbc070bc270
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1704a7a86e89685763da7bf49a67c1fe8373124a
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565858"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050540"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的类型转换器和标记扩展
 类型转换器和标记扩展是 XAML 类型系统和 XAML 编写器用来生成对象图组件的两种技术。 尽管类型转换器和标记扩展共享一些特征，但它们在 XAML 节点流中以不同的方式表示。 在本文档集中，类型转换器、标记扩展和类似的构造有时统称为值转换器。  
@@ -32,7 +32,7 @@ ms.locfileid: "33565858"
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>类型转换器  
- 在 .NET Framework XAML 服务定义中，类型转换器是从 CLR <xref:System.ComponentModel.TypeConverter> 类派生的类。 <xref:System.ComponentModel.TypeConverter> 是一个在 XAML 存在之前，已在 Microsoft.NET Framework 中的类。 它的原始用途是向 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 属性提供对属性窗口和类似的基于文本的编辑隐喻的支持。 对 .NET Framework 引入 XAML 则使用 <xref:System.ComponentModel.TypeConverter> 将文本语法（如某一特性值或 XAML 值节点中的）转换为对象。 <xref:System.ComponentModel.TypeConverter> 还可用于将对象值序列化为文本语法。 <xref:System.ComponentModel.TypeConverter> 此外用于在 Windows Presentation Foundation (WPF) 和 Windows Communication Foundation (WCF) 中的上一个特定于框架的 XAML 实现。 有关 XAML 中 <xref:System.ComponentModel.TypeConverter> 的更多信息，请参见 [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)中特定于框架的 XAML 实现。  
+ 在 .NET Framework XAML 服务定义中，类型转换器是从 CLR <xref:System.ComponentModel.TypeConverter> 类派生的类。 <xref:System.ComponentModel.TypeConverter> 是 XAML 出现之前是 Microsoft.NET Framework 中的类。 它的原始用途是向 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 属性提供对属性窗口和类似的基于文本的编辑隐喻的支持。 对 .NET Framework 引入 XAML 则使用 <xref:System.ComponentModel.TypeConverter> 将文本语法（如某一特性值或 XAML 值节点中的）转换为对象。 <xref:System.ComponentModel.TypeConverter> 还可用于将对象值序列化为文本语法。 <xref:System.ComponentModel.TypeConverter> 在 Windows Presentation Foundation (WPF) 和 Windows Communication Foundation (WCF) 中的上一个特定于框架的 XAML 实现中还使用。 有关 XAML 中 <xref:System.ComponentModel.TypeConverter> 的更多信息，请参见 [Type Converters for XAML Overview](type-converters-for-xaml-overview.md)中特定于框架的 XAML 实现。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>标记扩展  
@@ -42,16 +42,16 @@ ms.locfileid: "33565858"
   
  标记扩展与单一支持服务类相关联，但可以应用于任意成员值。 （但是，通过使用服务上下文，你可以实现你的标记扩展以有意将其应用限制为仅对某些成员或目标类型进行应用。）标记扩展可以替代类型转换器关联。 或者，可将其用于为本来不支持文本语法的成员指定特性值。  
   
- 有关 XAML 的标记扩展实现模式的详细信息，请参阅 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
+ 有关 XAML 的标记扩展实现模式的详细信息，请参阅 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 类型都在 <xref:System.Windows.Markup> 命名空间内而不是在 <xref:System.Xaml> 命名空间内。 这并不意味着这些类型是特定于本来会填充包含字符串的 CLR 命名空间的 WPF 或 Windows 窗体技术`Windows`。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 都在 System.Xaml 程序集中，并且没有特定的框架依赖关系。 这些类型存在于 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 的CLR 命名空间中，并保留在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的 CLR 命名空间中，以避免破坏现有 WPF 项目中的引用。 有关详细信息，请参阅 [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)。  
+>  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 类型都在 <xref:System.Windows.Markup> 命名空间内而不是在 <xref:System.Xaml> 命名空间内。 这并不意味着这些类型是特定于本来会填充包含字符串的 CLR 命名空间的 WPF 或 Windows 窗体技术`Windows`。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 都在 System.Xaml 程序集中，并且没有特定的框架依赖关系。 这些类型存在于 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 的CLR 命名空间中，并保留在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 的 CLR 命名空间中，以避免破坏现有 WPF 项目中的引用。 有关详细信息，请参阅 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)。  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>值序列化程序  
  <xref:System.Windows.Markup.ValueSerializer> 是针对将对象转换为字符串进行了优化的专用的类型转换器。 XAML 的 <xref:System.Windows.Markup.ValueSerializer> 可能完全不会实现 `ConvertFrom` 方法。 <xref:System.Windows.Markup.ValueSerializer> 实现以类似于 <xref:System.ComponentModel.TypeConverter> 实现的方式获取服务。 虚方法提供了一个输入 `context` 参数。 `context` 参数的类型为 <xref:System.Windows.Markup.IValueSerializerContext>，它继承自 <xref:System.IServiceProvider> 接口，并具有 <xref:System.IServiceProvider.GetService%2A> 方法。  
   
- 在 XAML 类型系统中，对于使用 XAML 节点循环处理进行序列化的 XAML 编写器实现，由其自身的 <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> 属性报告与某一类型或成员相关联的值转换器。 执行序列化的 XAML 编写器的含义是，如果存在 <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> 和 <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType>，则类型转换器应用于加载路径，值序列化应用于保存路径。 如果 <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> 存在但 <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> 为 `null`，则类型转换器也用于保存路径。  
+ 在 XAML 类型系统中，对于使用 XAML 节点循环处理进行序列化的 XAML 编写器实现，由其自身的 <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> 属性报告与某一类型或成员相关联的值转换器。 执行序列化的 XAML 编写器的含义是，如果存在 <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> 和 <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> ，则类型转换器应用于加载路径，值序列化应用于保存路径。 如果 <xref:System.Xaml.XamlType.TypeConverter%2A?displayProperty=nameWithType> 存在但 <xref:System.Xaml.XamlType.ValueSerializer%2A?displayProperty=nameWithType> 为 `null`，则类型转换器也用于保存路径。  
   
 <a name="other_value_converters"></a>   
 ## <a name="other-value-converters"></a>其他值转换器  
@@ -63,11 +63,11 @@ ms.locfileid: "33565858"
   
 <a name="service_context_for_a_value_converter"></a>   
 ## <a name="service-context-for-a-value-converter"></a>值转换器的服务上下文  
- 当实现值转换器时，你经常需要访问在其中应用了值转换器的上下文。 此上下文称为服务上下文。 服务上下文可能包括如下信息：活动的 XAML 架构上下文、对 XAML 架构上下文和 XAML 对象编写器提供的类型映射系统的访问权限等等。 有关可用与值转换器的服务上下文和如何访问服务上下文可能会提供的服务的详细信息，请参阅[可供类型转换器和标记扩展使用的服务上下文](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)。  
+ 当实现值转换器时，你经常需要访问在其中应用了值转换器的上下文。 此上下文称为服务上下文。 服务上下文可能包括如下信息：活动的 XAML 架构上下文、对 XAML 架构上下文和 XAML 对象编写器提供的类型映射系统的访问权限等等。 有关可用与值转换器的服务上下文和如何访问服务上下文可能会提供的服务的详细信息，请参阅[可供类型转换器和标记扩展使用的服务上下文](service-contexts-available-to-type-converters-and-markup-extensions.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Markup.MarkupExtension>  
- <xref:System.Xaml.XamlObjectWriter>  
- [XAML 的标记扩展概述](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
- [XAML 的类型转换器概述](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)  
- [可供类型转换器和标记扩展使用的服务上下文](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Markup.MarkupExtension>
+- <xref:System.Xaml.XamlObjectWriter>
+- [XAML 的标记扩展概述](markup-extensions-for-xaml-overview.md)
+- [XAML 的类型转换器概述](type-converters-for-xaml-overview.md)
+- [Service Contexts Available to Type Converters and Markup Extensions](service-contexts-available-to-type-converters-and-markup-extensions.md)

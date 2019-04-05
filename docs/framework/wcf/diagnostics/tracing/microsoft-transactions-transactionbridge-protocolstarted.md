@@ -2,11 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.ProtocolStarted
 ms.date: 03/30/2017
 ms.assetid: ac770da2-218e-4708-aeb5-465369c94a8d
-ms.openlocfilehash: 46bd51bfc421526649d10fd40281276c5bcd1112
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50854d1de144d512e695838755d3dc3864f08cd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531989"
 ---
 # <a name="microsofttransactionstransactionbridgeprotocolstarted"></a>Microsoft.Transactions.TransactionBridge.ProtocolStarted
 WS-Atomic Transaction 协议服务已启动。  
@@ -14,7 +15,7 @@ WS-Atomic Transaction 协议服务已启动。
 ## <a name="description"></a>描述  
  在事务管理器启动期间进行跟踪以指示已成功启动了哪个协议。  
   
-## <a name="see-also"></a>请参阅  
- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>请参阅
+- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [使用跟踪来排除应用程序故障](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)

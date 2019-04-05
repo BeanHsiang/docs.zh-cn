@@ -3,12 +3,12 @@ title: C# 委托 - C# 语言介绍
 description: 了解包含 C# 委托的晚期绑定
 ms.date: 08/10/2016
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 1dcd078b275d951b049b0c5bb6e084a4083d042d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2744f774392ef021974535de535b063264ae9a54
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360565"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151273"
 ---
 # <a name="delegates"></a>委托
 
@@ -29,5 +29,5 @@ ms.locfileid: "33360565"
 委托的一个有趣且有用的属性是，它不知道也不关心所引用的方法的类；只关心引用的方法是否具有与委托相同的参数和返回类型。
 
 >[!div class="step-by-step"]
-[上一页](enums.md)
-[下一页](attributes.md)
+>[上一页](enums.md)
+>[下一页](attributes.md)

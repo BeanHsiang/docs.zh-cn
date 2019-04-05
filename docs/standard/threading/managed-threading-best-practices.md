@@ -1,6 +1,6 @@
 ---
 title: 托管线程处理的最佳做法
-ms.date: 11/30/2017
+ms.date: 10/15/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 907e85d2622ea07ddbb61092f439583ed72e0c50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560030"
 ---
 # <a name="managed-threading-best-practices"></a>托管线程处理的最佳做法
 多线程处理需在编程时倍加注意。 对于多数任务，通过将执行请求以线程池线程的方式排队，可以降低复杂性。 本主题将探讨更复杂的情形，比如协调多个线程的工作或处理造成阻止的线程。  
@@ -70,37 +70,18 @@ else {
   
  争用条件也可能会在同步多个线程的活动时发生。 编写每一行代码时，都必须考虑出现以下情况时会发生什么情况：一个线程在执行该行代码（或构成该行的任何机器指令）前，其他线程抢先执行了该代码。  
   
-## <a name="number-of-processors"></a>处理器数量  
- 如今，大多数计算机，甚至平板电脑和手机等小型设备，都具有多个处理器（也称为核心）。 如果了解到正在开发的软件也将在单处理器计算机上运行，则应了解多线程可解决单处理器计算机和多处理器计算机的诸多问题。  
-  
-### <a name="multiprocessor-computers"></a>多处理器计算机  
- 多线程处理提供更大的吞吐量。 十个处理器的工作量是一个处理器的十倍，不过，只有将任务分开并让十个处理器同时工作才行；线程为划分任务并利用额外的处理能力提供了一种方便的办法。 如果在多处理器计算机上使用多线程处理，那么：  
-  
--   可并发执行的线程数取决于处理器数。  
-  
--   只有正在执行的前台线程数小于处理器数时，后台线程方可执行。  
-  
--   对线程调用 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法时，此线程可能会或可能不会立即开始执行，具体取决于处理器数以及当前等待执行的线程数。  
-  
--   争用条件可能在以下两种情况下发生：线程被意外抢占；在不同处理器上执行的两个线程抢用同一代码块。  
-  
-### <a name="single-processor-computers"></a>单处理器计算机  
- 多线程处理为计算机用户提供了更好的响应能力，并使用空闲时间处理后台任务。 如果在单处理器计算机上使用多线程处理，那么：  
-  
--   在任何时刻都只有一个线程运行。  
-  
--   后台线程仅在主用户线程空闲时才执行。 连续运行的前台线程将使后台线程缺乏处理器时间。  
-  
--   对线程调用 <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> 方法时，此线程只有等到当前线程生成或由操作系统强占后才会开始执行。  
-  
--   出现争用条件的原因通常是，程序员未预见到一个线程可能会在某一难以控制的时刻被抢占这一事实，有时就会出现另一线程抢先使用代码块这种情况。  
-  
 ## <a name="static-members-and-static-constructors"></a>静态成员和静态构造函数  
  在类的类构造函数（C# 中为 `static` 构造函数、Visual Basic 中为 `Shared Sub New`）完成运行之前，该类不会初始化。 为防止对未初始化的类型执行代码，在类构造函数完成运行之前，公共语言运行时会禁止从其他线程到类的 `static` 成员（在 Visual Basic 中为 `Shared` 成员）的所有调用。  
   
  例如，如果某个类构造函数启动了一个新线程，并且该线程过程调用了该类的 `static` 成员，则在该类构造函数完成之前，会一直禁止新线程。  
   
  以上情况适用于可拥有 `static` 构造函数的任意类型。  
+
+## <a name="number-of-processors"></a>处理器数量
+
+系统中是有多个处理器还是仅有一个处理器会影响多线程体系结构。 有关详细信息，请参阅[处理器数量](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors)。
+
+使用 <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> 属性来确定在运行时可用的处理器数量。
   
 ## <a name="general-recommendations"></a>一般性建议  
  使用多线程时需考虑以下准则：  
@@ -145,7 +126,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  在 .NET Framework 版本 2.0 中，<xref:System.Threading.Interlocked.Add%2A> 方法提供增量大于 1 的原子更新。  
+    > 在 .NET Framework 2.0 及更高版本中，为大于 1 的原子增量使用 <xref:System.Threading.Interlocked.Add%2A> 方法。  
   
      在第二个示例中，仅当引用类型变量为空引用（在 Visual Basic 中为 `Nothing`）时才会将其更新。  
   
@@ -183,7 +164,7 @@ else {
     ```  
   
     > [!NOTE]
-    >  在 .NET Framework 版本 2.0 中，<xref:System.Threading.Interlocked.CompareExchange%2A> 方法包含泛型重载，可用作任何引用类型的类型安全替换。  
+    > 从 .NET Framework 2.0 开始，<xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> 方法重载为引用类型提供类型安全的替代项。
   
 ## <a name="recommendations-for-class-libraries"></a>类库相关建议  
  为多线程处理设计类库时，请考虑以下准则：  
@@ -198,5 +179,5 @@ else {
   
 ## <a name="see-also"></a>请参阅
 
-- [线程处理](../../../docs/standard/threading/index.md)  
+- [线程处理](../../../docs/standard/threading/index.md)
 - [线程与线程处理](../../../docs/standard/threading/threads-and-threading.md)

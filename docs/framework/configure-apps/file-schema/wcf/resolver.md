@@ -1,29 +1,29 @@
 ---
-title: '&lt;resolver&gt;'
+title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: 48b6b6ca315f7ab63a8f7a64b97167fa04fe1e4e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f3d4b049afe55fb9fb80cbad56c49e8ec13e60db
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180795"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758737"
 ---
-# <a name="ltresolvergt"></a>&lt;resolver&gt;
+# <a name="resolver"></a>\<resolver>
 指定对等解析程序，对等解析程序用于将对等网格 ID 解析为一组对等节点地址，这些地址表示参与网格的若干节点。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<netPeerBinding>  
-\<绑定 >  
+\<binding>  
 \<resolver>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<resolver mode="Auto/Custom/Pnrp"  
-   referralPolicy="DoNotShare/Service/Share">  
-</resolver>  
+<resolver mode="Auto/Custom/Pnrp"
+          referralPolicy="DoNotShare/Service/Share">
+</resolver>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -46,16 +46,16 @@ ms.locfileid: "44180795"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义的所有绑定功能[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义的所有绑定功能[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)。|  
   
 ## <a name="remarks"></a>备注  
  对等名解析程序是对等通道用于查找参与对等网格的对等节点的发现服务。 它还可以用于在对等网格中“注册”节点，即对等节点在对等网格中变为已知和可用的机制。 对等解析程序的详细信息，请参阅[对等解析程序](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.PeerResolver>  
- <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings>  
- <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>  
- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>  
- <xref:System.ServiceModel.Configuration.PeerResolverElement>  
- [对等解析程序](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [对等通道应用程序中添加自定义冲突解决程序](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.PeerResolver>
+- <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings>
+- <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>
+- <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>
+- <xref:System.ServiceModel.Configuration.PeerResolverElement>
+- [对等解析程序](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [对等通道应用程序中添加自定义冲突解决程序](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: c94c3bf1a1e3e4c724f90690f52e97e8216cb9a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f74935d58d47e65b5eb614abc86a3fc9c8e6c42
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604609"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838360"
 ---
 # <a name="partial-visual-basic"></a>分部 (Visual Basic)
 指示类型声明为类型的分部定义。  
@@ -27,7 +27,7 @@ ms.locfileid: "33604609"
  可以使用 `Partial` 关键字在几个声明之间划分类型的定义。 可以根据需要在任意数量的不同源文件中使用任意数量的分部声明。 但是，所有声明都必须在相同的程序集和相同的命名空间中。  
   
 > [!NOTE]
->  Visual Basic 支持*分部方法*，这通常在分部类中实现。 有关详细信息，请参阅[分部方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)和[Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)。  
+>  Visual Basic 支持*分部方法*，这通常在分部类中实现。 有关详细信息，请参阅[分部方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)并[Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,14 +45,14 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |术语|定义|  
 |---|---|  
-|`attrlist`|可选。 应用于此类型的特性列表。 必须将括[特性列表](../../../visual-basic/language-reference/statements/attribute-list.md)中命令的尖括号 (`< >`)。|  
-|`accessmodifier`|可选。 指定哪些代码可以访问此类型。 请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|可选。 请参阅[阴影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
+|`attrlist`|可选。 应用于此类型的特性列表。 必须将[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)括进尖括号 (`< >`)。|  
+|`accessmodifier`|可选。 指定哪些代码可以访问此类型。 请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`Shadows`|可选。 请参阅[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
 |`MustInherit`|可选。 请参阅[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。|  
 |`NotInheritable`|可选。 请参阅[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。|  
-|`name`|必须的。 此类型的名称。 必须匹配在同一类型的所有其他分部声明中定义的名称。|  
-|`Of`|可选。 指定这是一种泛型类型。 请参阅[Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。|  
-|`typelist`|如果你使用是必需的[的](../../../visual-basic/language-reference/statements/of-clause.md)。 请参阅[键入列表](../../../visual-basic/language-reference/statements/type-list.md)。|  
+|`name`|必需。 此类型的名称。 必须匹配在同一类型的所有其他分部声明中定义的名称。|  
+|`Of`|可选。 指定这是一种泛型类型。 请参阅[在 Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。|  
+|`typelist`|如果在使用需要[的](../../../visual-basic/language-reference/statements/of-clause.md)。 请参阅[类型列表](../../../visual-basic/language-reference/statements/type-list.md)。|  
 |`Inherits`|可选。 请参阅[Inherits 语句](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
 |`classname`|如果使用 `Inherits`，则是必需的。 派生此类的类或接口的名称。|  
 |`Implements`|可选。 请参阅[实现语句](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
@@ -76,7 +76,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 -   **声明的联合。** 编译器将类型视为其所有分部声明的联合。 每个分部定义的每个修饰符均可应用于整个类型，并且每个分部定义的每个成员均可用于整个类型。  
   
--   **不允许使用模块中的分部类型的类型提升。** 如果分部定义位于模块内，则该类型的类型提升会自动失效。 在这种情况下，一组分部定义可能导致意外的结果，甚至导致编译器错误。 有关详细信息，请参阅[类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
+-   **不允许使用分部类型在模块中的类型提升。** 如果分部定义位于模块内，则该类型的类型提升会自动失效。 在这种情况下，一组分部定义可能导致意外的结果，甚至导致编译器错误。 有关详细信息，请参阅[类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)。  
   
      仅当其完全限定的路径相同时，编译器才将合并分部定义。  
   
@@ -89,14 +89,15 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 ## <a name="example"></a>示例  
  下面的示例将类 `sampleClass` 的定义拆分到两个声明中，其中每一个均定义一个不同的 `Sub` 过程。  
   
- [!code-vb[VbVbalrKeywords#3](../../../visual-basic/language-reference/codesnippet/VisualBasic/partial_1.vb)]  
+ [!code-vb[VbVbalrKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#3)]  
   
  前面示例中的两个分部定义可能在同一源文件中或在两个不同的源文件中。  
   
-## <a name="see-also"></a>请参阅  
- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [分部方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>请参阅
+
+- [Class 语句](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Structure 语句](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [类型提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Visual Basic 中的泛型类型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [分部方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

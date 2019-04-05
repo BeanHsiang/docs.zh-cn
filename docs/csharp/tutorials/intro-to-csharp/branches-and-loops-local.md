@@ -3,12 +3,12 @@ title: 分支和循环 - C# 教程简介
 description: 在本教程的“分支和循环”中，将编写 C# 代码以研究支持条件分支和循环重复执行语句的语言语法。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 0997c0b4a8f450c0e5eadc9616457a1ab84e7d96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186131"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677781"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>通过分支和循环语句了解条件逻辑
 
@@ -20,7 +20,7 @@ ms.locfileid: "50186131"
 
 创建名为 branches-tutorial 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console -n BranchesAndLoops -o .`。 此命令会在当前目录中创建一个新的 .NET Core 控制台应用程序。
 
-在常用编辑器中，打开 Program.cs，并将行 `Console.Writeline("Hello World!");` 替换为以下代码：
+在常用编辑器中，打开 Program.cs，并将行 `Console.WriteLine("Hello World!");` 替换为以下代码：
 
 ```csharp
 int a = 5;
@@ -31,7 +31,7 @@ if (a + b > 10)
 
 通过在控制台窗口键入 `dotnet run` 试运行此代码。 你应在控制台上看到以下消息：“The answer is greater than 10. （答案大于 10）”。
 
-修改 `b` 的声明，让总和小于 10： 
+修改 `b` 的声明，让总和小于 10：
 
 ```csharp
 int b = 3;
@@ -63,7 +63,8 @@ else
 
 > [!IMPORTANT]
 > `if` 和 `else` 语句下的缩进是为了方便读者阅读。
-> C# 语言忽略缩进或空格。 `if` 或 `else` 关键字后面的语句根据条件决定是否执行。 本教程中的所有示例都遵循了常见做法，根据语句的控制流缩进代码行。
+> C# 语言忽略缩进或空格。
+> `if` 或 `else` 关键字后面的语句根据条件决定是否执行。 本教程中的所有示例都遵循了常见做法，根据语句的控制流缩进代码行。
 
 由于缩进会被忽略，因此需要使用 `{` 和 `}`，指明要在根据条件决定是否执行的代码块中添加多个语句。 C# 程序员通常会对所有 `if` 和 `else` 子句使用这些大括号。 以下示例与刚刚创建的示例相同。 修改上面的代码以匹配下面的代码：
 
@@ -158,7 +159,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -218,12 +219,12 @@ For 循环通常用在 C# 中。 请在 Main() 方法中试用以下代码：
 for(int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 此循环的工作原理与已用过的 `while` 循环和 `do` 循环相同。 `for` 语句包含三个控制具体工作方式的部分。
 
-第一部分是 for 初始值设定项：`for index = 0;` 声明 `index` 是循环变量，并将它的初始值设置为 `0`。
+第一部分是 for 初始值设定项：`int index = 0;` 声明 `index` 是循环变量，并将它的初始值设置为 `0`。
 
 中间部分是 for 条件：`index < 10` 声明只要计数器值小于 10，此 `for` 循环就会继续执行。
 
@@ -252,7 +253,7 @@ for(int index = 0; index < 10; index++)
 
 若要详细了解这些概念，请参阅下列主题：
 
-[If 和 else 语句](../../language-reference/keywords/if-else.md)  
-[While 语句](../../language-reference/keywords/while.md)  
-[Do 语句](../../language-reference/keywords/do.md)  
-[For 语句](../../language-reference/keywords/for.md)  
+- [If 和 else 语句](../../language-reference/keywords/if-else.md)
+- [While 语句](../../language-reference/keywords/while.md)
+- [Do 语句](../../language-reference/keywords/do.md)
+- [For 语句](../../language-reference/keywords/for.md)

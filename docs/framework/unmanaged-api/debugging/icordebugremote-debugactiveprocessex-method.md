@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e3cdbff5054ec990c40c333ed4bd4029a91f12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eba0ff6e545a5da5d7733a157b73ddd66e717de9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420799"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477109"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx 方法
 将启动在调试器下远程计算机上的进程。  
@@ -38,18 +38,18 @@ HRESULT DebugActiveProcessEx (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pRemoteTarget`  
  [in]指向[ICorDebugRemoteTarget 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)。 此参数用于确定在其运行进程的计算机。  
   
  `id`  
- [in]调试器是要附加的进程的 ID。  
+ [in]调试程序要附加的进程 ID。  
   
  `win32Attach`  
- [in]`true`如果调试器应相当于 Win32 调试器进程并将其分派非托管的回调中; 否则为`false`。  
+ [in]`true`如果调试程序应将用作 Win32 调试器进程和调度的非托管的回叫; 否则为`false`。  
   
  `ppProcess`  
- [out]指向表示调试器附加到进程"ICorDebugProcess"对象的地址的指针。  
+ [out]指向表示调试器已附加到进程"ICorDebugProcess"对象的地址的指针。  
   
 ## <a name="return-value"></a>返回值  
  S_OK  
@@ -62,16 +62,16 @@ HRESULT DebugActiveProcessEx (
  Silverlight 不支持混合模式调试。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 4.5、 4、 3.5 SP1  
+ **.NET framework 版本：** 4.5，4，3.5 SP1  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugRemote 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugRemote 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [ICorDebug 接口](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

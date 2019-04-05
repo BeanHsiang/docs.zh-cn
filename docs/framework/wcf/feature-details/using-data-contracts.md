@@ -9,18 +9,18 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 992f35a9f7406ac161ddb5e31fdaf85756bfe31f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a93fb708ed6b1790027b1e3a2fc74ca8c5ff2024
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503719"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571669"
 ---
 # <a name="using-data-contracts"></a>使用数据协定
 “数据协定”  是在服务与客户端之间达成的正式协议，用于以抽象方式描述要交换的数据。 也就是说，为了进行通信，客户端和服务不必共享相同的类型，而只需共享相同的数据协定。 数据协定为每个参数或返回类型精确定义为进行交换而序列化哪些数据（将哪些数据转换为 XML）。  
   
 ## <a name="data-contract-basics"></a>数据协定基本知识  
- Windows Communication Foundation (WCF) 使用称为数据协定序列化程序默认情况下的序列化引擎进行序列化和反序列化的数据 （将其转换为 xml 或从 XML）。 所有 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 基元类型（如整型和字符串型）以及某些被视为基元的类型（如 <xref:System.DateTime> 和 <xref:System.Xml.XmlElement>）无需做其他任何准备工作就可序列化并被视为拥有默认数据协定。 许多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型也具有现有数据协定。 有关可序列化类型的完整列表，请参阅 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+ Windows Communication Foundation (WCF) 使用的序列化引擎，默认情况下调用数据协定序列化程序进行序列化和反序列化的数据 （将其转换到和从 XML）。 所有 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 基元类型（如整型和字符串型）以及某些被视为基元的类型（如 <xref:System.DateTime> 和 <xref:System.Xml.XmlElement>）无需做其他任何准备工作就可序列化并被视为拥有默认数据协定。 许多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 类型也具有现有数据协定。 有关可序列化类型的完整列表，请参阅 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
  必须为所创建的新复杂类型定义数据协定才能序列化这些类型。 默认情况下， <xref:System.Runtime.Serialization.DataContractSerializer> 推断数据协定并序列化所有公共可见类型。 类型的所有公共读/写属性和字段均被序列化。 可以使用 <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>从序列化中剔除某些成员。 还可以使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性显式创建数据协定。 正常情况下可通过将 <xref:System.Runtime.Serialization.DataContractAttribute> 属性应用到该类型来完成该任务。 可以将此属性应用到类、结构和枚举。 然后必须将 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性应用到数据协定类型的每个成员，以指示这些成员为数据成员， 即应进行序列化。 有关详细信息，请参阅[可序列化类型](../../../../docs/framework/wcf/feature-details/serializable-types.md)。  
   
@@ -66,17 +66,17 @@ ms.locfileid: "33503719"
   
  有关定义数据协定的 WCF 服务的完整代码示例，请参阅 [Basic Data Contract](../../../../docs/framework/wcf/samples/basic-data-contract.md) 示例。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- [可序列化类型](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
- [数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [数据成员顺序](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
- [数据协定版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [版本容错序列化回调](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [数据成员默认值](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)  
- [数据协定序列化程序支持的类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [如何：创建类或结构的基本数据协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- [可序列化类型](../../../../docs/framework/wcf/feature-details/serializable-types.md)
+- [数据协定名称](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+- [数据协定等效性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [数据成员顺序](../../../../docs/framework/wcf/feature-details/data-member-order.md)
+- [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [向前兼容的数据协定](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+- [数据协定版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [版本容错序列化回调](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [数据成员默认值](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
+- [数据协定序列化程序支持的类型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [如何：创建类或结构的基本数据协定](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

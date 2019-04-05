@@ -9,20 +9,20 @@ helpviewer_keywords:
 - clocks [WPF], animation
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
-ms.openlocfilehash: f2888f28ad7723b7390d0e2339c2117e64e84ecd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554802"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361442"
 ---
 # <a name="clocks-how-to-topics"></a>时钟帮助主题
 以下主题介绍如何使用<xref:System.Windows.Media.Animation.Clock>对象来维护计时的状态信息<xref:System.Windows.Media.Animation.Timeline>。  
   
 ## <a name="in-this-section"></a>本节内容  
- [使用 AnimationClock 为属性设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)  
- [以交互方式控制时钟](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)  
- [同步定位时钟](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-clock-synchronously.md)  
+ [使用 AnimationClock 为属性设置动画效果](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [以交互方式控制时钟](how-to-interactively-control-a-clock.md)  
+ [同步定位时钟](how-to-seek-a-clock-synchronously.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Media.Animation.Clock>  
@@ -34,6 +34,6 @@ ms.locfileid: "33554802"
  <xref:System.Windows.Media.Animation.Timeline>  
   
 ## <a name="related-sections"></a>相关章节  
- [动画概述](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [动画概述](animation-overview.md)  
   
- [演示图板概述](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+ [演示图板概述](storyboards-overview.md)

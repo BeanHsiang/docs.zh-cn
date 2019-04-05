@@ -2,12 +2,12 @@
 title: 联接运算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: f03d5cf14525a6d23240747c2f377348bf608782
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193052"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411455"
 ---
 # <a name="join-operations-c"></a>联接运算 (C#)
 联接两个数据源就是将一个数据源中的对象与另一个数据源中具有相同公共属性的对象相关联。  
@@ -18,27 +18,27 @@ ms.locfileid: "47193052"
   
  下图显示了一个概念性视图，其中包含两个集合以及这两个集合中的包含在内部联接或左外部联接中的元素。  
   
- ![显示内部/外部的两个重叠圆圈。](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![显示内部/外部的两个重叠圆圈。](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>方法  
   
-|方法名|描述|C# 查询表达式语法|详细信息|  
+|方法名|说明|C# 查询表达式语法|详细信息|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |联接|根据键选择器函数联接两个序列并提取值对。|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|根据键选择器函数联接两个序列，并对每个元素的结果匹配项进行分组。|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Linq>  
-- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [匿名类型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
-- [构建联接和叉积查询](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
-- [join 子句](../../../../csharp/language-reference/keywords/join-clause.md)  
-- [如何：使用复合键进行联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
-- [如何：联接不同文件的内容 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
-- [如何：对 Join 子句的结果进行排序](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
-- [如何：执行自定义联接操作](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
-- [如何：执行分组联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
-- [如何：执行内部联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
-- [如何：执行左外部联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+- <xref:System.Linq>
+- [标准查询运算符概述 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [匿名类型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [构建联接和叉积查询](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
+- [join 子句](../../../../csharp/language-reference/keywords/join-clause.md)
+- [如何：使用组合键进行联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)
+- [如何：联接不同文件的内容 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)
+- [如何：对 join 子句的结果进行排序](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [如何：执行自定义联接操作](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)
+- [如何：执行分组联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)
+- [如何：执行内部联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)
+- [如何：执行左外部联接](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)
 - [如何：从多个源填充对象集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

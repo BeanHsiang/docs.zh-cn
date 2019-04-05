@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678793"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>创建桌面应用程序的附属程序集
 资源文件在本地化的应用程序中具有核心作用。 通过资源文件，应用程序可以使用用户自己的语言和区域性显示字符串、图像及其他数据，并且在用户自己的语言或区域性资源不可用时，提供备用数据。 .NET Framework 使用中心辐射型模型来查找和检索已本地化的资源。 中心即主程序集，包含不可本地化的可执行代码和单个区域性（称作非特定区域性或默认区域性）的资源。 默认区域性是应用程序的回退区域性；没有任何已本地化的资源可用时，则使用默认区域性。 使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性来指定应用程序默认区域性的区域性。 每条轮辐均连接到一个附属程序集，该附属程序集包含单个本地化区域性的资源，但不包含任何代码。 因为附属程序集不是主程序集的一部分，所以不必替换该应用程序的主程序集即可轻松更新或替换与特定区域性相对应的资源。  
@@ -74,7 +74,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  下表详细展示了这些命令中使用的 Al.exe 选项。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |-target:lib|指定将附属程序集编译成库 (.dll) 文件。 因为附属程序集不包含可执行代码，并且不是应用程序的主程序集，所以必须将附属程序集另存为 DLL。|  
 |-embed:strings.de.resources|指定在 Al.exe 编译程序集时要嵌入的资源文件名。 可在附属程序集中嵌入多个 .resources 文件，但如果依循中心辐射模型，则必须为每个区域性编译一个附属程序集。 但是，可以为字符串和对象创建单独的 .resources 文件。|  
@@ -308,10 +308,10 @@ gacutil -i:StringLibrary.resources.dll
   
 14. 运行 Example.exe。  
   
-## <a name="see-also"></a>请参阅  
- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [延迟签发程序集](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
- [桌面应用中的资源](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>请参阅
+- [打包和部署资源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [延迟签发程序集](../../../docs/framework/app-domains/delay-sign-assembly.md)
+- [Al.exe（程序集链接器）](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Sn.exe（强名称工具）](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Gacutil.exe（全局程序集缓存工具）](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [桌面应用中的资源](../../../docs/framework/resources/index.md)

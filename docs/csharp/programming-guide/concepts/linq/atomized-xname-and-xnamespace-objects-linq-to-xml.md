@@ -2,12 +2,12 @@
 title: 原子化的 XName 和 XNamespace 对象 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: 3ffeaac6d893b70c2c0d49d8d52d0372879cdf37
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ff5677e84d0a4401c9d3ce8c43e7743385cdd432
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557849"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>原子化的 XName 和 XNamespace 对象 (LINQ to XML) (C#)
 <xref:System.Xml.Linq.XName> 和 <xref:System.Xml.Linq.XNamespace> 对象进行了原子化；即，如果这两个对象包含相同的限定名，则它们将引用同一个对象。 这将提高查询性能：当比较两个原子化名称是否相等时，基础中间语言只需确定这两个引用是否指向同一个对象。 基础代码不必进行很耗费时间的字符串比较。  

@@ -3,12 +3,13 @@ title: 使用 NUnit 和 .NET Core 进行 C# 单元测试
 description: 使用 dotnet test 和 NUnit 分步构建一个示例解决方案，在此交互式体验中学习 C# 和 .NET Core 中的单元测试概念。
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 253e07c16740a39566cf37ee5742a32342c78c49
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 7d3daa344b2a6fb8694a255fdc26b5ba31e2d82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746739"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747978"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>使用 NUnit 和 .NET Core 进行 C# 单元测试
 
@@ -16,7 +17,7 @@ ms.locfileid: "45746739"
 
 ## <a name="prerequisites"></a>系统必备
 
-- [.NET Core SDK 2.1（版本2.1.400）](https://www.microsoft.com/net/download)或更高版本。
+- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 或更高版本。
 - 按需选择的文本编辑器或代码编辑器。
 
 ## <a name="creating-the-source-project"></a>创建源项目
@@ -41,7 +42,7 @@ dotnet new sln
 dotnet new classlib
 ```
 
-将 *Class1.cs* 重命名为 *PrimeService.cs*。 为了使用由测试驱动的开发 (TDD)，需对 `PrimeService` 类创建故障实现：
+将 *Class1.cs* 重命名为 *PrimeService.cs*。 创建 `PrimeService` 类的失败实现：
 
 ```csharp
 using System;
@@ -108,15 +109,15 @@ dotnet add reference ../PrimeService/PrimeService.csproj
         PrimeService.Tests.csproj
 ```
 
-在 unit-testing-using-dotnet-test 目录中执行以下命令：
+在 unit-testing-using-nunit 目录中执行以下命令：
 
 ```console
-dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-TDD 方法要求编写一个失败的测试，使其通过测试，然后重复该过程。 在 PrimeService.Tests 目录中，将 UnitTest1.cs 文件重命名为 PrimeService_IsPrimeShould.cs，并将其整个内容替换为以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 在 PrimeService.Tests 目录中，将 UnitTest1.cs 文件重命名为 PrimeService_IsPrimeShould.cs，并将其整个内容替换为以下代码：
 
 ```csharp
 using NUnit.Framework;
@@ -166,7 +167,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以添加具有 `[Test]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 NUnit 属性可用于编写一套类似的测试。  `[TestCase]` 属性用于创建一套可执行相同代码但具有不同输入参数的测试。 可以使用 `[TestCase]` 属性来指定这些输入的值。
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0、-1。 可以添加具有 `[Test]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 NUnit 属性可用于编写一套类似的测试。  `[TestCase]` 属性用于创建一套可执行相同代码但具有不同输入参数的测试。 可以使用 `[TestCase]` 属性来指定这些输入的值。
 
 无需创建新的测试，而是应用此属性来创建数据驱动的单个测试。 数据驱动的测试方法用于测试多个小于 2（即最小质数）的值：
 

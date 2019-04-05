@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: b68f00724ecd3a3edc64ee1e3dd7d97bffa20a62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566157"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049456"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>可供类型转换器和标记扩展使用的服务上下文
 支持类型转换器和标记扩展用法的类型的作者通常必须拥有用法在标记或周围对象图结构中的所在位置的相关上下文信息。 为了能正确实例化所提供的对象或者对对象图中的现有对象进行对象引用，可能需要此信息。 使用.NET Framework XAML 服务时，可能需要的上下文将作为一系列服务接口公开。 类型转换器或标记扩展支持代码可使用从 <xref:System.Xaml.XamlObjectWriter> 或相关类型传递且可用的服务提供程序上下文来查询服务。 可通过一个这样的服务来直接获取 XAML 架构上下文。 本主题介绍如何从值转换器实现访问服务上下文，并且列出了通常可用的服务及其角色。  
   
 <a name="obtaining_services"></a>   
 ## <a name="obtaining-services"></a>获取服务  
- 作为值转换器的实现者，你经常需要访问在其中应用了值转换器的某些类型的上下文。 此上下文可能包括诸如活动的 XAML 架构上下文、对 XAML 架构上下文和 XAML 对象编写器提供的类型映射系统的访问权限等信息。 可用于标记扩展或类型转换器实现的服务通过属于每种虚方法签名的一部分的上下文参数来传递。 在每种情况下，你都在上下文中实现了 <xref:System.IServiceProvider>，并且可以调用 <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType> 来请求服务。  
+ 作为值转换器的实现者，你经常需要访问在其中应用了值转换器的某些类型的上下文。 此上下文可能包括诸如活动的 XAML 架构上下文、对 XAML 架构上下文和 XAML 对象编写器提供的类型映射系统的访问权限等信息。 可用于标记扩展或类型转换器实现的服务通过属于每种虚方法签名的一部分的上下文参数来传递。 在每种情况下，你都在上下文中实现了 <xref:System.IServiceProvider> ，并且可以调用 <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType> 来请求服务。  
   
 <a name="services_for_a_markup_extension"></a>   
 ## <a name="services-for-a-markup-extension"></a>用于标记扩展的服务  
@@ -75,7 +75,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iserviceprovider"></a>IServiceProvider  
  **参考文档**： <xref:System.IServiceProvider>  
   
- **与相关：** .NET Framework 中基于服务的基础结构的基本操作，以便你可以调用<xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>。  
+ **到相关：**.NET Framework 中基于服务的基础结构的基本操作，以便你可以调用<xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>。  
   
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **参考文档**： <xref:System.ComponentModel.ITypeDescriptorContext>  
@@ -92,7 +92,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **由以下内容定义：**  <xref:System.Windows.Markup> 命名空间、System.Xaml 程序集  
   
- **相关内容：** 加载路径方案以及与 XAML 架构上下文的交互  
+ **到相关：** 加载路径方案以及与 XAML 架构上下文的交互  
   
  **服务 API:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
@@ -103,7 +103,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **由以下内容定义：**  <xref:System.Windows.Markup> 命名空间、System.Xaml 程序集  
   
- **相关内容：** 是 URI 或 `x:Uri` 值的成员值的加载路径和保存路径处理。  
+ **到相关：** 加载路径和保存路径处理的成员值的是 Uri 或`x:Uri`值。  
   
  **服务 API:**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
   
@@ -114,7 +114,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **由以下内容定义：**  <xref:System.Xaml> 命名空间、System.Xaml 程序集  
   
- **相关内容：** 加载路径处理以及类型查找延迟或优化。  
+ **到相关：** 加载路径处理以及类型查找延迟或优化。  
   
  **服务 API：**  <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>、3 个其他 API。  
   
@@ -125,18 +125,18 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **由以下内容定义：**  <xref:System.Xaml> 命名空间、System.Xaml 程序集  
   
- **相关内容：** 加载路径以及必须将 XAML 类型解析为后备类型的任何操作。  
+ **到相关：** 加载路径以及必须将 XAML 类型解析为后备类型的任何操作。  
   
  **服务 API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- 对于任何推迟加载操作，XAML 架构上下文都是必需的，因为同一架构上下文必须作用于推迟的区域才能集成推迟的内容。 有关 XAML 架构上下文的角色的详细信息，请参阅 [XAML Services](../../../docs/framework/xaml-services/index.md)。  
+ 对于任何推迟加载操作，XAML 架构上下文都是必需的，因为同一架构上下文必须作用于推迟的区域才能集成推迟的内容。 有关 XAML 架构上下文的角色的详细信息，请参阅 [XAML Services](index.md)。  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **参考文档**： <xref:System.Xaml.IRootObjectProvider>  
   
  **由以下内容定义：**  <xref:System.Xaml> 命名空间、System.Xaml 程序集  
   
- **相关内容：** 加载路径。  
+ **到相关：** 加载路径。  
   
  **服务 API:**  <xref:System.Xaml.IRootObjectProvider.RootObject%2A>  
   
@@ -147,9 +147,9 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **由以下内容定义：**  <xref:System.Xaml> 命名空间、System.Xaml 程序集  
   
- **相关内容：** 加载路径、保存路径。  
+ **到相关：** 加载路径、 保存路径。  
   
- **服务 API:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A>用于加载路径、<xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A>的保存路径。  
+ **服务 API:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A>用于加载路径<xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A>的保存路径。  
   
  <xref:System.Xaml.IXamlNamespaceResolver> 是一项服务，该服务可按照原始 XAML 标记中映射的方式基于 XAML 命名空间的前缀返回 XAML 命名空间标识符/URI。  
   
@@ -158,7 +158,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **由以下内容定义：**  <xref:System.Windows.Markup> 命名空间、System.Xaml 程序集  
   
- **相关内容：** 加载路径和保存路径。  
+ **到相关：** 加载路径和保存路径。  
   
  **服务 API：**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>、 <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>。  
   
@@ -169,7 +169,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **由以下内容定义：**  <xref:System.Xaml> 命名空间、System.Xaml 程序集  
   
- **相关：** 加载路径对象关系图定义，解析由 `x:Name`、 `x:Reference`或特定于框架的技术标识的对象。  
+ **到相关：** 加载路径对象关系图定义，解析由标识的对象`x:Name`， `x:Reference`，或特定于框架的技术。  
   
  **服务 API：**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>；用于更高级方案（如处理前向引用）的其他 API。  
   
@@ -180,14 +180,14 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **由以下内容定义：**  <xref:System.Xaml> 命名空间、System.Xaml 程序集  
   
- **相关内容：** 间接 CLR 类型信息的加载路径解析。  
+ **到相关：** 加载路径解析的间接 CLR 类型信息。  
   
  **服务 API:** <xref:System.Xaml.IDestinationTypeProvider.GetDestinationType%2A>  
   
- 有关更多信息，请参见 <xref:System.Xaml.IDestinationTypeProvider>。  
+ 有关详细信息，请参阅 <xref:System.Xaml.IDestinationTypeProvider>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Markup.MarkupExtension>  
- <xref:System.Xaml.XamlObjectWriter>  
- [XAML 的标记扩展概述](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
- [XAML 的类型转换器概述](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Markup.MarkupExtension>
+- <xref:System.Xaml.XamlObjectWriter>
+- [XAML 的标记扩展概述](markup-extensions-for-xaml-overview.md)
+- [XAML 的类型转换器概述](type-converters-for-xaml-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：在联合身份验证服务上配置凭据
+title: 如何：联合身份验证服务上配置凭据
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 92c430ca5514441de01a630a6945e9d294a88c18
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 983504993a1252e4345c3c50130a25e25e99446d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509277"
 ---
-# <a name="how-to-configure-credentials-on-a-federation-service"></a>如何：在联合身份验证服务上配置凭据
+# <a name="how-to-configure-credentials-on-a-federation-service"></a>如何：联合身份验证服务上配置凭据
 在 Windows Communication Foundation (WCF) 中，创建联合的服务包含以下主要步骤：  
   
-1.  配置 <xref:System.ServiceModel.WSFederationHttpBinding> 或类似的自定义绑定。 有关创建适当绑定的详细信息，请参阅[如何： 创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。  
+1.  配置 <xref:System.ServiceModel.WSFederationHttpBinding> 或类似的自定义绑定。 有关创建适当绑定的详细信息，请参阅[如何：创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。  
   
 2.  配置 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>，它控制如何对提供给服务的已颁发令牌进行身份验证。  
   
@@ -69,14 +69,14 @@ ms.locfileid: "49349077"
   
 -   如果使用 X.509 证书对已颁发的令牌进行签名，该证书必须按照由 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 属性的值指定的语义进行验证，无论该证书是作为 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 发送给依赖方还是从 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 属性获取。 有关 X.509 证书验证的详细信息，请参阅[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
- 例如，将 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> 将对签名证书位于 `TrustedPeople` 证书存储中的任何已颁发令牌进行身份验证。 在这种情况下，请将 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 属性设置为 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> 或 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>。 您可以选择其他模式，包括 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>。 如果选择了 `Custom`，则必须将 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 类的一个实例分配给 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 属性。 自定义验证程序可以使用它喜欢的任何条件来验证证书。 有关详细信息，请参阅[如何： 创建使用自定义证书验证程序的服务](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
+ 例如，将 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 设置为 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> 将对签名证书位于 `TrustedPeople` 证书存储中的任何已颁发令牌进行身份验证。 在这种情况下，请将 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 属性设置为 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> 或 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>。 您可以选择其他模式，包括 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>。 如果选择了 `Custom`，则必须将 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 类的一个实例分配给 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 属性。 自定义验证程序可以使用它喜欢的任何条件来验证证书。 有关详细信息，请参阅[如何：创建使用自定义证书验证程序的服务](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
   
-## <a name="see-also"></a>请参阅  
-* [联合](../../../../docs/framework/wcf/feature-details/federation.md)  
-* [联合与信任](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
-* [联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)  
-* [如何：在 WSFederationHttpBinding 上禁用安全会话](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
-* [如何：创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
-* [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
-* [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
-* [SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)
+## <a name="see-also"></a>请参阅
+- [联合](../../../../docs/framework/wcf/feature-details/federation.md)
+- [联合与信任](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)
+- [联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [如何：禁用安全会话在 WSFederationHttpBinding 上](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [如何：创建 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [如何：创建联合客户端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [SecurityBindingElement 身份验证模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

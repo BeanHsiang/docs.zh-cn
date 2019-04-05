@@ -2,16 +2,16 @@
 title: 数学函数
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b6f248382f069df59a55e85e9a764b0df700fb26
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837305"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759374"
 ---
 # <a name="mathematical-functions"></a>数学函数
 
-SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学函数，这些函数针对作为自变量提供的输入值执行计算并返回数值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。下表描述 SqlClient 数学函数。  
+SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学函数，这些函数针对作为自变量提供的输入值执行计算并返回数值结果。 这些函数位于 SqlServer 命名空间中，该命名空间在您使用 SqlClient 时可用。 提供程序的命名空间属性使实体框架可以确定此提供程序对特定构造（如类型和函数）使用哪个前缀。 下表描述 SqlClient 数学函数。  
   
 ## <a name="absexpression"></a>ABS(expression)
 
@@ -19,7 +19,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 
 **参数**
 
-`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。
+`expression`：`Int32`， `Int64`， `Double`，或`Decimal`。
 
 **返回值**
 
@@ -99,7 +99,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 
 **参数**
 
-`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。
+`expression`：`Int32`， `Int64`， `Double`，或`Decimal`。
 
 **返回值**
 
@@ -148,7 +148,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 
 **参数** 
 
-`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。 
+`expression`：`Int32`， `Int64`， `Double`，或`Decimal`。 
 
 **返回值** 
 
@@ -221,7 +221,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 
 `SqlServer.LOG10(100)`
 
-## <a name="pi"></a>PI （)
+## <a name="pi"></a>PI()
 
 以 `Double` 格式返回 pi 的常量值。 
 
@@ -233,7 +233,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 
 `SqlServer.PI()`
 
-## <a name="powernumericexpression-powerexpression"></a>POWER （numeric_expression，power_expression）
+## <a name="powernumericexpression-powerexpression"></a>POWER(numeric_expression, power_expression)
 
 计算指定表达式的指定幂的值。
 
@@ -258,7 +258,7 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
 
 **参数** 
 
-`expression`：`Int32`、`Int64`、`Double` 或 `Decimal`。 
+`expression`：`Int32`， `Int64`， `Double`，或`Decimal`。 
 
 **返回值** 
 
@@ -382,10 +382,10 @@ SQL Server .NET Framework 数据提供程序 (SqlClient) 提供了各种数学�
   
 ## <a name="see-also"></a>请参阅
 
-有关 SqlClient 支持的数学函数的更多信息，请参见 SqlClient 提供程序清单中所指定的 SQL Server 版本的相应文档：  
-  
-**SQL Server 2005:** [数学函数 (Transact SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**SQL Server 2008:** [数学函数 (Transact SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**SQL Server 2012 和更高版本：** [数学函数 (Transact SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+有关 SqlClient 支持的数学函数的更多信息，请参见 SqlClient 提供程序清单中所指定的 SQL Server 版本的相应文档：
 
- [用于实体框架函数的 SqlClient](sqlclient-for-ef-functions.md)
+- **SQL Server 2005:**[数学函数 (Transact SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))
+- **SQL Server 2008:**[数学函数 (Transact SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))
+- **SQL Server 2012 和更高版本：**[数学函数 (Transact SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)
+
+- [用于实体框架函数的 SqlClient](sqlclient-for-ef-functions.md)

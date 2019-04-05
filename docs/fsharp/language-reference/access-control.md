@@ -1,13 +1,13 @@
 ---
-title: 访问控制 (F#)
-description: '了解如何控制对编程元素，如类型、 方法和函数，F # 编程语言中的访问。'
+title: 访问控制
+description: 了解如何控制访问编程元素，如类型、 方法和函数，在F#编程语言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 66a260d326acf07391e3775e5a7853654b4feee4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8db178b26f3beb6ce95bff84ccad9ac9e8c40ce7
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43803969"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612799"
 ---
 # <a name="access-control"></a>访问控制
 
@@ -15,7 +15,7 @@ ms.locfileid: "43803969"
 
 ## <a name="basics-of-access-control"></a>访问控制的基础知识
 
-在 F # 中，将访问控制说明符`public`， `internal`，和`private`可以应用于模块、 类型、 方法、 值定义、 函数、 属性和显式字段。
+在F#，访问控制说明符`public`， `internal`，并`private`可以应用于模块、 类型、 方法、 值定义、 函数、 属性和显式字段。
 
 - `public` 指示所有调用方可以访问该实体。
 
@@ -23,14 +23,14 @@ ms.locfileid: "43803969"
 
 - `private` 指示该实体，可以访问只能从封闭类型或模块。
 
->[!NOTE]
-访问说明符`protected`尽管它是可接受的如果使用的在支持的语言中编写的类型不使用在 F # 中，`protected`访问。 因此，如果重写受保护的方法，仍然只能在类及其后代中访问你的方法。
+> [!NOTE]
+> 访问说明符`protected`中不使用F#，但如果使用的在支持的语言中编写的类型是可以接受`protected`访问权限。 因此，如果重写受保护的方法，仍然只能在类及其后代中访问你的方法。
 
 一般情况下，该说明符放前的实体，除非名称`mutable`或`inline`使用说明符，它的访问控制说明符后显示。
 
 如果使用没有访问说明符，则默认值是`public`，除`let`绑定类型，它们始终`private`的类型。
 
-F # 中的签名提供另一种机制，用于控制对 F # 程序元素的访问。 签名时不需要的访问控制。 有关详细信息，请参阅[签名](signatures.md)。
+中的签名F#提供用于控制对访问另一种机制F#程序元素。 签名时不需要的访问控制。 有关详细信息，请参阅[签名](signatures.md)。
 
 ## <a name="rules-for-access-control"></a>用于访问控制规则
 

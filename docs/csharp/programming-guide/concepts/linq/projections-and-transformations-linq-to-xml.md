@@ -2,19 +2,19 @@
 title: 投影和转换 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: bb0457ab-1823-47e6-9d2d-c93c958cc913
-ms.openlocfilehash: 835383e472362d38ded3862042609eaaa508efbe
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8d721f600a4a5bb6f3e8c625f825b08d9f59b0ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43747829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514643"
 ---
 # <a name="projections-and-transformations-linq-to-xml-c"></a>投影和转换 (LINQ to XML) (C#)
 本节提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 投影和转换的示例。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[如何：通过 LINQ to XML 使用字典 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md)|演示如何将字典转换为 XML，以及如何将 XML 转换为字典。|  
 |[如何：转换 XML 树的形状 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md)|演示如何转换 XML 文档的形状。|  

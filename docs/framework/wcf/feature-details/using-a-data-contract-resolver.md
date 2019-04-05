@@ -2,15 +2,15 @@
 title: 使用数据协定解析程序
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 467977374e9e2b4a369be7ce467ced1b0dca1195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 844c4e0861c2cf4e6acb2b128ff1f5cefa0f7fa0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499396"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279144"
 ---
 # <a name="using-a-data-contract-resolver"></a>使用数据协定解析程序
-使用数据协定解析程序可以动态配置已知类型。 序列化或反序列化并非数据协定所需的类型时，要求提供已知类型。 有关已知类型的详细信息，请参阅[数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。 已知类型通常以静态方式指定。 这意味着您必须了解在实现某个操作期间，该操作可能接收的所有可能类型。 在某些方案中无法做到这一点，因此能够以动态方式指定已知类型十分重要。  
+使用数据协定解析程序可以动态配置已知类型。 序列化或反序列化并非数据协定所需的类型时，要求提供已知类型。 有关已知类型的详细信息，请参阅[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。 已知类型通常以静态方式指定。 这意味着您必须了解在实现某个操作期间，该操作可能接收的所有可能类型。 在某些方案中无法做到这一点，因此能够以动态方式指定已知类型十分重要。  
   
 ## <a name="creating-a-data-contract-resolver"></a>创建数据协定解析程序  
  创建数据协定解析程序涉及到实现两个方法：<xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> 和 <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>。 这两个方法分别实现在序列化和反序列化期间使用的回调。 在序列化期间将调用 <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> 方法，用于获取数据协定类型并将其映射到 `xsi:type` 名称和命名空间。 在反序列化期间将调用 <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> 方法，用于获取 `xsi:type` 名称和命名空间并将其解析为数据协定类型。 这两个方法均具有 `knownTypeResolver` 参数，该参数可用于在实现中使用默认已知类型解析程序。  
@@ -55,7 +55,7 @@ public class MyCustomerResolver : DataContractResolver
 XmlObjectSerializer serializer = new DataContractSerializer(typeof(Customer), null, Int32.MaxValue, false, false, null, new MyCustomerResolver());  
 ```  
   
- 可以在对 <xref:System.Runtime.Serialization.DataContractSerializer> 或 <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A> 方法的调用中指定  <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A>，如下面的示例所示。  
+ 可以在对 <xref:System.Runtime.Serialization.DataContractResolver> 或 <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A?displayProperty=nameWithType> 方法的调用中指定  <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A?displayProperty=nameWithType>，如下面的示例所示。  
   
 ```  
 MemoryStream ms = new MemoryStream();  
@@ -85,9 +85,9 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- 通过实现可以应用于服务的特性，可以通过声明方式指定数据协定解析程序。  有关详细信息，请参阅[KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)示例。 此示例实现一个称为"KnownAssembly"的属性，它将自定义数据协定解析程序添加到服务的行为。  
+ 通过实现可以应用于服务的特性，可以通过声明方式指定数据协定解析程序。  有关详细信息，请参阅[KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)示例。 此示例实现一个名为"KnownAssembly"属性，将自定义数据协定解析程序添加到服务的行为。  
   
-## <a name="see-also"></a>请参阅  
- [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [DataContractSerializer 示例](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)  
- [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+## <a name="see-also"></a>请参阅
+- [数据协定已知类型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [DataContractSerializer 示例](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)
+- [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)

@@ -9,24 +9,24 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: f595a214e807c2657ef5affd9e52fdf49aa24837
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8683b3ba55f3b9d5425c865af7e18127b55be02d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556050"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363641"
 ---
 # <a name="geometries"></a>几何图形
-<xref:System.Windows.Media.Geometry> 是一个通用的类，用于呈现[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]图形，命中测试对象，并定义剪辑区域  
+<xref:System.Windows.Media.Geometry> 是一个通用类，用于呈现[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]图形，命中测试对象，并定义剪辑区域  
   
 ## <a name="in-this-section"></a>本节内容  
- [路径标记语法](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [路径标记语法](path-markup-syntax.md)  
+ [Geometry 概述](geometry-overview.md)  
+ [帮助主题](geometries-how-to-topics.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Brushes>  
- <xref:System.Windows.Shapes.Shape>  
- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Brushes>
+- <xref:System.Windows.Shapes.Shape>
+- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
+- [图形和多媒体](index.md)

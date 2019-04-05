@@ -1,21 +1,21 @@
 ---
-title: '&lt;清除&gt;schemeSettings （Uri 设置） 的'
+title: schemeSettings 的 <clear> 元素（Uri 设置）
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: 043ce78283c42d2cf42851e13919bf71a77b28b4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5bb97fbe04cbd3bba85113200abe6495639bab87
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196669"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287100"
 ---
-# <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>&lt;清除&gt;schemeSettings （Uri 设置） 的
+# <a name="clear-element-for-schemesettings-uri-settings"></a>\<清除 > schemeSettings （Uri 设置） 的
 清除所有现有方案设置。  
   
  \<configuration>  
-\<uri >  
-\<schemeSettings >  
-\<清除 >  
+\<uri>  
+\<schemeSettings>  
+\<clear>  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,11 +70,11 @@ ms.locfileid: "50196669"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,42 +1,42 @@
 ---
-title: '&lt;netTcpBinding&gt; 的 &lt;transport&gt;'
+title: <transport> 的 <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 0405d3fa8e2155d21fd7bf5b20df39ff3db86b02
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de1f87d8074bbf3d85f6092a4ac316f5fd20052c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835785"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355581"
 ---
-# <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;netTcpBinding&gt; 的 &lt;transport&gt;
+# <a name="transport-of-nettcpbinding"></a>\<传输 > 的\<netTcpBinding >
 定义与配置的终结点的消息级安全性要求的类型[ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<netTcpBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
 \<transport>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<netTcpBinding>  
-    <binding>  
-        <security  
-         mode="None|Transport|Message|TransportWithMessageCredential">  
-            <transport clientCredentialType="None|Windows|Certificate"  
-             protectionLevel="None|Sign|EncryptAndSign"             sslProtocols="Tls|Tls11|Tls12">  
-                <extendedProtectionPolicy  
-                     policyEnforcement="Never|WhenSupported|Always"  
-                     protectionScenario="TransportSelected|TrustedProxy">  
-                    <customServiceNames></customServiceNames>  
-                        </extendedProtectionPolicy>  
-            </transport>  
-        </security>  
-    </binding>  
-</netTcpBinding>  
+<netTcpBinding>
+  <binding>
+    <security mode="None|Transport|Message|TransportWithMessageCredential">
+      <transport clientCredentialType="None|Windows|Certificate"
+                 protectionLevel="None|Sign|EncryptAndSign"
+                 sslProtocols="Tls|Tls11|Tls12">
+        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"
+                                  protectionScenario="TransportSelected|TrustedProxy">
+          <customServiceNames>
+          </customServiceNames>
+        </extendedProtectionPolicy>
+      </transport>
+    </security>
+  </binding>
+</netTcpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -79,13 +79,13 @@ ms.locfileid: "48835785"
 ## <a name="remarks"></a>备注  
  使用传输安全性以获得 SOAP 消息的完整性和保密性以及相互身份验证。 如果在绑定上选择此安全模式，则使用安全传输配置信道栈，并且使用传输安全性（如 Windows (Negotiate) 或 SSLL）保护 SOAP 消息安全通过 TCP 传递。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.TcpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.TcpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

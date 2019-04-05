@@ -2,12 +2,12 @@
 title: 如何：计算中间值 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 15ccf58738b64ebfaef77deb162ddb29db0ae33a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 12c8a87114859ce7b47b8206acb454cdc2838470
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604318"
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>如何：计算中间值 (C#)
 本示例演示如何计算可用于进行排序、筛选和选择的中间值。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 126276840ee12bdba99f5ce1c164762340bb580c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 92e4f416e26e5af9124593f2bef8d8042fcfc953
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183927"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966783"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>将 Windows 应用商店应用迁移到 .NET Native
 .NET 本机提供应用在 Windows 应用商店中或开发人员的计算机上的静态的编译。 这不同于及时生成 (JIT) 编译器或 [本地映像生成器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 在该设备上为 Windows 应用商店应用执行的动态编译。 尽管存在不同，.NET Native 尝试保持与兼容性[.NET for Windows Store 应用](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)。 大多数情况下，用于.NET for Windows Store 应用的内容也适用于.NET Native。  然而，在某些情况下，你可能会遇到行为变更。 本文档介绍了以下几个方面之间的标准.NET for Windows Store 应用和.NET Native 的这些差异：  
@@ -77,11 +77,11 @@ ms.locfileid: "50183927"
   
 -   <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> 属性为表示返回值的 `false` 对象正确返回 <xref:System.Reflection.ParameterInfo>。 在 Windows 应用商店应用的 .NET 中，它返回 `true`。 中间语言 (IL) 不直接支持此操作，且解释需要由语言来进行。  
   
--   位于 <xref:System.RuntimeFieldHandle> 和 <xref:System.RuntimeMethodHandle> 结构上的公共成员不受支持。 这些受到支持的类型仅用于 LINQ、表达式树和静态阵列初始化。  
+-   位于 <xref:System.RuntimeFieldHandle> 和 <xref:System.RuntimeMethodHandle> 结构上的公共成员不受支持。 这些受到支持的类型仅用于 LINQ、表达式树和静态数组初始化。  
   
 -   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 在基类中包含隐藏成员，因此可能会在没有显示重写的情况下遭到重写。 这也适用于其他 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 方法。  
   
--   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 在你试图创建特定组合（例如，ByRef 阵列）时不会发生故障。  
+-   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 在你试图创建特定组合（例如，ByRef 数组）时不会发生故障。  
   
 -   你无法使用反射来调用具有指针参数的成员。  
   
@@ -115,13 +115,13 @@ ms.locfileid: "50183927"
   
  **数组**  
   
--   界限低于零的阵列不受支持。 通常，这些阵列是通过调用 <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> 重载来创建的。  
+-   界限低于零的数组不受支持。 通常，这些数组是通过调用 <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> 重载来创建的。  
   
--   不支持动态创建多维阵列。 此类阵列一般是通过调用包括 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 参数的 `lengths` 方法重载来创建，或通过调用 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> 方法来创建。  
+-   不支持动态创建多维数组。 此类数组一般是通过调用包括 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 参数的 `lengths` 方法重载来创建，或通过调用 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> 方法来创建。  
   
--   四维或更多维的多维阵列不受支持；因为它们的 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 属性值是四或者更大。 可使用 [交错阵列](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) （阵列的阵列）。 例如， `array[x,y,z]` 无效，但 `array[x][y][z]` 有效。  
+-   四维或更多维的多维数组不受支持；因为它们的 <xref:System.Array.Rank%2A?displayProperty=nameWithType> 属性值是四或者更大。 可使用 [交错数组](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) （数组的数组）。 例如， `array[x,y,z]` 无效，但 `array[x][y][z]` 有效。  
   
--   多维阵列的差异不受支持且会在运行时导致 <xref:System.InvalidCastException> 异常。  
+-   多维数组的差异不受支持且会在运行时导致 <xref:System.InvalidCastException> 异常。  
   
  **泛型**  
   
@@ -131,7 +131,7 @@ ms.locfileid: "50183927"
   
  **指针**  
   
--   指针阵列不受支持。  
+-   指针数组不受支持。  
   
 -   你无法使用反射来获取或设置一个指针字段。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "50183927"
   
  **其他 API**  
   
--   如果 <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> 特性未应用于类型， <xref:System.PlatformNotSupportedException> 属性就会导致 <xref:System.Runtime.InteropServices.GuidAttribute> 异常。 GUID 主要用于 COM 支持。  
+-   [TypeInfo.GUID](xref:System.Type.GUID)属性，则会引发<xref:System.PlatformNotSupportedException>异常如果<xref:System.Runtime.InteropServices.GuidAttribute>特性未应用于类型。 GUID 主要用于 COM 支持。  
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>方法会正确解析包含在.NET Native 的短日期的字符串。 然而，它不会继续兼容 Microsoft 知识库文章 [KB2803771](https://support.microsoft.com/kb/2803771) 和 [KB2803755](https://support.microsoft.com/kb/2803755)中描述的日期和时间解析的变更。  
   
@@ -262,7 +262,7 @@ ms.locfileid: "50183927"
   
  大多数平台调用和 COM 互操作方案中.NET Native 仍受支持。 特别地，Windows Runtime (WinRT) API 的所有互操作和 Windows Runtime 所需的所有封送都受支持。 这包括针对以下内容的封送支持：  
   
--   阵列（包括 <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>）  
+-   数组（包括 <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>）  
   
 -   `BStr`  
   
@@ -380,7 +380,7 @@ ms.locfileid: "50183927"
   
  **RTC (System.Net.Http.Rtc)**  
   
- <xref:System.Net.Http.RtcRequestFactory?displayProperty=nameWithType>类不支持在.NET Native。  
+ `System.Net.Http.RtcRequestFactory`类不支持在.NET Native。  
   
  **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**  
   
@@ -622,10 +622,8 @@ ms.locfileid: "50183927"
   
 -   <xref:System.Xml.Serialization.XmlSerializer> 不兼容 <xref:System.Xml.Serialization.IXmlSerializable> 自定义序列化接口。 如果你的类实施此接口， <xref:System.Xml.Serialization.XmlSerializer> 会考虑普通旧 CLR 对象 (POCO) 类型并仅对其公共属性进行序列化。  
   
--   对普通 <xref:System.Exception> 对象的序列化（如以下情况）对 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>无效：  
-  
-  
-  
+-   序列化纯<xref:System.Exception>对象不太适合<xref:System.Runtime.Serialization.DataContractSerializer>和<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。
+
 <a name="VS"></a>   
 ## <a name="visual-studio-differences"></a>Visual Studio 差异  
  **异常和调试**  
@@ -652,8 +650,8 @@ ms.locfileid: "50183927"
   
  启用.NET Native 上的 Windows 应用商店应用项目单元测试库不支持，并且会导致项目无法生成。  
   
-## <a name="see-also"></a>请参阅  
- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [.NET for Windows Store 应用概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)  
- [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+## <a name="see-also"></a>请参阅
+- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [.NET for Windows Store 应用概述](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [.NET Framework 对 Windows 应用商店应用和 Windows 运行时的支持情况](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

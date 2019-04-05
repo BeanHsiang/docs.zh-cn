@@ -1,14 +1,14 @@
 ---
 title: 在运行时动态指定谓词筛选器（C# 中的 LINQ）
 description: 了解如何使用 C# 中的 LINQ 在运行时动态指定谓词筛选器。
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: ece5940edd615f30acab06a429de300e27811a66
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 314be8f98b9ff014f14bef11a1f3581eff8574b4
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038482"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857731"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>在运行时动态指定谓词筛选器
 
@@ -36,11 +36,11 @@ ms.locfileid: "50038482"
 
 7. 在控制台窗口中显示以下输出：
 
-     Garcia: 114
+     Garcia:114
 
-     O'Donnell: 112
+     O'Donnell:112
 
-     Omelchenko: 111
+     Omelchenko:111
 
 8. 下一步是再次运行该项目，此次是通过使用在运行时输入的输入而非数组 `ids` 来执行此操作。 在 `Main` 方法中，将 `QueryByID(ids)` 更改为 `QueryByID(args)`。
 
@@ -48,13 +48,13 @@ ms.locfileid: "50038482"
 
 10. 在控制台窗口中显示以下输出：
 
-     Adams: 120
+     Adams:120
 
-     Feng: 117
+     Feng:117
 
-     Garcia: 115
+     Garcia:115
 
-     Tucker: 122
+     Tucker:122
 
 ## <a name="to-filter-by-using-a-switch-statement"></a>使用 switch 语句进行筛选
 

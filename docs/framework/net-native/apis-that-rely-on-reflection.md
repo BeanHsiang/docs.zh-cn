@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98488a8e552940055a6ea06d360af1bd2c6b6079
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26a198db13e5855d9473cf7780dade9ce95e9298
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610832"
 ---
 # <a name="apis-that-rely-on-reflection"></a>利用反射的 API
 在某些情况下，在代码中对反射的使用不是明显的，并且 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具链并不保存在运行时间需要的元数据。 该主题介绍了一些常见的 API 或常见编程模式，它们不被视为是反射 API 的一部分，而依赖反射成功执行。 如果在源代码中使用了它们，可以将有关它们的信息添加到运行时指令 (.rd.xml) 文件，以便对这些 API 的调用不会在运行时内引发 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 异常或某种其他异常。  
@@ -76,7 +76,7 @@ App1.AppClass`1<System.Int32>.
   
  [!code-csharp[ProjectN#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/array1.cs#3)]  
   
- 如果不存在阵列元数据，以下错误会导致：  
+ 如果不存在数组元数据，以下错误会导致：  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
@@ -86,12 +86,12 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- 需要阵列类型的 `Browse` 元数据才能将其动态实例化。  以下运行时指令允许对 `Class1[]` 的进行动态实例化。  
+ 需要数组类型的 `Browse` 元数据才能将其动态实例化。  以下运行时指令允许对 `Class1[]` 的进行动态实例化。  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>请参阅
+- [入门](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

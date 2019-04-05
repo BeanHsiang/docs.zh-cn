@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: c164490464d839dacefaf570c8956bf15caeb7de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2a711ad4779b8c932436ce1886b1a93dda849a94
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856499"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093952"
 ---
 # <a name="enabling-query-notifications"></a>启用查询通知
 使用查询通知的应用程序有一组通用的需求。 必须正确配置数据源才能支持 SQL 查询通知，并且用户必须具有正确的客户端和服务器端权限。  
@@ -28,25 +28,25 @@ ms.locfileid: "43856499"
 ## <a name="query-notifications-requirements"></a>查询通知要求  
  仅对满足一系列特定要求的 SELECT 语句支持查询通知。 下表提供指向“SQL Server 联机丛书”中的 Service Broker 和“查询通知”文档的链接。  
   
- **SQL Server 联机丛书**  
+ **SQL Server 文档**  
   
--   [为通知创建查询](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [为通知创建查询](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Service Broker 的安全注意事项](https://msdn.microsoft.com/library/ms166059.aspx)  
+-   [Service Broker 的安全注意事项](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
--   [安全和保护 (Service Broker)](https://msdn.microsoft.com/library/bb522911.aspx)  
+-   [安全和保护 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
--   [Notification Services 的安全注意事项](https://msdn.microsoft.com/library/ms172604.aspx)  
+-   [Notification Services 的安全注意事项](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
--   [查询通知权限](https://msdn.microsoft.com/library/ms188311.aspx)  
+-   [查询通知权限](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
--   [Service broker 的国际化注意事项](https://msdn.microsoft.com/library/ms166028.aspx)  
+-   [Service broker 的国际化注意事项](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
--   [解决方案设计注意事项 (Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
+-   [解决方案设计注意事项 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
--   [Service Broker 开发人员信息中心](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker 开发人员信息中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [开发人员指南 (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [开发人员指南 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>启用查询通知运行示例代码  
  若要上启用 Service Broker **AdventureWorks**数据库使用 SQL Server Management Studio 中，执行以下 TRANSACT-SQL 语句：  
@@ -84,6 +84,6 @@ CREATE SERVICE ContactChangeNotifications
 ### <a name="using-sqlnotificationrequest"></a>使用 SqlNotificationRequest  
  相对而言，<xref:System.Data.Sql.SqlNotificationRequest> 要求您自己实现整个侦听基础结构。 此外，必须定义队列所支持的所有支持 Service Broker 对象（例如队列、服务和消息类型）。 如果应用程序要求特殊的通知消息或通知行为，或应用程序是更大的服务中介应用程序的一部分，此手动方法非常有用。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 中的查询通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [SQL Server 中的查询通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: WCF 和国际化域名
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: a0d4a5b4fe5dd3bc7cf41c8c6ad320dd83861aec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83c6f3c2afec0f2b6b8fccca4bd8252e9ab35400
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571582"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF 和国际化域名
 添加了允许使用带有国际化域名 (IDN) 的 WCF 服务的支持。 国际化域名称是包含非 ASCII 字符的域名。 这种支持包括能够承载具有 IDN 名称的 WCF 服务以及 WCF 客户端，以便与具有 IDN 名称的 Web 服务进行对话。  
@@ -41,5 +41,5 @@ ms.locfileid: "50187918"
 > [!WARNING]
 >  将 Unicode 字符添加到 applicationHost.exe.config 时，使用 UTF-8 编码保存文件。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Uri?displayProperty=nameWithType>
+## <a name="see-also"></a>请参阅
+- <xref:System.Uri?displayProperty=nameWithType>

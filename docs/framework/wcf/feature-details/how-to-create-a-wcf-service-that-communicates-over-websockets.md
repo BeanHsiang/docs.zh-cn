@@ -1,15 +1,15 @@
 ---
-title: 如何创建通过 WebSocket 进行通信的 WCF 服务
+title: 如何：创建通过 Websocket 进行通信的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: a9b3ae8d8dcac7844e241fa668e1199669d216e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d578b58f6613fb48f1bfceb8929ec51b8e025de1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196181"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689141"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>如何创建通过 WebSocket 进行通信的 WCF 服务
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>如何：创建通过 Websocket 进行通信的 WCF 服务
 WCF 服务和客户端可以使用 <xref:System.ServiceModel.NetHttpBinding> 绑定通过 WebSocket 进行通信。  当 <xref:System.ServiceModel.NetHttpBinding> 确定服务协定定义回调协定时，将使用 WebSocket。 本主题描述如何实现使用 <xref:System.ServiceModel.NetHttpBinding> 通过 WebSocket 进行通信的 WCF 服务和客户端。  
   
 ### <a name="define-the-service"></a>定义服务  
@@ -295,7 +295,7 @@ namespace Client
 ```  
   
 ```xml  
-<!—App.config -->  
+<!--App.config -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <startup>   
@@ -318,6 +318,6 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [同步和异步操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
- [使用 NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
+## <a name="see-also"></a>请参阅
+- [同步和异步操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
+- [使用 NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

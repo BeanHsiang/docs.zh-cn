@@ -1,5 +1,5 @@
 ---
-title: 如何：响应 Windows 窗体按钮的单击
+title: 如何：响应 Windows 窗体按钮单击
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: 14a880c34f163dc6fece44c24d377822a741b0f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534246"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724981"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>如何：响应 Windows 窗体按钮的单击
-Windows 窗体的最基本用法<xref:System.Windows.Forms.Button>控制是单击该按钮时运行某些代码。  
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>如何：响应 Windows 窗体按钮单击
+Windows 窗体的最基本用法<xref:System.Windows.Forms.Button>控件将在单击按钮时运行某些代码。  
   
- 单击<xref:System.Windows.Forms.Button>控件还会生成大量的其他事件，如<xref:System.Windows.Forms.Control.MouseEnter>， <xref:System.Windows.Forms.Control.MouseDown>，和<xref:System.Windows.Forms.Control.MouseUp>事件。 如果你想要附加这些相关事件的事件处理程序，请确保其操作不冲突。 例如，如果单击的按钮中清除用户已在文本框中键入的信息，将鼠标指针暂停到按钮上方时就不应显示具有该已不存在的信息的工具提示。  
+ 单击<xref:System.Windows.Forms.Button>控件还会生成大量的其他事件，如<xref:System.Windows.Forms.Control.MouseEnter>， <xref:System.Windows.Forms.Control.MouseDown>，和<xref:System.Windows.Forms.Control.MouseUp>事件。 如果你想要附加这些相关事件的事件处理程序，请确保它们的操作不会冲突。 例如，如果单击该按钮将清除用户已在文本框中键入的信息，将鼠标指针暂停到按钮上方时就不应显示工具提示信息的已不存在。  
   
  如果用户尝试双击<xref:System.Windows.Forms.Button>控件，每次单击将单独处理; 即，该控件不支持双击事件。  
   
 ### <a name="to-respond-to-a-button-click"></a>若要响应按钮单击  
   
--   在按钮的`Click`<xref:System.EventHandler>编写代码来运行。 `Button1_Click` 必须绑定到控件。 有关详细信息，请参阅[如何： 在运行时添加的 Windows 窗体创建事件处理程序](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
+-   在按钮的`Click`<xref:System.EventHandler>编写代码来运行。 `Button1_Click` 必须绑定到控件。 有关详细信息，请参阅[如何：在运行时为 Windows 窗体创建事件处理程序](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -55,7 +55,7 @@ Windows 窗体的最基本用法<xref:System.Windows.Forms.Button>控制是单�
        }  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [Button 控件概述](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [如何选择 Windows 窗体 Button 控件](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [Button 控件](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- [Button 控件概述](button-control-overview-windows-forms.md)
+- [如何选择 Windows 窗体 Button 控件](ways-to-select-a-windows-forms-button-control.md)
+- [Button 控件](button-control-windows-forms.md)

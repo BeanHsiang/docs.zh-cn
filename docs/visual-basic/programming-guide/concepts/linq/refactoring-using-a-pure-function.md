@@ -1,21 +1,21 @@
 ---
-title: 重构使用纯函数 (Visual Basic)
+title: 使用纯函数 (Visual Basic) 重构
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: fe1ad3b189891a1655e014dc49dac00c79507a7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac14385b87899490099dd0664264daef538319a8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645010"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833613"
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a>重构使用纯函数 (Visual Basic)
-下面的示例重构前面的示例中，[重构使用扩展方法 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)，则应在此示例中，代码以查找个段落的文本变为纯的静态方法使用纯函数`ParagraphText`.  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a>使用纯函数 (Visual Basic) 重构
+下面的示例重构前面的示例中，[使用扩展方法 (Visual Basic) 重构](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)，若要在此示例中，查找段落的文本将移至纯静态方法代码使用纯函数`ParagraphText`.  
   
 ## <a name="example"></a>示例  
  本示例处理一个 WordprocessingML 文档，它从 WordprocessingML 文档中检索段落节点。 它还标识每个段落的样式。 本示例以本教程中前面的一些示例为基础构建。 下面代码中的注释标识出了重构的代码。  
   
- 用于创建此示例中的源文档的说明，请参阅[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 有关创建此示例中的源文档的说明，请参阅[创建源 Office Open XML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
  本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
@@ -170,9 +170,10 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>后续步骤  
  下面的示例演示如何将 XML 投影到一个不同的形状：  
   
--   [将 XML 投影为不同的形状 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+-   [不同的形状 (Visual Basic 中) 中投影 XML](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>请参阅  
- [教程： 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [重构使用扩展方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
- [重构到纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>请参阅
+
+- [教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [使用扩展方法 (Visual Basic) 重构](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
+- [重构为纯函数 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -1,13 +1,13 @@
 ---
-title: 编译器指令 (F#)
-description: '了解有关 F # 语言预处理器指令、 条件编译指令、 行指令和编译器指令。'
-ms.date: 05/16/2016
-ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: 编译器指令
+description: 了解如何F#语言预处理器指令、 条件编译指令、 行指令和编译器指令。
+ms.date: 12/10/2018
+ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50181363"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614033"
 ---
 # <a name="compiler-directives"></a>编译器指令
 
@@ -21,7 +21,7 @@ ms.locfileid: "50181363"
 
 |指令|描述|
 |---------|-----------|
-|`#if` *符号*|支持条件编译。 后面部分中的代码`#if`如果，则包含*符号*定义。|
+|`#if` *符号*|支持条件编译。 后面部分中的代码`#if`如果，则包含*符号*定义。 此外可以使用取反符号`!`。|
 |`#else`|支持条件编译。 如果未定义与前面的 `#if` 一起使用的符号，则将一段代码标记为包含在内。|
 |`#endif`|支持条件编译。 标记条件代码段的末尾。|
 |`#`[行]*int*，<br/>`#`[行]*int* *字符串*，<br/>`#`[行]*int* *逐字字符串*|指示原始源代码行和文件名以用于调试。 此功能是为生成 F# 源代码的工具而提供的。|
@@ -35,8 +35,8 @@ ms.locfileid: "50181363"
 
 通过这些指令之一停用的代码显示为灰色 Visual Studio 代码编辑器中。
 
->[!NOTE]
-条件编译指令的行为与它在其他语言中的行为不同。 例如，不能使用涉及符号的布尔表达式，并且 `true` 和 `false` 没有特殊含义。 在 `if` 指令中使用的符号必须通过命令行或在项目设置中定义；没有 `define` 预处理器指令。
+> [!NOTE]
+> 条件编译指令的行为与它在其他语言中的行为不同。 例如，不能使用涉及符号的布尔表达式，并且 `true` 和 `false` 没有特殊含义。 在 `if` 指令中使用的符号必须通过命令行或在项目设置中定义；没有 `define` 预处理器指令。
 
 以下代码演示了 `#if`、`#else` 和 `#endif` 指令的用法。 在此示例中，代码包含两个版本的 `function1` 定义。 当`VERSION1`使用定义[-define 编译器选项](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)，之间的代码`#if`指令和`#else`激活指令。 否则，会激活 `#else` 与 `#endif` 之间的代码。
 
@@ -45,6 +45,16 @@ ms.locfileid: "50181363"
 F# 中没有 `#define` 预处理器指令。 必须使用编译器选项或项目设置来定义 `#if` 指令使用的符号。
 
 条件编译指令可以进行嵌套。 缩进对于预处理器指令并不重要。
+
+此外可以要求反的符号与`!`。 在此示例中，字符串的值是内容仅当_不_调试：
+
+```fsharp
+#if !DEBUG
+let str = "Not debugging!"
+#else
+let str = "Debugging!"
+#endif
+```
 
 ## <a name="line-directives"></a>行指令
 
@@ -65,7 +75,8 @@ F# 中没有 `#define` 预处理器指令。 必须使用编译器选项或项�
 |指令|描述|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|启用或禁用轻量语法，以便与其他版本的 ML 兼容。 默认情况下，轻量语法处于启用状态。 详细语法始终处于启用状态。 因此，可以同时使用轻量语法和详细语法。 指令 `#light` 本身等效于 `#light "on"`。 如果指定 `#light "off"`，则必须对所有语言构造使用详细语法。 F# 文档中展示的语法基于使用轻量语法这一假设。 有关详细信息，请参阅[详细语法](verbose-syntax.md)。|
-解释器 (fsi.exe) 指令，请参阅[使用 F # 进行交互式编程](../tutorials/fsharp-interactive/index.md)。
+
+解释器 (fsi.exe) 指令，请参阅[使用交互式编程F# ](../tutorials/fsharp-interactive/index.md)。
 
 ## <a name="see-also"></a>请参阅
 

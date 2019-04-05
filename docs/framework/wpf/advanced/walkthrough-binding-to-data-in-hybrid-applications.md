@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 378ebd5a402006d7e7a88029ced62f812f620aeb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584182"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377737"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>演练：绑定到混合应用程序中的数据
 无论您使用数据源绑定到控件是必需的用户提供对基础数据的访问[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 本演练演示如何在混合应用程序中包含这两个使用数据绑定[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控件。  
@@ -67,7 +67,7 @@ ms.locfileid: "48584182"
   
 5.  命名为默认值<xref:System.Windows.Controls.Grid>元素`mainGrid`通过将分配<xref:System.Windows.FrameworkElement.Name%2A>属性。  
   
-     [!code-xaml[WPFWithWFAndDatabinding#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
+     [!code-xaml[WPFWithWFAndDatabinding#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
 ## <a name="defining-the-data-template"></a>定义数据模板  
  客户的主列表显示在<xref:System.Windows.Controls.ListBox>控件。 下面的代码示例定义<xref:System.Windows.DataTemplate>名为对象`ListItemsTemplate`控件的可视化树<xref:System.Windows.Controls.ListBox>控件。 这<xref:System.Windows.DataTemplate>分配给<xref:System.Windows.Controls.ListBox>控件的<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>属性。  
@@ -76,7 +76,7 @@ ms.locfileid: "48584182"
   
 -   将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
   
-     [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
+     [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
 ## <a name="specifying-the-form-layout"></a>指定窗体布局  
  窗体的布局由一个三行三列的网格来定义。 <xref:System.Windows.Controls.Label> 控件旨在标识 Customers 表中的每个列。  
@@ -85,13 +85,13 @@ ms.locfileid: "48584182"
   
 -   将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
   
-     [!code-xaml[WPFWithWFAndDatabinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
+     [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>设置 Label 控件  
   
 -   将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
   
-     [!code-xaml[WPFWithWFAndDatabinding#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
+     [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
 ## <a name="specifying-data-bindings"></a>指定数据绑定  
  客户的主列表显示在<xref:System.Windows.Controls.ListBox>控件。 附加`ListItemsTemplate`绑定<xref:System.Windows.Controls.TextBlock>控制对`ContactName`字段从该数据库。  
@@ -104,7 +104,7 @@ ms.locfileid: "48584182"
   
      <xref:System.Windows.Data.Binding>类绑定<xref:System.Windows.Controls.TextBox>控件添加到数据库中的相应字段。  
   
-     [!code-xaml[WPFWithWFAndDatabinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
+     [!code-xaml[WPFWithWFAndDatabinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
   
 ## <a name="displaying-data-by-using-interoperation"></a>使用互操作功能显示数据  
  对应于所选客户的订单显示在<xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType>名为控件`dataGridView1`。 `dataGridView1`控件绑定到数据源中的代码隐藏文件。 一个<xref:System.Windows.Forms.Integration.WindowsFormsHost>控件是指此父[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控件。  
@@ -113,7 +113,7 @@ ms.locfileid: "48584182"
   
 -   将复制到以下 XAML<xref:System.Windows.Controls.Grid>元素的声明。  
   
-     [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
+     [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
 ## <a name="adding-the-data-source-to-the-project"></a>向项目添加数据源  
  使用 Visual Studio 中，可以轻松向项目添加数据源。 此过程将向项目添加强类型数据集。 还添加了其他支持类，例如每个所选表适用的表适配器。  
@@ -122,7 +122,7 @@ ms.locfileid: "48584182"
   
 1.  从**数据**菜单中，选择**添加新数据源**。  
   
-2.  在中**数据源配置向导**，使用数据集创建到 Northwind 数据库的连接。 有关详细信息，请参阅[如何： 连接到数据库中的数据](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)。  
+2.  在中**数据源配置向导**，使用数据集创建到 Northwind 数据库的连接。 有关详细信息，请参阅[如何：连接到数据库中的数据](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))。  
   
 3.  当提示你**数据源配置向导**，保存连接字符串作为`NorthwindConnectionString`。  
   
@@ -139,15 +139,15 @@ ms.locfileid: "48584182"
   
      此代码声明了<xref:System.Windows.Forms.BindingSource>组件和连接到数据库的相关帮助器类。  
   
-     [!code-csharp[WPFWithWFAndDatabinding#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
-     [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
+     [!code-csharp[WPFWithWFAndDatabinding#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
+     [!code-vb[WPFWithWFAndDatabinding#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
 
 3.  将以下代码复制到构造函数中。
 
      此代码将创建并初始化<xref:System.Windows.Forms.BindingSource>组件。
 
-     [!code-csharp[WPFWithWFAndDatabinding#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
-     [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
+     [!code-csharp[WPFWithWFAndDatabinding#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
+     [!code-vb[WPFWithWFAndDatabinding#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
 
 4.  打开 MainWindow.xaml。
 
@@ -161,22 +161,22 @@ ms.locfileid: "48584182"
 
      此代码将分配<xref:System.Windows.Forms.BindingSource>组件作为数据上下文，并填充`Customers`和`Orders`适配器对象。
 
-     [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
-     [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]
+     [!code-csharp[WPFWithWFAndDatabinding#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
+     [!code-vb[WPFWithWFAndDatabinding#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]
 
 9. 以下代码复制到`MainWindow`类定义。
 
      此方法可处理<xref:System.Windows.Data.CollectionView.CurrentChanged>事件并更新数据绑定的当前项。
 
-     [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
-     [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
+     [!code-csharp[WPFWithWFAndDatabinding#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
+     [!code-vb[WPFWithWFAndDatabinding#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
   
 10. 按 F5 生成并运行该应用程序。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [混合应用程序示例中的数据绑定](https://go.microsoft.com/fwlink/?LinkID=159983)  
- [演练：在 WPF 中托管 Windows 窗体复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [演练：在 Windows 窗体中承载 WPF 复合控件](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [混合应用程序示例中的数据绑定](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [演练：承载在 WPF 中的 Windows 窗体复合控件](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [演练：承载 WPF 复合控件在 Windows 窗体中](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -10,35 +10,36 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e47707d040cd7bf67008fab33ac482706963ce39
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725241"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>如何：创建线性渐变
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供水平线、 垂线、 对角线和线性渐变。 默认情况下中的线性渐变的颜色均匀地变化。 但是，以便的颜色更改非一致性方式可以自定义线性渐变。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供了水平、 垂直，和对角线线性渐变。 默认情况下，线性渐变中的颜色均匀地变化。 以便以非均匀方式将颜色更改，但是，可以自定义线性渐变。  
   
- 下面的示例填充线条、 椭圆和一个具有水平线性渐变画笔的矩形。  
+ 下面的示例填充直线、 椭圆和水平线性渐变画笔的矩形。  
   
- <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>构造函数接收四个自变量： 两个点以及两种颜色。 第一个点 （0，10） 程序与第一种颜色 （红色），并且第二个点 （200、 10） 与第二种颜色 （蓝色） 相关联。 如你所料的从绘制的线条 （0，10） 到 （200，10） 从红色为蓝色逐渐变成。  
+ <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>构造函数接收四个参数： 两个点和两种颜色。 第一个点 （0，10） 程序与第一种颜色 （红色），并且第二个点 （200，10） 与第二种颜色 （蓝色） 相关联。 如您所料的从绘制的线条 （0，10） 到 （200，10） 由红色变为蓝色逐渐更改。  
   
- 中的点 （50、 10） 和 200 （10） 的 10 并不重要。 重要的一点是两个点具有相同的第二个坐标 — 它们之间的连线是水平。 椭圆和矩形还逐渐从更改为蓝色，因为水平坐标将从 0 到 200 个的红色。  
+ 中的点 （50，10） 和 （200，10） 10 秒并不重要。 重要的是，两个点的第二个坐标相同 — 连接二者的线是水平。 椭圆和矩形也逐渐更改由红色变为蓝色因为是由从 0 到 200 的水平坐标。  
   
- 下图显示行、 椭圆和矩形。 请注意，颜色渐变本身可根据重复的水平坐标增加到 200 以上。  
+ 下图显示线条、 椭圆和矩形。 请注意，图的颜色渐变本身可根据重复的水平坐标增加到 200 以上。  
   
- ![线性渐变](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
+ ![线性渐变](./media/cslineargradient1.png "cslineargradient1")  
   
 ### <a name="to-use-horizontal-linear-gradients"></a>若要使用水平线性渐变  
   
--   将不透明的红色，并不透明蓝色分别作为第三个和第四个参数传递。  
+-   将不透明红色和不透明蓝色分别作为第三个和第四个参数传递。  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
- 在前面的示例中，颜色组件以线性方式更改当你从 0 的水平坐标移到 200 的水平坐标。 例如，其第一个坐标是介于 0 到 200 之间的中间值的点将具有是介于 0 和 255 之间的中间值蓝色分量。  
+ 在前面的示例中，颜色组件以线性方式更改为 0 的水平坐标从移动到 200 的水平坐标。 例如，其第一个坐标是 0 到 200 之间的中间位置的点将有一个介于 0 和 255 之间的中间位置的蓝色组件。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 允许你调整颜色因某条边的渐变到另的方式。 假设你想要创建一个渐变画笔，它从黑色将更改为红色根据下表。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可以调整一种颜色在某条边的渐变的其他不同的方式。 假设你想要创建从黑色更改为根据下表的红色渐变画笔。  
   
 |水平坐标|RGB 组件|  
 |---------------------------|--------------------|  
@@ -46,36 +47,36 @@ ms.lasthandoff: 05/04/2018
 |40|(128, 0, 0)|  
 |200|(255, 0, 0)|  
   
- 请注意，红色组件以半强度时，水平坐标是仅有 20%的从 0 到 200 个的方法。  
+ 请注意，红色组件以半强度时，水平坐标是只有 20%的从 0 到 200 的方法。  
   
- 下面的示例设置<xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A>属性<xref:System.Drawing.Drawing2D.LinearGradientBrush>将三个相对亮度与三个相对位置相关联的对象。 与上表中，一样 0.5 相对强度是与 0.2 的相对位置相关联。 该代码填充椭圆和一个具有渐变画笔的矩形。  
+ 下面的示例设置<xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A>属性的<xref:System.Drawing.Drawing2D.LinearGradientBrush>将三个相对亮度与三个相对位置相关联的对象。 如前面的表中所示相对强度是 0.5 的与 0.2 的相对位置相关联。 该代码填充椭圆和矩形使用渐变画笔。  
   
  下图显示得到的椭圆和矩形。  
   
- ![线性渐变](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
+ ![线性渐变](./media/cslineargradient2.png "cslineargradient2")  
   
 ### <a name="to-customize-linear-gradients"></a>若要自定义线性渐变  
   
--   将不透明的黑色和不透明红分别作为第三个和第四个参数传递。  
+-   将不透明的黑色和不透明红色分别作为第三个和第四个参数传递。  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
- 在上面的示例的渐变是水平的;也就是说，当的颜色更改逐渐沿任何水平行移动。 你还可以定义垂直渐变和对角线渐变。  
+ 在上述示例中的渐变的方向是水平;也就是说，颜色逐渐变化沿任意水平行移动。 此外可以定义垂直渐变和对角线渐变。  
   
- 下面的示例将点 （0，0） 和 （200，100） 传递给<xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>构造函数。 蓝色关联 （0，0），并与关联绿色 （200，100）。 （带有钢笔的宽度 10） 的行和一个椭圆将使用线性渐变画笔填充。  
+ 下面的示例将点 （0，0） 和 （200，100） 传递给<xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A>构造函数。 与之关联的颜色蓝色 （0，0），并与之关联的绿色 （200，100）。 使用线性渐变画笔填充行 （使用笔宽度为 10） 和一个椭圆。  
   
- 下图显示行和椭圆。 请注意，椭圆更改中的颜色逐渐随着沿任何行，是类似于通过传递的行 （0，0） 和 （200，100）。  
+ 下图显示了在行和椭圆。 请注意，在椭圆更改颜色逐渐沿任意移动行的是并行的行通过传递到 （0，0） 和 （200，100）。  
   
- ![线性渐变](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
+ ![线性渐变](./media/cslineargradient3.png "cslineargradient3")  
   
-### <a name="to-create-diagonal-linear-gradients"></a>若要创建对角线方向线性渐变  
+### <a name="to-create-diagonal-linear-gradients"></a>若要创建对角线线性渐变  
   
--   在不透明的蓝色和不透明绿色将作为第三个和第四个参数传递，分别。  
+-   传入的不透明的蓝色和不透明绿色作为第三个和第四个参数，分别。  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
-## <a name="see-also"></a>请参阅  
- [使用渐变画笔填充形状](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- [Windows 窗体中的图形和绘制](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- [使用渐变画笔填充形状](using-a-gradient-brush-to-fill-shapes.md)
+- [Windows 窗体中的图形和绘制](graphics-and-drawing-in-windows-forms.md)

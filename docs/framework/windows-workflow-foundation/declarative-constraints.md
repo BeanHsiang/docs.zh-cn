@@ -2,12 +2,12 @@
 title: 声明性约束
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842367"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708141"
 ---
 # <a name="declarative-constraints"></a>声明性约束
 声明性约束为活动及其与其他活动的关系提供了一个功能强大的验证方法。 约束是在创作过程中为活动配置的，但工作流宿主也可以指定其他约束。 本主题概述了如何使用声明性约束提供活动验证。  
@@ -63,7 +63,8 @@ public sealed class SampleActivity : CodeActivity
 
 可以使用多个验证活动，这些活动提供工作流中与验证的活动有关的其他活动的相关信息。 <xref:System.Activities.Validation.GetParentChain> 返回一个活动集合，该集合包含当前活动和根活动之间的所有活动。 <xref:System.Activities.Validation.GetChildSubtree> 提供一个活动集合，该集合包含采用递归模式的子活动，并且 <xref:System.Activities.Validation.GetWorkflowTree> 获取工作流中的所有活动。  
   
-下面的示例定义了一个 `CreateState` 活动。 `CreateState` 活动必须包含在 `CreateCountry` 活动中，并且 `GetParent` 方法返回一个强制此要求的约束。  `GetParent` 将 <xref:System.Activities.Validation.GetParentChain> 活动与 <xref:System.Activities.Statements.ForEach%601> 结合使用，以检查 `CreateState` 活动的父活动，从而确定是否满足要求。  
+下面的示例定义了一个 `CreateState` 活动。 
+  `CreateState` 活动必须包含在 `CreateCountry` 活动中，并且 `GetParent` 方法返回一个强制此要求的约束。  `GetParent` 将 <xref:System.Activities.Validation.GetParentChain> 活动与 <xref:System.Activities.Statements.ForEach%601> 结合使用，以检查 `CreateState` 活动的父活动，从而确定是否满足要求。  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -176,4 +177,4 @@ else
 }  
 ```  
   
- 如果 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 的 <xref:System.Activities.Validation.ValidationSettings> 属性为 `true`，则在通过调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 调用验证时只计算指定的其他约束。 对于检查工作流的特定验证配置，这非常有用。 但是，请注意调用工作流时，对在工作流中配置的验证逻辑进行计算并且必须传递给该工作流才能成功开始。 调用验证的详细信息，请参阅[调用活动验证](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。
+ 如果 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 的 <xref:System.Activities.Validation.ValidationSettings> 属性为 `true`，则在通过调用 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 调用验证时只计算指定的其他约束。 对于检查工作流的特定验证配置，这非常有用。 但是，请注意调用工作流时，对在工作流中配置的验证逻辑进行计算并且必须传递给该工作流才能成功开始。 调用验证的详细信息，请参阅[调用活动验证](invoking-activity-validation.md)。

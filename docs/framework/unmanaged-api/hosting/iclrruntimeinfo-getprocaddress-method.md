@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8e50a018016b885a3513cbd885b8e5115f18113
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: da9ae70056e3ef5d6d9e03fde1dcf8775e5d118e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432916"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498947"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress 方法
-获取指定已从公共语言运行时 (CLR) 与此接口关联导出的函数的地址。  
+获取指定的函数导出从公共语言运行时 (CLR) 与此接口关联的地址。  
   
  此方法取代[GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)函数。  
   
@@ -37,7 +37,7 @@ HRESULT GetProcAddress(
      [out, retval] LPVOID *ppProc);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pszProcName`  
  [in]导出函数的名称。  
   
@@ -50,22 +50,22 @@ HRESULT GetProcAddress(
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|该方法已成功完成。|  
-|E_POINTER|`pszProcName` 或 `ppProc` 为 null。|  
+|E_POINTER|`pszProcName` 或`ppProc`为 null。|  
 |CLR_E_SHIM_RUNTIMEEXPORT|指定的函数不是导出的函数。|  
   
 ## <a name="remarks"></a>备注  
  此方法会导致 CLR 加载，但未初始化。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MetaHost.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRRuntimeInfo 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>请参阅
+- [ICLRRuntimeInfo 接口](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [承载](../../../../docs/framework/unmanaged-api/hosting/index.md)

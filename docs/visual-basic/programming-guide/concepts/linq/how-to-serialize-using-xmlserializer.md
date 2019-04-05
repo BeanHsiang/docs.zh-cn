@@ -1,15 +1,15 @@
 ---
-title: 如何： 使用 XmlSerializer (Visual Basic) 进行序列化
+title: 如何：序列化使用 XmlSerializer (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: 3a85d915d02f7e2cd2290b6cfc8446c271edf3b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641061"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821460"
 ---
-# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>如何： 使用 XmlSerializer (Visual Basic) 进行序列化
+# <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>如何：序列化使用 XmlSerializer (Visual Basic)
 本主题显示一个使用 <xref:System.Xml.Serialization.XmlSerializer> 进行序列化和反序列化的示例。  
   
 ## <a name="example"></a>示例  
@@ -80,5 +80,6 @@ Testing for type: XElementContainer
   Deserialized type: XElementContainer  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [序列化对象图包含 XElement 对象 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a>请参阅
+
+- [序列化包含 XElement 对象 (Visual Basic 中) 的对象图](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

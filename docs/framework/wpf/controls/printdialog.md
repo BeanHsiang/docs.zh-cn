@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], PrintDialog
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
-ms.openlocfilehash: a1f69e0960e2882e3f31b5c79eaf0aab7a1e0e82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8638b56e8a6430b1a7cec371f133063a0c57692
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554763"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368972"
 ---
 # <a name="printdialog"></a>PrintDialog
 <xref:System.Windows.Controls.PrintDialog>控件用于实例化自动配置的标准打印对话框<xref:System.Printing.PrintTicket>和<xref:System.Printing.PrintQueue>根据用户输入。  
@@ -25,6 +25,6 @@ ms.locfileid: "33554763"
   
  <xref:System.Printing.PrintQueue>  
   
-## <a name="see-also"></a>请参阅  
- [打印概述](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>请参阅
+- [打印概述](../advanced/printing-overview.md)
+- [WPF 中的文档](../advanced/documents-in-wpf.md)

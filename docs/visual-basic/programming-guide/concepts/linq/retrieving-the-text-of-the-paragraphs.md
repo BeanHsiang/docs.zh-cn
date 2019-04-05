@@ -1,16 +1,16 @@
 ---
-title: 检索段落 (Visual Basic) 的文本
+title: 检索段落 (Visual Basic 中) 的文本
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-ms.openlocfilehash: f1a7bc607fb51a8dca6121ee950af0252ab4722e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc6035c7d894d30b1441dd35925c233e02d35163
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647145"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830001"
 ---
-# <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>检索段落 (Visual Basic) 的文本
-此示例基于前面的示例中，[检索段落和他们样式 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)。 这个新示例将每个段落的文本作为字符串进行检索。  
+# <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>检索段落 (Visual Basic 中) 的文本
+此示例基于上一示例中，[检索段落及其样式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)。 这个新示例将每个段落的文本作为字符串进行检索。  
   
  为检索文本，此示例另外添加了一个查询，该查询循环访问匿名类型的集合，并通过添加新成员 `Text` 对一个匿名类型的新集合进行投影。 该示例使用 <xref:System.Linq.Enumerable.Aggregate%2A> 标准查询运算符将多个字符串串联为一个字符串。  
   
@@ -18,12 +18,12 @@ ms.locfileid: "33647145"
   
  当然，可以只编写一个查询，使之包含检索段落、每个段落的样式以及每个段落的文本这些功能。 但是，将一个比较复杂的查询分解成多个查询通常很有好处，因为这样产生的代码更加模块化，更易于维护。 而且，如果需要重用查询的某一部分，使用此方式编写的查询更容易重构。  
   
- 这些查询，链接在一起，请使用主题中的详细信息在检查的处理模型[教程： 延迟执行 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)。  
+ 这些链接在一起的查询使用的处理模型在[教程：延迟执行 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)。  
   
 ## <a name="example"></a>示例  
  本示例处理一个 WordprocessingML 文档，它确定元素节点、样式名称和每个段落的文本。 本示例以本教程中前面的一些示例为基础构建。 下面代码中的注释标识出了这个新查询。  
   
- 用于创建此示例中的源文档的说明，请参阅[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 有关创建此示例中的源文档的说明，请参阅[创建源 Office Open XML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
  本示例使用 WindowsBase 程序集中的类。 它使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空间中的类型。  
   
@@ -116,7 +116,7 @@ Module Module1
 End Module  
 ```  
   
- 该示例产生以下输出时应用于文档中所述[创建源 Office Open XML 文档 (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 此示例将生成以下输出时应用于文档中所述[创建源 Office Open XML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -139,8 +139,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>后续步骤  
  下面的示例演示如何使用扩展方法而不是 <xref:System.Linq.Enumerable.Aggregate%2A> 将多个字符串串联为一个字符串。  
   
--   [重构使用扩展方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+-   [使用扩展方法 (Visual Basic) 重构](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>请参阅  
- [教程： 操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [延迟的执行和迟缓计算中 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a>请参阅
+
+- [教程：操作 WordprocessingML 文档 (Visual Basic 中) 中的内容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [延迟的执行和迟缓计算在 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

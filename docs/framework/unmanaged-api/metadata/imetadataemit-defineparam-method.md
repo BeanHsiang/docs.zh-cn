@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5d49ac70aceb76f69711ea4bf514f69697ac156c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5384dd69578dbd912690b9490bd4bfa762ccd56d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447367"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475302"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam 方法
-使用指定的签名与指定标记引用的方法创建的参数定义并获取该参数定义的标记。  
+创建具有指定的签名为指定的标记所引用的方法的参数定义，并为该参数定义中获取的标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,15 +42,15 @@ HRESULT DefineParam (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `md`  
- [in]正在定义中其参数的方法的标记。  
+ [in]要定义其参数的方法的标记。  
   
  `ulParamSeq`  
  [in]参数序列号。  
   
  `szName`  
- [in]以 Unicode 参数的名称。  
+ [in]以 unicode 格式参数的名称。  
   
  `dwParamFlags`  
  [in]参数的的标志。 这是一个位掩码的`CorParamAttr`值。  
@@ -65,20 +65,20 @@ HRESULT DefineParam (
  [in]大小，以 Unicode 字符的`pValue`。  
   
  `ppd`  
- [out]`mdParamDef`分配的令牌。  
+ [out]`mdParamDef`分配标记。  
   
 ## <a name="remarks"></a>备注  
- 序列值在`ulParamSeq`开头的参数 1。 返回值具有序列号为 0。  
+ 中的顺序值`ulParamSeq`参数 1 开头。 返回值具有的序列号为 0。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataEmit Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

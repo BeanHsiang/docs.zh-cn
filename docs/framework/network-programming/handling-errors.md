@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: d199219b36e2cc06314b38303fb2296f9f3794ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599773"
 ---
 # <a name="handling-errors"></a>处理错误
 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 类都会引发系统异常（如 <xref:System.ArgumentException>）和特定于 Web 的异常（为 <xref:System.Net.WebRequest.GetResponse%2A> 方法所引发的 <xref:System.Net.WebException>）。  
@@ -45,7 +45,7 @@ ms.locfileid: "50198336"
   
  下表描述了“状态”属性可能的值。  
   
-|状态|描述|  
+|状态|说明|  
 |------------|-----------------|  
 |ConnectFailure|无法在传输级别联系远程服务。|  
 |ConnectionClosed|连接被提前关闭。|  
@@ -167,6 +167,6 @@ End Try
   
  引发 SocketException 时，SocketException 类将 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 属性设置为最后一次发生的操作系统套接字错误。 有关套接字错误代码的详细信息，请参阅 MSDN 中的 Winsock 2.0 API 错误代码文档。  
   
-## <a name="see-also"></a>请参阅  
- [异常处理基础知识](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
- [请求数据](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>请参阅
+- [异常处理基础知识](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [请求数据](../../../docs/framework/network-programming/requesting-data.md)

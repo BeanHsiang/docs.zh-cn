@@ -8,36 +8,36 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 2d13650cb3e9a4e97a6642992b7211f323b9ea96
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 666dbb4e2de0e8a7a83d6e0dfda50822cfdfd860
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502253"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371180"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>如何：在代码中创建绑定
-此示例演示如何创建和设置<xref:System.Windows.Data.Binding>在代码中。  
+此示例演示如何在代码中创建和设置 <xref:System.Windows.Data.Binding>。  
   
 ## <a name="example"></a>示例  
- <xref:System.Windows.FrameworkElement>类和<xref:System.Windows.FrameworkContentElement>类都公开`SetBinding`方法。 如果要绑定的元素，这些类之一继承，则可以调用<xref:System.Windows.FrameworkElement.SetBinding%2A>直接方法。  
+ <xref:System.Windows.FrameworkElement> 类和 <xref:System.Windows.FrameworkContentElement> 类都公开了 `SetBinding` 方法。 如果要绑定的元素继承其中的一个类，则可直接调用 <xref:System.Windows.FrameworkElement.SetBinding%2A> 方法。  
   
- 下面的示例创建一个名为，类`MyData`，其中包含一个名为属性`MyDataProperty`。  
+ 下面的示例创建了一个名为 `MyData` 的类，其中包含一个名为 `MyDataProperty` 的属性。  
   
- [!code-csharp[CodeOnlyBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/MyData.cs#dataobject)]
- [!code-vb[CodeOnlyBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/MyData.vb#dataobject)]  
+ [!code-csharp[CodeOnlyBinding#DataObject](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/MyData.cs#dataobject)]
+ [!code-vb[CodeOnlyBinding#DataObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/MyData.vb#dataobject)]  
   
- 下面的示例演示如何创建绑定对象，以设置绑定的源。  该示例使用<xref:System.Windows.FrameworkElement.SetBinding%2A>绑定<xref:System.Windows.Controls.TextBlock.Text%2A>的属性`myText`，即<xref:System.Windows.Controls.TextBlock>控制，请为`MyDataProperty`。  
+ 下面的示例演示如何创建绑定对象来设置绑定源。  该示例使用 <xref:System.Windows.FrameworkElement.SetBinding%2A> 将 `myText` （一个 <xref:System.Windows.Controls.TextBlock> 控件）的 <xref:System.Windows.Controls.TextBlock.Text%2A> 属性绑定到 `MyDataProperty`。  
   
- [!code-csharp[CodeOnlyBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
- [!code-vb[CodeOnlyBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
+ [!code-csharp[CodeOnlyBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
+ [!code-vb[CodeOnlyBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
- 有关完整的代码示例，请参阅[仅限代码的绑定示例](https://msdn.microsoft.com/library/764aaf0b-2216-4941-9548-9c98da18d1a6)。  
+ 有关完整的代码示例，请参阅[仅限代码的绑定示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771500(v=vs.90))。  
   
- 而不是调用<xref:System.Windows.FrameworkElement.SetBinding%2A>，可以使用<xref:System.Windows.Data.BindingOperations.SetBinding%2A>的静态方法<xref:System.Windows.Data.BindingOperations>类。 下面的示例，调用<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>而不是<xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType>绑定`myText`到`myDataProperty`。  
+ 可以使用 <xref:System.Windows.Data.BindingOperations> 类的静态方法 <xref:System.Windows.Data.BindingOperations.SetBinding%2A>，而不是调用 <xref:System.Windows.FrameworkElement.SetBinding%2A>。 下面的示例通过调用 <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType> 而不是 <xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType> 将 `myText` 绑定到 `myDataProperty`。  
   
- [!code-csharp[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#bosetbinding)]
- [!code-vb[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
+ [!code-csharp[CodeOnlyBinding#BOSetBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#bosetbinding)]
+ [!code-vb[CodeOnlyBinding#BOSetBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
   
-## <a name="see-also"></a>请参阅  
- [数据绑定概述](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- [数据绑定概述](data-binding-overview.md)
+- [帮助主题](data-binding-how-to-topics.md)

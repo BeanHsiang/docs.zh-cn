@@ -7,21 +7,21 @@ helpviewer_keywords:
 - documents [WPF], flow content reference
 - flow content reference [WPF]
 ms.assetid: d32501af-0bac-4b80-8a20-61a6996753fe
-ms.openlocfilehash: c41270bc09dfefb282a3c0e0ee0308e22e1af446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47bdc48eb6f2fcb0ffd73f06a58bd01d716e56fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542332"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373538"
 ---
 # <a name="flow-content"></a>流内容
-流内容元素提供构建基块创建流内容适用于在中承载<xref:System.Windows.Documents.FlowDocument>。  
+流内容元素提供用于创建适用于中的托管流内容的构建基块<xref:System.Windows.Documents.FlowDocument>。  
   
 ## <a name="in-this-section"></a>本节内容  
- [流文档概述](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [TextElement 内容模型概述](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [表概述](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [流文档概述](flow-document-overview.md)  
+ [TextElement 内容模型概述](textelement-content-model-overview.md)  
+ [表概述](table-overview.md)  
+ [帮助主题](flow-content-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -39,4 +39,4 @@ ms.locfileid: "33542332"
   <xref:System.Windows.Documents.ListItem>  
   
 ## <a name="related-sections"></a>相关章节  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [WPF 中的文档](documents-in-wpf.md)

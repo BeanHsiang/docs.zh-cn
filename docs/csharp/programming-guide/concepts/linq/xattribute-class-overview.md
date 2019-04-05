@@ -2,12 +2,12 @@
 title: XAttribute 类概述 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 5619a8442fde9f4e8f612f213bde16c86ba00115
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dba8b29c98499bc056d546a282ff2ee1bb88bfbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529069"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494010"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 类概述 (C#)
 属性是与元素关联的名称/值对。 <xref:System.Xml.Linq.XAttribute> 类表示 XML 属性。  
@@ -20,7 +20,7 @@ ms.locfileid: "43529069"
 ## <a name="the-xattribute-constructor"></a>XAttribute 构造函数  
  下面的 <xref:System.Xml.Linq.XAttribute> 类构造函数是您将最常使用的构造函数之一：  
   
-|构造函数|描述|  
+|构造函数|说明|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|创建一个 <xref:System.Xml.Linq.XAttribute> 对象。 `name` 参数指定属性的名称；`content` 指定属性的内容。|  
   

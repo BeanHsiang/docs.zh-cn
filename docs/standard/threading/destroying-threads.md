@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a243c95aff77a5de2b3af15542c0bcc44870333
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 93832a296f9b80a5374bc729c04e19d1f178e99f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502541"
 ---
 # <a name="destroying-threads"></a>销毁线程
 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法用于永久停止托管线程。 调用 <xref:System.Threading.Thread.Abort%2A> 时，公共语言运行时在目标线程中抛出目标线程可以捕获的 <xref:System.Threading.ThreadAbortException>。 有关更多信息，请参见<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。  
@@ -68,6 +68,6 @@ catch (ThreadAbortException ex)
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.ThreadAbortException>  
-- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadAbortException>
+- <xref:System.Threading.Thread>
 - [使用线程和线程处理](../../../docs/standard/threading/using-threads-and-threading.md)

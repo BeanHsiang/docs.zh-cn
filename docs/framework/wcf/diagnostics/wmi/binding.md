@@ -2,12 +2,12 @@
 title: Binding2
 ms.date: 03/30/2017
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
-ms.openlocfilehash: 84e304f3dedcbd785d6238e6cb5eb142c288b995
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: aaf0dd9d6918f2c248942cee3773eee8332adda9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198884"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552835"
 ---
 # <a name="binding"></a>绑定
 wmi Binding  
@@ -31,7 +31,7 @@ class Binding
 ## <a name="methods"></a>方法  
  Binding 类未定义任何方法。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>Properties  
  Binding 类具有以下属性。  
   
 ### <a name="bindingelements"></a>BindingElements  
@@ -96,5 +96,5 @@ class Binding
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.Binding>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.Binding>

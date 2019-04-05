@@ -1,15 +1,13 @@
 ---
-title: dotnet migrate 命令 - .NET Core CLI
+title: dotnet migrate 命令
 description: dotnet migrate 命令可迁移项目及其所有依赖项。
-author: mairaw
-ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: 67a845f7604dededd00746fa6b74a320b3e134fa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 73e0169e64be4b55e10127ecca0101885061767e
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697100"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170738"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -26,7 +24,7 @@ dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--r
 dotnet migrate [-h|--help]
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet migrate` 命令将有效的基于预览版 2 *project.json* 的项目迁移到有效的 .NET Core SDK 1.0 *csproj* 项目。
 

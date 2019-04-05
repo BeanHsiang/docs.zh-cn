@@ -1,5 +1,5 @@
 ---
-title: '&lt;connectionManagement&gt;元素 （网络设置）'
+title: <connectionManagement> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 7cc5f2a37c0520ee48a10afeb4b9bc83ffd61033
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 61fd40500934bc7b67d2960f4a64f8ac12466883
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201538"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285826"
 ---
-# <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt;元素 （网络设置）
+# <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > 元素 （网络设置）
 指定到网络主机的最大连接数。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "50201538"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

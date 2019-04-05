@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: d7b57a9572a285dfdc13afb0a520de67e231a1c0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 088dc9507f073553f8a857bd11ecd016f0d94244
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858019"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730875"
 ---
 # <a name="updating-data-in-a-data-source"></a>更新数据源中的数据
 修改数据的 SQL 语句（如 INSERT、UPDATE 或 DELETE）不返回行。 同样，许多存储过程执行操作但不返回行。 若要执行不返回行的命令，创建**命令**具有相应的 SQL 命令对象和一个**连接**，包括任何所需**参数**。 使用执行命令**ExecuteNonQuery**方法**命令**对象。  
@@ -91,8 +91,8 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用命令修改数据](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [使用命令修改数据](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
+- [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [命令和参数](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

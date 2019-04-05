@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 9456316f71a213905bcb50336533c4e618f5174a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934180"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819524"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 在 Visual Basic 中，基于分类实施数据类型。 Visual Basic 数据类型可以根据特定类型的变量存储其自己的数据或指向的数据分类。 如果将存储其自己的数据很*值类型*; 如果它包含一个指针，它是的内存中的其他位置的数据*引用类型*。  
@@ -25,7 +25,7 @@ ms.locfileid: "42934180"
   
 -   所有数值数据类型  
   
--   `Boolean`、`Char` 和 `Date`  
+-   `Boolean`、 `Char`和 `Date`  
   
 -   所有的结构，即使其成员是引用类型  
   
@@ -72,10 +72,11 @@ Dim totals() As Single = New Single(8) {}
   
  您可以确定是否`Object`变量充当引用类型或值类型将其传递到<xref:Microsoft.VisualBasic.Information.IsReference%2A>中的方法<xref:Microsoft.VisualBasic.Information>的类<xref:Microsoft.VisualBasic?displayProperty=nameWithType>命名空间。 <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> 返回`True`如果内容的`Object`变量表示引用类型。  
   
-## <a name="see-also"></a>请参阅  
- [可以为 null 的值类型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [有效使用数据类型](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+## <a name="see-also"></a>请参阅
+
+- [可以为 null 的值类型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Structure 语句](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [有效使用数据类型](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Object 数据类型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

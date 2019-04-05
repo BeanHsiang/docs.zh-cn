@@ -1,21 +1,21 @@
 ---
-title: '&lt;tokenReplayDetection&gt;'
+title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: bd2272cb83dc0183d5008cfa178e11783f51ca2d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261050"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283070"
 ---
-# <a name="lttokenreplaydetectiongt"></a>&lt;tokenReplayDetection&gt;
+# <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
 启用令牌重放检测并指定令牌的到期时间。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<tokenReplayDetection >  
+\<tokenReplayDetection>  
   
 ## <a name="syntax"></a>语法  
   
@@ -48,8 +48,8 @@ ms.locfileid: "48261050"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|指定服务级别标识设置。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
   
 ## <a name="remarks"></a>备注  
  一个`<tokenReplayDetection>`可以在服务级别下指定元素`<identityConfiguration>`元素下的安全令牌处理程序集合级别上或`<securityTokenHandlerConfiguration>`元素。 标记处理程序集合上的设置将覆盖在服务上指定的。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 13cc4d85a1a4b5c9b1ff61afbf7980a54e3d22d0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424436"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039467"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>自定义类型和库的 XAML 相关 CLR 特性
 本主题介绍由.NET Framework XAML 服务定义的公共语言运行时 (CLR) 属性。 它还介绍了在.NET Framework 中定义具有对程序集或类型的应用程序的 XAML 相关方案的其他 CLR 属性。 使用这些 CLR 特性属性的程序集、 类型或成员提供了与您的类型相关的 XAML 类型系统信息。 到直接处理 XAML 节点流或专用的 XAML 读取器和 XAML 编写器通过使用.NET Framework XAML 服务的任何 XAML 使用者提供信息。  
@@ -22,9 +22,9 @@ ms.locfileid: "47424436"
 ### <a name="ambientattribute"></a>AmbientAttribute  
  **参考文档：**  <xref:System.Windows.Markup.AmbientAttribute>  
   
- **适用于：** 类、 属性和或`get`支持可附加属性的访问器成员。  
+ **适用于：** 类、 属性或`get`支持可附加属性的访问器成员。  
   
- **参数：** None  
+ **参数：** 无  
   
  <xref:System.Windows.Markup.AmbientAttribute> 指示该属性或采用特性化的类型的所有属性应解释 XAML 中的环境属性概念。 环境概念涉及 XAML 处理器如何确定成员的类型所有者。 环境属性是属性的值应为分析器上下文中可用时创建对象图，但其典型类型成员查找挂起直接 XAML 节点集创建的。  
   
@@ -37,14 +37,14 @@ ms.locfileid: "47424436"
   
  **参数：** 一个字符串，指定与单个构造函数自变量匹配的属性的名称。  
   
- <xref:System.Windows.Markup.ConstructorArgumentAttribute> 指定可以使用非默认构造函数语法来初始化的对象和指定名称的属性提供构造信息。 此信息主要用于 XAML 序列化。 有关详细信息，请参阅<xref:System.Windows.Markup.ConstructorArgumentAttribute>。  
+ <xref:System.Windows.Markup.ConstructorArgumentAttribute> 指定可以使用非默认构造函数语法来初始化的对象和指定名称的属性提供构造信息。 此信息主要用于 XAML 序列化。 有关详细信息，请参阅 <xref:System.Windows.Markup.ConstructorArgumentAttribute>。  
   
 ### <a name="contentpropertyattribute"></a>ContentPropertyAttribute  
  **参考文档：**  <xref:System.Windows.Markup.ContentPropertyAttribute>  
   
  **适用于：** 类  
   
- **参数：** 指定的特性化类型的成员名称的字符串。  
+ **参数：** 一个字符串，指定的特性化类型的成员名称。  
   
  <xref:System.Windows.Markup.ContentPropertyAttribute> 指示参数命名的属性应充当该类型的 XAML 内容属性。 XAML 内容属性定义继承到可分配给定义的类型的所有派生类型。 您可以通过应用覆盖特定派生类型上的定义<xref:System.Windows.Markup.ContentPropertyAttribute>特定派生类型。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47424436"
   
  **适用于：** 类，特别是集合类型。  
   
- **参数：** A <xref:System.Type> ，它指定要用作外部内容的内容包装类型的类型。  
+ **参数：** 一个<xref:System.Type>，它指定要用作外部内容的内容包装类型的类型。  
   
  <xref:System.Windows.Markup.ContentWrapperAttribute> 指定将用于包装外部内容的关联的集合类型的一个或多个类型。 外部内容是指其中的内容属性的类型的类型系统约束不捕获所有可能的内容事例所属类型的 XAML 用法将支持的情况下。 例如，XAML 支持特定类型的内容可能支持在强类型化的泛型字符串<xref:System.Collections.ObjectModel.Collection%601>。 内容包装可用于将预先存在的标记约定迁移到 XAML 的概念可分配的值的集合，如迁移与文本相关的内容模型。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "47424436"
   
  **适用于：** 类，它应为<xref:System.Windows.Markup.MarkupExtension>派生类型。  
   
- **参数：** A <xref:System.Type> ，它指定要为预期的最精确类型`ProvideValue`的特性化的结果<xref:System.Windows.Markup.MarkupExtension>。  
+ **参数：** 一个<xref:System.Type>，它指定要为预期的最精确类型`ProvideValue`结果的特性化<xref:System.Windows.Markup.MarkupExtension>。  
   
- 有关详细信息，请参阅[Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
+ 有关详细信息，请参阅[Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **参考文档：**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
@@ -101,9 +101,9 @@ ms.locfileid: "47424436"
   
  **适用于：** 类  
   
- **参数：** 特性化类型指定的运行时名称属性的名称的字符串。  
+ **参数：** 一个字符串，在特性化类型上指定的运行时名称属性的名称。  
   
- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 报告将映射到 XAML 特性化类型的属性[X:name 指令](../../../docs/framework/xaml-services/x-name-directive.md)。 属性的类型必须为<xref:System.String>并且必须是读/写。  
+ <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 报告将映射到 XAML 特性化类型的属性[X:name 指令](x-name-directive.md)。 属性的类型必须为<xref:System.String>并且必须是读/写。  
   
  定义继承到可分配给定义的类型的所有派生类型。 您可以通过应用覆盖特定派生类型上的定义<xref:System.Windows.Markup.RuntimeNamePropertyAttribute>特定派生类型。  
   
@@ -112,22 +112,22 @@ ms.locfileid: "47424436"
   
  **适用于：** 类型  
   
- **参数：** None。  
+ **参数：** 无。  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 应用于可能显示为空白有意义的内容内的子元素的特定类型 (内容由集合具有<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>)。 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 主要与保存路径，但现已推出的加载路径中的 XAML 类型系统通过检查<xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>。 有关详细信息，请参阅[空格处理在 XAML 中](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
+ <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 应用于可能显示为空白有意义的内容内的子元素的特定类型 (内容由集合具有<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>)。 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 主要与保存路径，但现已推出的加载路径中的 XAML 类型系统通过检查<xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>。 有关详细信息，请参阅[空格处理在 XAML 中](whitespace-processing-in-xaml.md)。  
   
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **参考文档：**  <xref:System.ComponentModel.TypeConverterAttribute>  
   
  **适用于：** 类、 属性、 方法 (仅 XAML 有效的方法用例是`get`支持可附加成员的访问器)。  
   
- **参数：** <xref:System.Type>的<xref:System.ComponentModel.TypeConverter>。  
+ **参数：**<xref:System.Type> 的 <xref:System.ComponentModel.TypeConverter>。  
   
  <xref:System.ComponentModel.TypeConverterAttribute> 上下文在 XAML 中引用自定义<xref:System.ComponentModel.TypeConverter>。 这<xref:System.ComponentModel.TypeConverter>的自定义类型或该类型的成员提供类型转换行为。  
   
  您将应用<xref:System.ComponentModel.TypeConverterAttribute>属性为所引用您的类型转换器实现的类型。 在类、 结构或接口，可以为 XAML 定义的类型转换器。 不需要提供类型转换为枚举，以本机方式启用转换。  
   
- 类型转换器应该能够从到预期的目标类型使用的属性或在标记中，初始化文本字符串转换。 有关详细信息，请参阅[TypeConverters 和 XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)。  
+ 类型转换器应该能够从到预期的目标类型使用的属性或在标记中，初始化文本字符串转换。 有关详细信息，请参阅[TypeConverters 和 XAML](../wpf/advanced/typeconverters-and-xaml.md)。  
   
  而不是将应用于所有类型的值，也可建立 XAML 的类型转换器行为上的特定属性。 在这种情况下，应用<xref:System.ComponentModel.TypeConverterAttribute>到属性定义 (外部定义，而不是特定`get`和`set`定义)。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "47424436"
   
  **参数：** 按名称引用的相关属性的字符串。  
   
- 指示该别名的一个类的 CLR 属性[X:uid 指令](../../../docs/framework/xaml-services/x-uid-directive.md)。  
+ 指示该别名的一个类的 CLR 属性[X:uid 指令](x-uid-directive.md)。  
   
 ### <a name="usableduringinitializationattribute"></a>UsableDuringInitializationAttribute  
  **参考文档：**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
@@ -151,14 +151,14 @@ ms.locfileid: "47424436"
   
  **参数：** 一个布尔值。 如果使用为该特性的预期用途，这应始终指定为`true`。  
   
- 指示在 XAML 对象图创建期间是否自上而下生成此类型。 这是一种高级的概念，这与编程模型的定义可能密切相关。 有关详细信息，请参阅<xref:System.Windows.Markup.UsableDuringInitializationAttribute>。  
+ 指示在 XAML 对象图创建期间是否自上而下生成此类型。 这是一种高级的概念，这与编程模型的定义可能密切相关。 有关详细信息，请参阅 <xref:System.Windows.Markup.UsableDuringInitializationAttribute>。  
   
 ### <a name="valueserializerattribute"></a>ValueSerializerAttribute  
  **参考文档：**  <xref:System.Windows.Markup.ValueSerializerAttribute>  
   
  **适用于：** 类、 属性、 方法 (仅 XAML 有效的方法用例是`get`支持可附加成员的访问器)。  
   
- **参数：** A <xref:System.Type> ，它指定要使用序列化的特性化类型的所有属性时的值序列化程序支持类或特定于特性化属性。  
+ **参数：** 一个<xref:System.Type>，它指定要使用序列化的特性化类型的所有属性时的值序列化程序支持类或特定于特性化属性。  
   
  <xref:System.Windows.Markup.ValueSerializer> 指定一个值序列化类，需要更多状态和上下文比<xref:System.ComponentModel.TypeConverter>does。 <xref:System.Windows.Markup.ValueSerializer> 可以通过将应用与可附加成员相关联<xref:System.Windows.Markup.ValueSerializerAttribute>静态属性`get`可附加成员的访问器方法。 值序列化也适用于枚举、 接口和结构，但不适用于委托。  
   
@@ -167,9 +167,9 @@ ms.locfileid: "47424436"
   
  **适用于：** 类，特别是应承载混合的内容，其中对象元素周围的空白区域可能会很明显的用户界面表示形式的集合类型。  
   
- **参数：** None。  
+ **参数：** 无。  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 指示集合类型应为重要的空白区域处理由 XAML 处理器，这会影响构造的 XAML 节点流的值在集合中的节点。 有关详细信息，请参阅[空格处理在 XAML 中](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。  
+ <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> 指示集合类型应为重要的空白区域处理由 XAML 处理器，这会影响构造的 XAML 节点流的值在集合中的节点。 有关详细信息，请参阅[空格处理在 XAML 中](whitespace-processing-in-xaml.md)。  
   
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **参考文档：**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
@@ -185,7 +185,7 @@ ms.locfileid: "47424436"
   
  **适用于：** 类  
   
- **参数：** 名称回调。  
+ **参数：** 命名该回调。  
   
  指示类可以使用标记扩展提供的值为一个或多个属性，并引用 XAML 编写器应在执行上类的任何属性标记扩展设置操作之前调用的处理程序。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "47424436"
   
  **适用于：** 类  
   
- **参数：** 名称回调。  
+ **参数：** 命名该回调。  
   
  指示类可以使用类型转换器提供的值为一个或多个属性，并引用 XAML 编写器应在执行上类的任何属性类型转换器设置操作之前调用的处理程序。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "47424436"
   
 -   一个字符串，指定可以包含从上一个参数的 XAML 命名空间的 XAML 命名空间的标识符。  
   
- <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> 指定可由另一个 XAML 命名空间被包含到 XAML 命名空间。 通常情况下，指示包含 XAML 命名空间中之前定义<xref:System.Windows.Markup.XmlnsDefinitionAttribute>。 此方法可用于版本控制库中，使其符合针对以前版本的词汇以前定义的标记的 XAML 词汇。  
+ <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> 指定可由另一个 XAML 命名空间被包含到 XAML 命名空间。 通常，先前定义的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 中指示了包含 XAML 命令空间。 此方法可用于版本控制库中，使其符合针对以前版本的词汇以前定义的标记的 XAML 词汇。  
   
 ### <a name="xmlnsdefinitionattribute"></a>XmlnsDefinitionAttribute  
  **参考文档：**  <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
@@ -268,6 +268,6 @@ ms.locfileid: "47424436"
 > [!NOTE]
 >  .NET framework XAML 服务还可定义与 XAML 相关的属性<xref:System.Windows.Markup.RootNamespaceAttribute>。 此属性是项目系统支持的程序集级别属性并不是适用于 XAML 的自定义类型。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Attribute>  
- [定义与 .NET Framework XAML 服务一起使用的自定义类型](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Attribute>
+- [定义与 .NET Framework XAML 服务一起使用的自定义类型](defining-custom-types-for-use-with-net-framework-xaml-services.md)

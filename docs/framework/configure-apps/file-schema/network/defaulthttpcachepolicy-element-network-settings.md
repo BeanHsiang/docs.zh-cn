@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultHttpCachePolicy&gt;元素 （网络设置）'
+title: <defaultHttpCachePolicy> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: d88d99b663b0aaeb0ae432cf02675a45c4c8bc1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a48fa5e4a5768f97d3aeabebe4d594ec9f498ca2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192000"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260666"
 ---
-# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt;元素 （网络设置）
+# <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > 元素 （网络设置）
 描述 HTTP 缓存功能是否处于活动状态并介绍了默认的缓存策略。  
   
  \<configuration>  
 \<system.net>  
-\<requestCaching >  
-\<defaultHttpCachePolicy >  
+\<requestCaching>  
+\<defaultHttpCachePolicy>  
   
 ## <a name="syntax"></a>语法  
   
@@ -80,8 +80,8 @@ ms.locfileid: "50192000"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.Cache>  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.Cache.RequestCacheLevel>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.Cache>
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.Cache.RequestCacheLevel>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

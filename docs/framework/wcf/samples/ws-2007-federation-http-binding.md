@@ -2,12 +2,12 @@
 title: WS 2007 联合 HTTP 绑定
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 53f2cb893476cdfa0517bd6586f38951dff1f2af
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f6d31de62420a8de8e1ac865918b600e7864a5d1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513057"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834447"
 ---
 # <a name="ws-2007-federation-http-binding"></a>WS 2007 联合 HTTP 绑定
 此示例演示 <xref:System.ServiceModel.WS2007FederationHttpBinding> 的用法，它是一个标准绑定，可用来生成支持 1.3 版 WS-Trust 规范的联合方案。  
@@ -112,7 +112,7 @@ Press <ENTER> to terminate client.
   
 1.  请确保您具有执行[的 Windows Communication Foundation 示例的一次性安装过程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  使用管理员特权打开 Visual Studio 命令提示并运行 Setup.bat 文件以创建所需的证书。  
+2.  使用管理员特权打开 Visual Studio 开发人员命令提示符并运行 Setup.bat 文件以创建所需的证书。  
   
  该批处理文件使用随 Windows SDK 分发的 Certmgr.exe 和 Makecert.exe。 但是，您必须在 Visual Studio 命令提示中运行 Setup.bat，脚本才能找到这些工具。  
   
@@ -129,4 +129,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`  
   
-## <a name="see-also"></a>请参阅

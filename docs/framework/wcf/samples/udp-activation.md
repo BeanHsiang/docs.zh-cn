@@ -2,15 +2,15 @@
 title: UDP 激活
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: a61b7fce891ea1ab68f48f836ffaae2b96c8e25d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562342"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836319"
 ---
 # <a name="udp-activation"></a>UDP 激活
-此示例基于[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展了[传输： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例，以使用 Windows 进程激活服务 (WAS) 支持进程激活。  
+此示例基于[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它扩展[传输：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例，以使用 Windows 进程激活服务 (WAS) 支持进程激活。  
   
  该示例主要由三个部分组成：  
   
@@ -103,13 +103,13 @@ ms.locfileid: "46562342"
 ## <a name="sample-usage"></a>示例用法  
  编译后，生成四个不同的二进制文件：  
   
--   Client.exe：客户端代码。 App.config 编译到客户端配置文件 Client.exe.config 中。  
+-   Client.exe:客户端代码中。 App.config 编译到客户端配置文件 Client.exe.config 中。  
   
 -   UDPActivation.dll：包含所有主要 UDP 实现的库。  
   
--   Service.dll：服务代码。 此代码被复制到虚拟应用程序 ServiceModelSamples 的 \bin 目录。 服务文件是 Service.svc，配置文件是 Web.config。编译后，这两个文件将被复制到以下位置：%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples。  
+-   Service.dll:服务代码中。 此代码被复制到虚拟应用程序 ServiceModelSamples 的 \bin 目录。 服务文件是 Service.svc，配置文件是 Web.config。编译后，这两个文件将被复制到以下位置：%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples。  
   
--   WasNetActivator：UDP 激活器程序。  
+-   WasNetActivator:UDP 激活器程序。  
   
 -   确保所有的必需部分均已正确安装。 下列步骤说明如何运行该示例：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "46562342"
   
     -   Windows 进程激活服务 (WAS)。  
   
-    -   Internet Information Services (IIS)：W3SVC。  
+    -   Internet 信息服务 (IIS):W3SVC.  
   
 2.  然后启动激活器 WasNetActivator.exe。 下**激活**选项卡上的唯一协议**UDP**，在下拉列表中选择。 单击**启动**按钮启动激活器。  
   
@@ -162,4 +162,3 @@ ms.locfileid: "46562342"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
   
-## <a name="see-also"></a>请参阅

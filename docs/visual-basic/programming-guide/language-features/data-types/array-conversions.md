@@ -12,19 +12,19 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784870"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830196"
 ---
 # <a name="array-conversions-visual-basic"></a>数组转换 (Visual Basic)
 可以将数组类型转换为另一个数组类型，但必须满足以下条件：  
   
 -   **秩相等。** 两个数组的秩必须相同，即，它们必须具有相同数量的维度。 但是，不需要的相应维度的长度相同。  
   
--   **元素数据类型。** 这两个数组的元素的数据类型必须是引用类型。 你不能转换`Integer`到数组`Long`数组，或者甚至到`Object`，因为涉及至少一个值类型数组。 有关详细信息，请参阅[值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
+-   **元素数据类型。** 这两个数组的元素的数据类型必须是引用类型。 你不能转换`Integer`到数组`Long`数组，或者甚至到`Object`，因为涉及至少一个值类型数组。 有关更多信息，请参见 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
   
 -   **支持。** 扩大或收缩转换时，必须是两个数组的元素类型之间可能的。 符合此要求的一个示例是之间尝试执行的转换`String`数组和数组的类派生自<xref:System.Attribute?displayProperty=nameWithType>。 这两种类型迥然不同，并且它们之间不存在任何类型的转换。  
   
@@ -59,12 +59,13 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [隐式转换和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [字符串和其他类型之间的转换](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [如何： 将对象转换为 Visual Basic 中的另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>请参阅
+
+- [数据类型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [在 Visual Basic 中的类型转换](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [隐式转换和显式转换](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [字符串和其他类型之间的转换](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [如何：将对象转换为 Visual Basic 中的另一种类型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
+- [类型转换函数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

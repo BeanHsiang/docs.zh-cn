@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyBinding&gt;元素&lt;配置&gt;'
+title: <assemblyBinding> 的 <configuration> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding
@@ -7,21 +7,19 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f5992a6085c32d37f56319cf8b2c361542c441e7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193351"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257322"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > 元素\<配置 >
 
 指定配置级的程序集绑定策略。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<assemblyBinding >**
+&nbsp;&nbsp;**\<assemblyBinding>**
 
 ## <a name="syntax"></a>语法
 
@@ -47,14 +45,14 @@ ms.locfileid: "47193351"
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<linkedConfiguration >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | 指定要包含的配置文件。 |
+| [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | 指定要包含的配置文件。 |
 
 ## <a name="remarks"></a>备注
 
 [  **\<LinkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md)元素中的配置文件允许应用程序配置文件包含程序集，从而简化管理的组件程序集已知位置，而不是复制的程序集配置设置。
 
 > [!NOTE]
-> **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
+>  **\<LinkedConfiguration >** 元素不支持使用 Windows 通过并行清单的应用程序。
 
 ## <a name="example"></a>示例
 
@@ -70,4 +68,4 @@ ms.locfileid: "47193351"
 
 ## <a name="see-also"></a>请参阅
 
-[.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework 的配置文件架构](~/docs/framework/configure-apps/file-schema/index.md)

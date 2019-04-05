@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b4c1d213c2ed87126fc5eb9995050e14f9214bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199833"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093029"
 ---
 # <a name="blittable-and-non-blittable-types"></a>可直接复制到本机结构中的类型和非直接复制到本机结构中的类型
 大多数数据类型在托管和非托管内存中具有共同的表示形式，而且不需要互操作封送处理程序进行特殊处理。 这些类型称为 blittable 类型，因为它们在托管和非托管代码之间传递时不需要进行转换。  
@@ -49,7 +49,7 @@ ms.locfileid: "50199833"
   
 -   所有 blittable 类型的一维数组，如整数数组。 但是，包含 blittable 类型变量数组的类型本身不是 blittable 类型。  
   
--   所有只包含 blittable 类型（和作为格式化类型进行封送的类）的格式化的值类型。 有关格式化的值类型的详细信息，请参阅[值类型的默认封送处理](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100))。  
+-   所有只包含 blittable 类型（和作为格式化类型进行封送的类）的格式化的值类型。 有关格式化的值类型的详细信息，请参阅[值类型的默认封送处理](default-marshaling-behavior.md#default-marshaling-for-value-types)。  
   
  对象引用不是 blittable 类型。 这包括本身是 blittable 的对象的引用数组。 例如，可以定义一个属于 blittable 类型的结构，但不能定义包含这些结构的引用数组的 blittable 类型。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "50199833"
   
  在非托管环境中，某些托管数据类型要求具有不同的表示形式。 必须将这些 non-blittable 数据类型转换为可以封送的形式。 例如，托管字符串就是 non-blittable 类型，因为这些字符串必须转换为字符串对象后才能进行封送。  
   
- 下表列出了 <xref:System> 命名空间中的 non-blittable 类型。 [委托](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100))是引用静态方法或类实例的数据结构，也是 non-blittable 类型。  
+ 下表列出了 <xref:System> 命名空间中的 non-blittable 类型。 [委托](default-marshaling-behavior.md#default-marshaling-for-delegates)是引用静态方法或类实例的数据结构，也是 non-blittable 类型。  
   
-|Non-blittable 类型|描述|  
+|Non-blittable 类型|说明|  
 |-------------------------|-----------------|  
 |[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|转换为 C 样式数组或 `SAFEARRAY`。|  
 |[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|转换为 1、2 或 4 字节的值，`true` 表示 1 或 -1。|  
@@ -73,5 +73,5 @@ ms.locfileid: "50199833"
   
  类和对象类型仅受 COM 互操作支持。 有关 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++ 中的相应类型的信息，请参阅[类库概述](../../../docs/standard/class-library-overview.md)。  
   
-## <a name="see-also"></a>请参阅  
- [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)
+## <a name="see-also"></a>请参阅
+- [默认封送处理行为](../../../docs/framework/interop/default-marshaling-behavior.md)

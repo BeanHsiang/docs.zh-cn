@@ -3,12 +3,12 @@ title: System.Delegate 和 `delegate` 关键字
 description: 详细介绍 .NET Framework 中支持委托的类以及这些类映射到“delegate”关键字的方式。
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827295"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465771"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 关键字
 
@@ -67,7 +67,7 @@ int result = comparator(left, right);
 在上面的行中，代码会调用附加到委托的方法。
 可将变量视为方法名称，并使用普通方法调用语法调用它。
 
-该代码行进行了不安全假设：不保证目标已添加到委托。 如果未附加目标，则上面的行会导致引发 `NullReferenceException`。 用于解决此问题的惯例比简单 null 检查更加复杂，在此[系列](delegates-patterns.md)的后面部分中会进行介绍。
+此代码行做出的假设不安全：无法保证目标已被添加到委托中。 如果未附加目标，则上面的行会导致引发 `NullReferenceException`。 用于解决此问题的惯例比简单 null 检查更加复杂，在此[系列](delegates-patterns.md)的后面部分中会进行介绍。
 
 ## <a name="assigning-adding-and-removing-invocation-targets"></a>分配、添加和移除调用目标
 
@@ -92,21 +92,21 @@ phrases.Sort(CompareLength);
 
 请注意，在不带括号的情况下使用方法名称。 将方法用作参数会告知编译器将方法引用转换为可以用作委托调用目标的引用，并将该方法作为调用目标进行附加。
 
-还可以通过声明“Comparison<string>”类型的变量并进行分配来显式执行操作：
+还可以通过声明“`Comparison<string>`”类型的变量并进行分配来显式执行操作：
 
 ```csharp
 Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-在用作委托目标的方法是小方法的用法中，经常会使用 [Lambda 表达式](lambda-expressions.md)执行分配：
+在用作委托目标的方法是小型方法的用法中，经常使用 [lambda 表达式](./programming-guide/statements-expressions-operators/lambda-expressions.md)语法来执行分配：
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);
 phrases.Sort(comparer);
 ```
 
-在[后面部分](delegates-patterns.md)中更详细地介绍了如何对委托目标使用 Lambda 表达式。
+[后续部分](delegates-patterns.md)中更详细地介绍了如何对委托目标使用 lambda 表达式。
 
 Sort() 示例通常将单个目标方法附加到委托。 但是，委托对象支持将多个目标方法附加到委托对象的调用列表。
 

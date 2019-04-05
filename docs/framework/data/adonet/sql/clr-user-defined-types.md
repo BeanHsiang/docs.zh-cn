@@ -2,12 +2,12 @@
 title: CLR 用户定义的类型
 ms.date: 03/30/2017
 ms.assetid: 9f70e0b0-3a0d-4eb1-b914-07a5d0c167c2
-ms.openlocfilehash: 4ea415a348375c52e42ddf26ea09a74e7de5e355
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b946a87e49d8bf496fb215eb95f9db9cb453c13c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743198"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681022"
 ---
 # <a name="clr-user-defined-types"></a>CLR 用户定义的类型
 Microsoft SQL Server 提供了对使用 Microsoft .NET Framework 公共语言运行时 (CLR) 实现的用户定义类型 (UDT) 的支持。 CLR 集成在 SQL Server 中，通过此机制，您可以扩展数据库的类型系统。 UDT 使用户可以扩展 SQL Server 的数据类型系统，还可以定义复杂的结构化类型。  
@@ -24,6 +24,6 @@ Microsoft SQL Server 提供了对使用 Microsoft .NET Framework 公共语言运
   
 1. [CLR 用户定义的类型](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-[ADO.NET 概述](../ado-net-overview.md)  
+- [ADO.NET 概述](../ado-net-overview.md)

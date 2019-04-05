@@ -1,5 +1,6 @@
 ---
-title: '&lt;para&gt;（C# 编程指南）'
+title: <para> - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <para>
@@ -8,21 +9,21 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: e51df23db97aadddbc4c4e8c3cb38bda7ff7e3a4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0891ce06b1d24b8b5841ed6c0b1e43d1d2e3fbc7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47192831"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481386"
 ---
-# <a name="ltparagt-c-programming-guide"></a>&lt;para&gt;（C# 编程指南）
+# <a name="para-c-programming-guide"></a>\<para>（C# 编程指南）
 ## <a name="syntax"></a>语法  
   
 ```xml  
 <para>content</para>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `content`  
  段落文本。  
   
@@ -36,5 +37,5 @@ ms.locfileid: "47192831"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [建议的文档注释标记](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

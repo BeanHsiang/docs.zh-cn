@@ -8,33 +8,33 @@ helpviewer_keywords:
 - deploying applications [WPF]
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
-ms.openlocfilehash: 874a184939f95f155ddaee053c33fe66c4db15d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547136"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368046"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>生成和部署 WPF 应用程序
-生成和部署模型提供的功能生成和部署应用程序，本地或远程管理，其中包括：  
+生成和部署模型提供的功能生成和部署应用程序本地和远程，其中包括：  
   
--   MSBuild:.NET 构建位于 Microsoft.Build.Tasks.Windows 命名空间中的系统。  
+-   MSBuild:.NET 构建系统位于 Microsoft.Build.Tasks.Windows 命名空间中。  
   
--   资源： 处理用户界面资源。  
+-   资源： 处理 UI 资源。  
   
 -   ClickOnce 部署：.NET 发布和部署系统。  
   
 ## <a name="in-this-section"></a>本节内容  
- [生成 WPF 应用程序](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [帮助主题](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [生成 WPF 应用程序](building-a-wpf-application-wpf.md)  
+ [部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)  
+ [帮助主题](build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  MSBuild  
   
 ## <a name="related-sections"></a>相关章节  
- [应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [WPF 中的窗口](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）  
-  [承载](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)
+ [应用程序管理概述](application-management-overview.md)  
+  [WPF 中的窗口](windows-in-wpf-applications.md)  
+  [导航概述](navigation-overview.md)  
+  [WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md)（WPF XAML 浏览器应用程序概述）  
+  [承载](hosting-wpf-applications.md)

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: a9e847a46941c37efb735d5bfd13bde2dd74271c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d5da0bde243128bc0d7aa29bf865ca9bfbd1d9a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560158"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355984"
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>如何：将 Visual 编码为图像文件
-此示例演示如何进行编码<xref:System.Windows.Media.Visual>对象插入图像文件使用<xref:System.Windows.Media.Imaging.RenderTargetBitmap>和<xref:System.Windows.Media.Imaging.PngBitmapEncoder>。  
+此示例演示如何进行编码<xref:System.Windows.Media.Visual>为图像文件，并使用对象<xref:System.Windows.Media.Imaging.RenderTargetBitmap>和一个<xref:System.Windows.Media.Imaging.PngBitmapEncoder>。  
   
 ## <a name="example"></a>示例  
- <xref:System.Windows.Media.DrawingVisual>使用创建<xref:System.Windows.Media.Imaging.BitmapImage>和<xref:System.Windows.Media.FormattedText>呈现到<xref:System.Windows.Media.Imaging.RenderTargetBitmap>。 呈现的位图随后用于创建<xref:System.Windows.Media.Imaging.BitmapFrame>它被添加到<xref:System.Windows.Media.Imaging.PngBitmapEncoder>创建新[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]文件。  
+ <xref:System.Windows.Media.DrawingVisual>使用创建<xref:System.Windows.Media.Imaging.BitmapImage>并<xref:System.Windows.Media.FormattedText>呈现到<xref:System.Windows.Media.Imaging.RenderTargetBitmap>。 呈现的位图随后用于创建<xref:System.Windows.Media.Imaging.BitmapFrame>添加到<xref:System.Windows.Media.Imaging.PngBitmapEncoder>若要创建一个新[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]文件。  
   
- [!code-csharp[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/RenderTargetBitmapExample_Encode.cs#rtbencodeinline1)]
- [!code-vb[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample_Encode.vb#rtbencodeinline1)]  
+ [!code-csharp[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/RenderTargetBitmapExample_Encode.cs#rtbencodeinline1)]
+ [!code-vb[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample_Encode.vb#rtbencodeinline1)]  
   
- A<xref:System.Windows.Media.Imaging.PngBitmapEncoder>在本示例，但任何派生中使用<xref:System.Windows.Media.Imaging.BitmapEncoder>对象可能已用来创建图像文件。  
+ 一个<xref:System.Windows.Media.Imaging.PngBitmapEncoder>使用在此示例中，但任何派生<xref:System.Windows.Media.Imaging.BitmapEncoder>对象可能已用来创建图像文件。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.DrawingContext>  
- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Drawing 对象概述](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [使用 DrawingVisual 对象](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.DrawingContext>
+- [图像处理概述](imaging-overview.md)
+- [Drawing 对象概述](drawing-objects-overview.md)
+- [使用 DrawingVisual 对象](using-drawingvisual-objects.md)

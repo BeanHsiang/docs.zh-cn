@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 84e2d07275194683661a75e422847bbe0ebf1383
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198362"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674407"
 ---
 # <a name="additional-class-libraries-and-apis"></a>其他类库和 API
 
@@ -29,7 +29,7 @@ ms.locfileid: "50198362"
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | 提供的集合数是线程安全的，并且保证决不会更改该集合的内容。 |
 | <xref:System.Net.Http.WinHttpHandler> | 基于 Windows 的 WinHTTP 接口为 <xref:System.Net.Http.HttpClient> 提供消息处理程序。 |
-| [System.Numerics.Vectors](https://msdn.microsoft.com/library/mt452176.aspx) | 提供可利用基于 SIMD 硬件的加速的向量类型库。| 
+| <xref:System.Numerics> | 提供可利用基于 SIMD 硬件的加速的向量类型库。| 
 | <xref:System.Threading.Tasks.Dataflow> | TPL 数据流库提供数据流组件以帮助提高启用并发的应用程序的稳健性。 |  
 
 ## <a name="platform-specific-libraries"></a>特定于平台的库

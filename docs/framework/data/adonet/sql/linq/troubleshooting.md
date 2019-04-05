@@ -2,12 +2,12 @@
 title: 疑难解答
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586405"
 ---
 # <a name="troubleshooting"></a>疑难解答
 下面的信息揭示您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 应用程序中可能遇到的一些问题，并提供建议以避免这些问题或减少这些问题的影响。  
@@ -37,7 +37,7 @@ ms.locfileid: "47108341"
   
  否则，将引发 <xref:System.Data.SqlClient.SqlException> 异常。  
   
- 有关详细信息，请参阅[如何： 删除数据库中的行](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)。  
+ 有关详细信息，请参阅[如何：从数据库中删除行](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)。  
   
 ## <a name="expression-not-queryable"></a>不可查询的表达式  
  如果收到错误消息“表达式 [表达式] 不可查询；是否缺少程序集引用?” ，请确保满足以下要求：  
@@ -57,7 +57,7 @@ ms.locfileid: "47108341"
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>SQL Server 2000 中的 Skip 和 Take 异常  
  在对 SQL Server 2000 数据库使用 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> 或 <xref:System.Linq.Queryable.Take%2A> 时，必须使用标识成员 (<xref:System.Linq.Queryable.Skip%2A>)。 查询必须针对单个表（即，不是联接），或必须为 <xref:System.Linq.Queryable.Distinct%2A>、<xref:System.Linq.Queryable.Except%2A>、<xref:System.Linq.Queryable.Intersect%2A> 或 <xref:System.Linq.Queryable.Union%2A> 操作，且不得包含 <xref:System.Linq.Queryable.Concat%2A> 操作。 有关详细信息，请参阅中的"SQL Server 2000 支持"部分[标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)。  
   
- 此要求不适用于 [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)]。  
+ 此需求不适用于 [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)]。  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
  如果在按 <xref:System.Linq.Enumerable.GroupBy%2A> 表达式进行分组的 `boolean` 查询（如 `group x by (Phone==@phone)`）中有一个列值为 null，则会引发此异常。 因为表达式的类型为 `boolean`，所以会将键的类型推理为 `boolean` 而不是 `nullable` `boolean`。 在转换后的比较生成 null 值时，系统会试图将一个 `nullable` `boolean` 值赋给一个 `boolean`，从而引发该异常。  
@@ -69,6 +69,6 @@ ms.locfileid: "47108341"
 ## <a name="oncreated-partial-method"></a>OnCreated() 分部方法  
  每次调用对象构造函数时都会调用生成的方法 `OnCreated()`，这包括以下这种情况，即 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 调用构造函数以生成原始值的副本。 如果您在自己的分部类中实现 `OnCreated()` 方法，请考虑此行为。  
   
-## <a name="see-also"></a>请参阅  
- [调试支持](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
- [常见问题](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+## <a name="see-also"></a>请参阅
+- [调试支持](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [常见问题](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

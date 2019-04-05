@@ -3,12 +3,12 @@ title: 语法转换 (Roslyn API) 入门
 description: 介绍如何遍历、查询及浏览语法树。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122560"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788435"
 ---
 # <a name="get-started-with-syntax-transformation"></a>语法转换入门
 
@@ -152,7 +152,7 @@ Type variable;
 
 最后，如果初始值设定项表达式的类型与指定类型相匹配，则添加以下 `if` 语句，将现有类型名称替换为 `var` 关键字：
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 此条件是必需的，因为声明可能将初始值设定项表达式转换为基类或接口。 如果这是需要的，则分配左侧和右侧的类型不匹配。 在这些情况下删除显式类型将更改程序语义。 `var` 指定为标识符而不是关键字，因为 `var` 是上下文关键字。 前导和尾随琐事（空白）从旧类型名转换为 `var` 关键字以保持垂直空白和缩进。 使用 `ReplaceNode`（而非 `With*`来转换 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> 更为简单，因为类型名称实际上是声明语句的孙级。
 

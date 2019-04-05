@@ -1,13 +1,13 @@
 ---
-title: 类中的 do 绑定 (F#)
-description: '了解如何使用 F # do 中的类定义，当构造对象或首次使用该类型时将执行操作的绑定。'
+title: 类中的 do 绑定
+description: 了解如何使用F#do 中的类定义，当构造对象或首次使用该类型时将执行操作的绑定。
 ms.date: 05/16/2016
-ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0ddf2b5ca458d0950c2e07bf2c37c205877e2173
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43801513"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613110"
 ---
 # <a name="do-bindings-in-classes"></a>类中的 do 绑定
 

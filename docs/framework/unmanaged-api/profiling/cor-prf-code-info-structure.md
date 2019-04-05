@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 852e6cbd666441b92afb583b15b72d50d26eff8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e83dbb234cf1cacc0e18d4e42bccb427eb54f14c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449779"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617247"
 ---
 # <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO 结构
 表示存储在内存中的一个本机代码连续块。  
@@ -43,13 +43,13 @@ typedef struct _COR_PRF_CODE_INFO {
 |`size`|块的大小。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorProf.idl  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>请参阅
+- [分析结构](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

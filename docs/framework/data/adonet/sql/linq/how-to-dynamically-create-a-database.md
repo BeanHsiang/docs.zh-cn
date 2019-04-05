@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: 122eb705838da00fedd77a01a5d8c4bd3b5f774e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a73efb334fddc7e0bbfbaca53f0d5026105dd22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597029"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>如何：动态创建数据库
 在 LINQ to SQL 中，对象模型映射到关系数据库。 通过使用基于属性的映射或外部映射文件启用映射，以描述关系数据库的结构。 在两种方案中，存在足够的有关使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法创建新的数据库实例的关系数据库的信息。  
@@ -48,9 +48,9 @@ ms.locfileid: "33359408"
  [!code-csharp[DLinqSubmittingChanges#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#7)]
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  
   
-## <a name="see-also"></a>请参阅  
- [基于特性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [进行和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+## <a name="see-also"></a>请参阅
+- [基于特性的映射](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [SQL-CLR 类型映射](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [进行和提交数据更改](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

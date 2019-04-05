@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 3a59347c3fcd72f68ee2ae07ccc638ec43021a3b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5f79f25e879df85fed7b6e402d47d98f047dd562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699842"
 ---
 # <a name="automatic-proxy-detection"></a>自动代理检测
 自动代理检测是一个进程，系统使用该进程来标识 Web 代理服务器，并用于代表客户端发送请求。 此功能也称为 Web 代理自动发现 (WPAD)。 启用自动代理检测后，系统会尝试查找代理配置脚本，该脚本负责返回一组可用于请求的代理。 如果找到了代理配置脚本，则会在针对使用 <xref:System.Net.WebProxy> 实例的请求获取代理信息、请求流或响应时，在本地计算机上下载、编译并运行该脚本。  
@@ -67,7 +67,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
   
  没有代理的请求将使用应用程序域的默认代理（通过 <xref:System.Net.WebRequest.DefaultWebProxy%2A> 属性提供）。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Net.WebProxy>  
- <xref:System.Net.WebRequest>  
- [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.WebProxy>
+- <xref:System.Net.WebRequest>
+- [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

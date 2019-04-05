@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd0321debc4aeee782c782b7e31fb8518aae2e96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50199430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740887"
 ---
 # <a name="cache-policy"></a>缓存策略
 缓存策略定义规则，这些规则用于确定使用已请求资源的缓存副本是否可以满足请求。 尽管应用程序为新鲜度指定客户端缓存要求，但有效的缓存策略是由客户端缓存要求、服务器的内容有效期限要求以及服务器的重新验证要求确定的。 客户端缓存策略和服务器要求的交互始终会造成最保守的缓存策略，有助于确保将最新鲜的内容返回给客户端应用程序。  
@@ -24,7 +24,7 @@ ms.locfileid: "50199430"
   
  下表中所述的类用于指定缓存策略。  
   
-|类名|描述|  
+|类名|说明|  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|表示使用 <xref:System.Net.HttpWebRequest> 对象请求的资源的基于位置和基于时间的缓存策略。|  
 |<xref:System.Net.Cache.RequestCachePolicy>|表示使用 <xref:System.Net.WebRequest> 对象请求的资源的基于位置的缓存策略或基于 <xref:System.Net.Cache.RequestCacheLevel.Default> 时间的缓存策略。|  
@@ -38,8 +38,8 @@ ms.locfileid: "50199430"
   
  有关演示如何创建和使用缓存策略的代码示例，请参阅[在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
   
-## <a name="see-also"></a>请参阅  
- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+## <a name="see-also"></a>请参阅
+- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: 1960a9c547892119d1bc0fb7efb51dfa5498a9c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ce9b03b1eae2a88a9e09449719b3a8e522409418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499296"
 ---
 # <a name="contracts"></a>协定
 本部分演示如何定义和实现 Windows Communication Foundation (WCF) 协定。 服务协定指定终结点与外界通信的内容。 更具体地说，它是有关一组特定消息的声明，这些消息被组织成基本消息交换模式 (MEP)，如请求/答复、单向和双工。 如果说服务协定是一组在逻辑上相关的消息交换，那么服务操作就是单个消息交换。 例如，`Hello` 操作显然必须接受一条消息（以便调用方能够发出问候），并可能返回也可能不返回一条消息（具体取决于操作的礼节性）。  
@@ -65,7 +65,7 @@ ms.locfileid: "43503237"
   
  此累积性需求过程是重要设计、 实现、 配置和承载 Windows Communication Foundation (WCF) 服务应用程序时应牢记。 例如，协定可能会指定需要支持某一会话。 如果是这样，您必须配置绑定以支持该协定性要求，否则服务实现将无法正常工作。 或者，如果你的服务要求集成 Windows 身份验证并在 Internet Information Services (IIS) 中承载，则服务所在的 Web 应用程序必须启用集成 Windows 身份验证并禁用匿名支持。 有关功能和影响的不同服务主机应用程序类型的详细信息，请参阅[Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)。  
   
-## <a name="see-also"></a>请参阅  
- [终结点：地址、绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)  
- [实现服务协定](../../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>请参阅
+- [终结点：地址、 绑定和协定](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [设计服务协定](../../../../docs/framework/wcf/designing-service-contracts.md)
+- [实现服务协定](../../../../docs/framework/wcf/implementing-service-contracts.md)

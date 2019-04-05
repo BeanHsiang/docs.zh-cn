@@ -1,5 +1,5 @@
 ---
-title: 如何：在 ComboBox 控件中创建大小可变的文本
+title: 如何：在组合框控件中创建大小可变的文本
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: a76e1d78cd9fade550fa846488e8bf4a93a21c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b55a6b66416aa79427035abdfbc19d1b0e21d94e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533226"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707785"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>如何：在 ComboBox 控件中创建大小可变的文本
-此示例演示中的文本的自定义绘制<xref:System.Windows.Forms.ComboBox>控件。 当项满足特定条件时，它是在更大的字体绘制，变为红色。  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>如何：在组合框控件中创建大小可变的文本
+此示例演示自定义绘图中的文本<xref:System.Windows.Forms.ComboBox>控件。 在项符合特定条件时，它是绘制中的较大图标，打开红色。  
   
 ## <a name="example"></a>示例  
   
@@ -60,17 +60,17 @@ End Sub
   
 -   Windows 窗体。  
   
--   A<xref:System.Windows.Forms.ComboBox>控件名为`ListBox1`中包含三项<xref:System.Windows.Forms.ComboBox.Items%2A>属性。 在此示例中，命名的三个项`"One", Two", and Three"`。 <xref:System.Windows.Forms.ComboBox.DrawMode%2A>属性`ComboBox1`必须设置为<xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>。  
+-   一个<xref:System.Windows.Forms.ComboBox>名为控件`ListBox1`与中的三个项<xref:System.Windows.Forms.ComboBox.Items%2A>属性。 在此示例中，三个项名为`"One", Two", and Three"`。 <xref:System.Windows.Forms.ComboBox.DrawMode%2A>的属性`ComboBox1`必须设置为<xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>。  
   
     > [!NOTE]
-    >  此方法也是适用于<xref:System.Windows.Forms.ListBox>控件 — 您可以替换<xref:System.Windows.Forms.ListBox>为<xref:System.Windows.Forms.ComboBox>。  
+    >  此方法也是适用于<xref:System.Windows.Forms.ListBox>控件，可以替换<xref:System.Windows.Forms.ListBox>为<xref:System.Windows.Forms.ComboBox>。  
   
 -   对 <xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 命名空间的引用。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.ComboBox.DrawItem>  
- <xref:System.Windows.Forms.DrawItemEventArgs>  
- <xref:System.Windows.Forms.ComboBox.MeasureItem>  
- [具有内置所有者描述支持的控件](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- [ListBox 控件](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
- [ComboBox 控件](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.ComboBox.DrawItem>
+- <xref:System.Windows.Forms.DrawItemEventArgs>
+- <xref:System.Windows.Forms.ComboBox.MeasureItem>
+- [具有内置所有者描述支持的控件](controls-with-built-in-owner-drawing-support.md)
+- [ListBox 控件](listbox-control-windows-forms.md)
+- [ComboBox 控件](combobox-control-windows-forms.md)

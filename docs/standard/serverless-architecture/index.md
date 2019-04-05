@@ -1,19 +1,19 @@
 ---
 title: 无服务器应用：体系结构、模式和 Azure 实现
-description: 无服务器体系结构指南。 了解何时、为何以及如何为企业应用程序实现无服务器体系结构（相对于服务架构 [IaaS] 或平台即服务 [PaaS]）。
+description: 无服务器体系结构指南。 了解何时、为何以及如何为企业应用程序实现无服务器体系结构（相对于基础结构即服务 [IaaS] 或平台即服务 [PaaS]）。
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: 89e5f387e218703a2f6311ef848b3d613a9279f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a44af1fc76b54ec9be0d8e3b3ba2e54f3e3b220b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404805"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653933"
 ---
-![](./media/Cover.jpg)
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>无服务器应用：体系结构、模式和 Azure 实现
+
+![显示无服务器应用电子书封面的屏幕截图。](./media/index/serverless-apps-cover.jpg)
 
 > 下载地址：<https://aka.ms/serverless-ebook>
 
@@ -43,7 +43,7 @@ Mac 和 macOS 是 Apple Inc. 的商标
 
 作者:
 
-> [Jeremy Likness](https://twitter.com/jeremylikness)，Microsoft Corp. APEX 高级云开发大使
+> Microsoft Corp. APEX 高级云开发大使，[Jeremy Likness](https://twitter.com/jeremylikness)
 
 参与者：
 
@@ -61,7 +61,7 @@ Mac 和 macOS 是 Apple Inc. 的商标
 
 ## <a name="introduction"></a>介绍
 
-无服务器是云平台向纯云本机代码方向的进化。 通过无服务器，开发者更接近业务逻辑，避免基础结构问题。 这种模式并不意味着“没有服务器”，而是“更少的服务器”。 无服务器代码是事件驱动的。 无论是传统的 HTTP Web 请求，还是计时器或上传文件的结果都可以触发代码。 无服务器背后的基础结构可实现即时缩放以满足弹性需求，并提供微计费以真正“为所使用的量付费”。 无服务器需要一种新的生成应用程序的思维和方法，它并不是解决每个问题的正确解决方案。 作为开发者，必须确定：
+[无服务器](https://azure.microsoft.com/solutions/serverless/)是云平台向纯云本机代码方向的进化。 通过无服务器，开发者更接近业务逻辑，避免基础结构问题。 这种模式并不意味着“没有服务器”，而是“更少的服务器”。 无服务器代码是事件驱动的。 无论是传统的 HTTP Web 请求，还是计时器或上传文件的结果都可以触发代码。 无服务器背后的基础结构可实现即时缩放以满足弹性需求，并提供微计费以真正“为所使用的量付费”。 无服务器需要一种新的生成应用程序的思维和方法，它并不是解决每个问题的正确解决方案。 作为开发者，必须确定：
 
 * 无服务器的优点和缺点是什么？
 * 为什么要考虑为自己的应用程序使用无服务器？
@@ -76,7 +76,7 @@ Mac 和 macOS 是 Apple Inc. 的商标
 
 ## <a name="evolution-of-cloud-platforms"></a>云平台的演变
 
-无服务器是云平台多次迭代的巅峰。 这种演变始于数据中心的物理计算机，然后经历了服务架构 (IaaS) 和平台即服务 (PaaS) 的发展阶段。
+无服务器是云平台多次迭代的巅峰。 这种演变始于数据中心的物理计算机，然后经历了基础结构即服务 (IaaS) 和平台即服务 (PaaS) 的发展阶段。
 
 ![从本地到无服务器的演变](./media/serverless-evolution-iaas-paas.png)
 
@@ -88,7 +88,7 @@ Mac 和 macOS 是 Apple Inc. 的商标
 * 存储备份发送到何处？
 * 应该有冗余电源吗？
 
-此类问题不胜枚举，相关开销巨大。 在许多情况下，IT 部门不得不处理大量浪费。 浪费是由服务器过度分配导致的，例如用于灾难恢复的备份计算机以及用于横向扩展的备用服务器。幸运的是，随着虚拟化技术（如 [Hyper-V](/virtualization/hyper-v-on-windows/about/)）和虚拟机 (VM) 的引入，产生了服务架构 (IaaS)。 虚拟化基础结构允许运营将一组标准服务器设置为主干网，从而形成一个灵活的环境，能够“按需”预配唯一服务器。 更重要的是，虚拟化为使用云提供虚拟机“即服务”奠定了基础。 公司不必担心冗余电源或物理计算机的问题。 他们可专注于虚拟环境。
+此类问题不胜枚举，相关开销巨大。 在许多情况下，IT 部门不得不处理大量浪费。 浪费是由服务器过度分配导致的，例如用于灾难恢复的备份计算机以及用于横向扩展的备用服务器。幸运的是，随着虚拟化技术（如 [Hyper-V](/virtualization/hyper-v-on-windows/about/)）和虚拟机 (VM) 的引入，产生了基础结构即服务 (IaaS)。 虚拟化基础结构允许运营将一组标准服务器设置为主干网，从而形成一个灵活的环境，能够“按需”预配唯一服务器。 更重要的是，虚拟化为使用云提供虚拟机“即服务”奠定了基础。 公司不必担心冗余电源或物理计算机的问题。 他们可专注于虚拟环境。
 
 IaaS 仍然需要大量开销，因为运营仍然负责执行各种任务。 这些任务包括：
 
@@ -138,4 +138,4 @@ IaaS 仍然需要大量开销，因为运营仍然负责执行各种任务。 �
 我们正在不断完善指南和相关示例，欢迎你提供反馈！ 如果对如何改进本指南有任何建议，请使用 [GitHub 问题](https://github.com/dotnet/docs/issues)上任何页面底部的反馈部分进行反馈。
 
 >[!div class="step-by-step"]
-[下一篇](architecture-approaches.md)
+>[下一页](architecture-approaches.md)

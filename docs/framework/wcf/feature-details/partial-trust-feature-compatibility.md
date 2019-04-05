@@ -2,12 +2,12 @@
 title: 部分信任功能兼容性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864519"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333494"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能兼容性
 在部分受信任的环境中运行时，Windows Communication Foundation (WCF) 支持有限的功能子集。 部分信任中支持的功能围绕 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主题中所述的一组特定的方案而设计。  
@@ -92,7 +92,7 @@ ms.locfileid: "43864519"
   
 -   确保在将应用程序作为完全受信任的应用程序部署时，用户不能修改代码访问安全设置，从而无法在部分信任环境中运行该应用程序。 如果用户可以这样做，则不会运行该行为，且不引发任何异常。 若要确保这一点，请参阅**levelfinal**选项使用[Caspol.exe （代码访问安全策略工具）](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
   
- 有关常见行为的一个示例，请参阅[如何： 在企业中 Lock Down Endpoints](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
+ 有关常见行为的一个示例，请参阅[如何：在企业中的锁定终结点](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
   
 ## <a name="configuration"></a>配置  
  有一个例外，部分受信任的代码只能加载本地 WCF 配置节`app.config`文件。 若要加载 WCF 配置节引用 WCF 节在 machine.config 或根中的 web.config 文件需要 configurationpermission （unrestricted）。 如果没有此权限引用向 WCF 配置节 （行为、 绑定） 之外的本地配置文件会引发异常时加载配置。  
@@ -111,7 +111,7 @@ ms.locfileid: "43864519"
  时在部分信任环境中运行 WCF 消息日志记录无效。 如果在部分信任下启用消息日志记录，不会出现服务激活失败，但不记录消息。  
   
 ### <a name="tracing"></a>跟踪  
- 在部分信任环境中运行时可使用有限的跟踪功能。 在配置文件的 <`listeners`> 元素中，可以添加的类型仅有 <xref:System.Diagnostics.TextWriterTraceListener> 和新的 <xref:System.Diagnostics.EventSchemaTraceListener>。 使用标准的 <xref:System.Diagnostics.XmlWriterTraceListener> 可能会造成日志不完整或不正确。  
+ 在部分信任环境中运行时可使用有限的跟踪功能。 在 <`listeners`> 配置文件中的元素，可以添加的类型仅有<xref:System.Diagnostics.TextWriterTraceListener>和新<xref:System.Diagnostics.EventSchemaTraceListener>。 使用标准的 <xref:System.Diagnostics.XmlWriterTraceListener> 可能会造成日志不完整或不正确。  
   
  支持的跟踪源有：  
   
@@ -127,7 +127,7 @@ ms.locfileid: "43864519"
   
 -   <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://msdn.microsoft.com/library/system.servicemodel.internal.transactionbridge.aspx)]
+-   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  不应指定下面的 <xref:System.Diagnostics.TraceOptions> 枚举成员：  
   
@@ -159,10 +159,10 @@ ms.locfileid: "43864519"
 ## <a name="unlisted-features"></a>未列出的功能  
  若要在部分信任环境中运行时发现不可用的信息或操作，最好的方法是尝试在 `try` 块的内部访问资源或执行操作，然后 `catch` 失败。 若要避免填满出现重复的错误的跟踪文件，WCF 会禁用资源或后第一次安全失败操作的跟踪。 对于在第一次尝试访问资源或执行操作时出现的每个失败的资源访问，将会有一个异常跟踪。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [支持的部署方案](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- [部分信任最佳做法](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
+- [支持的部署方案](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
+- [部分信任最佳做法](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

@@ -1,21 +1,22 @@
 ---
-title: in（泛型修饰符）（C# 参考）
+title: in（泛型修饰符） - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: e515329c060bd9fc11e4415b8e77520cf68cad9a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f736540a37d3226bccfc07749dcf06ca018663e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523773"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694563"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in（泛型修饰符）（C# 参考）
 
 对于泛型类型参数，`in` 关键字可指定类型参数是逆变的。 可以在泛型接口和委托中使用 `in` 关键字。
 
-逆变使你使用的类型可以比泛型参数指定的类型派生程度更小。 这样可以隐式转换实现变体接口的类以及隐式转换委托类型。 引用类型支持泛型类型参数中的协变和逆变，但值类型不支持它们。
+逆变使你使用的类型可以比泛型参数指定的类型派生程度更小。 这样可以隐式转换实现协变接口的类以及隐式转换委托类型。 引用类型支持泛型类型参数中的协变和逆变，但值类型不支持它们。
 
 仅在类型定义方法参数的类型，而不是方法返回类型时，类型可以在泛型接口或委托中声明为逆变。 `In`、`ref` 和 `out` 参数必须是固定的，这意味着它们既不为协变又不为逆变。
 
@@ -43,6 +44,6 @@ ms.locfileid: "43523773"
 
 ## <a name="see-also"></a>请参阅
 
-- [out](out-generic-modifier.md)  
-- [协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)  
-- [修饰符](modifiers.md)  
+- [out](out-generic-modifier.md)
+- [协变和逆变](../../programming-guide/concepts/covariance-contravariance/index.md)
+- [修饰符](modifiers.md)

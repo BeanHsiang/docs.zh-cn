@@ -1,12 +1,12 @@
 ---
 title: $ （Visual Basic 参考）
 ms.date: 10/31/2017
-ms.openlocfilehash: f4651849241ec0ccf8052cc012ae97babd299e62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1927e8277b0fdeda13d715b62c6e7cede28b3c52
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183433"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821345"
 ---
 # <a name="-visual-basic-reference"></a>$ （Visual Basic 参考）
 
@@ -18,6 +18,7 @@ ms.locfileid: "50183433"
 
 有关内插字符串的详细信息，请参阅[内插字符串](../../programming-guide/language-features/strings/interpolated-strings.md)主题。
 
-## <a name="see-also"></a>请参阅  
- [Visual Basic 参考](../index.md)  
- [Visual Basic 的特殊字符](index.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 参考](../index.md)
+- [Visual Basic 的特殊字符](index.md)

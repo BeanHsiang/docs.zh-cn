@@ -1,6 +1,6 @@
 ---
 title: 类型成员的名称
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], names
@@ -12,14 +12,13 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0541f100f208543c796de7238e68ea6f90c7b299
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576936"
 ---
 # <a name="names-of-type-members"></a>类型成员的名称
 类型的成员包括：方法、属性、事件、构造函数和字段。 以下各部分介绍各类型成员的命名准则。  
@@ -75,9 +74,9 @@ public class Control {
   
  例如，窗口关闭之前引发的事件称为 `Closing`，窗口关闭之后引发的事件称为 `Closed`。  
   
- **X DO NOT** 使用 “Before” 或 “After” 前缀和后缀来指示事件之前或之后。 应按前述使用现在时态和过去时态。  
+ X 请勿使用 “Before” 或 “After” 前缀和后缀来指示事件之前或之后。 应按前述使用现在时态和过去时态。  
   
- **✓ DO** 使用 “EventHandler” 后缀来命名事件处理程序（委托，用作事件类型），如以下示例所示：  
+ ✓ 请使用 “EventHandler” 后缀来命名事件处理程序（用作事件类型的委托），如以下示例所示：  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
@@ -90,19 +89,19 @@ public class Control {
 ## <a name="names-of-fields"></a>字段的名称  
  字段命名准则适用于静态公共字段和受保护字段。 准则不适用于内部字段和专用字段，[成员设计准则](../../../docs/standard/design-guidelines/member.md)不允许使用公共或受保护的实例字段。  
   
- **✓ DO** 在字段名称中使用 PascalCasing。  
+  ✓ 请在字段名称中使用 PascalCasing。    
   
- **✓ DO** 使用名词、名词短语或形容词来命名字段。  
+  ✓ 请使用名词、名词短语或形容词来命名字段。    
   
- **X DO NOT** 在字段名称中使用前缀。  
+  X 请勿在字段名称中使用前缀。    
   
  例如，不要使用 "g_" 或 "s_" 来指示静态字段。  
   
  *部分版权 © 2005, 2009 Microsoft Corporation。保留所有权利。*  
   
- *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第2版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
+ *经 Pearson Education, Inc 授权，转载自[框架设计准则：可重用的 .NET 库的约定、习惯用语和模式，第 2 版](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 作者：Krzysztof Cwalina 和 Brad Abrams，由 Addison Wesley Professional 于 2008 年 10 月 22 日印发，作为 Microsoft Windows 开发系列的一部分。*  
   
 ## <a name="see-also"></a>请参阅
 
-- [框架设计指南](../../../docs/standard/design-guidelines/index.md)  
+- [框架设计指南](../../../docs/standard/design-guidelines/index.md)
 - [命名规则](../../../docs/standard/design-guidelines/naming-guidelines.md)

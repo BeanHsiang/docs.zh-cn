@@ -2,12 +2,12 @@
 title: 演练：跨关系查询 (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a438b0ae83a223abfc35643915e6eedd5be068a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a24d96c9d138f0dcd2f162dad474da01f49e45d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563660"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>演练：跨关系查询 (C#)
 本演练演示如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*关联*来表示数据库中的外键关系。  
@@ -17,7 +17,7 @@ ms.locfileid: "33364413"
  本演练是使用 Visual C# 开发设置编写的。  
   
 ## <a name="prerequisites"></a>系统必备  
- 你必须已完成[演练： 简单对象模型和查询 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)。 本演练建立在该演练基础之上，包括在 c:\linqtest5 中须存在 northwnd.mdf 文件。  
+ 你必须已完成[演练：简单对象模型和查询 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)。 本演练建立在该演练基础之上，包括在 c:\linqtest5 中须存在 northwnd.mdf 文件。  
   
 ## <a name="overview"></a>概述  
  本演练由三项主要任务组成：  
@@ -47,7 +47,7 @@ ms.locfileid: "33364413"
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>跨 Customer-Order 关系创建并运行查询  
- 现在您可以直接从 `Order` 对象访问 `Customer` 对象，或反过来进行访问。 不需要显式*联接*客户与订单之间。  
+ 现在您可以直接从 `Order` 对象访问 `Customer` 对象，或反过来进行访问。 不需要显式*联接*customers 与 orders 之间。  
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>使用 Customer 对象访问 Order 对象  
   
@@ -86,7 +86,7 @@ ms.locfileid: "33364413"
 4.  在控制台窗口中按 Enter，以停止调试。  
   
 ## <a name="next-steps"></a>后续步骤  
- 下一步的演练 ([演练： 操作数据 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 演示如何处理数据。 该演练不要求您保存本系列中已经完成的两个演练的结果。  
+ 下一个演练 ([演练：操作数据 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 演示如何操作数据。 该演练不要求您保存本系列中已经完成的两个演练的结果。  
   
-## <a name="see-also"></a>请参阅  
- [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>请参阅
+- [通过演练学习](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

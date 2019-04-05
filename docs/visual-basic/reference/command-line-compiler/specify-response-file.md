@@ -4,12 +4,12 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: 54a4cee0b779c0784eec169a15ab1594c56cede9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b993a6399eec4e203821109db153aadf246cbac
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194678"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838113"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@（指定响应文件）(Visual Basic)
 指定包含编译器选项的文件和要编译的源代码文件。  
@@ -22,7 +22,7 @@ ms.locfileid: "50194678"
   
 ## <a name="arguments"></a>自变量  
  `response_file`  
- 必须的。 列出编译器选项或要编译的源代码文件的文件。 将文件名括在引号 ("") 如果包含空格。  
+ 必需。 列出编译器选项或要编译的源代码文件的文件。 将文件名括在引号 ("") 如果包含空格。  
   
 ## <a name="remarks"></a>备注  
  编译器处理编译器选项和源代码文件的响应文件中指定，如同它们已在命令行上指定的一样。  
@@ -60,7 +60,8 @@ source2.vb
 vbc @file1.rsp  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -2,12 +2,12 @@
 title: 创建使用 UDP 传输的多播应用程序
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324748"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241848"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>创建使用 UDP 传输的多播应用程序
 多播应用程序同时向大量收件人发送小消息，而无需建立点到点连接。 对于此类应用程序而言，速度比可靠性更重要。 换句话说，更重要的是发送及时的数据，而不是确保确实收到任何特定的消息。 现在，WCF 支持使用 <xref:System.ServiceModel.UdpBinding> 编写多播应用程序。 此传输在服务需要将小消息同时发出到大量客户端的方案中非常有用。 股票行情自动收录器应用程序是这类服务的一个示例。  
@@ -15,7 +15,7 @@ ms.locfileid: "46324748"
 ## <a name="implementing-a-multicast-application"></a>实现多播应用程序  
  要实现多播应用程序，请定义服务协定，并对需要响应多播消息的每个软件组件实现该服务协定。 例如，股票行情自动收录器应用程序可以定义服务协定：  
   
-```  
+```csharp
 // Shared contracts between the client and the service  
 [ServiceContract]
 interface IStockTicker
@@ -43,7 +43,7 @@ class StockInfo
   
  每个想要接收多播消息的应用程序必须承载公开此接口的服务。  例如，下面的代码示例演示如何接收多播消息：  
   
-```  
+```csharp
 // Service Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 // Binding
@@ -63,7 +63,7 @@ Console.ReadLine();
   
  在这种类型的方案中，它是实际发出多播消息的客户端。 正在正确的 UDP 地址上侦听的每个服务都将接收多播消息。 下面是发出多播消息的客户端的一个示例：  
   
-```  
+```csharp
 // Multicast Address
 string serviceAddress = "soap.udp://224.0.0.1:40000";
 
@@ -82,7 +82,7 @@ while (true)
 {
     // This will continue to mulicast stock information
     proxy.SendStockInfo(GetStockInfo());
-    Console.WriteLine(String.Format("sent stock info at {0}", DateTime.Now));
+    Console.WriteLine($"sent stock info at {DateTime.Now}");
     // Wait for one second before sending another update
     System.Threading.Thread.Sleep(new TimeSpan(0, 0, 1));
 }
@@ -96,7 +96,7 @@ while (true)
 ### <a name="two-way-multicast-messaging"></a>双向多播消息传送  
  尽管多播消息通常是单向的，但 UdpBinding 的确支持请求/答复消息交换。 使用 UDP 传输发送的消息同时包含发件人地址和收件人地址。 使用发件人地址时必须小心，因为它可能在路由过程中被恶意更改。  可以使用下面的代码来检查地址：  
   
-```  
+```csharp
 if (address.AddressFamily == AddressFamily.InterNetwork)
 {
     // IPv4

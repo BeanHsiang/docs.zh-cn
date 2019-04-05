@@ -1,24 +1,24 @@
 ---
-title: '&lt;nameClaimType&gt;'
+title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: bd4033b2edea7450b66c25f446669b3ded65e9af
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: aab76949d9c31ac003b8afd519c2ad66529cbf26
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123158"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254851"
 ---
-# <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
+# <a name="nameclaimtype"></a>\<nameClaimType>
 设置指定的声明类型<xref:System.Security.Principal.IIdentity.Name%2A>属性。 声明类型用于搜索<xref:System.Security.Claims.Claim>中的集合<xref:System.Security.Claims.ClaimsIdentity>返回的对象<xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>此令牌处理程序方法。 然后，将匹配声明的值设置为的名称<xref:System.Security.Principal.IIdentity>生成的此令牌处理程序。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
 \<add>  
-\<samlSecurityTokenRequirement >  
-\<nameClaimType >  
+\<samlSecurityTokenRequirement>  
+\<nameClaimType>  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ ms.locfileid: "49123158"
   
 |特性|描述|  
 |---------------|-----------------|  
-|值|一个字符串，指定表示要使用的声明的声明类型的 URI<xref:System.Security.Principal.IIdentity.Name%2A>属性。 必须的。|  
+|值|一个字符串，指定表示要使用的声明的声明类型的 URI<xref:System.Security.Principal.IIdentity.Name%2A>属性。 必需。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -68,5 +68,5 @@ ms.locfileid: "49123158"
 </add>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>

@@ -1,15 +1,13 @@
 ---
-title: dotnet-add reference 命令- .NET Core CLI
+title: dotnet-add reference 命令
 description: dotnet add reference 命令可便于添加项目间引用。
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 3398d4dc7bf70eaadcdd92269dbd3b784079c22d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/04/2018
+ms.openlocfilehash: 8df9fa3c9469f74b27a9cb8120936f03532b016c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696957"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169753"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -23,7 +21,7 @@ ms.locfileid: "34696957"
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 使用 `dotnet add reference` 命令可方便地向项目添加项目引用。 运行该命令后，会将 [`<ProjectReference>`](/visualstudio/msbuild/common-msbuild-project-items) 元素添加到项目文件。
 
@@ -37,34 +35,40 @@ ms.locfileid: "34696957"
 
 ## <a name="arguments"></a>自变量
 
-`PROJECT`
+* **`PROJECT`**
 
-指定项目文件。 如果未指定，此命令会搜索当前目录来获取一个项目文件。
+  指定项目文件。 如果未指定，此命令会搜索当前目录来获取一个项目文件。
 
-`PROJECT_REFERENCES`
+* **`PROJECT_REFERENCES`**
 
-要添加的项目到项目 (P2P) 引用。 指定一个或多个项目。 基于 Unix/Linux 的系统支持 [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))。
+  要添加的项目到项目 (P2P) 引用。 指定一个或多个项目。 基于 Unix/Linux 的系统支持 [glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))。
 
 ## <a name="options"></a>选项
 
-`-h|--help`
+* **`-h|--help`**
 
-打印出有关命令的简短帮助。
+  打印出有关命令的简短帮助。
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-仅在以特定[框架](../../standard/frameworks.md)为目标时添加项目引用。
+  仅在以特定[框架](../../standard/frameworks.md)为目标时添加项目引用。
 
 ## <a name="examples"></a>示例
 
-添加项目引用：
+* 添加项目引用：
 
-`dotnet add app/app.csproj reference lib/lib.csproj`
+  ```console
+  dotnet add app/app.csproj reference lib/lib.csproj
+  ```
 
-向当前目录中的项目添加多个项目引用：
+* 向当前目录中的项目添加多个项目引用：
 
-`dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
+  ```console
+  dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
+  ```
 
-使用 glob 模式在 Linux/Unix 上添加多个项目引用：
+* 使用 glob 模式在 Linux/Unix 上添加多个项目引用：
 
-`dotnet add app/app.csproj reference **/*.csproj`
+  ```console
+  dotnet add app/app.csproj reference **/*.csproj
+  ```

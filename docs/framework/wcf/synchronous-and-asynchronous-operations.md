@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: c2948cf76f7763eae51689973346965bc6c720a8
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: a35f4543543aa9023fd43de1757975c7ada87da9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529117"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和异步操作
 本主题讨论实现和调用异步服务操作。  
@@ -110,11 +110,11 @@ public class AsyncExample
  有关基于事件的异步模式的更多信息，请参见[基于事件的异步模式](https://go.microsoft.com/fwlink/?LinkId=232515)。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 异步模式  
- 服务操作也可以按异步方式实现，具体方法是使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 异步编程模式，并标记 `<Begin>` 属性设置为 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 的 `true` 方法。 在这种情况下，异步操作将以与同步操作相同的方式在元数据中公开，即作为单个操作随请求消息和相关的响应消息来公开。 随后，客户端编程模型可以进行选择。 客户端编程模型可以将这种模式表示为同步操作，也可以表示为异步操作，但前提是调用该服务时发生了请求-响应消息交换。  
+ 服务操作也可以按异步方式实现，具体方法是使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 异步编程模式，并标记 `<Begin>` 属性设置为 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 的 `true` 方法。 在这种情况下，在中同步操作的形式相同的元数据中公开异步操作：作为单个操作随请求消息和相关的响应消息。 随后，客户端编程模型可以进行选择。 客户端编程模型可以将这种模式表示为同步操作，也可以表示为异步操作，但前提是调用该服务时发生了请求-响应消息交换。  
   
  通常，考虑到系统的异步特性，您不应依赖于线程。  将数据传递到操作调度处理的各个阶段的最可靠方式是使用扩展。  
   
- 有关示例，请参见[如何：实现异步服务操作](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。  
+ 有关示例，请参见 [如何：实现异步服务操作](../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。  
   
  定义一个异步执行（而不考虑它在客户端应用程序中的调用方式）的协定操作 `X`：  
   
@@ -172,7 +172,7 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- 完成此操作后，Svcutil.exe 将生成带有事件基础结构的 WCF 客户端类，该事件基础结构使调用应用程序可以实现和分配事件处理程序，以便接收响应和采取相应的操作。 有关完整示例，请参见[如何：以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 完成此操作后，Svcutil.exe 将生成带有事件基础结构的 WCF 客户端类，该事件基础结构使调用应用程序可以实现和分配事件处理程序，以便接收响应和采取相应的操作。 有关完整示例，请参阅[如何：以异步方式调用服务操作](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
  但是，基于事件的异步模型仅在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中可用。 此外，如果 WCF 客户端通道是使用 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 创建的，那么即使在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中，也不支持该模型。 使用 WCF 客户端通道对象时，必须使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 对象异步调用操作。 若要使用此方法，请使用 [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 并指定 /async 命令选项，如下面的示例所示。  
   
@@ -180,7 +180,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   
- 这会生成一个服务协定，在该服务协定中，每个操作都作为 `<Begin>` 方法（其 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 属性设置为 `true`）和相应的 `<End>` 方法来建模。 有关使用 <xref:System.ServiceModel.ChannelFactory%601> 的完整示例，请参见[如何：使用通道工厂以异步方式调用操作](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)。  
+ 这会生成一个服务协定，在该服务协定中，每个操作都作为 `<Begin>` 方法（其 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 属性设置为 `true`）和相应的 `<End>` 方法来建模。 有关完整的示例使用<xref:System.ServiceModel.ChannelFactory%601>，请参阅[如何：调用操作以异步方式使用的通道工厂](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)。  
   
  在任何一种情况下，即使服务是以同步方式实现的，应用程序也可以异步方式调用操作，就如同应用程序可以使用同一个模式以异步方式调用本地同步方法一样。 操作的实现方式对于客户端而言无关紧要；当响应消息到达时，其内容会调度到客户端的异步 <`End`> 方法，并且客户端会检索相关信息。  
   
@@ -192,6 +192,6 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  如果要将消息对象作为 `Result` 属性来接收并要使返回的值作为该对象上的属性，请使用 /messageContract 命令选项。 这会生成一个签名，该签名会将响应消息作为 `Result` 对象上的 <xref:System.EventArgs> 属性返回。 然后，所有内部返回值就都是响应消息对象的属性了。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  
- <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
+- <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

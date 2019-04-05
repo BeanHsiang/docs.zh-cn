@@ -1,15 +1,15 @@
 ---
-title: 如何： 查找两个位置路径 (XPATH-LINQ to XML) 的并集 (Visual Basic)
+title: 如何：查找两个位置路径 (XPATH-LINQ to XML) 的并集 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-ms.openlocfilehash: 3f67ac24d12e7d2fcbd74e2f27a75d982c1cf00b
-ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
+ms.openlocfilehash: 662cad329f4837d26b25d56f15d323fe623b05c2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "42754091"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843677"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>如何： 查找两个位置路径 (XPATH-LINQ to XML) 的并集 (Visual Basic)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>如何：查找两个位置路径 (XPATH-LINQ to XML) 的并集 (Visual Basic)
 使用 XPath 可以查找两个 XPath 位置路径结果的联合。  
   
  XPath 表达式为：  
@@ -21,7 +21,7 @@ ms.locfileid: "42754091"
 ## <a name="example"></a>示例  
  本示例查找所有 `Category` 元素和所有 `Price` 元素，并将它们连接到单个集合中。 请注意，[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查询会调用 <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> 以对结果进行排序。 XPath 表达式的计算结果也按文档顺序排列。  
   
- 本示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
+ 此示例使用下面的 XML 文档：[示例 XML 文件：数值数据 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -65,5 +65,6 @@ Results are identical
 <Price>6.99</Price>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

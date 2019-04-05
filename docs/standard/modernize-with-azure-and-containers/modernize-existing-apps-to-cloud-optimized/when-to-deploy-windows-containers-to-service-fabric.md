@@ -1,40 +1,40 @@
 ---
-title: 何时到 Service Fabric 中部署 Windows 容器
-description: 更新现有的.NET 应用程序与 Azure 云和 Windows 容器 |何时到 Service Fabric 中部署 Windows 容器
+title: 何时将 Windows 容器部署到 Service Fabric
+description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |何时将 Windows 容器部署到 Service Fabric
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: c41db8b37c883f9369a6b8d1f8bccbc0535f504c
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957907"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129501"
 ---
-# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>何时到 Service Fabric 中部署 Windows 容器
+# <a name="when-to-deploy-windows-containers-to-service-fabric"></a>何时将 Windows 容器部署到 Service Fabric
 
-应用程序基于 Windows 容器快速将需要使用从 IaaS Vm 放下移甚至可更进一步的平台。 此内容用于改进自动的可伸缩性和高可伸缩性，并能够在部署中，完整的管理体验的重大改进升级时，版本控制、 回退和运行状况监视。 与 orchestrator Azure Service Fabric 中，可在 Microsoft Azure 云，但还在本地，或甚至在另一个云，可以实现这些目标。
+基于 Windows 容器的应用程序需要快速使用从 IaaS Vm 即可移动更进一步的平台。 此内容用于改进自动的可伸缩性和高可伸缩性，并获得全面的管理体验对于部署中的重大改进会升级，版本控制、 回滚、 和运行状况监视。 可以使用业务流程协调程序 Azure Service Fabric，可以在 Microsoft Azure 云，但还在本地，或甚至另一个云来实现这些目标。
 
-许多组织抬起，然后切换到容器的现有整体应用程序有两个原因：
+许多组织是提升并转移到容器的现有单一式应用程序有两个原因：
 
--   降低成本，或者由于合并和删除的现有硬件，或者在更高的密度运行应用程序。
+-   成本的降低，或者由于合并和删除的现有硬件，或在更高的密度运行的应用程序。
 
--   一致的部署之间开发和操作协定。
+-   开发和运营之间一致的部署协定。
 
-按照降低成本是可以理解，并很可能所有组织都追踪这一目标。 一致的部署将更难以若要评估，但同样重要。 部署一致协定指出开发人员可自由选择使用它们，适合的技术和运营团队都可使用单一方法来部署和管理应用程序。 本协议以减少无操作处理的许多不同的技术，复杂性或强制开发人员可以仅使用某些技术难题。 从根本上来说，每个应用程序被容器中的自包含的部署映像。
+追求降低成本是可以理解，并可能所有组织都跟踪这一目标。 一致的部署是更难以评估，但同样重要。 一致的部署协定说开发人员可自由选择使用适时，技术和运营团队获取一种方法来部署和管理应用程序。 本协议缓解了具有处理许多不同的技术，复杂的操作也不会强迫开发人员可以仅使用特定技术的麻烦。 从根本上来说，每个应用程序是适用于容器化的独立的部署映像中。
 
-某些组织将继续 modernizing 通过添加微服务 （云本机应用程序），但许多其他组织将在此处停止 （云优化应用程序）。 如所示在图 4-8 中，这些组织不会移动到微服务体系结构，因为它们可能不需要。 在任何情况下，它们已获得的好处，使用容器以及 Service Fabric 提供了一个完整的管理体验，包括部署、 升级、 版本控制、 回滚，和运行状况监视。
+某些组织将继续通过添加微服务 （云原生应用程序） 实现现代化，但其他许多组织将就此打住 （云计算得到优化的应用程序）。 如所示图 4-8，这些组织不会移动到微服务体系结构，因为它们可能不需要。 在任何情况下，它们已经获得优势，使用容器以及 Service Fabric 提供了一个完整管理体验，包括部署、 升级、 版本控制、 回滚、 和运行状况监视。
 
-> ![提升和移动到 Service Fabric 应用程序](./media/image8.png)
+> ![提升和迁移到 Service Fabric 应用程序](./media/image8.png)
 >
-> **图 4-8。** 提升和移动到 Service Fabric 应用程序
+> **图 4-8。** 提升和迁移到 Service Fabric 应用程序
 
-Service Fabric 的关键方法是重复使用现有代码和提升和移动。 因此，你可以通过使用 Windows 容器迁移你当前的.NET Framework 应用程序，并将它们部署到 Service Fabric。 它将更容易地将转 modernizing，最后，通过添加新的微服务。
+Service Fabric 的关键方法是重复使用现有代码和提升和转移。 因此，可以通过使用 Windows 容器迁移当前.NET Framework 应用程序，并将其部署到 Service Fabric。 它将更容易地将会更新，最后，通过添加新的微服务。
 
-时将 Service Fabric 与其他 orchestrators 进行比较，务必突出显示 Service Fabric 是成熟在运行基于 Windows 的应用程序和服务。 Service Fabric 已经运行基于 Windows 的服务和应用程序，包括年的第 1 层、 执行关键任务的 Microsoft 产品。 它是用于为 Windows 容器具有常规可用性的第一个 orchestrator。 其他容器，如 Kubernetes、 DC/OS 和 Docker Swarm，是更加成熟完善一些在 Linux 中，但不太成熟比基于 Windows 的 Service Fabric 应用程序和 Windows 容器。
+将 Service Fabric 与其他业务流程协调程序进行比较，时，一定要突出显示 Service Fabric 是在运行基于 Windows 的应用程序和服务的成熟。 Service Fabric 运行基于 Windows 的服务和应用程序，包括年第 1 层、 关键来自 Microsoft 的产品。 这是用于 Windows 容器具有正式发布第一个业务流程协调程序。 其他容器，如 Kubernetes、 DC/OS 和 Docker Swarm，是在 Linux 中，但比基于 Service Fabric 的 Windows 的应用程序和 Windows 容器不够成熟更成熟。
 
-Service Fabric 的最终目标是减少使用微服务方法生成应用程序的复杂性。 你最终将要用于特定类型的应用程序能够避免代价高昂的重新设计的微服务。 可以启动小、 缩放需要时，弃用服务、 添加新服务，和发展客户使用的应用程序。 有许多尚为大多数开发人员进行微服务更便于访问要解决其他问题。 如果你当前是刚刚提起并移动应用程序与 Windows 容器，但你正在考虑添加微服务在将来根据容器，这是 Service Fabric 最擅长的领域。
+Service Fabric 的最终目标是减少使用微服务方法构建应用程序的复杂性。 某些类型的应用程序以避免成本高昂的重新设计最终想使用微服务。 可以从小规模开始、 缩放时需要、 不推荐使用的服务、 添加新服务，并改进客户使用应用程序。 有许多其他尚待解决为进行大多数开发人员更方便地使用微服务的问题。 如果你当前是只需提升并转移使用 Windows 容器的应用程序，但你正在考虑添加将来基于容器的微服务，这是 Service Fabric 最擅长的领域。
 
 >[!div class="step-by-step"]
-[上一页](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-[下一页](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+>[上一页](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+>[下一页](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

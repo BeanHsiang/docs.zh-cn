@@ -1,17 +1,17 @@
 ---
 title: F# 语言参考
-description: '查找 F # 语言中的功能信息语言标记、 概念、 类型、 表达式和编译器支持的结构的主题对此引用。'
+description: 查找F#语言标记、 概念、 类型、 表达式和编译器支持的结构的主题对此引用中的语言功能信息。
 ms.date: 05/16/2016
-ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45646410"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846631"
 ---
 # <a name="f-language-reference"></a>F# 语言参考
 
-本部分是对 F # 语言，面向.NET 的多模式编程语言的引用。 F# 语言支持函数式、命令式、面向对象的编程模式。
+本部分是对的引用F#语言、 面向.NET 的多模式编程语言。 F# 语言支持函数式、命令式、面向对象的编程模式。
 
 ## <a name="f-tokens"></a>F# 标记
 
@@ -59,7 +59,7 @@ ms.locfileid: "45646410"
 |标题|描述|
 |-----|-----------|
 |[值](values/index.md)|介绍值，它是具有特定类型的不可变数量；值可以是整数或浮点数、字符或文本、列表、序列、数组、元组、可区分联合、记录、类类型或函数值。|
-|[基本类型](basic-types.md)|介绍 F # 语言中使用的基本基本类型。 它还提供每种类型的相应 .NET 类型和最小和最大值。|
+|[基本类型](basic-types.md)|描述中使用的基础的基本类型F#语言。 它还提供每种类型的相应 .NET 类型和最小和最大值。|
 |[Unit 类型](unit-type.md)|介绍 `unit` 类型，它指示缺少某特定值；`unit` 类型只有一个值，不存在任何其他值或者不需要其他值时，该值作为一个占位符。|
 |[字符串](strings.md)|介绍 F# 中的字符串。 `string` 类型将不可变的文本表示为 Unicode 字符的序列。 `string` 是 .NET Framework 中 `System.String` 的别名。|
 |[元组](tuples.md)|介绍元组，它是未命名但有序的值的组合，值的类型可能不同。|
@@ -95,7 +95,7 @@ ms.locfileid: "45646410"
 |[循环：`for...in` 表达式](loops-for-in-expression.md)|介绍 `for...in` 表达式，该表达式是一种循环构造，用于循环访问可枚举集合（例如，范围表达式、序列、列表、数组或其他支持枚举的构造）中的模式匹配项。|
 |[循环：`while...do` 表达式](loops-while-do-expression.md)|介绍 `while...do` 表达式，该表达式用于在指定的测试条件为 true 时执行迭代操作（循环）。|
 |[对象表达式](object-expressions.md)|介绍对象表达式，这些表达式可用于创建动态创建的匿名对象类型的新实例，该对象类型基于现有基类型、接口或接口集。|
-|[延迟计算](lazy-computations.md)|描述延迟计算，延迟计算是指不会立即开始而要等到实际需要结果时才进行的计算。|
+|[延迟表达式](lazy-expressions.md)|描述延迟表达式，它们是不会立即开始，但改为计算实际需要结果时的计算。|
 |[计算表达式](computation-expressions.md)|介绍 F# 中的计算表达式，它提供一种用于编写计算的方便语法，可以通过使用控制流构造和绑定来对这些计算进行排列和组合。 计算表达式可用于为 *Monad* 提供一种方便语法，Monad 是一种可用于管理函数程序中数据、控制以及副作用的函数编程功能。 异步工作流是计算表达式的一种，它提供对异步计算和并行计算的支持。 有关详细信息，请参阅[异步工作流](asynchronous-workflows.md)。|
 |[异步工作流](asynchronous-workflows.md)|介绍异步工作流，它是一种语言功能，可通过它用近似于编写同步代码的方式来编写异步代码。|
 |[代码引用](code-quotations.md)|介绍代码引用，它是一种可让你以编程方式生成和处理 F# 代码表达式的语言功能。|

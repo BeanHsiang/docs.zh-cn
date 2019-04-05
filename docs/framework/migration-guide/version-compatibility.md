@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8ef9445bb56523f3ef2adf668a4a637868b5d565
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48845536"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558908"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本兼容性
-向后兼容性表示为某个平台的特定版本开发的应用程序将在该平台的更高版本上运行。 .NET Framework 尝试最大程度地支持向后兼容性：为某个版本的 .NET Framework 编写的源代码应在更高版本的 .NET Framework 上编译，而在某个版本的 .NET Framework 上运行的二进制文件的行为方式应与其在更高版本的 .NET Framework 上的行为方式相同。  
+向后兼容性表示为某个平台的特定版本开发的应用程序将在该平台的更高版本上运行。 .NET Framework 尝试最大程度地支持后向兼容性：为某个版本的 .NET Framework 编写的源代码应在更高版本的 .NET Framework 上编译，而在某个版本的 .NET Framework 上运行的二进制文件的行为方式应与其在更高版本的 .NET Framework 上的行为方式相同。  
   
 <a name="Apps"></a>   
 ## <a name="version-compatibility-for-apps"></a>应用程序的版本兼容性  
@@ -34,7 +34,7 @@ ms.locfileid: "48845536"
 </configuration>  
 ```  
   
- 有关详细信息，请参阅[如何：配置应用以支持 .NET Framework 4 或 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。  
+ 有关详细信息，请参阅[如何：将应用配置为支持 .NET Framework 4 或 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。  
   
 ## <a name="version-compatibility-for-components"></a>组件的版本兼容性  
  应用程序可控制运行它的 .NET Framework 版本，但组件不能。 由于组件和类库在特定应用的上下文中加载，因此它们会自动在运行应用的 .NET Framework 版本上运行。  
@@ -65,9 +65,9 @@ ms.locfileid: "48845536"
 ## <a name="compatibility-and-side-by-side-execution"></a>兼容性和并行执行  
  如果找不到解决问题的适当方法，请记住，.NET Framework 4.5（或其中一个单点版本）是与版本 1.1、2.0 和 3.5 并行运行的，并且是取代版本 4 的就地更新。 对于以版本 1.1、2.0 和 3.5 为目标的应用程序，你可以在目标计算机上安装适当的 .NET Framework 版本以在其最佳环境中运行该应用程序。 有关并行执行的详细信息，请参阅[并行执行](../../../docs/framework/deployment/side-by-side-execution.md)。  
   
-## <a name="see-also"></a>请参阅  
- [新增功能](../../../docs/framework/whats-new/index.md)  
- [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)  
- [应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Microsoft .NET Framework 支持生命周期策略](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
- [.NET Framework 4 迁移问题](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)
+## <a name="see-also"></a>请参阅
+- [新增功能](../../../docs/framework/whats-new/index.md)
+- [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)
+- [应用程序兼容性](../../../docs/framework/migration-guide/application-compatibility.md)
+- [Microsoft .NET Framework 支持生命周期策略](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [.NET Framework 4 迁移问题](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

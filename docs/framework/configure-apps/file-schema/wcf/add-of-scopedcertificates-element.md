@@ -1,35 +1,34 @@
 ---
-title: '&lt;scopedCertificates&gt; 的 &lt;add&gt; 元素'
+title: <add> <scopedCertificates>元素
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: 0eb2f116fc0a2c7d59b90cea71150c7b46ee39fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 34dc51c27a5e16b1a8411112fb9afdfe617ed582
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746639"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262309"
 ---
-# <a name="ltaddgt-of-ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 的 &lt;add&gt; 元素
+# <a name="add-of-scopedcertificates-element"></a>\<添加 > 的\<scopedCertificates > 元素
 向作用域证书集合添加 X.509 证书。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 endpointBehaviors 部分  
-\<行为 >  
+\<behavior>  
 \<clientCredentials>  
-\<serviceCertificate >  
-\<scopedCertificates >  
-\<添加 > 元素\<scopedCertificates >  
+\<serviceCertificate>  
+\<scopedCertificates>  
+\<add> element for \<scopedCertificates>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<add findValue="String"  
-          storeLocation="CurrentUser/LocalMachine"  
-          storeName=" CurrentUser/LocalMachine"  
-          targetUri="string"  
-         x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier"   
-/>   
+<add findValue="String"
+     storeLocation="CurrentUser/LocalMachine"
+     storeName=" CurrentUser/LocalMachine"
+     targetUri="string"
+     x509Type="FindByThumbprint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindBySerialNumber/FindByTimeExpired/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -55,7 +54,7 @@ endpointBehaviors 部分
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|值包括：FindByThumbprint、FindBySubjectName、FindBySubjectDistinguishedName、FindByIssuerName、FindByIssuerDistinguishedName、FindBySerialNumber、FindByTimeValid、FindByTimeNotYetValid、FindBySerialNumber、FindByTimeExpired、FindByTemplateName、FindByApplicationPolicy、FindByCertificatePolicy、FindByExtension、FindByKeyUsage 和 FindBySubjectKeyIdentifier。|  
+|枚举|值包括：FindByThumbprint、 FindBySubjectName、 FindBySubjectDistinguishedName、 FindByIssuerName、 FindByIssuerDistinguishedName、 FindBySerialNumber、 FindByTimeValid、 FindByTimeNotYetValid、 FindBySerialNumber、 FindByTimeExpired、 FindByTemplateNameFindByApplicationPolicy、 FindByCertificatePolicy、 FindByExtension、 FindByKeyUsage、 和 FindBySubjectKeyIdentifier。|  
   
 ## <a name="storelocation-attribute"></a>storeLocation 属性  
   
@@ -67,7 +66,7 @@ endpointBehaviors 部分
   
 |值|描述|  
 |-----------|-----------------|  
-|枚举|值包括：AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople 和 TrustedPublisher。|  
+|枚举|值包括：AddressBook、 AuthRoot、 CertificateAuthority、 Disallowed、 My、 根、 TrustedPeople 和 TrustedPublisher。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -76,45 +75,45 @@ endpointBehaviors 部分
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<scopedCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|表示特定服务为身份验证提供的 X.509（作用域）证书的集合。|  
+|[\<scopedCertificates>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|表示特定服务为身份验证提供的 X.509（作用域）证书的集合。|  
   
 ## <a name="remarks"></a>备注  
  此元素使客户端能够根据与它通信的服务的 URL 来配置要使用的服务证书。 这在已颁发令牌的方案中尤其有用，在这些方案中，客户端可与多个服务（终端服务以及中间的安全令牌服务）进行通信。 对于使用基于证书的消息安全的绑定，此证书用于加密发送给服务的消息，并期望服务用它来对客户端的应答进行签名。  
   
  如果绑定需要服务的证书，但在 ScopedCertificates 中未找到服务 URL 的特定证书，则使用默认证书。  
   
- 有关详细信息，请参阅的"作用域证书"部分[如何： 创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。  
+ 有关详细信息，请参阅的"作用域证书"部分[如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例向集合中添加一个 X.509 证书。  
   
 ```xml  
-<behaviors>  
- <endpointBehaviors>  
-  <behavior name="MyEndpointBehavior">  
-   <clientCredentials>  
-    <serviceCertificate>  
-     <scopedCertificates>  
-      <add targetUri="http://www.contoso.com"   
-       findValue="www.Contoso.com"   
-       storeLocation="LocalMachine"  
-       storeName="Root"   
-       x509FindType="FindByIssuerName" />  
-     </scopedCertificates>  
-    </serviceCertificate>  
-   </clientCredentials>  
-  </behavior>  
- </endpointBehaviors>  
-</behaviors>  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="MyEndpointBehavior">
+      <clientCredentials>
+        <serviceCertificate>
+          <scopedCertificates>
+            <add targetUri="http://www.contoso.com"
+                 findValue="www.Contoso.com"
+                 storeLocation="LocalMachine"
+                 storeName="Root"
+                 x509FindType="FindByIssuerName" />
+          </scopedCertificates>
+        </serviceCertificate>
+      </clientCredentials>
+    </behavior>
+  </endpointBehaviors>
+</behaviors>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>  
- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>  
- [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>
+- <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
+- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>
+- [如何：创建联合客户端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [使用证书](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [保护客户端](../../../../../docs/framework/wcf/securing-clients.md)
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

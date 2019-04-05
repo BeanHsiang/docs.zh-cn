@@ -7,18 +7,18 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 5bb7a28e314d6c0b007c1579f371a26d0a714fce
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 8e845df7eb83f01adb2086025cf47e7fdc896ba6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582315"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724396"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows 窗体控件中的特性
 .NET Framework 提供了多种可应用于自定义控件和组件的成员的特性。 其中的一些特性会影响类的运行时行为，另一些会影响设计时行为。  
   
 ## <a name="attributes-for-control-and-component-properties"></a>控件和组件属性的特性  
- 下表显示了可应用于自定义控件和组件的属性或其他成员的特性。 请参阅[如何：在 Windows 窗体控件中应用特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)，获取一个使用了其中许多特性的示例。  
+ 下表显示了可应用于自定义控件和组件的属性或其他成员的特性。 有关使用这些属性的许多示例，请参阅[如何：应用 Windows 窗体控件中的特性](how-to-apply-attributes-in-windows-forms-controls.md)。  
   
 |特性|描述|  
 |---------------|-----------------|  
@@ -60,8 +60,8 @@ ms.locfileid: "48582315"
 |<xref:System.ComponentModel.ToolboxItemAttribute>|表示工具箱项的特性。|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|指定要用于工具箱项的筛选器字符串和筛选器类型。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Attribute>  
- [如何：在 Windows 窗体控件中应用特性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
- [扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [使用 .NET Framework 开发自定义 Windows 窗体控件](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Attribute>
+- [如何：应用 Windows 窗体控件中的特性](how-to-apply-attributes-in-windows-forms-controls.md)
+- [扩展设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [使用 .NET Framework 开发自定义 Windows 窗体控件](developing-custom-windows-forms-controls.md)

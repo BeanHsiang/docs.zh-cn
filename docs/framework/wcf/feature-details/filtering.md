@@ -2,12 +2,12 @@
 title: 筛选
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 49813ac0f493d628a941b3060be93ef19bb1e802
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 735fd4252bb1740c149659f6c6fe81f18285914a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626103"
 ---
 # <a name="filtering"></a>筛选
 Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选器匹配的消息以及做出操作决定。 使用筛选器，可以通过检查消息的某个部分来确定如何处理消息。 例如，查询过程可以使用 XPath 1.0 查询来检查已知标头的优先级元素，以确定是否将消息移动到队列的靠前位置。  
@@ -83,5 +83,5 @@ Windows Communication Foundation (WCF) 筛选系统可以使用声明性筛选�
   
 -   `EndpointAddress` 中的其余终结点参数（如 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 中指定）。  
   
-## <a name="see-also"></a>请参阅  
- [数据传输和序列化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+## <a name="see-also"></a>请参阅
+- [数据传输和序列化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

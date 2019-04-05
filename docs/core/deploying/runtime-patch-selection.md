@@ -1,19 +1,19 @@
 ---
-title: 自包含部署运行时前滚
+title: .NET Core 自包含应用部署的运行时前滚。
 description: 了解自包含部署的 dotnet publish 更改。
-author: jralexander
-ms.author: kdollard
+author: KathleenDollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.custom: seodec18
+ms.openlocfilehash: 9af1454ede03b277f9b1a10e1d99a997e38809ea
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071027"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656292"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>自包含部署运行时前滚
 
-.NET Core [自包含应用程序部署](index.md)包括 .NET Core 库和 .NET Core 运行时。 从 NET Core SDK 2.1.300 (.NET Core 2.1) 开始，自包含应用程序部署[在计算机上发布最高版本的修补程序运行时](https://github.com/dotnet/designs/pull/36)。 默认情况下，自包含部署的 [`dotnet publish`](../tools/dotnet-publish.md) 选择作为发布计算机上 SDK 一部分而安装的最新版本。 这让部署的应用程序在 `publish` 期间能与安全修补程序（以及其他修补程序）配合运行。 若要获取新的修补程序，需要重新发布应用程序。 自包含应用程序是通过在 `dotnet publish` 命令上指定 `-r <RID>` 创建的，或是通过在项目文件 (csproj / vbproj) 或命令行中指定[运行时标识符 (RID)](../rid-catalog.md) 创建的。
+.NET Core [自包含应用程序部署](index.md)包括 .NET Core 库和 .NET Core 运行时。 从 .NET Core 2.1 SDK（版本 2.1.300）开始，自包含应用程序部署[在计算机上发布最高版本的修补程序运行时](https://github.com/dotnet/designs/pull/36)。 默认情况下，自包含部署的 [`dotnet publish`](../tools/dotnet-publish.md) 选择作为发布计算机上 SDK 一部分而安装的最新版本。 这让部署的应用程序在 `publish` 期间能与安全修补程序（以及其他修补程序）配合运行。 若要获取新的修补程序，需要重新发布应用程序。 自包含应用程序是通过在 `dotnet publish` 命令上指定 `-r <RID>` 创建的，或是通过在项目文件 (csproj / vbproj) 或命令行中指定[运行时标识符 (RID)](../rid-catalog.md) 创建的。
 
 ## <a name="patch-version-roll-forward-overview"></a>修补程序版本前滚概述
 

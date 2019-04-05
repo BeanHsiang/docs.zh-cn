@@ -8,12 +8,12 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: 66edb32d24dd1dc543097b98ff3744f0aa0a7145
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7cbd3ec1b2d134106c6c9429341f5603444dac27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693975"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage（C# 编译器选项）
 如果所需页不是系统的当前默认代码页，则此选项指定编译期间要使用的代码页。  
@@ -37,7 +37,7 @@ ms.locfileid: "43511867"
   
  此编译器选项在 Visual Studio 中不可用，并且无法以编程方式更改。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

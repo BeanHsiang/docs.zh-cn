@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198693"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516156"
 ---
 # <a name="denial-of-service"></a>拒绝服务
 当系统处于过载状态而无法处理消息或者处理速度极慢时，会出现拒绝服务的情况。  
@@ -26,7 +26,7 @@ ms.locfileid: "47198693"
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>恶意客户端向服务发送过多的许可证请求  
  如果恶意客户端通过过多的许可证请求来攻击某个服务，则可能会致使服务器占用过量的内存。  
   
- 缓解操作：使用 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> 类的下列属性：  
+ 缓解：使用以下属性的<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>类：  
   
 -   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>：控制在 `SecurityContextToken` 或 `SPNego` 协商之后服务器所缓存的有时限的 `SSL` 的最大数目。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47198693"
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>无效的 IAuthorizationPolicy 实现可能会致使服务挂起  
  如果在有错误的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 接口实现上调用 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 方法，则可能会致使服务挂起。  
   
- 缓解操作：仅使用受信任的代码。 即，仅使用在编写后经过测试的代码或者来自受信任提供者的代码。 未经深思熟虑，请勿允许在代码中插入对 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 的不受信任的扩展。 这适用于服务实现中所使用的全部扩展。 在使用扩展点，WCF 不进行任何应用程序代码和插入的外部代码之间的区别。  
+ 缓解：仅使用受信任的代码。 即，仅使用在编写后经过测试的代码或者来自受信任提供者的代码。 未经深思熟虑，请勿允许在代码中插入对 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 的不受信任的扩展。 这适用于服务实现中所使用的全部扩展。 在使用扩展点，WCF 不进行任何应用程序代码和插入的外部代码之间的区别。  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>可能需要调整最大 Kerberos 令牌大小  
  如果客户端属于许多组（大约 900 个，尽管实际数字因组的数目而异），则可能会在消息头的块超过 64 KB 时出现问题。 在这种情况下，Microsoft 支持文章中所述增加最大 Kerberos 令牌大小"[由于连接到 IIS 的缓冲区空间不足，Internet Explorer Kerberos 身份验证不起作用](https://go.microsoft.com/fwlink/?LinkId=89176)。" 您可能还需要增加最大的 WCF 消息大小来容纳较大的 Kerberos 令牌。  
@@ -69,21 +69,21 @@ ms.locfileid: "47198693"
 ## <a name="protect-configuration-files-with-acls"></a>使用 ACL 保护配置文件  
  您可以在代码和配置文件中为 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所颁发的令牌指定必需的和可选的声明。 这会导致在发送到安全令牌服务的 `RequestSecurityToken` 消息中发出相应的元素。 攻击者可能会通过修改代码或配置来移除必需的或可选的声明，从而可能会让安全令牌服务颁发不允许访问目标服务的令牌。  
   
- 缓解措施：要求具有访问计算机的权限才能修改配置文件。 使用文件访问控制列表 (ACL) 来保护配置文件。 WCF 要求代码是在应用程序目录或全局程序集缓存中，只允许从配置加载此类代码。 使用目录 ACL 可以保护目录。  
+ 若要缓解此问题：需要修改配置文件的计算机访问。 使用文件访问控制列表 (ACL) 来保护配置文件。 WCF 要求代码是在应用程序目录或全局程序集缓存中，只允许从配置加载此类代码。 使用目录 ACL 可以保护目录。  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>达到了服务安全会话的最大数目  
  当客户端由某个服务成功进行身份验证，而且与此服务建立了安全会话时，此服务会记住该会话，直到该会话被客户端取消或者过期。 对于建立的每个会话都将进行计数，直到达到与该服务的同时活动会话的最大数目限制。 达到该限制时，尝试与该服务创建新会话的客户端将被拒绝，直到一个或多个活动会话过期或者被客户端取消。 一个客户端可以与某个服务建立多个会话，对于每个会话都将计数，直到达到相应的限制。  
   
 > [!NOTE]
->  在使用有状态会话时，上述内容并不适用。 有关有状态会话的详细信息，请参阅[如何： 为安全会话创建的安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  在使用有状态会话时，上述内容并不适用。 有关有状态会话的详细信息，请参阅[如何：创建安全上下文令牌的安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
  若要缓解此问题，请通过设置 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 属性来设置活动会话的最大数目限制以及会话的最长生存期限制。  
   
-## <a name="see-also"></a>请参阅  
- [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>请参阅
+- [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [不支持的方案](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

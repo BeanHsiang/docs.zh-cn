@@ -2,12 +2,12 @@
 title: 提供程序清单规范
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 409653fa415e62ff0591e09ad4771c5951689b24
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739268"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904601"
 ---
 # <a name="provider-manifest-specification"></a>提供程序清单规范
 本节讨论数据存储提供程序如何可以支持数据存储中的类型和功能。  
@@ -54,14 +54,14 @@ ms.locfileid: "43739268"
   
  编写具有两部分的 XML 文件：  
   
--   用 EDM 术语表示的提供程序类型的列表，其中定义了两个方向的映射：EDM 到提供程序的映射和提供程序到 EDM 的映射。  
+-   提供程序类型的列表以 EDM 表示，并定义了两个方向的映射：EDM 到提供程序和提供程序到 EDM。  
   
 -   提供程序支持的函数列表，其中的参数和返回类型用 EDM 术语表示。  
   
 ## <a name="provider-manifest-discoverability"></a>提供程序清单的可发现性  
  清单可以由实体服务中的若干组件类型（例如“工具”或“查询”）间接地使用，但更多的是通过使用数据存储元数据加载程序由元数据直接利用。  
   
- ![dfb3d02b&#45;7a8c&#45;4d 51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  但是，给定的提供程序可能支持不同的存储或相同存储的不同版本。 因此，对于每个支持的数据存储，提供程序必须报告不同的清单。  
   
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>使用提供程序清单标记  
- 对于脱机方案，此标记从 SSDL 表示形式中选取。 SSDL 允许您指定 ProviderManifestToken (请参阅[架构元素 (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222)有关详细信息)。 例如，如果无法打开某个连接，则 SSDL 会具有一个提供程序清单标记，用于指定有关清单的信息。  
+ 对于脱机方案，此标记从 SSDL 表示形式中选取。 SSDL 允许您指定 ProviderManifestToken (请参阅[架构元素 (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl)有关详细信息)。 例如，如果无法打开某个连接，则 SSDL 会具有一个提供程序清单标记，用于指定有关清单的信息。  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
@@ -264,7 +264,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |BuiltIn|Boolean|No|True|如果函数内置于数据存储中，则返回 True|  
 |StoreFunctionName|String|否|\<名称 >|数据存储中的函数名称。  考虑了函数名称的重定向级别。|  
 |NiladicFunction|Boolean|No|False|如果函数不需要任何参数且在调用时不使用任何参数，则返回 True。|  
-|ParameterType<br /><br /> 语义|ParameterSemantics|No|AllowImplicit<br /><br /> 转换|有关查询管道应如何处理参数类型替换的选项：<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|ParameterType<br /><br /> 语义|ParameterSemantics|No|AllowImplicit<br /><br /> 转换|有关查询管道应如何处理参数类型替换的选项：<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
   
  **参数节点**  
   
@@ -277,7 +277,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |模式|参数<br /><br /> 方向|是|无|参数的方向：<br /><br /> -在<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace 属性  
- 每个数据存储提供程序必须为清单中定义的信息定义一个命名空间或一组命名空间。 此命名空间可在 Entity SQL 查询中用来解析函数和类型的名称。 例如，SqlServer。 此命名空间必须与规范命名空间 EDM 不同，EDM 是由实体服务为 Entity SQL 查询要支持的标准函数定义的。  
+ 每个数据存储提供程序必须为清单中定义的信息定义一个命名空间或一组命名空间。 此命名空间可在 Entity SQL 查询中用来解析函数和类型的名称。 例如：SqlServer。 此命名空间必须与规范命名空间 EDM 不同，EDM 是由实体服务为 Entity SQL 查询要支持的标准函数定义的。  
   
-## <a name="see-also"></a>请参阅  
- [编写实体框架数据提供程序](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>请参阅
+- [编写实体框架数据提供程序](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

@@ -1,8 +1,7 @@
 ---
 title: DataMemberListEditor 类
 ms.date: 03/30/2017
-ms.technology:
-- dotnet-winforms
+ms.technology: dotnet-winforms
 api_name:
 - System.Windows.Forms.Design.DataMemberListEditor
 api_location:
@@ -14,12 +13,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7b79da7832a797cce0163de42363f0d3812a2376
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191805"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634344"
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor 类
 
@@ -32,7 +31,7 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberListEditor`类是内部，不应在代码中直接使用。
+> `DataMemberListEditor`类内部使用并且不应在代码中直接使用。
 > 
 > 在生产应用程序在任何情况下，Microsoft 不支持此类使用。
   
@@ -40,9 +39,9 @@ internal class DataMemberListEditor : UITypeEditor
 
 **Namespace**：<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**程序集：** System.Design （在 System.Design.dll)  
+**程序集：**（在 System.Design.dll) System.Design  
   
-**.NET framework 版本**：自 2.0 之后可用。  
+**.NET framework 版本：** 自 2.0 之后可用。  
   
 ## <a name="see-also"></a>请参阅
 

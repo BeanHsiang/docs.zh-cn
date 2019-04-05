@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7c3185bdc0776d6536458ce03c348ed77b8ba0b9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444312"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499090"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 函数
 将转换为相应的错误消息为指定的区域性的 HRESULT 值。  
   
- 此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,9 +41,9 @@ HRESULT LoadStringRCEx (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `lcid`  
- [in]区域性标识符。 传递-1 `lcid` ，使用默认区域性。  
+ [in]区域性标识符。 传递-1`lcid`若要使用默认区域性。  
   
  `iResourceID`  
  [in]HRESULT。  
@@ -61,7 +61,7 @@ HRESULT LoadStringRCEx (
  [out]指向错误消息的长度的指针。  
   
 ## <a name="return-value"></a>返回值  
- 此方法返回标准的 COM 错误代码，除了以下值中 WinError.h，定义。  
+ 此方法返回标准 COM 错误代码，定义在 WinError.h，除了以下值。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
@@ -69,18 +69,18 @@ HRESULT LoadStringRCEx (
 |E_INVALIDARG|`szBuffer` 为 null，或`iMax`为零 (0)。|  
   
 ## <a name="remarks"></a>备注  
- 如果方法不成功，完成`szBuffer`包含一个空字符串。  
+ 如果该方法不成功，完成`szBuffer`包含空字符串。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>  
- [LoadStringRC 函数](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
+- [LoadStringRC 函数](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
+- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

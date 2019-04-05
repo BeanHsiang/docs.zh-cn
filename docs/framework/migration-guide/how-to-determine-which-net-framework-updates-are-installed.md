@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6373def6859023377bf899f02d710c2ac6d83c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e11b2588471e95b4e47fd0efaf41757430b9bb39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604179"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>如何：确定安装了哪些 .NET Framework 安全更新和修补程序
 
@@ -37,7 +37,7 @@ ms.locfileid: "33389595"
 
      已安装的更新在标识适用的 .NET Framework 版本的子项下方列出。 每个更新均由知识库 (KB) 编号进行标识。
 
-在注册表编辑器中，.NET Framework 版本和每个版本已安装的更新都保存在不同的子项中。 若要了解如何检测已安装的版本号，请参阅[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
+在注册表编辑器中，.NET Framework 版本和每个版本已安装的更新都保存在不同的子项中。 有关检测已安装版本号的信息，请参阅[如何：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)。
 
 ## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>通过在代码中查询注册表找到已安装的更新
 
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>请参阅
 
-[如何：确定安装了哪些 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
-[安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)  
-[版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [如何：确定已安装的 .NET Framework 版本](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)
+- [安装面向开发者的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)
+- [版本和依赖关系](../../../docs/framework/migration-guide/versions-and-dependencies.md)

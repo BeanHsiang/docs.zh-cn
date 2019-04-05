@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ef4dce290a7a7f6340b15aa4083cd40518e37d0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507387"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821005"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 语句
 触发器在类、 窗体或文档中的模块级声明的事件。  
@@ -28,7 +28,7 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>部件  
  `eventname`  
- 必须的。 要触发的事件的名称。  
+ 必需。 要触发的事件的名称。  
   
  `argumentlist`  
  可选。 变量、 数组或表达式的以逗号分隔列表。 `argumentlist`参数必须括在圆括号。 如果没有任何自变量，必须省略括号。  
@@ -38,7 +38,7 @@ RaiseEvent eventname[( argumentlist )]
   
  如果尚未在其中引发的模块中声明事件，就会出错。 下面的代码段演示了一个事件声明和引发该事件的过程。  
   
- [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#37)]  
   
  不能使用`RaiseEvent`引发未在模块中显式声明的事件。 例如，所有窗体继承<xref:System.Windows.Forms.Control.Click>从事件<xref:System.Windows.Forms.Form?displayProperty=nameWithType>，不能提升使用`RaiseEvent`派生窗体中。 如果声明`Click`事件在窗体模块中，它会隐藏窗体的自己<xref:System.Windows.Forms.Control.Click>事件。 还可调用窗体的<xref:System.Windows.Forms.Control.Click>通过调用事件<xref:System.Windows.Forms.Control.OnClick%2A>方法。  
   
@@ -63,21 +63,22 @@ RaiseEvent eventname[( argumentlist )]
   
  添加`WithEvents`变量的声明部分`Form1`类。  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>示例  
  将下面的代码添加到 `Form1` 的代码： 替换可能存在，例如任何重复过程`Form_Load`，或`Button_Click`。  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  按 F5 以运行上述示例中，并单击标记的按钮**启动**。 第一个文本框中开始倒计时秒数。 经过了全部时间（10 秒）之后，第一个文本框会显示“Done”。  
   
 > [!NOTE]
->  `My.Application.DoEvents`窗体一样方法不会完全相同的方式处理事件。 若要使表单能够直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[线程处理](../../programming-guide/concepts/threading/index.md)。  
+>  `My.Application.DoEvents`窗体一样方法不会完全相同的方式处理事件。 若要使表单能够直接处理事件，可以使用多线程处理。 有关详细信息，请参阅[托管线程处理](../../../standard/threading/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)  
- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)  
- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)  
- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+## <a name="see-also"></a>请参阅
+
+- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Event 语句](../../../visual-basic/language-reference/statements/event-statement.md)
+- [AddHandler 语句](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [RemoveHandler 语句](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)

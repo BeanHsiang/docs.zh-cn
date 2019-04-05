@@ -1,20 +1,20 @@
 ---
-title: 演练：使用自定义组件自动填充工具箱
+title: 演练：自动填充工具箱与自定义组件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IToolboxService interface
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 488d51e748ea17b09e61b982db7abadc34f8e311
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8ddb248d2e011714ddc7fb68474f0e92e9ad8b5e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041556"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723967"
 ---
-# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>演练：使用自定义组件自动填充工具箱
-如果由当前打开的解决方案中的项目定义您的组件，它们将自动显示在**工具箱**，由你需执行任何操作。 可以手动填充**工具箱**与使用自定义组件[选择工具箱项对话框 (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)，但**工具箱**考虑在解决方案中的项的生成包含所有以下特征的输出结果：  
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>演练：自动填充工具箱与自定义组件
+如果由当前打开的解决方案中的项目定义您的组件，它们将自动显示在**工具箱**，由你需执行任何操作。 可以手动填充**工具箱**与使用自定义组件[选择工具箱项对话框 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))，但**工具箱**考虑在解决方案中的项的生成包含所有以下特征的输出结果：  
   
 -   实现<xref:System.ComponentModel.IComponent>;  
   
@@ -47,9 +47,9 @@ ms.locfileid: "44041556"
   
 1.  创建一个名为基于 Windows 的应用程序项目`ToolboxExample`(**文件** > **新建** > **项目** >  **Visual C#** 或**Visual Basic** > **经典桌面** > **Windows 窗体应用程序**)。  
   
-2.  向项目添加新组件。 调用它`DemoComponent`。  
+2.  向项目添加新组件。 将其命名为 `DemoComponent`。  
   
-     有关详细信息，请参阅[NIB： 如何： 添加新项目项](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce)。  
+     有关详细信息，请参阅[如何：添加新项目项](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))。  
   
 3.  生成项目。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "44041556"
   
 1.  卸载该解决方案中的项目。  
   
-     有关卸载的项目的详细信息，请参阅[NIB： 如何： 卸载并重新加载项目](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b)。 如果系统提示您保存时，选择**是**。  
+     有关卸载的项目的详细信息，请参阅[如何：卸载并重新加载项目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100))。 如果系统提示您保存时，选择**是**。  
   
 2.  添加一个新**Windows 应用程序**到解决方案。 打开中的窗体**设计器**。  
   
@@ -93,8 +93,8 @@ ms.locfileid: "44041556"
 ## <a name="next-steps"></a>后续步骤  
  本演练演示**工具箱**会考虑项目的组件，但**工具箱**同时也会考虑的控件。 通过添加和删除控件项目从解决方案来测试您自己的自定义控件。  
   
-## <a name="see-also"></a>请参阅  
- [通常，Windows 窗体设计器选项对话框](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
- [如何：操作工具箱选项卡](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
- [“选择工具箱项”对话框 (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  
- [将控件置于 Windows 窗体上](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- [通常，Windows 窗体设计器选项对话框](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [如何：操作工具箱选项卡](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
+- [“选择工具箱项”对话框 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
+- [将控件置于 Windows 窗体上](putting-controls-on-windows-forms.md)

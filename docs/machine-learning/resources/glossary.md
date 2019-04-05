@@ -1,30 +1,29 @@
 ---
-title: 机器学习库
-description: 机器学习术语库。
-ms.date: 05/31/2018
-ms.topic: conceptual
-ms.openlocfilehash: 22fcd4d2bdf53efd046cd594af42afe50a853f61
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+title: 机器学习术语表 - ML.NET
+description: 一个重要的机器学习术语表，可在 ML.NET 中生成自定义模型时使用。
+ms.custom: seodec18
+ms.date: 03/05/2019
+ms.openlocfilehash: cc236aaa99fd8a7b05af666a5b96f657d8bd3ad4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453198"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410233"
 ---
-# <a name="machine-learning-glossary"></a>机器学习库
+# <a name="machine-learning-glossary-of-important-terms"></a>机器学习重要术语词汇表
 
-以下列表是重要的机器学习术语编译，可在你生成自定义模型时使用。
+以下列表是重要的机器学习术语编译，可在 ML.NET 中生成自定义模型时使用。
+
+> [!NOTE]
+> 本文档引用 ML.NET（目前为预览版）。 材料可能会有所变化。 有关详细信息，请参阅 [ML.NET 简介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)。
 
 ## <a name="accuracy"></a>准确性
 
 在[分类](#classification)中，准确性是正确分类的项数目除以测试集内的项总数。 范围从 0（最不准确）到 1（最准确）。 准确性是模型性能的评估指标之一。 将其与[精度](#precision)、[撤回](#recall)和 [F 分数](#f-score)结合考虑。
 
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Accuracy?displayProperty=nameWithType>。
-
 ## <a name="area-under-the-curve-auc"></a>曲线下面积 (AUC)
 
 [二元分类](#binary-classification)中的一项评估指标，即曲线下面积值，它绘制真阳性率（y 轴）与误报率（x 轴）进行对照。 范围从 0.5（最差）到 1（最佳）。 也称为 ROC 曲线下面积，即，接受者操作特征曲线。 有关详细信息，请参阅 Wikipedia 上的[接受者操作特征](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)一文。
-
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>。
 
 ## <a name="binary-classification"></a>二元分类
 
@@ -38,8 +37,6 @@ ms.locfileid: "49453198"
 
 [回归](#regression)中的一项评估指标，表明数据与模型的匹配程度。 范围从 0 到 1。 值 0 表示数据是随机的，否则就无法与模型相匹配。 值 1 表示模型与数据完全匹配。 这通常称为 <sup>2</sup>、R<sup>2</sup> 或 r 平方值。
 
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>。
-
 ## <a name="feature"></a>功能
 
 正在对其进行度量的现象的一个可度量属性，通常是一个数（双精度）值。 多个特征被称为“特征向量”且通常存储为 `double[]`。 这些特征定义所度量现象的重要特性。 有关详细信息，请参阅 Wikipedia 上的[特征](https://en.wikipedia.org/wiki/Feature_(machine_learning))一文。
@@ -51,8 +48,6 @@ ms.locfileid: "49453198"
 ## <a name="f-score"></a>F 分数
 
 [分类](#classification)中的一项评估指标，它平衡[精度](#precision)和[撤回](#recall)。
-
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>。
 
 ## <a name="hyperparameter"></a>超参数
 
@@ -66,13 +61,9 @@ ms.locfileid: "49453198"
 
 在[分类](#classification)中，描述分类器准确性的评估指标。 对数损失越小，分类器越准确。
 
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>。
-
 ## <a name="mean-absolute-error-mae"></a>平均绝对误差 (MAE)
 
 [回归](#regression)中的一项评估指标，即所有模型误差的平均值，其中模型误差是预测[标签](#label)值和正确标签值之间的差距。
-
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>。
 
 ## <a name="model"></a>模型
 
@@ -98,15 +89,11 @@ ms.locfileid: "49453198"
 
 在[分类](#classification)中，类的精度是正确预测为属于该类的项目的数量，除以预测为属于该类的项目的总数。
 
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativePrecision?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositivePrecision?displayProperty=nameWithType>。
-
 ## <a name="recall"></a>撤回
 
 在[分类](#classification)中，类的撤回是正确预测为属于该类的项目的数量，除以实际属于该类的项目的总数。
 
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>、<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>。
-
-## <a name="regression"></a>回归
+## <a name="regression"></a>回归测试
 
 [监管式机器学习](#supervised-machine-learning)任务，其中输出是一个实际值，例如，双精度值。 示例包括预测股票价格。 有关详细信息，请参阅[机器学习任务](tasks.md)主题的[回归](tasks.md#regression)部分。
 
@@ -122,13 +109,11 @@ ms.locfileid: "49453198"
 
 [回归](#regression)中的一项评估指标，即误差平方平均值的平方根。
 
-相关 ML.NET API：<xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>。
-
 ## <a name="supervised-machine-learning"></a>监管式机器学习
 
 机器学习的一个子类，其中所需的模型预测尚不可见的数据标签。 示例包括分类、回归以及结构化预测。 有关详细信息，请参阅 Wikipedia 上的[监管式学习](https://en.wikipedia.org/wiki/Supervised_learning)一文。
 
-## <a name="training"></a>培训
+## <a name="training"></a>训练
 
 识别给定定型数据集[模型](#model)的过程。 对于线性模型，这意味着查找权重。 有关树信息，这涉及到标识拆分点。
 

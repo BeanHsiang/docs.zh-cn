@@ -7,18 +7,18 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: 5ce801a96bc4ef48934b983838dcf8578a5bc6e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b488997558d81c05307411d8b7fbf5b59100f9ea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503012"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717695"
 ---
 # <a name="control-type-recommendations"></a>控件类型建议
 .NET Framework 使你能够开发和实现新控件。 除了已熟悉的用户控件，现在你会发现你能够编写自定义控件用于执行其自己的绘制，甚至能够通过继承扩展现有控件的功能。 决定创建哪种类型的控件可能令人困惑。 本节重点介绍可以从其继承的各类控件之间的区别，并提供要为你的项目选择的类型的相关注意事项。  
   
 > [!NOTE]
->  如果要编写在 Web 窗体上使用的控件，请参阅[开发自定义 ASP.NET 服务器控件](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef)。  
+>  如果要编写在 Web 窗体上使用的控件，请参阅[开发自定义 ASP.NET 服务器控件](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100))。  
   
 ## <a name="inheriting-from-a-windows-forms-control"></a>从 Windows 窗体控件继承  
  你可以从任何现有的 Windows 窗体控件派生继承的控件。 此方法使你可以保留 Windows 窗体控件的所有固有功能，然后通过添加自定义属性、方法或其他功能来扩展该功能。 例如，可以创建一个派生自 <xref:System.Windows.Forms.TextBox> 的控件，它只能接受数字并自动将输入转换为一个值。 此类控件可能包含验证代码，该代码每当文本框中的文本更改时即被调用，而且可能具有附加属性，即“值”。 在某些控件中，还可以自定义外观的控件的图形界面通过重写<xref:System.Windows.Forms.Control.OnPaint%2A>基类的方法。  
@@ -45,40 +45,40 @@ ms.locfileid: "43503012"
   
 -   你需要实现不能通过标准控件实现的自定义功能。  
   
--   [如何：在“选择工具箱项”对话框中显示控件](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+-   [如何：中显示控件选择工具箱项对话框](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
   
--   [演练：使用 DesignerSerializationVisibilityAttribute 序列化标准类型的集合](serializing-collections-designerserializationvisibilityattribute.md)  
+-   [演练：序列化标准类型使用 DesignerSerializationVisibilityAttribute 集合](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [演练：使用 Visual C# 从 Windows 窗体控件继承](https://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
+-   [演练：从视觉对象的 Windows 窗体控件继承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
   
--   [如何：为控件提供工具箱位图](https://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
+-   [如何：为控件提供工具箱位图](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
   
--   [如何：从现有 Windows 窗体控件继承](https://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
+-   [如何：从现有 Windows 窗体控件继承](how-to-inherit-from-existing-windows-forms-controls.md)  
   
--   [演练：设计时调试自定义 Windows 窗体控件](https://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
+-   [演练：在设计时调试自定义 Windows 窗体控件](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
   
--   [如何：从 Control 类继承](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
+-   [如何：从 Control 类继承](how-to-inherit-from-the-control-class.md)  
   
 -   [如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [如何：设计时将控件与窗体边缘对齐](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
+-   [如何：将控件与窗体边缘对齐在设计时](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
   
--   [如何：从 UserControl 类继承](https://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
+-   [如何：从 UserControl 类继承](how-to-inherit-from-the-usercontrol-class.md)  
   
--   [如何：创作 Windows 窗体的控件](https://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
+-   [如何：Windows 窗体的作者控件](how-to-author-controls-for-windows-forms.md)  
   
--   [如何：创作复合控件](https://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
+-   [如何：创作复合控件](how-to-author-composite-controls.md)  
   
--   [演练：使用 Visual Basic 创作复合控件](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
+-   [演练：创作复合控件使用 Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
   
--   [演练：使用 Visual C# 创作复合控件](https://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
+-   [演练：创作复合控件通过视觉对象C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
   
--   [演练：使用 Visual Basic 从 Windows 窗体控件继承](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
+-   [演练：从使用 Visual Basic 的 Windows 窗体控件继承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
   
--   [如何：创建利用设计时功能的 Windows 窗体控件](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
+-   [演练：创建利用 Visual Studio 设计时功能的 Windows 窗体控件](creating-a-wf-control-design-time-features.md)  
   
--   [如何：创建利用设计时功能的 Windows 窗体控件](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [如何：创建利用设计时功能的 Windows 窗体控件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
-## <a name="see-also"></a>请参阅  
- [如何：开发简单的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
- [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>请参阅
+- [如何：开发的简单 Windows 窗体控件](how-to-develop-a-simple-windows-forms-control.md)
+- [各种自定义控件](varieties-of-custom-controls.md)

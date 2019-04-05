@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;类名&gt;&#39;由于不符合 cls 的接口&#39; &lt;interfacename&gt; &#39;它实现不符合 CLS'
+title: “<classname>”不符合 CLS，因为它所实现的接口“<interfacename>”不符合 CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40029
@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-ms.openlocfilehash: 4dda0e16a94f43cdb3deeff16fabdd1b10b62526
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6743a0decebb9711a4e44d09b03fe32f88ff2f72
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588489"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283473"
 ---
-# <a name="39ltclassnamegt39-is-not-cls-compliant-because-the-interface-39ltinterfacenamegt39-it-implements-is-not-cls-compliant"></a>&#39;&lt;类名&gt;&#39;由于不符合 cls 的接口&#39; &lt;interfacename&gt; &#39;它实现不符合 CLS
+# <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>'\<类名 > 不符合 CLS 規格因为接口\<interfacename > 其实现不符合 cls 的
 当某一类或接口派生自或实现标记为 `<CLSCompliant(True)>` 的类型时，该类或接口将被标记为 `<CLSCompliant(False)>` 。  
   
- 为确保类或接口符合[语言独立性和独立于语言的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，其整个继承层次结构必须是合规的。 这意味着从它继承的每一个类型，不管是直接还是间接继承，都必须符合。 同样，如果一个类实现一个或多个接口，则其整个继承层次结构都必须符合。  
+ 为确保类或接口符合[语言独立性和与语言无关的组件](../../../standard/language-independence-and-language-independent-components.md)(CLS)，其整个继承层次结构必须合规。 这意味着从它继承的每一个类型，不管是直接还是间接继承，都必须符合。 同样，如果一个类实现一个或多个接口，则其整个继承层次结构都必须符合。  
   
  当将 <xref:System.CLSCompliantAttribute> 应用到编程元素中时，需要将该特性的 `isCompliant` 参数设置为 `True` 或 `False` 来指示符合或不符合性。 此参数没有默认值，必须为其提供一个值。  
   

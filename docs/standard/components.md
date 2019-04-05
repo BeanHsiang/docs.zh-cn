@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b35db12c8da1f333b481d2bd2e7633026ae30c30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570718"
 ---
 # <a name="net-architectural-components"></a>.NET 体系结构组件
 
@@ -28,9 +28,9 @@ ms.locfileid: "50189688"
 
 .NET 的每个实现都具有以下组件：
 
-- 一个或多个运行时。 示例：用于 .NET Framework 的 CLR、CoreCLR 和用于 .NET Core 的 CoreRT。
+- 一个或多个运行时。 示例：CLR 用于 .NET Framework，CoreCLR 和 CoreRT 用于 .NET Core。
 - 实现 .NET Standard 并且可实现其他 API 的类库。 示例：.NET Framework 基类库、.NET Core 基类库。
-- 可选择包含一个或多个应用程序框架。 示例： [ASP.NET](https://www.asp.net/)、[Windows 窗体](../framework/winforms/windows-forms-overview.md)和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 包含在 .NET Framework 中。
+- 可选择包含一个或多个应用程序框架。 示例：[ASP.NET](https://www.asp.net/)、[Windows 窗体](../framework/winforms/windows-forms-overview.md)和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 包含在 .NET Framework 中。
 - 可包含开发工具。 某些开发工具在多个实现之间共享。
 
 Microsoft 积极开发和维护的主要 .NET 实现有 4 个：.NET Core、.NET Framework、Mono 和 UWP。
@@ -67,7 +67,7 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 
 ## <a name="net-runtimes"></a>.NET 运行时
 
-运行时是用于托管程序的执行环境。 OS 属于运行时环境，但不属于 .NET 运行时。 下面是 .NET 运行时的一些示例：
+运行时是用于托管程序的执行环境。 操作系统属于运行时环境，但不属于 .NET 运行时。 下面是 .NET 运行时的一些示例：
 
 - .NET Framework 公共语言运行时 (CLR)
 - .NET Core 核心公共语言运行时 (CoreCLR)
@@ -86,10 +86,10 @@ UWP 是用于为物联网 (IoT) 生成新式触控 Windows 应用程序和软件
 
 ## <a name="see-also"></a>请参阅
 
-- [为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)   
-- [.NET Standard](net-standard.md)  
-- [.NET Core 指南](../core/index.md)  
-- [.NET Framework 指南](../framework/index.md)  
-- [C# 指南](../csharp/index.md)  
-- [F# 指南](../fsharp/index.md)  
-- [VB.NET 指南](../visual-basic/index.md)  
+- [为服务器应用选择 .NET Core 或 .NET Framework](choosing-core-framework-server.md)
+- [.NET Standard](net-standard.md)
+- [.NET Core 指南](../core/index.md)
+- [.NET Framework 指南](../framework/index.md)
+- [C# 指南](../csharp/index.md)
+- [F# 指南](../fsharp/index.md)
+- [VB.NET 指南](../visual-basic/index.md)

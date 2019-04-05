@@ -1,31 +1,31 @@
 ---
-title: WCF 的 &lt;workflowInstanceQuery&gt;
+title: <workflowInstanceQuery> WCF 的
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 447564e46e5e74432802341d9f63adbb72667ab4
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 726d4db3bad9f57663790e2bb4e081faba28f1ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123301"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278767"
 ---
-# <a name="ltworkflowinstancequerygt-of-wcf"></a>WCF 的 &lt;workflowInstanceQuery&gt;
+# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery > 的 WCF
 
 表示一个查询，该查询跟踪工作流实例生命周期的更改，例如已开始或已完成的事件。  
   
 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<跟踪 >  
+\<tracking>  
 \<配置文件 >  
 \<trackingProfile>  
-\<工作流 >  
+\<workflow>  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
+\<workflowInstanceQuery>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -33,7 +33,7 @@ ms.locfileid: "49123301"
         <workflowInstanceQueries>
           <workflowInstanceQuery>
             <states>
-              <state name="Name"/>
+              <state name="Name" />
             </states>
           </workflowInstanceQuery>
         </workflowInstanceQueries>
@@ -41,8 +41,8 @@ ms.locfileid: "49123301"
     </trackingProfile>
   </profiles>
 </tracking>
-```
-
+```  
+  
 ## <a name="attributes-and-elements"></a>特性和元素  
 
 下列各节描述了特性、子元素和父元素。  
@@ -55,7 +55,7 @@ ms.locfileid: "49123301"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<状态 >](states-of-wcf-workflowinstancequery.md)|创建跟踪记录时已跟踪工作流实例中已订阅状态的集合。|  
+|[\<states>](states-of-wcf-workflowinstancequery.md)|创建跟踪记录时已跟踪工作流实例中已订阅状态的集合。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -82,13 +82,13 @@ ms.locfileid: "49123301"
 下面的配置使用此查询订阅 `Started` 实例状态的工作流实例级跟踪记录。  
   
 ```xml  
-<workflowInstanceQueries>  
-    <workflowInstanceQuery>  
-      <states>  
-        <state name="Started"/>  
-      </states>  
-    </workflowInstanceQuery>  
-</workflowInstanceQueries>  
+<workflowInstanceQueries>
+  <workflowInstanceQuery>
+    <states>
+      <state name="Started" />
+    </states>
+  </workflowInstanceQuery>
+</workflowInstanceQueries>
 ```  
   
 ## <a name="see-also"></a>请参阅

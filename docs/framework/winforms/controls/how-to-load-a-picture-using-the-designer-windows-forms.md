@@ -1,5 +1,5 @@
 ---
-title: 如何：使用设计器加载图片（Windows 窗体）
+title: 如何：使用设计器 （Windows 窗体） 加载图片
 ms.date: 03/30/2017
 helpviewer_keywords:
 - picture formats
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: e01e5d1dc0fad8171e705e85debc2b15d6a506eb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: febe1fc616bd1405e699c03fa673814a45976769
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855954"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723065"
 ---
-# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>如何：使用设计器加载图片（Windows 窗体）
+# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>如何：使用设计器 （Windows 窗体） 加载图片
 使用 Windows 窗体<xref:System.Windows.Forms.PictureBox>控件，可以加载和显示的图片在窗体上在设计时通过设置<xref:System.Windows.Forms.PictureBox.Image%2A>属性设置为有效的图片。 下表显示了可接受的文件类型。  
   
 |类型|文件扩展名|  
@@ -43,9 +43,9 @@ ms.locfileid: "43855954"
   
 1.  上**属性**窗口中，选择<xref:System.Windows.Forms.PictureBox.Image%2A>属性并右键单击显示的图像对象名称左侧的小缩略图。 选择**重置**。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.PictureBox>  
- [PictureBox 控件概述](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- [如何：在运行时修改图片的大小或位置](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- [如何：在运行时设置图片](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- [PictureBox 控件](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.PictureBox>
+- [PictureBox 控件概述](picturebox-control-overview-windows-forms.md)
+- [如何：在运行时修改的大小或位置的图片](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [如何：在运行时设置图片](how-to-set-pictures-at-run-time-windows-forms.md)
+- [PictureBox 控件](picturebox-control-windows-forms.md)

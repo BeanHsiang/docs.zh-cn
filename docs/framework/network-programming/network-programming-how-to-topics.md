@@ -7,12 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: 5b9236b3dd9d40c3f5656fd050f25cbb12f6a1ec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e3569ec8608a52101cc0bf752d39fbe01ab46917
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561967"
 ---
 # <a name="network-programming-how-to-topics"></a>网络编程操作说明主题
 以下列表包含指向网络编程概念文档中操作说明主题的链接。  
@@ -31,7 +31,7 @@ ms.locfileid: "50192351"
   
 -   [如何：使用 WebRequest 注册自定义协议](../../../docs/framework/network-programming/how-to-register-a-custom-protocol-using-webrequest.md)  
   
--   [如何：转换 WebRequest 以访问协议特定的属性](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
+-   [如何：转换 WebRequest 以访问协议特定属性](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)  
   
 -   [如何：访问 HTTP 特定的属性](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "50192351"
   
 -   [如何：Ping 主机](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
-## <a name="see-also"></a>请参阅  
- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)  
- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN 代码库中的 .NET 联网示例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>请参阅
+- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)
+- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)
+- [MSDN 代码库中的 .NET 联网示例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

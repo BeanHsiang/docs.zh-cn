@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
 ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048601"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150847"
 ---
 # <a name="routing"></a>路由
 本节中的主题涵盖路由服务。 路由服务是可配置的普通 SOAP 中介，使用该服务可以配置基于内容的路由、设置协议桥接、处理通信错误以及在运行时动态更新路由逻辑。  

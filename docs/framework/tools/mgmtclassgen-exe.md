@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 282d6376b434121ed6d59297be2ce36ce361c589
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409332"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628846"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe（管理强类型类生成器）
 利用管理强类型类生成器工具，你可以为指定的 Windows Management Instrumentation (WMI) 类快速生成早期绑定的托管类。 生成的类简化了访问 WMI 类的实例所必须编写的代码。  
@@ -30,11 +30,11 @@ mgmtclassgen
 WMIClass [options]   
 ```  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
 |WMIClass|为其生成早期绑定的托管类的 Windows Management Instrumentation 类。|  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |/l language|指定用于生成早期绑定的托管类的语言。 可以指定 CS（C#；默认）、VB (Visual Basic)、MC (C++) 或 JS (JScript) 作为语言参数。|  
 |/m machine|指定要连接到的计算机，WMI 类驻留在该计算机中。 默认为本地计算机。|  
@@ -150,9 +150,9 @@ public class App
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Management>  
- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>  
- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>  
- [工具](../../../docs/framework/tools/index.md)  
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Management>
+- <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
+- <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>
+- [工具](../../../docs/framework/tools/index.md)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

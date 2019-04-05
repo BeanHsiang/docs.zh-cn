@@ -1,206 +1,162 @@
 ---
-title: 使用 CLI 工具部署 .NET Core 应用
-description: 了解如何使用命令行接口 (CLI) 工具部署 .NET Core 应用
-author: rpetrusha
-ms.author: ronpet
-ms.date: 09/05/2018
+title: 使用 CLI 发布 .NET Core 应用
+description: 了解如何使用 .NET Core SDK 命令行接口 (CLI) 工具发布 .NET Core 应用。
+author: thraka
+ms.author: adegeo
+ms.date: 01/16/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454442"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410259"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令行接口 (CLI) 工具部署 .NET Core 应用
+# <a name="publish-net-core-apps-with-the-cli"></a>使用 CLI 发布 .NET Core 应用
 
-可将 .NET Core 应用程序部署为依赖框架的部署或独立部署，前者包含应用程序二进制文件，但依赖目标系统上存在的 .NET Core，而后者同时包含应用程序和 .NET Core 二进制文件。 请参阅 [.NET Core 应用程序部署](index.md)了解相关概述。
+本文演示了如何使用命令行发布 .NET Core 应用程序。 .NET Core 提供了三种发布应用程序的方式。 依赖于框架的部署生成一个跨平台 .dll 文件，该文件使用本地安装的 .NET Core 运行时。 依赖于框架的可执行文件生成特定于平台的可执行文件，后者使用本地安装的 .NET Core 运行时。 独立可执行文件生成特定于平台的可执行文件，并包含 .NET Core 运行时的本地副本。
 
-以下各节演示如何使用 [.NET Core 命令行接口工具](../tools/index.md)创建下列各类部署：
+请参阅 [.NET Core 应用程序部署](index.md)了解有关这些发布模式的概述。
 
-- 依赖框架的部署
-- 包含第三方依赖项的依赖框架的部署
-- 独立部署
-- 包含第三方依赖项的独立部署
+正在查找有关 CLI 的快速帮助？ 下表列出了一些关于如何发布应用的示例。 可以使用 `-f <TFM>` 参数或通过编辑项目文件来指定目标框架。 有关详细信息，请参阅[发布基本知识](#publishing-basics)。
 
-从命令行工作时，可使用所选的程序编辑器。 如果使用的程序编辑器是 [Visual Studio Code](https://code.visualstudio.com)，则可通过选择“视图” > “集成终端”打开 Visual Studio Code 环境中的命令控制台。
+| 发布模式 | SDK 版本 | 命令 |
+| ------------ | ----------- | ------- |
+| 依赖框架的部署 | 2.x | `dotnet publish -c Release` |
+| 依赖于框架的可执行文件 | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0* | `dotnet publish -c Release` |
+| 独立部署      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
+
+> [!IMPORTANT]
+> \*使用 SDK 版本 3.0 时，依赖于框架的可执行文件是运行基本 `dotnet publish` 命令时的默认发布模式。 这仅适用于面向 .NET Core 2.1 或 .NET Core 3.0 的项目。
+
+## <a name="publishing-basics"></a>发布基本知识
+
+发布应用时，项目文件的 `<TargetFramework>` 设置指定默认目标框架。 可以将目标框架更改为任意有效[目标框架名字对象 (TFM)](../../standard/frameworks.md)。 例如，如果项目使用 `<TargetFramework>netcoreapp2.2</TargetFramework>`，则会创建面向 .NET Core 2.2 的二进制文件。 此设置中指定的 TFM 是[`dotnet publish`](../tools/dotnet-publish.md) 命令使用的默认目标。
+
+如果要以多个框架为目标，可以将 `<TargetFrameworks>` 设置设置为多个以分号分隔的 TFM 值。 可以使用 `dotnet publish -f <TFM>` 命令发布其中一个框架。 例如，如果有 `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` 并运行 `dotnet publish -f netcoreapp2.1`，则会创建面向 .NET Core 2.1 的二进制文件。
+
+除非另有设置，否则 [`dotnet publish`](../tools/dotnet-publish.md) 命令的输出目录为 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`。 除非使用 `-c` 参数进行更改，否则默认的 BUILD-CONFIGURATION 模式为 Debug。 例如，`dotnet publish -c Release -f netcoreapp2.1` 发布到 `myfolder/bin/Release/netcoreapp2.1/publish/`。
+
+如果使用 .NET Core SDK 3.0，则面向 .NET Core 版本 2.1、2.2 或 3.0 的应用的默认发布模式为依赖于框架的可执行文件。
+
+如果使用 .NET Core SDK 2.1，则面向 .NET Core 版本 2.1、2.2 的应用的默认发布模式为依赖于框架的部署。
+
+### <a name="native-dependencies"></a>本机依赖项
+
+如果应用具有本机依赖项，则只能在相同操作系统上运行。 例如，如果应用使用本机 Windows API，则不能在 macOS 或 Linux 上运行。 需要提供特定于平台的代码并为每个平台编译可执行文件。
+
+另外，如果引用的库具有本机依赖项，则应用可能无法在每个平台上运行。 但是，引用的 NuGet 包可能包含特定于平台的版本，以便处理所需的本机依赖项。
+
+使用本机依赖项分发应用时，可能需要使用 `dotnet publish -r <RID>` 开关来指定想要发布的目标平台。 有关运行时标识符的详细信息，请参阅[运行时标识符 (RID) 目录](../rid-catalog.md)。
+
+有关特定于平台的二进制文件的详细信息，请参阅[依赖于框架的可执行文件](#framework-dependent-executable)和[独立部署](#self-contained-deployment)部分。
+
+## <a name="sample-app"></a>示例应用
+
+可以使用以下应用来探索发布命令。 通过在终端中运行以下命令来创建应用：
+
+```dotnetcli
+mkdir apptest1
+cd apptest1
+dotnet new console
+dotnet add package Figgle
+```
+
+控制台模板生成的 `Program.cs` 或 `Program.vb` 文件需要进行以下更改：
+
+```csharp
+using System;
+
+namespace apptest1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"));
+        }
+    }
+}
+```
+
+```vb
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"))
+    End Sub
+End Module
+```
+
+运行应用 ([`dotnet run`](../tools/dotnet-run.md)) 时，将显示以下输出：
+
+```terminal
+  _   _      _ _         __        __         _     _ _
+ | | | | ___| | | ___    \ \      / /__  _ __| | __| | |
+ | |_| |/ _ \ | |/ _ \    \ \ /\ / / _ \| '__| |/ _` | |
+ |  _  |  __/ | | (_) |    \ V  V / (_) | |  | | (_| |_|
+ |_| |_|\___|_|_|\___( )    \_/\_/ \___/|_|  |_|\__,_(_)
+                     |/
+```
 
 ## <a name="framework-dependent-deployment"></a>依赖框架的部署
 
-如果不使用第三方依赖项，部属依赖框架的部署只包括生成、测试和发布应用。 一个用 C# 编写的简单示例可说明此过程。
+对于 .NET Core SDK 2.x CLI，依赖于框架的部署 (FDD) 是基本 `dotnet publish` 命令的默认模式。
 
-1. 创建项目目录。
+将应用作为 FDD 发布时，会在 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` 文件夹中创建 `<PROJECT-NAME>.dll` 文件。 若要运行应用，请导航到输出文件夹并使用 `dotnet <PROJECT-NAME>.dll` 命令。
 
-   为项目创建一个目录，并将其设为当前目录。
+应用配置为面向 .NET Core 的特定版本。 目标 .NET Core 运行时需要位于要运行应用程序的计算机上。 例如，如果应用面向 .NET Core 2.2，则运行应用的任何计算机都必须已安装 .NET Core 2.2 运行时。 如[发布基础知识](#publishing-basics)部分中所述，可以编辑项目文件为更改默认目标框架或面向多个框架。
 
-1. 创建项目。
+发布 FDD 会创建一个应用，该应用会自动前滚到运行该应用的系统上可用的最新 .NET Core 安全修补程序。 有关编译时的版本绑定的详细信息，请参阅[选择要使用的 .NET Core 版本](../versions/selection.md#framework-dependent-apps-roll-forward)。
 
-   在命令行中，键入 [dotnet new console](../tools/dotnet-new.md) 以创建新的 C# 控制台项目或键入 [dotnet new console -lang vb](../tools/dotnet-new.md) 以在该目录中创建新的 Visual Basic 控制台项目。
+## <a name="framework-dependent-executable"></a>依赖于框架的可执行文件
 
-1. 添加应用程序的源代码。
+对于 .NET Core SDK 3.x CLI，依赖于框架的可执行文件 (FDE) 是基本 `dotnet publish` 命令的默认模式。 只要想要面向当前操作系统，就不需要指定任何其他参数。
 
-   在编辑器中打开 Program.cs 文件或 Program.vb 文件，然后使用下列代码替换自动生成的代码。 它会提示用户输入文本，并显示用户输入的个别词。 它使用正则表达式 `\w+` 来将输入文本中的词分开。
+在此模式下，将创建特定于平台的可执行主机来托管跨平台应用。 此模式类似于 FDD，因为 FDD 需要 `dotnet` 命令形式的主机。 每个平台的主机可执行文件名各不相同，其文件名类似于 `<PROJECT-FILE>.exe`。 可以直接运行此可执行文件，而不是调用 `dotnet <PROJECT-FILE>.dll`，这仍然是运行应用的可接受方式。
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+应用配置为面向 .NET Core 的特定版本。 目标 .NET Core 运行时需要位于要运行应用程序的计算机上。 例如，如果应用面向 .NET Core 2.2，则运行应用的任何计算机都必须已安装 .NET Core 2.2 运行时。 如[发布基础知识](#publishing-basics)部分中所述，可以编辑项目文件为更改默认目标框架或面向多个框架。
 
-1. 更新项目的依赖项和工具。
+发布 FDE 会创建一个应用，该应用会自动前滚到运行该应用的系统上可用的最新 .NET Core 安全修补程序。 有关编译时的版本绑定的详细信息，请参阅[选择要使用的 .NET Core 版本](../versions/selection.md#framework-dependent-apps-roll-forward)。
 
-   运行 [dotnet restore](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)）命令，还原项目中指定的依赖项。
+必须通过 `dotnet publish` 命令使用以下开关来发布 FDE（面向当前平台时，.NET Core 3.x 除外）：
 
-1. 创建应用的调试版本。
+- `-r <RID>` 此开关使用标识符 (RID) 来指定目标平台。 有关运行时标识符的详细信息，请参阅[运行时标识符 (RID) 目录](../rid-catalog.md)。
 
-   使用 [dotnet 生成](../tools/dotnet-build.md)命令生成应用程序，或使用 [dotnet 运行](../tools/dotnet-run.md)命令生成并运行应用程序。
+- `--self-contained false` 此开关告知 .NET Core SDK 创建可执行文件作为 FDE。
 
-1. 部署应用。
+每次使用 `-r` 开关时，输出文件路都将更改为：`./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
-   完成程序调试和测试后，使用下列命令创建部署：
+如果使用[示例应用](#sample-app)，请运行 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`。 此命令将创建以下可执行文件：`./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
-      ```console
-      dotnet publish -f netcoreapp2.1 -c Release
-      ```
-   这将创建一个应用的发行版（而不是调试版）。 生成的文件位于名为“发布”的目录中，该目录位于项目的 bin 目录的子目录中。
+> [!NOTE]
+> 可以通过启用全局固定模式来降低部署的总大小。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-   与应用程序的文件一起，发布过程将发出包含应用调试信息的程序数据库 (.pdb) 文件。 该文件主要用于调试异常。 可以选择不将其与应用程序的文件一起分布。 但是，如果要调试应用的发布版本，则应保存该文件。
+## <a name="self-contained-deployment"></a>独立部署
 
-   可以采用任何喜欢的方式部署完整的应用程序文件集。 例如，可以使用简单的 `copy` 命令将其打包为 Zip 文件，或者使用选择的安装包进行部署。
+发布独立部署 (SCD) 时，.NET Core SDK 创建特定于平台的可执行文件。 发布 SCD 包括运行应用所需的所有 .NET Core 文件，但它不包含 [.NET Core 的本机依赖项](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。 这些依赖项必须在应用运行前存在于系统中。
 
-1. 运行你的应用
+发布 SCD 会创建一个不会前滚到最新可用 .NET Core 安全修补程序的应用。 有关编译时的版本绑定的详细信息，请参阅[选择要使用的 .NET Core 版本](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)。
 
-   安装成功后，用户可通过使用 `dotnet` 命令或提供应用程序文件名（如 `dotnet fdd.dll`）来执行应用程序。
+必须通过 `dotnet publish` 命令使用以下开关来发布 SCD：
 
-   除应用程序二进制文件外，安装程序还应捆绑共享框架安装程序，或在安装应用程序的过程中将其作为先决条件进行检查。  安装共享框架需要管理员/根访问权限。
+- `-r <RID>` 此开关使用标识符 (RID) 来指定目标平台。 有关运行时标识符的详细信息，请参阅[运行时标识符 (RID) 目录](../rid-catalog.md)。
 
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>包含第三方依赖项的依赖框架的部署
+- `--self-contained true` 此开关告知 .NET Core SDK 创建可执行文件作为 SCD。
 
-要使用一个或多个第三方依赖项来部署依赖框架的部署，需要这些依赖项都可供项目使用。 在运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令之前，还需执行额外两个步骤：
+> [!NOTE]
+> 可以通过启用全局固定模式来降低部署的总大小。 此模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。 有关全局固定模式及其启用方式的详细信息，请参阅 [.NET Core 全局固定模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
-1. 向 csproj 文件的 `<ItemGroup>` 部分添加对所需第三方库的引用。 以下 `<ItemGroup>` 部分包含 [Json.NET](https://www.newtonsoft.com/json) 的依赖项（作为第三方库）：
-
-      ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-      ```
-
-1. 如果尚未安装，请下载包含第三方依赖项的 NuGet 包。 若要下载该包，请在添加依赖项后执行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令。 因为依赖项在发布时已从本地 NuGet 缓存解析出来，因此它一定适用于你的系统。
-
-请注意，如果依赖框架的部署具有第三方依赖项，则其可移植性只与第三方依赖项相同。 例如，如果某个第三方库只支持 macOS，该应用将无法移植到 Windows 系统。 当第三方依赖项本身取决于本机代码时，也可能发生此情况。 [Kestrel 服务器](/aspnet/core/fundamentals/servers/kestrel)就是一个很好的示例，它需要 [libuv](https://github.com/libuv/libuv) 的本机依赖项。 当为具有此类第三方依赖项的应用程序创建 FDD 时，已发布的输出会针对每个本机依赖项支持（存在于 NuGet 包中）的[运行时标识符 (RID)](../rid-catalog.md) 包含一个文件夹。
-
-## <a name="simpleSelf"></a>不包含第三方依赖项的独立部署
-
-部署没有第三方依赖项的独立部署包括创建项目、修改 csproj 文件、生成、测试以及发布应用。 一个用 C# 编写的简单示例可说明此过程。 该示例演示如何使用命令行中的 [dotnet 实用工具](../tools/dotnet.md)创建独立部署。
-
-1. 为项目创建目录。
-
-   为项目创建一个目录，并将其设为当前目录。
-
-1. 创建项目。
-
-   在命令栏行中，键入 [dotnet new console](../tools/dotnet-new.md)，在该目录中创建新的 C# 控制台项目。
-
-1. 添加应用程序的源代码。
-
-   在编辑器中打开 Program.cs 文件，然后使用下列代码替换自动生成的代码。 它会提示用户输入文本，并显示用户输入的个别词。 它使用正则表达式 `\w+` 来将输入文本中的词分开。
-
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
-1. 定义应用的目标平台。
-
-   在 csproj 文件（该文件用于定义应用的目标平台）的 `<PropertyGroup>` 部分中创建 `<RuntimeIdentifiers>` 标记，然后指定每个目标平台的运行时标识符 (RID)。 请注意，还需要添加分号来分隔 RID。 请查看[运行时标识符目录](../rid-catalog.md)，获取运行时标识符列表。
-
-   例如，以下 `<PropertyGroup>` 部分表明应用在 64 位 Windows 10 操作系统和 64 位 OS X 10.11 版本的操作系统上运行。
-
-     ```xml
-     <PropertyGroup>
-         <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-     </PropertyGroup>
-     ```
-
-   请注意，`<RuntimeIdentifiers>` 元素可能出现在 csproj 文件的任何 `<PropertyGroup>` 中。 本节后面部分将显示完整的示例 csproj 文件。
-
-1. 更新项目的依赖项和工具。
-
-   运行 [dotnet restore](../tools/dotnet-restore.md)（[请参阅注释](#dotnet-restore-note)）命令，还原项目中指定的依赖项。
-
-1. 确定是否要使用全球化固定模式。
-
-   特别是如果应用面向 Linux，则可以通过利用[全球化固定模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)来减小部署的总规模。 全球化固定模式适用于不具有全局意识且可以使用[固定区域性](xref:System.Globalization.CultureInfo.InvariantCulture)的格式约定、大小写约定以及字符串比较和排序顺序的应用程序。
-
-   要启用固定模式，右键单击“解决方案资源管理器”中的项目（不是解决方案），然后选择“编辑 SCD.csproj”或“编辑 SCD.vbproj”。 然后将以下突出显示的行添加到文件中：
-
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
-
-1. 创建应用的调试版本。
-
-   在命令行中，使用 [dotnet 生成](../tools/dotnet-build.md)命令。
-
-1. 调试并测试程序后，为应用的每个目标平台创建要与应用一起部署的文件。
-
-   同时对两个目标平台使用 `dotnet publish` 命令，如下所示：
-
-      ```console
-      dotnet publish -c Release -r win10-x64
-      dotnet publish -c Release -r osx.10.11-x64
-      ```
-
-   这将为每个目标平台创建一个应用的发行版（而不是调试版）。 生成的文件位于名为“发布”的子目录中，该子目录位于项目的 .\bin\Release\netcoreapp2.1\<runtime_identifier> 子目录的子目录中。 请注意，每个子目录中都包含完整的启动应用所需的文件集（既有应用文件，也有所有 .NET Core 文件）。
-
-与应用程序的文件一起，发布过程将发出包含应用调试信息的程序数据库 (.pdb) 文件。 该文件主要用于调试异常。 可以选择不使用应用程序文件打包该文件。 但是，如果要调试应用的发布版本，则应保存该文件。
-
-可按照任何喜欢的方式部署已发布的文件。 例如，可以使用简单的 `copy` 命令将其打包为 Zip 文件，或者使用选择的安装包进行部署。
-
-下面是此项目完整的 csproj 文件。
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
-```
-
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>包含第三方依赖项的独立部署
-
-部署包含一个或多个第三方依赖项的独立部署包括添加依赖项。 在运行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令之前，还需执行额外两个步骤：
-
-1. 将对任何第三方库的引用添加到 csproj 文件的 `<ItemGroup>` 部分。 以下 `<ItemGroup>` 部分使用 Json.NET 作为第三方库。
-
-    ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-    ```
-
-1. 如果尚未安装，请将包含第三方依赖项的 NuGet 包下载到系统。 若要使依赖项对应用适用，请在添加依赖项后执行 `dotnet restore`（[请参阅注释](#dotnet-restore-note)）命令。 因为依赖项在发布时已从本地 NuGet 缓存解析出来，因此它一定适用于你的系统。
-
-下面是此项目的完整 csproj 文件：
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-  </ItemGroup>
-</Project>
-```
-
-部署应用程序时，应用中使用的任何第三方依赖项也包含在应用程序文件中。 运行应用的系统上不需要第三方库。
-
-请注意，可以只将具有一个第三方库的独立部署部署到该库支持的平台。 这与依赖框架的部署中具有本机依赖项和第三方依赖项相似，其中的本机依赖项必须与部署应用的平台兼容。
-
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 ## <a name="see-also"></a>请参阅
 
-* [.NET Core 应用程序部署](index.md)
-* [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)
+- [.NET Core 应用程序部署概述](index.md)
+- [.NET Core 运行时标识符 (RID) 目录](../rid-catalog.md)

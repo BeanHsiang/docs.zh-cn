@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcedd478ee1eb89c11dc9535b1d2ffe843d0f658
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c6605fa1923dc4fdaf4f12a7c8fc7c1e344673b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697487"
 ---
 # <a name="foreground-and-background-threads"></a>前台和后台线程
 托管线程可以是后台线程，也可以是前台线程。 后台线程和前台线程几乎完全相同，只有一处不同，即后台线程不会确保托管执行环境一直运行。 一旦托管进程（其中 .exe 文件为托管程序集）中的所有前台线程都停止，系统会停止并关闭所有后台线程。  
@@ -34,6 +34,6 @@ ms.locfileid: "44081324"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
-- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>
+- <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadAbortException>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 5926216135429d235593aaf77ee0d29b0bacd8fa
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 1d2621b43428fa249fb6ebb820885ebe0a2221f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577253"
 ---
 # <a name="how-to-create-a-security-token-service"></a>如何：创建安全令牌服务
 安全令牌服务实现在 WS-Trust 规范中定义的协议。 此协议为颁发、续订、取消和验证安全令牌定义消息格式和消息交换模式。 给定的安全令牌服务提供这些功能中的一个或多个功能。 本主题考虑最常见的情况：实现令牌颁发。  
@@ -123,12 +123,12 @@ ms.locfileid: "50036497"
 ## <a name="example"></a>示例  
  安全令牌服务的完整代码，请参阅[联合身份验证示例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Tokens.SigningCredentials>  
- <xref:System.IdentityModel.Tokens.SecurityKey>  
- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>  
- <xref:System.IdentityModel.Tokens.SamlSecurityToken>  
- <xref:System.IdentityModel.Tokens.SamlAssertion>  
- <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>  
- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>  
- [联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Tokens.SigningCredentials>
+- <xref:System.IdentityModel.Tokens.SecurityKey>
+- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>
+- <xref:System.IdentityModel.Tokens.SamlSecurityToken>
+- <xref:System.IdentityModel.Tokens.SamlAssertion>
+- <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>
+- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>
+- [联合示例](../../../../docs/framework/wcf/samples/federation-sample.md)

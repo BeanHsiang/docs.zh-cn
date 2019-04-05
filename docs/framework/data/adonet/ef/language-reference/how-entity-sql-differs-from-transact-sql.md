@@ -2,12 +2,12 @@
 title: Entity SQL 与 Transact-SQL 有何不同
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: d34c6933e0f19c73b954446fdf18cea7243eae0d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f193a3f7441a8bf7efacf07d8a9eb18362d7f91d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635957"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL 与 Transact-SQL 有何不同
 本主题介绍之间的差异[!INCLUDE[esql](../../../../../../includes/esql-md.md)]和[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]。  
@@ -15,7 +15,7 @@ ms.locfileid: "32766291"
 ## <a name="inheritance-and-relationships-support"></a>继承和关系支持  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 直接使用概念实体架构并支持诸如继承和关系等概念模型功能。  
   
- 使用继承时，从父类型实例集合中选择子类型的实例通常是有用的。 [Oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)中的运算符[!INCLUDE[esql](../../../../../../includes/esql-md.md)](类似于`oftype`在 C# 序列中) 提供了此功能。  
+ 使用继承时，从父类型实例集合中选择子类型的实例通常是有用的。 [Oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)中的运算符[!INCLUDE[esql](../../../../../../includes/esql-md.md)](类似于`oftype`在C#序列) 提供了此功能。  
   
 ## <a name="support-for-collections"></a>集合支持  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将集合视为一类实体。 例如：  
@@ -33,7 +33,7 @@ ms.locfileid: "32766291"
 ## <a name="support-for-expressions"></a>对表达式的支持  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 具有子查询 （表） 和表达式 （行和列）。  
   
- 为了支持集合和嵌套的集合，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使所有内容成为表达式。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 比 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 更具有组合性，即每个表达式都可在任何地方使用。 查询表达式总是产生投影类型的集合，并且可以在允许使用集合表达式的任何地方使用。 璝惠[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]中不支持的表达式[!INCLUDE[esql](../../../../../../includes/esql-md.md)]，请参阅[不支持的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)。  
+ 为了支持集合和嵌套的集合，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使所有内容均表达式。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 比 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 更具有组合性，即每个表达式都可在任何地方使用。 查询表达式总是产生投影类型的集合，并且可以在允许使用集合表达式的任何地方使用。 璝惠[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]表达式中不支持[!INCLUDE[esql](../../../../../../includes/esql-md.md)]，请参阅[不支持的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)。  
   
  下面是所有有效的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查询。  
   
@@ -47,17 +47,17 @@ set(e1)
 ```  
   
 ## <a name="uniform-treatment-of-subqueries"></a>子查询统一处理  
- 虽然 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 将重点放在表上，但它对子查询执行上下文解释。 例如，`from` 子句中的子查询被视为多集（表）。 但是，`select` 子句中使用的同一子查询被视为标量子查询。 同样，子查询的左侧使用`in`运算符被视为标量子查询，而右侧应为多集子查询。  
+ 虽然 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 将重点放在表上，但它对子查询执行上下文解释。 例如，`from` 子句中的子查询被视为多集（表）。 但是，`select` 子句中使用的同一子查询被视为标量子查询。 同样，在左侧和右侧的上使用的子查询`in`运算符被视为标量子查询，而右侧的数字应为多集子的查询。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 消除了这些差异。 表达式具有不依赖于使用它的上下文的统一解释。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将所有子查询视为多集子查询。 如果需要从子查询获取标量值，则 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 会提供对集合（在此情况下为子查询）进行运算的 `anyelement` 运算符，并从集合中提取单一实例值。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 消除了这些差异。 表达式具有不依赖于使用它的上下文的统一解释。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 将视为多集子查询所有子查询。 如果需要从子查询获取标量值，则 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 会提供对集合（在此情况下为子查询）进行运算的 `anyelement` 运算符，并从集合中提取单一实例值。  
   
 ### <a name="avoiding-implicit-coercions-for-subqueries"></a>避免对子查询执行隐式强制转换  
  与统一处理子查询相关的一个副作用是将子查询隐式转换为标量值。 具体而言，在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中，行多集（具有单个字段）将被隐式转换为数据类型与该字段相同的标量值。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持这种隐式强制。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供 ANYELEMENT 运算符从集合中提取单一实例值，并提供 `select value` 子句以避免在查询表达式中创建行包装。  
   
-## <a name="select-value-avoiding-the-implicit-row-wrapper"></a>Select Value：避免隐式行包装  
- Select 子句中的[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]子查询隐式创建的项周围的行包装在子句中。 这意味着我们无法创建标量或对象的集合。 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 允许隐式强制转换具有一个字段的行类型和相同的数据类型的单一实例值之间。  
+## <a name="select-value-avoiding-the-implicit-row-wrapper"></a>选择值：避免隐式行包装器  
+ Select 子句中的[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]子查询隐式子句中创建行包装的项。 这意味着我们无法创建标量或对象的集合。 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 允许隐式强制转换具有一个字段的行类型和相同的数据类型的单一实例值之间。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了 `select value` 子句，以跳过隐式行构建。 在 `select value` 子句中只能指定一个项。 在使用这样的子句时，不会对 `select` 子句中的项构造行包装，并且可生成所需形状的集合，例如：`select value a`。  
   
@@ -83,7 +83,7 @@ select k from T as t group by (t.x + t.y) as k
 ```  
   
 ## <a name="referencing-columns-properties-of-tables-collections"></a>引用表（集合）的列（属性）  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的所有列引用都必须用表别名限定。 以下构造 (假定`a`是有效的列的表`T`) 中为有效值[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]但未显示在[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中的所有列引用都必须用表别名限定。 以下构造 (假定`a`是表的有效列`T`) 中有效[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]但不能在[!INCLUDE[esql](../../../../../../includes/esql-md.md)]。  
   
 ```  
 select a from T  
@@ -111,7 +111,7 @@ p.Address.City
 ```  
   
 ## <a name="no-support-for-"></a>不支持 *  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 支持非限定 * 语法作为整个行，和的限定别名\*语法 (t.\*) 作为该表字段的快捷方式。 此外，[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]允许一个特殊的计数 (\*) 聚合，其中包括 null 值。  
+ [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 支持非限定 * 语法作为整个行，并限定的别名\*语法 (t.\*) 作为该表字段的快捷方式。 此外，[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]允许一个特殊的计数 (\*) 聚合，其中包括 null 值。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持 * 构造。 形式为 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 和 `select * from T` 的 `select T1.* from T1, T2...` 查询在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中可以分别表示为 `select value t from T as t` 和 `select value t1 from T1 as t1, T2 as t2...`。 此外，这些构造还处理继承（值可替换性），同时将 `select *` 变体限制到所声明类型的顶级属性。  
   
@@ -189,13 +189,13 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 尚未提供对解析函数的支持。  
   
  内置函数、运算符  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 的内置函数和运算符中的一部分。 这些运算符和函数可能受到主要存储提供程序的支持。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 使用在提供程序清单中声明的特定于存储的函数。 此外，[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]允许您声明内置和用户定义的现有存储函数，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使用。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支持 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 的内置函数和运算符中的一部分。 这些运算符和函数可能受到主要存储提供程序的支持。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 使用在提供程序清单中声明的特定于存储的函数。 此外，[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]允许您声明内置和用户定义的现有存储函数，以供[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使用。  
   
  提示  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不提供查询提示机制。  
   
  查询结果批处理  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持查询结果批处理。 例如，以下是有效[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]（作为批处理发送）：  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支持查询结果批处理。 例如，以下是有效[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]（成批发送）：  
   
 ```  
 select * from products;  
@@ -211,6 +211,6 @@ Select value c from Categories as c;
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 仅支持在每个命令中使用一个由结果生成的查询语句。  
   
-## <a name="see-also"></a>请参阅  
- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [不支持的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)
+## <a name="see-also"></a>请参阅
+- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [不支持的表达式](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)

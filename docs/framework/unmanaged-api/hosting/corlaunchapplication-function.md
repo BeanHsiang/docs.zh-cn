@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e10a92b1748fcdf518fa68cb7054731f4511396b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428757"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487182"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication 函数
-启动位于指定的网络路径，使用指定的清单和其他应用程序数据的应用程序。  
+启动指定的网络路径，使用指定的清单和其他应用程序数据的应用程序。  
   
- 此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,36 +43,36 @@ HRESULT CorLaunchApplication (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `dwClickOnceHost`  
- [in]值为[HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)枚举，它指定的启动应用程序的宿主类型。  
+ [in]值为[HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)枚举，用于指定的启动应用程序的宿主类型。  
   
  `pwzAppFullName`  
- [in]正在启动应用程序的完整名称。  
+ [in]正在启动的应用程序的全名。  
   
  `dwManifestPaths`  
- [in]应用程序的清单路径的数量。  
+ [in]应用程序的清单路径数。  
   
  `ppwzManifestPaths`  
- [in]一个字符串数组，其中每个指定的应用程序正在启动清单的路径。  
+ [in]一个字符串数组，其中每个指定要启动的应用程序清单的路径。  
   
  `dwActivationData`  
- [in]激活的应用程序正在启动的数据项目数。  
+ [in]正在启动的应用程序的激活数据项目数。  
   
  `ppwzActivationData`  
- [in]一个字符串数组，其中每个是正在启动该应用程序的激活数据项。  
+ [in]一个字符串数组，其中每个是要启动的应用程序的激活数据项。  
   
  `lpProcessInformation`  
- [out]有关应用程序加载的过程的信息指向的指针。  
+ [out]指向有关在其中加载应用程序过程的信息的指针。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>请参阅
+- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

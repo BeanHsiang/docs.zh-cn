@@ -12,28 +12,29 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: e61a635d59bd9adfb73a0293df776187cdbca499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 347ca067a5ae5544351f29afe3ebcfe11d0b1e0f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527097"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713230"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>如何：向 ToolBar 控件添加按钮
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
+>  
+  <xref:System.Windows.Forms.ToolStrip> 控件取代了 <xref:System.Windows.Forms.ToolBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.ToolBar> 控件以实现向后兼容并供将来使用。  
   
- 不可或缺的组成部分<xref:System.Windows.Forms.ToolBar>控件是你向其添加的按钮。 这些可用于提供轻松访问菜单命令，或者，或者，您可以将它们放置在另一个区域中的应用程序以向你的菜单结构中均不提供的用户公开的命令的用户界面。  
+ 不可或缺的一部分<xref:System.Windows.Forms.ToolBar>控件是您向其中添加的按钮。 这些可用于提供方便您访问菜单命令或者，或者，您可以将它们放在另一个区域中的应用程序以向你的菜单结构中不可用的用户公开的命令的用户界面。  
   
- 下面的示例假定<xref:System.Windows.Forms.ToolBar>控件已添加到 Windows 窗体 (`Form1`)。  
+ 以下示例假定<xref:System.Windows.Forms.ToolBar>控件已添加到 Windows 窗体 (`Form1`)。  
   
-### <a name="to-add-buttons-programmatically"></a>以编程方式添加按钮  
+### <a name="to-add-buttons-programmatically"></a>若要以编程方式添加按钮  
   
-1.  在过程中，通过将它们添加到创建工具栏按钮<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合。  
+1.  在过程中，创建工具栏按钮将它们添加到<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合。  
   
-2.  通过将传递通过按钮的索引指定的属性设置的单个按钮<xref:System.Windows.Forms.ToolBar.Buttons%2A>属性。  
+2.  通过传递通过按钮的索引指定个别按钮的属性设置<xref:System.Windows.Forms.ToolBar.Buttons%2A>属性。  
   
-     下面的示例假定的窗体具有<xref:System.Windows.Forms.ToolBar>已添加的控件。  
+     下面的示例假定窗体具有<xref:System.Windows.Forms.ToolBar>已添加的控件。  
   
     > [!NOTE]
     >  <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合是一个从零开始的集合，因此代码应进行相应处理。  
@@ -148,9 +149,9 @@ ms.locfileid: "33527097"
        }  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.ToolBar>  
- [如何：定义 ToolBar 控件按钮的图标](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [如何：触发工具栏按钮的菜单事件](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [ToolBar 控件概述](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [ToolBar 控件](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.ToolBar>
+- [如何：定义的工具栏按钮的图标](how-to-define-an-icon-for-a-toolbar-button.md)
+- [如何：触发工具栏按钮的菜单事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar 控件概述](toolbar-control-overview-windows-forms.md)
+- [ToolBar 控件](toolbar-control-windows-forms.md)

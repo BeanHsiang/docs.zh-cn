@@ -2,12 +2,12 @@
 title: 创建源 Office Open XML 文档 (C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: 7941864e5dc2401a27df151c8c7806218609fcd4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0fe5463ae95374542482f768eee2bc694e2c5dd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44189879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635840"
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>创建源 Office Open XML 文档 (C#)
 本主题演示如何创建本教程其他示例中使用的 Office Open XML WordprocessingML 文档。 如果您按照这些说明操作，您的输出结果将与每个示例中提供的输出相匹配。  

@@ -7,32 +7,32 @@ helpviewer_keywords:
 - flow content elements [WPF], how-to topics
 - documents [WPF], flow content reference
 ms.assetid: ef5175df-6ab9-4096-be0c-804003b44c64
-ms.openlocfilehash: e5be189ed6bf5cf2baf676825dffca49e57a3dec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241f3736eef55fcca13d4cb9994bb04aaf4eda66
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546369"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354422"
 ---
 # <a name="flow-content-elements-how-to-topics"></a>流内容元素帮助主题
-本部分中的主题介绍如何完成使用各种流内容元素和相关的功能的常见任务。  
+在本部分中的主题介绍如何完成常见任务使用各种流内容元素和相关的功能。  
   
 ## <a name="in-this-section"></a>本节内容  
- [调整段落间距](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
- [以编程方式生成表](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [以编程方式更改内容的 FlowDirection](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
- [以编程方式更改 TextWrapping 属性](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
- [使用 XAML 定义表](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [修改文本版式](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
- [启用文本截断](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
- [以编程方式将元素插入文本](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
- [通过 Blocks 属性控制流内容元素](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [通过 Inlines 属性控制流内容元素](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
- [通过 Blocks 属性控制 FlowDocument](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [通过 Columns 属性控制表列](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [通过 RowGroups 属性操作表的行组](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [使用流内容元素](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
- [使用 FlowDocument 列分隔特性](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
+ [调整段落间距](how-to-adjust-spacing-between-paragraphs.md)  
+ [以编程方式生成表](how-to-build-a-table-programmatically.md)  
+ [以编程方式更改内容的 FlowDirection](how-to-change-the-flowdirection-of-content-programmatically.md)  
+ [以编程方式更改 TextWrapping 属性](how-to-change-the-textwrapping-property-programmatically.md)  
+ [使用 XAML 定义表](how-to-define-a-table-with-xaml.md)  
+ [修改文本版式](how-to-alter-the-typography-of-text.md)  
+ [启用文本截断](how-to-enable-text-trimming.md)  
+ [以编程方式将元素插入文本](how-to-insert-an-element-into-text-programmatically.md)  
+ [通过 Blocks 属性控制流内容元素](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [通过 Inlines 属性控制流内容元素](how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
+ [通过 Blocks 属性控制 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [通过 Columns 属性控制表列](how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [通过 RowGroups 属性操作表的行组](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [使用流内容元素](how-to-use-flow-content-elements.md)  
+ [使用 FlowDocument 列分隔特性](how-to-use-flowdocument-column-separating-attributes.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -40,4 +40,4 @@ ms.locfileid: "33546369"
   <xref:System.Windows.Documents.Inline>  
   
 ## <a name="related-sections"></a>相关章节  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [WPF 中的文档](documents-in-wpf.md)

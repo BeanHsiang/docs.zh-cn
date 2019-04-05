@@ -5,6 +5,7 @@ api_name:
 - CoUninitializeEE
 api_location:
 - mscoree.dll
+- mscorsvr.dll
 api_type:
 - DLLExport
 f1_keywords:
@@ -16,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73fa281d28e9b5362ff386b55b07dd431f1915f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2c4e22c2e80af37177294d86c2e5775a5c296fe7
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429177"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211853"
 ---
 # <a name="couninitializeee-function"></a>CoUninitializeEE 函数
 `CoUninitializeEE` 已过时，不提供任何功能。  
@@ -35,8 +36,8 @@ void CoUninitializeEE (
 ```  
   
 ## <a name="remarks"></a>备注  
- 公共语言运行时执行引擎无法从进程中卸载。 若要关闭的情况下执行引擎调用[CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)。  
+ 公共语言运行时执行引擎不能从进程中卸载。 若要关闭的情况下执行引擎调用[CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)。  
   
-## <a name="see-also"></a>请参阅  
- [CoInitializeEE 函数](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
- [元数据全局静态函数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>请参阅
+- [CoInitializeEE 函数](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)
+- [元数据全局静态函数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

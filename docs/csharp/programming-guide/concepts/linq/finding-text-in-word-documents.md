@@ -2,12 +2,12 @@
 title: 查找 Word 文档中的文本 (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 3213855716ebcfc581f213a34417e579c133e385
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 59d224307808edefbbb7e7ffc848f40fbe2880ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720780"
 ---
 # <a name="finding-text-in-word-documents-c"></a>查找 Word 文档中的文本 (C#)
 本主题扩展了以前的查询，以执行一些有用的任务：在文档中查找一个字符串的所有匹配项。  
@@ -329,6 +329,6 @@ StyleName:Code ><
   
 ## <a name="see-also"></a>请参阅
 
-- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
-- [使用纯函数重构 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [教程：操作 WordprocessingML 文档中的内容 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [使用纯函数重构 (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
 - [LINQ to XML 中的延迟执行和迟缓计算 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

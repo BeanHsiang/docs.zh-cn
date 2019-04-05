@@ -1,5 +1,5 @@
 ---
-title: 如何：使用项目数据源绑定数据（WCF 数据服务）
+title: 如何：将使用项目数据源 （WCF 数据服务） 的数据绑定
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540749"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>如何：使用项目数据源绑定数据（WCF 数据服务）
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>如何：将使用项目数据源 （WCF 数据服务） 的数据绑定
 
 可以创建基于 WCF 数据服务客户端应用程序中生成的数据对象的数据源。 当使用添加到数据服务的引用**添加服务引用**对话框中，以及生成的客户端数据类创建项目数据源。 将为数据服务公开的每个实体集各创建一个数据源。 可以创建显示通过将这些数据源项从服务中的数据的窗体**数据源**窗口拖到设计器。 这些项将成为绑定到该数据源的控件。 在执行期间，此数据源绑定到的实例<xref:System.Data.Services.Client.DataServiceCollection%601>类，该类填充有数据服务返回的查询的对象。 有关详细信息，请参阅[数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。
 
@@ -23,7 +23,7 @@ ms.locfileid: "44216524"
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>在 WPF 窗口中使用项目数据源
 
-1.  在 Visual Studio 中，在 WPF 项目中，添加对 Northwind 数据服务的引用。 有关详细信息，请参阅[如何： 添加数据服务引用](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。
+1.  在 Visual Studio 中，在 WPF 项目中，添加对 Northwind 数据服务的引用。 有关详细信息，请参阅[如何：添加数据服务引用](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。
 
 2.  在中**数据源**窗口中，展开`Customers`中的节点**NorthwindEntities**项目数据源。
 

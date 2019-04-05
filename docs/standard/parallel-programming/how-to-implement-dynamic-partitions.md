@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2d46264113cb4c961f6c4b971b5986bdd9eb6a7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 792488e53ffb7f870e21fdd1ad3ef94bf0303b1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720231"
 ---
 # <a name="how-to-implement-dynamic-partitions"></a>如何：实现动态分区
 下面的示例展示了如何实现自定义 <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType>，以实现动态分区，并可以通过特定重载 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 和 PLINQ 进行使用。  
@@ -30,5 +30,5 @@ ms.locfileid: "44180949"
   
 ## <a name="see-also"></a>请参阅
 
-- [PLINQ 和 TPL 的自定义分区程序](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)  
+- [PLINQ 和 TPL 的自定义分区程序](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
 - [如何：实现静态分区程序](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

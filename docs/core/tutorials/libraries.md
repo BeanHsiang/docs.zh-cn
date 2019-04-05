@@ -1,15 +1,15 @@
 ---
 title: 使用跨平台工具开发库
-description: 了解如何使用 .NET Core CLI 工具为 .NET 创建库。
+description: 了解如何使用 .NET Core CLI 工具创建 .NET Core 库。 将创建一个支持多个框架的库。
 author: cartermp
-ms.author: mairaw
 ms.date: 05/01/2017
-ms.openlocfilehash: a6db7a15c484122600afd54814d19ea11bd1abc1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.custom: seodec18
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256191"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212061"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>使用跨平台工具开发库
 
@@ -19,9 +19,9 @@ ms.locfileid: "43256191"
 
 需要在计算机上安装 [.NET Core SDK 和 CLI](https://www.microsoft.com/net/core) 。
 
-对于本文档中处理 .NET Framework 版本的部分，需要在 Windows 计算机上安装 [.NET Framework](http://getdotnet.azurewebsites.net/)。
+对于本文档中处理 .NET Framework 版本的部分，需要在 Windows 计算机上安装 [.NET Framework](https://dotnet.microsoft.com)。
 
-此外，如果想要支持较旧的 .NET Framework 目标，需要从 [.NET 目标平台页面](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html)安装用于较旧 Framework 版本的目标包/开发人员工具包。 请参阅此表：
+此外，如果想要支持较旧的 .NET Framework 目标，需要从 [.NET 下载存档页](https://dotnet.microsoft.com/download/archives)安装用于较旧 Framework 版本的目标包/开发人员工具包。 请参阅此表：
 
 | .NET Framework 版本 | 下载内容                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -39,7 +39,7 @@ ms.locfileid: "43256191"
 
 在该文中，提供有一个将 .NET Standard 版本映射到各种实现的表格：
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
 以下是此表格对于创建库的意义：
 
@@ -58,9 +58,9 @@ ms.locfileid: "43256191"
     ```
 
 2. 可通过修改项目文件 `TargetFramework` 节点中的值来使用更低或更高版本的 .NET Standard。
-    
+
     .NET Standard 版本可后向兼容。 这意味着 `netstandard1.0` 库可在 `netstandard1.1` 平台以及更高版本上运行。 但是，不可向前兼容，即版本较低的 .NET Standard 平台无法引用版本较高的平台。 这意味着 `netstandard1.0` 库不能引用面向 `netstandard1.1` 或更高版本的库。 选择适合所需、恰当混合有 API 和平台支持的 Standard 版本。 目前，我们建议 `netstandard1.4`。
-    
+
 3. 如果希望面向 .NET Framework 版本 4.0 或更低版本，或者要使用 .NET Framework 中提供但 .NET Standard 中不提供的 API（例如 `System.Drawing`），请阅读以下部分，了解如何设定多目标。
 
 ## <a name="how-to-target-the-net-framework"></a>如何以 .NET Framework 为目标
@@ -131,12 +131,12 @@ ms.locfileid: "43256191"
 在此处可看到三项主要更改：
 
 1. `TargetFramework` 节点已替换为 `TargetFrameworks`，其中表示了三个 TFM。
-1. `net40 ` 目标有一个 `<ItemGroup>` 节点，拉取一个 .NET Framework 引用。
+1. `net40` 目标有一个 `<ItemGroup>` 节点，拉取一个 .NET Framework 引用。
 1. `net45` 目标中有一个 `<ItemGroup>` 节点，拉取两个 .NET Framework 引用。
 
 生成系统可识别以下用在 `#if` 指令中的处理器符号：
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../../includes/preprocessor-symbols.md)]
 
 以下是使用每目标条件编译的示例：
 
@@ -167,7 +167,7 @@ namespace MultitargetLib
         // .NET Framework 4.0 does not have async/await
         public string GetDotNetCount()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             var uri = new Uri(url);
 
@@ -187,7 +187,7 @@ namespace MultitargetLib
         // .NET 4.5+ can use async/await!
         public async Task<string> GetDotNetCountAsync()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             // HttpClient is thread-safe, so no need to explicitly lock here
             var result = await _client.GetStringAsync(url);
@@ -213,7 +213,7 @@ netstandard1.4/
 
 ## <a name="how-to-test-libraries-on-net-core"></a>如何在 .NET Core 上测试库
 
-能够跨平台进行测试至关重要。 可使用现成的 [xUnit](http://xunit.github.io/) 或 MSTest。 它们都十分适合在 .NET Core 上对库进行单元测试。 如何使用测试项目设置解决方案取决于[解决方案的结构](#structuring-a-solution)。 下面的示例假设测试和源目录位于同一顶级目录下。
+能够跨平台进行测试至关重要。 可使用现成的 [xUnit](https://xunit.github.io/) 或 MSTest。 它们都十分适合在 .NET Core 上对库进行单元测试。 如何使用测试项目设置解决方案取决于[解决方案的结构](#structuring-a-solution)。 下面的示例假设测试和源目录位于同一顶级目录下。
 
 > [!NOTE]
 > 此示例将使用某些 [.NET Core CLI 命令](../tools/index.md)。 有关详细信息，请参阅 [dotnet new](../tools/dotnet-new.md) 和 [dotnet sln](../tools/dotnet-sln.md)。
@@ -253,10 +253,10 @@ netstandard1.4/
    dotnet build
    ```
 
-   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. 执行 `dotnet test` 命令，验证 xUnit 是否在运行。 如果选择使用 MSTest，则应改为运行 MSTest 控制台运行程序。
-    
+
 就是这么简单！ 现在可以使用命令行工具跨所有平台测试库。 若要继续测试，现已设置好了所有内容，测试库将非常简单：
 
 1. 对库进行更改。
@@ -321,7 +321,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 引用项目的最佳方式是使用 .NET Core CLI 添加项目引用。 在 AwesomeLibrary.CSharp 和 AwesomeLibrary.FSharp 项目目录中，可运行下列命令：
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 AwesomeLibrary.CSharp 和 AwesomeLibrary.FSharp 的项目文件现在需要将 AwesomeLibrary.Core 作为 `ProjectReference` 目标引用。  可通过检查项目文件和查看其中的下列内容来进行验证：

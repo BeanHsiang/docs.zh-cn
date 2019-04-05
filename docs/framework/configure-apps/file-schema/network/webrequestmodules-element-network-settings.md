@@ -1,5 +1,5 @@
 ---
-title: '&lt;webRequestModules&gt;元素 （网络设置）'
+title: <webRequestModules> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: 1d421009e8b2e0d4074679939092180c6037a0c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd7c5765665345906597963f8a4b2dbf7fcc7227
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200439"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288842"
 ---
-# <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt;元素 （网络设置）
+# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > 元素 （网络设置）
 指定模块用于从网络主机请求信息。  
   
  \<configuration>  
@@ -73,7 +73,7 @@ ms.locfileid: "50200439"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.IWebRequestCreate>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.IWebRequestCreate>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

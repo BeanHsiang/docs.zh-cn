@@ -16,43 +16,43 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3edae4cb112f46643734c5f1612d9df36ad47e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96c2081e5ff5b716c2645fa44a24f12beaa0f8e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441319"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585453"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager 接口
-提供允许公共语言运行时 (CLR) 可通过主机，虚拟内存请求的方法，而不是使用标准 Win32 虚拟内存函数。  
+而不是使用标准 Win32 虚拟内存函数提供允许公共语言运行时 (CLR)，以便通过主机的虚拟内存请求的方法。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[AcquiredVirtualAddressSpace 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-acquiredvirtualaddressspace-method.md)|通知主机公共语言运行时 (CLR) 已获取从操作系统指定的内存。|  
-|[CreateMAlloc 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|获取到的接口指针[IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)用于从非回收堆由宿主创建请求的内存分配的实例。|  
-|[GetMemoryLoad 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-getmemoryload-method.md)|报告的主机，请获取当前正在使用的物理内存量。|  
-|[NeedsVirtualAddressSpace 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-needsvirtualaddressspace-method.md)|通知宿主，CLR 将尝试使用指定的内存。|  
-|[RegisterMemoryNotificationCallback 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-registermemorynotificationcallback-method.md)|注册到主机时，将调用以通知在计算机上的当前内存加载的 CLR 的回调函数的指针。|  
-|[ReleasedVirtualAddressSpace 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-releasedvirtualaddressspace-method.md)|通知主机 CLR 已结束使用指定的内存。|  
-|[VirtualAlloc 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md)|用作的逻辑包装，相应的 Win32 函数，将保留或提交调用进程虚拟地址空间中的页面的区域。|  
-|[VirtualFree 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualfree-method.md)|用作相应的 Win32 函数，该释放、 解除或释放和解除的调用进程的虚拟地址空间中的页区域函数的逻辑包装。|  
-|[VirtualProtect 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualprotect-method.md)|用作更改调用进程的虚拟地址空间中的提交页面的保护区域上的对应 Win32 函数的逻辑包装。|  
-|[VirtualQuery 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualquery-method.md)|用作检索有关调用进程虚拟地址空间中的页面范围的信息的相应 Win32 函数的逻辑包装。|  
+|[AcquiredVirtualAddressSpace 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-acquiredvirtualaddressspace-method.md)|通知宿主公共语言运行时 (CLR) 已获得从操作系统指定的内存。|  
+|[CreateMAlloc 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|获取到的接口指针[IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)用于从堆创建主机的请求的内存分配的实例。|  
+|[GetMemoryLoad 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-getmemoryload-method.md)|由主机的报告获取当前正在使用的物理内存量。|  
+|[NeedsVirtualAddressSpace 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-needsvirtualaddressspace-method.md)|通知宿主，CLR 会尝试使用指定的内存。|  
+|[RegisterMemoryNotificationCallback 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-registermemorynotificationcallback-method.md)|注册到通知的计算机上的当前内存负载的 CLR 宿主通过调用的回调函数的指针。|  
+|[ReleasedVirtualAddressSpace 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-releasedvirtualaddressspace-method.md)|通知宿主 CLR 已完成使用指定的内存。|  
+|[VirtualAlloc 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md)|充当相应的 Win32 函数，将保留或提交的调用进程的虚拟地址空间中的页面区域的逻辑包装器。|  
+|[VirtualFree 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualfree-method.md)|充当相应的 Win32 函数，从而释放，解除，或释放并解除调用进程虚拟地址空间中的页面区域的逻辑包装器。|  
+|[VirtualProtect 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualprotect-method.md)|充当相应的 Win32 函数，这会更改调用进程的虚拟地址空间中的提交页面的保护区域上的逻辑包装器。|  
+|[VirtualQuery 方法](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualquery-method.md)|充当相应的 Win32 函数检索有关调用进程的虚拟地址空间中的页范围的信息的逻辑包装器。|  
   
 ## <a name="remarks"></a>备注  
- `IHostMemoryManager` 此外提供了方法，以便 CLR 获取通过其在堆上进行内存请求并获取在过程中，内存压力级别的指针，如报告的主机。  
+ `IHostMemoryManager` 此外提供了方法，以便 CLR 获取要在堆上发出内存请求和获取在过程中，内存压力的级别中的指针，如报告的主机。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IHostMalloc 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)  
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [IHostMalloc 接口](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

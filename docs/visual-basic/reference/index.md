@@ -5,12 +5,12 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 615421afe522770bfcff38ffdb23917d7925150d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: af8d2c99015304507b2b3361a8a851d125c14a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083903"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377147"
 ---
 # <a name="reference-visual-basic"></a>参考 (Visual Basic)
 本部分提供指向 Visual Basic 编程的各个方面的参考信息。  
@@ -27,13 +27,6 @@ ms.locfileid: "44083903"
   
  [Visual Basic 语言规范](../../visual-basic/reference/language-specification/index.md)  
  提供了完整的 Visual Basic 语言规范，其中包含语言的各个方面的详细的信息的链接。  
-  
-## <a name="reference"></a>参考  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
- 此命名空间包含 Visual Basic Power Pack 控件的类。 Visual Basic Power Packs 控件是附加的 Windows 窗体控件。  
-  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
- 此命名空间提供了一个组件，使你能够打印出屏幕上出现的窗体的传真。  
   
 ## <a name="related-sections"></a>相关章节  
  [常规用户界面元素 (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  

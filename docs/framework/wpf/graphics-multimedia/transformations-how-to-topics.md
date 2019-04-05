@@ -9,28 +9,29 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 95e33f38fcad70b61ae565307915b60dcbfb905a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a6fb777502db021b7b4d5f9403f4cd1d6d7f85a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361351"
 ---
 # <a name="transformations-how-to-topics"></a>变换帮助主题
-本部分中的主题介绍如何将不同的转换应用于对象。  
+在本部分中的主题介绍如何将不同的转换应用于对象。  
   
 ## <a name="in-this-section"></a>本节内容  
- [在事件发生时向元素应用转换](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [将多个转换应用到对象](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
- [让元素原地旋转](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
- [旋转对象](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
- [缩放元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
- [倾斜元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
- [使用相对值指定转换原点](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [转换元素](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
- [使用 MatrixTransform 创建自定义转换](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+ [在事件发生时向元素应用转换](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [将多个转换应用到对象](how-to-apply-multiple-transforms-to-an-object.md)  
+ [让元素原地旋转](how-to-make-an-element-spin-in-place.md)  
+ [旋转对象](how-to-rotate-an-object.md)  
+ [缩放元素](how-to-scale-an-element.md)  
+ [倾斜元素](how-to-skew-an-element.md)  
+ [使用相对值指定转换原点](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [转换元素](how-to-translate-an-element.md)  
+ [使用 MatrixTransform 创建自定义转换](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Transform>  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Transform>
+- [图形和多媒体](index.md)
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
+- [布局](../advanced/layout.md)

@@ -1,15 +1,15 @@
 ---
-title: 如何： 查找具有特定名称 (XPATH-LINQ to XML) 的同级的特性 (Visual Basic)
+title: 如何：查找具有特定名称 (XPATH-LINQ to XML) 的同级属性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-ms.openlocfilehash: 467a9a5f529111b45fccda79437ccc6538f1372a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07fb5647950c450d08ab3235ac8cb396eff15305
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643596"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839049"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>如何： 查找具有特定名称 (XPATH-LINQ to XML) 的同级的特性 (Visual Basic)
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a>如何：查找具有特定名称 (XPATH-LINQ to XML) 的同级属性 (Visual Basic)
 本主题演示如何查找上下文节点的同级的所有属性。 只返回集合中具有特定名称的属性。  
   
  XPath 表达式为：  
@@ -19,7 +19,7 @@ ms.locfileid: "33643596"
 ## <a name="example"></a>示例  
  本示例首先查找 `Book` 元素，然后查找名为 `Book` 的所有同级元素，再查找名为 `id` 的所有属性。 结果是一个属性集合。  
   
- 本示例使用以下 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
+ 此示例使用下面的 XML 文档：[示例 XML 文件：图书 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。  
   
 ```vb  
 Dim books as XDocument = XDocument.Load("Books.xml")  
@@ -54,5 +54,6 @@ id="bk101"
 id="bk102"  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

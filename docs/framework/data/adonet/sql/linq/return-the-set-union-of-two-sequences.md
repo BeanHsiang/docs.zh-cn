@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
-ms.openlocfilehash: ffdc1dc0f9b5c2ed3b9898d0c71c9b384723fe05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a2d51e8052c839ea4cd11dec07a3aef95d59d0f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546957"
 ---
 # <a name="return-the-set-union-of-two-sequences"></a>返回两个序列的并集
 使用 <xref:System.Linq.Queryable.Union%2A> 运算符可返回两个序列的并集。  
@@ -25,6 +25,6 @@ ms.locfileid: "50200545"
 
 有关详细信息和示例，请参阅<xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>。
   
-## <a name="see-also"></a>请参阅  
- [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>请参阅
+- [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

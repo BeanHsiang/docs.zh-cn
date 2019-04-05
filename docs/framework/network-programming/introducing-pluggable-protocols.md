@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: a0a50af2d773a9489d9e908b751ba2035b9ba626
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194015"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729127"
 ---
 # <a name="introducing-pluggable-protocols"></a>可插入协议简介
 Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且托管的实现，可以快速、轻松地将其集成到应用程序中。 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空间的 Internet 访问类可用于实现基于 Web 和基于 Internet 的应用程序。  
@@ -40,7 +40,7 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
  客户端应用程序通过标识请求的 Internet 资源和用于请求和响应的通信协议发出请求。 如有必要，客户端还提供完成请求所需的任何其他数据，例如代理位置或身份验证信息（用户名、密码等）。 形成请求后，可将请求发送到服务器。  
   
 ## <a name="identifying-resources"></a>标识资源  
- .NET Framework 使用统一资源标识符 (URI) 标识请求的 Internet 资源和通信协议。 URI 由至少三个或者四个片段组成：方案标识符，用于标识请求和响应的通信协议；服务器标识符，其由唯一标识 Internet 上服务器的域名系统 (DNS) 主机名或 TCP 地址组成；路径标识符，其在服务器上查找请求的信息；可选的查询字符串，其将信息从客户端传递到服务器。 例如，URI `http://www.contoso.com/whatsnew.aspx?date=today` 由方案标识符“http”、服务器标识符“www.contoso.com”、路径“/whatsnew.aspx”和查询字符串“?date=today”组成。  
+ .NET Framework 使用统一资源标识符 (URI) 标识请求的 Internet 资源和通信协议。 URI 由至少三个或者四个片段组成：方案标识符，用于标识请求和响应的通信协议；服务器标识符，其由唯一标识 Internet 上服务器的域名系统 (DNS) 主机名或 TCP 地址组成；路径标识符，其在服务器上查找请求的信息；可选的查询字符串，其将信息从客户端传递到服务器。 例如，URI `http://www.contoso.com/whatsnew.aspx?date=today` 由方案标识符 `http`、服务器标识符 `www.contoso.com`、路径 `/whatsnew.aspx` 和查询字符串 `?date=today` 组成。  
   
  服务器收到请求并处理响应后，会将这些响应返回到客户端应用程序。 响应包括补充信息，如内容的类型（例如，原始文本或 XML 数据）。  
   
@@ -66,8 +66,8 @@ Microsoft .NET Framework 为 Internet 服务提供了一种分层、可扩展且
   
  熟悉 Windows Sockets 接口的开发人员或需要通过套接字级编程提供的控件的开发人员将发现 System.Net.Sockets 类能够满足他们的需求。 System.Net.Sockets 类是从托管到 System.Net 类中的本机代码的转换点。 大多数情况下，System.Net.Sockets 类将数据封送到 Windows 32 位对应项，并处理任何必要的安全检查。  
   
-## <a name="see-also"></a>请参阅  
- [对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)  
- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)  
- [MSDN 代码库中的 .NET 联网示例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>请参阅
+- [对可插入协议进行编程](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)
+- [网络编程示例](../../../docs/framework/network-programming/network-programming-samples.md)
+- [MSDN 代码库中的 .NET 联网示例](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

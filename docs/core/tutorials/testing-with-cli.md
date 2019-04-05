@@ -2,18 +2,18 @@
 title: 使用 .NET Core 命令行组织和测试项目
 description: 本教程介绍如何从命令行组织和测试 .NET Core 项目。
 author: cartermp
-ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415219"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "57845903"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令行组织和测试项目
 
-本教程遵循[使用命令行在 Windows/Linux/macOS 上实现 .NET Core 入门](using-with-xplat-cli.md)，演示如何超越简单的创建控制台应用，开发更高级和组织更良好的应用程序。 在演示如何使用文件夹来组织代码后，本教程还将说明如何使用 [xUnit](https://xunit.github.io/) 测试框架扩展控制台应用程序。
+本教程遵循[通过命令行开始在 Windows/Linux/macOS 上使用 .NET Core](using-with-xplat-cli.md)，不只是介绍了如何创建简单的控制台应用程序，还介绍了如何开发结构清晰的高级应用程序。 在演示如何使用文件夹来组织代码后，本教程还将说明如何使用 [xUnit](https://xunit.github.io/) 测试框架扩展控制台应用程序。
 
 ## <a name="using-folders-to-organize-code"></a>使用文件夹组织代码
 
@@ -48,7 +48,7 @@ ms.locfileid: "49415219"
 
 对于下列步骤，可使用 [NewTypes Pets 示例](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild)进行相关操作，也可以创建自己的文件与文件夹进行操作。 各类型按逻辑组织为文件夹结构，允许日后加入更多类型，测试也按逻辑放置在文件夹中，允许日后加入更多测试。
 
-此示例包含两种类型 `Dog` 和 `Cat`，并使它们实现一个公共接口 `IPet`。 对于 `NewTypes` 项目，目标是将与宠物相关的类型组织到 Pets 文件夹中。 如果之后添加了另一组类型（例如 WildAnimals），则将其与 Pets 文件夹一同放在 NewTypes 文件夹中。 WildAnimals 文件夹可包含不属于宠物的动物类型，如 `Squirrel` 和 `Rabbit` 类型。 按照这种方式添加类型，不会破坏项目的良好组织。 
+此示例包含两种类型 `Dog` 和 `Cat`，并使它们实现一个公共接口 `IPet`。 对于 `NewTypes` 项目，目标是将与宠物相关的类型组织到 Pets 文件夹中。 如果之后添加了另一组类型（例如 WildAnimals），则将其与 Pets 文件夹一同放在 NewTypes 文件夹中。 WildAnimals 文件夹可包含不属于宠物的动物类型，如 `Squirrel` 和 `Rabbit` 类型。 按照这种方式添加类型，不会破坏项目的良好组织。
 
 创建以下文件夹结构，并指明文件内容：
 
@@ -97,25 +97,25 @@ Woof!
 Meow!
 ```
 
-可选练习：可通过扩展此项目添加新的宠物类型，如 `Bird`。 使鸟的 `TalkToOwner` 方法向所有者发出 `Tweet!`。 再次运行应用。 输出将包含 `Tweet!`
+可选练习：可通过扩展此项目来添加新的宠物类型，例如 `Bird`。 使鸟的 `TalkToOwner` 方法向所有者发出 `Tweet!`。 再次运行应用。 输出将包含 `Tweet!`
 
 ### <a name="testing-the-sample"></a>测试示例
 
 `NewTypes` 项目已准备就绪，与宠物相关的类型均置于一个文件夹中，因此具有良好的组织。 接下来，创建测试项目，并使用 [xUnit](https://xunit.github.io/) 测试框架开始编写测试。 使用单元测试，可自动检查宠物类型的行为，确认其正常运行。
 
-创建 test 文件夹，并在其中包含一个 NewTypesTests 文件夹。 在 NewTypesTests 文件夹的命令提示符中，执行 `dotnet new xunit`。 这将生成两个文件：NewTypesTests.csproj 和 UnitTest1.cs。
+导航回 src 文件夹并创建“test”文件夹，后者包含 NewTypesTests 文件夹。 在 NewTypesTests 文件夹的命令提示符中，执行 `dotnet new xunit`。 这将生成两个文件：NewTypesTests.csproj 和 UnitTest1.cs。
 
 测试项目当前无法测试 `NewTypes` 中的类型，并且需要对 `NewTypes` 项目的项目引用。 要添加项目引用，请使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
 
 ```
-dotnet add reference ../../src/NewTypes/NewTypes.csproj
+dotnet add reference ../../NewTypes/NewTypes.csproj
 ```
 
-还可以选择向 NewTypesTests.csproj 文件添加 `<ItemGroup>` 节点，手动添加项目引用：
+或者，可以选择向 NewTypesTests.csproj 文件添加 `<ItemGroup>` 节点，手动添加项目引用：
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 
@@ -144,22 +144,22 @@ public class PetTests
     {
         string expected = "Woof!";
         string actual = new Dog().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
-    
+
     [Fact]
     public void CatTalkToOwnerReturnsMeow()
     {
         string expected = "Meow!";
         string actual = new Cat().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
 }
 ```
 
-可选练习：如果先前向所有者添加了生成 `Tweet!` 的 `Bird` 类型，请向 PetTests.cs 文件 `BirdTalkToOwnerReturnsTweet` 添加测试方法，检查对于 `Bird` 类型，`TalkToOwner` 方法是否正常工作。
+可选练习：如果先前向所有者添加了生成 `Tweet!` 的 `Bird` 类型，请向 PetTests.cs 文件 `BirdTalkToOwnerReturnsTweet` 添加测试方法，以检查对于 `Bird` 类型，`TalkToOwner` 方法是否正常工作。
 
 > [!NOTE]
 > 尽管期望 `expected` 和 `actual` 值相等，但使用 `Assert.NotEqual` 检查的初始断言表明这些值并不相等。 务必最初创建一个失败的测试，以检查测试的逻辑是否正确。 确认测试失败后，调整断言，使测试通过。
@@ -184,9 +184,8 @@ public class PetTests
 
 在 test/NewTypesTests 目录中开始。 使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令还原测试项目。 使用 [`dotnet test`](../tools/dotnet-test.md) 命令运行测试。 此命令启动项目文件中指定的测试运行程序。
 
- [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
- 
 测试按预期失败，控制台显示以下输出：
 
 ```
@@ -238,4 +237,3 @@ Test execution time: 1.6029 Seconds
 测试通过。 在与所有者谈话时，宠物类型的方法返回正确的值。
 
 你已了解使用 xUnit 来组织和测试项目的方法。 继续使用这些方法，将它们应用于自己的项目中。 祝你编码愉快！
-

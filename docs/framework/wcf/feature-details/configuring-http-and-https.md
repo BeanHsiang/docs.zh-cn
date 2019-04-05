@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 36dbf725dfcd6fefe6482f7de69daea9356d3d07
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087694"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738924"
 ---
 # <a name="configuring-http-and-https"></a>配置 HTTP 和 HTTPS
 WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Internet Information Services (IIS) 或命令行工具可以配置 HTTP/HTTPS 设置。 当某个 WCF 服务承载于 IIS 之下时，可以在 IIS 中配置 HTTP 或 HTTPS 设置（使用 inetmgr.exe 工具）。 如果 WCF 服务是自承载的，则可使用命令行工具配置 HTTP 或 HTTPS 设置。  
@@ -32,8 +32,8 @@ WCF 服务和客户端可以通过 HTTP 和 HTTPS 通信。 通过使用 Interne
   
  下面演示的是带有 `set urlacl` 选项的 Httpcfg 命名的语法。  
   
-```  
-httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL  
+```console  
+httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /a ACL  
 ```  
   
  使用 `/u` 时需要 `set urlacl` 参数。 该参数接受一个包含完全限定的 URL 的字符串，该 URL 用作所要生成的预留的记录密钥。  
@@ -42,14 +42,14 @@ httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL
   
  下面演示的是一个使用此命令的示例。  
   
-```  
+```console  
 httpcfg.exe set urlacl /u http://myhost:8000/ /a "O:AOG:DAD:(A;;RPWPCCDCLCSWRCWDWOGA;;;S-1-0-0)"  
 ```  
   
 ### <a name="running-windows-vista-windows-server-2008-r2-or-windows-7"></a>运行 Windows Vista、Windows Server 2008 R2 或 Windows 7  
  如果在 [!INCLUDE[wv](../../../../includes/wv-md.md)]、Windows Server 2008 R2 或 Windows 7 上运行，则使用 Netsh.exe 工具。 下面演示的是一个使用此命令的示例。  
   
-```  
+```console  
 netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user  
 ```  
   
@@ -63,7 +63,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
   
  证书将根据连接的 IP 地址和端口号存储在一个中央存储区中。 特殊的 IP 地址 0.0.0.0 可以与本地计算机的任何 IP 地址相匹配。 请注意，证书存储区不会基于路径区分 URL。 即使服务的 URL 中的路径不同，带有相同 IP 地址和端口组合的服务也必须共享证书。  
   
- 有关分步说明，请参阅[如何： 使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+ 有关分步说明，请参阅[如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
 ## <a name="configuring-the-ip-listen-list"></a>配置 IP 侦听列表  
  在用户注册一个 URL 之后，HTTP 服务器 API 只绑定到一个 IP 地址和端口。 默认情况下，对于计算机的所有 IP 地址，HTTP 服务器 API 将绑定到所注册的 URL 中的端口。 如果不使用 HTTP 服务器 API 的应用程序先前已经绑定到该 IP 地址和端口的组合，则会引起冲突。 IP 侦听列表允许 WCF 服务与某些计算机的 IP 地址使用的端口的应用程序共存。 如果 IP 侦听列表包含任何项，则 HTTP 服务器 API 只绑定到该列表指定的那些 IP 地址。 修改 IP 侦听列表需要管理特权。  
@@ -71,14 +71,14 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
 ### <a name="running-windows-xp-or-server-2003"></a>运行 Windows XP 或 Server 2003  
  使用 httpcfg 工具修改 IP 侦听列表，如下面的示例所示。 [Windows 支持工具文档](https://go.microsoft.com/fwlink/?LinkId=94840)说明了 httpcfg.exe 工具的语法。  
   
-```  
+```console  
 httpcfg.exe set iplisten -i 0.0.0.0:8000  
 ```  
   
 ### <a name="running-windows-vista-or-windows-7"></a>运行 Windows Vista 或 Windows 7  
  使用 netsh 工具修改 IP 侦听列表，如下面的示例所示。  
   
-```  
+```console  
 netsh http add iplisten ipaddress=0.0.0.0:8000  
 ```  
   
@@ -90,6 +90,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP 特有的问题  
  IIS 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上不支持端口共享。 如果 IIS 正在运行并且 WCF 服务尝试与同一个端口使用的命名空间，WCF 服务将无法启动。 IIS 和 WCF 均默认设置使用端口 80。 请更改其中一个服务的端口分配或使用 IP 侦听列表将分配到 IIS 未使用的网络适配器的 WCF 服务。 IIS 6.0 和更高版本已经过重新设计，可以使用 HTTP 服务器 API。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- [如何：使用 SSL 证书配置端口](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

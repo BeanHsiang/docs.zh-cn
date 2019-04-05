@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dfb31a2fad8a07b3821ac85bbb43b25693f11d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed615ea641293f8ea3fdf962e3f84d602934df60
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404089"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494683"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder 方法
-将嵌套类型的类型转发器添加到给定的程序集的类型表。  
+将嵌套类型的类型转发器添加到给定的程序集的 type 表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +40,7 @@ HRESULT ExportNestedTypeForwarder(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `AssemblyID`  
  要从导出的程序集的 ID。  
   
@@ -54,7 +54,7 @@ HRESULT ExportNestedTypeForwarder(
  父类型的令牌。  
   
  `pszTypename`  
- 要导出的完全限定的类型名称。  
+ 若要导出的完全限定的类型名称。  
   
  `dwFlags`  
  `ComType` 标志，如`tdPublic`或`tdNested`。  
@@ -63,12 +63,12 @@ HRESULT ExportNestedTypeForwarder(
  收到的导出类型的令牌。 这是只需将发出嵌套的类型。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功，则返回，则为 S_OK。  
+ 如果该方法成功，返回，则为 S_OK。  
   
 ## <a name="requirements"></a>要求  
  需要 alink.h  
   
-## <a name="see-also"></a>请参阅  
- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>请参阅
+- [IALink 接口](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 接口](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

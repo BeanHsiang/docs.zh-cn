@@ -1,5 +1,5 @@
 ---
-title: CodeChunkInfo 结构 1
+title: CodeChunkInfo 结构
 ms.date: 03/30/2017
 api_name:
 - CodeChunkInfo
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e3d138700ef06da7b40a88a768a41f3ffcb38eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e9d5ed028045f14012567ecfa86ff6a5c3d419a1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403235"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977911"
 ---
-# <a name="codechunkinfo-structure1"></a>CodeChunkInfo 结构 1
+# <a name="codechunkinfo-structure"></a>CodeChunkInfo 结构
+
 表示内存中的单一代码块。  
   
 ## <a name="syntax"></a>语法  
@@ -39,22 +40,22 @@ typedef struct _CodeChunkInfo {
   
 |成员|描述|  
 |------------|-----------------|  
-|`startAddr`|A`CORDB_ADDRESS`值，该值指定的块区的起始地址。|  
-|`length`|以字节为单位，区块的大小。|  
+|`startAddr`|一个`CORDB_ADDRESS`值，该值指定块的起始地址。|  
+|`length`|以字节为单位的块区的大小。|  
   
 ## <a name="remarks"></a>备注  
- 的单一代码块是属于一个代码对象，如函数的本机代码的区域。  
+ 单一代码块是本机代码的代码对象，例如函数的一部分的区域。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+- [调试结构](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

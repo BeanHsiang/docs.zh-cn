@@ -1,5 +1,6 @@
 ---
-title: protected 关键字（C# 参考）
+title: protected 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - protected
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: cc3c8f81edb68fb26be560c8635e30dfd6e7b372
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6d625b2fd0a1f42a0bde7f68ebc332510a4e56ef
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183173"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239652"
 ---
 # <a name="protected-c-reference"></a>protected（C# 参考）
 
@@ -46,9 +47,9 @@ ms.locfileid: "50183173"
 
 `'Point.x' is inaccessible due to its protection level.`
 
-## <a name="c-language-specification"></a>C# 语言规范
+## <a name="c-language-specification"></a>C# 语言规范  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+有关详细信息，请参阅 [C# 语言规范](../language-specification/index.md)中的[声明的可访问性](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 该语言规范是 C# 语法和用法的权威资料。
 
 ## <a name="see-also"></a>请参阅
 

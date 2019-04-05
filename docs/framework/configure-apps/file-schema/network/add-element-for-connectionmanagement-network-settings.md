@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;connectionManagement （网络设置） 的元素'
+title: connectionManagement -> <add> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: a3b8de254c28aedc21df5baf54bd67527e35b7f9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a7a4cfe952a32c859a113f0903696fec3681f800
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201288"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267611"
 ---
-# <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;添加&gt;connectionManagement （网络设置） 的元素
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<添加 > connectionManagement （网络设置） 的元素
 将 IP 地址或 DNS 名称添加到连接管理列表。  
   
  \<configuration>  
 \<system.net>  
-\<connectionManagement >  
+\<connectionManagement>  
 \<add>  
   
 ## <a name="syntax"></a>语法  
@@ -75,7 +75,7 @@ ms.locfileid: "50201288"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

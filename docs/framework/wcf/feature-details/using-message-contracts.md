@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534415"
 ---
 # <a name="using-message-contracts"></a>使用消息约定
 通常在生成 Windows Communication Foundation (WCF) 应用程序时，开发人员密切关注数据结构和序列化问题而无需自己考虑在其中执行数据的消息的结构。 对于这些应用程序，为参数或返回值创建数据协定的过程很简单。 (有关详细信息，请参阅[Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
@@ -447,6 +447,6 @@ public class OperationDetails
   
  如果要将消息对象作为 `Result` 属性来接收并要使返回的值作为该对象上的属性，请使用 `/messageContract` 命令选项。 这会生成一个签名，该签名会将响应消息作为 `Result` 对象上的 <xref:System.EventArgs> 属性返回。 然后，所有内部返回值就都是响应消息对象的属性了。  
   
-## <a name="see-also"></a>请参阅  
- [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [设计和实现服务](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+## <a name="see-also"></a>请参阅
+- [使用数据协定](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [设计和实现服务](../../../../docs/framework/wcf/designing-and-implementing-services.md)

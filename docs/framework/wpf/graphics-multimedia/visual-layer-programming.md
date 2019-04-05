@@ -9,25 +9,25 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: 13957e60c92a90624882e126fe66aca789b6835a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561730"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376853"
 ---
 # <a name="visual-layer-programming"></a>可视化层编程
-<xref:System.Windows.Media.Visual>对象是一项核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对象，它的主要角色是提供呈现支持。 用户界面控件，如<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.TextBox>，派生自<xref:System.Windows.Media.Visual>类，并使用它来保持其呈现数据。  
+<xref:System.Windows.Media.Visual>对象是一项核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]对象，它的主要角色是提供呈现支持。 用户界面控件，如<xref:System.Windows.Controls.Button>并<xref:System.Windows.Controls.TextBox>，派生自<xref:System.Windows.Media.Visual>类，并使用该类来保持其呈现数据。  
   
 ## <a name="in-this-section"></a>本节内容  
- [可视化层中的命中测试](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [使用 DrawingVisual 对象](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [教程：在 Win32 应用程序中承载视觉对象](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+ [可视化层中的命中测试](hit-testing-in-the-visual-layer.md)  
+ [使用 DrawingVisual 对象](using-drawingvisual-objects.md)  
+ [教程：在 Win32 应用程序中承载视觉对象](tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [帮助主题](visual-layer-programming-how-to-topics.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [WPF 图形呈现概述](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [WPF 图形呈现概述](wpf-graphics-rendering-overview.md)
+- [图形和多媒体](index.md)

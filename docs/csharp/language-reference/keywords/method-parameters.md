@@ -1,17 +1,18 @@
 ---
-title: 方法参数（C# 参考）
+title: 方法参数 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], parameters
 - method parameters [C#]
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
-ms.openlocfilehash: 446a5239fa1de8559dea50f7e8b8869aed0297c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 72917d356ed0fce96502faeef68494c7fdcb214f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564755"
 ---
 # <a name="method-parameters-c-reference"></a>方法参数（C# 参考）
 
@@ -29,6 +30,6 @@ ms.locfileid: "43512780"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [C# 关键字](../../../csharp/language-reference/keywords/index.md)

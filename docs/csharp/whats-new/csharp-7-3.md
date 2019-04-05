@@ -2,12 +2,12 @@
 title: C# 7.3 中的新增功能
 description: C# 7.3 中的新增功能概述
 ms.date: 05/16/2018
-ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873795"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58028684"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 中的新增功能
 
@@ -51,7 +51,7 @@ unsafe struct S
 }
 ```
 
-在早期版本的 C# 中，需要固定变量才能访问属于 `myFixedField` 的整数之一。 现在，将在安全上下文中编译以下代码：
+在早期版本的 C# 中，需要固定变量才能访问属于 `myFixedField` 的整数之一。 现在，以下代码进行编译，而不将变量 `p` 固定到单独的 `fixed` 语句中：
 
 ```csharp
 class C

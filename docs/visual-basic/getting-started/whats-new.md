@@ -1,6 +1,6 @@
 ---
 title: Visual Basic 的新增功能
-ms.date: 10/04/2018
+ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 539fa890a4a7b73c9e1744601d8613a246cb2240
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596808"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新增功能
 
@@ -21,10 +21,13 @@ ms.locfileid: "50194054"
   
 ## <a name="current-version"></a>当前版本
 
-Visual Basic 15.5/Visual Studio 2017 版本 15.5  
-有关新功能，请参阅 [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15.8/Visual Studio 2017 版本 15.8  
+有关新功能，请参阅 [Visual Basic 15.8](#visual-basic-158)
 
 ## <a name="previous-versions"></a>早期版本
+
+Visual Basic 15.5/Visual Studio 2017 版本 15.5  
+有关新功能，请参阅 [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3/Visual Studio 2017 版本 15.3  
 有关新功能，请参阅 [Visual Basic 15.3](#visual-basic-153)
@@ -55,6 +58,39 @@ Visual Basic/Visual Studio .NET 2003
 
 Visual Basic/Visual Studio .NET 2002   
 Visual Basic.NET 的首次发布
+
+## <a name="visual-basic-158"></a>Visual Basic 15.8
+
+**优化的浮点到整数转换**
+
+在以前版本的 Visual Basic 中，[双精度](../language-reference/data-types/double-data-type.md)和[单精度](../language-reference/data-types/single-data-type.md)值到整数的转换的性能相对较差。 Visual Basic 15.8 显著增强了以下情况下的浮点到整数转换的性能：将以下任何方法返回的值传递到一个 [Visual Basic 内部整数转换函数](../language-reference/functions/type-conversion-functions.md)（CByte、CShort、CInt、CLng、CSByte、CUShort、CUInt、CULng）时，或是在 [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) 设置为 `Off` 的情况下将以下任何方法返回的值隐式强制转换为整型类型时：
+
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Single)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Single)?displayProperty=nameWithType>
+- <xref:System.Math.Ceiling(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Floor(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
+
+此优化使代码可以更快运行 -- 对于进行大量到整型类型的转换的代码，可快达两倍。 下面的示例说明了受此优化影响的一些简单方法调用：
+
+```vb
+Dim s As Single = 173.7619
+Dim d As Double = s 
+
+Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
+Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
+Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
+Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
+Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
+
+```
+
+请注意，这会截断而不是舍入浮点值。
 
 ## <a name="visual-basic-155"></a>Visual Basic 15.5
 
@@ -216,5 +252,5 @@ End Interface
   
  现在，编译器会使用正常的重载决策规则来选择最合适的 `GetDetails` 进行调用，你可以在 Visual Basic 中声明接口关系（如示例中所示的这些关系）。  
   
-## <a name="see-also"></a>请参阅  
- [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-in-visual-studio)
+## <a name="see-also"></a>请参阅
+- [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-in-visual-studio)

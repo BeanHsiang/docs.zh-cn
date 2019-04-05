@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: dc2ed1a450921452dee894caeb52c477d501b573
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702772"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758620"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 借助 <xref:System.Threading.EventWaitHandle> 类，线程可以通过发出信号和等待信号进行相互通信。 事件等待句柄（亦简称为“事件”）是可以收到信号以释放一个或多个等待线程的等待句柄。 收到信号后，事件等待句柄便会进行手动或自动重置。 <xref:System.Threading.EventWaitHandle> 类可以表示本地事件等待句柄（本地事件），也可以表示命名系统事件等待句柄（对所有进程可见的命名事件或系统事件）。  
@@ -64,8 +64,7 @@ ms.locfileid: "46702772"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.EventWaitHandle>  
-- <xref:System.Threading.WaitHandle>  
-- <xref:System.Threading.AutoResetEvent>  
-- <xref:System.Threading.ManualResetEvent>  
-- [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+- <xref:System.Threading.EventWaitHandle>
+- <xref:System.Threading.WaitHandle>
+- <xref:System.Threading.AutoResetEvent>
+- <xref:System.Threading.ManualResetEvent>

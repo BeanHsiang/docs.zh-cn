@@ -1,15 +1,15 @@
 ---
-title: 如何： 查找子元素 (XPATH-LINQ to XML) 的子代 (Visual Basic)
+title: 如何：查找子元素 (XPATH-LINQ to XML) 的后代 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: c29e8badd757b41d765e7d68f7ecd45c8dea8a14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 178729640898556244657e6e2917373825a4e51e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643137"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819003"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>如何： 查找子元素 (XPATH-LINQ to XML) 的子代 (Visual Basic)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>如何：查找子元素 (XPATH-LINQ to XML) 的后代 (Visual Basic)
 本主题演示如何获取具有特定名称的子元素的后代元素。  
   
  XPath 表达式为：  
@@ -69,5 +69,6 @@ Results are identical
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

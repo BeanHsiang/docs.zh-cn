@@ -1,17 +1,17 @@
 ---
 title: 设计面向 DDD 的微服务
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 设计面向 DDD 的微服务
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解面向 DDD 的订购微服务及其应用层的设计。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/06/2017
-ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: e41f84a79dc075de05a9e30ccbf3de38175900a2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183498"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464900"
 ---
-# <a name="designing-a-ddd-oriented-microservice"></a>设计面向 DDD 的微服务
+# <a name="design-a-ddd-oriented-microservice"></a>设计面向 DDD 的微服务
 
 域驱动设计 (DDD) 提倡基于与用例相关的真实业务来构建模型。 在构建应用程序的上下文中，DDD 用域来描述问题。 它将独立的问题区域描述为界定的上下文（每个界定的上下文关联一个微服务），并强调使用一种通用的语言来讨论这些问题。 它还提出许多技术概念和模式，如具有充血模型的域实体（无[贫血模型](https://martinfowler.com/bliki/AnemicDomainModel.html)）、值对象、聚合和聚合根（或根实体）规则，用于支持内部实现。 本部分介绍这些内部模式的设计和实现。
 
@@ -33,21 +33,21 @@ ms.locfileid: "50183498"
 
 例如，实体可从数据库进行加载。 相关信息的一部分或全部信息，包括来自其他实体的其他数据，可通过 REST Web API 发送到客户端 UI。 此处的重点是域实体限定在域模型层内，不应将其传播到其不属于的区域（如表示层）。
 
-此外，需要通过聚合根（根实体）控制始终有效的实体（请参阅[设计域模型层中的验证](#designing-validations-in-the-domain-model-layer)部分）。 因此，不应将实体绑定到客户端视图，因为在 UI 级别，某些数据可能仍未进行验证。 这正是 ViewModel（视图模式）的功能所在。 ViewModel 是专为解决表示层需要而创建的数据模型。 域实体并不直接属于 ViewModel。 相反，还需要在 Viewmodel 和域实体之间进行相互转换。
+此外，需要通过聚合根（根实体）控制始终有效的实体（请参阅[设计域模型层中的验证](domain-model-layer-validations.md)部分）。 因此，不应将实体绑定到客户端视图，因为在 UI 级别，某些数据可能仍未进行验证。 这正是 ViewModel（视图模式）的功能所在。 ViewModel 是专为解决表示层需要而创建的数据模型。 域实体并不直接属于 ViewModel。 相反，还需要在 Viewmodel 和域实体之间进行相互转换。
 
 为解决复杂性，务必要通过聚合根来控制一个域模型，以确保与该组实体（聚合）相关的所有固定协定和规则通过单个入口点或入口（聚合根）来执行。
 
-图 9-5 演示如何在 eShopOnContainers 应用程序中实现分层设计。
+图 7-5 演示如何在 eShopOnContainers 应用程序中实现分层设计。
 
-![](./media/image6.png)
+![DDD 微服务（例如，订购）中的三个层。 每层都是一个 VS 项目：应用程序层是 Ordering.API，域层是 Ordering.Domain，基础结构层是 Ordering.Infrastructure。](./media/image6.png)
 
-**图 9-5**。 eShopOnContainers 订单微服务中的 DDD 层
+**图 7-5**。 eShopOnContainers 订单微服务中的 DDD 层
 
-需要将系统设计为每个层只与某个其他层进行通信。 为了更轻松的实现这种设计，应将层实现为不同的类库，因为这样可以清楚地确定库之间的依赖关系。 例如，域模型层不应在任何其他层（域模型类应为普通旧 CLR 对象（简称 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)）类）上设置依赖关系。 如图 9-6 所示，**订单域**层库只在 .NET Core 库或 NuGet 包上具有依赖关系，而在任何其他自定义库（如数据库或持久性库）上不具有依赖关系。
+需要将系统设计为每个层只与某个其他层进行通信。 为了更轻松的实现这种设计，应将层实现为不同的类库，因为这样可以清楚地确定库之间的依赖关系。 例如，域模型层不应在任何其他层（域模型类应为普通旧 CLR 对象（简称 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)）类）上设置依赖关系。 如图 7-6 所示，**Ordering.Domain** 层库只在 .NET Core 库或 NuGet 包上具有依赖项，而在任何其他自定义库（如数据库或持久性库）上不具有依赖项。
 
-![](./media/image7.PNG)
+![显示 Ordering.Domain 依赖项仅依赖于 .NET Core 库的解决方案资源管理器视图。](./media/image7.png)
 
-**图 9-6**。 通过作为库实现的层，可以更好地控制各层之间的依赖关系
+**图7-6**。 通过作为库实现的层，可以更好地控制各层之间的依赖关系
 
 ### <a name="the-domain-model-layer"></a>域模型层
 
@@ -63,7 +63,7 @@ ms.locfileid: "50183498"
 
 大多数新式 ORM 框架（如 Entity Framework Core）允许使用这种方法，以确保域模型类不会耦合到基础结构。 但是使用某些 NoSQL 数据库和框架（如 Azure Service Fabric 中的执行组件和可靠集合）时，并不总是能够获得 POCO 实体。
 
-即使是在需要为域模型遵循持久性忽略原则的情况下，也不应忽略对持久性的关注。 仍然十分有必要了解物理数据模型和模型映射到实体对象模型的方式。 否则就不可能创建设计。
+即使在需要为域模型遵循持久性无感知原则的情况下，也不应忽略对持久性的关注。 仍然十分有必要了解物理数据模型和模型映射到实体对象模型的方式。 否则就不可能创建设计。
 
 但这并不意味可以采用为关系数据库设计的模型，并将其直接移到 NoSQL 或面向文档的数据库。 在某些实体模型中，该模型或许适用，但通常是不适用的。 实体模型仍须遵循某些约束，这些约束基于存储技术和 ORM 技术。
 
@@ -71,7 +71,7 @@ ms.locfileid: "50183498"
 
 现在我们来了解应用层，这里可以再次引用 Eric Evans 的[域驱动设计](https://domainlanguage.com/ddd/)一书中的内容：
 
-**应用层：** 定义软件要完成的作业并指导富有表现力的域对象解决问题。 这一层负责执行对业务具有意义的任务或与其他系统的应用层进行交互时需执行的任务。 这一层很“薄”。 它不包含业务规则或知识，仅针对下一层中域对象之间的协作，协调任务和委派工作。 它不具有反映业务状况的状态，但它可以具有状态，用于反映用户或程序的任务的进度。
+**应用程序层：** 定义软件要完成的作业并指导富有表现力的域对象解决问题。 这一层负责执行对业务具有意义的任务或与其他系统的应用层进行交互时需执行的任务。 这一层很“薄”。 它不包含业务规则或知识，仅针对下一层中域对象之间的协作，协调任务和委派工作。 它不具有反映业务状况的状态，但它可以具有状态，用于反映用户或程序的任务的进度。
 
 .NET 中微服务的应用层通常被编码为 ASP.NET Core Web API 项目。 该项目实现微服务的交互、远程网络访问和从 UI 或客户端应用中使用的外部 Web API。 它包括查询（如果使用 CQRS 方法）、微服务接受的命令，甚至是微服务之间的事件驱动的通信（集成事件）。 表示应用程序层的 ASP.NET Core Web API 不能包含业务规则或域知识（尤其是用于事务或更新的域规则）；这些规则和知识应由域模型类库所有。 应用层须只能协调任务，不能保有或定义任何域状态（域模型）。 它将业务规则的执行委托给域模型类自身（聚合根和域实体），最终在这些域实体内更新数据。
 
@@ -85,26 +85,25 @@ ms.locfileid: "50183498"
 
 为遵循之前提到的[持久性忽略](https://deviq.com/persistence-ignorance/)和[基础结构忽略](https://ayende.com/blog/3137/infrastructure-ignorance)原则，基础结构层不得“污染”域模型层。 必须通过不在框架上设置硬依赖关系，让域模型实体类对用于保存数据的基础结构（EF 或任何其他框架）保持为不可知状态。 域模型层类库应只具有域代码，且仅为 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) 实体类，用于实现软件核心，并完全脱离基础结构技术。
 
-因此，层或类库和项目应最终取决于域模型层（库），但反之则不成立，如图 9-7 中所示。
+因此，层或类库和项目应最终依赖于域模型层（库），但反之则不成立，如图 7-7 所示。
 
-![](./media/image8.png)
+![DDD 服务中的依赖项（应用层）依赖于域和基础结构，基础结构依赖于域，但域不依赖于任何层。](./media/image8.png)
 
-**图 9-7**。 DDD 中层之间的依赖关系
+**图 7-7**。 DDD 中层之间的依赖关系
 
 这一层设计对每个微服务应是独立的。 如之前所述，可以实现遵循 DDD 模式的最复杂的微服务，也可以使用简单的方法实现简单的数据驱动微服务（单个层中的简单 CRUD）。
 
 #### <a name="additional-resources"></a>其他资源
 
--   **DevIQ.Persistence Ignorance principle**（持久性忽略原则）
-    [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
+- **DevIQ.Persistence Ignorance principle** \（持久性无感知原则）
+  [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
 
--   **Oren Eini。Infrastructure Ignorance**（基础结构忽略）
-    [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
+- **Oren Eini。Infrastructure Ignorance** \（基础结构无感知）
+  [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez。Layered Architecture In Domain-Driven Design**（域驱动设计中的分层体系结构）
-    [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
-
+- **Angel Lopez。Layered Architecture In Domain-Driven Design** \（域驱动设计中的分层体系结构）
+  [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
-[上一页](cqrs-microservice-reads.md)
-[下一页](microservice-domain-model.md)
+>[上一页](cqrs-microservice-reads.md)
+>[下一页](microservice-domain-model.md)

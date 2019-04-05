@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac90699cf217aff926003aa545b9cceb11bf58d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4bc72b9c5687654c17a01ee9b4fa9d31dcf50b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556111"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 枚举
 指定接口，.NET Framework 的版本，或在其中引入了接口的 .NET Framework 的版本。  
@@ -145,10 +145,10 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugVersion_4_5`|.NET Framework（包括所有 Service Pack）的版本为 4.5。|4.5|  
 |`ver_ICorDebugManagedCallback`|[ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)|1.0|  
 |`ver_ICorDebugUnmanagedCallback`|[ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md)|1.0|  
-|`ver_ICorDebug`|[Icor 调试](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)|1.0|  
+|`ver_ICorDebug`|[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)|1.0|  
 |`ver_ICorDebugController`|[ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-interface.md)|1.0|  
 |`ver_ICorDebugAppDomain`|[ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md)|1.0|  
-|`ver_ICorDebugAssembly`|[Icor 调试程序集](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)|1.0|  
+|`ver_ICorDebugAssembly`|[ICorDebugAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md)|1.0|  
 |`ver_ICorDebugProcess`|[ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md)|1.0|  
 |`ver_ICorDebugBreakpoint`|[ICorDebugBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-interface.md)|1.0|  
 |`ver_ICorDebugFunctionBreakpoint`|[ICorDebugFunctionBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-interface.md)|1.0|  
@@ -161,7 +161,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugFrame`|[ICorDebugFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)|1.0|  
 |`ver_ICorDebugILFrame`|[ICorDebugILFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-interface.md)|1.0|  
 |`ver_ICorDebugNativeFrame`|[ICorDebugNativeFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-interface.md)|1.0|  
-|`ver_ICorDebugModule`|[Icor 调试模块](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-interface.md)|1.0|  
+|`ver_ICorDebugModule`|[ICorDebugModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-interface.md)|1.0|  
 |`ver_ICorDebugFunction`|[ICorDebugFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-interface1.md)|1.0|  
 |`ver_ICorDebugCode`|[ICorDebugCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)|1.0|  
 |`ver_ICorDebugClass`|[ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)|1.0|  
@@ -222,7 +222,7 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugLatestVersion`|.NET Framework（包括其所有 Service Pack）的版本为最新版本。|-|  
   
 ## <a name="remarks"></a>备注  
- 可以使用调试器`CorDebugInterfaceVersion`中的枚举[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函数来指定调试器支持.NET Framework 的最高版本。  
+ 可以使用调试器`CorDebugInterfaceVersion`中的枚举[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函数指定调试器支持的.NET Framework 的最高版本。  
   
 ## <a name="interface-names"></a>接口名称  
  出现在调试 API 中接口名称的末尾的数字（例如 `ICorDebugThread3` 中的“3”）指定接口版本，而不是 .NET Framework 的版本。 调试 API 中的所有接口名称包括除了 .NET Framework 版本 1 中引入的接口之外的版本号。 接口版本号和 .NET Framework 版本号之间的任何对应关系都是巧合。  
@@ -235,16 +235,16 @@ typedef enum CorDebugInterfaceVersion {
   
 -   .NET Framework 版本 3.0 和 3.5 使用现有 .NET Framework 2.0 接口，并且并未引入任何新接口。  
   
--   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]引入接口版本的混合。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 显示为 `ICorDebugThread` 接口的第三个和第四个版本。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]还引入了的第一个版本`ICorDebugStackWalk`接口和第二个版本`ICorDebugNativeFrame`接口 (`ICorDebugNativeFrame2`)。  
+-   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]引入了多个接口版本。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 显示为 `ICorDebugThread` 接口的第三个和第四个版本。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]还引入了第一版`ICorDebugStackWalk`界面和第二个版本`ICorDebugNativeFrame`接口 (`ICorDebugNativeFrame2`)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

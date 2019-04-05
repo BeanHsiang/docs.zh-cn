@@ -2,12 +2,12 @@
 title: 在数据集中使用 XML
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: cbdc6135a819e2141426f432d163cd49a7b78ac4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 245e893d052a67e79396fb3d9fc7062eea426215
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856434"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667037"
 ---
 # <a name="using-xml-in-a-dataset"></a>在数据集中使用 XML
 通过 ADO.NET，您可以从 XML 流或文档填充 <xref:System.Data.DataSet>。 可以使用 XML 流或文档向 <xref:System.Data.DataSet> 提供数据和/或架构信息。 从 XML 流或文档中提供的信息可以与已存在于 <xref:System.Data.DataSet> 中的现有数据或架构信息进行组合。  
@@ -46,6 +46,6 @@ ms.locfileid: "43856434"
  [ADO.NET 概述](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  描述 ADO.NET 结构和组件，并说明如何使用它们来访问现有的数据源和管理应用程序数据。  
   
-## <a name="see-also"></a>请参阅  
- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

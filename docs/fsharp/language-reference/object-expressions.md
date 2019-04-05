@@ -1,13 +1,13 @@
 ---
-title: 对象表达式 (F#)
-description: '了解如何使用 F # 对象表达式，如果想要避免额外的代码和所需创建一个新开销命名类型。'
-ms.date: 05/16/2016
-ms.openlocfilehash: 1a971044d680d3bf5a6fff38affdaf001d5403b4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: 对象表达式
+description: 了解如何使用F#对象表达式时您想要避免额外的代码和开销所需创建一个新命名类型。
+ms.date: 02/08/2019
+ms.openlocfilehash: c00b2e329a97b86ec2c8c84c143d2aa199875442
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865457"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091664"
 ---
 # <a name="object-expressions"></a>对象表达式
 
@@ -34,7 +34,44 @@ ms.locfileid: "43865457"
 
 下面的示例演示了多种不同类型的对象表达式。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4301.fs)]
+```fsharp
+// This object expression specifies a System.Object but overrides the
+// ToString method.
+let obj1 = { new System.Object() with member x.ToString() = "F#" }
+printfn "%A" obj1
+
+// This object expression implements the IFormattable interface.
+let delimiter(delim1: string, delim2: string, value: string) =
+    { new System.IFormattable with
+        member x.ToString(format: string, provider: System.IFormatProvider) =
+            if format = "D" then
+                delim1 + value + delim2
+            else
+                value }
+
+let obj2 = delimiter("{","}", "Bananas!");
+
+printfn "%A" (System.String.Format("{0:D}", obj2))
+
+// This object expression implements multiple interfaces.
+type IFirst =
+  abstract F : unit -> unit
+  abstract G : unit -> unit
+
+type ISecond =
+  inherit IFirst
+  abstract H : unit -> unit
+  abstract J : unit -> unit
+
+// This object expression implements an interface chain.
+let implementer() =
+    { new ISecond with
+        member this.H() = ()
+        member this.J() = ()
+      interface IFirst with
+        member this.F() = ()
+        member this.G() = () }
+```
 
 ## <a name="using-object-expressions"></a>使用对象表达式
 

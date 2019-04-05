@@ -1,12 +1,12 @@
 ---
 title: 序列化 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 638fdbd31912ffeb284d734e1f8ce2ecd879b540
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858312"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411572"
 ---
 # <a name="serialization-c"></a>序列化 (C#)
 
@@ -14,9 +14,9 @@ ms.locfileid: "43858312"
 
 ## <a name="how-serialization-works"></a>序列化的工作原理
 
-下图展示了序列化的整个过程。
+下图展示了序列化的整个过程：
 
-![序列化图](./media/serialization.gif "序列化")
+![图：序列化](./media/index/serialization-process.gif)
 
 对象被序列化成流，其中不仅包含数据，还包含对象类型的相关信息，如版本、区域性和程序集名称。 可以将此流中的内容存储在数据库、文件或内存中。
 
@@ -68,11 +68,11 @@ XML 序列化将对象的公共字段和属性或方法的参数和返回值序�
 
 设计器序列化是一种特殊形式的序列化，涉及与开发工具相关联的对象暂留。 设计器序列化是指将对象图转换成源文件以供日后用于恢复对象图的过程。 源文件可以包含代码、标记或 SQL 表信息。
 
-##  <a name="BKMK_RelatedTopics"></a>相关主题和示例  
-[演练：在 Visual Studio 中暂留对象 (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
+## <a name="BKMK_RelatedTopics"></a>相关主题和示例  
+[演练：在 Visual Basic 中保持对象 (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 展示了如何使用序列化在实例之间暂留对象数据，以便可以存储值并在下次实例化对象时检索值。
 
-[如何：读取 XML 文件中的对象数据 (C#)](how-to-read-object-data-from-an-xml-file.md)  
+[如何：从 XML 文件读取对象数据 (C#)](how-to-read-object-data-from-an-xml-file.md)  
  介绍如何使用 <xref:System.Xml.Serialization.XmlSerializer> 类读取之前写入 XML 文件的对象数据。
 
 [如何：将对象数据写入 XML 文件 (C#)](how-to-write-object-data-to-an-xml-file.md)  

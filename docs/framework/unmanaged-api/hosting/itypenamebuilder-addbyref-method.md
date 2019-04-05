@@ -17,30 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3118f80086df13681e43ecc0c46c276a9cf9e033
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93b3ae8c83973c4d981fc42d4a8f616c62b1b28a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442126"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371094"
 ---
 # <a name="itypenamebuilderaddbyref-method"></a>ITypeNameBuilder::AddByRef 方法
-此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。  
-  
-## <a name="syntax"></a>语法  
-  
-```  
-HRESULT AddByRef ( );  
-```  
-  
-## <a name="requirements"></a>要求  
- **平台：** WindoSee[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **标头：** MSCorEE.h  
-  
- **库：** 作为 MSCorEE.dll 中的资源  
-  
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>请参阅  
- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+此方法支持 .NET Framework 基础结构，但不适合直接在代码中使用。
+
+## <a name="syntax"></a>语法
+
+```cpp
+HRESULT AddByRef ( );
+```
+
+## <a name="requirements"></a>要求
+
+**平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+**标头：** MSCorEE.h
+
+**库：** 包含为 MSCorEE.dll 中的资源
+
+**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
+## <a name="see-also"></a>请参阅
+
+- [承载接口](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

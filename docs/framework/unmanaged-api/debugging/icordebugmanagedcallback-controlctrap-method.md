@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9758de5c2801f2c55b7eca149569016ec5b9243
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd84293b3414a8622c6b91717e9f1b2f2ce85286
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412748"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472468"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap 方法
-通知调试器 CTRL + C 困在正在调试的进程。  
+通知调试器 CTRL + C 正在调试的进程中捕获。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,9 +35,9 @@ HRESULT ControlCTrap (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pProcess`  
- [in]指向一个表示在其中捕获 CTRL + C 的过程的 ICorDebugProcess 对象的指针。  
+ [in]指向表示在其中捕获 CTRL + C 流程 ICorDebugProcess 对象的指针。  
   
 ## <a name="return-value"></a>返回值  
   
@@ -47,16 +47,16 @@ HRESULT ControlCTrap (
 |S_FALSE|调试器不会处理 CTRL + C 陷阱。|  
   
 ## <a name="remarks"></a>备注  
- 此回调将会停止进程内的所有应用程序域。  
+ 此回调的情况下，进程内的所有应用程序域都已停止。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugManagedCallback 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;p e&gt;元素'
+title: <appDomainManagerType> 元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainManagerType element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fb771d58a99e42ad53a465008e8848cff0a87fd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 25a3bf60986b571b473561d4258a76624bbfc982
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743480"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262473"
 ---
-# <a name="ltappdomainmanagertypegt-element"></a>&lt;p e&gt;元素
+# <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > 元素
 指定用作默认应用程序域的应用程序域管理器的类型。  
   
  \<configuration>  
 \<运行时 >  
-\<p e >  
+\<appDomainManagerType>  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,7 +35,7 @@ ms.locfileid: "32743480"
   
 |特性|描述|  
 |---------------|-----------------|  
-|`value`|必需的特性。 指定的类型，包括用作进程内的默认应用程序域的应用程序域管理器的命名空间的名称。|  
+|`value`|必需的特性。 指定的类型，包括用作默认应用程序域过程中的应用程序域管理器的命名空间的名称。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -48,20 +48,20 @@ ms.locfileid: "32743480"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 若要指定应用程序域管理器的类型，你必须同时指定此元素与[ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)元素。 如果未指定任一这些元素，另一个被忽略。  
+ 若要指定应用程序域管理器的类型，您必须同时指定此元素以及[ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)元素。 如果未指定这些元素之一，另一个被忽略。  
   
- 加载默认应用程序域后，<xref:System.TypeLoadException>如果中由指定的程序集不存在指定的类型，将引发[ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)元素; 和进程无法将到开始日期。  
+ 加载默认应用程序域时，<xref:System.TypeLoadException>如果中由指定的程序集不存在指定的类型，则引发[ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)元素; 并且到进程失败开始日期。  
   
- 当指定默认应用程序域的应用程序域管理器类型时，从默认应用程序域创建其他应用程序域继承的应用程序域管理器类型。 使用<xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>和<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>属性以指定新的应用程序域不同的应用程序域管理器类型。  
+ 指定默认应用程序域的应用程序域管理器类型，请从默认应用程序域创建其他应用程序域将继承的应用程序域管理器类型。 使用<xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>和<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>属性以指定新的应用程序域是不同的应用程序域管理器类型。  
   
- 指定的应用程序域管理器类型要求应用程序具有完全信任。 （例如，在桌面上运行的应用程序具有完全信任。）如果应用程序不具有完全信任，<xref:System.TypeLoadException>引发。  
+ 指定应用程序域管理器类型要求具有完全信任的应用程序。 （例如，在桌面上运行的应用程序具有完全信任。）如果应用程序不具有完全信任，<xref:System.TypeLoadException>引发。  
   
  类型和命名空间的格式是相同的格式用于<xref:System.Type.FullName%2A?displayProperty=nameWithType>属性。  
   
- 此配置元素可仅用于[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]及更高版本。  
+ 此配置元素是仅适用于[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]及更高版本。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何指定进程的默认应用程序域的应用程序域管理器是`MyMgr`键入`AdMgrExample`程序集。  
+ 下面的示例演示如何指定进程的默认应用程序域的应用程序域管理器是`MyMgr`中键入`AdMgrExample`程序集。  
   
 ```xml  
 <configuration>  
@@ -73,10 +73,10 @@ ms.locfileid: "32743480"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
- [\<appDomainManagerAssembly > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [SetAppDomainManagerType 方法](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
+- <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
+- [\<appDomainManagerAssembly > 元素](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [SetAppDomainManagerType 方法](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

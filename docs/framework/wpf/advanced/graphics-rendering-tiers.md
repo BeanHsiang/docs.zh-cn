@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 9fb24e13ab684170baf5ac3001d3a2d4bcd6df7e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357516"
 ---
 # <a name="graphics-rendering-tiers"></a>图形呈现层
 呈现层为运行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序的设备定义图形硬件功能和性能级别。  
@@ -90,7 +90,7 @@ ms.locfileid: "44086032"
 |使用的光栅化内容 <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|通过使用呈现任何内容<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>方法的<xref:System.Windows.Media.Imaging.RenderTargetBitmap>。|  
 |使用的平铺的内容 <xref:System.Windows.Media.TileBrush>|在其中的内容的任何平铺<xref:System.Windows.Media.TileBrush.TileMode%2A>的属性<xref:System.Windows.Media.TileBrush>设置为<xref:System.Windows.Media.TileMode.Tile>。|  
 |超过图形硬件最大纹理大小的图面|对大多数图形硬件而言，大型图面是指达到 2048x2048 或 4096x4096 像素大小的图面。|  
-|视频 RAM 要求超过图形硬件内存的任何操作|可使用 Windows SDK 中的 [WPF 性能套件](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)包含的分析器工具来监视应用程序视频 RAM 的使用情况。|  
+|视频 RAM 要求超过图形硬件内存的任何操作|可使用 Windows SDK 中的 [WPF 性能套件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))包含的分析器工具来监视应用程序视频 RAM 的使用情况。|  
 |分层窗口|分层窗口允许 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 应用程序将内容呈现到非矩形窗口中的屏幕。 在支持 Windows 显示驱动程序模型 (WDDM) 的操作系统（如 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)]）上，分层窗口采用硬件加速。 在 [!INCLUDE[winxp](../../../../includes/winxp-md.md)] 等其他系统上，分层窗口是通过软件来呈现的，未采用硬件加速。<br /><br /> 可以启用分层的窗口中[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]通过设置以下<xref:System.Windows.Window>属性：<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
@@ -107,7 +107,7 @@ ms.locfileid: "44086032"
 |**必需的视频驱动程序日期设置**|指定系统是否对 2004 年 11 月之前发布的驱动程序禁用硬件加速。|  
 |**使用参考光栅器选项**|指定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是否应使用参考光栅器。|  
   
- 知道如何引用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 注册表设置的任何外部配置实用工具都可以访问这些设置。 还可以直接使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 注册表编辑器来访问这些值，从而创建或修改这些设置。 有关详细信息，请参阅[图形呈现注册表设置](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)。  
+ 知道如何引用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 注册表设置的任何外部配置实用工具都可以访问这些设置。 还可以直接使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 注册表编辑器来访问这些值，从而创建或修改这些设置。 有关详细信息，请参阅[图形呈现注册表设置](../graphics-multimedia/graphics-rendering-registry-settings.md)。  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF 性能分析工具  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了一套性能分析工具，此工具可帮助分析应用程序的运行时行为，并确定可应用的性能优化类型。 下表列出了 [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] 工具中包括的性能分析工具，WPF 性能套件：  
@@ -117,7 +117,7 @@ ms.locfileid: "44086032"
 |分析器|用于分析呈现行为。|  
 |可视化探查器|用于按可视化树中的元素分析 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 服务（如布局和事件处理）的使用。|  
   
- WPF 性能套件提供丰富的性能数据的图形视图。 有关 WPF 性能工具的详细信息，请参阅 [WPF 性能套件](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)。  
+ WPF 性能套件提供丰富的性能数据的图形视图。 有关 WPF 性能工具的详细信息，请参阅 [WPF 性能套件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))。  
   
 ### <a name="directx-diagnostic-tool"></a>DirectX 诊断工具  
  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 诊断工具 Dxdiag.exe 旨在帮助你解决与 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 有关的问题。 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 诊断工具的默认安装文件夹是：  
@@ -126,13 +126,13 @@ ms.locfileid: "44086032"
   
  运行 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 诊断工具时，主窗口中包含一组可用于显示和诊断 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 相关信息的选项卡。 例如，“系统”选项卡提供有关计算机的系统信息，并指定安装在计算机上的 [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 版本。  
   
- ![屏幕截图： DirectX 诊断工具](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![屏幕快照：DirectX 诊断工具](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 “DirectX 诊断工具”主窗口  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.RenderCapability>  
- <xref:System.Windows.Media.RenderOptions>  
- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [WPF 性能套件](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)  
- [图形呈现注册表设置](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [动画提示和技巧](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.RenderCapability>
+- <xref:System.Windows.Media.RenderOptions>
+- [优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)
+- [WPF 性能套件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
+- [图形呈现注册表设置](../graphics-multimedia/graphics-rendering-registry-settings.md)
+- [动画提示和技巧](../graphics-multimedia/animation-tips-and-tricks.md)

@@ -1,5 +1,6 @@
 ---
-title: is（C# 参考）
+title: is - C# 参考
+ms.custom: seodec18
 ms.date: 02/17/2017
 f1_keywords:
 - is_CSharpKeyword
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 037144c47a97a44cad504882fdf8c88caf4918d7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121295"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977041"
 ---
-# <a name="is-c-reference"></a>is（C# 参考） #
+# <a name="is-c-reference"></a>is（C# 参考）
 
 检查对象是否与给定类型兼容，或（从 C# 7.0 开始）针对某个模式测试表达式。
 
-## <a name="testing-for-type-compatibility"></a>类型兼容性测试 ##
+## <a name="testing-for-type-compatibility"></a>类型兼容性测试
 
 `is` 关键字在运行时评估类型兼容性。 它确定对象实例或表达式结果是否可转换为指定类型。 语法如下：
 
@@ -55,7 +56,7 @@ ms.locfileid: "49121295"
 
 从 C# 7.0 开始，可以使用[类型模式](#type)的模式匹配来编写代码，代码使用 `is` 语句更为简洁。
 
-## <a name="pattern-matching-with-is"></a>利用 `is` 的模式匹配 ##
+## <a name="pattern-matching-with-is"></a>利用 `is` 的模式匹配
 
 从 C# 7.0 开始，`is` 和 [switch](../../../csharp/language-reference/keywords/switch.md) 语句支持模式匹配。 `is` 关键字支持以下模式：
 
@@ -103,7 +104,7 @@ ms.locfileid: "49121295"
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" />常量模式 ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" />常量模式
 
 使用常量模式执行模式匹配时，`is` 会测试表达式结果是否等于指定常量。 在 C# 6 和更低版本中，[switch](switch.md) 语句支持常量模式。 从 C# 7.0 开始，`is` 语句也支持常量模式。 语法为：
 
@@ -159,8 +160,8 @@ ms.locfileid: "49121295"
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)  
-- [as](../../../csharp/language-reference/keywords/as.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [typeof](../../../csharp/language-reference/keywords/typeof.md)
+- [as](../../../csharp/language-reference/keywords/as.md)
 - [运算符关键字](../../../csharp/language-reference/keywords/operator-keywords.md)

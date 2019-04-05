@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c283d3c87effcf9e898bb769cc8991da6cea453
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cd0719fbc84159fdf751b136c2a65b0ce40b42ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44199617"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665183"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 访问强类型 XML 数据
 作为 XPath 2.0 数据模型的实例，<xref:System.Xml.XPath.XPathNavigator> 类可以包含映射到公共语言运行库 (CLR) 类型的强类型数据。 根据 XPath 2.0 数据模型，只有元素和属性可以包含强类型数据。 <xref:System.Xml.XPath.XPathNavigator> 类提供将 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 对象中的数据作为强类型数据访问的机制，以及将一种数据类型转换为另一种数据类型的机制。  
@@ -34,7 +34,7 @@ ms.locfileid: "44199617"
 ## <a name="xpathnavigator-typed-accessors"></a>XPathNavigator 类型化访问器  
  下表显示 <xref:System.Xml.XPath.XPathNavigator> 类中可以用于访问节点的类型信息的各种属性和方法。  
   
-|属性|描述|  
+|Property|说明|  
 |--------------|-----------------|  
 |<xref:System.Xml.XPath.XPathNavigator.XmlType%2A>|此属性包含节点（如果有效）的 XML 架构类型信息。|  
 |<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>|此属性包含在验证之后添加的节点的后架构验证信息集。 其中包括 XML 架构类型信息以及有效性信息。|  
@@ -54,7 +54,7 @@ ms.locfileid: "44199617"
   
 1.  验证结果：有关元素或属性是否已成功验证的信息。 此信息通过 <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> 类的 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 属性的 <xref:System.Xml.XPath.XPathNavigator> 属性公开。  
   
-2.  默认信息：有关元素或属性的值是否已通过架构中指定的默认值获取的信息。 此信息通过 <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> 类的 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 属性的 <xref:System.Xml.XPath.XPathNavigator> 属性公开。  
+2.  默认的信息：有关元素或属性的值是否已通过架构中指定的默认值获取的信息。 此信息通过 <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> 类的 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 属性的 <xref:System.Xml.XPath.XPathNavigator> 属性公开。  
   
 3.  类型批注：对架构组件的参考，可能是类型定义或元素和属性的声明。 <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> 的 <xref:System.Xml.XPath.XPathNavigator> 属性包含节点（如果有效）的特定类型信息。 如果节点的有效性未知，例如节点在验证后进行了编辑， <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> 属性将设置为 `null`，但是类型信息仍可以通过 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 类的 <xref:System.Xml.XPath.XPathNavigator> 属性的各种属性访问。  
   
@@ -187,11 +187,11 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
-- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
-- [使用 XPathNavigator 的属性和命名空间节点定位](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [System.Xml 类中的类型支持](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+- [使用 XPath 数据模型处理 XML 数据](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [使用 XPathNavigator 的节点集定位](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
+- [使用 XPathNavigator 的属性和命名空间节点定位](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
 - [使用 XPathNavigator 提取 XML 数据](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)

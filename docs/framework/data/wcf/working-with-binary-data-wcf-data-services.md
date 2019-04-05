@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 9f7ee114a5a480d470c2c32b5b83e287b07e9537
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 44507d8e746584ecf8efaa0b361d1707eae50156
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570585"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>处理二进制数据（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库，可检索和更新二进制数据，从[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]源中的以下方法之一：  
@@ -25,7 +25,7 @@ ms.locfileid: "43515550"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 实现的流式处理的二进制数据中定义通过 HTTP [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。 在这种机制，二进制数据视为是分开的媒体资源，但与实体，这称为媒体链接入口相关。 有关详细信息，请参阅[流式处理提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。  
   
 > [!TIP]
->  有关如何创建下载二进制图像文件从一个 Windows Presentation Foundation (WPF) 客户端应用程序的分步示例[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务，用于存储照片，请参阅博文[数据服务流提供程序系列的一部分2： 从客户端访问媒体资源 Stream](https://go.microsoft.com/fwlink/?LinkId=201637)。 若要下载博客文章中的流照片数据服务的示例代码，请参阅[流照片数据服务示例](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN 代码库中。  
+>  有关如何创建下载二进制图像文件从一个 Windows Presentation Foundation (WPF) 客户端应用程序的分步示例[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务，用于存储照片，请参阅博文[数据服务流提供程序系列的一部分2:从客户端访问媒体资源 Stream](https://go.microsoft.com/fwlink/?LinkId=201637)。 若要下载博客文章中的流照片数据服务的示例代码，请参阅[流照片数据服务示例](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN 代码库中。  
   
 ## <a name="entity-metadata"></a>实体元数据  
  具有相关媒体资源流的实体由应用于实体类型（媒体链接入口）的 `HasStream` 属性在数据服务元数据中表示。 在以下示例中，`PhotoInfo`实体为媒体链接入口具有相关的媒体资源，由指示`HasStream`属性。  
@@ -38,7 +38,7 @@ ms.locfileid: "43515550"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]客户端库提供了从基于 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的数据服务访问二进制资源流的方法。 下载媒体资源时，可以使用媒体资源的 URI，也可以获取一个包含媒体资源数据本身的二进制流。 还可以上载媒体资源数据作为一个二进制流。  
   
 > [!TIP]
->  有关如何创建下载二进制图像文件从一个 Windows Presentation Foundation (WPF) 客户端应用程序的分步示例[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务，用于存储照片，请参阅博文[数据服务流提供程序系列的一部分2： 从客户端访问媒体资源 Stream](https://go.microsoft.com/fwlink/?LinkId=201637)。 若要下载博客文章中的流照片数据服务的示例代码，请参阅[流照片数据服务示例](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN 代码库中。  
+>  有关如何创建下载二进制图像文件从一个 Windows Presentation Foundation (WPF) 客户端应用程序的分步示例[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]服务，用于存储照片，请参阅博文[数据服务流提供程序系列的一部分2:从客户端访问媒体资源 Stream](https://go.microsoft.com/fwlink/?LinkId=201637)。 若要下载博客文章中的流照片数据服务的示例代码，请参阅[流照片数据服务示例](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN 代码库中。  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>获取二进制流的 URI  
  检索某些类型的媒体资源（如图像和其他媒体文件）时，在应用程序中使用媒体资源的 URI 通常比处理二进制数据流本身更容易。 要获取与给定媒体链接入口相关联的资源流的 URI，必须对跟踪实体的 <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> 实例调用 <xref:System.Data.Services.Client.DataServiceContext> 方法。 下面的示例揭示了如何调用 <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> 方法以获取用于在客户端上创建新图像的媒体资源流的 URI：  
@@ -66,6 +66,6 @@ ms.locfileid: "43515550"
 > [!NOTE]
 >  调用 <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> 时，只有在调用 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 之后，才会将流发送到数据服务。  
   
-## <a name="see-also"></a>请参阅  
- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [将数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+## <a name="see-also"></a>请参阅
+- [WCF Data Services 客户端库](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [将数据绑定到控件](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

@@ -1,14 +1,6 @@
 ---
-title: "ETaskType 枚举"
-ms.custom: 
+title: ETaskType 枚举
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ETaskType
 api_location:
@@ -22,20 +14,17 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a7973b8cbd49858daaf6f08d55c7d9f60f687a72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59fdc3d4682fe3c1967c8153043dc1bfe0668c35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610534"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType 枚举
-包含值，用于指示表示通过以下任一方法的任务的类型[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)或[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)接口。  
+包含指示表示通过以下任一方法的任务的类型值[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)或[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -59,26 +48,26 @@ typedef enum ETaskType {
   
 |成员|描述|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|接口表示一个应用程序域卸载任务。|  
-|`TT_DEBUGGERHELPER`|接口表示调试器帮助程序任务。|  
-|`TT_FINALIZER`|接口表示终结器任务。|  
-|`TT_GC`|接口表示垃圾回收作业。|  
-|`TT_THREADPOOL_GATE`|接口表示入口线程任务。|  
-|`TT_THREADPOOL_IOCOMPLETION`|接口表示一个 I/O 线程任务或完成端口线程任务。|  
-|`TT_THREADPOOL_TIMER`|接口表示计时器线程任务。|  
-|`TT_THREADPOOL_WAIT`|接口表示等待线程任务。|  
-|`TT_THREADPOOL_WORKER`|接口表示一个工作线程任务。|  
-|`TT_UNKNOWN`|任务是未知的。|  
-|`TT_USER`|接口表示一个用户任务。|  
+|`TT_ADUNLOAD`|该接口表示应用程序域正在卸载任务。|  
+|`TT_DEBUGGERHELPER`|该接口表示调试器帮助程序任务。|  
+|`TT_FINALIZER`|该接口表示终结器任务。|  
+|`TT_GC`|该接口表示垃圾回收任务。|  
+|`TT_THREADPOOL_GATE`|该接口表示入口线程任务。|  
+|`TT_THREADPOOL_IOCOMPLETION`|该接口表示一个 I/O 线程任务或完成端口线程任务。|  
+|`TT_THREADPOOL_TIMER`|该接口表示计时器线程任务。|  
+|`TT_THREADPOOL_WAIT`|该接口表示等待线程任务。|  
+|`TT_THREADPOOL_WORKER`|该接口表示工作线程任务。|  
+|`TT_UNKNOWN`|该任务是未知的。|  
+|`TT_USER`|该接口表示一个用户任务。|  
   
-## <a name="requirements"></a>惠?  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+## <a name="requirements"></a>要求  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

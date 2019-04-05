@@ -1,17 +1,17 @@
 ---
-title: '&lt;特性暗示&gt;元素 (.NET Native)'
+title: <AttributeImplies>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 960ee5716b9760ab82628a8d21728cd6675e5215
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be5412e323b1c4930d7e17d09faa174885611884
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395435"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254972"
 ---
-# <a name="ltattributeimpliesgt-element-net-native"></a>&lt;特性暗示&gt;元素 (.NET Native)
+# <a name="attributeimplies-element-net-native"></a>\<特性暗示 > 元素 (.NET Native)
 为包含特性应用的代码元素定义策略。  
   
 ## <a name="syntax"></a>语法  
@@ -67,8 +67,8 @@ ms.locfileid: "33395435"
   
  反射、序列化和互操作特性都是可选项，但必须存在至少一项。  
   
-## <a name="see-also"></a>请参阅  
- [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>请参阅
+- [\<类型 > 元素](../../../docs/framework/net-native/type-element-net-native.md)
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

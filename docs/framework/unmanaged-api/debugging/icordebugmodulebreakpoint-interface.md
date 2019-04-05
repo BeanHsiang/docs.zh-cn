@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModuleBreakpoint 接口 1
+title: ICorDebugModuleBreakpoint 接口
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModuleBreakpoint
@@ -16,21 +16,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c04d5f779306a67e389f768cefdf633f3d72f0ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3916bf8f7792e82ba905554bb32696f81634f819
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416132"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971515"
 ---
-# <a name="icordebugmodulebreakpoint-interface1"></a>ICorDebugModuleBreakpoint 接口 1
-提供对特定模块的访问。 此接口是 ICorDebugBreakpoint 接口的子类。  
+# <a name="icordebugmodulebreakpoint-interface"></a>ICorDebugModuleBreakpoint 接口
+
+提供对特定模块的访问。 此接口是 ICorDebugBreakpoint 接口子类。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetModule 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|ICorDebugModule 引用设有此断点的模块中获取的接口指针。|  
+|[GetModule 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|获取引用模块，在设置此断点 icor 调试模块的接口指针。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -38,13 +39,13 @@ ms.locfileid: "33416132"
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

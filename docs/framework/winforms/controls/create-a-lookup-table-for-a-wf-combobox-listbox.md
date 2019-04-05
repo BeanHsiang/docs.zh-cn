@@ -1,5 +1,5 @@
 ---
-title: 如何：为 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件创建查找表
+title: 如何：为 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件创建查找表
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: b719f2112aac1292b668fe199d48de4b0b60ed21
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: eaa92c2b95d8dd8578b46e44a948127e201bb351
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773084"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724604"
 ---
-# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：为 Windows 窗体 ComboBox 控件、ListBox 控件或 CheckedListBox 控件创建查找表
+# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：为 Windows 窗体 ComboBox、 ListBox 或 CheckedListBox 控件创建查找表
 有时，在 Windows 窗体上以用户友好格式显示数据，但存储数据时使用对程序而言更有意义的格式会很有帮助。 例如，食品订单窗体可能按列表框中的名称显示菜单项。 但是，记录订单的数据表将包含代表该食品的唯一 ID 号。 下表显示如何存储和显示食品订单窗体数据的示例。  
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
@@ -50,7 +50,7 @@ ms.locfileid: "43773084"
   
 2.  连接到数据源。  
   
-3.  在两张表之间建立数据关系。 请参阅[DataRelation 对象介绍](https://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192)。  
+3.  在两张表之间建立数据关系。 请参阅[DataRelation 对象介绍](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120))。  
   
 4.  设置以下属性： 以下属性可在代码或设计器中设置。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "43773084"
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [数据绑定和 Windows 窗体](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [ListBox 控件概述](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- [ComboBox 控件概述](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- [CheckedListBox 控件概述](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- [用于列出选项的 Windows 窗体控件](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>请参阅
+- [数据绑定和 Windows 窗体](../data-binding-and-windows-forms.md)
+- [ListBox 控件概述](listbox-control-overview-windows-forms.md)
+- [ComboBox 控件概述](combobox-control-overview-windows-forms.md)
+- [CheckedListBox 控件概述](checkedlistbox-control-overview-windows-forms.md)
+- [用于列出选项的 Windows 窗体控件](windows-forms-controls-used-to-list-options.md)

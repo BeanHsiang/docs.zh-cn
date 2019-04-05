@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;bypasslist （网络设置） 的元素'
+title: bypasslist -> <add> 元素（网络设置）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: ca1d33b2077736a9760f65857bffe4e96c4aeab0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 702aa8ccefcdddee1ffc5a7519a4f955b1dc5dfb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182211"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265657"
 ---
-# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;添加&gt;bypasslist （网络设置） 的元素
+# <a name="add-element-for-bypasslist-network-settings"></a>\<添加 > bypasslist （网络设置） 的元素
 将 IP 地址或 DNS 名称添加到代理跳过列表。  
   
  \<configuration>  
@@ -80,6 +80,6 @@ ms.locfileid: "50182211"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [网络设置架构](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

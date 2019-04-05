@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202902"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677159"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 系统上的大型对象堆
 
@@ -34,7 +34,7 @@ ms.locfileid: "50202902"
 
 大型对象属于第 2 代，因为只有在第 2 代回收期间才能回收它们。 回收一代时，同时也会回收它前面的所有代。 例如，执行第 1 代 GC 时，将同时回收第 1 代和第 0 代。 执行第 2 代 GC 时，将回收整个堆。 因此，第 2 代 GC 还可称为“完整 GC”。 本文引用第 2 代 GC 而不是完整 GC，但这两个术语是可以互换的。
 
-代可提供 GC 堆的逻辑视图。 实际上，对象存在于托管堆段中。 托管堆段是 GC 通过调用 [VirtualAlloc 功能](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)代表托管代码在操作系统上保留的内存块。 加载 CLR 时，GC 分配两个初始堆段：一个用于小型对象（小型对象堆或 SOH），一个用于大型对象（大型对象堆）。
+代可提供 GC 堆的逻辑视图。 实际上，对象存在于托管堆段中。 托管堆段是 GC 通过调用 [VirtualAlloc 功能](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)代表托管代码在操作系统上保留的内存块。 加载 CLR 时，GC 分配两个初始堆段：一个用于小型对象（小型对象堆或 SOH），一个用于大型对象（大型对象堆）。
 
 然后，通过将托管对象置于这些托管堆段上来满足分配请求。 如果该对象小于 85,000 字节，则将它置于 SOH 的段上，否则，将它置于 LOH 段。 随着分配到各段上的对象越来越多，会以较小块的形式提交这些段。
 对于 SOH，GC 未处理的对象将提升为下一代。 第 0 代回收未处理的对象现在视为第 1 代对象，以此类推。 但是，最后一代回收未处理的对象仍会被视为最后一代中的对象。 也就是说，第 2 代垃圾回收未处理的对象仍是第 2 代对象；LOH 未处理的对象仍是 LOH 对象（由第 2 代回收）。
@@ -47,21 +47,21 @@ ms.locfileid: "50202902"
 
 图 1 说明了一种情况，在第一次第 0 代 GC 后 GC 形成了第 1 代，其中 `Obj1` 和 `Obj3` 被清除；在第一次第 1 代 GC 后形成了第 2 代，其中 `Obj2` 和 `Obj5` 被清除。 请注意此图和下图仅用于说明，它们只包含能更好展示堆上的情况的极少几个对象。 实际上，GC 中通常包含更多的对象。
 
-![图 1：第 0 代 GC 和第 1 代 GC](media/loh/loh-figure-1.jpg)  
+![图 1：第 0 代 GC 和第 1 代 GC](media/loh/loh-figure-1.jpg)\
 图 1：第 0 代和第 1 代 GC。
 
 图 2 显示了第 2 代 GC 发现 `Obj1` 和 `Obj2` 被清除后，GC 在内存中形成了相邻的可用空间，由 `Obj1` 和 `Obj2` 占用，然后用于满足 `Obj4` 的分配要求。 从最后一个对象 `Obj3` 到此段末尾的空间仍可用于满足分配请求。
 
-![图 2：第 2 代 GC 之后](media/loh/loh-figure-2.jpg)  
-图 2：第 2 代 GC 之后
+![图 2：第 2 代 GC 后](media/loh/loh-figure-2.jpg)\
+图 2：第 2 代 GC 后
 
 如果没有足够的可用空间来容纳大型对象分配请求，GC 首先尝试从操作系统获取更多段。 如果失败了，它将触发第 2 代 GC，试图释放部分空间。
 
-在第 1 代或第 2 代 GC 期间，垃圾回收器会通过调用 [VirtualFree 功能](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx)将不包含活动对象的段释放回操作系统。 将退回最后一个活动对象到段末尾的空间（第 0 代/第 1 代存在的短暂段上的空间除外，垃圾回收器会在该段上会保存部分提交内容，因为应用程序将在其中立即分配）。 而且，尽管已重置可用空间，但仍会提交它们，这意味着操作系统无需将其中的数据重新写入磁盘。
+在第 1 代或第 2 代 GC 期间，垃圾回收器会通过调用 [VirtualFree 功能](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree)将不包含活动对象的段释放回操作系统。 将退回最后一个活动对象到段末尾的空间（第 0 代/第 1 代存在的短暂段上的空间除外，垃圾回收器会在该段上会保存部分提交内容，因为应用程序将在其中立即分配）。 而且，尽管已重置可用空间，但仍会提交它们，这意味着操作系统无需将其中的数据重新写入磁盘。
 
-由于 LOH 仅在第 2 代 GC 期间进行回收，所以 LOH 段仅在此类 GC 期间可用。 图 3 说明了一种情况，在此情况下，垃圾回收器将某段（段 2）释放回操作系统并且退回剩余段上更多的空间。 如果需要使用该段末尾的已退回空间来满足大型对象分配请求，它会再次提交该内存。 （有关提交/退回的解释说明，请参阅 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) 的文档）。
+由于 LOH 仅在第 2 代 GC 期间进行回收，所以 LOH 段仅在此类 GC 期间可用。 图 3 说明了一种情况，在此情况下，垃圾回收器将某段（段 2）释放回操作系统并且退回剩余段上更多的空间。 如果需要使用该段末尾的已退回空间来满足大型对象分配请求，它会再次提交该内存。 （有关提交/退回的解释说明，请参阅 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 的文档）。
 
-![图 3：第 2 代 GC 后的 LOH](media/loh/loh-figure-3.jpg)  
+![图 3：第 2 代 GC 后的 LOH](media/loh/loh-figure-3.jpg)\
 图 3：第 2 代 GC 后的 LOH
 
 ## <a name="when-is-a-large-object-collected"></a>何时收集大型对象？
@@ -144,7 +144,7 @@ ms.locfileid: "50202902"
 
 ### <a name="net-clr-memory-performance-counters"></a>.NET CLR 内存性能计数器
 
-这些性能计数器通常是调查性能问题的第一步（但是推荐使用 [ETW 事件](#etw)）。 通过添加所需计数器配置性能监视器，如图 4 所示。 与 LOH 相关的是：
+这些性能计数器通常是调查性能问题的第一步（但是推荐使用 [ETW 事件](#etw-events)）。 通过添加所需计数器配置性能监视器，如图 4 所示。 与 LOH 相关的是：
 
 - 第 2 代回收次数
 
@@ -156,7 +156,7 @@ ms.locfileid: "50202902"
 
 查看性能计数器的常用方法是使用性能监视器 (perfmon.exe)。 使用“添加计数器”可为关注的进程添加感兴趣的计数器。 可将性能计数器数据保存在日志文件中，如图 4 所示。
 
-![图 4：添加性能计数器。](media/loh/perfcounter.png)  
+![图 4：添加性能计数器。](media/loh/perfcounter.png)\
 图 4：第 2 代 GC 后的 LOH
 
 也可以编程方式查询性能计数器。 大部分人在例行测试过程中都采用此方式进行收集。 如果发现计数器显示的值不正常，则可以使用其他方法获得更多详细信息以帮助调查。
@@ -184,8 +184,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 结果类似于以下类容：
 
-![图 5：使用 PerfView 检查 ETW 事件](media/loh/perfview.png)  
-图 5：使用 PerfView 显示的 ETW 事件
+![图 5：使用 PerfView 检查 ETW 事件](media/loh/perfview.png) 图 5：使用 PerfView 显示的 ETW 事件
 
 如下所示，所有 GC 都是第 2 代 GC，并且都由 AllocLarge 触发，这表示分配大型对象会触发此 GC。 我们知道这些分配是临时的，因为“LOH 未清理率 %”列显示为 1%。
 
@@ -197,7 +196,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 收集 AllocationTick 事件，大约每 10 万次分配就会触发该事件。 换句话说，每次分配大型对象都会触发事件。 然后可查看某个 GC 堆分配视图，该视图显示分配大型对象的调用堆栈：
 
-![图 6：GC 堆分配视图](media/loh/perfview2.png)  
+![图 6：GC 堆分配视图](media/loh/perfview2.png)\
 图 6：GC 堆分配视图
 
 如图所示，这是从 `Main` 方法分配大型对象的简单测试。
@@ -302,13 +301,13 @@ LOH 堆大小为 (16,754,224 + 16,699,288 + 16,284,504) = 49,738,016 字节。 �
 
 通常看到的更多是由临时大型对象导致的 VM 碎片，这些对象要求垃圾回收器频繁从操作系统获取新的托管堆段，并将空托管堆段释放回操作系统。
 
-要验证 LOH 是否会生成 VM 碎片，可在 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) 和 [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) 上设置一个断点，查看是谁调用了它们。 例如，如果想知道谁曾尝试从操作系统分配大于 8MBB 的虚拟内存块，可按以下方式设置断点：
+要验证 LOH 是否会生成 VM 碎片，可在 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 和 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) 上设置一个断点，查看是谁调用了它们。 例如，如果想知道谁曾尝试从操作系统分配大于 8MBB 的虚拟内存块，可按以下方式设置断点：
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-只有在分配大小大于 8MB (0x800000) 的情况下调用 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) 时，此命令才会进入调试器并显示调用堆栈。
+只有在分配大小大于 8MB (0x800000) 的情况下调用 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 时，此命令才会进入调试器并显示调用堆栈。
 
 CLR 2.0 增加了称为“VM 囤积”的功能，用于频繁获取和释放段（包括在大型和小型对象堆上）的情况。 若要指定 VM 囤积，可通过托管 API 指定称为 `STARTUP_HOARD_GC_VM` 的启动标记。 CLR 退回这些段上的内存并将其添加到备用列表中，而不会将该空段释放回操作系统。 （请注意 CLR 不会针对太大型的段执行此操作。）CLR 稍后将使用这些段来满足新段请求。 下一次应用需要新段时，CLR 将使用此备用列表中的某个足够大的段。
 

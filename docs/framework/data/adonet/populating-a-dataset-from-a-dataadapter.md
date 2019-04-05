@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: d865f76b1a3e1ef72717fe790d3f1bc8895f8f58
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0756eb0917e812101006f000db07f55f39afda57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43740511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597120"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>从 DataAdapter 填充数据集
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> 是数据的内存驻留表示形式，它提供了独立于数据源的一致关系编程模型。 `DataSet` 表示整个数据集，其中包含表、约束和表之间的关系。 由于 `DataSet` 独立于数据源，因此 `DataSet` 可以包含应用程序本地的数据，也可以包含来自多个数据源的数据。 与现有数据源的交互通过 `DataAdapter`来控制。  
@@ -118,7 +118,7 @@ foreach (DataRow pRow in customerOrders.Tables["Customers"].Rows)
 ```  
   
 ## <a name="sql-server-decimal-type"></a>SQL Server Decimal 类型  
- 默认情况下， `DataSet` 使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据类型存储数据。 对于大多数应用程序，这些类型都提供了一种方便的数据源信息表示形式。 但是，当数据源中的数据类型是 SQL Server decimal 或 numeric 数据类型时，这种表示形式可能会导致问题。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] `decimal` 数据类型最多允许 28 个有效位，而 SQL Server `decimal` 数据类型则允许 38 个有效位。 如果 `SqlDataAdapter` 在 `Fill` 操作过程中确定 SQL Server `decimal` 字段的精度大于 28 个字符，则不会将当前行添加到 `DataTable`。 此时将发生 `FillError` 事件，使您能够确定是否将发生精度损失并作出适当的响应。 有关详细信息`FillError`事件，请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。 若要获取 SQL Server `decimal` 值，还可以使用 <xref:System.Data.SqlClient.SqlDataReader> 对象并调用 <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> 方法。  
+ 默认情况下， `DataSet` 使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 数据类型存储数据。 对于大多数应用程序，这些类型都提供了一种方便的数据源信息表示形式。 但是，当数据源中的数据类型是 SQL Server decimal 或 numeric 数据类型时，这种表示形式可能会导致问题。  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] `decimal` 数据类型最多允许 28 个有效位，而 SQL Server `decimal` 数据类型则允许 38 个有效位。 如果 `SqlDataAdapter` 在 `Fill` 操作过程中确定 SQL Server `decimal` 字段的精度大于 28 个字符，则不会将当前行添加到 `DataTable`。 此时将发生 `FillError` 事件，使您能够确定是否将发生精度损失并作出适当的响应。 有关详细信息`FillError`事件，请参阅[处理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。 若要获取 SQL Server `decimal` 值，还可以使用 <xref:System.Data.SqlClient.SqlDataReader> 对象并调用 <xref:System.Data.SqlClient.SqlDataReader.GetSqlDecimal%2A> 方法。  
   
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 增强了对 <xref:System.Data.SqlTypes> 中的 `DataSet`的支持。 有关详细信息，请参阅 [SqlTypes and the DataSet](../../../../docs/framework/data/adonet/sql/sqltypes-and-the-dataset.md)。  
   
@@ -181,9 +181,9 @@ adapter.Fill(customers, "Customers");
 |ANATR|10308|1|  
 |ANATR|10625|1|  
   
-## <a name="see-also"></a>请参阅  
- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [使用 DbDataAdapter 修改数据](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  
- [多重活动结果集 (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [DataAdapters 和 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [ADO.NET 中的数据类型映射](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
+- [使用 DbDataAdapter 修改数据](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
+- [多重活动结果集 (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 09d9654bf1a2670c77a4a3db2eae2ed7ab6dbfec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9a58dbaeae3f0cd165d72b8fd281b903ad9cca2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532169"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705744"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>如何：自定义绘制 ToolStrip 控件
 <xref:System.Windows.Forms.ToolStrip> 控件具有以下关联的呈现（绘制）类：  
@@ -133,10 +133,10 @@ ms.locfileid: "33532169"
     toolStrip.Renderer = new ToolStripProfessionalRenderer(colorTable);  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.ToolStripSystemRenderer>  
- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
- <xref:System.Windows.Forms.ToolStripRenderer>  
- [具有内置所有者描述支持的控件](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- [如何：在 Windows 窗体中为 ToolStrip 控件创建和设置自定义呈现器](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
- [ToolStrip 控件概述](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.ToolStripSystemRenderer>
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
+- <xref:System.Windows.Forms.ToolStripRenderer>
+- [具有内置所有者描述支持的控件](controls-with-built-in-owner-drawing-support.md)
+- [如何：创建并设置自定义呈现器在 Windows 窗体的 ToolStrip 控件](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [ToolStrip 控件概述](toolstrip-control-overview-windows-forms.md)

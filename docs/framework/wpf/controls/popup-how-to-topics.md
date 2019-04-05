@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Popup control [WPF], how-to topics
 - controls [WPF], Popup
 ms.assetid: 9488a245-0168-4650-b9ab-d075a108cc8f
-ms.openlocfilehash: 4b7bd1398e2630c7f2496c9cc78fe1d20c27c941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80f0d8bb3f78e80868d5294b5893ef409fdf478c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553710"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362521"
 ---
 # <a name="popup-how-to-topics"></a>Popup 帮助主题
-本部分中的主题介绍如何使用<xref:System.Windows.Controls.Primitives.Popup>控件来显示通过当前的应用程序窗口浮动的单独窗口中的内容。  
+在本部分中的主题介绍如何使用<xref:System.Windows.Controls.Primitives.Popup>控件来显示当前的应用程序窗口上浮动的单独窗口中的内容。  
   
 ## <a name="in-this-section"></a>本节内容  
- [为 Popup 设置动画效果](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [指定自定义 Popup 位置](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+ [为 Popup 设置动画效果](how-to-animate-a-popup.md)  
+ [指定自定义 Popup 位置](how-to-specify-a-custom-popup-position.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>相关章节  
- [Popup 概述](../../../../docs/framework/wpf/controls/popup-overview.md)
+ [Popup 概述](popup-overview.md)

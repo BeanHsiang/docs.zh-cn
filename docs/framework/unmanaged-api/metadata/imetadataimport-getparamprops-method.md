@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95850448504fd863f2726a7fb7574436476a6dc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed9bae4fde96f0878e40ed73b81cc8776571ada5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449320"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468053"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps 方法
 获取指定的 ParamDef 标记所引用的参数的元数据值。  
@@ -44,7 +44,7 @@ HRESULT GetParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `tk`  
  [in]表示要返回的元数据的参数的 ParamDef 标记。  
   
@@ -52,10 +52,10 @@ HRESULT GetParamProps (
  [out]指向表示采用参数的方法的 MethodDef 标记的指针。  
   
  `pulSequence`  
- [out]参数的方法自变量列表中的序号位置。  
+ [out]参数的方法参数列表中的序号位置。  
   
  `szName`  
- [out]一个缓冲区来存放参数的名称。  
+ [out]用于保存参数的名称的缓冲区。  
   
  `cchName`  
  [in]请求的大小以宽字符为单位`szName`。  
@@ -64,26 +64,30 @@ HRESULT GetParamProps (
  [out]在宽字符为单位返回的大小`szName`。  
   
  `pdwAttr`  
- [out]指向任何与参数相关联的属性标志的指针。  
+ [out]一个指向任何与参数关联的特性标志。 这是一个位掩码的`CorParamAttr`值。  
   
  `pdwCPlusTypeFlag`  
- [out]该参数是指向该标志指定的指针<xref:System.ValueType>。  
+ [out]该参数是指向一个标志，用于指定的指针<xref:System.ValueType>。  
   
  `ppValue`  
- [out]指向返回由参数的常量字符串的指针。  
+ [out]指向常量字符串的参数返回的指针。  
   
  `pcchValue`  
- [out]大小`ppValue`以宽字符数或为零`ppValue`不包含一个字符串。  
+ [out]大小`ppValue`宽字符，或者，如果零`ppValue`不保存字符串。  
   
+## <a name="remarks"></a>备注
+
+中的顺序值`pulSequence`参数 1 开头。 返回值具有的序列号为 0。
+
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

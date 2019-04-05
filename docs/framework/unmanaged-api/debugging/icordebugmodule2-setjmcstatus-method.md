@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a56b5c31c26dbe5c5371fdb7a10c13ad11847117
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d20c640d6a6a43b7bde4c7d46df470c7bc8c5aa2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419467"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499519"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>ICorDebugModule2::SetJMCStatus 方法
-设置的所有类的所有方法的仅我的代码 (JMC) 状态中到指定的值，除中此 ICorDebugModule2`pTokens`数组，它将设置为的相反值。  
+所有类的所有方法只是我的代码 (JMC) 状态设置为指定的值，除中此 ICorDebugModule2 中`pTokens`数组，它将设置为相反值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,28 +37,28 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `bIsJustMycode`  
- [in]设置为`true`代码是调试; 否则为如果设置为`false`。  
+ [in]设置为`true`的代码是调试; 否则为如果设置为`false`。  
   
  `cTokens`  
  [in] `pTokens` 数组的大小。  
   
  `pTokens`  
- [in]数组`mdToken`值，其中每个是指将具有设置为其 jmc 的方法状态的方法 ！`bIsJustMycode`。  
+ [in]一个数组`mdToken`值，其中每个引用的方法，将具有其 JMC 状态设置为 ！`bIsJustMycode`。  
   
 ## <a name="remarks"></a>备注  
- 中指定每个方法的 JMC 状态`pTokens`数组设置为相反`bIsJustMycode`值。 此模块中的所有其他方法的状态设置为`bIsJustMycode`值。  
+ 中指定每个方法的 JMC 状态`pTokens`数组设置为相反`bIsJustMycode`值。 在此模块中的所有其他方法的状态设置为`bIsJustMycode`值。  
   
- `SetJMCStatus`方法清除在此模块中的所有先前 jmc 的方法设置。  
+ `SetJMCStatus`方法会清除所有以前的 JMC 设置在此模块中。  
   
- `SetJMCStatus`方法返回，则为 S_OK HRESULT，如果所有函数已成功都设置。 它将返回标记一些函数，如果 CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT`true`不是可调试。  
+ `SetJMCStatus`方法返回 S_OK HRESULT，如果已成功设置的所有函数。 它将返回标记一些函数，如果将 CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT`true`不是可调试。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

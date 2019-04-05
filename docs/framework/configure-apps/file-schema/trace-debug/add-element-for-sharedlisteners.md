@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;元素&lt;sharedListeners&gt;'
+title: <add> 的 <sharedListeners> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 93fdb548882422634e1d2456b4d37f434b278f8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: cbce115c6a485c5642a60528614480324e3e5665
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845367"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274003"
 ---
-# <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;添加&gt;元素&lt;sharedListeners&gt;
+# <a name="add-element-for-sharedlisteners"></a>\<添加 > 元素\<sharedListeners >
 将侦听器添加到 `sharedListeners` 集合中。 `sharedListeners` 是侦听器的集合的任何[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以引用。  默认情况下，在侦听器`sharedListeners`集合未按放置`Listeners`集合。 它们肯定会添加到名称[\<源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<跟踪 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不能获取侦听器`sharedListeners`在运行时在代码中的集合。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<sharedListeners > 元素  
-\<add>  
+&nbsp;&nbsp;\<system.diagnostics>  
+&nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners > 元素  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<add>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
-  initializeData="data"/>  
-```  
+  initializeData="data"
+  traceOutputOptions = "None"
+/>  
+```
   
 ## <a name="attributes-and-elements"></a>特性和元素  
  下列各节描述了特性、子元素和父元素。  
@@ -43,7 +43,8 @@ ms.locfileid: "48845367"
 |`name`|必需的特性。<br /><br /> 指定用于将添加到的共享的侦听器的侦听器名称`Listeners`集合。|  
 |`type`|必需的特性。<br /><br /> 指定的侦听器的类型。 必须使用满足要求中指定的字符串[指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |`initializeData`|可选特性。<br /><br /> 传递给构造函数为指定类的字符串。|  
-  
+|`traceOutputOptions`|可选特性。<br/><br/>字符串表示形式的一个或多个<xref:System.Diagnostics.TraceOptions>枚举成员，指示要写入跟踪输出的数据。 由逗号分隔多个项。 默认值为"None"。|
+
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
@@ -107,8 +108,8 @@ ms.locfileid: "48845367"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

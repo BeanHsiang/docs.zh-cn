@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 554ea7c54973852510e539000baf03bdce8e7bcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 590fed6a2a4e59f438dc73057973aff4539cb1aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392559"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589761"
 ---
 # <a name="applying-interop-attributes"></a>应用互操作特性
 <xref:System.Runtime.InteropServices> 命名空间提供三类特定于互操作的特性：在设计时由你应用的特性、在转换进程中由 COM 互操作工具和 API 应用的特性以及由你或 COM 互操作应用的特性。  
@@ -30,7 +30,7 @@ ms.locfileid: "33392559"
 ## <a name="design-time-attributes"></a>设计时特性  
  可以使用设计时特性调整由 COM 互操作工具和 API 执行的转换进程的结果。 下表介绍了可以应用到托管源代码的特性。 有时，COM 互操作工具也可能应用此表中所述的特性。  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|指定应使用自动化封送处理程序还是自定义代理和存根对类型进行封送处理。|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|控制为类生成的接口类型。|  
@@ -57,7 +57,7 @@ ms.locfileid: "33392559"
 ## <a name="conversion-tool-attributes"></a>转换工具特性  
  下表介绍了转换过程期间 COM 互操作工具应用的特性。 不要在设计时应用这些特性。  
   
-|特性|描述|  
+|特性|说明|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|指示参数或字段类型的 COM 别名。 可用于特性参数、字段或返回值。|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|指示有关类或接口的信息从类型库被导入到程序集时丢失。|  
@@ -67,9 +67,9 @@ ms.locfileid: "33392559"
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|包含最初从 COM 类型库为此类型导入的 TYPEFLAGS。|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|包含最初从 COM 类型库为此变量导入的 VARFLAGS。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.InteropServices>  
- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [特性](../../../docs/standard/attributes/index.md)  
- [为互操作限定 .NET 类型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.InteropServices>
+- [向 COM 公开 .NET Framework 组件](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [特性](../../../docs/standard/attributes/index.md)
+- [为互操作限定 .NET 类型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
+- [将 COM 的程序集打包](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

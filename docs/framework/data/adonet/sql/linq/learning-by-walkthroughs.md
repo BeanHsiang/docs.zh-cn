@@ -2,12 +2,12 @@
 title: 通过演练学习
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 1386d0e8fadddab5cd15818cb616bf331262e654
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1ddd2b8dacaccc0911a7e5a2bd684bba0fa16012
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589870"
 ---
 # <a name="learning-by-walkthroughs"></a>通过演练学习
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文档提供了一些演练。 本主题介绍一些一般性的演练问题（包括疑难解答），并提供指向用于了解 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的一些入门级演练的链接。  
@@ -30,9 +30,9 @@ ms.locfileid: "47401493"
 ## <a name="general"></a>常规  
  以下信息大致介绍了这些演练：  
   
--   环境： 每个[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]演练使用 Visual Studio 作为其集成的开发环境 (IDE)。  
+-   环境:每个[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]演练使用 Visual Studio 作为其集成的开发环境 (IDE)。  
   
--   SQL 引擎：所编写的这些演练需使用 SQL Server Express 来执行。 如果您没有 SQL Server Express，可以免费下载。 有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+-   SQL 引擎：这些演练旨在实现通过使用 SQL Server Express。 如果您没有 SQL Server Express，可以免费下载。 有关详细信息，请参阅[下载示例数据库](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
     > [!NOTE]
     >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 演练使用文件名作为连接字符串。 只需指定文件名即可，这是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 为 SQL Server Express 用户提供的便捷之处。 始终要注意安全问题。 有关详细信息，请参阅[LINQ to SQL 中的安全](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。  
@@ -87,5 +87,5 @@ ms.locfileid: "47401493"
   
 3.  右键单击**SQL Server (SQLEXPRESS)**，然后单击**重新启动**。  
   
-## <a name="see-also"></a>请参阅  
- [入门](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a>请参阅
+- [入门](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

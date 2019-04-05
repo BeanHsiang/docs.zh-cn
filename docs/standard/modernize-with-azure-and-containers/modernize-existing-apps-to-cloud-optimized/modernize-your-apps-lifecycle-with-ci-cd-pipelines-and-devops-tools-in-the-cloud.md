@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序与 Azure 云和 Windows 容器 |实�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: c4d3eaa50f6c7645c954ca65bf42c6c1eab3a68d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c4eeb5606d3ea93b76efee58ddfecae0abbbd743
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070775"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128175"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>实现现代化，使用 CI/CD 管道和 DevOps 工具在云中的应用的生命周期
 
@@ -36,5 +36,5 @@ Azure DevOps 服务支持持续集成和多容器应用程序部署到各种环�
 > **图 4 到 12 个。** Azure DevOps 服务持续部署管道，将部署到 Kubernetes 群集
 
 >[!div class="step-by-step"]
-[上一页](modernize-your-apps-with-monitoring-and-telemetry.md)
-[下一页](migrate-to-hybrid-cloud-scenarios.md)
+>[上一页](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[下一页](migrate-to-hybrid-cloud-scenarios.md)

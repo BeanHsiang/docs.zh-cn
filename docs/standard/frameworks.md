@@ -3,15 +3,15 @@ title: 目标框架
 description: 了解用于 .NET Core 应用和库的目标框架。
 author: richlander
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 12/03/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 76bf496e957022f4d97d3cf3f3975f334b1d5c45
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2721266c90e183616a907803ff209258956a37b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727399"
 ---
 # <a name="target-frameworks"></a>目标框架
 
@@ -32,7 +32,7 @@ ms.locfileid: "48842096"
 | 目标 Framework      | 最新 <br/> 稳定版本 | 目标框架名字对象 (TFM) | 已实现 <br/> .NET Standard 版本 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0                         | netstandard2.0                 | 不可用                                     |
-| .NET Core             | 2.1                         | netcoreapp2.1                  | 2.0                                     |
+| .NET Core             | 2.2                         | netcoreapp2.2                  | 2.0                                     |
 | .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>支持的目标框架版本
@@ -42,7 +42,7 @@ ms.locfileid: "48842096"
 | 目标 Framework           | TFM |
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
 | Windows 应用商店              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
@@ -52,14 +52,14 @@ ms.locfileid: "48842096"
 
 ## <a name="how-to-specify-target-frameworks"></a>如何指定目标框架
 
-在项目文件中指定目标框架。 指定单个目标框架时，使用 TargetFramework 元素。 以下控制台应用项目文件演示了如何以 .NET Core 2.0 为目标：
+在项目文件中指定目标框架。 指定单个目标框架时，使用 TargetFramework 元素。 以下控制台应用项目文件演示了如何以 .NET Core 2.2 为目标：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -131,10 +131,10 @@ public class MyClass
 
 ## <a name="see-also"></a>请参阅
 
-- [包、元包和框架](../core/packages.md)  
-- [使用跨平台工具开发库](../core/tutorials/libraries.md)  
-- [.NET Standard](net-standard.md)  
-- [.NET Core 版本控制](../core/versions/index.md)  
-- [dotnet/standard GitHub 存储库](https://github.com/dotnet/standard)  
-- [NuGet 工具 GitHub 存储库](https://github.com/joelverhagen/NuGetTools)  
+- [包、元包和框架](../core/packages.md)
+- [使用跨平台工具开发库](../core/tutorials/libraries.md)
+- [.NET Standard](net-standard.md)
+- [.NET Core 版本控制](../core/versions/index.md)
+- [dotnet/standard GitHub 存储库](https://github.com/dotnet/standard)
+- [NuGet 工具 GitHub 存储库](https://github.com/joelverhagen/NuGetTools)
 - [.NET 中的框架配置文件](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

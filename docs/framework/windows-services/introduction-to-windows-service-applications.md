@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: d0a16ee6f627ecc062fcad5f5216dda9855e430e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b26186ccf4a773297db89026797e89f194db2aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036060"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614414"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 服务应用程序介绍
 Microsoft Windows 服务（过去称为 NT 服务）允许用户创建可在其自身的 Windows 会话中长时间运行的可执行应用程序。 这些服务可在计算机启动时自动启动，可以暂停和重启，并且不显示任何用户界面。 这些功能使服务非常适合在服务器上使用，或者需要长时间运行的功能（不会影响在同一台计算机上工作的其他用户）的情况。 还可以在与登录用户或默认计算机帐户不同的特定用户帐户的安全性上下文中运行服务。 有关服务和 Windows 会话的详细信息，请参阅 Windows SDK 文档。  
@@ -80,12 +80,12 @@ Microsoft Windows 服务（过去称为 NT 服务）允许用户创建可在其�
   
 -   包含 Windows 服务的项目必须具有项目及其服务的安装组件。 这可以通过“属性”窗口轻松完成。 有关详细信息，请参阅[如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Windows 服务应用程序](../../../docs/framework/windows-services/index.md)  
- [服务应用程序编程体系结构](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)  
- [如何：调试 Windows 服务应用程序](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [演练：在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>请参阅
+- [Windows 服务应用程序](../../../docs/framework/windows-services/index.md)
+- [服务应用程序编程体系结构](../../../docs/framework/windows-services/service-application-programming-architecture.md)
+- [如何：创建 Windows 服务](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [如何：安装和卸载服务](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [如何：启动服务](../../../docs/framework/windows-services/how-to-start-services.md)
+- [如何：调试 Windows 服务应用程序](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [演练：在组件设计器中创建 Windows 服务应用程序](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [如何：将安装程序添加到服务应用程序](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

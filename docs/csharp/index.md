@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 32da68206e2415d42df9cc820ff1ca2814fbf58f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 458b53c9a2f1ea9774a61bb3439fe041cc8c2861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195835"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709476"
 ---
 # <a name="c-guide"></a>C# 指南
 
@@ -66,6 +66,6 @@ C# 指南分为多个部分。 可以按顺序阅读，也可以直接跳到最�
 
 ## <a name="see-also"></a>请参阅
 
-* [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
-* [.NET 开发](https://msdn.microsoft.com/library/ff361664)  
-* [C# 示例](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+- [Visual C# 和 Visual Basic 入门](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [.NET 指南](../standard/index.md)
+- [C# 示例](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)

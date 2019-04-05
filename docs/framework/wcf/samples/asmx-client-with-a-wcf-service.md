@@ -2,12 +2,12 @@
 title: 带有 WCF 服务的 ASMX 客户端
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 8b8ebebbcb2c95555605ebd1d8e164b8babb7e3e
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 63938f866083dac56d6ef43fdd8757c60b9a2f2b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347833"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835149"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>带有 WCF 服务的 ASMX 客户端
 此示例演示如何创建使用 Windows Communication Foundation (WCF) 服务，然后从非 WCF 客户端，如 ASMX 客户端访问服务。  
@@ -138,7 +138,7 @@ Press <ENTER> to terminate client.
 3.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
->  详细了解传递和返回复杂数据类型的请参阅： [Windows 窗体客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)， [Windows Presentation Foundation 客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)，和[数据ASP.NET 客户端中的绑定](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  有关传递和返回复杂数据的详细信息请参阅类型：[Windows 中的数据绑定窗体客户端](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)， [Windows Presentation Foundation 客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)，和[ASP.NET 客户端中的数据绑定](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  您的计算机上可能已安装这些示例。 在继续操作之前，请先检查以下（默认）目录：  
@@ -149,4 +149,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
   
-## <a name="see-also"></a>请参阅

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb37394799db39baa406ef332066d5ebb2dbf19d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 793d3996f9cbcb1a38a728ade06f775784166123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745891"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION 枚举
-包含值，用于指示是否公共语言运行时 (CLR) 块中请求的操作，应采取的措施主机。  
+包含指示请求的公共语言运行时 (CLR) 块操作时应采取的操作主机的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,21 +40,21 @@ typedef enum {
   
 |成员|描述|  
 |------------|-----------------|  
-|`WAIT_ALERTABLE`|通知宿主任务应被唤醒，如果 CLR 调用[ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)方法。|  
-|`WAIT_MSGPUMP`|通知主机，如果线程被阻止，它必须发送当前的操作系统线程上的消息。 运行时指定此值仅在上<xref:System.Threading.ApartmentState.STA>线程。|  
-|`WAIT_NOTINDEADLOCK`|通知主机宿主无法中断指定的同步请求。 主机不能返回，即`HOST_E_DEADLOCK`。|  
+|`WAIT_ALERTABLE`|通知主机如果 CLR 调用该任务应被唤醒[ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)方法。|  
+|`WAIT_MSGPUMP`|通知主机，如果线程被阻止，它必须发送当前 OS 线程上的信息。 在运行时指定此值仅在上<xref:System.Threading.ApartmentState.STA>线程。|  
+|`WAIT_NOTINDEADLOCK`|通知宿主不能中断指定的同步请求主机。 也就是说，不能返回主机`HOST_E_DEADLOCK`。|  
   
 ## <a name="remarks"></a>备注  
- [Ihosttaskmanager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)和[ihosttaskmanager:: Switchtotask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)方法都执行此类型的参数。  
+ [Ihosttaskmanager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)并[ihosttaskmanager:: Switchtotask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)方法都采用这种类型的参数。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [承载枚举](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

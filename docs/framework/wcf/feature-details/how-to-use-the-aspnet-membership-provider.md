@@ -6,34 +6,34 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: d71e3679f4bf395b240c330fc573d6f613d1be07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4653a4b4ae90f391eac559210deb611e2a83d0f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495289"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634501"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>如何：使用 ASP.NET 成员资格提供程序
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成员资格提供程序是一种功能，可供 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 开发人员用于创建允许用户创建唯一用户名和密码组合的网站。 使用此工具，任何用户都可以在该网站上建立帐户，并登录网站以便独占访问该网站及其服务。 这与要求用户在 Windows 域中具有帐户的 Windows 安全完全不同。 所有提供凭据（用户名/密码组合）的用户都可以使用该网站及其服务。  
   
- 有关示例应用程序，请参阅[成员资格和角色提供程序](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 有关使用信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色提供程序功能，请参阅[如何： 使用 ASP.NET 角色提供程序与服务](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)。  
+ 示例应用程序，请参阅[成员资格和角色提供程序](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 有关使用信息[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色提供程序功能，请参阅[如何：与服务一起使用 ASP.NET 角色提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)。  
   
  成员资格功能要求使用 SQL Server 数据库来存储用户信息。 此功能还包括用于向忘记密码的用户提示问题的方法。  
   
- Windows Communication Foundation (WCF) 开发人员可以利用这些功能，出于安全目的。 当集成到 WCF 应用程序，用户必须提供用户名/密码组合到 WCF 客户端应用程序。 若要将数据传输到 WCF 服务，使用支持用户/密码凭据，如绑定<xref:System.ServiceModel.WSHttpBinding>(在配置中， [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) 并设置客户端凭据类型设置为`UserName`. 在服务上，WCF 安全基于用户名和密码，用户进行身份验证，并还会将通过指定的角色分配[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色。  
+ Windows Communication Foundation (WCF) 开发人员可以利用这些功能实现安全性。 当集成到 WCF 应用程序，用户必须提供用户名/密码组合到 WCF 客户端应用程序。 若要将数据传输到 WCF 服务，使用一个绑定，支持用户/密码凭据，如<xref:System.ServiceModel.WSHttpBinding>(在配置中， [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) 并设置客户端凭据类型设置为`UserName`. 在服务上，WCF 安全基于用户名和密码，用户进行身份验证，并还会通过指定的角色将分配[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]角色。  
   
 > [!NOTE]
->  WCF 不提供用户名/密码组合的数据库或其他用户信息填充的方法。  
+>  WCF 不提供方法以填充用户名/密码组合与数据库或其他用户信息。  
   
 ### <a name="to-configure-the-membership-provider"></a>配置成员资格提供程序  
   
-1.  在 Web.config 文件中，在 <`system.web`> 元素，创建 <`membership`> 元素。  
+1.  在 Web.config 文件中，在 <`system.web`> 元素中，创建 <`membership`> 元素。  
   
-2.  在 `<membership>` 元素之下创建一个`<providers>`元素。  
+2.  在 `<membership>`<providers> 元素之下创建一个`<providers>` 元素。  
   
-3.  为的子级 <`providers`> 元素中，添加`<clear />`元素以刷新提供程序的集合。  
+3.  子级作为 <`providers`> 元素中，添加`<clear />`元素以刷新提供程序的集合。  
   
-4.  下`<clear />`元素，创建 <`add`> 元素具有以下属性设置为适当的值： `name`， `type`， `connectionStringName`， `applicationName`， `enablePasswordRetrieval`， `enablePasswordReset`， `requiresQuestionAndAnswer``requiresUniqueEmail`，和`passwordFormat`。 `name` 属性以后作为一个值在配置文件中使用。 下面的示例将其设置为 `SqlMembershipProvider`。  
+4.  下`<clear />`元素中，创建 <`add`> 元素具有以下属性设置为适当的值： `name`， `type`， `connectionStringName`， `applicationName`， `enablePasswordRetrieval`， `enablePasswordReset`， `requiresQuestionAndAnswer``requiresUniqueEmail`，和`passwordFormat`。 `name` 属性以后作为一个值在配置文件中使用。 下面的示例将其设置为 `SqlMembershipProvider`。  
   
      下面的示例显示配置节。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "33495289"
   
 ### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>配置服务安全以接受用户名/密码组合  
   
-1.  在配置文件中，在[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素中，添加[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素。  
+1.  在配置文件中下, [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)元素中，添加[\<绑定 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素。  
   
-2.  添加[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)绑定部分。 有关创建 WCF 绑定元素的详细信息，请参阅[如何： 在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+2.  添加[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)到绑定节。 有关创建 WCF 绑定元素的详细信息，请参阅[如何：在配置中指定服务绑定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
   
 3.  将 `mode` 元素的 `<security>` 属性设置为 `Message`。  
   
-4.  设置`clientCredentialType`属性 <`message`> 元素`UserName`。 这将指定将用户名/密码对用作客户端的凭据。  
+4.  设置`clientCredentialType`属性的 <`message`> 元素`UserName`。 这将指定将用户名/密码对用作客户端的凭据。  
   
      下面的示例显示绑定的配置代码。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "33495289"
   
 2.  添加[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)到 <`behaviors`> 元素。  
   
-3.  添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)并设置`name`属性设为适当的值。  
+3.  添加[\<行为 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)并设置`name`属性为适当的值。  
   
 4.  添加[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)到 <`behavior`> 元素。  
   
@@ -154,6 +154,6 @@ ms.locfileid: "33495289"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [如何：将 ASP.NET 角色提供程序与服务一起使用](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [成员资格和角色提供程序](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
+## <a name="see-also"></a>请参阅
+- [如何：与服务一起使用 ASP.NET 角色提供程序](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [成员资格和角色提供程序](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

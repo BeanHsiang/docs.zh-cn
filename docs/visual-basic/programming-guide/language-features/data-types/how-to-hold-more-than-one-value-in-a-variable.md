@@ -1,5 +1,5 @@
 ---
-title: 如何：在一个变量中保存多个值 (Visual Basic)
+title: 如何：在一个变量 (Visual Basic 中) 中保存多个值
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517958"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825152"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>如何：在一个变量中保存多个值 (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>如何：在一个变量 (Visual Basic 中) 中保存多个值
 声明的变量存储多个值*复合数据类型*。  
   
  [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)包括结构、 数组和类。 复合数据类型的变量可以包含基本数据类型和其他复合类型的组合。 结构和类可以包含代码，以及数据。  
@@ -41,11 +41,12 @@ ms.locfileid: "43517958"
   
 5.  请按照`As`关键字适当的复合数据类型的名称。  
   
-## <a name="see-also"></a>请参阅  
- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)  
- [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>请参阅
+
+- [数据类型](../../../../visual-basic/language-reference/data-types/index.md)
+- [类型字符](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [复合数据类型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [结构](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [数组](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [对象和类](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [值类型和引用类型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

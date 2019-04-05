@@ -9,19 +9,19 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], adding items
 - context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
-ms.openlocfilehash: d044cf92cf7ce6db3425aacf397d6c7b4f111324
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a12a201ac73c86bf391d39f47baa47c87bf96095
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524620"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716748"
 ---
 # <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>如何：向 ContextMenuStrip 添加菜单项
-可以将一个菜单项或多个项添加到的一次<xref:System.Windows.Forms.ContextMenuStrip>。  
+可以在一次向添加一个菜单项或多个项<xref:System.Windows.Forms.ContextMenuStrip>。  
   
 ### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a>若要向 ContextMenuStrip 添加一个菜单项  
   
--   使用<xref:System.Windows.Forms.ToolStripItemCollection.Add%2A>方法将添加到的一个菜单项<xref:System.Windows.Forms.ContextMenuStrip>。  
+-   使用<xref:System.Windows.Forms.ToolStripItemCollection.Add%2A>方法将添加一个菜单项<xref:System.Windows.Forms.ContextMenuStrip>。  
   
     ```vb  
     Me.contextMenuStrip1.Items.Add(Me.toolStripMenuItem1)  
@@ -47,5 +47,5 @@ ms.locfileid: "33524620"
           this.toolStripMenuItem1, this.toolStripMenuItem2});  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [ContextMenuStrip 控件](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
+## <a name="see-also"></a>请参阅
+- [ContextMenuStrip 控件](contextmenustrip-control.md)

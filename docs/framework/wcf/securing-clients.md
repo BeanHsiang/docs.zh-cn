@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 7090d5e9cd4b44a6f894cc92ad69b34761356118
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fb8d2161800b336cd7f605dda79f28dbb5b91848
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188193"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333464"
 ---
 # <a name="securing-clients"></a>保证客户端的安全
 在 Windows Communication Foundation (WCF)，由服务规定客户端的安全要求。 即，由服务指定要使用的安全模式以及客户端是否必须提供凭据。 因此，保证客户端安全的过程非常简单：使用从服务那里获得的元数据（如果已发布）来生成客户端。 元数据指定如何配置客户端。 如果服务要求客户端提供凭据，您必须获得能够满足要求的凭据。 本主题进一步详细讨论此过程。 有关创建安全服务的详细信息，请参阅[Securing Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -38,10 +38,10 @@ ms.locfileid: "50188193"
 2.  指定一个实际客户端凭据。 实际的客户端凭据称为*客户端凭据值*类型区分开来。 例如，如果客户端凭据类型指定了证书，您必须提供由该服务所信任的证书颁发机构颁发的 X.509 证书。  
   
 ### <a name="determining-the-client-credential-type"></a>确定客户端凭据类型  
- 如果有配置文件由 Svcutil.exe 工具生成，请检查[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)部分可以确定哪些客户端凭据类型是必需的。 该节包含指定安全要求的绑定元素。 具体而言，检查\<安全 > 的每个绑定元素。 该元素包含 `mode` 属性，该属性可设置为以下三个可能的值之一：`Message`、`Transport` 或 `TransportWithMessageCredential`。 该属性的值确定模式，而模式则确定哪个子元素有效。  
+ 如果有配置文件由 Svcutil.exe 工具生成，请检查[\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)部分可以确定哪些客户端凭据类型是必需的。 该节包含指定安全需求的绑定元素。 具体而言，检查\<安全 > 的每个绑定元素。 该元素包含 `mode` 属性，该属性可设置为以下三个可能的值之一：`Message`、`Transport` 或 `TransportWithMessageCredential`。 该属性的值确定模式，而模式则确定哪个子元素有效。  
   
  `<security>`元素可以包含`<transport>`或`<message>`元素，或两者。 有效元素是指与安全模式匹配的那个元素。 例如，下面的代码指定安全模式为 `"Message"`，`<message>` 元素的客户端凭据类型为 `"Certificate"`。 在这种情况下，`<transport>` 元素可以忽略。 但是，`<message>` 元素指定必须提供 X.509 证书。  
-  
+
 ```xml  
 <wsHttpBinding>  
     <binding name="WSHttpBinding_ICalculator">  
@@ -56,7 +56,7 @@ ms.locfileid: "50188193"
     </binding>  
 </wsHttpBinding>  
 ```  
-  
+
  请注意，如果按照下面的示例所示，将 `clientCredentialType` 属性设置为 `"Windows"`，则无需提供实际凭据值。 这是因为，Windows 集成安全性提供了正在运行客户端的用户的实际凭据（一个 Kerberos 令牌）。  
   
 ```xml  
@@ -107,34 +107,27 @@ ms.locfileid: "50188193"
 </configuration>  
 ```  
   
- 若要在配置中设置客户端凭据，添加[ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)到配置文件的元素。 此外，必须添加的行为元素链接到服务的终结点使用`behaviorConfiguration`的属性[\<终结点 >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素，如以下示例所示。 `behaviorConfiguration` 属性的值必须与行为 `name` 属性的值相匹配。  
-  
- `<configuration>`  
-  
- `<system.serviceModel>`  
-  
- `<client>`  
-  
- `<endpoint address="http://localhost/servicemodelsamples/service.svc"`  
-  
- `binding="wsHttpBinding"`  
-  
- `bindingConfiguration="Binding1"`  
-  
- `behaviorConfiguration="myEndpointBehavior"`  
-  
- `contract="Microsoft.ServiceModel.Samples.ICalculator" />`  
-  
- `</client>`  
-  
- `</system.serviceModel>`  
-  
- `</configuration>`  
+ 若要在配置中设置客户端凭据，添加[ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)到配置文件的元素。 此外，必须添加的行为元素链接到服务的终结点使用`behaviorConfiguration`的属性[\<终结点 > 的\<客户端 >](../configure-apps/file-schema/wcf/endpoint-of-client.md)元素，如以下示例所示。 
+  `behaviorConfiguration` 属性的值必须与行为 `name` 属性的值相匹配。  
+
+```xml
+<configuration>
+  <system.serviceModel>
+    <client>
+      <endpoint address="http://localhost/servicemodelsamples/service.svc"
+                binding="wsHttpBinding"
+                bindingConfiguration="Binding1"
+                behaviorConfiguration="myEndpointBehavior"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </client>
+  </system.serviceModel>
+</configuration>
+```
   
 > [!NOTE]
 >  有些客户端凭据值无法使用应用程序配置文件来设置，例如，用户名和密码值或 Windows 用户和密码值。 这种凭据值只能在代码中指定。  
   
- 有关设置客户端凭据的详细信息，请参阅[How to: Specify Client Credential Values](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 有关设置客户端凭据的详细信息，请参阅[如何：指定客户端凭据值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 > [!NOTE]
 >  当 `ClientCredentialType` 设置为 `SecurityMode` 时，`"TransportWithMessageCredential",` 将被忽略，如下面的示例配置所示。  
@@ -152,16 +145,16 @@ ms.locfileid: "50188193"
 </wsHttpBinding>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
- <xref:System.ServiceModel.ClientBase%601>  
- <xref:System.ServiceModel.Description.ClientCredentials>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<绑定 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
- [配置编辑器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
- [保护服务](../../../docs/framework/wcf/securing-services.md)  
- [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [如何：指定客户端凭据值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)  
- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [如何：指定客户端凭据类型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
+- <xref:System.ServiceModel.ClientBase%601>
+- <xref:System.ServiceModel.Description.ClientCredentials>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
+- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
+- [配置编辑器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [保护服务](../../../docs/framework/wcf/securing-services.md)
+- [使用 WCF 客户端访问服务](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [如何：指定客户端凭据值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [如何：指定客户端凭据类型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

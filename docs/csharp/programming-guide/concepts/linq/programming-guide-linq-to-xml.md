@@ -2,12 +2,12 @@
 title: 编程指南 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-ms.openlocfilehash: acb8271ad9ea338d31516c35bae46593a5fd2f78
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d71fb2d0365199bf89b0cfbd05b614ebd7634219
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54493997"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>编程指南 (LINQ to XML) (C#)
 本节提供有关使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 进行编程的概念性和指导性信息。  
@@ -21,7 +21,7 @@ ms.locfileid: "47199042"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[LINQ to XML 编程概述 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|提供对 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 类的概述以及有关以下三个最重要类的详细信息：<xref:System.Xml.Linq.XElement>、<xref:System.Xml.Linq.XAttribute> 和 <xref:System.Xml.Linq.XDocument>。|  
 |[创建 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|提供有关创建 XML 树的概念性和基于任务的信息。 可以通过使用函数构造，或通过从字符串或文件解析 XML 文本来创建 XML 树。 也可以使用 <xref:System.Xml.XmlReader> 来填充 XML 树。|  
@@ -36,5 +36,5 @@ ms.locfileid: "47199042"
   
 ## <a name="see-also"></a>请参阅
 
-- [入门 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+- [入门 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
 - [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)

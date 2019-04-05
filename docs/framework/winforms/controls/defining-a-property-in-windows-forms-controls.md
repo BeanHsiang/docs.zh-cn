@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: c21aee867fc78c55e62eb183bb1a12ebf1c472e8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 84273d2fab36df287eaca70f5f32fd8024a9204d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858661"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712196"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>在 Windows 窗体控件中定义属性
-有关属性的概述，请参阅[属性概述](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。 定义属性时需考虑以下重要注意事项：  
+有关属性的概述，请参阅[属性概述](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))。 定义属性时需考虑以下重要注意事项：  
   
--   必须将特性应用于定义的属性。 特性指定设计器应如何显示属性。 有关详细信息，请参阅[组件的设计时特性](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)。  
+-   必须将特性应用于定义的属性。 特性指定设计器应如何显示属性。 有关详细信息，请参阅[组件的设计时特性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))。  
   
 -   如果更改该属性会影响该控件的可视显示，则调用<xref:System.Windows.Forms.Control.Invalidate%2A>方法 (继承自控件<xref:System.Windows.Forms.Control>) 从`set`访问器。 <xref:System.Windows.Forms.Control.Invalidate%2A> 反过来调用<xref:System.Windows.Forms.Control.OnPaint%2A>方法，重绘控件。 多次调用<xref:System.Windows.Forms.Control.Invalidate%2A>导致调用一次<xref:System.Windows.Forms.Control.OnPaint%2A>以提高效率。  
   
 -   .NET Framework 类库为常见数据类型（如整数、小数、布尔值和其他数据类型）提供了类型转换器。 类型转换器的用途通常是提供字符串到数值的转换（从字符串数据转换为其他数据类型）。 常见数据类型与默认类型转换器相关联，默认类型转换器可将数值转换为字符串，并将字符串转换为相应数据类型。 如果定义了自定义（即非标准）数据类型的属性，则应用的特性必须将类型转换器指定为与该属性相关联。 还可使用特性将自定义 UI 类型编辑器与某个属性相关联。 UI 类型编辑器提供一个用于编辑属性或数据类型的用户界面。 UI 类型编辑器的一个例子是颜色选取器。 本主题末尾给出了特性的示例。  
   
     > [!NOTE]
-    >  如果没有类型转换器或 UI 类型编辑器可供自定义属性使用，则可根据[扩展设计时支持](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)中所述来实现一个。  
+    >  如果没有类型转换器或 UI 类型编辑器可供自定义属性使用，则可根据[扩展设计时支持](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))中所述来实现一个。  
   
  以下代码片段为自定义控件 `FlashTrackBar` 定义了一个名为 `EndColor` 的自定义属性。  
   
@@ -120,8 +120,8 @@ public int Value {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Windows 窗体控件中的属性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [使用 ShouldSerialize 和 Reset 方法定义默认值](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
- [属性更改事件](../../../../docs/framework/winforms/controls/property-changed-events.md)  
- [Windows 窗体控件中的特性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+## <a name="see-also"></a>请参阅
+- [Windows 窗体控件中的属性](properties-in-windows-forms-controls.md)
+- [使用 ShouldSerialize 和 Reset 方法定义默认值](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
+- [属性更改事件](property-changed-events.md)
+- [Windows 窗体控件中的特性](attributes-in-windows-forms-controls.md)

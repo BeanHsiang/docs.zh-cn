@@ -1,33 +1,35 @@
 ---
-title: '&lt;serviceDebug&gt;'
+title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 0a0c6a45b6103d533a87a921e6e428bf30d81b20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ab7058d8667344197e8bc1ddc59cc7200f22270
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352241"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268556"
 ---
-# <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
-指定 Windows Communication Foundation (WCF) 服务的调试和帮助信息的功能。  
+# <a name="servicedebug"></a>\<serviceDebug>
+指定 Windows Communication Foundation (WCF) 服务的调试和帮助信息功能。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
-\<serviceDebug >  
+\<behavior>  
+\<serviceDebug>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<serviceDebug     httpHelpPageBinding="String"    httpHelpPageBindingConfiguration="String"  
-    httpHelpPageEnabled="Boolean"  
-    httpHelpPageUrl="Uri"  
-    httpsHelpPageBinding="String"    httpsHelpPageBindingConfiguration="String"  
-    httpsHelpPageEnabled="Boolean"  
-    httpsHelpPageUrl="Uri"  
-    includeExceptionDetailInFaults="Boolean" />  
+<serviceDebug httpHelpPageBinding="String"
+              httpHelpPageBindingConfiguration="String"
+              httpHelpPageEnabled="Boolean"
+              httpHelpPageUrl="Uri"
+              httpsHelpPageBinding="String"
+              httpsHelpPageBindingConfiguration="String"
+              httpsHelpPageEnabled="Boolean"
+              httpsHelpPageUrl="Uri"
+              includeExceptionDetailInFaults="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -39,13 +41,13 @@ ms.locfileid: "33352241"
 |---------------|-----------------|  
 |httpHelpPageBinding|一个字符串值，指定在利用 HTTP 访问服务帮助页时使用的绑定类型。<br /><br /> 仅支持具有支持 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> 的内部绑定元素的绑定。 此外，绑定的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 属性必须为 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>。|  
 |httpHelpPageBindingConfiguration|一个字符串，指定在 `httpHelpPageBinding` 特性中指定的绑定的名称，此名称引用此绑定的其他配置信息。 必须在 `<bindings>` 节中定义相同的名称。|  
-|httpHelpPageEnabled|一个布尔值，用于控制是否 WCF 发布 HTML 帮助页在指定的地址`httpHelpPageUrl`属性。 默认值为 `true`。<br /><br /> 可以将此属性设置为 `false` 以禁止发布对于 HTML 浏览器可见的 HTML 帮助页。<br /><br /> 若要确保在 `httpHelpPageUrl` 属性控制的位置发布 HTML 帮助页，必须将此属性设置为 `true`。 另外，还必须满足以下条件之一：<br /><br /> -`httpHelpPageUrl`属性是支持 HTTP 协议方案的绝对地址。<br />-没有支持 HTTP 协议方案的服务的基址。<br /><br /> 尽管为 `httpHelpPageUrl` 属性指定不支持 HTTP 协议方案的绝对地址会引发异常，但不满足前面两个条件的任何其他方案都不会引发异常，也不会发布 HTML 帮助页。|  
+|httpHelpPageEnabled|一个布尔值，用于控制 WCF 发布 HTML 帮助页在由指定的地址是否`httpHelpPageUrl`属性。 默认值为 `true`。<br /><br /> 可以将此属性设置为 `false` 以禁止发布对于 HTML 浏览器可见的 HTML 帮助页。<br /><br /> 若要确保在 `httpHelpPageUrl` 属性控制的位置发布 HTML 帮助页，必须将此属性设置为 `true`。 另外，还必须满足以下条件之一：<br /><br /> -`httpHelpPageUrl`属性是支持 HTTP 协议方案的绝对地址。<br />-没有支持 HTTP 协议方案的服务的基址。<br /><br /> 尽管为 `httpHelpPageUrl` 属性指定不支持 HTTP 协议方案的绝对地址会引发异常，但不满足前面两个条件的任何其他方案都不会引发异常，也不会发布 HTML 帮助页。|  
 |httpHelpPageUrl|一个 URI，指定在使用 HTML 浏览器查看终结点时，用户所见自定义 HTML 帮助文件的基于 HTTP 的相对或绝对 URL。<br /><br /> 可以使用此属性启用自定义 HTML 帮助文件，例如，从 HTML 浏览器通过 HTTP/Get 请求返回的帮助文件。 HTML 帮助文件位置的解析方式如下。<br /><br /> 1.如果此属性的值是相对地址，则 HTML 帮助文件的位置是支持 HTTP 请求的服务基址加上此属性值的值。<br />2.如果此属性的值是绝对地址并支持 HTTP 请求，则 HTML 帮助文件的位置是此属性的值。<br />3.如果此属性的值是绝对地址但不支持 HTTP 请求，则会引发异常。<br /><br /> 此属性是仅当`httpHelpPageEnabled`属性是`true`。|  
 |httpsHelpPageBinding|一个字符串值，指定在利用 HTTPS 访问服务帮助页时使用的绑定类型。<br /><br /> 仅支持具有支持 <xref:System.ServiceModel.Channels.IReplyChannel> 的内部绑定元素的绑定。 此外，绑定的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 属性必须为 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>。|  
 |httpsHelpPageBindingConfiguration|一个字符串，指定在 `httpsHelpPageBinding` 特性中指定的绑定的名称，此名称引用此绑定的其他配置信息。 必须在 `<bindings>` 节中定义相同的名称。|  
-|httpsHelpPageEnabled|一个布尔值，用于控制是否 WCF 发布 HTML 帮助页在指定的地址`httpsHelpPageUrl`属性。 默认值为 `true`。<br /><br /> 可以将此属性设置为 `false` 以禁止发布对于 HTML 浏览器可见的 HTML 帮助页。<br /><br /> 若要确保在 `httpsHelpPageUrl` 属性控制的位置发布 HTML 帮助页，必须将此属性设置为 `true`。 另外，还必须满足以下条件之一：<br /><br /> -`httpsHelpPageUrl`属性是支持 HTTPS 协议方案的绝对地址。<br />-没有支持 HTTPS 协议方案的服务的基址。<br /><br /> 尽管为 `httpsHelpPageUrl` 属性指定不支持 HTTPS 协议方案的绝对地址会引发异常，但不满足前面两个条件的任何其他方案都不会引发异常，也不会发布 HTML 帮助页。|  
-|httpsHelpPageUrl|一个 URI，指定在使用 HTML 浏览器查看终结点时，用户所见自定义 HTML 帮助文件的基于 HTTPS 的相对或绝对 URL。<br /><br /> 可以使用此属性启用自定义 HTML 帮助文件，例如，从 HTML 浏览器通过 HTTPS/Get 请求返回的帮助文件。 HTML 帮助文件位置的解析方式如下：<br /><br /> -如果此属性的值是相对地址，则 HTML 帮助文件的位置是支持 HTTPS 请求的服务基址加上此属性的值。<br />-如果此属性的值是绝对地址并支持 HTTPS 请求，则 HTML 帮助文件的位置是此属性的值。<br />-如果此属性的值是绝对地址但不支持 HTTPS 请求，将引发异常。<br /><br /> 此属性是仅当`httpHelpPageEnabled`属性是`true`。|  
-|includeExceptionDetailInFaults|一个值，指定是否在返回给客户端的 SOAP 错误详细信息中包含托管异常信息以供调试。 默认值为 `false`。<br /><br /> 如果将此属性设置为 `true`，则可以将托管异常信息流到客户端以便进行调试，还可以为在 Web 浏览器中浏览该服务的用户发布 HTML 信息文件。 **注意：** 返回托管的异常信息返回给客户端可能会带来安全风险。 这是因为，异常详细信息公开了有关内部服务实现的信息，这些信息可能被未经授权的客户端使用。|  
+|httpsHelpPageEnabled|一个布尔值，用于控制 WCF 发布 HTML 帮助页在由指定的地址是否`httpsHelpPageUrl`属性。 默认值为 `true`。<br /><br /> 可以将此属性设置为 `false` 以禁止发布对于 HTML 浏览器可见的 HTML 帮助页。<br /><br /> 若要确保在 `httpsHelpPageUrl` 属性控制的位置发布 HTML 帮助页，必须将此属性设置为 `true`。 另外，还必须满足以下条件之一：<br /><br /> -`httpsHelpPageUrl`属性是支持 HTTPS 协议方案的绝对地址。<br />-没有支持 HTTPS 协议方案的服务的基址。<br /><br /> 尽管为 `httpsHelpPageUrl` 属性指定不支持 HTTPS 协议方案的绝对地址会引发异常，但不满足前面两个条件的任何其他方案都不会引发异常，也不会发布 HTML 帮助页。|  
+|httpsHelpPageUrl|一个 URI，指定在使用 HTML 浏览器查看终结点时，用户所见自定义 HTML 帮助文件的基于 HTTPS 的相对或绝对 URL。<br /><br /> 可以使用此属性启用自定义 HTML 帮助文件，例如，从 HTML 浏览器通过 HTTPS/Get 请求返回的帮助文件。 HTML 帮助文件位置的解析方式如下：<br /><br /> -如果此属性的值是相对地址，则 HTML 帮助文件的位置是支持 HTTPS 请求的服务基址的值加上此属性的值。<br />-如果此属性的值是绝对地址并支持 HTTPS 请求，则 HTML 帮助文件的位置是此属性的值。<br />-如果此属性的值是绝对地址但不支持 HTTPS 请求，将引发异常。<br /><br /> 此属性是仅当`httpHelpPageEnabled`属性是`true`。|  
+|includeExceptionDetailInFaults|一个值，指定是否在返回给客户端的 SOAP 错误详细信息中包含托管异常信息以供调试。 默认值为 `false`。<br /><br /> 如果将此属性设置为 `true`，则可以将托管异常信息流到客户端以便进行调试，还可以为在 Web 浏览器中浏览该服务的用户发布 HTML 信息文件。 注意：向客户端返回托管异常信息可能具有安全风险。 这是因为，异常详细信息公开了有关内部服务实现的信息，这些信息可能被未经授权的客户端使用。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -54,10 +56,10 @@ ms.locfileid: "33352241"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<行为 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行为元素。|  
   
 ## <a name="remarks"></a>备注  
- 设置`includeExceptionDetailInFaults`到`true`使服务可以返回任何异常，即使不使用声明该异常由应用程序代码引发<xref:System.ServiceModel.FaultContractAttribute>。 此设置在调试服务器引发意外异常的事例时很有用。 通过使用此属性，可以返回未知异常的序列化形式，从而可以检查该异常的更多详细信息。  
+ 设置`includeExceptionDetailInFaults`到`true`使服务可以返回任何异常，即使未使用声明的异常由应用程序代码引发<xref:System.ServiceModel.FaultContractAttribute>。 此设置在调试服务器引发意外异常的事例时很有用。 通过使用此属性，可以返回未知异常的序列化形式，从而可以检查该异常的更多详细信息。  
   
 > [!CAUTION]
 >  将托管异常信息返回给客户端可能存在安全风险，因为异常详细信息会公开有关内部服务实现的信息，而未经授权的客户端可能会利用这些信息。 由于涉及到安全问题，强烈建议您仅在受控调试情况下执行此操作。 部署应用程序时应将 `includeExceptionDetailInFaults` 设置为 `false`。  
@@ -66,11 +68,11 @@ ms.locfileid: "33352241"
   
  也可以设置 `httpsHelpPageEnabled` 和 `httpsHelpPageUrl` 来启用或禁用帮助页。 每个服务可以选择公开一个帮助页，该帮助页包含有关服务的信息，其中包括要获取服务的 WSDL 的终结点。 通过将 `httpHelpPageEnabled` 设置为 `true` 可以启用该帮助页。 这将使帮助页返回到对服务基址的 GET 请求。 可以通过设置 `httpHelpPageUrl` 属性来更改此地址。 此外，通过使用 HTTPS（而不是 HTTP）可以使其安全。  
   
- 可以利用可选的 `httpHelpPageBinding` 和 `httpHelpPageBinding`属性来配置用于访问服务网页的绑定。 如果未指定这两个属性，则根据情况使用相应的默认绑定（采用 HTTP 时为 `HttpTransportBindingElement`，采用 HTTPS 时为 `HttpsTransportBindingElement`）来访问服务帮助页。 请注意：不能将这些属性用于内置 WCF 绑定。 与支持 xref:System.ServiceModel.Channels.IReplyChannel 的内部绑定元素的唯一绑定 > 将支持。 此外，绑定的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 属性必须为 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>。  
+ 可以利用可选的 `httpHelpPageBinding` 和 `httpHelpPageBinding`属性来配置用于访问服务网页的绑定。 如果未指定这两个属性，则根据情况使用相应的默认绑定（采用 HTTP 时为 `HttpTransportBindingElement`，采用 HTTPS 时为 `HttpsTransportBindingElement`）来访问服务帮助页。 请注意：不能将这些属性用于内置 WCF 绑定。 唯一的内部绑定元素支持 xref:System.ServiceModel.Channels.IReplyChannel 绑定 > 将支持。 此外，绑定的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 属性必须为 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ServiceDebugElement>  
- <xref:System.ServiceModel.Description.ServiceDebugBehavior>  
- [在协定和服务中指定并处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [处理异常和错误](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)  
- [服务调试行为](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ServiceDebugElement>
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>
+- [在协定和服务中指定并处理错误](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [处理异常和错误](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [服务调试行为](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

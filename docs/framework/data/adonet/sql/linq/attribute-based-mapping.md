@@ -2,19 +2,19 @@
 title: 基于特性的映射
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 81bbe8806694967d68c3e15da1d582092fb95e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713897"
 ---
 # <a name="attribute-based-mapping"></a>基于特性的映射
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 映射到 SQL Server 数据库[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]对象模型通过应用属性或通过使用外部映射文件。 本主题概述了基于属性的方法。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 最基本的映射形式是将数据库映射到 <xref:System.Data.Linq.DataContext>，将表映射到类，将列和关系映射到这些类的属性。 您也可以使用属性来将继承层次结构映射到对象模型中。 有关详细信息，请参阅[如何： 在 Visual Basic 或 C# 中生成对象模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 最基本的映射形式是将数据库映射到 <xref:System.Data.Linq.DataContext>，将表映射到类，将列和关系映射到这些类的属性。 您也可以使用属性来将继承层次结构映射到对象模型中。 有关详细信息，请参阅[如何：Visual Basic 中生成对象模型或C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
   
- 通常使用 Visual Studio 的开发人员使用执行基于属性的映射[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 也可以使用 SQLMetal 命令行工具，或亲自手动对属性进行编码。 有关详细信息，请参阅[如何： 在 Visual Basic 或 C# 中生成对象模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
+ 通常使用 Visual Studio 的开发人员使用执行基于属性的映射[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 也可以使用 SQLMetal 命令行工具，或亲自手动对属性进行编码。 有关详细信息，请参阅[如何：Visual Basic 中生成对象模型或C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
   
 > [!NOTE]
 >  您还可以通过使用外部 XML 文件进行映射。 有关详细信息，请参阅[外部映射](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "33358175"
   
 |属性|类型|默认|描述|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Never|指示公共语言运行库 (CLR) 在执行插入或更新操作后检索值。<br /><br /> 可供选择的值：Always、Never、OnUpdate、OnInsert。|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Never|指示公共语言运行库 (CLR) 在执行插入或更新操作后检索值。<br /><br /> 选项:Always、 Never、 OnUpdate、 OnInsert。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|指示列可以包含 null 值。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|String|推断出的数据库列类型|使用数据库类型和修饰符来指定数据库列的类型。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|String|空|定义数据库中计算所得的列。|  
@@ -61,10 +61,10 @@ ms.locfileid: "33358175"
  有关详细信息，请参阅<xref:System.Data.Linq.Mapping.ColumnAttribute>。  
   
 > [!NOTE]
->  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有.NET 编程语言，即使那些不通常区分大小写，包括 Visual Basic。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
+>  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有.NET 编程语言，甚至那些不是通常区分大小写，包括 Visual Basic。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute 属性  
- 使用此属性 (Attribute) 可指定属性 (Property) 表示数据库中的关联，如外键对主键关系。 有关关系的详细信息，请参阅[如何： 映射数据库关系](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
+ 使用此属性 (Attribute) 可指定属性 (Property) 表示数据库中的关联，如外键对主键关系。 有关关系的详细信息，请参阅[如何：映射数据库关系](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。  
   
  下表介绍了此属性 (Attribute) 的属性 (Property)。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "33358175"
  有关详细信息，请参阅<xref:System.Data.Linq.Mapping.AssociationAttribute>。  
   
 > [!NOTE]
->  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有.NET 编程语言，即使那些不通常区分大小写，包括 Visual Basic。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
+>  AssociationAttribute 和 ColumnAttribute Storage 属性值区分大小写。 例如，请确保 AssociationAttribute.Storage 属性 (Property) 的属性 (Attribute) 中使用的值与代码中其他位置使用的相应属性 (Property) 名称值的大小写相匹配。 这适用于所有.NET 编程语言，甚至那些不是通常区分大小写，包括 Visual Basic。 有关 Storage 属性的更多信息，请参见 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>。  
   
 ## <a name="inheritancemappingattribute-attribute"></a>InheritanceMappingAttribute 属性  
  使用此属性可映射继承层次结构。  
@@ -140,7 +140,7 @@ ms.locfileid: "33358175"
 |<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|String|与数据库中的名称相同|指定表、列等的名称。|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|String|公共访问器|指定基础存储字段的名称。|  
   
- 有关详细信息，请参阅<xref:System.Data.Linq.Mapping.DataAttribute>。  
+ 有关详细信息，请参阅 <xref:System.Data.Linq.Mapping.DataAttribute>。  
   
-## <a name="see-also"></a>请参阅  
- [参考](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>请参阅
+- [引用](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -1,13 +1,13 @@
 ---
-title: '匹配表达式 （F #）'
-description: '了解 F # 匹配表达式如何提供基于的表达式与一组模式的比较结果的分支控制。'
+title: 匹配表达式
+description: 了解如何F#匹配表达式提供的表达式与一组模式的比较结果为基础的分支控制。
 ms.date: 04/19/2018
-ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44221839"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611563"
 ---
 # <a name="match-expressions"></a>匹配表达式
 
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>请参阅
 
-- [F# 语言参考](index.md)  
-- [活动模式](active-patterns.md)  
-- [模式匹配](pattern-matching.md)  
+- [F# 语言参考](index.md)
+- [活动模式](active-patterns.md)
+- [模式匹配](pattern-matching.md)

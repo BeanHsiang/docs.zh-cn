@@ -9,15 +9,15 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: bdfbe59ef779de242e32be11ca28c84f68437240
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 02e19470aaac76e7bcab5a324138bb50dedb212f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192198"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720194"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>如何：创建 MDI 子窗体
-MDI 子窗体是不可或缺的要素[多文档界面 (MDI) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)，因为这些窗体是用户交互的中心。  
+MDI 子窗体是不可或缺的要素[多文档界面 (MDI) 应用程序](multiple-document-interface-mdi-applications.md)，因为这些窗体是用户交互的中心。  
   
  在下面的过程中，将创建显示 <xref:System.Windows.Forms.RichTextBox> 控件的 MDI 子窗体，该子窗体类似于大多数字处理应用程序。 将 <xref:System.Windows.Forms> 控件替换为其他控件（如 <xref:System.Windows.Forms.DataGridView> 控件或混合控件）使你能够创建各种可能的 MDI 子窗口（并且进一步扩展为 MDI 应用程序）。  
   
@@ -106,9 +106,9 @@ MDI 子窗体是不可或缺的要素[多文档界面 (MDI) 应用程序](../../
     > [!NOTE]
     >  当 MDI 子窗体具有一个 <xref:System.Windows.Forms.MainMenu> 组件（通常带有菜单项的菜单结构），而且它在有 <xref:System.Windows.Forms.MainMenu> 组件（通常带有菜单项的菜单结构）的 MDI 父窗体中打开时，如果设置了 <xref:System.Windows.Forms.MenuItem.MergeType%2A> 属性（或 <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> 属性），这些菜单项就会自动合并。 将两个 <xref:System.Windows.Forms.MainMenu> 组件的 <xref:System.Windows.Forms.MenuItem.MergeType%2A> 属性和子窗体的所有菜单项设置为 <xref:System.Windows.Forms.MenuMerge.MergeItems>。 此外，设置 <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> 属性，以便这两个菜单的菜单项按所需顺序显示。 此外，请记住，关闭 MDI 父窗体时，每个 MDI 子窗体先引发一个 <xref:System.Windows.Forms.Form.Closing> 事件，再引发 MDI 父窗体的 <xref:System.Windows.Forms.Form.Closing> 事件。 取消 MDI 子窗体的 <xref:System.Windows.Forms.Form.Closing> 事件将不会阻止引发 MDI 父窗体的 <xref:System.Windows.Forms.Form.Closing> 事件；但是，MDI 父窗体的 <xref:System.Windows.Forms.Form.Closing> 事件的 <xref:System.ComponentModel.CancelEventArgs> 参数将设置为 `true`。 通过将 <xref:System.ComponentModel.CancelEventArgs> 参数设置为 `false` 可以强制 MDI 父窗体和所有 MDI 子窗体关闭。  
   
-## <a name="see-also"></a>请参阅  
- [多文档界面 (MDI) 应用程序](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- [如何：创建 MDI 父窗体](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [如何：确定活动的 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- [如何：将数据发送到活动的 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
- [如何：排列 MDI 子窗体](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a>请参阅
+- [多文档界面 (MDI) 应用程序](multiple-document-interface-mdi-applications.md)
+- [如何：创建 MDI 父窗体](how-to-create-mdi-parent-forms.md)
+- [如何：确定活动的 MDI 子窗体](how-to-determine-the-active-mdi-child.md)
+- [如何：将数据发送到活动的 MDI 子窗体](how-to-send-data-to-the-active-mdi-child.md)
+- [如何：排列 MDI 子窗体](how-to-arrange-mdi-child-forms.md)

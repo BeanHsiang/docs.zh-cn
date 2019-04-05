@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd5d35cb13bb55fc73e160089cbc1050cb3d5c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cdc617039ac8328e0153abc7cc3752c54060a8c4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449213"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481458"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints 方法
-获取与指定标记所表示的泛型参数相关联的泛型参数约束的数组的枚举数。  
+获取与指定的标记表示的泛型参数相关联的泛型参数约束的数组的枚举器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,21 +39,21 @@ HRESULT EnumGenericParamConstraints (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `phEnum`  
- [在中，out]枚举数指向的指针。  
+ [in、 out]一个指向枚举器。  
   
  `tk`  
- [in]  一个表示其约束是要枚举的泛型参数的令牌。  
+ [in]  表示其约束是要枚举的泛型参数的标记。  
   
  `rGenericParamConstraints`  
  [out]若要枚举的泛型参数约束的数组。  
   
  `cMax`  
- [in]  请求的令牌中放置的最大数`rGenericParamConstraints`。  
+ [in]  要放置在中的令牌的请求最大数目`rGenericParamConstraints`。  
   
  `pcGenericParamConstraints`  
- [out]指向的令牌的数目的指针置于`rGenericParamConstraints`。  
+ [out]指向标记数的指针置于`rGenericParamConstraints`。  
   
 ## <a name="return-value"></a>返回值  
   
@@ -63,14 +63,14 @@ HRESULT EnumGenericParamConstraints (
 |`S_FALSE`|`phEnum` 不包含任何成员元素。 在这种情况下，`pcGenericParameterConstraints`设置为 0 （零）。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
  **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

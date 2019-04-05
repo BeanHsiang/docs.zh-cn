@@ -2,18 +2,18 @@
 title: ServiceDescription 和 WSDL 引用
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: e70d653519c13d2f40fa2a579b674893e1b7ab02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544323"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 和 WSDL 引用
 本主题介绍与 Windows Communication Foundation (WCF) 如何映射 Web 服务描述语言 (WSDL) 文档<xref:System.ServiceModel.Description.ServiceDescription>实例。  
   
 ## <a name="how-servicedescription-maps-to-wsdl-11"></a>ServiceDescription 如何映射到 WSDL 1.1  
- 您可以使用 WCF 导出从 WSDL 文档<xref:System.ServiceModel.Description.ServiceDescription>为你的服务的实例。 发布元数据终结点时，将为服务自动生成 WSDL 文档。  
+ 您可以使用 WCF 将从 WSDL 文档<xref:System.ServiceModel.Description.ServiceDescription>为你的服务实例。 发布元数据终结点时，将为服务自动生成 WSDL 文档。  
   
  还可以使用 <xref:System.ServiceModel.Description.ServiceEndpoint> 类型从 WSDL 文档导入 <xref:System.ServiceModel.Description.ContractDescription> 实例、<xref:System.ServiceModel.Channels.Binding> 实例和 `WsdlImporter` 实例。  
   
@@ -35,14 +35,14 @@ ms.locfileid: "33507344"
   
 |属性|WSDL 映射|  
 |----------------|------------------|  
-|`Name`|`wsdl:port` /@name终结点的值与`wsdl:binding`/@name终结点绑定的值。|  
+|`Name`|`wsdl:port` /@name终结点的值和`wsdl:binding`/@name终结点绑定的值。|  
 |`Address`|终结点的 `wsdl:port` 定义的地址。<br /><br /> 终结点的传输确定地址的格式。 例如，对于 WCF 支持传输，它可能是 SOAP 地址或终结点引用。|  
-|`Binding`|终结点的 `wsdl:binding` 定义。<br /><br /> 与不同`wsdl:binding`定义，WCF 中的绑定不会与任何一个协定关联。|  
+|`Binding`|终结点的 `wsdl:binding` 定义。<br /><br /> 与不同`wsdl:binding`定义，在 WCF 中的绑定不受限于任何一个协定。|  
 |`Contract`|终结点的 `wsdl:portType` 定义。|  
 |`Behaviors`|实现 <xref:System.ServiceModel.Description.IWsdlExportExtension> 接口的终结点行为可以修改终结点的 `wsdl:port`。|  
   
 ### <a name="bindings"></a>绑定  
- `ServiceEndpoint` 实例的绑定实例映射到 `wsdl:binding` 定义。 与不同`wsdl:binding`定义，这必须是与一个特定关联`wsdl:portType`定义，WCF 绑定都独立于任何协定。  
+ `ServiceEndpoint` 实例的绑定实例映射到 `wsdl:binding` 定义。 与不同`wsdl:binding`定义，必须将与特定`wsdl:portType`定义中，WCF 绑定是独立于任何协定。  
   
  绑定由绑定元素的集合组成。 每个元素描述终结点与客户端的通信方式的某一方面。 另外，绑定还具有一个 <xref:System.ServiceModel.Channels.MessageVersion>，指示终结点的 <xref:System.ServiceModel.EnvelopeVersion> 和 <xref:System.ServiceModel.Channels.AddressingVersion>。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "33507344"
  绑定的 <xref:System.ServiceModel.Channels.TransportBindingElement> 为 SOAP 绑定确定传输统一资源标识符 (URI)。  
   
 #### <a name="addressingversion"></a>AddressingVersion  
- 绑定上的 `AddressingVersion` 映射到 `wsd:port` 中使用的寻址版本。 WCF 支持 SOAP 1.1 和 SOAP 1.2 地址以及 Ws-addressing 08/2004年和 Ws-addressing 1.0 终结点引用。  
+ 绑定上的 `AddressingVersion` 映射到 `wsd:port` 中使用的寻址版本。 WCF 支持 SOAP 1.1 和 SOAP 1.2 地址以及 Ws-addressing 08/2004 和 Ws-addressing 1.0 终结点引用。  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
  绑定上的 `EnvelopeVersion` 映射到 `wsdl:binding` 中使用的 SOAP 的版本。 WCF 支持 SOAP 1.1 和 SOAP 1.2 绑定。  
@@ -81,12 +81,12 @@ ms.locfileid: "33507344"
   
 |属性|WSDL 映射|  
 |----------------|------------------|  
-|`Name`|`wsdl:portType` / `wsdl:operation` /@name操作的值。|  
+|`Name`|`wsdl:portType` / `wsdl:operation` /@name操作值。|  
 |`ProtectionLevel`|附加到此操作的 `wsdl:binding/wsdl:operation` 消息的安全策略中的保护断言。|  
-|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating操作的值。 此属性是 WSDL 1.1 的 WCF 扩展。|  
-|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating操作的值。 此属性是 WSDL 1.1 的 WCF 扩展。|  
-|`Messages`|`wsdl:portType` / `wsdl:operation` / `wsdl:input`和`wsdl:portType` / `wsdl:operation` / `wsdl:output`操作的消息。|  
-|`Faults`|`wsdl:portType` / `wsdl:operation` / `wsdl:fault`定义，则为该操作。|  
+|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating操作值。 此属性是 WSDL 1.1 的 WCF 扩展。|  
+|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating操作值。 此属性是 WSDL 1.1 的 WCF 扩展。|  
+|`Messages`|`wsdl:portType` / `wsdl:operation` / `wsdl:input`并`wsdl:portType` / `wsdl:operation` / `wsdl:output`操作消息。|  
+|`Faults`|`wsdl:portType` / `wsdl:operation` / `wsdl:fault`操作定义。|  
 |`Behaviors`|`DataContractSerializerOperationBehavior` 和 `XmlSerializerOperationBehavior` 处理操作绑定和操作消息。|  
   
 #### <a name="the-datacontractserializeroperationbehavior"></a>DataContractSerializerOperationBehavior  
@@ -94,17 +94,17 @@ ms.locfileid: "33507344"
   
 |属性|WSDL 映射|  
 |----------------|------------------|  
-|`DataContractFormatAttribute`|`Style`此特性的属性将映射到`wsdl:binding` / `wsdl:operation` / `soap:operation` /@style操作的值。<br /><br /> `DataContractSerializerOperationBehavior` 仅支持 WSDL 中架构类型的文字用法。|  
+|`DataContractFormatAttribute`|`Style`此特性的属性映射到`wsdl:binding` / `wsdl:operation` / `soap:operation` /@style操作值。<br /><br /> `DataContractSerializerOperationBehavior` 仅支持 WSDL 中架构类型的文字用法。|  
   
 #### <a name="the-xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior  
  操作的 `XmlSerializerOperationBehavior` 是用于为该操作导出 WSDL 消息和绑定的 `IWsdlExportExtension` 实现。 XML 架构类型是使用 `XmlSchemaExporter` 导出的。 `XmlSerializerOperationBehavior` 还为该操作确定用途、样式和要使用的架构导出程序与导入程序。  
   
 |属性|WSDL 映射|  
 |----------------|------------------|  
-|`XmlSerializerFormatAttribute`|`Style`此特性的属性将映射到`wsdl:binding` / `wsdl:operation` / `soap:operation` /@style操作的值。<br /><br /> `Use`此特性的属性将映射到`wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use操作中的所有消息的值。|  
+|`XmlSerializerFormatAttribute`|`Style`此特性的属性映射到`wsdl:binding` / `wsdl:operation` / `soap:operation` /@style操作值。<br /><br /> `Use`此特性的属性映射到`wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use操作中的所有消息的值。|  
   
 ### <a name="messages"></a>消息  
- A`MessageDescription`实例映射到`wsdl:message`引用`wsdl:portType` / `wsdl:operation` / `wsdl:input`或`wsdl:portType` / `wsdl:operation` / `wsdl:output`在操作中的消息。 `MessageDescription` 包含正文和标头。  
+ 一个`MessageDescription`实例映射到`wsdl:message`引用`wsdl:portType` / `wsdl:operation` / `wsdl:input`或`wsdl:portType` / `wsdl:operation` / `wsdl:output`操作中的消息。 `MessageDescription` 包含正文和标头。  
   
 |属性|WSDL 映射|  
 |----------------|------------------|  
@@ -113,26 +113,26 @@ ms.locfileid: "33507344"
 |`ProtectionLevel`|附加到此消息的 `wsdl:message` 定义的安全策略中的保护断言。|  
 |`Body`|消息的消息正文。|  
 |`Headers`|消息的标头。|  
-|`ContractDescription.Name`, `OperationContract.Name`|在导出时，用于派生`wsdl:message`/@name值。|  
+|`ContractDescription.Name`， `OperationContract.Name`|在导出时，用于派生`wsdl:message`/@name值。|  
   
 #### <a name="message-body"></a>消息正文  
- A`MessageBodyDescription`实例映射到`wsdl:message` / `wsdl:part`的消息的正文定义。 消息正文可以包装也可以裸露。  
+ 一个`MessageBodyDescription`实例映射到`wsdl:message` / `wsdl:part`的消息的正文定义。 消息正文可以包装也可以裸露。  
   
 |属性|WSDL 映射|  
 |----------------|------------------|  
-|`WrapperName`|如果样式不是 RPC，则`WrapperName`映射到引用的元素名称`wsdl:message` / `wsdl:part`与@name设置为"parameters"。|  
+|`WrapperName`|如果样式不是 RPC，则`WrapperName`映射到引用的元素名`wsdl:message` / `wsdl:part`与@name设置为"parameters"。|  
 |`WrapperNamespace`|如果样式不是 RPC，则`WrapperNamespace`映射到的元素命名空间`wsdl:message` / `wsdl:part`与@name设置为"parameters"。|  
 |`Parts`|此消息正文的消息部分。|  
-|`ReturnValue`|如果存在包装元素 （文档包装样式或 RPC 样式），否则的包装元素的子元素的第一个`wsdl:message` / `wsdl:part`消息中。|  
+|`ReturnValue`|如果存在包装元素 （文档包装样式或 RPC 样式），否则在包装元素的子元素第一个`wsdl:message` / `wsdl:part`消息中。|  
   
 #### <a name="message-parts"></a>消息部分  
- A`MessagePartDescription`实例映射到`wsdl:message` / `wsdl:part`和 XML 架构类型或消息部分所指向的元素。  
+ 一个`MessagePartDescription`实例映射到`wsdl:message` / `wsdl:part`和 XML 架构类型或消息部分所指向的元素。  
   
-|属性|WSDL 映射|  
+|Properties|WSDL 映射|  
 |----------------|------------------|  
-|`Name`|`wsd:message` / `wsdl:part` /@name以及消息部分的消息部分所指向的元素的名称的值。|  
+|`Name`|`wsd:message` / `wsdl:part` /@name消息部分和消息部分所指向的元素的名称值。|  
 |`Namespace`|消息部分所指向的元素的命名空间。|  
-|`Index`|索引`wsdl:message` / `wsdl:part`消息。|  
+|`Index`|索引`wsdl:message` / `wsdl:part`的消息。|  
 |`ProtectionLevel`|附加到此消息部分的 `wsdl:message` 定义的安全策略中的保护断言。 将策略参数化，使其指向特定的消息部分。|  
 |`MessageType`|消息部分所指向的元素的 XML 架构类型。|  
   
@@ -140,7 +140,7 @@ ms.locfileid: "33507344"
  `MessageHeaderDescription` 实例是同时还映射到消息部分的 `soap:header` 绑定的消息部分。  
   
 ### <a name="faults"></a>错误  
- A`FaultDescription`实例映射到`wsdl:portType` / `wsdl:operation` / `wsdl:fault`定义和其关联`wsdl:message`定义。 将 `wsdl:message` 添加到与其关联的 WSDL 端口类型相同的目标命名空间。 `wsdl:message` 有一个名为“详细信息”的消息部分，该部分指向对应于 `DefaultType` 实例的 `FaultDescription` 属性值的 XML 架构元素。  
+ 一个`FaultDescription`实例映射到`wsdl:portType` / `wsdl:operation` / `wsdl:fault`定义和其关联`wsdl:message`定义。 将 `wsdl:message` 添加到与其关联的 WSDL 端口类型相同的目标命名空间。 `wsdl:message` 有一个名为“详细信息”的消息部分，该部分指向对应于 `DefaultType` 实例的 `FaultDescription` 属性值的 XML 架构元素。  
   
 |属性|WSDL 映射|  
 |----------------|------------------|  
@@ -151,5 +151,5 @@ ms.locfileid: "33507344"
 |`DetailType`|详细消息部分所指向的元素的 XML 架构类型。|  
 |`Name, ContractDescription.Name, OperationDescription.Name,`|用于派生`wsdl:message`/@name错误消息的值。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Description>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Description>

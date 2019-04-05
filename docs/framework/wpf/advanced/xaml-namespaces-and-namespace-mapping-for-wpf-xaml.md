@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 9e93d3cd417d0d075fcebb8327ec51799884f8d6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664639"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366599"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML 的 XAML 命名空间和命名空间映射
 本主题进一步解释通常在 WPF XAML 文件的根标记中出现的两个 XAML 命名空间映射的存在性和用途。 此外，还介绍如何生成相似映射以使用代码中和/或单独程序集内定义的元素。  
@@ -40,7 +40,7 @@ ms.locfileid: "45664639"
   
  这些声明之间的关系是 `x:` 前缀映射支持 XAML 语言定义中的内部函数，并且 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是将 XAML 用作语言并为 XAML 定义对象词汇的一种实现。 因为 WPF 词汇用法远比 XAML 内部函数用法常见，因此默认映射 WPF 词汇。  
   
- 此 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 内，映射 XAML 语言内部函数支持的 `x:` 前缀约定后跟项目模板、示例代码和语言功能文档。 XAML 命名空间定义许多常用功能，即使对于基本 WPF 应用程序而言，这些功能也是必需的。 例如，若要通过分部类将任何代码隐藏加入到 XAML 文件，必须将该类命名为相关 XAML 文件根元素中的 `x:Class` 属性。 或者，XAML 页面中定义的任何要作为键控资源访问的元素都应在当前元素上设置 `x:Key` 属性。 有关 XAML 的这些方面和其他方面的详细信息，请参阅 [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 或 [XAML 语法详述](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+ 此 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 内，映射 XAML 语言内部函数支持的 `x:` 前缀约定后跟项目模板、示例代码和语言功能文档。 XAML 命名空间定义许多常用功能，即使对于基本 WPF 应用程序而言，这些功能也是必需的。 例如，若要通过分部类将任何代码隐藏加入到 XAML 文件，必须将该类命名为相关 XAML 文件根元素中的 `x:Class` 属性。 或者，XAML 页面中定义的任何要作为键控资源访问的元素都应在当前元素上设置 `x:Key` 属性。 有关 XAML 的这些方面和其他方面的详细信息，请参阅 [XAML 概述 (WPF)](xaml-overview-wpf.md) 或 [XAML 语法详述](xaml-syntax-in-detail.md)。  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>映射到自定义类和程序集  
@@ -115,7 +115,7 @@ End Namespace
   
  [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 使用通常映射到前缀 `d:` 的设计器命名空间。 WPF 的较新项目模板可能会预映射此 XAML 命名空间，以支持 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 和其他设计环境之间的交换。 此设计 XAML 命名空间用于在设计器中往返基于 XAML 的 UI 时保持设计状态。 它也用于 `d:IsDataSource`（在设计器中启用运行时数据源）等功能。  
   
- 可能看到的另一个映射前缀是 `mc:`。 `mc:` 用于标记兼容，使用一种并不一定特定于 XAML 的标记兼容模式。 某种程度上，标记兼容功能可用于在框架之间或跨后备实现的其他边界交换 XAML、在 XAML 架构上下文之间运行、为设计器中限制模式提供兼容性等。 有关标记兼容概念及其与 WPF 的关系的详细信息，请参阅[标记兼容 (mc:) 语言功能](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)。  
+ 可能看到的另一个映射前缀是 `mc:`。 `mc:` 用于标记兼容，使用一种并不一定特定于 XAML 的标记兼容模式。 某种程度上，标记兼容功能可用于在框架之间或跨后备实现的其他边界交换 XAML、在 XAML 架构上下文之间运行、为设计器中限制模式提供兼容性等。 标记兼容概念和如何与 WPF 的关系的详细信息，请参阅[标记兼容 (mc:)语言功能](markup-compatibility-mc-language-features.md)。  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF 和程序集加载  
  WPF 的 XAML 架构上下文与 WPF 应用程序模型，后者又使用的 CLR 定义概念<xref:System.AppDomain>。 以下序列描述 XAML 架构上下文如何解释如何加载程序集或查找类型在运行的时或设计时，根据 WPF 使用的<xref:System.AppDomain>和其他因素。  
@@ -136,6 +136,6 @@ End Namespace
   
  虽然 BAML 也不应包含非限定程序集名称，但是已编译 BAML（通过 PresentationBuildTask 生成）会使用所有步骤。  
   
-## <a name="see-also"></a>请参阅  
- [了解 XML 命名空间](https://go.microsoft.com/fwlink/?LinkId=98069)  
- [XAML 概述 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>请参阅
+- [了解 XML 命名空间](https://go.microsoft.com/fwlink/?LinkId=98069)
+- [XAML 概述 (WPF)](xaml-overview-wpf.md)

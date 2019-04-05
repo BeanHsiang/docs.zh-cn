@@ -1,21 +1,23 @@
 ---
 title: 在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解在 eShopOnContainers 中的订购微服务中实现 CQRS 的方式。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: fdca8d38157d5c5b62bd077e5d715ca22ac9780f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 198e7df6e3bdc88d699c396ce8ac97f8a74066d6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106744"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462703"
 ---
-# <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
+# <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服务中应用 CQRS 和 CQS 方法
 
 eShopOnContainers 引用应用程序处的订单微服务设计基于 CQRS 原则。 但是，它使用最简单的方法：只需将查询与命令分离，且执行这两种操作时使用相同的数据库。
 
-这些模式的本质，以及这里的要点是，查询是幂等的：无论查询一个系统多少次，该系统的状态都不会改变。 你甚至可以使用不同的“读取”数据模型而不是事务逻辑的“写入”域模型，尽管排序微服务使用的是相同的数据库。 因此这是简化的 CQRS 方法。
+这些模式的本质，以及这里的要点是，查询是幂等的：无论查询一个系统多少次，该系统的状态都不会改变。 换而言之，查询没有副作用。
+
+因此，可以使用不同的“读取”数据模型而不是事务逻辑的“写入”域模型，尽管排序微服务使用的是相同的数据库。 因此，这是简化的 CQRS 方法。
 
 另一方面，用于触发事务和数据更新的命令在系统中会更改状态。 在处理复杂问题和不断变化的业务规则的过程中，使用命令时需小心谨慎。 这正是应用 DDD 技术的时候，可以获取更好的模型化系统。
 
@@ -23,7 +25,7 @@ eShopOnContainers 引用应用程序处的订单微服务设计基于 CQRS 原�
 
 这种模式中的一种是聚合模式，会在后面几部分中进行详细介绍。 简单来说，在聚合模式中，因多个域对象在域中的关系，会将这些域对象作为一个单位来对待。 在查询中，此模式也可能产生不便，它可能会增加查询逻辑的复杂性。 对于只读查询，无法获得将多个对象视为单个聚合的优势。 而只会增加复杂性。
 
-如图 9-2 所示，本指南建议仅在微服务的事务性/更新区域中使用 DDD 模式（也即由命令触发时）。 查询可以遵循更简单的方法，如果遵循 CQRS 方法，应将查询与命令分离开来。
+如图 7-2 所示，本指南建议仅在微服务的事务性/更新区域中使用 DDD 模式（也即由命令触发时）。 查询可以遵循更简单的方法，如果遵循 CQRS 方法，应将查询与命令分离开来。
 
 要实现“查询端”，成熟的 ORM 中有许多方法可供选择：EF Core、AutoMapper 投影、存储过程、视图、具体化视图或微型 ORM。
 
@@ -39,30 +41,29 @@ eShopOnContainers 引用应用程序处的订单微服务设计基于 CQRS 原�
 
 只有一个应用程序体系结构：你设计的系统或端到端应用程序的体系结构（如微服务体系结构）。 但该应用程序中的每个界定的上下文或微服务的设计反映有关其自身的折衷方案和体系结构模式级别的内部设计决策。 请勿尝试将相同的体系结构模式（如 CQRS 或 DDD）用于所有情况。
 
-####  <a name="additional-resources"></a>其他资源
+### <a name="additional-resources"></a>其他资源
 
--   **Martin Fowler。CQRS**
-    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
+- **Martin Fowler。CQRS** \
+  [https://martinfowler.com/bliki/CQRS.html](https://martinfowler.com/bliki/CQRS.html)
 
--   **Greg Young.CQS 与CQRS**
-    [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
+- **Greg Young.CQS 与CQRS** \
+  [http://codebetter.com/gregyoung/2009/08/13/command-query-separation/](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young.CQRS 文档**
-    [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
+- **Greg Young.CQRS Documents** \（CQRS 文档）
+  [https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young.CQRS、基于任务的 UI 和事件源**
-    [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
+- **Greg Young.CQRS, Task Based UIs and Event Sourcing** \（CQRS、基于任务的 UI 和事件源）
+  [http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Udi Dahan.Clarified CQRS**（明确的 CQRS）
-    [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **Udi Dahan.Clarified CQRS** \（明确的 CQRS）
+  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **CQRS**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **CQRS** \
+  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **事件源 (ES)**
-    [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
-
+- **Event-Sourcing (ES)** \（事件源 (ES)）
+  [http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 >[!div class="step-by-step"]
-[上一页](apply-simplified-microservice-cqrs-ddd-patterns.md)
-[下一页](cqrs-microservice-reads.md)
+>[上一页](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[下一页](cqrs-microservice-reads.md)

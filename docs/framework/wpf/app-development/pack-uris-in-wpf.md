@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 7addb503d0a7d4c7a4388144759e7f40264d7703
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e84f586e621aa54d7e8a8f62e605ec3016cfb757
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522430"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411273"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 在 Windows Presentation Foundation (WPF)[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]用于标识和加载在许多方面，包括以下文件：  
@@ -44,19 +44,19 @@ ms.locfileid: "43522430"
 ## <a name="the-pack-uri-scheme"></a>Pack URI 方案  
  包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]通过使用方案[开放打包约定](https://go.microsoft.com/fwlink/?LinkID=71255)(OPC) 规范，描述用于组织和标识内容的模型。 此模型的关键元素是包和部件，其中*包*是逻辑容器，一个或多个逻辑*部件*。 下图阐释了此概念。  
   
- ![包和部件关系图](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
+ ![包和部件示意图](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)  
   
- 为了标识部件，OPC 规范利用 RFC 2396 扩展性 (统一资源标识符 (URI): 一般语法) 来定义 pack[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]方案。  
+ 为了标识部件，OPC 规范利用 RFC 2396 扩展性 (统一资源标识符 (URI):一般语法） 来定义 pack[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]方案。  
   
  由指定的方案[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]由其前缀; 定义 http、 ftp 和 file 是众所周知的示例。 包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]方案作为其方案中，使用"包"，并包含两个组件： 授权和路径。 下面是包的格式[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  
   
- 包: / /*颁发机构*/*路径*
+ pack://*authority*/*path*
   
  *颁发机构*指定的类型，由包含部件的包时*路径*指定部件在包中的位置。  
   
  下图阐释了此概念：  
   
- ![包、授权与路径之间的关系](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure2.PNG "WPFPackURISchemeFigure2")  
+ ![包、颁发机构与路径之间的关系](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)  
   
  包和部件之间的关系类似于应用程序和文件之间的关系，其中应用程序（包）可以包含一个或多个文件（部件），包括：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "43522430"
   
  若要访问这些类型的文件，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支持两种授权： 应用程序: / / 和 siteoforigin:///: / /。 application:/// 授权标识在编译时已知的应用程序数据文件，包括资源文件和内容文件。 siteoforigin:/// 授权标识源站点文件。 下图显示了每种授权的范围。  
   
- ![Pack URI 关系图](../../../../docs/framework/wpf/app-development/media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
+ ![Pack URI 示意图](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)  
   
 > [!NOTE]
 >  包的证书颁发机构部分[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]是一个嵌入式[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]的指向包并且必须符合 RFC 2396。 另外，必须用字符“,”替换字符“/”，并且必须对保留字符（如“%”和“?”）进行转义。 有关详细信息，请参阅 OPC。  
@@ -89,7 +89,7 @@ ms.locfileid: "43522430"
   
 -   **授权**：application:///。  
   
--   **路径**：资源文件的名称，包括其相对于本地程序集项目文件夹根目录的路径。  
+-   **路径**:资源文件，包括其路径，相对于本地程序集项目文件夹根目录的名称。  
   
  下面的示例演示了包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]位于本地程序集的项目文件夹的根目录中的资源文件。  
   
@@ -105,9 +105,9 @@ ms.locfileid: "43522430"
   
 -   **授权**：application:///。  
   
--   **路径**：编译到所引用程序集内的资源文件的名称。 路径必须符合以下格式：  
+-   **路径**:资源文件编译到引用的程序集的名称。 路径必须符合以下格式：  
   
-     *程序集短名称*{*;版本*] {*;PublicKey*]; 组件 /*路径*  
+     *AssemblyShortName*{*;Version*]{*;PublicKey*];component/*Path*  
   
     -   **程序集短名称**：所引用的程序集的短名称。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "43522430"
   
 -   **授权**：application:///。  
   
--   **路径**：内容文件的名称，包括其相对于应用程序的主可执行程序集的文件系统位置的路径。  
+-   **路径**:内容文件，包括其相对于应用程序的主可执行程序集的文件系统位置的路径名称。  
   
  下面的示例演示了包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]位于可执行程序集所在的文件夹中的内容文件。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "43522430"
   
 -   **授权**：siteoforigin:///。  
   
--   **路径**：源站点文件的名称，包括其相对于可执行程序集启动位置的路径。  
+-   **路径**:源站点文件，包括其相对于从中启动可执行程序集位置的路径的名称。  
   
  下面的示例演示了包[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]为[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]源站点文件，存储在从中启动可执行程序集的位置。  
   
@@ -281,7 +281,7 @@ ms.locfileid: "43522430"
   
  表 1 说明了各种绝对 pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] ，可以在标记中指定。  
   
- 表 1：标记中的绝对 Pack URI  
+ 表 1:在标记中的绝对 Pack Uri  
   
 |文件|绝对 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -297,7 +297,7 @@ ms.locfileid: "43522430"
   
  表 2 说明了各种相对 pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] ，可以在标记中指定。  
   
- 表 2：标记中的相对 Pack URI  
+ 表 2:在标记中的相对 Pack Uri  
   
 |文件|相对 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -342,7 +342,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  表 3 说明了各种相对 pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] ，可以使用在代码中指定<xref:System.Uri?displayProperty=nameWithType>。  
   
- 表 3：代码中的绝对 Pack URI  
+ 表 3:在代码中的绝对 Pack Uri  
   
 |文件|绝对 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -358,7 +358,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  表 4 阐释了各种相对 pack[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]你可以指定在代码中使用<xref:System.Uri?displayProperty=nameWithType>。  
   
- 表 4：代码中的相对 Pack URI  
+ 表 4:在代码中的相对 Pack Uri  
   
 |文件|相对 pack [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]|  
 |----------|-------------------------------------------------------------------------------------------------------------------------|  
@@ -377,11 +377,11 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 #### <a name="specifying-the-ui-to-show-when-an-application-starts"></a>指定当应用程序启动时显示的 UI  
  <xref:System.Windows.Application.StartupUri%2A> 指定第一个[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]时显示[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]启动应用程序。 对于独立应用程序，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]可以是一个窗口，如下面的示例中所示。  
   
- [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]  
+ [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]  
   
  独立应用程序和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]还可以指定页为初始 UI，如下面的示例中所示。  
   
- [!code-xaml[PackURIOverviewSnippets#StartupUriPage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]  
+ [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]  
   
  如果应用程序是一个独立应用程序并使用指定了一个页面<xref:System.Windows.Application.StartupUri%2A>，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]将打开<xref:System.Windows.Navigation.NavigationWindow>以承载该页面。 有关[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，主机浏览器中显示了页。  
   
@@ -389,39 +389,39 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 #### <a name="navigating-to-a-page"></a>导航到页面  
  下面的示例演示如何导航到页面。  
   
- [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]  
-[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]  
-[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]  
+ [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]  
+[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]  
+[!code-xaml[NavigationOverviewSnippets#HyperlinkXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml3)]  
   
- 有关详细信息中导航的各种方法[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，请参阅[导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
+ 有关详细信息中导航的各种方法[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，请参阅[导航概述](navigation-overview.md)。  
   
 <a name="Specifying_a_Window_Icon"></a>   
 #### <a name="specifying-a-window-icon"></a>指定窗口图标  
  下面的示例演示如何使用 URI 指定窗口的图标。  
   
- [!code-xaml[WindowIconSnippets#WindowIconSetXAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]  
+ [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]  
   
- 有关详细信息，请参阅<xref:System.Windows.Window.Icon%2A>。  
+ 有关详细信息，请参阅 <xref:System.Windows.Window.Icon%2A>。  
   
 <a name="Loading_Image__Audio__and_Video_Files"></a>   
 #### <a name="loading-image-audio-and-video-files"></a>加载图像、音频和视频文件  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 允许应用程序使用各种媒体类型，所有这些都可以标识和加载与包[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，如下面的示例中所示。  
   
- [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]  
+ [!code-xaml[MediaPlayerVideoSample#VideoPackURIAtSOO](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerVideoSample/CS/HomePage.xaml#videopackuriatsoo)]  
   
- [!code-xaml[MediaPlayerAudioSample#AudioPackURIAtSOO](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerAudioSample/CS/HomePage.xaml#audiopackuriatsoo)]  
+ [!code-xaml[MediaPlayerAudioSample#AudioPackURIAtSOO](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaPlayerAudioSample/CS/HomePage.xaml#audiopackuriatsoo)]  
   
- [!code-xaml[ImageSample#ImagePackURIContent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageSample/CS/HomePage.xaml#imagepackuricontent)]  
+ [!code-xaml[ImageSample#ImagePackURIContent](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageSample/CS/HomePage.xaml#imagepackuricontent)]  
   
- 使用媒体内容的详细信息，请参阅[图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)。  
+ 使用媒体内容的详细信息，请参阅[图形和多媒体](../graphics-multimedia/index.md)。  
   
 <a name="Loading_a_Resource_Dictionary_from_the_Site_of_Origin"></a>   
 #### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>从源站点加载资源字典  
  资源字典 (<xref:System.Windows.ResourceDictionary>) 可用于支持应用程序的主题。 创建和管理主题的一种方式是将多个主题创建为位于应用程序源站点的资源字典。 这样，在添加和更新主题时将无需重新编译和重新部署应用程序。 这些资源字典可以标识和使用包加载[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]，下面的示例所示。  
   
- [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]  
+ [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]  
   
- 有关中的主题的概述[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，请参阅[样式和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ 有关中的主题的概述[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，请参阅[样式和模板化](../controls/styling-and-templating.md)。  
   
-## <a name="see-also"></a>请参阅  
- [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>请参阅
+- [WPF 应用程序资源、内容和数据文件](wpf-application-resource-content-and-data-files.md)

@@ -1,15 +1,13 @@
 ---
-title: dotnet tool list 命令 - .NET Core CLI
+title: dotnet tool list 命令
 description: dotnet tool list 命令从计算机中列出指定的 .NET Core 全局工具。
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: e2bea974207d3098ed67b69ed16a72a03c44cd8b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d3ff7fc90faf6ede3f7de0d5af5112c77ca140db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712905"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -27,7 +25,7 @@ dotnet tool list <--tool-path>
 dotnet tool list <-h|--help>
 ```
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet tool list` 命令让你可以列出计算机上（当前用户配置文件）或特定路径中安装的所有用户范围的 .NET Core 全局工具。 此命令列出包名称、安装的版本以及全局工具命令。 若要使用此 list 命令，需要使用 `--global` 选项指定要查看所有用户范围的工具或者使用 `--tool-path` 选项指定自定义路径。
 
@@ -61,4 +59,4 @@ dotnet tool list <-h|--help>
 
 ## <a name="see-also"></a>请参阅
 
-* [.NET Core 全局工具](global-tools.md)
+- [.NET Core 全局工具](global-tools.md)

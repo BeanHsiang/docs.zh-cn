@@ -1,5 +1,5 @@
 ---
-title: 演练：使用 Visual Basic 创作复合控件
+title: 演练：创作复合控件使用 Visual Basic
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: be2265f62092e6fdf43d8647a71d2c441beeefef
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5eaa92b6294ebf849f005f6e12d2dacb43fa4d6c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482385"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714276"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>演练：使用 Visual Basic 创作复合控件
+# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>演练：创作复合控件使用 Visual Basic
 复合控件提供了一种创建和重用自定义图形界面的方法。 复合控件本质上是具有可视化表示形式的组件。 因此，它可能包含一个或多个 Windows 窗体控件、组件或代码块，它们能够通过验证用户输入、修改显示属性或执行作者所需的其他任务来扩展功能。 可以按照与其他控件相同的方式将复合控件置于 Windows 窗体中。 在本演练的第一部分，将创建一个名为 `ctlClock` 的简单复合控件。 在本演练的第二部分，将通过继承扩展 `ctlClock` 的功能。  
   
 > [!NOTE]
@@ -147,7 +147,7 @@ ms.locfileid: "43482385"
 4.  在“文件”菜单上，单击“全部保存”保存项目。  
   
 ## <a name="testing-the-control"></a>测试控件  
- 控件不是独立的项目，它们必须托管在容器中。 测试控件的运行时行为，并使用“UserControl 测试容器”运用其属性。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+ 控件不是独立的项目，它们必须托管在容器中。 测试控件的运行时行为，并使用“UserControl 测试容器”运用其属性。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
   
 #### <a name="to-test-your-control"></a>测试控件  
   
@@ -326,7 +326,7 @@ ms.locfileid: "43482385"
 4.  在“文件”菜单上，单击“全部保存”保存项目。  
   
 ### <a name="using-the-inherited-control-on-a-form"></a>在窗体上使用继承的控件  
- 可按测试基类控件 `ctlClock` 相同的方法测试继承的控件：按 F5 生成项目并在“UserControl 测试容器”中运行控件。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
+ 你可以测试继承的控件相同的方式测试基类控件`ctlClock`:按 F5 生成项目并在“UserControl 测试容器”中运行该控件。 有关详细信息，请参阅[如何：测试 UserControl 的运行时行为](how-to-test-the-run-time-behavior-of-a-usercontrol.md)。  
   
  若要使用控件，还需要将其放入窗体中。 与标准复合控件一样，继承的复合控件不能独立存在，而必须承载在窗体或其他容器中。 由于 `ctlAlarmClock` 的功能更加深入，因此需要附加代码以对其进行测试。 在本过程中，将编写一个简单的程序来测试 `ctlAlarmClock` 的功能。 将编写代码来设置和显示 `ctlAlarmClock` 的 `AlarmTime` 属性，并测试其固有功能。  
   
@@ -356,7 +356,7 @@ ms.locfileid: "43482385"
   
 11. 按下述方法设置这些控件的属性。  
   
-    |控件|属性|“值”|  
+    |控件|属性|值|  
     |-------------|--------------|-----------|  
     |`label1`|**文本**|`(blank space)`|  
     ||**名称**|`lblTest`|  
@@ -395,8 +395,7 @@ ms.locfileid: "43482385"
   
      本演练涵盖了多个关键概念。 现已应了解如何通过将控件和组件组合到复合控件容器中来创建复合控件。 还应了解图和将属性添加到控件，以及如何编写代码以实现自定义功能。 在最后一节中，应了解到如何通过继承来扩展给定复合控件的功能，以及如何通过重写承载方法来改变这些方法的功能。  
   
-## <a name="see-also"></a>请参阅  
- [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [如何：创作复合控件](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- [如何：在“选择工具箱项”对话框中显示控件](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [组件创作演练](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+## <a name="see-also"></a>请参阅
+- [各种自定义控件](varieties-of-custom-controls.md)
+- [如何：创作复合控件](how-to-author-composite-controls.md)
+- [如何：中显示控件选择工具箱项对话框](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

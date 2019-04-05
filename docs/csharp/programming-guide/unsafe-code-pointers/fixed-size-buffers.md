@@ -1,16 +1,17 @@
 ---
-title: 固定大小的缓冲区（C# 编程指南）
+title: 固定大小的缓冲区 - C# 编程指南
+ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 134a219acd02caa2b16c5a6e8716c3245579ecca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50049550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700606"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小的缓冲区（C# 编程指南）
 
@@ -50,7 +51,7 @@ private fixed char name[30];
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../index.md)  
-- [不安全代码和指针](index.md)  
-- [fixed 语句](../../language-reference/keywords/fixed-statement.md)  
+- [C# 编程指南](../index.md)
+- [不安全代码和指针](index.md)
+- [fixed 语句](../../language-reference/keywords/fixed-statement.md)
 - [互操作性](../interop/index.md)

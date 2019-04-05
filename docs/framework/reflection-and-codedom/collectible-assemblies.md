@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04a04e422fec14055d8ac3f50b9f2f18658a0f9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637737"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>动态类型生成的可回收程序集
 
@@ -77,9 +77,9 @@ ms.locfileid: "33398249"
 - **上下文绑定对象**    
    不支持上下文静态变量。 可回收程序集中的类型无法扩展 <xref:System.ContextBoundObject>。 但是，可回收程序集中的代码可使用在其他位置定义的上下文绑定对象。
 
-- **线程静态数据**       
+- **线程静态数据**       
    不支持线程静态变量。
 
 ## <a name="see-also"></a>请参阅
 
-[发出动态方法和程序集](emitting-dynamic-methods-and-assemblies.md)
+- [发出动态方法和程序集](emitting-dynamic-methods-and-assemblies.md)

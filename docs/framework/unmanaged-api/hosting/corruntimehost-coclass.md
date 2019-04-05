@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9b9b8a728932caa085bba1665dc97faf02be8fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7c81a39acee31986421c810e2814a4f7e6c4d970
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597523"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost 组件类
-提供用于管理正由公共语言运行时执行的应用程序的接口。  
+提供用于管理应用程序正在执行公共语言运行时的接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,19 +43,19 @@ coclass CorRuntimeHost {
 |接口|描述|  
 |---------------|-----------------|  
 |[ICorConfiguration 接口](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|提供用于配置公共语言运行时 (CLR) 方法。|  
-|[ICorRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|提供使主机能够显式启动和停止公共语言运行时，创建和配置应用程序域，以访问默认域，以及枚举进程中运行的所有域的方法。|  
-|[IDebuggerInfo 接口](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|提供用于获取有关调试服务的状态信息的方法。|  
-|[IGCHost 接口](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|提供用于获取有关垃圾回收系统的信息以及控制垃圾回收的某些方面的方法。|  
-|"IValidator"|提供用于验证和验证错误的详细报告的可移植可执行映像的方法。|  
+|[ICorRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|提供了使宿主能够显式启动和停止公共语言运行时，若要创建和配置应用程序域，若要访问默认域，并要枚举的进程中运行的所有域的方法。|  
+|[IDebuggerInfo 接口](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|提供用于获取有关调试的服务的状态信息的方法。|  
+|[IGCHost 接口](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|提供方法用于获取有关垃圾回收系统的信息以及用于控制垃圾回收的某些方面。|  
+|"IValidator"|提供了用于验证的可移植可执行映像和详细报告验证错误的方法。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.idl  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [承载组件类](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a>请参阅
+- [承载组件类](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

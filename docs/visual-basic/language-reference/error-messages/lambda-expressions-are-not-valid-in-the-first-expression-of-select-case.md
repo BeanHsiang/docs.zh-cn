@@ -1,5 +1,5 @@
 ---
-title: Lambda 表达式不是有效的第一个表达式中&#39;Select Case&#39;语句
+title: Lambda 表达式在“Select Case”语句的第一个表达式中无效
 ms.date: 07/20/2015
 f1_keywords:
 - bc36635
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: c492615850ec089fe35c1ae4eaba90a741e30f42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588916"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843444"
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Lambda 表达式不是有效的第一个表达式中&#39;Select Case&#39;语句
-不能使用 lambda 表达式中的测试表达式`Select Case`语句。 Lambda 表达式定义返回函数和的测试表达式`Select Case`语句必须是基本数据类型。  
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Lambda 表达式在“Select Case”语句的第一个表达式中无效
+不能使用 lambda 表达式中的测试表达式`Select Case`语句。 返回的函数，测试表达式的 lambda 表达式定义`Select Case`语句必须是基本数据类型。  
   
  下面的代码会导致此错误：  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33588916"
   
 -   检查你的代码以确定是否可以使用其他条件构造，例如 `If...Then...Else` 语句。  
   
--   你可能具有想要调用函数，如下面的代码中所示：  
+-   您可能打算调用该函数，如下面的代码中所示：  
   
 ```vb  
 Dim num? As Integer  
@@ -40,7 +40,8 @@ Select Case ((Function(arg? As Integer) arg Is Nothing)(num))
 End Select  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [If...Then...Else 语句](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Select...Case 语句](../../../visual-basic/language-reference/statements/select-case-statement.md)
+## <a name="see-also"></a>请参阅
+
+- [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [If...Then...Else 语句](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Select...Case 语句](../../../visual-basic/language-reference/statements/select-case-statement.md)

@@ -1,13 +1,13 @@
 ---
-title: 有效的内容的 XElement 和 XDocument Objects2
+title: XElement 和 XDocument Objects2 的有效内容
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: 4b1d588f0ebbfec6d5cf7a58b63f92005db75acc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649378"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828793"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 和 XDocument 对象的有效内容
 本主题描述可以传递给构造函数以及用于向元素和文档添加内容的方法的有效参数。  
@@ -88,5 +88,6 @@ ms.locfileid: "33649378"
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|用新内容替换子节点。|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|用新内容替换节点。|  
   
-## <a name="see-also"></a>请参阅  
- [创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>请参阅
+
+- [创建 XML 树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

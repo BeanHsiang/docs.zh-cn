@@ -4,12 +4,12 @@ description: Azure functions 提供无服务器功能跨多个语言 （C#、 Ja
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: f08ba20b485197acd3bb5cdfe5699cd6be991d7c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369659"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145158"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -17,13 +17,13 @@ Azure functions 提供无服务器计算体验。 通过调用函数*触发器*�
 
 ![Azure functions 徽标](./media/azure-functions-logo.png)
 
-有两个版本的 Azure 功能框架。 旧的版本支持完整的.NET Framework 和新的运行时支持跨平台.NET Core 应用程序。 除了 C# JavaScript、 F # 和 Java 等其他语言支持。 在门户中创建的函数提供了丰富的脚本语法。 可以使用完整的平台支持和功能部署作为独立项目创建的函数。
+有两个版本的 Azure 功能框架。 旧的版本支持完整的.NET Framework 和新的运行时支持跨平台.NET Core 应用程序。 除了其他语言C#JavaScript 中，如F#，并支持 Java。 在门户中创建的函数提供了丰富的脚本语法。 可以使用完整的平台支持和功能部署作为独立项目创建的函数。
 
 有关详细信息，请参阅[Azure Functions 文档](https://docs.microsoft.com/azure/azure-functions)。
 
 ## <a name="functions-v1-vs-v2"></a>函数 v1 与 v2
 
-有两个 Azure Functions 运行时版本： 1.x 和 2.x。 版本 1.x 已正式推出 (GA)。 它支持从门户或 Windows 计算机的.NET 开发，并使用.NET Framework。 1.x 支持 C#、 JavaScript 和 F #、 Python、 PHP、 TypeScript、 Batch、 Bash、 和 PowerShell 的实验性支持。
+有两个版本的 Azure Functions 运行时：1.x 和 2.x。 版本 1.x 已正式推出 (GA)。 它支持从门户或 Windows 计算机的.NET 开发，并使用.NET Framework。 1.x 支持C#，JavaScript，和F#，使用 Python、 PHP、 TypeScript、 Batch、 Bash、 和 PowerShell 的实验性支持。
 
 版本 2.x 处于预览状态。 它利用.NET Core，并支持 Windows、 macOS 和 Linux 计算机上的跨平台开发。 2.x 添加了适用于 Java 的一流支持，但尚不直接支持的任何实验性语言。 版本 2.x 使用新的绑定扩展性模型，从而使第三方扩展到平台独立的版本控制的绑定，并更简化的执行环境。
 
@@ -175,10 +175,10 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 
 `Root`代理会发送到的根 URL 的任何内容 (`https://--shorturl--/`) 并将它重定向到文档站点。
 
-使用代理的示例所示视频[Azure： 将应用迁移到使用无服务器 Azure Functions 在云中](https://channel9.msdn.com/events/Connect/2017/E102)。 在真实时间中在本地 SQL Server 上运行的 ASP.NET Core 应用程序迁移到 Azure 云。 使用代理服务器来帮助重构传统的 Web API 项目以使用函数。
+使用代理的示例所示视频[Azure:将应用迁移到使用无服务器 Azure Functions 在云中](https://channel9.msdn.com/events/Connect/2017/E102)。 在真实时间中在本地 SQL Server 上运行的 ASP.NET Core 应用程序迁移到 Azure 云。 使用代理服务器来帮助重构传统的 Web API 项目以使用函数。
 
 有关代理的详细信息，请参阅[使用 Azure Functions 代理](https://docs.microsoft.com/azure/azure-functions/functions-proxies)。
 
 >[!div class="step-by-step"]
-[上一页](azure-serverless-platform.md)
-[下一页](application-insights.md)
+>[上一页](azure-serverless-platform.md)
+>[下一页](application-insights.md)

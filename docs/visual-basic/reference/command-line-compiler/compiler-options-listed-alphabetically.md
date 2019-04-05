@@ -4,19 +4,19 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 98a9295f1a2158e28a699aa6dfb1403542e523b4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 846d033c62d0168bab4661b9ab2b71a2139e2fcb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197296"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823514"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>按字母顺序列出的 Visual Basic 编译器选项
 Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的开发环境 (IDE) 的程序的替代方法。 下面是 Visual Basic 命令行编译器选项按字母顺序排序的列表。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-|选项|目标|  
+|Option|用途|  
 |------------|-------------|  
 |[@（指定响应文件）](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定响应文件。|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|显示编译器选项。 此命令等同于指定 `-help` 选项。 未进行编译。|  
@@ -25,7 +25,7 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
 |`-analyzer`|从此程序集（缩写形式：-a）运行分析器|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定的 DLL 的基址。|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|创建一个文件，其中包含可以轻松报告 bug 的信息。|  
-|`-checksumalgorithm:<alg>`|指定用于计算 PDB 中存储的源文件校验和的算法。  支持的值为：SHA1（默认值）或 SHA256。|  
+|`-checksumalgorithm:<alg>`|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|指定要用于编译中所有源代码文件的代码页。|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|生成调试信息。|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|定义条件编译的符号。|  
@@ -39,7 +39,7 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|从指定的程序集导入命名空间。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定密钥对的密钥容器名称从而为程序集赋予强名称。|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|指定包含密钥或密钥对的文件从而为程序集赋予强名称。|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定语言版本： 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定语言版本：9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定引用的程序集的位置[-引用](../../../visual-basic/reference/command-line-compiler/reference.md)选项。|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|创建指向托管资源的链接。|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定包含的类`Sub Main`启动时要使用的过程。|  
@@ -80,8 +80,7 @@ Visual Basic 命令行编译器用作一种编译来自 Visual Studio 集成的�
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|标识用户定义的 Win32 应用程序清单文件要嵌入到项目的可移植可执行 (PE) 文件。|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|将 Win32 资源插入到输出文件。|  
   
-## <a name="see-also"></a>请参阅  
- [按类别列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
- [项目设计器简介](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
- [按字母顺序列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [按类别列出的 C# 编译器选项](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+## <a name="see-also"></a>请参阅
+
+- [按类别列出的 Visual Basic 编译器选项](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
+- [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

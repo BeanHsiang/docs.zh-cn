@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-ms.openlocfilehash: da0b612feb5b9a479d50f52cf65e38007ab3b196
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e5f87a8e367e8c9df65b979fea3781b42ee3ce83
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746518"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824957"
 ---
 # <a name="math-functions-visual-basic"></a>数学函数 (Visual Basic)
 方法<xref:System.Math?displayProperty=nameWithType>类提供三角、 对数和其他通用数学函数。  
@@ -166,9 +166,10 @@ End Function
   
  **程序集：** mscorlib （在 mscorlib.dll 中)  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>  
- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>  
- <xref:System.Double.NaN>  
- [派生的数学函数](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
- [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>
+- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>
+- <xref:System.Double.NaN>
+- [派生的数学函数](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
+- [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

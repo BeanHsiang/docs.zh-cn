@@ -1,16 +1,16 @@
 ---
-title: 如何： 使用表达式树来生成动态查询 (Visual Basic)
+title: 如何：使用表达式树来生成动态查询 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: a2101598a083f8d0738cb531ebbaea0f7a87a577
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f91d95f888ab98902cc300afb61c41b62e64050
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643343"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827674"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>如何： 使用表达式树来生成动态查询 (Visual Basic)
-在 LINQ 中，表达式树用于表示针对数据源的结构化查询，这些数据源可实现 <xref:System.Linq.IQueryable%601>。 例如，LINQ 提供程序可实现 <xref:System.Linq.IQueryable%601> 接口，用于查询关系数据存储。 Visual Basic 编译器编译将生成一个在运行时的表达式树的代码作为目标，此类数据源的查询。 然后，查询提供程序可以遍历表达式树数据结构，并将其转换为适合于数据源的查询语言。  
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>如何：使用表达式树来生成动态查询 (Visual Basic)
+在 LINQ 中，表达式树用于表示针对数据源的结构化查询，这些数据源可实现 <xref:System.Linq.IQueryable%601>。 例如，LINQ 提供程序可实现 <xref:System.Linq.IQueryable%601> 接口，用于查询关系数据存储。 Visual Basic 编译器编译代码，生成一个表达式树在运行时作为目标，此类数据源的查询。 然后，查询提供程序可以遍历表达式树数据结构，并将其转换为适合于数据源的查询语言。  
   
  表达式树还可以用在 LINQ 中，用于表示分配给类型为 <xref:System.Linq.Expressions.Expression%601> 的变量的 lambda 表达式。  
   
@@ -107,8 +107,9 @@ Next
   
 -   包括 System.Linq.Expressions 命名空间。  
   
--   该示例从复制代码并将其粘贴到`Main``Sub`过程。  
+-   复制代码示例中并将其粘贴到`Main``Sub`过程。  
   
-## <a name="see-also"></a>请参阅  
- [表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
- [如何： 执行表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+## <a name="see-also"></a>请参阅
+
+- [表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [如何：执行表达式树 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

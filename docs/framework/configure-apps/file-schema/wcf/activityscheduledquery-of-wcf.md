@@ -1,43 +1,43 @@
 ---
-title: WCF 的 &lt;activityScheduledQuery&gt;
+title: <activityScheduledQuery> WCF 的
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: a3c4c8b338921c9d949edd83deb4d6073eb26b55
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 5087d56092296f8c68b719ec0945993adeb3de0a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123366"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272898"
 ---
-# <a name="ltactivityscheduledquerygt-of-wcf"></a>WCF 的 &lt;activityScheduledQuery&gt;
+# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery > 的 WCF
 
 表示一个查询集合，这些查询用于跟踪安排给父活动来执行的活动。 跟踪参与者需要用此查询来订阅活动安排记录。  
   
 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<跟踪 >  
+\<tracking>  
 \<配置文件 >  
 \<trackingProfile>  
-\<工作流 >  
-\<activityScheduledQueries >  
-\<activityScheduledQuery >  
+\<workflow>  
+\<activityScheduledQueries>  
+\<activityScheduledQuery>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
       <workflow>
         <activityScheduledQueries>
-          <activityScheduledQuery activityName="String"   
-                                  childActivityName="String"/>
+          <activityScheduledQuery activityName="String"
+                                  childActivityName="String" />
         </activityScheduledQueries>
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking> 
+</tracking>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  

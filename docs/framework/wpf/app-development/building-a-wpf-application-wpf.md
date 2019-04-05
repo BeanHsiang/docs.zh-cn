@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 89ceb39b08250bc400eed6ca8f8c24013446b453
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084080"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364289"
 ---
 # <a name="building-a-wpf-application-wpf"></a>生成 WPF 应用程序 (WPF)
 Windows Presentation Foundation (WPF) 应用程序可以生成为[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]可执行文件 (.exe)、 库 (.dll) 或这两种类型的程序集的组合。 本主题将介绍如何生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 应用程序，并对生成过程中的各个关键步骤进行说明。  
@@ -26,13 +26,13 @@ Windows Presentation Foundation (WPF) 应用程序可以生成为[!INCLUDE[dnprd
   
 -   Microsoft 生成引擎 (MSBuild)。 除了代码和 XAML 文件之外，应用程序还必须包含一个 MSBuild 项目文件。 有关详细信息，请参阅“MSBuild”。  
   
--   Visual Studio。 Visual Studio 是一个集成式开发环境，可编译使用 MSBuild 生成的 WPF 应用程序，并包含可用于创建 UI 的可视化设计器。 有关详细信息，请参阅[Visual Studio 中的应用程序开发](https://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68)并[在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)。  
+-   Visual Studio。 Visual Studio 是一个集成式开发环境，可编译使用 MSBuild 生成的 WPF 应用程序，并包含可用于创建 UI 的可视化设计器。 有关详细信息，请参阅[编写和管理代码使用 Visual Studio](/visualstudio/ide/index-writing-code)并[在 Visual Studio 中设计 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)。  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF 生成管道  
  在生成 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 项目时，会组合调用特定于语言的目标和特定于 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的目标。 执行这些目标的进程被称为生成管道，相关的关键步骤已显示在下图中。  
   
- ![WPF 生成过程](../../../../docs/framework/wpf/app-development/media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
+ ![WPF 生成过程](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
   
 <a name="Pre_Build_Initializations"></a>   
 ### <a name="pre-build-initializations"></a>预生成初始化  
@@ -166,8 +166,8 @@ End Sub
   
 -   不会重新编译任何内容（如果项目未发生任何变化）。  
   
-## <a name="see-also"></a>请参阅  
- [部署 WPF 应用程序](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [WPF MSBuild 参考](/visualstudio/msbuild/wpf-msbuild-reference)  
- [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [WPF 应用程序资源、内容和数据文件](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+## <a name="see-also"></a>请参阅
+- [部署 WPF 应用程序](deploying-a-wpf-application-wpf.md)
+- [WPF MSBuild 参考](/visualstudio/msbuild/wpf-msbuild-reference)
+- [WPF 中的 Pack URI](pack-uris-in-wpf.md)
+- [WPF 应用程序资源、内容和数据文件](wpf-application-resource-content-and-data-files.md)

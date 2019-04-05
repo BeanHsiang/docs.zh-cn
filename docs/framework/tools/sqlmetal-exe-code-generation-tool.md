@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c9631ed7ecc854fe6f355eb4bbc2bfb5097ea770
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002887"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540619"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe（代码生成工具）
 SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] 的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]组件生成代码和映射。 通过应用本主题后面出现的选项，可以指示 SqlMetal 执行若干种不同的操作，其中包括：  
@@ -30,7 +30,7 @@ SqlMetal 命令行工具可为 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlin
 > [!NOTE]
 >  使用 Visual Studio 的开发人员还可以使用 [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] 生成实体类。 对于大型数据库，这种命令行方法具有很好的扩展性。 由于 SqlMetal 是一个命令行工具，因此可以在生成过程中使用它。  
   
- 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示符](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。在命令提示符处，键入以下内容：  
+ 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示符](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。在命令提示符处，键入以下内容：  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,7 +43,7 @@ sqlmetal [options] [<input file>]
   
  **连接选项**  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |/server: \<name>|指定数据库服务器名称。|  
 |/database: \<name>|指定服务器上的数据库目录。|  
@@ -54,7 +54,7 @@ sqlmetal [options] [<input file>]
   
  **提取选项**  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**/views**|提取数据库视图。|  
 |**/functions**|提取数据库函数。|  
@@ -62,7 +62,7 @@ sqlmetal [options] [<input file>]
   
  **输出选项**  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**/dbml** *[:file]*|采用 .dbml 格式发送输出。 不能与 **/map** 选项一起使用。|  
 |**/code** *[:file]*|以源代码形式发送输出。 不能与 **/dbml** 选项一起使用。|  
@@ -70,18 +70,18 @@ sqlmetal [options] [<input file>]
   
  **杂项**  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |/language: \<language>|指定源代码语言。<br /><br /> 有效 \<language>：vb、csharp。<br /><br /> 默认值：从代码文件的扩展名派生。|  
 |/namespace: \<name>|为生成的代码指定命名空间。 默认值：无命名空间。|  
 |/context: \<type>|指定数据上下文类的名称。 默认值：从数据库名称派生。|  
 |/entitybase: \<type>|指定生成的代码中的实体类的基类。 默认值：实体没有基类。|  
 |**/pluralize**|自动为类和成员名称应用复数或单数形式。<br /><br /> 此选项仅在美国可用。英文版。|  
-|/serialization: \<option>|生成可序列化类。<br /><br /> 有效 \<option>：None、Unidirectional。 默认值：None。<br /><br /> 有关详细信息，请参阅[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。|  
+|/serialization: \<option>|生成可序列化类。<br /><br /> 有效\<选项>：无，单向。 默认值：无。<br /><br /> 有关详细信息，请参阅[序列化](../../../docs/framework/data/adonet/sql/linq/serialization.md)。|  
   
  **输入文件**  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |\<input file>|指定 SQL Server Express .mdf 文件、 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] .sdf 文件或 .dbml 中间文件。|  
   
@@ -132,7 +132,7 @@ sqlmetal [options] [<input file>]
 > [!NOTE]
 >  如果对 Northwind 示例数据库应用 **/pluralize** 选项，请注意以下行为。 如果 SqlMetal 为表创建了行类型的名称，表名将采用单数形式。 如果它为表创建了 <xref:System.Data.Linq.DataContext> 属性，则表名将采用复数形式。 巧合的是，Northwind 示例数据库中的表名已采用复数形式。 因此，你将看不到这种效果。 尽管数据库表普遍命名为单数形式，但在 .NET 中，将集合命名为复数形式也是一种常见的做法。  
   
-## <a name="see-also"></a>请参阅  
- [如何：在 Visual Basic 或 C# 中生成对象模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- [LINQ to SQL 中的代码生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
- [外部映射](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+## <a name="see-also"></a>请参阅
+- [如何：在 Visual Basic 或 C# 中生成对象模型](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [LINQ to SQL 中的代码生成](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [外部映射](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

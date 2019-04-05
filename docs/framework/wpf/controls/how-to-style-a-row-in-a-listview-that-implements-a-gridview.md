@@ -6,36 +6,36 @@ helpviewer_keywords:
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 313ead6de45f2a137775adb0ad9aad8bd061c066
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c8806c399959fdc1466e0839ba469881718092b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555190"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361624"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>如何：为实现 GridView 的 ListView 中的行设置样式
-此示例演示如何设置样式中的行<xref:System.Windows.Controls.ListView>实现控件<xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A>模式。  
+此示例演示如何在中的行设置样式<xref:System.Windows.Controls.ListView>实现控件<xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A>模式。  
   
 ## <a name="example"></a>示例  
- 你可以设置样式中的行<xref:System.Windows.Controls.ListView>通过设置<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>上<xref:System.Windows.Controls.ListView>控件。 将表示为其项的样式设置<xref:System.Windows.Controls.ListViewItem>对象。 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>引用<xref:System.Windows.Controls.ControlTemplate>用于显示行内容的对象。  
+ 您可以在中的行设置样式<xref:System.Windows.Controls.ListView>通过设置控件<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>上<xref:System.Windows.Controls.ListView>控件。 表示为其项的样式设置<xref:System.Windows.Controls.ListViewItem>对象。 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>引用<xref:System.Windows.Controls.ControlTemplate>用于显示行内容的对象。  
   
  提取了以下示例的完整示例中显示了存储在 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 数据库中的歌曲信息集合。 数据库中的每首歌都有一个评级字段，此字段的值指定了歌曲信息行的显示方式。  
   
- 下面的示例演示如何定义<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>为<xref:System.Windows.Controls.ListViewItem>表示歌曲首歌曲集合中的对象。 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>引用<xref:System.Windows.Controls.ControlTemplate>指定如何显示一行歌曲信息的对象。  
+ 下面的示例演示如何定义<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>为<xref:System.Windows.Controls.ListViewItem>表示歌曲集合中的歌曲的对象。 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>引用<xref:System.Windows.Controls.ControlTemplate>指定如何显示歌曲信息行的对象。  
   
- [!code-xaml[ListViewItemStyleSnippet#ItemContainerStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#itemcontainerstyle)]  
+ [!code-xaml[ListViewItemStyleSnippet#ItemContainerStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#itemcontainerstyle)]  
   
- 下面的示例演示<xref:System.Windows.Controls.ControlTemplate>，它将添加的文本字符串`"Strongly Recommended"`的行。 此模板中引用<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>并显示歌曲的分级具有 5 （五个） 的值时。 <xref:System.Windows.Controls.ControlTemplate>包括<xref:System.Windows.Controls.GridViewRowPresenter>是布局中列的行的内容由定义的对象<xref:System.Windows.Controls.GridView>视图模式。  
+ 下面的示例演示<xref:System.Windows.Controls.ControlTemplate>，它将文本字符串`"Strongly Recommended"`到行。 此模板中引用<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>，并在歌曲的评级的值为 5 （五） 时显示。 <xref:System.Windows.Controls.ControlTemplate>包括<xref:System.Windows.Controls.GridViewRowPresenter>对象，它定义的列中的行的内容布局<xref:System.Windows.Controls.GridView>视图模式。  
   
- [!code-xaml[ListViewItemStyleSnippet#ControlTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#controltemplate)]  
+ [!code-xaml[ListViewItemStyleSnippet#ControlTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#controltemplate)]  
   
  下面的示例定义<xref:System.Windows.Controls.GridView>。  
   
- [!code-xaml[ListViewItemStyleSnippet#GridView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
+ [!code-xaml[ListViewItemStyleSnippet#GridView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [帮助主题](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [ListView 概述](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [帮助主题](listview-how-to-topics.md)
+- [ListView 概述](listview-overview.md)
+- [样式设置和模板化](styling-and-templating.md)

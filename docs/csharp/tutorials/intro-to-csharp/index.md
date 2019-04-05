@@ -1,16 +1,10 @@
 ---
-title: C# 简介 - 交互式教程
-description: 通过浏览器了解 C#，并开始使用自己的开发环境
+title: 'C# 简介 - 交互式教程'
+description: '通过浏览器了解 C#，并开始使用自己的开发环境'
 ms.date: 01/30/2018
 ms.custom: mvc
-ms.openlocfilehash: bfd08c0885351cebb0b2d7a45e93de20fa1bc97f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186163"
 ---
-# <a name="introduction-to-c"></a>C# 简介 #
+# <a name="introduction-to-c"></a>C\# 简介
 
 欢迎学习 C# 教程简介。 本系列教程从可以在浏览器中演练的交互式课程入手。
 

@@ -1,17 +1,17 @@
 ---
-title: 如何：使用 COM+ 服务模型配置工具
+title: 如何：使用 COM + 服务模型配置工具
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: d26e3b127328a3de4df6bd58fb6015bee045f3c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736242"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>如何：使用 COM+ 服务模型配置工具
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>如何：使用 COM + 服务模型配置工具
 在选择了适当的宿主模式之后，就可使用 COM+ 服务模型配置命令行工具 (ComSvcConfig.exe) 来配置将作为 Web 服务公开的应用程序接口。  
   
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "33496235"
 >  还原此注册表项十分重要。 这是一个兼容性注册表项。 不还原此更改可能会造成在计算机上运行的其他 .NET 应用程序产生问题）  
   
 > [!WARNING]
->  在使用 ComSvcConfig.exe /install Windows 8 计算机对话框上的会出现"您的电脑上的应用程序需要使用以下 Windows 功能：.NET Framework 3.5 (包括.NET 2.0 和 3.0"如果未安装.NET Framework 3.5。 可忽略此对话框。 或者，可以将 OnlyUseLatestCLR 注册表项设置为 DWORD 值 0x00000001  
+>  时使用 ComSvcConfig.exe /install 一个对话框，在 Windows 8 计算机上的会显示指出"您的 PC 上的应用程序需要以下 Windows 功能：.NET Framework 3.5 (包括.NET 2.0 和.NET 3.0"如果未安装.NET Framework 3.5。 可忽略此对话框。 或者，可以将 OnlyUseLatestCLR 注册表项设置为 DWORD 值 0x00000001  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>使用 COM+ 宿主模式将接口添加到将作为 Web 服务公开的接口集  
   
@@ -109,5 +109,5 @@ ms.locfileid: "33496235"
     ComSvcConfig.exe /?  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [与 COM+ 应用程序集成的概述](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+## <a name="see-also"></a>请参阅
+- [与 COM+ 应用程序集成的概述](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

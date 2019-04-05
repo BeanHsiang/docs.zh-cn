@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: d17ded99e08fa4fb99fd87e220045c2869a35805
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e02aa10f585cd4ad61e6a07d48a0c7e66e4c7523
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188230"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832051"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 此示例演示如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 类来自定义序列化和反序列化过程。 此示例演示如何在序列化和反序列化过程中动态添加已知类型。  
@@ -371,4 +371,3 @@ Lists combined:
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
   
-## <a name="see-also"></a>请参阅

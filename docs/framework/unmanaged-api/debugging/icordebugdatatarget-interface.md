@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 972c650e0fb3b42e943838b72faf2658f65543ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 53c054b59376a78eda83181e75aec94548e92f17
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499812"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget 接口
 提供一个回调接口，该接口可提供对特定目标进程的访问。  
@@ -30,35 +30,35 @@ ms.locfileid: "33412898"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetPlatform 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|提供有关平台，包括处理器体系结构和目标进程正在其运行的操作系统的信息。|  
-|[ReadVirtual 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|获取指定的地址处开始的连续内存块，并在提供的缓冲区中将其返回。|  
-|[GetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|请求指定的线程的当前线程上下文。|  
+|[GetPlatform 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|提供有关平台，包括处理器体系结构和操作系统，目标进程正在其运行的信息。|  
+|[ReadVirtual 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|获取从指定地址处开始的连续内存块，并返回它所提供的缓冲区中。|  
+|[GetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|请求对指定线程的当前线程上下文。|  
   
 ## <a name="remarks"></a>备注  
- `ICorDebugDataTarget` 和其方法具有以下特征：  
+ `ICorDebugDataTarget` 其方法具有以下特征：  
   
--   调试服务对此接口可访问内存和目标进程中的其他数据调用方法。  
+-   调试服务对此接口来访问内存和其他数据目标进程中的调用方法。  
   
--   调试器客户端必须实现此接口为适合特定的目标 （例如，活动进程或内存转储）。  
+-   调试器客户端必须实现此接口作为适用于特定目标 （例如，实时进程或内存转储）。  
   
--   `ICorDebugDataTarget`方法可以在其他实现的方法内调用只能从`ICorDebug*`接口。 这可确保调试器客户端已通过的线程调用，以及何时进行控制。  
+-   `ICorDebugDataTarget`方法可以实现其他的方法内调用只能从`ICorDebug*`接口。 这可确保调试器客户端已通过哪个线程调用，以及何时进行控制。  
   
 -   `ICorDebugDataTarget`实现必须始终返回有关目标的最新信息。  
   
- 应停止目标进程，并将其以任何方式时不更改`ICorDebug*`接口 (并因此`ICorDebugDataTarget`方法) 正被调用。 如果目标为活动的进程并且其状态更改， [iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法必须再次调用提供的替换 ICorDebugProcess 实例。  
+ 目标进程应停止，并以任何方式时不更改`ICorDebug*`接口 (并因此`ICorDebugDataTarget`方法) 正被调用。 如果目标是将其状态更改，并实时过程[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法必须再次调用以提供替换 ICorDebugProcess 实例。  
   
 > [!NOTE]
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

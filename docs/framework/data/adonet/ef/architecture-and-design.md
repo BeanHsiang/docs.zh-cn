@@ -2,17 +2,17 @@
 title: 体系结构和设计
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576325"
 ---
 # <a name="architecture-and-design"></a>体系结构和设计
-中的 SQL 生成模块[示例提供程序](https://go.microsoft.com/fwlink/?LinkId=180616)作为表示命令目录树的表达式树的访问者实现。 通过表达式树上的单个传递来执行生成。  
+中的 SQL 生成模块[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)作为表示命令目录树的表达式树的访问者实现。 通过表达式树上的单个传递来执行生成。  
   
- 从下至上处理树中的节点。 首先，生成一个中间结构：SqlSelectStatement 或 SqlBuilder（二者都实现 ISqlFragment）。 紧接着，从该结构生成字符串 SQL 语句。 生成中间结构的原因有两个：  
+ 从下至上处理树中的节点。 首先，生成中间结构：SqlSelectStatement 或 SqlBuilder，这两个实现 ISqlFragment。 紧接着，从该结构生成字符串 SQL 语句。 生成中间结构的原因有两个：  
   
 -   从逻辑上说，不按顺序填充 SQL SELECT 语句。 先访问参与 FROM 子句的节点，然后再访问参与 WHERE、GROUP BY 和 ORDER BY 子句的节点。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "43530465"
  在第二阶段，当生成实际字符串时，将重命名别名。  
   
 ## <a name="data-structures"></a>数据结构  
- 本部分讨论中使用的类型[示例提供程序](https://go.microsoft.com/fwlink/?LinkId=180616)用于生成 SQL 语句。  
+ 本部分讨论中使用的类型[示例提供程序](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)用于生成 SQL 语句。  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  本节涵盖实现 ISqlFragment 接口的类，此接口有两个用途：  
@@ -226,9 +226,9 @@ private bool IsParentAJoin{get}
  联接别名平展是在访问 DbPropertyExpression 时实现的，如标题为 DbPropertyExpression 的一节中所述。  
   
 ### <a name="column-name-and-extent-alias-renaming"></a>列名和范围别名重命名  
- 通过使用仅在生成的第二阶段中代替别名的符号来解决列名和范围别名重命名的问题，如标题为“SQL 生成的第二阶段：生成字符串命令”一节中所述。  
+ 在标题为 SQL 生成的第二个阶段的部分中所述的生成的第二个阶段中使用别名使用符号仅替换解决列名和范围别名重命名的问题：生成字符串命令。  
   
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL 生成的第一阶段：访问该表达式树  
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>SQL 生成的第一阶段：访问表达式树  
  本节介绍 SQL 生成的第一阶段，在此阶段中将访问表示查询的表达式并生成中间结构（SqlSelectStatement 或 SqlBuilder）。  
   
  本节描述访问不同的表达式节点类别时遵循的原则以及有关访问特定表达式类型的详细信息。  
@@ -405,7 +405,7 @@ Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(inp
 IsEmpty(inut) = Not Exists(input)  
 ```  
   
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成的第二阶段：生成字符串命令  
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 生成的第二个阶段：生成字符串命令  
  在生成字符串 SQL 命令时，SqlSelectStatement 会生成符号的实际别名，这将解决列名和范围别名的重命名问题。  
   
  在将 SqlSelectStatement 对象写入字符串时会发生范围别名重命名。 首先，创建外部范围使用的所有别名的列表。 对于 FromExtents（如果它不为 null，则为 AllJoinExtents）中的每个符号，如果该符号与任何外部范围发生冲突，则对该符号进行重命名。 如果需要进行重命名，则它不会与 AllExtentNames 中收集的任何范围发生冲突。  
@@ -414,5 +414,5 @@ IsEmpty(inut) = Not Exists(input)
   
  若要同时为范围别名和列生成唯一名称，请使用 <existing_name>_n，其中 n 是尚未使用的最小别名。 所有别名的全局列表加大了对层叠重命名的需要。  
   
-## <a name="see-also"></a>请参阅  
- [示例提供程序中的 SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>请参阅
+- [示例提供程序中的 SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

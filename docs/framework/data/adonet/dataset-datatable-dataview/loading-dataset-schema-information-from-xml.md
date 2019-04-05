@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: a076dcbbe79a7ec0dfbd727e0d0c752bd4675eef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bde264684eb4d36ae59e9ed966c88f379231ac73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596093"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>从 XML 加载数据集架构信息
 架构<xref:System.Data.DataSet>（其表、 列、 关系和约束） 可以定义，以编程方式创建的**填充**或**FillSchema**方法<xref:System.Data.Common.DataAdapter>，或从已加载XML 文档。 若要加载**数据集**架构信息从 XML 文档，您可以使用**ReadXmlSchema**或**InferXmlSchema**方法**数据集**. **ReadXmlSchema**允许您加载或推断**数据集**从包含 XML 架构定义语言 (XSD) 架构或包含内联 XML 架构的 XML 文档的文档的架构信息。 **InferXmlSchema** ，可忽略的某些指定的 XML 命名空间推断 XML 文档中的架构。  
@@ -73,7 +73,7 @@ xmlStream.Close();
 </NewDataSet>  
 ```  
   
- 由于前面的 XML 文档中的元素指定的属性都**ReadXmlSchema**方法并**ReadXml**方法替换**XmlReadMode**的**InferSchema**会在文档中创建表的每个元素：**类别**， **CategoryID**， **CategoryName**，**说明**，**产品**， **ProductID**， **ReorderLevel**，和**停止使用**. (有关详细信息，请参阅[推断数据集关系结构从 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)。)但是，更为合适的结构就是创建仅**类别**并**产品**表，然后创建**CategoryID**， **CategoryName**，并**描述**中的列**类别**表中，和**ProductID**， **ReorderLevel**，和**Discontinued**中的列**产品**表。 若要确保推断的架构忽略在 XML 元素中指定的属性，请使用**InferXmlSchema**方法并指定的 XML 命名空间**officedata**被忽略，如中所示下面的示例。  
+ 由于前面的 XML 文档中的元素指定的属性都**ReadXmlSchema**方法并**ReadXml**方法替换**XmlReadMode**的**InferSchema**会在文档中创建表的每个元素：**类别**， **CategoryID**， **CategoryName**，**说明**，**产品**， **ProductID**， **ReorderLevel**，和**停止使用**。 (有关详细信息，请参阅[推断数据集关系结构从 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)。)但是，更为合适的结构就是创建仅**类别**并**产品**表，然后创建**CategoryID**， **CategoryName**，并**描述**中的列**类别**表中，和**ProductID**， **ReorderLevel**，和**Discontinued**中的列**产品**表。 若要确保推断的架构忽略在 XML 元素中指定的属性，请使用**InferXmlSchema**方法并指定的 XML 命名空间**officedata**被忽略，如中所示下面的示例。  
   
 ```vb  
 Dim dataSet As DataSet = New DataSet  
@@ -85,10 +85,10 @@ DataSet dataSet = new DataSet();
 dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:officedata");  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [从 XML 架构派生数据集关系结构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- [从 XML 推断数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [在数据集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [从 XML 架构派生数据集关系结构 (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [从 XML 推断数据集关系结构](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
+- [从 XML 加载数据集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [数据集、数据表和数据视图](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

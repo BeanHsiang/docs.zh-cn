@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
-ms.openlocfilehash: e01a0264b86e052d9def7f3657f96d238a67afb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555779"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370756"
 ---
 # <a name="menu"></a>菜单
-A<xref:System.Windows.Controls.Menu>是允许的命令或事件处理程序与关联的元素的分层组织的控件。 每个<xref:System.Windows.Controls.Menu>可以包含多个<xref:System.Windows.Controls.MenuItem>控件。 每个<xref:System.Windows.Controls.MenuItem>可以调用命令或调用`Click`事件处理程序。 A<xref:System.Windows.Controls.MenuItem>还可以有多个<xref:System.Windows.Controls.MenuItem>元素作为子级，构成子菜单。  
+一个<xref:System.Windows.Controls.Menu>是允许的命令或事件处理程序与关联的元素的分层组织的控件。 每个<xref:System.Windows.Controls.Menu>可以包含多个<xref:System.Windows.Controls.MenuItem>控件。 每个<xref:System.Windows.Controls.MenuItem>可调用命令或调用`Click`事件处理程序。 一个<xref:System.Windows.Controls.MenuItem>还可以有多个<xref:System.Windows.Controls.MenuItem>元素作为子级，构成子菜单。  
   
- 下图显示菜单控件的三个不同的状态。 没有设备如鼠标指针停留在线上时的默认状态<xref:System.Windows.Controls.Menu>。 当鼠标指针悬停在焦点状态时发生<xref:System.Windows.Controls.Menu>并且通过单击鼠标按钮时发生按下的状态<xref:System.Windows.Controls.Menu>。  
+ 下图显示了菜单控件的三个不同状态。 默认状态是没有设备如鼠标指针停留在上时<xref:System.Windows.Controls.Menu>。 当鼠标指针悬停的焦点状态时发生<xref:System.Windows.Controls.Menu>，并且按下的状态时通过单击鼠标按钮出现<xref:System.Windows.Controls.Menu>。  
   
- ![菜单状态](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
-不同状态中的菜单  
+ ![菜单状态](./media/ss-ctl-menu.gif "SS_CTL_menu")  
+中的不同状态的菜单  
   
 ## <a name="in-this-section"></a>本节内容  
- [菜单概述](../../../../docs/framework/wpf/controls/menu-overview.md)  
+ [菜单概述](menu-overview.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Menu>  

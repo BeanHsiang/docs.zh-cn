@@ -2,12 +2,12 @@
 title: 目标文件夹是一个文件
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
-ms.openlocfilehash: b6235e849f3311398dff96efdfec3d0ac05f9432
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3189b6284939fabaaff923b80e6e767b89df50b2
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865493"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58035088"
 ---
 # <a name="target-folder-is-a-file"></a>目标文件夹是一个文件
 在尝试执行与文件夹相关的操作时指定了文件。  
@@ -16,9 +16,10 @@ ms.locfileid: "43865493"
   
 -   检查所提供的路径，以确保指定的是文件夹而不是文件。  
   
-## <a name="see-also"></a>请参阅  
- [如何：分析文件路径](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)  
- [创建、删除和移动文件和目录](../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- [文件、 目录和驱动器在 Visual Basic 中的属性](https://msdn.microsoft.com/library/131593e9-d1b0-4c89-9c03-ae8afc458829)  
- [如何： 确定 Visual Basic 中文件的绝对路径](https://msdn.microsoft.com/library/4c6769df-e9b9-4b69-bfdf-ce4cfbda30ff)
+## <a name="see-also"></a>请参阅
+
+- [如何：分析文件路径](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [创建、删除和移动文件和目录](../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+- [文件、 目录和驱动器在 Visual Basic 中的属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/as4xcs58(v=vs.100))
+- [如何：确定在 Visual Basic 中的文件的绝对路径](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/e00wt2d8(v=vs.100))

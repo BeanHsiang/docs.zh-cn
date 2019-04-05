@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 228de9f3b92d45866c98976be08b84988a2db8d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84dcc6471ad37bfda90f58c748c99ff514f7eb3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668972"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>返回或跳过序列中的元素
 使用 <xref:System.Linq.Queryable.Take%2A> 运算符可返回序列中给定数目的元素，然后跳过其余元素。  
@@ -18,7 +18,7 @@ ms.locfileid: "33359873"
  使用 <xref:System.Linq.Queryable.Skip%2A> 运算符可跳过序列中给定数目的元素，然后返回其余元素。  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅中的"跳过和 Take 异常在 SQL Server 2000"条目[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
+>  <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 用在针对 SQL Server 2000 的查询中时存在一定的限制。 有关详细信息，请参阅中的"Skip 和 Take 异常在 SQL Server 2000"条目[故障排除](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通过使用带有 SQL <xref:System.Linq.Queryable.Skip%2A> 子句的子查询来转换 `NOT EXISTS`。 这种转换存在以下局限性：  
   
@@ -76,8 +76,8 @@ ORDER BY [t0].[CustomerID]
   
  当 <xref:System.Linq.Queryable.Take%2A> 和 <xref:System.Linq.Queryable.Skip%2A> 链接在一起时，所有指定的排序都必须一致。 否则，结果将是不确定的。  
   
- 对于非负的、基于 SQL 规范的整型常量参数，<xref:System.Linq.Queryable.Take%2A> 和 <xref:System.Linq.Queryable.Skip%2A> 都是定义完善的。  
+ 对于非负的、基于 SQL 规范的整型常量自变量，<xref:System.Linq.Queryable.Take%2A> 和 <xref:System.Linq.Queryable.Skip%2A> 都是定义完善的。  
   
-## <a name="see-also"></a>请参阅  
- [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>请参阅
+- [查询示例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [标准查询运算符转换](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

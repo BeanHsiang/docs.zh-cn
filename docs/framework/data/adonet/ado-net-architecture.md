@@ -2,12 +2,12 @@
 title: ADO.NET 体系结构
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2af1d6339b17871d56b949d845534479380c46ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195512"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623178"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 体系结构
 以前，数据处理主要依赖于基于连接的双层模型。 随着数据处理越来越多地使用多层体系结构，程序员正在向断开方法转换，以便为他们的应用程序提供更好的可伸缩性。  
@@ -49,13 +49,13 @@ ADO.NET 体系结构
  ADO.NET 实体框架专门用于让开发人员能够通过针对概念应用程序模型进行编程（而不是直接针对关系存储架构进行编程）来创建数据访问应用程序。 这样做的目的是减少面向数据的应用程序所需的编码和维护工作。 有关详细信息，请参阅[ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)。  
   
 ## <a name="wcf-data-services"></a>WCF 数据服务  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用于在 Web 或 Intranet 上部署数据服务。 这些数据将按照实体数据模型的规范组织成不同的实体和关系。 在此模型上部署的数据可通过标准的 HTTP 协议进行寻址。 有关详细信息，请参阅[WCF 数据服务 4.5](../../../../docs/framework/data/wcf/index.md)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用于在 Web 或 Intranet 上部署数据服务。 这些数据将按照实体数据模型的规范组织成不同的实体和关系。 在此模型上部署的数据可通过标准的 HTTP 协议进行寻址。 有关详细信息，请参阅 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)。  
   
 ## <a name="xml-and-adonet"></a>XML 和 ADO.NET  
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 利用 XML 的功能来提供对数据的断开连接的访问。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 是与 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的 XML 类一起设计的，它们都是同一个体系结构的组件。  
   
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中的 XML 类集中于 `DataSet` 对象中。 无论 XML 源是文件还是 XML 流，都可以用其中的数据来填充 `DataSet`。 无论 `DataSet` 中数据的源是什么，都可以将 `DataSet` 作为符合万维网联合会 (W3C) 的 XML 进行编写，其架构作为 XML 架构定义语言 (XSD) 架构。 由于 `DataSet` 的本机序列化格式为 XML，因此它是用于在层间移动数据的绝佳媒介，这使 `DataSet` 成为了与 XML Web 服务之间远程处理数据和架构上下文的最佳选择。 有关详细信息，请参阅 [XML 文档和数据](../../../../docs/standard/data/xml/index.md)。  
   
-## <a name="see-also"></a>请参阅  
- [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [ADO.NET 概述](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

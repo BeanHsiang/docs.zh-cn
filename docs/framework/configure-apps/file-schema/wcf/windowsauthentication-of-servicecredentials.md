@@ -1,30 +1,29 @@
 ---
-title: '&lt;serviceCredentials&gt; 的 &lt;windowsAuthentication&gt;'
+title: <windowsAuthentication> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: 9872b1f2520661ff3f31cef94b6822bb345ebfdf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f366c85f895356594cf8bd9049ca41c8fb458c4c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767539"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280951"
 ---
-# <a name="ltwindowsauthenticationgt-of-ltservicecredentialsgt"></a>&lt;serviceCredentials&gt; 的 &lt;windowsAuthentication&gt;
+# <a name="windowsauthentication-of-servicecredentials"></a>\<windowsAuthentication> of \<serviceCredentials>
 指定 Windows 服务凭据的设置。  
   
  \<system.ServiceModel>  
-\<行为 >  
+\<behaviors>  
 \<serviceBehaviors>  
-\<行为 >  
+\<behavior>  
 \<serviceCredentials>  
-\<windows 身份验证 >  
+\<windowsAuthentication>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<windowsAuthentication  
-      allowAnonymousLogons="Boolean"  
-      includeWindowsGroups="Boolean" />  
+<windowsAuthentication allowAnonymousLogons="Boolean"
+                       includeWindowsGroups="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -49,8 +48,8 @@ ms.locfileid: "32767539"
 ## <a name="remarks"></a>备注  
  通过设置 `allowAnonymousLogons` 属性，使用此元素可指定是否允许匿名 Windows 用户访问。 此外，通过设置 `includeWindowsGroups` 属性还可以指定是否在 AuthorizationContext 中包含用户所属的组信息。 如果将它设置为 `true`（默认设置），服务就可以确定客户端所属的 Windows 组。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.WindowsServiceElement>  
- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>  
- <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.WindowsServiceElement>
+- <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>
+- <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1016a0c63a85919764271e01771ff8192341725c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45810390ced8584ea7b37908a9e4af8d3da73f34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549845"
 ---
 # <a name="specifying-a-character-set"></a>指定字符集
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 字段控制字符串封送，并确定平台调用在 DLL 中查找函数名的方式。 本主题将介绍这两种行为。  
@@ -140,8 +140,8 @@ extern "C" int MessageBox(HWND hWnd,
                           unsigned int uType);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)  
- [用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- [在托管代码中创建原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [平台调用示例](../../../docs/framework/interop/platform-invoke-examples.md)
+- [用平台调用封送数据](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)

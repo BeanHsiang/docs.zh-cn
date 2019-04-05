@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51a7969821cb4c2367ac298c8452daf1f2a8ceab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185896"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066007"
 ---
 # <a name="securing-method-access"></a>保护方法访问
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 某些方法可能不适用于允许任意不受信任的代码进行调用。 此类方法会带来几种风险：方法可能会提供一些受限制的信息；它可能信任传递给它的任何信息；它可能不会对参数执行错误检查；如果使用错误的参数，它还可能出现故障或执行某些有害操作。 应该注意这些情况，并采取措施以帮助保护这类方法。  
+ 某些方法可能不适用于允许任意不受信任的代码进行调用。 此类方法会带来几种风险：该方法可能会提供一些受限制的信息;它可能信任传递给它; 的任何信息它可能不会执行错误检查的参数;或使用错误的参数，它可能会出现故障或执行某些有害操作。 应该注意这些情况，并采取措施以帮助保护这类方法。  
   
  在某些情况下，可能需要限制并不打算用于公共用途但仍须为公共方法的方法。 例如，可能有一个需在你自己的 DLL 间调用（从而必须为公共接口）的接口，但你不希望将其以公共方式公开，以防止客户使用它，或防止恶意代码利用入口点进入组件中。 限制不打算用于公共用途（但必须为公共方法）的方法的另一个常见理由是：为了避免不得不记录和支持可能是内部接口的接口。  
   
@@ -234,11 +234,11 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Virtual Internal 重写或 Overloads Overridable Friend  
   
 > [!NOTE]
->  本部分中的安全问题时将方法声明为同时发出警告`virtual`并`internal`(`Overloads``Overridable``Friend`在 Visual Basic 中)。 此警告仅适用于.NET framework 1.0 和 1.1 版，不适用于更高版本。  
+>  本部分中的安全问题时将方法声明为同时发出警告`virtual`并`internal`(`Overloads` `Overridable` `Friend`在 Visual Basic 中)。 此警告仅适用于.NET framework 1.0 和 1.1 版，不适用于更高版本。  
   
  在.NET framework 1.0 和 1.1 版中，您必须注意类型系统可访问性的细微差别时确认你的代码对其他程序集不可用。 声明的方法**虚拟**并**内部**(**Overloads Overridable Friend**在 Visual Basic 中) 可以重写父类的 vtable 条目，并可以仅通过使用在同一程序集中因为它是内部。 但是，由重写的可访问性**虚拟**关键字，并且可以覆盖从另一个程序集，只要该代码有权访问类本身。 如果重写可能会出现问题，使用声明性安全来解决问题，或删除**虚拟**如果不是绝对必需的关键字。  
   
  请注意，即使语言编译器通过编译错误防止这些重写，使用其他编译器编写的代码也可能发生重写。  
   
-## <a name="see-also"></a>请参阅  
- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>请参阅
+- [安全编码准则](../../../docs/standard/security/secure-coding-guidelines.md)

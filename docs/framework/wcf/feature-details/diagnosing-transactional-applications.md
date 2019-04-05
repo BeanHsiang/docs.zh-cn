@@ -2,18 +2,18 @@
 title: 诊断事务应用程序
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4cc42e7ac6847d8320b96fce5198d55df303de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550274"
 ---
 # <a name="diagnosing-transactional-applications"></a>诊断事务应用程序
 本主题介绍如何使用 Windows Communication Foundation (WCF) 管理和诊断功能来解决事务应用程序。  
   
 ## <a name="performance-counters"></a>性能计数器  
- WCF 提供了一组标准性能计数器，用于评估事务应用程序的性能。 有关更多信息，请参阅[性能计数器](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)。  
+ WCF 提供了一组标准的性能计数器，用于测量事务应用程序的性能。 有关更多信息，请参阅[性能计数器](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)。  
   
  性能计数器分为三个不同级别：服务、终结点和操作，如下表所述。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33496995"
 |Transactions Flowed Per Second（每秒流动的事务数）|每秒钟流向此终结点上的操作的事务数。 每当发送到终结点的消息中存在事务时，此计数器即会递增。|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Management Instrumentation  
- WCF 通过 WCF Windows Management Instrumentation (WMI) 提供程序的运行时公开服务的检测的数据。 有关访问 WMI 数据的详细信息，请参阅[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ WCF 在通过 WCF Windows Management Instrumentation (WMI) 提供程序的运行时公开服务的检测数据。 有关访问 WMI 数据的详细信息，请参阅[使用 Windows Management Instrumentation 进行诊断](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
  很多 WMI 只读属性都指示为服务应用的事务设置。 下表列出了所有这些设置。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "33496995"
   
 -   标准 WCF 跟踪  
   
-     这种类型的跟踪操作相同跟踪任何 WCF 应用程序。 有关更多信息，请参见 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
+     这种类型是跟踪的跟踪任何 WCF 应用程序相同。 有关更多信息，请参见 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
   
 -   WS-AtomicTransaction 跟踪  
   
-     Ws-atomictransaction 跟踪可以通过使用[Ws-atomictransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。 这种跟踪有助于详细了解系统中事务和参与者的状态。 若还要启用内部服务模块跟踪，可以将 `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` 注册表项设置为 <xref:System.Diagnostics.SourceLevels> 枚举的一个有效值。 你可以启用消息日志记录与其他 WCF 应用程序相同的方式。  
+     WS-AtomicTransaction 跟踪可以通过启用[WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。 这种跟踪有助于详细了解系统中事务和参与者的状态。 若还要启用内部服务模块跟踪，可以将 `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` 注册表项设置为 <xref:System.Diagnostics.SourceLevels> 枚举的一个有效值。 可以启用消息日志记录与其他 WCF 应用程序相同的方式。  
   
 -   `System.Transactions` 跟踪  
   
@@ -118,9 +118,9 @@ ms.locfileid: "33496995"
     </configuration>  
     ```  
   
-     这样，WCF 跟踪，如 WCF 还利用<xref:System.Transactions>基础结构。  
+     这样，WCF 跟踪，因为 WCF 还利用<xref:System.Transactions>基础结构。  
   
-## <a name="see-also"></a>请参阅  
- [管理和诊断](../../../../docs/framework/wcf/diagnostics/index.md)  
- [配置跟踪](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>请参阅
+- [管理和诊断](../../../../docs/framework/wcf/diagnostics/index.md)
+- [配置跟踪](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

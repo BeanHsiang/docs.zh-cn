@@ -2,12 +2,12 @@
 title: 如何：在 CSV 文本文件中计算列值 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: debc6bffd2a5c23e27fe8685c237b33016745be6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3a4bd410bc0d01e835132f7752970417be66941b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585833"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>如何：在 CSV 文本文件中计算列值 (LINQ) (C#)
 此示例演示如何对 .csv 文件的列执行 Sum、Average、Min 和 Max 等聚合计算。 此处所示的示例原则可以应用于其他类型的结构化文本。  
@@ -163,5 +163,5 @@ class SumColumns
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ 和字符串 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 和文件目录 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

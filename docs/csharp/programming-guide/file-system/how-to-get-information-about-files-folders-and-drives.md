@@ -1,15 +1,16 @@
 ---
-title: 如何：获取有关文件、文件夹和驱动器的信息（C# 编程指南）
+title: 如何：获取有关文件、文件夹和驱动器的信息 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: 8ebacff0f3a1704ec001e3570d0df136f54baf9d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e2315f5bfdca05da79e5ee4d897cd06dba6f1ed1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702954"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966159"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>如何：获取有关文件、文件夹和驱动器的信息（C# 编程指南）
 在 .NET Framework 中，可以使用以下类访问文件系统信息：  
@@ -37,7 +38,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## <a name="example"></a>示例  
  下面的示例演示用于访问有关文件和文件夹的信息的各种方法。  
   
- [!code-csharp[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-get-information-about-files-folders-and-drives_1.cs)]  
+ [!code-csharp[csFilesandFolders#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#6)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  处理用户指定的路径字符串时，还应针对以下情况处理异常：  
@@ -54,6 +55,6 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- <xref:System.IO?displayProperty=nameWithType>
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [文件系统和注册表（C# 编程指南）](../../../csharp/programming-guide/file-system/index.md)

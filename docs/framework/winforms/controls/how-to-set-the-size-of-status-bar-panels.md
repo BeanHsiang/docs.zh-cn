@@ -10,22 +10,23 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: d708b94d02b4f1c1e2f00101e6e394043a6057ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b78463ca273f089f036166f5339977be435ccc9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533775"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711936"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>如何：设置状态栏面板的大小
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStripStatusLabel> 控件取代了 <xref:System.Windows.Forms.StatusBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.StatusBar> 控件以实现向后兼容并供将来使用。  
+>  
+  <xref:System.Windows.Forms.ToolStripStatusLabel> 控件取代了 <xref:System.Windows.Forms.StatusBar> 控件并添加了功能；但是，可以选择保留 <xref:System.Windows.Forms.StatusBar> 控件以实现向后兼容并供将来使用。  
   
- 每个实例<xref:System.Windows.Forms.StatusBarPanel>类内[StatusBar 控件](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)控件具有大量的动态属性，确定其宽度，并在运行时调整大小行为。  
+ 每个实例<xref:System.Windows.Forms.StatusBarPanel>类中[StatusBar 控件](statusbar-control-windows-forms.md)控件具有多个动态属性，以确定其宽度和在运行时重设大小行为。  
   
 ### <a name="to-set-the-size-of-a-panel"></a>若要设置面板的大小  
   
-1.  在过程中，设置<xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>， <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>，和<xref:System.Windows.Forms.StatusBarPanel.Width%2A>属性 (或任何子集其中) 的状态栏面板使用其索引传递<xref:System.Windows.Forms.StatusBar.Panels%2A>属性<xref:System.Windows.Forms.StatusBarPanel>集合。  
+1.  在过程中，设置<xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>， <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>，并<xref:System.Windows.Forms.StatusBarPanel.Width%2A>属性 (或任何子集其中) 为状态栏面板使用它们的索引传递<xref:System.Windows.Forms.StatusBar.Panels%2A>属性<xref:System.Windows.Forms.StatusBarPanel>集合。  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
@@ -65,9 +66,9 @@ ms.locfileid: "33533775"
        }  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.StatusBar>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [演练：在运行时更新状态栏信息](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
- [如何：确定 Windows 窗体 StatusBar 控件中的哪个面板获得了单击](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [StatusBar 控件概述](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.StatusBar>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- [演练：在运行时的更新状态栏信息](walkthrough-updating-status-bar-information-at-run-time.md)
+- [如何：确定已单击 Windows 窗体 StatusBar 控件中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar 控件概述](statusbar-control-overview-windows-forms.md)

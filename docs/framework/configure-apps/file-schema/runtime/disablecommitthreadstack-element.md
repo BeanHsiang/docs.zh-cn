@@ -1,5 +1,5 @@
 ---
-title: '&lt;disableCommitThreadStack&gt;元素'
+title: <disableCommitThreadStack> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCommitThreadStack
@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d8724d16a25cdec040fa5b1f5472da06b11f669
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5071b2c23b25d6368c84582b76c1f8d18e2a3dff
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752658"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257507"
 ---
-# <a name="ltdisablecommitthreadstackgt-element"></a>&lt;disableCommitThreadStack&gt;元素
+# <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 元素
 指定在线程启动时是否提交完整线程堆栈。  
   
  \<configuration>  
 \<运行时 >  
-\<disableCommitThreadStack >  
+\<disableCommitThreadStack>  
   
 ## <a name="syntax"></a>语法  
   
@@ -73,6 +73,6 @@ ms.locfileid: "32752658"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)

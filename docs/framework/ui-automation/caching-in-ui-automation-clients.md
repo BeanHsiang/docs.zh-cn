@@ -5,18 +5,16 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 2b821a1deb947db86e89207c447045f76a8bb842
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 003928d718579948a9baf188d02a7847edb676e1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035105"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676858"
 ---
 # <a name="caching-in-ui-automation-clients"></a>在 UI 自动化客户端中缓存
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题介绍 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 属性和控件模式的缓存。  
   
@@ -24,7 +22,7 @@ ms.locfileid: "48035105"
   
  缓存的优点是最为明显与 Windows Presentation Foundation (WPF) 控件和具有服务器端 UI 自动化提供程序的自定义控件。 在访问客户端提供程序（如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控件的默认提供程序）时，其优势稍小一些。  
   
- 当应用程序激活 <xref:System.Windows.Automation.CacheRequest> ，然后使用任何返回 <xref:System.Windows.Automation.AutomationElement>的方法或属性时，就会进行缓存；例如， <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>和 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 方法<xref:System.Windows.Automation.TreeWalker>类是个例外; 如果仅进行缓存<xref:System.Windows.Automation.CacheRequest>指定为参数 (例如， <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>。  
+ 当应用程序激活 <xref:System.Windows.Automation.CacheRequest> ，然后使用任何返回 <xref:System.Windows.Automation.AutomationElement>的方法或属性时，就会进行缓存；例如， <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>和 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 <xref:System.Windows.Automation.TreeWalker> 类的方法例外；只有在将 <xref:System.Windows.Automation.CacheRequest> 指定为参数（例如， <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>）时，才会进行缓存。  
   
  如果 <xref:System.Windows.Automation.CacheRequest> 处于活动状态时订阅事件，也会进行缓存。 作为事件来源传递到事件处理程序的 <xref:System.Windows.Automation.AutomationElement> 包含由原始 <xref:System.Windows.Automation.CacheRequest>指定的缓存属性和模式。 在订阅事件后对 <xref:System.Windows.Automation.CacheRequest> 进行的任何更改都没有影响。  
   
@@ -40,17 +38,17 @@ ms.locfileid: "48035105"
   
 <a name="Control_Patterns_to_Cache"></a>   
 ### <a name="control-patterns-to-cache"></a>要缓存的控件模式  
- 可以通过在激活请求之前为每个模式调用 <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> 来指定要缓存的控件模式。 一种模式缓存时，不自动缓存其属性;必须指定想通过使用缓存的属性<xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>。  
+ 可以通过在激活请求之前为每个模式调用 <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> 来指定要缓存的控件模式。 在缓存模式时，不会自动缓存模式的属性；必须通过使用 <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>指定想要缓存的属性。  
   
 <a name="Scope_of_the_Caching"></a>   
 ### <a name="scope-and-filtering-of-caching"></a>缓存的范围和筛选  
- 可以指定元素，其属性和模式，通过设置要缓存<xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType>激活请求之前的属性。 范围与请求处于活动状态时检索的元素有关。 例如，如果仅设置 <xref:System.Windows.Automation.TreeScope.Children>，然后检索 <xref:System.Windows.Automation.AutomationElement>，则会缓存该元素的子项的属性和模式，但不会缓存该元素本身的属性和模式。 若要确保对检索的元素本身进行缓存，则必须在 <xref:System.Windows.Automation.TreeScope.Element> 属性中包括 <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> 。 不可将范围设置为 <xref:System.Windows.Automation.TreeScope.Parent> 或 <xref:System.Windows.Automation.TreeScope.Ancestors>。 但是，在缓存了子元素后，就可以缓存父元素；请参阅本主题中的“检索缓存的子项和父项”。  
+ 可以通过在激活请求之前设置 <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> 属性来指定想要缓存其属性和模式的元素。 范围与请求处于活动状态时检索的元素有关。 例如，如果仅设置 <xref:System.Windows.Automation.TreeScope.Children>，然后检索 <xref:System.Windows.Automation.AutomationElement>，则会缓存该元素的子项的属性和模式，但不会缓存该元素本身的属性和模式。 若要确保对检索的元素本身进行缓存，则必须在 <xref:System.Windows.Automation.TreeScope.Element> 属性中包括 <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> 。 不可将范围设置为 <xref:System.Windows.Automation.TreeScope.Parent> 或 <xref:System.Windows.Automation.TreeScope.Ancestors>。 但是，在缓存了子元素后，就可以缓存父元素；请参阅本主题中的“检索缓存的子项和父项”。  
   
- 缓存的范围也会影响<xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType>属性。 默认情况下，只会对出现在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中的元素执行缓存。 但是，可以更改此属性以将缓存应用于所有元素，或者只应用于出现在内容视图中的元素。  
+ 缓存的范围还会受 <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> 属性的影响。 默认情况下，只会对出现在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 树的控件视图中的元素执行缓存。 但是，可以更改此属性以将缓存应用于所有元素，或者只应用于出现在内容视图中的元素。  
   
 <a name="Strength_of_the_Element_References"></a>   
 ### <a name="strength-of-the-element-references"></a>元素引用的强度  
- 在检索 <xref:System.Windows.Automation.AutomationElement>时，默认情况下可以访问该元素的所有属性和模式，包括那些未缓存的属性和模式。 但是，为了提高效率，可以通过将 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 的 <xref:System.Windows.Automation.CacheRequest> 属性设置为 <xref:System.Windows.Automation.AutomationElementMode.None>来指定元素引用只引用缓存的数据。 在这种情况下，你没有权限访问所检索元素的任何未缓存属性和模式。 这意味着你无法通过 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 或者 `Current` 的 <xref:System.Windows.Automation.AutomationElement> 属性或任何控件模式访问任何属性；也无法通过使用 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 或 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>检索模式。 在缓存的模式，可以调用方法检索数组属性，如<xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>，但不是在控件上执行的操作如<xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>。  
+ 在检索 <xref:System.Windows.Automation.AutomationElement>时，默认情况下可以访问该元素的所有属性和模式，包括那些未缓存的属性和模式。 但是，为了提高效率，可以通过将 <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> 的 <xref:System.Windows.Automation.CacheRequest> 属性设置为 <xref:System.Windows.Automation.AutomationElementMode.None>来指定元素引用只引用缓存的数据。 在这种情况下，你没有权限访问所检索元素的任何未缓存属性和模式。 这意味着你无法通过 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 或者 `Current` 的 <xref:System.Windows.Automation.AutomationElement> 属性或任何控件模式访问任何属性；也无法通过使用 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 或 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>检索模式。 在缓存的模式中，可以调用检索数组属性的方法（如 <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>），但不能调用对控件执行操作的任何方法（如 <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>）。  
   
  可能无需完全引用对象的应用程序的一个示例是屏幕阅读器，它将预提取窗口中的元素的 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> 和 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> 属性，但不需要 <xref:System.Windows.Automation.AutomationElement> 对象本身。  
   
@@ -103,7 +101,7 @@ ms.locfileid: "48035105"
   
  更新缓存不会更改任何现有 <xref:System.Windows.Automation.AutomationElement> 引用的属性。  
   
-## <a name="see-also"></a>请参阅  
- [客户端的 UI 自动化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
- [FetchTimer 示例](https://msdn.microsoft.com/library/5b7d3294-de22-4f24-b2d6-d4785a304b90)
+## <a name="see-also"></a>请参阅
+- [客户端的 UI 自动化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
+- [在 UI 自动化中使用缓存](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [FetchTimer 示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

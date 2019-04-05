@@ -1,5 +1,5 @@
 ---
-title: 演练：对用户控件启用拖放功能
+title: 演练：启用拖放用户控件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7ca4987da8422c00e3fc34ff4605ddd13e4091b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7009f56c25ff63729f0b0170503c2f356dc91301
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193698"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352914"
 ---
-# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>演练：对用户控件启用拖放功能
+# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>演练：启用拖放用户控件
 
 本演练演示如何创建可在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中参与拖放数据传输的自定义用户控件。
 
@@ -33,12 +33,12 @@ ms.locfileid: "47193698"
 
 ## <a name="prerequisites"></a>系统必备
 
-需要 Visual Studio 来完成本演练。
+若要完成本演练，必须具有 Visual Studio。
 
 ## <a name="create-the-application-project"></a>创建应用程序项目
  在本部分中，您将创建应用程序基础结构，其中包括主页，其中两个面板和<xref:System.Windows.Controls.TextBox>。
 
-1.  在 Visual Basic 或 Visual C# 中创建名为 `DragDropExample` 的新 WPF 应用程序项目。 有关详细信息，请参阅[如何：创建新的 WPF 应用程序项目](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)。
+1.  在 Visual Basic 或 Visual C# 中创建名为 `DragDropExample` 的新 WPF 应用程序项目。 有关详细信息，请参见[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
 2.  打开 MainWindow.xaml。
 
@@ -46,7 +46,7 @@ ms.locfileid: "47193698"
 
      此标记将创建用于测试应用程序的用户界面。
 
-     [!code-xaml[DragDropWalkthrough#PanelsStep1XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep1xaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsStep1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep1xaml)]
 
 ## <a name="add-a-new-user-control-to-the-project"></a>向项目添加新的用户控件
  本节将介绍如何向项目添加新的用户控件。
@@ -63,7 +63,7 @@ ms.locfileid: "47193698"
 
 4.  将以下标记添加到根<xref:System.Windows.Controls.Grid>若要创建将蓝色圆形作为其 UI 的简单用户控件。
 
-     [!code-xaml[DragDropWalkthrough#EllipseXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]
+     [!code-xaml[DragDropWalkthrough#EllipseXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]
 
 5.  打开 Circle.xaml.cs 或 Circle.xaml.vb。
 
@@ -71,8 +71,8 @@ ms.locfileid: "47193698"
 
      若要允许复制用户控件，需在代码隐藏文件中添加复制构造函数方法。 在简化的圆形用户控件中，将只复制该用户控件的填充和大小。
 
-     [!code-csharp[DragDropWalkthrough#CopyCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#copyctor)]
-     [!code-vb[DragDropWalkthrough#CopyCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#copyctor)]
+     [!code-csharp[DragDropWalkthrough#CopyCtor](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#copyctor)]
+     [!code-vb[DragDropWalkthrough#CopyCtor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#copyctor)]
 
 ## <a name="add-the-user-control-to-the-main-window"></a>将用户控件添加到主窗口
 
@@ -86,11 +86,11 @@ ms.locfileid: "47193698"
 
 3.  在第一个<xref:System.Windows.Controls.StackPanel>，添加以下 XAML 在第一个面板中创建圆形用户控件的两个实例。
 
-     [!code-xaml[DragDropWalkthrough#CirclesXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
+     [!code-xaml[DragDropWalkthrough#CirclesXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
 
      此面板的完整 XAML 如下所示。
 
-     [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]
 
 ## <a name="implement-drag-source-events-in-the-user-control"></a>在用户控件中实现拖动源事件
  在本部分中，你将重写<xref:System.Windows.UIElement.OnMouseMove%2A>方法并启动拖放操作。
@@ -103,8 +103,8 @@ ms.locfileid: "47193698"
 
 2.  添加以下<xref:System.Windows.UIElement.OnMouseMove%2A>替代，以便提供类处理<xref:System.Windows.UIElement.MouseMove>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
-     [!code-vb[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
+     [!code-csharp[DragDropWalkthrough#OnMouseMove](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
+     [!code-vb[DragDropWalkthrough#OnMouseMove](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
 
      这<xref:System.Windows.UIElement.OnMouseMove%2A>替代执行以下任务：
 
@@ -128,7 +128,7 @@ ms.locfileid: "47193698"
 
 6.  拖放到上的一个圆圈<xref:System.Windows.Controls.TextBox>。 圆形填充颜色的字符串表示形式追加到<xref:System.Windows.Controls.TextBox>。
 
-     ![圆形填充颜色的字符串表示形式](../../../../docs/framework/wpf/advanced/media/dragdrop-colorstring.png "DragDrop_ColorString")
+     ![圆形填充颜色的字符串表示形式](./media/dragdrop-colorstring.png "DragDrop_ColorString")
 
 默认情况下，光标会在拖放操作过程中更改，以指示放置数据会产生的效果。 你可以自定义提供给用户，通过处理反馈<xref:System.Windows.UIElement.GiveFeedback>事件和设置不同光标。
 
@@ -138,8 +138,8 @@ ms.locfileid: "47193698"
 
 2.  添加以下<xref:System.Windows.UIElement.OnGiveFeedback%2A>替代，以便提供类处理<xref:System.Windows.UIElement.GiveFeedback>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
-     [!code-vb[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
+     [!code-csharp[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
+     [!code-vb[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
 
      这<xref:System.Windows.UIElement.OnGiveFeedback%2A>替代执行以下任务：
 
@@ -151,7 +151,7 @@ ms.locfileid: "47193698"
 
 4.  拖动其中一个圆形的面板，另一个圆形，通过控制和<xref:System.Windows.Controls.TextBox>。 请注意，现在的光标是你在中指定的自定义光标<xref:System.Windows.UIElement.OnGiveFeedback%2A>重写。
 
-     ![使用自定义光标拖放](../../../../docs/framework/wpf/advanced/media/dragdrop-customcursor.png "DragDrop_CustomCursor")
+     ![使用自定义光标拖放](./media/dragdrop-customcursor.png "DragDrop_CustomCursor")
 
 5.  选择的文本`green`从<xref:System.Windows.Controls.TextBox>。
 
@@ -166,7 +166,7 @@ ms.locfileid: "47193698"
 
 2.  在左括号<xref:System.Windows.Controls.UserControl>标记中，添加<xref:System.Windows.UIElement.AllowDrop%2A>属性并将其设置为`true`。
 
-     [!code-xaml[DragDropWalkthrough#UCTagXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
+     [!code-xaml[DragDropWalkthrough#UCTagXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
 
 <xref:System.Windows.UIElement.OnDrop%2A>时调用方法<xref:System.Windows.UIElement.AllowDrop%2A>属性设置为`true`和拖动源中的数据放置在圆形用户控件上。 在这种方法中，将处理已放置的数据，并将这些数据应用于圆形。
 
@@ -176,8 +176,8 @@ ms.locfileid: "47193698"
 
 2.  添加以下<xref:System.Windows.UIElement.OnDrop%2A>替代，以便提供类处理<xref:System.Windows.UIElement.Drop>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
-     [!code-vb[DragDropWalkthrough#OnDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
+     [!code-csharp[DragDropWalkthrough#OnDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
+     [!code-vb[DragDropWalkthrough#OnDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
 
      这<xref:System.Windows.UIElement.OnDrop%2A>替代执行以下任务：
 
@@ -197,7 +197,7 @@ ms.locfileid: "47193698"
 
 5.  将文本拖放到一个圆形控件上。 该圆形会从蓝色变为绿色。
 
-     ![将字符串转换为画笔](../../../../docs/framework/wpf/advanced/media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
+     ![将字符串转换为画笔](./media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
 
 6.  键入的文本`green`在<xref:System.Windows.Controls.TextBox>。
 
@@ -217,8 +217,8 @@ ms.locfileid: "47193698"
 
 2.  添加以下<xref:System.Windows.UIElement.OnDragOver%2A>替代，以便提供类处理<xref:System.Windows.UIElement.DragOver>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
-     [!code-vb[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
+     [!code-csharp[DragDropWalkthrough#OnDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
+     [!code-vb[DragDropWalkthrough#OnDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
 
      这<xref:System.Windows.UIElement.OnDragOver%2A>替代执行以下任务：
 
@@ -242,13 +242,13 @@ ms.locfileid: "47193698"
 
 2.  在圆形类中，声明一个私有<xref:System.Windows.Media.Brush>名为变量`_previousFill`并将其初始化`null`。
 
-     [!code-csharp[DragDropWalkthrough#Brush](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
-     [!code-vb[DragDropWalkthrough#Brush](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
+     [!code-csharp[DragDropWalkthrough#Brush](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
+     [!code-vb[DragDropWalkthrough#Brush](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
 
 3.  添加以下<xref:System.Windows.UIElement.OnDragEnter%2A>替代，以便提供类处理<xref:System.Windows.UIElement.DragEnter>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
-     [!code-vb[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
+     [!code-csharp[DragDropWalkthrough#OnDragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
+     [!code-vb[DragDropWalkthrough#OnDragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
 
      这<xref:System.Windows.UIElement.OnDragEnter%2A>替代执行以下任务：
 
@@ -260,8 +260,8 @@ ms.locfileid: "47193698"
 
 4.  添加以下<xref:System.Windows.UIElement.OnDragLeave%2A>替代，以便提供类处理<xref:System.Windows.UIElement.DragLeave>事件。
 
-     [!code-csharp[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
-     [!code-vb[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
+     [!code-csharp[DragDropWalkthrough#OnDragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
+     [!code-vb[DragDropWalkthrough#OnDragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
 
      这<xref:System.Windows.UIElement.OnDragLeave%2A>替代执行以下任务：
 
@@ -273,7 +273,7 @@ ms.locfileid: "47193698"
 
 7.  将该文本拖到一个圆形控件上而不放置。 该圆形会从蓝色变为绿色。
 
-     ![预览拖放操作的效果](../../../../docs/framework/wpf/advanced/media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
+     ![预览拖放操作的效果](./media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
 
 8.  将文本拖离该圆形控件。 该圆形会从绿色变回蓝色。
 
@@ -285,14 +285,14 @@ ms.locfileid: "47193698"
 
 2.  以下 XAML 中的每个中所示<xref:System.Windows.Controls.StackPanel>控件，则添加的处理程序<xref:System.Windows.UIElement.DragOver>和<xref:System.Windows.UIElement.Drop>事件。 名称<xref:System.Windows.UIElement.DragOver>事件处理程序`panel_DragOver`，并将命名<xref:System.Windows.UIElement.Drop>事件处理程序`panel_Drop`。
 
-     [!code-xaml[DragDropWalkthrough#PanelsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
 
 3.  打开 MainWindows.xaml.cs 或 MainWindow.xaml.vb。
 
 4.  添加以下代码为<xref:System.Windows.UIElement.DragOver>事件处理程序。
 
-     [!code-csharp[DragDropWalkthrough#PanelDragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
-     [!code-vb[DragDropWalkthrough#PanelDragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
+     [!code-csharp[DragDropWalkthrough#PanelDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
+     [!code-vb[DragDropWalkthrough#PanelDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
 
      这<xref:System.Windows.UIElement.DragOver>事件处理程序执行以下任务：
 
@@ -304,8 +304,8 @@ ms.locfileid: "47193698"
 
 5.  添加以下代码为<xref:System.Windows.UIElement.Drop>事件处理程序。
 
-     [!code-csharp[DragDropWalkthrough#PanelDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
-     [!code-vb[DragDropWalkthrough#PanelDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
+     [!code-csharp[DragDropWalkthrough#PanelDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
+     [!code-vb[DragDropWalkthrough#PanelDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
 
      这<xref:System.Windows.UIElement.Drop>事件处理程序执行以下任务：
 
@@ -329,8 +329,8 @@ ms.locfileid: "47193698"
 
 10. 从面板到另一个面板将一个圆形控件拖放时按**Ctrl**密钥。 将复制该圆形并将副本添加到<xref:System.Windows.Controls.Panel.Children%2A>接收面板的集合。
 
-     ![按住 Ctrl 键的同时拖动圆形](../../../../docs/framework/wpf/advanced/media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
+     ![按住 Ctrl 键的同时拖动圆形](./media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
 
 ## <a name="see-also"></a>请参阅
 
-- [拖放概述](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+- [拖放概述](drag-and-drop-overview.md)

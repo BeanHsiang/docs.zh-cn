@@ -1,5 +1,5 @@
 ---
-title: 如何： 将时区保存到嵌入的资源
+title: 如何：将时区保存到嵌入的资源
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 921874e774d18751c29db495dac1bc53d10cc8ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592869"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>如何： 将时区保存到嵌入的资源
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>如何：将时区保存到嵌入的资源
 
 时区感知应用程序通常需要某个特定时区存在。 但是，因为单个可用性<xref:System.TimeZoneInfo>对象取决于存储在本地系统注册表中的信息，即使通常可用的时区可能不存在。 此外，有关自定义时区的信息通过使用实例化<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法不会存储在注册表中其他时区信息。 若要确保这些时间区域可在需要时，可以通过序列化，将其保存，并更高版本进行反序列化这些还原它们。
 
@@ -37,9 +37,9 @@ ms.locfileid: "45653329"
 
 1. 检索现有的时区，或者创建新的时区。
 
-   若要检索现有的时区，请参阅[如何： 访问预定义的 UTC 和本地时区对象](../../../docs/standard/datetime/access-utc-and-local.md)并[如何： 实例化 TimeZoneInfo 对象](../../../docs/standard/datetime/instantiate-time-zone-info.md)。
+   若要检索现有的时区，请参阅[如何：访问预定义的 UTC 和本地时区对象](../../../docs/standard/datetime/access-utc-and-local.md)和[如何：实例化 TimeZoneInfo 对象](../../../docs/standard/datetime/instantiate-time-zone-info.md)。
 
-   若要创建新的时区，请调用的重载之一<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法。 有关详细信息，请参阅[如何： 创建不含调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)并[如何： 创建含调整规则的时区](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。
+   若要创建新的时区，请调用的重载之一<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>方法。 有关详细信息，请参阅[如何：创建不含调整规则的时区](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)和[如何：创建含调整规则的时区](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)。
 
 2. 调用<xref:System.TimeZoneInfo.ToSerializedString%2A>方法来创建包含时区的数据的字符串。
 
@@ -85,6 +85,6 @@ ms.locfileid: "45653329"
 
 ## <a name="see-also"></a>请参阅
 
-* [日期、时间和时区](../../../docs/standard/datetime/index.md)
-* [时区概述](../../../docs/standard/datetime/time-zone-overview.md)
-* [如何：从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [日期、时间和时区](../../../docs/standard/datetime/index.md)
+- [时区概述](../../../docs/standard/datetime/time-zone-overview.md)
+- [如何：从嵌入的资源还原时区](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

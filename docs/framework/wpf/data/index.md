@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: 198199ad52d7d5047f8b3eddd55192048002cdd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26c9297586df18bb89d1f769c5457eae12e3b211
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557129"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353967"
 ---
 # <a name="data"></a>数据
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 数据绑定为应用程序呈现数据并与数据交互提供了一种简单且一致的方式。 元素能够以 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 对象和 XML 的形式绑定到各种数据源中的数据。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 还提供了通过拖放操作传输数据的机制。  
   
 ## <a name="in-this-section"></a>本节内容  
- [数据绑定](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
- [拖放](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [数据绑定](data-binding-wpf.md)  
+ [拖放](../advanced/drag-and-drop.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Data>  
@@ -32,12 +32,12 @@ ms.locfileid: "33557129"
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>相关章节  
- [控件](../../../../docs/framework/wpf/controls/index.md)  
+ [控件](../controls/index.md)  
   
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [样式设置和模板化](../controls/styling-and-templating.md)  
   
- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [数据绑定](../advanced/optimizing-performance-data-binding.md)  
   
-## <a name="see-also"></a>请参阅  
- [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [演练：在 WPF 应用程序中缓存应用程序数据](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+## <a name="see-also"></a>请参阅
+- [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [演练：缓存在 WPF 应用程序的应用程序数据](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

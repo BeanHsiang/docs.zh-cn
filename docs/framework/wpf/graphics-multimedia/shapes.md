@@ -14,21 +14,21 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 1dc19da76b73d5b8e5d66851b539a7d1829fc938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c4f76ee753ed6caa30d15a51c341a2edb64011d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562188"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350698"
 ---
 # <a name="shapes"></a>形状
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 为绘制基本形状使用提供支持<xref:System.Windows.Shapes.Shape>类。 形状对象派生自<xref:System.Windows.FrameworkElement>和在这种情况下，参与布局系统，并可以只需使用绘制[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 绘制基本形状使用提供支持<xref:System.Windows.Shapes.Shape>类。 Shape 对象派生自<xref:System.Windows.FrameworkElement>这种情况下，参与布局系统并可以只需使用绘制[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
 ## <a name="in-this-section"></a>本节内容  
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
+ [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)  
+ [帮助主题](shapes-how-to-topics.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Shapes.Shape>  
- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Shapes.Shape>
+- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [图形和多媒体](index.md)

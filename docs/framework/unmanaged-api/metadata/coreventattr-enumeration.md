@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4e4b9d9c7481bdc51aaf75b26b3805940875f8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d34aa954126cc26519aaea963f99299e5557d2c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743045"
 ---
 # <a name="coreventattr-enumeration"></a>CorEventAttr 枚举
 包含一些值，用于描述事件的元数据。  
@@ -43,16 +43,16 @@ typedef enum CorEventAttr {
   
 |成员|描述|  
 |------------|-----------------|  
-|`evSpecialName`|指定事件为特殊，且其名称描述如何。|  
-|`evReservedMask`|保留供内部使用公共语言运行时。|  
-|`evRTSpecialName`|指定公共语言运行时，应检查的事件名称的编码。|  
+|`evSpecialName`|指定事件特殊，并且其名称描述如何。|  
+|`evReservedMask`|公共语言运行时，保留供内部使用。|  
+|`evRTSpecialName`|指定公共语言运行时应检查事件名称的编码。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

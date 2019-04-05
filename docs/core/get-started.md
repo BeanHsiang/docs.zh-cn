@@ -4,12 +4,12 @@ description: 查找相关资源，了解如何在 Windows、Linux 和 macOS 上�
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 3fff7884082c46477d37b08560a2c71e7ee345e5
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121249"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977158"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 入门
 
@@ -84,4 +84,4 @@ Hello World!
 
 有关受支持的 OS X/macOS 版本列表，请参阅 [macOS 开发的先决条件](macos-prerequisites.md)一文。
 
-***
+---

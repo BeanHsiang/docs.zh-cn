@@ -1,6 +1,7 @@
 ---
-title: 正则表达式中的回溯
-ms.date: 03/30/2017
+title: .NET 正则表达式中的回溯
+description: 了解如何在正则表达式模式匹配中控制回溯的使用。
+ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,12 +19,13 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043b4ab00699062d8c1af5866fbeb3773c8ce9af
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.custom: seodec18
+ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615972"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正则表达式中的回溯
 <a name="top"></a> 当正则表达式模式包含可选 [限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)时，会发生回溯，并且正则表达式引擎会返回以前保存的状态，以继续搜索匹配项。 回溯是正则表达式的强大功能的中心；它使得表达式强大、灵活，可以匹配非常复杂的模式。 同时，这种强大功能需要付出一定代价。 通常，回溯是影响正则表达式引擎性能的单个最重要的因素。 幸运的是，开发人员可以控制正则表达式引擎的行为及其使用回溯的方式。 本主题说明回溯的工作方式以及如何对其进行控制。  
@@ -99,7 +101,7 @@ ms.locfileid: "44039496"
   
 -   它将模式中的“s”与匹配的“e”字符之后的“s”（“expressions”中的第一个“s”）进行比较。 匹配成功。  
   
- 当您使用回溯将正则表达式模式与输入字符串（长度为 55 个字符）匹配时，需要执行 67 次比较操作。 有趣的是，如果正则表达式模式包括惰性限定符 .`*?(es)`，则匹配正则表达式将需要进行更多比较。 在此情况下，不必从字符串末尾回溯到“expressions”中的“r”，正则表达式引擎必须一直回溯到字符串开头来匹配“Es”，将需要进行 113 次比较。 通常，如果正则表达式模式包括单个替换构造或单个可选限定符，则匹配模式所需要的比较操作数大于输入字符串中字符数的两倍。  
+ 当您使用回溯将正则表达式模式与输入字符串（长度为 55 个字符）匹配时，需要执行 67 次比较操作。 通常，如果正则表达式模式包括单个替换构造或单个可选限定符，则匹配模式所需要的比较操作数大于输入字符串中字符数的两倍。  
   
  [返回页首](#top)  
   
@@ -162,7 +164,7 @@ ms.locfileid: "44039496"
   
  第一个正则表达式模式 `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`[0-9A-Z]`|匹配字母数字字符。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
@@ -173,7 +175,7 @@ ms.locfileid: "44039496"
   
  第二个正则表达式模式 `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`使用正回顾断言。 其定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`[0-9A-Z]`|匹配字母数字字符。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
@@ -194,7 +196,7 @@ ms.locfileid: "44039496"
   
  第一个正则表达式模式 `^(([A-Z]\w*)+\.)*[A-Z]\w*$`的定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`([A-Z]\w*)+\.`|对后跟零个或多个单词字符、句点的字母字符 (A-Z) 匹配一次或多次。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
@@ -204,7 +206,7 @@ ms.locfileid: "44039496"
   
  第二个正则表达式模式 `^((?=[A-Z])\w+\.)*[A-Z]\w*$`使用正预测先行断言。 其定义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`^`|从字符串开头开始匹配。|  
 |`(?=[A-Z])`|预测先行到第一个字符，如果它是字母 (A-Z)，则继续匹配。 因为 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法是使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 选项调用的，所以此比较不区分大小写。|  
@@ -217,8 +219,8 @@ ms.locfileid: "44039496"
   
 ## <a name="see-also"></a>请参阅
 
-- [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)  
-- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
-- [限定符](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
-- [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
-- [分组构造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [.NET 正则表达式](../../../docs/standard/base-types/regular-expressions.md)
+- [正则表达式语言 - 快速参考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [数量词](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
+- [替换构造](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
+- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

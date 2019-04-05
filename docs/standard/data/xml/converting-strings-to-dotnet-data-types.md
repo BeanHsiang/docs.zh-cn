@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc07779f03784cd32524e1b1189faae343710a05
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 376dd9df4666193f8e5a6be83f3fcaf5dc32f1a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54544596"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>将字符串转换为 .NET Framework 数据类型
 若要将字符串转换为 .NET Framework 数据类型，请使用满足应用要求的 XmlConvert 方法。 有关 XmlConvert 类提供的所有转换方法的列表，请参阅 <xref:System.Xml.XmlConvert>。  
@@ -135,5 +135,5 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
   
 ## <a name="see-also"></a>请参阅
 
-- [XML 数据类型转换](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+- [XML 数据类型转换](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [将 .NET Framework 类型转换为字符串](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

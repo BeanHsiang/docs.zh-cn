@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: ed4ccb45e4470eb03cec856e865d4b50220816e3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2d6ef24d00baa4df6dfc8e0af69c1d489b79a41f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836454"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724645"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>自定义工作流设计体验
 
@@ -17,15 +17,15 @@ ms.locfileid: "48836454"
 
 ## <a name="in-this-section"></a>本节内容
 
- [使用自定义活动设计器和模板](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)
+ [使用自定义活动设计器和模板](using-custom-activity-designers-and-templates.md)
 
  介绍如何创建新的自定义活动设计器和模板。
 
- [重新托管工作流设计器](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+ [重新托管工作流设计器](rehosting-the-workflow-designer.md)
 
  介绍如何重新托管[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]之外 Visual Studio 以及如何显示验证错误。
 
- [使用自定义表达式编辑器](../../../docs/framework/windows-workflow-foundation/using-a-custom-expression-editor.md)
+ [使用自定义表达式编辑器](using-a-custom-expression-editor.md)
 
  介绍如何实现一个自定义表达式编辑器来使用 Visual Studio 2010 之外重新承载的工作流设计器。
 
@@ -35,7 +35,7 @@ ms.locfileid: "48836454"
 
 ## <a name="see-also"></a>请参阅
 
-- [扩展 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md)
-- [设计器](../../../docs/framework/windows-workflow-foundation/samples/designer.md)
-- [自定义活动设计器](../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)
-- [重新承载设计器](../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)
+- [扩展 Windows Workflow Foundation](extend.md)
+- [设计器](./samples/designer.md)
+- [自定义活动设计器](./samples/custom-activity-designers.md)
+- [重新承载设计器](./samples/designer-rehosting.md)

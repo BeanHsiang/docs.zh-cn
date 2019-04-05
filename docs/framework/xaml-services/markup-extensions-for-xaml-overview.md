@@ -5,17 +5,17 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 6b7c13355fe46d4b768699555bbaf522e3b49c73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81e142a6989ad2c2c365def4ad43e1bad505c411
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566569"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58019164"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 的标记扩展概述
 标记扩展是一种用于获取既不是基元也不是特定 XAML 类型的值的 XAML 方法。 对于特性用法，标记扩展使用已知的左大括号 `{` 字符序列输入标记扩展范围，并使用右大括号 `}` 退出。 使用 .NET Framework XAML 服务时，可以使用 System.Xaml 程序集中的某些预定义 XAML 语言标记扩展。 还可以使用 <xref:System.Windows.Markup.MarkupExtension> 类（在 System.Xaml 中定义）的子类，并定义自己的标记扩展。 或者，如果已在引用特定框架，则可以使用由该框架定义的标记扩展。  
   
- 访问标记扩展用法时，XAML 对象编写器可以通过 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType> 重写中的服务连接点向自定义 <xref:System.Windows.Markup.MarkupExtension> 类提供服务。 服务可以用于获取有关用法的上下文、对象编写器的特定功能、XAML 架构上下文等。  
+ 访问标记扩展用法时，XAML 对象编写器可以通过 <xref:System.Windows.Markup.MarkupExtension> 重写中的服务连接点向自定义 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType> 类提供服务。 服务可以用于获取有关用法的上下文、对象编写器的特定功能、XAML 架构上下文等。  
   
 <a name="XAML_Defined_Markup_Extensions"></a>   
 ## <a name="xaml-defined-markup-extensions"></a>XAML 定义的标记扩展  
@@ -25,28 +25,28 @@ ms.locfileid: "33566569"
 >  `x:` 前缀用于 XAML 语言命名空间中的典型 XAML 命名空间映射（在 XAML 生成的根元素中）。 例如，用于各种特定框架的 Visual Studio 项目和页面模板启动使用这一个 XAML 文件`x:`映射。 可以在自己的 XAML 命名空间映射中选择不同的前缀标记，但是本文档采用默认值 `x:` 映射来标识作为 XAML 语言 XAML 命名空间的已定义部分的实体，而不是采用特定框架的默认 XAML 命名空间或其他任意 CLR 或 XML 命名空间。  
   
 ### <a name="xtype"></a>x:Type  
- `x:Type` 为命名类型提供 <xref:System.Type> 对象。 此功能最常在使用基础 CLR 类型和类型派生作为分组名字对象或标识符的延迟机制中使用。 WPF 样式和模板以及其 `TargetType` 属性的用法是一个具体示例。 有关详细信息，请参阅 [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md)。  
+ `x:Type` 为命名类型提供 <xref:System.Type> 对象。 此功能最常在使用基础 CLR 类型和类型派生作为分组名字对象或标识符的延迟机制中使用。 WPF 样式和模板以及其 `TargetType` 属性的用法是一个具体示例。 有关详细信息，请参阅 [x:Type Markup Extension](x-type-markup-extension.md)。  
   
 ### <a name="xstatic"></a>x:Static  
- `x:Static` 从值-类型代码实体生成静态值，它们不直接是属性值的类型，但可以计算为该类型。 这可用于将已存在的值指定为类型定义中的已知常量。 有关详细信息，请参阅 [x:Static Markup Extension](../../../docs/framework/xaml-services/x-static-markup-extension.md)。  
+ `x:Static` 从值-类型代码实体生成静态值，它们不直接是属性值的类型，但可以计算为该类型。 这可用于将已存在的值指定为类型定义中的已知常量。 有关详细信息，请参阅 [x:Static Markup Extension](x-static-markup-extension.md)。  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` 指定 `null` 作为 XAML 成员的值。 根据特定类型的设计或更大框架概念， `null` 并不总是属性的默认值，或是空字符串特性的隐式值。 有关详细信息，请参阅 [x:Null Markup Extension](../../../docs/framework/xaml-services/x-null-markup-extension.md)。  
+ `x:Null` 指定 `null` 作为 XAML 成员的值。 根据特定类型的设计或更大框架概念， `null` 并不总是属性的默认值，或是空字符串特性的隐式值。 有关详细信息，请参阅 [x:Null Markup Extension](x-null-markup-extension.md)。  
   
 ### <a name="xarray"></a>x:Array  
- `x:Array` 支持采用 XAML 语法创建常规数组，以防出现故意不使用由基元素和控件模型提供的集合支持的情况。 有关更多信息，请参见 [x:Array Markup Extension](../../../docs/framework/xaml-services/x-array-markup-extension.md)。 具体而言，在 XAML 2009 中，数组是作为语言基元而不是作为扩展进行访问。 有关更多信息，请参见 [XAML 2009 Language Features](../../../docs/framework/xaml-services/xaml-2009-language-features.md)。  
+ `x:Array` 支持采用 XAML 语法创建常规数组，以防出现故意不使用由基元素和控件模型提供的集合支持的情况。 有关更多信息，请参见 [x:Array Markup Extension](x-array-markup-extension.md)。 具体而言，在 XAML 2009 中，数组是作为语言基元而不是作为扩展进行访问。 有关更多信息，请参见 [XAML 2009 Language Features](xaml-2009-language-features.md)。  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` 属于 XAML 2009（原始 (2006) 语言集的扩展）。 `x:Reference` 表示对对象图中另一个现有对象的引用。 该对象由其 `x:Name`进行标识。 有关详细信息，请参阅 [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md)。  
+ `x:Reference` 属于 XAML 2009（原始 (2006) 语言集的扩展）。 `x:Reference` 表示对对象图中另一个现有对象的引用。 该对象由其 `x:Name`进行标识。 有关详细信息，请参阅 [x:Reference Markup Extension](x-reference-markup-extension.md)。  
   
-### <a name="other-x-constructs"></a>其他 x: 构造  
- 还有其他用于支持 XAML 语言功能的 `x:` 构造，不过这些构造并不作为标记扩展而实现。 有关更多信息，请参见 [XAML Namespace (x:) Language Features](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。  
+### <a name="other-x-constructs"></a>其他 x:构造  
+ 还有其他用于支持 XAML 语言功能的 `x:` 构造，不过这些构造并不作为标记扩展而实现。 有关详细信息，请参阅[XAML Namespace （x:）语言功能](xaml-namespace-x-language-features.md)。  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>MarkupExtension 基类  
  若要定义可以与 System.Xaml 中 XAML 读取器和 XAML 编写器的默认实现进行交互的自定义标记扩展，可从抽象 <xref:System.Windows.Markup.MarkupExtension> 类派生类。 该类具有一个用于重写的方法，即 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>。 可能还需要定义其他构造函数来支持用于标记扩展用法和匹配可设置属性的参数。  
   
- 通过 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>，自定义标记扩展有权访问报告以下环境的服务上下文：其中实际由 XAML 处理器调用标记扩展。 在加载路径中，这通常是 <xref:System.Xaml.XamlObjectWriter>。 在保存路径中，这通常是 <xref:System.Xaml.XamlXmlWriter>。 每项都将服务上下文报告为内部 XAML 服务提供程序上下文类，该类可实现一种服务提供程序模式。 有关可用服务以及它们所表示的含义的详细信息，请参阅 [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)。  
+ 通过 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>，自定义标记扩展有权访问报告以下环境的服务上下文：其中实际由 XAML 处理器调用标记扩展。 在加载路径中，这通常是 <xref:System.Xaml.XamlObjectWriter>。 在保存路径中，这通常是 <xref:System.Xaml.XamlXmlWriter>。 每项都将服务上下文报告为内部 XAML 服务提供程序上下文类，该类可实现一种服务提供程序模式。 有关可用服务以及它们所表示的含义的详细信息，请参阅 [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)。  
   
  标记扩展类必须使用公共访问级别；XAML 处理器必须始终能够实例化标记扩展的支持类，以便使用其服务。  
   
@@ -110,13 +110,13 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>从标记扩展实现访问服务提供程序上下文  
- 可用服务对于任何值转换器都是相同的。 不同之处在于每个值转换器接收服务上下文的方式。 访问服务以及可用服务在主题 [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)中进行了说明。  
+ 可用服务对于任何值转换器都是相同的。 不同之处在于每个值转换器接收服务上下文的方式。 访问服务以及可用服务在主题 [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)中进行了说明。  
   
 <a name="property_element_usage_of_a_markup_extension"></a>   
 ## <a name="property-element-usage-of-a-markup-extension"></a>标记扩展的属性元素用法  
  标记扩展用法方案通常是围绕在特性用法中使用标记扩展来设计的。 但是，还可能可以定义后备类以支持属性元素用法。  
   
- 若要支持标记扩展的属性元素用法，请定义公共默认构造函数。 这应是实例构造函数，而不是静态构造函数。 这是必需的，因为 XAML 处理器通常必须对它从标记处理的任何对象元素调用默认构造函数，并且这会包含标记扩展类作为对象元素。 对于高级方案，可以为类定义非默认构造路径。 (有关详细信息，请参阅[X:factorymethod 指令](../../../docs/framework/xaml-services/x-factorymethod-directive.md)。)但是，不应将这些模式用于标记扩展用途，因为这会显著提高用法模式的发现难度（对于设计者和原始标记的用户都是如此）。  
+ 若要支持标记扩展的属性元素用法，请定义公共默认构造函数。 这应是实例构造函数，而不是静态构造函数。 这是必需的，因为 XAML 处理器通常必须对它从标记处理的任何对象元素调用默认构造函数，并且这会包含标记扩展类作为对象元素。 对于高级方案，可以为类定义非默认构造路径。 (有关详细信息，请参阅[X:factorymethod 指令](x-factorymethod-directive.md)。)但是，不应将这些模式用于标记扩展用途，因为这会显著提高用法模式的发现难度（对于设计者和原始标记的用户都是如此）。  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>自定义标记扩展的归因  
@@ -154,7 +154,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  如果在保存路径上使用 XAML 节点流，则对象图表示形式中通常没有任何内容可告知要序列化的对象最初由标记扩展用法和 `ProvideValue` 结果提供。 需要保持标记扩展用法以进行往返，同时还捕获对象图中的其他更改的方案必须设计自己的方法，来保留原始 XAML 输入中有关标记扩展用法的信息。 例如，若要还原标记扩展用法，可能需要在保存路径上使用节点流才能还原标记扩展用法，或在原始 XAML 与往返 XAML 之间执行某种类型的合并。 某些 XAML 实现框架（如 WPF）使用中间类型（表达式）来帮助表示标记扩展用法提供值的情况。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Markup.MarkupExtension>  
- [XAML 的类型转换器和标记扩展](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [标记扩展和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Markup.MarkupExtension>
+- [XAML 的类型转换器和标记扩展](type-converters-and-markup-extensions-for-xaml.md)
+- [标记扩展和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b7f70162ae368934e1383683672fed86f9ce18c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e88dd0053ec7562d6223c18479f4a4fadc68c12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441408"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701789"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr 枚举
-提供用于指定以供节特性值[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口。  
+提供用于指定以供节的特性值[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)接口。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,19 +43,19 @@ typedef enum  {
   
 |成员|描述|  
 |------------|-----------------|  
-|`sdNone`|部分包含任何属性。|  
-|`sdReadOnly`|部分包含初始化只能读取，未更新的数据。|  
-|`sdReadWrite`|部分包含可读取或更新的初始化的数据。|  
-|`sdExecute`|部分包含允许读取和执行的可执行代码。|  
+|`sdNone`|部分没有任何属性。|  
+|`sdReadOnly`|部分包含初始化的数据，可以仅读取，不会更新。|  
+|`sdReadWrite`|部分包含初始化的数据可读取或更新。|  
+|`sdExecute`|部分包含可执行代码，允许读取和执行。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

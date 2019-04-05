@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 628d6fac45b046d9e8f26ad8777c38450da27a1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cbb290314328023c95d0028dd90687b1a6926ff5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427413"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501066"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo 方法
 获取符号搜索信息。  
@@ -37,21 +37,21 @@ HRESULT GetSymbolSearchInfo(
         ISymUnmanagedSymbolSearchInfo **rgpSearchInfo);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `cSearchInfo`  
- [in]A `ULONG32` ，该值指示的大小`rgpSearchInfo`。  
+ [in]一个`ULONG32`指示的大小`rgpSearchInfo`。  
   
  `pcSearchInfo`  
- [out]指向的指针`ULONG32`接收包含搜索信息所需的缓冲区的大小。  
+ [out]一个指向`ULONG32`接收包含搜索信息所需的缓冲区的大小。  
   
  `rgpSearchInfo`  
  [out]一个指针，它设置为返回[ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md)接口。  
   
 ## <a name="return-value"></a>返回值  
- 如果该方法成功; 则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
+ 如果方法成功，则为 S_OK否则为 E_FAIL 或某些其他错误代码。  
   
 ## <a name="requirements"></a>要求  
- **标头：** CorSym.idl、 CorSym.h  
+ **标头：** CorSym.idl CorSym.h  
   
-## <a name="see-also"></a>请参阅  
- [ISymUnmanagedReaderSymbolSearchInfo 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+## <a name="see-also"></a>请参阅
+- [ISymUnmanagedReaderSymbolSearchInfo 接口](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

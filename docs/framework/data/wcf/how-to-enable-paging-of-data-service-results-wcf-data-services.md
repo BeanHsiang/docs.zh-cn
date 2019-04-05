@@ -1,5 +1,5 @@
 ---
-title: 如何：启用数据服务结果分页（WCF 数据服务）
+title: 如何：启用分页的数据服务结果 （WCF 数据服务）
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: 822184e3de3fd0cc628eb08619f93ba0734a464d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be5bd41494c27724a360b785b8706b618447e7de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523450"
 ---
-# <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>如何：启用数据服务结果分页（WCF 数据服务）
+# <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>如何：启用分页的数据服务结果 （WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使您能够限制由数据服务查询返回的实体数。 页限制在初始化服务时调用的方法中定义，并可为每个实体集单独设置页限制。  
   
- 启用分页后，源中的最后一项包含指向下一页数据的链接。 有关详细信息，请参阅[配置数据服务](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。  
+ 启用分页后，源中的最后一项包含指向下一页数据的链接。 有关详细信息，请参阅[数据服务配置](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。  
   
- 本主题介绍如何修改数据服务以启用返回的 `Customers` 和 `Orders` 实体集的分页。 本主题中的示例使用 Northwind 示例数据服务。 在完成时创建此服务[WCF 数据服务快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
+ 本主题介绍如何修改数据服务以启用返回的 `Customers` 和 `Orders` 实体集的分页。 本主题中的示例使用 Northwind 示例数据服务。 此服务创建完成后[WCF Data Services 快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
   
 ### <a name="how-to-enable-paging-of-returned-customers-and-orders-entity-sets"></a>如何启用返回的 Customers 和 Orders 实体集的分页  
   
@@ -28,6 +28,6 @@ ms.locfileid: "33360607"
      [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind.svc.cs#dataserviceconfigpaging)]
      [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
-## <a name="see-also"></a>请参阅  
- [加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
- [如何：加载分页结果](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)
+## <a name="see-also"></a>请参阅
+- [加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)
+- [如何：加载分页结果](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)

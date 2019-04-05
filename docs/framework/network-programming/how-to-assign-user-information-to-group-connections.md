@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 6d0be3ccfc0a0b4b032283b7ed34908f79774bb6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50049537"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607993"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>如何：将用户信息分配给组连接
 
@@ -108,6 +108,6 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [管理连接](../../../docs/framework/network-programming/managing-connections.md)  
- [连接分组](../../../docs/framework/network-programming/connection-grouping.md)
+## <a name="see-also"></a>请参阅
+- [管理连接](../../../docs/framework/network-programming/managing-connections.md)
+- [连接分组](../../../docs/framework/network-programming/connection-grouping.md)

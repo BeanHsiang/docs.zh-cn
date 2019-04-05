@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62d9213e58aaabd0b4001d5c6a7fd6fd375eba2e
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 95e85578a4879a9af9f262a933150292a4f58ec2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668855"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>如何：从类型库生成互操作程序集
 [类型库导入程序 (Tlbexp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 是一个命令行工具，可将 COM 类型库中包含的组件类和接口转换为元数据。 此工具会自动为类型信息创建互操作程序集和命名空间。 类的元数据可用之后，托管客户端可创建 COM 类型的实例并调用其方法，就像它是 .NET 实例一样。 Tlbimp.exe 同时将整个类型库转换为元数据，而且无法生成类型库中定义的类型子集的类型信息。  
@@ -41,6 +41,6 @@ tlbimp Loanlib.tlb
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [将类型库作为程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a>请参阅
+- [将类型库作为程序集导入](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+- [向 .NET Framework 公开 COM 组件](../../../docs/framework/interop/exposing-com-components.md)

@@ -2,12 +2,12 @@
 title: 另一个事件日志已使用该名称注册了一个源
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-ms.openlocfilehash: b12fd5dcdeaccb0dc294c44e4b8a898726978633
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b32169b79521ec7d0c429e1dce641aca9d747bb1
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598915"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58032135"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>另一个事件日志已使用该名称注册了一个源
 已尝试向事件日志写入条目，其中指定的源使用其他事件日志进行注册。  
@@ -20,6 +20,6 @@ ms.locfileid: "33598915"
   
 2.  使用新的日志注册源。  
   
-## <a name="see-also"></a>请参阅  
- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+## <a name="see-also"></a>请参阅
 
+- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

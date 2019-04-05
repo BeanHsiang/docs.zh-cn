@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50192611"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674576"
 ---
 # <a name="application-domains"></a>应用程序域
 
@@ -48,7 +48,7 @@ ms.locfileid: "50192611"
     > [!NOTE]
     >  不能卸载单个程序集或类型。 只能卸载整个域。  
   
--   在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 **System.IO.FileNotFound** 的异常。 有关详细信息，请参阅[远程对象](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)。 确定如何跨域访问对象的机制是由该对象决定的。 有关更多信息，请参见<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
+-   在一个应用程序中运行的代码不能直接访问其他应用程序中的代码或资源。 为了强制实施此隔离，公共语言运行时禁止在不同应用程序域中的对象之间进行直接调用。 要在各域之间传递对象，可以复制这些对象，或通过代理访问这些对象。 如果复制对象，那么对该对象的调用为本地调用。 也就是说，调用方和被引用的对象位于同一应用程序域中。 如果通过代理访问对象，那么对该对象的调用为远程调用。 在此情况下，调用方和被引用的对象位于不同的应用程序域中。 域间调用所采用的远程调用基础结构与两个进程间的调用或两台计算机间的调用的基础结构相同。 因此，被引用的对象的元数据必须对于两个应用程序域均可用，以便用 JIT 正确编译该方法调用。 如果调用域对被调用对象的元数据没有访问权，则编译可能失败，并引发类型为 <xref:System.IO.FileNotFoundException> 的异常。 有关详细信息，请参阅 [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))。 确定如何跨域访问对象的机制是由该对象决定的。 有关更多信息，请参见<xref:System.MarshalByRefObject?displayProperty=nameWithType>。  
   
 -   代码行为的作用范围由它运行所在的应用程序决定。 换言之，应用程序域将提供应用程序版本策略等配置设置、它所访问的任意远程程序集的位置，以及加载到该域中的程序集的位置信息。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "50192611"
   
  <xref:System.AppDomain> 是应用程序域的程序设计界面。 此类包括各种方法，这些方法可以创建和卸载域、创建域中各类型的实例以及注册各种通知（如应用程序域卸载）。 下表列出了常用的 <xref:System.AppDomain> 方法。  
   
-|AppDomain 方法|描述|  
+|AppDomain 方法|说明​​|  
 |----------------------|-----------------|  
 |<xref:System.AppDomain.CreateDomain%2A>|创建新的应用程序域。 建议使用此方法指定 <xref:System.AppDomainSetup> 对象的重载形式。 这是设置新域的各个属性的首选方式，这些属性包括应用程序基（即该应用程序的根目录）、域的配置文件的位置、以及公共语言运行时用于将程序集加载到域中的搜索路径等。|  
 |<xref:System.AppDomain.ExecuteAssembly%2A> 和 <xref:System.AppDomain.ExecuteAssemblyByName%2A>|执行应用程序域中的程序集。 这是一个实例方法，因此它可用来执行另一个应用程序域（你拥有对该域的引用）中的代码。|  

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1232e8c574f263f709a9b66c7b1b3d06cca5e4da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8832d6c19108459ffe261a5cf66f921ff521ddf9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447206"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465824"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA 方法
-获取相对虚拟地址 (RVA) 和方法或指定标记所表示的字段的实现标志。  
+获取相对虚拟地址 (RVA) 和实现的方法或字段所指定的标记表示的标志。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,25 +37,25 @@ HRESULT GetRVA (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `tk`  
- [in]表示要返回的 RVA 的代码对象的 MethodDef 或 FieldDef 元数据标记。 如果此令牌为 FieldDef，字段必须是全局变量。  
+ [in]表示要返回的 RVA 的代码对象的 MethodDef 或 FieldDef 元数据标记。 如果令牌 FieldDef，字段必须是全局变量。  
   
  `pulCodeRVA`  
- [out]指向由标记表示的代码对象的相对虚拟地址的指针。  
+ [out]指向标记所表示的代码对象的相对虚拟地址的指针。  
   
  `pdwImplFlags`  
- [out]指向方法的实现标志的指针。 此值是从一个位掩码[CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)枚举。 值`pdwImplFlags`有效才`tk`是 MethodDef 标记。  
+ [out]一个指向该方法的实现标志。 此值是从一个位掩码[CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)枚举。 值`pdwImplFlags`无效，仅当`tk`是 MethodDef 标记。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

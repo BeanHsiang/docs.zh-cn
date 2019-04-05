@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: fdde238d4a4fd9291c520d4ef13694c3648c8298
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ab6efa726b9a7eaf8106ff8752cdc4ecdfb0112f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522815"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816715"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 此示例演示如何生成自定义协议通道，以便使用 HTTP Cookie 进行会话管理。 此通道启用 WCF 客户端和 ASMX 服务之间或 Windows Communication Foundation (WCF) 服务和 ASMX 客户端之间的通信。  
@@ -170,4 +170,3 @@ Press <ENTER> to terminate client.
   
 4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>请参阅

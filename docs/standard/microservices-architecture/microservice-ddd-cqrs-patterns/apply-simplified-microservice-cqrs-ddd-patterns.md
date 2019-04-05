@@ -1,23 +1,23 @@
 ---
 title: 在微服务中应用简化的 CQRS 和 DDD 模式
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 在微服务中应用简化的 CQRS 和 DDD 模式
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 了解 CQRS 与 DDD 模式之间的整体关系。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 5557a3d83d1f5f3016ff411157db1652d3ac50e2
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: ef3260143c91c2500becd7c8c1a6cd0b81dbf3d2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106079"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148062"
 ---
-# <a name="applying-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>在微服务中应用简化的 CQRS 和 DDD 模式
+# <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>在微服务中应用简化后的 CQRS 和 DDD 模式
 
 CQRS 是一种分离数据读取与写入模型的体系结构模式。 相关术语[命令查询分离 (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html)最初由 Bertrand Meyer 在其《面向对象软件构造》一书中定义。 基本思想是可以将系统操作划分为两个界限明显的类别：
 
--   查询。 这些查询返回结果，不改变系统的状态，且没有副作用。
+- 查询。 这些查询返回结果，不改变系统的状态，且没有副作用。
 
--   命令。 这些命令会更改系统状态。
+- 命令。 这些命令会更改系统状态。
 
 CQS 是一个简单的概念 - 说明同一对象中的方法是查询还是命令。 每种方法要么返回状态，要么更改状态，不会二者兼具。 即使是单个存储库模式对象也符合 CQS。 CQS 被视为 CQRS 的基本原则。
 
@@ -27,15 +27,14 @@ CQRS 的分离操作通过将查询操作分到一层中而将命令分到另一
 
 CQRS 表示有两个对象用于读/写操作，而在其他上下文中有一个对象。 可以添加一个非规范化读取数据库，如要了解这些数据库，请参阅更高级的 CQRS 文献。 但是我们在这里没有使用这种方法，因为在此处，我们的目标是更灵活地查询，而不是使用 DDD 模式的约束（如聚合）限制查询。
 
-这种服务的一个例子就是 eShopOnContainers 引用应用程序的订购微服务。 该服务基于简化的 CQRS 方法实现微服务。 使用单个数据源或数据库、两个逻辑模型和事务域的 DDD 模式，如图 9-2 所示。
+这种服务的一个例子就是 eShopOnContainers 引用应用程序的订购微服务。 该服务基于简化的 CQRS 方法实现微服务。 使用单个数据源或数据库、两个逻辑模型和事务域的 DDD 模式，如图 7-2 所示。
 
-![](./media/image2.png)
+![逻辑订购微服务包括其订购数据库，该数据库无论是否与其位于同一 Docker 主机均可。 若该数据库位于同一 Docker 主机，则更利于开发，但不利于生产。](./media/image2.png)
 
-**图 9-2**。 基于简化 CQRS 和 DDD 的微服务
+**图 7-2**。 基于简化 CQRS 和 DDD 的微服务
 
 应用程序层可以是 Web API 本身。 此处的重要设计是微服务已经从 CQRS 模式之后的命令、域模型和事务中将查询和 ViewModel（特别为客户端应用程序创建的数据模型）拆分开了。 这种方法使查询独立于 DDD 模式的限制和约束，这些模式只对事务和更新有意义，如后面的章节所述。
 
-
 >[!div class="step-by-step"]
-[上一页](index.md)
-[下一页](eshoponcontainers-cqrs-ddd-microservice.md)
+>[上一页](index.md)
+>[下一页](eshoponcontainers-cqrs-ddd-microservice.md)

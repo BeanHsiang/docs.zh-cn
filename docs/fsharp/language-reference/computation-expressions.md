@@ -1,17 +1,17 @@
 ---
-title: 计算表达式 (F#)
-description: '了解如何创建用于编写计算 F # 中用于进行排列和组合使用控制流构造和绑定的方便语法。'
-ms.date: 07/27/2018
-ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: 计算表达式
+description: 了解如何创建方便的语法中编写计算F#，可以进行序列化和组合使用控制流构造和绑定。
+ms.date: 03/15/2019
+ms.openlocfilehash: 3c2abb5c6204309fc8d5215a53ce8af46c01d218
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839864"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125507"
 ---
 # <a name="computation-expressions"></a>计算表达式
 
-F # 中的计算表达式提供方便的语法用于编写计算，可以进行排列和组合使用控制流构造和绑定。 根据计算表达式的种类，它们可以认为的 monad、 monoids、 monad 转换器和 applicative 函子的表达方式。 但是，不同于其他语言 (如*是否表示法*Haskell 中)，它们不受限于单一的抽象概念，而不依赖宏或其他形式的元编程来完成方便且与上下文相关的语法。
+中的计算表达式F#提供的方便语法用于编写计算，可以进行排列和组合使用控制流构造和绑定。 根据计算表达式的种类，它们可以认为的 monad、 monoids、 monad 转换器和 applicative 函子的表达方式。 但是，不同于其他语言 (如*是否表示法*Haskell 中)，它们不受限于单一的抽象概念，而不依赖宏或其他形式的元编程来完成方便且与上下文相关的语法。
 
 ## <a name="overview"></a>概述
 
@@ -22,7 +22,7 @@ F # 中的计算表达式提供方便的语法用于编写计算，可以进行�
 * Effectful 计算
 * 生成计算
 
-一般来说，有*上下文相关*必须在应用程序的某些部分中执行的计算。 编写与上下文相关代码极具挑战性，因为可轻松之外不抽象来阻止你执行此操作的情况下的给定上下文将"泄漏"计算。 这些抽象通常具有挑战性，若要编写的自己，这就是，F # 的一个通用的方法来实现所谓的原因**计算表达式**。
+一般来说，有*上下文相关*必须在应用程序的某些部分中执行的计算。 编写与上下文相关代码极具挑战性，因为可轻松之外不抽象来阻止你执行此操作的情况下的给定上下文将"泄漏"计算。 这些抽象通常具有挑战性，若要编写的自己，这就是为什么F#具有一个通用的方法来实现所谓**计算表达式**。
 
 计算表达式提供统一的语法和抽象的编码与上下文相关的计算模型。
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-每个这些关键字和其他标准的 F # 关键字才可用计算表达式中，如果它们已在后备生成器类型中定义。 唯一的例外是`match!`，它本身就是使用的语法糖`let!`跟模式匹配的结果。
+这些关键字和其他标准的每个F#关键字才在计算表达式中可用，如果它们已在后备生成器类型中定义。 唯一的例外是`match!`，它本身就是使用的语法糖`let!`跟模式匹配的结果。
 
-生成器类型是一个对象，定义的管理的方式合并的片段的计算表达式; 的特殊方法也就是说，其方法控制计算表达式的行为方式。 另一种方法来描述的生成器类是说它允许你自定义的多个 F # 构造，如循环和绑定操作。
+生成器类型是一个对象，定义的管理的方式合并的片段的计算表达式; 的特殊方法也就是说，其方法控制计算表达式的行为方式。 另一种方法来描述的生成器类是说它允许你自定义的许多操作F#构造，如循环和绑定。
 
 ### `let!`
 
@@ -179,7 +179,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-从 F # 4.5，开始`match!`关键字可以内联调用根据其结果的另一个计算表达式和模式匹配：
+从F#4.5 中，`match!`关键字可以内联调用根据其结果的另一个计算表达式和模式匹配：
 
 ```fsharp
 let doThingsAsync url =
@@ -194,7 +194,7 @@ let doThingsAsync url =
 
 ## <a name="built-in-computation-expressions"></a>内置的计算表达式
 
-F # 核心库定义了三个内置的计算表达式：[序列表达式](sequences.md)，[异步工作流](asynchronous-workflows.md)，并[查询表达式](query-expressions.md)。
+F#核心库定义了三个内置的计算表达式：[序列表达式](sequences.md)，[异步工作流](asynchronous-workflows.md)，和[查询表达式](query-expressions.md)。
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>创建新的计算表达式的类型
 
@@ -218,6 +218,7 @@ F # 核心库定义了三个内置的计算表达式：[序列表达式](sequenc
 |`Yield`|`'T -> M<'T>`|为调用`yield`中计算表达式的表达式。|
 |`YieldFrom`|`M<'T> -> M<'T>`|为调用`yield!`中计算表达式的表达式。|
 |`Zero`|`unit -> M<'T>`|调用空`else`的分支`if...then`中计算表达式的表达式。|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|指示计算表达式传递给`Run`作为报价的成员。 它将转换到报价计算的所有实例。|
 
 许多生成器类中的方法使用并返回`M<'T>`构造，这通常是已单独定义的类型特征的计算种类的组合，例如，`Async<'T>`对异步工作流和`Seq<'T>`表示序列工作流。 这些方法的签名启用它们要合并且相互嵌套，以便从一个构造返回的工作流对象可以传递到下一步。 编译器分析计算表达式时使用上表中的方法和计算表达式中的代码，为一系列嵌套的函数调用的转换表达式。
 
@@ -227,7 +228,7 @@ F # 核心库定义了三个内置的计算表达式：[序列表达式](sequenc
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-在上面的代码中，对调用`Run`和`Delay`省略了如果中计算表达式生成器类未定义。 计算表达式，此处表示为正文`{| cexpr |}`下, 表中所描述的翻译转换为涉及生成器类的方法的调用。 计算表达式`{| cexpr |}`定义以递归方式根据这些翻译其中`expr`是一个 F # 表达式和`cexpr`是计算表达式。
+在上面的代码中，对调用`Run`和`Delay`省略了如果中计算表达式生成器类未定义。 计算表达式，此处表示为正文`{| cexpr |}`下, 表中所描述的翻译转换为涉及生成器类的方法的调用。 计算表达式`{| cexpr |}`定义以递归方式根据这些翻译其中`expr`是F#表达式并`cexpr`是计算表达式。
 
 |表达式|转换|
 |----------|-----------|
@@ -245,12 +246,13 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 |<code>{&#124; match expr with &#124; pattern_i -> cexpr_i &#124;}</code>|<code>match expr with &#124; pattern_i -> {&#124; cexpr_i &#124;}</code>|
 |<code>{&#124; for pattern in expr do cexpr &#124;}</code>|<code>builder.For(enumeration, (fun pattern -> {&#124; cexpr &#124;}))</code>|
 |<code>{&#124; for identifier = expr1 to expr2 do cexpr &#124;}</code>|<code>builder.For(enumeration, (fun identifier -> {&#124; cexpr &#124;}))</code>|
-|<code>{&#124; while expr do cexpr &#124;}</code>|<code>builder.While(fun () -> expr), builder.Delay({&#124;cexpr &#124;})</code>|
+|<code>{&#124; while expr do cexpr &#124;}</code>|<code>builder.While(fun () -> expr, builder.Delay({&#124;cexpr &#124;}))</code>|
 |<code>{&#124; try cexpr with &#124; pattern_i -> expr_i &#124;}</code>|<code>builder.TryWith(builder.Delay({&#124; cexpr &#124;}), (fun value -> match value with &#124; pattern_i -> expr_i &#124; exn -> reraise exn)))</code>|
 |<code>{&#124; try cexpr finally expr &#124;}</code>|<code>builder.TryFinally(builder.Delay( {&#124; cexpr &#124;}), (fun () -> expr))</code>|
 |<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
 |<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
 |<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
+
 上表中`other-expr`介绍一个表达式，否则不表中列出。 生成器类不需要实现的所有方法和支持所有前面的表中列出的翻译。 未实现这些构造不在该类型的计算表达式中可用。 例如，如果你不想要支持`use`中计算表达式的关键字，则可以省略的定义`Use`生成器类中。
 
 下面的代码示例显示了一系列步骤，可以是计算一次一个步骤封装计算的计算表达式。 一个可区分联合类型`OkOrException`，到目前为止计算对表达式的错误状态进行编码。 此代码演示了可以在您的计算表达式，如生成器方法的一些样本实现中使用的几种典型模式。
@@ -266,7 +268,7 @@ module Eventually =
     // computation.
     let rec bind func expr =
         match expr with
-        | Done value -> NotYetDone (fun () -> func value)
+        | Done value -> func value
         | NotYetDone work -> NotYetDone (fun () -> bind func (work()))
 
     // Return the final value wrapped in the Eventually type.
@@ -372,13 +374,8 @@ comp |> step |> step
 
 // prints "x = 1"
 // prints "x = 2"
-// returns "NotYetDone <closure>"
-comp |> step |> step |> step |> step |> step |> step
-
-// prints "x = 1"
-// prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step |> step |> step |> step |> step
+comp |> step |> step |> step |> step 
 ```
 
 计算表达式的表达式返回的基础类型。 基础类型可表示计算所得的结果或可以执行的延迟的计算或它可能会提供一种方法来循环访问某种类型的集合。 在上一示例中，基础类型是**最终**。 为序列表达式的基础类型是<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>。 对于查询表达式中，基础类型是<xref:System.Linq.IQueryable?displayProperty=nameWithType>。 对于异步工作流，基础类型是[ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)。 `Async`对象都表示为计算的结果执行的工作。 例如，调用[ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)执行计算并返回结果。

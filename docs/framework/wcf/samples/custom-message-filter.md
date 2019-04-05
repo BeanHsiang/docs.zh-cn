@@ -2,12 +2,12 @@
 title: 自定义消息筛选器
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: c9a6e436548d4d1f009833f80899721c4c085513
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d71f147a5664b44cf6ef37b4432e295344f0aee2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746621"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829367"
 ---
 # <a name="custom-message-filter"></a>自定义消息筛选器
 此示例演示如何替换 Windows Communication Foundation (WCF) 用于将消息调度到终结点的消息筛选器。  
@@ -135,4 +135,3 @@ Hello
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  
     ```  
   
-## <a name="see-also"></a>请参阅

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b69970d50652da203ecf1ae6fe8d604ccee06cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402684"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483570"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 方法
-获取为指定的函数，为反汇编进行格式化的所有代码。 .NET Framework 2.0 版中，此方法已被否决。 使用[icordebugcode2:: Getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)相反。  
+获取指定的函数的反汇编格式的所有代码。 .NET Framework 2.0 版中，此方法已弃用。 使用[ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)相反。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,12 +40,12 @@ HRESULT GetCode (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `startOffset`  
- [in]函数的开头的偏移量。  
+ [in]该函数的开头的偏移量。  
   
  `endOffset`  
- [in]在函数末尾的偏移量。  
+ [in]该函数的末尾的偏移量。  
   
  `cBufferAlloc`  
  [in]大小`buffer`数组转换返回的代码。  
@@ -57,17 +57,17 @@ HRESULT GetCode (
  [out]返回的字节数。  
   
 ## <a name="remarks"></a>备注  
- 如果该函数的代码具有已划分为多个块区中，它们被串联本机偏移递增的顺序。 不检查指令边界。  
+ 如果该函数的代码都分成多个块区，系统会将它们连接起来递增本机偏移量的顺序。 不检查指令边界。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** 1.1、 1.0  
+ **.NET framework 版本：** 1.1, 1.0  
   
-## <a name="see-also"></a>请参阅  
- [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- 
+## <a name="see-also"></a>请参阅
+- [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+

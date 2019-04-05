@@ -2,12 +2,12 @@
 title: 对等协作
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: a7d382006921487ea91f82ee830c75b6355a01f3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 81900cac9bf3c4d2fb247c36f00d4aa8413944f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50180782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590534"
 ---
 # <a name="peer-to-peer-collaboration"></a>对等协作
 
@@ -40,5 +40,5 @@ ms.locfileid: "50180782"
  在 Active Directory 域中，域控制器使用 Kerberos 提供身份验证服务。 在无服务器对等环境中，对等机必须提供其自身的身份验证。 对于对等网络，任何节点都可充当 CA，无需要求每个对等机受信任根存储中存在根证书。 使用自签名证书提供身份验证，格式为 X.509 证书。 这些是由每个对等机创建的证书，其生成公钥/私钥对以及使用私钥签名的证书。 自签名证书用于身份验证，并提供有关对等机实体的信息。 如 X.509 身份验证一样，对等机网络身份验证依赖于一系列追溯受信任公钥的证书。  
   
 ## <a name="see-also"></a>请参阅
-- <xref:System.Net.PeerToPeer.Collaboration>  
+- <xref:System.Net.PeerToPeer.Collaboration>
 - [关于 System.Net.PeerToPeer.Collaboration 命名空间](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

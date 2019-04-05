@@ -1,5 +1,5 @@
 ---
-title: '&lt;编译器&gt;元素'
+title: <compiler> 元素
 ms.date: 08/14/2018
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compiler
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e8c5021b00de503783adb3f1b1dc11964639afbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 34753d538ff37ac4ae621f653d47ac92ac6749a0
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193523"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674459"
 ---
-# <a name="ltcompilergt-element"></a>&lt;编译器&gt;元素
+# <a name="compiler-element"></a>\<编译器 > 元素
 
 指定语言提供程序的编译器配置属性。
 
@@ -106,4 +104,4 @@ ms.locfileid: "50193523"
 - [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<编译器 > 元素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
 - [指定完全限定的类型名称](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [（ASP.NET 设置架构） compilation 的 compilers 的 compiler 元素](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e(v=vs.100))
+- [（ASP.NET 设置架构） compilation 的 compilers 的 compiler 元素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

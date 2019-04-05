@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e09bf424a41445f7e36397775d1578cdf4e7e75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf1be8d5c709f3d6e5991e4d33dde2e923291a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569409"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 枚举
 包含一些值，用于在元数据生成期间影响行为。  
@@ -52,17 +52,17 @@ typedef enum CorSetENC {
 |`MDSetENCOff`|已过时。|  
 |`MDUpdateENC`|指示可以更新元数据，而不能移动标记。|  
 |`MDUpdateFull`|指示可以在更新过程移动标记。|  
-|`MDUpdateExtension`|指示更新可以包含仅的新增功能。 令牌不能移动。|  
-|`MDUpdateIncremental`|指示为增量编译。|  
+|`MDUpdateExtension`|指示更新可以包含仅的新增功能。 不能移动标记。|  
+|`MDUpdateIncremental`|指示增量编译。|  
 |`MDUpdateDelta`|指示应保存该仅更改了元数据。|  
 |`MDUpdateMask`|包括`MDUpdateENC`，`MDUpdateFull`和`MDUpdateIncremental`。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

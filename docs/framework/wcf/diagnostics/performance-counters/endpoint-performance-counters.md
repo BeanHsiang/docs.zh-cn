@@ -2,12 +2,12 @@
 title: 终结点性能计数器
 ms.date: 03/30/2017
 ms.assetid: 7d44d576-bd4e-453b-8b76-a818ce90b806
-ms.openlocfilehash: 8354cff600f8c16a5ab9b4f6efd3c0b93a46276c
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: de750b3e5ee61b6bfc5b387fb7de84b74171d8d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54501956"
 ---
 # <a name="endpoint-performance-counters"></a>终结点性能计数器
 终结点性能计数器可以捕获能够揭示终结点如何接受消息的数据。 如果使用性能监视器查看，可以在 `ServiceModelEndpoint 4.0.0.0` 性能对象下找到它们。 性能计数器实例使用以下模式命名：  
@@ -19,7 +19,7 @@ ms.locfileid: "33803132"
  它们所捕获的数据与针对单个操作收集的数据类似，不同之处仅在于在整个终结点中进行了聚合。  
   
 > [!CAUTION]
->  性能计数器实例的名称长度存在限制。 Windows Communication Foundation (WCF) 计数器实例名称超出最大长度，WCF 会将哈希值替换实例名称的一部分。  
+>  性能计数器实例的名称长度存在限制。 当 Windows Communication Foundation (WCF) 计数器实例名称超出了最大长度时，WCF 会将实例名称的一部分替换为哈希值。  
   
-## <a name="see-also"></a>请参阅  
- [性能计数器](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
+## <a name="see-also"></a>请参阅
+- [性能计数器](../../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)

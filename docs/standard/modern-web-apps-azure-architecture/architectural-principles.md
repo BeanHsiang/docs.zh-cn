@@ -3,13 +3,13 @@ title: 体系结构原则
 description: 使用 ASP.NET Core 和 Azure 构建新式 Web 应用程序 | 体系结构原则
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.date: 02/16/2019
+ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404433"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442979"
 ---
 # <a name="architectural-principles"></a>体系结构原则
 
@@ -99,22 +99,11 @@ ms.locfileid: "37404433"
 
 至少，各 Web 应用程序应努力成为自己的有界上下文，为其业务模型提供自己的持久性存储，而不是与其他应用程序共享数据库。 有界上下文之间的通信通过编程接口进行，而不是通过共享数据库进行，这样可以引发业务逻辑和事件来响应发生的更改。 有界上下文会紧密映射到微服务，后者在理想情况下也作为其自己的单独有界上下文实现。
 
-> ### <a name="references--modern-web-applications"></a>参考 - 新式 Web 应用程序
-> - **分离关注点**  
-> <https://deviq.com/separation-of-concerns/>
-> - **封装**  
-> <https://deviq.com/encapsulation/>
-> - **依赖关系反转原则**  
-> <https://deviq.com/dependency-inversion-principle/>
-> - **Explicit Dependencies Principle**（显式依赖关系原则）  
-> <https://deviq.com/explicit-dependencies-principle/>
-> - **不要自我重复**  
-> <https://deviq.com/don-t-repeat-yourself/>
-> - **持久性无感知**  
-> <https://deviq.com/persistence-ignorance/>
-> - **有界上下文**  
-> <https://martinfowler.com/bliki/BoundedContext.html>
+## <a name="additional-resources"></a>其他资源
+
+* [JAVA 设计模式：原则](https://java-design-patterns.com/principles/)
+* [有界上下文](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
-[上一页](choose-between-traditional-web-and-single-page-apps.md)
-[下一页](common-web-application-architectures.md)
+>[上一页](choose-between-traditional-web-and-single-page-apps.md)
+>[下一页](common-web-application-architectures.md)

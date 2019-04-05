@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 367c43dc08722288dc3b32b5133f7770ffc3a27c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eee75bc16f46ba5ea58fc42c570e48b09ab9a2e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423099"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553225"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next 方法
 将移动[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)到下一个帧的对象。  
@@ -38,26 +38,26 @@ HRESULT Next();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|运行时成功地将展开到下一个帧 （请参阅备注）。|  
+|S_OK|在运行时成功展开至下一帧 （请参阅备注）。|  
 |E_FAIL|`ICorDebugStackWalk`不为高级对象。|  
 |CORDBG_S_AT_END_OF_STACK|由于此展开已达到堆栈的末尾。|  
-|CORDBG_E_PAST_END_OF_STACK|帧指针是已在堆栈; 末尾因此，可以不访问任何其他帧。|  
+|CORDBG_E_PAST_END_OF_STACK|帧指针已末尾的堆栈;因此，可以不访问任何其他帧。|  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>Exceptions  
   
 ## <a name="remarks"></a>备注  
- `Next`方法的改进`ICorDebugStackWalk`对象到调用的帧，仅当运行时可以进行展开当前帧。 否则，该对象将前进到下一个帧以及运行时无法展开。  
+ `Next`方法的改进`ICorDebugStackWalk`仅当运行时可展开当前帧对象传递给调用的帧。 否则，对象前移至下一个运行时能够展开的帧。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugStackWalk 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugStackWalk 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

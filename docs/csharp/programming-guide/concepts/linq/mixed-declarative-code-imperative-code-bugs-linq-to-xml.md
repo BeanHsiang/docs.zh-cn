@@ -2,12 +2,12 @@
 title: 混合声明性代码-命令性代码的问题 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 56d8140613f3dae7f99c1374634dbd8bdf094a7c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 5963e470acebfe259126ab8f2a17e131cb44f25b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086760"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524697"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>混合声明性代码/命令性代码的问题 (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 包含各种不同的方法，使您能够直接修改 XML 树。 您可以添加元素、删除元素、更改元素的内容、添加属性等等。 在[修改 XML 树 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md) 中详细介绍了此编程接口。 如果循环访问一个轴，例如 <xref:System.Xml.Linq.XContainer.Elements%2A>，而在循环访问该轴时正在修改 XML 树，那么可能会发生一些异常问题。  

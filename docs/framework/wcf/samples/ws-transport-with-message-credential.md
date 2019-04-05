@@ -2,12 +2,12 @@
 title: 使用消息凭据的 WS 传输
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 44f37e3576b508e679d45a3cbafacfb5a68a7838
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 31c1ed5d4b62c0f0b4c0c149629bb84a7dab6f01
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030176"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826205"
 ---
 # <a name="ws-transport-with-message-credential"></a>使用消息凭据的 WS 传输
 此示例演示如何将 SSL 传输安全与消息中传送的客户端凭据结合使用。 本示例使用 `wsHttpBinding` 绑定。  
@@ -61,7 +61,7 @@ public string GetCallerIdentity()
   
  指定的地址使用 https:// 方案。 绑定配置将安全模式设置为 `TransportWithMessageCredential`。 必须在服务的 Web.config 文件中指定相同的安全模式。  
   
- 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，安全警报出现时尝试访问 https： 地址，如`https://localhost/servicemodelsamples/service.svc `，从你的浏览器。 若要允许 WCF 客户端以使用测试证书后，某些其他代码已添加到客户端以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
+ 因为此示例中使用的证书是用 Makecert.exe 创建的测试证书，安全警报出现时尝试访问 https： 地址，如`https://localhost/servicemodelsamples/service.svc`，从你的浏览器。 若要允许 WCF 客户端以使用测试证书后，某些其他代码已添加到客户端以禁用安全警报。 使用生产证书时，不需要此代码和随附的类。  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   
@@ -97,4 +97,3 @@ Press <ENTER> to terminate client.
   
 4.  若要在单或跨计算机配置中运行示例，请按照中的说明[运行 Windows Communication Foundation 示例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>请参阅

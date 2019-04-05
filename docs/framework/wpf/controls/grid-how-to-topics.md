@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Grid control [WPF], how-to topics
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
-ms.openlocfilehash: ec9ee608b939c10db295c7b6c37442ef6085f194
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550360"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377672"
 ---
 # <a name="grid-how-to-topics"></a>Grid 帮助主题
-本部分中的主题介绍如何定位元素使用<xref:System.Windows.Controls.Grid>元素。  
+在本部分中的主题介绍如何来定位元素使用<xref:System.Windows.Controls.Grid>元素。  
   
 ## <a name="in-this-section"></a>本节内容  
- [使用 Grid 生成标准 UI 对话框](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [创建复杂网格](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [创建 Grid 元素](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [创建和使用 GridLengthConverter 对象](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [使用 ColumnDefinitionsCollection 和 RowDefinitionsCollection 控制列和行](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [确定 Grid 子元素的位置](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [在 Grid 之间共用重设大小属性](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ [使用 Grid 生成标准 UI 对话框](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [创建复杂网格](how-to-create-a-complex-grid.md)  
+ [创建 Grid 元素](how-to-create-a-grid-element.md)  
+ [创建和使用 GridLengthConverter 对象](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [使用 ColumnDefinitionsCollection 和 RowDefinitionsCollection 控制列和行](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [确定 Grid 子元素的位置](how-to-position-the-child-elements-of-a-grid.md)  
+ [在 Grid 之间共用重设大小属性](how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Panel>  
@@ -42,8 +42,8 @@ ms.locfileid: "33550360"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相关章节  
- [布局](../../../../docs/framework/wpf/advanced/layout.md)  
+ [布局](../advanced/layout.md)  
   
- [演练：我的第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [演练：我的第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概述](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概述](scrollviewer-overview.md)

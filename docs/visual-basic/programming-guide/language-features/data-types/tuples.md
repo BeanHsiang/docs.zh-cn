@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: d76c14aa83fcf47faea41946614e83cfbc8ad57b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 146e9c2360cea153d2f487769d5b983516861e8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195497"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694719"
 ---
 # <a name="tuples-visual-basic"></a>元组 (Visual Basic)
 
@@ -50,7 +50,7 @@ Visual Basic 元组字段是可读写;已实例化一个元组后，可以修改
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-若要启用 interred 元组元素名称，必须定义要在 Visual Basic 项目中使用的 Visual Basic 编译器的版本 (\*.vbproj) 文件： 
+若要启用推断元组元素名称，必须定义要在 Visual Basic 项目中使用的 Visual Basic 编译器的版本 (\*.vbproj) 文件： 
 
 ```xml 
 <PropertyGroup> 
@@ -62,7 +62,7 @@ Visual Basic 元组字段是可读写;已实例化一个元组后，可以修改
 
 有关详细信息，请参阅[设置的 Visual Basic 语言版本](../../../language-reference/configure-language-version.md)。
 
-在某些情况下，Visual Basic 编译器无法推断元组元素名称从候选名称，并且仅可以使用其默认名称，例如引用元组字段`Item1`， `Item2`，等等。这些方法包括：
+在某些情况下，Visual Basic 编译器无法推断元组元素名称从候选名称，并且仅可以使用其默认名称，例如引用元组字段`Item1`， `Item2`，等等。这些问题包括：
 
 - 候选名称是元组成员的名称相同例如`Item3`， `Rest`，或`ToString`。
 
@@ -72,7 +72,7 @@ Visual Basic 元组字段是可读写;已实例化一个元组后，可以修改
   
 ## <a name="tuples-versus-structures"></a>与结构的元组
 
-Visual Basic 元组是值类型之一的实例**System.ValueTuple**泛型类型。 例如，`holiday`在上一示例中定义的元组是的一个实例<xref:System.ValueTuple%603>结构。 它被旨在作为数据的轻量容器。 由于元组的目的是为了更加轻松地使用多个数据项创建一个对象，它缺乏一些自定义结构可能具有的功能。 这些方法包括：
+Visual Basic 元组是值类型之一的实例**System.ValueTuple**泛型类型。 例如，`holiday`在上一示例中定义的元组是的一个实例<xref:System.ValueTuple%603>结构。 它被旨在作为数据的轻量容器。 由于元组的目的是为了更加轻松地使用多个数据项创建一个对象，它缺乏一些自定义结构可能具有的功能。 这些问题包括：
 
 - 自定义成员。 不能定义自己的属性、 方法或事件的元组。
 
@@ -173,4 +173,4 @@ Visual Basic 元组是之一的实例**System.ValueTuple**泛型类型，.NET Fr
 
 ## <a name="see-also"></a>请参阅
 
-[Visual Basic 语言参考](index.md)  
+- [Visual Basic 语言参考](index.md)

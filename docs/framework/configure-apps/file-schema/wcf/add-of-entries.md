@@ -1,28 +1,39 @@
 ---
-title: '&lt;entries&gt; 的 &lt;add&gt;'
+title: <add> 的 <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: a6960c16c84c13d905f0993ee3cfc1cf67df07fc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7267b8719987ecd25bcca78a7897a0d4172a42ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744975"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264565"
 ---
-# <a name="ltaddgt-of-ltentriesgt"></a>&lt;entries&gt; 的 &lt;add&gt;
+# <a name="add-of-entries"></a>\<添加 > 的\<条目 >
 表示将筛选器映射到以前定义的客户端终结点的路由项。 与此筛选器匹配的消息将发送到此目标。  
   
  \<system.serviceModel>  
 \<路由 >  
-\<routingTables >  
-\<表 >  
-\<条目 >  
+\<filterTables>  
+\<filterTable>  
+\<entries>  
 \<add>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
-   <routing>      <filterTables>        <filterTable name="String">          <entries>            <add backupList="String"                 endpointName="String"                  filterName="String"                  priority="Integer" />          </entries>        </table>      </routingTables></routing>  
+```xml  
+<routing>
+  <filterTables>
+    <filterTable name="String">
+      <entries>
+        <add backupList="String"
+             endpointName="String"
+             filterName="String"
+             priority="Integer" />
+      </entries>
+    </filterTable>
+  </filterTables>
+</routing>
 ```  
   
 ```csharp  
@@ -47,8 +58,8 @@ ms.locfileid: "32744975"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|一个包含路由映射项的配置节。|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|一个包含路由映射项的配置节。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>      
- <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType> 
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>

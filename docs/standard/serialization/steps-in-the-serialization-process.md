@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-ms.openlocfilehash: ef81ecc7ca177fa9360f53a6b66015412d282065
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b697e8c590d0865b26eaa9f66a333504a5faece2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517352"
 ---
 # <a name="steps-in-the-serialization-process"></a>序列化过程中的步骤
 对[格式化程序](xref:System.Runtime.Serialization.Formatter)调用 <xref:System.Runtime.Serialization.Formatter.Serialize*> 方法时，将按照以下规则顺序进行对象序列化：
@@ -27,5 +27,5 @@ ms.locfileid: "44084905"
   
 ## <a name="see-also"></a>请参阅
 
-- [二进制序列化](binary-serialization.md)  
+- [二进制序列化](binary-serialization.md)
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

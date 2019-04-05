@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aecf7aef9023439e145d408e40fb4adf5c0e986
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 59a89aa354941b7ff22a125a980c2d9c75ac37ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47192206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491514"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>如何：在独立存储中读取和写入文件
 若要读取或写入独立存储区的文件，请使用包含流读取器（<xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 对象）或流编写器（<xref:System.IO.StreamReader> 对象）的 <xref:System.IO.StreamWriter> 对象。  
@@ -36,11 +36,11 @@ ms.locfileid: "47192206"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
-- <xref:System.IO.FileMode?displayProperty=nameWithType>  
-- <xref:System.IO.FileAccess?displayProperty=nameWithType>  
-- <xref:System.IO.StreamReader?displayProperty=nameWithType>  
-- <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
-- [文件和流 I/O](../../../docs/standard/io/index.md)  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
+- <xref:System.IO.FileMode?displayProperty=nameWithType>
+- <xref:System.IO.FileAccess?displayProperty=nameWithType>
+- <xref:System.IO.StreamReader?displayProperty=nameWithType>
+- <xref:System.IO.StreamWriter?displayProperty=nameWithType>
+- [文件和流 I/O](../../../docs/standard/io/index.md)
 - [独立存储](../../../docs/standard/io/isolated-storage.md)

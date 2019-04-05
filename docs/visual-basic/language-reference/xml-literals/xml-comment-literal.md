@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 60c354215c627683fd6c69d9ca66fc115c26ccda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 149bbac6d301a9c2f166d05698e3780171126cb3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603933"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827271"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML 注释文本 (Visual Basic)
 一个文本表示<xref:System.Xml.Linq.XComment>对象。  
@@ -29,9 +29,9 @@ ms.locfileid: "33603933"
   
 |术语|定义|  
 |---|---|  
-|`<!--`|必须的。 表示 XML 注释的开头。|  
-|`content`|必须的。 若要显示的 XML 注释中的文本。 不能包含一系列的两个连字符 （-） 或靠近结束标记的连字符结尾。|  
-|`-->`|必须的。 表示 XML 注释的结尾。|  
+|`<!--`|必需。 表示 XML 注释的开始。|  
+|`content`|必需。 XML 注释中显示的文本。 不能包含一系列的两个连字符 （-） 或与结束标记相邻的连字符结尾。|  
+|`-->`|必需。 表示 XML 注释的结尾。|  
   
 ## <a name="return-value"></a>返回值  
  一个 <xref:System.Xml.Linq.XComment> 对象。  
@@ -39,24 +39,25 @@ ms.locfileid: "33603933"
 ## <a name="remarks"></a>备注  
  XML 注释文本不包含文档内容;它们包含有关文档的信息。 序列"-->"结尾的 XML 注释部分。 这意味着以下几点：  
   
--   你无法使用嵌入式的表达式 XML 注释文本中，因为嵌入式的表达式分隔符是有效的 XML 注释内容。  
+-   因为嵌入的分隔符是有效的 XML 注释内容，不能在 XML 注释文本中使用嵌入式的表达式。  
   
--   XML 注释部分不能嵌套，因为`content`不能包含值"-->"。  
+-   XML 注释节无法嵌套，因为`content`不能包含值"-->"。  
   
- 可以将 XML 注释文本分配给一个变量，或者可以将其包含在 XML 元素文本。  
+ 可以将 XML 注释文本分配给一个变量，或将其包含在 XML 元素文本中。  
   
 > [!NOTE]
->  XML 文本可以跨多行，而无需使用行继续符。 此功能，可从 XML 文档中复制内容，然后将其粘贴到 Visual Basic 程序直接。  
+>  XML 文本可以跨多个行，而无需使用行继续符。 此功能，可将内容从 XML 文档复制并粘贴直接到 Visual Basic 程序。  
   
  Visual Basic 编译器将 XML 注释文本转换为调用<xref:System.Xml.Linq.XComment.%23ctor%2A>构造函数。  
   
 ## <a name="example"></a>示例  
- 下面的示例创建包含文本的 XML 注释"这是一个注释"。  
+ 以下示例创建 XML 注释包含文本"这是一条注释"。  
   
- [!code-vb[VbXMLSamples#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-comment-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Xml.Linq.XComment>  
- [XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)  
- [在 Visual Basic 中创建 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Xml.Linq.XComment>
+- [XML 元素文本](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML 文本](../../../visual-basic/language-reference/xml-literals/index.md)
+- [在 Visual Basic 中创建 XML](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

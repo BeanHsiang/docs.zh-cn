@@ -12,25 +12,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 4e243191b83149f17f4970150d784dcd7d014b22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4db424b27af09dcb7def0051fba070fe9ccf0491
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532078"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721965"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>如何：用 Windows 窗体创建多窗格用户界面
-在下面的过程中，将创建多窗格用户界面类似于在 Microsoft Outlook 中与使用**文件夹**列表中，**消息**窗格中，和一个**预览**窗格。 这种安排主要通过停靠处理该窗体控件。  
+在下面的过程中，将创建类似于在 Microsoft Outlook 中使用与多窗格用户界面**文件夹**列表中，**消息**窗格中，和一个**预览**窗格。 这种排列方式被实现主要通过处理该窗体控件停靠。  
   
- 当你将控件停靠时，你确定控件固定的父容器的边缘。 因此，如果你设置<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性<xref:System.Windows.Forms.DockStyle.Right>，将其父控件的右边缘停靠的控件的右边缘。 此外，该控件的停靠的边缘是调整大小，以匹配它的容器控件。 有关详细信息，如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性会发生作用，请参阅[如何： 在 Windows 窗体上停靠控件](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)。  
+ 停靠控件时，您可以确定控件固定的父容器的边缘。 因此，如果您设置<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性设置为<xref:System.Windows.Forms.DockStyle.Right>，将在该控件的右边缘停靠到其父控件的右边缘。 此外，该控件的停靠的边缘调整大小以匹配的它的容器控件。 详细了解如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>属性的工作原理，请参阅[如何：在 Windows 窗体上停靠控件](how-to-dock-controls-on-windows-forms.md)。  
   
- 此过程侧重于排列<xref:System.Windows.Forms.SplitContainer>和其他控件在窗体上，而不添加使模拟 Microsoft Outlook 应用程序的功能。  
+ 此过程重点介绍排列<xref:System.Windows.Forms.SplitContainer>和其他控件在窗体上，而不上添加功能以使应用程序模仿 Microsoft Outlook。  
   
- 若要创建此用户界面，你将中的所有控件<xref:System.Windows.Forms.SplitContainer>控件，它包含<xref:System.Windows.Forms.TreeView>左侧面板中的控件。 右侧面板<xref:System.Windows.Forms.SplitContainer>控件包含第二个<xref:System.Windows.Forms.SplitContainer>控件替换为<xref:System.Windows.Forms.ListView>控件上述<xref:System.Windows.Forms.RichTextBox>控件。 这些<xref:System.Windows.Forms.SplitContainer>控件启用独立调整窗体上的其他控件的大小。 你可以调整此过程制作出的你自己的自定义用户界面中的方法。  
+ 若要创建此用户界面，您将中的所有控件<xref:System.Windows.Forms.SplitContainer>控件，它包含<xref:System.Windows.Forms.TreeView>左侧面板中的控件。 右侧面板中的<xref:System.Windows.Forms.SplitContainer>控件包含第二个<xref:System.Windows.Forms.SplitContainer>控件替换<xref:System.Windows.Forms.ListView>控制上述<xref:System.Windows.Forms.RichTextBox>控件。 这些<xref:System.Windows.Forms.SplitContainer>控件启用独立调整大小的窗体上的其他控件。 您可以改写此过程，以制作出的您自己的自定义用户界面中的技术。  
   
-### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>以编程方式创建的 Outlook 样式的用户界面  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>若要以编程方式创建的 Outlook 样式用户界面  
   
-1.  在窗体中，声明每个控件，它包含你的用户界面。 对于此示例中，使用<xref:System.Windows.Forms.TreeView>， <xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.SplitContainer>，和<xref:System.Windows.Forms.RichTextBox>控件以模拟 Microsoft Outlook 用户界面。  
+1.  在窗体中声明每个控件组成用户界面。 对于此示例中，使用<xref:System.Windows.Forms.TreeView>， <xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.SplitContainer>，和<xref:System.Windows.Forms.RichTextBox>控件来模拟 Microsoft Outlook 用户界面。  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ ms.locfileid: "33532078"
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  创建一个定义你的用户界面的过程。 下面的代码，以便窗体将类似于 Microsoft Outlook 中的用户界面设置的属性。 但是，通过使用其他控件，或使它们以不同的方式停靠，将只创建同样灵活其他用户界面一样简单。  
+2.  创建一个定义用户界面的过程。 下面的代码，以便窗体将类似于 Microsoft Outlook 中的用户界面设置的属性。 但是，通过使用其他控件，或以不同的方式将它们停靠在一起，将只需创建其他同样灵活的用户界面一样简单。  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ ms.locfileid: "33532078"
     }  
     ```  
   
-3.  在 Visual Basic 中，添加对刚才创建过程的调用`New()`过程。 在 Visual C# 中，将此代码行添加到窗体类的构造函数。  
+3.  在 Visual Basic 中，添加对刚刚创建的过程的调用`New()`过程。 视觉对象中C#，将这行代码添加到窗体类的构造函数。  
   
     ```vb  
     ' Add this to the New procedure.  
@@ -176,7 +176,7 @@ ms.locfileid: "33532078"
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer 控件](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [如何：使用设计器用 Windows 窗体创建多窗格用户界面](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer 控件](splitcontainer-control-windows-forms.md)
+- [如何：用 Windows 窗体使用设计器创建多窗格用户界面](create-a-multipane-user-interface-with-wf-using-the-designer.md)

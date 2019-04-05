@@ -1,18 +1,18 @@
 ---
-title: 如何：在 Windows 窗体上创建简单绑定控件
+title: 如何：创建 Windows 窗体上的简单绑定控件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321348"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708335"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>如何：在 Windows 窗体上创建简单绑定控件
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>如何：创建 Windows 窗体上的简单绑定控件
 与*简单绑定*，可以在控件中显示单个数据元素，如从数据集表中列的值。 可以将控件属性简单绑定到数据值。  
   
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "46321348"
   
 ### <a name="to-simple-bind-a-control"></a>简单绑定控件  
   
-1.  连接到数据源。 有关详细信息，请参阅[连接到数据源](../../../docs/framework/data/adonet/connecting-to-a-data-source.md)。  
+1.  连接到数据源。 有关详细信息，请参阅[连接到数据源](../data/adonet/connecting-to-a-data-source.md)。  
   
 2.  在表单中，选择控件并显示**属性**窗口。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "46321348"
   
      最常绑定的属性将显示下面 **(DataBindings)** 属性。 例如，在大多数控件而言**文本**最经常绑定属性。  
   
-4.  如果该属性要绑定不经常绑定的属性之一，请单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 中 **（高级）** 框，以显示**格式设置和高级绑定**为该控件的属性的完整列表对话框。  
+4.  如果该属性要绑定不经常绑定的属性之一，请单击**省略号**按钮 (![VisualStudioEllipsesButton 屏幕快照](./media/vbellipsesbutton.png "vbEllipsesButton")) 中 **（高级）** 框，以显示**格式设置和高级绑定**为该控件的属性的完整列表对话框。  
   
 5.  选择你想要绑定，并单击下的下拉箭头的属性**绑定**。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "46321348"
     > [!NOTE]
     >  由于简单绑定控件显示单个数据元素，它是非常典型，若要在具有简单绑定控件的 Windows 窗体中包含导航逻辑。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Binding>  
- [Windows 窗体数据绑定](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [数据绑定和 Windows 窗体](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Binding>
+- [Windows 窗体数据绑定](windows-forms-data-binding.md)
+- [数据绑定和 Windows 窗体](data-binding-and-windows-forms.md)

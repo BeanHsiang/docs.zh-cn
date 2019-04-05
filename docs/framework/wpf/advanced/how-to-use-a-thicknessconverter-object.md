@@ -8,12 +8,12 @@ helpviewer_keywords:
 - border thickness [WPF]
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
-ms.openlocfilehash: 6c8f9e83468a7b189b96efca2e175c0f3fe0dfff
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7dcac523ad105f074df11cdd74126536a60497b0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856658"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350692"
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>如何：使用 ThicknessConverter 对象
 ## <a name="example"></a>示例  
@@ -23,13 +23,13 @@ ms.locfileid: "43856658"
   
  此示例不运行。  
   
- [!code-csharp[ThicknessConverter#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThicknessConverter/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ThicknessConverter#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
+ [!code-csharp[ThicknessConverter#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessConverter/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ThicknessConverter#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Thickness>  
- <xref:System.Windows.ThicknessConverter>  
- <xref:System.Windows.Controls.Border>  
- [如何： 更改 Margin 属性](https://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
- [如何： 将 ListBoxItem 转换为新的数据类型](https://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)  
- [面板概述](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Thickness>
+- <xref:System.Windows.ThicknessConverter>
+- <xref:System.Windows.Controls.Border>
+- [如何：更改边距属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms750561(v=vs.90))
+- [如何：将 ListBoxItem 转换为新的数据类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749147(v=vs.90))
+- [面板概述](../controls/panels-overview.md)

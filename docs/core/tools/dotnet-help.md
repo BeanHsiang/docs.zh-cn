@@ -1,15 +1,13 @@
 ---
-title: dotnet help 命令 - .NET Core CLI
+title: dotnet help 命令
 description: dotnet help 命令可显示指定命令更详细的在线文档。
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: ed152717e32ffb294f5d5bd8e5eb74d55e33e506
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/04/2018
+ms.openlocfilehash: 44274b698ed83bd3cdb58787f433eeb5c555bc6d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696593"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168945"
 ---
 # <a name="dotnet-help-reference"></a>dotnet help 参考
 
@@ -23,24 +21,26 @@ ms.locfileid: "34696593"
 
 `dotnet help <COMMAND_NAME> [-h|--help]`
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet help` 命令打开 docs.microsoft.com 参考页，以提供指定命令的更多详细信息。
 
 ## <a name="arguments"></a>自变量
 
-`COMMAND_NAME`
+* **`COMMAND_NAME`**
 
-.NET Core CLI 命令名称。 有关有效 CLI 命令的列表，请参阅 [CLI 命令](index.md#cli-commands)。
+  .NET Core CLI 命令名称。 有关有效 CLI 命令的列表，请参阅 [CLI 命令](index.md#cli-commands)。
 
 ## <a name="options"></a>选项
 
-`-h|--help`
+* **`-h|--help`**
 
-打印出有关命令的简短帮助。
+  打印出有关命令的简短帮助。
 
 ## <a name="examples"></a>示例
 
-打开 [dotnet new](dotnet-new.md) 命令的文档页：
+* 打开 [dotnet new](dotnet-new.md) 命令的文档页：
 
-`dotnet help new`
+  ```console
+  dotnet help new
+  ```

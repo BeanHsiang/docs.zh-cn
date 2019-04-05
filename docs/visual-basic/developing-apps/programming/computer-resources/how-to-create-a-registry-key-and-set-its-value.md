@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 4f74d41aa8055e26f5a707829449ddd310ff576f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3ae01057f2f2caa7ce07731c3a38f2496484713
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590746"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971754"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>如何：在 Visual Basic 中创建注册表项并设置其值
 `My.Computer.Registry` 对象的 `CreateSubKey` 方法可用于创建注册表项。  
@@ -27,22 +27,22 @@ ms.locfileid: "33590746"
   
 -   使用 `CreateSubKey` 方法，指定放置注册表项的配置单元以及注册表项的名称。 参数 `Subkey` 不区分大小写。 此示例在 HKEY_CURRENT_USER 下创建注册表项 `MyTestKey`。  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
+     [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
 #### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>创建注册表项并设置其值  
   
 1.  使用 `CreateSubkey` 方法，指定放置注册表项的配置单元以及注册表项的名称。 此示例在 HKEY_CURRENT_USER 下创建注册表项 `MyTestKey`。  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
+     [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
 2.  使用 `SetValue` 方法设置值。 此示例设置字符串值。 “MyTestKeyValue”设置为“This is a test value”。  
   
-     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_2.vb)]  
+     [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>示例  
  此示例在 HKEY_CURRENT_USER 下创建注册表项 `MyTestKey`，然后将字符串值 `MyTestKeyValue` 设置为 `This is a test value`。  
   
- [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_3.vb)]  
+ [!code-vb[VbResourceTasks#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#15)]  
   
 ## <a name="robust-programming"></a>可靠编程  
  检查注册表结构，查找适合项的位置。 例如，可能需要打开当前用户的 HKEY_CURRENT_USER\Software 项，并用公司的名称创建一项。 然后将注册表值添加到公司的项上。  
@@ -70,9 +70,9 @@ ms.locfileid: "33590746"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  若要运行此进程，程序集需要 <xref:System.Security.Permissions.RegistryPermission> 类授予的特权等级。 如果在部分信任上下文中运行，该进程可能会因特权不足而引发异常。 同样，用户必须具有用于创建或写入设置的正确 ACL。 例如，具有代码访问安全性权限的本地应用程序可能没有操作系统权限。 有关详细信息，请参阅[代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
- [读取和写入注册表](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
- [代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)
+## <a name="see-also"></a>请参阅
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
+- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
+- [读取和写入注册表](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [代码访问安全性基础知识](../../../../framework/misc/code-access-security-basics.md)

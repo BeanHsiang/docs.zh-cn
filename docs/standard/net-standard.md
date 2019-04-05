@@ -3,15 +3,15 @@ title: .NET Standard
 description: 了解 .NET Standard 及其版本以及支持它的 .NET 实现。
 author: mairaw
 ms.author: mairaw
-ms.date: 07/19/2018
+ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83b5498ac6f585a8d2554377748836d88ce592d1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50186065"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970878"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -35,7 +35,7 @@ ms.locfileid: "50186065"
 
 1. 查找要运行的 .NET 实现所在的行。
 2. 在这一行中从右向左查找可以定位的 .NET Standard 版本所在的列。
-3. 列标题指明了目标平台支持的 .NET Standard 版本（也支持所有更低的 .NET Standard 版本）。
+3. 列标题指示目标支持的 .NET Standard 版本。 此外可以面向任何更低的 .NET Standard 版本。 更高版本的 .NET Standard 还支持实现。
 4. 对要定位的每个平台重复执行此过程。 如果有多个目标平台，应选择它们都支持的最高版本。 例如，如果要在 .NET Framework 4.5 和 .NET Core 1.0 上运行，可以使用的最高 .NET Standard 版本是 .NET Standard 1.1。
 
 ### <a name="which-net-standard-version-to-target"></a>要定位哪个 .NET Standard 版本
@@ -65,9 +65,9 @@ ms.locfileid: "50186065"
 
 ### <a name="official-artifacts"></a>正式项目
 
-正式规范是一组用于定义标准中包含的 API 的 .cs 文件。 [dotnet/standard 存储库](https://github.com/dotnet/standard)中的 [Ref 目录](https://github.com/dotnet/standard/tree/master/netstandard/ref)定义了 .NET Standard API。
+正式规范是一组用于定义标准中包含的 API 的 .cs 文件。 [dotnet/standard 存储库](https://github.com/dotnet/standard)中的 [Ref 目录](https://github.com/dotnet/standard/tree/master/src/netstandard/ref)定义了 .NET Standard API。
 
-[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 元包（[源代码](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)）描述用于部分定义一个或多个 .NET Standard 版本的库集。
+[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 元包（[源代码](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)）描述用于部分定义一个或多个 .NET Standard 版本的库集。
 
 给定的组件（如 `System.Runtime`）描述：
 

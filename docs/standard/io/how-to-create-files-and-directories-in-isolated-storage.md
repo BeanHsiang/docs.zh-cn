@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08beb44fdb58ab1c1d53f70ac0653348b96fcb18
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 92f4b686a5a2bdc74ff3f0f68de4c6b2048da5a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47157829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709008"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>如何：在独立存储中创建文件和目录
 获得独立存储区之后，您可以创建用于存储数据的目录和文件。 在存储中，文件名和目录名称是相对于虚拟文件系统的根目录进行指定。  
@@ -40,6 +40,6 @@ ms.locfileid: "47157829"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
 - [独立存储](../../../docs/standard/io/isolated-storage.md)

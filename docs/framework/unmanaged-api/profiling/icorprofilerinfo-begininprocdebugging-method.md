@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82e798e1a31f771c63e71f2a85f8cbb684b237bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3e23f39f8e7a1812366e15ffec9589f756c73f94
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462385"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481683"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging 方法
-初始化进程内调试支持。 此方法是.NET Framework 2.0 版中过时。  
+初始化在进程中调试支持。 此方法是在.NET Framework 2.0 版中已过时。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,24 +35,24 @@ HRESULT BeginInprocDebugging(
     [out] DWORD *pdwProfilerContext);  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `fThisThreadOnly`  
- [in]将此值设置为`true`初始化调试支持仅当前线程; 将其设置为`false`初始化的所有线程的调试支持。  
+ [in]将此值设置为`true`初始化调试支持仅当前的线程; 将其设置为`false`初始化的所有线程的调试支持。  
   
  `pdwProfilerContext`  
- [out]指向标识调试会话的返回值的指针。  
+ [out]指向返回的值标识的调试会话的指针。  
   
 ## <a name="remarks"></a>备注  
- CLR 调试服务支持在.NET framework 1.0 和 1.1 版中的有限进程内调试。 探查器使用了调试 API 的检查部分启用进程内调试。 但是，由于客户反馈，进程内调试已从.NET Framework 2.0 版中，在中删除和替换为一组是根据分析 API 的详细信息的功能。  
+ CLR 调试服务支持在.NET framework 1.0 和 1.1 版中进行有限进程内调试。 探查器可以使用调试 API 的检查部分启用进程内调试。 但是，由于客户反馈，进程内调试已从.NET Framework 2.0 版中，在中删除并替换为符合分析 API 的更多的功能的一组。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **头文件：** CorProf.idl、CorProf.h  
+ **标头：** CorProf.idl, CorProf.h  
   
  **库：** CorGuids.lib  
   
  **.NET framework 版本：** 1.0  
   
-## <a name="see-also"></a>请参阅  
- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorProfilerInfo 接口](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

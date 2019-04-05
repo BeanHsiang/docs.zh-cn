@@ -1,17 +1,17 @@
 ---
-title: '&lt;Method&gt; 元素 (.NET Native)'
+title: <Method>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e32b9a294f81208fe85a9e1de011daef0d1d5294
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 008a61a75aa96faad801e6da8bb0f8a86f65829c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393333"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288075"
 ---
-# <a name="ltmethodgt-element-net-native"></a>&lt;Method&gt; 元素 (.NET Native)
+# <a name="method-element-net-native"></a>\<方法 > 元素 (.NET Native)
 将运行时反射策略应用到一个构造函数或方法。  
   
 ## <a name="syntax"></a>语法  
@@ -60,7 +60,7 @@ ms.locfileid: "33393333"
 |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|将策略应用到传递到方法的自变量类型。|  
 |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|将策略应用到一个泛型类型或方法的参数类型。|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|如果该策略已应用到以包含 `<Method>` 元素为代表的方法，将该策略应用到一个类型。|  
-|[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|将策略应用到以传递到方法为代表的 <xref:System.Type> 参数类型。|  
+|[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|将策略应用到以传递到方法为代表的 <xref:System.Type> 自变量类型。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -145,8 +145,8 @@ ms.locfileid: "33393333"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [\<MethodInstantiation> 元素](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+## <a name="see-also"></a>请参阅
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<MethodInstantiation> 元素](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)

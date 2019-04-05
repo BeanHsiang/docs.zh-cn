@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfd53309b2b5e96e28e9e063a8adfda430864115
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a91c8de67a095a2f89a69f43375c9ebdd4fc767c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447446"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491290"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods 方法
 枚举表示当前元数据范围内未解析的方法的 MemberDef 标记。  
@@ -38,9 +38,9 @@ HRESULT EnumUnresolvedMethods (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `phEnum`  
- [在中，out]枚举数指向的指针。 这必须在首次调用此方法为 NULL。  
+ [in、 out]一个指向枚举器。 对于首次调用此方法，这必须为 NULL。  
   
  `rMethods`  
  [out]用于存储 MemberDef 标记的数组。  
@@ -59,19 +59,19 @@ HRESULT EnumUnresolvedMethods (
 |`S_FALSE`|没有要枚举的标记。 在这种情况下，`pcTokens`为零。|  
   
 ## <a name="remarks"></a>备注  
- 无法解析的方法是指已声明但未实现。 如果标记的方法，枚举中包括的一种方法`miForwardRef`和任一`mdPinvokeImpl`或`miRuntime`设置为零。 换而言之，无法解析的方法是标记的类方法`miForwardRef`但其不在 （通过 PInvoke 到达） 的非托管代码中实现也不会由运行时本身在内部实现  
+ 无法解析的方法是指已声明但未实现。 如果该方法标记为一种方法枚举中包括`miForwardRef`并将`mdPinvokeImpl`或`miRuntime`设置为零。 换而言之，未解析的方法是标记的类方法`miForwardRef`但其不在非托管代码 （通过 PInvoke 访问） 中实现也不会由运行时本身在内部实现  
   
- 在枚举排除在模块作用域 （全局） 或在接口或抽象类定义的所有方法。  
+ 枚举不包括在模块作用域 （全局） 或接口或抽象类中定义的所有方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

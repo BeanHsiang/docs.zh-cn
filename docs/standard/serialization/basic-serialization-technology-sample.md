@@ -2,12 +2,12 @@
 title: 基本序列化技术示例
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 474eb8ded01a72182533a6d49397d7567447d64e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45619089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681698"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技术示例
 [下载示例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -80,20 +80,20 @@ ms.locfileid: "45619089"
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.IO>  
-- <xref:System.IO.File>  
-- <xref:System.IO.FileStream>  
-- <xref:System.IO.Stream>  
-- <xref:System.Random>  
-- <xref:System.Runtime.Serialization>  
-- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
-- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>  
-- <xref:System.Runtime.Serialization.IFormatter>  
-- <xref:System.SerializableAttribute>  
-- <xref:System.Xml.Serialization>  
-- [基本序列化](../../../docs/standard/serialization/basic-serialization.md)  
-- [二进制序列化](../../../docs/standard/serialization/binary-serialization.md)  
-- [使用属性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
-- [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [序列化](../../../docs/standard/serialization/index.md)  
+- <xref:System.IO>
+- <xref:System.IO.File>
+- <xref:System.IO.FileStream>
+- <xref:System.IO.Stream>
+- <xref:System.Random>
+- <xref:System.Runtime.Serialization>
+- <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>
+- <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>
+- <xref:System.Runtime.Serialization.IFormatter>
+- <xref:System.SerializableAttribute>
+- <xref:System.Xml.Serialization>
+- [基本序列化](../../../docs/standard/serialization/basic-serialization.md)
+- [二进制序列化](../../../docs/standard/serialization/binary-serialization.md)
+- [使用属性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [XML 序列化简介](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [序列化](../../../docs/standard/serialization/index.md)
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)

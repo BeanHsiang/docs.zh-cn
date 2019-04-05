@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de467c98dfa7ad3eac69502f2afe311b301e1ec5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f888c39160e52e550d07f58b9c5bcd11fd625658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564076"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 枚举
 包含一些值，用于描述方法和关联属性或事件之间的关系。  
@@ -47,17 +47,17 @@ typedef enum CorMethodSemanticsAttr {
 |------------|-----------------|  
 |`msSetter`|指定的方法是`set`属性访问器。|  
 |`msGetter`|指定的方法是`get`属性访问器。|  
-|`msOther`|指定该方法具有一个属性或事件之外此处定义的关系。|  
+|`msOther`|指定该方法具有一个属性或事件而不是此处定义的关系。|  
 |`msAddOn`|指定该方法将添加事件处理程序方法。|  
-|`msRemoveOn`|指定该方法中删除事件处理程序方法。|  
-|`msFire`|指定该方法将引发事件。|  
+|`msRemoveOn`|指定方法移除事件处理程序方法。|  
+|`msFire`|指定该方法将引发一个事件。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

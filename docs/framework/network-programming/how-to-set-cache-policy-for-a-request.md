@@ -1,5 +1,5 @@
 ---
-title: 如何为请求设置缓存策略
+title: 如何：为请求设置缓存策略
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 11f36065c02c5ec513e66bff2541536e9290b5c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190653"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563556"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>如何为请求设置缓存策略
+# <a name="how-to-set-cache-policy-for-a-request"></a>如何：为请求设置缓存策略
 以下示例演示如何为请求设置缓存策略。 该示例输入是一个 URI，如 `http://www.contoso.com/`。  
   
 ## <a name="example"></a>示例  
@@ -105,9 +105,9 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)  
- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>请参阅
+- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
+- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

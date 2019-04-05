@@ -10,29 +10,20 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393145"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410740"
 ---
 # <a name="default-marshaling-for-arrays"></a>数组的默认封送处理
 在完全由托管代码组成的应用程序中，公共语言运行时将数组类型作为 In/Out 参数传递。 而互操作封送拆收器默认将数组作为 In 参数传递。  
   
  使用[固定优化](copying-and-pinning.md)，blittable 数组在与同一单元中的对象交互时，可能看上去像是作为 In/Out 参数运行。 但是，如果随后将代码导出到用于生成跨计算机代理的类型库，且该库用于跨单元封送调用，则调用可还原为真正的 In 参数行为。  
   
- 数组本就很复杂，而托管数组和非托管数组之间的差异使它们比其他 blittable 类型具有更多信息。 本主题提供封送处理数组的以下信息：  
+ 数组本就很复杂，而托管数组和非托管数组之间的差异使它们比其他 blittable 类型具有更多信息。  
   
--   [托管数组](#cpcondefaultmarshalingforarraysanchor1)  
-  
--   [非托管数组](#cpcondefaultmarshalingforarraysanchor2)  
-  
--   [将数组参数传递给 .NET 代码](#cpcondefaultmarshalingforarraysanchor3)  
-  
--   [将数组传递给 COM](#cpcondefaultmarshalingforarraysanchor4)  
-  
-<a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>托管数组  
  可以有各种托管数组类型；但是，<xref:System.Array?displayProperty=nameWithType> 类是所有数组类型的基类。 System.Array 类的属性可确定数组的秩、长度、下限和上限，其方法可用于访问、搜索、复制、创建数组以及对数组排序。  
   
@@ -46,11 +37,9 @@ ms.locfileid: "33393145"
 |ELEMENT_TYPE_CLASS|未知|未知|未知|**System.Array**|  
 |ELEMENT_TYPE_SZARRAY|由类型指定。|1|0|type [ n ]|  
   
-<a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>非托管数组  
  非托管数组是 COM 样式安全数组或 C 样式数组，其长度固定或可变。 安全数组是自我描述的数组，带有关联数组数据的类型、秩和界限。 C 样式数组是具有固定下限 0 的一维类型化数组。 封送处理服务对两种数组类型的支持均有限。  
   
-<a name="cpcondefaultmarshalingforarraysanchor3"></a>   
 ## <a name="passing-array-parameters-to-net-code"></a>将数组参数传递给 .NET 代码  
  C 样式数组和安全数组都可以作为安全数组或 C 样式数组从非托管代码传递给 .NET 代码。 下表显示非托管类型值和导入的类型。  
   
@@ -91,7 +80,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- 如果修改由 Tlbimp.exe 产生的方法签名以指示元素类型 ELEMENT_TYPE_ARRAY 而非 ELEMENT_TYPE_SZARRAY，则可将多维或非零界限安全数组封送到托管代码中。 或者，可将 /sysarray 开关与 Tlbimp.exe 一起使用，将所有数组作为 <xref:System.Array?displayProperty=nameWithType> 对象导入。 如果已知正在传递的数组是多维数组，则可编辑由 Tlbimp.exe 生成的 Microsoft 中间语言 (MSIL) 代码，然后重新编译它。 有关如何修改 MSIL 代码的详细信息，请参阅[自定义运行时可调用包装器](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))。  
+ 如果修改由 Tlbimp.exe 产生的方法签名以指示元素类型 ELEMENT_TYPE_ARRAY 而非 ELEMENT_TYPE_SZARRAY，则可将多维或非零界限安全数组封送到托管代码中。 或者，可将 /sysarray 开关与 Tlbimp.exe 一起使用，将所有数组作为 <xref:System.Array?displayProperty=nameWithType> 对象导入。 如果已知正在传递的数组是多维数组，则可编辑由 Tlbimp.exe 生成的 Microsoft 中间语言 (MSIL) 代码，然后重新编译它。 有关如何修改 MSIL 代码的详细信息，请参阅[自定义运行时可调用包装器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))。  
   
 ### <a name="c-style-arrays"></a>C 样式数组  
  将 C 样式数组从类型库导入 .NET 程序集中时，数组被转换为 ELEMENT_TYPE_SZARRAY。  
@@ -155,7 +144,7 @@ void New2(ref double ar);
 void New3(ref String ar);   
 ```  
   
- 编辑由 Tlbimp.exe 生成的 Microsoft 中间语言 (MSIL) 代码，再重新编译该代码，即可向封送拆收器提供数组大小。 有关如何修改 MSIL 代码的详细信息，请参阅[自定义运行时可调用包装器](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))。 要指示数组中的元素数，请采用以下任一方式将 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 类型应用于托管方法定义的数组参数：  
+ 编辑由 Tlbimp.exe 生成的 Microsoft 中间语言 (MSIL) 代码，再重新编译该代码，即可向封送拆收器提供数组大小。 有关如何修改 MSIL 代码的详细信息，请参阅[自定义运行时可调用包装器](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))。 要指示数组中的元素数，请采用以下任一方式将 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 类型应用于托管方法定义的数组参数：  
   
 -   标识含数组中的元素数的另一个参数。 按位置标识参数，从第一个参数开始，将第一个参数标识为数字 0。     
   
@@ -190,7 +179,6 @@ void New3(ref String ar);
   
  互操作封送拆收器使用 CoTaskMemAlloc 和 CoTaskMemFree 方法分配和检索内存。 非托管代码所执行的内存分配也必须使用这些方法。  
   
-<a name="cpcondefaultmarshalingforarraysanchor4"></a>   
 ## <a name="passing-arrays-to-com"></a>将数组传递给 COM  
  所有托管数组类型都可以从托管代码传递给非托管代码。 根据托管类型和应用于它的属性，可将数组作为安全数组或 C 样式数组进行访问，如下表所示。  
   
@@ -372,8 +360,8 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [默认封送处理行为](default-marshaling-behavior.md)  
- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)  
- [方向特性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [复制和锁定](copying-and-pinning.md)
+## <a name="see-also"></a>请参阅
+- [默认封送处理行为](default-marshaling-behavior.md)
+- [可直接复制到本机结构中的类型和非直接复制到本机结构中的类型](blittable-and-non-blittable-types.md)
+- [方向特性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
+- [复制和锁定](copying-and-pinning.md)

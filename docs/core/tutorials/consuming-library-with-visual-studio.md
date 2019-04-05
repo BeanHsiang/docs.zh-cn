@@ -1,21 +1,21 @@
 ---
 title: 在 Visual Studio 2017 中使用 .NET Standard 库
-description: 了解如何使用 Visual Studio 2017 调用类库中的成员。
+description: 生成一个 .NET Core 应用程序，该应用程序使用 Visual Studio 2017 调用另一个类库的成员。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52ec46c23bb928b49f034270ed1d510d1acf992e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 7689d45b341dbe9dbfae40beec3a7663e2bd0366
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518160"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362387"
 ---
-# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Standard 库
+# <a name="consume-a-net-standard-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Standard 库
 
 如果已按照[使用 Visual Studio 2017 生成 C# .NET Core 类库](./library-with-visual-studio.md)或[使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库](vb-library-with-visual-studio.md)以及[使用 Visual Studio 2017 测试 .NET Core 类库](testing-library-with-visual-studio.md)中的步骤创建并测试 .NET Standard 类库，并且已生成库的发布版本，下一步就是使其可供调用方使用。 可以通过以下两种方式执行此操作：
 
@@ -32,19 +32,19 @@ ms.locfileid: "45518160"
 
 1. 在“添加新项目”对话框中，展开“Visual C#”节点，再依次选择“.NET Core”节点和“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“ShowCase”，然后选择“确定”按钮。
 
-   ![“添加新项目”对话框](./media/consuming-library-with-visual-studio/addnewproject.png)
+   ![Visual Studio“添加新项目”对话框 - C#](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. 在“解决方案资源管理器”****中，右键单击“ShowCase”**** 项目，在上下文菜单中选择“设为启动项目”。 
+1. 在“**解决方案资源管理器**”中，右键单击“**ShowCase**”项目，在上下文菜单中选择“**设为启动项目**”。
 
-   ![ShowCase 上下文菜单](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Visual Studio 中用于设置启动项目的项目上下文菜单 - C#](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. 项目一开始无权访问类库。 若要允许项目调用类库中的方法，可以创建对该类库的引用。 在“解决方案资源管理器”中，右键单击 `ShowCase` 项目的“依赖项”节点，并选择“添加引用”。
 
-   ![ShowCase 依赖项上下文菜单](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Visual Studio 项目添加引用上下文菜单 - C#](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. 在“引用管理器”对话框中，选择类库项目“StringLibrary”，然后选择“确定”按钮。
 
-   ![引用管理器](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio“管理引用”对话框 - C#](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. 在“Program.cs”文件的代码窗口中，将所有代码替换为以下代码：
 
@@ -56,25 +56,25 @@ ms.locfileid: "45518160"
 
 1. 必要时，将工具栏更改为编译 `ShowCase` 项目的“调试”版本。 选择“ShowCase”按钮上的绿色箭头，编译并运行程序。
 
-   ![图像](./media/consuming-library-with-visual-studio/toolbar.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+   ![Visual Studio 中显示“调试”按钮的项目工具栏 - C#](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. 打开在[使用 Visual Studio 2017 生成 Visual Basic .NET Core 类库](vb-library-with-visual-studio.md)主题中创建的 `ClassLibraryProjects` 解决方案。 在“解决方案资源管理器”中，右键单击“ClassLibraryProjects”解决方案，然后从上下文菜单依次选择“添加” > “新项目”。
 
 1. 在“添加新项目”对话框中，展开“Visual Basic”节点，再依次选择“.NET Core”节点和“控制台应用程序(.NET Core)”项目模板。 在“名称”文本框中，键入“ShowCase”，然后选择“确定”按钮。
 
-   ![“添加新项目”对话框](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
+   ![Visual Studio“添加新项目”对话框 - Visual Basic](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
-1. 在“解决方案资源管理器”****中，右键单击“ShowCase”**** 项目，在上下文菜单中选择“设为启动项目”。 
+1. 在“**解决方案资源管理器**”中，右键单击“**ShowCase**”项目，在上下文菜单中选择“**设为启动项目**”。 
 
-   ![ShowCase 上下文菜单](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Visual Studio 中用于设置启动项目的项目上下文菜单 - Visual Basic](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. 项目一开始无权访问类库。 若要允许项目调用类库中的方法，可以创建对该类库的引用。 在“解决方案资源管理器”中，右键单击 `ShowCase` 项目的“依赖项”节点，并选择“添加引用”。
 
-   ![ShowCase 依赖项上下文菜单](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Visual Studio 项目添加引用上下文菜单 - Visual Basic](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. 在“引用管理器”对话框中，选择类库项目“StringLibrary”，然后选择“确定”按钮。
 
-   ![引用管理器](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Visual Studio“管理引用”对话框 - Visual Basic](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. 在“Program.vb”文件的代码窗口中，将所有代码替换为以下代码：
 
@@ -86,7 +86,7 @@ ms.locfileid: "45518160"
 
 1. 必要时，将工具栏更改为编译 `ShowCase` 项目的“调试”版本。 选择“ShowCase”按钮上的绿色箭头，编译并运行程序。
 
-   ![图像](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![在工具栏上调试 - Visual Basic](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 ---
 
 可以按照[使用 Visual Studio 2017 调试 Hello World 应用程序](debugging-with-visual-studio.md)和[使用 Visual Studio 2017 发布 Hello World 应用程序](publishing-with-visual-studio.md)中的步骤操作，调试并发布使用此库的应用程序。

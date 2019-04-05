@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: 7e1370ad27072bcbdd4b80125f94a0cc0aaac8f9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 36603b7d517e0c6576e9b70fad2cbee8027acad0
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511072"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739106"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Framework 参考信息 (Visual Basic)
 本主题提供有关如何使用信息的链接[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]类库。  
@@ -28,9 +28,6 @@ ms.locfileid: "43511072"
   
  [工具](../../framework/tools/index.md)  
  描述可用于开发、 配置和部署应用程序使用.NET Framework 技术的工具。  
-  
- [.NET Framework 示例](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
- 提供指向演示.NET Framework 技术的示例应用程序。  
   
  [.NET API 浏览器](../../../api/index.md)  
  提供语法、 代码示例和.NET Framework 命名空间中的一个类的相关的信息。

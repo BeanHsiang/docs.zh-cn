@@ -1,5 +1,5 @@
 ---
-title: 安全透明的代码，级别 1
+title: 安全透明代码，级别 1
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparent
@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 252611f3aab138ab7344f1afe6eefb0fe2f5ea24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 485579df9c3976d70d2560c10d74f0402f48492e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393732"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590375"
 ---
-# <a name="security-transparent-code-level-1"></a>安全透明的代码，级别 1
+# <a name="security-transparent-code-level-1"></a>安全透明代码，级别 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 透明度可帮助开发人员编写更安全的 .NET Framework 库来向部分信任的代码公开功能。 .NET Framework 2.0 版中引入了 1 级透明度，此透明度主要仅供 Microsoft 内部使用。 从开始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，你可以使用[2 级透明度](../../../docs/framework/misc/security-transparent-code-level-2.md)。 但是，已保留 1 级透明度，以便你能够标识必须使用以前的安全规则运行的旧代码。  
+ 透明度可帮助开发人员编写更安全的 .NET Framework 库来向部分信任的代码公开功能。 .NET Framework 2.0 版中引入了 1 级透明度，此透明度主要仅供 Microsoft 内部使用。 从开始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，可以使用[2 级透明度](../../../docs/framework/misc/security-transparent-code-level-2.md)。 但是，已保留 1 级透明度，以便可以确定必须使用以前的安全规则运行的旧代码。  
   
 > [!IMPORTANT]
 >  应仅出于兼容性目的而指定 1 级透明度；也就是说，仅为使用 .NET Framework 3.5 或以前的版本（使用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 或不使用透明度模型）开发的代码指定 1 级透明度。 例如，对允许从部分信任的调用方 (APTCA) 调用的 .NET Framework 2.0 程序集使用 1 级透明度。 为 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 开发的代码始终使用 2 级透明度。  
   
  本主题包含以下各节：  
   
--   [级别 1 透明度模型](#the_level_1_transparency_model)  
+-   [1 级透明度模型](#the_level_1_transparency_model)  
   
--   [将透明特性](#transparency_attributes)  
+-   [透明性属性](#transparency_attributes)  
   
 -   [安全透明度示例](#security_transparency_examples)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "33393732"
 |特性|描述|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|只允许在程序集级别上应用。 将程序集中的所有类型和成员都标识为安全透明。 程序集不能包含任何安全关键代码。|  
-|<xref:System.Security.SecurityCriticalAttribute>|不带 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性在程序集级别使用时，默认将程序集中的所有代码都标识为安全透明的代码，但会指出程序集可能包含安全关键代码。<br /><br /> 在类级别使用时，将类或方法标识为安全关键，但不会如此标识类的成员。 若要使所有成员都成为安全关键成员，请将 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性设置为 <xref:System.Security.SecurityCriticalScope.Everything>。<br /><br /> 在成员级别使用时，特性仅应用于相应的成员。<br /><br /> 标识为安全关键的类或成员可以执行特权提升。 **重要说明：** 1 级透明度中安全关键类型和成员被视为安全可靠关键当从程序集外部调用时。 应该通过针对完全信任的链接要求来保护安全关键类型和成员，以避免未经授权的特权提升。|  
+|<xref:System.Security.SecurityCriticalAttribute>|不带 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性在程序集级别使用时，默认将程序集中的所有代码都标识为安全透明的代码，但会指出程序集可能包含安全关键代码。<br /><br /> 在类级别使用时，将类或方法标识为安全关键，但不会如此标识类的成员。 若要使所有成员都成为安全关键成员，请将 <xref:System.Security.SecurityCriticalAttribute.Scope%2A> 属性设置为 <xref:System.Security.SecurityCriticalScope.Everything>。<br /><br /> 在成员级别使用时，特性仅应用于相应的成员。<br /><br /> 标识为安全关键的类或成员可以执行特权提升。 **重要提示：** 在 1 级透明度中，当从程序集外部调用安全关键类型和成员时，该类型或成员被视为是安全可靠关键的。 应该通过针对完全信任的链接要求来保护安全关键类型和成员，以避免未经授权的特权提升。|  
 |<xref:System.Security.SecuritySafeCriticalAttribute>|标识可以由程序集中的安全透明代码访问的安全关键代码。 否则，安全透明的代码将不能访问同一程序集中的私有或内部安全关键成员。 执行此操作将影响安全关键代码，并且可能会引起意外的特权提升。 安全可靠关键代码应该经过严格的安全审核。 **注意：** 安全可靠关键类型和成员必须验证调用方的权限，以确定调用方是否有权访问受保护的资源。|  
   
  <xref:System.Security.SecuritySafeCriticalAttribute> 特性使得安全透明的代码可以访问同一程序集中的安全关键成员。 将程序集中的安全透明代码和安全关键代码视为两个程序集中的代码。 安全透明的代码将不能查看安全关键代码的私有或内部成员。 此外，通常会对安全关键代码进行审核，以核查对其公共接口的访问权限。 你不希望可在程序集外访问私有或内部状态，而希望将该状态保持隔离。 <xref:System.Security.SecuritySafeCriticalAttribute> 特性可在安全透明代码和安全关键代码之间保持状态隔离，同时允许在必要时替代该隔离。 安全透明的代码不能访问私有或内部安全关键代码，除非这些成员已标记有 <xref:System.Security.SecuritySafeCriticalAttribute>. 在应用 <xref:System.Security.SecuritySafeCriticalAttribute> 之前，将该成员视为公共公开的成员对其进行审核。  
@@ -130,6 +130,6 @@ public class B
   
  除 `Critical` 方法显式标记为安全关键之外，前面的代码都是透明的。 即使使用程序集级别的 <xref:System.Security.SecurityCriticalAttribute> 特性，透明度也是默认设置。  
   
-## <a name="see-also"></a>请参阅  
- [安全透明的代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)  
- [安全更改](../../../docs/framework/security/security-changes.md)
+## <a name="see-also"></a>请参阅
+- [安全透明代码，级别 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [安全更改](../../../docs/framework/security/security-changes.md)

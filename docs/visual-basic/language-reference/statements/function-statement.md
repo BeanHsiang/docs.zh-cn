@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: b370e92aaab88a7f0d49f1de60b50fa6bbf1e161
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: dffe67d1c31b0fe7c037839ba0588793a461f276
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39323009"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818457"
 ---
 # <a name="function-statement-visual-basic"></a>Function 语句 (Visual Basic)
 声明名称、 参数和定义的代码`Function`过程。  
@@ -67,11 +67,11 @@ End Function
   
     -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    -   [受保护的友元](../../language-reference/modifiers/protected-friend.md)
+    -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)
 
-    - [专用受保护](../../language-reference/modifiers/private-protected.md)  
+    - [Private Protected](../../language-reference/modifiers/private-protected.md)  
   
-     请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
+     请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 -   `proceduremodifiers`  
   
@@ -109,7 +109,7 @@ End Function
   
 -   `name`  
   
-     必须的。 该过程的名称。 请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+     必需。 该过程的名称。 请参阅 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
 -   `typeparamlist`  
   
@@ -139,8 +139,8 @@ End Function
   
     |部件|描述|  
     |---|---|  
-    |`interface`|必须的。 此过程实现的接口的名称的包含类或结构。|  
-    |`definedname`|必须的。 在 `interface` 中用于定义过程的名称。|  
+    |`interface`|必需。 此过程实现的接口的名称的包含类或结构。|  
+    |`definedname`|必需。 在 `interface` 中用于定义过程的名称。|  
   
 -   `Handles`  
   
@@ -158,8 +158,8 @@ End Function
   
     |部件|描述|  
     |---|---|  
-    |`eventvariable`|必须的。 声明的类或结构，它会引发事件的数据类型的对象变量。|  
-    |`event`|必须的。 此过程处理的事件的名称。|  
+    |`eventvariable`|必需。 声明的类或结构，它会引发事件的数据类型的对象变量。|  
+    |`event`|必需。 此过程处理的事件的名称。|  
   
 -   `statements`  
   
@@ -193,11 +193,11 @@ End Function
   
  `Return`语句同时分配返回值，并退出函数，如以下示例所示。  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
   
  以下示例将返回值分配为函数名称`myFunction`，然后使用`Exit Function`语句返回。  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
   
  `Exit Function`并`Return`语句会导致立即退出`Function`过程。 任意数量的`Exit Function`并`Return`语句可以在过程中，任何位置出现，并且可以混合`Exit Function`和`Return`语句。  
   
@@ -240,29 +240,30 @@ End Function
 ## <a name="example"></a>示例  
  下面的示例使用`Function`语句声明名称、 参数和窗体的主体的代码`Function`过程。 `ParamArray`修饰符使函数能够接受数目可变的参数。  
   
- [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>示例  
  下面的示例调用在前面的示例声明的函数。  
   
- [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
 ## <a name="example"></a>示例  
  在以下示例中，`DelayAsync`是`Async``Function`具有返回类型的<xref:System.Threading.Tasks.Task%601>。 `DelayAsync` 具有返回整数的 `Return` 语句。 因此的函数声明`DelayAsync`需要具有返回类型为`Task(Of Integer)`。 因为返回类型是`Task(Of Integer)`的评估`Await`中的表达式`DoSomethingAsync`得出整数。 此语句中对此进行了演示： `Dim result As Integer = Await delayTask`。  
   
  `startButton_Click`过程是一种`Async Sub`过程。 因为`DoSomethingAsync`是`Async`函数，为调用任务`DoSomethingAsync`必须等待，如下面的语句中所示： `Await DoSomethingAsync()`。 `startButton_Click` `Sub`过程必须使用定义`Async`修饰符，因此`Await`表达式。  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- [Sub 语句](sub-statement.md)  
- [Function 过程](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
- [参数列表](parameter-list.md)  
- [Dim 语句](dim-statement.md)  
- [Call 语句](call-statement.md)  
- [Of](of-clause.md)  
- [参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [如何：使用泛型类](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [过程疑难解答](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
- [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [函数表达式](../../../visual-basic/language-reference/operators/function-expression.md)
+## <a name="see-also"></a>请参阅
+
+- [Sub 语句](sub-statement.md)
+- [Function 过程](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
+- [参数列表](parameter-list.md)
+- [Dim 语句](dim-statement.md)
+- [Call 语句](call-statement.md)
+- [Of](of-clause.md)
+- [参数数组](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [如何：使用泛型类](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [过程疑难解答](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [Lambda 表达式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [函数表达式](../../../visual-basic/language-reference/operators/function-expression.md)

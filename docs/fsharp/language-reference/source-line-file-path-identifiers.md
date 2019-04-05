@@ -1,13 +1,13 @@
 ---
-title: 源代码行标识符、文件标识符和路径标识符 (F#)
-description: '了解如何使用内置的 F # 标识符值，使你能够访问源行号、 目录和文件名称在代码中。'
+title: 源代码行标识符、文件标识符和路径标识符
+description: 了解如何使用内置F#标识符值使您能够访问源行号、 目录和文件名称在代码中的。
 ms.date: 05/16/2016
-ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 4b145fe1fe20e3d7f868558e33bab26204fb0125
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865122"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656006"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>源代码行标识符、文件标识符和路径标识符
 
@@ -25,13 +25,14 @@ __SOURCE_FILE__
 
 每个值具有类型`string`。
 
-下表总结了源行、 文件和路径标识符具有在 F # 中可用。 这些标识符不是预处理器宏;它们是由编译器识别的内置值。
+下表总结了中可用的源行、 文件和路径标识符F#。 这些标识符不是预处理器宏;它们是由编译器识别的内置值。
 
 |预定义的标识符|描述|
 |---------------------|-----------|
 |`__LINE__`|计算结果为当前行号，考虑`#line`指令。|
 |`__SOURCE_DIRECTORY__`|计算结果为当前源目录的完整路径考虑`#line`指令。|
 |`__SOURCE_FILE__`|计算结果为当前的源代码文件的名称，其路径中，考虑`#line`指令。|
+
 有关详细信息`#line`指令，请参阅[编译器指令](compiler-directives.md)。
 
 ## <a name="example"></a>示例

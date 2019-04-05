@@ -2,12 +2,12 @@
 title: 如何：查找子元素 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 3027914d87b8245af16b4864c0f558158ab253a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6ce31c803e1f0877a6029bda9de73e4bf8e79279
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737476"
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>如何：查找子元素 (XPath-LINQ to XML) (C#)
 本主题将 XPath 子元素轴与 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 方法进行比较。  
@@ -17,7 +17,7 @@ ms.locfileid: "43503762"
 ## <a name="example"></a>示例  
  本示例查找子元素 `DeliveryNotes`。  
   
- 本示例使用以下 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ 本示例使用下面的 XML 文档：[示例 XML 文件：多个采购订单 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  

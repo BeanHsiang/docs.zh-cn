@@ -1,16 +1,17 @@
 ---
-title: 如何：使用指针复制字节数组（C# 编程指南）
+title: 如何：使用指针复制字节数组 - C# 编程指南
+ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 061bbbc4557cb25d39edfb1f6235bb065a5de7bd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d174f51fa1709a70b98473a4dbbad89b9c62c22a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087977"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640298"
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>如何：使用指针复制字节数组（C# 编程指南）
 
@@ -26,7 +27,7 @@ ms.locfileid: "44087977"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../index.md)  
-- [不安全代码和指针](index.md)  
-- [-unsafe（C# 编译器选项）](../../language-reference/compiler-options/unsafe-compiler-option.md)  
-- [垃圾回收](../../../standard/garbage-collection/index.md)  
+- [C# 编程指南](../index.md)
+- [不安全代码和指针](index.md)
+- [-unsafe（C# 编译器选项）](../../language-reference/compiler-options/unsafe-compiler-option.md)
+- [垃圾回收](../../../standard/garbage-collection/index.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;跟踪&gt;元素'
+title: <trace> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
@@ -10,21 +10,19 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d930e1fe9a9a4012e363bbbffe83e1ea7cc1c595
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845432"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257793"
 ---
-# <a name="lttracegt-element"></a>&lt;跟踪&gt;元素
+# <a name="trace-element"></a>\<跟踪 > 元素
 包含用于收集、存储和路由跟踪消息的侦听器。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<跟踪 >  
+\<system.diagnostics>  
+\<trace>  
   
 ## <a name="syntax"></a>语法  
   
@@ -52,7 +50,7 @@ ms.locfileid: "48845432"
 |`false`|不自动刷新输出缓冲区。 这是默认设置。|  
 |`true`|自动刷新输出缓冲区。|  
   
-## <a name="usegloballock-attribute"></a>useGlobalLock 属性  
+## <a name="usegloballock-attribute"></a>useGlobalLock Attribute  
   
 |“值”|描述|  
 |-----------|-----------------|  
@@ -87,9 +85,9 @@ ms.locfileid: "48845432"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

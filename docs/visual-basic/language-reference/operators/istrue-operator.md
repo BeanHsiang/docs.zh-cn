@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: bf81384b0cecfd1ee3d438e4463949381279a181
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cb8ad8cb4a1ec13611edfcc3de7f4b7eb33fc553
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785187"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829923"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 运算符 (Visual Basic)
 确定表达式是否为`True`。  
@@ -37,14 +37,15 @@ ms.locfileid: "43785187"
  如果您未定义任何转换为`Boolean`或`IsTrue`运算符，编译器会引发错误。  
   
 > [!NOTE]
->  `IsTrue`运算符可以被*重载*，这意味着，某个类或结构可以重新定义其行为时，其操作数的类或结构的类型。 如果你的代码对此类的类或结构使用此运算符，请确保了解其被重新定义的行为。 有关详细信息，请参阅[运算符过程](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
+>  `IsTrue`运算符可以被*重载*，这意味着，某个类或结构可以重新定义其行为时，其操作数的类或结构的类型。 如果你的代码对此类的类或结构使用此运算符，请确保了解其被重新定义的行为。 有关详细信息，请参阅 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  
   
 ## <a name="example"></a>示例  
  下面的代码示例定义一个结构，其中包含定义大纲`IsFalse`和`IsTrue`运算符。  
   
- [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/istrue-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
-## <a name="see-also"></a>请参阅  
- [IsFalse 运算符](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [如何：定义运算符](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [OrElse 运算符](../../../visual-basic/language-reference/operators/orelse-operator.md)
+## <a name="see-also"></a>请参阅
+
+- [IsFalse 运算符](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [如何：定义运算符](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [OrElse 运算符](../../../visual-basic/language-reference/operators/orelse-operator.md)

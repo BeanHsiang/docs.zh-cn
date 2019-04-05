@@ -1,31 +1,33 @@
 ---
-title: '&lt;client&gt; 的 &lt;endpoint&gt;'
+title: <endpoint> 的 <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: f9a69483ab058823fd419edc84868e801b91d2c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e3c934ac26a648eea4822cc7ae782dfbbfe0d99e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748056"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287763"
 ---
-# <a name="ltendpointgt-of-ltclientgt"></a>&lt;client&gt; 的 &lt;endpoint&gt;
+# <a name="endpoint-of-client"></a>\<终结点 > 的\<客户端 >
 指定通道终结点的协定、绑定和地址属性，客户端使用通道终结点与服务器上的服务终结点连接。  
   
  \<system.ServiceModel>  
-\<客户端 >  
-\<终结点 >  
+\<client>  
+\<endpoint>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<endpoint address="String"  
-   behaviorConfiguration="String"  
-   binding="String"  
-   bindingConfiguration="String"  
-   contract="String"   endpointConfiguration="String"   kind="String"  
-   name="String"  
-</endpoint>  
+<endpoint address="String"
+          behaviorConfiguration="String"
+          binding="String"
+          bindingConfiguration="String"
+          contract="String"
+          endpointConfiguration="String"
+          kind="String"
+          name="String">
+</endpoint>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -49,31 +51,31 @@ ms.locfileid: "32748056"
 |元素|描述|  
 |-------------|-----------------|  
 |[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|一个地址标头集合。|  
-|[\<标识 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|一个标识，与某个终结点交换消息的其他终结点可以使用该标识对该终结点进行身份验证。|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|一个标识，与某个终结点交换消息的其他终结点可以使用该标识对该终结点进行身份验证。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<客户端 >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|一个配置节，定义客户端可以连接的终结点的列表。|  
+|[\<client>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|一个配置节，定义客户端可以连接的终结点的列表。|  
   
 ## <a name="example"></a>示例  
  这是通道终结点配置的一个示例。  
   
 ```xml  
-<endpoint address="/HelloWorld/"  
-    bindingConfiguration="usingDefaults"  
-    name="MyBinding"  
-    binding="customBinding"  
-    contract="HelloWorld">  
-</endpoint>  
+<endpoint address="/HelloWorld/"
+          bindingConfiguration="usingDefaults"
+          name="MyBinding"
+          binding="customBinding"
+          contract="HelloWorld">
+</endpoint>
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- <xref:System.ServiceModel.Configuration.ClientSection>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>  
- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>  
- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>  
- [WCF 客户端配置](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [客户端](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- <xref:System.ServiceModel.Configuration.ClientSection>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>
+- <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>
+- <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
+- [WCF 客户端配置](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [客户端](../../../../../docs/framework/wcf/feature-details/clients.md)

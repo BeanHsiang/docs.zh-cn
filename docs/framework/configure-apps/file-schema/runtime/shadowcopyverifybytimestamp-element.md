@@ -1,5 +1,5 @@
 ---
-title: '&lt;shadowCopyVerifyByTimestamp&gt;元素'
+title: <shadowCopyVerifyByTimestamp> 元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <shadowCopyTimeStampVerification> element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2439a4812163562a73bd3520e65b9973e666a863
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 902ed07264615e91721d92861b9d974ea10f0d1e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749720"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273879"
 ---
-# <a name="ltshadowcopyverifybytimestampgt-element"></a>&lt;shadowCopyVerifyByTimestamp&gt;元素
+# <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp > 元素
 指定卷影复制是否使用 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 中引入的默认启动行为，或恢复到 .NET Framework 的早期版本的启动行为。  
   
  \<配置 > 元素  
@@ -34,14 +34,14 @@ ms.locfileid: "32749720"
   
 |特性|描述|  
 |---------------|-----------------|  
-|enabled|必需的特性。<br /><br /> 指定启动，以确定是否在卷影复制程序集之前更新此程序集时，使用卷影复制的应用程序域是否比较程序集的时间戳。|  
+|enabled|必需的特性。<br /><br /> 指定是否使用卷影复制的应用程序域进行比较的程序集时间戳时启动，以确定是否已在卷影复制程序集之前更新程序集。|  
   
 ## <a name="enabled-attribute"></a>enabled 特性  
   
 |值|描述|  
 |-----------|-----------------|  
-|true|在启动时，将复制仅以来它们上次复制到卷影复制目录，已更新的程序集。 这是默认值[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。|  
-|False|恢复到的启动行为的以前版本的.NET Framework 中，这是将在启动的所有文件复制。|  
+|true|在启动时，将复制仅后，它们上次复制到卷影复制目录已更新的程序集。 这是默认[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]。|  
+|False|将恢复为以前版本的.NET Framework 的启动行为是将在启动时的所有文件复制。|  
   
 ### <a name="child-elements"></a>子元素  
  无。  
@@ -54,7 +54,7 @@ ms.locfileid: "32749720"
 |`runtime`|包含有关程序集绑定和垃圾回收的信息。|  
   
 ## <a name="remarks"></a>备注  
- 从开始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，程序集进行影像复制仅当其时间戳指示上次它们已将其复制到卷影复制目录以来已更改。 这将提高使用卷影复制的许多应用程序的启动时间中所述[影像复制程序集](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)。 对于程序集更新百分比和频率都很高的应用程序，可能不会从此行为改变中获益。 在此情况下，可以使用此元素存储 .NET Framework 早先版本的行为。  
+ 从开始[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，程序集进行卷影复制仅当其时间戳指示自上次复制到卷影复制目录了这些以来已更改。 这提高了使用卷影复制，许多应用程序的启动时间，如中所述[卷影复制程序集](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)。 对于程序集更新百分比和频率都很高的应用程序，可能不会从此行为改变中获益。 在此情况下，可以使用此元素存储 .NET Framework 早先版本的行为。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何禁用中卷影复制的默认启动行为[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]，并恢复为以前版本的.NET Framework 的启动行为。  
@@ -67,7 +67,7 @@ ms.locfileid: "32749720"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [卷影复制程序集](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)
+## <a name="see-also"></a>请参阅
+- [运行时设置架构](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [配置文件架构](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [卷影复制程序集](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)

@@ -1,22 +1,22 @@
 ---
-title: '&lt;clear&gt;'
+title: <clear>
 ms.date: 03/30/2017
 ms.assetid: 54dcd1d1-038f-4fc8-a3a4-56ba7a1ca0fd
 author: BrucePerlerMS
-ms.openlocfilehash: 8f5d2e2b580d6a2824fd885f9b08cb2b2f0b244e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b7320b6504c252770bed803666201df633e161a1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205441"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280457"
 ---
-# <a name="ltcleargt"></a>&lt;clear&gt;
+# <a name="clear"></a>\<clear>
 清除所有安全令牌处理程序从当前的标记处理程序集合。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<清除 >  
+\<clear>  
   
 ## <a name="syntax"></a>语法  
   

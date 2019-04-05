@@ -5,12 +5,12 @@ helpviewer_keywords:
 - TickBar [WPF]
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
-ms.openlocfilehash: 045a2f540a37cdea84d2bf2f3ed1e74e122bdbb5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 438bd8aca4b44bc449415dc2b9a0ff2036d14eb5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864371"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368100"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>如何：自定义滑块上的刻度
 此示例演示如何创建<xref:System.Windows.Controls.Slider>带有刻度的控件。  
@@ -22,10 +22,10 @@ ms.locfileid: "43864371"
   
  下面的示例演示如何使用<xref:System.Windows.Controls.Slider.Ticks%2A>属性来创建刻度线沿<xref:System.Windows.Controls.Slider>不规则间隔。  
   
- [!code-xaml[Slider#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
+ [!code-xaml[Slider#4](~/samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Controls.Slider>  
- <xref:System.Windows.Controls.Primitives.TickBar>  
- <xref:System.Windows.Controls.Slider.TickPlacement%2A>  
- [滑块操作说明主题](https://msdn.microsoft.com/library/534be86c-afb2-425d-8186-631278a9925e)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Controls.Slider>
+- <xref:System.Windows.Controls.Primitives.TickBar>
+- <xref:System.Windows.Controls.Slider.TickPlacement%2A>
+- [如何：将滑块绑定到属性值](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms788716(v=vs.90))

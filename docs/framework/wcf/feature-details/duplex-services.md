@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: da92b8f2d1223f582677a93a8ff6fd697512d297
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 9adbb4166d713cea0344c9fa58ce85e5afce086d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717888"
 ---
 # <a name="duplex-services"></a>双工服务
 双工服务协定是一种消息交换模式，其中双方终结点都可独立向对方发送消息。 因此，双工服务可以将消息发送回客户端终结点，从而提供类似事件的行为。 当客户端连接到服务并为服务提供可用来将消息发送回客户端的通道时，就会发生双工通信。 请注意，双工服务的类似事件的行为仅在会话中起作用。  
@@ -32,7 +32,7 @@ ms.locfileid: "34037358"
  [!code-csharp[c_DuplexServices#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#2)]
  [!code-vb[c_DuplexServices#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#2)]  
   
- 为双工协定需要生成 WCF 客户端<xref:System.ServiceModel.InstanceContext>类，以在构造时提供。 此 <xref:System.ServiceModel.InstanceContext> 类用作实现回调接口并处理从服务发送回的消息的对象所在的位置。 <xref:System.ServiceModel.InstanceContext> 类是用 `CallbackHandler` 类的实例构造的。 此对象处理通过回调接口从服务发送到客户端的消息。  
+ WCF 客户端生成的双工协定需要供<xref:System.ServiceModel.InstanceContext>类，以在构造时提供。 此 <xref:System.ServiceModel.InstanceContext> 类用作实现回调接口并处理从服务发送回的消息的对象所在的位置。 <xref:System.ServiceModel.InstanceContext> 类是用 `CallbackHandler` 类的实例构造的。 此对象处理通过回调接口从服务发送到客户端的消息。  
   
  [!code-csharp[c_DuplexServices#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_duplexservices/cs/client.cs#3)]
  [!code-vb[c_DuplexServices#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_duplexservices/vb/client.vb#3)]  
@@ -53,7 +53,7 @@ HTTP could not register URL
 htp://+:80/Temporary_Listen_Addresses/<guid> because TCP port 80 is being used by another application.  
 ```  
   
- 下面的示例代码演示如何指定客户端终结点地址以编程方式。
+ 下面的示例代码演示了如何指定客户端终结点地址以编程方式。
   
 ```csharp  
 WSDualHttpBinding binding = new WSDualHttpBinding();  
@@ -89,7 +89,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 > [!WARNING]
 >  双工模型不自动检测服务或客户端何时关闭其通道。 因此，如果客户端意外终止，默认情况下将不会通知该服务；或者，如果客户端意外终止，将不会通知该服务。 客户端和服务可以实现自己的协议以相互通知对方（如果它们这么选择）。  
   
-## <a name="see-also"></a>请参阅  
- [双工](../../../../docs/framework/wcf/samples/duplex.md)  
- [指定客户端运行时行为](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
- [如何：创建通道工厂并用它创建和管理通道](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+## <a name="see-also"></a>请参阅
+- [双工](../../../../docs/framework/wcf/samples/duplex.md)
+- [指定客户端运行时行为](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [如何：创建通道工厂并用它创建和管理通道](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

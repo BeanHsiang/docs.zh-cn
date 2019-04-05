@@ -1,17 +1,17 @@
 ---
 title: 类型提供程序安全性
-description: '了解如何在 F # 中，包括如何更改的类型提供程序的信任设置的类型提供程序安全性。'
+description: 了解如何在类型提供程序安全性F#，包括如何更改的类型提供程序的信任设置。
 ms.date: 05/16/2016
-ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861902"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611186"
 ---
 # <a name="type-provider-security"></a>类型提供程序安全性
 
-类型提供程序将引用的程序集 (Dll) 的 F # 项目或脚本包含用于连接到外部数据源和传达给 F # 类型环境的此类型信息代码。 通常情况下，仅运行中引用的程序集的代码，在编译时，然后执行代码 （对于脚本，请将代码发送到 F # Interactive）。 但是，将在 Visual Studio 运行类型提供程序程序集，只是在编辑器中浏览代码时多。 这是因为类型提供程序需要运行到编辑器，例如快速信息工具提示，IntelliSense 完成添加额外信息等。 因此，有一些额外的安全注意事项类型提供程序程序集，因为它们在 Visual Studio 进程内自动运行。
+类型提供程序将所引用的程序集 (Dll) 在F#项目或脚本包含代码以连接到外部数据源并呈现到此类型信息的F#类型的环境。 通常情况下，代码中引用的程序集只运行时编译，并执行代码 (或在脚本的情况下发送到的代码F#交互)。 但是，将在 Visual Studio 运行类型提供程序程序集，只是在编辑器中浏览代码时多。 这是因为类型提供程序需要运行到编辑器，例如快速信息工具提示，IntelliSense 完成添加额外信息等。 因此，有一些额外的安全注意事项类型提供程序程序集，因为它们在 Visual Studio 进程内自动运行。
 
 ## <a name="security-warning-dialog"></a>安全警告对话框
 

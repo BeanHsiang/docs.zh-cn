@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9115657c52f31d9b7b7da3c843338670343da26c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf6e0c1de9bfb920932e5c22adb4eb8573125506
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446468"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489951"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly 方法
-创建`Assembly`结构指定的程序集包含的元数据，并返回关联的元数据标记。  
+创建`Assembly`结构包含元数据，为指定的程序集并返回关联的元数据标记。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,18 +41,18 @@ HRESULT DefineAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pbPublicKey`  
- [in]如果程序集没有强名称标识的程序集或为 NULL 的发布者公钥。  
+ [in]如果该程序集没有强名称标识的程序集或为 NULL 的发布者公钥。  
   
  `cbPublicKey`  
  [in]以字节为单位的大小`pbPublicKey`。  
   
  `uHashAlgId`  
- [in]要使用加密文件中的程序集或为 NULL，以指定 sha-1 算法的哈希算法标识符。  
+ [in]要用于加密的程序集或为 NULL，以指定 sha-1 算法中的文件的哈希算法的标识符。  
   
  `szName`  
- [in]程序集的用户可读文本名称。 此值不得超过 1024年个字符。  
+ [in]用户可读文本的程序集的名称。 此值不得超过 1024年个字符。  
   
  `pMetaData`  
  [in]指向包含程序集的版本、 平台和区域设置信息的 ASSEMBLYMETADATA 实例的指针。  
@@ -67,13 +67,13 @@ HRESULT DefineAssembly (
  只有一个`Assembly`元数据结构可定义一个清单内。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：** 作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataAssemblyEmit 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

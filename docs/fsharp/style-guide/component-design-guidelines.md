@@ -1,40 +1,40 @@
 ---
-title: 'F # 组件设计准则'
-description: '了解用于编写 F # 面向消费由其他调用方的组件的准则。'
+title: F#组件设计准则
+description: 了解以进行写入的准则F#面向消费由其他调用方的组件。
 ms.date: 05/14/2018
-ms.openlocfilehash: 446cba0f810af9517b655ef5741ddf7a919676d5
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43488282"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55066020"
 ---
-# <a name="f-component-design-guidelines"></a>F # 组件设计准则
+# <a name="f-component-design-guidelines"></a>F#组件设计准则
 
-本文档是一组 F # 编程，基于 F # 组件设计准则，v14，Microsoft Research 的组件设计准则并[另一个版本](https://fsharp.org/specs/component-design-guidelines/)最初策划的和由 F # 软件基金会维护。
+本文档是一套组件设计准则F#进行编程，基于F#组件设计准则、 v14，Microsoft Research 和[另一个版本](https://fsharp.org/specs/component-design-guidelines/)最初策划和维护的F#软件的基础。
 
-本文档假定您熟悉 F # 编程。 非常感谢 F # 社区的贡献和在本指南的各个版本的有用反馈。
+本文档假定您熟悉F#编程。 多感谢对F#社区的贡献和在本指南的各个版本的有用反馈。
 
 ## <a name="overview"></a>概述
 
-本文档探讨一些与 F # 组件设计和编码相关的问题。 组件可能意味着以下任一项：
+本文档探讨一些与相关的问题F#组件设计和编码。 组件可能意味着以下任一项：
 
-* 具有该项目中的外部使用者在 F # 项目中的层。
-* 跨程序集边界中用于 F # 代码使用库。
+* 中的层在F#项目中具有该项目中的外部使用者。
+* 适用于使用情况的库F#跨程序集边界的代码。
 * 跨程序集边界的任何.NET 语言适用于使用一个库。
 * 一个库，如适用于通过包存储库，将其分发[NuGet](https://nuget.org)。
 
-请按照本文中所述的技术[优秀的 F # 代码的五个原则](index.md#five-principles-of-good-f-code)，因此利用同时功能和对象根据编程。
+请按照本文中所述的技术[良好的五个原则F#代码](index.md#five-principles-of-good-f-code)，因此利用同时功能和对象根据编程。
 
 方法，无论组件和库设计器时尝试创建一个 API，开发人员可以非常轻松地使用人脸可行且十分普通的问题的数。 下降的应用程序[.NET 类库设计准则](../../standard/design-guidelines/index.md)将引导你创建一组一致的愉快，若要使用的 Api。
 
 ## <a name="general-guidelines"></a>通用准则
 
-有几个通用指导原则应用于 F # 库，而不考虑在库的目标受众。
+有几个通用指导原则适用于F#库，而不考虑在库的目标受众。
 
 ### <a name="learn-the-net-library-design-guidelines"></a>了解.NET 类库设计准则
 
-不论哪种 F # 编码执行操作，非常有价值有实际的了解[.NET 类库设计准则](../../standard/design-guidelines/index.md)。 大多数其他 F # 和.NET 编程人员将熟悉这些指导原则，并期望.NET 代码，以符合它们。
+而不考虑类型的F#编码执行时，它非常有价值有实际的了解[.NET 类库设计准则](../../standard/design-guidelines/index.md)。 大多数其他F#.NET 编程人员将熟悉这些指导原则，并期望.NET 代码，以符合它们。
 
 .NET 类库设计准则提供常规指南有关命名、 设计类和接口、 成员 （属性、 方法、 事件等） 的设计和的详细信息，并且引用的各种设计指南的有用的第一个点。
 
@@ -47,48 +47,48 @@ ms.locfileid: "43488282"
 type Point =
 
     /// Computes the distance between this point and another
-    member DistanceTo : otherPoint:Point -> float
+    member DistanceTo: otherPoint:Point -> float
 ```
 
 您可以使用缩写形式 XML 注释 (`/// comment`)，或标准的 XML 注释 (`///<summary>comment</summary>`)。
 
 ### <a name="consider-using-explicit-signature-files-fsi-for-stable-library-and-component-apis"></a>请考虑使用稳定的库和组件 Api 显式签名文件 (.fsi)
 
-使用 F # 库中的显式签名文件提供简洁的公共 API，这两者都可帮助确保，你知道你的库的完整公共接口，以及提供完全分离之间公共文档和内部摘要实现详细信息。 请注意，签名文件会将冲突添加到更改公共 API，通过要求在实现和签名文件中进行更改。 因此，签名文件通常只时应引入 API 变得日臻完善和不再需要显著更改。
+使用显式的签名文件中F#库提供的公共 API，这两者都可帮助确保您知道完整公共图面上的库，也因为提供了公共文档之间完全分离和内部简洁摘要实现详细信息。 请注意，签名文件会将冲突添加到更改公共 API，通过要求在实现和签名文件中进行更改。 因此，签名文件通常只时应引入 API 变得日臻完善和不再需要显著更改。
 
 ### <a name="always-follow-best-practices-for-using-strings-in-net"></a>在.NET 中使用字符串的最佳实践，应始终遵循
 
 请按照[在.NET 中使用字符串的最佳做法](../../standard/base-types/best-practices-strings.md)指南。 具体而言，始终显式声明*区域性意向*中转换和比较字符串 （如果适用）。
 
-## <a name="guidelines-for-f-facing-libraries"></a>F # 的准则-面向库
+## <a name="guidelines-for-f-facing-libraries"></a>准则F#-面向库
 
-本部分提供了建议，用于确定公共 F #-面向库;也就是说，公开旨在由 F # 开发人员使用的公共 Api 的库。 有特定于 F # 适用的各种库设计建议。 如果没有按照具体建议，.NET 类库设计准则是回退的指南。
+本部分提供了建议，用于确定公共F#-面向库;即，库公开公共 Api，旨在通过使用F#开发人员。 有各种库设计建议适用于F#。 如果没有按照具体建议，.NET 类库设计准则是回退的指南。
 
 ### <a name="naming-conventions"></a>命名约定
 
 #### <a name="use-net-naming-and-capitalization-conventions"></a>使用.NET 命名和大小写约定
 
-下表遵循.NET 命名和大小写约定。 有小添加项。 还包括 F # 构造。
+下表遵循.NET 命名和大小写约定。 小添加还包括了F#构造。
 
 | 构造 | Case | 部件 | 示例 | 说明 |
 |-----------|------|------|----------|-------|
-| 具体的类型 | Pascal 命名法 | 名词 / 形容词 | 列表中，双精度，复杂 | 具体类型是结构、 类、 枚举、 委托、 记录和联合。 尽管类型名称是传统上在 OCaml 小写，但 F # 已采用了.NET 类型的命名方案。
-| DLL           | Pascal 命名法 |                 | Fabrikam.Core.dll |  |
-| 联合标记     | Pascal 命名法 | 名词 | 一些，添加成功 | 不要在公共 Api 中使用前缀。 （可选） 使用的前缀时内部的例如 '' 键入团队 = TAlpha | TBeta | TDelta。 ' ' |
-| 事件          | Pascal 命名法 | 谓词 | ValueChanged / ValueChanging |  |
-| 异常     | Pascal 命名法 |      | WebException | 名称应以"Exception"结尾。 |
-| 字段          | Pascal 命名法 | 名词 | CurrentName  | |
-| 接口类型 |  Pascal 命名法 | 名词 / 形容词 | IDisposable | 名称应以"I"开头。 |
-| 方法 |  Pascal 命名法 |  谓词 | ToString | |
-| 命名空间 | Pascal 命名法 | | Microsoft.FSharp.Core | 通常情况下使用`<Organization>.<Technology>[.<Subnamespace>]`，但是如果独立于组织的技术是删除组织。 |
-| 参数 | 驼峰式大小写 | 名词 |  类型名称、 转换、 范围 | |
+| 具体的类型 | PascalCase | 名词 / 形容词 | 列表中，双精度，复杂 | 具体类型是结构、 类、 枚举、 委托、 记录和联合。 尽管类型名称为 OCaml，在传统上小写F#已采用了.NET 类型的命名方案。
+| DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
+| 联合标记     | PascalCase | 名词 | 一些，添加成功 | 不要在公共 Api 中使用前缀。 （可选） 使用的前缀时内部的例如 `type Teams = TAlpha | TBeta | TDelta.` |
+| 事件          | PascalCase | 谓词 | ValueChanged / ValueChanging |  |
+| Exceptions     | PascalCase |      | WebException | 名称应以"Exception"结尾。 |
+| 字段          | PascalCase | 名词 | CurrentName  | |
+| 接口类型 |  PascalCase | 名词 / 形容词 | IDisposable | 名称应以"I"开头。 |
+| 方法 |  PascalCase |  谓词 | ToString | |
+| 命名空间 | PascalCase | | Microsoft.FSharp.Core | 通常情况下使用`<Organization>.<Technology>[.<Subnamespace>]`，但是如果独立于组织的技术是删除组织。 |
+| 参数 | camelCase | 名词 |  类型名称、 转换、 范围 | |
 | 允许值 （内部） | 驼峰式大小写或 pascal 命名法 | 名词 / 动词 |  getValue myTable |
-| 允许值 （外部） | 驼峰式大小写或 pascal 命名法 | 名词/动词  | List.map Dates.Today | let 绑定值通常是公共的遵循传统的功能性设计模式时。 但是，通常使用 pascal 命名法标识符可以使用从其他.NET 语言时如此。 |
-| 属性  | Pascal 命名法  | 名词 / 形容词  | IsEndOfFile，背景色  | 布尔型属性通常使用是的可以并应该是肯定的如 IsEndOfFile，不 IsNotEndOfFile 中所示。
+| 允许值 （外部） | 驼峰式大小写或 pascal 命名法 | 名词/动词  | List.map, Dates.Today | let 绑定值通常是公共的遵循传统的功能性设计模式时。 但是，通常使用 pascal 命名法标识符可以使用从其他.NET 语言时如此。 |
+| 属性  | PascalCase  | 名词 / 形容词  | IsEndOfFile，背景色  | 布尔型属性通常使用是的可以并应该是肯定的如 IsEndOfFile，不 IsNotEndOfFile 中所示。
 
 #### <a name="avoid-abbreviations"></a>避免缩写
 
-.NET 指南不鼓励使用缩写的使用 (例如，"使用`OnButtonClick`而非`OnBtnClick`")。 常见的缩写词，如`Async`允许为"异步"。 对函数式编程; 有时还会忽略此准则例如，`List.iter`用于一个缩写词"迭代"。 出于此原因，使用缩写形式通常是可以容忍 F # 中是更大-到-F # 编程，但仍通常应避免在公共组件设计中。
+.NET 指南不鼓励使用缩写的使用 (例如，"使用`OnButtonClick`而非`OnBtnClick`")。 常见的缩写词，如`Async`允许为"异步"。 对函数式编程; 有时还会忽略此准则例如，`List.iter`用于一个缩写词"迭代"。 出于此原因，使用缩写通常在更大程度上是可以容忍F#到F#进行编程，但仍通常应避免在公共组件设计。
 
 #### <a name="avoid-casing-name-collisions"></a>避免名称冲突的大小写
 
@@ -100,9 +100,9 @@ type Point =
 
 #### <a name="use-pascalcase-for-generic-parameter-names"></a>为泛型参数名称使用 pascal 命名法
 
-执行操作的公共 Api，包括 F # 中的泛型参数名称使用 pascal 命名法-面向库。 具体而言，使用类似的名称`T`， `U`， `T1`，`T2`任意泛型参数，和特定名称很有用，然后对于 F # 的面向公众的库使用类似的名称`Key`， `Value`， `Arg`(但不是能， `TKey`)。
+使用 pascal 命名法为公共 Api，包括适用于中的泛型参数名称F#-面向库。 具体而言，使用类似的名称`T`， `U`， `T1`，`T2`任意泛型参数，和特定名称很有用，然后F#的面向公众的库使用类似名称`Key`， `Value`，`Arg` (但不是能， `TKey`)。
 
-#### <a name="use-either-pascalcase-or-camelcase-for-public-functions-and-values-in-f-modules"></a>有关公共函数和 F # 模块中的值使用 pascal 命名法或驼峰式大小写
+#### <a name="use-either-pascalcase-or-camelcase-for-public-functions-and-values-in-f-modules"></a>为公共函数和中的值使用 pascal 命名法或驼峰式大小写F#模块
 
 对于设计用于的公共函数使用驼峰式大小写不合格 (例如， `invalidArg`)，以及"标准集合函数"（例如，List.map）。 在这两个这些情况下，函数名称作用类似语言中的关键字。
 
@@ -110,7 +110,7 @@ type Point =
 
 #### <a name="use-namespaces-or-modules-to-contain-your-types-and-modules"></a>使用命名空间或模块包含类型和模块
 
-在组件中的每个 F # 文件应命名空间声明或模块声明开头。
+每个F#组件中的文件应以命名空间声明或模块声明开头。
 
 ```fsharp
 namespace Fabrikam.BasicOperationsAndTypes
@@ -143,11 +143,11 @@ module CommonOperations =
 使用模块和命名空间来组织代码最高级别之间的区别是，如下所示：
 
 * 命名空间可以跨多个文件
-* 命名空间不能包含 F # 函数，除非它们是内部模块内
+* 命名空间不能包含F#函数，除非它们是内部模块内
 * 为任何给定模块的代码必须包含在单个文件
-* 顶级模块可以包含 F # 函数，而无需内部模块
+* 顶级模块可以包含F#函数而无需内部模块
 
-顶级命名空间或模块之间的选择会影响代码的已编译的形式，因此将影响其他.NET 语言中的视图应 API 最终使用 F # 代码之外。
+顶级命名空间或模块之间的选择会影响代码的已编译的形式，因此会影响将视图从其他.NET 语言应 API 最终使用外部的F#代码。
 
 #### <a name="use-methods-and-properties-for-operations-intrinsic-to-object-types"></a>使用方法和属性的对象类型中的内部操作
 
@@ -173,7 +173,7 @@ type HashTable<'Key,'Value>(comparer: IEqualityComparer<'Key>) =
 
 #### <a name="use-classes-to-encapsulate-mutable-state"></a>使用类来封装的可变状态
 
-在 F # 中，这只需完成的状态未已封装由另一个语言构造，如闭包、 序列表达式或异步计算。
+在F#，这只需要完成的状态未已封装由另一个语言构造，如闭包、 序列表达式或异步计算。
 
 ```fsharp
 type Counter() =
@@ -191,16 +191,16 @@ type Counter() =
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 在优先于：
 
 ```fsharp
 type Serializer<'T> = {
-    Serialize : bool -> 'T -> string
-    Deserialize : bool -> string -> 'T
+    Serialize: bool -> 'T -> string
+    Deserialize: bool -> string -> 'T
 }
 ```
 
@@ -243,24 +243,24 @@ module CollectionType =
 有时类用于建模数学构造，例如向量。 当要建模的域具有众所周知的运算符时，将其定义为类中的内部成员非常有用。
 
 ```fsharp
-type Vector(x:float) =
+type Vector(x: float) =
 
     member v.X = x
 
-    static member (*) (vector:Vector, scalar:float) = Vector(vector.X * scalar)
+    static member (*) (vector: Vector, scalar: float) = Vector(vector.X * scalar)
 
-    static member (+) (vector1:Vector, vector2:Vector) = Vector(vector1.X + vector2.X)
+    static member (+) (vector1: Vector, vector2: Vector) = Vector(vector1.X + vector2.X)
 
 let v = Vector(5.0)
 
 let u = v * 10.0
 ```
 
-本指南对应于这些类型的常规.NET 指南。 但是，它可以在 F # 编写代码因为这会使与 F # 函数一起使用和与成员约束，例如 List.sumBy 方法中使用这些类型非常重要。
+本指南对应于这些类型的常规.NET 指南。 但是，它可以是在非常重要F#编写代码，因为这会使这些类型结合使用F#函数和成员约束，例如 List.sumBy 使用的方法。
 
 #### <a name="consider-using-compiledname-to-provide-a-net-friendly-name-for-other-net-language-consumers"></a>请考虑使用 CompiledName 来提供。其他.NET 语言的使用者的 NET 的友好名称
 
-有时你可能想要的 F # 使用者名称中一种样式的某些内容 (例如，以使其显示的小写形式是静态成员，就好像模块绑定函数)，但编译为程序集时具有不同的样式的名称。 可以使用`[<CompiledName>]`要为非 F # 代码使用程序集提供不同的样式属性。
+有时你可能想要提供的名称是中一种样式的F#使用者 (例如，以使其显示的小写形式是静态成员，就好像模块绑定函数)，但编译为程序集时具有不同的样式的名称。 可以使用`[<CompiledName>]`属性来提供不同的样式为非F#使用程序集代码。
 
 ```fsharp
 type Vector(x:float, y:float) =
@@ -274,7 +274,7 @@ type Vector(x:float, y:float) =
 let v = Vector.create 5.0 3.0
 ```
 
-通过使用`[<CompiledName>]`，可以为非 F # 程序集的使用者使用的.NET 命名约定。
+通过使用`[<CompiledName>]`，可以使用适用的.NET 命名约定非F#的程序集的使用者。
 
 #### <a name="use-method-overloading-for-member-functions-if-doing-so-provides-a-simpler-api"></a>如果这样做将提供更简单的 API，使用方法重载的成员函数
 
@@ -289,7 +289,7 @@ type Logger() =
         ...
 ```
 
-在 F # 中，它是更常见的是重载的参数数目而不是参数的类型。
+在F#，它是更常见的是重载的参数数目而不是参数的类型。
 
 #### <a name="hide-the-representations-of-record-and-union-types-if-the-design-of-these-types-is-likely-to-evolve"></a>这些类型的设计是可能会不断变化的情况下隐藏的记录和联合类型的表示形式
 
@@ -297,7 +297,7 @@ type Logger() =
 
 #### <a name="avoid-the-use-of-implementation-inheritance-for-extensibility"></a>避免使用实现继承的可扩展性
 
-在 F # 中，很少使用实现继承。 此外，继承层次结构通常是将复杂且难以实现，若要更改新的要求到达时。 继承实现仍存在于 F # 兼容性和极少数情况下，它是最佳解决方案到问题，但多态性，如接口实现的设计时，应在 F # 程序中查找其他方法。
+在F#，很少使用实现继承。 此外，继承层次结构通常是将复杂且难以实现，若要更改新的要求到达时。 继承实现仍存在于F#兼容性和极少数情况下，它是最佳解决方案到问题，但应中寻找其他方法在F#程序的多态性，如接口设计时实现。
 
 ### <a name="function-and-member-signatures"></a>函数和成员签名
 
@@ -306,20 +306,20 @@ type Logger() =
 下面是在返回类型中使用元组的一个很好示例：
 
 ```fsharp
-val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
+val divrem: BigInteger -> BigInteger -> BigInteger * BigInteger
 ```
 
 对于返回类型包含许多组件，或如果单个身份实体与相关组件，应考虑使用命名的类型而不元组。
 
-#### <a name="use-asynct-for-async-programming-at-f-api-boundaries"></a>使用`Async<T>`有关 F # API 边界处的异步编程
+#### <a name="use-asynct-for-async-programming-at-f-api-boundaries"></a>使用`Async<T>`的异步编程在F#API 边界
 
-如果没有名为相应的同步操作`Operation`，它返回`T`，则应命名为异步操作`AsyncOperation`如果它返回`Async<T>`或`OperationAsync`如果它返回`Task<T>`。 对于常用的.NET 类型公开 Begin/End 方法，请考虑使用`Async.FromBeginEnd`将扩展方法为提供的.NET Api 到 F # 异步编程模型的外观。
+如果没有名为相应的同步操作`Operation`，它返回`T`，则应命名为异步操作`AsyncOperation`如果它返回`Async<T>`或`OperationAsync`如果它返回`Task<T>`。 对于常用的.NET 类型公开 Begin/End 方法，请考虑使用`Async.FromBeginEnd`将扩展方法提供的外观为F#的.NET Api 到异步编程模型。
 
 ```fsharp
 type SomeType =
-    member this.Compute(x:int) : int =
+    member this.Compute(x:int): int =
         ...
-    member this.AsyncCompute(x:int) : Async<int> =
+    member this.AsyncCompute(x:int): Async<int> =
         ...
 
 type System.ServiceModel.Channels.IInputChannel with
@@ -327,15 +327,15 @@ type System.ServiceModel.Channels.IInputChannel with
         ...
 ```
 
-### <a name="exceptions"></a>异常
+### <a name="exceptions"></a>Exceptions
 
 请参阅[错误管理](conventions.md#error-management)若要了解如何正确使用的异常、 结果和选项。
 
 ### <a name="extension-members"></a>扩展成员
 
-#### <a name="carefully-apply-f-extension-members-in-f-to-f-components"></a>小心地将应用 F # 中的 F # 扩展成员-到-F # 组件
+#### <a name="carefully-apply-f-extension-members-in-f-to-f-components"></a>小心地将应用F#中的扩展成员F#到F#组件
 
-F # 扩展成员通常只应与在其模式使用大多数类型关联的内部操作的闭包中的操作。 一种常见用途是提供各种.NET 类型到 F # 更常用的 Api:
+F#扩展成员通常只应与在其模式使用大多数类型关联的内部操作的闭包中的操作。 一种常见用途是提供到更惯用的 ApiF#的各种.NET 类型：
 
 ```fsharp
 type System.ServiceModel.Channels.IInputChannel with
@@ -368,7 +368,7 @@ type BST<'T> =
 
 #### <a name="hide-the-representations-of-discriminated-unions-for-binary-compatible-apis-if-the-design-of-these-types-is-likely-to-evolve"></a>这些类型的设计是可能会不断变化的情况下隐藏二进制兼容的 Api 可区分联合的表示形式
 
-联合类型依赖于 F # 模式匹配窗体的简洁的编程模型。 正如前面提到的应避免泄露具体数据表示形式，如果这些类型的设计是可能会不断变化。
+联合类型依赖于F#模式匹配的简洁的编程模型的窗体。 正如前面提到的应避免泄露具体数据表示形式，如果这些类型的设计是可能会不断变化。
 
 例如，可区分联合的表示形式可以隐藏使用私有或内部声明，或通过使用签名文件。
 
@@ -381,13 +381,13 @@ type Union =
 
 如果不加选择地显示可区分的联合，你可能会发现它很难版本库而不会中断用户代码。 相反，应考虑显示一个或多个活动的模式，以允许针对您的类型的值的模式匹配。
 
-活动模式提供 F # 使用者提供的模式匹配同时避免了直接公开 F # 联合类型的替代方法。
+活动模式提供另一种方法提供F#使用者与模式匹配时避免公开F#直接联合类型。
 
 ### <a name="inline-functions-and-member-constraints"></a>内联函数和成员约束
 
 #### <a name="define-generic-numeric-algorithms-using-inline-functions-with-implied-member-constraints-and-statically-resolved-generic-types"></a>定义泛型数值算法中使用内联函数的隐式的成员约束和静态解析的泛型类型
 
-算术成员约束和 F # 比较约束是 F # 编程的标准。 例如，考虑以下代码：
+算术成员约束和F#比较约束是一种标准F#编程。 例如，考虑以下代码：
 
 ```fsharp
 let inline highestCommonFactor a b =
@@ -412,7 +412,7 @@ val inline highestCommonFactor : ^T -> ^T -> ^T
 
 #### <a name="avoid-using-member-constraints-to-simulate-type-classes-and-duck-typing"></a>避免使用成员约束来模拟类型的类和鸭子类型化
 
-可以模拟"鸭子类型键入"使用 F # 成员约束。 但是，成员，从而使利用这一点不在常规中应使用 F #-到-F # 库设计。 这是因为基于不熟悉或非标准的隐式约束的库设计可能会导致用户代码会变得不灵活且绑定到一个特定的框架模式。
+可以模拟"鸭子类型化"使用F#成员约束。 但是，成员，从而使利用这一点应在中使用不在常规F#到F#库的设计。 这是因为基于不熟悉或非标准的隐式约束的库设计可能会导致用户代码会变得不灵活且绑定到一个特定的框架模式。
 
 此外，还有很可能会大量使用这种方式中的成员约束可能会很长的编译时间。
 
@@ -426,13 +426,13 @@ val inline highestCommonFactor : ^T -> ^T -> ^T
 
 ### <a name="units-of-measure"></a>度量单位
 
-#### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>仔细的添加了的类型安全性，F # 代码中使用度量的单位
+#### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>小心地使用的度量值的单位来实现中添加的类型安全F#代码
 
 其他.NET 语言在查看时，将清除其他单元的度量值的类型化信息。 请注意，.NET 组件、 工具和反射将看到 san 单位类型。 例如，C# 使用者将看到`float`而非`float<kg>`。
 
 ### <a name="type-abbreviations"></a>类型缩写
 
-#### <a name="carefully-use-type-abbreviations-to-simplify-f-code"></a>小心地使用类型缩写来简化 F # 代码
+#### <a name="carefully-use-type-abbreviations-to-simplify-f-code"></a>小心地使用类型缩写来简化F#代码
 
 .NET 组件、 工具和反射不会看到类型的缩写的名称。 类型缩写的重要使用情况还可以显示比它变得更加复杂实际上是，这可以给消费者带来困惑的域。
 
@@ -440,7 +440,7 @@ val inline highestCommonFactor : ^T -> ^T -> ^T
 
 在这种情况下，被缩写的类型将显示有关正在定义的实际类型的表示形式的过多信息。 相反，包装类类型或单用例可区分的联合中的缩写，请考虑 （或基本性能时，请考虑使用结构类型来包装缩写）。
 
-例如，它很容易定义多重映射作为一种特殊情况的 F # 地图，例如：
+例如，很容易定义多重映射为一种特殊情况的F#映射，例如：
 
 ```fsharp
 type MultiMap<'Key,'Value> = Map<'Key,'Value list>
@@ -450,7 +450,7 @@ type MultiMap<'Key,'Value> = Map<'Key,'Value list>
 
 ## <a name="guidelines-for-libraries-for-use-from-other-net-languages"></a>用于从其他.NET 语言中使用的库的指导原则
 
-在设计时从其他.NET 语言中使用的库，它是必须遵守[.NET 类库设计准则](../../standard/design-guidelines/index.md)。 在本文档中，这些库标记为普通的.NET 库，而不是 F #-不受限制地面向使用 F # 库构造。 设计普通的.NET 库意味着提供大家所熟悉且惯用 Api 与.NET Framework 的其余部分一致的最大程度减少使用 F # 的公共 API 中的特定构造。 以下各节中介绍了这些规则。
+在设计时从其他.NET 语言中使用的库，它是必须遵守[.NET 类库设计准则](../../standard/design-guidelines/index.md)。 在本文档中，这些库标记为普通的.NET 库，而不是F#-面向使用的库F#不受限制地构造。 设计普通的.NET 库意味着提供大家所熟悉且惯用 Api 与.NET Framework 的其余部分保持一致的最大程度减少使用F#-在公共 API 中的特定构造。 以下各节中介绍了这些规则。
 
 ### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Namespace 和类型设计 （适用于从其他.NET 语言中使用的库）
 
@@ -468,11 +468,11 @@ type PolarCoordinate = ...
 
 #### <a name="use-namespaces-types-and-members-as-the-primary-organizational-structure-for-your-components"></a>使用命名空间、 类型和成员作为您的组件的主要组织结构
 
-包含公共功能的所有文件应都以开头`namespace`声明，以及命名空间中唯一的面向公众的实体应为类型。 不要使用 F # 模块。
+包含公共功能的所有文件应都以开头`namespace`声明，以及命名空间中唯一的面向公众的实体应为类型。 不要使用F#模块。
 
 使用非公共模块用于保存实现代码、 实用程序类型和实用工具函数。
 
-静态类型应当优先于模块，因为它们支持的 API 的未来发展使用重载和其他不能使用 F # 模块中的.NET API 设计概念。
+静态类型应当优先于模块，因为它们支持的 API 的未来发展使用重载和其他不能使用中的.NET API 设计概念F#模块。
 
 例如，替代以下公共 API:
 
@@ -497,19 +497,19 @@ type Utilities =
     static member Add(x,y,z) = x + y + z
 ```
 
-#### <a name="use-f-record-types-in-vanilla-net-apis-if-the-design-of-the-types-wont-evolve"></a>如果类型的设计不会改进在传统的.NET Api 中使用 F # 记录类型
+#### <a name="use-f-record-types-in-vanilla-net-apis-if-the-design-of-the-types-wont-evolve"></a>使用F#类型的设计不会演变中传统的.NET Api 记录类型
 
-F # 记录类型编译为一个简单的.NET 类。 这些是适用于 Api 中的一些简单的稳定类型。 应考虑使用`[<NoEquality>]`和`[<NoComparison>]`特性禁止显示自动生成的接口。 此外还应避免使用传统的.NET Api 中的可变记录字段作为这些公开一个公共字段。 应始终考虑到一个类是否将提供更灵活的 api 选项未来的发展。
+F#记录类型编译为一个简单的.NET 类。 这些是适用于 Api 中的一些简单的稳定类型。 应考虑使用`[<NoEquality>]`和`[<NoComparison>]`特性禁止显示自动生成的接口。 此外还应避免使用传统的.NET Api 中的可变记录字段作为这些公开一个公共字段。 应始终考虑到一个类是否将提供更灵活的 api 选项未来的发展。
 
-例如，下面的 F # 代码公开给 C# 使用者的公共 API:
+例如，以下F#代码会公开公共 APIC#使用者：
 
-F # 中：
+F#：
 
 ```fsharp
 [<NoEquality; NoComparison>]
 type MyRecord =
-    { FirstThing : int
-        SecondThing : string }
+    { FirstThing: int
+        SecondThing: string }
 ```
 
 C#：
@@ -523,9 +523,9 @@ public sealed class MyRecord
 }
 ```
 
-#### <a name="hide-the-representation-of-f-union-types-in-vanilla-net-apis"></a>隐藏 F # 联合类型的传统的.NET Api 中的表示形式
+#### <a name="hide-the-representation-of-f-union-types-in-vanilla-net-apis"></a>隐藏的表示形式F#在传统的.NET Api 中的联合类型
 
-F # 联合类型不常用跨组件边界，即使对于 F #-到-F # 编写代码。 它们是一个极好实现设备时在组件和库内部使用。
+F#联合类型不常用跨组件边界，即使对于F#到F#编码。 它们是一个极好实现设备时在组件和库内部使用。
 
 在设计时传统的.NET API，请考虑使用专用的声明或签名文件中隐藏的联合类型的表示形式。
 
@@ -574,7 +574,7 @@ type MyBadType() =
     [<CLIEvent>]
     member this.MyEvent = myEv.Publish
 
-type MyEventArgs(x:int) =
+type MyEventArgs(x: int) =
     inherit System.EventArgs()
     member this.X = x
 
@@ -588,7 +588,7 @@ type MyGoodType() =
 
 #### <a name="expose-asynchronous-operations-as-methods-which-return-net-tasks"></a>将异步操作公开为方法返回.NET 任务
 
-在.NET 中使用任务来表示活动的异步计算。 任务是通常比 F # 不太复合`Async<T>`对象，因为它们表示"已在执行"任务，不能为一起组合方式执行并行组合，或其中隐藏取消信号和其他传播上下文参数。
+在.NET 中使用任务来表示活动的异步计算。 任务通常比不太组合是F#`Async<T>`对象，因为它们表示"已在执行"任务，不能为组合在一起以执行并行组合，或其隐藏的取消信号传播的方式和其他上下文参数。
 
 但是，尽管如此，返回任务的方法是在.NET 异步编程的标准表示形式。
 
@@ -596,7 +596,7 @@ type MyGoodType() =
 /// A type in a component designed for use from other .NET languages
 type MyType() =
 
-    let compute (x: int) : Async<int> = async { ... }
+    let compute (x: int): Async<int> = async { ... }
 
     member this.ComputeAsync(x) = compute x |> Async.StartAsTask
 ```
@@ -606,68 +606,68 @@ type MyType() =
 ```fsharp
 /// A type in a component designed for use from other .NET languages
 type MyType() =
-    let compute(x:int) : Async<int> = async { ... }
+    let compute(x: int): Async<int> = async { ... }
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
-#### <a name="use-net-delegate-types-instead-of-f-function-types"></a>使用.NET 委托类型，而不是 F # 函数类型
+#### <a name="use-net-delegate-types-instead-of-f-function-types"></a>使用.NET 委托类型，而不是F#函数类型
 
-此处"F # 函数类型"的含义"箭头"类型如`int -> int`。
+此处"F#函数类型"表示"箭头"类型喜欢`int -> int`。
 
 而不是以下内容：
 
 ```fsharp
-member this.Transform(f:int->int) =
+member this.Transform(f: int->int) =
     ...
 ```
 
 执行此操作：
 
 ```fsharp
-member this.Transform(f:Func<int,int>) =
+member this.Transform(f: Func<int,int>) =
     ...
 ```
 
-F # 函数类型显示为`class FSharpFunc<T,U>`到了其他.NET 语言，并不太适用于了解委托类型的语言功能和工具。 创建面向.NET Framework 3.5 或更高版本，一个更高序位方法时`System.Func`和`System.Action`委托是正确的 Api 来发布使.NET 开发人员能够以低冲突的方式使用这些 Api。 (时定目标到.NET Framework 2.0，会限制更多系统定义的委托类型; 请考虑使用预定义的委托类型，如`System.Converter<T,U>`或定义特定委托类型。)
+F#函数类型显示为`class FSharpFunc<T,U>`与其他.NET 语言，并不太适用于了解委托类型的语言功能和工具。 创建面向.NET Framework 3.5 或更高版本，一个更高序位方法时`System.Func`和`System.Action`委托是正确的 Api 来发布使.NET 开发人员能够以低冲突的方式使用这些 Api。 (时定目标到.NET Framework 2.0，会限制更多系统定义的委托类型; 请考虑使用预定义的委托类型，如`System.Converter<T,U>`或定义特定委托类型。)
 
-另一方面，.NET 委托不是 F # 自然的面向库 (请参阅下一步部分 F #-面向库)。 常见的实现策略开发普通的.NET 库的更高序位方法时，结果是编写所有使用 F # 函数类型的实现，然后创建使用委托作为在实际 F # 的精简外观的公共 API实现。
+另一方面，.NET 委托不是很自然F#-面向库 (请参阅下一步部分F#-面向库)。 因此，常见的实现策略开发普通的.NET 库的更高序位方法时是创作所有实施方案，使用F#函数类型，并创建使用委托作为实际F#实现。
 
-#### <a name="use-the-trygetvalue-pattern-instead-of-returning-f-option-values-and-prefer-method-overloading-to-taking-f-option-values-as-arguments"></a>使用 TryGetValue 模式而不是返回的 F # 选项值，并更喜欢方法重载，则可以考虑作为参数的 F # 选项值
+#### <a name="use-the-trygetvalue-pattern-instead-of-returning-f-option-values-and-prefer-method-overloading-to-taking-f-option-values-as-arguments"></a>使用 TryGetValue 模式而不是返回F#选项的值，并更喜欢方法重载采用到F#选项作为参数的值
 
-在 Api 中的 F # 选项类型使用的常见模式是更好地实现在传统的.NET Api 使用标准.NET 设计技术。 而不是返回的 F # 选项值，请考虑使用 bool 返回类型以及如"TryGetValue"模式中所示的输出参数。 而不会采用 F # 选项值作为参数，请考虑使用方法重载或可选参数。
+有关使用的常见模式F#Api 中的选项类型为更好地实现在传统的.NET Api 使用标准.NET 设计技术。 而不是返回F#选项值，请考虑使用 bool 返回类型以及如"TryGetValue"模式中所示的输出参数。 和而不是采用F#选项作为参数的值，请考虑使用方法重载或可选参数。
 
 ```fsharp
 member this.ReturnOption() = Some 3
 
-member this.ReturnBoolAndOut(outVal : byref<int>) =
+member this.ReturnBoolAndOut(outVal: byref<int>) =
     outVal <- 3
     true
 
-member this.ParamOption(x : int, y : int option) =
+member this.ParamOption(x: int, y: int option) =
     match y with
     | Some y2 -> x + y2
     | None -> x
 
-member this.ParamOverload(x : int) = x
+member this.ParamOverload(x: int) = x
 
-member this.ParamOverload(x : int, y : int) = x + y
+member this.ParamOverload(x: int, y: int) = x + y
 ```
 
 #### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>使用.NET 集合接口类型 IEnumerable\<T\>和 IDictionary\<键，值\>参数和返回值
 
-避免使用具体集合类型，如.NET 数组`T[]`，F # 类型`list<T>`，`Map<Key,Value>`并`Set<T>`，和.NET 具体集合类型，如`Dictionary<Key,Value>`。 .NET 类库设计准则有好的建议，有关何时使用各种集合类型，如`IEnumerable<T>`。 某些使用数组 (`T[]`) 是可以接受在某些情况下，性能的基础上。 请注意，尤其是`seq<T>`是只是 F # 的别名`IEnumerable<T>`，并因此 seq 通常是一个普通的.NET API 的相应类型。
+避免使用具体集合类型，如.NET 数组`T[]`，F#类型`list<T>`，`Map<Key,Value>`并`Set<T>`，以及.NET 具体集合类型，如`Dictionary<Key,Value>`。 .NET 类库设计准则有好的建议，有关何时使用各种集合类型，如`IEnumerable<T>`。 某些使用数组 (`T[]`) 是可以接受在某些情况下，性能的基础上。 请注意，尤其是`seq<T>`是只是F#别名以供`IEnumerable<T>`，并因此 seq 通常是一个普通的.NET API 的相应类型。
 
-而不是 F # 列表：
+而不是F#列出了：
 
 ```fsharp
-member this.PrintNames(names : string list) =
+member this.PrintNames(names: string list) =
     ...
 ```
 
-使用 F # 序列：
+使用F#序列：
 
 ```fsharp
-member this.PrintNames(names : seq<string>) =
+member this.PrintNames(names: seq<string>) =
     ...
 ```
 
@@ -678,18 +678,18 @@ member this.PrintNames(names : seq<string>) =
 ```fsharp
 ✔ member this.NoArguments() = 3
 
-✔ member this.ReturnVoid(x : int) = ()
+✔ member this.ReturnVoid(x: int) = ()
 ```
 
 这是错误的：
 
 ```fsharp
-member this.WrongUnit( x:unit, z:int) = ((), ())
+member this.WrongUnit( x: unit, z: int) = ((), ())
 ```
 
 #### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>检查在普通的.NET API 边界上的 null 值
 
-F # 实现代码往往具有较少的 null 值，原因不可变的设计模式和使用的 F # 类型的 null 文本的限制。 其他.NET 语言通常使用 null 值频繁得多。 正因为如此，F # 代码公开了一个普通的.NET API 应该检查的 API 边界上的 null 参数，并防止这些值更深层次流入 F # 实现代码。 `isNull`函数或模式进行匹配`null`，可以使用模式。
+F#实现代码往往具有较少的 null 值，原因不可变的设计模式和使用限制的 null 文本的F#类型。 其他.NET 语言通常使用 null 值频繁得多。 因此，F#公开了一个普通的.NET API 的代码应检查是否在 API 边界为空的参数和流动到更深入地阻止这些值F#实现代码。 `isNull`函数或模式进行匹配`null`，可以使用模式。
 
 ```fsharp
 let checkNonNull argName (arg: obj) =
@@ -708,17 +708,17 @@ let checkNonNull` argName (arg: obj) =
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>避免使用科的参数
 
-请改用.NET 调用约定``Method(arg1,arg2,…,argN)``。
+请改用.NET 调用约定`Method(arg1,arg2,…,argN)`。
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str
 ```
 
-提示： 如果您正在设计用于从任何.NET 语言中使用库，则没有什么可以替代实际执行的一些试验性 C# 和 Visual Basic 编程，确保您的库"感觉右"这些语言的操作。 此外可以使用.NET Reflector 和 Visual Studio 对象浏览器等工具来确保库和它们的文档显示预期的开发人员。
+提示:如果您正在设计用于从任何.NET 语言一样，使用库，则一些试验性是无可替代的实际执行的操作C#和 Visual Basic 编程，确保您的库"感觉右"从这些语言。 此外可以使用.NET Reflector 和 Visual Studio 对象浏览器等工具来确保库和它们的文档显示预期的开发人员。
 
 ## <a name="appendix"></a>附录
 
-### <a name="end-to-end-example-of-designing-f-code-for-use-by-other-net-languages"></a>由其他.NET 语言设计用于 F # 代码的端到端示例
+### <a name="end-to-end-example-of-designing-f-code-for-use-by-other-net-languages"></a>设计的端到端示例F#以供其他.NET 语言代码
 
 请考虑以下类：
 
@@ -735,7 +735,7 @@ type Point1(angle,radius) =
         [ for i in 1..n -> Point1(angle=2.0*Math.PI/float(n), radius=1.0) ]
 ```
 
-推断的 F # 类型的此类是按如下所示：
+推断出F#的此类类型是按如下所示：
 
 ```fsharp
 type Point1 =
@@ -748,7 +748,7 @@ type Point1 =
     member Radius : double
 ```
 
-让我们看一看此 F # 类型到使用另一种.NET 语言的程序员的显示方式。 例如，近似 C#"签名"是按如下所示：
+让我们看一看这F#类型显示给使用另一种.NET 语言的程序员。 例如，近似 C#"签名"是按如下所示：
 
 ```csharp
 // C# signature for the unadjusted Point1 class
@@ -770,13 +770,13 @@ public class Point1
 }
 ```
 
-有一些要注意 F # 如何表示构造此处的要点。 例如：
+有一些重要事项需要注意到有关如何F#表示此处构造。 例如：
 
 * 保留元数据，例如参数名称。
 
-* 采用两个参数的 F # 方法成为 C# 方法采用两个自变量。
+* F#方法采用两个自变量成为C#采用两个参数的方法。
 
-* 函数和列表会变得对 F # 库中的相应类型的引用。
+* 函数和列表会变得对中的相应类型的引用F#库。
 
 下面的代码演示如何调整该代码需要考虑这些内容。
 
@@ -809,7 +809,7 @@ type RadialPoint(angle:double, radius:double) =
                 RadialPoint(angle=2.0*Math.PI/float(count), radius=1.0) }
 ```
 
-推断出的 F # 类型的代码如下所示：
+推断出F#类型的代码如下所示：
 
 ```fsharp
 type RadialPoint =
@@ -849,6 +849,6 @@ public class RadialPoint
 
 * 使用返回类型为`seq<RadialPoint>`而不是`RadialPoint list`通过更改列表构造使用`[ ... ]`序列构造使用`IEnumerable<RadialPoint>`。
 
-* 使用.NET 委托类型`System.Func`而不是 F # 函数类型。
+* 使用.NET 委托类型`System.Func`而不是F#函数类型。
 
 这样，就得好多了要在 C# 代码中使用。

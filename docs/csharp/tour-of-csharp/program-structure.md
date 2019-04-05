@@ -3,12 +3,12 @@ title: C# 程序结构 - C# 语言介绍
 description: 了解 C# 程序的基本构建基块
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 9efd2542d449da5ddcd9d3170c2e598282a34c39
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: de10cd000b4028a66ce6dd6f21e39c013e38ecd2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565746"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131022"
 ---
 # <a name="program-structure"></a>程序结构
 
@@ -52,5 +52,5 @@ csc /r:acme.dll example.cs
 使用 C#，可以将程序的源文本存储在多个源文件中。 编译多文件 C# 程序时，可以将所有源文件一起处理，并且源文件可以随意相互引用。从概念上讲，就像是所有源文件在处理前被集中到一个大文件中一样。 在 C# 中，永远都不需要使用前向声明，因为声明顺序无关紧要（除了极少数的例外情况）。 C# 并不限制源文件只能声明一种公共类型，也不要求源文件的文件名必须与其中声明的类型相匹配。
 
 >[!div class="step-by-step"]
-[上一页](index.md)
-[下一页](types-and-variables.md)
+>[上一页](index.md)
+>[下一页](types-and-variables.md)

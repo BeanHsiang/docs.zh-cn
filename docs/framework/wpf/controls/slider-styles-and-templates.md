@@ -9,26 +9,26 @@ helpviewer_keywords:
 - templates [WPF], Slider
 - ControlTemplate [WPF], Slider
 ms.assetid: d89aa97b-075a-4752-9c41-9679df65c491
-ms.openlocfilehash: ea7e9f5323f29adf10ad8cfe890a85ff91071733
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 8ec1f436ac0134ccdb19e63592c4181951814cb1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457964"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375670"
 ---
 # <a name="slider-styles-and-templates"></a>Slider 样式和模板
-本主题介绍的样式和模板的<xref:System.Windows.Controls.Slider>控件。 你可以修改默认<xref:System.Windows.Controls.ControlTemplate>提供独特外观的控件。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+本主题介绍的样式和模板的<xref:System.Windows.Controls.Slider>控件。 可以修改默认<xref:System.Windows.Controls.ControlTemplate>为控件提供唯一外观。 有关详细信息，请参阅[通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)。  
   
-## <a name="slider-parts"></a>滑块部件  
- 下表列出的命名的部件<xref:System.Windows.Controls.Slider>控件。  
+## <a name="slider-parts"></a>滑块部分  
+ 下表列出了用于命名的部件<xref:System.Windows.Controls.Slider>控件。  
   
 |部件|类型|描述|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|指示的位置的元素的容器<xref:System.Windows.Controls.Slider>。|  
-|PART_SelectionRange|<xref:System.Windows.FrameworkElement>|显示选择范围沿元素<xref:System.Windows.Controls.Slider>。  选择范围才可见才<xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A>属性是`true`。|  
+|PART_SelectionRange|<xref:System.Windows.FrameworkElement>|显示选择范围沿元素<xref:System.Windows.Controls.Slider>。  选择范围，可见才<xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A>属性是`true`。|  
   
 ## <a name="slider-states"></a>滑块状态  
- 下表列出的可视状态<xref:System.Windows.Controls.Slider>控件。  
+ 下表列出了的可视状态<xref:System.Windows.Controls.Slider>控件。  
   
 |VisualState 名称|VisualStateGroup 名称|描述|  
 |----------------------|---------------------------|-----------------|  
@@ -37,25 +37,25 @@ ms.locfileid: "34457964"
 |已禁用|CommonStates|已禁用控件。|  
 |已设定焦点|FocusStates|控件有焦点。|  
 |失去焦点|FocusStates|控件没有焦点。|  
-|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`false`。|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`true`已在控件有焦点。|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性`true`具有该控件没有焦点。|  
+|有效|ValidationStates|该控件使用<xref:System.Windows.Controls.Validation>类和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`false`。|  
+|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`已在控件有焦点。|  
+|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的属性是`true`具有该控件没有焦点。|  
   
 ## <a name="slider-controltemplate-example"></a>滑块 ControlTemplate 示例  
  下面的示例演示如何定义<xref:System.Windows.Controls.ControlTemplate>为<xref:System.Windows.Controls.Slider>控件。  
   
- [!code-xaml[ControlTemplateExamples#Slider](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#slider)]  
+ [!code-xaml[ControlTemplateExamples#Slider](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#slider)]  
   
  上一示例使用了一个或多个以下资源。  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  有关完整示例，请参阅[使用 ControlTemplates 设置样式示例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.FrameworkElement.Style%2A>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [控件样式和模板](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [控件自定义](../../../../docs/framework/wpf/controls/control-customization.md)  
- [样式设置和模板化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [通过创建 ControlTemplate 自定义现有控件的外观](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.FrameworkElement.Style%2A>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [控件样式和模板](control-styles-and-templates.md)
+- [控件自定义](control-customization.md)
+- [样式设置和模板化](styling-and-templating.md)
+- [通过创建 ControlTemplate 自定义现有控件的外观](customizing-the-appearance-of-an-existing-control.md)

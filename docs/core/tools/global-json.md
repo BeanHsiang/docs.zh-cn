@@ -1,16 +1,14 @@
 ---
 title: global.json 概述
 description: 了解如何在运行 .NET Core CLI 命令时使用 global.json 文件设置 .NET Core SDK 版本。
-author: mairaw
-ms.author: mairaw
-ms.date: 07/30/2018
-ms.custom: updateeachrelease
-ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: updateeachrelease, seodec18
+ms.openlocfilehash: e0f929a049812cac6f62e5218629c9b0add83de8
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838073"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170764"
 ---
 # <a name="globaljson-overview"></a>global.json 概述
 
@@ -26,7 +24,7 @@ ms.locfileid: "48838073"
 
 ### <a name="sdk"></a>SDK
 
-类型：Object
+类型：对象
 
 指定要选择的 .NET Core SDK 的相关信息。
 
@@ -46,14 +44,14 @@ ms.locfileid: "48838073"
 ```json
 {
   "sdk": {
-    "version": "2.1.300"
+    "version": "2.2.100"
   }
 }
 ```
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json 和 .NET Core CLI
 
-最好能知道哪些版本可用，以便在 global.json 文件中设置相应版本。 可在 [.NET 下载](https://www.microsoft.com/net/download/all)站点中找到支持的可用 SDK 的完整列表。 从 .NET Core SDK 2.1 开始，可运行以下命令来验证计算机上已安装的 SDK 版本：
+最好能知道哪些版本可用，以便在 global.json 文件中设置相应版本。 可在 [.NET 下载](https://www.microsoft.com/net/download/all)站点中找到支持的可用 SDK 的完整列表。 从 .NET Core 2.1 SDK 开始，可运行以下命令来验证计算机上已安装的 SDK 版本：
 
 ```console
 dotnet --list-sdks
@@ -64,7 +62,7 @@ dotnet --list-sdks
 可执行 [dotnet new](dotnet-new.md) 命令在当前目录中创建一个新的 global.json 文件，类似于以下示例：
 
 ```console
-dotnet new globaljson --sdk-version 2.1.300
+dotnet new globaljson --sdk-version 2.2.100
 ```
 
 ## <a name="matching-rules"></a>匹配规则
@@ -103,8 +101,8 @@ SDK 版本目前由以下部分组成：
 > [!WARNING]
 > 启动项目 '{startupProject}' 面向框架 '.NETCoreApp' 的版本 '{targetFrameworkVersion}'。 此版本的 Entity Framework Core .NET 命令行工具仅支持 2.0 或更高版本。 有关使用旧版工具的信息，请参阅 <https://go.microsoft.com/fwlink/?linkid=871254>
 
-从.NET Core SDK 2.1 (v. 2.1.300) 开始，SDK 中包含了 `dotnet ef` 命令。 此警告指示项目面向 EF Core 1.0 或 1.1，后者与 .NET Core SDK 2.1 及更高版本不兼容。 若要编译项目，请在计算机上安装 .NET Core SDK 2.0 (v. 2.1.201) 及更早版本，并使用 global.json 文件定义所需 SDK 版本。 有关 `dotnet ef` 命令的详细信息，请参阅 [EF Core .NET 命令行工具](/ef/core/miscellaneous/cli/dotnet)。
+从 .NET Core 2.1 SDK（版本 2.1.300）开始，SDK 中包含 `dotnet ef` 命令。 此警告指示项目面向 EF Core 1.0 或 1.1，后者与 .NET Core 2.1 SDK 及更高版本不兼容。 若要编译项目，请在计算机上安装 .NET Core 2.0 SDK（版本 2.1.201）及更早版本，并使用 global.json 文件定义所需 SDK 版本。 有关 `dotnet ef` 命令的详细信息，请参阅 [EF Core .NET 命令行工具](/ef/core/miscellaneous/cli/dotnet)。
 
 ## <a name="see-also"></a>请参阅
 
-* [如何解析 SDK 项目](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+- [如何解析 SDK 项目](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 83bba35340a917b649369fc1eb7a01a2bc6a2188
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861671"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840362"
 ---
 # <a name="mysettings-object"></a>My.Settings 对象
 提供用于访问应用程序的设置属性和方法。  
@@ -45,24 +45,25 @@ ms.locfileid: "43861671"
 ## <a name="tasks"></a>任务  
  下表列出了所涉及的任务的示例`My.Settings`对象。  
   
-|到|查看|  
+|功能|查看|  
 |---|---|  
 |读取应用程序设置|[如何：在 Visual Basic 中读取应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
 |更改用户设置|[如何：在 Visual Basic 中更改用户设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|保存用户设置|[如何：在 Visual Basic 中保存用户设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|创建用户设置的属性网格|[如何：在 Visual Basic 中创建用户设置的属性网格](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|保存用户设置|[如何：在 Visual Basic 中暂留用户设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|创建用户设置的属性网格|[如何：在 Visual Basic 中为用户设置创建属性网格](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>示例  
  此示例显示 `Nickname` 设置的值。  
   
- [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-settings-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
  若要使此示例正常工作，应用程序必须具有类型为 `String` 的 `Nickname` 设置。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Configuration.ApplicationSettingsBase>  
- [如何：在 Visual Basic 中读取应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)  
- [如何：在 Visual Basic 中更改用户设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)  
- [如何：在 Visual Basic 中保存用户设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)  
- [如何：在 Visual Basic 中创建用户设置的属性网格](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
- [管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
+## <a name="see-also"></a>请参阅
+
+- <xref:System.Configuration.ApplicationSettingsBase>
+- [如何：在 Visual Basic 中读取应用程序设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [如何：在 Visual Basic 中更改用户设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [如何：在 Visual Basic 中暂留用户设置](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [如何：在 Visual Basic 中为用户设置创建属性网格](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [管理应用程序设置 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a0679dafda7935034d3a3ab0f4c43656ab5668b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185243"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58038186"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中的过时成员
-本文中的表列出了 .NET Framework 4.5 和更高版本中由程序集组织的已过时的类型成员。 使用以下链接可查看每个程序集中过时的成员和建议的备选项的列表。 本主题不会列出已过时类型的成员。 有关过时类型的列表，请参阅 [过时类型](../../../docs/framework/whats-new/obsolete-types.md)。  
+本文中的表列出了 .NET Framework 4.5 和更高版本中由程序集组织的已过时的类型成员。 使用以下链接可查看每个程序集中过时的成员和建议的备选项的列表。 本主题不会列出已过时类型的成员。 有关过时类型的列表，请参阅 [过时类型](obsolete-types.md)。  
   
 -   [系统程序集中的过时成员](#SystemMembers)  
   
@@ -177,12 +177,12 @@ ms.locfileid: "50185243"
 |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.UInt32%29>|此构造函数已弃用。 请改用 <xref:System.Reflection.AssemblyFlagsAttribute.%23ctor%28System.Reflection.AssemblyNameFlags%29?displayProperty=nameWithType>。|  
 |<xref:System.Reflection.AssemblyFlagsAttribute?displayProperty=nameWithType>|<xref:System.Reflection.AssemblyFlagsAttribute.Flags%2A>|此属性已弃用。 请改用 <xref:System.Reflection.AssemblyFlagsAttribute.AssemblyFlags%2A?displayProperty=nameWithType>。|  
 |<xref:System.Reflection.Emit.ConstructorBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ConstructorBuilder.ReturnType%2A>|此属性已弃用。|  
-|<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|备用 API 可用：改为发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|  
+|<xref:System.Reflection.Emit.FieldBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FieldBuilder.SetMarshal%2A>|有一个可用的备用 API：发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|  
 |<xref:System.Reflection.Emit.FlowControl?displayProperty=nameWithType>|<xref:System.Reflection.Emit.FlowControl.Phi>|此 API 已弃用。|  
-|<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|备用 API 可用：改为发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|  
+|<xref:System.Reflection.Emit.MethodBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.MethodBuilder.SetMarshal%2A>|有一个可用的备用 API：发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|  
 |<xref:System.Reflection.Emit.OpCodeType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OpCodeType.Annotation>|此 API 已弃用。|  
 |<xref:System.Reflection.Emit.OperandType?displayProperty=nameWithType>|<xref:System.Reflection.Emit.OperandType.InlinePhi>|此 API 已弃用。|  
-|<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|备用 API 可用：改为发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|  
+|<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|有一个可用的备用 API：发出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自定义特性。|  
 |<xref:System.Resources.ResourceManager?displayProperty=nameWithType>|<xref:System.Resources.ResourceManager.ResourceSets>|请改为调用 <xref:System.Resources.ResourceManager.InternalGetResourceSet%28System.Globalization.CultureInfo%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType>。|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A> 方法已弃用，并将从未来版本中移除。|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A> 方法已弃用。 若要执行此操作，请使用托管 API。|  
@@ -416,7 +416,7 @@ ms.locfileid: "50185243"
 |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>|此方法已被否决。 请改用 <xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A?displayProperty=nameWithType>。|  
 |<xref:System.ComponentModel.Design.DesignSurface?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A>|<xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A> 方法已替换为 <xref:System.ComponentModel.Design.DesignSurface.CreateInstance%28System.Type%29>。|  
 |<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer.SerializeToReferenceExpression%2A>|此方法已被否决。 请改用 <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> 或 <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A>。|  
-|<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|使用此属性会生成编译器错误。<br /><br /> 错误：此属性将不再引用，并已包含至现有已编译的应用程序中。 不再使用设计\-时元素视图体系结构。|  
+|<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|使用此属性会生成编译器错误。<br /><br /> 错误：将不再引用此属性，并已含入现有已编译的应用程序中。 不再使用设计\-时元素视图体系结构。|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A>|建议的替代项为使用 [`ControlDesigner.SetViewFlags(ViewFlags.DesignTimeHtmlRequiresLoadComplete, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A)。|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml%2A>|建议的替代项为 <xref:System.Web.UI.Design.ControlDesigner.GetPersistenceContent%2A?displayProperty=nameWithType>。|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.IsDirty%2A>|建议的替代项为使用 [`ControlDesigner.Tag.SetDirty`](xref:System.Web.UI.Design.IControlDesignerTag.SetDirty%2A) 和 [`ControlDesigner.Tag.IsDirty`](xref:System.Web.UI.Design.IControlDesignerTag.IsDirty%2A)。|  
@@ -426,7 +426,7 @@ ms.locfileid: "50185243"
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.RaiseResizeEvent%2A>|建议不要使用此方法，因为调整大小由 <xref:System.Web.UI.Design.ControlDesigner.OnComponentChanged%2A?displayProperty=nameWithType> 方法处理。|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.ReadOnly%2A>|建议的替代项改为从 <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=nameWithType> 继承，并使用 <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType>。 利用区域，可更好地控制设计器中的内容。|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.Behavior%2A>|建议的替代项为 <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>。|  
-|<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|使用此属性会生成编译器错误。<br /><br /> 错误：此属性将不再引用，并已包含至现有已编译的应用程序中。 设计\-时元素可能无法始终提供对标记中元素的访问。 <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> 上处理客户端脚本和控件的替换方法。|  
+|<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.DesignTimeElement%2A>|使用此属性会生成编译器错误。<br /><br /> 错误：将不再引用此属性，并已含入现有已编译的应用程序中。 设计\-时元素可能无法始终提供对标记中元素的访问。 <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=nameWithType> 上处理客户端脚本和控件的替换方法。|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorAttached%2A>|建议的替代项为 <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>。|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBehaviorDetaching%2A>|建议的替代项为 <xref:System.Web.UI.Design.ControlDesigner.Tag%2A?displayProperty=nameWithType>。|  
 |<xref:System.Web.UI.Design.HtmlControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.HtmlControlDesigner.OnBindingsCollectionChanged%2A>|建议的替代项是处理 [HtmlControlDesigner.DataBindings.Changed](xref:System.Web.UI.DataBindingCollection.Changed) 事件。 <xref:System.Web.UI.Design.HtmlControlDesigner.DataBindings%2A?displayProperty=nameWithType> 属性返回的 <xref:System.Web.UI.DataBindingCollection> 集合允许在更大程度上控制与该控件关联的数据绑定。|  
@@ -798,6 +798,6 @@ ms.locfileid: "50185243"
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|使用此成员会生成编译器错误。<br /><br /> 不要使用此方法。|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` 注册表项仅适用于 Win9x，此版本的.NET Framework 不支持。 改用 `PerformanceData` 注册表项。 此属性将从 Framework 的未来版本中移除。|  
   
-## <a name="see-also"></a>请参阅  
- [类库中过时的内容](../../../docs/framework/whats-new/whats-obsolete.md)  
- [过时类型](../../../docs/framework/whats-new/obsolete-types.md)
+## <a name="see-also"></a>请参阅
+- [类库中过时的内容](whats-obsolete.md)
+- [过时类型](obsolete-types.md)

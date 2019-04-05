@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b25f3dbe655dd60c9284ae5ef5591e95fc1b84e5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842822"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846462"
 ---
 # <a name="language-independence-and-language-independent-components"></a>语言独立性和与语言无关的组件
 .NET Framework 是独立于语言的。 这意味着，作为开发人员，您可以使用面向 .NET Framework 的多种语言（例如，C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 以及 Windows PowerShell）之一进行开发。 您可以访问针对 .NET Framework 开发的类库的类型和成员，而不必了解它们的初始编写语言，也不必遵循任何原始语言的约定。 如果您是组件开发人员，无论组件采用哪种语言，均可由任何 .NET Framework 应用程序访问。  
@@ -72,7 +72,7 @@ ms.locfileid: "48842822"
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>CLS 遵从性规则  
- 本节讨论用于创建符合 CLS 的组件的规则。 有关规则的完整列表，请参阅 [ECMA-335 标准：公共语言基础结构](https://www.ecma-international.org/publications/standards/Ecma-335.htm)的第 I 部分的第 11 条。  
+ 本节讨论用于创建符合 CLS 的组件的规则。 有关规则的完整列表，请参阅 [ECMA-335 标准：公共语言基础结构](https://www.ecma-international.org/publications/standards/Ecma-335.htm)的第 I 部分的第 7 条至第 11 条中进行了定义。  
   
 > [!NOTE]
 >  公共语言规范讨论 CLS 遵从性的每个规则，因为它应用于使用者（以编程方式访问符合 CLS 的组件的开发人员）、框架（使用语言编译器创建符合 CLS 的库的开发人员）和扩展人员（创建可创建符合 CLS 的组件的语言编译器或代码分析器等工具的开发人员）。 本文重点介绍适用于框架的规则。 但请注意，一些适用于扩展程序的规则也适用于使用 Reflection.Emit 创建的程序集。  
@@ -169,7 +169,7 @@ ms.locfileid: "48842822"
   
  .NET Framework [通用类型系统](../../docs/standard/base-types/common-type-system.md)包括大量直接受公共语言运行时支持且专以程序集元数据编码的内置类型。 在这些内部类型中，下表中所列的类型都符合 CLS。  
   
-|符合 CLS 的类型|描述|  
+|符合 CLS 的类型|说明|  
 |-------------------------|-----------------|  
 |<xref:System.Byte>|8 位无符号整数|  
 |<xref:System.Int16>|16 位带符号整数|  
@@ -185,10 +185,10 @@ ms.locfileid: "48842822"
   
  下表中所列的内部类型不符合 CLS。  
   
-|不符合类型|描述|符合 CLS 的替代方法|  
+|不符合类型|说明|符合 CLS 的替代方法|  
 |-------------------------|-----------------|--------------------------------|  
 |<xref:System.SByte>|8 位带符号整数数据类型|<xref:System.Int16>|  
-|<xref:System.TypedReference>|指向对象及其运行时类型的指针|无|  
+|<xref:System.TypedReference>|指向对象及其运行时类型的指针|None|  
 |<xref:System.UInt16>|16 位无符号整数|<xref:System.Int32>|  
 |<xref:System.UInt32>|32 位无符号整数|<xref:System.Int64>|  
 |<xref:System.UInt64>|64 位无符号整数|<xref:System.Int64>（可能溢出）、<xref:System.Numerics.BigInteger> 或 <xref:System.Double>|  
@@ -305,7 +305,7 @@ ms.locfileid: "48842822"
   
      由于存在此规则，因此符合 CLS 的类型不需要实现不符合 CLS 的成员。 如果一个符合 CLS 的框架公开实现不符合 CLS 接口的类，则其还应提供所有不符合 CLS 的成员的具体实现。  
   
- 符合 CLS 的语言编译器还必须允许类提供在多个接口中具有相同名称和签名的成员的单独实现。  C# 和 Visual Basic 都支持[显式接口实现](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md)以提供同名方法的不同实现。 Visual Basic 还支持 `Implements` 关键字，可让您显式指定特定成员要实现的接口和成员。 下面的示例通过定义一个将 `Temperature` 和 `ICelsius` 接口作为显式接口实现的 `IFahrenheit` 类来说明此方案。  
+ 符合 CLS 的语言编译器还必须允许类提供在多个接口中具有相同名称和签名的成员的单独实现。  C# 和 Visual Basic 都支持[显式接口实现](../csharp/programming-guide/interfaces/explicit-interface-implementation.md)以提供同名方法的不同实现。 Visual Basic 还支持 `Implements` 关键字，可让您显式指定特定成员要实现的接口和成员。 下面的示例通过定义一个将 `Temperature` 和 `ICelsius` 接口作为显式接口实现的 `IFahrenheit` 类来说明此方案。  
   
  [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
  [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
@@ -337,13 +337,13 @@ ms.locfileid: "48842822"
 ### <a name="type-members-in-general"></a>类型成员概述  
  公共语言规范要求将所有字段和方法作为特定类的成员进行访问。 因此，全局静态字段和方法（即，除类型外定义的静态字段或方法）不符合 CLS。 如果您尝试在您的源代码中包括全局字段或方法，则 C# 和 Visual Basic 编译器都会生成编译器错误。  
   
- 公共语言规范仅支持标准托管调用约定。 它不支持非托管调用约定和带使用 `varargs` 关键字标记的变量参数列表的方法。 对于符合标准托管调用约定的变量参数列表，请使用 <xref:System.ParamArrayAttribute> 特性或单个语言的实现，如 C# 中的 `params` 关键字和 Visual Basic 中的 `ParamArray` 关键字。  
+ 公共语言规范仅支持标准托管调用约定。 它不支持非托管调用约定和带使用 `varargs` 关键字标记的变量参数列表的方法。 对于符合标准托管调用约定的变量自变量列表，请使用 <xref:System.ParamArrayAttribute> 特性或单个语言的实现，如 C# 中的 `params` 关键字和 Visual Basic 中的 `ParamArray` 关键字。  
   
 <a name="MemberAccess"></a>   
 ### <a name="member-accessibility"></a>成员可访问性  
  重写继承成员不能更改该成员的可访问性。 例如，无法在派生类中通过私有方法重写基类中的公共方法。 有一个例外：由其他程序集中的类型重写的程序集中的 `protected internal`（在 C# 中）或 `Protected Friend`（在 Visual Basic 中）成员。 在该示例中，重写的可访问性是 `Protected`。  
   
- 下面的示例说明了当 <xref:System.CLSCompliantAttribute> 特性设置为 `true`，并且 `Person`（它是派生自 `Animal` 的类）尝试将 `Species` 属性的可访问性从公开更改为私有时生成的错误。 如果该示例的可访问性更改为公共，则其编译成功。  
+ 下面的示例说明了当 <xref:System.CLSCompliantAttribute> 特性设置为 `true`，并且 `Human`（它是派生自 `Animal` 的类）尝试将 `Species` 属性的可访问性从公开更改为私有时生成的错误。 如果该示例的可访问性更改为公共，则其编译成功。  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  
@@ -548,23 +548,23 @@ ms.locfileid: "48842822"
   
  若要将两个类打包到单个程序集中，必须将它们编译到模块中。 要将 Visual Basic 源代码文件编译到模块，请使用此命令：  
   
-```  
+```console  
 vbc /t:module StringUtil.vb   
 ```  
   
- 有关 Visual Basic 编译器的命令行语法的详细信息，请参阅[从命令行生成](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。  
+ 有关 Visual Basic 编译器的命令行语法的详细信息，请参阅[从命令行生成](../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。  
   
  要将 C# 源代码文件编译到模块，请使用此命令：  
   
-```  
+```console  
 csc /t:module NumberUtil.cs  
 ```  
   
- 有关 C# 编译器的命令行语法的详细信息，请参阅[在命令行上使用 csc.exe 生成](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。  
+ 有关 C# 编译器的命令行语法的详细信息，请参阅[在命令行上使用 csc.exe 生成](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。  
   
- 然后，使用[链接工具 (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) 将两个模块编译到一个程序集：  
+ 然后，可以使用[链接器选项](/cpp/build/reference/linker-options)将两个模块编译到一个程序集：  
   
-```  
+```console  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   
 ```  
   
@@ -575,13 +575,13 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  要编译 Visual Basic 代码，请使用此命令：  
   
-```  
+```console  
 vbc example.vb /r:UtilityLib.dll  
 ```  
   
  要使用 C# 进行编译，请将编译器的名称从 **vbc** 更改为 **csc**，将文件扩展名从 .vb 更改为 .cs：  
   
-```  
+```console  
 csc example.cs /r:UtilityLib.dll  
 ```  
   

@@ -6,13 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-author: tdykstra
-ms.openlocfilehash: 4d9451f99b0253d0a4de6550b64fedd7fdfeda77
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 39fd5e7bb6e12178df0f75c6dadb575dac82c228
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862012"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674843"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 应用程序中的缓存
 缓存可以将数据存储在内存中以便快速访问。 再次访问数据时，应用程序可以从缓存获取数据，而不是从原始源检索数据。 这可改善性能和可伸缩性。 此外，数据源暂时不可用时，缓存可提供数据。  
@@ -42,19 +41,19 @@ ms.locfileid: "43862012"
 > [!NOTE]
 >  <xref:System.Runtime.Caching.MemoryCache> 类在 <xref:System.Web.Caching> 命名空间中定义的 ASP.NET 缓存对象中建模。 因此，内部缓存逻辑与 ASP.NET 早期版本所提供的逻辑相似。  
   
- 有关如何在 WPF 应用程序中使用缓存的示例，请参阅[演练：在 WPF 应用程序中缓存应用程序数据](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)。  
+ 有关如何使用缓存在 WPF 应用程序的示例，请参阅[演练：缓存在 WPF 应用程序的应用程序数据](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)。  
   
 ## <a name="caching-in-aspnet-applications"></a>在 ASP.NET 应用程序中进行缓存  
  <xref:System.Runtime.Caching> 命名空间中的缓存类提供在 ASP.NET 中缓存数据的功能。  
   
 > [!NOTE]
->  如果应用程序针对 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 或更早版本，必须使用在 <xref:System.Web.Caching> 命名空间中定义的缓存类。 有关详细信息，请参阅 [ASP.NET 缓存概述](https://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d)。  
+>  如果应用程序针对 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 或更早版本，必须使用在 <xref:System.Web.Caching> 命名空间中定义的缓存类。 有关详细信息，请参阅 [ASP.NET 缓存概述](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))。  
   
 > [!NOTE]
->  开发新应用程序时，建议使用 <xref:System.Runtime.Caching.MemoryCache> 类。 <xref:System.Runtime.Caching> 命名空间中提供的 API 与 <xref:System.Web.Caching.Cache> 命名空间中提供的 API 类似。 因此，如果你已在 ASP.NET 早期版本中使用过缓存，那么将会对 API 感到熟悉。 有关如何在 ASP.NET 应用程序中使用缓存的示例，请参阅[演练：在 ASP.NET 中缓存应用程序数据](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)。  
+>  开发新应用程序时，建议使用 <xref:System.Runtime.Caching.MemoryCache> 类。 <xref:System.Runtime.Caching> 命名空间中提供的 API 与 <xref:System.Web.Caching.Cache> 命名空间中提供的 API 类似。 因此，如果你已在 ASP.NET 早期版本中使用过缓存，那么将会对 API 感到熟悉。 有关如何使用 ASP.NET 应用程序中缓存的示例，请参阅[演练：缓存在 ASP.NET 中的应用程序数据](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))。  
   
 ### <a name="output-caching"></a>输出缓存  
- 若要手动缓存应用程序数据，可使用 ASP.NET 中的 <xref:System.Runtime.Caching.MemoryCache> 类。 ASP.NET 还支持输出缓存，在内存中存储生成的页面输出、控件和 HTTP 响应。 可在 ASP.NET Web 页中通过声明方式或使用 Web.config 文件中的设置，配置输出缓存。 有关详细信息，请参阅[用于缓存的 outputCache 元素（ASP.NET 设置架构）](https://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee)。  
+ 若要手动缓存应用程序数据，可使用 ASP.NET 中的 <xref:System.Runtime.Caching.MemoryCache> 类。 ASP.NET 还支持输出缓存，在内存中存储生成的页面输出、控件和 HTTP 响应。 可在 ASP.NET Web 页中通过声明方式或使用 Web.config 文件中的设置，配置输出缓存。 有关详细信息，请参阅[用于缓存的 outputCache 元素（ASP.NET 设置架构）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100))。  
   
  借助 ASP.NET，可通过创建自定义输出缓存提供程序扩展输出缓存。 通过自定义提供程序，可使用磁盘、云存储和分布式缓存引擎等其他存储设备，存储缓存内容。 若要创建自定义输出缓存提供程序，可创建 <xref:System.Web.Caching.OutputCacheProvider> 类的派生类，并将应用程序配置为使用自定义输出缓存提供程序。  
   
@@ -76,8 +75,8 @@ ms.locfileid: "43862012"
   
  有关详细信息，请参阅 Scott Guthrie 博客上的 [ASP.NET 4 的可扩展输出缓存（VS 2010 和 .NET 4.0 系列）](https://go.microsoft.com/fwlink/?LinkId=185772)文章。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Caching.ObjectCache>  
- <xref:System.Runtime.Caching.MemoryCache>  
- [演练：在 WPF 应用程序中缓存应用程序数据](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)  
- [演练：在 ASP.NET 中缓存应用程序数据](https://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Caching.ObjectCache>
+- <xref:System.Runtime.Caching.MemoryCache>
+- [演练：缓存在 WPF 应用程序的应用程序数据](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [演练：在 ASP.NET 中缓存应用程序数据](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

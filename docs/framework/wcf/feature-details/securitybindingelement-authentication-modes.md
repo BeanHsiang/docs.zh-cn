@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 2b1601bd84e92b5a39c5c4c91fdfe67537720430
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b09b50d2db277d6aec325fb9305890f8e5be581c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198377"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658895"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 身份验证模式
 Windows Communication Foundation (WCF) 提供了多个模式的客户端和服务互相进行身份验证。 你可以通过使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 类上的静态方法或通过配置为这些身份验证模式创建安全绑定元素。 本主题简要说明 18 种身份验证模式。  
   
- 有关使用该元素的一种身份验证模式的示例，请参阅[如何： 为指定身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
+ 有关使用该元素的一种身份验证模式的示例，请参阅[如何：为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
 ## <a name="basic-configuration-programming"></a>基本配置编程  
  下面的过程说明如何在配置文件中设置身份验证模式。  
@@ -120,6 +120,6 @@ Windows Communication Foundation (WCF) 提供了多个模式的客户端和服�
 ### <a name="usernameovertransport"></a>UserNameOverTransport  
  在此身份验证模式中，客户端使用用户名令牌进行身份验证，此证书作为经过签名的支持令牌（即签署消息签名的令牌）显示在 SOAP 层上。 在传输层，服务是用 X.509 证书进行身份验证的。 安全绑定元素是由 `TransportSecurityBindingElement` 方法返回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A>。 或者，将 `authenticationMode` 属性设置为 `UserNameOverTransport`。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- [如何：为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- [如何：为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

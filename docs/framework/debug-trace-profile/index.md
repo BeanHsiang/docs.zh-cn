@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 855a1329c9804e4b40d796c639bbe8768156dcc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855278"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092496"
 ---
 # <a name="debugging-tracing-and-profiling"></a>调试、跟踪和分析
-若要调试 .NET Framework 应用程序，编译器和运行时环境必须配置为可将调试程序附加到该应用程序，并且如果可能的话，为该应用程序及其相应 Microsoft 中间语言 (MSIL) 同时生成符号和行映射。 在对托管应用程序进行调试后，可对其进行分析以增强性能。 分析计算并描述可生成最常执行的代码的源代码行，以及执行它们所需的时间。  
+若要调试 .NET Framework 应用程序，必须配置编译器和运行时环境，以使调试器能够附加到应用程序，并且如果可能的话，为该应用程序及其相应 Microsoft 中间语言 (MSIL) 同时生成符号和行映射。 在对托管应用程序进行调试后，可对其进行分析以增强性能。 分析可以计算并描述可生成最常执行的代码的源代码行，以及执行它们所需的时间。  
   
- 通过使用 Visual Studio 可轻松地调试.NET framework 应用程序，前者用于处理配置的许多详细信息。 如果未安装 Visual Studio，可以通过使用 .NET Framework <xref:System.Diagnostics> 命名空间中的调试类检查并提升 .NET Framework 应用程序的性能。 此命名空间包括用于跟踪执行流的 <xref:System.Diagnostics.Trace>、<xref:System.Diagnostics.Debug> 和 <xref:System.Diagnostics.TraceSource> 类，以及用于分析代码的 <xref:System.Diagnostics.Process>、<xref:System.Diagnostics.EventLog> 和 <xref:System.Diagnostics.PerformanceCounter> 类。  
+ Visual Studio 可处理许多配置详细信息，使用它可以轻松调试 .NET Framework 应用程序。 如果未安装 Visual Studio，可通过使用 .NET Framework <xref:System.Diagnostics> 命名空间中的调试类来检查和改进 .NET Framework 应用程序的性能。 此命名空间包括用于跟踪执行流的 <xref:System.Diagnostics.Trace>、<xref:System.Diagnostics.Debug> 和 <xref:System.Diagnostics.TraceSource> 类，以及用于分析代码的 <xref:System.Diagnostics.Process>、<xref:System.Diagnostics.EventLog> 和 <xref:System.Diagnostics.PerformanceCounter> 类。  
   
 ## <a name="in-this-section"></a>本节内容  
  [启用 JIT 附加调试](../../../docs/framework/debug-trace-profile/enabling-jit-attach-debugging.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "43855278"
  描述可用来跟踪应用程序性能的计数器。  
   
 ## <a name="related-sections"></a>相关章节  
- [调试 ASP.NET 和 AJAX 应用程序](https://msdn.microsoft.com/library/9d531913-541b-47b8-864d-138021fca0c6)  
+ [调试 Visual Studio 中的 ASP.NET 或 ASP.NET Core 应用](/visualstudio/debugger/debugging-aspnet-and-ajax-applications)  
  提供有关如何在开发期间或部署后调试 ASP.NET 应用程序的先决条件和说明。  
   
  [开发指南](../../../docs/framework/development-guide.md)  

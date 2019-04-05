@@ -1,5 +1,6 @@
 ---
-title: Main() 和命令行参数（C# 编程指南）
+title: Main() 和命令行参数 - C# 编程指南
+ms.custom: seodec18
 ms.date: 08/02/2017
 f1_keywords:
 - CS5001
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 144d03edf28464717430bd0ae83db637578d8296
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f1cbbc6081c0e2f3e29d49f413e00c7346ea7e60
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698579"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968993"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令行参数（C# 编程指南）
 
@@ -25,7 +26,7 @@ ms.locfileid: "45698579"
 
  C# 程序中只能有一个入口点。 如果多个类包含 `Main` 方法，必须使用 **/main** 编译器选项来编译程序，以指定将哪个 `Main` 方法用作入口点。 有关详细信息，请参阅 [/main（C# 编译器选项）](../../../csharp/language-reference/compiler-options/main-compiler-option.md)。
 
- [!code-csharp[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]
+ [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
 ## <a name="overview"></a>概述
 
@@ -43,7 +44,7 @@ ms.locfileid: "45698579"
 
 ## <a name="see-also"></a>请参阅
 
-- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [在 C# 程序内部](../../../csharp/programming-guide/inside-a-program/index.md)  
+- [在命令行上使用 csc.exe 生成](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [在 C# 程序内部](../../../csharp/programming-guide/inside-a-program/index.md)

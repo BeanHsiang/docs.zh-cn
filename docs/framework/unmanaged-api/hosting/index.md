@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ca2eb93fb2b75f043d33d376a5650092030cac
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 412b61e026b019f7516332c247b203ac85304146
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43797412"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305774"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>承载（非托管 API 参考）
 利用承载 API，非托管主机能够将公共语言运行时 (CLR) 集成到其应用程序中。  
@@ -35,5 +35,5 @@ ms.locfileid: "43797412"
  描述承载 API 使用的非托管结构。  
   
 ## <a name="related-sections"></a>相关章节  
- [运行时主机](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
+ [运行时主机](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))  
  描述 .NET Framework 附带的运行时主机。

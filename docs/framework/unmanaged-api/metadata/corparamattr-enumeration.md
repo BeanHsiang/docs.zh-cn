@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ba2103003e3976e51e82ad6b42315a881582f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7d07c6de47038d5c52d76ad8ca8e0a5684551d59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491462"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr 枚举
 包含一些值，用于描述方法参数的元数据。  
@@ -48,20 +48,20 @@ typedef enum CorParamAttr {
   
 |成员|描述|  
 |------------|-----------------|  
-|`pdIn`|指定参数被传递到方法调用。|  
-|`pdOut`|指定的参数传递从方法返回。|  
+|`pdIn`|指定该参数传递到方法调用。|  
+|`pdOut`|指定该参数将传递从方法返回。|  
 |`pdOptional`|指定参数为可选。|  
-|`pdReservedMask`|保留供内部使用公共语言运行时。|  
+|`pdReservedMask`|公共语言运行时，保留供内部使用。|  
 |`pdHasDefault`|指定参数具有默认值。|  
-|`pdHasFieldMarshal`|指定的参数具有封送处理信息。|  
+|`pdHasFieldMarshal`|指定该参数具有封送处理信息。|  
 |`pdUnused`|未使用。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

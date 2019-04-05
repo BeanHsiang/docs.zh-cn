@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: 1d50a3bb739bbde09fa10d2adf03ec7c1ff5d344
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0c23a74f91cd6666a0c4bef5ea67c58430c511b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180795"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819398"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 指定如何进行字符串比较。  
@@ -55,11 +55,12 @@ ms.locfileid: "50180795"
 vbc -optioncompare:binary projFile.vb  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [“选项”对话框 ->“项目”->“Visual Basic 默认值”](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Option Compare 语句](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [“选项”对话框 ->“项目”->“Visual Basic 默认值”](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

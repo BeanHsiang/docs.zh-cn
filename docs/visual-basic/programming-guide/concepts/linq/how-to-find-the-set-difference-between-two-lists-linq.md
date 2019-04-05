@@ -1,20 +1,20 @@
 ---
-title: 如何： 查找两个列表 (LINQ) (Visual Basic 中) 之间的差集
+title: 如何：查找两个列表 (LINQ) (Visual Basic 中) 之间的差集
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: 77ff74788adddcd28e23028b034cd682f2d94233
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d87a2bd882adb6eca144288ace72b0e7c464907
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641227"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829494"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>如何： 查找两个列表 (LINQ) (Visual Basic 中) 之间的差集
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>如何：查找两个列表 (LINQ) (Visual Basic 中) 之间的差集
 此示例演示如何使用 LINQ 对两个字符串列表进行比较，并输出那些位于 names1.txt 中但不在 names2.txt 中的行。  
   
 ### <a name="to-create-the-data-files"></a>创建数据文件  
   
-1.  Names1.txt names2.txt 复制到你的解决方案文件夹中中, 所示[如何： 组合和比较字符串集合 (LINQ) (Visual Basic 中)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)。  
+1.  按照[如何：合并和比较字符串集合 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)。  
   
 ## <a name="example"></a>示例  
   
@@ -51,10 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- 某些类型的查询在 Visual Basic 中的操作如<xref:System.Linq.Enumerable.Except%2A>， <xref:System.Linq.Enumerable.Distinct%2A>， <xref:System.Linq.Enumerable.Union%2A>，和<xref:System.Linq.Enumerable.Concat%2A>，仅可以在基于方法的语法中表示。  
+ 某些类型的查询在 Visual Basic 中的操作，例如<xref:System.Linq.Enumerable.Except%2A>， <xref:System.Linq.Enumerable.Distinct%2A>， <xref:System.Linq.Enumerable.Union%2A>，和<xref:System.Linq.Enumerable.Concat%2A>，仅采用基于方法的语法进行表示。  
   
 ## <a name="compiling-the-code"></a>编译代码  
  创建面向 .NET Framework 3.5 或更高版本的项目，此项目包含对 System.Core.dll 的引用和用于 System.Linq 命名空间的 `Imports` 语句。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ 和字符串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

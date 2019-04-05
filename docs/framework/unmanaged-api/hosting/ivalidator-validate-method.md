@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf2c343db459879ca95372e104aee68b22dee6b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c362b41d842fb9d35cc7ae9293e2e305b2af281
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440611"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500429"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate 方法
 验证指定的可移植可执行 (PE) 或 Microsoft 中间语言 (MSIL) 文件。  
@@ -42,9 +42,9 @@ HRESULT Validate (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `veh`  
- [in]指向的指针`IVEHandler`处理验证错误的实例。  
+ [in]一个指向`IVEHandler`处理验证错误的实例。  
   
  `pAppDomain`  
  [in]指向在其中加载的文件的应用程序域的指针。  
@@ -56,25 +56,25 @@ HRESULT Validate (
  [in]最大允许在退出验证之前的错误数。  
   
  `token`  
- [in]未使用。  
+ [in]不使用。  
   
  `fileName`  
- [in]一个字符串，指定要验证文件的名称。  
+ [in]一个字符串，指定要验证的文件的名称。  
   
  `pe`  
- [in]指向在其中存储该文件的内存缓冲区的指针。  
+ [in]指向在其中存储文件的内存缓冲区的指针。  
   
  `ulSize`  
  [in]以字节为单位，要验证的文件的大小。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** IValidator.idl、 IValidator.h  
+ **标头：** IValidator.idl, IValidator.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

@@ -2,12 +2,12 @@
 title: OLE DB、ODBC 和 Oracle 连接池
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 3ce65036605b7693955c3a6064fca80263d3538f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc07d4d33f2a568ef0fb4dd9806832222a13ca6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692738"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 连接池
 池连接可以显著提高应用程序的性能和可缩放性。 本节介绍用于 OLE DB、ODBC 和 Oracle 的 .NET Framework 数据提供程序的连接池。  
@@ -68,7 +68,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Min Pool Size`|0|池中维护的最小连接数。|  
 |`Pooling`|'true'|当为 `true` 时，将从相应的池中取出连接，或者在必要时创建连接并将其添加到相应的池中。|  
   
-## <a name="see-also"></a>请参阅  
- [连接池](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [性能计数器](../../../../docs/framework/data/adonet/performance-counters.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [连接池](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [性能计数器](../../../../docs/framework/data/adonet/performance-counters.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

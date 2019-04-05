@@ -2,12 +2,12 @@
 title: WCF 服务主机 (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6f719756688af066a42c3f73a860038dad1e5a53
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505635"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服务主机 (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) 服务主机 (WcfSvcHost.exe) 允许您以启动 Visual Studio 调试器 (F5) 以自动承载和测试已实现的服务。 然后，您可以测试使用 WCF 测试客户端 (WcfTestClient.exe) 或自己的客户端，以查找并解决任何潜在错误的服务。  
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) 服务主机 (WcfSvcHost.exe) 允许您�
 >  WCF 服务主机不支持部分信任。 如果你想要在部分信任环境中使用 WCF 服务，不要使用 WCF 服务库项目模板在 Visual Studio 中生成服务。 相反，新的网站在 Visual Studio 中通过选择创建 WCF 服务网站模板，可以托管 web 服务器支持是 WCF 部分信任环境中的服务。  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>WCF 服务主机承载的项目类型  
- WCF 服务主机可以承载以下 WCF 服务库项目类型： WCF 服务库、 顺序工作流服务库、 状态机工作流服务库和联合服务库。 WCF 服务主机也可以承载这些服务，可以添加到服务库项目 using**添加项**功能。 这包括 WCF 服务、 WF 状态机服务、 WF 顺序服务、 XAML WF 状态机服务和 XAML WF 顺序服务。  
+ WCF 服务主机可以承载以下 WCF 服务库项目类型：WCF 服务库、 顺序工作流服务库、 状态机工作流服务库和联合服务库。 WCF 服务主机也可以承载这些服务，可以添加到服务库项目 using**添加项**功能。 这包括 WCF 服务、 WF 状态机服务、 WF 顺序服务、 XAML WF 状态机服务和 XAML WF 顺序服务。  
   
  但是，应该注意到该工具将不会帮助您配置主机。 对于此项任务，必须手动编辑 App.config 文件。 另外，此工具也不会验证用户定义的配置文件。  
   
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) 服务主机 (WcfSvcHost.exe) 允许您�
   
  当您按 F5 再次启动该服务时，WCF 服务主机将启动调试器时自动启动自定义客户端。  
   
- 也可以按照以下示例中的指示使用 `/clientArg:` 形参将字符串指定为传递给自定义客户端应用程序的实参。  
+ 也可以按照以下示例中的指示使用 `/clientArg:` 参数将字符串指定为传递给自定义客户端应用程序的自变量。  
   
  `/client:"path/CustomClient.exe" /clientArg:"arguments that are passed to Client"`  
   
@@ -72,19 +72,19 @@ Windows Communication Foundation (WCF) 服务主机 (WcfSvcHost.exe) 允许您�
   
  **WCF 服务主机**主窗口包含两个菜单：  
   
--   **文件**： 包含**关闭**并**退出**命令。 当您单击**关闭**，则**WCF 服务主机**对话框将关闭，但继续承载服务。 当您单击**退出**，WCF 服务主机也将关闭。 这还将停止所有承载的服务。  
+-   **文件**:包含**关闭**并**退出**命令。 当您单击**关闭**，则**WCF 服务主机**对话框将关闭，但继续承载服务。 当您单击**退出**，WCF 服务主机也将关闭。 这还将停止所有承载的服务。  
   
--   **帮助**： 包含**有关**命令包含版本信息。 它还包含**帮助**可以打开帮助文件的命令。  
+-   **帮助**:包含**有关**命令包含版本信息。 它还包含**帮助**可以打开帮助文件的命令。  
   
  主**WCF 服务主机**窗口包含两个区域：  
   
 -   第一个功能是**服务**。 该区域包含一个显示所有服务基本信息的列表。 这些信息包括：  
   
-    -   **服务**： 列出所有的服务。  
+    -   **服务**：列出所有服务。  
   
-    -   **状态**： 列出了服务的状态。 有效值为"已启动"、"已停止"和"错误"。  
+    -   **状态**:列出了服务的状态。 有效值为"已启动"、"已停止"和"错误"。  
   
-    -   **元数据地址**： 显示服务的元数据地址。  
+    -   **元数据地址**:显示服务的元数据地址。  
   
 -   第二个区域**的其他信息**。 它将显示服务状态的详细的说明中选择特定的服务行时**服务**区域。 如果状态为“错误”，则可以在屏幕上查看完整的错误消息。  
   
@@ -110,5 +110,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  有关 netsh.exe 的更多信息，请参阅"[如何使用 Netsh.exe 工具和命令行开关](https://go.microsoft.com/fwlink/?LinkId=97877)"。  
   
-## <a name="see-also"></a>请参阅  
- [WCF 测试客户端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>请参阅
+- [WCF 测试客户端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

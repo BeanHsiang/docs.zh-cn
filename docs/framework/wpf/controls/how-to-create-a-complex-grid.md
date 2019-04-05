@@ -7,12 +7,12 @@ helpviewer_keywords:
 - monthly calendar [WPF], creating
 - Grid control [WPF], creating [WPF], complex grid
 ms.assetid: 4ce3040a-a156-4364-9596-98ca1eca5550
-ms.openlocfilehash: e2356113457e8c9a6737132e9779e49c05a23d77
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dd17dfeea85e2b404f7a284f93faceec63145b1f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199976"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355008"
 ---
 # <a name="how-to-create-a-complex-grid"></a>如何创建复杂网格
 
@@ -24,11 +24,11 @@ ms.locfileid: "50199976"
 
 该示例使用垂直渐变来<xref:System.Windows.Shapes.Shape.Fill%2A>列和行，以改进的可视化展示和日历的可读性。 样式<xref:System.Windows.Controls.TextBlock>元素表示的日期和星期数。 <xref:System.Windows.Controls.TextBlock> 元素绝对定位在其单元格内使用<xref:System.Windows.FrameworkElement.Margin%2A>属性和应用程序的样式中定义的对齐方式属性。
 
-[!code-xaml[GridComplex#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
+[!code-xaml[GridComplex#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
 
 下图显示了生成的控件，可自定义日历：
 
-![生成的控件的屏幕截图](./media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
+![生成的控件的屏幕截图](././media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
 
 ## <a name="see-also"></a>请参阅
 

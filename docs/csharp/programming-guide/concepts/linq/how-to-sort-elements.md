@@ -2,12 +2,12 @@
 title: 如何：对元素进行排序 (C#)
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: 7548f183736ac9ed0ed09d3be775b3ffde6cb255
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 66a41fc018b2df64aa95c24d1d698b6c38fd189a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640779"
 ---
 # <a name="how-to-sort-elements-c"></a>如何：对元素进行排序 (C#)
 本示例演示如何编写对查询结果进行排序的查询。  
@@ -69,5 +69,5 @@ foreach (decimal el in prices)
   
 ## <a name="see-also"></a>请参阅
 
-- [对数据进行排序 (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+- [对数据进行排序 (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)
 - [基本查询 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

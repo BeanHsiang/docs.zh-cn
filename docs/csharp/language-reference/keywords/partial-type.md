@@ -1,5 +1,6 @@
 ---
-title: 分部类型（C# 参考）
+title: 分部类型 - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - partialtype
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 365d00d2c53d3efe1cd4330bdd3ec48740a49c53
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ed3e18c5981fa52dc2c6ef09bfb666cfa705fede
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47208271"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239561"
 ---
 # <a name="partial-type-c-reference"></a>分部类型（C# 参考）
 

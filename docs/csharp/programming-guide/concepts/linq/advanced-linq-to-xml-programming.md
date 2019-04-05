@@ -2,19 +2,19 @@
 title: 高级 LINQ to XML 编程 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
-ms.openlocfilehash: 684c91724ad8f283dc47f38e31697884f4d216d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f921bf6e560f6b8286340ec80ab12e60cf248720
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855811"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58133280"
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>高级 LINQ to XML 编程 (C#)
 本节为高级开发人员提供一些只适用于某些 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 方案的信息。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|描述|  
+|主题|说明|  
 |-----------|-----------------|  
 |[LINQ to XML 批注](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-annotations.md)|介绍如何将批注添加到 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 节点和属性。|  
 |[LINQ to XML 事件 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-events.md)|介绍如何为更改 XML 树时所发生的事件编写事件处理程序。|  
@@ -24,7 +24,7 @@ ms.locfileid: "43855811"
 |[如何：执行大型 XML 文档的流式转换 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md)|介绍如何在 <xref:System.Xml.XmlReader> 中对 XML 进行流式处理，如何转换 XML 片段，如何使用 <xref:System.Xml.Linq.XStreamingElement> 对输出进行流式处理。|  
 |[如何：读取和写入编码的文档 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-read-and-write-an-encoded-document.md)|介绍如何读取和写入经过编码的 XML 文档。|  
 |[使用 XSLT 转换 XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/using-xslt-to-transform-an-xml-tree.md)|介绍如何使用 XSLT 转换 XML 树。|  
-|[如何：使用批注以 XSLT 样式转换 LINQ to XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|介绍如何使用批注来帮助进行 XML 树的转换。|  
+|[如何：使用批注转换 XSLT 样式中的 LINQ to XML 树 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md)|介绍如何使用批注来帮助进行 XML 树的转换。|  
 |[序列化包含 XElement 对象的对象图 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|介绍如何序列化包含 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 对象的对象图。|  
 |[使用 LINQ to XML 进行 WPF 数据绑定](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|介绍如何将 LINQ to XML 用作 Windows Presentation Foundation 应用程序中数据绑定的数据源。|  
   

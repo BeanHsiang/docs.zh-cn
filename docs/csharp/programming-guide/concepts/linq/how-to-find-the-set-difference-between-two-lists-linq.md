@@ -2,12 +2,12 @@
 title: 如何：查找两个列表之间的差集 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: e416e97b8fe3a1a76a0f04ea46353d9fd8c0ad8c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 13166aaeba50d8cca33861d5489d7839d3933099
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712728"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>如何：查找两个列表之间的差集 (LINQ) (C#)
 此示例演示如何使用 LINQ 对两个字符串列表进行比较，并输出那些位于 names1.txt 中但不在 names2.txt 中的行。  

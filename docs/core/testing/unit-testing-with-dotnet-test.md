@@ -4,12 +4,13 @@ description: 通过使用 dotnet test 和 xUnit 分步生成示例解决方案�
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 97cf42c78154375ce06639d4a3029ed87b993ced
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507825"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504348"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 和 xUnit 在 .NET Core 中进行 C# 单元测试
 
@@ -27,7 +28,7 @@ ms.locfileid: "43507825"
     /PrimeService
 ```
 
-将 *PrimeService* 作为当前目录，然后运行 [`dotnet new classlib`](../tools/dotnet-new.md) 以创建源项目。 将 *Class1.cs* 重命名为 *PrimeService.cs*。 为了使用由测试驱动的开发 (TDD)，需首先对 `PrimeService` 类创建故障实现：
+将 *PrimeService* 作为当前目录，然后运行 [`dotnet new classlib`](../tools/dotnet-new.md) 以创建源项目。 将 *Class1.cs* 重命名为 *PrimeService.cs*。 首先创建 `PrimeService` 类的失败实现：
 
 ```csharp
 using System;
@@ -49,7 +50,7 @@ namespace Prime.Services
 运行 [dotnet sln](../tools/dotnet-sln.md) 命令，向解决方案添加类库项目：
 
 ```
-dotnet sln add .\PrimeService\PrimeService.csproj
+dotnet sln add ./PrimeService/PrimeService.csproj
 ```
 
 ## <a name="creating-the-test-project"></a>创建测试项目
@@ -65,7 +66,7 @@ dotnet sln add .\PrimeService\PrimeService.csproj
     /PrimeService.Tests
 ```
 
-将 *PrimeService.Tests* 目录作为当前目录，并使用 [`dotnet new xunit`](../tools/dotnet-new.md) 创建一个新项目。 此命令会创建将 xUnit 用作测试库的测试项目。 生成的模板在 PrimeServiceTests.csproj 文件中配置测试运行程序，类似以下代码：
+将 *PrimeService.Tests* 目录作为当前目录，并使用 [`dotnet new xunit`](../tools/dotnet-new.md) 创建一个新项目。 此命令会创建将 [xUnit](https://xunit.github.io/) 用作测试库的测试项目。 生成的模板在 PrimeServiceTests.csproj 文件中配置测试运行程序，类似以下代码：
 
 ```xml
 <ItemGroup>
@@ -99,12 +100,12 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 若要向解决方案添加测试项目，请在 unit-testing-using-dotnet-test 目录下运行 [dotnet sln](../tools/dotnet-sln.md) 命令：
 
 ```
-dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
 ## <a name="creating-the-first-test"></a>创建第一个测试
 
-TDD 方法要求编写一个失败的测试，使其通过测试，然后重复该过程。 从 PrimeService.Tests 目录删除 UnitTest1.cs，并创建一个名为 PrimeService_IsPrimeShould.cs 的新 C# 文件。 添加以下代码：
+编写一个失败测试，使其通过，然后重复此过程。 从 PrimeService.Tests 目录删除 UnitTest1.cs，并创建一个名为 PrimeService_IsPrimeShould.cs 的新 C# 文件。 添加以下代码：
 
 ```csharp
 using Xunit;
@@ -151,7 +152,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>添加更多功能
 
-你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0，-1。 可以将这些情况添加为具有 `[Fact]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件：
+你已经通过了一个测试，现在可以编写更多测试。 质数有其他几种简单情况：0、-1。 可以将这些情况添加为具有 `[Fact]` 属性的新测试，但这很快就会变得枯燥乏味。 还有其他 xUnit 属性，可使你编写类似测试套件：
 
 - `[Theory]` 表示执行相同代码，但具有不同输入参数的测试套件。
 
@@ -171,4 +172,5 @@ if (candidate < 2)
 
 ### <a name="additional-resources"></a>其他资源
 
+- [xUnit.net 官方网站](https://xunit.github.io)
 - [ASP.NET Core 中的测试控制器逻辑](/aspnet/core/mvc/controllers/testing)

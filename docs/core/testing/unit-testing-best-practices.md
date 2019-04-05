@@ -1,23 +1,24 @@
 ---
 title: 编写单元测试的最佳做法
-description: 了解有关编写可提高代码质量和弹性的单元测试的最佳做法
+description: 了解有关编写单元测试的最佳做法，以提高 .NET Core 和 .NET Standard 项目的代码质量和弹性。
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 69fe0cae141d1ed1e1281eecd78bf03e6e8be961
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527729"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360246"
 ---
-# <a name="unit-testing-best-practices"></a>单元测试最佳做法
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 单元测试最佳做法
 
-作者是 [John Reese](http://reesespieces.io) 且特别感谢 [Roy Osherove](http://osherove.com/)
-
-编写单元测试有许多好处；它们有助于回归、提供文档和促进良好的设计。 然而，难懂且脆弱的单元测试会对代码库造成严重破坏。
+编写单元测试有许多好处；它们有助于回归、提供文档和促进良好的设计。 然而，难懂且脆弱的单元测试会对代码库造成严重破坏。 本文介绍一些有关 .NET Core 和 .NET Standard 项目的单元测试设计的最佳做法。
 
 本指南将介绍一些在编写单元测试时的最佳做法，使测试具有弹性且易于理解。
+
+作者是 [John Reese](https://reese.dev) 且特别感谢 [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>为什么要执行单元测试？
 
@@ -32,7 +33,7 @@ ms.locfileid: "43527729"
 使用单元测试，可在每次生成后，甚至在更改一行代码后重新运行整套测试。 让你确信新代码不会破坏现有功能。
 
 ### <a name="executable-documentation"></a>可执行文档
-在给定某个输入的情况下，特定方法的作用或行为可能并不总是很明显。 你可能会问自己：如果我将空白字符串传递给它，此方法会有怎样的行为？ Null?
+在给定某个输入的情况下，特定方法的作用或行为可能并不总是很明显。 你可能会想知道：如果我将空白字符串传递给它，此方法会有怎样的行为？ Null?
 
 如果你有一套命名正确的单元测试，每个测试应能够清楚地解释给定输入的预期输出。 此外，它应该能够验证其确实有效。
 
@@ -46,7 +47,7 @@ ms.locfileid: "43527729"
 - 独立。 单元测试是独立的，可以单独运行，并且不依赖文件系统或数据库等任何外部因素。
 - 可重复。 运行单元测试的结果应该保持一致，也就是说，如果在运行期间不更改任何内容，总是返回相同的结果。
 - 自检查。 测试应该能够在没有任何人工交互的情况下，自动检测测试是否通过。
-- 及时。 与要测试的代码相比，单元测试不应花费不成比例的时间来编写。 如果发现测试代码与编写代码相比需要花费大量的时间，请考虑一种更易测试的设计。
+- 及时。 与要测试的代码相比，编写单元测试不应花费过多不必要的时间。 如果发现测试代码与编写代码相比需要花费大量的时间，请考虑一种更易测试的设计。
 
 ## <a name="lets-speak-the-same-language"></a>让我们使用相同的术语
 遗憾的是，当谈到测试时，术语“mock”的滥用情况很严重。 以下定义了编写单元测试时最常见的 fake 类型：
@@ -328,7 +329,7 @@ public interface IDateTimeProvider
     DayOfWeek DayOfWeek();
 }
 
-public bool GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
+public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
     if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
     {

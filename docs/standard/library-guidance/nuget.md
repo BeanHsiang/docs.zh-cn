@@ -3,13 +3,13 @@ title: NuGet 和 .NET 库
 description: 使用 .NET 库的 NuGet 打包的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 479d1786c232ef1f843877169954e847453681c9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 01/15/2019
+ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185611"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204608"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -38,17 +38,15 @@ NuGet 包 (`*.nupkg`) 是一个 zip 文件，其中包含 .NET 程序集和关�
 
 ✔️请考虑使用 SDK 样式项目文件创建 NuGet 包。
 
-✔️请考虑设置 SourceLink 以将源代码管理元数据添加到你的程序集和 NuGet 包。
-
 ## <a name="package-dependencies"></a>包依赖项
 
 [依赖项](./dependencies.md)一文详细介绍了 NuGet 包依赖项。
 
 ## <a name="important-nuget-package-metadata"></a>重要的 NuGet 包元数据
 
-NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含每个开放源代码项目应提供的核心元数据：
+NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含 NuGet.org 上的每个包应提供的核心元数据：
 
-| MSBuild 属性名称              | Nuspec 名称              | 描述  |
+| MSBuild 属性名称              | Nuspec 名称              | 说明​​  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | 包标识符。 如果标识符的前缀满足[条件](/nuget/reference/id-prefix-reservation)，则可以保留该前缀。 |
 | `PackageVersion`                   | `version`                  | NuGet 包版本。 有关详细信息，请参阅 [NuGet 包版本](./versioning.md#nuget-package-version)。             |
@@ -58,20 +56,22 @@ NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含�
 | `PackageTags`                      | `tags`                     | 描述包的标记和关键字的空格分隔列表。 搜索包时使用标记。             |
 | `PackageIconUrl`                   | `iconUrl`                  | 要用作包的图标的图像 URL。 URL 应为 HTTPS，图像应为 64x64 并具有透明背景。             |
 | `PackageProjectUrl`                | `projectUrl`               | 项目主页或源存储库的 URL。             |
-| `PackageLicenseUrl`                | `licenseUrl`               | 指向项目许可证的 URL。 可以是指向源代码管理中的 `LICENSE` 文件的 URL。             |
-
-✔️请考虑选择带有满足 NuGet 前缀保留[条件](/nuget/reference/id-prefix-reservation)的前缀的 NuGet 包名称。
-
-✔️请考虑将源代码管理中的 `LICENSE` 文件用作 `LicenseUrl`。 例如，[LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md)。
+| `PackageLicenseExpression`         | `license`                  | 项目许可证的 [SPDX 标识符](https://spdx.org/licenses/)。 只有获得 OSI 和 FSF 批准的许可证才能使用标识符。 其他许可证应使用 `PackageLicenseFile`。 详细了解 [`license` 元数据](/nuget/reference/nuspec#license)。 |
 
 > [!IMPORTANT]
 > 无许可证的项目默认为 [exclusive copyright](https://choosealicense.com/no-permission/)（独占版权所有），从而无法供其他人使用。
+
+✔️请考虑选择带有满足 NuGet 前缀保留[条件](/nuget/reference/id-prefix-reservation)的前缀的 NuGet 包名称。
 
 ✔️ 请使用指向包图标的 HTTPS href。
 
 > 启用 HTTPS 运行并显示非 HTTPS 图像的 NuGet.org 等网站将创建混合内容警告。
 
 ✔️请使用属于 64x64 并具有透明背景的包图标图像以获得最佳查看结果。
+
+**✔️ 请考虑**设置[源链接](./sourcelink.md)以将源代码管理元数据添加到程序集和 NuGet 包中。
+
+> 源链接会自动将 `RepositoryUrl` 和 `RepositoryType` 元数据添加到 NuGet 包中。 源链接还会添加用于构建包的确切源代码的相关信息。 例如，从 Git 存储库创建的包将添加提交哈希作为元数据。
 
 ## <a name="pre-release-packages"></a>预发行包
 
@@ -92,9 +92,16 @@ NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含�
 
 ## <a name="symbol-packages"></a>符号包
 
-符号文件 (`*.pdb`) 由 .NET 编译器与程序集一起生成。 符号文件将执行位置映射到原始源代码，以便可以逐行执行源代码（因为它使用调试程序运行）。 NuGet 支持[生成单独的符号包](/nuget/create-packages/symbol-packages)（包含符号文件）以及主包（包含 .NET 程序集）。 符号包的理念是它们托管在符号服务器上并仅由 Visual Studio 等工具按需下载。
+符号文件 (`*.pdb`) 由 .NET 编译器与程序集一起生成。 符号文件将执行位置映射到原始源代码，以便可以逐行执行源代码（因为它使用调试程序运行）。 NuGet 支持[生成单独的符号包 (`*.snupkg`)](/nuget/create-packages/symbol-packages-snupkg)（包含符号文件）以及主包（包含 .NET 程序集）。 符号包的理念是它们托管在符号服务器上并仅由 Visual Studio 等工具按需下载。
 
-目前，符号 ([SymbolSource](http://www.symbolsource.org/)) 的主要公共主机不支持由 SDK 样式项目创建的新[可移植符号文件](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`)，并且符号包没有用处。 除非符号包有推荐的主机，才能将符号文件嵌入在主 NuGet 包中。 如果使用 SDK 样式项目生成 NuGet 包，则可以通过设置 `AllowedOutputExtensionsInPackageBuildOutputFolder` 属性来嵌入符号文件： 
+NuGet.org 托管了自己的[符号服务器存储库](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)。 开发人员可以通过向其在 [Visual Studio 中的符号源](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)添加 `https://symbols.nuget.org/download/symbols`，来使用发布到 NuGet.org 符号服务器的符号。
+
+> [!IMPORTANT]
+> NuGet.org 符号服务器仅支持由 SDK 样式项目创建的新的[可移植符号文件](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`)。
+>
+> 若要在调试 .NET 库时使用 NuGet.org 符号服务器，开发人员必须安装有 Visual Studio 2017 15.9 或更高版本。
+
+创建符号包的另一种方法是在主 NuGet 包中嵌入符号文件。 主 NuGet 包将变大，但嵌入的符号文件意味着开发人员不需要配置 NuGet.org 符号服务器。 如果使用 SDK 样式项目生成 NuGet 包，则可以通过设置 `AllowedOutputExtensionsInPackageBuildOutputFolder` 属性来嵌入符号文件：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -105,10 +112,15 @@ NuGet 包支持多个[元数据属性](/nuget/reference/nuspec)。 下表包含�
 </Project>
 ```
 
-✔️请考虑将符号文件嵌入在主 NuGet 包中。
+嵌入式符号文件的缺点是，对于使用 SDK 样式项目编译的 .NET 库，它们会将包的大小增加约 30%。 如果要考虑包大小，应改成在符号包中发布符号。
 
-❌请避免创建包含符号文件的符号包。
+“✔️考虑”将符号作为符号包 (`*.snupkg`) 发布到 NuGet.org
+
+> 符号包 (`*.snupkg`) 为开发人员提供了良好的按需调试体验，而不会使主程序包大小膨胀，也不会影响那些不打算调试 NuGet 包的用户的还原性能。
+>
+> 需要注意的是，他们需要在其 IDE 中查找和配置 NuGet 符号服务器（作为一次性设置）来获取符号文件。 Visual Studio 2019 计划将 NuGet.org 符号服务器作为现成选项之一提供。 
+
 
 >[!div class="step-by-step"]
-[上一页](./strong-naming.md)
-[下一页](./dependencies.md)
+>[上一页](strong-naming.md)
+>[下一页](dependencies.md)

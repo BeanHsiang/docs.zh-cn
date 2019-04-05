@@ -2,12 +2,12 @@
 title: NamedPipeTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c201309c-c528-4b92-a53c-4d48151c5749
-ms.openlocfilehash: 621e19510b4ab67eb4e7f478cd75572cef35c457
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5cb5dbe50a5fec09f950a56ef12ac9b7fb7a8144
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185477"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628664"
 ---
 # <a name="namedpipetransportbindingelement"></a>NamedPipeTransportBindingElement
 NamedPipeTransportBindingElement  
@@ -40,5 +40,5 @@ class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingEleme
 |---------|-----------------------------------|  
 |命名空间|已在 root\ServiceModel 中定义|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>

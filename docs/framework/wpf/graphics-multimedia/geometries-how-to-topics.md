@@ -6,35 +6,35 @@ f1_keywords:
 helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
-ms.openlocfilehash: 8c72cf0e7fc0e516c25f1019af91401514f45a92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2a45cf48c1d0cc097cea956d22fed2079e657a8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557155"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361637"
 ---
 # <a name="geometries-how-to-topics"></a>几何图形帮助主题
-此部分中的主题演示如何使用<xref:System.Windows.Media.Geometry>你的应用程序中的对象。  
+在本部分中的主题演示如何使用<xref:System.Windows.Media.Geometry>您的应用程序中的对象。  
   
 ## <a name="in-this-section"></a>本节内容  
- [为 EllipseGeometry 设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
- [为 ArcSegment 的大小设置动画效果](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
- [控制复合形状的填充](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
- [创建组合的几何图形](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
- [创建复合形状](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [创建三次方贝塞尔曲线](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [使用 LineGeometry 创建直线](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
- [在 PathGeometry 中创建 LineSegment](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [使用 PathGeometry 创建形状](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [使用 StreamGeometry 创建形状](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
- [创建二次贝塞尔曲线](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [创建椭圆弧](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [在 PathGeometry 内创建多个子路径](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [使用 RectangleGeometry 定义矩形](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [让 RectangleGeometry 采用圆角](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
+ [为 EllipseGeometry 设置动画效果](how-to-animate-an-ellipsegeometry.md)  
+ [为 ArcSegment 的大小设置动画效果](how-to-animate-the-size-of-an-arcsegment.md)  
+ [控制复合形状的填充](how-to-control-the-fill-of-a-composite-shape.md)  
+ [创建组合的几何图形](how-to-create-a-combined-geometry.md)  
+ [创建复合形状](how-to-create-a-composite-shape.md)  
+ [创建三次方贝塞尔曲线](how-to-create-a-cubic-bezier-curve.md)  
+ [使用 LineGeometry 创建直线](how-to-create-a-line-using-a-linegeometry.md)  
+ [在 PathGeometry 中创建 LineSegment](how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [使用 PathGeometry 创建形状](how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [使用 StreamGeometry 创建形状](how-to-create-a-shape-using-a-streamgeometry.md)  
+ [创建二次贝塞尔曲线](how-to-create-a-quadratic-bezier-curve.md)  
+ [创建椭圆弧](how-to-create-an-elliptical-arc.md)  
+ [在 PathGeometry 内创建多个子路径](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [使用 RectangleGeometry 定义矩形](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [让 RectangleGeometry 采用圆角](how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.Brushes>  
- <xref:System.Windows.Shapes.Shape>  
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.Brushes>
+- <xref:System.Windows.Shapes.Shape>
+- [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
+- [图形和多媒体](index.md)

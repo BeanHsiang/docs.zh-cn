@@ -3,14 +3,14 @@ title: C# 中的数字 - C# 教程简介
 description: 通过浏览数字类型、其属性和方法了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 52feb91fc011902f1e30f6b747512a7e0908bfbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197452"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673855"
 ---
-# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>处理 C# 中的整数和浮点数 #
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>处理 C\# 中的整数和浮点数
 
 本教程以交互方式介绍了 C# 中的数字类型。 你将编写少量的代码，然后编译并运行这些代码。 本教程包含一系列课程，介绍了 C# 中的数字和数学运算。 这些课程介绍了 C# 语言的基础知识。
 
@@ -20,7 +20,7 @@ ms.locfileid: "50197452"
 
 创建名为 numbers-quickstart 的目录。 将新建的目录设为当前目录，并运行 `dotnet new console -n NumbersInCSharp -o .`。
 
-在常用编辑器中，打开 Program.cs，并将行 `Console.Writeline("Hello World!");` 替换为以下代码：
+在常用编辑器中，打开 Program.cs，并将行 `Console.WriteLine("Hello World!");` 替换为以下代码：
 
 ```csharp
 int a = 18;
@@ -29,7 +29,7 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-通过在命令窗口中键入 `dotnet run` 运行此代码。 
+通过在命令窗口中键入 `dotnet run` 运行此代码。
 
 刚刚看到的是一种基本的整数数学运算。 `int` 类型表示整数（正整数或负整数）。 使用 `+` 符号执行加法运算。 其他常见的整数数学运算包括：
 
@@ -48,13 +48,13 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-通过在命令窗口中键入 `dotnet run` 运行此代码。 
-    
+通过在命令窗口中键入 `dotnet run` 运行此代码。
+
 如果愿意，也可以尝试在同一行中执行多个数学运算。 例如，请尝试 `c = a + b - 12 * 17;`。 允许混合使用变量和常数。
 
 > [!TIP]
 > 在探索 C#（或任何编程语言）的过程中，可能会在编写代码时犯错。 编译器会发现并报告这些错误。 如果输出中包含错误消息，请仔细比对示例代码和你的窗口中的代码，看看哪些需要纠正。
-> 这样做有助于了解 C# 代码结构。     
+> 这样做有助于了解 C# 代码结构。
 
 你已完成第一步。 开始进入下一部分前，先将当前代码移到单独的方法中。 这样一来，可以更轻松地开始处理新示例。 将 `Main` 方法重命名为 `WorkingWithIntegers`，并编写调用 `WorkingWithIntegers` 的新 `Main` 方法。 完成后，代码应如下所示：
 
@@ -164,7 +164,7 @@ namespace NumbersInCSharp
         }
 
         static void OrderPrecedence()
-        {   
+        {
             int a = 5;
             int b = 4;
             int c = 2;
@@ -196,6 +196,7 @@ namespace NumbersInCSharp
 ```
 
 ## <a name="explore-integer-precision-and-limits"></a>探索整数运算精度和限值
+
 在上一个示例中，整数除法截断了结果。
 可以使用取模运算符（即 `%` 字符）计算余数。 在 `Main` 方法中试用以下代码：
 
@@ -210,7 +211,7 @@ Console.WriteLine($"remainder: {e}");
 ```
 
 C# 整数类型不同于数学上的整数的另一点是，`int` 类型有最小限值和最大限值。 将此代码添加到 `Main` 方法，看看这些限制的运行机制：
-    
+
 ```csharp
 int max = int.MaxValue;
 int min = int.MinValue;
@@ -223,13 +224,14 @@ Console.WriteLine($"The range of integers is {min} to {max}");
 int what = max + 3;
 Console.WriteLine($"An example of overflow: {what}");
 ```
-    
-可以看到，答案非常接近最小（负）整数。 与 `min + 2` 相同。 加法运算会让整数溢出允许的值。
+
+可以看到，答案非常接近最小（负）整数。 与 `min + 2` 相同。
+加法运算会让整数溢出允许的值。
 答案是一个非常大的负数，因为溢出从最大整数值覆盖回最小整数值。
 
 如果 `int` 类型无法满足需求，还会用到限值和精度不同的其他数字类型。 接下来，将探索这些类型。
 
-让我们再一次将你在本节编写的代码移到一个单独的方法中。 将其命名为 `TestLimits`。 
+让我们再一次将你在本节编写的代码移到一个单独的方法中。 将其命名为 `TestLimits`。
 
 ## <a name="work-with-the-double-type"></a>使用双精度类型
 
@@ -262,7 +264,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-打印出来的这些值用科学记数法表示。 `E` 左侧为有效数字。 右侧为是 10 的 n 次幂。 
+打印出来的这些值用科学记数法表示。 `E` 左侧为有效数字。 右侧为是 10 的 n 次幂。
 
 与数学上的十进制数字一样，C# 中的双精度值可能会有四舍五入误差。 试运行以下代码：
 
@@ -303,23 +305,23 @@ Console.WriteLine(c / d);
 
 数字中的 `M` 后缀指明了常数应如何使用 `decimal` 类型。
 
-可以看到，使用十进制类型执行数学运算时，十进制小数点右侧的数字更多。 
+可以看到，使用十进制类型执行数学运算时，十进制小数点右侧的数字更多。
 
 ***挑战***
 
-至此，大家已了解不同的数字类型。请编写代码来计算圆面积（其中，半径为 2.50 厘米）。 请注意，圆面积是用半径的平方乘以 PI 进行计算。 小提示：.NET 包含 PI 常数 <xref:System.Math.PI?displayProperty=nameWithType>，可用于相应的值计算。 
+至此，大家已了解不同的数字类型。请编写代码来计算圆面积（其中，半径为 2.50 厘米）。 请注意，圆面积是用半径的平方乘以 PI 进行计算。 小提示：.NET 包含 PI 常数 <xref:System.Math.PI?displayProperty=nameWithType>，可用于相应的值计算。
 
 你应获得 19 和 20 之间的答案。
 要查看你的答案，可以[查看 GitHub 上的完成示例代码](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)
 
-如果需要，可以试用一些其他公式。 
+如果需要，可以试用一些其他公式。
 
 已完成“C# 中的数字”快速入门教程。 可以在自己的开发环境中继续学习[分支和循环](branches-and-loops-local.md)快速入门教程。
 
 可以参阅下面的主题，详细了解 C# 中的数字：
 
-[整型类型表](../../language-reference/keywords/integral-types-table.md)   
-[浮点型表](../../language-reference/keywords/floating-point-types-table.md)   
-[内置类型表](../../language-reference/keywords/built-in-types-table.md)   
-[隐式数值转换表](../../language-reference/keywords/implicit-numeric-conversions-table.md)   
-[显式数值转换表](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [整型表](../../language-reference/keywords/integral-types-table.md)
+- [浮点型表](../../language-reference/keywords/floating-point-types-table.md)
+- [内置类型表](../../language-reference/keywords/built-in-types-table.md)
+- [隐式数值转换表](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+- [显式数值转换表](../../language-reference/keywords/explicit-numeric-conversions-table.md)

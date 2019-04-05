@@ -2,12 +2,12 @@
 title: OLE DB 数据类型映射
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 2dbea33140e6cdd7370c1822d2bd6513917a31ea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 203b017234a98553a053981d8f74b2c419376e96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521362"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711728"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB 数据类型映射
 下表显示了针对适用于 ADO 和 OLE DB 的 .NET Framework 数据提供程序 ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) 中的数据类型推断出的 <xref:System.Data.OleDb> 类型。 另外，还列出了 <xref:System.Data.OleDb.OleDbDataReader> 的类型化访问器方法。  
@@ -49,6 +49,6 @@ ms.locfileid: "43521362"
   
  \* 对于 OLE DB 类型`DBTYPE_IUNKNOWN`和`DBTYPE_IDISPATCH`，对象引用是指针的封送表示形式。  
   
-## <a name="see-also"></a>请参阅  
- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,18 +1,18 @@
 ---
-title: 序列 (F#)
-description: '了解如何使用 F # 序列，当具有较大，有序数据集合，但不一定希望使用的所有元素。'
-ms.date: 05/16/2016
-ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: 序列
+description: 了解如何使用F#序列，当你具有较大时排序的数据集合，但不一定希望使用的所有元素。
+ms.date: 02/19/2019
+ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48838894"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583922"
 ---
 # <a name="sequences"></a>序列
 
 > [!NOTE]
-本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
+> 本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 一个*序列*是以逻辑序列的元素类型相同的所有。 当具有较大，有序数据集合，但一定不希望使用的所有元素时，序列是特别有用。 各序列元素计算仅为所需，因此，序列可以提供更好的性能比中在不使用的所有元素的情况下的列表。 序列由`seq<'T>`类型，即别名为`System.Collections.Generic.IEnumerable`。 因此，任何.NET Framework 类型实现`System.IEnumerable`可作为一个序列。 [Seq 模块](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)对涉及多个序列的操作提供支持。
 
@@ -22,7 +22,7 @@ ms.locfileid: "48838894"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-序列表达式由 F # 表达式生成的序列的值组成。 可以使用`yield`关键字来生成将成为序列的一部分的值。
+序列表达式组成的F#生成的序列值的表达式。 可以使用`yield`关键字来生成将成为序列的一部分的值。
 
 以下是一个示例。
 
@@ -62,7 +62,7 @@ ms.locfileid: "48838894"
 
 序列支持许多相同的功能[列出了](lists.md)。 序列还支持分组，然后通过使用键生成函数计算等操作。 序列还支持更多的不同函数的提取子序列。
 
-多种数据类型，例如列表、 数组、 集和地图隐式是序列，因为它们是可枚举集合。 将序列作为参数适用于任何常见的 F # 数据类型，除了为实现任何.NET Framework 数据类型的函数`System.Collections.Generic.IEnumerable<'T>`。 使用列表作为参数，它只能使用列表的函数相反。 类型`seq<'T>`是类型缩写`IEnumerable<'T>`。 这意味着，任何实现泛型的类型`System.Collections.Generic.IEnumerable<'T>`，其中包括数组、 列表、 设置，并在 F # 中，并还大多数.NET Framework 集合类型，映射是与兼容`seq`类型并可以在一个序列的任何地方。
+多种数据类型，例如列表、 数组、 集和地图隐式是序列，因为它们是可枚举集合。 将序列作为参数适用于任何常用的函数F#数据类型，除了实现的任何.NET Framework 数据类型`System.Collections.Generic.IEnumerable<'T>`。 使用列表作为参数，它只能使用列表的函数相反。 类型`seq<'T>`是类型缩写`IEnumerable<'T>`。 这意味着，任何实现泛型的类型`System.Collections.Generic.IEnumerable<'T>`，其中包括数组、 列表、 集和中的地图F#，和也大多数.NET Framework 集合类型，与兼容`seq`键入并可以在一个序列的任何地方.
 
 ## <a name="module-functions"></a>模块函数
 
@@ -98,7 +98,7 @@ ms.locfileid: "48838894"
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)从使用一个状态和转换以生成序列中的每个后续元素的计算函数生成的序列。 状态为只是一个值，该值用于计算每个元素，并根据计算每个元素可以更改。 第二个参数`Seq.unfold`是用于启动序列的初始值。 `Seq.unfold` 使用状态时，这样就可以通过返回终止序列选项类型`None`值。 下面的代码演示的序列，两个示例`seq1`并`fib`，生成的`unfold`操作。 第一种`seq1`，是只具有最多 100 个数字的简单序列。 第二类是`fib`，使用`unfold`计算斐波那契序列。 斐波那契序列中的每个元素是前两个斐波那契数字的总和，因为状态值将为元组组成的序列中前两个数字。 初始值是`(1,1)`，序列中的前两个数字。
+[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)从使用一个状态和转换以生成序列中的每个后续元素的计算函数生成的序列。 状态为只是一个值，该值用于计算每个元素，并根据计算每个元素可以更改。 第二个参数`Seq.unfold`是用于启动序列的初始值。 `Seq.unfold` 使用状态时，这样就可以通过返回终止序列选项类型`None`值。 下面的代码演示的序列，两个示例`seq1`并`fib`，生成的`unfold`操作。 第一种`seq1`，是只具有最多 20 个数字的简单序列。 第二类是`fib`，使用`unfold`计算斐波那契序列。 斐波那契序列中的每个元素是前两个斐波那契数字的总和，因为状态值将为元组组成的序列中前两个数字。 初始值是`(1,1)`，序列中的前两个数字。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -120,7 +120,7 @@ The sequence fib contains Fibonacci numbers.
 
 ## <a name="searching-and-finding-elements"></a>搜索和查找元素
 
-序列支持适用于列表的功能： [Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1)， [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565)， [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8)， [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3)， [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d)， [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47)，和[Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)。 这些函数可用于序列的版本的计算结果最多要搜索的元素序列。 有关示例，请参阅[列出了](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d)。
+序列支持适用于列表的功能：[Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1)， [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565)， [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8)， [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3)， [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d)， [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47)，并[Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)。 这些函数可用于序列的版本的计算结果最多要搜索的元素序列。 有关示例，请参阅[列出了](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d)。
 
 ## <a name="obtaining-subsequences"></a>获取子序列
 

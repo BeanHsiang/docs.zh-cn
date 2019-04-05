@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 135c44217debcddb15fd4cef7e73ca2f98903c43
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003693"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814957"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>运算符结果的数据类型 (Visual Basic)
 Visual Basic 确定基于操作数的数据类型的操作的结果数据类型。 在某些情况下这可能是更大的范围比的其中一个操作数的数据类型。  
@@ -86,7 +86,7 @@ Visual Basic 确定基于操作数的数据类型的操作的结果数据类型�
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
 |一元 `+`|Short|SByte|Byte|Short|UShort|整数|UInteger|Long|ULong|  
-|一元 `–`|Short|SByte|Short|Short|Integer|整数|Long|Long|十进制|  
+|一元 `–`|Short|SByte|Short|Short|整数|整数|Long|Long|十进制|  
   
 ### <a name="-and--operators"></a><\< 和 >> 运算符  
  下表显示了结果数据类型的两个位移位运算符，`<<`和`>>`。 Visual Basic 将视为一元运算符对其左操作数 （要移动的位模式） 的每个位移位运算符。  
@@ -94,7 +94,7 @@ Visual Basic 确定基于操作数的数据类型的操作的结果数据类型�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`<<`, `>>`|Short|SByte|Byte|Short|UShort|整数|UInteger|Long|ULong|  
+|`<<`， `>>`|Short|SByte|Byte|Short|UShort|整数|UInteger|Long|ULong|  
   
  如果左的操作数是`Decimal`， `Single`， `Double`，或`String`，尝试将其转换为 Visual Basic`Long`前该操作，并且结果数据类型为`Long`。 右操作数 （要移位的位位置数） 必须是`Integer`或类型扩大到`Integer`。  
   
@@ -104,15 +104,15 @@ Visual Basic 确定基于操作数的数据类型的操作的结果数据类型�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|Integer|整数|Long|Long|十进制|  
-|`SByte`|SByte|SByte|Short|Short|Integer|整数|Long|Long|十进制|  
+|`Boolean`|Short|SByte|Short|Short|整数|整数|Long|Long|十进制|  
+|`SByte`|SByte|SByte|Short|Short|整数|整数|Long|Long|十进制|  
 |`Byte`|Short|Short|Byte|Short|UShort|整数|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|Integer|整数|Long|Long|十进制|  
+|`Short`|Short|Short|Short|Short|整数|整数|Long|Long|十进制|  
 |`UShort`|整数|整数|UShort|整数|UShort|整数|UInteger|Long|ULong|  
 |`Integer`|整数|整数|整数|整数|整数|整数|Long|Long|十进制|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
 |`Long`|Long|Long|Long|Long|Long|Long|Long|Long|十进制|  
-|`ULong`|Decimal|十进制|ULong|十进制|ULong|十进制|ULong|十进制|ULong|  
+|`ULong`|十进制|十进制|ULong|十进制|ULong|十进制|ULong|十进制|ULong|  
   
 ### <a name="-operator"></a>\ 运算符  
  下表显示了结果数据类型为`\`运算符。 请注意，此表是对称;对于操作数数据类型的给定组合，结果数据类型是操作数的顺序相同。  
@@ -120,10 +120,10 @@ Visual Basic 确定基于操作数的数据类型的操作的结果数据类型�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Short|SByte|Short|Short|Integer|整数|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|Integer|整数|Long|Long|Long|  
+|`Boolean`|Short|SByte|Short|Short|整数|整数|Long|Long|Long|  
+|`SByte`|SByte|SByte|Short|Short|整数|整数|Long|Long|Long|  
 |`Byte`|Short|Short|Byte|Short|UShort|整数|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|Integer|整数|Long|Long|Long|  
+|`Short`|Short|Short|Short|Short|整数|整数|Long|Long|Long|  
 |`UShort`|整数|整数|UShort|整数|UShort|整数|UInteger|Long|ULong|  
 |`Integer`|整数|整数|整数|整数|整数|整数|Long|Long|Long|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -156,10 +156,10 @@ Visual Basic 确定基于操作数的数据类型的操作的结果数据类型�
 |||||||||||  
 |---|---|---|---|---|---|---|---|---|---|  
 ||`Boolean`|`SByte`|`Byte`|`Short`|`UShort`|`Integer`|`UInteger`|`Long`|`ULong`|  
-|`Boolean`|Boolean|SByte|Short|Short|Integer|整数|Long|Long|Long|  
-|`SByte`|SByte|SByte|Short|Short|Integer|整数|Long|Long|Long|  
+|`Boolean`|Boolean|SByte|Short|Short|整数|整数|Long|Long|Long|  
+|`SByte`|SByte|SByte|Short|Short|整数|整数|Long|Long|Long|  
 |`Byte`|Short|Short|Byte|Short|UShort|整数|UInteger|Long|ULong|  
-|`Short`|Short|Short|Short|Short|Integer|整数|Long|Long|Long|  
+|`Short`|Short|Short|Short|Short|整数|整数|Long|Long|Long|  
 |`UShort`|整数|整数|UShort|整数|UShort|整数|UInteger|Long|ULong|  
 |`Integer`|整数|整数|整数|整数|整数|整数|Long|Long|Long|  
 |`UInteger`|Long|Long|UInteger|Long|UInteger|Long|UInteger|Long|ULong|  
@@ -175,14 +175,15 @@ Visual Basic 确定基于操作数的数据类型的操作的结果数据类型�
   
  `Like`运算符定义只进行模式匹配的`String`操作数。 Visual Basic 会尝试将根据需要向每个操作数转换`String`操作之前。 结果数据类型始终是`Boolean`。  
   
-## <a name="see-also"></a>请参阅  
- [数据类型](../../../visual-basic/language-reference/data-types/index.md)  
- [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [在 Visual Basic 中的算术运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [在 Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [运算符](../../../visual-basic/language-reference/operators/index.md)  
- [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [比较运算符](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>请参阅
+
+- [数据类型](../../../visual-basic/language-reference/data-types/index.md)
+- [运算符和表达式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [在 Visual Basic 中的算术运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [在 Visual Basic 中的比较运算符](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [运算符](../../../visual-basic/language-reference/operators/index.md)
+- [Visual Basic 中的运算符优先级](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [算术运算符](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [比较运算符](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Option Strict 语句](../../../visual-basic/language-reference/statements/option-strict-statement.md)

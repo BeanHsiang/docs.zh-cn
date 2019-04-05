@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: cdb93f802d313c0812bb50236ff5962c44251b4e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d40b0ffbe514429ed24eaa5d0c2ce2d52c80d37d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608948"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>如何：为应用程序设置默认基于时间的缓存策略
 默认基于时间的缓存策略允许应用程序将标头定义的缓存行为与缓存资源和 RFC 2616 的第 13 和 14 节（可在 [工程任务组 (IETF)](https://www.ietf.org/) 中找到）中定义的缓存行为一起发送。 这是适用于大多数应用程序的缓存行为。  
@@ -62,9 +62,9 @@ Public Shared Sub SetDefaultTimeBasedPolicy2()
 End Sub  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)  
- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>请参阅
+- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
+- [基于位置的缓存策略](../../../docs/framework/network-programming/location-based-cache-policies.md)
+- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

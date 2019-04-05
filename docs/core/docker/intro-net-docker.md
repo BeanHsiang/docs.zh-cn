@@ -1,22 +1,20 @@
 ---
-title: .NET 和 Docker 简介
-description: 了解 Docker 和 .NET Core
-author: jralexander
-ms.author: johalex
+title: Docker 简介
+description: 本文简要概述 .NET Core 应用程序上下文中的 Docker。
 ms.date: 11/06/2017
-ms.custom: mvc
-ms.openlocfilehash: d578ec5a25dbb5de3c88386e212e68cf3b267749
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: mvc, seodec18
+ms.openlocfilehash: b2640a1cea4d77158b7d9ed6ec63cf36d9e1f9cd
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970638"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676273"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 简介
 
 本文提供了如何在 Docker 上使用 .NET 的简介和概念背景。
 
-## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker：打包应用程序以在任何位置部署和运行
+## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker：打包应用以在任何位置部署和运行
 
 [Docker](../../standard/microservices-architecture/container-docker-introduction/docker-defined.md) 是一个开放平台，使开发人员和管理员可以在称为[容器](https://www.docker.com/what-container)的松散隔离的环境中构建[映像](https://docs.docker.com/glossary/?term=image)、交付和运行分布式应用程序。 此方法可以在开发、QA 和生产环境之间进行高效的应用程序生命周期管理。
  
@@ -180,7 +178,7 @@ Microsoft 对 .NET 存储库的打算是要有细化和集中存储库，表示�
 
 了解了 Docker 平台和不同的 Docker 映像后，下一步就是探索内容丰富的 Docker 生态系统。 以下链接展示了 Microsoft 工具对容器开发所做的补充。
 
-* [将 .NET 与 Docker 一起使用](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/)
+* [将 .NET 与 Docker 一起使用](https://devblogs.microsoft.com/dotnet/using-net-and-docker-together/)
 * [设计和开发基于微服务的多容器 .NET 应用程序](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
 * [Visual Studio Code Docker 扩展](https://code.visualstudio.com/docs/languages/dockerfile)
 * [了解如何使用 Azure Service Fabric](/azure/service-fabric/index)

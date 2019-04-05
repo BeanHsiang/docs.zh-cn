@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-ms.openlocfilehash: 1bbaf4fc85fe4d7e3d3737cf62cb63d8e09927cd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 594aef9feee81d026abd6313f1e75cb518479688
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499821"
 ---
 # <a name="location-based-cache-policies"></a>基于位置的缓存策略
 基于位置的缓存策略根据可从中获取所请求资源的位置来定义有效缓存条目的新鲜度。 如果使用它不违反服务器指定的重新验证要求，则缓存资源为有效。 基于位置的缓存策略通过使用 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 类构造函数以编程方式创建。 使用 <xref:System.Net.Cache.RequestCacheLevel> 或 <xref:System.Net.Cache.HttpRequestCacheLevel> 枚举值将基于位置的策略的类型传递给构造函数。 有关创建基于位置的缓存策略的代码示例，请参阅[如何：为应用程序设置基于位置的缓存策略](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)。 以下部分介绍超文本传输协议（http 和 https）资源每种基于位置的缓存策略。  
@@ -46,9 +46,9 @@ ms.locfileid: "50194392"
 ## <a name="revalidate-policy"></a>重新验证策略  
  将缓存中的资源副本与服务器上的副本进行比较。 如果服务器上的副本较新，则用它来满足请求并替换缓存中的副本。 如果缓存中的副本与服务器副本相同，则使用缓存副本。 在 HTTP 缓存协议中，这是通过条件请求来实现的。  
   
-## <a name="see-also"></a>请参阅  
- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)  
- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>请参阅
+- [网络应用程序的缓存管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
+- [缓存策略](../../../docs/framework/network-programming/cache-policy.md)
+- [基于时间的缓存策略](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [在网络应用程序中配置缓存](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
+- [\<requestCaching> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

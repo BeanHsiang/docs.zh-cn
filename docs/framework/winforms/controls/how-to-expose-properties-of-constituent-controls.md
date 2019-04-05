@@ -10,19 +10,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 8f7b5c44a5cb20b5da10df5fd630b371cc959fa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75ee93b7a601b4fc1480dca708d78740664c9a85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532628"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704511"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>如何：公开构成控件的属性
-构成复合控件的控件称为*构成控件*。 这些控件通常被声明为私有的并因此不能由开发人员访问。 如果你想要使这些控件的属性适用于未来的用户，必须将它们公开给用户。 通过在用户控件中，创建的属性并使用公开构成控件的属性`get`和`set`访问器的该属性以影响构成控件的私有属性中更改。  
+构成复合控件的控件称为*构成控件*。 这些控件通常被声明为私有的并因此不能由开发人员访问。 如果你想要使这些控件的属性可供将来的用户，必须向用户公开它们。 通过在用户控件中，创建属性并使用公开构成控件的属性`get`和`set`该属性的访问器以构成控件的私有属性更改生效。  
   
- 假设用户控件，请考虑与名为构成按钮`MyButton`。 在此示例中，当用户请求`ConstituentButtonBackColor`属性、 中存储的值<xref:System.Windows.Forms.Control.BackColor%2A>属性`MyButton`传递。 当用户将分配给此属性的一个值时，该值将自动传递给<xref:System.Windows.Forms.Control.BackColor%2A>属性`MyButton`和`set`的代码将执行更改的颜色`MyButton`。  
+ 有一个用户控件，请考虑使用名为的构成按钮`MyButton`。 在此示例中，当用户请求`ConstituentButtonBackColor`属性中，存储中的值<xref:System.Windows.Forms.Control.BackColor%2A>属性的`MyButton`传送。 当用户将分配给此属性的值时，该值将自动传递给<xref:System.Windows.Forms.Control.BackColor%2A>的属性`MyButton`和`set`将会执行代码，更改颜色`MyButton`。  
   
- 下面的示例演示如何公开<xref:System.Windows.Forms.Control.BackColor%2A>构成按钮属性：  
+ 下面的示例演示如何公开<xref:System.Windows.Forms.Control.BackColor%2A>构成按钮的属性：  
   
 ```vb  
 Public Property ButtonColor() as System.Drawing.Color  
@@ -53,11 +53,11 @@ public Color ButtonColor
   
 1.  创建你的用户控件的公共属性。  
   
-2.  在`get`一部分的属性，编写代码，以检索要公开的属性值。  
+2.  在`get`一部分的属性，编写代码，以检索你想要公开的属性的值。  
   
-3.  在`set`一部分的属性，将属性的值传递给构成控件的公开的属性编写代码。  
+3.  在`set`一部分的属性，编写代码，将属性的值传递给构成控件的公开的属性。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.UserControl>  
- [Windows 窗体控件中的属性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [各种自定义控件](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.UserControl>
+- [Windows 窗体控件中的属性](properties-in-windows-forms-controls.md)
+- [各种自定义控件](varieties-of-custom-controls.md)

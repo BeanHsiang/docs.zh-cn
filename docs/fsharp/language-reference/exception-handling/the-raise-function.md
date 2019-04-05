@@ -1,13 +1,13 @@
 ---
-title: 异常：raise 函数 (F#)
-description: '了解如何使用 F # raise 函数来指示已发生的错误或异常情况。'
+title: 异常：raise 函数
+description: 了解如何F#raise 函数用来指示已发生的错误或异常情况。
 ms.date: 05/16/2016
-ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43778254"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610146"
 ---
 # <a name="exceptions-the-raise-function"></a>异常：raise 函数
 
@@ -37,7 +37,7 @@ raise (expression)
 
 - [异常处理](index.md)
 - [异常类型](exception-types.md)
-- [异常：`try...with` 表达式](the-try-with-expression.md)
-- [异常：`try...finally` 表达式](the-try-finally-expression.md)
-- [异常：`failwith` 函数](the-failwith-function.md)
-- [异常：`invalidArg` 函数](the-invalidArg-function.md)
+- [异常：`try...with`表达式](the-try-with-expression.md)
+- [异常：`try...finally`表达式](the-try-finally-expression.md)
+- [异常：`failwith`函数](the-failwith-function.md)
+- [异常：`invalidArg`函数](the-invalidArg-function.md)

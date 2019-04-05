@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637367"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 枚举
-指定如何将对象序列化公共语言运行时。  
+指定公共语言运行时如何序列化对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -58,33 +59,33 @@ typedef enum CorSerializationType {
   
 |成员|描述|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|序列化的对象是不确定的。|  
+|`SERIALIZATION_TYPE_UNDEFINED`|序列化的对象是未定义。|  
 |`SERIALIZATION_TYPE_BOOLEAN`|将对象序列化为布尔值类型|  
 |`SERIALIZATION_TYPE_CHAR`|将对象序列化为字符类型。|  
-|`SERIALIZATION_TYPE_I1`|对象序列化为一个带符号的 1 字节整数。|  
-|`SERIALIZATION_TYPE_U1`|对象序列化为的无符号的 1 字节整数。|  
-|`SERIALIZATION_TYPE_I2`|对象序列化为一个带符号的 2 字节整数。|  
-|`SERIALIZATION_TYPE_U2`|对象序列化为的无符号的 2 字节整数。|  
-|`SERIALIZATION_TYPE_I4`|对象序列化为一个带符号的 4 字节整数。|  
-|`SERIALIZATION_TYPE_U4`|对象序列化为的无符号的 4 字节整数。|  
-|`SERIALIZATION_TYPE_I8`|对象序列化为一个带符号的 8 字节整数。|  
-|`SERIALIZATION_TYPE_U8`|对象序列化为的无符号的 8 字节整数。|  
+|`SERIALIZATION_TYPE_I1`|对象序列化为 1 字节有符号整数。|  
+|`SERIALIZATION_TYPE_U1`|对象序列化为 1 字节无符号整数。|  
+|`SERIALIZATION_TYPE_I2`|对象序列化为 2 字节有符号整数。|  
+|`SERIALIZATION_TYPE_U2`|对象序列化为 2 字节无符号整数。|  
+|`SERIALIZATION_TYPE_I4`|对象序列化为 4 字节有符号整数。|  
+|`SERIALIZATION_TYPE_U4`|对象序列化为 4 字节无符号整数。|  
+|`SERIALIZATION_TYPE_I8`|对象序列化为 8 字节有符号整数。|  
+|`SERIALIZATION_TYPE_U8`|对象序列化为一个无符号的 8 字节整数。|  
 |`SERIALIZATION_TYPE_R4`|将对象序列化为 4 字节浮点数。|  
 |`SERIALIZATION_TYPE_R8`|将对象序列化为 8 字节浮点数。|  
 |`SERIALIZATION_TYPE_STRING`|将对象序列化为 System.String 类型。|  
 |`SERIALIZATION_TYPE_SZARRAY`|将对象序列化为一维，零的下限的数组。|  
 |`SERIALIZATION_TYPE_TYPE`|将对象序列化为泛型类型。|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|将对象序列化为标记对象。|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|将对象序列化为一个标记对象。|  
 |`SERIALIZATION_TYPE_FIELD`|将对象序列化为一个字段。|  
 |`SERIALIZATION_TYPE_PROPERTY`|将对象序列化为一个属性。|  
 |`SERIALIZATION_TYPE_ENUM`|将对象序列化为一个枚举。|  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be053c9f8b431a9e157e53ec2d32fef874cf2d6b
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195676"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262456"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 部署指南（针对管理员）
 本文分步说明系统管理员可以如何使用 Microsoft System Center Configuration Manager 在网络中部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系统依赖项。 本文假定所有目标客户端计算机都满足 .NET Framework 的最低要求。 有关安装 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的软件和硬件要求列表，请参阅[系统需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -114,15 +114,15 @@ ms.locfileid: "50195676"
   
     2.  命令行：`dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT`（这些步骤后的表中描述了命令行选项）  
   
-    3.  运行：选择“隐藏”。  
+    3.  **运行：** 选择“隐藏”。  
   
-    4.  程序可以运行：选择指定程序可以运行（不管用户是否登录）的选项。  
+    4.  **程序可以运行：** 选择指定程序可以运行（不管用户是否登录）的选项。  
   
 8.  在“需求”页上，选择“下一步”以接受默认值，然后完成该向导。  
   
  下表描述了步骤 7 中指定的命令行选项。  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**/q**|设置安静模式。 不需要用户输入，也不显示输出。|  
 |**/norestart**|防止安装程序自动重新启动。 如果你使用此选项，则 Configuration Manager 必须处理计算机重新启动。|  
@@ -176,8 +176,8 @@ ms.locfileid: "50195676"
   
 9. 在该向导的“用户体验”页上，使用默认值并选择“下一步”。  
   
-    > [!WARNING]
-    >  你的生产环境可能具有需要选择不同的部署计划的策略。 有关这些选项的信息，请参阅 TechNet 库中的[播发名称属性：“计划”选项卡](https://technet.microsoft.com/library/bb694016.aspx)。  
+> [!WARNING]
+> 你的生产环境可能具有需要选择不同的部署计划的策略。 有关这些选项的信息，请参阅[播发名称属性：“计划”选项卡](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29)。
   
 10. 在该向导的“分发点”页上，使用默认值并选择“下一步”。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "50195676"
   
  **SQL Server 2008:**  
   
--   [安装 SQL Server 2008（SQL Server 视频）](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
+-   [安装 SQL Server 2008（SQL Server 视频）](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))  
   
 -   [面向数据库管理员的 SQL Server 2008 安全概述](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
@@ -207,7 +207,7 @@ ms.locfileid: "50195676"
   
 -   [System Center 2012 Configuration Manager 的站点管理](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Configuration Manager 单站点计划和部署](https://technet.microsoft.com/library/bb680961.aspx)  
+-   [Configuration Manager 单站点计划和部署](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
   
  适用于 Windows 计算机的 System Center 2012 Configuration Manager 客户端：  
   
@@ -234,7 +234,7 @@ ms.locfileid: "50195676"
   
  有关指向详细信息的链接，请参阅下一节[下载错误代码](#additional_error_codes)。  
   
-|返回代码|描述|  
+|返回代码|说明|  
 |-----------------|-----------------|  
 |0|已成功完成安装。|  
 |1602|用户已取消安装。|  
@@ -254,10 +254,11 @@ ms.locfileid: "50195676"
   
  其他错误代码：  
   
--   [Windows Installer 错误代码](/windows/desktop/msi/error-codes)  
-  
--   [Windows 更新代理结果代码](/security-updates/WindowsUpdateServices/18127055)  
-  
-## <a name="see-also"></a>请参阅  
-- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+-   [Windows Installer 错误代码](/windows/desktop/msi/error-codes)
+
+-   [Windows 更新代理结果代码](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
+
+## <a name="see-also"></a>请参阅
+
+- [面向开发人员的部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [系统要求](../../../docs/framework/get-started/system-requirements.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123756"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092951"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 开发指南
 本节介绍了如何创建、配置、调试、保护和部署 .NET Framework 应用。 本节还提供有关技术领域的信息，例如，动态编程、互操作性、扩展性、内存管理和线程处理。  
@@ -79,5 +79,5 @@ ms.locfileid: "49123756"
  [工具](../../docs/framework/tools/index.md)  
  描述有助于使用 .NET Framework 技术开发、配置和部署应用的工具。  
   
- [.NET Framework 示例](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
- 提供指向演示 .NET Framework 技术的示例应用的 MSDN 代码示例库的链接。
+ [.NET 示例和教程](../samples-and-tutorials/index.md)  
+ 提供有助于你了解 .NET 的示例和教程的链接。

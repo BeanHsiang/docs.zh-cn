@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-ms.openlocfilehash: 1edb648ec574c0052b7b8314f4ada710c8b0fe01
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2fe1834c3e92c3eff016ffd7857a0473eb2e8b3a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183329"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816416"
 ---
 # <a name="-recurse"></a>-recurse
 编译源代码文件中指定的目录或项目目录的所有子目录。  
@@ -27,7 +27,7 @@ ms.locfileid: "50183329"
  可选。 希望从中开始搜索的目录。 如果未指定，在项目目录中开始搜索。  
   
  `file`  
- 必须的。 要搜索的文件。 允许通配符。  
+ 必需。 要搜索的文件。 允许通配符。  
   
 ## <a name="remarks"></a>备注  
  可以在文件名中使用通配符来编译项目目录中的所有匹配文件无需使用`-recurse`。 如果不指定任何输出文件的名称，编译器将基于处理的第一个输入文件上的输出文件名称。 这通常是在编译时按字母顺序查看的文件列表中的第一个文件。 出于此原因，最好指定输出文件使用`-out`选项。  
@@ -48,7 +48,8 @@ vbc *.vb
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
+- [示例编译命令行](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

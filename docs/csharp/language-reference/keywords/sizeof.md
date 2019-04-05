@@ -1,5 +1,6 @@
 ---
-title: sizeof（C# 参考）
+title: sizeof - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - sizeof_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 37eb9345edc31a8d318540fd528f311059225de4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1c5526366651d7e6623724c939b08ac46aa7db56
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184200"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242628"
 ---
 # <a name="sizeof-c-reference"></a>sizeof（C# 参考）
 

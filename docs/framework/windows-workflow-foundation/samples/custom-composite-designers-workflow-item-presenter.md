@@ -2,12 +2,12 @@
 title: 自定义复合设计器 — 工作流项演示器
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 7a3089f1b96cfc766143dd62d9f917fb014af636
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d201dad45f4ed31d7c06f3302a9cdfbb01647722
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731005"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>自定义复合设计器 — 工作流项演示器
 <xref:System.Activities.Presentation.WorkflowItemPresenter>是可在何处可放置任意活动的"放置区"创建的 WF 设计器编程模型中的密钥类型。 此示例演示如何生成活动设计器呈现此类的"放置区。"
@@ -80,6 +80,6 @@ ms.locfileid: "48836691"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Activities.Presentation.WorkflowItemPresenter>  
- [使用工作流设计器开发应用程序](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+## <a name="see-also"></a>请参阅
+- <xref:System.Activities.Presentation.WorkflowItemPresenter>
+- [使用工作流设计器开发应用程序](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

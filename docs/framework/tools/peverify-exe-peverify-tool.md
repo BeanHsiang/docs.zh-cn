@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57c47fab98d7def3c3548769da091951819db1b1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 35ff03eb830a02b05dd128da4c072a8c2c918921
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50199677"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501493"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe（PEVerify 工具）
 PEVerify 工具有助于生成 Microsoft 中间语言 (MSIL) 的开发人员（如编译器编写者、脚本引擎开发人员等）确定其 MSIL 代码及关联的元数据是否满足类型安全要求。 某些编译器仅当你避免使用某些语言构造时才生成可验证的类型安全代码。 如果你作为开发人员正在使用此类编译器，则可能需要确认你未危害代码的类型安全性。 在这种情况下，你可以对文件运行 PEVerify 工具来检查 MSIL 和元数据。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -32,13 +32,13 @@ PEVerify 工具有助于生成 Microsoft 中间语言 (MSIL) 的开发人员（�
 peverify filename [options]  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
 |*filename*|要为其检查 MSIL 和元数据的可移植可执行 (PE) 文件。|  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |/break= maxErrorCount|在出现 maxErrorCount 错误后中止验证。<br /><br /> 此参数在 .NET Framework 2.0 版或更高版本中不受支持。|  
 |**/clock**|测量并报告下列验证时间（以毫秒为单位）：<br /><br /> MD Val. cycle<br /> 元数据验证周期<br /><br /> MD Val. pure<br /> 元数据纯验证<br /><br /> IL Ver. cycle<br /> Microsoft 中间语言 (MSIL) 验证周期<br /><br /> IL Ver pure<br /> MSIL 纯验证<br /><br /> MD Val. cycle 和 IL Ver. cycle 时间包括执行必要的启动和关闭过程所需的时间。 MD Val. pure 和 IL Ver pure 时间反映了只执行验证或检验所需的时间。|  
@@ -120,8 +120,8 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [工具](../../../docs/framework/tools/index.md)  
- [编写可验证类型安全代码](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)  
- [类型安全和安全性](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)  
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>请参阅
+- [工具](../../../docs/framework/tools/index.md)
+- [编写可验证类型安全代码](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
+- [类型安全和安全性](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

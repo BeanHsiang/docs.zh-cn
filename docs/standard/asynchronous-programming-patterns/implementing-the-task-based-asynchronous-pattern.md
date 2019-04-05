@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 639a7ae4eb20cfc95f4d01dd0c7035f17656e3e1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a218633ed607222fec3e46629a9bcd614c3d0610
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678208"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>实现基于任务的异步模式
 可使用以下三种方式实现基于任务的异步模式 (TAP)：使用 Visual Studio 中的 C# 和 Visual Basic 编译器、手动实现或编译器和手动方法相结合。 以下各节详细地讨论了每一种方法。 可以使用 TAP 模式实现计算密集型和 I/O 密集型异步操作。 [工作负载](#workloads)部分介绍了各种类型的操作。
@@ -69,7 +69,7 @@ ms.locfileid: "45988564"
 
 如果满足下列条件之一，则计算密集型任务以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 状态结束：
 
-- 取消请求通过 <xref:System.Threading.CancellationToken> 对象到达，该对象在任务转换到 `StartNew` 状态前，作为创建方法的实参（例如 `Run` 或 <xref:System.Threading.Tasks.TaskStatus.Running>）提供。
+- 取消请求通过 <xref:System.Threading.CancellationToken> 对象到达，该对象在任务转换到 `StartNew` 状态前，作为创建方法的自变量（例如 `Run` 或 <xref:System.Threading.Tasks.TaskStatus.Running>）提供。
 
 - <xref:System.OperationCanceledException> 异常在此类任务的主体内未得到处理，该异常包含传给该任务的同一 <xref:System.Threading.CancellationToken>，并且该标记显示已请求取消操作。
 
@@ -88,7 +88,7 @@ ms.locfileid: "45988564"
 [!code-csharp[Conceptual.TAP_Patterns#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#5)]
 [!code-vb[Conceptual.TAP_Patterns#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#5)]
 
-<xref:System.Threading.Tasks.TaskCompletionSource%601> 类并没有对应的非泛型类。 然而 <xref:System.Threading.Tasks.Task%601> 派生自 <xref:System.Threading.Tasks.Task>，因此你可以为仅返回任务的 I/O 密集型方法使用泛型 <xref:System.Threading.Tasks.TaskCompletionSource%601> 对象。 为了做到这一点，你可以使用具有虚拟 `TResult`（<xref:System.Boolean> 是一个很好的默认选项，但是如果你担心 <xref:System.Threading.Tasks.Task> 用户将其向下转换成 <xref:System.Threading.Tasks.Task%601>，那么你可以转而使用私有 `TResult` 类型）。 例如，上一个示例中的 `Delay` 方法返回现有时间和所产生的偏移量（`Task<DateTimeOffset>`）。 如果结果值是不必要的，则可对该方法进行如下改写（注意对 <xref:System.Threading.Tasks.TaskCompletionSource%601.TrySetResult%2A> 的返回类型的更改和实参的更改）：
+<xref:System.Threading.Tasks.TaskCompletionSource%601> 类并没有对应的非泛型类。 然而 <xref:System.Threading.Tasks.Task%601> 派生自 <xref:System.Threading.Tasks.Task>，因此你可以为仅返回任务的 I/O 密集型方法使用泛型 <xref:System.Threading.Tasks.TaskCompletionSource%601> 对象。 为了做到这一点，你可以使用具有虚拟 `TResult`（<xref:System.Boolean> 是一个很好的默认选项，但是如果你担心 <xref:System.Threading.Tasks.Task> 用户将其向下转换成 <xref:System.Threading.Tasks.Task%601>，那么你可以转而使用私有 `TResult` 类型）。 例如，上一个示例中的 `Delay` 方法返回现有时间和所产生的偏移量（`Task<DateTimeOffset>`）。 如果结果值是不必要的，则可对该方法进行如下改写（注意对 <xref:System.Threading.Tasks.TaskCompletionSource%601.TrySetResult%2A> 的返回类型的更改和自变量的更改）：
 
 [!code-csharp[Conceptual.TAP_Patterns#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#6)]
 [!code-vb[Conceptual.TAP_Patterns#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#6)]
@@ -103,6 +103,6 @@ ms.locfileid: "45988564"
 
 ## <a name="see-also"></a>请参阅
 
-- [基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
-- [使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
-- [与其他异步模式和类型互操作](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  
+- [基于任务的异步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
+- [使用基于任务的异步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [与其他异步模式和类型互操作](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

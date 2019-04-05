@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398204"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412326"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在托管代码中创建原型
 本主题介绍了如何访问非托管函数，并介绍了在托管代码中批注方法定义的若干属性字段。 有关演示如何构造要用于平台调用、基于 .NET 的声明的示例，请参阅[用平台调用封送数据](marshaling-data-with-platform-invoke.md)。  
@@ -32,61 +32,74 @@ ms.locfileid: "33398204"
  在从托管代码访问非托管 DLL 函数之前，需要知道函数的名称以及将其导出的 DLL 的名称。 使用此信息，可开始为 DLL 中实现的非托管函数编写托管定义。 此外，可调整平台调用创建函数以及将数据封送到函数和从中封送数据的方法。  
   
 > [!NOTE]
->  借助分配字符串的 Win32 API 函数，你可以使用 `LocalFree` 等方法释放字符串。 平台调用以不同方式处理此类参数。 为了调用平台调用，将参数设为 `IntPtr` 类型，而不是 `String` 类型。 使用 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 类提供的方法手动将类型转换为字符串，并将其手动释放。  
+>  借助分配字符串的 Windows API 函数，可以使用 `LocalFree` 等方法释放字符串。 平台调用以不同方式处理此类参数。 为了调用平台调用，将参数设为 `IntPtr` 类型，而不是 `String` 类型。 使用 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 类提供的方法手动将类型转换为字符串，并将其手动释放。  
   
 ## <a name="declaration-basics"></a>声明基本知识  
  如以下示例所示，非托管函数的托管定义依赖于语言。 有关更完整的代码示例，请参阅[平台调用示例](platform-invoke-examples.md)。  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
  若要将 <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>、<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>、<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>、<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>、<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> 或 <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> 字段应用到 [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 声明，必须使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 属性，而不是 `Declare` 语句。  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-   <DllImport ("user32.dll", CharSet := CharSet.Auto)> _  
-   Public Shared Function MessageBox (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-   End Function  
-End Class  
-```  
+```vb
+Imports System
+Imports System.Runtime.InteropServices
+
+Friend Class WindowsAPI
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Friend Shared Function MessageBox(
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+    End Function
+End Class
+```
   
-```csharp  
-using System.Runtime.InteropServices;  
-[DllImport("user32.dll")]  
-    public static extern IntPtr MessageBox(int hWnd, String text,   
-                                       String caption, uint type);  
-```  
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+internal static class WindowsAPI
+{
+    [DllImport("user32.dll")]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
+```
   
-```cpp  
-using namespace System::Runtime::InteropServices;  
-[DllImport("user32.dll")]  
-    extern "C" IntPtr MessageBox(int hWnd, String* pText,  
-    String* pCaption unsigned int uType);  
-```  
+```cpp
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[DllImport("user32.dll")]
+extern "C" int MessageBox(
+    IntPtr hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
 ## <a name="adjusting-the-definition"></a>调整定义  
  无论是否设置为显式，属性字段都将定义托管代码的行为。 平台调用根据程序集中作为元数据存在的各个字段上设置的默认值进行操作。 可通过调整一个或多个字段的值来更改此默认行为。 在很多情况下，使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 设置值。  
   
  下表列出了与平台调用相关的完整的属性字段集。 对于每个字段，此表包括了默认值以及有关如何使用这些字段来定义非托管 DLL 函数的信息的链接。  
   
-|字段|描述|  
+|字段|说明|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|启用或禁用最佳映射。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|指定要用于传递方法自变量的调用约定。 默认值是 `WinAPI`，此值对应于 32 位基于 Intel 的平台的 `__stdcall`。|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|控件名称重整以及应将字符串自变量封送到函数的方法。 默认值为 `CharSet.Ansi`。|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|控件名称重整以及应将字符串参数封送到函数的方法。 默认值为 `CharSet.Ansi`。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|指定要调用的 DLL 入口点。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|控制是否应修改入口点以对应字符集。 默认值因编程语言而异。|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|控制是否应将托管方法签名转换为返回 HRESULT 并具有返回值的附加 [out，retval] 自变量的非托管签名。<br /><br /> 默认值为 `true`（不应转换签名）。|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|控制是否应将托管方法签名转换为返回 HRESULT 并具有返回值的附加 [out，retval] 参数的非托管签名。<br /><br /> 默认值为 `true`（不应转换签名）。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>|允许调用方使用 `Marshal.GetLastWin32Error` API 函数确定执行此方法时是否发生了错误。 在 Visual Basic 中，默认值为 `true`；在 C# 和 C++ 中，默认值为 `false`。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar>|控制在转换为 ANSI "?" 字符的非托管 Unicode 字符上引发的异常。|  
   
@@ -221,12 +234,12 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用非托管 DLL 函数](consuming-unmanaged-dll-functions.md)  
- [指定入口点](specifying-an-entry-point.md)  
- [指定字符集](specifying-a-character-set.md)  
- [平台调用示例](platform-invoke-examples.md)  
- [平台调用安全注意事项](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
- [标识 DLL 中的函数](identifying-functions-in-dlls.md)  
- [创建用于容纳 DLL 函数的类](creating-a-class-to-hold-dll-functions.md)  
- [调用 DLL 函数](calling-a-dll-function.md)
+## <a name="see-also"></a>请参阅
+- [使用非托管 DLL 函数](consuming-unmanaged-dll-functions.md)
+- [指定入口点](specifying-an-entry-point.md)
+- [指定字符集](specifying-a-character-set.md)
+- [平台调用示例](platform-invoke-examples.md)
+- [平台调用安全注意事项](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
+- [标识 DLL 中的函数](identifying-functions-in-dlls.md)
+- [创建用于容纳 DLL 函数的类](creating-a-class-to-hold-dll-functions.md)
+- [调用 DLL 函数](calling-a-dll-function.md)

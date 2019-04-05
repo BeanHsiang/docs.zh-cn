@@ -1,17 +1,18 @@
 ---
-title: '#杂注警告（C# 参考）'
+title: '#pragma warning - C# 参考'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma warning'
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 89ff8151d55ac58a1b114f7727297704ce26b9a7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0145df533572ff9d5004a653bb232a7ff60af5f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083647"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495099"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning（C# 参考）
 `#pragma warning` 可以启用或禁用特定警告。  
@@ -23,7 +24,7 @@ ms.locfileid: "44083647"
 #pragma warning restore warning-list  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `warning-list`  
  以逗号分隔的警告编号的列表。 “CS”前缀是可选的。  
   
@@ -60,7 +61,7 @@ public class D
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)
 - [C# 编译器错误](../../../csharp/language-reference/compiler-messages/index.md)

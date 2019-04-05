@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 106ef520f64233323cbb3f26cb3efdee152559b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f74952c2b3960dc29e0d1970276d972b048837f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499155"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef 方法
 解析<xref:System.Type>指定的 TypeRef 标记所表示的引用。  
@@ -37,37 +38,37 @@ HRESULT ResolveTypeRef (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `tr`  
- [in]要返回的引用的类型信息的 TypeRef 元数据标记。  
+ [in]要返回的被引用的类型信息的 TypeRef 元数据标记。  
   
  `riid`  
- [in]接口的 IID，以返回`ppIScope`。 通常，这是 IID_IMetaDataImport。  
+ [in]若要在中返回的接口的 IID `ppIScope`。 通常情况下，这将是 IID_IMetaDataImport。  
   
  `ppIScope`  
- [out]一个指向在其中定义引用的类型的模块作用域接口。  
+ [out]一个要在其中定义被引用的类型在模块作用域的接口。  
   
  `ptd`  
- [out]指向表示引用的类型的 TypeDef 标记的指针。  
+ [out]指向表示被引用的类型的 TypeDef 标记的指针。  
   
 ## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]
->  如果加载多个应用程序域，则不要使用此方法。 该方法不遵从应用程序域边界。 如果已加载的程序集的多个版本，并且它们包含具有相同的命名空间的相同类型，该方法将返回它找到的第一个类型的模块作用域。  
+>  如果加载多个应用程序域，则不使用此方法。 该方法不会接受应用程序域边界。 如果加载了多个版本的程序集，并且它们包含具有相同的命名空间的相同类型，该方法将返回它找到的第一个类型在模块作用域。  
   
- `ResolveTypeRef`方法搜索其他模块中的类型定义。 如果找到的类型定义，则`ResolveTypeRef`返回一个指向该模块作用域，以及该类型的 TypeDef 标记接口。  
+ `ResolveTypeRef`方法搜索的其他模块中的类型定义。 如果找到该类型定义，则`ResolveTypeRef`返回一个指向该模块作用域，以及类型的 TypeDef 标记接口。  
   
- 如果要将解析的类型引用具有 AssemblyRef，解析范围`ResolveTypeRef`方法搜索仅中已经打开与调用的元数据作用域的匹配项[imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法或[imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)方法。 这是因为`ResolveTypeRef`无法确定从仅在磁盘上或在全局程序集缓存中程序集的存储位置的 AssemblyRef 作用域。  
+ 如果要将解析的类型引用具有 AssemblyRef，解析范围`ResolveTypeRef`方法搜索匹配项仅在已打开与调用的元数据作用域中[imetadatadispenser:: Openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)方法或[imetadatadispenser:: Openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)方法。 这是因为`ResolveTypeRef`无法确定从磁盘上或位于全局程序集缓存程序集的存储位置的 AssemblyRef 范围。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**作为 MsCorEE.dll 中的资源  
+ **库：** 包含为 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>请参阅
+- [IMetaDataImport 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 接口](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

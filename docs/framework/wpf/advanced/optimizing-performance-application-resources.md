@@ -9,46 +9,46 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 53e906f31f32fb0f1df3f8d986daa0ae95ea9e4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546590"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352394"
 ---
 # <a name="optimizing-performance-application-resources"></a>优化性能：应用程序资源
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 允许你共享应用程序资源，以便你可以跨类似类型的元素支持一个一致的外观或行为。 本主题提供了一些建议在此区域中，可帮助你提高你的应用程序的性能。  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以共享应用程序资源，以便可以跨类似类型的元素支持一致的外观或行为。 本主题提供了一些建议在此区域中可帮助你改进应用程序的性能。  
   
- 有关资源的详细信息，请参阅 [XAML 资源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ 有关资源的详细信息，请参阅 [XAML 资源](xaml-resources.md)。  
   
 ## <a name="sharing-resources"></a>共享资源  
- 如果你的应用程序使用自定义控件，并定义中的资源<xref:System.Windows.ResourceDictionary>（或 XAML 资源节点），建议，你可以定义的资源在<xref:System.Windows.Application>或<xref:System.Windows.Window>对象级别，或定义它们中的默认主题自定义控件。 在一个自定义控件中定义资源<xref:System.Windows.ResourceDictionary>施加了该控件的每个实例的性能造成影响。 例如，如果你有性能要求较高画笔操作定义为资源定义的自定义控件的一部分和自定义控件的多个实例，则应用程序的工作集将显著增加。  
+ 如果你的应用程序使用自定义控件和定义中的资源<xref:System.Windows.ResourceDictionary>（或 XAML 资源节点），建议，您可以定义在资源<xref:System.Windows.Application>或<xref:System.Windows.Window>对象级别，或定义中的默认主题自定义控件。 定义一个自定义控件中的资源<xref:System.Windows.ResourceDictionary>施加了该控件的每个实例的性能造成影响。 例如，如果有需要进行大量性能的画笔操作定义为资源定义的自定义控件的部件和自定义控件的多个实例，则应用程序的工作集将显著增加。  
   
- 为了说明这一点，请考虑以下。 假设你正在开发卡游戏 using [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 对于大多数纸牌游戏，你需要 52 卡，52 不同的外观。 你决定实现卡自定义控件和中的卡自定义控件的资源定义 （每个元素表示一种纸牌外观） 的 52 画笔。 在主应用程序，你最初创建此卡自定义控件的 52 的实例。 卡自定义控件的每个实例生成的 52 实例<xref:System.Windows.Media.Brush>对象，使您总共有的 52 * 52<xref:System.Windows.Media.Brush>你的应用程序中的对象。 通过移动到的卡自定义控件资源超出画笔<xref:System.Windows.Application>或<xref:System.Windows.Window>对象级别，或定义它们中的自定义控件的默认主题您降低应用程序的工作集，因为现在正在共享 52 画笔之间的卡控件的 52 实例。  
+ 若要演示这一点，请考虑以下。 假设你正在开发卡游戏 using [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 对于大多数纸牌游戏，需要 52 张牌，52 不同的人脸。 还可以实施一种卡片自定义控件和卡自定义控件的资源中定义 52 画笔 （每个元素表示一种纸牌外观）。 在主应用程序，最初创建此卡自定义控件 52 个的实例。 卡自定义控件的每个实例生成的 52 个实例<xref:System.Windows.Media.Brush>对象，这将使您总共 52 * 52<xref:System.Windows.Media.Brush>你的应用程序中的对象。 通过将移动到的卡自定义控件资源超出画笔<xref:System.Windows.Application>或<xref:System.Windows.Window>对象级别，或在自定义控件的默认主题中定义它们你降低该应用程序的工作集，因为现在正在共享 52 画笔52 个实例的卡片控件。  
   
-## <a name="sharing-a-brush-without-copying"></a>而不复制共享画笔  
- 如果必须使用相同的多个元素<xref:System.Windows.Media.Brush>对象、 为资源定义画笔和引用它，而不定义画笔内联在[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]。 此方法将创建一个实例，并重复使用它，而定义画笔内联在[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]创建的每个元素的新实例。  
+## <a name="sharing-a-brush-without-copying"></a>不进行复制而共享画笔  
+ 如果您有多个元素使用的相同<xref:System.Windows.Media.Brush>对象，定义为资源的画笔并引用它，而不是定义中的画笔内联[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]。 此方法将创建一个实例，并重复使用它，而定义画笔中的以内联方式[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]创建的每个元素的新实例。  
   
- 下面的标记示例说明了这一点：  
+ 以下标记示例阐释了这一点：  
   
- [!code-xaml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
+ [!code-xaml[Performance#PerformanceSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
-## <a name="use-static-resources-when-possible"></a>使用静态资源尽可能  
- 静态资源通过查找对已定义的资源的引用的任何 XAML 属性提供一个值。 该资源的查找行为是类似于编译时查找。  
+## <a name="use-static-resources-when-possible"></a>使用静态资源在可能的情况  
+ 静态资源通过查找对已定义资源的引用，为任何 XAML 属性提供值。 类似于编译时查找该资源的查找行为。  
   
- 动态资源，另一方面，将创建一个临时在初始编译表达式，并因此的操作延迟的资源的查找请求的资源值是构造一个对象才能实际必需的。 该资源的查找行为是类似于运行时查找，它会影响性能。 使用尽可能使用动态资源仅在必要时对应用程序中的静态资源。  
+ 动态资源，但是，将创建初始编译期间的临时表达式，并因此延迟的资源查找，直到实际需要来构造对象请求的资源值为止。 该资源的查找行为是类似于运行时查找，它会影响性能。 使用静态资源应尽可能使用动态资源仅在必要时你应用程序中。  
   
- 下面的标记示例演示如何使用两种类型的资源：  
+ 以下标记示例演示如何使用这两种类型的资源：  
   
- [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
+ [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
-## <a name="see-also"></a>请参阅  
- [优化 WPF 应用程序性能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [规划应用程序性能](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
- [利用硬件](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
- [布局和示例](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [对象行为](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
- [文本](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [数据绑定](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [其他性能建议](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a>请参阅
+- [优化 WPF 应用程序性能](optimizing-wpf-application-performance.md)
+- [规划应用程序性能](planning-for-application-performance.md)
+- [利用硬件](optimizing-performance-taking-advantage-of-hardware.md)
+- [布局和示例](optimizing-performance-layout-and-design.md)
+- [2D 图形和图像处理](optimizing-performance-2d-graphics-and-imaging.md)
+- [对象行为](optimizing-performance-object-behavior.md)
+- [文本](optimizing-performance-text.md)
+- [数据绑定](optimizing-performance-data-binding.md)
+- [其他性能建议](optimizing-performance-other-recommendations.md)

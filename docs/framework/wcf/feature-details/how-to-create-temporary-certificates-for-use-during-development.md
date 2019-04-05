@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698579"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921320"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>如何：创建开发期间使用的临时证书
 
@@ -21,7 +21,7 @@ ms.locfileid: "46698579"
 >
 > 默认情况下[New-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 创建的是自签名证书和这些证书将不安全。 将自签名的证书放入受信任的根证书颁发机构存储区，可创建更紧密地模拟你的部署环境的开发环境。
 
- 有关创建和使用证书的详细信息，请参阅[Working with Certificates](working-with-certificates.md)。 有关使用证书作为凭据的详细信息，请参阅[保护服务和客户端](securing-services-and-clients.md)。 有关使用 Microsoft Authenticode 技术的教程，请参阅[Authenticode 概述和教程](https://go.microsoft.com/fwlink/?LinkId=88919)。
+ 有关创建和使用证书的详细信息，请参阅[Working with Certificates](working-with-certificates.md)。 有关使用证书作为凭据的详细信息，请参阅[保护服务和客户端](securing-services-and-clients.md)。 有关使用 Microsoft Authenticode 技术的教程，请参阅 [Authenticode Overviews and Tutorials](https://go.microsoft.com/fwlink/?LinkId=88919)（Authenticode 概述和教程）。
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>创建一个自签名根证书颁发机构证书并导出私钥
 
@@ -70,7 +70,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 4. 右击 **“证书”** 文件夹，再单击 **“所有任务”**，然后单击 **“导入”**。
 
-5. 按照屏幕向导说明，将 TempCa.cer 导入到存储区中。
+5. 按照屏幕向导说明 RootCA.pfx 导入的存储。
 
 ## <a name="using-certificates-with-wcf"></a>使用证书与 WCF
 
@@ -78,7 +78,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 ### <a name="to-specify-a-certificate-as-the-client-credential-type"></a>指定证书作为客户端凭据类型
 
-- 在服务的配置文件中，使用下面的 XML 将安全模式设置为消息，并将客户端凭据类型设置为证书。
+1. 在服务的配置文件中，使用下面的 XML 将安全模式设置为消息，并将客户端凭据类型设置为证书。
 
     ```xml
     <bindings>
@@ -92,21 +92,21 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
     </bindings>
     ```
 
-在客户端的配置文件，使用下面的 XML 指定的证书位于用户的存储，以及可以通过搜索"CohoWinery。"的值在 SubjectName 字段中找到
+2. 在客户端的配置文件，使用下面的 XML 指定的证书位于用户的存储，以及可以通过搜索"CohoWinery。"的值在 SubjectName 字段中找到
 
-```xml
-<behaviors>
-  <endpointBehaviors>
-    <behavior name="CertForClient">
-      <clientCredentials>
-        <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
-       </clientCredentials>
-     </behavior>
-   </endpointBehaviors>
-</behaviors>
-```
+    ```xml
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="CertForClient">
+          <clientCredentials>
+            <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
+          </clientCredentials>
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+    ```
 
-在 WCF 中使用证书的详细信息，请参阅[Working with Certificates](working-with-certificates.md)。
+有关在 WCF 中使用证书的详细信息，请参阅 [Working with Certificates](working-with-certificates.md)。
 
 ## <a name="net-framework-security"></a>.NET Framework 安全性
 

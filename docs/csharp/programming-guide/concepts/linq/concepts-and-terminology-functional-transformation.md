@@ -2,12 +2,12 @@
 title: 概念和术语（函数转换）(C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: e42c14965ba3341c812811f6c27ece386c42d7c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 83c2f531f5747047c60ddbcedabc0747641d80c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583358"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>概念和术语（函数转换）(C#)
 本主题介绍纯函数转换的概念和术语。 与更加传统的命令性编程方式相比，用来转换数据的函数转换方法所生成的代码往往编程速度更快、含义更明确、更易于调试和维护。  
@@ -73,5 +73,5 @@ ms.locfileid: "43526990"
   
 ## <a name="see-also"></a>请参阅
 
-- [纯函数转换简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [纯函数转换简介 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [函数编程与命令式编程 (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

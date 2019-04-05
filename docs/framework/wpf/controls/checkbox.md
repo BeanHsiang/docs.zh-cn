@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550745"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377059"
 ---
 # <a name="checkbox"></a>CheckBox
-你可以使用<xref:System.Windows.Controls.CheckBox>中[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的应用程序以表示用户可以选择或清除的选项。 你可以使用一个复选框，或可以组两个或多个复选框。  
+可以使用<xref:System.Windows.Controls.CheckBox>在[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]的应用程序来表示用户可以选中或清除的选项。 可以使用单个复选框，也可以组合两个或多个复选框。  
   
- 下图显示的不同状态的<xref:System.Windows.Controls.CheckBox>。  
+ 下图显示的不同状态<xref:System.Windows.Controls.CheckBox>。  
   
- ![复选框状态](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
-处于其他状态的复选框控件  
+ ![复选框状态](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
+中的不同状态的复选框控件  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.CheckBox>  

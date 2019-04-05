@@ -4,12 +4,12 @@ description: 强命名 .NET 库的最佳实践建议。
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99905a795c4cdb3c79884716b39ed4e38cfe39d6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201447"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128994"
 ---
 # <a name="strong-naming"></a>强命名
 
@@ -71,5 +71,5 @@ ms.locfileid: "50201447"
 > 发布两个包会为开发人员生态系统创建分支。 此外，如果应用程序依赖于这两个包，则开发人员可能会遇到类型名称冲突。 就 .NET 而言，它们是不同程序集中的不同类型。
 
 >[!div class="step-by-step"]
-[上一页](./cross-platform-targeting.md)
-[下一页](./nuget.md)
+>[上一页](cross-platform-targeting.md)
+>[下一页](nuget.md)

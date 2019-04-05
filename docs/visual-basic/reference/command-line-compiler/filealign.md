@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /filealign compiler option [Visual Basic]
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
-ms.openlocfilehash: db70749f28592ae6711b6d9544f8704af9416490
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9a844515a4596064937762ac05b850463f1b5e14
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181717"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819172"
 ---
 # <a name="-filealign"></a>-filealign
 指定输出文件各节的对齐位置。  
@@ -27,7 +27,7 @@ ms.locfileid: "50181717"
   
 ## <a name="arguments"></a>自变量  
  `number`  
- 必须的。 一个值，输出文件中指定的节的对齐方式。 有效值为 512、1024、2048、4096 和 8192。 这些值以字节为单位。  
+ 必需。 一个值，输出文件中指定的节的对齐方式。 有效值为 512、1024、2048、4096 和 8192。 这些值以字节为单位。  
   
 ## <a name="remarks"></a>备注  
  可以使用`-filealign`选项以在输出文件中指定的节的对齐方式。 节是包含代码或数据的可移植可执行文件 (PE) 文件中的连续内存块。 `-filealign`选项，可以编译应用程序时使用了非标准的对齐方式; 大多数开发人员不需要使用此选项。  
@@ -39,5 +39,6 @@ ms.locfileid: "50181717"
 > [!NOTE]
 >  `-filealign`选项不适用于从 Visual Studio 开发环境中，仅当从命令行编译时便可。  
   
-## <a name="see-also"></a>请参阅  
- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)
+## <a name="see-also"></a>请参阅
+
+- [Visual Basic 命令行编译器](../../../visual-basic/reference/command-line-compiler/index.md)

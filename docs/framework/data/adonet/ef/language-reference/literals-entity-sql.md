@@ -2,12 +2,12 @@
 title: 文本 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643099"
 ---
 # <a name="literals-entity-sql"></a>文本 (Entity SQL)
 本主题介绍 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 对于文字的支持。  
@@ -17,7 +17,7 @@ ms.locfileid: "32767318"
   
  强制转换可以在空文字之上创建类型空值。 有关详细信息，请参阅[强制转换](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)。  
   
- 有关在何处规则自由浮动 null 文本可以使用，请参阅[Null 文本和类型推理](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)。  
+ 有关在何处规则自由浮动 null 文本可用，请参阅[Null 文本和类型推理](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)。  
   
 ## <a name="boolean"></a>Boolean  
  布尔值文字由关键字 `true` 和 `false` 表示。  
@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  日期时间文字独立于区域设置并由日期部分和时间部分组成。 日期部分和时间部分都是必需的，并且没有默认值。  
   
- 日期部分必须采用格式： `YYYY` - `MM` - `DD`，其中`YYYY`是介于 0001 与 9999 之间的四位年度值`MM`是介于 1 和 12 之间的月份和`DD`是对给定月份是有效的日期值`MM`。  
+ 日期部分必须采用格式： `YYYY` - `MM` - `DD`，其中`YYYY`是介于 0001 与 9999 之间的四位年度值`MM`是介于 1 和 12 之间的月份和`DD`是对给定月份有效日期值`MM`。  
   
  时间部分的格式必须为：`HH`:`MM`[:`SS`[.fffffff]]，其中 `HH` 为介于 0 至 23 之间的小时值，`MM` 为介于 0 至 59 之间的分钟值，`SS` 为介于 0 至 59 之间的秒值，而 fffffff 为介于 0 至 9999999 之间的秒的小数部分值。 所有值范围都包含两端。 秒的小数部分是可选的。 除非指定了秒的小数部分，否则秒是可选的；在指定了秒的小数部分时秒是必需的。 在未指定秒或秒的小数部分时，将使用默认值零。  
   
@@ -67,7 +67,7 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- datetimeoffset 文字独立于区域设置并由日期部分、时间部分和偏移量部分组成。 所有日期、时间和偏移量部分都是必选项，并且没有默认值。 日期部分的格式必须为 YYYY-MM-DD，其中 YYYY 是介于 0001 与 9999 之间的四位年度值，MM 是介于 1 与 12 之间的月份，而 DD 是对给定月份有效的日期值。 时间部分的格式必须为 HH:MM[:SS[.fffffff]]，其中 HH 为介于 0 至 23 之间的小时值，MM 为介于 0 至 59 之间的分钟值，SS 为介于 0 至 59 之间的秒值，而 fffffff 为介于 0 至 9999999 之间的秒的小数部分值。 所有值范围都包含两端。 秒的小数部分是可选的。 除非指定了秒的小数部分，否则秒是可选的；在指定了秒的小数部分时秒是必需的。 在未指定秒或秒的小数部分时，将使用默认值零。 偏移量的部分格式必须为 {+&#124;-} hh: mm，其中 HH 和 MM 具有相同的含义如下所示的时间部分。 但是，偏移量的范围必须介于 -14:00 至 + 14:00 之间。  
+ datetimeoffset 文字独立于区域设置并由日期部分、时间部分和偏移量部分组成。 所有日期、时间和偏移量部分都是必选项，并且没有默认值。 日期部分的格式必须为 YYYY-MM-DD，其中 YYYY 是介于 0001 与 9999 之间的四位年度值，MM 是介于 1 与 12 之间的月份，而 DD 是对给定月份有效的日期值。 时间部分的格式必须为 HH:MM[:SS[.fffffff]]，其中 HH 为介于 0 至 23 之间的小时值，MM 为介于 0 至 59 之间的分钟值，SS 为介于 0 至 59 之间的秒值，而 fffffff 为介于 0 至 9999999 之间的秒的小数部分值。 所有值范围都包含两端。 秒的小数部分是可选的。 除非指定了秒的小数部分，否则秒是可选的；在指定了秒的小数部分时秒是必需的。 在未指定秒或秒的小数部分时，将使用默认值零。 偏移量的部分必须具有格式 {+&#124;-} hh: mm，其中 HH 和 MM 具有相同的意义与时间部分。 但是，偏移量的范围必须介于 -14:00 至 + 14:00 之间。  
   
  在 DATETIMEOFFSET 符号与文字负载之间可以存在任意数目的空格，但是不能存在新行。  
   
@@ -92,7 +92,7 @@ X'' –- empty binary string
 ```  
   
 ## <a name="guid"></a>Guid  
- `GUID` 文本表示全局唯一标识符。 它是一个序列，由关键字`GUID`跟十六进制数字构成，采用称为*注册表*格式： 8-4-4-4-12 括在单引号中。 十六进制数字区分大小写。  
+ `GUID` 文本表示全局唯一标识符。 它是一个序列，由关键字`GUID`跟十六进制数字构成，采用称为*注册表*格式：包含在单引号内的 8-4-4-4-12。 十六进制数字区分大小写。  
   
  在 GUID 符号与文字负载之间可以存在任意数目的空格，但是不能存在新行。  
   
@@ -101,5 +101,5 @@ Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>请参阅
+- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

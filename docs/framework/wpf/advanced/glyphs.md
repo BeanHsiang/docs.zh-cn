@@ -10,23 +10,23 @@ helpviewer_keywords:
 - GlyphRunDrawing objects [WPF]
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
-ms.openlocfilehash: 744906d7dba8b9bc317d181738790b7647fe912c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03c05d45fae22273429b9ec80e2dcbbb22e82d65
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543061"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353174"
 ---
 # <a name="glyphs"></a>标志符号
-标志符号是字符的要在屏幕上绘制的低级表示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 对于想要截获并保存在格式化后的文本的客户提供直接访问权限的标志符号。  
+标志符号是字符的要在屏幕上绘制的低级别描述。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 对于想要拦截和保留格式化后的文本的客户提供直接访问权限的标志符号。  
   
 ## <a name="in-this-section"></a>本节内容  
- [GlyphRun 对象和 Glyphs 元素简介](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [如何：使用 Glyphs 元素绘制文本](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
+ [GlyphRun 对象和 Glyphs 元素简介](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
+  [如何：使用 Glyphs 绘制文本](draw-text-using-glyphs.md)  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Media.GlyphRun>  
- <xref:System.Windows.Media.DrawingContext.DrawText%2A>  
- <xref:System.Windows.Documents.Glyphs>  
- [WPF 中的文档](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [WPF 中的版式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Media.GlyphRun>
+- <xref:System.Windows.Media.DrawingContext.DrawText%2A>
+- <xref:System.Windows.Documents.Glyphs>
+- [WPF 中的文档](documents-in-wpf.md)
+- [WPF 中的版式](typography-in-wpf.md)

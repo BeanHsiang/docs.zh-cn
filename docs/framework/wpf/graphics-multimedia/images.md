@@ -9,19 +9,19 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: dbb8b9511b05c5df228a463d82efb17b7cd6f23a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b59cd1c1ec2ee058811996c92e4b215c8872ff0b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561694"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372810"
 ---
 # <a name="images"></a>图像
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供对多种图像格式、高保真图像呈现以及编解码器扩展性的内置支持。  
   
 ## <a name="in-this-section"></a>本节内容  
- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
+ [图像处理概述](imaging-overview.md)  
+ [帮助主题](imaging-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Image>  
@@ -30,6 +30,6 @@ ms.locfileid: "33561694"
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>请参阅  
- [2D 图形和图像处理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [图形和多媒体](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>请参阅
+- [2D 图形和图像处理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [图形和多媒体](index.md)

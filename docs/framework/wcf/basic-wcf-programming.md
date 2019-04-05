@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c4c8529eb477b31eba464c9b156569819ec22941
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609797"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251074"
 ---
 # <a name="basic-wcf-programming"></a>基本 WCF 编程
 本部分介绍用于创建 Windows Communication Foundation (WCF) 应用程序基础知识。  
@@ -61,7 +61,7 @@ ms.locfileid: "45609797"
   
  [Windows Communication Foundation 工具](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation 示例](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation (WCF) 示例](./samples/index.md)  
   
  [入门](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

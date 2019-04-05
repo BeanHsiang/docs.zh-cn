@@ -2,12 +2,12 @@
 title: 不支持的方案
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 2e44cbf159d5df724a5213648b28d952f49b8e8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631253"
 ---
 # <a name="unsupported-scenarios"></a>不支持的方案
 由于各种原因，Windows Communication Foundation (WCF) 不支持某些特定安全方案。 例如， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 没有实现 SSPI 或 Kerberos 身份验证协议，并因此 WCF 不支持该平台上运行使用 Windows 身份验证的服务。 运行 Windows XP Home Edition 下的 WCF 时，支持其他身份验证机制，例如用户名/密码和 HTTP/HTTPS 集成身份验证。  
@@ -28,9 +28,9 @@ ms.locfileid: "48845671"
   
 -   创建了基于状态的安全上下文令牌 (SCT)。默认情况下禁止创建此类令牌。  
   
- 基于状态的 SCT 只能使用自定义绑定来创建。 有关详细信息，请参阅[如何： 为安全会话创建的安全上下文令牌](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在代码中，可通过创建安全绑定元素（<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>）启用令牌，方法是：使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> 方法，并且将 `requireCancellation` 参数设置为 `false`。 该参数引用 SCT 的缓存。 若将该值设置为 `false`，则启用基于状态的 SCT 功能。  
+ 基于状态的 SCT 只能使用自定义绑定来创建。 有关详细信息，请参阅[如何：创建安全上下文令牌的安全会话](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在代码中，可通过创建安全绑定元素（<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>）启用令牌，方法是：使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> 方法，并且将 `requireCancellation` 参数设置为 `false`。 该参数引用 SCT 的缓存。 若将该值设置为 `false`，则启用基于状态的 SCT 功能。  
   
- 或者，在配置中，以下方法启用令牌通过创建 <`customBinding`>，然后添加 <`security`> 元素，并将`authenticationMode`SecureConversation 属性和`requireSecurityContextCancellation`归于`true`。  
+ 或者，可以在配置中通过以下方法启用令牌：创建一个 <`customBinding`>，然后添加一个 <`security`> 元素，并将 `authenticationMode` 属性设置为 SecureConversation，同时将 `requireSecurityContextCancellation` 属性设置为 `true`。  
   
 > [!NOTE]
 >  上述需求是特定的。 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 创建一个产生 Windows 标识的绑定元素，但并不建立一个 SCT。 因此，在 `Required` 上，可以将其与 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 选项一起使用。  
@@ -62,7 +62,7 @@ ms.locfileid: "48845671"
  与 FIPS 兼容的 AES 加密无法在标识级模拟下以双工回调模式工作。  
   
 ### <a name="cngksp-certificates"></a>CNG/KSP 证书  
- *加密 API: Next Generation (CNG)* 是 CryptoAPI 的长期替代。 此 API 现已推出上的非托管代码[!INCLUDE[wv](../../../../includes/wv-md.md)]，[!INCLUDE[lserver](../../../../includes/lserver-md.md)]和更高版本的 Windows 版本。  
+ *加密 API:下一代 (CNG)* 是 CryptoAPI 的长期替代。 此 API 现已推出上的非托管代码[!INCLUDE[wv](../../../../includes/wv-md.md)]，[!INCLUDE[lserver](../../../../includes/lserver-md.md)]和更高版本的 Windows 版本。  
   
  因为它们使用旧的 CryptoAPI 来处理 CNG/KSP 证书，.NET framework 4.6.1 及更早版本不支持这些证书。 使用.NET Framework 4.6.1 及更早版本使用这些证书将导致异常。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48845671"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>如果要求使用 ASP.NET 模拟和 ASP.NET 兼容性，消息安全将失败  
  WCF 不支持以下设置组合，因为它们可能会阻止客户端身份验证的发生：  
   
--   启用了 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟。 这通过 Web.config 文件中设置`impersonate`属性的 <`identity`> 元素`true`。  
+-   启用了 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模拟。 这是在 Web.config 文件中通过将 <`identity`> 元素的 `impersonate` 属性设置为 `true` 实现的。  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 通过设置启用兼容性模式`aspNetCompatibilityEnabled`的属性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
   
@@ -108,10 +108,10 @@ ms.locfileid: "48845671"
   
  解决方法是，导入完毕后直接在客户端上修改绑定。  
   
-## <a name="see-also"></a>请参阅  
- [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>请参阅
+- [安全注意事项](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [信息泄漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [特权提升](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [拒绝服务](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [篡改](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [重放攻击](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

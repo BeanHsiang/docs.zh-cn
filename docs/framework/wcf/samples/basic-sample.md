@@ -2,12 +2,12 @@
 title: 基本示例
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: c16ad22a63958bd7c7b2b3d94f2c82b5b7db6f65
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 015b3ccee939cb62411d5901c7e2e558da3cc237
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193276"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814570"
 ---
 # <a name="basic-sample"></a>基本示例
 此示例演示如何使服务可发现以及如何搜索和调用可发现服务。 此示例由两个项目组成：服务项目和客户端项目。
@@ -101,4 +101,3 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  
   
-## <a name="see-also"></a>请参阅

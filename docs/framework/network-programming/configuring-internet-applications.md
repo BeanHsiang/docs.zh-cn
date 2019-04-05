@@ -21,12 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 48794898eb1a3e13454a335a2335fac57d8faf3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561642"
 ---
 # <a name="configuring-internet-applications"></a>配置 Internet 应用程序
 [\<System.Net > 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)配置元素包含应用程序的网络配置信息。 使用 [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)元素，可以设置代理服务器，设置连接管理参数，包括自定义应用程序内的身份验证和请求模块。  
@@ -97,7 +97,7 @@ ms.locfileid: "50197231"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)  
- [网络设置架构](../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+## <a name="see-also"></a>请参阅
+- [.NET Framework 中的网络编程](../../../docs/framework/network-programming/index.md)
+- [网络设置架构](../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [\<system.Net> 元素（网络设置）](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

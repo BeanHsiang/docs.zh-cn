@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584907"
 ---
 # <a name="configuring-tracing"></a>配置跟踪
 本主题描述您可以如何启用跟踪，配置要发出跟踪的跟踪源并设置跟踪级别，设置活动跟踪和传播以支持端对端的跟踪关联，以及设置要访问跟踪的跟踪侦听器。  
@@ -58,17 +58,17 @@ ms.locfileid: "45649993"
 ## <a name="configuring-trace-sources-to-emit-traces"></a>配置要发出跟踪的跟踪源  
  WCF 定义每个程序集的跟踪源。 在程序集中生成的跟踪由为该跟踪源定义的侦听器访问。 定义下列跟踪源：  
   
--   System.ServiceModel： 记录所有阶段的 WCF 处理，每当读取配置，在传输过程中处理消息，安全处理一条消息调度在用户代码中，依次类推。  
+-   System.ServiceModel:记录所有阶段的 WCF 处理，每当读取配置，在传输过程中处理消息，安全处理一条消息调度在用户代码中，依次类推。  
   
--   System.ServiceModel.MessageLogging：记录流过系统的所有消息。  
+-   System.ServiceModel.MessageLogging:记录流过系统的所有消息。  
   
 -   System.IdentityModel。  
   
 -   System.ServiceModel.Activation。  
   
--   System.IO.Log：记录公用日志文件系统 (CLFS) 的 .NET Framework 接口。  
+-   System.IO.Log:.NET Framework 接口对公用日志文件系统 (CLFS) 日志记录功能。  
   
--   System.Runtime.Serialization：在读/写对象时进行记录。  
+-   System.Runtime.Serialization:日志读取或写入对象时。  
   
 -   CardSpace。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "45649993"
   
  可以将自定义跟踪侦听器配置为在网络上发送跟踪，例如，发送到远程数据库。 作为应用程序部署人员，您应对远程计算机上的跟踪日志施加适当的访问控制。  
   
- 您也可以通过编程方式配置跟踪侦听器。 有关详细信息，请参阅[如何： 创建和初始化跟踪侦听器](https://go.microsoft.com/fwlink/?LinkId=94648)并[创建自定义 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)。  
+ 您也可以通过编程方式配置跟踪侦听器。 有关详细信息，请参阅[如何：创建和初始化跟踪侦听器](https://go.microsoft.com/fwlink/?LinkId=94648)并[创建自定义 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)。  
   
 > [!CAUTION]
 >  由于 `System.Diagnostics.XmlWriterTraceListener` 不是线程安全的，因此，跟踪源可能会在输出跟踪时以独占方式锁定资源。 当多个线程输出对配置为使用此侦听器的跟踪源的跟踪时，可能会出现资源争用，这会致使重大的性能问题。 若要解决此问题，应实现一个线程安全的自定义侦听器。  
@@ -153,7 +153,7 @@ ms.locfileid: "45649993"
 |跟踪级别|被跟踪事件的特性|被跟踪事件的内容|被跟踪事件|用户目标|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |Off|不可用|不可用|不发出任何跟踪。|不可用|  
-|严重|"负"事件： 表示意外的处理或错误条件的事件。||将记录包括下列各项的未经处理的异常：<br /><br /> -OutOfMemoryException<br />-ThreadAbortException （CLR 调用任何 ThreadAbortExceptionHandler）<br />-StackOverflowException （无法捕获）<br />-配置错误异常<br />-SEHException<br />-应用程序启动错误<br />-故障快速报警事件<br />-系统挂起<br />-有害消息： 消息会导致应用程序失败的跟踪。|管理员<br /><br /> 应用程序开发人员|  
+|严重|"负"事件： 表示意外的处理或错误条件的事件。||将记录包括下列各项的未经处理的异常：<br /><br /> -   OutOfMemoryException<br />-ThreadAbortException （CLR 调用任何 ThreadAbortExceptionHandler）<br />-StackOverflowException （无法捕获）<br />-   ConfigurationErrorsException<br />-   SEHException<br />-应用程序启动错误<br />-故障快速报警事件<br />-系统挂起<br />-有害消息： 消息会导致应用程序失败的跟踪。|管理员<br /><br /> 应用程序开发人员|  
 |Error|"负"事件： 表示意外的处理或错误条件的事件。|已发生意外处理。 应用程序未能执行预期的任务。 然而，应用程序仍处于开启状态并在运行。|记录所有异常。|管理员<br /><br /> 应用程序开发人员|  
 |警告|"负"事件： 表示意外的处理或错误条件的事件。|可能的问题已经出现或可能出现，但是，应用程序仍在正常工作。 不过，该应用程序可能不会继续正常工作。|-应用程序正在接收比其遏制设置所允许的更多请求。<br />-接收队列即将达到其最大配置的容量。<br />已超过超时。<br />-凭据被拒绝。|管理员<br /><br /> 应用程序开发人员|  
 |信息|"正"事件： 事件成功里程碑进行标记|应用程序执行的重要和成功里程碑，而不考虑该应用程序是否工作正常。|通常，生成对监视和诊断系统状态、测量性能或执行分析十分有用的消息。 可以使用此类信息规划容量和管理性能：<br /><br /> 的创建通道。<br />创建终结点侦听器。<br />消息进入/离开传输。<br />检索安全令牌。<br />读取配置设置。|管理员<br /><br /> 应用程序开发人员<br /><br /> 产品开发人员。|  
@@ -180,8 +180,8 @@ ms.locfileid: "45649993"
   
  不能将 `propagateActivity` 属性与用户定义的跟踪源一起使用。 对于用户代码活动 ID 传播，请确保未设置 ServiceModel `ActivityTracing`，而同时仍将 ServiceModel `propagateActivity` 属性设置为 `true`。  
   
-## <a name="see-also"></a>请参阅  
- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [如何：创建和初始化跟踪侦听器](https://go.microsoft.com/fwlink/?LinkId=94648)  
- [创建自定义 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)
+## <a name="see-also"></a>请参阅
+- [跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [管理和诊断](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [如何：创建和初始化跟踪侦听器](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [创建自定义 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)

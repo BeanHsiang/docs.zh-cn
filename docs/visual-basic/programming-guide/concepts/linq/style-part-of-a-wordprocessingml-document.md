@@ -1,13 +1,13 @@
 ---
-title: 样式部分的 WordprocessingML 文档 2
+title: WordprocessingML 文档 2 的样式部件
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 58767c51595a5a2c4c262df133c393dc700e0b10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e5e0e570fa842fb8a4df59d4b1c02e1169c6878
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645949"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838061"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML 文档的样式部件
 本主题演示 Office Open XML WordprocessingML 文档的样式部分的示例。  
@@ -140,5 +140,6 @@ ms.locfileid: "33645949"
 </w:styles>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [详细信息的 Office Open XML WordprocessingML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>请参阅
+
+- [详细信息的 Office Open XML WordprocessingML 文档 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

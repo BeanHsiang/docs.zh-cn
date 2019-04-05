@@ -1,15 +1,15 @@
 ---
-title: 如何：使用 Descendants 方法查找单个子代 (C#)
+title: 如何：使用 Descendants 方法查找单个后代 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: fafb7dc4e2e65c913de46b64028f7dcd69fdd2c3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a13a4aef6a3d22d2b7c3adb8e37996de08978b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43784655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690522"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>如何：使用 Descendants 方法查找单个子代 (C#)
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>如何：使用 Descendants 方法查找单个后代 (C#)
 可以使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴方法快速编写代码来查找名称唯一的单个元素。 如果想要查找具有特定名称的特定后代，则此技术特别有用。 虽然可以编写代码以导航到需要的元素，但使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 轴编写代码通常更快更容易。  
   
 ## <a name="example"></a>示例  

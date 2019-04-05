@@ -7,33 +7,34 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 28df9bd2f313165f233c90149d26c60856b3926b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80659117ab96a6bdb9a9536d3eba47d13a2c395f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359531"
 ---
 # <a name="imaging-how-to-topics"></a>图像处理帮助主题
-此部分中的主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以显示或 alter 位图图像。  
+在本部分中的主题演示如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]来显示或改变位图图像。  
   
 ## <a name="in-this-section"></a>本节内容  
- [在 XAML 中使用 BitmapImage](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
- [将图像作为缩略图加载](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
- [向位图图像应用转换](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
- [通过视觉对象创建位图](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
- [将视觉对象编码为图像文件](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
- [新建 BitmapSource](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
- [将多个 BitmapSource 对象链在一起](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
- [将 BitmapSource 转换成另一种 PixelFormat](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [将 BitmapSource 转换成索引的像素格式](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [编码和解码 JPEG 图像](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
- [编码和解码 BMP 图像](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
- [编码和解码 PNG 图像](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
- [编码和解码 WDP 图像](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
- [编码和解码 GIF 图像](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
- [编码和解码 TIFF 图像](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
- [在位图中写入元数据](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
- [从位图读取元数据](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
+ [在 XAML 中使用 BitmapImage](how-to-use-a-bitmapimage.md)  
+ [将图像作为缩略图加载](how-to-load-an-image-as-a-thumbnail.md)  
+ [向位图图像应用转换](how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [通过视觉对象创建位图](how-to-create-a-bitmap-from-a-visual.md)  
+ [将视觉对象编码为图像文件](how-to-encode-a-visual-to-an-image-file.md)  
+ [新建 BitmapSource](how-to-create-a-new-bitmapsource.md)  
+ [将多个 BitmapSource 对象链在一起](how-to-chain-bitmapsource-objects-together.md)  
+ [将 BitmapSource 转换成另一种 PixelFormat](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [将 BitmapSource 转换成索引的像素格式](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [编码和解码 JPEG 图像](how-to-encode-and-decode-a-jpeg-image.md)  
+ [编码和解码 BMP 图像](how-to-encode-and-decode-a-bmp-image.md)  
+ [编码和解码 PNG 图像](how-to-encode-and-decode-a-png-image.md)  
+ [编码和解码 WDP 图像](how-to-encode-and-decode-a-wdp-image.md)  
+ [编码和解码 GIF 图像](how-to-encode-and-decode-a-gif-image.md)  
+ [编码和解码 TIFF 图像](how-to-encode-and-decode-a-tiff-image.md)  
+ [在位图中写入元数据](how-to-write-metadata-to-a-bitmap.md)  
+ [从位图读取元数据](how-to-read-metadata-from-a-bitmap.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Controls.Image>  
@@ -42,5 +43,5 @@ ms.lasthandoff: 05/04/2018
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>请参阅  
- [图像处理概述](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a>请参阅
+- [图像处理概述](imaging-overview.md)

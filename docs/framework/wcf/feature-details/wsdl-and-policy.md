@@ -2,17 +2,17 @@
 title: WSDL 和策略
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741426"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 和策略
 本主题介绍 Windows Communication Foundation (WCF) WSDL 1.1、 Ws-policy 和 Ws-policyattachment 实现详细信息，以及其他 Ws-policy 断言和 WSDL 1.1 扩展引入的 WCF。  
   
- WCF 实现以及约束和本文档中描述的声明提交给 W3C 的 Ws-policy 和 Ws-policyattachment 规范。  
+ WCF 实现以及约束和声明本文档中所述提交给 W3C 的 Ws-policy 和 Ws-policyattachment 规范。  
   
  本文档使用下表中所示的前缀和命名空间。  
   
@@ -28,10 +28,10 @@ ms.locfileid: "33501090"
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>WCF WSDL1.1 扩展  
- WCF 使用下列 WSDL1.1 扩展来描述协定会话要求。  
+ WCF 使用下列 WSDL1.1 扩展来描述协定会话需求。  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs: boolean，指示此操作启动 WCF 会话;默认值是`false`。  
+ xs: boolean，指示此操作会启动 WCF 会话;默认值是`false`。  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
  xs: boolean，指示此操作将终止 WCF 会话;默认值是`false`。  
@@ -40,7 +40,7 @@ ms.locfileid: "33501090"
  xs:boolean，指示此协定要求建立会话。  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTP 绑定传输 URI  
- WCF 使用以下 Uri 指示要用于 WSDL 1.1、 SOAP 1.1 和 SOAP 1.2 绑定扩展元素的传输。  
+ WCF 使用以下 Uri 来指示要用于 WSDL 1.1、soap 1.1 和 SOAP 1.2 绑定扩展元素的传输。  
   
 |传输|URI|  
 |---------------|---------|  
@@ -50,7 +50,7 @@ ms.locfileid: "33501090"
 |命名管道|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>由 WCF 实现的策略断言  
- 除了在 Web 服务规范中引入的策略断言 (WS-*) 并在此文档的其他部分中所述，WCF 实现以下策略断言。  
+ 除了在 Web 服务规范中引入的策略断言 (WS-*)，并在本文档其他部分中所述，WCF 实现以下策略断言。  
   
 |策略断言|策略主题|描述|  
 |----------------------|--------------------|-----------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "33501090"
 |mssp:MustNotSendCancel|嵌套|指定一个要求，即不要将使用 Cancel 绑定 [WS-Trust、WS-SC] 的请求安全令牌 (RST) 请求消息 [WS-Trust] 发送给给定 SecurityContextToken 的颁发机构。 如果此断言存在，则不得将此类请求消息发送给颁发机构。 如果此断言不存在，则可以将此类请求消息发送给颁发机构。|  
 |mssp:RequireClientCertificate|嵌套|这一可选元素指定需要作为 TLSNEGO 协议的一部分提供的客户端证书。 如果此断言存在，则必须提供客户端证书。 如果此断言不存在，则不得提供客户端证书。 此断言不得在 mssp:SslContextToken 外部使用。|  
   
-## <a name="see-also"></a>请参阅  
- [自定义 WSDL 发布](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [如何：导出自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [如何：导入自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a>请参阅
+- [自定义 WSDL 发布](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+- [如何：导出自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [如何：导入自定义 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

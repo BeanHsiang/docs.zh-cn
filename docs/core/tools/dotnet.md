@@ -1,15 +1,13 @@
 ---
-title: dotnet 命令 - .NET Core CLI
+title: dotnet 命令
 description: 了解 dotnet 命令（.NET Core CLI 工具的通用驱动程序）及其用法。
-author: mairaw
-ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 107a529952cce62dac840874fa5d6d8986376adf
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615568"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185631"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -38,7 +36,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 ```
 ---
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 `dotnet` 是一款管理 .NET 源代码和二进制文件的工具。 它公开执行特定任务的命令，例如 [`dotnet build`](dotnet-build.md) 和 [`dotnet run`](dotnet-run.md)。 每个命令都定义自己的参数。 在每个命令后键入 `--help` 以访问简要帮助文档。
 
@@ -80,9 +78,14 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 显示已安装的 .NET Core SDK。
 
-`--roll-forward-on-no-candidate-fx`
+`--roll-forward-on-no-candidate-fx <N>`
 
- 如果设置为 `0`，则禁用次要版本前滚。 有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
+所需的共享框架不可用时，请定义行为。 `N` 可以是：
+* `0` - 禁用次要版本前滚。
+* `1` - 前滚次要版本，但不前滚主版本。 这是默认行为。
+* `2` - 前滚次要和主版本。
+
+ 有关详细信息，请参阅[前滚](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
 `-v|--verbosity <LEVEL>`
 

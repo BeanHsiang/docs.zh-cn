@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: c8918bce1d0e19e8f70be4ddbda892924a944e68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54525256"
 ---
 # <a name="security-overview"></a>安全性概述
 Windows Communication Foundation (WCF) 是一个 SOAP 基于消息的分布式编程平台，并保护客户端和服务之间的消息是保护数据必不可少。 WCF 基于现有安全性基础结构和 SOAP 消息安全标准的安全消息交换提供通用且可互操作平台。  
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF) 是一个 SOAP 基于消息的分布式�
 ### <a name="standards-and-interoperability"></a>标准和互操作性  
  在具有大量现有部署的环境中，很少会出现同质化现象。 分布式计算/通信平台需要与不同供应商提供的技术进行互操作。 同样地，安全性也必须能够互操作。  
   
- 为了实现可互操作的安全系统，活跃在 Web 服务行业的公司编写了多种不同的标准。 具体到安全性，它们提出了几个著名的标准：WS-Security：SOAP 消息安全（由 OASIS 标准组织采用，以前称为 WS-Security）、WS-Trust、WS-SecureConversation 和 WS-SecurityPolicy。  
+ 为了实现可互操作的安全系统，活跃在 Web 服务行业的公司编写了多种不同的标准。 有关安全，特别被提出几个值得注意的标准：WS-安全性：SOAP 消息安全 （接受的 OASIS 标准主体，以前称为 Ws-security）、 Ws-trust、 Ws-secureconversation 和 Ws-securitypolicy。  
   
  WCF 支持各种互操作性方案。 <xref:System.ServiceModel.BasicHttpBinding> 类可支持基本安全配置文件 (BSP)，而 <xref:System.ServiceModel.WSHttpBinding> 类则支持最新的安全标准，例如 WS-Security 1.1 和 WS-SecureConversation。 通过遵循这些标准，WCF 安全可以进行互操作和与操作系统和 Microsoft Windows 以外的平台托管的 Web 服务集成。  
   
@@ -95,21 +95,21 @@ Windows Communication Foundation (WCF) 是一个 SOAP 基于消息的分布式�
  在 WCF 中，访问控制功能提供通过与公共语言运行时 (CLR) 集成<xref:System.Security.Permissions.PrincipalPermissionAttribute>并通过一系列 Api 称为*标识模型*。 有关访问控制和基于声明的授权的详细信息，请参阅[扩展安全](../../../../docs/framework/wcf/extending/extending-security.md)。  
   
 ### <a name="auditing"></a>审核  
- *审核*是到 Windows 事件日志的安全事件的日志记录。 您可以记录与安全相关的事件，例如身份验证失败（或成功）。 有关详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。 有关编程的详细信息，请参阅[如何： 审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
+ *审核*是到 Windows 事件日志的安全事件的日志记录。 您可以记录与安全相关的事件，例如身份验证失败（或成功）。 有关详细信息，请参阅[审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。 有关编程的详细信息，请参阅[如何：审核安全事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [保护服务](../../../../docs/framework/wcf/securing-services.md)  
- [常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [身份验证](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
- [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [联合令牌与颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
- [审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [安全指导和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- [使用配置文件配置服务](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [终结点创建概述](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [扩展安全性](../../../../docs/framework/wcf/extending/extending-security.md)  
- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>请参阅
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- [保护服务](../../../../docs/framework/wcf/securing-services.md)
+- [常用安全方案](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+- [绑定与安全](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [身份验证](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+- [授权](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [联合令牌与颁发的令牌](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [审核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
+- [安全指导和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [使用配置文件配置服务](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [系统提供的绑定](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [终结点创建概述](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [扩展安全性](../../../../docs/framework/wcf/extending/extending-security.md)
+- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

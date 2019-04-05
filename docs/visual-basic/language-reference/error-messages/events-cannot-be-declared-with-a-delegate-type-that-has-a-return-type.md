@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31084
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
-ms.openlocfilehash: 33cef19d91445fa39c19ad1cdd6ef4f73b6b5319
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbdd85cfc1852afb2e174ac8b94fd63f9d07b796
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586459"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823202"
 ---
 # <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>事件不能用具有返回类型的委托类型声明
-为函数过程指定委托。  
+为函数过程指定的委托。  
   
  **错误 ID:** BC31084  
   
@@ -23,5 +23,6 @@ ms.locfileid: "33586459"
   
 -   指定的委托`Sub`过程。  
   
-## <a name="see-also"></a>请参阅  
- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a>请参阅
+
+- [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

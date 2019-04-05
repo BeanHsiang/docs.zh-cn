@@ -2,12 +2,12 @@
 title: 如何：创建自定义活动模板
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: 87acf0d084154c9c3e5cbc97da4af9821709f0a5
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: f9594f799e1b6a176e7bbf28cdea77c9cdfb70ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044835"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703460"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>如何：创建自定义活动模板
 
@@ -127,4 +127,4 @@ namespace DelayActivityTemplate
 ## <a name="see-also"></a>请参阅
 
 - <xref:System.Activities.Presentation.IActivityTemplateFactory>
-- [自定义工作流设计体验](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [自定义工作流设计体验](customizing-the-workflow-design-experience.md)

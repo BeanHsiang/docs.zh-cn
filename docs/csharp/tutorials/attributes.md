@@ -4,14 +4,14 @@ description: 了解特性在 C# 中的工作方式。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390514"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975597"
 ---
-# <a name="using-attributes-in-c"></a>在 C# 中使用特性 #
+# <a name="using-attributes-in-c"></a>在 C\# 中使用属性
 
 使用特性，可以声明的方式将信息与代码相关联。 特性还可以提供能够应用于各种目标的可重用元素。
 
@@ -110,7 +110,7 @@ ms.locfileid: "43390514"
 
 若要查找并使用特性，通常需要使用[反射](../programming-guide/concepts/reflection.md)。 我不会在此教程中深入介绍反射，但基本概念就是借助反射，可以在 C# 中编写用于检查其他代码的代码。
 
-例如，可以使用反射获取类的相关信息： 
+例如，可以使用反射获取类的相关信息（在代码开始处添加 `using System.Reflection;`）： 
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
@@ -137,7 +137,7 @@ ms.locfileid: "43390514"
 * `[Obsolete]`。 此特性已在上面的示例中使用过，位于 `System` 命名空间中。 可用于提供关于不断变化的基本代码的声明性文档。 可以提供字符串形式的消息，并能使用另一布尔参数将编译器警告升级为编译器错误。
 
 * `[Conditional]`。 此特性位于 `System.Diagnostics` 命名空间中。 可应用于方法（或特性类）。 必须向构造函数传递字符串。
-如果此字符串与 `#define` 指令匹配，那么 C# 编译器将删除对该方法（而不是方法本身）的所有调用。 此特性通常用于调试（诊断）目的。
+如果该字符串与 `#define` 指令不匹配，那么 C# 编译器将删除对该方法（而不是方法本身）的所有调用。 此特性通常用于调试（诊断）目的。
 
 * `[CallerMemberName]`。 此特性可应用于参数，位于 `System.Runtime.CompilerServices` 命名空间中。 可用于插入正在调用另一方法的方法的名称。 此特性通常用于在各种 UI 框架中实现 INotifyPropertyChanged 时清除“神奇字符串”。 例如：
 

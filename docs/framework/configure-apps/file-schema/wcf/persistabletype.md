@@ -1,33 +1,33 @@
 ---
-title: '&lt;persistableType&gt;'
+title: <persistableType>
 ms.date: 03/30/2017
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-ms.openlocfilehash: 23724957398ed1ade2c81a3932e9773d7cf4c642
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ea99d360ceb1e3fe6e97cbf9c8827dd7c853f63
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747068"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256519"
 ---
-# <a name="ltpersistabletypegt"></a>&lt;persistableType&gt;
+# <a name="persistabletype"></a>\<persistableType>
 指定所有永久类型。  
   
  \<system.ServiceModel>  
 \<comContracts>  
-\<comContract >  
+\<comContract>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<comContracts>  
-  <comContract>  
-      <persistableTypes>  
-         <persistableType id="string"  
-            name="string">  
-         </persistableType>  
-      </persistableTypes>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract>
+    <persistableTypes>
+      <persistableType id="String"
+                       name="String">
+      </persistableType>
+    </persistableTypes>
+  </comContract>
+</comContracts>
 ```  
   
 ## <a name="type"></a>类型  
@@ -52,9 +52,9 @@ ms.locfileid: "32747068"
 |-------------|-----------------|  
 |[\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)|一个 `persistableType` 元素集合。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>  
- <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>  
- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [与 COM+ 应用程序集成](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [如何：配置 COM+ 服务设置](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>
+- <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>
+- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
+- [与 COM+ 应用程序集成](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [如何：配置 COM + 服务设置](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -1,5 +1,6 @@
 ---
-title: base 关键字（C# 参考）
+title: base 关键字 - C# 参考
+ms.custom: seodec18
 description: 了解 base 关键字，使用它从 C# 中的派生类中访问基类的成员。
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: 8719ab79273701173530760ad1bec837c4f4302d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ef7995c9f7737d29d7e9479c3b84a25b13943be3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681750"
 ---
 # <a name="base-c-reference"></a>base（C# 参考）
 
@@ -50,7 +51,7 @@ ms.locfileid: "48837846"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
 - [this](../../../csharp/language-reference/keywords/this.md)

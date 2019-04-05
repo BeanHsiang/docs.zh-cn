@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 343cdc4e30984e75bd2fede2706679839a573153
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845701"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517690"
 ---
 # <a name="configuring-system-provided-bindings"></a>配置系统提供的绑定
 绑定可指定在与终结点通话时所使用的通信机制，并指示如何连接到终结点。 绑定包含的元素的定义方式的 Windows Communication Foundation (WCF) 通道进行分层以提供所需的通信功能。 绑定包含三种类型的元素：  
@@ -22,7 +22,7 @@ ms.locfileid: "48845701"
   
 -   消息编码绑定元素，用于确定要对发送到终结点的消息使用的网络编码，例如，文本/XML、二进制或消息传输优化机制 (MTOM)。  
   
- 本主题介绍了所有系统提供的 Windows Communication Foundation (WCF) 绑定。 如果这些绑定没有一个完全符合应用程序的要求，则可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 类创建一个绑定。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 本主题介绍了所有系统提供的 Windows Communication Foundation (WCF) 绑定。 如果这些绑定没有一个完全符合应用程序的需求，则可以使用 <xref:System.ServiceModel.Channels.CustomBinding> 类创建一个绑定。 有关创建自定义绑定的详细信息，请参阅[自定义绑定](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 > [!IMPORTANT]
 >  选择启用了安全性的绑定。 默认情况下，除 <xref:System.ServiceModel.BasicHttpBinding> 绑定之外的所有绑定都启用了安全性。 如果不选择安全绑定或禁用了安全性，请确保以某种其他方式保护网络交换，例如在安全的数据中心或独立的网络上进行网络交换。  
@@ -40,7 +40,7 @@ ms.locfileid: "48845701"
 |<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|一个安全且可互操作的绑定，可为 <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> 的正确版本和 <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> 绑定元素提供支持。|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|一个安全且可互操作的绑定，适用于双工服务协定或通过 SOAP 媒介进行的通信。|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|一个安全且可互操作的绑定，支持 WS 联合协议并使联合中的组织可以高效地对用户进行身份验证和授权。|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|一个安全且可互操作的绑定，它派生自 <xref:System.ServiceModel.WS2007HttpBinding>并支持联合安全性。|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|一个安全且可互操作的绑定，它派生自 <xref:System.ServiceModel.WS2007HttpBinding>并支持联合安全性。|  
 |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|一个安全且经过优化的绑定，适用于 WCF 应用程序之间跨计算机的通信。|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|一个安全、可靠且经过优化的绑定，适用于 WCF 应用程序之间计算机上的通信。|  
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|一个排队绑定，适用于 WCF 应用程序之间的计算机间的通信。|  
@@ -71,13 +71,13 @@ ms.locfileid: "48845701"
 |功能|描述|  
 |-------------|-----------------|  
 |互操作性类型|指定绑定用来确保互操作的协议或技术。|  
-|安全性|指定如何保护通道：<br /><br /> -None: SOAP 消息不安全的并且客户端未经过身份验证。<br />-传输： 在传输层上满足安全要求。<br />-消息： 在消息层上满足安全要求。<br />混合： 此安全模式称为`TransportWithMessageCredentials`。 此模式在消息级别上处理凭据，并由传输层来满足完整性和保密性需求。<br />-: 消息级别和传输级别安全性将使用它们。 此功能仅可用于 <xref:System.ServiceModel.NetMsmqBinding>。|  
+|安全性|指定如何保护通道：<br /><br /> -None:不保护 SOAP 消息，客户端未经过身份验证。<br />-传输：在传输层上满足安全要求。<br />-消息：在消息层上满足安全要求。<br />混合：此安全模式称为`TransportWithMessageCredentials`。 此模式在消息级别上处理凭据，并由传输层来满足完整性和保密性需求。<br />-同时：使用消息级别和传输级别安全。 此功能仅可用于 <xref:System.ServiceModel.NetMsmqBinding>。|  
 |会话|指定此绑定是否支持会话协定。|  
 |事务|指定是否启用事务。|  
 |双工|指定是否支持双工协定。 注意，此功能要求在绑定中支持会话。|  
 |流式处理|指定是否支持消息流处理。|  
   
-## <a name="see-also"></a>请参阅  
- [终结点创建概述](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [使用绑定配置服务和客户端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)
+## <a name="see-also"></a>请参阅
+- [终结点创建概述](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [使用绑定配置服务和客户端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [基本 WCF 编程](../../../../docs/framework/wcf/basic-wcf-programming.md)

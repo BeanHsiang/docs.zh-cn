@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28c5e817e415e08c3a58c840e52cdfcbe286997
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da36cfb86aae52af90451e92b8b17088e29481da
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409823"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481750"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe（类型库导入程序）
 类型库导入程序将 COM 类型库中的类型定义转换为公共语言运行时程序集中的等效定义。 Tlbimp.exe 的输出是一个二进制文件（程序集），其中包含在原始类型库中定义的类型的运行时元数据。 可以使用 [Ildasm.exe](ildasm-exe-il-disassembler.md) 这样的工具检查此文件。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](developer-command-prompt-for-vs.md)。  
   
  在命令提示符处，键入以下内容：  
   
@@ -32,13 +32,13 @@ ms.locfileid: "33409823"
 tlbimp tlbFile [options]  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
 |*tlbFile*|任何包含 COM 类型库的文件的名称。|  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**/asmversion:** *versionnumber*|指定要生成的程序集的版本号。 以 *major.minor.build.revision* 格式指定 *versionnumber*。|  
 |**/company:** `companyinformation`|将公司信息添加到输出程序集。|  
@@ -52,7 +52,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|阻止 Tlbimp.exe 向类添加成员。 这样可避免潜在的 <xref:System.TypeLoadException>。|  
 |**/nologo**|取消显示 Microsoft 启动版权标志。|  
 |**/out:** *filename*|指定输出文件、程序集以及要写入元数据定义的命名空间的名称。 如果类型库指定的接口定义语言 (IDL) 自定义特性显式控制程序集的命名空间，则 **/out** 选项对程序集的命名空间没有任何影响。 如果你没有指定此选项，则 Tlbimp.exe 会将元数据写入到与在输入文件内定义的实际类型库同名的文件中，并且为其分配 .dll 扩展名。 如果输出文件的名称与输入文件的名称相同，则该工具将生成一个错误以防止覆盖类型库。|  
-|**/primary**|生成指定类型库的主互操作程序集。 将在程序集中添加相关信息以指示类型库的发行者已生成程序集。 通过指定主互操作程序集，可以将发布者的程序集与使用 Tlbimp.exe 从类型库创建的任何其他程序集区分开来。 如果你是用 Tlbimp.exe 导入的类型库的发布者，则应只使用 **/primary** 选项。 请注意，你必须使用[强名称](../app-domains/strong-named-assemblies.md)对主互操作程序集进行签名。 有关详细信息，请参阅[主互操作程序集](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100))。|  
+|**/primary**|生成指定类型库的主互操作程序集。 将在程序集中添加相关信息以指示类型库的发行者已生成程序集。 通过指定主互操作程序集，可以将发布者的程序集与使用 Tlbimp.exe 从类型库创建的任何其他程序集区分开来。 如果你是用 Tlbimp.exe 导入的类型库的发布者，则应只使用 **/primary** 选项。 请注意，你必须使用[强名称](../app-domains/strong-named-assemblies.md)对主互操作程序集进行签名。 有关详细信息，请参阅[主互操作程序集](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。|  
 |**/product:** `productinformation`|将产品信息添加到输出程序集。 此信息可在程序集的“文件属性”对话框中查看。|  
 |**/productversion:** `productversioninformation`|将产品版本信息添加到输出程序集。 没有格式限制。 此信息可在程序集的“文件属性”对话框中查看。|  
 |**/publickey:** *filename*|指定包含用来对结果程序集签名的公钥的文件。 如果指定 **/keyfile:** 或 **/keycontainer:** 选项而非 **/publickey:**，则 Tlbimp.exe 将根据随 **/keyfile:** 或 **/keycontainer:** 一起提供的公钥/私钥对来生成公钥。 **/publickey:** 选项支持测试键和延迟签名方案。 文件的格式为 Sn.exe 生成的格式。 有关详细信息，请参阅[强名称工具 (Sn.exe)](sn-exe-strong-name-tool.md) 中的 Sn.exe 的 **-p** 选项。|  
@@ -125,13 +125,13 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [工具](index.md)  
- [Tlbexp.exe（类型库导出程序）](tlbexp-exe-type-library-exporter.md)  
- [将类型库作为程序集导入](../interop/importing-a-type-library-as-an-assembly.md)  
- [有关从类型库转换到程序集的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Ildasm.exe（IL 反汇编程序）](ildasm-exe-il-disassembler.md)  
- [Sn.exe（强名称工具）](sn-exe-strong-name-tool.md)  
- [具有强名称的程序集](../app-domains/strong-named-assemblies.md)  
- [用于向互操作程序集导入类型库的特性](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))  
- [命令提示](developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>请参阅
+- [工具](index.md)
+- [Tlbexp.exe（类型库导出程序）](tlbexp-exe-type-library-exporter.md)
+- [将类型库作为程序集导入](../interop/importing-a-type-library-as-an-assembly.md)
+- [有关从类型库转换到程序集的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Ildasm.exe（IL 反汇编程序）](ildasm-exe-il-disassembler.md)
+- [Sn.exe（强名称工具）](sn-exe-strong-name-tool.md)
+- [具有强名称的程序集](../app-domains/strong-named-assemblies.md)
+- [用于向互操作程序集导入类型库的特性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))
+- [命令提示](developer-command-prompt-for-vs.md)

@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 21184098f90be3b64cfccd5ab98a1824cee50e48
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508183"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212516"
 ---
 # <a name="service-identity-and-authentication"></a>服务标识和身份验证
-服务的*终结点标识*是从 Web 服务描述语言 (wsdl) 生成的值。 此值可传播到任何客户端，用于对服务进行身份验证。 在客户端启动与终结点的通信并且服务向客户端验证自己的身份之后，客户端将终结点标识值与终结点身份验证过程返回的实际值进行比较。 如果二者匹配，则客户端确信其已与预期的服务终结点联系。 此功能，以防*网络钓鱼*通过防止客户端重定向到由恶意服务承载的终结点。  
+服务的*终结点标识*是从服务 Web Services 描述语言 (WSDL) 生成的值。 此值可传播到任何客户端，用于对服务进行身份验证。 在客户端启动与终结点的通信并且服务向客户端验证自己的身份之后，客户端将终结点标识值与终结点身份验证过程返回的实际值进行比较。 如果二者匹配，则客户端确信其已与预期的服务终结点联系。 这作为防范*仿冒网站*通过防止客户端被重定向到恶意服务承载的终结点。  
   
- 有关演示如何标识设置的示例应用，请参阅[服务标识示例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 有关终结点和终结点地址的详细信息，请参阅[地址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)。  
+ 有关演示标识设置的示例应用程序，请参阅[服务标识示例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 有关终结点和终结点地址的详细信息，请参阅[地址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)。  
   
 > [!NOTE]
 >  在使用 NT LanMan (NTLM) 进行身份验证时，将不检查服务标识，这是因为在 NTLM 下客户端无法对服务器进行身份验证。 在计算机是 Windows 工作组的一部分时，或者在运行不支持的 Kerberos 身份验证的 Windows 早期版本时，将使用 NTLM。  
@@ -32,43 +32,43 @@ ms.locfileid: "33508183"
   
  客户端上的标识处理与服务上的客户端身份验证相似。 直到已经对客户端的凭据进行了身份验证，安全服务才会执行代码。 同样，直到基于事先从服务元数据已知的内容对服务凭据进行了身份验证，客户端才会向服务发送消息。  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A> 类的 <xref:System.ServiceModel.EndpointAddress> 属性表示由客户端调用的服务的标识。 服务在其元数据中发布 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 当客户端开发人员运行时[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)针对服务终结点，则生成的配置包含的值的服务的<xref:System.ServiceModel.EndpointAddress.Identity%2A>属性。 WCF 基础结构 （是否使用安全配置） 验证服务拥有指定的标识。  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A> 类的 <xref:System.ServiceModel.EndpointAddress> 属性表示由客户端调用的服务的标识。 服务在其元数据中发布 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 当客户端开发人员运行时[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)针对服务终结点，生成的配置包含的值的服务的<xref:System.ServiceModel.EndpointAddress.Identity%2A>属性。 WCF 基础结构 （是否使用安全配置） 验证该服务处理指定的标识。  
   
 > [!IMPORTANT]
->  元数据包含服务的预期标识，因此建议以安全方式公开服务元数据，例如，通过创建服务的 HTTPS 终结点。 有关详细信息，请参阅[如何： 保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
+>  元数据包含服务的预期标识，因此建议以安全方式公开服务元数据，例如，通过创建服务的 HTTPS 终结点。 有关详细信息，请参阅[如何：保护元数据终结点](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
   
 ## <a name="identity-types"></a>标识类型  
- 一种服务可以提供六种类型的标识。 每种标识类型对应于一个可以包含在配置中的 `<identity>` 元素内的元素。 使用的类型取决于方案和服务的安全要求。 下表描述每种标识类型。  
+ 服务可以提供六种类型的标识。 每种标识类型对应于一个可以包含在配置中的 `<identity>` 元素内的元素。 使用的类型取决于方案和服务的安全要求。 下表描述每种标识类型。  
   
 |标识类型|描述|典型的方案|  
 |-------------------|-----------------|----------------------|  
 |域名系统 (DNS)|将此元素用于 X.509 证书或 Windows 帐户。 它将凭据中指定的 DNS 名称与此元素中指定的值进行比较。|DNS 检查让您可以通过 DNS 或使用者名称来使用证书。 如果使用同一个 DNS 或使用者名称来重新颁发证书，则标识检查仍然有效。 在重新颁发证书时，它会获取新的 RSA 密钥，但保留相同的 DNS 或使用者名称。 这意味着客户端不必更新其有关服务的标识信息。|  
-|证书。 `ClientCredentialType` 设置为 Certificate 时的默认值。|此元素指定要与客户端进行比较的 Base64 编码的 X.509 证书值。<br /><br /> 在使用 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 作为对服务进行身份验证的凭据时也使用此元素。|此元素将身份验证限制为单个基于其指纹值的证书。 这样将启用更为严格的身份验证，因为指纹值是唯一的。 这也带来一个需要注意的问题：如果使用相同使用者名称重新颁发证书，则证书也有一个新的指纹。 因此，客户端无法验证服务，除非新的指纹是已知的。 有关查找证书的指纹的详细信息，请参阅[如何： 检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。|  
+|证书。 `ClientCredentialType` 设置为 Certificate 时的默认值。|此元素指定要与客户端进行比较的 Base64 编码的 X.509 证书值。<br /><br /> 在使用 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 作为对服务进行身份验证的凭据时也使用此元素。|此元素将身份验证限制为单个基于其指纹值的证书。 这样将启用更为严格的身份验证，因为指纹值是唯一的。 这会带来一点：如果具有相同的使用者名称重新颁发证书时，它还具有一个新的指纹。 因此，客户端无法验证服务，除非新的指纹是已知的。 有关查找证书的指纹的详细信息，请参阅[如何：检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。|  
 |证书引用|与前面描述的“证书”选项完全相同。 但是，此元素可让您指定证书名称并存储检索证书的位置。|与前面描述的“证书”方案相同。<br /><br /> 其优点是证书存储位置可以更改。|  
 |RSA|此元素指定要与客户端进行比较的 RSA 密钥值。 这与“证书”选项类似，但并不使用证书的指纹，而是使用证书的 RSA 密钥。|RSA 检查可让您明确地将身份验证限制为单个证书（基于其 RSA 证书）。 这样将启用更为严格的特定 RSA 密钥身份验证，不过与此对应的代价是，如果更改 RSA 密钥值，则该服务不可再用于现有客户端。|  
-|用户主体名称 (UPN)。 `ClientCredentialType` 设置为 Windows 时的默认值，并且服务进程不是在一个系统帐户下运行的。|此元素指定运行服务所依据的 UPN。 请参阅的 Kerberos 协议和标识部分[重写进行身份验证服务的标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。|这将确保服务在特定的 Windows 用户帐户下运行。 用户帐户可以是当前已登录用户，也可以是在特定用户帐户下运行的服务。<br /><br /> 如果服务是在 Active Directory 环境内的域帐户下运行，则此设置将利用 Windows Kerberos 安全。|  
-|服务主体名称 (SPN)。 `ClientCredentialType` 设置为 Windows 时的默认值，并且服务进程是在一个系统帐户（LocalService、LocalSystem 或 NetworkService）下运行的。|此元素指定与服务的帐户相关联的 SPN。 请参阅的 Kerberos 协议和标识部分[重写进行身份验证服务的标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。|这将确保 SPN 和与 SPN 相关联的特定 Windows 帐户标识服务。<br /><br /> 可以使用 Setspn.exe 工具将计算机帐户与服务的用户帐户进行关联。<br /><br /> 如果服务是在一个系统帐户下或具有与其关联的 SPN 名称的域帐户下运行的，并且计算机是 Active Directory 环境中的域的一个成员，则此设置将利用 Windows Kerberos 安全。|  
+|用户主体名称 (UPN)。 `ClientCredentialType` 设置为 Windows 时的默认值，并且服务进程不是在一个系统帐户下运行的。|此元素指定运行服务所依据的 UPN。 请参阅的 Kerberos 协议和标识部分[重写用于身份验证的服务标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。|这将确保服务在特定的 Windows 用户帐户下运行。 用户帐户可以是当前已登录用户，也可以是在特定用户帐户下运行的服务。<br /><br /> 如果服务是在 Active Directory 环境内的域帐户下运行，则此设置将利用 Windows Kerberos 安全。|  
+|服务主体名称 (SPN)。 `ClientCredentialType` 设置为 Windows 时的默认值，并且服务进程是在一个系统帐户（LocalService、LocalSystem 或 NetworkService）下运行的。|此元素指定与服务的帐户相关联的 SPN。 请参阅的 Kerberos 协议和标识部分[重写用于身份验证的服务标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。|这将确保 SPN 和与 SPN 相关联的特定 Windows 帐户标识服务。<br /><br /> 可以使用 Setspn.exe 工具将计算机帐户与服务的用户帐户进行关联。<br /><br /> 如果服务是在一个系统帐户下或具有与其关联的 SPN 名称的域帐户下运行的，并且计算机是 Active Directory 环境中的域的一个成员，则此设置将利用 Windows Kerberos 安全。|  
   
 ## <a name="specifying-identity-at-the-service"></a>在服务上指定标识  
- 通常情况下不需要设置服务上的标识，因为客户端凭据类型的选择即规定了服务元数据中公开的标识的类型。 有关如何重写或指定的服务标识的详细信息，请参阅[重写进行身份验证服务的标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。  
+ 通常情况下不需要设置服务上的标识，因为客户端凭据类型的选择即规定了服务元数据中公开的标识的类型。 有关如何重写或指定服务标识的详细信息，请参阅[重写用于身份验证的服务标识](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。  
   
 ## <a name="using-the-identity-element-in-configuration"></a>使用\<标识 > 配置中的元素  
  如果将前面演示的绑定中的客户端凭据类型更改为 `Certificate,`，则生成的 WSDL 将包含一个 Base64 序列化 X.509 证书作为标识值，如下面的代码所示。 这是除 Windows 之外的所有客户端凭据类型的默认值。  
   
   
   
- 可以更改默认服务标识的值，也可以使用的标识类型更改`<identity>`元素在配置中或通过在代码中设置标识。 下面的配置代码使用值 `contoso.com` 设置域名系统 (DNS) 标识。  
+ 可以更改默认服务标识的值，也可以使用更改的标识类型`<identity>`元素在配置中或通过在代码中设置标识。 下面的配置代码使用值 `contoso.com` 设置域名系统 (DNS) 标识。  
   
   
   
 ## <a name="setting-identity-programmatically"></a>以编程方式设置标识  
- 你的服务不必显式指定标识，因为 WCF 自动确定。 但是，WCF 允许你指定一个标识终结点，如果需要。 下面的代码使用特定的 DNS 标识添加了一个新的服务终结点。  
+ 你的服务无需显式指定标识，因为 WCF 会自动确定。 但是，WCF 允许您终结点上指定标识必要。 下面的代码使用特定的 DNS 标识添加了一个新的服务终结点。  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>在客户端上指定标识  
- 在设计时，客户端开发人员通常使用[ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成客户端配置。 生成的配置文件（适用于客户端使用）包含服务器的标识。 例如，下面的代码是从指定 DNS 标识的服务生成的，如前面的示例中所示。 请注意，客户端的终结点标识值与服务的标识值匹配。 在此情况下，客户端接收服务的 Windows (Kerberos) 凭据，期望的值为 `contoso.com`。  
+ 在设计时，客户端开发人员通常使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成客户端配置。 生成的配置文件（适用于客户端使用）包含服务器的标识。 例如，下面的代码是从指定 DNS 标识的服务生成的，如前面的示例中所示。 请注意，客户端的终结点标识值与服务的标识值匹配。 在此情况下，客户端接收服务的 Windows (Kerberos) 凭据，期望的值为 `contoso.com`。  
   
   
   
@@ -86,7 +86,7 @@ ms.locfileid: "33508183"
   
  如果配置通道以将消息级或传输级安全套接字层 (SSL) 与用于身份验证的 X.509 证书一起用来进行身份验证，则下面的标识值是有效的：  
   
--   DNS。 WCF 可确保在 SSL 握手期间提供的证书包含 DNS 或`CommonName`(CN) 属性等于客户端上的 DNS 标识中指定的值。 请注意，除了确定服务器证书的有效性之外还执行这些检查。 默认情况下，WCF 验证服务器证书由受信任的根颁发机构颁发。  
+-   DNS。 WCF 可确保在 SSL 握手期间提供的证书包含 DNS 或`CommonName`(CN) 属性等于在客户端上的 DNS 标识中指定的值。 请注意，除了确定服务器证书的有效性之外还执行这些检查。 默认情况下，WCF 会验证服务器证书由受信任的根颁发机构颁发。  
   
 -   证书。 在 SSL 握手期间 WCF 可确保远程终结点提供标识中指定的相同证书值。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "33508183"
   
 -   SPN。 返回显式的服务 SPN，例如 `host/myservice`。  
   
--   UPN。 服务帐户的 UPN。 UPN 采用的形式`username` @ `domain`。 例如，当服务在用户帐户中运行时，它可以是 `username@contoso.com`。  
+-   UPN。 服务帐户的 UPN。 UPN 采用窗体`username` @ `domain`。 例如，当服务在用户帐户中运行时，它可以是 `username@contoso.com`。  
   
  以编程的方式指定标识（使用 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 属性）是可选的。 如果未指定标识，并且客户端凭据类型是 Windows，则默认使用 SPN 并将其设置为以“host/”文本为前缀的服务终结点地址的主机名部分。 如果未指定标识，并且客户端凭据类型是证书，则默认使用 `Certificate`。 这将应用于消息级安全和传输级安全。  
   
@@ -110,14 +110,14 @@ ms.locfileid: "33508183"
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
   
- 有关如何堆栈绑定的详细信息元素的正确自定义绑定，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。 有关创建自定义绑定使用的详细信息<xref:System.ServiceModel.Channels.SecurityBindingElement>，请参阅[如何： 为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
+ 详细了解如何堆叠绑定元素正确自定义绑定，请参阅[创建用户定义绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。 有关创建自定义绑定的详细信息<xref:System.ServiceModel.Channels.SecurityBindingElement>，请参阅[如何：为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
-## <a name="see-also"></a>请参阅  
- [如何：使用 SecurityBindingElement 创建自定义绑定](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [如何：为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
- [如何：创建自定义客户端标识验证工具](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- [选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [创建用户定义的绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)  
- [如何：检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+## <a name="see-also"></a>请参阅
+- [如何：创建自定义绑定使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [如何：为指定的身份验证模式创建 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [如何：创建自定义客户端标识验证工具](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+- [选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [使用证书](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [ServiceModel 元数据实用工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [创建用户定义的绑定](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+- [如何：检索证书的指纹](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

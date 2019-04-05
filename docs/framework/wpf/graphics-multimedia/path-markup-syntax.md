@@ -7,19 +7,19 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 65a86b82af9269d1af7198b8106ad478e88f3691
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591927"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379154"
 ---
 # <a name="path-markup-syntax"></a>路径标记语法
-路径中讨论[形状和基本绘图中 WPF 概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)和[几何概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)，但是，本主题详细介绍了功能强大且复杂的微型语言，可用于指定路径使用更简洁的几何图形[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
+路径中讨论[形状和基本绘图中 WPF 概述](shapes-and-basic-drawing-in-wpf-overview.md)和[几何概述](geometry-overview.md)，但是，本主题详细介绍了功能强大且复杂的微型语言，可用于指定路径使用更简洁的几何图形[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>系统必备  
- 若要了解本主题，您应该熟悉的基本功能的<xref:System.Windows.Media.Geometry>对象。 有关详细信息，请参阅[几何概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
+ 若要了解本主题，您应该熟悉的基本功能的<xref:System.Windows.Media.Geometry>对象。 有关详细信息，请参阅[几何概述](geometry-overview.md)。  
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry and PathFigureCollection Mini-Languages  
@@ -27,33 +27,33 @@ ms.locfileid: "45591927"
   
 -   您使用<xref:System.Windows.Media.StreamGeometry>微型语言设置类型的属性时<xref:System.Windows.Media.Geometry>，如<xref:System.Windows.UIElement.Clip%2A>的属性<xref:System.Windows.UIElement>或<xref:System.Windows.Shapes.Path.Data%2A>属性<xref:System.Windows.Shapes.Path>元素。 下面的示例使用属性语法创建<xref:System.Windows.Media.StreamGeometry>。  
   
-     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
 -   您使用<xref:System.Windows.Media.PathFigureCollection>微型语言设置时<xref:System.Windows.Media.PathGeometry.Figures%2A>属性的<xref:System.Windows.Media.PathGeometry>。 下面的示例使用特性语法来创建<xref:System.Windows.Media.PathFigureCollection>为<xref:System.Windows.Media.PathGeometry>。  
   
-     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
+     [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   
  从前面的示例中可以看出，两种微型语言非常相似。 它始终是可以使用<xref:System.Windows.Media.PathGeometry>在任何情况下，可以使用<xref:System.Windows.Media.StreamGeometry>; 因此，您应使用哪一个？ 使用<xref:System.Windows.Media.StreamGeometry>不需要创建它; 后修改的路径时使用<xref:System.Windows.Media.PathGeometry>如果需要修改的路径。  
   
- 有关详细信息之间的差异<xref:System.Windows.Media.PathGeometry>并<xref:System.Windows.Media.StreamGeometry>对象，请参阅[几何概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
+ 有关详细信息之间的差异<xref:System.Windows.Media.PathGeometry>并<xref:System.Windows.Media.StreamGeometry>对象，请参阅[几何概述](geometry-overview.md)。  
   
 ### <a name="a-note-about-white-space"></a>有关空格的注意事项  
  为简洁起见，随后的语法部分中显示一个空格，但在显示一个空格的地方，多个空格也可以接受。  
   
- 两个数字实际上无需分隔逗号或空格，但这仅可以生成的字符串不明确时。 例如，`2..3`是实际的两个数字:"2"。 和“.3”。 同样，`2-3`是"2"和"-3"。 命令前面或后面也无需加空格。  
+ 两个数字实际上无需分隔逗号或空格，但这仅可以生成的字符串不明确时。 例如，`2..3`是实际的两个数字："2." 和“.3”。 同样，`2-3`是"2"和"-3"。 命令前面或后面也无需加空格。  
   
 ### <a name="syntax"></a>语法  
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]属性使用语法<xref:System.Windows.Media.StreamGeometry>组成的可选<xref:System.Windows.Media.FillRule>值和一个或多个图说明。  
   
 |StreamGeometry XAML 属性用法|  
 |-----------------------------------------|  
-|`<` *对象**属性* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]属性使用语法<xref:System.Windows.Media.PathFigureCollection>由一个或多个图形说明组成。  
   
 |PathFigureCollection XAML Attribute Usage|  
 |-----------------------------------------------|  
-|`<` *对象**属性* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |术语|描述|  
 |----------|-----------------|  
@@ -224,11 +224,11 @@ ms.locfileid: "45591927"
   
  也可使用科学计数法。 例如，`+1.e17`是有效的值。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [WPF 中的形状和基本绘图概述](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Geometry 概述](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [WPF 中的形状和基本绘图概述](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Geometry 概述](geometry-overview.md)
+- [帮助主题](geometries-how-to-topics.md)

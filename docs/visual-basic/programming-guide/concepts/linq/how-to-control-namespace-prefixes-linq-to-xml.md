@@ -2,12 +2,12 @@
 title: 如何：控制命名空间前缀 (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: f60f90ef6742dfd725f51ff7e760436117346e85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e5a05d2fa93e61338f450d0a4d890fa94c04fd2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641675"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839007"
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>如何：控制命名空间前缀 (Visual Basic) (LINQ to XML)
 本主题说明如何控制命名空间前缀。  
@@ -15,7 +15,7 @@ ms.locfileid: "33641675"
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>描述  
- 本示例声明两个命名空间。 它指定`http://www.adventure-works.com`命名空间具有前缀`aw`，且`www.fourthcoffee.com`命名空间具有的前缀`fc`。  
+ 本示例声明两个命名空间。 它指定`http://www.adventure-works.com`命名空间具有前缀`aw`，并且`www.fourthcoffee.com`命名空间具有前缀的`fc`。  
   
 ### <a name="code"></a>代码  
   
@@ -53,5 +53,6 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [处理 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>请参阅
+
+- [使用 XML 命名空间 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

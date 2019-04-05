@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4338619414c9c9ac8c5fe85479562410d1678698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 74a54da0bc4257ccc50d2d99177a17b796380fb3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403853"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481425"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata 方法
-调用由公共语言运行时 (CLR) 数据访问服务以检索图像的元数据。  
+调用由公共语言运行时 (CLR) 数据访问服务检索的图像的元数据。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,7 +44,7 @@ HRESULT GetMetadata(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `imagePath`  
  [in]一个字符串，指定图像文件的路径。  
   
@@ -58,13 +58,13 @@ HRESULT GetMetadata(
  [in]图像的全局唯一标识符。  
   
  `mdRva`  
- [in]相对虚拟地址 (RVA) 的元数据。 该地址是相对于映像的基址。  
+ [in]相对虚拟地址 (RVA) 的元数据。 此地址是相对于映像的基址。  
   
  `flags`  
- [in]留待将来使用。  
+ [in]保留供将来使用。  
   
  `bufferSize`  
- [in]要在其中放置元数据缓冲区的大小。  
+ [in]要在其中放置元数据的缓冲区的大小。  
   
  `buffer`  
  [out]要在其中放置元数据缓冲区。  
@@ -76,13 +76,13 @@ HRESULT GetMetadata(
  此方法由调试应用程序的编写器实现。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** ClrData.idl、 ClrData.h  
+ **标头：** ClrData.idl, ClrData.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICLRMetadataLocator 接口](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICLRMetadataLocator 接口](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)

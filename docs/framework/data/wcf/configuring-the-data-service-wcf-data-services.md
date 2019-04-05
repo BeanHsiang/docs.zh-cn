@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: a564d214e933cb91e834191eb5dc5297c733664f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5b7e078b2eb76191ba572a7d141b29f71d7d8a96
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202271"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092548"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>配置数据服务（WCF 数据服务）
 与[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，可以创建公开的数据服务[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 这些源中的数据可以来自各种数据源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用数据提供程序公开此数据作为[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]源。 这些提供程序包括一个[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序、一个反射提供程序和一组自定义数据服务提供程序接口。 提供程序实现为服务定义数据模型。 有关详细信息，请参阅[数据服务提供商](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。  
@@ -29,27 +29,27 @@ ms.locfileid: "50202271"
   
 |成员|行为|  
 |------------|--------------|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|用于禁用通过使用 `$count` 路径段和 `$inlinecount` 查询选项提交给数据服务的计数请求。 有关详细信息，请参阅[OData: URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)。|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|用于在通过使用 `$select` 查询选项提交给数据服务的请求中禁用数据投影支持。 有关详细信息，请参阅[OData: URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)。|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|用于禁用通过使用 `$count` 路径段和 `$inlinecount` 查询选项提交给数据服务的计数请求。 有关详细信息，请参阅[OData:URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)。|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|用于在通过使用 `$select` 查询选项提交给数据服务的请求中禁用数据投影支持。 有关详细信息，请参阅[OData:URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeAccess%2A>|用于在通过使用 <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> 接口所定义的动态元数据提供程序的元数据中公开数据类型。|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeConversion%2A>|用于指定数据服务运行时是否应将负载中包含的类型转换为请求中指定的实际属性类型。|  
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|用于指定在删除两个实体之间的关系链接时是否对相关实体调用注册的变更侦听器。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|用于限制单个批处理中允许的变更集和查询操作的数量。 有关详细信息，请参阅[OData： 批处理](https://go.microsoft.com/fwlink/?LinkId=185602)并[批处理操作](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|用于限制单个变更集中可包含的变更的数量。 有关详细信息，请参阅[如何： 启用分页的数据服务结果](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md)。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的数量。 有关详细信息，请参阅[OData: URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)并[加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的图深度。 有关详细信息，请参阅[OData: URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)并[加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|用于限制单个批处理中允许的变更集和查询操作的数量。 有关详细信息，请参阅[OData:批处理](https://go.microsoft.com/fwlink/?LinkId=185602)并[对操作进行批处理](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|用于限制单个变更集中可包含的变更的数量。 有关详细信息，请参阅[如何：启用数据服务结果分页](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的数量。 有关详细信息，请参阅[OData:URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)并[加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|用于限制响应的大小，方法是使用 `$expand` 查询运算符限制单个请求中可包含的相关实体的图深度。 有关详细信息，请参阅[OData:URI 约定](https://go.microsoft.com/fwlink/?LinkId=185564)并[加载延迟的内容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|用于限制要插入的（即单个 POST 请求中可包含的）实体数量。|  
 |<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|定义数据服务所使用的 Atom 协议的版本。 如果 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的值设置为小于 <xref:System.Data.Services.Common.DataServiceProtocolVersion> 的最大值，则访问该数据服务的客户端不能使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的最新功能。 有关详细信息，请参阅[数据服务版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|用于限制响应的大小，方法是限制以数据馈送形式返回的每个实体集中实体的数量。|  
 |<xref:System.Data.Services.DataServiceConfiguration.RegisterKnownType%2A>|向可由数据服务识别的类型列表中添加数据类型。|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>|为可用于数据服务的实体集资源设置访问权限。 通过为名称参数提供星号值 (`*`)，可将对其余所有实体集的访问权限设置为同一级别。 建议您将对实体集的访问权限设置为能够提供客户端应用程序访问数据服务资源所需的最低访问权限。 有关更多信息，请参见 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。 有关给定 URI 和 HTTP 操作所需的最低访问权限的示例，请参阅中的表[最低资源访问要求](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md#accessRequirements)部分。|  
-|<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetPageSize%2A>|为实体集资源设置最大页面大小。 有关详细信息，请参阅[如何： 启用分页的数据服务结果](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetPageSize%2A>|为实体集资源设置最大页面大小。 有关详细信息，请参阅[如何：启用数据服务结果分页](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetServiceOperationAccessRule%2A>|为在数据服务中定义的服务操作设置访问权限。 有关详细信息，请参阅[服务操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。 通过为名称参数提供星号值 (`*`)，可将对所有服务操作的访问权限设置为同一级别。 建议您将对服务操作的访问权限设置为能够提供客户端应用程序访问数据服务资源所需的最低访问权限。 有关更多信息，请参见 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>|使用此配置属性可以在错误响应消息中返回更多信息，从而使您可以更轻松地对数据服务进行故障排除。 此选项不适用于生产环境。 有关详细信息，请参阅[开发和部署 WCF 数据服务](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)。|  
   
 <a name="accessRequirements"></a>   
 ## <a name="minimum-resource-access-requirements"></a>最低资源访问要求  
- 下表详细描述了为执行特定操作而必须授予的最低实体集权限。 路径示例基于 Northwind 数据服务创建完成后[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 由于 <xref:System.Data.Services.EntitySetRights> 枚举和 <xref:System.Data.Services.ServiceOperationRights> 枚举都是通过使用 <xref:System.FlagsAttribute> 定义的，因此您可以使用逻辑 OR 运算符来针对单个实体集或操作指定多个权限。 有关详细信息，请参阅[如何： 启用对数据服务的访问权限](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)。  
+ 下表详细描述了为执行特定操作而必须授予的最低实体集权限。 路径示例基于 Northwind 数据服务创建完成后[快速入门](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 由于 <xref:System.Data.Services.EntitySetRights> 枚举和 <xref:System.Data.Services.ServiceOperationRights> 枚举都是通过使用 <xref:System.FlagsAttribute> 定义的，因此您可以使用逻辑 OR 运算符来针对单个实体集或操作指定多个权限。 有关详细信息，请参阅[如何：启用对数据服务的访问](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)。  
   
 |路径/操作|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  
 |------------------|-----------|--------------|-------------|------------|-----------|  
@@ -69,7 +69,7 @@ ms.locfileid: "50202271"
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|不支持|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> －和－<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支持|不支持|不支持|不支持|  
   
- <sup>1</sup>在此示例中，`Address`表示的复杂类型属性`Customers`实体有一个名为`StreetAddress`。 罗斯文数据服务所使用的模型不会显式定义此复杂类型。 如果数据模型是使用[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序定义的，则可以使用[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]工具来定义这样的复杂类型。 有关详细信息，请参阅[如何： 创建和修改复杂类型](https://msdn.microsoft.com/library/afb8e206-0ffe-4597-b6d4-6ab566897e1d)。  
+ <sup>1</sup>在此示例中，`Address`表示的复杂类型属性`Customers`实体有一个名为`StreetAddress`。 罗斯文数据服务所使用的模型不会显式定义此复杂类型。 如果数据模型是使用[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供程序定义的，则可以使用[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]工具来定义这样的复杂类型。 有关详细信息，请参阅[如何：创建和修改复杂类型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))。  
   
  <sup>2</sup>返回二进制大型对象 (BLOB) 的属性定义为属于媒体链接入口，在此情况下，为某个实体的媒体资源时，才支持此 URI `Customers`。 有关详细信息，请参阅[流式处理提供程序](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。  
   
@@ -83,6 +83,6 @@ ms.locfileid: "50202271"
   
  有关详细信息，请参阅[数据服务版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
   
-## <a name="see-also"></a>请参阅  
- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a>请参阅
+- [定义 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [承载数据服务](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

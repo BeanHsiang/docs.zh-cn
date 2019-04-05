@@ -6,15 +6,15 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745373"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 体系结构
-如下图所示的 Windows Communication Foundation (WCF) 体系结构的主要层。  
+下图演示了 Windows Communication Foundation (WCF) 体系结构的主要层。  
   
 ## <a name="wcf-architecture"></a>WCF 体系结构  
  ![WCF 体系结构](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
@@ -30,7 +30,7 @@ ms.locfileid: "33804217"
  通过扩展性功能可以自定义运行时进程。 例如，消息检查功能用于检查消息的各个部分，使用参数筛选功能可以根据作用于消息头的筛选器来执行预设操作。  
   
 ### <a name="messaging"></a>消息  
- 消息传递层组成*通道*。 通道是以某种方式对消息进行处理（例如通过对消息进行身份验证）的组件。 一组通道是也称为*通道堆栈*。 通道对消息和消息头进行操作。 这与服务运行时层不同，服务运行时层主要涉及对消息正文内容的处理。  
+ 消息传送层组成*通道*。 通道是以某种方式对消息进行处理（例如通过对消息进行身份验证）的组件。 一组通道是也称为*通道堆栈*。 通道对消息和消息头进行操作。 这与服务运行时层不同，服务运行时层主要涉及对消息正文内容的处理。  
   
  有两种类型的通道：传输通道和协议通道。  
   
@@ -43,8 +43,8 @@ ms.locfileid: "33804217"
 ### <a name="hosting-and-activation"></a>承载和激活  
  服务的最终形式为程序。 与其他程序类似，服务必须在可执行文件中运行。 这称为*自承载*服务。  
   
- 也可以是服务*托管*，或运行外部代理，如 IIS 或 Windows 激活服务 (WAS) 管理的可执行文件。 是，WCF 应用程序能够运行的计算机上部署时自动激活。 还可通过可执行文件（.exe 文件）的形式来手动运行服务。 服务也可作为 Windows 服务自动运行。 COM + 组件还可作为 WCF 服务承载。  
+ 服务还可以是*托管*，或在由外部的代理，如 IIS 或 Windows 激活服务 (WAS) 管理的可执行文件中运行。 是，WCF 应用程序能够运行的计算机上部署时自动激活。 还可通过可执行文件（.exe 文件）的形式来手动运行服务。 服务也可作为 Windows 服务自动运行。 COM + 组件还可作为 WCF 服务承载。  
   
-## <a name="see-also"></a>请参阅  
- [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation 基础概念](../../../docs/framework/wcf/fundamental-concepts.md)
+## <a name="see-also"></a>请参阅
+- [什么是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation 基础概念](../../../docs/framework/wcf/fundamental-concepts.md)

@@ -1,82 +1,81 @@
 ---
-title: '&lt;wsFederationHttpBinding&gt; 的 &lt;security&gt;'
+title: <security> 的 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 9473fa062867383f84ba5931c394f1ac665a74fb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5316060d4122a443dd0223ce1ee9cdd39efac0b8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199287"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282056"
 ---
-# <a name="ltsecuritygt-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt; 的 &lt;security&gt;
+# <a name="security-of-wsfederationhttpbinding"></a>\<security> of \<wsFederationHttpBinding>
 定义的安全设置[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
  \<system.ServiceModel>  
-\<绑定 >  
+\<bindings>  
 \<wsFederatedBinding>  
-\<绑定 >  
+\<binding>  
 \<安全 >  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<wsFederationBinding>  
-    <binding >  
-       <security mode="None/Message/TransportWithMessageCredential">  
-         <message   
-            algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-            issuedTokenType="string"   
-            issuedKeyType="SymmetricKey/PublicKey"  
-            negotiateServiceCredential="Boolean" >  
-            <claimTypeRequirements>  
-               <add claimType="URI"  
-                    isOptional="Boolean" />  
-            </claimTypeRequirements>  
-                        <issuer address="Uri" >  
-               <headers>  
-                  <add name="String"  
-                       namespace="String" />  
-                          </headers>  
-                              <identity>  
-                                 <certificate encodedValue="String"/>  
-                                <certificateReference findValue="String"   
-                                 isChainIncluded="Boolean"  
-                            storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-                                  storeLocation="LocalMachine/CurrentUser"  
-                                   X509FindType=System.Security.Cryptography.X509certificates.X509findtype/>  
-                                   <dns value="String"/>  
-                                <rsa value="String"/>  
-                                <servicePrincipalName value="String"/>  
-                                <usePrincipalName value="String"/>  
-                              </identity>  
-                        </issuer>  
-                        <issuerMetadata address=String" >  
-               <headers>  
-                  <add name="String"  
-                       namespace="String" />  
-               </headers>  
-               <identity>  
-                  <certificate encodedValue="String"/>  
-                  <certificateReference findValue="String"   
-                     isChainIncluded="Boolean"  
-                     storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-                     storeLocation="LocalMachine/CurrentUser"  
-                                   X509FindType=System.Security.Cryptography.X509certificates.X509findtype/>  
-                  <dns value="String"/>  
-                  <rsa value="String"/>  
-                  <servicePrincipalName value="String"/>  
-                  <usePrincipalName value="String"/>  
-               </identity>  
-                        </issuerMetadata>  
-            <tokenRequestParameters>  
-               <xmlElement>  
-               </xmlElement>  
-            </tokenRequestParameters>  
-         </message>  
-       </security>  
-    </binding>  
-</wsFederationBinding>  
+<wsFederationBinding>
+  <binding>
+    <security mode="None/Message/TransportWithMessageCredential">
+      <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+               issuedTokenType="string"
+               issuedKeyType="SymmetricKey/PublicKey"
+               negotiateServiceCredential="Boolean">
+        <claimTypeRequirements>
+          <add claimType="URI"
+               isOptional="Boolean" />
+        </claimTypeRequirements>
+        <issuer address="Uri" >
+          <headers>
+            <add name="String"
+                 namespace="String" />
+          </headers>
+          <identity>
+            <certificate encodedValue="String" />
+            <certificateReference findValue="String"
+                                  isChainIncluded="Boolean"
+                                  storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+                                  storeLocation="LocalMachine/CurrentUser"
+                                  X509FindType="System.Security.Cryptography.X509certificates.X509findtype" />
+            <dns value="String" />
+            <rsa value="String" />
+            <servicePrincipalName value="String" />
+            <usePrincipalName value="String" />
+          </identity>
+        </issuer>
+        <issuerMetadata address="String">
+          <headers>
+            <add name="String"
+                 namespace="String" />
+          </headers>
+          <identity>
+            <certificate encodedValue="String" />
+            <certificateReference findValue="String"
+                                  isChainIncluded="Boolean"
+                                  storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+                                  storeLocation="LocalMachine/CurrentUser"
+                                  X509FindType="System.Security.Cryptography.X509certificates.X509findtype" />
+            <dns value="String" />
+            <rsa value="String" />
+            <servicePrincipalName value="String" />
+            <usePrincipalName value="String" />
+          </identity>
+        </issuerMetadata>
+        <tokenRequestParameters>
+          <xmlElement>
+          </xmlElement>
+        </tokenRequestParameters>
+      </message>
+    </security>
+  </binding>
+</wsFederationBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -106,17 +105,17 @@ ms.locfileid: "50199287"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义的所有绑定功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义的所有绑定功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。|  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.WSFederationHttpSecurity>  
- <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>  
- [如何：创建 WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [选择凭据类型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<绑定 >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.WSFederationHttpSecurity>
+- <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>
+- [如何：创建 WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [保护服务和客户端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [选择凭据类型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [配置系统提供的绑定](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [使用绑定配置服务和客户端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

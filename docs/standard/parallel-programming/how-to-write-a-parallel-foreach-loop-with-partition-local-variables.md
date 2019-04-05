@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 2f27d1f11e4517653c9beb2d868d798c215741a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562302"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730979"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>如何：使用分区本地变量编写 Parallel.ForEach 循环
 下面的示例演示如何编写使用分区本地变量的 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 方法。 当 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环执行时，它会将其源集合划分为多个分区。 每个分区都有自己的分区本地变量的副本。 分区本地变量类似于[线程本地变量](xref:System.Threading.ThreadLocal%601)，只是单个线程上可以运行多个分区。
   
- 此示例中的代码和参数非常类似于对应的 <xref:System.Threading.Tasks.Parallel.For%2A> 方法。 有关详细信息，请参阅[如何：编写包含线程本地变量的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)。  
+ 此示例中的代码和参数非常类似于对应的 <xref:System.Threading.Tasks.Parallel.For%2A> 方法。 有关详细信息，请参阅[如何：编写具有线程局部变量的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)。  
   
  若要在 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 循环中使用分区本地变量，必须调用采用两个类型参数的其中一个方法重载。 第一个类型参数 `TSource` 指定源元素的类型，第二个类型参数 `TLocal` 指定分区本地变量的类型。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "46562302"
   
 ## <a name="see-also"></a>请参阅
 
-- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
-- [如何：编写具有线程局部变量的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+- [数据并行](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [如何：编写具有线程局部变量的 Parallel.For 循环](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
 - [PLINQ 和 TPL 中的 Lambda 表达式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

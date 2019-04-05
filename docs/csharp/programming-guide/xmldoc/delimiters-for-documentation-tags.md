@@ -1,17 +1,18 @@
 ---
-title: 文档标记的分隔符（C# 编程指南）
+title: 文档标记分隔符 - C# 编程指南
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], delimiters
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 06bd997e6862bc1f86ad2e3b2afbbb5afac78d9c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ef1f6ceed49d728f6c9923204c0cb7e11aa3905a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627364"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>文档标记的分隔符（C# 编程指南）
 XML 文档注释需要使用分隔符，用来向编译器指示文档注释开始和结束的位置。 可以使用以下采用 XML 文档标记的分隔符：  
@@ -37,7 +38,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
   
 -   以下注释中将被处理的唯一部分是以 `<summary>` 开头的行。 三种标记格式产生的注释相同。  
   
-    ```  
+    ```csharp  
     /** <summary>text</summary> */   
   
     /**   
@@ -51,7 +52,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
   
 -   编译器识别出第二和第三行开头的共同模式“*”。 此模式不包括在输出中。  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
      * text </summary>*/   
@@ -59,7 +60,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
   
 -   编译器在下面的注释中未找到共同模式，因为第三行的第二个字符不是一个星号。 因此，第二和第三行上的所有文本将处理为注释的一部分。  
   
-    ```  
+    ```csharp  
     /**   
      * <summary>   
        text </summary>  
@@ -68,7 +69,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
   
 -   编译器在以下注释中未找到模式，原因有两个。 首先，星号前的空格数不一致。 其次，第 5 行以制表符开头，这与空格不匹配。 因此，第二到第五行的所有文本都作为注释的一部分进行处理。  
   
-    ```  
+    ```csharp  
     /**   
       * <summary>   
       * text   
@@ -79,7 +80,7 @@ XML 文档注释需要使用分隔符，用来向编译器指示文档注释开�
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
-- [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [/doc（C# 编译器选项）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
 - [XML 文档注释](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

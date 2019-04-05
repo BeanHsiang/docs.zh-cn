@@ -2,12 +2,12 @@
 title: 函数重载解析 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: 517bdb682213deff90a37eafcf32946fef63921f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b8e2a4f26c0101141292b768ee5870db78c90b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625167"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>函数重载解析 (Entity SQL)
 本主题描述如何解析 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 函数。  
@@ -16,7 +16,7 @@ ms.locfileid: "32762853"
   
  在发生这种情况时，必须应用下面的条件来确定给定的表达式引用哪个函数。 这些条件是按顺序应用的。 第一个仅适用于单个函数的条件所对应的函数就是所解析的函数。  
   
-1.  **参数号**。 函数在表达式中指定了相同个数的参数。  
+1.  **参数数目**。 函数在表达式中指定了相同个数的参数。  
   
 2.  **类型严格匹配**。 函数的每个自变量类型都严格匹配参数类型，或为 null 字面值。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "32762853"
   
  对于用户定义的函数，内联查询函数的定义将优先，即使当模型定义的函数存在且具有一个更适合用户定义函数的签名也不例外。  
   
-## <a name="see-also"></a>请参阅  
- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [函数](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+## <a name="see-also"></a>请参阅
+- [实体 SQL 引用](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [函数](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

@@ -2,15 +2,15 @@
 title: 如何：使用 Task.WhenAll 扩展异步演练 (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: e809ea3c2b2bcc0f547dd53280835a83f52e079b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6143dfa43227f35eb8c74b386bee96ccec696a4e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631793"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何：使用 Task.WhenAll 扩展异步演练 (C#)
-可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法来改进[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中的异步解决方案性能。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  
+提高[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中的异步解决方案的性能，方法是使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  
   
  你可能已在演练中注意到网站以不同速率进行下载。 有时一个网站非常慢，这会延迟所有其余下载。 运行在演练中生成的异步解决方案时，如果不想等待，则可以方便地结束程序，但更好的选项是同时启动所有下载，并让较快的下载继续进行而不等待延迟的下载。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "50188035"
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>向你的 GetURLContentsAsync 解决方案中添加 Task.WhenAll  
   
-1.  向[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中开发的第一个应用程序添加 `ProcessURLAsync` 方法。  
+1.  将 `ProcessURLAsync` 方法添加到[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中开发的第一个应用程序。  
   
     -   如果是从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载的代码，请打开 AsyncWalkthrough 项目，然后向 MainWindow.xaml.cs 文件添加 `ProcessURLAsync`。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "50188035"
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>向 HttpClient.GetByteArrayAsync 解决方案中添加 Task.WhenAll  
   
-1.  向[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中开发的第二个应用程序添加以下版本的 `ProcessURLAsync`。  
+1.  将 `ProcessURLAsync` 的以下版本添加到[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中开发的第二个应用程序。  
   
     -   如果是从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载的代码，请打开 AsyncWalkthrough_HttpClient 项目，然后向 MainWindow.xaml.cs 文件添加 `ProcessURLAsync`。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "50188035"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>测试 Task.WhenAll 解决方案  
   
--   对于任一解决方案，按 F5 键以运行程序，然后选择“启动”按钮。 输出应类似于[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中的异步解决方案的输出。 但请注意，网站每次会以不同顺序出现。  
+-   对于任一解决方案，按 F5 键以运行程序，然后选择“启动”按钮。 输出应类似于[演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)中的异步解决方案中的输出。 但请注意，网站每次会以不同顺序出现。  
   
 ## <a name="example"></a>示例  
  以下代码演示使用 `GetURLContentsAsync` 方法从 Web 下载内容的项目的扩展。  
@@ -246,7 +246,7 @@ namespace AsyncExampleWPF_WhenAll
   
             // Display the total count for all of the websites.  
             resultsTextBox.Text +=  
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);  
+                $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }  
   
         private List<string> SetUpURLList()  
@@ -307,9 +307,8 @@ namespace AsyncExampleWPF_WhenAll
             var bytes = content.Length;  
             // Strip off the "https://".  
             var displayURL = url.Replace("https://", "");  
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
-  
-        }  
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
+        }
     }  
 }  
 ```  
@@ -393,7 +392,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
   
             // Display the total count for all of the web addresses.  
             resultsTextBox.Text +=  
-                string.Format("\r\n\r\nTotal bytes returned:  {0}\r\n", total);  
+                $"\r\n\r\nTotal bytes returned:  {total}\r\n";
         }  
   
         private List<string> SetUpURLList()  
@@ -429,7 +428,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
             var bytes = content.Length;  
             // Strip off the "https://".  
             var displayURL = url.Replace("https://", "");  
-            resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
+            resultsTextBox.Text += $"\n{displayURL,-58} {bytes,8}";
         }  
     }  
 }  
@@ -437,5 +436,5 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
 - [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

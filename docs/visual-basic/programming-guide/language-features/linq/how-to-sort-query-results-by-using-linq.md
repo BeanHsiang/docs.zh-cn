@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 LINQ 排序查询结果 (Visual Basic)
+title: 如何：使用 LINQ (Visual Basic 中) 的查询结果进行排序
 ms.date: 07/20/2015
 helpviewer_keywords:
 - sorting query results, multiple columns
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 5104ef5714819bd69cfd5b6d754e81b97f235e31
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ab1bebae4fe88e8b4e630a6f7eca70ca8d1b32c5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529216"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829156"
 ---
-# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ 排序查询结果 (Visual Basic)
+# <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ (Visual Basic 中) 的查询结果进行排序
 语言集成查询 (LINQ) 轻松地访问数据库的信息和执行查询。  
   
  下面的示例演示如何创建新应用程序对 SQL Server 数据库执行查询并对按多个字段对结果进行排序通过使用`Order By`子句。 可以按升序或降序排序的每个字段的排序顺序。 有关详细信息，请参阅[Order By 子句](../../../../visual-basic/language-reference/queries/order-by-clause.md)。  
@@ -69,12 +69,13 @@ ms.locfileid: "43529216"
   
      将以下代码添加到`Load`事件，以查询方式被称为数据上下文的属性和对结果进行排序的表。 查询对客户的订单，按降序顺序数排序结果。 具有相同数目的订单的客户按升序排序 （默认值） 的公司名称进行排序。  
   
-     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-sort-query-results-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form4.vb#10)]  
   
 4.  按 F5 以运行您的项目并查看结果。  
   
-## <a name="see-also"></a>请参阅  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [查询](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>请参阅
+
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [查询](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext 方法（O/R 设计器）](/visualstudio/data-tools/datacontext-methods-o-r-designer)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592427"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>配置 WS-Atomic 事务支持
 本主题介绍如何通过 WS-AT 配置实用工具来配置 WS-AtomicTransaction (WS-AT) 支持。  
@@ -54,7 +54,7 @@ ms.locfileid: "43525877"
 ### <a name="creating-and-exporting-certificates"></a>创建和导出证书  
  此过程需要使用 MMC“证书”管理单元。 打开“开始”/“运行”菜单，并在输入框中输入“mmc”，然后按“确定”可访问该管理单元。 然后，在**Console1**窗口中，导航到**文件/添加 / 删除**管理单元中，单击添加，然后选择**证书**从**不可单独使用管理单元**列表。 最后，选择**计算机帐户**来管理和单击**确定**。 **证书**节点会显示在管理单元控制台。  
   
- 必须拥有必需的证书才能建立信任。 若要了解如何创建和安装新证书下面的步骤之前，请参阅[如何： 创建和安装临时客户端证书在开发期间 WCF](https://go.microsoft.com/fwlink/?LinkId=158925)。  
+ 必须拥有必需的证书才能建立信任。 若要了解如何创建和安装新证书下面的步骤之前，请参阅[如何：创建并在开发过程中在 WCF 中安装临时客户端证书](https://go.microsoft.com/fwlink/?LinkId=158925)。  
   
 1.  在计算机 A 上，使用 MMC“证书”管理单元将现有证书 (certA) 导入 LocalMachine\MY（“个人”节点）和 LocalMachine\ROOT 存储区（“受信任的根证书颁发机构”节点）。 若要将证书导入特定的节点，右键单击节点并选择**所有任务/导入**。  
   
@@ -118,6 +118,6 @@ ms.locfileid: "43525877"
   
 -   31：详细  
   
-## <a name="see-also"></a>请参阅  
- [WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
- [WS-AtomicTransaction 配置 MMC 管理单元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+## <a name="see-also"></a>请参阅
+- [WS-AtomicTransaction 配置实用工具 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction 配置 MMC 管理单元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

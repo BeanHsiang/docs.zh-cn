@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb187719ff502abe61ac5deb69c6427a4a64ab44
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 74eb098ee68f57477c8b9115db2bce60919f0b12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580208"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 函数
 创建类的新实例。    
@@ -47,7 +47,7 @@ HRESULT SpawnInstance (
 [in]一个指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)实例。
 
 `lFlags`  
-[in]保留。 此参数必须为 0。
+[in] 保留。 此参数必须为 0。
 
 `ppNewInstance`  
 [out]接收到的类的新实例的指针。 如果发生错误，新对象不是返回，和`ppNewInstance`左侧不被修改。
@@ -56,7 +56,7 @@ HRESULT SpawnInstance (
 
 此函数返回以下值中定义*WbemCli.h*标头文件，也可以在定义它们为常量在代码中：
 
-|返回的常量  |“值”  |描述  |
+|返回的常量  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 不是有效的类定义，无法生成新的实例。 不完整，或者它尚未注册到 Windows 管理通过调用[PutClassWmi](putclasswmi.md)。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 没有足够的内存是可用于完成该操作。 |
@@ -75,11 +75,11 @@ HRESULT SpawnInstance (
 新的对象中返回`ppNewClass`自动成为当前对象的子类。 不能重写此行为。 没有其他方法可以创建子类 （的派生类）。
 
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** WMINet_Utils.idl  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>请参阅  
-[WMI 和性能计数器 （非托管 API 参考）](index.md)
+## <a name="see-also"></a>请参阅
+- [WMI 和性能计数器 （非托管 API 参考）](index.md)

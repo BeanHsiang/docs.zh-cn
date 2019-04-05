@@ -12,15 +12,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: a438455668310769c5267a6d42a2e694bb7b01dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651604"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824671"
 ---
 # <a name="optional-parameters-visual-basic"></a>可选参数 (Visual Basic)
-可以指定过程参数是可选的，并且在调用过程时不必为其提供自变量。 *可选参数*由指示`Optional`过程定义中的关键字。 适用以下规则：  
+可以指定过程参数是可选的，并且在调用过程时不必为其提供自变量。 *可选参数*所指示的`Optional`过程定义中的关键字。 适用以下规则：  
   
 -   过程定义中的每个可选参数都必须指定默认值。  
   
@@ -47,24 +47,25 @@ Sub name(argument 1, , , argument 4)
   
  对 `MsgBox` 的第一个调用将按照 `MsgBox` 定义参数的顺序提供所有三个参数。 第二个调用仅提供必选自变量。 第三个和第四个调用分别提供第一个和第三个自变量。 第三个调用按位置提供参数，第四个调用按名称提供参数。  
   
- [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
 ## <a name="determining-whether-an-optional-argument-is-present"></a>确定可选自变量是否存在  
- 过程在运行时无法检测到给定的参数是否已被省略，或者调用代码是否已显式提供默认值。 如果需要弄清楚这一点，可以设置一个不可能的值作为默认值。 下面的过程定义可选参数`office`，并测试其默认值，`QJZ`以查看它已在调用中被省略：  
+ 过程在运行时无法检测到给定的自变量是否已被省略，或者调用代码是否已显式提供默认值。 如果需要弄清楚这一点，可以设置一个不可能的值作为默认值。 下面的过程定义的可选参数`office`，并测试其默认值， `QJZ`，以查看它是否在调用中被省略：  
   
- [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#46)]  
   
- 如果可选参数是像 `String` 这样的引用类型，只要它不是该变量所预期的值，就可以使用 `Nothing` 作为默认值。  
+ 如果可选参数是像 `String` 这样的引用类型，只要它不是该自变量所预期的值，就可以使用 `Nothing` 作为默认值。  
   
 ## <a name="optional-parameters-and-overloading"></a>可选参数和重载  
  定义带可选参数的过程的另一种方法是使用重载。 如果有一个可选参数，可以定义过程的两个重载版本，一个接受此参数，另一个则不带参数。 此方法随可选参数数目的增加而变得更复杂。 然而，这样做的优点是可以完全确定调用程序是否提供了每个可选自变量。  
   
-## <a name="see-also"></a>请参阅  
- [过程](./index.md)  
- [过程参数和自变量](./procedure-parameters-and-arguments.md)  
- [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)  
- [按位置和按名称传递自变量](./passing-arguments-by-position-and-by-name.md)  
- [参数数组](./parameter-arrays.md)  
- [过程重载](./procedure-overloading.md)  
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>请参阅
+
+- [过程](./index.md)
+- [过程参数和自变量](./procedure-parameters-and-arguments.md)
+- [按值和按引用传递自变量](./passing-arguments-by-value-and-by-reference.md)
+- [按位置和按名称传递自变量](./passing-arguments-by-position-and-by-name.md)
+- [参数数组](./parameter-arrays.md)
+- [过程重载](./procedure-overloading.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

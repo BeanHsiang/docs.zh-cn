@@ -2,12 +2,12 @@
 title: 如何：捕捉分析错误 (C#)
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 879a8f037e9d31051ef0d4059ee3ce2a2fca7a4d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2f56ca48278f9ad8b38f8564f54a379cc09f94ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515857"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>如何：捕捉分析错误 (C#)
 本主题演示如何检测格式不正确或无效的 XML。  

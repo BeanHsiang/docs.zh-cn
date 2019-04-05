@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee396c512dca2bea0a7a9737d5515defce4b2b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0dffe95df75fafe293c225c513db7ff7896765fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415124"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501768"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState 方法
-设置进程中的所有托管线程调试状态。  
+设置过程中的所有托管线程的调试状态。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,24 +36,24 @@ HRESULT SetAllThreadsDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `state`  
- [in]指定用于调试线程的状态"CorDebugThreadState"枚举的值。  
+ [in]指定用于调试线程的状态为"CorDebugThreadState"枚举的值。  
   
  `pExceptThisThread`  
- [in]指向一个表示线程调试状态设置从免除"ICorDebugThread"对象的指针。 如果此值为 null，则无需对线程被免除。  
+ [in]一个指向一个"ICorDebugThread"对象，表示线程调试状态设置也如此。 如果此值为 null，不受任何线程。  
   
 ## <a name="remarks"></a>备注  
- `SetAllThreadsDebugState`方法可能会影响不能通过显示的线程[EnumerateThreads 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)，因此与挂起的线程`SetAllThreadsDebugState`方法需要继续执行，但是`SetAllThreadsDebugState`方法。  
+ `SetAllThreadsDebugState`方法可能会影响线程不可见通过[EnumerateThreads 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)，因此与挂起的线程`SetAllThreadsDebugState`方法将需要使用恢复`SetAllThreadsDebugState`方法。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- 
+## <a name="see-also"></a>请参阅
+

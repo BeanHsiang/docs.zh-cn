@@ -2,12 +2,12 @@
 title: 多个协定
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: 040ab9b80e9567139ca4588e3ddf83b8f43f2d76
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5e52c83d69c15ca5c407240a8971248205fef832
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864808"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818328"
 ---
 # <a name="multiple-contracts"></a>多个协定
 “多个协定”示例演示如何在一个服务上实现多个协定，以及如何配置终结点以便与实现的每个协定进行通信。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 该服务已进行修改以定义两个协定：`ICalculator` 协定和 `ICalculatorSession` 协定。  
@@ -63,4 +63,3 @@ ms.locfileid: "43864808"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleContracts`  
   
-## <a name="see-also"></a>请参阅

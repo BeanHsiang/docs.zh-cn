@@ -2,12 +2,12 @@
 title: -target:winmdobj（C# 编译器选项）
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 38d0dedbca56475d4f2561c99e8b29e01e9d7a90
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43740917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608961"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj（C# 编译器选项）
 如果使用 -target:winmdobj 编译器选项，则编译器会创建一个中间 .winmdobj 文件，你可以将这个文件转换为 Windows 运行时二进制 (.winmd) 文件。 之后，除了托管语言程序外，JavaScript 和 C++ 程序也可以使用该 .winmd 文件。  
@@ -46,7 +46,7 @@ ms.locfileid: "43740917"
 csc -target:winmdobj filename.cs  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [-target（C# 编译器选项）](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)

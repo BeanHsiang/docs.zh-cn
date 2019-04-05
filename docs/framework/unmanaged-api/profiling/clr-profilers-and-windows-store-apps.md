@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188815"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358543"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 探查器和 Windows 应用商店应用程序
 
@@ -126,7 +126,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 可以使用<xref:Windows.Management.Deployment.PackageManager>类来生成此列表。 `PackageManager` 适用于桌面应用的 Windows 运行时类，实际上它是*仅*适用于桌面应用。
 
-下面的代码示例从编写为桌面应用程序在 C# yses 假设 Profiler UI`PackageManager`生成 Windows 应用的列表：
+下面的代码示例假设 Profiler UI 编写桌面应用程序中为从C#使用`PackageManager`生成的 Windows 应用的列表：
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -143,7 +143,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine, 
+pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
@@ -168,7 +168,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
         // Parse command line here
         // …
 
-        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, 
+        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME,
                                                                   FALSE /* bInheritHandle */, nThreadID);
         ResumeThread(hThread);
         CloseHandle(hThread);
@@ -235,7 +235,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */, 
+pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */,
                                                                  IntPtr.Zero /* environment */);
 ```
 
@@ -384,7 +384,7 @@ Profiler DLL 时执行操作的内存分析，通常创建一个单独的线程�
 
 相关的问题是，由探查器创建的线程上进行的调用，总是会考虑同步的即使这些调用都是从外部的 Profiler DLL 的一个实现[ICorProfilerCallback](icorprofilercallback-interface.md)方法。 至少，它用于出现这种情况。 现在，CLR 已启用探查器的线程到托管线程对的调用由于[ForceGC 方法](icorprofilerinfo-forcegc-method.md)，线程将不再被视为探查器的线程。 在这种情况下，CLR 强制实施更严格的什么限定为该线程同步定义 — 即的调用必须源自的 Profiler DLL 的一个[ICorProfilerCallback](icorprofilercallback-interface.md)限定为同步的方法。
 
-在实践中，这意味着什么？ 大多数[ICorProfilerInfo](icorprofilerinfo-interface.md)仅安全地同步，调用方法，否则将立即失败。 因此，如果 Profiler DLL 重用您[ForceGC 方法](icorprofilerinfo-forcegc-method.md)探查器创建的线程通常由其他调用的线程 (例如，若[RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)， [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)，或[RequestRevert](icorprofilerinfo4-requestrevert-method.md))，您会遇到问题。 甚至如异步安全函数[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)已从托管线程中调用时的特殊规则。 (请参阅博客文章[Profiler 堆栈遍历： 基础知识及更高版本](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)有关详细信息。)
+在实践中，这意味着什么？ 大多数[ICorProfilerInfo](icorprofilerinfo-interface.md)仅安全地同步，调用方法，否则将立即失败。 因此，如果 Profiler DLL 重用您[ForceGC 方法](icorprofilerinfo-forcegc-method.md)探查器创建的线程通常由其他调用的线程 (例如，若[RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)， [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)，或[RequestRevert](icorprofilerinfo4-requestrevert-method.md))，您会遇到问题。 甚至如异步安全函数[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)已从托管线程中调用时的特殊规则。 (请参阅博客文章[Profiler 堆栈遍历：基础知识及更高版本](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)有关详细信息。)
 
 因此，我们建议您 Profiler 的 DLL 创建，以便在调用任何线程[ForceGC 方法](icorprofilerinfo-forcegc-method.md)应使用*仅*为了触发 Gc，然后响应 GC 回调。 它不应调用到分析 API 来执行其他任务，例如采样或分离的堆栈。
 

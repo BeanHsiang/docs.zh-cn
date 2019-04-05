@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: e02eda66ab9fadbc7b5b042c8940096c70ef6a03
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45746122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725696"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource（C# 编译器选项）
 将指定资源嵌入输出文件。  
@@ -31,10 +31,10 @@ ms.locfileid: "45746122"
  `filename`  
  要嵌入到输出文件的 .NET Framework 资源文件。  
   
- `identifier`（可选）  
+ `identifier` （可选）  
  资源的逻辑名称；用于加载资源的名称。 默认值是文件名的名称。  
   
- `accessibility-modifier`（可选）  
+ `accessibility-modifier` （可选）  
  资源的可访问性：public 或 private。 默认值为 public。  
   
 ## <a name="remarks"></a>备注  
@@ -67,7 +67,7 @@ ms.locfileid: "45746122"
 csc -resource:rf.resource in.cs  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 编译器选项](../../../csharp/language-reference/compiler-options/index.md)
 - [管理项目和解决方案属性](/visualstudio/ide/managing-project-and-solution-properties)

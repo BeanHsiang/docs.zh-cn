@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f51e3f36594a6f66c5fad32214d84a11b78726a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e5f683ff123652e312d4d8dacc614f8a451ccd91
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582874"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127389"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自定义日期和时间格式字符串
 
@@ -46,7 +46,7 @@ ms.locfileid: "48582874"
 
  下表描述自定义日期和时间格式说明符并显示由每个格式说明符生成的结果字符串。 默认情况下，结果字符串反映 zh-cn 区域性的格式设置约定。 如果特定格式说明符生成本地化结果字符串，则该示例还注明结果字符串适用的区域性。 有关使用自定义日期和时间格式字符串的附加信息，请参见注释部分。
 
-| 格式说明符 | 描述 | 示例 |
+| 格式说明符 | 说明 | 示例 |
 | ---------------------- | ----------------- | -------------- |
 |"d"|一个月中的某一天（1 到 31）。<br /><br /> 有关详细信息，请参阅[“d”自定义格式说明符](#dSpecifier)。|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |“dd”|一个月中的某一天（01 到 31）。<br /><br /> 有关详细信息，请参阅[“dd”自定义格式说明符](#ddSpecifier)。|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
@@ -94,7 +94,7 @@ ms.locfileid: "48582874"
 |"/"|日期分隔符。<br /><br /> 有关详细信息，请参阅[“/”自定义格式说明符](#dateSeparator)。|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
 |"string"<br /><br /> 'string'|文本字符串分隔符。<br /><br /> 有关详细信息，请参阅[字符文本](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|将下面的字符定义为自定义格式说明符。<br /><br /> 有关详细信息，请参阅[使用单个自定义格式说明符](#UsingSingleSpecifiers)。|2009-06-15T13:45:30 (%h) -> 1|
-|\\|转义字符。<br /><br /> 有关详细信息，请参阅[字符文本](#Literals)和[使用转义字符](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|
+|&#92;|转义字符。<br /><br /> 有关详细信息，请参阅[字符文本](#Literals)和[使用转义字符](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|
 |任何其他字符|字符将复制到未更改的结果字符串。<br /><br /> 有关详细信息，请参阅[字符文本](#Literals)。|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
 
  以下各节提供有关每个自定义日期和时间格式说明符的附加信息。 除非另行说明，否则，每个说明符将生成相同的字符串表示形式，这与它是与 <xref:System.DateTime> 值一起使用还是与 <xref:System.DateTimeOffset> 值一起使用无关。

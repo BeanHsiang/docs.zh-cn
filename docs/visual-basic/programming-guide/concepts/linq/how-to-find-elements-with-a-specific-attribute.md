@@ -1,15 +1,15 @@
 ---
-title: 如何： 查找具有特定特性 (XPATH-LINQ to XML) 的元素 (Visual Basic)
+title: 如何：查找具有特定特性 (XPATH-LINQ to XML) 的元素 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 9a50eb792a074d245651231678bfea72f124f344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17c5e9abf607df7311ff2552b7e9c54cbf30fd59
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642072"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825334"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>如何： 查找具有特定特性 (XPATH-LINQ to XML) 的元素 (Visual Basic)
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>如何：查找具有特定特性 (XPATH-LINQ to XML) 的元素 (Visual Basic)
 有时需要查找具有特定属性的所有元素。 您并不关心属性的内容， 而是根据属性是否存在进行选择。  
   
  XPath 表达式为：  
@@ -59,5 +59,6 @@ Results are identical
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>请参阅
+
+- [LINQ to XML 针对 XPath 用户 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

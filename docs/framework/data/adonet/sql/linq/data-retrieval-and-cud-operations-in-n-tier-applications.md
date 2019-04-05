@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: ea27d6406ed588f2046dc938f5167a6c0200329e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebbc53f2962c99bc31f998f1afcb4316f3ea81f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365834"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674698"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 层应用程序中的数据检索和 CUD 操作 (LINQ to SQL)
 在将实体对象（如 Customers 或 Orders）通过网络序列化到客户端时，这些实体会与其数据上下文分离。 数据上下文不再跟踪这些实体的更改或它们与其他对象的关联。 只要客户端只读取数据，这就不会成为问题。 要使客户端可以向数据库添加新行，也比较容易做到。 但是，如果应用程序要求客户端能够更新或删除数据，则必须在调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> 之前将实体附加到新的数据上下文。 此外，如果对原始值使用开放式并发检查，则还需要一种为数据库同时提供原始实体和修改后的实体的方式。 使用 `Attach` 方法可以在实体分离后将其放入新的数据上下文中。  
   
  即使要序列化代理对象来代替 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 实体，仍然必须在数据访问层 (DAL) 上构造一个实体，并将其附加到新的 <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>，以便将数据提交给数据库。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 完全不关心实体的序列化方式。 有关如何使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]和 SQLMetal 工具生成通过使用 Windows Communication Foundation (WCF) 都是可序列化的类，请参阅[如何： 使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 完全不关心实体的序列化方式。 有关如何使用详细信息[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]和 SQLMetal 工具生成通过使用 Windows Communication Foundation (WCF) 是可序列化的类，请参阅[如何：使实体可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。  
   
 > [!NOTE]
->  仅对新实体或反序列化后的实体调用 `Attach` 方法。 将实体与其原始数据上下文分离的唯一方式是将其序列化。 如果试图将未分离的实体附加到新的数据上下文，并且该实体仍然具有来自其以前的数据上下文的延迟加载程序，则 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会引发异常。 如果一个实体具有来自两个不同数据上下文的延迟加载程序，则在对该实体执行插入、更新和删除操作时，可能产生意外的结果。 有关的延迟加载程序的详细信息，请参阅[延迟执行与立即加载](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。  
+>  仅对新实体或反序列化后的实体调用 `Attach` 方法。 将实体与其原始数据上下文分离的唯一方式是将其序列化。 如果试图将未分离的实体附加到新的数据上下文，并且该实体仍然具有来自其以前的数据上下文的延迟加载程序，则 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 会引发异常。 如果一个实体具有来自两个不同数据上下文的延迟加载程序，则在对该实体执行插入、更新和删除操作时，可能产生意外的结果。 有关延迟加载程序的详细信息，请参阅[推迟加载与即时加载](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。  
   
 ## <a name="retrieving-data"></a>检索数据  
   
@@ -121,7 +121,7 @@ public IEnumerable<Product> GetProductsByCategory(int categoryID)
   
  数据上下文的实例应具有一个“工作单元”的生存期。 在松耦合环境中，工作单元通常较小，它可能是一个开放式事务，其中包含对 `SubmitChanges` 的单个调用。 因此，数据上下文在方法范围上创建和释放。 如果工作单元包含对业务规则逻辑的调用，则通常需要为整个操作保持 `DataContext` 实例。 在任何情况下，都不应该使 `DataContext` 实例在任意数量的事务之间长时间保持活动状态。  
   
- 此方法会返回 Product 对象，但不会返回与每个 Product 相关联的 Order_Detail 对象的集合。 使用 <xref:System.Data.Linq.DataLoadOptions> 对象可以更改此默认行为。 有关详细信息，请参阅[如何： 控制更相关检索数据的方式](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md)。  
+ 此方法会返回 Product 对象，但不会返回与每个 Product 相关联的 Order_Detail 对象的集合。 使用 <xref:System.Data.Linq.DataLoadOptions> 对象可以更改此默认行为。 有关详细信息，请参阅[如何：控制检索相关的数据量](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md)。  
   
 ## <a name="inserting-data"></a>插入数据  
  为了插入新对象，表示层只是调用中间层接口上的相关方法，并传入要插入的新对象。 在某些情况下，对于客户端而言，仅传入一些值并让中间层来构造完整对象可能更加高效。  
@@ -157,7 +157,7 @@ End Sub
 ## <a name="deleting-data"></a>删除数据  
  为了从数据库删除现有对象，表示层调用中间层接口上的相关方法，并传入要删除的对象的副本（其中包含该对象的原始值）。  
   
- 删除操作涉及到开放式并发检查，并且必须首先将要删除的对象附加到新的数据上下文。 在此示例中，`Boolean` 参数设置为 `false`，以指示该对象没有时间戳 (RowVersion)。 如果数据库表确实为每个记录生成了时间戳，则并发检查会简单得多（特别是对客户端而言）。 只需传入原始对象或已修改的对象，并将 `Boolean` 参数设置为 `true`。 在任何情况下，通常都需要在中间层上捕捉 <xref:System.Data.Linq.ChangeConflictException>。 有关如何处理开放式并发冲突的详细信息，请参阅[开放式并发： 概述](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
+ 删除操作涉及到开放式并发检查，并且必须首先将要删除的对象附加到新的数据上下文。 在此示例中，`Boolean` 参数设置为 `false`，以指示该对象没有时间戳 (RowVersion)。 如果数据库表确实为每个记录生成了时间戳，则并发检查会简单得多（特别是对客户端而言）。 只需传入原始对象或已修改的对象，并将 `Boolean` 参数设置为 `true`。 在任何情况下，通常都需要在中间层上捕捉 <xref:System.Data.Linq.ChangeConflictException>。 有关如何处理开放式并发冲突的详细信息，请参阅[开放式并发：概述](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
   
  如果要删除的实体具有对关联表的外键约束，则必须首先删除该实体的 <xref:System.Data.Linq.EntitySet%601> 集合中的所有对象。  
   
@@ -218,7 +218,7 @@ public void DeleteOrder(Order order)
   
  还可以对实体及其关系（如一个 Customer 及其关联 Order 对象的集合）一起执行更新或删除。 如果在客户端上对实体对象及其子代 (`EntitySet`) 集合的关系图进行修改，并且开放式并发检查需要原始值，则客户端必须为每个实体和 <xref:System.Data.Linq.EntitySet%601> 对象提供这些原始值。 如果需要使客户端可以在单个方法调用中进行一组相关的更新、删除和插入操作，则必须为客户端提供一种相应的方式，以便指示要对每个实体执行的操作的类型。 然后，在调用 <xref:System.Data.Linq.ITable.Attach%2A> 之前，必须在中间层上为每个实体调用适当的 <xref:System.Data.Linq.ITable.InsertOnSubmit%2A> 方法，然后依次调用 <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A>、<xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> 或 `Attach`（对于插入操作，不调用 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>）。 在尝试进行更新之前，不要将从数据库中检索数据作为一种获取原始值的方式。  
   
- 有关开放式并发的详细信息，请参阅[开放式并发： 概述](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。 有关解决开放式并发的详细信息更改冲突，请参阅[如何： 管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
+ 有关开放式并发的详细信息，请参阅[开放式并发：概述](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。 有关解决开放式并发的详细信息更改冲突，请参阅[如何：管理更改冲突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
   
  下面的示例演示每种方案：  
   
@@ -406,6 +406,6 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
  在附加一组 `IEnumerable` 对象时，将在出现已存在的键时引发 <xref:System.Data.Linq.DuplicateKeyException>。 剩余的对象将不会附加。  
   
-## <a name="see-also"></a>请参阅  
- [使用 LINQ to SQL 的 N 层和远程应用程序](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>请参阅
+- [使用 LINQ to SQL 的 N 层和远程应用程序](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
+- [背景信息](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

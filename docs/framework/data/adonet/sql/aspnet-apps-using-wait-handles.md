@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: 608cec63f08869ebb3a6519f9de0fe7fa02a344f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0d089b27158a36d03245e6312dff0e0dc71d12f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599585"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>使用等待句柄的 ASP.NET 应用程序
 在您的应用程序一次只处理一个异步操作时，用于处理异步操作的回调和轮询模型十分有用。 等待模型提供了一种更灵活的方式来处理多个异步操作。 有两种等待模型，是根据用于实现它们的 <xref:System.Threading.WaitHandle> 方法命名的：等待（任何）模型和等待（所有）模型。  
@@ -21,7 +21,7 @@ ms.locfileid: "43738961"
   
  当您需要在不同服务器上运行时间长度不等的多个操作时，或者在服务器的性能强大到足以同时处理所有查询时，等待模型的优点可以最大地发挥。 在此处提供的示例中，通过将长度不等的多个 WAITFOR 命令添加到不重要的 SELECT 查询，三个查询模拟长进程。  
   
-## <a name="example-wait-any-model"></a>示例：等待（任何）模型  
+## <a name="example-wait-any-model"></a>示例:等待（任何）模型  
  下面的示例说明等待（任何）模型。 一旦启动了三个异步进程后，就调用 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法以等待其中任何一个进程完成。 在每个进程完成后，调用 <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 方法并读取结果 <xref:System.Data.SqlClient.SqlDataReader> 对象。 在此时，实际的应用程序将很可能使用 <xref:System.Data.SqlClient.SqlDataReader> 填充该页的某个部分。 在这个简单的示例中，进程完成时间被添加到与该进程相对应的文本框中。 合起来看，文本框中的这些时间说明以下结论：每次进程完成后都执行代码。  
   
  要设置此示例，请创建一个新的 ASP.NET 网站项目。 将一个 <xref:System.Web.UI.WebControls.Button> 控件和四个 <xref:System.Web.UI.WebControls.TextBox> 控件放置于页面上（接受每个控件的默认名称）。  
@@ -312,7 +312,7 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="example-wait-all-model"></a>示例：等待（所有）模型  
+## <a name="example-wait-all-model"></a>示例:等待（所有）模型  
  下面的示例说明等待（所有）模型。 一旦启动了三个异步进程后，调用 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法以等待这些进程完成或超时。  
   
  与等待（任何）模型的示例类似，进程完成时间被添加到与该进程相对应的文本框中。 文本框中的这些时间再次说明以下结论：跟随在 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法后的代码只在所有进程都完成后才执行。  
@@ -579,6 +579,6 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [异步操作](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b102be5a792f982edeb320199576bdddbd859a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412355"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501001"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus 方法
-将仅我的代码，表示通过此 ICorDebugFunction2 函数标记单步执行。  
+将标记为仅我的代码表示通过此 ICorDebugFunction2 函数单步执行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,25 +35,25 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `bIsJustMyCode`  
- [in]设置为`true`若要将函数标记为用户代码; 否则，设置为`false`。  
+ [in]设置为`true`若要将函数标记为用户代码; 否则，将设置为`false`。  
   
 ## <a name="return-values"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|此函数已成功标记。|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|此函数不无法标记为用户代码，因为它不能进行调试。|  
+|`S_OK`|该函数已成功地标记。|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|因为它不能进行调试，该函数可能未标记为用户代码中。|  
   
 ## <a name="remarks"></a>备注  
- 仅我的代码分档器将跳过的非用户代码。 用户代码必须是代码的可调试的子集。  
+ 仅我的代码分档器将跳过非用户代码。 用户代码必须是代码的可调试的子集。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -5,18 +5,16 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 16bc9475599510a5e55f246d49aaa0be19314979
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 24a9c63b8d52ef05c386e5bfefe81e33245ece91
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208680"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674479"
 ---
 # <a name="obtaining-ui-automation-elements"></a>获取 UI 自动化元素
 > [!NOTE]
->  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API: UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  本文档适用于想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空间中定义的托管 <xref:System.Windows.Automation> 类的 .NET Framework 开发人员。 有关最新信息[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，请参阅[Windows 自动化 API:UI 自动化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  本主题描述获取 <xref:System.Windows.Automation.AutomationElement> 元素的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 对象的各种方法。  
   
@@ -27,7 +25,7 @@ ms.locfileid: "47208680"
 ## <a name="root-element"></a>根元素  
  所有 <xref:System.Windows.Automation.AutomationElement> 对象搜索都必须具有一个起点。 此起点可以是任何元素，包括桌面、应用程序窗口或控件。  
   
- 所有元素所都起源从其桌面的根元素从静态获取<xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType>属性。  
+ 所有元素所起源于的桌面根元素是从静态的 <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> 属性中获取的。  
   
 > [!CAUTION]
 >  通常，你应当尝试只获取 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子项。 对后代的搜索可能循环访问数百个甚至数千个元素，这可能导致堆栈溢出。 如果尝试在较低级别上获取特定元素，应该从应用程序窗口或者从较低级别的容器中开始搜索。  
@@ -98,7 +96,7 @@ ms.locfileid: "47208680"
 ### <a name="from-the-focused-control"></a>从具有焦点的控件中  
  可以从静态 <xref:System.Windows.Automation.AutomationElement> 属性中检索表示焦点控件的 <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> 。  
   
-## <a name="see-also"></a>请参阅  
- [基于属性条件查找 UI 自动化元素](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [使用 TreeWalker 在 UI 自动化元素之间导航](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
- [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+## <a name="see-also"></a>请参阅
+- [基于属性条件查找 UI 自动化元素](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [使用 TreeWalker 在 UI 自动化元素之间导航](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [UI 自动化树概述](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

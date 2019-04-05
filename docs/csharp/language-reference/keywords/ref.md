@@ -1,5 +1,6 @@
 ---
-title: ref 关键字（C# 参考）
+title: ref 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195965"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726645"
 ---
 # <a name="ref-c-reference"></a>ref（C# 参考）
 
@@ -92,7 +93,7 @@ return ref DecimalArray[0];
 
 所调用方法还可能会将返回值声明为 `ref readonly` 以按引用返回值，并坚持调用代码无法修改返回的值。 调用方法可以通过将返回的值存储在本地 [ref readonly](#ref-readonly-locals) 变量中来避免复制该值。
 
-有关示例，请参阅 [ref 返回值和 ref 局部变量示例](#a-ref-returns-and-ref-locals-example)
+有关示例，请参阅 [ref 返回值和 ref 局部变量示例](#a-ref-returns-and-ref-locals-example)。
 
 ## <a name="ref-locals"></a>ref 局部变量
 
@@ -113,6 +114,8 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
 请注意，在这两个示例中，必须在两个位置同时使用 `ref` 关键字，否则编译器将生成错误 CS8172：“无法使用值对按引用变量进行初始化”。
+
+从 C# 7.3 开始，`foreach` 语句的迭代变量可以是 ref local 变量，也可以是 ref readonly local 变量。 有关详细信息，请参阅 [foreach 语句](foreach-in.md)一文。
 
 ## <a name="ref-readonly-locals"></a>Ref readonly 局部变量
 
@@ -151,9 +154,12 @@ Ref readonly 局部变量用于指代在其签名中具有 `ref readonly` 并使
   
 ## <a name="see-also"></a>请参阅
 
-- [编写安全高效的代码](../../write-safe-efficient-code.md)  
-- [传递参数](../../programming-guide/classes-and-structs/passing-parameters.md)  
-- [方法参数](method-parameters.md)  
-- [C# 参考](../index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
+- [编写安全高效的代码](../../write-safe-efficient-code.md)
+- [ref 返回结果和局部变量](../../programming-guide/classes-and-structs/ref-returns.md)
+- [条件 ref 表达式](../operators/conditional-operator.md#conditional-ref-expression)
+- [ref 赋值运算符](../operators/assignment-operator.md#ref-assignment-operator)
+- [传递参数](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [方法参数](method-parameters.md)
+- [C# 参考](../index.md)
+- [C# 编程指南](../../programming-guide/index.md)
 - [C# 关键字](index.md)

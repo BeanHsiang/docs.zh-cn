@@ -2,12 +2,12 @@
 title: 根据服务元数据生成 WCF 客户端
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 78804eb7f4139280e7d72c5a45aa0ae4cc3c2d77
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3bdb283e461076ffd5c1e77963933de0e5b4bb02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570952"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>根据服务元数据生成 WCF 客户端
 本主题介绍如何使用 Svcutil.exe 中的各种开关，根据元数据文档生成客户端。  
@@ -20,7 +20,7 @@ ms.locfileid: "43801432"
   
 -   DISCO 请求 (使用[DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777)从 ASP.NET Web 服务) 针对所提供地址。  
   
- Svcutil.exe 基于 Web 服务描述语言 (WSDL) 或从服务接收的策略文件生成客户端。 通过串联用户名称和生成的用户主体名称 (UPN)"\@"，然后添加完全限定域名 (FQDN)。 但是，对于在 Active Directory 注册的用户，此格式不是有效并且该工具将生成的 UPN 导致以下错误消息进行 Kerberos 身份验证失败：**登录尝试失败。** 若要解决此问题，请手动修复该工具生成的客户端文件。  
+ Svcutil.exe 基于 Web 服务描述语言 (WSDL) 或从服务接收的策略文件生成客户端。 通过串联用户名称和生成的用户主体名称 (UPN)"\@"，然后添加完全限定域名 (FQDN)。 但是，对于在 Active Directory 注册的用户，此格式无效，该工具将生成的 UPN 导致以下错误消息进行 Kerberos 身份验证失败：**登录尝试失败。** 若要解决此问题，请手动修复该工具生成的客户端文件。  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
@@ -47,13 +47,13 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |选项|描述|  
 |------------|-----------------|  
-|**/language:\<语言 >**|指定要用于代码生成的编程语言。 提供在 Machine.config 文件中注册的语言名称或从 <xref:System.CodeDom.Compiler.CodeDomProvider> 继承的类的完全限定名称。<br /><br /> 值：c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp<br /><br /> 默认设置：csharp<br /><br /> 缩写形式：`/l`<br /><br /> 有关详细信息，请参阅[CodeDomProvider 类](https://go.microsoft.com/fwlink/?LinkId=94778)。|  
+|**/language:\<language>**|指定要用于代码生成的编程语言。 提供在 Machine.config 文件中注册的语言名称或从 <xref:System.CodeDom.Compiler.CodeDomProvider> 继承的类的完全限定名称。<br /><br /> 值：c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp<br /><br /> 默认设置：csharp<br /><br /> 缩写形式：`/l`<br /><br /> 有关详细信息，请参阅[CodeDomProvider 类](https://go.microsoft.com/fwlink/?LinkId=94778)。|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>为客户端选择命名空间  
   
 |选项|描述|  
 |------------|-----------------|  
-|**/namespace:\<字符串、 字符串 >**|指定从 WSDL 或 XML 架构 `targetNamespace` 到公共语言运行库 (CLR) 命名空间的映射。 将通配符 (*) 用于 `targetNamespace` 将映射所有 `targetNamespaces`，而不显式映射到该 CLR 命名空间。<br /><br /> 若要确保消息协定名称不与操作名称相冲突，请用双冒号 (`::`) 限定类型引用，或者确保名称是唯一的。<br /><br /> 默认设置：派生自 `DataContracts` 的架构文档的目标命名空间。 默认命名空间用于所有其他生成的类型。<br /><br /> 缩写形式：`/n`|  
+|**/namespace:\<string,string>**|指定从 WSDL 或 XML 架构 `targetNamespace` 到公共语言运行库 (CLR) 命名空间的映射。 将通配符 (*) 用于 `targetNamespace` 将映射所有 `targetNamespaces`，而不显式映射到该 CLR 命名空间。<br /><br /> 若要确保消息协定名称不与操作名称相冲突，请用双冒号 (`::`) 限定类型引用，或者确保名称是唯一的。<br /><br /> 默认：派生自的架构文档的目标命名空间`DataContracts`。 默认命名空间用于所有其他生成的类型。<br /><br /> 缩写形式：`/n`|  
   
 ## <a name="choosing-a-data-binding"></a>选择数据绑定  
   
@@ -69,6 +69,6 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/mergeConfig**|将生成的配置合并到现有文件中，而不是覆盖现有文件。|  
 |**/noConfig**|不生成配置文件。|  
   
-## <a name="see-also"></a>请参阅  
- [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+## <a name="see-also"></a>请参阅
+- [使用元数据](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [元数据体系结构概述](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

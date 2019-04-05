@@ -2,14 +2,14 @@
 title: .NET Core 全局工具
 description: 概述：介绍 .NET Core 全局工具及其适用的 .NET Core CLI 命令。
 author: KathleenDollard
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 077ffd53f1ba2988c80a637aaa109a66139736b0
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.custom: seodec18
+ms.openlocfilehash: 3bbf1e7953482dc07f05570443cf640a9fab6258
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697087"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170831"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core 全局工具概述
 

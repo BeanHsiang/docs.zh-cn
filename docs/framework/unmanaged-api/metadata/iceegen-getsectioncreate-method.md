@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 857462c380ce51994e13dab5cfe3c28bba0f38be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03de69d51b520ae2d8be6c7f450f0541c52c36a2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472429"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate 方法
-生成并获取使用指定的名称和标志值的代码节。  
+生成并获取使用指定的名称和标记值的代码节。  
   
  此方法已过时，不应使用。  
   
@@ -38,9 +39,9 @@ HRESULT GetSectionCreate (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `name`  
- [in]指向一个字符串，指定要创建的部分的名称的指针。  
+ [in]指向一个字符串，指定要创建的节的名称的指针。  
   
  `flags`  
  [in]指定选项的标志。  
@@ -49,16 +50,16 @@ HRESULT GetSectionCreate (
  [out]指向新创建的代码部分的指针。  
   
 ## <a name="remarks"></a>备注  
- 调用`GetSectionCreate`仅当你有特殊的段中要求未由其他方法。  
+ 调用`GetSectionCreate`仅在具有未由其他方法的特殊部分要求。  
   
 ## <a name="requirements"></a>要求  
- **平台：**请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Cor.h  
   
- **库：**用作 MsCorEE.dll 中的资源  
+ **库：** 用作 MsCorEE.dll 中的资源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICeeGen 接口](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

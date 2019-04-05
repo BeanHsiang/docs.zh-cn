@@ -1,15 +1,15 @@
 ---
 title: 创建、改进微服务 API 及协定并进行版本控制
-description: 用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 创建、改进微服务 API 及协定并进行版本控制
+description: 在考虑演变和版本控制的情况下创建微服务 API 和协定，因为需要改变。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: a2ec577a12cf677c2ec5e20a6f3e862911c82fbb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: 6580418ea04d64650cefe2f4c91f03e3f40a058f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105688"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466031"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>创建、改进微服务 API 及协定并进行版本控制
 
@@ -17,7 +17,7 @@ ms.locfileid: "37105688"
 
 API 定义的本质取决于所使用的协议。 例如，如果使用的是消息传送（如 [AMQP](https://www.amqp.org/)）协议，则 API 由消息类型构成。 如果使用的是 HTTP 和 RESTful 服务，则 API 由 URL、请求和响应 JSON 格式构成。
 
-但是，即使关注的是初始协定，服务 API 仍需随时间推移而改变。 如果发生这种情况—尤其是如果 API 是一个供多个客户端应用程序使用的公共 API，通常不能强制所有客户端升级到新的 API 协定。 通常需要逐渐增加对新版服务的部署，并且同时运行旧版和新版的服务协定。 因此，有必要制定服务版本控制策略。
+但是，即使关注的是初始协定，服务 API 仍需随时间推移而改变。 如果发生这种情况 — 尤其是如果 API 是一个供多个客户端应用程序使用的公共 API，通常不能强制所有客户端升级到新的 API 协定。 通常需要逐渐增加对新版服务的部署，并且同时运行旧版和新版的服务协定。 因此，有必要制定服务版本控制策略。
 
 如果 API 改动较小，例如向 API 添加属性或参数，则使用较旧 API 的客户端应切换到服务的新版本。 你或许能够为任何缺少的必需属性提供默认值，并且客户端或许能够忽略任何额外响应属性。
 
@@ -27,16 +27,15 @@ API 定义的本质取决于所使用的协议。 例如，如果使用的是消
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Scott Hanselman.ASP.NET Core RESTful Web API versioning made easy**（简化 ASP.NET Core RESTful Web API 版本控制）
-    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+- **Scott Hanselman.ASP.NET Core RESTful Web API versioning made easy** \（简化 ASP.NET Core RESTful Web API 版本控制）
+  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **RESTful web API 版本控制**
-    [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+- **RESTful Web API 版本控制** \
+  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding。Versioning, Hypermedia, and REST**（版本控制、超媒体和 REST）
-    <https://www.infoq.com/articles/roy-fielding-on-versioning>
-
+- **Roy Fielding。版本控制、超媒体和 REST** \
+  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 >[!div class="step-by-step"]
-[上一页](asynchronous-message-based-communication.md)
-[下一页](microservices-addressability-service-registry.md)
+>[上一页](asynchronous-message-based-communication.md)
+>[下一页](microservices-addressability-service-registry.md)

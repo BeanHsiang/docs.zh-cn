@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9d1c6dff4a1a8722a2ca196763756336d512631
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7cbc639c9fed90b25c034964b5a504e880876b54
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203938"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091833"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系统要求
 
@@ -53,7 +53,7 @@ ms.locfileid: "50203938"
 
 ## <a name="supported-client-operating-systems"></a>支持的客户端操作系统
 
-| 操作系统 | 支持的版本 | 随 OS 预安装 | 可安装单独 |
+| 操作系统 | 支持的版本 | 随 OS 预安装 | 可单独安装 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
 | Windows 10 2018 年 10 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |--|
 | Windows 10 2018 年 4 月更新 | 32 位和 64 位 | .NET Framework 4.7.2 |--|
@@ -82,8 +82,10 @@ ms.locfileid: "50203938"
 
 ## <a name="supported-server-operating-systems"></a>支持的服务器操作系统
 
-| 操作系统 | 支持的版本 | 随 OS 预安装 | 可安装单独 |
+| 操作系统 | 支持的版本 | 随 OS 预安装 | 可单独安装 |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows Server 2019 | 64 位 | .NET Framework 4.7.2 | -- |
+| Windows Server 版本 1809 | 64 位 | .NET Framework 4.7.2 | -- |
 | Windows Server 版本 1803 | 64 位 | .NET Framework 4.7.2 | -- |
 | Windows Server 版本 1709 | 64 位 | .NET Framework 4.7.1 | .NET Framework 4.7.2 | 
 | Windows 2016 Server | 64 位 | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] | .NET Framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
@@ -96,7 +98,7 @@ ms.locfileid: "50203938"
 
 - [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 包括 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，因此，你不必单独安装它。 同样，[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]包含 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]。
 
-- .NET Framework 对 Windows Server 2008 R2 SP1 或更高版本的服务器核心角色的支持有限。 有关不受支持的 API 列表，请参阅[服务器核心 .NET 功能](https://msdn.microsoft.com/library/ee391632.aspx)。
+- .NET Framework 对 Windows Server 2008 R2 SP1 或更高版本的服务器核心角色的支持有限。 有关不受支持的 API 列表，请参阅[服务器核心 .NET 功能](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85))。
 
 - 适用于基于 Itanium 的系统的 Windows Server 2008 R2 不支持 .NET Framework。
 
@@ -108,6 +110,6 @@ ms.locfileid: "50203938"
 
 ## <a name="see-also"></a>请参阅
 
-- [安装指南](../../../docs/framework/install/index.md)   
-- [入门](../../../docs/framework/get-started/index.md)   
+- [安装指南](../../../docs/framework/install/index.md)
+- [入门](../../../docs/framework/get-started/index.md)
 - [安装和卸载 .NET Framework 受阻疑难解答](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

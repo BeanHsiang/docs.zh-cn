@@ -1,17 +1,18 @@
 ---
-title: 类（C# 编程指南）
+title: 类 - C# 编程指南
+ms.custom: seodec18
 description: 了解类类型及其创建方式
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: db490225bbef4517c1306aee7afb5c01d2d0fec6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 4cea68e76c17e5393ab7213f457c0875cdc5b53b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596693"
 ---
 # <a name="classes-c-programming-guide"></a>类（C# 编程指南）
 
@@ -19,7 +20,7 @@ ms.locfileid: "44081471"
 定义为[类](../../../csharp/language-reference/keywords/class.md)的一个类型是*引用类型*。 在运行时，如果声明引用类型的变量，此变量就会一直包含值 [null](../../../csharp/language-reference/keywords/null.md)，直到使用 [new](../../../csharp/language-reference/keywords/new.md) 运算符显式创建类实例，或直到为此变量分配可能已在其他位置创建的兼容类型的对象，如下面的示例所示：
 
 ```csharp
-//Declaring a object of type MyClass.
+//Declaring an object of type MyClass.
 MyClass mc = new MyClass();
 
 //Declaring another object of the same type, assigning it the value of the first object.

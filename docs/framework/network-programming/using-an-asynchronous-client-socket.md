@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 386b9d3cf0342784c09ed8fc7a815a242924b068
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 54a8209c7dee2d1c26b4a66223b5f727d7765c11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497441"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>使用异步客户端套接字
 异步客户端套接字在等待网络操作完成时不会挂起应用程序。 相反，它使用标准 .NET Framework 异步编程模型在一个线程上处理网络连接，而应用程序继续在原始线程上运行。 异步套接字适用于大量使用网络或不宜等待网络操作完成（才可继续运作）的应用程序。  
@@ -285,7 +285,7 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)  
- [异步客户端套接字示例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+## <a name="see-also"></a>请参阅
+- [使用同步客户端套接字](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
+- [使用套接字侦听](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [异步客户端套接字示例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)

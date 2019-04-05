@@ -1,5 +1,5 @@
 ---
-title: '&lt;添加&gt;的元素&lt;侦听器&gt;为&lt;源&gt;'
+title: <add> 的 <listeners> 的 <source> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
@@ -8,23 +8,21 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c0ab15f6eca8b20653530583016eb849273c4ce1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae5231f43e7c157b5250376f7ab97deccea595e5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216859"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277116"
 ---
-# <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;添加&gt;的元素&lt;侦听器&gt;为&lt;源&gt;
+# <a name="add-element-for-listeners-for-source"></a>\<添加 > 元素\<侦听器 > 为\<源 >
 将侦听器添加到跟踪源的 `Listeners` 集合中。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<源 >  
-\<源 >  
-\<侦听器 >  
+\<system.diagnostics>  
+\<sources>  
+\<source>  
+\<listeners>  
 \<add>  
   
 ## <a name="syntax"></a>语法  
@@ -120,8 +118,8 @@ ms.locfileid: "47216859"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [跟踪侦听器](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

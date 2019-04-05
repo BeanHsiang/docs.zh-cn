@@ -1,5 +1,5 @@
 ---
-title: 如何： 解决不明确时间
+title: 如何：解决不明确时间
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb09b1f087e0a0f726d32d85e06cfb2a9ec741a8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: aae3e5145d2fa85cd55fc5b1288ef4aaa0fef48f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569282"
 ---
-# <a name="how-to-resolve-ambiguous-times"></a>如何： 解决不明确时间
+# <a name="how-to-resolve-ambiguous-times"></a>如何：解决不明确时间
 
 不明确时间是指映射到多个协调世界时 (UTC) 的时间。 在向后调整时钟时间时，例如从时区的夏令时调整到标准时间这段转换期间，便会出现不明确时间。 在处理不明确时间时，可执行以下任一操作：
 
@@ -59,5 +59,5 @@ ms.locfileid: "43863129"
 
 ## <a name="see-also"></a>请参阅
 
-* [日期、时间和时区](../../../docs/standard/datetime/index.md)
-* [如何：让用户解析不明确时间](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)
+- [日期、时间和时区](../../../docs/standard/datetime/index.md)
+- [如何：让用户解决不明确时间](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md)

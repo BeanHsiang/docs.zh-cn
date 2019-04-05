@@ -2,12 +2,12 @@
 title: 安全性验证
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 16a12a031845a8898c32ac43bbb2e2a44fd7c7ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699761"
 ---
 # <a name="security-validation"></a>安全性验证
 此示例演示如何使用自定义行为来验证计算机上的服务，以确保服务符合特定条件。 在此示例中，自定义行为通过以下方法验证服务：扫描服务上的每个终结点，并查看这些终结点是否包含安全的绑定元素。 此示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -77,7 +77,7 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  向所有服务中添加行为时，建议在进行任何更改之前备份 Machine.config 文件。  
   
- 现在运行此示例的 client\bin 目录中提供的客户端。 异常已出现并显示以下消息:"请求的服务 http://localhost/servicemodelsamples/service.svc无法激活。" 这是预期的行为，因为终结点验证行为认为某个终结点不安全，并阻止服务启动。 该行为还会引发一个内部异常，以描述哪个终结点不安全，并在“System.ServiceModel 4.0.0.0”源和“WebHost”类别下的系统事件查看器中写入一则消息。 还可以在此示例中打开对服务的跟踪。 这样可以使用户查看终结点验证行为引发的异常，方法是：使用服务跟踪查看器工具打开生成的服务跟踪。  
+ 现在运行此示例的 client\bin 目录中提供的客户端。 异常已出现并显示以下消息："请求的服务 http://localhost/servicemodelsamples/service.svc无法激活。" 这是预期的行为，因为终结点验证行为认为某个终结点不安全，并阻止服务启动。 该行为还会引发一个内部异常，以描述哪个终结点不安全，并在“System.ServiceModel 4.0.0.0”源和“WebHost”类别下的系统事件查看器中写入一则消息。 还可以在此示例中打开对服务的跟踪。 这样可以使用户查看终结点验证行为引发的异常，方法是：使用服务跟踪查看器工具打开生成的服务跟踪。  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>查看事件查看器中失败的终结点验证异常消息  
   
@@ -106,5 +106,5 @@ public void Validate(ServiceDescription serviceDescription,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>请参阅  
- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>请参阅
+- [AppFabric 监视示例](https://go.microsoft.com/fwlink/?LinkId=193959)

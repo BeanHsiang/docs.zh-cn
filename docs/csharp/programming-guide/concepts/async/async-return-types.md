@@ -2,12 +2,12 @@
 title: 异步返回类型 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036235"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368176"
 ---
 # <a name="async-return-types-c"></a>异步返回类型 (C#)
 异步方法可以具有以下返回类型：
@@ -24,7 +24,7 @@ ms.locfileid: "48036235"
   
 在以下其中一节检查每个返回类型，且在本主题末尾可以找到使用全部三种类型的完整示例。  
   
-##  <a name="BKMK_TaskTReturnType"></a> Task\<TResult\> 返回类型  
+## <a name="BKMK_TaskTReturnType"></a> Task\<TResult\> 返回类型  
 <xref:System.Threading.Tasks.Task%601> 返回类型用于某种异步方法，此异步方法包含 [return](../../../../csharp/language-reference/keywords/return.md) (C#) 语句，其中操作数具有类型 `TResult`。  
   
 在下面的示例中，`GetLeisureHours` 异步方法包含返回整数的 `return` 语句。 因此，该方法声明必须指定 `Task<int>` 的返回类型。  <xref:System.Threading.Tasks.Task.FromResult%2A> 异步方法是返回字符串的操作的占位符。
@@ -33,14 +33,14 @@ ms.locfileid: "48036235"
 
 在 `ShowTodaysInfo` 方法中从 await 表达式内调用 `GetLeisureHours` 时，await 表达式检索存储在由 `GetLeisureHours` 方法返回的任务中的整数值（`leisureHours` 的值）。 有关 await 表达式的详细信息，请参阅 [await](../../../../csharp/language-reference/keywords/await.md)。  
   
-通过从应用程序 `await` 中分离对 `GetLeisureHours` 的调用，你可以更好地了解此操作，如下面的代码所示。 对非立即等待的方法 `GetLeisureHours` 的调用返回 `Task<int>`，正如你从方法声明预料的一样。 该任务指派给示例中的 `infoTask` 变量。 因为 `infoTask` 是 <xref:System.Threading.Tasks.Task%601>，所以它包含类型 `TResult` 的 <xref:System.Threading.Tasks.Task%601.Result> 属性。 在这种情况下，`TResult` 表示整数类型。 `await` 应用于 `infoTask`，await 表达式的计算结果为 `infoTask` 的 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性内容。 此值分配给 `ret` 变量。  
+通过从应用程序 `await` 中分离对 `GetLeisureHours` 的调用，你可以更好地了解此操作，如下面的代码所示。 对非立即等待的方法 `GetLeisureHours` 的调用返回 `Task<int>`，正如你从方法声明预料的一样。 该任务指派给示例中的 `integerTask` 变量。 因为 `integerTask` 是 <xref:System.Threading.Tasks.Task%601>，所以它包含类型 `TResult` 的 <xref:System.Threading.Tasks.Task%601.Result> 属性。 在这种情况下，`TResult` 表示整数类型。 `await` 应用于 `integerTask`，await 表达式的计算结果为 `integerTask` 的 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性内容。 此值分配给 `ret` 变量。  
   
 > [!IMPORTANT]
 >  <xref:System.Threading.Tasks.Task%601.Result%2A> 属性为阻止属性。 如果你在其任务完成之前尝试访问它，当前处于活动状态的线程将被阻止，直到任务完成且值为可用。 在大多数情况下，应通过使用 `await` 访问此值，而不是直接访问属性。 <br/> 上一示例通过检索 <xref:System.Threading.Tasks.Task%601.Result%2A> 属性的值来阻止主线程，从而使 `ShowTodaysInfo` 方法可在应用程序结束之前完成执行。  
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a>任务返回类型  
+## <a name="BKMK_TaskReturnType"></a>任务返回类型  
 不包含 `return` 语句的异步方法或包含不返回操作数的 `return` 语句的异步方法通常具有返回类型 <xref:System.Threading.Tasks.Task>。 如果此类方法同步运行，它们将返回 `void`。 如果在异步方法中使用 <xref:System.Threading.Tasks.Task> 返回类型，调用方法可以使用 `await` 运算符暂停调用方的完成，直至被调用的异步方法结束。  
   
 如下示例中，`WaitAndApologize` 异步方法不包含 `return` 语句，因此此方法返回 <xref:System.Threading.Tasks.Task> 对象。 通过这样可等待 `WaitAndApologize`。 请注意，<xref:System.Threading.Tasks.Task> 类型不包含 `Result` 属性，因为它不具有任何返回值。  
@@ -55,7 +55,7 @@ ms.locfileid: "48036235"
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a>Void 返回类型
+## <a name="BKMK_VoidReturnType"></a>Void 返回类型
 
 在异步事件处理程序中使用 `void` 返回类型，这需要 `void` 返回类型。 对于事件处理程序以外的不返回值的方法，应返回 <xref:System.Threading.Tasks.Task>，因为无法等待返回 `void` 的异步方法。 这种方法的任何调用方必须能够继续完成，而无需等待调用的异步方法完成，并且调用方必须独立于异步方法生成的任何值或异常。  
   
@@ -79,8 +79,8 @@ ms.locfileid: "48036235"
 
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.Tasks.Task.FromResult%2A>   
-- [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-- [异步程序中的控制流 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
-- [async](../../../../csharp/language-reference/keywords/async.md)   
+- <xref:System.Threading.Tasks.Task.FromResult%2A>
+- [演练：使用 Async 和 Await 访问 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [异步程序中的控制流 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)

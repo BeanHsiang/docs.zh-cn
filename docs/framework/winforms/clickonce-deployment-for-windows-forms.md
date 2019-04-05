@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 0b76e07a23b105f2c1b4fb55a0d25bb52bcb9dc2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192036"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702563"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows 窗体的 ClickOnce 部署
 下面的主题描述了 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，这是一种用于将 Windows 窗体应用程序轻松部署到客户端计算机的技术。  
@@ -41,10 +41,10 @@ ms.locfileid: "44192036"
  [演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  演示如何使用命令行和 SDK 工具（而不使用 Visual Studio）来部署 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序。  
   
- [如何：为 ClickOnce 应用程序向客户端计算机添加一个受信任的发布者](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [如何：为 ClickOnce 应用程序向客户端计算机添加受信任的发布者](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  演示如何一次性配置受信任的应用程序部署所需要的客户端计算机。  
   
- [如何：指定部署更新的其他位置](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
+ [如何：指定部署更新的替换位置](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  演示如何使用 SDK 工具来配置 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序，以检查另一个用于新版本应用程序的位置。  
   
  [演练：使用 ClickOnce 部署 API 按需下载程序集](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
@@ -59,13 +59,13 @@ ms.locfileid: "44192036"
  [在 ClickOnce 应用程序中访问本地数据和远程数据](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
  介绍如何从 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 应用程序访问本地数据文件和远程数据源。  
   
- [如何：将数据文件包括到 ClickOnce 应用程序中](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
+ [如何：将数据文件添加到 ClickOnce 应用程序中](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  演示如何标记文件以使它在 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 数据目录中可用。  
   
-## <a name="see-also"></a>请参阅  
- [应用程序设置概述](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [发布 ClickOnce 应用程序](/visualstudio/deployment/publishing-clickonce-applications)  
- [从命令行生成 ClickOnce 应用程序](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  
- [调试使用 System.Deployment.Application 的 ClickOnce 应用程序](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
- [使用 ClickOnce 部署 COM 组件](/visualstudio/deployment/deploying-com-components-with-clickonce)  
- [如何：使用发布向导发布 ClickOnce 应用程序](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
+## <a name="see-also"></a>请参阅
+- [应用程序设置概述](./advanced/application-settings-overview.md)
+- [发布 ClickOnce 应用程序](/visualstudio/deployment/publishing-clickonce-applications)
+- [从命令行生成 ClickOnce 应用程序](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
+- [调试使用 System.Deployment.Application 的 ClickOnce 应用程序](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)
+- [使用 ClickOnce 部署 COM 组件](/visualstudio/deployment/deploying-com-components-with-clickonce)
+- [如何：使用发布向导发布 ClickOnce 应用程序](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

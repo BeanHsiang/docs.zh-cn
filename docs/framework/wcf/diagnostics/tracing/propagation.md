@@ -2,12 +2,12 @@
 title: 传播
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 1d5ac743e94edd845650a1b550b3e982929d1b32
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 680f732fa4e75eb1eaa82a861f0a0021dc9c974c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198245"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686330"
 ---
 # <a name="propagation"></a>传播
 本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动传播。  
@@ -76,8 +76,8 @@ ms.locfileid: "50198245"
 ## <a name="synchronization"></a>同步  
  为了同步不同计算机上运行的各终结点之间的事件，向在消息中传播的 ActivityId 标头中添加了一个 CorrelationId。 工具可使用此 ID 来同步计算机之间具有时钟差的事件。 具体地说，服务跟踪查看器工具可使用此 ID 显示终结点之间的消息流。  
   
-## <a name="see-also"></a>请参阅  
- [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a>请参阅
+- [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

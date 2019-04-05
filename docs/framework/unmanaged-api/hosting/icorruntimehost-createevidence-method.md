@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a06d57348cfbdfb8bb57580a48e54e298e27e166
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c54c21008e5922a5357f503821d87e297f0d00e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438189"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499246"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence 方法
-获取类型的接口指针<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>，这样，主机可以在创建安全证据要传递给[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)或[CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)方法。  
+获取类型的接口指针<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>，它允许主机来创建安全证据要传递给[CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)或[CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,32 +35,32 @@ HRESULT CreateEvidence (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pEvidence`  
- [out]接口指针<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>用于创建安全证据的实例。 此指针被类型化为`IUnknown`，因此通常应调用的调用方`QueryInterface`用于获取指向此接口上<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>。  
+ [out]指向的接口指针<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>实例用来创建安全证据。 此指针被类型化为`IUnknown`，因此通常情况下调用调用方应`QueryInterface`若要获取指向此接口上<xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>。  
   
 ## <a name="return-value"></a>返回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|该操作成功。|  
-|S_FALSE|操作无法完成。|  
-|E_FAIL|发生了未知的灾难性故障。 如果某方法返回 E_FAIL，公共语言运行时 (CLR) 不再可用进程中。 对任何托管 Api 的后续调用会返回 HOST_E_CLRNOTAVAILABLE。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或 CLR 处于不能运行托管的代码或成功处理调用的状态。|  
+|S_OK|操作成功。|  
+|S_FALSE|该操作未能完成。|  
+|E_FAIL|发生了未知的灾难性故障。 如果方法返回 E_FAIL，公共语言运行时 (CLR) 不再可在该过程中使用。 对任何托管 Api 的后续调用返回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未加载到进程中，或处于不能运行托管的代码或已成功处理调用的状态。|  
   
 ## <a name="remarks"></a>备注  
- 此方法返回从本机代码，将无法填充的空集合。 应使用<xref:System.Security.Policy.Evidence>方法相反。  
+ 此方法返回的本机代码中不能填充一个空集合。 应使用<xref:System.Security.Policy.Evidence>方法相反。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** 作为 MSCorEE.dll 中的资源  
+ **库：** 包含为 MSCorEE.dll 中的资源  
   
- **.NET framework 版本：** 1.0、 1.1  
+ **.NET framework 版本：** 1.0, 1.1  
   
-## <a name="see-also"></a>请参阅  
- <xref:System._AppDomain>  
- <xref:System.AppDomain>  
- [ICorRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a>请参阅
+- <xref:System._AppDomain>
+- <xref:System.AppDomain>
+- [ICorRuntimeHost 接口](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

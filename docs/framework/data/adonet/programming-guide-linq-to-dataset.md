@@ -2,12 +2,12 @@
 title: 编程指南 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 0c6b026d86a898aa52d93833ac3e447d6f6cba11
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f6ab1634769a54bd8dbafe8c9d41b11ff787d50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636477"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>编程指南 (LINQ to DataSet)
 本节提供有关使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 进行编程的概念性信息和示例。  
@@ -25,7 +25,7 @@ ms.locfileid: "43513365"
  [从查询创建数据表](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
  提供有关创建信息<xref:System.Data.DataTable>从[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]通过使用查询<xref:System.Data.DataTableExtensions.CopyToDataTable%2A>方法。  
   
- [如何： 实现 CopyToDataTable\<T > 的泛型类型 T 不是 DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
+ [如何：实现 CopyToDataTable\<T > 的泛型类型 T 不是 DataRow](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
  描述如何实现自定义的 `CopyToDataTable<T>` 方法，其中泛型参数 T 的类型不是 <xref:System.Data.DataRow>。  
   
  [泛型字段和 SetField 方法](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
@@ -54,5 +54,5 @@ ms.locfileid: "43513365"
   
 ## <a name="see-also"></a>请参阅
 
-- [LINQ 和 ADO.NET](linq-and-ado-net.md)  
+- [LINQ 和 ADO.NET](linq-and-ado-net.md)
 - [语言集成查询 (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)

@@ -1,5 +1,6 @@
 ---
-title: object（C# 参考）
+title: object - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - object_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - object keyword [C#]
 ms.assetid: 93f60c0b-e17a-40a9-9362-cca5fb77b0e7
-ms.openlocfilehash: b36703828e6027a89297ac88edaf2b55ec18f42e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a1917a7925d4ed90ede40248fa394f9c45d09b4e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849877"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238958"
 ---
 # <a name="object-c-reference"></a>object（C# 参考）
 

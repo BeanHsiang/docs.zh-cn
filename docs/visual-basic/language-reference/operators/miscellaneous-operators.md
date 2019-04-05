@@ -5,19 +5,19 @@ helpviewer_keywords:
 - operators [Visual Basic]
 - operators [Visual Basic], miscellaneous
 ms.assetid: 2423b3c5-fc3f-479c-bcd2-2c6ebe92814f
-ms.openlocfilehash: ac01bf81926fcf8068d1d648486cfb61fba52cf0
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: c9c5475993659fd366e6cefd1fc0bdaad3ab02d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513082"
 ---
 # <a name="miscellaneous-operators-visual-basic"></a>杂项运算符 (Visual Basic)
 以下是定义在 Visual Basic 中的其他运算符。  
   
 [?.null 条件运算符](null-conditional-operators.md)
 
-[?（） null 条件运算符](null-conditional-operators.md)
+[?() null-conditional operator](null-conditional-operators.md)
 
  [AddressOf 运算符](../../../visual-basic/language-reference/operators/addressof-operator.md)  
   
@@ -33,4 +33,4 @@ ms.locfileid: "49453091"
   
 ## <a name="see-also"></a>请参阅
 
- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [按功能列出的运算符](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: eaabb382a7bbb2cdd19c884fcd8499e626f70d4a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30b61a662170b87a557a1a2ea094301ba6401742
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608662"
 ---
 # <a name="proxy-configuration"></a>代理配置
 代理服务器处理客户端对资源的请求。 代理可以从其缓存中返回已请求的资源，或将请求转发到资源驻留的服务器。 代理可以通过减少发送到远程服务器的请求数量来提高网络性能。 代理还可以用于限制对资源的访问。  
@@ -53,7 +53,7 @@ ms.locfileid: "50180986"
   
  下表显示了静态代理的配置选项。  
   
-|特性、属性或配置文件设置|描述|  
+|特性、属性或配置文件设置|说明|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` 或 <xref:System.Net.WebProxy.Address>|要使用的代理地址。|  
 |`bypassonlocal` 或 <xref:System.Net.WebProxy.BypassProxyOnLocal>|控制是否对本地地址不使用代理。|  
@@ -75,7 +75,7 @@ ms.locfileid: "50180986"
 </system.net>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Net.WebProxy>  
- <xref:System.Net.GlobalProxySelection>  
- [自动代理检测](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.WebProxy>
+- <xref:System.Net.GlobalProxySelection>
+- [自动代理检测](../../../docs/framework/network-programming/automatic-proxy-detection.md)

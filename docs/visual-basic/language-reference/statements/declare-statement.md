@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 343ee168809fc63ef63559eda0fd018abde684e7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fbb7b4e118598157e2005469f89831df50de6576
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485737"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838334"
 ---
 # <a name="declare-statement"></a>Declare Statement
 声明对外部文件中实现的过程的引用。  
@@ -54,14 +54,14 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |术语|定义|  
 |---|---|  
 |`attributelist`|可选。 请参阅[属性列表](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|可选。 可以是以下各项之一：<br /><br /> -   [公共](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [专用](../../../visual-basic/language-reference/modifiers/private.md)<br />- [受保护的友元](../../language-reference/modifiers/protected-friend.md)<br />- [专用受保护](../../language-reference/modifiers/private-protected.md)<br /><br /> 请参阅[访问 Visual Basic 中的级别](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`accessmodifier`|可选。 可以是以下各项之一：<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保护](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [友元](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [专用](../../../visual-basic/language-reference/modifiers/private.md)<br />- [受保护的友元](../../language-reference/modifiers/protected-friend.md)<br />- [专用受保护](../../language-reference/modifiers/private-protected.md)<br /><br /> 请参阅 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
 |`Shadows`|可选。 请参阅[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
 |`charsetmodifier`|可选。 指定字符集和文件搜索信息。 可以是以下各项之一：<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) （默认值）<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [自动](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|（可选），但`Sub`或`Function`必须出现。 指示外部过程不返回值。|  
 |`Function`|（可选），但`Sub`或`Function`必须出现。 指示外部过程返回一个值。|  
-|`name`|必须的。 此外部引用的名称。 有关详细信息，请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Lib`|必须的。 引入了`Lib`子句，用于标识包含外部过程的外部文件 （DLL 或代码资源）。|  
-|`libname`|必须的。 包含声明的过程的文件的名称。|  
+|`name`|必需。 此外部引用的名称。 有关详细信息，请参阅[声明的元素名称](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`Lib`|必需。 引入了`Lib`子句，用于标识包含外部过程的外部文件 （DLL 或代码资源）。|  
+|`libname`|必需。 包含声明的过程的文件的名称。|  
 |`Alias`|可选。 指示所声明的过程，不能通过中指定的名称在其文件中进行标识`name`。 指定在其标识`aliasname`。|  
 |`aliasname`|如果在使用需要`Alias`关键字。 标识过程的两种方式之一的字符串：<br /><br /> 在其文件中，用引号括起来的过程的入口点名称 (`""`)<br /><br /> 或<br /><br /> 数字符号 (`#`) 后跟一个整数，指定在其文件内的过程的入口点的序号|  
 |`parameterlist`|所需的过程如果采用参数。 请参阅[参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
@@ -124,29 +124,30 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
     -   在 Unicode 平台上，如 Windows NT、 Windows 2000 或 Windows XP 中，首先查找与没有名称的修改的外部过程。 如果该操作失败，则将追加"W"到末尾的外部过程的名称，并再次查找。  
   
--   **机制。** Visual Basic 使用.NET Framework*平台调用*(PInvoke) 机制来解析和访问外部过程。 `Declare`语句和<xref:System.Runtime.InteropServices.DllImportAttribute>这两个类使用此机制自动，并且不需要任何知识的 PInvoke。 有关详细信息，请参阅[演练： 调用 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
+-   **机制。** Visual Basic 使用.NET Framework*平台调用*(PInvoke) 机制来解析和访问外部过程。 `Declare`语句和<xref:System.Runtime.InteropServices.DllImportAttribute>这两个类使用此机制自动，并且不需要任何知识的 PInvoke。 有关详细信息，请参见[演练：调用 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
   
 > [!IMPORTANT]
->  如果外部过程外部公共语言运行时 (CLR) 运行，则*非托管代码*。 当调用此类过程，例如 Win32 API 函数或 COM 方法，可能会使你的应用程序的安全风险。 有关详细信息，请参阅[用于非托管代码安全编码准则](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)。  
+>  如果外部过程外部公共语言运行时 (CLR) 运行，则*非托管代码*。 当调用此类过程，例如 Windows API 函数或 COM 方法，可能会使你的应用程序的安全风险。 有关详细信息，请参阅[用于非托管代码安全编码准则](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例声明的外部引用`Function`返回当前用户名称的过程。 然后，它调用外部过程`GetUserNameA`作为的一部分`getUser`过程。  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]  
   
 ## <a name="example"></a>示例  
  <xref:System.Runtime.InteropServices.DllImportAttribute>提供非托管代码中使用函数的替代方法。 下面的示例声明导入的函数，而无需使用`Declare`语句。  
   
- [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#16)]  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [Imports 语句（.NET 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [AddressOf 运算符](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Call 语句](../../../visual-basic/language-reference/statements/call-statement.md)  
- [演练：调用 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
+- [Imports 语句（.NET 命名空间和类型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [AddressOf 运算符](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Function 语句](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub 语句](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [参数列表](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Call 语句](../../../visual-basic/language-reference/statements/call-statement.md)
+- [演练：调用 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

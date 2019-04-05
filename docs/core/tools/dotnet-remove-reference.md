@@ -1,15 +1,13 @@
 ---
-title: dotnet remove reference 命令 - .NET Core CLI
+title: dotnet remove reference 命令
 description: dotnet remove reference 命令可便于删除项目间引用。
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: b281b255be7f49a99a6b4928c340cd4fb085f085
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: bfac4721743babcf48fd8e86a50c8df136e1bfce
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696226"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170608"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
@@ -23,7 +21,7 @@ ms.locfileid: "34696226"
 
 `dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 使用 `dotnet remove reference` 命令可方便地从项目删除项目引用。
 

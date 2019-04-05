@@ -6,31 +6,31 @@ helpviewer_keywords:
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: 58e243812f9c2dcb65dc37bfd50d9bcfb124e4f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ccba42c3e16fdda73c087afde99e9864dc4ab0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557090"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351926"
 ---
 # <a name="how-to-bind-to-a-method"></a>如何：绑定到方法
 下面的示例演示如何将绑定到方法使用<xref:System.Windows.Data.ObjectDataProvider>。  
   
 ## <a name="example"></a>示例  
- 在本示例中，`TemperatureScale` 是一个具有方法 `ConvertTemp` 的类，该方法接收两个参数（分别为 `double` 和 `enum` 类型的 `TempType)`），并将给定值从一个温标转换为另一个温标。 在下面的示例中，<xref:System.Windows.Data.ObjectDataProvider>用来实例化`TemperatureScale`对象。 将使用两个指定参数调用 `ConvertTemp` 方法。  
+ 在本示例中，`TemperatureScale` 是一个具有 `ConvertTemp` 方法的类，该方法接收两个参数（分别为 `double` 和 `enum` 类型的 `TempType)`），将给定值从一个温标转换为另一个温标。 在以下示例中，<xref:System.Windows.Data.ObjectDataProvider> 用来实例化 `TemperatureScale` 对象。 将使用两个指定参数调用 `ConvertTemp` 方法。  
   
- [!code-xaml[BindToMethod#WindowResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#windowresources)]  
+ [!code-xaml[BindToMethod#WindowResources](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#windowresources)]  
   
- 现在方法可以作为资源使用，因此可绑定到其结果。 在下面的示例中，<xref:System.Windows.Controls.TextBox.Text%2A>属性<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>的<xref:System.Windows.Controls.ComboBox>绑定到方法的两个参数。 这允许用户指定要转换的温度以及要转换自的温标。 请注意，<xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>设置为`true`因为我们要绑定到<xref:System.Windows.Data.ObjectDataProvider.MethodParameters%2A>属性<xref:System.Windows.Data.ObjectDataProvider>实例和未包装的对象的属性<xref:System.Windows.Data.ObjectDataProvider>(`TemperatureScale`对象)。  
+ 现在此方法可以作为资源使用，因此可绑定到其结果。 在以下示例中，<xref:System.Windows.Controls.TextBox> 的 <xref:System.Windows.Controls.TextBox.Text%2A> 属性和 <xref:System.Windows.Controls.ComboBox> 的 <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> 绑定到该方法的两个参数。 这样用户就可以指定要转换的温度以及要从哪个温标进行转换。 注意，<xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A> 设置为 `true` 是因为我们要绑定到 <xref:System.Windows.Data.ObjectDataProvider> 实例的 <xref:System.Windows.Data.ObjectDataProvider.MethodParameters%2A> 属性，而不是由 <xref:System.Windows.Data.ObjectDataProvider> 包装的对象（`TemperatureScale`对象）的属性。  
   
- <xref:System.Windows.Controls.ContentControl.Content%2A>的最后一个<xref:System.Windows.Controls.Label>更新在用户修改的内容时<xref:System.Windows.Controls.TextBox>或选定的<xref:System.Windows.Controls.ComboBox>。  
+ 最后一个 <xref:System.Windows.Controls.Label> 的 <xref:System.Windows.Controls.ContentControl.Content%2A> 会在用户修改 <xref:System.Windows.Controls.TextBox> 的内容或 <xref:System.Windows.Controls.ComboBox> 的选项时更新。  
   
- [!code-xaml[BindToMethod#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#ui)]  
+ [!code-xaml[BindToMethod#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#ui)]  
   
- 转换器`DoubleToString`采用双精度值并将其转换中的字符串<xref:System.Windows.Data.IValueConverter.Convert%2A>方向 (从绑定源到绑定目标，即<xref:System.Windows.Controls.TextBox.Text%2A>属性)，并将转换`string`到`double`中<xref:System.Windows.Data.IValueConverter.ConvertBack%2A>方向。  
+ `DoubleToString` 转换器在 <xref:System.Windows.Data.IValueConverter.Convert%2A> 方向接受一个双精度值并将其转换为字符串（从绑定源到绑定目标，后者为 <xref:System.Windows.Controls.TextBox.Text%2A> 属性），在<xref:System.Windows.Data.IValueConverter.ConvertBack%2A> 方向将 `string` 转换为 `double`。  
   
- `InvalidationCharacterRule`是<xref:System.Windows.Controls.ValidationRule>，用于检查无效字符。 默认的错误模板，这是一个红色边框周围<xref:System.Windows.Controls.TextBox>，显示输入的值不是一个双精度值时通知用户。  
+ `InvalidationCharacterRule` 是一个 <xref:System.Windows.Controls.ValidationRule>，用于检查无效字符。 当输入值不是一个 `double` 值时，默认错误模板（一个围绕 <xref:System.Windows.Controls.TextBox> 的红色边框）将出现，对用户进行通知。  
   
-## <a name="see-also"></a>请参阅  
- [帮助主题](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [绑定到枚举](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)
+## <a name="see-also"></a>请参阅
+- [帮助主题](data-binding-how-to-topics.md)
+- [绑定到枚举](how-to-bind-to-an-enumeration.md)

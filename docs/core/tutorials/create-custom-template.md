@@ -2,14 +2,14 @@
 title: 创建 dotnet new 自定义模板
 description: 在本趣味性教程中，了解如何创建 dotnet new 命令的自定义模板。
 author: guardrex
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516648"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676442"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>创建 dotnet new 自定义模板
 
@@ -64,17 +64,17 @@ ms.locfileid: "43516648"
 1. 将项目文件夹的内容连同 .template.config/template.json 文件一起复制到创建的 content 文件夹中。
 1. 在 content 文件夹旁边，添加 [nuspec 文件](/nuget/create-packages/creating-a-package)。 nuspec 文件是 XML 清单文件，用于描述包内容，并促进创建 NuGet 包。
 
-   ![显示 NuGet 包布局的目录结构](./media/create-custom-template/nugetdirectorylayout.png)
+   ![显示 NuGet 包布局的目录结构](./media/create-custom-template/nuget-directory-layout.png)
 
 1. 在 nuspec文件的 \<packageTypes> 元素中，添加 `name` 属性值为 `Template` 的 \<packageType> 元素。 content 文件夹和 nuspec 文件应位于同一目录。 下表列出了将模板生成为 NuGet 包至少所需的 nuspec 文件元素。
 
-   | 元素            | 类型   | 描述 |
+   | 元素            | 类型   | 说明 |
    | ------------------ | ------ | ----------- |
-   | **\<authors>**     | 字符串 | 包创建者的逗号分隔列表，与 nuget.org 上的配置文件名称一致。创建者显示在 nuget.org 上的 NuGet 库中，用于交叉引用同一创建者的包。 |
-   | **\<description>** | 字符串 | 用于 UI 显示的包的详细说明。 |
-   | **\<id>**          | 字符串 | 不区分大小写的包标识符，在 nuget.org 或包驻留的任意库中必须是唯一的。 ID 不得包含空格或对 URL 无效的字符，通常遵循 .NET 命名空间规则。 有关指南，请参阅[选择唯一包标识符并设置版本号](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)。 |
-   | **\<packageType>** | 字符串 | 将此元素置于 \<metadata> 元素之间的 \<packageTypes> 元素内。 将 \<packageType> 元素的 `name` 属性设置为 `Template`。 |
-   | **\<version>**     | 字符串 | 遵循 major.minor.patch 模式的包版本。 版本号可能包括预发布后缀，如[预发布版本](/nuget/create-packages/prerelease-packages#semantic-versioning)中所述。 |
+   | **\<authors>**     | string | 包创建者的逗号分隔列表，与 nuget.org 上的配置文件名称一致。创建者显示在 nuget.org 上的 NuGet 库中，用于交叉引用同一创建者的包。 |
+   | **\<description>** | string | 用于 UI 显示的包的详细说明。 |
+   | **\<id>**          | string | 不区分大小写的包标识符，在 nuget.org 或包驻留的任意库中必须是唯一的。 ID 不得包含空格或对 URL 无效的字符，通常遵循 .NET 命名空间规则。 有关指南，请参阅[选择唯一包标识符并设置版本号](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number)。 |
+   | **\<packageType>** | string | 将此元素置于 \<metadata> 元素之间的 \<packageTypes> 元素内。 将 \<packageType> 元素的 `name` 属性设置为 `Template`。 |
+   | **\<version>**     | string | 遵循 major.minor.patch 模式的包版本。 版本号可能包括预发布后缀，如[预发布版本](/nuget/create-packages/prerelease-packages#semantic-versioning)中所述。 |
 
    有关完整的 nuspec 文件架构，请参阅 [.nuspec 参考](/nuget/schema/nuspec)。
 
@@ -136,7 +136,7 @@ dotnet new -i NUnit3.DotNetNew.Template
 
 使用 `dotnet new -l` 列出模板时，模板列表中会列出短名称为“nunit”的“NUnit 3 测试项目”。 可以在下一部分中使用此模板了。
 
-![控制台窗口将 NUnit 模板与其他已安装的模板一起列出](./media/create-custom-template/nunit1.png)
+![控制台窗口，显示带有其他模板的 NUnit 模板](./media/create-custom-template/nunit-template-console-window.png)
 
 ### <a name="create-a-project-from-the-template"></a>通过模板创建项目
 
@@ -148,7 +148,7 @@ dotnet new nunit
 
 控制台显示项目已创建，且项目包已还原。 运行此命令后，项目便可供使用。
 
-![控制台窗口显示 dotnet new 命令创建 NUnit 项目并还原项目依赖项时的输出](./media/create-custom-template/nunit2.png)
+![控制台窗口显示 dotnet new nunit 的输出，包括还原项目依赖项](./media/create-custom-template/dotnet-new-nunit-console-output.png)
 
 ### <a name="to-uninstall-a-template-from-a-nuget-package-stored-at-nugetorg"></a>从 nuget.org 中存储的 NuGet 包卸载模板的具体步骤
 
@@ -209,7 +209,7 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 
 ## <a name="see-also"></a>请参阅
 
-* [dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)  
-* [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)  
-* [如何创建自己的 dotnet new 模板](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
-* [JSON 架构存储中的 template.json 架构](http://json.schemastore.org/template)  
+- [dotnet/templating GitHub 存储库 Wiki](https://github.com/dotnet/templating/wiki)
+- [dotnet/dotnet-template-samples GitHub 存储库](https://github.com/dotnet/dotnet-template-samples)
+- [如何创建自己的 dotnet new 模板](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
+- [JSON 架构存储中的 template.json 架构](http://json.schemastore.org/template)

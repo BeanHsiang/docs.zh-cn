@@ -2,12 +2,12 @@
 title: WCF 配置架构
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 11123d30138e8e1e763af0a01245e774dfba14f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: baea1e49bce10054530afa5b6f282023d5ceb981
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508897"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463327"
 ---
 # <a name="wcf-configuration-schema"></a>WCF 配置架构
 Windows Communication Foundation (WCF) 配置元素，可以配置 WCF 服务和客户端应用程序。 可以使用[配置编辑器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 创建和修改客户端和服务的配置文件。 由于配置文件的格式都是以 XML 形式设置的，因此，如果要使用文本编辑器手动编辑这些文件，则您必须熟悉 XML。 否则，您可能会遇到一些问题，如找不到某个 XML 元素标记或特性。 这是因为 XML 元素标记和特性是区分大小写的。  
@@ -18,9 +18,9 @@ Windows Communication Foundation (WCF) 配置元素，可以配置 WCF 服务和
   
  [锁定配置设置](https://go.microsoft.com/fwlink/?LinkId=95338)  
   
- 本节描述每个配置项的所有可能的值，以及它如何与其他 WCF 配置元素进行交互。 下面的映射演示了 WCF 配置架构。  
+ 本节描述每个配置项的所有可能的值，以及它如何与其他 WCF 配置元素进行交互。 下面的代码图说明了 WCF 配置架构：  
   
- ![WCF 配置架构](../../../../../docs/framework/configure-apps/file-schema/wcf/media/orcasconfigschema.gif "OrcasConfigSchema")  
+ ![图，显示 WCF 配置架构。](./media/index/windows-communication-foundation-configuration-schema.gif)  
   
 > [!CAUTION]
 >  你应保护 WCF 应用程序配置文件 (app.config) 与相应的访问控制列表 (ACL) 以防止任何潜在安全威胁中的配置节。  例如，你应确保仅有适当的人员可以访问或修改有关应用程序绑定的安全设置或服务的配置文件的服务模型节。  
@@ -36,5 +36,5 @@ Windows Communication Foundation (WCF) 配置元素，可以配置 WCF 服务和
  当使用序列化程序（如 <xref:System.Runtime.Serialization.DataContractSerializer>）时，用于设置选项的顶级元素。  
   
 ## <a name="related-sections"></a>相关章节  
- [配置 Windows Communication Foundation 应用程序](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [配置 Windows Communication Foundation 应用程序](../../../wcf/configuring-services.md)  
  介绍如何配置 WCF 服务和客户端。

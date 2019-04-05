@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2b3a2432deb1e956060ab3615db01821658f8782
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508674"
 ---
 # <a name="xml-document-object-model-dom"></a>XML 文档对象模型 (DOM)
 XML 文档对象模型 (DOM) 类是 XML 文档的内存中表示形式。 DOM 使您能够以编程方式读取、处理和修改 XML 文档。 虽然 XmlReader 类也读取 XML，但它提供的是非缓存、仅正向的只读访问。 也就是说，使用 XmlReader 无法编辑属性值或元素内容，也无法插入和删除节点。 编辑是 DOM 的主要功能。 XML 数据在内存中表示是常见的结构化方法，尽管实际的 XML 数据在文件中时或从另一个对象传入时以线性方式存储。 以下是 XML 数据。  
@@ -78,5 +78,5 @@ XML 文档结构
   
 ## <a name="see-also"></a>请参阅
 
-- [XML 节点类型](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [XML 节点类型](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
 - [将对象层次结构映射到 XML 数据](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

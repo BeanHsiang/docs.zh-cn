@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620521"
 ---
 # <a name="importing-schema-to-generate-classes"></a>导入架构以生成类
 若要从使用 Windows Communication Foundation (WCF) 可用架构生成类，使用<xref:System.Runtime.Serialization.XsdDataContractImporter>类。 本主题描述该过程和变体。  
@@ -42,7 +42,7 @@ ms.locfileid: "47197366"
     > [!NOTE]
     > 如果导入期间出现了故障，则 `CodeCompileUnit` 将处于不可预知的状态。 使用从失败的导入中产生的 `CodeCompileUnit` 可能会使您暴露出安全漏洞。  
   
-5. 通过 `CodeCompileUnit` 属性访问 <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A>。  
+5. 通过 `CodeCompileUnit` 属性访问 <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> 。  
   
 ### <a name="import-options-customizing-the-generated-types"></a>导入选项：自定义生成的类型  
  可以将 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 的 <xref:System.Runtime.Serialization.XsdDataContractImporter> 属性设置为 <xref:System.Runtime.Serialization.ImportOptions> 类的一个实例，以便控制导入过程的各个方面。 许多选项会直接影响生成的类型。  
@@ -143,7 +143,7 @@ ms.locfileid: "47197366"
 > [!NOTE]
 >  当使用 Svcutil.exe 或 （在 Visual Studio)**添加服务引用**自动引用 MsCorLib.dll 中的类型的所有工具。  
   
-#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>导入选项：将 Non-DataContract 架构作为 IXmlSerializable 类型导入  
+#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>导入选项：作为 IXmlSerializable 类型导入非 DataContract 架构  
  <xref:System.Runtime.Serialization.XsdDataContractImporter> 支持架构的有限子集。 如果出现不受支持的架构构造（例如，XML 属性），导入尝试会失败并引发异常。 但是，将 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 属性设置为 `true` 可扩展受支持架构的范围。 设置为 `true` 时，<xref:System.Runtime.Serialization.XsdDataContractImporter> 生成可实现 <xref:System.Xml.Serialization.IXmlSerializable> 接口的类型。 这样可直接访问这些类型的 XML 表示形式。  
   
 ##### <a name="design-considerations"></a>设计注意事项  
@@ -179,13 +179,13 @@ ms.locfileid: "47197366"
   
 -   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 属性。 一个可用此属性指定的 <xref:System.Runtime.Serialization.IDataContractSurrogate> 实现。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 自定义导入过程。 有关详细信息，请参阅[数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 默认情况下，不使用代理项。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- <xref:System.Runtime.Serialization.ImportOptions>  
- [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
- [架构导入和导出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- [从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
- [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- <xref:System.Runtime.Serialization.XsdDataContractExporter>
+- <xref:System.Runtime.Serialization.ImportOptions>
+- [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [数据协定代理项](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
+- [架构导入和导出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [从类导出架构](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [数据协定架构引用](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

@@ -1,19 +1,19 @@
 ---
 title: 运行时包存储区
-description: 本主题介绍了 .NET Core 使用的运行时包存储区和目标清单。
+description: 了解如何使用 .NET Core 使用的运行时包存储以面向清单。
 author: bleroy
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: df2776ac2e4a2eed7f54b3031f13ab41fc714aae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 2f37e0de4b6fcb1b2047470b0a9df3753fe87d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697980"
 ---
 # <a name="runtime-package-store"></a>运行时包存储区
 
-自 .NET Core 2.0 起，可以根据目标环境中已知的一组包来打包和部署应用程序。 优点是部署速度更快、磁盘空间占用少，并可以在某些情况下提升启动性能。
+自 .NET Core 2.0 起，可以根据目标环境中已知的一组包来打包和部署应用程序。 优点是部署速度更快、磁盘空间使用更少，并可以在某些情况下提升启动性能。
 
 此功能实现为运行时包存储区，这是包在磁盘上的存储目录（通常情况下，在 macOS/Linux 上是 /usr/local/share/dotnet/store，在 Windows 上是 C:/Program Files/dotnet/store）。 此目录下有各个体系结构和[目标框架](../../standard/frameworks.md)的子目录。 文件布局类似于[磁盘上的 NuGet 资产布局](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure)：
 
@@ -147,5 +147,5 @@ ASP.NET Core 隐式存储仅适用于 ASP.NET Core 2.0。 我们强烈建议应�
 
 ## <a name="see-also"></a>请参阅
 
-* [dotnet-publish](../tools/dotnet-publish.md)  
-* [dotnet-store](../tools/dotnet-store.md)  
+- [dotnet-publish](../tools/dotnet-publish.md)
+- [dotnet-store](../tools/dotnet-store.md)

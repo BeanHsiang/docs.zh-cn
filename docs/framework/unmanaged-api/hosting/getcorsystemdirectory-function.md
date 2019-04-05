@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008514e3637a980f3722d0c9896a17be33d54c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9afe4afcaefb9409edb93bd1da96a02db20dbd20
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431683"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466715"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 函数
-返回加载到进程公共语言运行时 (CLR) 的安装目录。 安装目录是完全限定，例如，"c:\windows\microsoft.net\framework\v1.0.3705"。  
+返回加载到进程的公共语言运行时 (CLR) 的安装目录。 安装目录是完全限定，例如，"c:\windows\microsoft.net\framework\v1.0.3705"。  
   
- 此函数已弃用。 它已被取代[iclrruntimeinfo:: Getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)中提供的方法[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函数已弃用。 被取代[iclrruntimeinfo:: Getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)方法中提供[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +39,9 @@ HRESULT GetCORSystemDirectory (
 );   
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `pbuffer`  
- [out]在运行时用于返回包含加载到进程的运行时安装目录的完全限定的名称的字符串缓冲区。 如果尚未到过程加载运行时，函数将返回在计算机上安装的运行时的最新版本的相应目录信息。  
+ [out]在缓冲区中运行时返回一个字符串，包含要加载到进程的运行时安装目录的完全限定的名称。 如果尚未在流程中加载运行时，函数将返回在计算机上安装的运行时的最新版本的相应的目录信息。  
   
  `cchBuffer`  
  [in]大小，以字节为单位的`pbuffer`。  
@@ -52,16 +52,16 @@ HRESULT GetCORSystemDirectory (
 ## <a name="remarks"></a>备注  
   
 > [!CAUTION]
->  不要在运行版本 4 的 CLR 的进程中使用此函数。 如果在计算机上安装的 CLR 早期版本，此函数将返回该版本的安装目录。  
+>  在运行版本 4 的 CLR 的进程中不使用此函数。 如果在计算机上安装早期版本的 CLR，则此函数将返回该版本的安装目录。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **库：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>请参阅
+- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

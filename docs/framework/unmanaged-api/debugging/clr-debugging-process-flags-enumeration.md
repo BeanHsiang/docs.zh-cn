@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dff6b245c80050a5e85561b8bba6aa9ba8199ba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 609bb050bb9c5addb5250f65a059a70d3ce32428
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662239"
 ---
 # <a name="clrdebuggingprocessflags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS 枚举
-提供使用的值[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。  
+提供了使用的值[iclrdebugging:: Openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,19 +44,19 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
 |`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|处于挂起状态的托管的事件是<xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>请求。|  
   
 ## <a name="remarks"></a>备注  
- 弥补性事件包括进程、 应用程序域、 程序集、 模块和将调试器移到当前状态后已附加到进程的线程创建通知。 非 catch 向上事件，这由`CLR_DEBUGGING_MANAGED_EVENT_PENDING`标记，包括所有其他调试器事件，如异常以及托管调试助手 (MDA) 通知。  
+ 追赶事件包括进程、 应用程序域、 程序集、 模块和最多的当前状态使调试器之后它已附加到进程, 的线程创建通知。 所指示的非 catch 向上事件`CLR_DEBUGGING_MANAGED_EVENT_PENDING`标记，包括所有其他调试器事件、 异常等以及托管调试助手 (MDA) 通知。  
   
- `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`标志允许运行时终止的异常和附加托管的调试器可以取消的请求有差异。  
+ `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`标志可使运行时终止的异常和附加有托管的调试器，可以取消的请求之间进行区分。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **标头：** Metahost.idl、 Metahost.h  
+ **标头：** Metahost.idl Metahost.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [调试枚举](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

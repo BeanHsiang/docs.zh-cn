@@ -2,12 +2,12 @@
 title: 活动
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 00115d51cff40be726ccf94c3cac09242c0bdab8
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505583"
 ---
 # <a name="activity"></a>活动
 本主题介绍 Windows Communication Foundation (WCF) 跟踪模型中的活动跟踪。 活动是帮助用户缩小故障范围的处理单位。 在同一活动中发生的错误直接相关。 例如，消息解密失败可导致操作失败。 操作失败和消息解密失败的跟踪出现在同一活动中，表明解密错误和请求错误之间直接相关。  
@@ -64,7 +64,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="activity-lifetime"></a>活动生存期  
  用最严格的术语表述，活动的证据从第一次在发出的跟踪中使用活动 ID 时开始，到最后一次在发出的跟踪中使用活动 ID 时结束。 <xref:System.Diagnostics> 提供了一组预定义的跟踪类型（包括“开始”和“停止”），以便显式标记活动生存期边界。  
   
--   开始：指示活动开始。 "开始"跟踪提供开始新的处理里程碑的记录。 它包含给定进程中给定跟踪源的新活动 ID，但是，当活动 ID 跨越终结点传播时除外 — 在这种情况下，我们会在每个终结点中看到一个“开始”跟踪。 开始新活动的示例包括创建新的处理线程或进入新的公共方法。  
+-   启动：指示活动开始。 "开始"跟踪提供开始新的处理里程碑的记录。 它包含给定进程中给定跟踪源的新活动 ID，但是，当活动 ID 跨越终结点传播时除外 — 在这种情况下，我们会在每个终结点中看到一个“开始”跟踪。 开始新活动的示例包括创建新的处理线程或进入新的公共方法。  
   
 -   停止：指示活动结束。 "停止"跟踪提供结束现有处理里程碑的记录。 它包含给定进程中给定跟踪源的现有活动 ID，但在终结点之间传播活动 ID 时除外。在这种情况下，我们会在每个终结点中看到一个“停止”跟踪。  停止活动的示例包括终止处理线程或退出的方法开始时表示为"开始"跟踪。  
   
@@ -72,7 +72,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   恢复：指示继续处理活动。 "恢复"跟踪包含从当前跟踪源发出的最后一个跟踪是"挂起"跟踪一个现有活动 id。 示例包括从对外部库函数的调用返回或发出让资源（如 I/O 完成端口）恢复处理的信号。  
   
--   传输： 因为一些活动由其他人，或与其他人，可以将与相关的活动"转换"跟踪通过其他活动。 转换跟踪记录了活动之间的定向关系。  
+-   传输：因为一些活动由其他人，或与其他人，可以通过"转换"跟踪的其他活动与相关活动。 转换跟踪记录了活动之间的定向关系。  
   
  “开始”和“停止”跟踪并不是关联所必需的。 然而，它们可以帮助提高性能、分析和验证活动范围。  
   
@@ -97,9 +97,9 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   活动表示的是活动本身，而未必是对象。 活动应解释为"这发生的情况时。 . . （发出有意义的跟踪）时发生的”。  
   
-## <a name="see-also"></a>请参阅  
- [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)
+## <a name="see-also"></a>请参阅
+- [配置跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [使用服务跟踪查看器查看相关跟踪和进行故障排除](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [端到端跟踪方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [服务跟踪查看器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [发出用户代码跟踪](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: 9c4b3fa3a706f8dc0ff072520dd91a74bc9d0a2c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0f2e7626cb0526ac897853374b483ad09c20d368
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712608"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>自定义数据服务提供程序（WCF 数据服务）
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包括一组提供程序，用于基于后期绑定数据类型定义数据模型。  
@@ -24,7 +24,7 @@ ms.locfileid: "44251753"
   
  有关详细信息，请参阅文章[自定义数据服务提供商](https://go.microsoft.com/fwlink/?LinkID=186850)并[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]中的提供程序工具包[OData SDK](https://go.microsoft.com/fwlink/?LinkId=186069)。  
   
-## <a name="see-also"></a>请参阅  
- [数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [实体框架提供程序](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
- [反射提供程序](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+## <a name="see-also"></a>请参阅
+- [数据服务提供程序](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [实体框架提供程序](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+- [反射提供程序](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)

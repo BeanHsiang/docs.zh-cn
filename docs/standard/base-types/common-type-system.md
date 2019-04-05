@@ -1,5 +1,6 @@
 ---
 title: 常规类型系统
+description: 了解 .NET 中的类型系统。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722657"
 ---
 # <a name="common-type-system"></a>常规类型系统
 通用类型系统定义了如何在公共语言运行时中声明、使用和管理类型，同时也是运行时跨语言集成支持的一个重要组成部分。 常规类型系统执行以下功能：  
@@ -71,7 +73,7 @@ ms.locfileid: "47204197"
   
  下表介绍了类可以具有的一些特征。 支持运行时的每种语言都提供了一种方法，来指示类或类成员具有其中的一种或多种特征。 但是，针对 .NET 的各个编程语言不能使所有这些特征都可用。  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |sealed|指定不能从此类型派生出另一个类。|  
 |实现|指出该类通过提供接口成员的实现，使用一个或多个接口。|  
@@ -190,7 +192,7 @@ ms.locfileid: "47204197"
 ### <a name="type-accessibility"></a>类型可访问性  
  所有类型都有一个修饰符，控制从其他类型对它们的可访问性。 下表说明了运行时所支持的类型可访问性。  
   
-|可访问性|描述|  
+|可访问性|说明|  
 |-------------------|-----------------|  
 |public|所有程序集都可以访问此类型。|  
 |程序集|只能在其程序集内访问此类型。|  
@@ -295,7 +297,7 @@ ms.locfileid: "47204197"
 ## <a name="characteristics-of-type-members"></a>类型成员的特征  
  通用类型系统允许类型成员具有多种特征，但并不要求语言能支持所有这些特征。 下表介绍了这些成员特征。  
   
-|特征|可应用到|描述|  
+|特征|可应用到|说明|  
 |--------------------|------------------|-----------------|  
 |abstract|方法、属性和事件|类型不提供方法的实现。 继承或实现抽象方法的类型必须提供方法的实现。 只有当派生的类型本身是抽象类型的时候，情况例外。 所有的抽象方法都是虚的。|  
 |private、family、assembly、family 和 assembly、family 或 assembly，或者 public|全部|定义成员的可访问性：<br /><br /> private<br /> 只能在与成员相同的类型或在嵌套类型中访问。<br /><br /> family<br /> 在与成员相同的类型中和从它继承的派生类型访问。<br /><br /> 程序集<br /> 只能在定义该类型的程序集中访问。<br /><br /> family 和 assembly<br /> 只能从同时具备族和程序集访问权的类型进行访问。<br /><br /> family 或 assembly<br /> 只能从具备族和程序集访问权的类型进行访问。<br /><br /> public<br /> 可从任何类型访问。|  
@@ -322,6 +324,6 @@ ms.locfileid: "47204197"
   
 ## <a name="see-also"></a>请参阅
 
-- [.NET API 浏览器](/dotnet/api)  
-- [公共语言运行时](../../../docs/standard/clr.md)  
+- [.NET API 浏览器](/dotnet/api)
+- [公共语言运行时](../../../docs/standard/clr.md)
 - [.NET 中的类型转换](../../../docs/standard/base-types/type-conversion.md)

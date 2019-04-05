@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc8df722acd5c9547833cb4fe3051e1590c6c627
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e2cf9e1b4349d83a378f6b17e8740c95546bbe4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087668"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573957"
 ---
 # <a name="editing-xml-schemas"></a>编辑 XML 架构
 编辑 XML 架构是架构对象模型 (SOM) 最重要的功能之一。 SOM 的所有前架构编译属性均可以用于更改 XML 架构中的现有值。 然后，可以重新编译 XML 架构以反映更改。  
@@ -137,10 +137,10 @@ ms.locfileid: "44087668"
   
 ## <a name="see-also"></a>请参阅
 
-- [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
-- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [XML 架构对象模型概述](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [读取和编写 XML 架构](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [生成 XML 架构](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [遍历 XML 架构](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [包含或导入 XML 架构](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [用于编译架构的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [后架构编译信息集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;筛选器&gt;的元素&lt;添加&gt;有关&lt;侦听器&gt;为&lt;源&gt;'
+title: <filter> 的 <add> 的 <listeners> 的 <source> 元素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,25 +9,23 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 19b28c3391a10cc522f17c5353c9ec0726b0a2f8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7207e72c537e8338f8c646750016c9b6c810bf9a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033423"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260575"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;筛选器&gt;的元素&lt;添加&gt;有关&lt;侦听器&gt;为&lt;源&gt;
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<筛选器 > 元素\<添加 > 有关\<侦听器 > 为\<源 >
 将筛选器添加到跟踪源的 `Listeners` 集合中的侦听器。  
   
  \<configuration>  
-\<system.diagnostics >  
-\<源 >  
-\<源 >  
-\<侦听器 >  
+\<system.diagnostics>  
+\<sources>  
+\<source>  
+\<listeners>  
 \<add>  
-\<筛选器 >  
+\<filter>  
   
 ## <a name="syntax"></a>语法  
   
@@ -92,9 +90,9 @@ ms.locfileid: "48033423"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>  
- <xref:System.Diagnostics.TraceFilter>  
- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
+- <xref:System.Diagnostics.TraceFilter>
+- [跟踪和调试设置架构](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

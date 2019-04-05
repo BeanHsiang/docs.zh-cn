@@ -1,13 +1,13 @@
 ---
-title: 泛型 (F#)
-description: '了解如何使用 F # 泛型函数和类型，以便你能够编写代码，而无需重复代码适用于不同的类型。'
+title: 泛型
+description: 了解如何使用F#泛型函数和类型，以便你能够编写代码，而无需重复代码适用于不同的类型。
 ms.date: 05/16/2016
-ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bafb80893df2f3fab85840ee844bc78d1fb33428
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44084957"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614343"
 ---
 # <a name="generics"></a>泛型
 
@@ -71,8 +71,8 @@ type type-name<type-parameters> type-definition
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
->[!NOTE]
-有两种方法可以通过名称指代泛型类型。 例如，`list<int>` 和 `int list` 这两种方法可用来指代具有单个类型参数 `list` 的泛型类型 `int`。 后一种形式通常只用于内置 F# 类型，例如 `list` 和 `option`。 如果存在多个类型参数，通常会使用语法 `Dictionary<int, string>`，但还可使用语法 `(int, string) Dictionary`。
+> [!NOTE]
+> 有两种方法可以通过名称指代泛型类型。 例如，`list<int>` 和 `int list` 这两种方法可用来指代具有单个类型参数 `list` 的泛型类型 `int`。 后一种形式通常只用于内置 F# 类型，例如 `list` 和 `option`。 如果存在多个类型参数，通常会使用语法 `Dictionary<int, string>`，但还可使用语法 `(int, string) Dictionary`。
 
 ## <a name="wildcards-as-type-arguments"></a>通配符作为类型参数
 

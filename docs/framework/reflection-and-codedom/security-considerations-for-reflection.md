@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7bec2023e3ee0db9987e053dd54647ab2e94f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509296"
 ---
 # <a name="security-considerations-for-reflection"></a>反射的安全注意事项
 通过反射能够获取有关类型和成员的信息，并能访问成员（即，调用方法和构造函数来获取和设置属性值，添加和移除事件处理程序，等等）。 使用反射可以获取有关类型的信息并且成员是不受限制的。 所有代码都可使用反射来执行以下任务：  
@@ -56,7 +56,7 @@ ms.locfileid: "33398699"
   
  无论是通过已编译代码直接访问还是使用反射访问安全关键成员，这些规则都不会变。  
   
- 从命令行运行的应用程序代码将以“完全信任”运行。 只要不被标记为透明，它就可以使用反射来访问安全关键成员。 当以“部分信任”（例如，在沙盒应用程序域中）运行相同的代码时，程序集的信任级别将确定它是否可以访问安全关键代码：如果该程序集具有强名称，并且安装在全局程序集缓存中，它则是受信任的程序集，可以调用安全关键成员。 如果不是受信任的，即使未标记为透明，它也将变为透明，并且它不能访问安全关键成员。  
+ 从命令行运行的应用程序代码将以“完全信任”运行。 只要不被标记为透明，它就可以使用反射来访问安全关键成员。 当同一代码以部分信任运行时（例如，在沙箱应用程序域中），程序集的信任级别将决定其是否能够访问安全关键代码：如果程序集有强名称并安装在全局程序集缓存中，则是受信任的程序集，可以调用安全关键成员。 如果不是受信任的，即使未标记为透明，它也将变为透明，并且它不能访问安全关键成员。  
   
  有关 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中安全模型的详细信息，请参阅[安全更改](../../../docs/framework/security/security-changes.md)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "33398699"
     > [!NOTE]
     >  默认情况下，安全策略拒绝源于 Internet 的代码的权限。 此权限永远不会授权予源自 Internet 的代码。  
   
--   若要允许代码调用任何非公共成员，只要包含调用成员的程序集的授予集与包含调用代码的程序集的授予集相同或为其子集：你的代码必须授予带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
+-   要允许代码调用任何非公共成员，只要包含调用成员的程序集的授予集与包含调用代码的程序集的授予集相同或与其子集相同：你的代码必须授予带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
  例如，假设你为应用程序域授予 Internet 权限以及带 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>，则使用两个程序集 A 和 B 运行 Internet 应用程序。  
   
@@ -104,13 +104,13 @@ ms.locfileid: "33398699"
   
 -   以 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 开始，使用反射获取关于非公共类型和成员的信息不需要任何权限。 早期版本中，需要带 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 标志的 <xref:System.Security.Permissions.ReflectionPermission>。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Security.Permissions.ReflectionPermissionFlag>  
- <xref:System.Security.Permissions.ReflectionPermission>  
- <xref:System.Security.Permissions.SecurityPermission>  
- [安全更改](../../../docs/framework/security/security-changes.md)  
- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)  
- [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [应用特性](../../../docs/standard/attributes/applying-attributes.md)  
- [访问自定义属性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Security.Permissions.ReflectionPermissionFlag>
+- <xref:System.Security.Permissions.ReflectionPermission>
+- <xref:System.Security.Permissions.SecurityPermission>
+- [安全更改](../../../docs/framework/security/security-changes.md)
+- [代码访问安全性](../../../docs/framework/misc/code-access-security.md)
+- [反射发出中的安全问题](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [应用特性](../../../docs/standard/attributes/applying-attributes.md)
+- [访问自定义属性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

@@ -1,17 +1,17 @@
 ---
 title: 将 NoSQL 数据库用作持久性基础结构
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 将 NoSQL 数据库用作持久性基础结构
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 大致了解 NoSQL 数据库（特别是 Azure Cosmos DB）作为持久性实现选项的使用情况。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: bb119d62691a714a0c7dbc99079dfc1a1fac3aae
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 07ed5ba4650eea72f29d254accaaaea5208b1129
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188555"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465940"
 ---
-# <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>将 NoSQL 数据库用作持久性基础结构
+# <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>将 NoSQL 数据库用作持久性基础结构
 
 将 NoSQL 数据库用于基础结构数据层时，通常不使用 Entity Framework Core 等 ORM。 而是使用 NoSQL 引擎提供的 API，如 Azure Cosmos DB、MongoDB、Cassandra、RavenDB、CouchDB 或 Azure 存储表等。
 
@@ -19,9 +19,9 @@ ms.locfileid: "50188555"
 
 当使用面向文档的数据库时，可将聚合作为单个文档实现，以 JSON 或其他格式进行序列化。 但是，从域模型代码的角度来看，数据库的使用是透明的。 在使用 NoSQL 数据库时，仍然使用实体类和聚合根类，但比使用 EF Core 时具有更大的灵活性，因为持久性不相关。
 
-区别在于如何保留该模型。 如果基于 POCO 实体类实现域模型，与基础结构持久性无关，则似乎你可能会移至不同的持久性基础结构，即使从关系数据库到 NoSQL 也是如此。 但是，这不应该是你的目标。 不同的数据库中总是存在约束来限制操作，因此无法对关系数据库或 NoSQL 数据库使用相同的模型。 更改持久性模型并不简单，因为事务和永久性操作大不相同。
+区别在于如何保留该模型。 如果基于 POCO 实体类实现域模型，与基础结构持久性无关，则似乎你可能会移至不同的持久性基础结构，即使从关系数据库到 NoSQL 也是如此。 但是，这不应该是你的目标。 不同的数据库技术中总是存在各种约束和权衡，因此无法对关系数据库或 NoSQL 数据库使用相同的模型。 更改持久性模型并不是简单的任务，因为事务和永久性操作大不相同。
 
-例如，在面向文档的数据库中，聚合根可以拥有多个子集合属性。 但在关系数据库中，查询多个子集合属性将会很糟糕，因为会从 EF 返回一个 UNION ALL SQL 语句。 对关系数据库或 NoSQL 数据库使用相同的域模型并不简单，因此不应尝试。 设计模型必须真正了解数据在每个特定数据库中的使用方式。
+例如，在面向文档的数据库中，聚合根可以拥有多个子集合属性。 在关系数据库中，无法轻松对查询多个子集合属性进行优化，因为会从 EF 返回 UNION ALL SQL 语句。 对关系数据库或 NoSQL 数据库使用相同的域模型并不简单，且不应尝试这样做。 设计模型必须真正了解数据在每个特定数据库中的使用方式。
 
 使用 NoSQL 数据库的一项优势是实体更加非规范化，所以不用设置表映射。 域模型较使用关系数据库时更加灵活。
 
@@ -56,7 +56,8 @@ ms.locfileid: "50188555"
 
 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) 是 Microsoft 针对任务关键型应用程序的全球分布式数据库服务。 Azure Cosmos DB 提供[统包全局分发](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)、全球范围内[吞吐量和存储的弹性扩展](https://docs.microsoft.com/azure/cosmos-db/partition-data)、99% 的情况下低至个位数的毫秒延迟、[五种定义完善的一致性级别](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)以及有保证的高可用性，所有这些均由[业界领先的 SLA](https://azure.microsoft.com/support/legal/sla/cosmos-db/) 提供支持。 Azure Cosmos DB [自动为数据编制索引](https://www.vldb.org/pvldb/vol8/p1668-shukla.pdf)，无需用户处理架构和管理索引。 它采用多模型，并支持文档、键值、图和分栏式数据模型。
 
-![](./media/image19.1.png) 图 9-19. Azure Cosmos DB 全局分发
+![Azure Cosmos DB 是能够保证低延迟的全局分布式数据库，可通过四个 API 协议进行访问。 ](./media/image19.1.png)
+**图 7-19**。 Azure Cosmos DB 全局分发
 
 使用 C\# 模型实现 Azure Cosmos DB API 使用的聚合时，该聚合可类似于结合 EF Core 使用的 C\# POCO 类。 区别在于从应用程序和基础结构层使用它们的方式，如以下代码所示：
 
@@ -98,7 +99,6 @@ OrderItem orderItem1 = new OrderItem
 
 //Using methods with domain logic within the entity. No anemic-domain model
 orderAggregate.AddOrderItem(orderItem1);
-orderAggregate.AddOrderItem(orderItem2);
 // *** End of Domain Model Code ***
 
 // *** Infrastructure Code using Cosmos DB Client API ***
@@ -117,29 +117,31 @@ await client.CreateDocumentAsync(collectionUri, newOrder);
 
 但是，当将模型保存到 NoSQL 数据库时，与 EF Core 代码或与关系数据库相关的任何其他代码相比，该代码和 API 会发生显著变化。
 
-## <a name="implementing-net-code-targeting-mongodb-and-azure-cosmos-db"></a>实施针对 MongoDB 和 Azure Cosmos DB 的 .NET 代码
+## <a name="implement-net-code-targeting-mongodb-and-azure-cosmos-db"></a>实现针对 MongoDB 和 Azure Cosmos DB 的 .NET 代码
 
-### <a name="using-azure-cosmos-db-from-net-containers"></a>从 .NET 容器使用 Azure Cosmos DB
+### <a name="use-azure-cosmos-db-from-net-containers"></a>从 .NET 容器使用 Azure Cosmos DB
 
 可以像从其他任何 .NET 应用程序一样，从运行在容器中的 .NET 代码访问 Azure Cosmos DB 数据库。 例如，实现 eShopOnContainers 中的 Locations.API 和 Marketing.API 微服务，这样它们就可以使用 Azure Cosmos DB 数据库。
 
 但是，从 Docker 开发环境的角度来看，Azure Cosmos DB 存在限制。 即使有本地 [Azure Cosmos DB 仿真器](https://docs.microsoft.com/azure/cosmos-db/local-emulator)能够在本地开发计算机（如 PC）中运行，截至 2017 年底，它也仅支持 Windows，不支持 Linux。 
 
-此外，也可能在 Docker 上运行此模拟器，但仅在 Windows 容器上运行，而不是 Linux 容器。 如果将应用程序部署为 Linux 容器，这对开发环境来说从一开始就是一个障碍，因为目前无法同时在用于 Windows 的 Docker 上部署 Linux 和 Windows 容器。 所有正在部署的容器都必须适用于 Linux 或 Windows。  
+此外，也可能在 Docker 上运行此仿真器，但仅在 Windows 容器上运行，而不在 Linux 容器上运行。 如果将应用程序部署为 Linux 容器，这对开发环境来说从一开始就是一个障碍，因为目前无法同时在用于 Windows 的 Docker 上部署 Linux 和 Windows 容器。 所有正在部署的容器都必须适用于 Linux 或 Windows。
 
 对于开发/测试解决方案，更为直接且理想的部署是能够将数据库系统作为容器与自定义容器一起部署，这样开发/测试环境就始终一致。
 
 ### <a name="use-mongodb-api-for-local-devtest-linuxwindows-containers-plus-azure-cosmos-db"></a>将 MongoDB API 用于本地开发/测试 Linux/Windows 容器以及 Azure Cosmos DB
 
-Cosmos DB 数据库支持 .NET 的 MongoDB API 以及本地 MongoDB 网络协议。 这意味着通过使用现有的驱动程序，为 MongoDB 编写的应用程序现在可以与 Cosmos DB 通信，并且可使用 Cosmos DB 数据库而非 MongoDB 数据库，如图 9-20 所示。
+Cosmos DB 数据库支持 .NET 的 MongoDB API 以及本地 MongoDB 网络协议。 这意味着通过使用现有的驱动程序，为 MongoDB 编写的应用程序现在可以与 Cosmos DB 通信，并且可使用 Cosmos DB 数据库而非 MongoDB 数据库，如图 7-20 所示。
 
-![](./media/image19.2.png) 图 9-20. 使用 MongoDB API 和协议访问 Azure Cosmos DB
+![Cosmos DB 支持适用于 .NET 的 MongoDB API 和 MongoDB 网络协议，你可从 MongoDb 轻松切换到 Cosmos DB。](./media/image19.2.png)
+**图 7-20**。 使用 MongoDB API 和协议访问 Azure Cosmos DB
 
 这对于含有 Linux 容器的 Docker 环境中的概念证明来说是一种非常便捷的方法，因为 [MongoDB Docker 映像](https://hub.docker.com/r/_/mongo/)是一种支持 Docker Linux 容器和 Docker Windows 容器的多体系映像。
 
-如图 9-21 所示，通过使用 MongoDB API，eShopOnContainers 支持适用于本地开发环境的 MongoDB Linux 和 Windows 容器，然后只需[将 MongoDB 连接字符串更改为指向 Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)即可作为 Azure Cosmos DB 移至可扩展的 PaaS 云解决方案。 
+如下图所示，通过使用 MongoDB API，eShopOnContainers 支持适用于本地开发环境的 MongoDB Linux 和 Windows 容器，随后只需[将 MongoDB 连接字符串更改为指向 Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)，即可作为 Azure Cosmos DB 移至可伸缩的 PaaS 云解决方案。
 
-![](./media/image20-bis.png) 图 9-21. 使用用于 dev-env 或 Azure Cosmos DB 的 MongoDB 容器进行生产的 eShopOnContainers
+![eShopOnContainers 中的位置微服务使用 MongoDB 实现，但只需更改连接字符串即可切换到 Cosmos DB。](./media/image20-bis.png)
+**图 7-21**。 使用用于 dev-env 或 Azure Cosmos DB 的 MongoDB 容器进行生产的 eShopOnContainers
 
 生产 Azure Cosmos DB 将作为 PaaS 和可扩展服务在 Azure 云中运行。
 
@@ -149,22 +151,23 @@ Cosmos DB 数据库支持 .NET 的 MongoDB API 以及本地 MongoDB 网络协议
 
 若要进一步比较在云中仅使用 MongoDB 和 Cosmos DB 的差异，请参阅此页中[使用 Azure Cosmos DB 的好处](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)。 
 
-
-### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>分析生产应用程序的方法：MongoDB API 与Cosmos DB API
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>分析适用于生产应用程序的方法：MongoDB API vs.Cosmos DB API
 
 我们在 eShopOnContainers 中使用 MongoDB API，因为我们的首要任务是从根本上拥有使用 NoSQL 数据库的一致开发/测试环境，该数据库也可以与 Azure Cosmos DB 一起使用。
 
-但是，如果打算使用 MongoDB API 访问 Azure 中的 Azure Cosmos 数据库以获取生产应用程序，则应该分析与使用本机 Azure Cosmos DB API 相比，使用 MongoDB API 访问 Azure Cosmos DB 数据库时的功能和性能差异。 如果相似，则可以使用 MongoDB API，并且可以获取同时支持两个 NoSQL 数据库引擎的优势。 
+但是，如果打算使用 MongoDB API 访问 Azure 中的 Azure Cosmos 数据库以获取生产应用程序，则应该分析与使用本机 Azure Cosmos DB API 相比，使用 MongoDB API 访问 Azure Cosmos DB 数据库时的功能和性能差异。 如果相似，则可以使用 MongoDB API，并且可以获取同时支持两个 NoSQL 数据库引擎的好处。
 
 此外，也可以将 MongoDB 群集作为 Azure 云中的生产数据库与 [MongoDB Azure 服务](https://www.mongodb.com/scale/mongodb-azure-service)一起使用。 但这不是由 Microsoft 提供的 PaaS 服务。 在这种情况下，Azure 只托管来自 MongoDB 的解决方案。
 
-基本上，这只是指出不应总是针对 Azure Cosmos DB 使用 MongoDB API 的免责声明，就像在 eShopOnContainers 中所做的那样，因为这对于 Linux 容器来说是一个方便的选择。 应根据特定需求以及需要对生产应用程序执行的测试来做出决定。  
+基本上，这只是指出不应总是针对 Azure Cosmos DB 使用 MongoDB API 的免责声明，就像在 eShopOnContainers 中所做的那样，因为这对于 Linux 容器来说是一个方便的选择。 应根据特定需求以及需要对生产应用程序执行的测试来做出决定。
 
-### <a name="the-code-using-mongodb-api-in-net-core-applications"></a>代码：在 .NET Core 应用程序中使用 MongoDB API
+### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>代码：在 .NET Core 应用程序中使用 MongoDB API
 
-用于 .NET 的 MongoDB API 基于需要添加到项目中的 NuGet 包，如图 9-22 所示的 Locations.API。
+适用于 .NET 的 MongoDB API 是基于 NuGet 包的，你需要添加到类似于下图所示的 Locations.API 项目中。
 
-![](./media/image21-bis.png) 图 9-22. .NET Core 项目中的 MongoDB API NuGet 包引用
+![显示 MongoDB NuGet 包中的依赖项的解决方案资源管理器视图。](./media/image21-bis.png)
+
+**图 7-22**。 .NET Core 项目中的 MongoDB API NuGet 包引用
 
 让我们来研究下面几节中的代码。
 
@@ -266,7 +269,7 @@ public async Task<Locations> GetAsync(int locationId)
 
 ```yml
 # docker-compose.override.yml
-version: '3'
+version: '3.4'
 services:
   # Other services
   locations.api:
@@ -276,7 +279,7 @@ services:
 
 ```
 
-`ConnectionString` 环境变量通过以下方式解析：如果使用 Azure Cosmos DB 连接字符串在 `.env` 文件中定义该 `ESHOP_AZURE_COSMOSDB` 全局变量，则将使用它访问云中的 Azure Cosmos DB 数据库。 
+`ConnectionString` 环境变量通过以下方式解析：如果使用 Azure Cosmos DB 连接字符串在 `.env` 文件中定义该 `ESHOP_AZURE_COSMOSDB` 全局变量，则将使用它访问云中的 Azure Cosmos DB 数据库。 如果未定义，它将采用 mongodb://nosql.data 值并使用 mongodb 开发容器。
 
 以下代码演示带有 Azure Cosmos DB 连接字符串全局环境变量的 `.env` 文件，如在 eShopOnContainers 中实现一样：
 
@@ -297,38 +300,46 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 应取消注释 ESHOP_AZURE_COSMOSDB 行，并使用从 Azure 门户获得的 Azure Cosmos DB 连接字符串进行更新，如[将 MongoDB 应用程序连接到 Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account) 中所述。
 
-如果 `ESHOP_AZURE_COSMOSDB` 全局变量为空，则表示它已在 `.env` 文件中注释禁止，则该容器使用指向已在 eShopOnContainers 中部署、名为 `nosql.data` 的本地 MongoDB 容器的默认 MongoDB 连接字符串，如以下.yml 代码所示。 
+如果 `ESHOP_AZURE_COSMOSDB` 全局变量为空（表示它已在 `.env` 文件中被注释掉），则该容器使用指向在 eShopOnContainers 中部署的本地 MongoDB 容器（名为 `nosql.data` 并在 docker-compose 文件中定义）的默认 MongoDB 连接字符串，如以下.yml 代码所示。 
+
+``` yml
+# docker-compose.yml
+version: '3.4'
+services:
+  # ...Other services...
+  nosql.data:
+    image: mongo
+```
 
 #### <a name="additional-resources"></a>其他资源
 
--   Modeling document data for NoSQL databases（针对 NoSQL 数据库的文档数据建模）
-    [*https://docs.microsoft.com/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
+- **Modeling document data for NoSQL databases** \（针对 NoSQL 数据库的文档数据建模）
+  [https://docs.microsoft.com/azure/cosmos-db/modeling-data](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
 
--   **Vaughn Vernon。The Ideal Domain-Driven Design Aggregate Store?（理想的域驱动设计聚合应用商店？）**
-    [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
+- **Vaughn Vernon。The Ideal Domain-Driven Design Aggregate Store?**（理想的域驱动设计聚合存储？） \
+  <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
--   Introduction to Azure Cosmos DB: API for MongoDB（Azure Cosmos DB 介绍：API for MongoDB）**** 
-    [*https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
+- **Introduction to Azure Cosmos DB:API for MongoDB**  \（Azure Cosmos DB 简介：适用于 MongoDB 的 API）
+  [https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 
--   Azure Cosmos DB: Build a MongoDB API web app with .NET and the Azure portal（Azure Cosmos DB：使用 .NET 和 Azure 门户生成 MongoDB API Web 应用）**** 
-    [*https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
+- **Azure Cosmos DB：Build a MongoDB API web app with .NET and the Azure portal**  \（使用 .NET 和 Azure 门户生成 MongoDB API Web 应用）
+  [https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
 
--   Use the Azure Cosmos DB Emulator for local development and testing（将 Azure Cosmos DB 仿真器用于本地开发和测试）**** 
-    [*https://docs.microsoft.com/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/azure/cosmos-db/local-emulator)
+- **Use the Azure Cosmos DB Emulator for local development and testing**  \（将 Azure Cosmos DB 仿真器用于本地开发和测试）
+  [https://docs.microsoft.com/azure/cosmos-db/local-emulator](https://docs.microsoft.com/azure/cosmos-db/local-emulator)
 
--   Connect a MongoDB application to Azure Cosmos DB（将 MongoDB 应用程序连接到 Azure Cosmos DB）**** 
-    [*https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account*](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)
+- **Connect a MongoDB application to Azure Cosmos DB**  \（将 MongoDB 应用程序连接到 Azure Cosmos DB）
+  [https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account)
 
--   The Cosmos DB Emulator Docker image (Windows Container)（Cosmos DB 仿真器 Docker 映像（Windows 容器））**** 
-    [*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
+- **The Cosmos DB Emulator Docker image (Windows Container)**  \（Cosmos DB 仿真器 Docker 映像 [Windows 容器]）
+  [https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
 
--   The MongoDB Docker image (Linux and Windows Container)（MongoDB Docker 映像（Linux 和 Windows 容器））**** 
-    [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
+- **The MongoDB Docker image (Linux and Windows Container)**  \（MongoDB Docker 映像 [Linux 和 Windows 容器]）
+  [https://hub.docker.com/r/_/mongo/](https://hub.docker.com/r/_/mongo/)
 
--   Use MongoChef (Studio 3T) with an Azure Cosmos DB: API for MongoDB account（将 MongoChef (Studio 3T) 用于 Azure Cosmos DB：API for MongoDB 帐户）**** 
-    [*https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
-
+- **Use MongoChef (Studio 3T) with an Azure Cosmos DB:API for MongoDB account**  \（将 MongoChef [Studio 3T] 用于 Azure Cosmos DB：适用于 MongoDB 的 API 帐户）
+  [https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
 
 >[!div class="step-by-step"]
-[上一页](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
-[下一页](microservice-application-layer-web-api-design.md)
+>[上一页](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[下一页](microservice-application-layer-web-api-design.md)

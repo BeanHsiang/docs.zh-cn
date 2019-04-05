@@ -2,19 +2,19 @@
 title: 独立 JSON 序列化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: b84e7dbb91c4f1e94ae0701dffcca50b7834df6c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618417"
 ---
 # <a name="stand-alone-json-serialization"></a>独立 JSON 序列化
 JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行的 JavaScript 代码而设计的一种数据格式。 它是 ASP.NET AJAX 服务创建 Windows Communication Foundation (WCF) 中使用的默认数据格式。  
   
  在未与 ASP.NET 集成的情况下（在此情况下，XML 将是默认格式，但可以选择 JSON）创建 AJAX 服务时，也可以使用此格式。  
   
- 最后，如果需要 JSON 支持但不创建 AJAX 服务，则可以使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>，以便将 .NET 对象直接序列化为 JSON 数据并将此类数据反序列化回 .NET 类型的实例。 有关如何执行此操作的说明，请参阅[如何： 序列化和反序列化 JSON 数据](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)。  
+ 最后，如果需要 JSON 支持但不创建 AJAX 服务，则可以使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>，以便将 .NET 对象直接序列化为 JSON 数据并将此类数据反序列化回 .NET 类型的实例。 有关如何执行此操作的说明，请参阅[如何：序列化和反序列化 JSON 数据](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)。  
   
  使用 JSON 时，它支持的 .NET 类型与 <xref:System.Runtime.Serialization.DataContractSerializer> 支持的类型相同，但有少数例外。 有关支持的类型的列表，请参阅[类型支持的数据协定序列化程序](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 支持的类型包括大多数基元类型、大多数数组和集合类型，以及使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 的复杂类型。  
   
@@ -26,7 +26,7 @@ JSON（JavaScript 对象表示法）是专门为浏览器中的网页上运行�
 |所有数值类型，例如 <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>|数字|不支持 `Double.NaN`、`Double.PositiveInfinity` 和 `Double.NegativeInfinity` 等特殊值，它们会导致无效的 JSON。|  
 |<xref:System.Enum>|数字|请参见本主题中后面的“枚举和 JSON”。|  
 |<xref:System.Boolean>|Boolean|--|  
-|<xref:System.String>, <xref:System.Char>|String|--|  
+|<xref:System.String>， <xref:System.Char>|String|--|  
 |<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|在 JSON 中这些类型的格式是与 XML 中的相同 (实质上，采用 ISO 8601 持续时间格式的时间跨度，采用"12345678-ABCD-ABCD-ABCD-1234567890AB"格式的 GUID 和其自然字符串形式的 URI，如" http://www.example.com ")。 精确的信息，请参阅[数据协定架构参考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
 |<xref:System.Xml.XmlQualifiedName>|String|格式为“名称:命名空间”（第一个冒号之前的所有内容都是名称）。 可以缺少名称或命名空间。 如果没有命名空间，则也可以省略冒号。|  
 |<xref:System.Array> 类型的 <xref:System.Byte>|数字数组|每个数字都表示一个字节的值。|  
@@ -260,6 +260,6 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>有效的 JSON 键名  
  序列化程序 XML 编码的键名不是有效的 XML 名称。 例如，名为"123"的数据成员必须的编码的名称，如"\_x0031\_\_x0032\_\_x0033\_"因为"123"是无效的 XML 元素名称 (开头数字）。 在 XML 名称中，如果某些国际字符集无效，也会出现类似的情况。 XML 对 JSON 处理这种效果的说明，请参阅[Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
 - [支持 JSON 和其他数据传输格式](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

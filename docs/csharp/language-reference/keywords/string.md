@@ -1,5 +1,6 @@
 ---
-title: string（C# 参考）
+title: string - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - string
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: ab2e69c60872aed19d46450f17becc918ffe2a38
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f6c76f8effc5aef82803014b9a7257c2ad6865b8
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181454"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286476"
 ---
 # <a name="string-c-reference"></a>string（C# 参考）
 
@@ -55,6 +56,18 @@ b += "ello";
 string str = "test";
 char x = str[2];  // x = 's';
 ```
+
+同样，[] 运算符也可用于循环访问 `string` 中的每个字符：
+
+```csharp
+string str = "test";
+
+for (int i = 0; i < str.Length; i++)
+{
+  Console.Write(str[i] + " ");
+}
+// Output: t e s t
+``` 
 
 字符串文本属于类型 `string` 且可编写为两种形式，带引号和 @-quoted。 带引号字符串括在双引号 (") 内。
 
@@ -108,7 +121,6 @@ Console.WriteLine(a);
 - [C# 编程指南](../../programming-guide/index.md)
 - [有关使用字符串的最佳做法](../../../standard/base-types/best-practices-strings.md)
 - [C# 关键字](index.md)
-- [C# 编程指南](../../programming-guide/index.md)
 - [引用类型](reference-types.md)
 - [值类型](value-types.md)
 - [基本字符串操作](../../../standard/base-types/basic-string-operations.md)

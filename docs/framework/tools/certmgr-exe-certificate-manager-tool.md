@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eceff4380fa5965ef38fb98f4ead81b052da3460
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198479"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496919"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe（证书管理器工具）
 证书管理器工具 (Certmgr.exe) 管理证书、证书信任列表 (CTL) 和证书吊销列表 (CRL)。  
@@ -28,9 +28,9 @@ ms.locfileid: "50198479"
  安装 Visual Studio 时，将会自动安装证书管理器。 若要启动该工具，请使用[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
 > [!NOTE]
->  证书管理器工具 (Certmgr.exe) 是命令行实用程序，而“证书”(Certmgr.msc) 则是 Microsoft 管理控制台 (MMC) 管理单元。 由于 Certmgr.msc 通常位于 Windows 系统目录中，因此在命令行上输入 `certmgr` 可加载“证书”MMC 管理单元（即使已打开 Visual Studio 命令提示）。 出现这种情况的原因是，在 PATH 环境变量中，“证书”管理单元的路径出现在证书管理器工具的路径之前。 如果你遇到此问题，则可以通过指定可执行文件的路径来执行 Certmgr.exe 命令。  
+>  证书管理器工具 (Certmgr.exe) 是命令行实用程序，而“证书”(Certmgr.msc) 则是 Microsoft 管理控制台 (MMC) 管理单元。 由于 Certmgr.msc 通常位于 Windows 系统目录中，因此在命令行上输入 `certmgr` 可加载“证书”MMC 管理单元（即使已打开 Visual Studio 开发人员命令提示）。 出现这种情况的原因是，在 PATH 环境变量中，“证书”管理单元的路径出现在证书管理器工具的路径之前。 如果你遇到此问题，则可以通过指定可执行文件的路径来执行 Certmgr.exe 命令。  
   
- 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具会自动随 Visual Studio 一起安装。 若要运行此工具，请使用 Visual Studio 开发人员命令提示（或 Windows 7 中的 Visual Studio 命令提示）。 有关详细信息，请参阅[命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  有关 X.509 证书的概述，请参阅[使用证书](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
@@ -44,17 +44,17 @@ ms.locfileid: "50198479"
 [/s[/r registryLocation]] [destinationStorename]  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
   
-|参数|描述|  
+|参数|说明|  
 |--------------|-----------------|  
 |*sourceStorename*|包含要添加、删除、保存或显示的现有证书、CTL 或 CRL 的证书存储。 这可以是一个存储文件，也可以是一个系统存储。|  
 |*destinationStorename*|输出证书存储或文件。|  
   
-|选项|描述|  
+|选项|说明|  
 |------------|-----------------|  
 |**/add**|将证书、CTL 和 CRL 添加到证书存储中。|  
-|**/all**|当与 **/add** 一起使用时添加所有项。 当与 **/del** 一起使用时删除所有项。当不与 /add 或 **/del** 选项一起使用时显示所有项。 **/all** 选项不能与 **/put** 一起使用。|  
+|**/all**|当与 **/add** 一起使用时添加所有项。 当与 **/del** 一起使用时删除所有项。当不与 **/add** 或 **/del** 选项一起使用时显示所有项。 **/all** 选项不能与 **/put** 一起使用。|  
 |**/c**|当与 **/add** 一起使用时添加证书。 当与 **/del** 一起使用时删除证书。当与 **/put** 一起使用时保存证书。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示证书。|  
 |**/CRL**|当与 **/add** 一起使用时添加 CRL。 当与 **/del** 一起使用时删除 CRL。当与 **/put** 一起使用时保存 CRL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CRL。|  
 |**/CTL**|当与 **/add** 一起使用时添加 CTL。 当与 **/del** 一起使用时删除 CTL。当与 **/put** 一起使用时保存 CTL。 当不与 **/add**、**/del** 或 **/put** 选项一起使用时显示 CTL。|  
@@ -83,7 +83,7 @@ ms.locfileid: "50198479"
   
 -   将证书存储中的 X.509 证书、CTL 或 CRL 保存到文件。  
   
- Certmgr.exe 使用两类证书存储：**StoreFile** 和系统存储。 不必指定证书存储的类型；Certmgr.exe 能够识别存储类型并执行适当的操作。  
+ Certmgr.exe 适用于两类证书存储：StoreFile 和系统存储。 不必指定证书存储的类型；Certmgr.exe 能够识别存储类型并执行适当的操作。  
   
  运行 Certmgr.exe 时若不指定任何选项，则将启动 certmgr.msc 管理单元，该管理单元具有一个 GUI，可帮助执行也可通过命令行访问的证书管理任务。 该 GUI 提供了一个导入向导，此向导会将证书、CTL 和 CRL 从磁盘复制到证书存储中。  
   
@@ -137,7 +137,7 @@ certmgr /del /all /ctl /s my newStore.str
 certmgr /put /c /s my newFile  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [工具](../../../docs/framework/tools/index.md)  
- [Makecert.exe（证书创建工具）](/windows/desktop/SecCrypto/makecert)  
- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>请参阅
+- [工具](../../../docs/framework/tools/index.md)
+- [Makecert.exe（证书创建工具）](/windows/desktop/SecCrypto/makecert)
+- [命令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

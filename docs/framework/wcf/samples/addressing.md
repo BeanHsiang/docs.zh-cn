@@ -2,12 +2,12 @@
 title: 寻址
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 0e18039db51a1060661b435640c356fd0610a68a
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3de6c3556ce2a11e1ebcfba179c08a45d87bea6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123197"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835045"
 ---
 # <a name="addressing"></a>寻址
 “寻址”示例演示终结点地址的各个方面和功能。 该示例基于[Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在本示例中，服务是自承载的。 服务和客户端都是控制台应用程序。 服务使用相对和绝对终结点地址的组合来定义多个终结点。  
@@ -136,4 +136,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   
-## <a name="see-also"></a>请参阅

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 4dfe14f7680ad0c3a302334c07bb17e3e92011b0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083528"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890392"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>利用 Visual Basic 自定义项目并扩展 My 对象
 你可以自定义项目模板，以提供其他`My`对象。 这样方便其他开发人员查找并使用您的对象。  
@@ -27,7 +27,7 @@ ms.locfileid: "44083528"
  介绍如何通过重写的成员指定你自己的扩展到应用程序模型<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>类。  
   
  [自定义 My 中可用的对象](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- 介绍如何控制哪些`My`对象启用通过设置项目的 _MYTYPE 条件编译常量。  
+ 介绍如何控制哪些`My`通过设置你的项目启用对象\_MYTYPE 条件编译常量。  
   
 ## <a name="related-sections"></a>相关章节  
  [使用 My 开发](../../../visual-basic/developing-apps/development-with-my/index.md)  
@@ -45,5 +45,6 @@ ms.locfileid: "44083528"
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
  介绍`My`提供属性、 方法和事件的对象与当前应用程序相关。  
   
-## <a name="see-also"></a>请参阅  
- [使用 Visual Basic 开发应用程序](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a>请参阅
+
+- [使用 Visual Basic 开发应用程序](../../../visual-basic/developing-apps/index.md)

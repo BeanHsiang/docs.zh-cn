@@ -3,12 +3,12 @@ title: 查询表达式基础（C# 中的 LINQ）
 description: 与查询表达式相关的概念介绍
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 68f338381e354f4944539d63ca3a3cc3500031c1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709112"
 ---
 # <a name="query-expression-basics"></a>查询表达式基础
 
@@ -174,7 +174,7 @@ ms.locfileid: "45625489"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编程指南](../programming-guide/index.md)  
-- [语言集成查询 (LINQ)](index.md)  
-- [查询关键字 (LINQ)](../language-reference/keywords/query-keywords.md)  
-- [标准查询运算符概述](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [C# 编程指南](../programming-guide/index.md)
+- [语言集成查询 (LINQ)](index.md)
+- [查询关键字 (LINQ)](../language-reference/keywords/query-keywords.md)
+- [标准查询运算符概述](../programming-guide/concepts/linq/standard-query-operators-overview.md)

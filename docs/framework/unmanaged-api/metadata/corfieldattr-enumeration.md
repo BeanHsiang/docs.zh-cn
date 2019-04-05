@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446615"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576010"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 枚举
 包含一些值，用于描述字段的相应元数据。  
@@ -62,32 +62,32 @@ typedef enum CorFieldAttr {
   
 |成员|描述|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|指定的辅助功能信息。|  
-|`fdPrivateScope`|指定不能引用字段。|  
-|`fdPrivate`|指定字段为只能由其父类型访问。|  
-|`fdFamANDAssem`|指定该字段是由在其程序集的派生类可访问。|  
-|`fdAssembly`|指定字段为可通过在程序集中的所有类型访问。|  
-|`fdFamily`|指定字段为只能由其类型访问，并且派生类。|  
-|`fdFamORAssem`|指定字段为可由派生类和在程序集中的所有类型访问。|  
-|`fdPublic`|指定字段具有可见性的所有类型，此范围的可访问。|  
-|`fdStatic`|指定字段为其类型的成员而不是实例成员。|  
-|`fdInitOnly`|指定该字段进行初始化之后无法更改。|  
-|`fdLiteral`|指定的字段值是编译时常量。|  
-|`fdNotSerialized`|指定项目其类型为进行远程处理时，该字段不会序列化。|  
-|`fdSpecialName`|指定字段为特殊，其名称描述如何。|  
-|`fdPinvokeImpl`|指定的字段实现通过 PInvoke 转发。|  
-|`fdReservedMask`|保留供内部使用公共语言运行时。|  
+|`fdFieldAccessMask`|指定可访问性信息。|  
+|`fdPrivateScope`|指定不能引用的字段。|  
+|`fdPrivate`|指定字段只能由其父类型访问。|  
+|`fdFamANDAssem`|指定字段是由其程序集中的派生类可访问。|  
+|`fdAssembly`|指定该字段是可由其程序集中的所有类型访问。|  
+|`fdFamily`|指定该字段只能由其类型访问和派生类。|  
+|`fdFamORAssem`|指定该字段可由派生类中它的程序集的所有类型访问。|  
+|`fdPublic`|指定字段具有可见性的所有类型，此作用域的访问。|  
+|`fdStatic`|指定字段及其类型的成员，而不是实例成员。|  
+|`fdInitOnly`|指定在初始化后，无法更改该字段。|  
+|`fdLiteral`|指定字段值是一个编译时常量。|  
+|`fdNotSerialized`|指定项目扩展其类型时，该字段不会序列化。|  
+|`fdSpecialName`|指定该字段是特殊的并且其名称描述如何。|  
+|`fdPinvokeImpl`|指定字段实现通过 PInvoke 转发。|  
+|`fdReservedMask`|公共语言运行时，保留供内部使用。|  
 |`fdRTSpecialName`|指定公共语言运行时元数据内部 Api 应检查该名称的编码。|  
 |`fdHasFieldMarshal`|指定该字段包含封送处理信息。|  
-|`fdHasDefault`|指定字段具有默认值。|  
-|`fdHasFieldRVA`|指定字段具有的相对虚拟地址。|  
+|`fdHasDefault`|指定该字段具有默认值。|  
+|`fdHasFieldRVA`|指定该字段具有相对虚拟地址。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorHdr.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>请参阅
+- [Metadata 枚举](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

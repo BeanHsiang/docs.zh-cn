@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: f13e7348eb1c63e8256a48da7a8f5a8e357c72ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584419"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830313"
 ---
 # <a name="development-with-my-visual-basic"></a>使用 My 开发 (Visual Basic)
 Visual Basic 提供了支持快速应用程序开发的新功能，不仅功能强大，还有助于提高工作效率和易用性。 其中一项功能称为 `My`，可提供对与应用程序及其运行时环境相关的信息和默认对象实例的访问权限。 此类信息按可通过 IntelliSense 搜索的格式进行编排，并根据用途进行了逻辑界定。  
@@ -23,7 +23,7 @@ Visual Basic 提供了支持快速应用程序开发的新功能，不仅功能�
   
  下表展示了顶级 `My` 对象及其相互之间的关系。  
   
- ![My 的对象模型](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")  
+ ![关系图显示的对象模型我。](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>本节内容  
  [使用 My.Application、My.Computer 和 My.User 执行任务](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
@@ -36,15 +36,16 @@ Visual Basic 提供了支持快速应用程序开发的新功能，不仅功能�
  介绍了 `My.Resources` 和 `My.Settings` 对象，这些对象提供对应用程序资源和设置的访问权限。  
   
  [Visual Basic 应用程序模型概述](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- 介绍了 Visual Basic 应用程序启动/关闭模式。  
+ 介绍 Visual Basic 应用程序启动/关闭模型。  
   
  [My 对项目类型的依赖方式](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  详细介绍了不同项目类型中可用的 `My` 功能。  
   
-## <a name="see-also"></a>请参阅  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.Devices.Computer>  
- <xref:Microsoft.VisualBasic.ApplicationServices.User>  
- [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)  
- [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)  
- [My 对项目类型的依赖方式](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+## <a name="see-also"></a>请参阅
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.Devices.Computer>
+- <xref:Microsoft.VisualBasic.ApplicationServices.User>
+- [My.Forms 对象](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.WebServices 对象](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [My 对项目类型的依赖方式](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

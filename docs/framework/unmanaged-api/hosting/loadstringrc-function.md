@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463bcf451574700d02f933d024ea5c24cedd259d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e020b65966dc03bf326220ab0bab26bc61155c0c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441810"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485481"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC 函数
-将 HRESULT 值转换为一条错误消息中，通过使用当前线程的默认区域性。  
+通过使用当前线程的默认区域性将 HRESULT 值转换成一条错误消息。  
   
- 此函数已弃用中[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ 此函数中不推荐[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,7 +39,7 @@ HRESULT LoadStringRC (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `iResourceID`  
  [in]HRESULT。  
   
@@ -53,7 +53,7 @@ HRESULT LoadStringRC (
  [in]忽略。  
   
 ## <a name="return-value"></a>返回值  
- 此方法返回标准的组件对象模型 (COM) 错误代码，除了以下值中 WinError.h，定义。  
+ 此方法返回标准的组件对象模型 (COM) 错误代码，定义在 WinError.h，除了以下值。  
   
 |返回代码|描述|  
 |-----------------|-----------------|  
@@ -61,17 +61,17 @@ HRESULT LoadStringRC (
 |E_INVALIDARG|`szBuffer` 为 null 或`iMax`为零 (0)。|  
   
 ## <a name="remarks"></a>备注  
- 如果方法不成功，完成`szBuffer`包含一个空字符串。  
+ 如果该方法不成功，完成`szBuffer`包含空字符串。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
- **库：** MSCorEE.dll 和 Mscorwks.dll。 使用而不是 Mscorwks.dll MSCorEE.dll 来确保面向.NET Framework 的正确版本。  
+ **库：** MSCorEE.dll 和 Mscorwks.dll。 使用而不是 Mscorwks.dll MSCorEE.dll 确保面向.NET Framework 的正确版本。  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [LoadStringRCEx 函数](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)  
- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>请参阅
+- [LoadStringRCEx 函数](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)
+- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

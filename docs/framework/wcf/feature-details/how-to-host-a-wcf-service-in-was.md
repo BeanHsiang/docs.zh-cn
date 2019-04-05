@@ -1,18 +1,18 @@
 ---
-title: 如何：在 WAS 中承载 WCF 服务
+title: 如何：承载在 WAS 中的 WCF 服务
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: fd48957f7f8410b4b0df39fe125c35e4fc98cb8e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746795"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651170"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>如何：在 WAS 中承载 WCF 服务
+# <a name="how-to-host-a-wcf-service-in-was"></a>如何：承载在 WAS 中的 WCF 服务
 本主题概述了创建 Windows 进程激活服务 (也称为 WAS) 所需的基本步骤的托管 Windows Communication Foundation (WCF) 服务。 WAS 是新的进程激活服务，是对使用非 HTTP 传输协议的 Internet Information Services (IIS) 功能的泛化。 WCF 使用侦听器适配器接口传递激活请求通过非 HTTP 协议支持的 WCF，如 TCP、 命名管道和消息队列接收的请求。  
   
- 此主机选项要求正确安装和配置 WAS 激活组件，但不要求编写任何主机代码作为应用程序的一部分。 有关安装和配置 WAS 的详细信息，请参阅[如何： 安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
+ 此主机选项要求正确安装和配置 WAS 激活组件，但不要求编写任何主机代码作为应用程序的一部分。 有关安装和配置 WAS 的详细信息，请参阅[如何：安装和配置 WCF 激活组件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
   
 > [!WARNING]
 >  如果将 Web 服务器的请求处理管道设置为经典模式，则将不支持 WAS 激活。 如果要使用 WAS 激活，则必须将 Web 服务器的请求处理管道设置为集成模式。  
@@ -47,7 +47,7 @@ ms.locfileid: "43746795"
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  创建 Web.config 文件，以定义要由 <xref:System.ServiceModel.NetTcpBinding> 终结点使用的 `CalculatorService` 绑定。  
+3.  创建 Web.config 文件，以定义要由 `CalculatorService` 终结点使用的 <xref:System.ServiceModel.NetTcpBinding> 绑定。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -98,6 +98,6 @@ ms.locfileid: "43746795"
   
 6.  编译并运行客户端。  
   
-## <a name="see-also"></a>请参阅  
- [TCP 激活](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>请参阅
+- [TCP 激活](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [Windows Server App Fabric 承载功能](https://go.microsoft.com/fwlink/?LinkId=201276)

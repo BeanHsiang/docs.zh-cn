@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 7f8a8cd1d9d8524c4bfbf3a7f783a33eee972474
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 51795007b906a6eb71e5e03b4afef2fc83328b28
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593337"
 ---
 # <a name="message-security-with-mutual-certificates"></a>使用相互证书的消息安全
 以下方案显示了 Windows Communication Foundation (WCF) 服务和使用消息安全模式保护的客户端。 使用证书对客户端和服务进行身份验证。  
@@ -158,7 +158,7 @@ ms.locfileid: "50183043"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
- [如何： 创建和安装临时证书在 WCF 中的传输安全模式在开发过程](https://go.microsoft.com/fwlink/?LinkId=244264)
+## <a name="see-also"></a>请参阅
+- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [如何：创建和安装临时证书在 WCF 中的传输安全模式在开发过程](https://go.microsoft.com/fwlink/?LinkId=244264)

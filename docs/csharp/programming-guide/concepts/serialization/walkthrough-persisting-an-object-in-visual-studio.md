@@ -1,14 +1,14 @@
 ---
 title: 演练：使用 C# 保留对象
 ms.date: 04/26/2018
-ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 85b58e93d667d39800538bb2c29d4ba69146e7f3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086072"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975818"
 ---
-# <a name="walkthrough-persisting-an-object-using-c"></a>演练：使用 C# 保留对象 #
+# <a name="walkthrough-persisting-an-object-using-c"></a>演练：使用 C\# 保留对象
 
 可使用序列化在实例之间保持对象的数据，以便可存储值并在下次实例化对象时检索这些值。
 
@@ -101,5 +101,5 @@ New customer value: Henry Clay
 
 ## <a name="see-also"></a>请参阅
 
-- [序列化 (C#)](index.md)  
-- [C# 编程指南](../..//index.md)  
+- [序列化 (C#)](index.md)
+- [C# 编程指南](../..//index.md)

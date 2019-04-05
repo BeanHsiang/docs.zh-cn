@@ -2,12 +2,12 @@
 title: 按正文元素调度
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 449c153092d80bb457a2059b80158ea665bfc645
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 376dfc0dcca3c3278ee4d4afefbe4756dd631212
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396373"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817053"
 ---
 # <a name="dispatch-by-body-element"></a>按正文元素调度
 本示例演示如何实现用于将传入消息分配到操作的可选算法。  
@@ -20,7 +20,7 @@ ms.locfileid: "43396373"
   
  类构造函数需要一个用 `XmlQualifiedName` 和字符串对填充的字典，其中限定名称指示 SOAP 正文的第一个子级的名称，而字符串指示匹配的操作名称。 `defaultOperationName` 是操作的名称，该操作接收无法与此字典匹配的所有消息：  
   
-```  
+```csharp
 class DispatchByBodyElementOperationSelector : IDispatchOperationSelector  
 {  
     Dictionary<XmlQualifiedName, string> dispatchDictionary;  
@@ -31,13 +31,14 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
         this.dispatchDictionary = dispatchDictionary;  
         this.defaultOperationName = defaultOperationName;  
     }  
+}
 ```  
   
  <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 实现的生成非常简单，因为在接口上只有一个方法：<xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>。 此方法的任务是检查传入消息并返回一个字符串，该字符串为当前终结点服务协定上的方法的名称。  
   
  在此示例中，操作选择器使用 <xref:System.Xml.XmlDictionaryReader> 获取传入消息正文的 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>。 此方法已经将读取器定位在消息正文的第一个子级上，因此完全可以获取当前元素的名称和命名空间 URI 并将它们结合成 `XmlQualifiedName`，然后用它来从操作选择器保存的字典中查找相应的操作。  
   
-```  
+```csharp
 public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
 {  
     XmlDictionaryReader bodyReader = message.GetReaderAtBodyContents();  
@@ -57,7 +58,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
   
  访问消息正文时，不管使用的是 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 还是可以访问消息正文内容的任何其他方法，都将导致该消息被标记为“已读”，这意味着该消息不能进行任何进一步处理。 因此，操作选择器将使用下面代码演示的方法创建传入消息的副本。 因为在检查过程中读取器的位置没有更改，可以由新创建的消息引用，消息属性和消息头也会复制到新创建的消息中，因此可以得到与原始消息完全相同的克隆：  
   
-```  
+```csharp
 private Message CreateMessageCopy(Message message,   
                                      XmlDictionaryReader body)  
 {  
@@ -77,7 +78,7 @@ private Message CreateMessageCopy(Message message,
   
  为了简洁起见，下面的代码摘录仅演示 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> 方法的实现，此方法影响本示例中调度程序的配置更改。 未演示其他方法，因为它们不执行任何操作就返回到调用方。  
   
-```  
+```csharp
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
 class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior  
 {  
@@ -92,7 +93,7 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
   
  填充字典后，将使用此信息构造一个新的 `DispatchByBodyElementOperationSelector` 并将其设置为调度运行时的操作选择器：  
   
-```  
+```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
 {  
     Dictionary<XmlQualifiedName,string> dispatchDictionary =   
@@ -123,7 +124,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
   
  由于操作选择器只根据消息正文元素进行调度并忽略“Action”，因此需要通过将通配符“*”分配给 `ReplyAction` 的 <xref:System.ServiceModel.OperationContractAttribute> 属性来告诉运行时不要对返回的答复检查“Action”标头。 此外，有必要，可以有一个具有"操作"属性设置为通配符的默认操作"\*"。 此默认操作接收所有无法调度的消息并且没有 `DispatchBodyElementAttribute`：  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
                             DispatchByBodyElementBehavior]  
 public interface IDispatchedByBody  
@@ -178,4 +179,3 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   
-## <a name="see-also"></a>请参阅

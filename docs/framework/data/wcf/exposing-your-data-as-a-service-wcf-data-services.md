@@ -6,20 +6,20 @@ helpviewer_keywords:
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-ms.openlocfilehash: ba316aeda0a0a7e80af8e37a6a62e88652b9635b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8e598dde0d85b1d7d4208bf2475a0f6f6eee34a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700983"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>将数据公开为服务 (WCF Data Services)
 
 WCF Data Services 与 Visual Studio，以便你可以更轻松地定义用于公开为数据服务集成[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]馈送。 创建公开 OData 源的数据服务涉及以下基本步骤：
 
-1.  **定义数据模型。** WCF 数据服务本身支持基于的数据模型[ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)。 有关详细信息，请参阅[如何： 创建数据服务使用 ADO.NET 实体框架数据源](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)。
+1.  **定义数据模型。** WCF 数据服务本身支持基于的数据模型[ADO.NET 实体框架](../../../../docs/framework/data/adonet/ef/index.md)。 有关详细信息，请参阅[如何：创建数据服务使用 ADO.NET 实体框架数据源](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)。
 
-     WCF 数据服务还支持基于返回的实例的公共语言运行时 (CLR) 对象的数据模型<xref:System.Linq.IQueryable%601>接口。 通过此功能，您可以在 .NET Framework 中部署基于列表、数组和集合的数据服务。 若要启用针对这些数据结构的创建、更新和删除操作，还必须实现 <xref:System.Data.Services.IUpdatable> 接口。 有关详细信息，请参阅[如何： 创建数据服务使用反射提供程序](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)。
+     WCF 数据服务还支持基于返回的实例的公共语言运行时 (CLR) 对象的数据模型<xref:System.Linq.IQueryable%601>接口。 通过此功能，您可以在 .NET Framework 中部署基于列表、数组和集合的数据服务。 若要启用针对这些数据结构的创建、更新和删除操作，还必须实现 <xref:System.Data.Services.IUpdatable> 接口。 有关详细信息，请参阅[如何：创建数据服务使用反射提供程序](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)。
 
      对于更高级的方案，WCF Data Services 包括一组使您可以定义基于后期绑定数据类型的数据模型的提供程序。 有关详细信息，请参阅[自定义数据服务提供商](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)。
 

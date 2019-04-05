@@ -7,24 +7,24 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544227"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350743"
 ---
 # <a name="input-wpf"></a>输入 (WPF)
-Windows Presentation Foundation (WPF) 包含支持多种类型的输入。 此输入包含文本、 触摸、 鼠标、 命令、 焦点、 触摸、 拖放和数字墨迹。 本部分介绍相关输入在 WPF 中的主题。  
+Windows Presentation Foundation (WPF) 支持多种类型的输入。 此输入包括文本、 触摸、 鼠标、 命令、 关注、 触控、 拖动并放置和数字墨迹。 本部分介绍相关输入在 WPF 中的主题。  
   
 ## <a name="in-this-section"></a>本节内容  
- [输入概述](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [命令概述](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [焦点概述](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [为控件中的焦点设置样式以及 FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [演练：创建第一个触控应用程序](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [帮助主题](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [数字墨迹](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [输入概述](input-overview.md)  
+ [命令概述](commanding-overview.md)  
+ [焦点概述](focus-overview.md)  
+ [为控件中的焦点设置样式以及 FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [演练：创建第一个触控应用程序](walkthrough-creating-your-first-touch-application.md)  
+ [帮助主题](input-and-commands-how-to-topics.md)  
+ [数字墨迹](digital-ink.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.UIElement>  
@@ -42,5 +42,5 @@ Windows Presentation Foundation (WPF) 包含支持多种类型的输入。 此�
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>相关章节  
- [控件](../../../../docs/framework/wpf/controls/index.md)  
-  [事件](../../../../docs/framework/wpf/advanced/events-wpf.md)
+ [控件](../controls/index.md)  
+  [事件](events-wpf.md)

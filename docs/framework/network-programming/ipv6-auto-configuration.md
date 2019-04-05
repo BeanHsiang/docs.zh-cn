@@ -2,12 +2,12 @@
 title: IPv6 自动配置
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 31aaebaefa0d2682ee20ae93496aff42ae1633d8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2184b02f6f4c8ba4e8a79279f212ffca2cb41959
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726346"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 自动配置
 IPv6 的一个重要目标是支持节点即插即用。 也就是说，可以将节点插入 IPv6 网络，让其自动进行配置，无需任何人为干预。  
@@ -22,8 +22,8 @@ IPv6 的一个重要目标是支持节点即插即用。 也就是说，可以�
  无论如何确定地址，节点必须验证可能的地址对于本地链接是否唯一。 通过向可能的地址发送邻居请求消息可完成此操作。 如果节点收到任何响应，就知道该地址已在使用，并且必须确定其他地址。  
   
 ## <a name="ipv6-mobility"></a>IPv6 移动性  
- 移动设备的激增引入了新的要求：设备必须能够随意改变 IPv6 Internet 上的位置，但是仍然保持现有连接。 为实现此功能，向移动节点分配一个始终可以到达的主地址。 当移动节点在其中时，它连接到主链接并使用其主地址。 当移动节点离开时，主代理（通常是路由器）在移动节点和其正与之通信的节点之间中继消息。  
+ 移动设备的广泛应用催生了新的要求：设备必须能够随意改变 IPv6 Internet 上的位置，但是仍然保持现有连接。 为实现此功能，向移动节点分配一个始终可以到达的主地址。 当移动节点在其中时，它连接到主链接并使用其主地址。 当移动节点离开时，主代理（通常是路由器）在移动节点和其正与之通信的节点之间中继消息。  
   
-## <a name="see-also"></a>请参阅  
- [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [套接字](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>请参阅
+- [Internet 协议版本 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [套接字](../../../docs/framework/network-programming/sockets.md)

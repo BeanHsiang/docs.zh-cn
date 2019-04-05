@@ -2,12 +2,12 @@
 title: 对等网络方案
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
-ms.openlocfilehash: 46e0be29d367db0d36b87c063779d55d1338b39e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7795bae8fa9ea6b5192f16dfe616c0bf5d543c80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668998"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>对等网络方案
 对等网络实现或改进以下方案：  
@@ -68,5 +68,5 @@ ms.locfileid: "50199937"
   
 -  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Net.PeerToPeer.Collaboration>
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.PeerToPeer.Collaboration>

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModuleEnum 接口 1
+title: ICorDebugModuleEnum 接口
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModuleEnum
@@ -16,21 +16,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd6391c06900d5cafc1bfde23bd12c22ee0c77a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6bf3d72b2439250fd8fbdc1bf1dc9ca28352c9ad
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422421"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976832"
 ---
-# <a name="icordebugmoduleenum-interface1"></a>ICorDebugModuleEnum 接口 1
-实现 ICorDebugEnum 方法，并枚举 ICorDebugModule 数组。  
+# <a name="icordebugmoduleenum-interface"></a>ICorDebugModuleEnum 接口
+
+实现 ICorDebugEnum 方法，并枚举 icor 调试模块数组。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|获取指定的数目的`ICorDebugModule`枚举，从当前位置开始中的实例。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-next-method.md)|获取指定的数目的`ICorDebugModule`从当前位置开始枚举的实例。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -38,13 +39,13 @@ ms.locfileid: "33422421"
 >  此接口不支持跨计算机或跨进程远程调用。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

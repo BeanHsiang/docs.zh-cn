@@ -1,31 +1,31 @@
 ---
-title: WCF 的 &lt;customTrackingQuery&gt;
+title: <customTrackingQuery> WCF 的
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: e13064afbd9f5dbc8d7216eb384001e1e005785c
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 0a5e7c034ce1ef12a8d7d5b1753e2e441e48e293
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316228"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279482"
 ---
-# <a name="ltcustomtrackingquerygt-of-wcf"></a>WCF 的 &lt;customTrackingQuery&gt;
+# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery > 的 WCF
 
 表示用于跟踪你代码活动中定义的事件的查询。 跟踪参与者需要用此查询来订阅自定义跟踪记录。
 
 有关跟踪配置文件查询的详细信息，请参阅[跟踪配置文件](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<跟踪 >  
+\<tracking>  
 \<配置文件 >  
 \<trackingProfile>  
-\<工作流 >  
-\<customTrackingQueries >  
-\<customTrackingQuery >  
+\<workflow>  
+\<customTrackingQueries>  
+\<customTrackingQuery>  
   
 ## <a name="syntax"></a>语法  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -38,8 +38,8 @@ ms.locfileid: "49316228"
     </trackingProfile>
   </profiles>
 </tracking>
-```
-
+```  
+  
 ## <a name="attributes-and-elements"></a>特性和元素  
 
 下列各节描述了特性、子元素和父元素。  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 641a1cc0fd0ec53872ee3312e7da06923b82ddd7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cd8aeeb1ed56acfca0d57cb3c2c56cabab184683
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507600"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904090"
 ---
 # <a name="optimistic-concurrency"></a>开放式并发
 在多用户环境中，有两种用于更新数据库中数据的模型：开放式并发和保守式并发。 设计 <xref:System.Data.DataSet> 对象的目的是为了促进将开放式并发用于长时间运行的活动，例如对数据进行远程处理以及与数据进行交互时。  
@@ -123,7 +123,7 @@ adapter.UpdateCommand.Parameters.Add( _
   "@CompanyName", SqlDbType.NVarChar, 30, "CompanyName")  
   
 ' Pass the original values to the WHERE clause parameters.  
-Dim parameter As SqlParameter = dataSet.UpdateCommand.Parameters.Add( _  
+Dim parameter As SqlParameter = adapter.UpdateCommand.Parameters.Add( _  
   "@oldCustomerID", SqlDbType.NChar, 5, "CustomerID")  
 parameter.SourceVersion = DataRowVersion.Original  
 parameter = adapter.UpdateCommand.Parameters.Add( _  
@@ -206,9 +206,9 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [行错误信息](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
- [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [在 ADO.NET 中检索和修改数据](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [使用 DataAdapter 更新数据源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [行错误信息](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
+- [事务和并发性](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: 路由服务
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: 139607614934aedbad9f76172b8e31fb02394d80
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0d58e70d482532e3f148d3f4f92741f46221982
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495300"
 ---
 # <a name="routing-service"></a>路由服务
 路由服务是充当消息路由器的泛型 SOAP 中介。 路由服务的核心功能是基于消息内容来路由消息，通过该功能，可基于消息本身（标头或消息正文）中的值将消息转发到客户端终结点。  
@@ -62,7 +62,7 @@ ms.locfileid: "43522165"
  使用基于内容的路由，您可以公开一个用于接收外部客户端应用程序发送的消息的终结点，然后基于消息中的值将每条消息路由到相应的内部终结点。 这有助于为各种后端应用程序提供一个特定终结点，同时也有助于在将应用程序分解为各种服务时向客户提供一个应用程序终结点。  
   
 ### <a name="service-versioning"></a>服务版本控制  
- 当迁移到新版解决方案时，您可能需要并行维护旧版本，以便向现有客户提供服务。 通常，这要求连接到较新版本的客户端在与解决方案通信时必须使用不同的地址。 路由服务允许您根据消息中包含的版本特定信息将消息路由至相应解决方案，从而公开一个可为解决方案的两个版本提供服务的服务终结点。 有关此类实现的示例，请参阅[How To： 服务版本控制](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
+ 当迁移到新版解决方案时，您可能需要并行维护旧版本，以便向现有客户提供服务。 通常，这要求连接到较新版本的客户端在与解决方案通信时必须使用不同的地址。 路由服务允许您根据消息中包含的版本特定信息将消息路由至相应解决方案，从而公开一个可为解决方案的两个版本提供服务的服务终结点。 有关此类实现的示例，请参阅[How To:服务版本控制](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
   
 ### <a name="priority-routing"></a>优先级路由  
  向多个客户端提供服务时，您可以与某些合作伙伴达成服务级别协议 (SLA)，该协议要求对来自这些合作伙伴的所有数据与其他客户端数据单独处理。 使用查找消息中包含的客户特定信息的筛选器，您可以轻松地将来自特定合作伙伴的消息路由至为满足其 SLA 要求而创建的终结点。  
@@ -105,7 +105,7 @@ ms.locfileid: "43522165"
   
 -   动态配置  
   
-## <a name="see-also"></a>请参阅  
- [路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
- [路由协定](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)
+## <a name="see-also"></a>请参阅
+- [路由简介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [路由协定](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
+- [消息筛选器](../../../../docs/framework/wcf/feature-details/message-filters.md)

@@ -2,12 +2,12 @@
 title: 活动定义范围和可见性
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: f3a8936c1bc3275468e1e4dbd23d0d001edad021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518497"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723837"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>活动定义范围和可见性
 正如对象的范围和可见性一样，活动定义范围和可见性是其他对象或活动访问此活动成员的能力。 通过以下实现来执行活动定义：  
@@ -22,7 +22,7 @@ ms.locfileid: "33518497"
  除了数据范围之外，活动模型可见性还可限制对活动的其他方面的访问，例如验证、调试、跟踪或追踪。 执行属性使用可见性和范围，将执行特征约束到特定的定义范围。 辅助根使用可见性和范围，将 <xref:System.Activities.Statements.CompensableActivity> 捕获的状态约束到使用补偿活动的定义范围。  
   
 ## <a name="definition-and-usage"></a>定义和用法  
- 通过创作新活动，从基本活动类继承，并通过从活动编写的工作流[内置活动库](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)。 若要使用某个活动，该活动的作者必须配置其定义的每个组件的可见性。  
+ 通过创作新活动，通过从基本活动类继承，并使用来自活动编写的工作流[内置活动库](net-framework-4-5-built-in-activity-library.md)。 若要使用某个活动，该活动的作者必须配置其定义的每个组件的可见性。  
   
 ### <a name="activity-members"></a>活动成员  
  活动模型定义活动提供给使用者的参数、变量、委托和子活动。 其中每个成员均可声明为 `public` 或 `private`。 公共成员由活动的使用者进行配置，而`private`成员使用活动的作者确定的实现。 数据范围的可见性规则如下：  

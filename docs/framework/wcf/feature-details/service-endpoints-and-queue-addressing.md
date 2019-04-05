@@ -2,12 +2,12 @@
 title: 服务终结点和队列寻址
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7b4eca1519eeb1ed6357b625a3253105ece2b8ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196299"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332515"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服务终结点和队列寻址
 本主题讨论客户端如何对从队列中读取的服务进行寻址以及服务终结点如何映射到队列。 请注意下, 图显示经典 Windows Communication Foundation (WCF) 排队应用程序部署。  
@@ -40,13 +40,13 @@ ms.locfileid: "47196299"
   
 -   \<*队列名称*> 是队列的名称。 队列名还可以引用子队列。 因此， \<*队列名称*> = \<*队列名称*> [;*子队列名*]。  
   
- 示例 1：若要对计算机 abc atadatum.com 上承载的专用队列 PurchaseOrders 寻址，URI 将为 net.msmq://abc.adatum.com/private/PurchaseOrders。  
+ 示例 1:若要解决的专用队列 PurchaseOrders 对计算机 abc atadatum.com 上承载，则 URI 将为 net.msmq: //abc.adatum.com/private/purchaseorders。  
   
- 示例 2：若要对计算机 def atadatum.com 上承载的公共队列 AccountsPayable 寻址，URI 将为 net.msmq://def.adatum.com/AccountsPayable。  
+ 示例 2:若要解决的公共队列 AccountsPayable 计算机 def atadatum.com 上承载，则 URI 将为 net.msmq: //def.adatum.com/accountspayable。  
   
  队列地址用作侦听器从中读取消息的侦听 URI。 换言之，队列地址等效于 TCP 套接字的侦听端口。  
   
- 从队列中读取消息的终结点必须使用以前在打开 ServiceHost 时指定的同一方案指定队列地址。 有关示例，请参阅[Net MSMQ 绑定](../../../../docs/framework/wcf/samples/net-msmq-binding.md)并[消息队列集成绑定的示例](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)。  
+ 从队列中读取消息的终结点必须使用以前在打开 ServiceHost 时指定的同一方案指定队列地址。 有关示例，请参阅[Net MSMQ 绑定](../../../../docs/framework/wcf/samples/net-msmq-binding.md)。  
   
 ### <a name="multiple-contracts-in-a-queue"></a>队列中存在多个协定  
  队列中的消息可以实现不同的协定。 在这种情况下，下列条件中必须有一个成立才能成功读取并处理所有消息：  
@@ -73,13 +73,13 @@ ms.locfileid: "47196299"
 |基于 WCF URI 的队列地址|使用 Active Directory 属性|队列传输协议属性|得到的 MSMQ 格式名|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |Net.msmq://\<machine-name>/private/abc|False（默认值）|Native（默认值）|DIRECT=OS:计算机名\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT =http://machine/msmq/private$/ abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
 |Net.msmq://\<machine-name>/private/abc|True|Native|PUBLIC=some-guid（队列的 GUID）|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>从死信队列或病毒消息队列读取消息  
  若要从作为目标队列子队列的病毒消息队列中读取消息，请打开具有子队列地址的 `ServiceHost`。  
   
- 示例：从本地计算机的 PurchaseOrders 专用队列的病毒消息队列中读取消息的服务将按 net.msmq://localhost/private/PurchaseOrders;poison 寻址。  
+ 示例:从本地计算机的 PurchaseOrders 专用队列的病毒消息队列中读取的服务将解决 net.msmq://localhost/private/PurchaseOrders;poison。  
   
  若要从系统的事务性死信队列中读取消息，URI 必须采用以下形式：net.msmq://localhost/system$;DeadXact。  
   
@@ -100,9 +100,9 @@ ms.locfileid: "47196299"
   
  请注意，当使用 `MsmqIntegrationBinding` 从队列接收消息时，只能使用直接格式名以及公共和专用格式名（需要 Active Directory 集成）。 但是，建议您使用直接格式名。 例如，在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用任何其他格式名都将导致错误，因为系统会尝试打开一个子队列，而该子队列只能使用直接格式名打开。  
   
- 在使用 `MsmqIntegrationBinding` 对 SRMP 进行寻址时，不需要在直接格式名中添加 /msmq/ 来帮助 Internet 信息服务 (IIS) 进行调度。 例如： abc 使用 SRMP 协议，而不是直接对队列进行寻址时 =http://adatum.com/msmq/private$/ abc，则应使用 DIRECT =http://adatum.com/private$/ abc。  
+ 在使用 `MsmqIntegrationBinding` 对 SRMP 进行寻址时，不需要在直接格式名中添加 /msmq/ 来帮助 Internet 信息服务 (IIS) 进行调度。 例如：Abc 使用 SRMP 协议，而不是直接对队列进行寻址时 =http://adatum.com/msmq/private$/ abc，则应使用 DIRECT =http://adatum.com/private$/ abc。  
   
  请注意，对于 `MsmqIntegrationBinding`，不能使用 net.msmq:// 寻址。 因为`MsmqIntegrationBinding`支持自由的 MSMQ 格式名寻址，可以使用 WCF 服务使用此绑定在 MSMQ 中使用多播和通讯组列表功能。 一个例外是在使用 `CustomDeadLetterQueue` 时指定 `MsmqIntegrationBinding`。 它必须采用 net.msmq:// 形式，这与使用 `NetMsmqBinding` 进行指定的方式相似。  
   
-## <a name="see-also"></a>请参阅  
- [承载排队应用程序的 Web](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>请参阅
+- [承载排队应用程序的 Web](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

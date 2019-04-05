@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24112edc3ac28124953974463233800c51da5cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453078"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221232"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework 中的反射
-<xref:System.Reflection> 命名空间中的类与 <xref:System.Type?displayProperty=nameWithType> 使你能够获取有关加载的[程序集](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)和其中定义的类型的信息，如[类](../../../docs/standard/base-types/common-type-system.md#classes)、[接口](../../../docs/standard/base-types/common-type-system.md#interfaces)和[值类型](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de)。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。  
+<xref:System.Reflection> 命名空间中的类与 <xref:System.Type?displayProperty=nameWithType> 使你能够获取有关加载的[程序集](../app-domains/assemblies-in-the-common-language-runtime.md)和其中定义的类型的信息，如[类](../../standard/base-types/common-type-system.md#classes)、[接口](../../standard/base-types/common-type-system.md#interfaces)和[值类型](../../csharp/language-reference/keywords/value-types.md)。 可以使用反射在运行时创建、调用和访问类型实例。 有关反射的特定方面的主题，请参见本概述末的[相关主题](#related_topics)。
   
  [公共语言运行时](../../../docs/standard/clr.md)加载程序管理[应用程序域](../../../docs/framework/app-domains/application-domains.md)，应用程序域构成具有相同应用程序范围的对象周围定义的边界。 此管理包括将每个程序集加载到相应的应用程序域中和控制每个程序集内的类型层次结构的内存布局。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "49453078"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>相关主题  
   
-|标题|描述|  
+|Title|说明​​|  
 |-----------|-----------------|  
 |[查看类型信息](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|介绍 <xref:System.Type> 类，并提供演示如何使用具有几个反射类的 <xref:System.Type> 来获取有关构造函数、方法、字段、属性和事件的信息的代码示例。|  
 |[反射类型和泛型类型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|说明反射如何处理泛型类型和泛型方法的类型参数和类型自变量。|  
@@ -80,7 +80,7 @@ ms.locfileid: "49453078"
 |[如何：将程序集加载到仅反射上下文中](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|描述仅反射的加载上下文。 显示如何加载程序集、如何测试上下文以及如何检查应用到仅反射上下文中的程序集。|  
 |[访问自定义属性](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|演示如何使用反射来查询特性的存在和值。|  
 |[指定完全限定的类型名称](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|描述 Backus-Naur 形式 (BNF) 的完全限定类型名称的格式，以及指定特殊字符、程序集名称、指针、引用和数组所需的语法。|  
-|[如何：使用反射连接委托](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|说明如何创建方法的委托并将委托挂钩到事件。 说明如何使用 <xref:System.Reflection.Emit.DynamicMethod> 在运行时创建事件处理方法。|  
+|[如何：使用反射将委托挂钩](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|说明如何创建方法的委托并将委托挂钩到事件。 说明如何使用 <xref:System.Reflection.Emit.DynamicMethod> 在运行时创建事件处理方法。|  
 |[发出动态方法和程序集](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|说明如何生成动态程序集和动态方法。|  
   
 ## <a name="reference"></a>参考  

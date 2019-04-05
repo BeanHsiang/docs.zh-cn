@@ -1,35 +1,31 @@
 ---
-title: '&lt;oneWay&gt;'
+title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: f9a5631501b3879463606f526485314efd5eff2b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 35631cc4b120169e0cadb80c6beba26ab9eafd7a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746717"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283265"
 ---
-# <a name="ltonewaygt"></a>&lt;oneWay&gt;
+# <a name="oneway"></a>\<oneWay>
 对自定义绑定启用数据包路由并使用单向方法。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
-\<oneWay >  
+\<binding>  
+\<oneWay>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<oneWay packetRoutable="Boolean">  
-        <channelPoolSettings  
-           idleTimeout"TimeSpan"  
-          leaseTimeout"TimeSpan"  
-          maxOutboundConnectionsPerEndpopint="Integer" />  
-```  
-  
-```xml  
-</oneWay>  
+<oneWay packetRoutable="Boolean">
+  <channelPoolSettings idleTimeout="TimeSpan"
+                       leaseTimeout="TimeSpan"
+                       maxOutboundConnectionsPerEndpopint="Integer" />
+</oneWay>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -46,22 +42,22 @@ ms.locfileid: "32746717"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<channelPoolSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/channelpoolsettings.md)|一个 <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> 对象，包含当前通道的通道池的属性。|  
+|[\<channelPoolSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/channelpoolsettings.md)|一个 <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement> 对象，包含当前通道的通道池的属性。|  
   
 ### <a name="parent-elements"></a>父元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<绑定 >](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定义自定义绑定的所有绑定功能。|  
   
 ## <a name="remarks"></a>备注  
  若要启用数据包路由，必须使用此元素提供的单向转换层。 用户可以创建一个自定义绑定，将此绑定置于具有会话功能或请求/答复传输的上层，使之可进行数据包路由。 如果希望以更自然的方式公开单向方法，则此元素也十分有用。 在这一层上可应用更多的转换，如复合双工和可靠消息。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Channels.OneWayBindingElement>  
- <xref:System.ServiceModel.Configuration.OneWayElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Channels.OneWayBindingElement>
+- <xref:System.ServiceModel.Configuration.OneWayElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

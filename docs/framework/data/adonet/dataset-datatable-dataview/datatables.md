@@ -2,12 +2,12 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 2849d159fbfdb0c0739b76fd288a987d4ce3d02f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f0f429d7f28360fd76dfff0e7d4a4eba019e5acf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653239"
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet> 由表、关系和约束的集合组成。 在 ADO.NET 中，<xref:System.Data.DataTable>对象用于表示中的表**数据集**。 一个**DataTable**表示的内存中关系数据; 一个表的数据是本地的。它驻留，但可以从数据源，例如 Microsoft SQL Server 使用填充的基于网络的应用程序**DataAdapter**有关详细信息，请参阅[填充数据集从 DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  
@@ -55,5 +55,5 @@ ms.locfileid: "43786054"
  [类库概述](../../../../../docs/standard/class-library-overview.md)  
  概述了.NET Framework 类库，包括**系统**命名空间以及第二个级别的命名空间**System.Data**。  
   
-## <a name="see-also"></a>请参阅  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

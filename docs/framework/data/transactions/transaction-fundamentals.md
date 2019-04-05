@@ -2,12 +2,12 @@
 title: 事务基础知识
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: 20bce37bb5d5aa1460570b1d39b54c2cb8a3362f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cb5123cbee9245178cac43cfd2388cce3f5d356f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620508"
 ---
 # <a name="transaction-fundamentals"></a>事务基础知识
 事务将多个任务绑定在一起。 例如，假设应用程序执行两个任务。 首先，它在数据库中创建一个新表。 然后，它调用一个专用对象，来收集数据、设置数据格式以及将数据插入新表中。 这两个任务是相关的，甚至是相互依赖的，以便只有在可以用数据填充表时才创建新表。 在单个事务范围内执行这两个任务时，会在它们之间强制建立连接。 如果第二个任务失败，则第一个任务会回滚到创建新表之前的点。  
@@ -24,5 +24,5 @@ ms.locfileid: "44177191"
   
  您可以创建使用 ADO.NET，事务<xref:System.EnterpriseServices>，或提供的事务性编程模型<xref:System.Transactions>命名空间。 [由 System.Transactions 提供的功能](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)主题讨论可用于编写事务应用程序使用的功能<xref:System.Transactions>命名空间。  
   
-## <a name="see-also"></a>请参阅  
- [由 System.Transactions 提供的功能](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)
+## <a name="see-also"></a>请参阅
+- [由 System.Transactions 提供的功能](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)

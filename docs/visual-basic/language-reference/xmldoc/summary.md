@@ -1,18 +1,18 @@
 ---
-title: '&lt;摘要&gt;(Visual Basic)'
+title: <summary> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 5ef9b7a98503ff36174de4418ca7d599c365f5aa
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0fbe07884f55b7e6f460929e54520de5f718e1af
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000474"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814998"
 ---
-# <a name="ltsummarygt-visual-basic"></a>&lt;摘要&gt;(Visual Basic)
+# <a name="summary-visual-basic"></a>\<摘要 > (Visual Basic)
 指定的成员的摘要。  
   
 ## <a name="syntax"></a>语法  
@@ -21,7 +21,7 @@ ms.locfileid: "46000474"
 <summary>description</summary>  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `description`  
  对象的摘要。  
   
@@ -35,7 +35,8 @@ ms.locfileid: "46000474"
 ## <a name="example"></a>示例  
  此示例使用`<summary>`标记来描述`ResetCounter`方法和`Counter`属性。  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/summary_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>请参阅  
- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 注释标记](../../../visual-basic/language-reference/xmldoc/index.md)

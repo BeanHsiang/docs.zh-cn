@@ -1,21 +1,21 @@
 ---
-title: '&lt;cookieHandler&gt;'
+title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 99bf6edb4e4f631eba292990c65c1f0c8553d8c0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: dc0613bb727f9ed061c3b5d494bdc279515b56e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840714"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369006"
 ---
-# <a name="ltcookiehandlergt"></a>&lt;cookieHandler&gt;
+# <a name="cookiehandler"></a>\<cookieHandler>
 配置<xref:System.IdentityModel.Services.CookieHandler>的<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) 用于读取和写入 cookie。  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
-\<cookieHandler >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<cookieHandler>  
   
 ## <a name="syntax"></a>语法  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48840714"
 |path|指定任何已编写 cookie 的路径值。 默认值为"HttpRuntime.AppDomainAppVirtualPath"。|  
 |mode|其中一个<xref:System.IdentityModel.Services.CookieHandlerMode>值，该值指定由 SAM 使用的 cookie 处理程序的类型。 可以使用以下值：<br /><br /> -"默认"-"Chunked"相同。<br />-"块"，使用的实例<xref:System.IdentityModel.Services.ChunkedCookieHandler>类。 此 cookie 处理程序可确保单个 cookie 不能超过集的最大大小。 它通过可能"区块"一个逻辑 cookie，为多个 cookie 上在线完成此操作。<br />-"自定义"— 使用派生自的自定义类的实例<xref:System.IdentityModel.Services.CookieHandler>。 在派生的类引用的`<customCookieHandler>`子元素。<br /><br /> 默认值为"Default"。|  
 |persistentSessionLifetime|指定永久会话的生存期。 如果为零，始终使用瞬变会话。 默认值为"0:0:0"，指定的临时会话。 最大值为"365:0:0"，指定为 365 天的会话。 应该根据以下限制指定的值： `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`，其中最左侧的值指定天、 中间值 （如果有） 指定的小时数，而最右侧的值 （如果有） 指定的分钟数。|  
-|RequireSsl|指定是否有任何已编写 cookie 发出"安全"标志。 如果设置此值，在登录会话 cookie 仅可通过 HTTPS。 默认值为“true”。|  
+|requireSsl|指定是否有任何已编写 cookie 发出"安全"标志。 如果设置此值，在登录会话 cookie 仅可通过 HTTPS。 默认值为“true”。|  
 |hideFromScript|控制是否有任何已编写 cookie 发出"HttpOnly"标志。 某些 web 浏览器的客户端脚本访问 cookie 值遵循此标志。 默认值为“true”。|  
 |域|编写任何 cookie 的域值。 默认值为 ""。|  
   
@@ -55,8 +55,8 @@ ms.locfileid: "48840714"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<chunkedCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|配置<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 此元素仅可能存在如果`mode`属性的`<cookieHandler>`元素是"Default"块"。|  
-|[\<customCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|设置自定义 cookie 处理程序类型。 此元素必须存在如果`mode`属性的`<cookieHandler>`元素是"自定义"。 它不能同时存在的任何其他值`mode`属性。 自定义的类型必须派生自<xref:System.IdentityModel.Services.CookieHandler>类。|  
+|[\<chunkedCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|配置<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 此元素仅可能存在如果`mode`属性的`<cookieHandler>`元素是"Default"块"。|  
+|[\<customCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|设置自定义 cookie 处理程序类型。 此元素必须存在如果`mode`属性的`<cookieHandler>`元素是"自定义"。 它不能同时存在的任何其他值`mode`属性。 自定义的类型必须派生自<xref:System.IdentityModel.Services.CookieHandler>类。|  
   
 ### <a name="parent-elements"></a>父元素  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48840714"
 <cookieHandler requireSsl="false" />  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Services.CookieHandler>  
- <xref:System.IdentityModel.Services.ChunkedCookieHandler>  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Services.CookieHandler>
+- <xref:System.IdentityModel.Services.ChunkedCookieHandler>
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>

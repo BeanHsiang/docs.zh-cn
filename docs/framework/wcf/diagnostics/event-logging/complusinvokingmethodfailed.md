@@ -2,20 +2,20 @@
 title: ComPlusInvokingMethodFailed
 ms.date: 03/30/2017
 ms.assetid: aa435a6d-87a1-468e-a73a-f287fcf697c3
-ms.openlocfilehash: 7f48a3f9e674cddc50ad8c163c827990894b8f42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e88ee738a4027f14d255a7f9cd3b190dc811701a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33468151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54541334"
 ---
 # <a name="complusinvokingmethodfailed"></a>ComPlusInvokingMethodFailed
-Id: 133  
+ID:133  
   
- 严重性：错误  
+ 严重性：Error  
   
  类别：ServiceModel  
   
-## <a name="see-also"></a>请参阅  
- [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>请参阅
+- [事件日志记录](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [事件常规参考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

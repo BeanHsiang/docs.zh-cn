@@ -1,5 +1,6 @@
 ---
-title: event（C# 参考）
+title: event - C# 参考
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - event
@@ -9,18 +10,18 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 35a42692bc87da63c69d7ccbce1b49396a84f5a2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: fcfaa05d4efec43a49e3f485b74cadadbabd9236
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54557925"
 ---
 # <a name="event-c-reference"></a>event（C# 参考）
 `event` 关键字用于声明发布服务器类中的事件。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何声明和引发使用 <xref:System.EventHandler> 作为基础委托类型的事件。 有关演示如何使用泛型 <xref:System.EventHandler%601> 委托类型以及如何订阅事件并创建事件处理程序方法的完整的代码示例，请参阅[如何：发布符合 .NET Framework 准则的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。  
+ 下面的示例演示如何声明和引发使用 <xref:System.EventHandler> 作为基础委托类型的事件。 有关展示如何使用泛型 <xref:System.EventHandler%601> 委托类型以及如何订阅事件并创建事件处理程序方法的完整代码示例，请参阅[操作说明：发布符合 .NET Framework 准则的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。  
   
  [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
   
@@ -31,7 +32,7 @@ ms.locfileid: "44259696"
 ## <a name="keywords-and-events"></a>关键字和事件  
  下列关键字应用于事件。  
   
-|关键字|描述|更多相关信息|  
+|关键字|说明|更多相关信息|  
 |-------------|-----------------|--------------------------|  
 |[static](../../../csharp/language-reference/keywords/static.md)|使事件可供调用方在任何时候进行调用，即使不存在类的实例。|[静态类和静态类成员](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|  
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|允许派生类使用[重写](../../../csharp/language-reference/keywords/override.md)关键字重写事件行为。|[继承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)|  
@@ -45,12 +46,12 @@ ms.locfileid: "44259696"
 ## <a name="c-language-specification"></a>C# 语言规范  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
-- [C# 关键字](../../../csharp/language-reference/keywords/index.md)  
-- [add](../../../csharp/language-reference/keywords/add.md)  
-- [remove](../../../csharp/language-reference/keywords/remove.md)  
-- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
+- [C# 关键字](../../../csharp/language-reference/keywords/index.md)
+- [add](../../../csharp/language-reference/keywords/add.md)
+- [remove](../../../csharp/language-reference/keywords/remove.md)
+- [修饰符](../../../csharp/language-reference/keywords/modifiers.md)
 - [如何：合并委托（多播委托）](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

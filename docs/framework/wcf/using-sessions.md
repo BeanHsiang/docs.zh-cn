@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 898e5688ae08a59415c8b3116665eec6cb4cf904
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260199"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442719"
 ---
 # <a name="using-sessions"></a>使用会话
 在 Windows Communication Foundation (WCF) 应用程序中*会话*将一组消息关联起来形成对话。 WCF 会话是中提供的会话对象不同[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]应用程序，支持不同的行为，并且以不同的方式进行控制。 本主题介绍在 WCF 中的会话启用的功能的应用程序以及如何使用它们。  
@@ -62,7 +62,7 @@ ms.locfileid: "44260199"
   
  WCF 提供了以下类型的基于会话的应用程序的行为：  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> 支持基于安全的会话，其中，两个通信端采用统一的安全对话。 有关详细信息，请参阅[Securing Services](../../../docs/framework/wcf/securing-services.md)。 例如，<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 绑定（包含对安全会话和可靠会话的支持）默认情况下只使用对消息进行加密和数字签名的安全会话。  
+-   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> 支持基于安全的会话，其中，两个通信端采用统一的安全对话。 有关详细信息，请参阅[Securing Services](../../../docs/framework/wcf/securing-services.md)。 例如， <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 绑定（包含对安全会话和可靠会话的支持）默认情况下只使用对消息进行加密和数字签名的安全会话。  
   
 -   <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> 绑定支持基于 TCP/IP 的会话，以确保所有消息都由套接字级别的连接进行关联。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "44260199"
   
  服务不会启动与客户端的会话。 在 WCF 客户端应用程序，基于会话的通道的生存期和会话本身的生存期之间存在直接的关系。 因此，客户端可通过创建新的基于会话的通道来创建新会话，并通过正常关闭基于会话的通道来关闭现有的会话。 客户端通过调用以下项目之一来启动与服务终结点的会话：  
   
--   通过调用 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 返回的通道上的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   通过调用<xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 返回的通道上的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 生成的 WCF 客户端对象上[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
@@ -123,13 +123,13 @@ ms.locfileid: "44260199"
   
  通常，客户端通过调用以下项目之一来结束与服务终结点的会话：  
   
--   通过调用 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 返回的通道上的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   通过调用<xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 返回的通道上的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 在由 Svcutil.exe 生成的 WCF 客户端对象。  
   
 -   任一类型的 WCF 客户端对象上的终止操作 （默认情况下，不终止任何操作; 协定必须显式指定的终止操作）。 当调用的第一个操作时，WCF 客户端对象自动打开通道并启动会话。  
   
- 有关示例，请参阅 [如何：创建要求会话的服务](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 以及 [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 和 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 示例。  
+ 相关示例，请参阅[如何：创建 Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)并将[Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md)并[Instancing](../../../docs/framework/wcf/samples/instancing.md)示例。  
   
  有关客户端和会话的详细信息，请参阅[使用 WCF 客户端访问服务](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "44260199"
  协定中的 <xref:System.ServiceModel.SessionMode> 枚举与 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 属性之间存在交互，该属性可控制通道和特定服务对象之间的关联。 有关详细信息，请参阅[会话、 实例存储功能和并发](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)。  
   
 ### <a name="sharing-instancecontext-objects"></a>共享 InstanceContext 对象  
- 通过自己执行关联，您还可以控制将哪个基于会话的通道或调用与哪个 <xref:System.ServiceModel.InstanceContext> 对象相关联。 有关完整示例，请参阅[InstanceContextSharing](https://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)。  
+ 通过自己执行关联，您还可以控制将哪个基于会话的通道或调用与哪个 <xref:System.ServiceModel.InstanceContext> 对象相关联。 
   
 ## <a name="sessions-and-streaming"></a>会话和流  
  如果有大量要传输的数据，在 WCF 中的流传输模式是缓冲和处理其完整的内存中的消息的默认行为可行的替代方法。 在流与基于会话的绑定一起调用时可能会产生意外行为。 可通过单一通道（数据报通道）执行所有流调用，该通道不支持会话，即使将正在使用的绑定配置为使用会话也是如此。 如果多个客户端通过基于会话的绑定对相同的服务对象进行流调用，并且将服务对象的并发模式设置为 single，同时将其实例上下文模式设置为 `PerSession`，则所用的调用必须经过数据报通道，因此一次只处理一个调用。 一个或多个客户端因此可能会超时。通过将服务对象的 `InstanceContextMode` 设置为 `PerCall` 或者将 Concurrency 设置为 multiple，可以解决此问题。  
@@ -145,6 +145,6 @@ ms.locfileid: "44260199"
 > [!NOTE]
 >  MaxConcurrentSessions 在此情况下不会产生任何影响，因为只有一个“会话”可用。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>  
- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
+- <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

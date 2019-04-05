@@ -1,21 +1,21 @@
 ---
-title: 布尔运算符 (F#)
-description: '了解有关 F # 编程语言中可用的布尔运算符。'
+title: 布尔运算符
+description: 了解有关中可用的布尔运算符F#编程语言。
 ms.date: 05/16/2016
-ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 5353b6ec6a0bd610f3446761a1d28f01f0403302
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45638475"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612733"
 ---
 # <a name="boolean-operators"></a>布尔运算符
 
-本主题介绍对 F # 语言中的布尔运算符的支持。
+本主题介绍中的布尔运算符的支持F#语言。
 
 ## <a name="summary-of-boolean-operators"></a>布尔运算符的摘要
 
-下表汇总了 F # 语言中可用的布尔运算符。 这些运算符支持的唯一类型是`bool`类型。
+下表总结了中可用的布尔运算符F#语言。 这些运算符支持的唯一类型是`bool`类型。
 
 |运算符|描述|
 |--------|-----------|

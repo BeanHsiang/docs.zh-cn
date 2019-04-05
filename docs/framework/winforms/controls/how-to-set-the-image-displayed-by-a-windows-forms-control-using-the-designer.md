@@ -1,5 +1,5 @@
 ---
-title: 如何：使用设计器设置 Windows 窗体控件显示的图像
+title: 如何：设置所显示的图像的 Windows 窗体控件使用设计器
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], images
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: cf9491c7eee7dee197e9a3b91d35bc7f71f4e956
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863101"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702252"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>如何：使用设计器设置 Windows 窗体控件显示的图像
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>如何：设置所显示的图像的 Windows 窗体控件使用设计器
 多个 Windows 窗体控件可以显示图像。 图像可以是一个说明用途的控件，如上按钮表示的磁盘图标的图标**保存**命令。 或者，该图标可以是以提供所需的外观的控件的背景图像。  
   
 > [!NOTE]
@@ -26,14 +26,14 @@ ms.locfileid: "43863101"
   
 1.  在中**属性**窗口中，选择**映像**或**BackgroundImage**属性的控件，然后单击省略号按钮 （  
   
-     ![VisualStudioEllipsesButton 屏幕快照](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![VisualStudioEllipsesButton 屏幕快照](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) 以显示**选择资源**对话框。  
   
 2.  选择你想要显示的图像。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Drawing.Image.FromFile%2A>  
- <xref:System.Drawing.Image>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
- [标记各个 Windows 窗体控件并创建它们的快捷键](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Drawing.Image.FromFile%2A>
+- <xref:System.Drawing.Image>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+- [标记各个 Windows 窗体控件并创建它们的快捷键](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

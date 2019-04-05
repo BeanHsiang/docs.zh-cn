@@ -13,20 +13,20 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 25f9c0141a97d8e52e0883b14fd3e1f4574a05ea
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0d0796eae469f8a40e01e3de02c00149eb3f00c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004270"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374669"
 ---
 # <a name="collect-ink"></a>收集墨迹
 
-[Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) 平台会收集数字墨迹，这是其功能中的核心部分之一。 本主题讨论用于收集墨迹 Windows Presentation Foundation (WPF) 中的方法。
+[Windows Presentation Foundation](../index.md) 平台会收集数字墨迹，这是其功能中的核心部分之一。 本主题讨论用于收集墨迹 Windows Presentation Foundation (WPF) 中的方法。
 
 ## <a name="prerequisites"></a>系统必备
 
-若要使用下面的示例，必须首先安装 Visual Studio 和[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]。 您还应了解如何编写 WPF 应用程序。 有关如何开始使用 WPF 的详细信息，请参阅[演练： 我第一个 WPF 桌面应用程序](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。
+若要使用下面的示例，必须首先安装 Visual Studio 和[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]。 您还应了解如何编写 WPF 应用程序。 有关如何开始使用 WPF 的详细信息，请参阅[演练：我第一个 WPF 桌面应用程序](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
 ## <a name="use-the-inkcanvas-element"></a>使用 InkCanvas 元素
 
@@ -34,15 +34,15 @@ ms.locfileid: "46004270"
 
 通过使用 XAML，您可以设置墨迹收集与添加轻松**InkCanvas**到树的元素。 下面的示例添加<xref:System.Windows.Controls.InkCanvas>到 Visual Studio 中创建一个默认 WPF 项目：
 
-[!code-xaml[DigitalInkTopics#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
+[!code-xaml[DigitalInkTopics#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
 
 **InkCanvas**元素还可以包含子元素，这样便可以将墨迹批注功能添加到几乎任何类型的 XAML 元素。 例如，若要将墨迹功能添加到文本元素，只需使其成为子的<xref:System.Windows.Controls.InkCanvas>:
 
-[!code-xaml[DigitalInkTopics#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
+[!code-xaml[DigitalInkTopics#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
 
 添加图像墨迹标记支持操作同样非常简单：
 
-[!code-xaml[DigitalInkTopics#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
+[!code-xaml[DigitalInkTopics#7](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
 
 ### <a name="inkcollection-modes"></a>InkCollection 模式
 
@@ -58,8 +58,8 @@ ms.locfileid: "46004270"
 
 下面的代码设置值的基础的编辑模式<xref:System.Windows.Forms.CheckBox>:
 
-[!code-csharp[DigitalInkTopics#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
-[!code-vb[DigitalInkTopics#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
+[!code-csharp[DigitalInkTopics#8](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
+[!code-vb[DigitalInkTopics#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
 
 #### <a name="drawingattributes"></a>DrawingAttributes
 
@@ -67,8 +67,8 @@ ms.locfileid: "46004270"
 
 下面的示例更改选定笔画的颜色为红色：
 
-[!code-csharp[DigitalInkTopics#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
-[!code-vb[DigitalInkTopics#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
+[!code-csharp[DigitalInkTopics#9](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
+[!code-vb[DigitalInkTopics#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
 
 ### <a name="defaultdrawingattributes"></a>DefaultDrawingAttributes
 
@@ -78,11 +78,11 @@ ms.locfileid: "46004270"
 
 下面的示例演示如何设置<xref:System.Windows.Ink.DrawingAttributes.Color%2A>属性。 若要使用此代码，创建新的 WPF 项目在 Visual Studio 中名为"HelloInkCanvas"。 中的代码替换*MainWindow.xaml*文件使用以下代码：
 
-[!code-xaml[HelloInkCanvas#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
+[!code-xaml[HelloInkCanvas#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
 
 接下来，将以下按钮事件处理程序添加到代码隐藏文件，在 MainWindow 类中：
 
-[!code-csharp[HelloInkCanvas#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
+[!code-csharp[HelloInkCanvas#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
 
 复制此代码后, 按**F5** Visual Studio 调试器中运行程序中。
 

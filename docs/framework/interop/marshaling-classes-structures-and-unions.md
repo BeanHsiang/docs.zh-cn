@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f3e67fe49fb6d8a4d56b3d36d78d86c6c517d2a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3a4461d14299264a35f36133480cb11709c346ce
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50181600"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221272"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送类、结构和联合
 .NET Framework 中类和结构非常相似。 它们都可以具有字段、属性和事件。 并且都可以具有静态和非静态方法。 一个显著区别是结构是值类型，而类是引用类型。  
   
  下表列出了类、结构和联合的封送处理选项；描述了它们的用法；并提供了到相应平台调用示例的链接。  
   
-|类型|描述|示例|  
+|类型|说明​​|示例|  
 |----------|-----------------|------------|  
 |按值显示类。|将具有整数成员的类传递为 In/Out 参数，与托管的情形相似。|SysTime 示例|  
-|按值显示结构。|将结构作为 In 参数传递。|“结构”示例|  
+|按值显示结构。|将结构作为 In 参数传递。|结构示例|  
 |按引用显示结构。|将结构作为 In/Out 参数传递。|OSInfo 示例|  
 |具有内嵌结构（平展）的结构。|传递非托管函数中表示内嵌结构的结构的类。 此结构在托管的原型中将平展为一个大的结构。|FindFile 示例|  
 |具有指向另一结构的指针的结构。|将包含指向第二结构的指针的结构作为成员传递。|结构示例|  
@@ -108,7 +108,8 @@ typedef struct _MYARRAYSTRUCT
   
  对于此示例中的所有结构，应用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性以确保成员在内存中按出现的顺序进行排列。  
   
- `LibWrap` 类包含 `App` 类所调用的 `TestStructInStruct`、`TestStructInStruct3` 和 `TestArrayInStruct` 方法的托管原型。 每个原型均声明一个参数，如下所示：  
+ 
+  `LibWrap` 类包含 `App` 类所调用的 `TestStructInStruct`、`TestStructInStruct3` 和 `TestArrayInStruct` 方法的托管原型。 每个原型均声明一个参数，如下所示：  
   
 -   `TestStructInStruct` 将对 `MyPerson2` 类型的引用声明为其参数。  
   
@@ -129,7 +130,7 @@ typedef struct _MYARRAYSTRUCT
  [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
   
 ## <a name="findfile-sample"></a>FindFile 示例  
- 此示例演示了如何将包含第二、嵌入结构的结构传递到非托管函数。 它还演示了如何使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性在结构中声明固定长度的数组。 在此示例中，嵌入的结构元素将添加到父结构。 有关未平展的嵌入结构的示例，请参阅[结构示例](https://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e(v=vs.100))。  
+ 此示例演示了如何将包含第二、嵌入结构的结构传递到非托管函数。 它还演示了如何使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性在结构中声明固定长度的数组。 在此示例中，嵌入的结构元素将添加到父结构。 有关未平展的嵌入结构的示例，请参阅[结构示例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100))。  
   
  FindFile 示例使用以下的非托管函数（与其原始函数声明一同显示）：  
   
@@ -159,7 +160,8 @@ typedef struct _WIN32_FIND_DATA
   
  在此示例中，`FindData` 类包含原始结构和嵌入结构中每个元素的对应数据成员。 如果存在 2 个原始字符缓冲区，类将替换字符串。 MarshalAsAttribute 将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举设置为 ByValTStr，它用于标识非托管结构中出现的定长内联字符数组。  
   
- `LibWrap` 类包含 `FindFirstFile` 方法的托管原型，此方法将 `FindData` 类作为参数传递。 此参数必须使用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性进行声明，因为作为引用类型的类默认传递为 In 参数。  
+ 
+  `LibWrap` 类包含 `FindFirstFile` 方法的托管原型，此方法将 `FindData` 类作为参数传递。 此参数必须使用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性进行声明，因为作为引用类型的类默认传递为 In 参数。  
   
 ### <a name="declaring-prototypes"></a>声明原型  
  [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)]
@@ -198,11 +200,16 @@ union MYUNION2
 };  
 ```  
   
- 在托管代码中，将联合定义为结构。 `MyUnion` 结构包含两个值类型（整数和双精度值），将其作为成员。 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性设置为控制每个数据成员的精确位置。 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 属性提供联合的非托管表示形式中字段的物理位置。 请注意，这两个成员具有相同的偏移值，因此成员可以定义相同的内存块数。  
+ 在托管代码中，将联合定义为结构。 
+  `MyUnion` 结构包含两个值类型（整数和双精度值），将其作为成员。 
+  <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性设置为控制每个数据成员的精确位置。 
+  <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 属性提供联合的非托管表示形式中字段的物理位置。 请注意，这两个成员具有相同的偏移值，因此成员可以定义相同的内存块数。  
   
- `MyUnion2_1` 和 `MyUnion2_2` 分别包含值类型（整数）和字符串。 在托管代码中，值类型和引用类型不允许重叠。 此示例使用方法重载以使调用方在调用同一个非托管函数时能够使用这两种类型。 `MyUnion2_1` 的布局是显式的且具有准确的偏移值。 与此相反，`MyUnion2_2` 具有顺序布局，因为不允许引用类型使用显式布局。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举设置为 ByValTStr，它用于标识在联合的非托管表示形式中出现的定长内联字符数组。  
+ `MyUnion2_1` 和 `MyUnion2_2` 分别包含值类型（整数）和字符串。 在托管代码中，值类型和引用类型不允许重叠。 此示例使用方法重载以使调用方在调用同一个非托管函数时能够使用这两种类型。 
+  `MyUnion2_1` 的布局是显式的且具有准确的偏移值。 与此相反，`MyUnion2_2` 的布局是按顺序的，因为不允许引用类型使用显式布局。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性将 <xref:System.Runtime.InteropServices.UnmanagedType> 枚举设置为 ByValTStr，它用于标识在联合的非托管表示形式中出现的定长内联字符数组。  
   
- `LibWrap` 类包含 `TestUnion` 和 `TestUnion2` 方法的原型。 已重载 `TestUnion2` 以将 `MyUnion2_1` 或 `MyUnion2_2` 声明为参数。  
+ 
+  `LibWrap` 类包含 `TestUnion` 和 `TestUnion2` 方法的原型。 已重载 `TestUnion2` 以将 `MyUnion2_1` 或 `MyUnion2_2` 声明为参数。  
   
 ### <a name="declaring-prototypes"></a>声明原型  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -242,7 +249,9 @@ typedef struct _SYSTEMTIME {
   
  在此示例中，`SystemTime` 类包含原始结构中表示为类成员的元素。 设置 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 特性，以确保成员在内存中按照它们出现的顺序进行排列。  
   
- `LibWrap` 类包含 `GetSystemTime` 方法的托管原型，此方法在默认情况下将 `SystemTime` 类作为 In/Out 参数传递。 此参数必须使用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性进行声明，因为作为引用类型的类默认传递为 In 参数。 为使调用方接收结果，这些[方向特性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))必须显式应用。 `App` 类创建 `SystemTime` 类的新实例，并访问它的数据字段。  
+ 
+  `LibWrap` 类包含 `GetSystemTime` 方法的托管原型，此方法在默认情况下将 `SystemTime` 类作为 In/Out 参数传递。 此参数必须使用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 属性进行声明，因为作为引用类型的类默认传递为 In 参数。 为使调用方接收结果，这些[方向特性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))必须显式应用。 
+  `App` 类创建 `SystemTime` 类的新实例，并访问它的数据字段。  
   
 ### <a name="code-samples"></a>代码示例  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -264,11 +273,15 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- `MyStruct` 类包含 ANSI 字符的字符串对象。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 字段指定 ANSI 格式。 `MyUnsafeStruct` 是一种包含 <xref:System.IntPtr> 类型（而非字符串）的结构。  
+ 
+  `MyStruct` 类包含 ANSI 字符的字符串对象。 
+  <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 字段指定 ANSI 格式。 `MyUnsafeStruct` 是一种包含 <xref:System.IntPtr> 类型（而非字符串）的结构。  
   
- `LibWrap` 类包含已重载 `TestOutArrayOfStructs` 原型方法。 如果方法将指针声明为参数，则应使用 `unsafe` 关键字标记类。 因为 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 无法使用不安全代码，所以已重载方法、不安全修饰符和 `MyUnsafeStruct` 结构不是必需的。  
+ 
+  `LibWrap` 类包含已重载 `TestOutArrayOfStructs` 原型方法。 如果方法将指针声明为参数，则应使用 `unsafe` 关键字标记类。 因为 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 无法使用不安全代码，所以已重载方法、不安全修饰符和 `MyUnsafeStruct` 结构不是必需的。  
   
- `App` 类实现 `UsingMarshaling` 方法，此方法执行传递数组所需的全部任务。 使用 `out`（Visual Basic 中的 `ByRef`）关键字标记数组，以指示数据从被调用方传递至调用方。 实现使用以下 <xref:System.Runtime.InteropServices.Marshal> 类方法：  
+ 
+  `App` 类实现 `UsingMarshaling` 方法，此方法执行传递数组所需的全部任务。 使用 `out`（Visual Basic 中的 `ByRef`）关键字标记数组，以指示数据从被调用方传递至调用方。 实现使用以下 <xref:System.Runtime.InteropServices.Marshal> 类方法：  
   
 -   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A>，用于将数据从非托管缓冲区封送到托管对象。  
   
@@ -288,8 +301,7 @@ typedef struct _MYSTRSTRUCT2
  [!code-csharp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
-## <a name="see-also"></a>请参阅  
- [用平台调用封送数据](marshaling-data-with-platform-invoke.md)  
- [平台调用数据类型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [封送处理字符串](marshaling-strings.md)  
- [封送类型数组](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+## <a name="see-also"></a>请参阅
+- [用平台调用封送数据](marshaling-data-with-platform-invoke.md)
+- [封送处理字符串](marshaling-strings.md)
+- [封送处理不同类型的数组](marshaling-different-types-of-arrays.md)

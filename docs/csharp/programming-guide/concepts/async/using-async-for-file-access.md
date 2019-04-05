@@ -2,12 +2,12 @@
 title: 使用异步进行文件访问 (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: bbaeb14d5c17665308932c26a0630f1e9e5dabdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9fa96869e56357a5feb4b0ac0b5bc7514f6eb186
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657371"
 ---
 # <a name="using-async-for-file-access-c"></a>使用异步进行文件访问 (C#)
 可使用异步功能访问文件。 通过使用异步功能，你可以调用异步方法而无需使用回调，也不需要跨多个方法或 lambda 表达式来拆分代码。 若要使同步代码异步，只需调用异步方法而非同步方法，并向代码中添加几个关键字。  
@@ -176,6 +176,6 @@ public async void ProcessWriteMult()
   
 ## <a name="see-also"></a>请参阅
 
-- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
-- [异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
+- [使用 Async 和 Await 的异步编程 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+- [异步返回类型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [异步程序中的控制流 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)

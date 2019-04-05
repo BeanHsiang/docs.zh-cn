@@ -4,12 +4,12 @@ description: 不同的方式企业体系结构的指南是已部署到云，IaaS
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 6566971d8984ec046b8b5fa2db295c1d48c30b20
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369664"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152664"
 ---
 # <a name="architecture-deployment-approaches"></a>体系结构部署方法
 
@@ -166,5 +166,5 @@ PaaS 的主要缺点通常是供应商绑架。 例如，某些 PaaS 提供程�
 * [Wingtip Tickets SaaS 应用程序](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
-[上一页](architecture-approaches.md)
-[下一页](serverless-architecture.md)
+>[上一页](architecture-approaches.md)
+>[下一页](serverless-architecture.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 1b7d5aca6b2c992e4f1d6bdef2a687d1ff43bf71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584540"
 ---
 # <a name="date-and-time-data"></a>日期和时间数据
 SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 新的数据类型包括单独的日期和时间类型以及具有更大范围、更高精度和更强时区感知能力的扩展数据类型。 从 .NET Framework 3.5 Service Pack (SP) 1 开始，适用于 SQL Server 的 .NET Framework 数据提供程序 (<xref:System.Data.SqlClient>) 完全支持 SQL Server 2008 数据库引擎的所有新功能。 您必须安装 .NET Framework 3.5 SP1（或更高版本）才能将这些新功能与 SqlClient 一起使用。  
@@ -88,7 +88,7 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
   
 |属性|描述|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|获取或设置值是否可以为 null。 在向服务器发送 null 参数值时，必须指定 <xref:System.DBNull> 而非 `null`（在 Visual Basic 中为 `Nothing`）。 有关数据库 null 值的详细信息，请参阅[Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)。|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|获取或设置值是否可以为 null。 在向服务器发送 null 参数值时，必须指定 <xref:System.DBNull> 而非 `null`（在 Visual Basic 中为 `Nothing`）。 有关数据库 null 值的详细信息，请参阅 [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md)。|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|获取或设置用来表示值的最大位数。 对于日期和时间数据类型，忽略此设置。|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|获取或设置的值的时间部分是解析为的小数位数`Time`， `DateTime2`，和`DateTimeOffset`。 默认值为 0。这意味着实际小数位数从值推断出来并发送给服务器。|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|对于日期和时间数据类型，忽略此设置。|  
@@ -99,7 +99,7 @@ SQL Server 2008 引入了用于处理日期和时间信息的新数据类型。 
 >  小于 0 或大于等于 24 小时的时间值将引发 <xref:System.ArgumentException>。  
   
 ### <a name="creating-parameters"></a>创建参数  
- 可以通过以下方法来创建 <xref:System.Data.SqlClient.SqlParameter> 对象：使用相应的构造函数；或者通过调用 <xref:System.Data.SqlClient.SqlCommand> 的 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 方法将其添加到 `Add`<xref:System.Data.SqlClient.SqlParameterCollection> 集合。 `Add` 方法将采用构造函数参数或现有的参数对象用作输入。  
+ 可以通过以下方法来创建 <xref:System.Data.SqlClient.SqlParameter> 对象：使用相应的构造函数；或者通过调用 <xref:System.Data.SqlClient.SqlCommand> 的 <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 方法将其添加到 `Add`<xref:System.Data.SqlClient.SqlParameterCollection> 集合。 `Add` 方法将采用构造函数自变量或现有的参数对象用作输入。  
   
  本主题中的以下各部分提供了如何指定日期和时间参数的示例。 使用参数的其他示例，请参阅[配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)并[DataAdapter 参数](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)。  
   
@@ -239,8 +239,8 @@ command.Parameters.AddWithValue( _
 |[使用日期和时间数据](https://go.microsoft.com/fwlink/?LinkId=98361)|提供有关日期和时间数据类型和函数的信息及相应的用法示例。|  
 |[数据类型 (Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|介绍 SQL Server 2008 中的系统数据类型。|  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [SQL Server 数据类型映射](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [配置参数和参数数据类型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [SQL Server 数据类型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

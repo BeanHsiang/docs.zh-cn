@@ -1,23 +1,23 @@
 ---
-title: '&lt;issuerTokenResolver&gt;'
+title: <issuerTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: eefd18c206b7f013c3a423df424c795583c0dde8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a37935fa9302493c0ecaab0f56e1414d44637af6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216326"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269219"
 ---
-# <a name="ltissuertokenresolvergt"></a>&lt;issuerTokenResolver&gt;
+# <a name="issuertokenresolver"></a>\<issuerTokenResolver>
 注册令牌处理程序集合中的处理程序使用的颁发者令牌解析程序。 颁发者令牌解析程序用于解决签名令牌对传入令牌和消息。  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<issuerTokenResolver >  
+\<securityTokenHandlerConfiguration>  
+\<issuerTokenResolver>  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47216326"
   
 |特性|描述|  
 |---------------|-----------------|  
-|类型|指定颁发者令牌解析器的类型。 必须是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>类或派生类型<xref:System.IdentityModel.Tokens.IssuerTokenResolver>类。 必须的。|  
+|类型|指定颁发者令牌解析器的类型。 必须是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>类或派生类型<xref:System.IdentityModel.Tokens.IssuerTokenResolver>类。 必需。|  
   
 ### <a name="child-elements"></a>子元素  
  无  
@@ -50,7 +50,7 @@ ms.locfileid: "47216326"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|提供配置集合的安全令牌处理程序。|  
   
 ## <a name="remarks"></a>备注  
  颁发者令牌解析程序用于解决签名令牌对传入令牌和消息。 它用于检索用来检查签名的加密材料。 必须指定`type`属性。 指定的类型可以是<xref:System.IdentityModel.Tokens.IssuerTokenResolver>派生的自定义类型或<xref:System.IdentityModel.Tokens.IssuerTokenResolver>类。  
@@ -87,5 +87,5 @@ public override void LoadCustomConfiguration(System.Xml.XmlNodeList nodelist)
 }  
 ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.IdentityModel.Tokens.IssuerTokenResolver>
+## <a name="see-also"></a>请参阅
+- <xref:System.IdentityModel.Tokens.IssuerTokenResolver>

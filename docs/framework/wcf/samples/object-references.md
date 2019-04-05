@@ -2,12 +2,12 @@
 title: 对象引用
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 00caccaeed8cebeec2e053d418ae6a5bf9a12138
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 4965ddab23f0f6c64edd3d71e97ba3293d2f69ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577624"
 ---
 # <a name="object-references"></a>对象引用
 此示例演示如何在服务器与客户端之间通过引用来传递对象。 此示例使用模拟*社交网络*。 社会网络由一个 `Person` 类组成，该类包含一个朋友列表，其中每个朋友都是 `Person` 类的一个实例，并有自己的朋友列表。 这将创建一个对象图。 服务在这些社会网络上公开操作。  
@@ -113,6 +113,6 @@ public List<Person> GetCommonFriends(List<Person> people)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
- [可互操作的对象引用](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
+- [可互操作的对象引用](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

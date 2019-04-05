@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cf0aa035b78b582ede76f288443734c25e92a02c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199861"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466526"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函数
 加载指定的版本的.NET Framework 可再发行组件包中包含的 DLL。  
@@ -40,7 +40,7 @@ HRESULT LoadLibraryShim (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `szDllName`  
  [in]的以零结尾的字符串表示要从.NET Framework 库加载的 DLL 的名称。  
   
@@ -68,11 +68,11 @@ HRESULT LoadLibraryShim (
 >  从.NET Framework 2.0 版开始，将加载 Fusion.dll 导致要加载的 CLR。 这是因为在 Fusion.dll 函数现在是由运行时提供其实现的包装器。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** MSCorEE.h  
   
  **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>请参阅
+- [弃用的 CLR 承载函数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

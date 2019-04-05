@@ -1,5 +1,6 @@
 ---
-title: set 关键字（C# 参考）
+title: set 关键字 - C# 参考
+ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - set
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: 66f0b7a709c6474b5428fe2e8faec4f068020066
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0322f1bb94174dd3a0cdd2089c8626d25a80cc1c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187005"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147988"
 ---
 # <a name="set-c-reference"></a>set（C# 参考）
 
@@ -22,7 +23,7 @@ ms.locfileid: "50187005"
 
 [!code-csharp[set#1](~/samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]
 
-通常，`set` 访问器包含返回一个值的单个语句，如前面的示例所示。 从 C# 7.0 开始，可以将 `set` 访问器作为 expression-bodied 成员实现。 下面的示例将 `get` 和 `set` 访问器都作为表达式主体成员实现。
+通常，`set` 访问器包含分配一个值的单个语句，如前面的示例所示。 从 C# 7.0 开始，可以将 `set` 访问器作为 expression-bodied 成员实现。 下面的示例将 `get` 和 `set` 访问器都作为表达式主体成员实现。
 
 [!code-csharp[set#3](~/samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]
   

@@ -1,18 +1,18 @@
 ---
-title: 如何：使用 LINQ 转换 XML (Visual Basic)
+title: 如何：将 XML 转换通过使用 LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: 94ad5180c7921a5ace09f9161de5f275475e46d4
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 0d07c47e64b7eaea80155eabbc50bc2bae0a889c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924904"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834252"
 ---
-# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>如何：使用 LINQ 转换 XML (Visual Basic)
+# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>如何：将 XML 转换通过使用 LINQ (Visual Basic)
 [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)轻松地从一个源中读取 XML 并将其转换为新的 XML 格式。 您可以充分利用 LINQ 查询以检索要转换的内容或将现有文档中的内容更改为新的 XML 格式。  
   
  本主题中的示例转换为 HTML，以在浏览器中查看 XML 源文档中的内容。  
@@ -57,7 +57,7 @@ ms.locfileid: "42924904"
         </Catalog>  
     ```  
   
-     [如何： 从文件、 字符串或 Stream 加载 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)。  
+     [如何：从文件、 字符串或 Stream 加载 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)。  
   
 3.  若要创建源 XML 文档的代码后, 添加以下代码以检索所有\<书籍 > 对象中的元素并将它们转换为 HTML 文档。 列表\<书籍 > 元素通过使用 LINQ 查询返回的集合创建<xref:System.Xml.Linq.XElement>包含转换后的 HTML 的对象。 嵌入的表达式可用于将源文档中新的 XML 格式的值。  
   
@@ -155,10 +155,11 @@ ms.locfileid: "42924904"
     </html>  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)  
- [在 Visual Basic 中操控 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [如何：从文件、字符串或流加载 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>请参阅
+
+- [XML 文本](../../../../visual-basic/language-reference/xml-literals/index.md)
+- [在 Visual Basic 中操控 XML](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [如何：从文件、 字符串或 Stream 加载 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic 中的 LINQ 简介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

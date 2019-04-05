@@ -1,17 +1,18 @@
 ---
-title: '#杂注校验和（C# 参考）'
+title: '#pragma checksum - C# 参考'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 28a9ccfb9d36e648304a177294904ab1b7f18892
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ec215517cd667a6333137d0c7e51fe2ac58f5bcf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024540"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499819"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum（C# 参考）
 为源文件生成校验和，以帮助调试校验 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 页。  
@@ -22,12 +23,12 @@ ms.locfileid: "48024540"
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `"filename"`  
  需要监视更改或更新的文件的名称。  
   
  `"{guid}"`  
- 哈希算法的全局唯一标识符 (GUID)。  
+ 哈希算法的全局唯一标识符 (GUID)。  
   
  `"checksum_bytes"`  
  表示校验和字节的十六进制数字的字符串。 必须是偶数个十六进制数字。 奇数个十六进制数字会导致编译时警告出现，且指令遭忽略。  
@@ -55,6 +56,6 @@ class TestClass
   
 ## <a name="see-also"></a>请参阅
 
-- [C# 参考](../../../csharp/language-reference/index.md)  
-- [C# 编程指南](../../../csharp/programming-guide/index.md)  
+- [C# 参考](../../../csharp/language-reference/index.md)
+- [C# 编程指南](../../../csharp/programming-guide/index.md)
 - [C# 预处理器指令](../../../csharp/language-reference/preprocessor-directives/index.md)

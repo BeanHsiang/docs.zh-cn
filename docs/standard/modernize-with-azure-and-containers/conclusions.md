@@ -4,12 +4,12 @@ description: 更新现有.NET 应用程序使用 Azure 云和 Windows 容器 |�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: af6151d04622c72acdb7f27ebb220bf611418b4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 62a9a38ccbe696c34ef799b574c0f5a95bc8f726
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743964"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147913"
 ---
 # <a name="conclusions"></a>结论
 
@@ -30,4 +30,4 @@ ms.locfileid: "45743964"
 - Microsoft Azure 提供要更新现有.NET Framework 应用程序使用 Windows 容器、 云基础结构和 PaaS 服务的最全面、 最完整的环境。
 
 >[!div class="step-by-step"]
-[上一篇](walkthroughs-technical-get-started-overview.md)
+>[上一篇](walkthroughs-technical-get-started-overview.md)

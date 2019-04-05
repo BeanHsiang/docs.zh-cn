@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a395579892ff2410865a4fcdd19cf20449b82b88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 06e88e7b3f8e4541c8c7058e27cddb41c78076bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421066"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477837"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList 方法
-提供有关与监视器锁关联的事件将排队等待的线程的已排序的列表。  
+提供的监视器锁与相关联的事件的线程排队的排序的列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,9 +35,9 @@ HRESULT GetMonitorEventWaitList (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `ppThreadEnum`  
- [out]ICorDebugThreadEnum 枚举器提供的线程的已排序的列表。  
+ [out]ICorDebugThreadEnum 枚举器提供的线程的顺序的列表。  
   
 ## <a name="return-value"></a>返回值  
  此方法返回以下特定 HRESULT 以及表示方法失败的 HRESULT 错误。  
@@ -45,30 +45,30 @@ HRESULT GetMonitorEventWaitList (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|该列表不为空。|  
-|S_FALSE|列表为空。|  
+|S_FALSE|该列表为空。|  
   
-## <a name="exceptions"></a>异常  
+## <a name="exceptions"></a>Exceptions  
   
 ## <a name="remarks"></a>备注  
- 在列表中的第一个线程是发布到的下一个调用的第一个线程<xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>。 在列表中的下一个线程释放以下调用，依次类推。  
+ 在列表中的第一个线程是下一次发布的第一个线程<xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>。 在列表中的下一个线程释放以下调用中，依次类推。  
   
- 如果列表不为空，则此方法返回，则为 S_OK。 如果列表为空，该方法返回 S_FALSE;在这种情况下，枚举是仍然有效，但它是空。  
+ 如果列表不为空，则此方法返回 S_OK。 如果列表为空，则方法返回 S_FALSE;在这种情况下，枚举仍然有效，但为空。  
   
- 在任一情况下，枚举接口可以仅为当前的同步状态的持续时间是可用。 但是，从其分配的线程的接口都有效，直到线程退出。  
+ 在任一情况下，枚举接口可以仅为当前同步状态的持续时间是可用。 但是，从该分发的线程接口都有效，直到线程退出为止。  
   
- 如果`ppThreadEnum`不是有效的指针，结果不可确定。  
+ 如果`ppThreadEnum`不是有效的指针，则结果不可确定。  
   
- 出错时，无法确定哪些，如果有的话，线程在等待监视器，该方法将返回一个 HRESULT，指示失败。  
+ 出错时，无法确定的如果有，线程处于等待状态监视器，该方法将返回一个 HRESULT，指示失败。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>请参阅
+- [调试接口](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [调试](../../../../docs/framework/unmanaged-api/debugging/index.md)

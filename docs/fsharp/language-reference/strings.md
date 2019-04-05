@@ -1,24 +1,24 @@
 ---
-title: 字符串 (F#)
-description: "了解 F # 'string' 类型如何表示为一系列 Unicode 字符的不可变的文本。"
+title: 字符串
+description: 了解如何F#'string' 类型不可变的文本表示为一系列 Unicode 字符。
 ms.date: 05/16/2016
-ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 5b55b0c87b6636346677b973e093e7bcba324e98
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43799338"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610653"
 ---
 # <a name="strings"></a>字符串
 
 > [!NOTE]
-本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
+> 本文中的 API 参考链接将转至 MSDN。  Docs.microsoft.com API 参考尚未完成。
 
 `string`类型将不可变的文本表示为一系列 Unicode 字符。 `string` 是 .NET Framework 中 `System.String` 的别名。
 
 ## <a name="remarks"></a>备注
 
-字符串文本用引号 （"） 字符分隔。 反斜杠字符 ( \\ ) 使用某些特殊字符进行编码。 反斜杠和组合在一起的下一个字符被称为*转义序列*。 转义序列在 F # 字符串文本会显示下表中受支持。
+字符串文本用引号 （"） 字符分隔。 反斜杠字符 ( \\ ) 使用某些特殊字符进行编码。 反斜杠和组合在一起的下一个字符被称为*转义序列*。 转义序列中支持F#字符串文本下表中所示。
 
 |字符|转义序列|
 |---------|---------------|
@@ -78,7 +78,7 @@ def
 
 ## <a name="string-class"></a>字符串类
 
-因为 F # 中的字符串类型是实际.NET Framework`System.String`类型，所有`System.String`成员均可。 这包括`+`运算符，用来连接字符串`Length`属性，并`Chars`Unicode 字符数组的形式返回字符串的属性。 有关字符串的详细信息，请参阅`System.String`。
+因为字符串类型在F#是实际.NET Framework`System.String`键入所有`System.String`成员均可。 这包括`+`运算符，用来连接字符串`Length`属性，并`Chars`Unicode 字符数组的形式返回字符串的属性。 有关字符串的详细信息，请参阅`System.String`。
 
 通过使用`Chars`属性的`System.String`，可以通过指定一个索引，如下面的代码中所示访问字符串中的单个字符。
 

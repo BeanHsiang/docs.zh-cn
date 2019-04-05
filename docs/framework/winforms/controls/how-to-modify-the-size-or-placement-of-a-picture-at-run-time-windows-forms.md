@@ -1,5 +1,5 @@
 ---
-title: 如何：在运行时修改图片的大小或位置（Windows 窗体）
+title: 如何：在运行时 （Windows 窗体） 中修改的大小或位置的图片
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 9e6e114e0a9d7e5e9c17ba21ef941703cd108784
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 021cb448e5dbcb3ea1405d5cedaed1ae6d4f1b53
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534769"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709773"
 ---
-# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>如何：在运行时修改图片的大小或位置（Windows 窗体）
-如果你使用 Windows 窗体<xref:System.Windows.Forms.PictureBox>控件在窗体中，可以设置<xref:System.Windows.Forms.PictureBox.SizeMode%2A>到属性：  
+# <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>如何：在运行时 （Windows 窗体） 中修改的大小或位置的图片
+如果使用 Windows 窗体<xref:System.Windows.Forms.PictureBox>控件在窗体上可以设置<xref:System.Windows.Forms.PictureBox.SizeMode%2A>到其上的属性：  
   
 -   将图片的左上的角的控件的左上角对齐  
   
--   使控件内的图片居中  
+-   使图片在控件内居中  
   
--   调整控件以适应其显示的图片的大小  
+-   调整控件以适合其显示的图片的大小  
   
 -   拉伸以适合控件显示的任何图片  
   
- 拉伸图片 （尤其是一个位图格式） 可能导致图像质量丢失。 图元文件，它们是在运行时绘制图像的图形说明的列表，可更好适用于拉伸比位图。  
+ 拉伸图片 （尤其是一个位图格式） 可能导致丢失在图像质量。 图元文件，这是一系列有关在运行时绘制图像的图形说明的都更好地适合拉伸比位图。  
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>若要在运行时设置的缩放模式属性  
   
-1.  设置<xref:System.Windows.Forms.PictureBox.SizeMode%2A>到<xref:System.Windows.Forms.PictureBoxSizeMode.Normal>（默认值）、 <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>， <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>，或<xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>。 <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> 意味着图像应置于控件的左上角;如果图像大于控件，其下限和右边缘被剪切。 <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> 意味着映像控件; 内居中如果图像大于控件，图片的外边缘被剪切。 <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> 表示控件的大小调整为图像的大小。 <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> 相反，并表示图像的大小调整到控件的大小。  
+1.  设置<xref:System.Windows.Forms.PictureBox.SizeMode%2A>到<xref:System.Windows.Forms.PictureBoxSizeMode.Normal>（默认值）， <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>， <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>，或<xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>。 <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> 映像是放置控件的左上角;如果图像大于该控件，将剪切其较低和右边缘。 <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> 表示该映像在控件中; 中居中如果图像大于该控件，将剪切图片的外边缘。 <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> 表示控件的大小调整为图像的大小。 <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> 相反，并表示图像的大小调整为该控件的大小。  
   
-     在下面的示例中，设置为的位置的路径是映像的我的文档文件夹。 此操作后，因为你可以采用大多数计算机运行 Windows 操作系统，将包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。 下面的示例假定的窗体具有<xref:System.Windows.Forms.PictureBox>已添加的控件。  
+     在下面的示例中，设置的位置的路径是映像的 My Documents 文件夹。 此操作后，因为您可以假定大多数运行 Windows 操作系统的计算机都包含此目录。 这还使得具有最低系统访问级别的用户能够安全运行应用程序。 下面的示例假定窗体具有<xref:System.Windows.Forms.PictureBox>已添加的控件。  
   
     ```vb  
     Private Sub StretchPic()  
@@ -82,9 +82,9 @@ ms.locfileid: "33534769"
        }  
     ```  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.PictureBox>  
- [如何：使用设计器加载图片](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- [PictureBox 控件概述](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- [如何：在运行时设置图片](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- [PictureBox 控件](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.PictureBox>
+- [如何：使用设计器加载图片](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [PictureBox 控件概述](picturebox-control-overview-windows-forms.md)
+- [如何：在运行时设置图片](how-to-set-pictures-at-run-time-windows-forms.md)
+- [PictureBox 控件](picturebox-control-windows-forms.md)

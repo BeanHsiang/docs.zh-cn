@@ -2,12 +2,12 @@
 title: Null 文本和类型推理 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 74ff2b459488f896c5ea6af4f7d1e045da5a7983
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2499579237155ff3f7291f795bd1ce9e8a84163c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764211"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529104"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Null 文本和类型推理 (Entity SQL)
 Null 文本与 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 类型系统中的任何类型都兼容。 但是，为了正确进行 Null 文本类型推理，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 对何处可以使用 Null 文本实施某些约束。  
@@ -40,5 +40,5 @@ Null 文本与 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 类型系
   
  其他情况下不能使用自由浮动 Null 文本。 例如，它们不能用作行构造函数的自变量。  
   
-## <a name="see-also"></a>请参阅  
- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>请参阅
+- [实体 SQL 概述](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

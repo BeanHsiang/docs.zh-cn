@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: e1625d2cdf0be4106a43b9d40aef97ea2b5c4ec4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999456"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981564"
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化简介
 
@@ -28,7 +28,8 @@ ms.locfileid: "45999456"
 > [!NOTE]
 > XML 序列化不能转换方法、索引器、私有字段或只读属性（只读集合除外）。 若要序列化对象的所有公共和私有字段和属性，请使用 <xref:System.Runtime.Serialization.DataContractSerializer> 而不要使用 XML 序列化。
 
- XML 序列化中的中心类是 <xref:System.Xml.Serialization.XmlSerializer> 类，此类中最重要的方法是 Serialize 和 Deserialize 方法。 <xref:System.Xml.Serialization.XmlSerializer> 创建 C# 文件并将其编译为 .dll 文件，以执行此序列化。 在 .NET Framework 2.0 中，[XML 序列化程序生成器工具 (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) 旨在预先生成要与应用程序一起部署的这些序列化程序集，并改进启动性能。 生成的 XML 流**XmlSerializer**符合 World Wide Web 联合会 (W3C) [XML 架构定义语言 (XSD) 1.0 建议](https://www.w3.org/TR/xslt)。 而且，生成的数据类型符合文档“XML 架构第 2 部分：数据类型”(XML Schema Part 2: Datatypes)。
+ XML 序列化中的中心类是 <xref:System.Xml.Serialization.XmlSerializer> 类，此类中最重要的方法是 Serialize 和 Deserialize 方法。 
+  <xref:System.Xml.Serialization.XmlSerializer> 创建 C# 文件并将其编译为 .dll 文件，以执行此序列化。 在 .NET Framework 2.0 中，[XML 序列化程序生成器工具 (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) 旨在预先生成要与应用程序一起部署的这些序列化程序集，并改进启动性能。 生成的 XML 流**XmlSerializer**符合 World Wide Web 联合会 (W3C) [XML 架构定义语言 (XSD) 1.0 建议](https://www.w3.org/TR/xslt)。 此外，生成的数据类型都符合文档标题为"XML 架构第 2 部分：数据类型。"
 
  对象中的数据是用编程语言构造来描述的，如类、字段、属性、基元类型、数组，甚至是 XmlElement 或 XmlAttribute 对象形式的嵌入 XML。 您可以创建自己的用特性批注的类，也可以使用 XML 架构定义工具生成基于现有 XML 架构的类。
 
@@ -36,9 +37,9 @@ ms.locfileid: "45999456"
 
  特性可控制 XmlSerializer 类生成的 XML 流，使你能够设置 XML 流的 XML 命名空间、元素名称、特性名称等。 有关这些特性以及它们如何控制 XML 序列化的详细信息，请参阅[使用特性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)。 有关那些用于控制生成的 XML 的特性的表格，请参阅[控制 XML 序列化的特性](attributes-that-control-xml-serialization.md)。
 
- XmlSerializer 类可以进一步序列化对象并生成编码的 SOAP XML 流。 生成的 XML 符合万维网联合会文档“简单对象访问协议 (SOAP) 1.1”(Simple Object Access Protocol (SOAP) 1.1) 的第 5 节。 有关此过程的详细信息，请参阅[如何：将对象序列化为 SOAP 编码的 XML 流](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)。 有关可控制生成的 XML 的特性的表格，请参阅[控制编码的 SOAP 序列化的特性](attributes-that-control-encoded-soap-serialization.md)。
+ XmlSerializer 类可以进一步序列化对象并生成编码的 SOAP XML 流。 生成的 XML 符合万维网联合会文档“简单对象访问协议 (SOAP) 1.1”(Simple Object Access Protocol (SOAP) 1.1) 的第 5 节。 有关此过程的详细信息，请参阅[如何：SOAP 编码的 XML Stream 将对象序列化为](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)。 有关可控制生成的 XML 的特性的表格，请参阅[控制编码的 SOAP 序列化的特性](attributes-that-control-encoded-soap-serialization.md)。
 
- XmlSerializer 类生成由 XML Web 服务创建并传递给 XML Web 服务的 SOAP 信息。 要控制 SOAP 消息，可以将特性应用于在 XML Web services 文件 (.asmx) 中找到的类、返回值、参数和字段。 由于 XML Web services 可以使用文本或编码的 SOAP 样式，因此既可以使用“用来控制 XML 序列化的特性”中列出的特性，也可以使用“用来控制编码的 SOAP 序列化的特性”中列出的特性。 有关使用特性来控制由 XML Web 服务生成的 XML 的详细信息，请参阅[使用 XML Web 服务进行 XML 序列化](xml-serialization-with-xml-web-services.md)。 有关 SOAP 和 XML Web 服务的详细信息，请参阅[自定义 SOAP 信息](https://msdn.microsoft.com/en-us/subscriptions/index/dkwy2d72\(v=vs.71\).aspx)。
+ XmlSerializer 类生成由 XML Web 服务创建并传递给 XML Web 服务的 SOAP 信息。 要控制 SOAP 消息，可以将特性应用于在 XML Web services 文件 (.asmx) 中找到的类、返回值、参数和字段。 由于 XML Web services 可以使用文本或编码的 SOAP 样式，因此既可以使用“用来控制 XML 序列化的特性”中列出的特性，也可以使用“用来控制编码的 SOAP 序列化的特性”中列出的特性。 有关使用特性来控制由 XML Web 服务生成的 XML 的详细信息，请参阅[使用 XML Web 服务进行 XML 序列化](xml-serialization-with-xml-web-services.md)。 有关 SOAP 和 XML Web services 的详细信息，请参阅[自定义 SOAP 消息格式设置](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))。
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer 应用程序的安全注意事项
 
@@ -107,7 +108,7 @@ public class OrderForm
 
 - DataSet 对象。
 
- 有关序列化或反序列化对象的详细信息，请参阅[如何：序列化对象](how-to-serialize-an-object.md)和[如何：反序列化对象](how-to-deserialize-an-object.md)。
+ 有关序列化或反序列化对象的详细信息，请参阅[如何：将对象序列化为](how-to-serialize-an-object.md)和[如何：反序列化对象](how-to-deserialize-an-object.md)。
 
 ## <a name="advantages-of-using-xml-serialization"></a>使用 XML 序列化的优点
 
@@ -147,7 +148,7 @@ XML 序列化的另一个优点是，只要生成的 XML 流符合给定的架�
 
 ## <a name="xsd-data-type-mapping"></a>XSD 数据类型映射
 
-标题为的 W3C 文档[XML 架构第 2 部分： 数据类型](https://www.w3.org/TR/xmlschema-2/)在 XML 架构定义语言 (XSD) 架构中指定允许的简单数据类型。 对于其中的许多数据类型（如“int”和“decimal”），.NET Framework 中都有相应的数据类型。 然而，某些 XML 数据类型在 .NET Framework 中没有相应的数据类型（如“NMTOKEN”数据类型）。 在这种情况下，如果使用 XML 架构定义工具（[XML 架构定义工具 (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)）从架构中生成类，相应的特性会应用到字符串类型的成员，其“DataType”属性会设置为 XML 数据类型名称。 例如，如果架构包含 XML 数据类型为“NMTOKEN”且名为“MyToken”的元素，则生成的类可能包含下例中所示的成员。
+标题为的 W3C 文档[XML 架构第 2 部分：数据类型](https://www.w3.org/TR/xmlschema-2/)在 XML 架构定义语言 (XSD) 架构中指定允许的简单数据类型。 对于其中的许多数据类型（如“int”和“decimal”），.NET Framework 中都有相应的数据类型。 然而，某些 XML 数据类型在 .NET Framework 中没有相应的数据类型（如“NMTOKEN”数据类型）。 在这种情况下，如果使用 XML 架构定义工具（[XML 架构定义工具 (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)）从架构中生成类，相应的特性会应用到字符串类型的成员，其“DataType”属性会设置为 XML 数据类型名称。 例如，如果架构包含 XML 数据类型为“NMTOKEN”且名为“MyToken”的元素，则生成的类可能包含下例中所示的成员。
 
 ```vb
 <XmlElement(DataType:="NMTOKEN")> _
@@ -185,5 +186,5 @@ public string MyToken;
 - [序列化](index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML 序列化示例](examples-of-xml-serialization.md)
-- [如何：序列化对象](how-to-serialize-an-object.md)
+- [如何：将对象序列化](how-to-serialize-an-object.md)
 - [如何：反序列化对象](how-to-deserialize-an-object.md)

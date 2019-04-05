@@ -2,12 +2,12 @@
 title: 入门 (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
-ms.openlocfilehash: 1bf91b511c1954effb53f30dd32729660f73aa35
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 743b99aeaaf4e0ce0f3049dd582ab396570ca295
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452744"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903609"
 ---
 # <a name="getting-started-linq-to-dataset"></a>入门 (LINQ to DataSet)
 本节提供有关使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 进行编程的介绍性信息。  
@@ -32,7 +32,7 @@ ms.locfileid: "49452744"
   
  <xref:System.Data.DataTableExtensions>  
   
-## <a name="see-also"></a>请参阅  
- [LINQ 和 ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [LINQ 入门](https://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+## <a name="see-also"></a>请参阅
+- [LINQ 和 ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)
+- [语言集成查询 (LINQ)-C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+- [语言集成查询 (LINQ) 的 Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  

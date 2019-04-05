@@ -1,17 +1,17 @@
 ---
-title: '&lt;属性&gt;元素 (.NET Native)'
+title: <Property>元素 (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b4541bc5a878739c17179576739fbe33384445d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c29cbfbd1c84d267e129bf97d4e9126c772d06d6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205200"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279105"
 ---
-# <a name="ltpropertygt-element-net-native"></a>&lt;属性&gt;元素 (.NET Native)
+# <a name="property-element-net-native"></a>\<属性 > 元素 (.NET Native)
 将运行时反射策略应用到一个属性。  
   
 ## <a name="syntax"></a>语法  
@@ -99,7 +99,7 @@ ms.locfileid: "50205200"
     </Directives>  
     ```  
   
-## <a name="see-also"></a>请参阅  
- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>请参阅
+- [运行时指令 (rd.xml) 配置文件参考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [运行时指令元素](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [运行时指令策略设置](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

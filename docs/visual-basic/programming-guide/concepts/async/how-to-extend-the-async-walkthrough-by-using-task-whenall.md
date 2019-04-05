@@ -1,29 +1,29 @@
 ---
-title: 如何： 使用 Task.WhenAll (Visual Basic) 扩展异步演练
+title: 如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: 3c502356c27914aeec6b501ada1301ca5ab7b167
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 80fbe824d62b439fe6f015704bc32194e104cd85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619300"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>如何： 使用 Task.WhenAll (Visual Basic) 扩展异步演练
-可以提高的中的异步解决方案性能[演练： 使用 Async 和 Await (Visual Basic 中) 通过 Web 访问](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)通过使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>方法。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>如何：使用 (Visual Basic) Task.WhenAll 扩展异步演练
+您可以提高的中的异步解决方案性能[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)通过使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>方法。 此方法以异步方式等待多个异步操作（它们表示为任务的集合）。  
   
  你可能已在演练中注意到网站以不同速率进行下载。 有时一个网站非常慢，这会延迟所有其余下载。 运行在演练中生成的异步解决方案时，如果不想等待，则可以方便地结束程序，但更好的选项是同时启动所有下载，并让较快的下载继续进行而不等待延迟的下载。  
   
  可将 `Task.WhenAll` 方法应用于任务的集合。 `WhenAll` 的应用程序返回单个任务，直到集合中的每个任务都已完成之后，该任务才会完成。 任务会表现为并行运行，但不会创建其他线程。 任务可以按任何顺序完成。  
   
 > [!IMPORTANT]
->  下面的过程介绍在开发的异步应用程序的扩展[演练： 使用 Async 和 Await (Visual Basic 中) 通过 Web 访问](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以通过完成演练或从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载代码来开发应用程序。  
+>  下面的过程介绍在开发的异步应用程序的扩展[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 可以通过完成演练或从[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下载代码来开发应用程序。  
 >   
 >  若要运行示例，必须在计算机上安装 Visual Studio 2012 或更高版本。  
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>向你的 GetURLContentsAsync 解决方案中添加 Task.WhenAll  
   
-1.  添加`ProcessURLAsync`中开发的第一个应用程序的方法[演练： 使用 Async 和 Await (Visual Basic 中) 通过 Web 访问](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+1.  添加`ProcessURLAsync`中开发的第一个应用程序的方法[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
     -   如果你已下载的代码[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)，打开 AsyncWalkthrough 项目，然后添加`ProcessURLAsync`MainWindow.xaml.vb 文件。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "50188217"
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>向 HttpClient.GetByteArrayAsync 解决方案中添加 Task.WhenAll  
   
-1.  添加以下版本的`ProcessURLAsync`中开发的第二个应用程序[演练： 使用 Async 和 Await (Visual Basic 中) 通过 Web 访问](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+1.  添加以下版本的`ProcessURLAsync`中开发的第二个应用程序[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
     -   如果你已下载的代码[开发人员代码示例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)，打开 AsyncWalkthrough_HttpClient 项目，然后添加`ProcessURLAsync`MainWindow.xaml.vb 文件。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "50188217"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>测试 Task.WhenAll 解决方案  
   
--   对于任一解决方案，按 F5 键以运行程序，然后选择“启动”按钮。 输出应类似于中的异步解决方案的输出[演练： 使用 Async 和 Await (Visual Basic 中) 通过 Web 访问](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 但请注意，网站每次会以不同顺序出现。  
+-   对于任一解决方案，按 F5 键以运行程序，然后选择“启动”按钮。 输出应类似于中的异步解决方案的输出[演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 但请注意，网站每次会以不同顺序出现。  
   
 ## <a name="example"></a>示例  
  以下代码演示使用 `GetURLContentsAsync` 方法从 Web 下载内容的项目的扩展。  
@@ -421,5 +421,5 @@ End Class
   
 ## <a name="see-also"></a>请参阅
 
-- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
-- [演练：使用 Async 和 Await 访问 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
+- [演练：访问 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

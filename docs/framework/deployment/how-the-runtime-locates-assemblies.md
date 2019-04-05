@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661862"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>运行时如何定位程序集
 若要成功部署 .NET Framework 应用程序，必须了解公共语言运行时如何查找和绑定到构成应用程序的程序集。 默认情况下，运行时尝试与生成应用程序的程序集的准确版本绑定。 可通过配置文件设置重写此默认行为。  
@@ -61,7 +61,7 @@ ms.locfileid: "49453445"
         >  不会检查未带强名称的程序集版本，运行时也不会检查全局程序集缓存中未带强名称的程序集。  
   
 <a name="step1"></a>   
-## <a name="step-1-examining-the-configuration-files"></a>第 1 步：检查配置文件  
+## <a name="step-1-examining-the-configuration-files"></a>步骤 1：检查配置文件  
  可根据 3 个 XML 文件在不同级别上配置程序集绑定行为：  
   
 -   应用程序配置文件。  
@@ -138,7 +138,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  最后，运行时检查计算机配置文件。 此文件名为 Machine.config，驻留在本地计算机上安装有运行时的根目录的配置子目录中。 管理员可使用此文件来指定此计算机本地的程序集绑定限制。 计算机配置文件中的设置优先于所有其他配置设置 ；但是，这并不意味着所有配置设置都应置于此文件中。 管理员策略文件确定的版本为最终版本，且不能重写。 Machine.config 文件中指定的重写可影响所有应用程序。 有关配置文件的详细信息，请参阅 [使用配置文件配置应用](../../../docs/framework/configure-apps/index.md)。  
   
 <a name="step2"></a>   
-## <a name="step-2-checking-for-previously-referenced-assemblies"></a>第 2 步：检查以前引用的程序集  
+## <a name="step-2-checking-for-previously-referenced-assemblies"></a>步骤 2：检查以前引用的程序集  
  如果请求的程序集已先前调用中请求过，则公共语言运行时将使用已加载的程序集。 命名构成应用程序的程序集时，这可能会造成影响。 有关命名程序集的详细信息，请参阅 [程序集名称](../../../docs/framework/app-domains/assembly-names.md)。  
   
  如果先前的程序集请求失败，此程序集的后续请求立即失败且不会尝试加载程序集。 从 .NET Framework 2.0 版开始，将缓存程序集绑定故障，且缓存的信息用于确定是否尝试加载此程序集。  
@@ -147,11 +147,11 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 >  若要还原到 .NET framework 1.0 和 1.1 版的行为（即，不缓存绑定故障），请将 [\<disableCachingBindingFailures> 元素](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)包括到配置文件中。  
   
 <a name="step3"></a>   
-## <a name="step-3-checking-the-global-assembly-cache"></a>第 3 步：检查全局程序集缓存  
+## <a name="step-3-checking-the-global-assembly-cache"></a>步骤 3：检查全局程序集缓存  
  对于强名称程序集，通过查看全局程序集缓存继续执行绑定进程。 全局程序集缓存存储可由同一计算机上多个应用程序使用的程序集。 全局程序集缓存中的所有程序集都必须具有强名称。  
   
 <a name="step4"></a>   
-## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>第 4 步：通过基本代码或探测定位程序集  
+## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>步骤 4：通过基本代码或探测定位程序集  
  在通过使用调用程序集引用和配置文件中的信息确定正确的程序集版本，且已在全局程序集缓存中检查此版本（仅针对强名称程序集）之后，公共语言运行时将尝试查找此程序集。 查找程序集的过程涉及以下步骤：  
   
 1.  如果在应用程序配置文件中找到 [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 元素，则运行时会检查指定的位置。 如果找到匹配项，则使用此程序集且不执行探测。 如果此处不存在程序集，则绑定请求失败。  
@@ -247,6 +247,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  例如，如果 Assembly1 引用 Assembly2 且 Assembly1 是从 `http://www.code.microsoft.com/utils` 下载的，则此位置被视为可提示 Assembly2.dll 的位置。 然后运行时会在 `http://www.code.microsoft.com/utils/Assembly2.dll` 和 `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` 中探测程序集。 如果在这两个位置中均未找到 Assembly2，则运行时将查询 Windows Installer。  
   
-## <a name="see-also"></a>请参阅  
-- [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>请参阅
+- [适用于程序集加载的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [部署](../../../docs/framework/deployment/index.md)

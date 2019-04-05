@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504301"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845661"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>启用多个活动结果集
 多个活动结果集 (MARS) 是一项用于 SQL Server 的功能，可用来对单个连接执行多个批处理。 如果对 SQL Server 启用了 MARS，使用的每个命令对象将向该连接添加一个会话。  
@@ -92,13 +92,13 @@ string connectionString = "Data Source=MSSQL1;" +
   
  例如，考虑以下方案。 创建了两个命令对象，一个用于处理结果集，另一个用于更新数据；这两个命令对象通过 MARS 共享公共连接。 在此方案中， `Transaction`。`Commit` 在更新时失败，直到在第一个命令对象，并生成以下异常上读取了所有结果：  
   
- 消息：其他会话正在使用事务的上下文。  
+ 消息:其他会话正在使用事务的上下文。  
   
- 源：.Net SqlClient 数据提供程序  
+ 源：.NET SqlClient 数据提供程序  
   
  要求：(null)  
   
- 收到：System.Data.SqlClient.SqlException  
+ 接收到：System.Data.SqlClient.SqlException  
   
  可以通过三种方式处理此方案：  
   
@@ -109,8 +109,8 @@ string connectionString = "Data Source=MSSQL1;" +
 3.  不使用 MARS；而是对每个命令对象使用独立的连接，就像在 MARS 之前一样。  
   
 ### <a name="detecting-mars-support"></a>检测 MARS 支持  
- 应用程序可以通过读取 `SqlConnection.ServerVersion` 值来检查 MARS 支持。 SQL Server 2005 的主版本号应为 9，SQL Server 2008 的主版本号应为 10。  
+ 应用程序可以通过读取 `SqlConnection.ServerVersion` 值来检查 MARS 支持。  SQL Server 2005 的主版本号应为 9，SQL Server 2008 的主版本号应为 10。  
   
-## <a name="see-also"></a>请参阅  
- [多重活动结果集 (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>请参阅
+- [多重活动结果集 (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET 托管提供程序和数据集开发人员中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: 在自定义日志名称中，只有前八个字符是有意义的
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
-ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 26ba0c0813fa4e1c1c371114dfbac073da888ce9
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583134"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58032911"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>在自定义日志名称中，只有前八个字符是有意义的
 在检查事件日志名称的唯一性时，仅考虑前八个字符。 当事件日志共享前八个字符时，则可能会导致冲突。  
@@ -16,6 +16,7 @@ ms.locfileid: "48583134"
   
 -   为事件日志命名，其中前八个字符是唯一的。  
   
-## <a name="see-also"></a>请参阅  
- [如何： 创建和删除自定义事件日志](https://msdn.microsoft.com/library/af9b7da0-80c7-46ac-b7f7-897063ddd503)  
- [管理事件日志](https://msdn.microsoft.com/library/35f53238-bdd2-417b-acd8-2fd9f7397f18)
+## <a name="see-also"></a>请参阅
+
+- [如何：创建和删除自定义事件日志](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/49dwckkz(v=vs.90))
+- [管理事件日志](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))

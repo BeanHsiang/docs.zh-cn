@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 51cc54d67d5b68e07f1dcfcb4c62f32cd509d51a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 0b36c25742757f2606d103d6af05eee7bc175ea0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697305"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>使用 ASP.NET 开发 Web 应用
 
@@ -22,7 +22,7 @@ ASP.NET 是用于创建 Web 应用程序的 .NET Framework 技术。 有关 ASP.
 - [ASP.NET 网页](https://go.microsoft.com/fwlink/p/?LinkId=251040)
 - [ASP.NET Web API](https://go.microsoft.com/fwlink/p/?LinkId=251041)  
 - [在 Azure 中创建 ASP.NET Framework Web 应用](/azure/app-service/app-service-web-get-started-dotnet-framework)
-- 
+
 ## <a name="developing-web-apps-with-aspnet-core"></a>使用 ASP.NET Core 开发 Web 应用
 
 ASP.NET Core 是 ASP.NET 4.x 的重新设计。 与 ASP.NET 相比，ASP.NET Core 可以提供的部分优势如下：
@@ -41,4 +41,4 @@ ASP.NET Core 是 ASP.NET 4.x 的重新设计。 与 ASP.NET 相比，ASP.NET Cor
   
 ## <a name="see-also"></a>请参阅
 
-[开发指南](../../docs/framework/development-guide.md)
+- [开发指南](../../docs/framework/development-guide.md)

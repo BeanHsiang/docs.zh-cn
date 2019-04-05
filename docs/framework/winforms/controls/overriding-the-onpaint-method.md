@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: fbc0a82f82afcc59384246b58437d521d56d708b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 93afd0d463ed3f52ec6425c9de19a6c147860ed9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838515"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713223"
 ---
 # <a name="overriding-the-onpaint-method"></a>重写 OnPaint 方法
 重写中定义任何事件的基本步骤[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]相同，并且在以下列表总结了。  
@@ -26,7 +26,7 @@ ms.locfileid: "48838515"
   
  <xref:System.Windows.Forms.Control.Paint>在此处详细论述事件，因为每个 Windows 窗体控件必须重写<xref:System.Windows.Forms.Control.Paint>它所继承的事件<xref:System.Windows.Forms.Control>。 基<xref:System.Windows.Forms.Control>类不知道如何派生的控件需要绘制时，它不提供任何绘制逻辑中的<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 <xref:System.Windows.Forms.Control.OnPaint%2A>方法<xref:System.Windows.Forms.Control>只需将调度<xref:System.Windows.Forms.Control.Paint>到已注册的事件接收器的事件。  
   
- 如果您已完成中的示例[如何： 开发简单的 Windows 窗体控件](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)，你已了解的重写示例<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 下面的代码片段摘自该示例。  
+ 如果您已完成中的示例[如何：开发简单的 Windows 窗体控件](how-to-develop-a-simple-windows-forms-control.md)，你已了解的重写示例<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 下面的代码片段摘自该示例。  
   
 ```vb  
 Public Class FirstControl  
@@ -86,7 +86,7 @@ public class PaintEventArgs : EventArgs {
   
  控件调用其<xref:System.Windows.Forms.Control.OnPaint%2A>方法需要更改其可视显示时。 此方法反过来引发<xref:System.Windows.Forms.Control.Paint>事件。  
   
-## <a name="see-also"></a>请参阅  
- [事件](../../../../docs/standard/events/index.md)  
- [呈现 Windows 窗体控件](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)  
- [定义事件](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)
+## <a name="see-also"></a>请参阅
+- [事件](../../../standard/events/index.md)
+- [呈现 Windows 窗体控件](rendering-a-windows-forms-control.md)
+- [定义事件](defining-an-event-in-windows-forms-controls.md)

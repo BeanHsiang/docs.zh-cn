@@ -2,17 +2,17 @@
 title: 按字母顺序列出的 C# 编译器选项
 ms.date: 05/15/2018
 helpviewer_keywords:
-- compiler options [C#], listed alpabetically
-- C# language, compiler options listed alphabitically
+- compiler options [C#], listed alphabetically
+- C# language, compiler options listed alphabetically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525680"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58037696"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>按字母顺序列出的 C# 编译器选项
 
@@ -29,13 +29,17 @@ ms.locfileid: "43525680"
 |[-baseaddress](baseaddress-compiler-option.md)|指定要生成的库的基址。|
 |[-bugreport](bugreport-compiler-option.md)|创建“Bug 报告”文件。 如果与 -errorreport:prompt 或 -errorreport:send 一起使用，则发送任何崩溃信息时都将随附此文件。|
 |[/checked](checked-compiler-option.md)|使编译器生成溢出检查。|
-|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  支持的值为：SHA1（默认值）或 SHA256。|
+|-checksumalgorithm:\<alg>|指定用于计算 PDB 中存储的源文件校验和的算法。  受支持的值为:SHA1（默认值）或 SHA256。<br>由于与 SHA1 冲突，Microsoft 建议使用 SHA256。 |
 |[-codepage](codepage-compiler-option.md)|指定在打开源文件时使用的代码页。|
 |[-debug](debug-compiler-option.md)|发出调试信息。|
 |[-define](define-compiler-option.md)|定义条件编译符号。|
 |[-delaysign](delaysign-compiler-option.md)|仅使用强名称密钥公共部分对程序集进行延迟签名。|
 |[-deterministic](deterministic-compiler-option.md)|如果输入相同，则会导致编译器输出的程序集其二进制内容在整个编译中相同。|
 |[-doc](doc-compiler-option.md)|指定要生成的 XML 文档文件。|
+|-embed|在 PDB 中嵌入所有源文件。|
+|-embed:\<file list>|在 PDB 中嵌入特定文件。|
+|-errorendlocation|每个错误结尾位置的输出行和列。|
+|-errorlog:\<file>|指定要记录所有编译器和分析器诊断的文件。|
 |[-errorreport](errorreport-compiler-option.md)|指定如何处理内部编译器错误；prompt、send 或 none。 默认值为 none。|
 |[-filealign](filealign-compiler-option.md)|指定用于输出文件节的对齐方式。|
 |[/fullpaths](fullpaths-compiler-option.md)|使编译器生成完全限定的路径。|
@@ -44,7 +48,7 @@ ms.locfileid: "43525680"
 |-incremental|启用增量编译 [已过时]。|
 |[-keycontainer](keycontainer-compiler-option.md)|指定强名称密钥容器。|
 |[-keyfile](keyfile-compiler-option.md)|指定强名称密钥文件。|
-|[-langversion:\<string>](langversion-compiler-option.md)|指定语言版本：默认、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或最新版 |
+|[-langversion:\<string>](langversion-compiler-option.md)|指定语言版本：默认、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或最新版本 |
 |[/lib](lib-compiler-option.md)|指定要在其中搜索引用的附加目录。|
 |[-link](link-compiler-option.md)|使指定程序集中的 COM 类型信息对项目可用。|
 |[-linkresource](linkresource-compiler-option.md)|将指定的资源链接到此程序集。|
@@ -68,12 +72,14 @@ ms.locfileid: "43525680"
 |[-reference](reference-compiler-option.md)|从指定的程序集文件引用元数据。|
 |[/refout](refout-compiler-option.md)|除主程序集之外，还生成引用程序集。|
 |[/refonly](refonly-compiler-option.md)|生成引用程序集，而不生成主程序集。|
+|-reportanalyzer|报告其他分析器信息，如执行时间。|
 |[-resource](resource-compiler-option.md)|嵌入指定的资源。|
 |-ruleset:\<file>|指定可禁用特定诊断的规则集文件。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|指定可执行文件可以使用的子系统的最低版本。|
 |[-target](target-compiler-option.md)|使用下列四个选项之一指定输出文件的格式：[-target:appcontainerexe](target-appcontainerexe-compiler-option.md)、[-target:exe](target-exe-compiler-option.md)、[-target:library](target-library-compiler-option.md)、[-target:module](target-module-compiler-option.md)、[-target:winexe](target-winexe-compiler-option.md)、[-target:winmdobj](target-winmdobj-compiler-option.md)。|
-|[不安全](unsafe-compiler-option.md)|允许[不安全](../../../csharp/language-reference/keywords/unsafe.md)代码。|
+|[unsafe](unsafe-compiler-option.md)|允许[不安全](../../../csharp/language-reference/keywords/unsafe.md)代码。|
 |[-utf8output](utf8output-compiler-option.md)|以 UTF-8 编码格式输出编译器消息。|
+|-version|显示编译器的版本号并退出。|
 |[/warn](warn-compiler-option.md)|设置警告等级 (0-4)。|
 |[-warnaserror](warnaserror-compiler-option.md)|将特定警告报告为错误。|
 |[-win32icon](win32icon-compiler-option.md)|对输出使用此图标。|
@@ -82,7 +88,7 @@ ms.locfileid: "43525680"
 
 ## <a name="see-also"></a>请参阅
 
-- [C# 编译器选项](index.md)  
-- [按类别列出的 C# 编译器选项](listed-by-category.md)  
-- [如何：为 Visual Studio 命令行设置环境变量](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [C# 编译器选项](index.md)
+- [按类别列出的 C# 编译器选项](listed-by-category.md)
+- [如何：设置 Visual Studio 命令行的环境变量](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

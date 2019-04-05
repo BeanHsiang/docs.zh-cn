@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 9cd180c5e1bd8afff462c380ad3389a78027eb48
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5ec801e1e20fdb495537505a71ddaef6218ad5fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54521363"
 ---
 # <a name="bindings-and-security"></a>绑定与安全
 系统提供的绑定包括与 Windows Communication Foundation (WCF) 提供程序的 WCF 应用程序的快速方法。 但有一个例外，就是所有绑定都启用了默认的安全方案。 本主题将帮助你根据安全需要来选择正确的绑定。  
@@ -161,7 +161,7 @@ ms.locfileid: "50195315"
   
 -   同时启用传输安全性和消息安全性 (Both)。  
   
--   支持的客户端凭据类型：None、Windows、UserName、Certificate、IssuedToken。  
+-   支持的客户端凭据类型：None、 Windows、 用户名、 证书、 IssuedToken。  
   
  仅当安全模式设置为 <xref:System.ServiceModel.MessageCredentialType.Certificate> 或 <xref:System.ServiceModel.NetMsmqSecurityMode.Both> 时，才支持 <xref:System.ServiceModel.NetMsmqSecurityMode.Message> 凭据。  
   
@@ -205,8 +205,8 @@ ms.locfileid: "50195315"
 |类型|描述|  
 |----------|-----------------|  
 |无|指定客户端不需要提供任何凭据。 这相当于匿名客户端。|  
-|Basic|基本身份验证 有关详细信息，请参阅 RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，可在[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
-|摘要|摘要式身份验证。 有关详细信息，请参阅 RFC 2617 – HTTP 身份验证： 基本和摘要式身份验证，可在[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
+|Basic|基本身份验证 有关详细信息，请参阅 RFC 2617 – HTTP 身份验证：基本和摘要式身份验证，可在[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
+|摘要|摘要式身份验证。 有关详细信息，请参阅 RFC 2617 – HTTP 身份验证：基本和摘要式身份验证，可在[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
 |NTLM|NT LAN Manager (NTLM) 身份验证。|  
 |Windows|Windows 身份验证。|  
 |证书|使用证书执行的身份验证。|  
@@ -223,10 +223,10 @@ ms.locfileid: "50195315"
 |证书|允许服务要求使用证书对客户端进行身份验证。|  
 |IssuedToken|允许服务使用安全令牌服务来提供自定义令牌。|  
   
-## <a name="see-also"></a>请参阅  
- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>请参阅
+- [安全性概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [保护服务和客户端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [选择凭据类型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [使用自定义绑定的安全功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [安全行为](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Windows Server App Fabric 的安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa12252c4f2a8e710a4a880af103aa324f8118ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 22276e543e8eeb9c6cf9aeee7a9af92c503d3a7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549010"
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName 接口
 提供用于描述和使用程序集的唯一标识的方法。  
@@ -30,22 +30,22 @@ ms.locfileid: "33432395"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Clone 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|创建此的浅表副本`IAssemblyName`对象。|  
-|[Finalize 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|允许此`IAssemblyName`对象以释放资源并执行其他清理操作之前调用其析构函数。|  
+|[Clone 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|创建的浅表副本`IAssemblyName`对象。|  
+|[Finalize 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|允许此`IAssemblyName`对象释放资源并调用其析构函数之前执行其他清理操作。|  
 |[GetDisplayName 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|获取此引用的程序集的用户可读名称`IAssemblyName`对象。|  
 |[GetName 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|获取此引用的程序集的简单、 非加密名称`IAssemblyName`对象。|  
 |[GetProperty 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|获取一个指针指向由指定引用的属性`PropertyId`。|  
 |[GetVersion 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getversion-method.md)|获取此引用的程序集的版本信息`IAssemblyName`对象。|  
 |[IsEqual 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|确定指定`IAssemblyName`对象是否等于此`IAssemblyName`、 根据指定的比较标志。|  
-|[SetProperty 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|设置指定所引用的属性的值`PropertyId`。|  
+|[SetProperty 方法](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|设置由指定引用的属性的值`PropertyId`。|  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** Fusion.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IAssemblyEnum 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+## <a name="see-also"></a>请参阅
+- [合成接口](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IAssemblyEnum 接口](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

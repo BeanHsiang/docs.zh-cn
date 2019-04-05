@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 632d3912bae28da22e701078bb47d2d8dbfd3644
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c1ee576f41d20fdf4523fb4b566c3f2ce870d62c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423398"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469087"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>ICorDebugRegisterSet::GetThreadContext 方法
 获取当前线程的上下文。  
@@ -37,27 +37,27 @@ HRESULT GetThreadContext(
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `contextSize`  
  [in]大小，以字节为单位的`context`数组。  
   
  `context`  
- [在中，out]撰写 Win32 的字节数组`CONTEXT`当前平台的结构。  
+ [in、 out]编写 Win32 的字节数组`CONTEXT`对于当前平台的结构。  
   
 ## <a name="remarks"></a>备注  
- 调试器应调用此函数而不是 Win32`GetThreadContext`函数，因为该线程可能处于其上下文已被暂时更改"被劫持"状态。 返回的数据是 Win32`CONTEXT`当前平台的结构。  
+ 调试程序应调用此函数而不是 Win32`GetThreadContext`函数，因为该线程可能在其上下文已被暂时更改"被劫持"状态。 返回的数据是 Win32`CONTEXT`对于当前平台的结构。  
   
- 对于非叶的帧，客户端应检查哪些寄存器是有效的通过使用[icordebugregisterset:: Getregistersavailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)。  
+ 对于非叶帧，客户端应检查哪些寄存器是有效的通过使用[icordebugregisterset:: Getregistersavailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>请参阅  
- [ICorDebugRegisterSet 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [ICorDebugRegisterSet2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a>请参阅
+- [ICorDebugRegisterSet 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 接口](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

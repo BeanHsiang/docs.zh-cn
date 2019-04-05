@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582835"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975961"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>正则表达式示例：扫描 HREF
 下面的示例搜索输入字符串并显示所有 href="…" 的值和它们在字符串中的位置。  
@@ -38,13 +38,13 @@ ms.locfileid: "48582835"
   
  正则表达式模式 `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` 的含义如下表所示。  
   
-|模式|描述|  
+|模式|说明|  
 |-------------|-----------------|  
 |`href`|匹配文本字符串“href”。 匹配不区分大小写。|  
 |`\s*`|匹配零个或多个空白字符。|  
 |`=`|匹配等于号。|  
 |`\s*`|匹配零个或多个空白字符。|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|匹配以下项之一，而不将结果分配到捕获组：<br /> <ul><li><p>一个引号或单引号，后跟零个或多个引号或单引号以外的任意字符，然后再后跟一个引号或单引号。 名为 `1` 的组包含在此模式。</p></li><li><p>一个或多个非空格字符。 名为 `1` 的组包含在此模式。</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|匹配以下项之一，而不将结果分配到捕获组：<br /> <ul><li><p>一个引号或单引号，后跟零个或多个引号或单引号以外的任意字符，然后再后跟一个引号或单引号。 名为 `1` 的组包含在此模式。</p></li><li><p>一个或多个非空格字符。 名为 `1` 的组包含在此模式。</p></li></ul>|  
 |`(?<1>[^"']*)`|将零个或多个引号或单引号以外的任意字符分配给名为 `1` 的捕获组。|  
 |`(?<1>\S+)`|将一个或多个非空白字符分配给名为 `1` 的捕获组。|  
   

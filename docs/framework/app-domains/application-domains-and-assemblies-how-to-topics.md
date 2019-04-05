@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bed7c6c856c55662b46ff581f007f9df6b67149d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 500ed62c20036eb3cb78952504fbb0ff0f0c11dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636594"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>应用程序域和程序集帮助主题
 以下各节包含使用应用程序域和程序集进行编程的相关概念性文档中的所有操作说明主题链接。  
@@ -27,15 +27,15 @@ ms.locfileid: "50190991"
   
 -   [如何：将程序集加载到应用程序域中](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
   
--   [如何：从程序集获取类型和成员信息](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+-   [如何：从程序集获得类型和成员信息](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
   
  **程序集**  
   
--   [如何：确定程序集的完全限定的名称](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+-   [如何：确定程序集的完全限定名](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
   
 -   [如何：生成单文件程序集](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
   
--   [如何：生成多文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+-   [如何：生成单文件程序集](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
   
 -   [如何：创建公钥/私钥对](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
   
@@ -53,5 +53,5 @@ ms.locfileid: "50190991"
   
 -   [如何：查看程序集内容](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 - [应用程序域和程序集](../../../docs/framework/app-domains/index.md)

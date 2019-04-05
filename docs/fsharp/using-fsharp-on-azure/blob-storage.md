@@ -1,20 +1,20 @@
 ---
-title: '开始使用 Azure Blob 存储中使用 F #'
+title: 开始使用 Azure Blob 存储使用F#
 description: 使用 Azure Blob 存储在云中存储非结构化的数据。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44037277"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846423"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>开始使用 Azure Blob 存储中使用 F # #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>开始使用 Azure Blob 存储中使用 F\#
 
 Azure Blob 存储是将非结构化数据作为对象/blob 存储在云中的服务。 Blob 存储可以存储任何类型的文本或二进制数据（如文档、媒体文件或应用程序安装程序）。 Blob 存储也称为对象存储。
 
-本文介绍如何使用 Blob 存储执行常见任务。 相关示例是使用 F # 使用用于.NET 的 Azure 存储客户端库。 涉及的任务包括如何上传、 列出、 下载和删除 blob。
+本文介绍如何使用 Blob 存储执行常见任务。 相关示例是使用F#使用用于.NET 的 Azure 存储客户端库。 涉及的任务包括如何上传、 列出、 下载和删除 blob。
 
 有关 blob 存储的概念概述，请参阅[适用于 blob 存储的.NET 指南](/azure/storage/storage-dotnet-how-to-use-blobs)。
 
@@ -22,9 +22,9 @@ Azure Blob 存储是将非结构化数据作为对象/blob 存储在云中的服
 
 若要使用本指南，您必须首先[创建 Azure 存储帐户](/azure/storage/storage-create-storage-account)。 为此帐户还需要存储访问密钥。
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>创建 F # 脚本，并开始将 F # Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>创建F#脚本并启动F#交互式
 
-这篇文章中的示例可以在 F # 应用程序或 F # 脚本中使用。 若要创建 F # 脚本，创建的文件`.fsx`扩展，例如`blobs.fsx`，在 F # 开发环境中。
+这篇文章中的示例可在F#应用程序或F#脚本。 若要创建F#脚本，创建的文件`.fsx`扩展，例如`blobs.fsx`，在你F#开发环境。
 
 接下来，使用[程序包管理器](package-management.md)如[paket 依存](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/)安装`WindowsAzure.Storage`并`Microsoft.WindowsAzure.ConfigurationManager`包和引用`WindowsAzure.Storage.dll`和`Microsoft.WindowsAzure.Configuration.dll`脚本使用`#r`指令。
 
@@ -102,14 +102,14 @@ Azure Blob 存储支持块 blob 和页 blob。 在大多数情况下，块 blob 
 
 例如，考虑名为的容器的块 blob 的下面一`photos`:
 
-*photo1.jpg*
-*2015/architecture/description.txt*
-*2015/architecture/photo3.jpg*
-*2015/architecture/photo4.jpg*
-*2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg*
-*2016/architecture/description.txt*
-*2016/photo7.jpg*
+*photo1.jpg*\
+*2015/architecture/description.txt*\
+*2015/architecture/photo3.jpg*\
+*2015/architecture/photo4.jpg*\
+*2016/architecture/photo5.jpg*\
+*2016/architecture/photo6.jpg*\
+*2016/architecture/description.txt*\
+*2016/photo7.jpg*\
 
 当您调用`ListBlobs`上 （如上面的示例中） 的容器，将返回一个层次结构列表。 如果它同时包含`CloudBlobDirectory`和`CloudBlockBlob`对象，分别表示目录和 blob 容器中的，则生成的输出显示类似于下面：
 
@@ -216,23 +216,24 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 默认情况下，你的存储帐户中的 blob 数据是仅供存储帐户所有者访问。 默认情况下，针对 Blob 存储的请求进行身份验证需要帐户访问密钥。 但是，你可能想要向其他用户提供特定的 blob 数据。
 
-有关如何控制对 blob 存储的访问的详细信息，请参阅[上的访问控制的 blob 存储部分.NET 指南](/azure/storage/storage-dotnet-how-to-use-blobs#controlling-access-to-blob-data)。
-
-
 ### <a name="encrypting-blob-data"></a>加密 blob 数据
 
 Azure 存储支持加密 blob 数据在客户端和服务器上。
-
-加密 blob 数据的详细信息，请参阅[加密的 blob 存储部分的.NET 指南](/azure/storage/storage-dotnet-how-to-use-blobs#encrypting-blob-data)。
 
 ## <a name="next-steps"></a>后续步骤
 
 现在，你已了解 Blob 存储的基础知识，单击以下链接了解详细信息。
 
 ### <a name="tools"></a>工具
-- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) F # 类型提供程序可用于浏览 Blob、 表和队列的 Azure 存储资产并轻松地将应用对它们的 CRUD 操作。
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)的 F # API 使用 Microsoft Azure 表存储服务
-- [Microsoft Azure 存储资源管理器 (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)是使您能够以可视方式处理 Azure 存储的数据在 Windows、 OS X 和 Linux 上的 microsoft 免费提供的独立应用。
+
+- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+F#类型提供程序可用于浏览 Blob、 表和队列的 Azure 存储资产并轻松地将应用对它们的 CRUD 操作。
+
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+F#使用 Microsoft Azure 表存储服务 API
+
+- [Microsoft Azure 存储资源管理器 (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+使您能够以可视方式处理 Azure 存储的数据在 Windows、 OS X 和 Linux 上的 microsoft 免费提供的独立应用。
 
 ### <a name="blob-storage-reference"></a>Blob 存储参考
 
@@ -246,3 +247,4 @@ Azure 存储支持加密 blob 数据在客户端和服务器上。
 - [使用 AzCopy 命令行实用工具 on Linux 传输数据](/azure/storage/common/storage-use-azcopy-linux)
 - [配置 Azure 存储连接字符串](/azure/storage/common/storage-configure-connection-string)
 - [Azure 存储团队博客](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [快速入门：使用.NET 在对象存储中创建 blob](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

@@ -1,18 +1,18 @@
 ---
-title: 如何：使用设计器将 Windows 窗体按钮指定为“取消”按钮
+title: 如何：将 Windows 窗体按钮指定为使用设计器的取消按钮
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 30e77d9c-d565-4ab5-a84a-62c043af8822
-ms.openlocfilehash: faffeafc0cbe67c3b40297144ec85acd94956da9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 85387c22dafb34b15b995d8f60f2fd9b3ec18227
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580938"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708283"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>如何：使用设计器将 Windows 窗体按钮指定为“取消”按钮
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>如何：将 Windows 窗体按钮指定为使用设计器的取消按钮
 在任何 Windows 窗体中，可以将指定<xref:System.Windows.Forms.Button>控件为取消按钮。 每当用户按 ESC 键时，无论哪个窗体上的其他控件具有焦点时，单击取消按钮。 通常，设计这样的按钮，使用户能够快速退出操作而无须执行任何操作。  
   
 > [!NOTE]
@@ -24,10 +24,10 @@ ms.locfileid: "48580938"
   
 2.  在中**属性**窗口中，将窗体的<xref:System.Windows.Forms.Form.CancelButton%2A>属性设置为<xref:System.Windows.Forms.Button>控件的名称。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Windows.Forms.Form.CancelButton%2A>  
- [Button 控件概述](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [如何选择 Windows 窗体 Button 控件](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [如何：响应 Windows 窗体 Button 控件单击](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [如何：使用设计器将 Windows 窗体按钮指定为“接受”按钮](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
- [Button 控件](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.Windows.Forms.Form.CancelButton%2A>
+- [Button 控件概述](button-control-overview-windows-forms.md)
+- [如何选择 Windows 窗体 Button 控件](ways-to-select-a-windows-forms-button-control.md)
+- [如何：响应 Windows 窗体按钮单击](how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：将 Windows 窗体按钮指定为接受按钮使用设计器](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [Button 控件](button-control-windows-forms.md)

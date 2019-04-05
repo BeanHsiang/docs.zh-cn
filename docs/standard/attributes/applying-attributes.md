@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48844301"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836469"
 ---
 # <a name="applying-attributes"></a>应用特性
 使用以下过程将特性应用于代码的元素。  
@@ -54,7 +54,8 @@ ms.locfileid: "48844301"
   
 ## <a name="see-also"></a>请参阅
 
-- [特性](../../../docs/standard/attributes/index.md)  
-- [检索存储在特性中的信息](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
-- [概念](/cpp/windows/attributed-programming-concepts)  
-- [特性](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+- [特性](../../../docs/standard/attributes/index.md)
+- [检索存储在特性中的信息](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
+- [概念](/cpp/windows/attributed-programming-concepts)
+- [特性 (C#)](../../csharp/programming-guide/concepts/attributes/index.md)
+- [特性概述 (Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

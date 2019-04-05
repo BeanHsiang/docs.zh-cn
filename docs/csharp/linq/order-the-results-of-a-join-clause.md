@@ -1,14 +1,14 @@
 ---
 title: 对 join 子句的结果进行排序（C# 中的 LINQ）
 description: 了解如何对 C# 中的 LINQ join 子句的结果进行排序。
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
-ms.openlocfilehash: 13cd6cb202cf67def17310db6d98e368ce837646
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f60000b83bf378dd8740b7255d421dd4335614c4
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516981"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857883"
 ---
 # <a name="order-the-results-of-a-join-clause"></a>对 join 子句的结果进行排序
 
@@ -22,6 +22,6 @@ ms.locfileid: "43516981"
 
 ## <a name="see-also"></a>请参阅
 
-- [语言集成查询 (LINQ)](index.md)  
-- [orderby 子句](../language-reference/keywords/orderby-clause.md)  
-- [join 子句](../language-reference/keywords/join-clause.md)  
+- [语言集成查询 (LINQ)](index.md)
+- [orderby 子句](../language-reference/keywords/orderby-clause.md)
+- [join 子句](../language-reference/keywords/join-clause.md)

@@ -2,12 +2,12 @@
 title: PNRP 缓存
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 53df90a9bb3da90145ebe30bb274b4ff4950c00f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 375e193e618366b169d5c84073adb432cea3634c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736939"
 ---
 # <a name="pnrp-caches"></a>PNRP 缓存
 对等名称解析协议 (PNRP) 缓存是对等机上维护的算法选择的对等终结点的本地集合。  
@@ -35,5 +35,5 @@ ms.locfileid: "50180960"
   
  对等机可以登记从其他对等机接收对象的偏好。 当对象更新时，协作应用程序收到通知，新的对象传递给应用程序的所有订阅者。 例如，组聊天应用程序中的对等程序可以登记接收应用程序信息的偏好，这会向其发送所有聊天记录作为应用程序数据。  这使得它可以监视云内的聊天活动。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>请参阅
+- <xref:System.Net.PeerToPeer>

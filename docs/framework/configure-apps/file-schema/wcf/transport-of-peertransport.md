@@ -1,31 +1,31 @@
 ---
-title: '&lt;peerTransport&gt; 的 &lt;transport&gt;'
+title: <transport> 的 <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: aeadf23b4ae6b4b0be18755c43585cbfea418567
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3dbeda5d418c30f378515fa83979eaca289370f9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756418"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284006"
 ---
-# <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;peerTransport&gt; 的 &lt;transport&gt;
+# <a name="transport-of-peertransport"></a>\<传输 > 的\<peerTransport >
 指定采用此绑定配置的对等方所发送的安全消息的传输类型。  
   
  \<system.serviceModel>  
-\<绑定 >  
+\<bindings>  
 \<customBinding>  
-\<绑定 >  
-\<t >  
+\<binding>  
+\<peerTransport>  
 \<安全 >  
 \<transport>  
   
 ## <a name="syntax"></a>语法  
   
 ```xml  
-<security>  
-   <transport credentialType="Certificate/Password" />  
-</security>         
+<security>
+  <transport credentialType="Certificate/Password" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>特性和元素  
@@ -56,15 +56,15 @@ ms.locfileid: "32756418"
 ## <a name="remarks"></a>备注  
  仅当设置此元素的 mode 属性[\<安全 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)设置为`Transport`或`TransportWithMessageCredential`。  
   
-## <a name="see-also"></a>请参阅  
- <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  
- <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>  
- <xref:System.ServiceModel.PeerTransportSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [传输安全性](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [绑定](../../../../../docs/framework/wcf/bindings.md)  
- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>请参阅
+- <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
+- <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
+- <xref:System.ServiceModel.PeerTransportSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [传输安全性](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [传输](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [选择传输](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [绑定](../../../../../docs/framework/wcf/bindings.md)
+- [扩展绑定](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [自定义绑定](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

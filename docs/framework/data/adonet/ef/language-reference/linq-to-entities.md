@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 0a02899ab9dc751cfee1127a092854b81b8360db
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 19849f318d07a11fe0d894f7f0a68cd37f1ee249
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664756"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825779"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员使用 Visual Basic 或 Visual C# 根据实体框架概念模型编写查询。 针对实体框架的查询由针对对象上下文执行的命令目录树查询表示。 LINQ to Entities 将语言集成查询 (LINQ) 查询转换为命令目录树查询，针对实体框架执行这些查询，并返回可同时由实体框架和 LINQ 使用的对象。 以下是创建和执行 LINQ to Entities 查询的过程：  
@@ -88,8 +88,9 @@ LINQ to Entities 提供语言集成查询 (LINQ) 支持，它允许开发人员�
   
  [LINQ to Entities 中的已知问题和注意事项](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
-## <a name="see-also"></a>请参阅  
- [LINQ to Entities 中的已知问题和注意事项](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
- [LINQ（语言集成查询）](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [LINQ 和 ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- [ADO.NET 实体框架](../../../../../../docs/framework/data/adonet/ef/index.md)
+## <a name="see-also"></a>请参阅
+- [LINQ to Entities 中的已知问题和注意事项](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+- [语言集成查询 (LINQ)-C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [语言集成查询 (LINQ) 的 Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [LINQ 和 ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
+- [ADO.NET 实体框架](../../../../../../docs/framework/data/adonet/ef/index.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e874d593a18be352e7053a15525f3168e7fcc9db
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397850"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220973"
 ---
 # <a name="dynamic-language-runtime-overview"></a>动态语言运行时概述
 
@@ -80,7 +80,7 @@ DLR 与 CLR一样，也属于 .NET Framework，并随 .NET Framework 和 Visual 
 
  DLR 向 CLR 添加了一组服务，以便更好地支持动态语言。 这些服务包括：
 
--   表达式树。 DLR 使用表达式树来表示语言语义。 为此，DLR 扩展了 LINQ 表达式树，使其包含控制流、分配和其他语言建模节点。 有关详细信息，请参阅[表达式树](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)。
+-   表达式树。 DLR 使用表达式树来表示语言语义。 为此，DLR 扩展了 LINQ 表达式树，使其包含控制流、分配和其他语言建模节点。 有关详细信息，请参阅[表达式树 (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) 或[表达式树 (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)。
 
 -   调用站点缓存。 动态调用站点是代码中对动态对象执行 `a + b` 或 `a.b()` 等操作的位置。 DLR 会缓存 `a` 和 `b`（通常为这些对象的类型）的特征，以及有关操作的信息。 如果之前已经执行过此类操作，则 DLR 会从缓存中检索所有的必要信息，以实现快速调度。
 
@@ -96,5 +96,6 @@ DLR 在调用站点中使用联编程序不仅与 .NET Framework 进行通信，
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [公共语言运行时](../../../docs/standard/clr.md)
-- [表达式树](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+- [表达式树 (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [表达式树 (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [演练：创建和使用动态对象](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

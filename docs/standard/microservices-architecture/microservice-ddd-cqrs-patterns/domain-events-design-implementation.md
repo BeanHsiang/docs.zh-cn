@@ -1,15 +1,15 @@
 ---
 title: 域事件。 设计和实现
-description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 域事件、设计和实现
+description: 适用于容器化 .NET 应用程序的 .NET 微服务体系结构 | 深入了解域事件（在聚合之间建立通信的一个关键概念）。
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 3daab93a97c57521ae6f16ea2498c3f36f30d795
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.date: 10/08/2018
+ms.openlocfilehash: 1c943ac93e629da069b594291cd55a952e18742c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937122"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464393"
 ---
 # <a name="domain-events-design-and-implementation"></a>域事件：设计和实现
 
@@ -17,13 +17,21 @@ ms.locfileid: "37937122"
 
 ## <a name="what-is-a-domain-event"></a>什么是域事件？
 
-事件是过去发生的事。 从逻辑上说，域事件是发生在特定域的事件，是你希望同一域（进程内）的其他部分识别和响应的事件。
+事件是过去发生的事。 域事件是在域中发生的事，你希望同一个域（进程）的其他部分了解它。 通知部分通常以某种方式对事件作出反应。
 
-域事件的一个重要优点是，可在域中发生事件后，显式表示副作用，而不是隐式表示副作用。 这些副作用必须保持一致性，以确保与业务任务相关的所有操作要么都发生，要么都不发生。 此外，域事件可优化相同域的类中的问题分离。
+域事件的一个重要优势是可以显式表示副作用。
 
-例如，如果只使用实体框架和实体或聚合，且用例必须引起副作用，则这些将在事件发生后作为耦合代码中的隐式概念实现。 但是，如果只是查看代码，可能不知道代码（副作用）是主操作的一部分，还是真的副作用。 但是，使用域事件可让概念成为显式，并属于通用语言。 例如，在 eShopOnContainers 应用程序中，创建订单并不仅仅与订单相关，还需要基于原始用户更新或创建购买者聚合，因为用户在下订单前不是购买者。 如果使用域事件，可根据域专家提供的通用语言显式表示域规则。
+例如，如果只使用实体框架，并且必须对某个事件作出反应，则可能会对需要向触发事件的内容关闭的任何内容进行编码。 因此规则会隐式地关联到代码，需要查看代码才有希望认识到在其中实现了规则。
 
-域事件在某种程度上类似于消息样式事件，但有一个重要的区别。 对于真正的消息传送、消息队列、消息中转站或使用 AMPQ 的服务总线，消息始终异步发送，并跨进程和计算机传达。 这对于集成多个绑定上下文、微服务或不同应用程序很有用。 但是，对于域事件，需要从当前运行的域操作引发事件，但需要在相同的域中发生副作用。
+另一方面，使用域事件会使概念明确，因为会涉及到 `DomainEvent` 以及至少一个 `DomainEventHandler`。
+
+例如在 eShopOnContainers 应用程序中，当创建订单时，用户会成为买家，因此 `OrderStartedDomainEvent` 会被引发并在 `ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler` 中进行处理，这样基础概念便十分明显。
+
+简言之，域事件可帮助根据域专家提供的通用语言显式表示域规则。 通过域事件还可更好地在相同域中的类之间分离关注点。
+
+请务必确保与域事件相关的所有操作都成功完成，或是都未成功完成，正如数据库事务一样。
+
+域事件类似于消息样式事件，但有一个重要的区别。 对于真正的消息传送、消息队列、消息中转站或使用 AMQP 的服务总线，消息始终异步发送，并跨进程和计算机传达。 这对于集成多个绑定上下文、微服务或不同应用程序很有用。 但是，对于域事件，需要从当前运行的域操作引发事件，但需要在相同的域中发生副作用。
 
 域事件和副作用（过后触发的操作，由事件处理程序管理）应几乎立即发生，通常在进程内或在相同的域中。 因此，域事件可以是同步或异步。 但是集成事件应始终是异步。
 
@@ -31,52 +39,58 @@ ms.locfileid: "37937122"
 
 从语义上看，域事件和集成事件是相同的：都是对已发生事件的通知。 但是，它们的实现必须不同。 域事件是推送到域事件调度程序的消息，可基于 IoC 容器或任何其他方法作为内存中转存进程实现。
 
-但是，集成事件的目的是将已提交事务和更新传播到其他子系统，无论它们是其他微服务、绑定上下文，还是外部应用程序。 因此，它们应仅在成功保存实体时发生，因为在许多情况下，如果失败，整个操作不会发生。
+但是，集成事件的目的是将已提交事务和更新传播到其他子系统，无论它们是其他微服务、绑定上下文，还是外部应用程序。 因此，它们应仅在成功保存实体时发生，否则便会如同整个操作从未发生一样。
 
-此外，如前所述，集成事件必须基于多个微服务（其他绑定上下文）或外部系统/应用程序之间的异步通信。 因此，事件总线接口需要一些基础结构来实现远程服务之间的进程间和分布式通信。 可以基于商用服务总线、队列、作为邮箱的共享数据库或任何其他分布式和基于推送的消息传送系统。
+如前所述，集成事件必须基于多个微服务（其他绑定上下文）或外部系统/应用程序之间的异步通信。
+
+因此，事件总线接口需要一些基础结构来实现远程服务之间的进程间和分布式通信。 可以基于商用服务总线、队列、作为邮箱的共享数据库或任何其他分布式和基于推送的消息传送系统。
 
 ## <a name="domain-events-as-a-preferred-way-to-trigger-side-effects-across-multiple-aggregates-within-the-same-domain"></a>域事件是在相同域中跨多个聚合触发副作用的首选方式
 
-如果执行与一个聚合实例相关的命令需要其他域规则运行一个或多个其他聚合，应将这些副作用设计和实现为由域事件触发。 如图 9-14 所示，这是一个最重要的用例之一，应将域事件用于在相同域模型中跨多个聚合传播状态更改。
+如果执行与一个聚合实例相关的命令需要其他域规则运行一个或多个其他聚合，应将这些副作用设计和实现为由域事件触发。 如图 7-14 所示，这是一个最重要的用例之一，应将域事件用于在相同域模型中跨多个聚合传播状态更改。
 
-![](./media/image15.png)
+![聚合之间的一致性由域事件实现，订单聚合会发送处理过的 OrderStarted 域事件以更新买家聚合。 ](./media/image15.png)
 
-**图 9-14**。 域事件在相同域的多个聚合之间强制执行一致性
+**图 7-14**。 域事件在相同域的多个聚合之间强制执行一致性
 
 在图中，当用户发起订单时，OrderStarted 域事件基于标识微服务（包含 CreateOrder 命令中提供的信息）中的原始用户信息，在订购微服务中触发购买者对象创建。 当最初创建时，域事件由订单聚合生成。
 
 或者，可以使聚合根订阅由聚合（子实体）成员引发的事件。 例如，每个 OrderItem 子实体可以在项目价格高于特定金额，或产品项目金额过高时，引发事件。 然后，聚合根可以接收这些事件，并执行全局计算或聚合。
 
-请注意，此基于事件的通信不会直接在聚合中实现，需要实现域事件处理程序。 处理域事件是一个应用程序问题。 域模型层应只关注域逻辑（域专家可理解的内容），而不应关注应用程序基础结构（如处理程序）和使用存储库的副作用持久性操作。 因此，应用程序层级别是在引发域事件时应执行域事件处理程序触发操作的位置。
+请注意，此基于事件的通信不会直接在聚合中实现，需要实现域事件处理程序。
+
+处理域事件是一个应用程序问题。 域模型层应只关注域逻辑（域专家可理解的内容），而不应关注应用程序基础结构（如处理程序）和使用存储库的副作用持久性操作。 因此，应用程序层级别是在引发域事件时应执行域事件处理程序触发操作的位置。
 
 域事件还可用于触发任意数量的应用程序操作，并且更重要的是，必须可在将来通过分离方式增加此数目。 例如，发起订单时，可能需要发布域事件以将信息传播到其他聚合，或引发通知等应用程序操作。
 
-关键在于域事件发生时要执行的操作的可变数量。 最终，域中的操作和规则以及应用程序会发展。 事件发生时的复杂性或副作用操作的数量将增加，但如果代码被“固定”（即使用 C\# 中的新关键字实例化对象），每当需要添加新操作时，需要更改原始代码。 这可能导致新 bug，因为对于每个新要求，需要更改原始代码流。 这违背了 [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) 中的[开/闭原则](https://en.wikipedia.org/wiki/Open/closed_principle)。 不仅如此，协调操作的原始类将不断增加，这违背了[单一功能原则 (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle)。
+关键在于域事件发生时要执行的操作的可变数量。 最终，域中的操作和规则以及应用程序会发展。 事件发生时的复杂性或副作用操作的数量将增加，但如果代码被“固定”（即使用 `new` 创建特定对象），每当需要添加新操作时，还需要更改正在工作和经过测试的代码。
+
+此更改可能会导致新 bug，而且此方法还会违背 [SOLID](https://en.wikipedia.org/wiki/SOLID) 的[开/闭原则](https://en.wikipedia.org/wiki/Open/closed_principle)。 不仅如此，协调操作的原始类将不断增加，这违背了[单一功能原则 (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle)。
 
 但是，如果使用域事件，可以通过使用以下方法分离功能来创建细化和分离的实现：
 
-1.  发送命令（例如，CreateOrder）。
-2.  在命令处理程序中接收命令。
-    -   执行单个聚合的事务。
-    -   （可选）引发副作用的域事件（例如 OrderStartedDomainEvent）。
-1.  处理域事件（在当前进程中），这些域事件会在多个聚合或应用程序操作中执行可变数量的副作用。 例如:
-    -   验证或创建购买者和付款方式。
-    -   创建相关集成事件并将其发送到事件总线，以在微服务中传播状态，或触发外部操作，例如将电子邮件发送给购买者。
-    -   处理其他副作用。
+1. 发送命令（例如，CreateOrder）。
+2. 在命令处理程序中接收命令。
+   - 执行单个聚合的事务。
+   - （可选）引发副作用的域事件（例如 OrderStartedDomainEvent）。
+3. 处理域事件（在当前进程中），这些域事件会在多个聚合或应用程序操作中执行可变数量的副作用。 例如:
+   - 验证或创建购买者和付款方式。
+   - 创建相关集成事件并将其发送到事件总线，以在微服务中传播状态，或触发外部操作，例如将电子邮件发送给购买者。
+   - 处理其他副作用。
 
-如图 9-15 所示，从同一域事件，可以处理与域中的其他聚合相关的多个操作，或处理需要在与集成事件和事件总线相关的微服务中执行的其他应用程序操作。
+如图 7-15 所示，从同一域事件，可以处理与域中的其他聚合相关的多个操作，或处理需要在与集成事件和事件总线相关的微服务中执行的其他应用程序操作。
 
-![](./media/image16.png)
+![同一个域事件在应用层中可以有多个处理程序，一个处理程序可以解决聚合之间的一致性，另一个处理程序可以发布集成事件，以便其他微服务可以对它执行操作。](./media/image16.png)
 
-**图 9-15**。 处理每个域的多个操作
+**图 7-15**。 处理每个域的多个操作
 
 事件处理程序通常在应用程序层中，因为会将存储库或应用程序 API 等基础结构对象用于微服务行为。 在此意义上，事件处理程序类似于命令处理程序，因此两者都在应用程序层中。 两者的重要区别是命令应只处理一次。 域事件可处理零或 n 次，因为它可被多个接收方或事件处理程序接收，针对每个处理程序具有不同用途。
 
-借助每个域事件的可变数量的处理程序，可添加更多域规则，而不会影响当前代码。 例如，如果要实现必须在事件发生后立即发生的以下业务规则，可能只需轻松地添加一些（或者甚至是一个）事件处理程序：
+借助每个域事件的可变数量的处理程序，可添加所需数量的域规则，而不会影响当前代码。 例如，可以轻松地添加一些（或者甚至是一个）事件处理程序来实现以下业务规则：
 
-如果客户在商店购买的总金额（跨任意数量订单）超过 6,000 美元，则为每个新订单提供 10% 的折扣，并通过电子邮件告知客户将来订单的折扣。
+> 如果客户在商店购买的总金额（跨任意数量订单）超过 6,000 美元，则为每个新订单提供 10% 的折扣，并通过电子邮件告知客户将来订单的折扣。
 
-## <a name="implementing-domain-events"></a>实现域事件
+## <a name="implement-domain-events"></a>实现域事件
 
 在 C# 中，域事件只是数据保留结构或类（如 DTO），包含与域中发生的事件相关的所有信息，如以下示例所示：
 
@@ -110,17 +124,19 @@ public class OrderStartedDomainEvent : INotification
 
 关于域的通用语言，由于事件在过去发生的，事件的类名称应使用过去时态谓词表示，如 OrderStartedDomainEvent 或 OrderShippedDomainEvent。 这是域事件在 eShopOnContainers 的订购微服务中的实现方式。
 
-如前文所述，事件的一个重要特性是：由于事件是在过去发生的，所以不应发生更改。 因此，它必须是一个不可变的类。 可以从上一个代码中看到，属性是从对象外部只读的。 更新对象的唯一方法是在创建事件对象时通过构造函数。
+如前文所述，事件的一个重要特性是：由于事件是在过去发生的，所以不应发生更改。 因此，它必须是一个不可变的类。 可以从上一个代码中看到，属性是只读的。 无法更新对象，只能在创建它时设置值。
 
-### <a name="raising-domain-events"></a>引发域事件
+这里必须重点强调的是，如果域事件要使用需要序列化和反序列化事件对象的队列进行异步处理，则属性必须是“专用集”而不是只读，以便反序列化程序能够在出队列时分配值。 这不是订购微服务中的问题，因为域事件发布/订阅是使用 MediatR 同步实现的。
+
+### <a name="raise-domain-events"></a>引发域事件
 
 下一个问题是如何引发域事件，使其到达相关的事件处理程序。 可使用多个方法。
 
-Udi Dahan 最初建议（例如在 [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/)（域事件 – Take 2）等一系列文章中）将静态类用于管理和引发事件。 这可能包括名为 DomainEvents 的静态类，该类会在调用时，使用 DomainEvents.Raise(Event myEvent) 等语法立即引发域事件。 Jimmy Bogard 在其博客文章 ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/))（强化你的域：域事件）中建议使用类似方法。
+Udi Dahan 最初建议（例如在 [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/)（域事件 – Take 2）等一系列文章中）将静态类用于管理和引发事件。 这可能包括名为 DomainEvents 的静态类，该类会在调用时，使用 `DomainEvents.Raise(Event myEvent)` 等语法立即引发域事件。 Jimmy Bogard 写了过一篇博客文章（[强化你的域：域事件](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)），其中建议了类似的方法。
 
 但是，如果域事件类是静态的，它也会立即调度给处理程序。 这使得测试和调试更加困难，因为会在引发事件后立即执行具有副作用逻辑的事件处理程序。 测试和调试时，你希望专注于当前聚合类发生的事件；不希望突然重定向到其他事件处理程序，处理与其他聚合或应用程序逻辑相关的副作用。 因此，其他方法应运而生，下一节将进行介绍。
 
-#### <a name="the-deferred-approach-for-raising-and-dispatching-events"></a>引发和调度事件的延迟方法
+#### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>用于引发和调度事件的延迟方法
 
 一个更好的方法是将域事件添加到集合，然后在提交事务之前或之后立即调度这些域事件（正如 EF 中的 SaveChanges），而不是立即调度到域事件处理程序。 （Jimmy Bogard 的文章 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)（一个更好的域事件模式）中介绍了此方法。）
 
@@ -132,21 +148,20 @@ eShopOnContainers 使用延迟方法。 首先，将实体中发生的事件添�
 public abstract class Entity
 {
      //... 
-    private List<INotification> _domainEvents;
-    public List<INotification> DomainEvents => _domainEvents;
+     private List<INotification> _domainEvents;
+     public List<INotification> DomainEvents => _domainEvents; 
 
-    public void AddDomainEvent(INotification eventItem)
-    {
-        _domainEvents = _domainEvents ?? new List<INotification>();
-        _domainEvents.Add(eventItem);
-    }
+     public void AddDomainEvent(INotification eventItem)
+     {
+         _domainEvents = _domainEvents ?? new List<INotification>();
+         _domainEvents.Add(eventItem);
+     }
 
-    public void RemoveDomainEvent(INotification eventItem)
-    {
-        if (_domainEvents is null) return;
-        _domainEvents.Remove(eventItem);
-    }
-    // ...
+     public void RemoveDomainEvent(INotification eventItem)
+     {
+         _domainEvents?.Remove(eventItem);
+     }
+     //... Additional code
 }
 ```
 
@@ -195,33 +210,33 @@ public class OrderingContext : DbContext, IUnitOfWork
 
 总体结果是将域事件引用（简单添加到内存中列表）从调度到事件处理程序中分离。 此外，可同步或异步调度事件，具体取决于你使用的调度程序。
 
-请注意事务边界在此时发挥巨大作用。 如果工作单元和事务可跨多个聚合（如使用 EF Core 和关系数据库时），这可正常运行。 但是，如果事务不能跨聚合（例如使用 Azure DocumentDB 等 NoSQL 数据库时），必须执行额外步骤以实现一致性。 这是持久性无感知不通用的另一个原因，它取决于你使用的存储系统。
+请注意事务边界在此时发挥巨大作用。 如果工作单元和事务可跨多个聚合（如使用 EF Core 和关系数据库时），这可正常运行。 但是，如果事务不能跨聚合（例如使用 Azure CosmosDB 等 NoSQL 数据库时），必须执行额外步骤以实现一致性。 这是持久性无感知不通用的另一个原因，它取决于你使用的存储系统。 
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>跨聚合的单个事务与跨聚合的最终一致性
 
 是跨聚合执行单个事务，还是依赖跨聚合的最终一致性，这一点存在争议。 Eric Evans 和 Vaughn Vernon 等许多作者提倡遵循一个事务 = 一个聚合的规则，因此支持跨聚合的最终一致性。 例如，Eric Evans 在他的著作《Domain-Driven Design》（域驱动的设计）中表示：
 
-跨聚合的任何规则都不会始终保持最新状态。 通过事件处理、批处理或其他更新机制，其他依赖项可在特定时间内解析。 （第 128 页）
+> 跨聚合的任何规则都不会始终保持最新状态。 通过事件处理、批处理或其他更新机制，其他依赖项可在特定时间内解析。 （第 128 页）
 
-Vaughn Vernon 在 [Effective Aggregate Design.Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)（有效聚合设计。第二部分：让聚合共同工作）中提到：
+Vaughn Vernon 在 [Effective Aggregate Design.第 II 部分：让聚合共同工作](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)：
 
-因此，如果在一个聚合实例上执行命令需要在一个或多个聚合上执行其他业务规则，则使用最终一致性。\[...\]有一个实用方法可在 DDD 模型中支持最终一致性。 聚合方法发布及时交付到一个或多个异步订阅服务器的域事件。
+> 因此，如果在一个聚合实例上执行命令需要在一个或多个聚合上执行其他业务规则，则使用最终一致性。\[...\]有一个实用方法可在 DDD 模型中支持最终一致性。 聚合方法发布及时交付到一个或多个异步订阅服务器的域事件。
 
 此观点基于接受细化事务，而不是跨多个聚合或实体的事务。 原理是在第二种情况下，具有高可伸缩性要求的大规模应用程序的数据库锁定的数量巨大。 接受高可伸缩性应用程序不需要多个聚合间的即时事务一致性的事实，有助于接受最终一致性的概念。 业务通常不需要原子更改，而且确定特定操作是否需要原子事务始终是域专家的职责。 如果操作始终需要多个聚合间的原子事务，应考虑聚合是否应该更大，或是否未正确设计。
 
 但 Jimmy Bogard 等其他开发者和架构师赞成在多个聚合中跨越单个事务 - 但仅当这些额外聚合与相同原始命令的副作用相关时。 例如，在 [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)（更好的域事件模式）中，Bogard 表示：
 
-通常情况下，我希望域事件的副作用发生在相同的逻辑事务中，但不一定是在引发域事件的同一作用域 \[...\]在提交事务前，将事件调度到相应的处理程序。
+> 通常情况下，我希望域事件的副作用发生在相同的逻辑事务中，但不一定是在引发域事件的同一作用域 \[...\]在提交事务前，将事件调度到相应的处理程序。
 
 如果在提交原始事务前调度域事件，这是因为希望在相同事务中添加这些事件的副作用。 例如，如果 EF DbContext SaveChanges 方法失败，事务会回退所有更改，包括由相关域事件处理程序实现的副作用操作。 这是因为默认情况下 DbContext 生存范围定义为“已设置范围”。 因此，DbContext 对象跨多个在相同范围或对象图中实例化的存储库对象共享。 在开发 Web API 或 MVC 应用时，这与 HttpRequest 范围一致。
 
-实际上，这两种方法（单个原子事务和最终一致性）都是正确的。 实际上取决于你的域或业务要求，以及域专家的建议。 它还取决于所需的服务可缩放性（事务越细化，对数据库锁定的影响越小）。 它取决于你愿意在代码上进行的投资，由于最终一致性需要更复杂的代码以检测聚合中可能的不一致，且需要实现补偿操作。 请考虑以下情况：如果将更改提交到原始聚合，当调度事件时会发生问题，事件处理程序无法提交副作用，聚合之间将产生不一致。
+实际上，这两种方法（单个原子事务和最终一致性）都是正确的。 实际上取决于你的域或业务要求，以及域专家的建议。 它还取决于所需的服务可缩放性（事务越细化，对数据库锁定的影响越小）。 它取决于你愿意在代码上进行的投资，由于最终一致性需要更复杂的代码以检测聚合中可能的不一致，且需要实现补偿操作。 请考虑以下情况：如果将更改提交到原始聚合，并且之后当调度事件时如果发生问题，事件处理程序无法提交副作用，则聚合之间将产生不一致。
 
 若要执行补偿操作，可将域事件存储在其他数据库表格，使其属于原始事务。 然后，可通过批处理比较事件列表和聚合的当前状态，从而检测不一致并运行补偿操作。 补偿操作属于复杂主题，需要你进行深度分析，包括与业务用户和域专家进行讨论。
 
 在任何情况下，你可以选择所需的方法。 但初始延迟方法（在提交前引发事件，从而使用单个事务）是使用 EF Core 和关系数据库时最简单的方法。 该方法易于实现且在许多业务情景中有效。 这也是 eShopOnContainers 的订购微服务中使用的方法。
 
-但如何将这些事件调度到相应的事件处理程序？ 你在上一个示例中看到的\_转存进程对象是什么？ 它与用于在事件及其事件处理程序之间映射的技术和项目有关。
+但如何将这些事件调度到相应的事件处理程序？ 在上一个示例中看到的 `_mediator` 对象是什么？ 它与用于在事件与其事件处理程序之间映射的技术和项目有关。
 
 ### <a name="the-domain-event-dispatcher-mapping-from-events-to-event-handlers"></a>域事件调度程序：从事件映射到事件处理程序
 
@@ -229,13 +244,13 @@ Vaughn Vernon 在 [Effective Aggregate Design.Part II: Making Aggregates Work To
 
 一种方法是使用真正的消息传送系统或事件总线，可能基于服务总线，而不是内存中事件。 但是，对于第一种情况，真正的消息传送可能对于处理域事件来说用力过猛，因为你只需要处理相同进程（即相同域和应用程序层）中的事件。
 
-将事件映射到多个事件处理程序的另一种方法是使用 IoC 容器中的类型注册，以便动态推断是否调度事件。 换而言之，需要知道什么事件处理程序需要获得特定事件。 图 9-16 演示简化的方法。
+将事件映射到多个事件处理程序的另一种方法是使用 IoC 容器中的类型注册，以便动态推断是否调度事件。 换而言之，需要知道什么事件处理程序需要获得特定事件。 图 7-16 显示此方法的简化方法。
 
-![](./media/image17.png)
+![依赖关系注入可以用于将事件与事件处理程序相关联，这是 MediatR 使用的方法](./media/image17.png)
 
-**图 9-16**。 使用 IoC 的域事件调度程序
+**图 7-16**。 使用 IoC 的域事件调度程序
 
-可以构建所有联结和项目，自行实现此方法。 但是还可使用 [MediatR](https://github.com/jbogard/MediatR)（MediatR 实际上使用 IoC 容器）等可用库。 因此，可以直接使用预定义的接口和转存进程对象的发布/调度方法。
+可以构建所有联结和项目，自行实现此方法。 但是还可使用 [MediatR](https://github.com/jbogard/MediatR)（它实际上使用 IoC 容器）等可用库。 因此，可以直接使用预定义的接口和转存进程对象的发布/调度方法。
 
 在代码中，首先需要在 IoC 容器中注册事件处理程序类型，如 [eShopOnContainers 订购服务](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/MediatorModule.cs)处的以下示例所示：
 
@@ -323,7 +338,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 #### <a name="domain-events-can-generate-integration-events-to-be-published-outside-of-the-microservice-boundaries"></a>域事件可以生成要在微服务边界之外发布的集成事件
 
-最后，请注意，有时需要跨多个微服务传播事件。 这被视为集成事件，可通过特定域事件处理程序的事件总线发布它。
+最后，请注意，有时需要跨多个微服务传播事件。 该传播是集成事件，可通过特定域事件处理程序的事件总线发布它。
 
 ## <a name="conclusions-on-domain-events"></a>域事件的结论
 
@@ -331,40 +346,39 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 ## <a name="additional-resources"></a>其他资源
 
--   **Greg Young.What is a Domain Event?**
-    [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)（什么是域事件？）
+- **Greg Young.What is a Domain Event?**（什么是域事件？） \
+  [http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
--   **Jan Stenberg。Domain Events and Eventual Consistency**
-    [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)（域事件和最终一致性）
+- **Jan Stenberg。Domain Events and Eventual Consistency** \（域事件和最终一致性）
+  [https://www.infoq.com/news/2015/09/domain-events-consistency](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
--   **Jimmy Bogard。A better domain events pattern**
-    [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)（更好的域事件模式）
+- **Jimmy Bogard。A better domain events pattern** \（更好的域事件模式）
+  [https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon。高效聚合设计第 II 部分：协同聚合**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+- **Vaughn Vernon。有效聚合设计，第 II 部分：让聚合共同工作** \
+  [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
--   **Jimmy Bogard。Strengthening your domain: Domain Events**
-    *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>*（强化域：域事件）
+- **Jimmy Bogard。强化域：域事件** \
+  [https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
 
--   **Tony Truong。Domain Events Pattern Example**
-    [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)（域事件模式示例）
+- **Tony Truong。Domain Events Pattern Example** \（域事件模式示例）
+  [https://www.tonytruong.net/domain-events-pattern-example/](https://www.tonytruong.net/domain-events-pattern-example/)
 
--   **Udi Dahan.How to create fully encapsulated Domain Models**
-    [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)（如何创建完全封装的域模型）
+- **Udi Dahan.How to create fully encapsulated Domain Models** \（如何创建完全封装的域模型）
+  [http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
--   **Udi Dahan.Domain Events – Take 2**
-    [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)（域事件 – 搞定两个问题）
+- **Udi Dahan.Domain Events – Take 2** \（域事件 – 搞定两个问题）
+  [http://udidahan.com/2008/08/25/domain-events-take-2/](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
--   **Udi Dahan.Domain Events – Salvation**
-    [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)（域事件 – 救助）
+- **Udi Dahan.Domain Events – Salvation** \（域事件 – 救助）
+  [http://udidahan.com/2009/06/14/domain-events-salvation/](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Jan Kronquist。Don't publish Domain Events, return them!**
-    [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)（不要发布域事件，返回它们！）
+- **Jan Kronquist。Don't publish Domain Events, return them!**（不要发布域事件，返回它们！） \
+  [https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
--   **Cesar de la Torre。Domain Events vs.Integration Events in DDD and microservices architectures**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)（DDD 和微服务体系结构中的域事件和集成事件）
-
+- **Cesar de la Torre。Domain Events vs.Integration Events in DDD and microservices architectures** \（DDD 和微服务体系结构中的域事件和集成事件）
+  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 >[!div class="step-by-step"]
-[上一页](client-side-validation.md)
-[下一页](infrastructure-persistence-layer-design.md)
+>[上一页](client-side-validation.md)
+>[下一页](infrastructure-persistence-layer-design.md)

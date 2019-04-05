@@ -2,12 +2,12 @@
 title: 对等名称发布和解析
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50184551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682977"
 ---
 # <a name="peer-name-publication-and-resolution"></a>对等名称发布和解析
 
@@ -47,5 +47,5 @@ ms.locfileid: "50184551"
   
  在 <xref:System.Net.PeerToPeer> 命名空间中，<xref:System.Net.PeerToPeer.PeerName> 记录之间存在多对多的关系，这些关系包含终结点和 PNRP 云或用于通信的对等网格。 有重复或过时条目，或具有相同对等名称的多个节点时，PNRP 节点可以使用 <xref:System.Net.PeerToPeer.PeerNameResolver> 类获取当前信息。 <xref:System.Net.PeerToPeer.PeerNameResolver> 方法使用单一对等名称，将透视简化为一对多对等名称记录和相同的一对多对等机和云的名称记录。 这类似于使用关系表联接执行的查询。 成功完成后，解析程序对象返回指定对等名称的 <xref:System.Net.PeerToPeer.PeerNameRecordCollection>。  例如，集合中所有对等名称记录中将会出现由云排序的对等名称。 这些是对等名称实例，基于 PNRP 的应用程序可能请求这些支持数据。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>请参阅
 - <xref:System.Net.PeerToPeer>

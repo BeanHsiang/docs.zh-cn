@@ -7,20 +7,20 @@ helpviewer_keywords:
 - windows [WPF]
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
-ms.openlocfilehash: 04622255ea70d3d8161dc18919cb2833fe706639
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550772"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353850"
 ---
 # <a name="windows-in-wpf-applications"></a>WPF 应用程序中的窗口
-用户与通过 windows 应用程序进行交互。 窗口的基本目的是承载并显示内容。 内容，窗口承载取决于数据的类型，应用程序操作，其中包括媒体、 可扩展应用程序标记语言 (XAML) 页、 网页、 文档、 数据库表和记录和系统信息类型。  
+用户与通过 windows 应用程序进行交互。 窗口的基本目的是承载并显示内容。 内容，窗口承载取决于数据的类型，应用程序进行操作，其中包括媒体、 Extensible Application Markup Language (XAML) 页、 网页、 文档、 数据库表和记录和系统信息类型。  
   
 ## <a name="in-this-section"></a>本节内容  
- [WPF 窗口概述](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [对话框概述](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [帮助主题](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [WPF 窗口概述](wpf-windows-overview.md)  
+ [对话框概述](dialog-boxes-overview.md)  
+ [帮助主题](window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>参考  
  <xref:System.Windows.Window>  
@@ -28,7 +28,7 @@ ms.locfileid: "33550772"
  <xref:System.Windows.Navigation.NavigationWindow>  
   
 ## <a name="related-sections"></a>相关章节  
- [应用程序管理概述](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [导航概述](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [承载](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [生成和部署](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [应用程序管理概述](application-management-overview.md)  
+  [导航概述](navigation-overview.md)  
+  [承载](hosting-wpf-applications.md)  
+  [生成和部署](building-and-deploying-wpf-applications.md)

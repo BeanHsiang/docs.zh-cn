@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe587f6356eec861c39c9eb0aa0b6476e0b9a232
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3077e0494816a083d97839d66d06b18130e5dac8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407514"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487793"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName 方法
-获取程序集的名称这`ICorDebugAssembly`实例表示。  
+获取程序集的名称，这`ICorDebugAssembly`实例所表示。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,7 +37,7 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>参数  
+## <a name="parameters"></a>参数  
  `cchName`  
  [in] `szName` 数组的大小。  
   
@@ -48,13 +48,13 @@ HRESULT GetName (
  [out]存储的名称数组。  
   
 ## <a name="remarks"></a>备注  
- `GetName`方法返回程序集的完整路径和文件名称。  
+ `GetName`方法返回的程序集的完整路径和文件名称。  
   
 ## <a name="requirements"></a>要求  
- **平台：** 请参阅[系统要求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 请参阅[系统需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **标头：** CorDebug.idl、 CorDebug.h  
   
  **库：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

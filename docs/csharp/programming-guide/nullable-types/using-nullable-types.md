@@ -1,16 +1,17 @@
 ---
-title: 使用可以为 null 的类型（C# 编程指南）
+title: 使用可以为 null 的类型 - C# 编程指南
+ms.custom: seodec18
 description: 了解如何使用 C# 可以为 null 的类型
 ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 8ef875aee8c40f60472df52c19d1c1f2c73e95e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658242"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>使用可以为 null 的类型（C# 编程指南）
 
@@ -88,7 +89,7 @@ ms.locfileid: "43515432"
 
 ## <a name="the-bool-type"></a>bool? 类型
 
-可以为 null 的类型 `bool?` 可包含三个不同的值：[true](../../language-reference/keywords/true-literal.md)、[false](../../language-reference/keywords/false-literal.md) 和 [null](../../language-reference/keywords/null.md)。 `bool?` 类型类似于在 SQL 中使用的布尔变量类型。 为确保 `&` 和 `|` 运算符产生的结果与 SQL 中具有三个值的布尔值类型一致，在此提供以下预定义运算符：
+可以为空的类型 `bool?` 可包含三个不同的值：[true](../../language-reference/keywords/true-literal.md)、[false](../../language-reference/keywords/false-literal.md) 和 [null](../../language-reference/keywords/null.md)。 `bool?` 类型类似于在 SQL 中使用的布尔变量类型。 为确保 `&` 和 `|` 运算符产生的结果与 SQL 中具有三个值的布尔值类型一致，在此提供以下预定义运算符：
 
 - `bool? operator &(bool? x, bool? y)`  
 - `bool? operator |(bool? x, bool? y)`  
@@ -111,6 +112,6 @@ ms.locfileid: "43515432"
   
 ## <a name="see-also"></a>请参阅
 
-- [可以为 null 的类型](index.md)  
-- [C# 编程指南](../../programming-guide/index.md)  
-- [“提升”的准确含义是什么？](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)  
+- [可以为 null 的类型](index.md)
+- [C# 编程指南](../../programming-guide/index.md)
+- [“提升”的准确含义是什么？](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
